@@ -1,0 +1,41 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)">
+		<!-- wp:bestofislam/breadcrumbs /-->
+
+		<!-- wp:post-title {"level":1} /-->
+		<!-- wp:post-terms {"term":"listicle-topic","prefix":"Topic: "} /-->
+		<!-- wp:post-date /-->
+		<!-- wp:bestofislam/reading-time /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:post-featured-image {"align":"wide"} /-->
+
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+	<!-- wp:bestofislam/share /-->
+	<!-- wp:bestofislam/author-card /-->
+	<!-- wp:bestofislam/related /-->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|50"} -->
+	<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:comments -->
+	<div class="wp-block-comments">
+		<!-- wp:comments-title /-->
+		<!-- wp:comment-template -->
+		<!-- wp:comment-author-name /-->
+		<!-- wp:comment-content /-->
+		<!-- /wp:comment-template -->
+		<!-- wp:post-comments-form /-->
+	</div>
+	<!-- /wp:comments -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,61 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.2rem, 6vw, 3.6rem)"}}} -->
+		<h1 class="wp-block-heading" style="font-size:clamp(2.2rem, 6vw, 3.6rem)">Arguments, examined</h1>
+		<!-- /wp:heading -->
+		<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.15rem"},"color":{"text":"var:preset|color|accent-5"}}} -->
+		<p class="has-text-color" style="color:var(--wp--preset--color--accent-5);font-size:1.15rem">Ranked arguments on the questions that decide the matter.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:bestofislam/featured-lead /-->
+
+	<!-- wp:bestofislam/mission /-->
+
+	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--60)">
+		<!-- wp:heading {"level":2,"className":"boi-eyebrow"} -->
+		<h2 class="wp-block-heading boi-eyebrow">Latest</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:query {"query":{"perPage":6,"pages":1,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-query alignwide">
+			<!-- wp:post-template {"layout":{"type":"grid","minimumColumnWidth":"17rem"}} -->
+			<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"10px"}}} /-->
+			<!-- wp:post-terms {"term":"listicle-topic"} /-->
+			<!-- wp:post-title {"isLink":true,"level":3} /-->
+			<!-- wp:post-excerpt {"excerptLength":22} /-->
+			<!-- /wp:post-template -->
+			<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>Nothing published yet.</p>
+			<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+		</div>
+		<!-- /wp:query -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:bestofislam/reflections-strip /-->
+
+	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--60)">
+		<!-- wp:heading {"level":2,"className":"boi-eyebrow"} -->
+		<h2 class="wp-block-heading boi-eyebrow">Browse by section</h2>
+		<!-- /wp:heading -->
+		<!-- wp:bestofislam/sections /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:bestofislam/follow /-->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

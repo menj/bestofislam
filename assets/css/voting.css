@@ -1,0 +1,60 @@
+/**
+ * Vote control presentation.
+ */
+
+.boi-vote {
+	margin-block-start: 1rem;
+}
+
+.boi-vote__button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.45rem 0.9rem;
+	background: transparent;
+	color: var(--wp--custom--listicle--vote--accent, currentColor);
+	border: 1px solid var(--wp--custom--listicle--vote--muted, rgba(0, 0, 0, 0.3));
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	cursor: pointer;
+	font: inherit;
+	line-height: 1;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.boi-vote__button:hover,
+.boi-vote__button:focus-visible {
+	border-color: var(--wp--custom--listicle--vote--accent, currentColor);
+}
+
+.boi-vote__button[disabled] {
+	cursor: default;
+	opacity: 0.65;
+}
+
+.boi-vote__button.is-voted {
+	background: var(--wp--custom--listicle--vote--accent, #333);
+	color: var(--wp--preset--color--base, #fff);
+	border-color: transparent;
+}
+
+.boi-vote__count {
+	font-variant-numeric: tabular-nums;
+	font-weight: 600;
+}
+
+.boi-vote__message:empty {
+	display: none;
+}
+
+.boi-vote__message {
+	margin-block-start: 0.5rem;
+	font-size: 0.875rem;
+	color: var(--wp--custom--listicle--vote--muted, inherit);
+}
+
+@media (max-width: 600px) {
+	.boi-vote__button {
+		min-block-size: 2.75rem;
+		padding-inline: 1.1rem;
+	}
+}

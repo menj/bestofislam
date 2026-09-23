@@ -1,0 +1,56 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bestofislam/entry",
+	"title": "Listicle Entry",
+	"category": "design",
+	"icon": "list-view",
+	"parent": [
+		"bestofislam/listicle"
+	],
+	"description": "A single ranked entry within a listicle.",
+	"textdomain": "bestofislam",
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"entryId": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"linkText": {
+			"type": "string",
+			"default": ""
+		},
+		"claim": {
+			"type": "string",
+			"default": ""
+		},
+		"claimSource": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"editorScript": "file:./index.js"
+}

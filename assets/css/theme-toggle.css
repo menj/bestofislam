@@ -1,0 +1,127 @@
+/**
+ * Appearance toggle and the dark token set.
+ *
+ * The dark values mirror the Best of Islam Night style variation, so a reader
+ * switching appearance sees the same palette an editor would select in the
+ * Site Editor. Overrides sit on the preset tokens themselves, which means
+ * every block on the page follows, not only the listicle.
+ */
+
+:root[data-theme="dark"] {
+	--wp--preset--color--base: #0A2038;
+	--wp--preset--color--contrast: #EAF2FB;
+	--wp--preset--color--accent-1: #3FA9F5;
+	--wp--preset--color--accent-2: #E8B33C;
+	--wp--preset--color--accent-3: #0F2B49;
+	--wp--preset--color--accent-4: #1F6FCC;
+	--wp--preset--color--accent-5: #9DB3C9;
+	--wp--preset--color--accent-6: #1A3555;
+	color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+	color-scheme: light;
+}
+
+/* The control: two cells in a pill. The filled cell is the current state,
+   and its glyph is drawn in the fill's opposite colour so it is always
+   visible. Two variables carry the pair, so the control reads correctly on
+   the navy band, on a white ground, and in either appearance. */
+.boi-appearance {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.625rem;
+	--boi-toggle-fg: var(--wp--preset--color--contrast, #0D2B4E);
+	--boi-toggle-bg: var(--wp--preset--color--base, #FFFFFF);
+}
+
+.boi-header .boi-appearance,
+.boi-footer .boi-appearance {
+	--boi-toggle-fg: #FFFFFF;
+	--boi-toggle-bg: #0D2B4E;
+}
+
+.boi-appearance__label {
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--boi-toggle-fg);
+	opacity: 0.7;
+}
+
+.boi-appearance__frame {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	inline-size: 4.5rem;
+	block-size: 2.125rem;
+	padding: 0;
+	background: transparent;
+	border: 1px solid color-mix(in srgb, var(--boi-toggle-fg) 45%, transparent);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.boi-appearance__frame:focus-visible {
+	outline: 2px solid var(--boi-toggle-fg);
+	outline-offset: 2px;
+}
+
+/* The fill sits under the current cell. */
+.boi-appearance__block {
+	position: absolute;
+	inset-block: 0;
+	inset-inline-start: 0;
+	inline-size: 50%;
+	background: var(--boi-toggle-fg);
+	transition: transform 0.18s ease;
+}
+
+:root[data-theme="dark"] .boi-appearance__block {
+	transform: translateX(100%);
+}
+
+/* Inactive cells: the foreground colour, dimmed. */
+.boi-appearance__cell {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	block-size: 100%;
+	color: var(--boi-toggle-fg);
+	opacity: 0.55;
+	transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+/* The current cell: the background colour on the filled block, at full strength. */
+:root[data-theme="light"] .boi-appearance__cell.is-light,
+:root[data-theme="dark"] .boi-appearance__cell.is-dark {
+	color: var(--boi-toggle-bg);
+	opacity: 1;
+}
+
+.boi-appearance__glyph {
+	inline-size: 1.05rem;
+	block-size: 1.05rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-appearance__block,
+	.boi-appearance__cell {
+		transition: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.boi-appearance__label {
+		display: none;
+	}
+
+	.boi-appearance__frame {
+		inline-size: 4rem;
+		block-size: 2.25rem;
+	}
+}

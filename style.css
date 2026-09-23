@@ -1,0 +1,20 @@
+/*
+Theme Name: Best of Islam
+Theme URI: https://bestofislam.org/
+Author: Mohd Elfie Nieshaem Juferi
+Author URI: https://menj.me/
+Description: A listicle child theme of Twenty Twenty-Five for bestofislam.org. Provides ranked list blocks with objection and response structure, ItemList schema, a section taxonomy, multiscript typography, a reader-facing appearance toggle, and visitor voting.
+Template: twentytwentyfive
+Version: 1.29.1
+Requires at least: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bestofislam
+Tags: block-patterns, block-styles, full-site-editing, style-variations, translation-ready
+*/
+
+/*
+ * Presentational styles live in assets/css/. This file carries the theme
+ * header only, in line with the parent theme's approach.
+ */

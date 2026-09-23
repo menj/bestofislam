@@ -1,0 +1,91 @@
+/**
+ * Multiscript typography.
+ *
+ * Each face is scoped by unicode-range, so a browser downloads a file only
+ * when the page actually contains glyphs in that block. A listicle with no
+ * Arabic citation therefore costs nothing.
+ *
+ * Font files are not bundled with this theme. See assets/fonts/scripts/README.md
+ * for the expected filenames and where to obtain each face. Until a file is
+ * present the declaration is inert and the browser falls back to the system
+ * stack named below.
+ */
+
+@font-face {
+	font-family: "BOI Quran";
+	src: url("../fonts/scripts/uthmanic-hafs.woff2") format("woff2");
+	font-display: swap;
+	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+	font-family: "BOI Arabic";
+	src: url("../fonts/scripts/noto-naskh-arabic.woff2") format("woff2");
+	font-display: swap;
+	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+	font-family: "BOI Hebrew";
+	src: url("../fonts/scripts/sbl-hebrew.woff2") format("woff2");
+	font-display: swap;
+	unicode-range: U+0590-05FF, U+FB1D-FB4F;
+}
+
+@font-face {
+	font-family: "BOI Greek";
+	src: url("../fonts/scripts/sbl-greek.woff2") format("woff2");
+	font-display: swap;
+	unicode-range: U+0370-03FF, U+1F00-1FFF;
+}
+
+@font-face {
+	font-family: "BOI Syriac";
+	src: url("../fonts/scripts/evangelion-cpa.woff2") format("woff2");
+	font-display: swap;
+	unicode-range: U+0700-074F, U+0860-086F;
+}
+
+@font-face {
+	font-family: "BOI Cuneiform";
+	src: url("../fonts/scripts/noto-sans-cuneiform.woff2") format("woff2");
+	font-display: swap;
+	unicode-range: U+12000-123FF, U+12400-1247F;
+}
+
+/*
+ * The stack is applied globally to body text. Because every face above is
+ * range-scoped, Latin text never touches them and the Latin faces declared in
+ * theme.json continue to resolve first.
+ */
+body {
+	font-family:
+		var(--wp--preset--font-family--ysabeau-office, sans-serif),
+		"BOI Quran",
+		"BOI Arabic",
+		"BOI Hebrew",
+		"BOI Greek",
+		"BOI Syriac",
+		"BOI Cuneiform";
+}
+
+/* Right-to-left passages set as block quotations. */
+.boi-script-arabic,
+.boi-script-hebrew,
+.boi-script-syriac {
+	direction: rtl;
+	unicode-bidi: isolate;
+	text-align: start;
+}
+
+.boi-script-quran {
+	font-family: "BOI Quran", serif;
+	direction: rtl;
+	unicode-bidi: isolate;
+	font-size: 1.35em;
+	line-height: 2.1;
+}
+
+.boi-script-greek {
+	font-family: "BOI Greek", serif;
+}

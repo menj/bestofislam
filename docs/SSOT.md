@@ -1,0 +1,319 @@
+# Single Source of Truth
+
+Authoritative record of architectural decisions for the Best of Islam child
+theme. Amend this file whenever a decision here is superseded.
+
+## Scope
+
+bestofislam.org, a listicle publication. Distinct from bestofislam.com, which
+runs a separate theme.
+
+## Decisions
+
+### D1. Everything ships in the child theme
+
+No companion plugin. Directed by the site owner. The consequence is that the
+taxonomy, blocks, and votes table are bound to this theme; switching themes
+would orphan taxonomy terms and leave block markup unrendered. Mitigation: each
+concern lives in a self-contained file under `inc/` that could be moved into a
+plugin without modification.
+
+### D2. Blocks rather than a custom post type
+
+Entries live in `post_content` as nested blocks. This keeps content portable,
+visible in the editor canvas, and free of meta-box repeaters. Any ordinary post
+may become a listicle.
+
+### D3. Server-side rendering for both blocks
+
+`save()` emits inner block content only. Rank numbers, vote tallies, and the
+configured image size are resolved at render time, so reordering entries or
+changing settings requires no post re-save.
+
+### D4. Schema derived from parsed blocks
+
+`inc/schema.php` walks `parse_blocks()` output rather than reading duplicated
+meta. Structured data therefore cannot diverge from visible content.
+
+### D5. Colour configuration through theme.json
+
+Listicle tokens are declared under `settings.custom.listicle` and consumed as
+`--wp--custom--listicle--*` custom properties. Recolouring happens through the
+Site Editor and style variations. The settings screen deliberately carries no
+colour picker.
+
+### D6. Votes in a dedicated table
+
+`{prefix}_boi_votes`, with a unique key on `(post_id, entry_id, voter_hash)`.
+Post meta was rejected because a popular list would bloat the meta table and
+slow every query touching the post. Tallies are cached in transients for one
+hour and invalidated on write.
+
+### D7. Public voting, rate limited
+
+Default is public voting, one vote per entry per visitor hash, capped at ten
+votes per ten minutes. A logged-in-only switch is available if coordinated
+voting appears. The visitor hash combines address and user agent with
+`wp_salt()`; for authenticated users it is derived from the user identifier.
+
+### D8. No build step
+
+Editor scripts are written against `wp.element.createElement` and loaded
+directly through `block.json`. No npm toolchain, no compiled bundle.
+
+### D9. Distinct identity from bestofislam.com
+
+The .org property carries its own visual identity. It inherits one constraint
+from the .com theme: the chrome must not read as overtly Islamic at first
+glance, so religious typography appears only where the content calls for it.
+Typography is Platypi for display and Ysabeau Office for text, both bundled
+from the parent theme's font set as variable woff2. The wordmark is a third
+face, Vollkorn at 800, set lowercase and tightened, so the site name reads as a
+mark rather than as a heading that happens to sit in the header. It is
+typeset rather than drawn, which remains the honest limit of the current
+identity.
+
+The palette is navy, azure and gold over white, taken from the Bismika
+Allahuma property. The earlier paper and terracotta scheme was dropped because
+it read as a house habit across the group rather than as an identity for this
+site. Only the colour crosses over: the gradients, bevels, mosque silhouette
+and masthead calligraphy of that design stay behind, the last two because they
+would breach the chrome constraint above.
+
+Gold fails contrast against white at text sizes, so it is confined to rules,
+borders and fills.
+
+Corners are rounded on a four-step token scale in `settings.custom.radius`
+(6px, 10px, 16px, pill). Entries are filled cards rather than rule-separated
+rows.
+
+### D10. Content model serves apologetics, not product review
+
+The site publishes argumentative listicles. Three consequences follow. Star
+ratings are removed, since a rating communicates nothing about a proposition
+and `Review` markup on one risks a structured-data penalty. Voting defaults to
+off, since a public tally on a contested argument invites organised voting and
+reads as a verdict. Each entry carries an optional objection field, rendered
+before the response, so the claim-then-answer rhythm is visible on the page.
+
+### D11. Script fonts are range-scoped and unbundled
+
+Six faces covering Arabic, Hebrew, Greek, Syriac, and Akkadian are declared in
+`assets/css/scripts.css` under `unicode-range`, so a page without those glyphs
+downloads nothing. The files themselves are not shipped; licence terms put that
+on the site owner. `assets/fonts/scripts/README.md` names each expected file.
+
+### D12. Population is idempotent and reversible by hand
+
+`inc/setup.php` runs once on activation, guarded by the `boi_content_populated`
+option, and may be re-run from the Content tab. Every creation step checks for
+an existing object first, so a second run adds only what is missing. Listicles
+are created as drafts rather than published, so nothing reaches the public site
+before the author has written the responses.
+
+### D13. Reader-facing dark mode overrides tokens, not stylesheets
+
+The appearance toggle sets `data-theme` on the document element, and
+`assets/css/theme-toggle.css` redefines the `--wp--preset--color--*` tokens
+under that attribute. Overriding the presets rather than the listicle tokens
+means every block on the page follows the switch. The dark values mirror the
+Night style variation, so the reader-facing toggle and the editor-facing
+variation produce the same palette. A pre-paint script in the head prevents the
+light flash; it is inline by necessity, since an external file would load too
+late.
+
+### D14. Topics are sections, not subjects
+
+Topic terms name a standing section of the publication rather than the subject
+of one article. A term should be able to hold dozens of listicles over time.
+Where a section grows large enough to justify subdivision, the taxonomy is
+hierarchical and narrower terms nest beneath the section rather than sitting
+beside it. The seed set reproduces the section scheme the Best of Islam
+property has used since its earlier incarnation: Belief & Practices, Arts &
+Culture, History, Science, The Muslim World, with Islamophobia as a child of
+the last, with one addition. Faith & Reason was added because argument and
+rebuttal content serves a different reader and a different search intent from
+explanatory content, and routing both into Belief & Practices blurred the
+signal for each.
+
+Three rules govern the taxonomy from here. The top level is capped at six
+terms, since beyond that the navigation wraps and each archive thins. A post
+takes exactly one section, because multiple assignment creates duplicate
+archive paths for the same content. Child terms are created on evidence rather
+than in advance, once a section holds roughly a dozen articles and a recurring
+sub-theme is visible in the analytics. Creating children early produces empty
+archives, which was the weakness of the earlier scheme.
+
+### D15. Articles ship as files, not as PHP arrays
+
+Finished prose lives in `/content/<slug>.html` as block markup and is read at
+seed time. Embedding articles in PHP string literals makes both the code and
+the prose harder to revise, and it puts editorial work behind a deployment. The
+loader resolves the slug through `sanitize_file_name()` and returns an empty
+string when the file is absent, in which case that post is skipped rather than
+created empty.
+
+Seeded articles publish rather than draft, because they carry finished content.
+Each declares its own slug so the URL is fixed by the theme.
+
+### D16. The mark describes the format, not the subject
+
+The logo is three rounded strokes of descending length inside a rounded frame:
+the countdown list, drawn. It was chosen over two alternatives, an eightfold
+geometric knot and a pointed arch, because both of those would sit equally well
+on any site about Islam, and because both breach the chrome constraint in D9 by
+signalling the subject before the content does. The descent mark signals the
+format instead.
+
+`mark.svg` takes `currentColor` for its frame and third stroke, so it reverses
+on the navy band and holds on white without a second file. `mark-solid.svg`
+carries fixed colours for the site icon and share cards, where inheritance is
+unavailable.
+
+### D17. The front page and the posts index are separate
+
+The front page is a static page, so it can become a curated landing page
+without disturbing anything. The posts index lives on its own page, titled Reflections, assigned
+through `page_for_posts` and rendered by `templates/home.html`. Keeping the two
+apart means the site always has one URL listing every article, whatever the
+front page later becomes.
+
+### D18. Content type is derived, not declared
+
+The site publishes two kinds of post. Listicles take the ranked format and are
+reached through the section archives. Reflections are essays and shorter pieces
+and are reached through the posts index.
+
+The distinction is derived from the content: `save_post` checks for the
+listicle block and writes `_boi_is_listicle` accordingly, and a `pre_get_posts`
+filter excludes flagged posts from the home query. No custom post type, no
+editorial checkbox, and no way for the classification to disagree with what the
+post actually contains. A separate post type was rejected because it would split
+the taxonomy, the feed and the archive logic for a distinction the content
+already makes.
+
+Section archives are deliberately unfiltered: a reader browsing History wants
+both kinds.
+
+### D19. Search results point at entries, not only at posts
+
+The useful unit on this site is the entry. A reader searching for a specific
+objection wants the entry that answers it, and a result that drops him at the
+top of a 1,200-word article makes him find it himself.
+
+`boi_matching_entries()` parses the post's blocks, tests each entry's title and
+rendered body against the term, and returns up to three with their anchors. The
+anchors come from `boi_entry_anchor()`, the same function the entry renderer
+and the jump list use, so the three cannot disagree.
+
+Relevance ordering is applied through `posts_orderby` rather than by
+post-processing, so it survives pagination. Filters are read from the URL
+rather than held in session, so a filtered search is linkable.
+
+### D20. Three breakpoints, and the numeral degrades rather than disappears
+
+Layout steps at 1024px, 781px and 600px. The lower two match the parent's own
+breakpoints so the child never disagrees with the header and footer around
+it; the 1024px step exists for the header cluster alone, which needs its own
+row before the tablet step arrives. Every module ships with rules at each
+step it needs; a module that relies on an auto-fit grid needs only padding
+and type adjustments, and gets them.
+
+The rank numeral is the element that decides the scale. At full width it is a
+display figure in the margin. On a tablet the column narrows and the figure
+shrinks. On a phone the column is dropped and the figure becomes a label above
+the title, which keeps the reader's position visible inside a long entry. It is
+never removed, because the numeral is the format.
+
+Grids take a minimum column width rather than a column count, so they reflow
+instead of holding a fixed count into a narrow viewport.
+
+### D21. The identity ships in the base, not in a variation
+
+Everything that defines how the site looks by default belongs in the child's
+own `theme.json`: the palette, the base styles, the type assignments. A style
+variation is an option a user selects, and shipping the identity there meant a
+fresh activation inherited the parent's defaults and looked broken. The two
+variations remain, and now differ from the base only where they are meant to.
+
+The same reasoning applies to the header and footer. A block theme that relies
+on the user assembling its chrome in the Site Editor has not shipped that
+chrome. The child supplies both parts, overriding the parent's, so the band,
+the wordmark and the toggle are present on activation.
+
+### D22. Navigation ships in the parts, and the seed writes wp_navigation
+
+Block themes resolve the navigation block against the `wp_navigation` post
+type. Classic menus are invisible to it. The header and footer parts carry
+their links as inner blocks, so the menu exists on activation with nothing to
+select; the seed also creates a `wp_navigation` post so an editor who opens
+the Site Editor finds the same menu there. Links are written as custom URLs
+rather than object references, because the parts are files and cannot know
+post or term identifiers in advance.
+
+### D23. Nothing on the front page comes from page content
+
+The front page is entirely template. Rendering page content beneath a
+templated hero invites duplication the moment someone edits the page, which
+is exactly what happened. The Home page exists only so WordPress has a static
+front, and it is seeded empty.
+
+### D24. The starter guide is implemented, not appended
+
+The Google Search Engine Optimization Starter Guide governs the theme's
+search-facing behaviour. Its practices are implemented in `inc/seo.php` and
+the templates rather than left to a plugin: unique titles, a description per
+page, breadcrumbs with structured data, search results kept out of the index,
+robots directives, sitemap inclusion, a useful 404, one H1 per page with
+entries as H2, and descriptive anchor text. The description tag yields to an
+installed SEO plugin, because two descriptions on a page is worse than none.
+
+Titles are sentence case throughout. A listicle title capitalises its first
+word and proper nouns only.
+
+### D25. Updates migrate; they do not wait for a reinstall
+
+`boi_maybe_install()` runs on every version change. It creates the votes
+table, then re-runs population if the site was populated before. Population
+is idempotent, so it creates only what is missing, and `boi_migrate_seed()`
+then corrects records an earlier seed left behind: term parents and
+descriptions, and the title, excerpt and section of each seeded post. A seed
+fix therefore reaches an existing site on the next update with no action from
+the owner.
+
+### D26. Two widths, and the chrome uses the wide one
+
+The reading column is 46rem, wide enough for prose without lines running
+long. The wide band is 76rem, and the header, footer, front-page grids,
+archives and the featured lead all align to it. The parent's 645px column was
+never meant to carry a site's chrome, and inheriting it was what made the
+site feel confined.
+
+### D27. The front page carries modules that do not depend on post count
+
+Four articles cannot fill a front page, and the front page should not look
+empty while the archive grows. Alongside the lead and the latest grid it
+carries a mission band, section cards that describe each section and show
+its latest piece, a Reflections strip that appears once essays exist, and a
+Follow module. Each earns its place with no posts behind it, so the page
+reads as a publication on day one rather than as a grid waiting to fill.
+
+### D28. The secondary pages ship with content, and the contact form needs no plugin
+
+About, FAQ, Contact, Sources and standards, and Privacy are seeded with real
+prose rather than placeholders, because a site with an empty About page is
+not launched. The contact form is native: nonce, honeypot, a per-address rate
+limit, and `wp_mail()`. It stores nothing, which is what the Privacy page
+promises, and it means one fewer plugin to keep updated.
+
+## Asset conventions
+
+CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`, one file per concern, loaded
+conditionally: listicle styles only where the block is present or on a topic
+archive; voting assets only when voting is enabled.
+
+## Naming
+
+Prefix `boi_` for functions, `boi-` for CSS classes and handles, `bestofislam/`
+for block names, `bestofislam` for the text domain. Package archives follow
+`[theme name]-[version].zip`.

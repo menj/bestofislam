@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bestofislam/theme-toggle",
+	"title": "Appearance Toggle",
+	"category": "design",
+	"icon": "visibility",
+	"description": "A two-state control switching the page between light and dark.",
+	"textdomain": "bestofislam",
+	"supports": {
+		"html": false,
+		"spacing": { "margin": true }
+	},
+	"attributes": {
+		"showLabel": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"editorScript": "file:./index.js"
+}

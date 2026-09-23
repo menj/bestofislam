@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bestofislam/listicle",
+	"title": "Listicle",
+	"category": "design",
+	"icon": "editor-ol",
+	"description": "A ranked list of entries with optional ratings, schema output, and voting.",
+	"textdomain": "bestofislam",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"order": {
+			"type": "string",
+			"default": "descending"
+		},
+		"schemaType": {
+			"type": "string",
+			"default": "ItemList"
+		},
+		"showJumpList": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"editorScript": "file:./index.js"
+}

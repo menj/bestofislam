@@ -1,0 +1,91 @@
+/**
+ * Primary navigation.
+ *
+ * Items are pill buttons. Colour is derived from the surrounding text with
+ * color-mix rather than named, so the same rules hold on the navy header band,
+ * on a white ground, and in the dark appearance without a second set.
+ */
+
+.wp-block-navigation {
+	--boi-nav-hover: color-mix(in srgb, currentColor 14%, transparent);
+	--boi-nav-border: color-mix(in srgb, currentColor 28%, transparent);
+	--boi-nav-current: color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.wp-block-navigation .wp-block-navigation-item__content {
+	padding: 0.4rem 0.85rem;
+	border: 1px solid transparent;
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	text-decoration: none;
+	line-height: 1.2;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.wp-block-navigation .wp-block-navigation-item__content:hover {
+	background-color: var(--boi-nav-hover);
+	border-color: var(--boi-nav-border);
+	text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item__content:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+/* The section the reader is in stays filled. */
+.wp-block-navigation .current-menu-item > .wp-block-navigation-item__content,
+.wp-block-navigation .current-menu-ancestor > .wp-block-navigation-item__content,
+.wp-block-navigation .current_page_item > .wp-block-navigation-item__content {
+	background-color: var(--boi-nav-current);
+	border-color: var(--boi-nav-border);
+	font-weight: 600;
+}
+
+/* Submenus keep square-ish panels; only the items inside them are pills. */
+.wp-block-navigation .wp-block-navigation-submenu__toggle {
+	border-radius: var(--wp--custom--radius--pill, 999px);
+}
+
+.wp-block-navigation .wp-block-navigation__submenu-container {
+	border-radius: var(--wp--custom--radius--md, 10px);
+	padding: 0.35rem;
+	overflow: hidden;
+}
+
+.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+/* Give the pills room to breathe against each other. */
+.wp-block-navigation__container {
+	gap: 0.25rem;
+}
+
+@media (max-width: 600px) {
+	.wp-block-navigation .wp-block-navigation-item__content {
+		padding: 0.35rem 0.75rem;
+		font-size: 0.9rem;
+	}
+}
+
+/* Phone: WordPress swaps the row for an overlay. Items stack, and the pill
+   styling is dropped in favour of a plain list with generous tap targets. */
+@media (max-width: 600px) {
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+		display: block;
+		padding: 0.85rem 0.25rem;
+		border: 0;
+		border-radius: 0;
+		border-block-end: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+		font-size: 1.05rem;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover {
+		background: transparent;
+	}
+
+	.wp-block-navigation__responsive-container-open,
+	.wp-block-navigation__responsive-container-close {
+		padding: 0.5rem;
+	}
+}

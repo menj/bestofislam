@@ -1,0 +1,1096 @@
+/**
+ * Listicle presentation.
+ *
+ * Entries sit in rounded cards on a pale fill, with the rank numeral in the
+ * left margin. Every value resolves from a theme.json token, so a style
+ * variation can recolour or re-form the list without touching this file.
+ */
+
+.boi-listicle {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--custom--listicle--card--gap, 1.5rem);
+}
+
+.boi-entry {
+	display: grid;
+	grid-template-columns: var(--wp--custom--listicle--rank--size, 3.25rem) 1fr;
+	gap: var(--wp--custom--listicle--card--gap, 1.5rem);
+	align-items: start;
+	padding: var(--wp--custom--listicle--card--padding, 1.5rem);
+	background: var(--wp--custom--listicle--card--background, transparent);
+	border: var(--wp--custom--listicle--card--border, 1px solid rgba(0, 0, 0, 0.1));
+	border-radius: var(--wp--custom--listicle--card--radius, 10px);
+}
+
+/* The numeral reads as a display figure, aligned to the title baseline. */
+.boi-entry__rank {
+	display: block;
+	inline-size: var(--wp--custom--listicle--rank--size, 3.25rem);
+	background: var(--wp--custom--listicle--rank--background, transparent);
+	color: var(--wp--custom--listicle--rank--foreground, currentColor);
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-size: var(--wp--custom--listicle--rank--font-size, 2rem);
+	font-weight: 700;
+	font-variant-numeric: lining-nums tabular-nums;
+	line-height: 1.15;
+	letter-spacing: -0.03em;
+}
+
+.boi-entry__body {
+	min-inline-size: 0;
+}
+
+.boi-entry__media {
+	margin: 0 0 1.25rem;
+}
+
+.boi-entry__media img {
+	inline-size: 100%;
+	block-size: auto;
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-entry__title {
+	margin: 0 0 0.75rem;
+	text-wrap: balance;
+}
+
+.boi-entry__claim {
+	margin: 0 0 1.25rem;
+	padding: 0.875rem 1rem;
+	background: var(--wp--preset--color--base, transparent);
+	border-inline-start: 3px solid var(--wp--custom--listicle--quote--accent, currentColor);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-entry__claim-label {
+	margin: 0 0 0.25rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--wp--custom--listicle--vote--muted, inherit);
+}
+
+.boi-entry__claim-text {
+	margin: 0;
+	font-style: italic;
+	line-height: 1.55;
+}
+
+.boi-entry__claim-source {
+	display: block;
+	margin-block-start: 0.5rem;
+	font-size: 0.875rem;
+	font-style: normal;
+	color: var(--wp--custom--listicle--vote--muted, inherit);
+}
+
+/* Jump list. Anchors the entry titles for readers and for list-format results. */
+.boi-jump {
+	margin-block-end: var(--wp--preset--spacing--50, 2.5rem);
+	padding: var(--wp--preset--spacing--40, 1.5rem);
+	background: var(--wp--custom--listicle--card--background, transparent);
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+.boi-jump__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.boi-jump__item a {
+	display: grid;
+	grid-template-columns: 2rem 1fr;
+	gap: 0.75rem;
+	align-items: baseline;
+	text-decoration: none;
+	color: inherit;
+}
+
+.boi-jump__item a:hover {
+	text-decoration: underline;
+}
+
+.boi-jump__rank {
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-variant-numeric: lining-nums tabular-nums;
+	font-weight: 700;
+	color: var(--wp--custom--listicle--rank--foreground, currentColor);
+}
+
+.boi-entry__cta {
+	margin-block-start: 1.25rem;
+}
+
+.boi-entry__link {
+	font-weight: 600;
+}
+
+/* Wide content inside an entry scrolls in its own box, so the page body
+   never scrolls sideways on a narrow screen. */
+.boi-entry__content table,
+.boi-entry__content pre {
+	display: block;
+	max-inline-size: 100%;
+	overflow-x: auto;
+}
+
+.boi-entry__title,
+.boi-jump__item a {
+	overflow-wrap: break-word;
+}
+
+/* Tablet. The numeral column narrows before it is dropped. */
+@media (max-width: 781px) {
+	.boi-entry {
+		grid-template-columns: 2.5rem 1fr;
+		gap: 1.25rem;
+		padding: 1.25rem;
+	}
+
+	.boi-entry__rank {
+		inline-size: 2.5rem;
+		font-size: 1.6rem;
+	}
+
+	.boi-jump {
+		padding: 1.25rem;
+	}
+}
+
+/* Phone. The numeral moves above the title and shrinks to a label, so it
+   stays visible while the reader is inside a long entry. */
+@media (max-width: 600px) {
+	.boi-listicle {
+		gap: 1rem;
+	}
+
+	.boi-entry {
+		grid-template-columns: 1fr;
+		gap: 0.5rem;
+		padding: 1.125rem;
+	}
+
+	.boi-entry__rank {
+		inline-size: auto;
+		font-size: 1.25rem;
+		line-height: 1;
+	}
+
+	.boi-entry__claim {
+		padding: 0.75rem 0.875rem;
+	}
+
+	.boi-jump {
+		padding: 1.125rem;
+	}
+
+	.boi-jump__item a {
+		grid-template-columns: 1.5rem 1fr;
+		gap: 0.5rem;
+	}
+
+	.boi-brand__mark {
+		inline-size: 1.75rem;
+		block-size: 1.75rem;
+	}
+}
+
+/* Section cards on the front page. */
+.boi-sections {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-sections__item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1.25rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--md, 10px);
+	transition: border-color 0.15s ease;
+}
+
+.boi-sections__item:hover {
+	border-color: var(--wp--preset--color--accent-1, currentColor);
+}
+
+.boi-sections__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.75rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+.boi-sections__name {
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.boi-sections__count {
+	font-size: 0.8rem;
+	font-variant-numeric: tabular-nums;
+	color: var(--wp--preset--color--accent-5, inherit);
+	white-space: nowrap;
+}
+
+.boi-sections__desc {
+	margin: 0;
+	font-size: 0.93rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-sections__latest {
+	margin: 0.25rem 0 0;
+	padding-block-start: 0.6rem;
+	border-block-start: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	font-size: 0.88rem;
+}
+
+.boi-sections__latest span {
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-sections__latest a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.boi-sections__latest a:hover {
+	text-decoration: underline;
+}
+
+.boi-sections__latest.is-empty {
+	color: var(--wp--preset--color--accent-5, inherit);
+	font-style: italic;
+}
+
+/* Previous and next links under a post. */
+.boi-postnav {
+	gap: 1rem;
+	padding-block-start: 1.25rem;
+	border-block-start: 1px solid var(--wp--preset--color--accent-6, currentColor);
+}
+
+.boi-postnav a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.boi-postnav a:hover {
+	text-decoration: underline;
+}
+
+.boi-brand__name,
+.boi-brand__name a {
+	font-family: var(--wp--preset--font-family--vollkorn, Georgia, serif);
+	font-weight: 800;
+	font-size: clamp(1.4rem, 1.1rem + 1vw, 1.8rem);
+	letter-spacing: -0.035em;
+	text-transform: lowercase;
+	line-height: 1;
+}
+
+@media (max-width: 600px) {
+	.boi-brand__name,
+	.boi-brand__name a {
+		font-size: 1.25rem;
+	}
+}
+
+/* Query grids. Core renders each result as a list item with no styling of its
+   own, so the cards on the front page, the archives and the index are built
+   here rather than repeated in every template. */
+.wp-block-post-template.is-layout-grid {
+	gap: var(--wp--preset--spacing--40, 1.5rem);
+}
+
+.wp-block-post-template.is-layout-grid > li {
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+	padding: 1.1rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-title {
+	font-size: 1.15rem;
+}
+
+.boi-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 16 / 10;
+	margin-block-end: 0.35rem;
+	background: var(--wp--preset--color--base, #fff);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+	color: var(--wp--preset--color--contrast, currentColor);
+}
+
+.boi-placeholder svg {
+	inline-size: 3rem;
+	block-size: 3rem;
+	opacity: 0.55;
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-title {
+	margin: 0;
+	text-wrap: balance;
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-title a:hover {
+	color: var(--wp--preset--color--accent-1, currentColor);
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-excerpt {
+	margin: 0;
+	font-size: 0.92rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-excerpt__more-text {
+	margin-block-start: 0.35rem;
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-terms {
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-terms a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* A post with no featured image keeps its place in the grid. */
+.wp-block-post-template.is-layout-grid > li .wp-block-post-featured-image {
+	margin-block-end: 0.35rem;
+}
+
+.wp-block-post-template.is-layout-grid > li .wp-block-post-featured-image img {
+	inline-size: 100%;
+	block-size: auto;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+/* Header and footer bands. */
+.boi-header .wp-block-navigation,
+.boi-footer .wp-block-navigation {
+	--boi-nav-hover: rgba(255, 255, 255, 0.14);
+	--boi-nav-border: rgba(255, 255, 255, 0.28);
+	--boi-nav-current: rgba(255, 255, 255, 0.22);
+}
+
+.boi-header .boi-brand__name a,
+.boi-footer a {
+	text-decoration: none;
+}
+
+.boi-header .wp-block-group {
+	gap: 1rem;
+}
+
+/* Breadcrumbs. */
+.boi-breadcrumbs {
+	margin-block-end: 1rem;
+	font-size: 0.82rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-breadcrumbs ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-breadcrumbs li + li::before {
+	content: "/";
+	margin-inline-end: 0.35rem;
+	opacity: 0.5;
+}
+
+.boi-breadcrumbs a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+.boi-breadcrumbs [aria-current="page"] {
+	color: var(--wp--preset--color--contrast, inherit);
+}
+
+/* Eyebrow headings on the front page. */
+.boi-eyebrow {
+	font-family: var(--wp--preset--font-family--ysabeau-office, inherit);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, inherit);
+	margin: 0 0 1rem;
+}
+
+/* Header: the tools cluster sits right and wraps as a unit. */
+.boi-header__tools {
+	gap: 0.75rem;
+	margin-inline-start: auto;
+}
+
+.boi-header .boi-header__search {
+	inline-size: 11rem;
+}
+
+.boi-header .boi-header__search .wp-block-search__inside-wrapper {
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 999px;
+	padding: 0.15rem 0.15rem 0.15rem 0.6rem;
+}
+
+.boi-header .boi-header__search input {
+	background: transparent;
+	border: 0;
+	color: #fff;
+	font-size: 0.85rem;
+	min-block-size: 1.75rem;
+}
+
+.boi-header .boi-header__search input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.boi-header .boi-header__search button {
+	background: #fff;
+	color: #0D2B4E;
+	border: 0;
+	border-radius: 999px;
+	padding: 0.25rem 0.5rem;
+	min-block-size: 1.75rem;
+}
+
+.boi-footer__nav .wp-block-navigation-item__content {
+	padding-inline: 0;
+}
+
+.boi-footer__nav .wp-block-navigation-item__content:hover {
+	background: transparent;
+	border-color: transparent;
+	text-decoration: underline;
+}
+
+/* Featured lead on the front page. */
+.boi-lead {
+	display: grid;
+	grid-template-columns: 1.15fr 1fr;
+	gap: 2rem;
+	align-items: center;
+	padding: 1.5rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--lg, 16px);
+}
+
+.boi-lead__media img,
+.boi-lead__media .boi-placeholder {
+	inline-size: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border-radius: var(--wp--custom--radius--md, 10px);
+	margin: 0;
+}
+
+.boi-lead__kicker {
+	display: inline-block;
+	margin-block-end: 0.5rem;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--wp--preset--color--accent-1, inherit);
+}
+
+.boi-lead__title {
+	font-size: clamp(1.5rem, 3vw, 2.1rem);
+	margin: 0 0 0.75rem;
+	text-wrap: balance;
+}
+
+.boi-lead__title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-lead__excerpt {
+	margin: 0 0 1.25rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-lead__cta {
+	display: inline-block;
+	padding: 0.55rem 1.1rem;
+	background: var(--wp--preset--color--accent-1, currentColor);
+	color: var(--wp--preset--color--base, #fff);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+/* Reading time, share, author, related. */
+.boi-reading-time {
+	font-size: 0.85rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-reading-time::before {
+	content: "·";
+	margin-inline-end: 0.5rem;
+}
+
+.boi-share {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem;
+	margin-block-start: 2rem;
+	padding-block-start: 1.25rem;
+	border-block-start: 1px solid var(--wp--preset--color--accent-6, currentColor);
+}
+
+.boi-share__label {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, inherit);
+	margin-inline-end: 0.4rem;
+}
+
+.boi-share__link {
+	padding: 0.3rem 0.8rem;
+	font-size: 0.85rem;
+	text-decoration: none;
+	color: inherit;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+}
+
+.boi-share__link:hover {
+	border-color: var(--wp--preset--color--accent-1, currentColor);
+}
+
+.boi-author {
+	display: grid;
+	grid-template-columns: 4.5rem 1fr;
+	gap: 1.25rem;
+	align-items: start;
+	margin-block-start: 2rem;
+	padding: 1.25rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+.boi-author__avatar img {
+	inline-size: 4.5rem;
+	block-size: 4.5rem;
+	border-radius: 50%;
+}
+
+.boi-author__label {
+	margin: 0;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-author__name {
+	margin: 0.15rem 0 0.4rem;
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-size: 1.15rem;
+	font-weight: 600;
+}
+
+.boi-author__name a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-author__bio {
+	margin: 0;
+	font-size: 0.95rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-related {
+	margin-block-start: 3rem;
+}
+
+.boi-related__heading {
+	font-size: 0.78rem;
+	font-family: var(--wp--preset--font-family--ysabeau-office, inherit);
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, inherit);
+	margin: 0 0 1rem;
+}
+
+.boi-related__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-related__item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.9rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+.boi-related__item img,
+.boi-related__item .boi-placeholder {
+	inline-size: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border-radius: var(--wp--custom--radius--sm, 6px);
+	margin: 0;
+}
+
+.boi-related__link {
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-weight: 600;
+	color: inherit;
+	text-decoration: none;
+	text-wrap: balance;
+}
+
+@media (max-width: 781px) {
+	.boi-lead {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.boi-header .boi-header__search {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.boi-author {
+		grid-template-columns: 3.5rem 1fr;
+		gap: 0.9rem;
+	}
+
+	.boi-author__avatar img {
+		inline-size: 3.5rem;
+		block-size: 3.5rem;
+	}
+}
+
+/* Mission band. */
+.boi-mission {
+	margin-block-start: var(--wp--preset--spacing--60, 4rem);
+	padding: clamp(2rem, 5vw, 3.5rem);
+	background: var(--wp--preset--color--contrast, #0D2B4E);
+	color: var(--wp--preset--color--base, #fff);
+	border-radius: var(--wp--custom--radius--lg, 16px);
+}
+
+.boi-mission__inner {
+	max-inline-size: 44rem;
+}
+
+.boi-mission__label {
+	margin: 0 0 0.75rem;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-mission__title {
+	margin: 0 0 1rem;
+	font-size: clamp(1.5rem, 3vw, 2.1rem);
+	color: inherit;
+	text-wrap: balance;
+}
+
+.boi-mission__text {
+	margin: 0 0 1.5rem;
+	font-size: 1.05rem;
+	line-height: 1.7;
+	opacity: 0.88;
+}
+
+.boi-mission__cta {
+	display: inline-block;
+	padding: 0.55rem 1.1rem;
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	color: inherit;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.boi-mission__cta:hover {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+/* Reflections strip. */
+.boi-strip {
+	margin-block-start: var(--wp--preset--spacing--60, 4rem);
+}
+
+.boi-strip__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+}
+
+.boi-strip__more {
+	font-size: 0.88rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.boi-strip__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-strip__item a {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	padding: 1.1rem 1.25rem;
+	border-inline-start: 3px solid var(--wp--preset--color--accent-2, currentColor);
+	background: var(--wp--preset--color--accent-3, transparent);
+	border-radius: var(--wp--custom--radius--md, 10px);
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-strip__title {
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-wrap: balance;
+}
+
+.boi-strip__date {
+	font-size: 0.82rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+/* Follow module. */
+.boi-follow {
+	margin-block-start: var(--wp--preset--spacing--60, 4rem);
+	padding-block-start: var(--wp--preset--spacing--50, 2.5rem);
+	border-block-start: 1px solid var(--wp--preset--color--accent-6, currentColor);
+}
+
+.boi-follow__text {
+	margin: 0 0 1rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-follow__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.boi-follow__link {
+	padding: 0.45rem 1rem;
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+	font-size: 0.9rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+}
+
+.boi-follow__link:hover {
+	border-color: var(--wp--preset--color--accent-1, currentColor);
+}
+
+/* Brand lockup. The mark inherits the surrounding colour, so it reverses
+   cleanly on the navy band. Restored after the rule was cut in 1.21. */
+.boi-brand {
+	gap: 0.7rem;
+	align-items: center;
+}
+
+.boi-brand__mark {
+	display: block;
+	inline-size: 2.125rem;
+	block-size: 2.125rem;
+	flex: 0 0 auto;
+	color: currentColor;
+}
+
+.boi-brand__mark svg {
+	inline-size: 100%;
+	block-size: 100%;
+	display: block;
+}
+
+/* Contact form. */
+.boi-contact__field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	margin: 0 0 1rem;
+}
+
+.boi-contact__field label {
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.boi-contact__field input,
+.boi-contact__field textarea {
+	font: inherit;
+	padding: 0.65rem 0.9rem;
+	color: inherit;
+	background: var(--wp--preset--color--base, #fff);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-contact__field input:focus,
+.boi-contact__field textarea:focus {
+	outline: 2px solid var(--wp--preset--color--accent-1, currentColor);
+	outline-offset: 1px;
+}
+
+.boi-contact__trap {
+	position: absolute;
+	left: -9999px;
+	inline-size: 1px;
+	block-size: 1px;
+	overflow: hidden;
+}
+
+.boi-contact__button {
+	font: inherit;
+	font-weight: 600;
+	padding: 0.65rem 1.4rem;
+	color: var(--wp--preset--color--base, #fff);
+	background: var(--wp--preset--color--accent-1, currentColor);
+	border: 0;
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	cursor: pointer;
+}
+
+.boi-contact__notice {
+	padding: 0.8rem 1rem;
+	border-radius: var(--wp--custom--radius--sm, 6px);
+	margin-block-end: 1.25rem;
+}
+
+.boi-contact__notice.is-success {
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-1, currentColor);
+}
+
+.boi-contact__notice.is-error {
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-2, currentColor);
+}
+
+/* ------------------------------------------------------------------
+   Responsive pass for every module added since the first breakpoints.
+   Steps: 1024px (small laptop / tablet landscape), 781px (tablet portrait),
+   600px (phone). Grids reflow on their own; these rules handle the header
+   cluster, padding, type, and anything that would otherwise crowd.
+   ------------------------------------------------------------------ */
+
+/* Nothing may push the page sideways. */
+html,
+body {
+	overflow-x: clip;
+}
+
+img,
+svg,
+video {
+	max-inline-size: 100%;
+	block-size: auto;
+}
+
+/* Tablet landscape: the tools cluster takes its own row under the brand,
+   so seven pills, search and the toggle never fight the wordmark. */
+@media (max-width: 1024px) {
+	.boi-header__tools {
+		flex-basis: 100%;
+		margin-inline-start: 0;
+		justify-content: space-between;
+	}
+
+	.boi-header__tools .wp-block-navigation {
+		flex: 1 1 auto;
+	}
+
+	.boi-lead {
+		gap: 1.5rem;
+	}
+}
+
+/* Tablet portrait. */
+@media (max-width: 781px) {
+	.boi-lead,
+	.boi-mission,
+	.boi-related__item,
+	.boi-sections__item,
+	.boi-author,
+	.boi-result {
+		padding: 1.25rem;
+	}
+
+	.boi-mission__title {
+		font-size: 1.5rem;
+	}
+
+	.boi-mission__text {
+		font-size: 1rem;
+	}
+
+	.boi-strip__list,
+	.boi-related__list,
+	.boi-sections {
+		gap: 0.75rem;
+	}
+
+	.boi-footer .wp-block-group.alignwide.is-layout-grid {
+		gap: 1.5rem;
+	}
+
+	.boi-breadcrumbs {
+		font-size: 0.78rem;
+	}
+}
+
+/* Phone. */
+@media (max-width: 600px) {
+	.boi-lead {
+		padding: 1rem;
+		border-radius: var(--wp--custom--radius--md, 10px);
+	}
+
+	.boi-lead__title {
+		font-size: 1.35rem;
+	}
+
+	.boi-lead__cta,
+	.boi-mission__cta,
+	.boi-contact__button {
+		display: block;
+		text-align: center;
+	}
+
+	.boi-mission {
+		padding: 1.5rem 1.25rem;
+		border-radius: var(--wp--custom--radius--md, 10px);
+	}
+
+	.boi-strip__head {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.25rem;
+	}
+
+	.boi-sections__name {
+		font-size: 1.1rem;
+	}
+
+	.boi-share {
+		gap: 0.35rem;
+	}
+
+	.boi-share__link,
+	.boi-follow__link {
+		font-size: 0.82rem;
+		padding: 0.35rem 0.7rem;
+	}
+
+	.boi-related__list {
+		grid-template-columns: 1fr;
+	}
+
+	.boi-contact__field input,
+	.boi-contact__field textarea {
+		font-size: 16px; /* prevents iOS zoom on focus */
+	}
+
+	.boi-footer .wp-block-group.alignwide.is-layout-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.boi-eyebrow {
+		font-size: 0.72rem;
+	}
+
+	/* The breadcrumb trail truncates the current title so it never wraps
+	   to three lines on a narrow screen. */
+	.boi-breadcrumbs [aria-current="page"] {
+		max-inline-size: 60vw;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}

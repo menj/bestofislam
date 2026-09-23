@@ -1,0 +1,169 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Best of Islam",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#FFFFFF",
+					"name": "White"
+				},
+				{
+					"slug": "contrast",
+					"color": "#0D2B4E",
+					"name": "Navy"
+				},
+				{
+					"slug": "accent-1",
+					"color": "#1F6FCC",
+					"name": "Azure"
+				},
+				{
+					"slug": "accent-2",
+					"color": "#E8B33C",
+					"name": "Gold"
+				},
+				{
+					"slug": "accent-3",
+					"color": "#EAF2FB",
+					"name": "Pale blue"
+				},
+				{
+					"slug": "accent-4",
+					"color": "#3FA9F5",
+					"name": "Sky"
+				},
+				{
+					"slug": "accent-5",
+					"color": "#4A5A6E",
+					"name": "Slate"
+				},
+				{
+					"slug": "accent-6",
+					"color": "#D9E3EF",
+					"name": "Rule"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Platypi",
+					"slug": "platypi",
+					"fontFamily": "Platypi, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Platypi",
+							"fontStyle": "normal",
+							"fontWeight": "300 800",
+							"src": [
+								"file:./assets/fonts/platypi/Platypi-VariableFont_wght.woff2"
+							]
+						},
+						{
+							"fontFamily": "Platypi",
+							"fontStyle": "italic",
+							"fontWeight": "300 800",
+							"src": [
+								"file:./assets/fonts/platypi/Platypi-Italic-VariableFont_wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Ysabeau Office",
+					"slug": "ysabeau-office",
+					"fontFamily": "\"Ysabeau Office\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"Ysabeau Office\"",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/ysabeau-office/YsabeauOffice-VariableFont_wght.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Ysabeau Office\"",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/ysabeau-office/YsabeauOffice-Italic-VariableFont_wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"name": "Vollkorn",
+					"slug": "vollkorn",
+					"fontFamily": "Vollkorn, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Vollkorn",
+							"fontStyle": "normal",
+							"fontWeight": "400 900",
+							"src": [
+								"file:./assets/fonts/vollkorn/Vollkorn-VariableFont_wght.woff2"
+							]
+						},
+						{
+							"fontFamily": "Vollkorn",
+							"fontStyle": "italic",
+							"fontWeight": "400 900",
+							"src": [
+								"file:./assets/fonts/vollkorn/Vollkorn-Italic-VariableFont_wght.woff2"
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--ysabeau-office)",
+			"lineHeight": "1.65"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--platypi)",
+					"fontWeight": "600",
+					"lineHeight": "1.15",
+					"letterSpacing": "-0.015em"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--accent-1)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--accent-1)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				"border": {
+					"radius": "var(--wp--custom--radius--pill)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--ysabeau-office)"
+				}
+			}
+		}
+	}
+}

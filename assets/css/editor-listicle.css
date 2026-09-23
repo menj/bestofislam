@@ -1,0 +1,36 @@
+/**
+ * Editor-only affordances for the listicle blocks.
+ */
+
+.editor-styles-wrapper .boi-entry {
+	display: grid;
+	grid-template-columns: 3.25rem 1fr;
+	gap: 2rem;
+	padding-block: 2.5rem;
+	border-block-start: 1px dashed rgba(127, 127, 127, 0.4);
+}
+
+.editor-styles-wrapper .boi-entry__rank {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.15;
+	opacity: 0.45;
+}
+
+.editor-styles-wrapper .boi-entry__media-button {
+	padding: 0;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.editor-styles-wrapper .boi-entry__media-button img {
+	max-inline-size: 100%;
+	block-size: auto;
+}
+
+.editor-styles-wrapper .boi-entry__claim {
+	padding-inline-start: 1.25rem;
+	border-inline-start: 2px solid currentColor;
+	opacity: 0.85;
+}

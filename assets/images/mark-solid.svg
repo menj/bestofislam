@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Best of Islam">
+	<rect x="4" y="4" width="112" height="112" rx="22" fill="#0D2B4E"/>
+	<g stroke-linecap="round">
+		<line x1="30" y1="38" x2="92" y2="38" stroke="#E8B33C" stroke-width="11"/>
+		<line x1="30" y1="60" x2="78" y2="60" stroke="#3FA9F5" stroke-width="11"/>
+		<line x1="30" y1="82" x2="60" y2="82" stroke="#FFFFFF" stroke-width="11"/>
+	</g>
+</svg>
