@@ -117,20 +117,21 @@ function boi_render_share() {
 	$title = rawurlencode( wp_strip_all_tags( get_the_title() ) );
 
 	$links = array(
-		array( 'X', 'https://x.com/intent/post?url=' . $url . '&text=' . $title ),
-		array( 'Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' . $url ),
-		array( 'WhatsApp', 'https://wa.me/?text=' . $title . '%20' . $url ),
-		array( 'Telegram', 'https://t.me/share/url?url=' . $url . '&text=' . $title ),
-		array( 'Email', 'mailto:?subject=' . $title . '&body=' . $url ),
+		array( 'x', 'X', 'https://x.com/intent/post?url=' . $url . '&text=' . $title ),
+		array( 'facebook', 'Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' . $url ),
+		array( 'whatsapp', 'WhatsApp', 'https://wa.me/?text=' . $title . '%20' . $url ),
+		array( 'telegram', 'Telegram', 'https://t.me/share/url?url=' . $url . '&text=' . $title ),
+		array( 'email', __( 'Email', 'bestofislam' ), 'mailto:?subject=' . $title . '&body=' . $url ),
 	);
 
 	$items = '';
 
 	foreach ( $links as $link ) {
 		$items .= sprintf(
-			'<a class="boi-share__link" href="%1$s" rel="noopener nofollow" target="_blank">%2$s</a>',
-			esc_url( $link[1] ),
-			esc_html( $link[0] )
+			'<a class="boi-share__link" href="%1$s" rel="noopener nofollow" target="_blank" aria-label="%2$s" title="%2$s">%3$s</a>',
+			esc_url( $link[2] ),
+			esc_attr( 'email' === $link[0] ? __( 'Share by email', 'bestofislam' ) : sprintf( /* translators: %s: network name. */ __( 'Share on %s', 'bestofislam' ), $link[1] ) ),
+			boi_icon( $link[0] )
 		);
 	}
 
@@ -297,24 +298,15 @@ function boi_render_mission() {
  * @return string
  */
 function boi_render_follow() {
-	$options = boi_get_options();
-	$links   = array(
-		array( __( 'RSS feed', 'bestofislam' ), get_feed_link() ),
-	);
-
-	foreach ( array( 'youtube' => 'YouTube', 'x' => 'X', 'facebook' => 'Facebook', 'telegram' => 'Telegram' ) as $key => $label ) {
-		if ( ! empty( $options[ 'follow_' . $key ] ) ) {
-			$links[] = array( $label, $options[ 'follow_' . $key ] );
-		}
-	}
-
 	$items = '';
 
-	foreach ( $links as $link ) {
+	foreach ( boi_follow_links() as $link ) {
 		$items .= sprintf(
-			'<a class="boi-follow__link" href="%1$s" rel="noopener">%2$s</a>',
-			esc_url( $link[1] ),
-			esc_html( $link[0] )
+			'<a class="boi-follow__link" href="%1$s" rel="%2$s">%3$s<span>%4$s</span></a>',
+			esc_url( $link[2] ),
+			'mastodon' === $link[0] ? 'me noopener' : 'noopener',
+			boi_icon( $link[0] ),
+			esc_html( $link[1] )
 		);
 	}
 
@@ -325,3 +317,51 @@ function boi_render_follow() {
 		$items
 	);
 }
+
+/**
+ * Registers the footer notice.
+ *
+ * @return void
+ */
+function boi_register_footer_notice() {
+	register_block_type( 'bestofislam/footer-notice', array( 'render_callback' => 'boi_render_footer_notice' ) );
+}
+add_action( 'init', 'boi_register_footer_notice' );
+
+/**
+ * The notice at the foot of every page: the current year and site name, the
+ * terms on which articles may be quoted, the source of the images, and a
+ * link back to the top. The year is rendered at request time, so it never
+ * goes stale.
+ *
+ * @return string
+ */
+function boi_render_footer_notice() {
+	$sources = get_page_by_path( 'sources-and-standards', OBJECT, 'page' );
+
+	$images = $sources
+		? sprintf(
+			/* translators: %s: link to the Sources and standards page. */
+			esc_html__( 'Images are in the public domain, credited on each page and in %s.', 'bestofislam' ),
+			'<a href="' . esc_url( get_permalink( $sources ) ) . '">' . esc_html__( 'Sources and standards', 'bestofislam' ) . '</a>'
+		)
+		: esc_html__( 'Images are in the public domain and credited on each page.', 'bestofislam' );
+
+	return sprintf(
+		'<div class="boi-notice"><p class="boi-notice__text">%1$s %2$s %3$s</p><a class="boi-notice__top" href="#top">%4$s</a></div>',
+		esc_html( sprintf( /* translators: 1: year, 2: site name. */ __( '© %1$s %2$s.', 'bestofislam' ), wp_date( 'Y' ), get_bloginfo( 'name' ) ) ),
+		esc_html__( 'Articles may be quoted with attribution and a link.', 'bestofislam' ),
+		$images,
+		esc_html__( 'Back to top', 'bestofislam' )
+	);
+}
+
+/**
+ * Gives the page an anchor for the Back to top link.
+ *
+ * @return void
+ */
+function boi_top_anchor() {
+	echo '<span id="top" class="screen-reader-text"></span>';
+}
+add_action( 'wp_body_open', 'boi_top_anchor' );

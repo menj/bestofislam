@@ -1,0 +1,13 @@
+/**
+ * Editor: running text justified at 1.5, as it appears on the site. Element
+ * selectors, so any alignment an author sets on a block (centre, right)
+ * still wins.
+ */
+p,
+li {
+	line-height: 1.5;
+	text-align: justify;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	text-wrap: pretty;
+}

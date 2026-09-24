@@ -1,0 +1,17 @@
+Icons in this folder
+====================
+
+Minimalist Social & Platform Icons Pack, version 2.8, released under the GNU
+General Public License. Most marks derive from CC0 sources; see the pack's
+own README for the history of each.
+
+Omitted from this theme: linkedin.svg and scribd.svg. They derive from Font
+Awesome Free under CC BY 4.0, whose attribution condition would require a
+visible credit on the site. Add them only with that credit:
+"Icons by Font Awesome (https://fontawesome.com), CC BY 4.0."
+
+Drawn for this theme to the pack's 24x24 single-colour convention: rss.svg
+and email.svg. Released under the same licence as the theme.
+
+Brand names and logos remain trademarks of their owners. They are used here
+only to link to the site's own profiles and to share its articles.

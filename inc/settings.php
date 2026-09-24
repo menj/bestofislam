@@ -30,7 +30,15 @@ function boi_get_options() {
 		'follow_x'            => '',
 		'follow_facebook'     => '',
 		'follow_telegram'     => '',
+		'follow_instagram'    => '',
+		'follow_tiktok'       => '',
+		'follow_threads'      => '',
+		'follow_bluesky'      => '',
+		'follow_mastodon'     => '',
+		'follow_whatsapp'     => '',
 		'contact_email'       => '',
+		'picks'               => '',
+		'hero_image'          => '',
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
@@ -88,11 +96,17 @@ function boi_sanitize_options( $input ) {
 			$current['show_rank']  = empty( $input['show_rank'] ) ? 0 : 1;
 			$current['image_size'] = sanitize_key( isset( $input['image_size'] ) ? $input['image_size'] : 'large' );
 
-			foreach ( array( 'youtube', 'x', 'facebook', 'telegram' ) as $network ) {
+			foreach ( array_keys( boi_follow_networks() ) as $network ) {
 				$current[ 'follow_' . $network ] = isset( $input[ 'follow_' . $network ] ) ? esc_url_raw( trim( $input[ 'follow_' . $network ] ) ) : '';
 			}
 
 			$current['contact_email'] = isset( $input['contact_email'] ) && is_email( $input['contact_email'] ) ? sanitize_email( $input['contact_email'] ) : '';
+
+			$hero                  = isset( $input['hero_image'] ) ? sanitize_title( $input['hero_image'] ) : '';
+			$current['hero_image'] = ( in_array( $hero, array( '', 'none', 'newest' ), true ) || get_page_by_path( $hero, OBJECT, 'post' ) ) ? $hero : '';
+
+			$current['picks'] = isset( $input['picks'] ) ? implode( ',', array_filter( array_map( 'sanitize_title', explode( ',', (string) $input['picks'] ) ) ) ) : '';
+
 			break;
 
 		case 'schema':
@@ -232,7 +246,7 @@ function boi_render_display_tab( $opts ) {
 				<p class="description"><?php esc_html_e( 'Colour schemes are configured in the Site Editor under Styles.', 'bestofislam' ); ?></p>
 			</td>
 		</tr>
-		<?php foreach ( array( 'youtube' => 'YouTube', 'x' => 'X', 'facebook' => 'Facebook', 'telegram' => 'Telegram' ) as $network => $label ) : ?>
+		<?php foreach ( boi_follow_networks() as $network => $label ) : ?>
 		<tr>
 			<th scope="row"><label for="boi-follow-<?php echo esc_attr( $network ); ?>"><?php echo esc_html( $label ); ?></label></th>
 			<td>
@@ -241,13 +255,36 @@ function boi_render_display_tab( $opts ) {
 		</tr>
 		<?php endforeach; ?>
 	</table>
-	<p class="description"><?php esc_html_e( 'Channels with a link appear in the Follow module on the front page.', 'bestofislam' ); ?></p>
+	<p class="description"><?php esc_html_e( 'Channels with a link appear in the Follow links on the front page and as icons in the footer. RSS always appears.', 'bestofislam' ); ?></p>
 	<table class="form-table" role="presentation">
 		<tr>
 			<th scope="row"><label for="boi-contact-email"><?php esc_html_e( 'Contact form recipient', 'bestofislam' ); ?></label></th>
 			<td>
 				<input type="email" class="regular-text" id="boi-contact-email" name="<?php echo esc_attr( $key ); ?>[contact_email]" value="<?php echo esc_attr( $opts['contact_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" />
 				<p class="description"><?php esc_html_e( 'Leave empty to use the site administrator address.', 'bestofislam' ); ?></p>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row"><label for="boi-hero-image"><?php esc_html_e( 'Hero background', 'bestofislam' ); ?></label></th>
+			<td>
+				<select id="boi-hero-image" name="<?php echo esc_attr( $key ); ?>[hero_image]">
+					<option value="" <?php selected( $opts['hero_image'], '' ); ?>><?php esc_html_e( 'Birmingham Quran leaves (default)', 'bestofislam' ); ?></option>
+					<option value="newest" <?php selected( $opts['hero_image'], 'newest' ); ?>><?php esc_html_e( 'The newest article\'s image', 'bestofislam' ); ?></option>
+					<option value="none" <?php selected( $opts['hero_image'], 'none' ); ?>><?php esc_html_e( 'No image', 'bestofislam' ); ?></option>
+					<optgroup label="<?php esc_attr_e( 'A particular article\'s image', 'bestofislam' ); ?>">
+						<?php foreach ( get_posts( array( 'post_type' => 'post', 'posts_per_page' => 100, 'orderby' => 'title', 'order' => 'ASC', 'meta_key' => '_thumbnail_id' ) ) as $p ) : // phpcs:ignore WordPress.DB.SlowDBQuery.slow_query_meta_key ?>
+							<option value="<?php echo esc_attr( $p->post_name ); ?>" <?php selected( $opts['hero_image'], $p->post_name ); ?>><?php echo esc_html( get_the_title( $p ) ); ?></option>
+						<?php endforeach; ?>
+					</optgroup>
+				</select>
+				<p class="description"><?php esc_html_e( 'The image behind the front-page headline. A dark overlay keeps the text legible, and the image is credited in the band\'s corner.', 'bestofislam' ); ?></p>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row"><label for="boi-picks"><?php esc_html_e( "Editor's picks", 'bestofislam' ); ?></label></th>
+			<td>
+				<input type="text" class="regular-text" id="boi-picks" name="<?php echo esc_attr( $key ); ?>[picks]" value="<?php echo esc_attr( $opts['picks'] ); ?>" placeholder="same-god, islamic-dilemma, haman-anachronism" />
+				<p class="description"><?php esc_html_e( 'Up to three post slugs, comma-separated. Leave empty to show the three longest lists.', 'bestofislam' ); ?></p>
 			</td>
 		</tr>
 	</table>

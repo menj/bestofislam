@@ -287,9 +287,16 @@ function boi_render_search_filters() {
 		}
 	}
 
-	return sprintf(
-		'<div class="boi-filters"><div class="boi-filters__row">%1$s</div><div class="boi-filters__row">%2$s</div></div>',
-		$chips,
-		$second
-	);
+	// With no reflections published, "Everything" and "Lists" return the same
+	// results and "Reflections" returns none, so the kind row is left out
+	// until the first reflection exists.
+	$has_reflections = function_exists( 'boi_has_reflections' ) ? boi_has_reflections() : true;
+	$kind_row        = $has_reflections ? '<div class="boi-filters__row">' . $chips . '</div>' : '';
+	$section_row     = '' !== $second ? '<div class="boi-filters__row">' . $second . '</div>' : '';
+
+	if ( '' === $kind_row && '' === $section_row ) {
+		return '';
+	}
+
+	return '<div class="boi-filters">' . $kind_row . $section_row . '</div>';
 }

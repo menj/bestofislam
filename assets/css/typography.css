@@ -1,0 +1,75 @@
+/**
+ * Running text: justified, with 1.5 line spacing.
+ *
+ * Loaded after every other stylesheet so these two rules hold everywhere.
+ *
+ * Justification applies to paragraphs and list items of running text. It is
+ * left off one-line labels, navigation, buttons, headings and anything
+ * deliberately centred or right-aligned, where it either has no effect or
+ * would undo the alignment. Hyphenation accompanies it, since justified text
+ * in narrow columns otherwise opens wide gaps between words.
+ *
+ * Quranic Arabic keeps its own taller spacing (scripts.css) for its vowel
+ * marks, and right-to-left scripts are never hyphenated.
+ */
+
+body {
+	line-height: 1.5;
+}
+
+:where(main, .wp-site-blocks > footer, footer.wp-block-template-part) :where(p, li, dd, blockquote, figcaption, .wp-block-post-excerpt__excerpt) {
+	line-height: 1.5;
+}
+
+/* Justify running text. */
+main p:not(:where(
+	.boi-band__head p,
+	.boi-band__label,
+	.boi-follow__text,
+	.boi-credit,
+	.boi-hero__credit,
+	.boi-stack__from,
+	.boi-objections__more,
+	.boi-objection__label,
+	.boi-answers__label,
+	.boi-next__label,
+	.boi-next__part,
+	.boi-result__label,
+	.boi-picks__term,
+	.boi-picks__meta,
+	.boi-sections__latest,
+	.boi-strip__date,
+	.boi-eyebrow,
+	.boi-stack__title,
+	[class*="has-text-align-"]
+)),
+main li:not(:where(
+	nav li,
+	.boi-social li,
+	.boi-jump li,
+	.boi-picks > li,
+	.boi-sections > li,
+	.boi-strip__list > li,
+	.boi-path > li,
+	.boi-results > li,
+	.boi-related__list > li,
+	.boi-stats > li,
+	.wp-block-post-template > li
+)),
+main .wp-block-post-excerpt__excerpt,
+main .boi-answers li,
+footer .boi-notice__text,
+footer .wp-block-group > p {
+	text-align: justify;
+	text-justify: inter-word;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	hyphenate-limit-chars: 7 3 3;
+	text-wrap: pretty;
+}
+
+/* Right-to-left scripts: no hyphenation. */
+:where([dir="rtl"], :lang(ar), :lang(he), :lang(syr)) {
+	-webkit-hyphens: manual;
+	hyphens: manual;
+}

@@ -13,6 +13,7 @@ A listicle child theme of Twenty Twenty-Five (1.5) for bestofislam.org.
 - **Article features.** Reading time, share links, an author card, related pieces from the same section, and a featured lead on the front page.
 - **Search engine practices.** Unique titles, meta descriptions, breadcrumbs with BreadcrumbList markup, noindex on search results, robots.txt and sitemap handling, a useful 404, and a clean heading outline, following the Google Search Engine Optimization Starter Guide.
 - **Search.** Relevance-ordered results with entry-level deep links, plus filters for kind and section.
+- **Questions answered.** 26 questions with short answers, each linked to its article, in the front-page band, with an anchor on each, and in a panel on every article linking to its answers.
 - **Jump list.** An anchored outline of entry titles at the head of any list of three or more.
 - **Multiscript typography.** Arabic, Hebrew, Greek, Syriac, and Akkadian faces scoped by `unicode-range`. Font files are supplied by the site owner; see `assets/fonts/scripts/README.md`.
 - **Configurable colour.** All listicle colour, spacing, and sizing tokens are declared in `theme.json` under `settings.custom.listicle` and consumed as CSS custom properties. Two bundled style variations, Best of Islam and Best of Islam Night, recolour the list without editing stylesheets.
@@ -34,8 +35,8 @@ The identity is editorial and secular in its chrome, following the constraint th
 ## Installation
 
 1. Install and keep Twenty Twenty-Five active in the themes directory.
-2. Upload `bestofislam-1.29.1.zip` under Appearance, Themes, Add New.
-3. Activate. On first activation the theme creates its votes table, flushes rewrite rules, and populates the site: the section taxonomy, a front page, a Reflections index, the About, FAQ, Contact, Sources and Privacy pages, the primary menu, and sixteen published articles.
+2. Upload `bestofislam-1.45.0.zip` under Appearance, Themes, Add New.
+3. Activate. On first activation the theme creates its votes table, flushes rewrite rules, and populates the site: the section taxonomy, a front page, a Reflections index, the About, FAQ, Contact, Sources and Privacy pages, the primary menu, and twenty-nine published articles.
 4. Configure under Appearance, Listicles. The Content tab re-runs population if anything is missing.
 
 ## Authoring a listicle
@@ -49,14 +50,14 @@ bestofislam/
 ├── style.css               Theme header only
 ├── functions.php           Bootstrap and conditional asset loading
 ├── theme.json              Custom listicle tokens, template registration
-├── inc/                    taxonomy, blocks, schema, voting, settings, setup, appearance, reflections, search, sections, seo, features, contact
+├── inc/                    taxonomy, blocks, schema, voting, settings, setup, appearance, reflections, search, sections, seo, features, contact, front, images, questions, reading, icons
 ├── blocks/                 Block definitions and editor scripts
 ├── templates/              Block templates: front-page, home, single, single-listicle, page, archive, tag, taxonomy, search, 404
 ├── styles/                 Style variation
 ├── patterns/               Starter pattern
 ├── assets/css/             Stylesheets
 ├── assets/fonts/           Bundled variable fonts
-├── assets/images/          Logo mark, solid and inheriting
+├── assets/images/          Logo mark, and featured/ with 23 Commons images
 ├── assets/js/              Scripts
 └── docs/                   SSOT, upgrading notes
 ```

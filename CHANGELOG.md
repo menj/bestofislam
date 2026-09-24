@@ -4,6 +4,252 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.45.0] - 2026-09-23
+
+### Added
+
+- The Muslim World: How an ex-Muslim blog persuades: 5 findings from a Malaysian study. Drawn from Ab Rashid and Mohamad's 2019 Springer study of a Malaysian ex-Muslim's blog: the identities she built, her storytelling, her rhetoric, and a count of her readers' comments (40 percent supportive, 25 percent hostile, 8 percent advising). The piece closes on the study's finding for Muslim readers: insults added to her appeal, and reasoned, respectful replies were the ones the researchers judged could reach her. The blogger is not named; the study, which names her with her consent, is cited in full. Every claim was checked against the book, with page references where the book gives them.
+- Public-domain image: a mosque at Kuala Lumpur around 1900, by G. R. Lambert and Co.
+- Placed at the end of the reading order, after Indonesia. A question: "Why do ex-Muslim stories persuade so many readers online?" The theme ships 29 articles and 26 questions.
+
+## [1.44.0] - 2026-09-23
+
+### Added
+
+- Science: 6 Muslim astronomers whose names are on the Moon. Albategnius, Azophi, Arzachel, Alhazen, Al-Biruni and Almanon, each with the work that earned the name. Crater names and their 1935 adoption by the International Astronomical Union checked against the crater records; the astronomers' achievements checked against the scholarly literature. Illustrated with NASA's Lunar Reconnaissance Orbiter mosaic of the near side.
+- The Muslim World: 6 facts about Indonesia, the country with the most Muslims. Population from Pew and the 2025 civil registry, the constitution's recognition of six religions, provincial variation from Aceh to Bali, Istiqlal Mosque facing Jakarta Cathedral, and the two great Muslim organisations. Illustrated with a 19th-century photograph of a mosque in the Minangkabau highlands of Sumatra (Rijksmuseum, CC0).
+- Both are placed in the reading order: the Moon piece closes Part 6, and Indonesia closes Part 7 and so the whole order.
+- A question: "Is Islam a Middle Eastern religion?" The theme ships 28 articles and 25 questions.
+
+## [1.43.0] - 2026-09-23
+
+### Changed
+
+- Running text is justified throughout: article paragraphs and lists, excerpts, section descriptions, answers, the mission statement, page content and the footer notice. Hyphenation accompanies it, so narrow columns do not open wide gaps between words. Justification is left off headings, navigation, buttons, one-line labels and anything deliberately centred or right-aligned, where it would have no effect or would undo the alignment. Right-to-left scripts are never hyphenated.
+- Line spacing is 1.5 for all reading text, set in theme.json and the default style variation (previously 1.65), with the hero lead, the claim quotations and the mission statement brought down to match. Headings keep 1.15. Quranic Arabic keeps its taller spacing for its vowel marks.
+- The rules sit in `assets/css/typography.css`, loaded after every other stylesheet so they hold everywhere, with a matching editor stylesheet so text appears justified while writing.
+
+## [1.42.0] - 2026-09-23
+
+### Added
+
+- A secondary navigation bar along the bottom of the footer: About, FAQ, Contact, Sources and standards, Privacy and Site map in one horizontal row, separated by thin dots, above the copyright notice. It wraps on narrow screens and is labelled "Site" for screen readers.
+
+### Changed
+
+- The footer's third column is renamed "Read" and keeps the reading links: Questions answered, Start here, and Reflections, which stays hidden until a reflection exists. The standing pages moved to the new bar, so no footer link appears twice.
+
+## [1.41.1] - 2026-09-23
+
+### Fixed
+
+- The footer icon row is protected against general list and layout rules. Its selector now carries the element, it resets its own list items, and it keeps its row layout even when another stylesheet lays out footer lists as columns.
+
+## [1.41.0] - 2026-09-23
+
+### Added
+
+- The Minimalist Social & Platform Icons Pack (GPL), bundled in `assets/icons/`: 43 single-colour 24x24 SVGs. LinkedIn and Scribd are left out, since their Font Awesome origin under CC BY 4.0 would require a visible credit. RSS and email icons were drawn to the pack's grid, since it has neither. `assets/icons/LICENSE.txt` records all of this.
+- `boi_icon()` inlines any icon filled with currentColor, so icons take the colour of the text around them in either appearance, at no cost in requests.
+- A row of icons in the footer, beneath the tagline: RSS, then every network with a link set.
+
+### Changed
+
+- Share links on articles are round icon buttons, each named for screen readers ("Share on X"), and invert on hover.
+- Follow links on the front page carry their network's icon beside the name.
+- The Follow settings on the Display tab cover ten networks, up from four: YouTube, X, Facebook, Instagram, TikTok, Threads, Bluesky, Mastodon, Telegram and WhatsApp. Mastodon links carry rel="me", so a Mastodon profile can verify the site.
+
+## [1.40.0] - 2026-09-23
+
+### Added
+
+- A background image in the front-page hero. By default it is the Birmingham Quran leaves from "Manuscript transmission": tested against five other images under the overlay, the script sits quietly and the headline stays legible. A navy overlay runs darkest behind the headline and lifts towards the card stack; over the image the hero text switches to light, and the cards stay white. Narrow screens get a smaller file and an even overlay, and the dark appearance deepens it.
+- A Hero background setting on the Display tab: the default, the newest article's image, any particular article's image, or none. With none, the hero returns to its light tint.
+- A small credit for the background in the hero's lower corner, drawn from the same record as the credit beneath the image on its article.
+
+## [1.39.0] - 2026-09-23
+
+### Removed
+
+- The newsletter. Its front-page band, its block, its two settings on the Display tab (form endpoint and field name) and its styles are gone. Any values saved for those settings are ignored.
+
+### Changed
+
+- The Follow links, which sat inside the newsletter band, now close the band above it, beneath the mission statement. The front page ends on that tint band, directly above the navy footer.
+
+## [1.38.2] - 2026-09-23
+
+### Fixed
+
+- The header search was hidden entirely at 781px and below, leaving tablets and phones with no way to search. It now stays, filling the space between the menu button and the appearance toggle, with a 16px input so iOS does not zoom on focus.
+- Search results no longer offer an "Everything / Lists / Reflections" row while the site has no reflections. The row repeated one result set twice and led to an empty page on the third chip. It returns by itself with the first published reflection, as the Reflections navigation link does. The section chips are unchanged.
+
+## [1.38.1] - 2026-09-23
+
+### Changed
+
+- The footer notice is now a dynamic block. It shows the current year and site name, states that articles may be quoted with attribution and a link (matching the FAQ, where the old line said content was "licensed"), notes that images are public domain and links to their credits, and ends with a Back to top link. Smooth scrolling honours the reader's reduced-motion setting.
+
+## [1.38.0] - 2026-09-23
+
+### Added
+
+- Comparative Religion: Written in Peter's name: 5 things a Catholic Bible says about 2 Peter. Drawn from the introduction to 2 Peter in the Bible the United States Conference of Catholic Bishops publishes online: wide scholarly agreement that the letter is pseudonymous, a probable date in the second century, dependence on Jude, and centuries of hesitation over its place in the canon. Every verse the introduction relies on was checked against the text. The piece answers the charge that Muslims hold hadith and gospels to different standards.
+- Public-domain image: Papyrus 72, the leaf where 1 Peter ends and 2 Peter begins.
+- Placed in the reading order in Part 4, between the manuscript comparison and Uthman's copies.
+- A featured question: "Why trust hadith written down after the Prophet, when Muslims question the gospels?" The theme ships 26 articles and 24 questions.
+
+## [1.37.0] - 2026-09-23
+
+### Changed
+
+- The house rule of no contractions in published prose now holds across the site. Every contraction in all 24 articles, the question list and the seeded pages is expanded, 250 in all, with each ambiguous case resolved by hand ("she had done", "she would be"). The articles had varied from 2 contractions to 28, so the voice is now even from the first piece to the last.
+- Ten contrastive constructions ("It is not a list of rules. It is a curriculum.") rewritten so that the positive claim stands alone. Most sat in the earliest articles, written before the check existed.
+
+### Verified
+
+- Every scripture reference on the site, 69 in all, checked against the text: 47 Quran references against Sahih International, 22 Bible references against the World English Bible. Every one matches the claim it supports.
+- The qibla change at sixteen or seventeen months: Sahih al-Bukhari 4486, now footnoted.
+- The al-Zutt narration: Musnad Ahmad 3788, narrated from Ibn Masud. The article now adds that Ibn Masud himself, in Sahih Muslim 450, says no companion was with the Prophet that night, and that the Musnad's editors grade related narrations as weak.
+- The Ezra verse: the tradition naming Sallam ibn Mishkam of Medina, and 4 Ezra 14:9, both now footnoted. One unverifiable claim, that no early source records the Jews of Medina objecting, was replaced with a verified one: F. E. Peters's observation that the Quran is very nearly the only source for what Arabian Jews believed. The Ezra answer in the question list was aligned to match.
+
+### Added
+
+- Science: 6 words science still uses that came from Arabic. Algebra, algorithm, zenith, azimuth, nadir and alcohol, with etymologies checked against the Online Etymology Dictionary. Illustrated with a page from the oldest surviving copy of al-Khwarizmi's algebra, Bodleian MS. Huntington 214. Placed in the reading order after the instruments piece. The theme ships 25 articles.
+
+## [1.36.1] - 2026-09-23
+
+### Fixed
+
+- Featured images are attached three at a time, one batch per page load, until all are done. Loading all 24 in a single request, with WordPress generating resized copies of each, could exceed a shared host's time limit and show the first visitor after an update an error page. Progress is saved after every image, and a short lock keeps two simultaneous visitors from loading the same image twice.
+
+## [1.36.0] - 2026-09-23
+
+A pass over the site as a reader meets it.
+
+### Added
+
+- A reading order: all 24 articles as one path in seven parts, from what Islam teaches, through reason, the Bible and the Quran, transmission, the Prophet and history, to the Muslim world today. It lives in `inc/reading.php`.
+- A Read next card at the foot of every article, naming the next piece and its part. The last article points to the questions answered on the front page.
+
+### Changed
+
+- Seeded articles no longer share one install timestamp, which had left the featured lead, the Latest grid and the archive in an arbitrary order. Their dates now follow the reading order, one day apart. Articles the owner has edited keep their dates, and the dates are set once per revision of the order.
+- The hero shows the opening entries of the first article in the reading order.
+- Start here links each step to the first article of its part and names it, where it previously sent readers to section archives.
+- Start here moves up to sit directly beneath the featured piece. Band backgrounds are rebalanced so that tint and white alternate down the page.
+- The Reflections link is hidden while there are no reflections to show, so the first item in the navigation no longer leads to an empty page. It returns with the first published reflection.
+- The Latest band's button now reads "Browse every piece" and leads to the site map, where it previously led to the empty Reflections index.
+- One spelling of Uthman throughout. Titles of reference works in the Haman and al-Zutt articles moved from the body into the notes.
+
+## [1.35.1] - 2026-09-23
+
+### Changed
+
+- The Questions answered page is removed. It repeated what the front page and the article panels already did. The front-page band now carries every question: the featured set first, then the rest grouped by theme behind a single "Show more questions" disclosure.
+- Every question on the front page carries its own anchor. The panel at the head of each article links each question straight to its answer, and a small deferred script opens the answer, and the disclosure around it when needed, on arrival.
+- FAQPage structured data now describes the front page, where the answers are.
+- The footer link "Questions answered" points to the front-page band.
+
+### Removed
+
+- The Questions answered page seeded in 1.34.0 is moved to the bin on update, while it still holds the content the theme wrote. A page the owner has edited is left alone, and a binned page can be restored.
+
+## [1.35.0] - 2026-09-23
+
+### Added
+
+- The Muslim World: Islam is the world's fastest-growing religion: 6 figures from the latest data. Headline figures come from Pew's 2025 measurement of 2010 to 2020, since the 2015 and 2017 projections supplied carry Pew's own notice that their baselines have been superseded. The projections are used for the demographic mechanism and for the forecast to 2060, labelled as a forecast. Retention figures come from Pew's 2025 switching study: 99 percent of those raised Muslim remain Muslim. The piece closes by stating that growth proves nothing about truth.
+- Public-domain image: Eid al-Fitr prayer at the South Plaza of the National Parliament, Dhaka, 2016.
+- A Questions answered entry, featured on the front page: "Is Islam really the fastest-growing religion?"
+- The theme ships 24 articles and 23 questions.
+
+## [1.34.0] - 2026-09-23
+
+### Added
+
+- Questions answered: a single list of 22 questions put to Muslims, grouped under six themes, each with a short answer and the article that argues it in full. Questions are phrased the way they are asked and attributed to no one. The list lives in `inc/questions.php` and feeds three places, so an answer edited once changes everywhere:
+  - a Questions answered page, seeded on update, with a jump list of themes, an anchor on every question, and FAQPage structured data;
+  - the front-page accordion, which now shows the featured questions and links to the full page;
+  - a panel at the head of each article naming the questions it answers.
+- Questions answered is linked from the footer and from the front-page band. The FAQ page, which concerns the site itself, now points readers with questions about Islam to it.
+
+### Changed
+
+- The front-page band reads "The questions most often put to Muslims".
+- The objection list formerly in `inc/front.php` is replaced by the shared question list. An item whose answering article is unpublished is still never shown.
+
+### Removed
+
+- The replies addressed to an individual commenter. Their substance now lives in the shared question list, and a Markdown export of that list serves for replies off the site.
+
+## [1.33.0] - 2026-09-23
+
+### Changed
+
+- "Uthman's copies" rewritten to lead with the manuscript evidence. It now opens with the Birmingham leaves, radiocarbon dated to 568 to 645, followed by the Samarkand codex, presented as the copy tradition has attributed to Uthman for centuries, with its contested dating stated as it stands. The Codex Parisino-Petropolitanus, the oral chain and the account in Bukhari 4987 follow.
+- The article's excerpt, its front-page objection, and the two YouTube replies that discussed Uthman's copies updated to match.
+
+### Added
+
+- Seeded article bodies now refresh on theme updates while the owner has not edited them. Each body the theme writes is recorded as a hash; an article whose content no longer matches is treated as edited and left alone. Articles seeded before this release count as unedited only if never modified after publication.
+
+## [1.32.1] - 2026-09-23
+
+### Fixed
+
+- The footer showed the wordmark without the mark. The mark now sits beside it, sized to the smaller footer title and fixed to white on the navy band.
+
+## [1.32.0] - 2026-09-23
+
+### Added
+
+- Seven articles drawn from objections raised in YouTube comments, each checked against the writing rules:
+  - Comparative Religion: Where is the Injil? 5 answers to the question critics ask most; Paul and the Law: 6 verses that sit badly with Matthew 5:17; Ezra and Mary in the Quran: 5 points on two contested verses.
+  - History: Uthman's copies: 5 facts about the Quran's earliest manuscripts; Jerusalem, then Mecca: 5 facts about the change of qibla.
+  - Belief & Practices: Why five prayers? 5 answers on what the Quran says and what it leaves to the Prophet.
+  - Faith & Reason: Who saw Gabriel? 5 answers on witnesses to revelation.
+- Seven public-domain images from Wikimedia Commons, licence confirmed from each file's metadata, none depicting a prophet.
+- Four further objections in the front-page accordion, each linking to its answering piece. The accordion now holds twelve.
+- The theme ships 23 articles.
+
+## [1.31.1] - 2026-09-23
+
+### Changed
+
+- The site no longer describes itself as apologetics. The front-page label reads "One argument at a time", and the About page describes the editor as having written on Islam and Christianity, without the label.
+- The About page's closing paragraph is rewritten without a contrastive construction, and its heading reads "What it is for".
+- The About page now refreshes on theme updates while unedited, alongside the Sources and Site map pages.
+
+## [1.31.0] - 2026-09-20
+
+### Added
+
+- Featured images for all 16 seeded articles, drawn from Wikimedia Commons. Each file was checked against its own Commons licence metadata before selection: 11 public domain, 5 CC0. None depicts a prophet; the pieces on Jesus, Abraham, Moses and Muhammad are illustrated with manuscripts, places and objects instead. Files are bundled in `assets/images/featured/` at a longest side of 1,400 pixels.
+- On update, each image is sideloaded into the media library, given descriptive alt text as the Search Engine Optimization Starter Guide asks, and set as its article's featured image. An article that already has a featured image, the owner's or ours, is never touched.
+- A credit line beneath every featured image, naming the author and licence and linking to the Commons file page.
+- An Images section on the Sources and standards page listing every credit in full.
+- Standing pages the theme seeds are now updated on theme updates while the owner has not edited them. A page the owner has changed is left alone.
+- The theme screenshot now shows the real images.
+
+## [1.30.0] - 2026-09-20
+
+### Changed
+
+- Front page rebuilt as a sequence of full-bleed bands in the manner of the Abrahamic theme: each band spans the viewport, alternates white, tint and dark, and opens with a centred label, title and subtitle. Content sits in the wide column inside each band. This rhythm replaces the single white ground that made the page read as sparse.
+
+### Added
+
+- Hero: headline, lead and two calls to action beside a stack of the newest listicle's first three entries, rendered as numbered cards that link straight to each entry.
+- Stats strip: pieces published, objections answered, sections, and no ads or trackers. Counts are live, cached for twelve hours and cleared on save.
+- Objections band: the eight objections most often put to Muslims as an accordion, each with a one-line answer and a link to the piece that argues it. An objection whose answering piece is unpublished is not shown, so no link can be dead.
+- Editor's picks, after Kolofon: three slugs set on the Display tab, or the three longest lists when none are set.
+- Start here: a three-step reading path from Belief & Practices through Faith & Reason to Comparative Religion.
+- Newsletter band, after Abrahamic: posts to the mailing-list endpoint set on the Display tab, or offers the RSS feed when none is set.
+- HTML site map page, as the Search Engine Optimization Starter Guide recommends, listing every section with its pieces and every standing page. Linked from the footer.
+- Entries with an image alternate image and text sides on wide screens, after the Wuffes reference.
+- Print stylesheet, after Kolofon: articles print without chrome, black on white, with link targets shown.
+
 ## [1.29.1] - 2026-09-20
 
 ### Added

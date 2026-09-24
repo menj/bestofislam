@@ -1,0 +1,52 @@
+/**
+ * Print. An article should print as an article: no header band, no toggle,
+ * no share links, no navigation; black on white; links shown in full.
+ */
+@media print {
+	.boi-header,
+	.boi-footer,
+	.boi-share,
+	.boi-related,
+	.boi-author,
+	.boi-vote,
+	.boi-jump,
+	.boi-breadcrumbs,
+	.boi-appearance,
+	.wp-block-post-comments-form,
+	.wp-block-comments,
+	.boi-postnav {
+		display: none !important;
+	}
+
+	body,
+	.boi-entry,
+	.boi-entry__claim {
+		background: #fff !important;
+		color: #000 !important;
+		box-shadow: none !important;
+	}
+
+	.boi-entry {
+		border: 0 !important;
+		border-block-start: 1px solid #999 !important;
+		border-radius: 0 !important;
+		padding-inline: 0 !important;
+		break-inside: avoid;
+	}
+
+	.boi-entry__rank {
+		color: #000 !important;
+	}
+
+	.boi-entry__content a[href^="http"]::after {
+		content: " (" attr(href) ")";
+		font-size: 0.8em;
+		word-break: break-all;
+	}
+
+	h1,
+	h2,
+	h3 {
+		break-after: avoid;
+	}
+}

@@ -94,3 +94,73 @@ function boi_backfill_listicle_flags() {
 		}
 	}
 }
+
+/**
+ * Whether any published reflection exists: a post without the listicle flag.
+ * Cached until the next save.
+ *
+ * @return bool
+ */
+function boi_has_reflections() {
+	$cached = get_transient( 'boi_has_reflections' );
+
+	if ( false !== $cached ) {
+		return 'yes' === $cached;
+	}
+
+	$found = get_posts(
+		array(
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => 1,
+			'fields'         => 'ids',
+			'meta_query'     => array(
+				array(
+					'key'     => BOI_LISTICLE_META,
+					'compare' => 'NOT EXISTS',
+				),
+			),
+		)
+	);
+
+	set_transient( 'boi_has_reflections', empty( $found ) ? 'no' : 'yes', 12 * HOUR_IN_SECONDS );
+
+	return ! empty( $found );
+}
+
+/**
+ * Clears the reflections cache whenever a post changes.
+ *
+ * @return void
+ */
+function boi_flush_reflections_flag() {
+	delete_transient( 'boi_has_reflections' );
+}
+add_action( 'save_post_post', 'boi_flush_reflections_flag' );
+add_action( 'deleted_post', 'boi_flush_reflections_flag' );
+
+/**
+ * Hides navigation links to the Reflections index while it would be empty,
+ * so the first item a reader meets never leads to a blank page. The link
+ * returns by itself with the first published reflection.
+ *
+ * @param string $content Rendered block.
+ * @param array  $block   Parsed block.
+ * @return string
+ */
+function boi_hide_empty_reflections_link( $content, $block ) {
+	if ( 'core/navigation-link' !== $block['blockName'] || boi_has_reflections() ) {
+		return $content;
+	}
+
+	$page_id = (int) get_option( 'page_for_posts' );
+	$url     = isset( $block['attrs']['url'] ) ? $block['attrs']['url'] : '';
+	$id      = isset( $block['attrs']['id'] ) ? (int) $block['attrs']['id'] : 0;
+
+	$points_at_index = ( $page_id && $id === $page_id )
+		|| ( $page_id && untrailingslashit( $url ) === untrailingslashit( get_permalink( $page_id ) ) )
+		|| '/reflections' === untrailingslashit( wp_parse_url( $url, PHP_URL_PATH ) ?? '' );
+
+	return $points_at_index ? '' : $content;
+}
+add_filter( 'render_block', 'boi_hide_empty_reflections_link', 10, 2 );

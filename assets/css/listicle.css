@@ -76,7 +76,7 @@
 .boi-entry__claim-text {
 	margin: 0;
 	font-style: italic;
-	line-height: 1.55;
+	line-height: 1.5;
 }
 
 .boi-entry__claim-source {
@@ -716,8 +716,38 @@
 		gap: 1.25rem;
 	}
 
+	/* The search stays on small screens. It fills the space between the
+	   menu button and the appearance toggle, so the row never overflows. */
+	.boi-header .boi-header__tools {
+		inline-size: 100%;
+		gap: 0.5rem;
+	}
+
 	.boi-header .boi-header__search {
-		display: none;
+		display: block;
+		flex: 1 1 auto;
+		min-inline-size: 0;
+		order: 2;
+	}
+
+	.boi-header .boi-header__search .wp-block-search__inside-wrapper {
+		inline-size: 100%;
+	}
+
+	.boi-header .boi-header__search input {
+		min-inline-size: 0;
+		inline-size: 100%;
+		font-size: 16px; /* prevents iOS zoom on focus */
+	}
+
+	.boi-header .boi-header__tools .wp-block-navigation {
+		order: 1;
+		flex: 0 0 auto;
+	}
+
+	.boi-header .boi-header__tools .boi-appearance {
+		order: 3;
+		flex: 0 0 auto;
 	}
 }
 
@@ -765,7 +795,7 @@
 .boi-mission__text {
 	margin: 0 0 1.5rem;
 	font-size: 1.05rem;
-	line-height: 1.7;
+	line-height: 1.5;
 	opacity: 0.88;
 }
 
@@ -1093,4 +1123,380 @@ video {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+}
+
+/* Entries with an image alternate sides on wide screens, after the Wuffes
+   reference: image left, then right, then left. Text-only entries are
+   unaffected. */
+@media (min-width: 900px) {
+	.boi-listicle .boi-entry:has(.boi-entry__media) .boi-entry__body {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+		column-gap: 1.75rem;
+		align-items: start;
+	}
+
+	.boi-listicle .boi-entry:has(.boi-entry__media) .boi-entry__media {
+		grid-row: 1 / span 6;
+		margin: 0;
+	}
+
+	.boi-listicle .boi-entry:has(.boi-entry__media):nth-child(even of .boi-entry) .boi-entry__body {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	}
+
+	.boi-listicle .boi-entry:has(.boi-entry__media):nth-child(even of .boi-entry) .boi-entry__media {
+		grid-column: 2;
+	}
+}
+
+/* Image credit beneath a featured image, and the full credits list. */
+.boi-credit {
+	margin: 0.5rem auto 0 !important;
+	max-inline-size: var(--wp--style--global--wide-size, 76rem);
+	font-size: 0.75rem;
+	color: var(--wp--preset--color--accent-5, inherit);
+	text-align: end;
+}
+
+.boi-credit a {
+	color: inherit;
+}
+
+.boi-credits {
+	display: grid;
+	gap: 0.5rem;
+	padding-inline-start: 1.1rem;
+	font-size: 0.9rem;
+}
+
+/* Featured images on articles keep a consistent frame. */
+.single .wp-block-post-featured-image img {
+	max-block-size: 34rem;
+	object-fit: cover;
+	inline-size: 100%;
+}
+
+/* Footer lockup: the mark sits beside the wordmark at a size matched to the
+   smaller footer title. Colours are fixed to white, since the footer band is
+   always navy. */
+.boi-brand--footer {
+	gap: 0.6rem;
+	margin-block-end: 0.5rem;
+}
+
+.boi-brand--footer .boi-brand__mark {
+	inline-size: 1.75rem;
+	block-size: 1.75rem;
+}
+
+.boi-brand--footer .boi-brand__name,
+.boi-brand--footer .boi-brand__name a {
+	font-size: 1.3rem;
+	line-height: 1;
+	margin: 0;
+}
+
+/* Questions answered page. */
+.boi-qnav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin: 0 0 2.5rem;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-qnav a {
+	display: inline-block;
+	padding: 0.35rem 0.85rem;
+	font-size: 0.88rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: inherit;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border: 1px solid var(--wp--preset--color--accent-6, currentColor);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+}
+
+.boi-qnav a:hover {
+	border-color: var(--wp--preset--color--accent-1, currentColor);
+}
+
+.boi-qgroup {
+	margin-block-end: 3rem;
+	scroll-margin-block-start: 5rem;
+}
+
+.boi-qgroup__title {
+	font-size: 1.4rem;
+	margin: 0 0 1rem;
+	padding-block-end: 0.5rem;
+	border-block-end: 1px solid var(--wp--preset--color--accent-6, currentColor);
+}
+
+.boi-objections--list {
+	grid-template-columns: 1fr;
+	max-inline-size: none;
+}
+
+.boi-objection {
+	scroll-margin-block-start: 5rem;
+}
+
+.boi-objection:target {
+	border-color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+/* The panel at the head of an article. */
+.boi-answers {
+	margin-block: 0 2rem;
+	padding: 1.1rem 1.25rem;
+	background: var(--wp--preset--color--accent-3, transparent);
+	border-inline-start: 3px solid var(--wp--preset--color--accent-2, #E8B33C);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-answers__label {
+	margin: 0 0 0.5rem;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-answers ul {
+	margin: 0 0 0.75rem;
+	padding-inline-start: 1.1rem;
+	display: grid;
+	gap: 0.3rem;
+	font-family: var(--wp--preset--font-family--platypi, inherit);
+	font-weight: 600;
+}
+
+.boi-answers__more {
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+/* Read next: the card at the foot of every article in the reading order. */
+.boi-next {
+	margin-block: 2.5rem 1.5rem;
+	padding: 1.4rem 1.5rem;
+	background: #0D2B4E;
+	color: #EAF2FB;
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+:root[data-theme="dark"] .boi-next {
+	background: #06182C;
+}
+
+.boi-next__label {
+	margin: 0 0 0.4rem;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-next__title {
+	display: block;
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #fff;
+	text-decoration: none;
+	text-wrap: balance;
+}
+
+.boi-next__title:hover {
+	text-decoration: underline;
+}
+
+.boi-next__title::after {
+	content: " \2192";
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-next__part {
+	margin: 0.5rem 0 0;
+	font-size: 0.82rem;
+	color: #9DB3C9;
+}
+
+/* Footer notice: the bottom line of every page. */
+.boi-notice {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.75rem 2rem;
+	inline-size: 100%;
+	font-size: 0.8rem;
+	color: #9DB3C9;
+}
+
+.boi-notice__text {
+	margin: 0;
+	max-inline-size: 48rem;
+}
+
+.boi-notice a {
+	color: #EAF2FB;
+}
+
+.boi-notice__top {
+	white-space: nowrap;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.boi-notice__top::after {
+	content: " \2191";
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.boi-notice {
+		flex-direction: column;
+	}
+}
+
+/* Icons from the Minimalist Social & Platform Icons Pack, inlined with
+   currentColor so they follow the surrounding text in either appearance. */
+.boi-icon {
+	display: block;
+	flex: 0 0 auto;
+	inline-size: 1.1em;
+	block-size: 1.1em;
+}
+
+/* Share: round icon buttons. */
+.boi-share {
+	align-items: center;
+}
+
+.boi-share__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: 2.5rem;
+	block-size: 2.5rem;
+	padding: 0 !important;
+	font-size: 1.05rem;
+	border-radius: 50% !important;
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.boi-share__link:hover,
+.boi-share__link:focus-visible {
+	background: var(--wp--preset--color--contrast, #0D2B4E);
+	border-color: var(--wp--preset--color--contrast, #0D2B4E);
+	color: var(--wp--preset--color--base, #fff);
+}
+
+/* Follow: pills with an icon and a name. */
+.boi-follow__link {
+	display: inline-flex !important;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.boi-follow__link .boi-icon {
+	inline-size: 1.05em;
+	block-size: 1.05em;
+}
+
+/* Footer: a row of plain icons beneath the tagline. The selector carries
+   the element and the list items are reset, so no general list or layout
+   rule from WordPress, a plugin or the parent theme can stack the icons. */
+ul.boi-social {
+	display: flex !important;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.35rem;
+	max-inline-size: none;
+	margin: 1rem 0 0 !important;
+	padding: 0;
+	list-style: none;
+}
+
+ul.boi-social > li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+ul.boi-social > li::marker {
+	content: none;
+}
+
+.boi-social__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: 2.25rem;
+	block-size: 2.25rem;
+	font-size: 1.05rem;
+	color: #EAF2FB;
+	border: 1px solid #2A4A70;
+	border-radius: 50%;
+	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.boi-social__link:hover,
+.boi-social__link:focus-visible {
+	background: #fff;
+	border-color: #fff;
+	color: #0D2B4E;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-share__link,
+	.boi-social__link {
+		transition: none;
+	}
+}
+
+/* Footer bar: the site's standing pages in one horizontal row, separated by
+   thin dots, above the notice. It wraps on narrow screens. */
+.boi-footer__bar .wp-block-navigation__container {
+	gap: 0.35rem 0;
+	row-gap: 0.35rem;
+}
+
+.boi-footer__bar .wp-block-navigation-item + .wp-block-navigation-item::before {
+	content: "\00B7";
+	margin-inline: 0.7rem;
+	color: #5C7A9C;
+}
+
+.boi-footer__bar .wp-block-navigation-item__content {
+	padding: 0;
+	text-decoration: none;
+}
+
+.boi-footer__bar .wp-block-navigation-item__content:hover,
+.boi-footer__bar .wp-block-navigation-item__content:focus-visible {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.boi-footer__bottom > .boi-notice {
+	inline-size: 100%;
 }

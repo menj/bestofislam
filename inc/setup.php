@@ -118,7 +118,7 @@ function boi_seed_listicles() {
 		array(
 			'slug'    => 'morality-without-god',
 			'title'   => __( 'Why morality is impossible without God: 4 fatal flaws in secular humanism', 'bestofislam' ),
-			'excerpt' => __( '4 places the secular account of morality gives way, each stated in the humanist\'s own terms before it\'s answered. Read on.', 'bestofislam' ),
+			'excerpt' => __( '4 places the secular account of morality gives way, each stated in the humanist\'s own terms before it is answered. Read on.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
@@ -168,6 +168,84 @@ function boi_seed_listicles() {
 			'title'   => __( '5 answers to the claim that Haman is a Quranic mistake', 'bestofislam' ),
 			'excerpt' => __( 'Orientalists say the Quran\'s Haman is borrowed from Esther, 1,000 years too early. 5 answers, including the Egyptian evidence.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'where-is-the-injil',
+			'title'   => __( 'Where is the Injil? 5 answers to the question critics ask most', 'bestofislam' ),
+			'excerpt' => __( 'Critics say: show us the Injil, or admit it never existed. 5 answers to what the question assumes. Read the case.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'paul-and-the-law',
+			'title'   => __( 'Paul and the Law: 6 verses that sit badly with Matthew 5:17', 'bestofislam' ),
+			'excerpt' => __( 'Did Paul abolish the Law, or only explain it? 6 of his own verses set beside Jesus in Matthew 5. Read them and judge.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'ezra-and-mary',
+			'title'   => __( 'Ezra and Mary in the Quran: 5 points on two contested verses', 'bestofislam' ),
+			'excerpt' => __( 'Critics say no Jews called Ezra son of God and no Christians put Mary in the Trinity. 5 points on both verses. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'uthman-copies',
+			'title'   => __( 'Uthman\'s copies: 5 facts about the Quran\'s earliest manuscripts', 'bestofislam' ),
+			'excerpt' => __( 'Where are Uthman\'s copies of the Quran? 5 facts on the earliest manuscripts, from Birmingham to Samarkand. Read them.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'qibla-change',
+			'title'   => __( 'Jerusalem, then Mecca: 5 facts about the change of qibla', 'bestofislam' ),
+			'excerpt' => __( 'The first Muslims prayed towards Jerusalem. Critics call that a problem. 5 facts about the change of qibla. Read them.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'why-five-prayers',
+			'title'   => __( 'Why five prayers? 5 answers on what the Quran says and what it leaves to the Prophet', 'bestofislam' ),
+			'excerpt' => __( 'Show me five daily prayers from the Quran alone, critics say. 5 answers on the Quran, the Prophet and practice. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'who-saw-gabriel',
+			'title'   => __( 'Who saw Gabriel? 5 answers on witnesses to revelation', 'bestofislam' ),
+			'excerpt' => __( 'Nobody was in the cave with Muhammad, critics say, so why believe it was Gabriel? 5 answers on witnesses. Read the case.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'fastest-growing-religion',
+			'title'   => __( 'Islam is the world\'s fastest-growing religion: 6 figures from the latest data', 'bestofislam' ),
+			'excerpt' => __( 'Islam grew faster than any other religion from 2010 to 2020. 6 figures from Pew\'s latest data, and what drives them. Read on.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
+		),
+		array(
+			'slug'    => 'arabic-words-science',
+			'title'   => __( '6 words science still uses that came from Arabic', 'bestofislam' ),
+			'excerpt' => __( 'Algebra, algorithm, zenith, azimuth, nadir, alcohol: 6 scientific words from Arabic, and how each crossed over. Read on.', 'bestofislam' ),
+			'topic'   => 'science',
+		),
+		array(
+			'slug'    => 'second-peter',
+			'title'   => __( 'Written in Peter\'s name: 5 things a Catholic Bible says about 2 Peter', 'bestofislam' ),
+			'excerpt' => __( 'The Catholic bishops\' own Bible says 2 Peter was likely written in Peter\'s name by a later author. 5 admissions. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'moon-craters',
+			'title'   => __( '6 Muslim astronomers whose names are on the Moon', 'bestofislam' ),
+			'excerpt' => __( 'Albategnius, Azophi, Arzachel: 6 lunar craters named for Muslim astronomers, and the work that earned each one. Read on.', 'bestofislam' ),
+			'topic'   => 'science',
+		),
+		array(
+			'slug'    => 'indonesia',
+			'title'   => __( '6 facts about Indonesia, the country with the most Muslims', 'bestofislam' ),
+			'excerpt' => __( 'Indonesia has more Muslims than any other country, and it is not an Islamic state. 6 facts about the nation. Read on.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
+		),
+		array(
+			'slug'    => 'ex-muslim-blog-study',
+			'title'   => __( 'How an ex-Muslim blog persuades: 5 findings from a Malaysian study', 'bestofislam' ),
+			'excerpt' => __( 'A Malaysian study analysed how an ex-Muslim blog won readers, and which replies failed. 5 findings for Muslims. Read on.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
 		),
 	);
 }
@@ -285,11 +363,11 @@ function boi_create_listicles( $topics ) {
 }
 
 /**
- * Creates the front page and the about page.
+ * Standing page definitions: title and content, keyed by role.
  *
- * @return array Map of key to post identifier.
+ * @return array
  */
-function boi_create_pages() {
+function boi_seed_pages() {
 	$p = function ( $text ) {
 		return "<!-- wp:paragraph -->\n<p>" . esc_html( $text ) . "</p>\n<!-- /wp:paragraph -->\n\n";
 	};
@@ -311,9 +389,9 @@ function boi_create_pages() {
 			'content' => $p( __( 'Best of Islam publishes ranked arguments on the questions that decide the matter: whether God exists, what Islam teaches, what its history was, and what its critics get wrong.', 'bestofislam' ) )
 				. $p( __( 'Each piece takes the same form. An objection is stated in its own terms, then answered from the Quran, the hadith, the historical record and the scholarly tradition, with the sources named. Where a critic has a point, the piece says so. Where the answer is contested among Muslim scholars, the piece says that too.', 'bestofislam' ) )
 				. $h( __( 'Who writes it', 'bestofislam' ) )
-				. $p( __( 'The site is written and edited by Mohd Elfie Nieshaem Juferi, a Muslim apologist who has written on Christian and Muslim polemic since the early 2000s. Longer treatments of many of the arguments here appear on Bismika Allahuma, the companion site.', 'bestofislam' ) )
-				. $h( __( 'What it is not', 'bestofislam' ) )
-				. $p( __( 'It is not a site for converting anyone. It is a site for arguing well. Readers who leave unconvinced but better informed about what Muslims think and why have got what the site is for.', 'bestofislam' ) ),
+				. $p( __( 'The site is written and edited by Mohd Elfie Nieshaem Juferi, who has written on Islam and Christianity since the early 2000s. Longer treatments of many of the arguments here appear on Bismika Allahuma, the companion site.', 'bestofislam' ) )
+				. $h( __( 'What it is for', 'bestofislam' ) )
+				. $p( __( 'The site exists to argue well. Readers who leave unconvinced, yet better informed about what Muslims think and why, have got what it is for.', 'bestofislam' ) ),
 		),
 		'faq'       => array(
 			'title'   => __( 'Frequently asked questions', 'bestofislam' ),
@@ -341,8 +419,15 @@ function boi_create_pages() {
 				. $p( __( 'The Quran by chapter and verse. Hadith by collection and, where it matters, by narrator and grading. Historical claims by the primary source where one exists and by a named modern historian where it does not. Statistics by the body that published them, with the year.', 'bestofislam' ) )
 				. $h( __( 'What gets conceded', 'bestofislam' ) )
 				. $p( __( 'Where a critic is right, the article says so. Where Muslim scholars disagree, the article names the disagreement. A site that concedes nothing cannot be trusted when it concedes nothing.', 'bestofislam' ) )
+				. $h( __( 'Images', 'bestofislam' ) )
+				. $p( __( 'Every image on the site is drawn from Wikimedia Commons and is in the public domain or dedicated under CC0. No image depicts a prophet. Each is credited beneath it, and in full here.', 'bestofislam' ) )
+				. "<!-- wp:bestofislam/image-credits /-->\n\n"
 				. $h( __( 'Corrections', 'bestofislam' ) )
 				. $p( __( 'Errors of fact are corrected in the article and noted at the foot of it. Errors of argument are answered, if at all, in a new piece.', 'bestofislam' ) ),
+		),
+		'sitemap'   => array(
+			'title'   => __( 'Site map', 'bestofislam' ),
+			'content' => $p( __( 'Every section and every piece on the site, in one place.', 'bestofislam' ) ) . "<!-- wp:bestofislam/html-sitemap /-->\n",
 		),
 		'privacy'   => array(
 			'title'   => __( 'Privacy', 'bestofislam' ),
@@ -355,6 +440,29 @@ function boi_create_pages() {
 				. $p( __( 'One setting, your choice of light or dark appearance, is kept in your browser and never sent anywhere. WordPress sets its own cookies if you log in or comment.', 'bestofislam' ) ),
 		),
 	);
+
+	return $pages;
+}
+
+/**
+ * Content the theme would seed for one standing page.
+ *
+ * @param string $key Page key.
+ * @return string
+ */
+function boi_seed_page_content( $key ) {
+	$pages = boi_seed_pages();
+
+	return isset( $pages[ $key ] ) ? (string) $pages[ $key ]['content'] : '';
+}
+
+/**
+ * Creates the front page and the about page.
+ *
+ * @return array Map of key to post identifier.
+ */
+function boi_create_pages() {
+	$pages = boi_seed_pages();
 
 	$map = array();
 
@@ -508,6 +616,19 @@ function boi_populate_content() {
 	boi_backfill_listicle_flags();
 	boi_migrate_seed( $topics );
 
+	if ( function_exists( 'boi_attach_featured_images' ) && ! get_transient( 'boi_images_lock' ) ) {
+		set_transient( 'boi_images_lock', 1, MINUTE_IN_SECONDS );
+		boi_attach_featured_images();
+		delete_transient( 'boi_images_lock' );
+	}
+
+	boi_migrate_pages( $pages );
+	boi_retire_questions_page();
+
+	if ( function_exists( 'boi_stagger_seed_dates' ) ) {
+		boi_stagger_seed_dates();
+	}
+
 	update_option( 'boi_content_populated', gmdate( 'c' ) );
 
 	return array(
@@ -616,6 +737,28 @@ function boi_migrate_seed( $topics ) {
 			$args['post_excerpt'] = $listicle['excerpt'];
 		}
 
+		// Refresh the body only while the owner has not edited it. An article
+		// the theme wrote carries a stored hash of what it wrote; one seeded
+		// before hashes existed counts as unedited if it was never modified
+		// after publication.
+		$fresh   = boi_load_article( $listicle['slug'] );
+		$hashes  = (array) get_option( 'boi_article_hashes', array() );
+		$current = md5( $post->post_content );
+		$slug    = $listicle['slug'];
+
+		$unedited = isset( $hashes[ $slug ] )
+			? $hashes[ $slug ] === $current
+			: $post->post_modified_gmt === $post->post_date_gmt;
+
+		if ( '' !== $fresh && $unedited && $fresh !== $post->post_content ) {
+			$args['post_content'] = $fresh;
+			$hashes[ $slug ]      = md5( $fresh );
+			update_option( 'boi_article_hashes', $hashes, false );
+		} elseif ( $unedited && ! isset( $hashes[ $slug ] ) ) {
+			$hashes[ $slug ] = $current;
+			update_option( 'boi_article_hashes', $hashes, false );
+		}
+
 		if ( isset( $topics[ $listicle['topic'] ] ) ) {
 			wp_set_object_terms( $post->ID, array( $topics[ $listicle['topic'] ] ), 'listicle-topic' );
 		}
@@ -625,4 +768,74 @@ function boi_migrate_seed( $topics ) {
 			wp_update_post( $args );
 		}
 	}
+}
+
+/**
+ * Brings the content of seeded standing pages up to date, but only while the
+ * owner has not edited them, so a customised page is never overwritten.
+ *
+ * @param array $pages Map of page key to post identifier.
+ * @return void
+ */
+function boi_migrate_pages( $pages ) {
+	$hashes = (array) get_option( 'boi_page_hashes', array() );
+
+	foreach ( array( 'about', 'faq', 'sources', 'sitemap' ) as $key ) {
+		if ( empty( $pages[ $key ] ) ) {
+			continue;
+		}
+
+		$post = get_post( $pages[ $key ] );
+
+		if ( ! $post ) {
+			continue;
+		}
+
+		$current = md5( $post->post_content );
+
+		// Unedited means the stored content still matches what the theme last wrote.
+		if ( isset( $hashes[ $key ] ) && $hashes[ $key ] !== $current ) {
+			continue;
+		}
+
+		$fresh = boi_seed_page_content( $key );
+
+		if ( '' !== $fresh && $fresh !== $post->post_content ) {
+			wp_update_post( array( 'ID' => $post->ID, 'post_content' => $fresh ) );
+			$current = md5( $fresh );
+		}
+
+		$hashes[ $key ] = $current;
+	}
+
+	update_option( 'boi_page_hashes', $hashes, false );
+}
+
+/**
+ * Removes the Questions answered page seeded in 1.34.0, now that the answers
+ * live on the front page. The page is moved to the bin, so it can be
+ * restored, and only while its content is still what the theme wrote.
+ *
+ * @return void
+ */
+function boi_retire_questions_page() {
+	$page = get_page_by_path( 'questions-answered', OBJECT, 'page' );
+
+	if ( ! $page || 'trash' === $page->post_status ) {
+		return;
+	}
+
+	if ( false === strpos( $page->post_content, '<!-- wp:bestofislam/questions /-->' ) ) {
+		return;
+	}
+
+	$hashes = (array) get_option( 'boi_page_hashes', array() );
+
+	if ( isset( $hashes['questions'] ) && md5( $page->post_content ) !== $hashes['questions'] ) {
+		return;
+	}
+
+	wp_trash_post( $page->ID );
+	unset( $hashes['questions'] );
+	update_option( 'boi_page_hashes', $hashes, false );
 }

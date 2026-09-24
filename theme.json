@@ -174,7 +174,7 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--ysabeau-office)",
-			"lineHeight": "1.65"
+			"lineHeight": "1.5"
 		},
 		"elements": {
 			"heading": {

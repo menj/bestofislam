@@ -306,6 +306,77 @@ not launched. The contact form is native: nonce, honeypot, a per-address rate
 limit, and `wp_mail()`. It stores nothing, which is what the Privacy page
 promises, and it means one fewer plugin to keep updated.
 
+### D29. The front page borrows the house rhythm from Abrahamic
+
+The front page is a run of full-bleed bands, each with one job and a centred
+head of label, title and subtitle, alternating white, tint and dark. The
+pattern is taken from the Abrahamic theme, where fifteen such bands give a
+long page room without monotony. Features borrowed from Kolofon, editor's
+picks, an HTML site map and a print stylesheet, sit alongside. Every module
+renders from live data and hides itself when it has nothing to show, so no
+band can advertise content that does not exist.
+
+### D30. Images come from Commons, are verified, and never depict a prophet
+
+Every bundled image is taken from Wikimedia Commons and accepted only when
+its own licence metadata reads public domain or CC0; a file is never assumed
+to be free. A second rule sits above the licence: no image depicts a prophet.
+Articles about Jesus, Abraham, Moses or Muhammad are illustrated by
+manuscripts, places and objects. Credit is shown beneath every image and
+collected on the Sources page, although neither licence requires it, because
+a site built on citing its sources should cite its pictures too.
+
+### D31. The site does not name itself as apologetics
+
+Public copy never labels the site, its editor or its sections as
+apologetics. The work speaks for itself: objections stated and answered.
+Articles may still describe a critic's argument as polemic, since that
+describes the opponent and says nothing about the site.
+
+### D32. Questions are answered once, anonymously, and linked both ways
+
+The site answers the questions its critics raise without naming anyone who
+raised them. A question is phrased as it is asked and answered in a few
+sentences, and every answer links to the article that argues it in full.
+The list in `inc/questions.php` is the only copy: the front-page band and
+each article's panel read from it. The answers live on the front page, with
+an anchor on every question; a separate page would only repeat them. An answer
+corrected there is corrected everywhere, including the Markdown export used
+for replies elsewhere.
+
+FAQPage markup is emitted on the front page because the answers are there. Google limits FAQ rich results to a narrow class of sites,
+so the markup should not be expected to produce them.
+
+### D33. The site has a reading order
+
+Twenty-four articles arranged by section alone read as islands. The reading
+order in `inc/reading.php` gives them a sequence in seven parts, and four
+things follow it: the Read next card, the Start here path, the hero, and the
+seeded publish dates. Sections remain the way to browse; the order is the way
+to read. A new article is placed in the order when it is added.
+
+### D34. No contractions in published prose
+
+The owner's house rule for published English prose excludes contractions,
+and it overrides the anti-AI voice skill, which otherwise permits them.
+Every article, answer and seeded page follows it. A new article is checked
+for contractions, contrastive negation, coordinated triads and anaphoric
+runs before it is seeded.
+
+### D35. No newsletter
+
+The site offers no mailing list. Readers follow by RSS or by the channels
+set on the Display tab, shown in the Follow links at the foot of the front
+page. The privacy position stays simple as a result: the site collects no
+email addresses except those a reader sends through the contact form.
+
+### D36. Justified running text at 1.5
+
+Running text is justified with hyphenation, at a line spacing of 1.5.
+Headings, navigation, labels and centred elements keep their alignment, and
+headings keep their tighter display leading. The rules live in a stylesheet
+loaded last, so a later component stylesheet cannot quietly undo them.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`, one file per concern, loaded

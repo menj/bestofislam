@@ -1,59 +1,223 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
-
-	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
-	<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--40)">
-		<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.2rem, 6vw, 3.6rem)"}}} -->
-		<h1 class="wp-block-heading" style="font-size:clamp(2.2rem, 6vw, 3.6rem)">Arguments, examined</h1>
-		<!-- /wp:heading -->
-		<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.15rem"},"color":{"text":"var:preset|color|accent-5"}}} -->
-		<p class="has-text-color" style="color:var(--wp--preset--color--accent-5);font-size:1.15rem">Ranked arguments on the questions that decide the matter.</p>
-		<!-- /wp:paragraph -->
-	</div>
-	<!-- /wp:group -->
-
-	<!-- wp:bestofislam/featured-lead /-->
-
-	<!-- wp:bestofislam/mission /-->
-
-	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
-	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--60)">
-		<!-- wp:heading {"level":2,"className":"boi-eyebrow"} -->
-		<h2 class="wp-block-heading boi-eyebrow">Latest</h2>
-		<!-- /wp:heading -->
-
-		<!-- wp:query {"query":{"perPage":6,"pages":1,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"align":"wide","layout":{"type":"default"}} -->
-		<div class="wp-block-query alignwide">
-			<!-- wp:post-template {"layout":{"type":"grid","minimumColumnWidth":"17rem"}} -->
-			<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"10px"}}} /-->
-			<!-- wp:post-terms {"term":"listicle-topic"} /-->
-			<!-- wp:post-title {"isLink":true,"level":3} /-->
-			<!-- wp:post-excerpt {"excerptLength":22} /-->
-			<!-- /wp:post-template -->
-			<!-- wp:query-no-results -->
-			<!-- wp:paragraph -->
-			<p>Nothing published yet.</p>
-			<!-- /wp:paragraph -->
-			<!-- /wp:query-no-results -->
+<!-- wp:group {"tagName":"main","className":"boi-front","layout":{"type":"constrained"}} -->
+<main class="wp-block-group boi-front">
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band boi-hero is-tint","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band boi-hero is-tint">
+		<!-- wp:group {"align":"wide","className":"boi-hero__grid","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide boi-hero__grid">
+			<!-- wp:group {"className":"boi-hero__copy","layout":{"type":"default"}} -->
+			<div class="wp-block-group boi-hero__copy">
+				<!-- wp:paragraph {"className":"boi-band__label"} -->
+				<p class="boi-band__label">One argument at a time</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:heading {"level":1,"className":"boi-hero__title"} -->
+				<h1 class="wp-block-heading boi-hero__title">Arguments, examined</h1>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"className":"boi-hero__lead"} -->
+				<p class="boi-hero__lead">Every objection to Islam stated in its own terms, numbered, and answered from the Quran, the hadith and the historical record.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:buttons {"className":"boi-hero__ctas"} -->
+				<div class="wp-block-buttons boi-hero__ctas">
+					<!-- wp:button {"className":"is-primary"} -->
+					<div class="wp-block-button is-primary"><a class="wp-block-button__link wp-element-button" href="#objections">See the questions</a></div>
+					<!-- /wp:button -->
+					<!-- wp:button {"className":"is-ghost"} -->
+					<div class="wp-block-button is-ghost"><a class="wp-block-button__link wp-element-button" href="#start-here">Where to start</a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:bestofislam/hero-stack /-->
 		</div>
-		<!-- /wp:query -->
-	</div>
+		<!-- /wp:group -->
+		<!-- wp:bestofislam/hero-credit /-->
+	</section>
 	<!-- /wp:group -->
 
-	<!-- wp:bestofislam/reflections-strip /-->
-
-	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
-	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--60)">
-		<!-- wp:heading {"level":2,"className":"boi-eyebrow"} -->
-		<h2 class="wp-block-heading boi-eyebrow">Browse by section</h2>
-		<!-- /wp:heading -->
-		<!-- wp:bestofislam/sections /-->
-	</div>
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band boi-band--slim is-dark","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band boi-band--slim is-dark">
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/stats /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
 	<!-- /wp:group -->
 
-	<!-- wp:bestofislam/follow /-->
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band boi-band--featured","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band boi-band--featured">
+		<!-- wp:group {"className":"boi-band__head","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group boi-band__head">
+			<!-- wp:paragraph {"className":"boi-band__label"} -->
+			<p class="boi-band__label">Featured</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:heading {"level":2,"className":"boi-band__title"} -->
+			<h2 class="wp-block-heading boi-band__title">The newest argument</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-band__sub"} -->
+			<p class="boi-band__sub">The latest piece, in full view.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/featured-lead /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"tagName":"section","align":"full","anchor":"start-here","className":"boi-band boi-band--path is-tint","layout":{"type":"constrained"}} -->
+	<section id="start-here" class="wp-block-group alignfull boi-band boi-band--path is-tint">
+		<!-- wp:group {"className":"boi-band__head","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group boi-band__head">
+			<!-- wp:paragraph {"className":"boi-band__label"} -->
+			<p class="boi-band__label">Start here</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:heading {"level":2,"className":"boi-band__title"} -->
+			<h2 class="wp-block-heading boi-band__title">A first visit, in three steps</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-band__sub"} -->
+			<p class="boi-band__sub">Belief first, then reason, then the Bible.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/start-here /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band">
+		<!-- wp:group {"className":"boi-band__head","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group boi-band__head">
+			<!-- wp:paragraph {"className":"boi-band__label"} -->
+			<p class="boi-band__label">Sections</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:heading {"level":2,"className":"boi-band__title"} -->
+			<h2 class="wp-block-heading boi-band__title">Browse by section</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-band__sub"} -->
+			<p class="boi-band__sub">Six standing sections, each built to hold dozens of pieces.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/sections /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"tagName":"section","align":"full","anchor":"objections","className":"boi-band boi-band--objections is-tint","layout":{"type":"constrained"}} -->
+	<section id="objections" class="wp-block-group alignfull boi-band boi-band--objections is-tint">
+		<!-- wp:group {"className":"boi-band__head","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group boi-band__head">
+			<!-- wp:paragraph {"className":"boi-band__label"} -->
+			<p class="boi-band__label">Questions answered</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:heading {"level":2,"className":"boi-band__title"} -->
+			<h2 class="wp-block-heading boi-band__title">The questions most often put to Muslims</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-band__sub"} -->
+			<p class="boi-band__sub">Open one to see the short answer, then read the full case.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/objections /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band">
+		<!-- wp:group {"className":"boi-band__head","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group boi-band__head">
+			<!-- wp:paragraph {"className":"boi-band__label"} -->
+			<p class="boi-band__label">Latest</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:heading {"level":2,"className":"boi-band__title"} -->
+			<h2 class="wp-block-heading boi-band__title">Recently published</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-band__sub"} -->
+			<p class="boi-band__sub">New lists as they are finished, newest first.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:query {"query":{"perPage":6,"pages":1,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"layout":{"type":"default"}} -->
+			<div class="wp-block-query">
+				<!-- wp:post-template {"layout":{"type":"grid","minimumColumnWidth":"17rem"}} -->
+				<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"10px"}}} /-->
+				<!-- wp:post-terms {"term":"listicle-topic"} /-->
+				<!-- wp:post-title {"isLink":true,"level":3} /-->
+				<!-- wp:post-excerpt {"excerptLength":22} /-->
+				<!-- /wp:post-template -->
+			</div>
+			<!-- /wp:query -->
+			<!-- wp:buttons {"className":"boi-band__more","layout":{"type":"flex","justifyContent":"center"}} -->
+			<div class="wp-block-buttons boi-band__more">
+				<!-- wp:button {"className":"is-ghost"} -->
+				<div class="wp-block-button is-ghost"><a class="wp-block-button__link wp-element-button" href="/site-map/">Browse every piece</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band is-dark","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band is-dark">
+		<!-- wp:group {"className":"boi-band__head","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group boi-band__head">
+			<!-- wp:paragraph {"className":"boi-band__label"} -->
+			<p class="boi-band__label">Editor's picks</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:heading {"level":2,"className":"boi-band__title"} -->
+			<h2 class="wp-block-heading boi-band__title">Where to begin if you read only three</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-band__sub"} -->
+			<p class="boi-band__sub">The pieces that carry the most weight.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/picks /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"tagName":"section","align":"full","className":"boi-band is-tint","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull boi-band is-tint">
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:bestofislam/reflections-strip /-->
+			<!-- wp:bestofislam/mission /-->
+			<!-- wp:bestofislam/follow /-->
+		</div>
+		<!-- /wp:group -->
+	</section>
+	<!-- /wp:group -->
+
 
 </main>
 <!-- /wp:group -->

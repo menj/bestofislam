@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.29.1' );
+define( 'BOI_VERSION', '1.45.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -22,8 +22,13 @@ require_once BOI_DIR . '/inc/reflections.php';
 require_once BOI_DIR . '/inc/search.php';
 require_once BOI_DIR . '/inc/sections.php';
 require_once BOI_DIR . '/inc/seo.php';
+require_once BOI_DIR . '/inc/icons.php';
 require_once BOI_DIR . '/inc/features.php';
 require_once BOI_DIR . '/inc/contact.php';
+require_once BOI_DIR . '/inc/front.php';
+require_once BOI_DIR . '/inc/images.php';
+require_once BOI_DIR . '/inc/questions.php';
+require_once BOI_DIR . '/inc/reading.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.
@@ -46,6 +51,31 @@ function boi_enqueue_assets() {
 		BOI_URI . '/assets/css/navigation.css',
 		array(),
 		BOI_VERSION
+	);
+
+	wp_enqueue_style(
+		'boi-front',
+		BOI_URI . '/assets/css/front.css',
+		array( 'boi-navigation' ),
+		BOI_VERSION
+	);
+
+	if ( is_front_page() ) {
+		wp_enqueue_script(
+			'boi-questions',
+			BOI_URI . '/assets/js/questions.js',
+			array(),
+			BOI_VERSION,
+			array( 'in_footer' => true, 'strategy' => 'defer' )
+		);
+	}
+
+	wp_enqueue_style(
+		'boi-print',
+		BOI_URI . '/assets/css/print.css',
+		array(),
+		BOI_VERSION,
+		'print'
 	);
 
 	wp_enqueue_script(
@@ -132,7 +162,7 @@ add_action( 'wp_enqueue_scripts', 'boi_enqueue_assets' );
  * @return void
  */
 function boi_editor_style() {
-	add_editor_style( array( 'assets/css/scripts.css', 'assets/css/theme-toggle.css', 'assets/css/navigation.css', 'assets/css/editor-listicle.css' ) );
+	add_editor_style( array( 'assets/css/scripts.css', 'assets/css/theme-toggle.css', 'assets/css/navigation.css', 'assets/css/editor-listicle.css', 'assets/css/editor-typography.css' ) );
 }
 add_action( 'after_setup_theme', 'boi_editor_style' );
 
@@ -176,3 +206,19 @@ function boi_maybe_install() {
 add_action( 'after_switch_theme', 'boi_maybe_install' );
 add_action( 'admin_init', 'boi_maybe_install' );
 add_action( 'init', 'boi_maybe_install', 20 );
+
+/**
+ * Enqueues the typography rules last, after every other stylesheet, so that
+ * justified running text and 1.5 line spacing hold throughout.
+ *
+ * @return void
+ */
+function boi_enqueue_typography() {
+	wp_enqueue_style(
+		'boi-typography',
+		BOI_URI . '/assets/css/typography.css',
+		array(),
+		BOI_VERSION
+	);
+}
+add_action( 'wp_enqueue_scripts', 'boi_enqueue_typography', 100 );
