@@ -99,22 +99,35 @@ function boi_render_sections() {
 }
 
 /**
- * Supplies a branded placeholder when a post has no featured image.
+ * Fills an empty featured image.
  *
- * Grids with some images and some gaps look broken. The placeholder carries
- * the rank mark on the pale fill, so an unillustrated post keeps its shape
- * without pretending to have a photograph.
+ * First choice is the image bundled with the theme for a seeded article,
+ * which covers the time before, or instead of, its copy into the media
+ * library. Failing that, a branded placeholder keeps the grid's shape.
  *
- * @param string $html    Existing markup.
- * @param int    $post_id Post identifier.
+ * The placeholder is a span. Blocks set to link their image wrap this output
+ * in a link of their own, and a link inside a link is invalid HTML that
+ * browsers repair by moving the inner one out of its frame, over the card's
+ * title. The article being read shows no placeholder in its own hero slot.
+ *
+ * @param string       $html              Existing markup.
+ * @param int          $post_id           Post identifier.
+ * @param int          $post_thumbnail_id Attachment identifier, or 0.
+ * @param string|array $size              Requested size.
+ * @param string|array $attr              Requested attributes.
  * @return string
  */
-function boi_featured_image_fallback( $html, $post_id ) {
+function boi_featured_image_fallback( $html, $post_id, $post_thumbnail_id = 0, $size = '', $attr = array() ) {
 	if ( '' !== $html ) {
 		return $html;
 	}
 
-	// The post being read shows no placeholder in its own hero slot.
+	$bundled = function_exists( 'boi_bundled_image' ) ? boi_bundled_image( $post_id ) : null;
+
+	if ( $bundled ) {
+		return boi_bundled_image_html( $bundled, $attr );
+	}
+
 	if ( is_singular() && (int) get_queried_object_id() === (int) $post_id && ! is_front_page() ) {
 		return $html;
 	}
@@ -126,10 +139,6 @@ function boi_featured_image_fallback( $html, $post_id ) {
 		. '<line x1="30" y1="82" x2="60" y2="82" stroke="currentColor" stroke-width="10"/>'
 		. '</g></svg>';
 
-	return sprintf(
-		'<a class="boi-placeholder" href="%1$s" aria-hidden="true" tabindex="-1">%2$s</a>',
-		esc_url( get_permalink( $post_id ) ),
-		$svg
-	);
+	return '<span class="boi-placeholder" aria-hidden="true">' . $svg . '</span>';
 }
-add_filter( 'post_thumbnail_html', 'boi_featured_image_fallback', 10, 2 );
+add_filter( 'post_thumbnail_html', 'boi_featured_image_fallback', 10, 5 );

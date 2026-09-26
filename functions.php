@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.45.0' );
+define( 'BOI_VERSION', '1.55.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -29,6 +29,11 @@ require_once BOI_DIR . '/inc/front.php';
 require_once BOI_DIR . '/inc/images.php';
 require_once BOI_DIR . '/inc/questions.php';
 require_once BOI_DIR . '/inc/reading.php';
+require_once BOI_DIR . '/inc/structured-data.php';
+require_once BOI_DIR . '/inc/unlist.php';
+require_once BOI_DIR . '/inc/search-permalinks.php';
+require_once BOI_DIR . '/inc/login.php';
+require_once BOI_DIR . '/inc/login-screen.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.
@@ -69,6 +74,13 @@ function boi_enqueue_assets() {
 			array( 'in_footer' => true, 'strategy' => 'defer' )
 		);
 	}
+
+	wp_enqueue_style(
+		'boi-footer',
+		BOI_URI . '/assets/css/footer.css',
+		array(),
+		BOI_VERSION
+	);
 
 	wp_enqueue_style(
 		'boi-print',

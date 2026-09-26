@@ -78,6 +78,23 @@ function boi_meta_description() {
 		return '';
 	}
 
+	// The front page is a static page with no content of its own, so it gets
+	// the site's promise, within 130 characters and ending on a call to action.
+	if ( is_front_page() ) {
+		return __( 'Every objection to Islam stated in its own terms, numbered, and answered from the Quran, hadith and history. Start reading.', 'bestofislam' );
+	}
+
+	if ( is_author() ) {
+		$author = get_queried_object();
+		$bio    = $author ? get_the_author_meta( 'description', $author->ID ) : '';
+
+		if ( '' !== $bio ) {
+			return wp_trim_words( wp_strip_all_tags( $bio ), 22, '' );
+		}
+
+		return $author ? sprintf( /* translators: %s: author name. */ __( 'Articles by %s on Best of Islam: objections to Islam answered from the sources.', 'bestofislam' ), $author->display_name ) : '';
+	}
+
 	if ( is_singular() ) {
 		$post = get_post();
 
@@ -306,7 +323,7 @@ function boi_render_breadcrumbs() {
 		$node = array(
 			'@type'    => 'ListItem',
 			'position' => $i + 1,
-			'name'     => wp_strip_all_tags( $crumb['label'] ),
+			'name'     => boi_plain( $crumb['label'] ),
 		);
 
 		if ( ! $is_last && '' !== $crumb['url'] ) {
@@ -332,3 +349,59 @@ function boi_render_breadcrumbs() {
 		$json
 	);
 }
+
+/**
+ * Prints a canonical link on the indexable views WordPress core leaves
+ * without one: section archives, the Reflections index, author archives and
+ * their paginated pages. Core already prints one on single posts and pages.
+ * Search results are not indexed and get none.
+ *
+ * @return void
+ */
+function boi_canonical_link() {
+	if ( is_singular() || is_search() || is_404() || ! boi_should_emit_description() ) {
+		return;
+	}
+
+	$url = '';
+
+	if ( is_tax() || is_category() || is_tag() ) {
+		$term = get_queried_object();
+		$link = $term ? get_term_link( $term ) : '';
+		$url  = is_wp_error( $link ) ? '' : $link;
+	} elseif ( is_home() ) {
+		$page = (int) get_option( 'page_for_posts' );
+		$url  = $page ? get_permalink( $page ) : home_url( '/' );
+	} elseif ( is_author() ) {
+		$author = get_queried_object();
+		$url    = $author ? get_author_posts_url( $author->ID ) : '';
+	}
+
+	if ( '' === $url ) {
+		return;
+	}
+
+	$paged = (int) get_query_var( 'paged' );
+
+	if ( $paged > 1 ) {
+		$url = trailingslashit( $url ) . user_trailingslashit( 'page/' . $paged, 'paged' );
+	}
+
+	printf( "<link rel=\"canonical\" href=\"%s\" />\n", esc_url( $url ) );
+}
+add_action( 'wp_head', 'boi_canonical_link', 2 );
+
+/**
+ * Keeps WordPress's default category and tag archives out of the XML sitemap.
+ * The site organises its articles by section, so those archives hold nothing
+ * a reader would want to land on.
+ *
+ * @param array $taxonomies Taxonomy objects keyed by name.
+ * @return array
+ */
+function boi_sitemap_taxonomies( $taxonomies ) {
+	unset( $taxonomies['category'], $taxonomies['post_tag'] );
+
+	return $taxonomies;
+}
+add_filter( 'wp_sitemaps_taxonomies', 'boi_sitemap_taxonomies' );

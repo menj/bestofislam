@@ -46,7 +46,7 @@ function boi_render_hero_stack() {
 		foreach ( array_keys( boi_reading_positions() ) as $slug ) {
 			$candidate = get_page_by_path( $slug, OBJECT, 'post' );
 
-			if ( $candidate && 'publish' === $candidate->post_status ) {
+			if ( $candidate && 'publish' === $candidate->post_status && ! boi_is_unlisted( $candidate ) ) {
 				$post = $candidate;
 				break;
 			}
@@ -222,7 +222,7 @@ function boi_render_picks() {
 	foreach ( $slugs as $slug ) {
 		$post = get_page_by_path( $slug, OBJECT, 'post' );
 
-		if ( $post && 'publish' === $post->post_status ) {
+		if ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) {
 			$posts[] = $post;
 		}
 	}
@@ -300,7 +300,7 @@ function boi_render_start_here() {
 			foreach ( $order[ $i ]['slugs'] as $slug ) {
 				$post = get_page_by_path( $slug, OBJECT, 'post' );
 
-				if ( $post && 'publish' === $post->post_status ) {
+				if ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) {
 					$url   = get_permalink( $post );
 					$first = get_the_title( $post );
 					break;
@@ -384,45 +384,87 @@ function boi_render_html_sitemap() {
 }
 
 /**
- * The attachment used as the hero background, or 0 for none.
+ * The article whose image sits behind the hero, or null for none.
  *
  * The Display tab chooses the source: a named article's featured image, the
  * newest article's, or none. The default is the Birmingham Quran leaves from
  * "Manuscript transmission", chosen because the script sits quietly under the
  * overlay and keeps the headline legible.
  *
- * @return int
+ * @return WP_Post|null
  */
-function boi_hero_image_id() {
+function boi_hero_post() {
 	$options = boi_get_options();
 	$choice  = isset( $options['hero_image'] ) ? (string) $options['hero_image'] : '';
 
 	if ( 'none' === $choice ) {
-		return 0;
+		return null;
 	}
 
 	if ( 'newest' === $choice ) {
-		$posts = get_posts(
-			array(
-				'post_type'      => 'post',
-				'posts_per_page' => 1,
-				'meta_key'       => '_thumbnail_id', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_query_meta_key
-			)
-		);
+		$posts = get_posts( array( 'post_type' => 'post', 'posts_per_page' => 1 ) );
 
-		return $posts ? (int) get_post_thumbnail_id( $posts[0] ) : 0;
+		return $posts ? $posts[0] : null;
 	}
 
-	$slug = '' !== $choice ? $choice : 'manuscript-transmission';
-	$post = get_page_by_path( $slug, OBJECT, 'post' );
+	$post = get_page_by_path( '' !== $choice ? $choice : 'manuscript-transmission', OBJECT, 'post' );
 
-	return ( $post && has_post_thumbnail( $post ) ) ? (int) get_post_thumbnail_id( $post ) : 0;
+	return ( $post && 'publish' === $post->post_status ) ? $post : null;
+}
+
+/**
+ * The hero background: image URLs for wide and narrow screens, and a credit.
+ * Uses the attached featured image when there is one, and the image bundled
+ * with the theme when there is not yet.
+ *
+ * @return array|null Array( large, small, artist, licence, source ), or null.
+ */
+function boi_hero_image() {
+	static $hero = false;
+
+	if ( false !== $hero ) {
+		return $hero;
+	}
+
+	$hero = null;
+	$post = boi_hero_post();
+
+	if ( ! $post ) {
+		return $hero;
+	}
+
+	$id = (int) get_post_thumbnail_id( $post );
+
+	if ( $id && wp_get_attachment_image_url( $id, 'full' ) ) {
+		$credit = get_post_meta( $id, '_boi_credit', true );
+		$hero   = array(
+			'large'   => wp_get_attachment_image_url( $id, 'full' ),
+			'small'   => wp_get_attachment_image_url( $id, 'large' ),
+			'artist'  => is_array( $credit ) && ! empty( $credit['artist'] ) ? $credit['artist'] : '',
+			'licence' => is_array( $credit ) && ! empty( $credit['licence'] ) ? $credit['licence'] : '',
+			'source'  => is_array( $credit ) && ! empty( $credit['source'] ) ? $credit['source'] : '',
+		);
+		return $hero;
+	}
+
+	$bundled = function_exists( 'boi_bundled_image' ) ? boi_bundled_image( $post ) : null;
+
+	if ( $bundled ) {
+		$hero = array(
+			'large'   => $bundled['url'],
+			'small'   => $bundled['url'],
+			'artist'  => $bundled['artist'],
+			'licence' => $bundled['licence'],
+			'source'  => $bundled['source'],
+		);
+	}
+
+	return $hero;
 }
 
 /**
  * Sets the hero background as a custom property on the front page, with a
- * smaller file for narrow screens, and marks the body so the hero can switch
- * to light text over the image.
+ * smaller file for narrow screens where one exists.
  *
  * @return void
  */
@@ -431,23 +473,16 @@ function boi_print_hero_background() {
 		return;
 	}
 
-	$id = boi_hero_image_id();
+	$hero = boi_hero_image();
 
-	if ( ! $id ) {
-		return;
-	}
-
-	$large = wp_get_attachment_image_url( $id, 'full' );
-	$small = wp_get_attachment_image_url( $id, 'large' );
-
-	if ( ! $large ) {
+	if ( ! $hero ) {
 		return;
 	}
 
 	printf(
 		"<style id=\"boi-hero-bg\">:root{--boi-hero-img:url(%1\$s)}@media (max-width:781px){:root{--boi-hero-img:url(%2\$s)}}</style>\n",
-		esc_url( $large ),
-		esc_url( $small ? $small : $large )
+		esc_url( $hero['large'] ),
+		esc_url( $hero['small'] ? $hero['small'] : $hero['large'] )
 	);
 }
 add_action( 'wp_head', 'boi_print_hero_background', 20 );
@@ -459,7 +494,7 @@ add_action( 'wp_head', 'boi_print_hero_background', 20 );
  * @return array
  */
 function boi_hero_body_class( $classes ) {
-	if ( is_front_page() && boi_hero_image_id() ) {
+	if ( is_front_page() && boi_hero_image() ) {
 		$classes[] = 'boi-has-hero-image';
 	}
 
@@ -484,22 +519,16 @@ add_action( 'init', 'boi_register_hero_credit' );
  * @return string
  */
 function boi_render_hero_credit() {
-	$id = boi_hero_image_id();
+	$hero = boi_hero_image();
 
-	if ( ! $id ) {
-		return '';
-	}
-
-	$credit = get_post_meta( $id, '_boi_credit', true );
-
-	if ( ! is_array( $credit ) || empty( $credit['source'] ) ) {
+	if ( ! $hero || '' === $hero['source'] ) {
 		return '';
 	}
 
 	return sprintf(
 		'<p class="boi-hero__credit">%1$s <a href="%2$s" rel="noopener">%3$s</a></p>',
-		esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Background: %1$s. %2$s,', 'bestofislam' ), $credit['artist'], $credit['licence'] ) ),
-		esc_url( $credit['source'] ),
+		esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Background: %1$s. %2$s,', 'bestofislam' ), $hero['artist'], $hero['licence'] ) ),
+		esc_url( $hero['source'] ),
 		esc_html__( 'Wikimedia Commons', 'bestofislam' )
 	);
 }

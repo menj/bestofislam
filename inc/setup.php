@@ -12,6 +12,44 @@
 
 defined( 'ABSPATH' ) || exit;
 
+
+/**
+ * Saves a new post. WordPress removes one level of backslashes from what it
+ * is given, so the data is slashed first; without this, escaped quotation
+ * marks inside block settings were stripped and the settings became
+ * unreadable.
+ *
+ * @param array $postarr Post data.
+ * @param bool  $wp_error Whether to return a WP_Error on failure.
+ * @return int|WP_Error
+ */
+function boi_insert_post( $postarr, $wp_error = false ) {
+	return wp_insert_post( wp_slash( $postarr ), $wp_error );
+}
+
+/**
+ * Updates a post, slashing the data for the same reason.
+ *
+ * @param array $postarr Post data, including ID.
+ * @return int|WP_Error
+ */
+function boi_update_post( $postarr ) {
+	return wp_update_post( wp_slash( $postarr ) );
+}
+
+/**
+ * A fingerprint of block content in the form WordPress stores it.
+ * WordPress rewrites the formatting of block settings on saving, so the
+ * content is passed through its own parser and serialiser before hashing,
+ * and a file and its saved copy produce the same fingerprint.
+ *
+ * @param string $content Block content.
+ * @return string
+ */
+function boi_content_fingerprint( $content ) {
+	return md5( serialize_blocks( parse_blocks( (string) $content ) ) );
+}
+
 /**
  * Returns the topic terms created on activation.
  *
@@ -247,6 +285,42 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'A Malaysian study analysed how an ex-Muslim blog won readers, and which replies failed. 5 findings for Muslims. Read on.', 'bestofislam' ),
 			'topic'   => 'the-muslim-world',
 		),
+		array(
+			'slug'    => 'kaaba-witnesses',
+			'title'   => __( 'The Kaaba before Islam: 5 ancient witnesses, weighed', 'bestofislam' ),
+			'excerpt' => __( 'Diodorus, Ptolemy, a new inscription, a Psalm and the Quran: 5 witnesses to the Kaaba, each weighed. Read on.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'dome-inscriptions',
+			'title'   => __( 'The Dome of the Rock: 6 things its inscriptions tell us about the Quran', 'bestofislam' ),
+			'excerpt' => __( 'Dated 72 AH, the Dome of the Rock quotes the Quran Muslims recite today. 6 things its inscriptions show. Read on.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'library-of-alexandria',
+			'title'   => __( 'Who burned the Library of Alexandria? 5 facts behind the story', 'bestofislam' ),
+			'excerpt' => __( 'Did the caliph ʿUmar order the Library of Alexandria burned? 5 facts from the sources behind the story. Read on.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'jizya',
+			'title'   => __( 'What was the jizya? 6 facts about the tax', 'bestofislam' ),
+			'excerpt' => __( 'What was the jizya tax? Who paid it, how much, why, and what its critics say. 6 facts from the sources. Read on.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'quran-preservation-reddit',
+			'title'   => __( 'Quran preservation on Reddit: 5 points from the scholars\' debate', 'bestofislam' ),
+			'excerpt' => __( 'Was the Quran preserved? What Reddit\'s academic Quran forum concluded, and where Muslims should agree. Read on.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'apostasy-in-islam',
+			'title'   => __( 'Apostasy in Islam: 6 facts about the death penalty debate', 'bestofislam' ),
+			'excerpt' => __( 'Does Islam demand death for leaving it? What the Quran, the hadith, the jurists and the surveys say. 6 facts. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
 	);
 }
 
@@ -337,13 +411,14 @@ function boi_create_listicles( $topics ) {
 			continue;
 		}
 
-		$post_id = wp_insert_post(
+		$post_id = boi_insert_post(
 			array(
 				'post_title'   => $listicle['title'],
 				'post_name'    => $listicle['slug'],
 				'post_excerpt' => $listicle['excerpt'],
 				'post_content' => $content,
 				'post_status'  => 'publish',
+				'post_author'  => boi_seed_author(),
 				'post_type'    => 'post',
 			)
 		);
@@ -474,11 +549,12 @@ function boi_create_pages() {
 			continue;
 		}
 
-		$post_id = wp_insert_post(
+		$post_id = boi_insert_post(
 			array(
 				'post_title'   => $page['title'],
 				'post_content' => (string) $page['content'],
 				'post_status'  => 'publish',
+				'post_author'  => boi_seed_author(),
 				'post_type'    => 'page',
 			)
 		);
@@ -538,12 +614,13 @@ function boi_create_navigation( $topics, $pages ) {
 		}
 	}
 
-	$id = wp_insert_post(
+	$id = boi_insert_post(
 		array(
 			'post_type'    => 'wp_navigation',
 			'post_title'   => __( 'Primary', 'bestofislam' ),
 			'post_name'    => 'primary',
 			'post_status'  => 'publish',
+			'post_author'  => boi_seed_author(),
 			'post_content' => $links,
 		)
 	);
@@ -624,6 +701,7 @@ function boi_populate_content() {
 
 	boi_migrate_pages( $pages );
 	boi_retire_questions_page();
+	boi_repair_seed_authors();
 
 	if ( function_exists( 'boi_stagger_seed_dates' ) ) {
 		boi_stagger_seed_dates();
@@ -737,26 +815,28 @@ function boi_migrate_seed( $topics ) {
 			$args['post_excerpt'] = $listicle['excerpt'];
 		}
 
-		// Refresh the body only while the owner has not edited it. An article
-		// the theme wrote carries a stored hash of what it wrote; one seeded
-		// before hashes existed counts as unedited if it was never modified
-		// after publication.
+		// Refresh the body only while the owner has not edited it. Four cases:
+		// already current; damaged by the old unslashed save and otherwise
+		// untouched, which is repaired; recorded as written by the theme,
+		// which is refreshed; anything else is left for the owner to decide
+		// from the Content tab.
 		$fresh   = boi_load_article( $listicle['slug'] );
 		$hashes  = (array) get_option( 'boi_article_hashes', array() );
-		$current = md5( $post->post_content );
 		$slug    = $listicle['slug'];
+		$current = boi_content_fingerprint( $post->post_content );
 
-		$unedited = isset( $hashes[ $slug ] )
-			? $hashes[ $slug ] === $current
-			: $post->post_modified_gmt === $post->post_date_gmt;
+		if ( '' !== $fresh ) {
+			$target  = boi_content_fingerprint( $fresh );
+			$damaged = boi_content_fingerprint( wp_unslash( $fresh ) );
 
-		if ( '' !== $fresh && $unedited && $fresh !== $post->post_content ) {
-			$args['post_content'] = $fresh;
-			$hashes[ $slug ]      = md5( $fresh );
-			update_option( 'boi_article_hashes', $hashes, false );
-		} elseif ( $unedited && ! isset( $hashes[ $slug ] ) ) {
-			$hashes[ $slug ] = $current;
-			update_option( 'boi_article_hashes', $hashes, false );
+			if ( $current === $target ) {
+				$hashes[ $slug ] = $current;
+				update_option( 'boi_article_hashes', $hashes, false );
+			} elseif ( ( isset( $hashes[ $slug ] ) && $hashes[ $slug ] === $current )
+				|| $current === $damaged
+				|| ( ! isset( $hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt ) ) {
+				$args['post_content'] = $fresh;
+			}
 		}
 
 		if ( isset( $topics[ $listicle['topic'] ] ) ) {
@@ -765,7 +845,14 @@ function boi_migrate_seed( $topics ) {
 
 		if ( $args ) {
 			$args['ID'] = $post->ID;
-			wp_update_post( $args );
+			boi_update_post( $args );
+
+			if ( isset( $args['post_content'] ) ) {
+				$saved           = get_post( $post->ID );
+				$hashes          = (array) get_option( 'boi_article_hashes', array() );
+				$hashes[ $slug ] = boi_content_fingerprint( $saved->post_content );
+				update_option( 'boi_article_hashes', $hashes, false );
+			}
 		}
 	}
 }
@@ -791,7 +878,7 @@ function boi_migrate_pages( $pages ) {
 			continue;
 		}
 
-		$current = md5( $post->post_content );
+		$current = boi_content_fingerprint( $post->post_content );
 
 		// Unedited means the stored content still matches what the theme last wrote.
 		if ( isset( $hashes[ $key ] ) && $hashes[ $key ] !== $current ) {
@@ -800,9 +887,9 @@ function boi_migrate_pages( $pages ) {
 
 		$fresh = boi_seed_page_content( $key );
 
-		if ( '' !== $fresh && $fresh !== $post->post_content ) {
-			wp_update_post( array( 'ID' => $post->ID, 'post_content' => $fresh ) );
-			$current = md5( $fresh );
+		if ( '' !== $fresh && boi_content_fingerprint( $fresh ) !== $current ) {
+			boi_update_post( array( 'ID' => $post->ID, 'post_content' => $fresh ) );
+			$current = boi_content_fingerprint( get_post( $post->ID )->post_content );
 		}
 
 		$hashes[ $key ] = $current;
@@ -831,7 +918,7 @@ function boi_retire_questions_page() {
 
 	$hashes = (array) get_option( 'boi_page_hashes', array() );
 
-	if ( isset( $hashes['questions'] ) && md5( $page->post_content ) !== $hashes['questions'] ) {
+	if ( isset( $hashes['questions'] ) && md5( $page->post_content ) !== $hashes['questions'] && boi_content_fingerprint( $page->post_content ) !== $hashes['questions'] ) {
 		return;
 	}
 
@@ -839,3 +926,150 @@ function boi_retire_questions_page() {
 	unset( $hashes['questions'] );
 	update_option( 'boi_page_hashes', $hashes, false );
 }
+
+/**
+ * The user seeded content belongs to: the site's first administrator.
+ *
+ * Population can run on a front-end request, where nobody is logged in, and
+ * WordPress assigns new posts to the current user. Without an explicit author
+ * the seeded articles belonged to no one: no author card, an empty author
+ * archive, and no author in the Article structured data.
+ *
+ * @return int User identifier, or 0 when the site has no administrator.
+ */
+function boi_seed_author() {
+	static $id = null;
+
+	if ( null === $id ) {
+		$admins = get_users(
+			array(
+				'role'    => 'administrator',
+				'orderby' => 'ID',
+				'order'   => 'ASC',
+				'number'  => 1,
+				'fields'  => 'ID',
+			)
+		);
+
+		$id = $admins ? (int) $admins[0] : 0;
+	}
+
+	return $id;
+}
+
+/**
+ * Gives an author to seeded articles and pages that were created without
+ * one. Posts that already have an author, including any the owner has
+ * reassigned, are left alone.
+ *
+ * @return int Number of posts repaired.
+ */
+function boi_repair_seed_authors() {
+	$author = boi_seed_author();
+
+	if ( ! $author ) {
+		return 0;
+	}
+
+	$slugs = array();
+
+	foreach ( boi_seed_listicles() as $listicle ) {
+		$slugs[] = $listicle['slug'];
+	}
+
+	$fixed = 0;
+
+	foreach ( get_posts(
+		array(
+			'post_type'      => array( 'post', 'page' ),
+			'post_status'    => 'any',
+			'posts_per_page' => -1,
+			'author'         => 0,
+		)
+	) as $post ) {
+		if ( 0 !== (int) $post->post_author ) {
+			continue;
+		}
+
+		if ( 'post' === $post->post_type && ! in_array( $post->post_name, $slugs, true ) ) {
+			continue;
+		}
+
+		boi_update_post(
+			array(
+				'ID'          => $post->ID,
+				'post_author' => $author,
+			)
+		);
+		++$fixed;
+	}
+
+	return $fixed;
+}
+
+/**
+ * Seeded articles whose text differs from this release's, and which the
+ * update therefore left alone because it cannot tell whether the owner
+ * edited them.
+ *
+ * @return WP_Post[] Keyed by slug.
+ */
+function boi_differing_articles() {
+	$out = array();
+
+	foreach ( boi_seed_listicles() as $listicle ) {
+		$post  = get_page_by_path( $listicle['slug'], OBJECT, 'post' );
+		$fresh = boi_load_article( $listicle['slug'] );
+
+		if ( ! $post || '' === $fresh ) {
+			continue;
+		}
+
+		if ( boi_content_fingerprint( $post->post_content ) !== boi_content_fingerprint( $fresh ) ) {
+			$out[ $listicle['slug'] ] = $post;
+		}
+	}
+
+	return $out;
+}
+
+/**
+ * Brings the articles the owner selects on the Content tab up to this
+ * release's text, replacing whatever they currently hold.
+ *
+ * @return void
+ */
+function boi_handle_refresh_articles() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( esc_html__( 'You are not allowed to do this.', 'bestofislam' ) );
+	}
+
+	check_admin_referer( 'boi_refresh_articles' );
+
+	$chosen  = isset( $_POST['boi_articles'] ) ? array_map( 'sanitize_title', (array) wp_unslash( $_POST['boi_articles'] ) ) : array();
+	$allowed = boi_differing_articles();
+	$hashes  = (array) get_option( 'boi_article_hashes', array() );
+	$done    = 0;
+
+	foreach ( $chosen as $slug ) {
+		if ( ! isset( $allowed[ $slug ] ) ) {
+			continue;
+		}
+
+		boi_update_post(
+			array(
+				'ID'           => $allowed[ $slug ]->ID,
+				'post_content' => boi_load_article( $slug ),
+			)
+		);
+
+		$hashes[ $slug ] = boi_content_fingerprint( get_post( $allowed[ $slug ]->ID )->post_content );
+		++$done;
+	}
+
+	update_option( 'boi_article_hashes', $hashes, false );
+
+	wp_safe_redirect( add_query_arg( array( 'page' => 'boi-settings', 'tab' => 'content', 'boi_refreshed' => $done ), admin_url( 'themes.php' ) ) );
+	exit;
+}
+add_action( 'admin_post_boi_refresh_articles', 'boi_handle_refresh_articles' );

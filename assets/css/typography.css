@@ -57,15 +57,32 @@ main li:not(:where(
 	.wp-block-post-template > li
 )),
 main .wp-block-post-excerpt__excerpt,
-main .boi-answers li,
-footer .boi-notice__text,
-footer .wp-block-group > p {
+main .boi-answers li {
 	text-align: justify;
 	text-justify: inter-word;
 	-webkit-hyphens: auto;
 	hyphens: auto;
 	hyphenate-limit-chars: 7 3 3;
 	text-wrap: pretty;
+}
+
+/* Short text is never justified: labels, the footer, and the blurbs on
+   cards, which run to a few lines in narrow columns, where justification
+   opens gaps and adds nothing. Articles and pages stay justified. */
+footer p,
+footer li,
+.boi-footer p,
+main .wp-block-post-template .wp-block-post-excerpt__excerpt,
+main .boi-sections__desc,
+main .boi-path__text,
+main .boi-path__first,
+main .boi-strip__item p,
+main .boi-related__item p,
+main .boi-lead p,
+main .boi-objection__answer p {
+	text-align: start;
+	-webkit-hyphens: manual;
+	hyphens: manual;
 }
 
 /* Right-to-left scripts: no hyphenation. */

@@ -210,14 +210,15 @@ Relevance ordering is applied through `posts_orderby` rather than by
 post-processing, so it survives pagination. Filters are read from the URL
 rather than held in session, so a filtered search is linkable.
 
-### D20. Three breakpoints, and the numeral degrades rather than disappears
+### D20. Breakpoints follow the content, and the numeral degrades rather than disappears
 
-Layout steps at 1024px, 781px and 600px. The lower two match the parent's own
-breakpoints so the child never disagrees with the header and footer around
-it; the 1024px step exists for the header cluster alone, which needs its own
-row before the tablet step arrives. Every module ships with rules at each
-step it needs; a module that relies on an auto-fit grid needs only padding
-and type adjustments, and gets them.
+The header steps at 1300px, 781px and 600px. Six section links, the search
+field and the toggle need about 1,200px beside the wordmark, so up to 1300px
+the header takes two rows. Between 600 and 781px the links keep one row that
+scrolls sideways, fading at the edge, because WordPress folds them into its
+menu button only below 600px. Below 600px the menu button, search and toggle
+share a row. Elsewhere, layout steps at 1024px, 781px and 600px; the lower two
+match the parent's breakpoints so the child never disagrees with it.
 
 The rank numeral is the element that decides the scale. At full width it is a
 display figure in the margin. On a tablet the column narrows and the figure
@@ -225,8 +226,9 @@ shrinks. On a phone the column is dropped and the figure becomes a label above
 the title, which keeps the reader's position visible inside a long entry. It is
 never removed, because the numeral is the format.
 
-Grids take a minimum column width rather than a column count, so they reflow
-instead of holding a fixed count into a narrow viewport.
+Grids take a minimum column width, not a column count, so they reflow instead
+of holding a fixed count into a narrow screen. Grid items align to the start
+of their row, so opening one question never stretches its neighbour.
 
 ### D21. The identity ships in the base, not in a variation
 
@@ -355,11 +357,13 @@ things follow it: the Read next card, the Start here path, the hero, and the
 seeded publish dates. Sections remain the way to browse; the order is the way
 to read. A new article is placed in the order when it is added.
 
-### D34. No contractions in published prose
+### D34. No contractions in any English
 
-The owner's house rule for published English prose excludes contractions,
-and it overrides the anti-AI voice skill, which otherwise permits them.
-Every article, answer and seeded page follows it. A new article is checked
+The owner's rule excludes contractions from all English the theme contains,
+with every word spelt out in full: articles, answers and seeded pages, and
+equally the interface text, settings descriptions, code comments and
+documentation. It overrides the anti-AI voice skill, which otherwise permits
+them. A new article is checked
 for contractions, contrastive negation, coordinated triads and anaphoric
 runs before it is seeded.
 
@@ -377,11 +381,112 @@ Headings, navigation, labels and centred elements keep their alignment, and
 headings keep their tighter display leading. The rules live in a stylesheet
 loaded last, so a later component stylesheet cannot quietly undo them.
 
+### D37. The footer carries the mark
+
+The footer is the one place every page shares, so it states the identity:
+the mark's descending bars, the wordmark at display size, the site's promise,
+and the reading order numbered in the countdown style. A footer of plain
+link columns could belong to any site; this one could belong only to this
+one.
+
+### D38. Layout is tested on real WordPress output
+
+Responsive checks run against a working WordPress install in a real browser,
+never against mockups, which drifted from the theme twice. The standard at
+every width from 320 to 1920px: no sideways scrolling, nothing past the screen
+edge even where clipping hides it, no text under 12px, and phone tap targets
+of at least 24px.
+
+### D39. Structured data follows Google's supported list
+
+The site emits the structured data features Google Search supports that fit
+it: Article, Breadcrumb, Image metadata and Organization, plus WebSite. Each
+page's entities form one graph joined by @id. Image metadata is built from the
+same Commons credits shown beneath each image, so the licence a reader sees
+and the licence Google reads are one record. Markup Google no longer rewards,
+FAQ and list carousels, stays only because it describes its page accurately.
+
+### D40. Three plugins, rebuilt inside the theme
+
+Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide Login are
+rebuilt natively, in keeping with D1, and credited in docs/CREDITS.md. Each
+was rebuilt to suit the theme's own structure, never copied in whole:
+
+- Unlisting filters at pre_get_posts, since the plugin's posts_where filter
+  is skipped by get_posts(), which builds most of the theme's modules.
+- Search redirects keep every query argument, since the theme's search
+  filters travel as arguments and the plugin dropped them.
+- The login address intercepts at wp_loaded, since a theme loads after the
+  plugins_loaded hook the plugin used.
+
+Each feature stands aside while its original plugin is active and imports
+that plugin's saved settings. The login address is off by default, refuses
+any address that would not work, and yields to BOI_HIDE_LOGIN false in
+wp-config.php. Because it belongs to the theme, activating another theme
+restores wp-login.php; the failure mode is an open door, never a locked one.
+
+### D41. The login page belongs to the site
+
+The login page is the first thing an editor sees and the only part of the
+admin a visitor might reach. The whole page carries the site's identity: the
+manuscript background covers the screen, and the bars, the wordmark and the
+form sit in one centred column, so arriving there feels like arriving at the
+site. It keeps to WordPress's own markup and hooks, adding a
+panel and a heading and restyling the rest, so core updates to the login
+page keep working.
+
+### D42. The hero carries an image, chosen for legibility
+
+The front-page hero has a background image under a navy overlay, darkest
+behind the headline. The default is the Birmingham Quran leaves, chosen after
+testing six images for legibility behind the headline. It shows Arabic
+script, a deliberate exception to D9's neutral chrome that the owner
+accepted; the Hubble Deep Field is the neutral alternative, one setting away
+on the Display tab. The same image carries the login page.
+
+### D43. Icons come from one pack, inlined in the text colour
+
+Share and follow icons come from the Minimalist Social & Platform Icons Pack
+(GPL), bundled as SVG files and inlined filled with currentColor, so each
+takes the colour of the text around it in either appearance and costs no
+extra request. Icons whose licence would require a visible credit are left
+out; icons the pack lacks are drawn to its grid.
+
+### D44. Seeded images never depend on the media library
+
+Every seeded article's image ships with the theme. The copy into the media
+library runs in the background and can lag or fail on hosts that restrict
+uploads, so wherever an attached image is missing, the bundled copy stands in:
+in cards, on the article, in its credit, in the hero and in the structured
+data. The empty-image placeholder is a plain element, never a link, since the
+image block wraps its output in a link of its own.
+
+### D45. The theme compares content as WordPress stores it
+
+WordPress changes content on saving: it removes one level of backslashes and
+rewrites the formatting of block settings. So every save slashes its data
+first, and every fingerprint is taken from the saved copy after passing
+through WordPress's own block parser and serialiser. Where the theme cannot
+tell whether the owner edited an article, it leaves the article alone and
+asks; an update never overwrites what it cannot prove it wrote.
+
 ## Asset conventions
 
-CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`, one file per concern, loaded
-conditionally: listicle styles only where the block is present or on a topic
-archive; voting assets only when voting is enabled.
+CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,
+icons in `assets/icons/`, images in `assets/images/`; one file per concern.
+
+- Loaded on every page: `theme-toggle`, `navigation`, `front`, `footer`,
+  `print`, `scripts`, `listicle`, and `typography`, which loads last so its
+  rules on justification and line spacing hold everywhere. The header,
+  footer and article cards appear site-wide, so their rules do too.
+- Loaded where needed: `search` on search results, and `voting` on articles
+  with a list when voting is on. Of the scripts, `theme-toggle` runs on every
+  page, `questions` on the front page, and `voting` where its stylesheet
+  loads.
+- The login page loads `login` alone, with its own font declarations, since
+  it does not receive the theme's global styles.
+- The editor loads `editor-listicle` and `editor-typography`; the settings
+  screen loads `admin-settings`.
 
 ## Naming
 

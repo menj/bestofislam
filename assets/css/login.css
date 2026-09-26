@@ -1,0 +1,462 @@
+/**
+ * Login page.
+ *
+ * The whole page is the design. The navy background with the manuscript
+ * under the hero's overlay covers the screen at every size, and one centred
+ * column carries the logo, a line saying who the page is for, the form in a
+ * navy card with a gold top edge, the links and the image credit. The page is
+ * navy in light and dark mode alike. WordPress loads its own login styles
+ * first; every rule here is scoped to body.boi-login so it takes precedence
+ * cleanly. The pop-up login inside the dashboard keeps a plain column.
+ */
+
+@font-face {
+	font-family: "Platypi";
+	font-style: normal;
+	font-weight: 300 800;
+	font-display: swap;
+	src: url("../fonts/platypi/Platypi-VariableFont_wght.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Ysabeau Office";
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("../fonts/ysabeau-office/YsabeauOffice-VariableFont_wght.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Vollkorn";
+	font-style: normal;
+	font-weight: 400 900;
+	font-display: swap;
+	src: url("../fonts/vollkorn/Vollkorn-VariableFont_wght.woff2") format("woff2");
+}
+
+body.boi-login {
+	--boi-navy: #0D2B4E;
+	--boi-deep: #081F3A;
+	--boi-card: rgba(10, 32, 56, 0.9);
+	--boi-card-edge: #2A4A70;
+	--boi-azure: #1F6FCC;
+	--boi-sky: #3FA9F5;
+	--boi-gold: #E8B33C;
+	--boi-text: #EAF2FB;
+	--boi-muted: #B5C8DC;
+	--boi-field: #EAF2FB;
+	--boi-field-text: #0D2B4E;
+	--boi-error: #F2B8B5;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-block-size: 100vh;
+	margin: 0;
+	padding: clamp(2.5rem, 7vh, 4.5rem) 1rem 2rem;
+	box-sizing: border-box;
+	color: var(--boi-text);
+	font-family: "Ysabeau Office", system-ui, -apple-system, "Segoe UI", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: var(--boi-navy);
+	background-image: radial-gradient(ellipse at 50% 35%, rgba(13, 43, 78, 0.8) 0%, rgba(8, 31, 58, 0.95) 70%);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+body.boi-login.boi-login-has-image {
+	background-image:
+		radial-gradient(ellipse at 50% 35%, rgba(13, 43, 78, 0.82) 0%, rgba(8, 31, 58, 0.95) 70%),
+		var(--boi-login-img);
+}
+
+/* Header: logo and the line beneath it. */
+body.boi-login .boi-login-brand {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 0 1.75rem;
+	text-align: center;
+}
+
+body.boi-login .boi-login-brand__bars {
+	display: grid;
+	gap: 0.55rem;
+	inline-size: 9rem;
+	margin: 0 0 1.4rem;
+}
+
+body.boi-login .boi-login-brand__bars span {
+	display: block;
+	block-size: 0.45rem;
+	border-radius: 999px;
+}
+
+body.boi-login .boi-login-brand__bars span:nth-child(1) {
+	inline-size: 100%;
+	background: var(--boi-gold);
+}
+
+body.boi-login .boi-login-brand__bars span:nth-child(2) {
+	inline-size: 78%;
+	background: var(--boi-sky);
+}
+
+body.boi-login .boi-login-brand__bars span:nth-child(3) {
+	inline-size: 52%;
+	background: #FFFFFF;
+}
+
+body.boi-login .boi-login-brand__wordmark {
+	margin: 0;
+	font-family: "Vollkorn", Georgia, serif;
+	font-size: clamp(2.6rem, 7vw, 3.6rem);
+	font-weight: 800;
+	line-height: 1;
+	letter-spacing: -0.035em;
+	text-transform: lowercase;
+}
+
+body.boi-login .boi-login-brand__wordmark a {
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 6px;
+}
+
+body.boi-login .boi-login-brand__wordmark a:focus-visible {
+	outline: 2px solid var(--boi-gold);
+	outline-offset: 4px;
+	box-shadow: none;
+}
+
+body.boi-login .boi-login-brand__line {
+	margin: 1rem 0 0;
+	font-size: 1.05rem;
+	color: var(--boi-muted);
+}
+
+/* The column. WordPress's own logo slot is replaced by the header above. */
+body.boi-login #login {
+	inline-size: min(25rem, 100%);
+	margin: 0;
+	padding: 0;
+}
+
+body.boi-login #login h1 {
+	display: none;
+}
+
+/* The card. */
+body.boi-login form,
+body.boi-login #loginform,
+body.boi-login #lostpasswordform,
+body.boi-login #registerform,
+body.boi-login #resetpassform {
+	margin: 0;
+	padding: 2rem;
+	background: var(--boi-card);
+	border: 1px solid var(--boi-card-edge);
+	border-block-start: 4px solid var(--boi-gold);
+	border-radius: 14px;
+	box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.6);
+	overflow: visible;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+}
+
+body.boi-login label {
+	margin-block-end: 0.4rem;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--boi-text);
+}
+
+body.boi-login input[type="text"],
+body.boi-login input[type="email"],
+body.boi-login input[type="password"] {
+	box-sizing: border-box;
+	inline-size: 100%;
+	min-block-size: 3rem;
+	margin: 0 0 1.2rem;
+	padding: 0.6rem 0.95rem;
+	font-family: inherit;
+	font-size: 1rem;
+	color: var(--boi-field-text);
+	background: var(--boi-field);
+	border: 2px solid transparent;
+	border-radius: 10px;
+	box-shadow: none;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+body.boi-login input[type="text"]:focus,
+body.boi-login input[type="email"]:focus,
+body.boi-login input[type="password"]:focus {
+	border-color: var(--boi-sky);
+	box-shadow: 0 0 0 3px rgba(63, 169, 245, 0.35);
+	outline: none;
+}
+
+body.boi-login .wp-pwd input[type="password"],
+body.boi-login .wp-pwd input[type="text"] {
+	padding-inline-end: 3rem;
+}
+
+body.boi-login .wp-hide-pw {
+	inline-size: 2.5rem;
+	block-size: 2.5rem;
+	inset-block-start: 0.25rem;
+	inset-inline-end: 0.25rem;
+	color: #4A5A6E;
+	border-radius: 8px;
+}
+
+body.boi-login .wp-hide-pw:hover,
+body.boi-login .wp-hide-pw:focus {
+	color: var(--boi-azure);
+	background: #D9E6F4;
+	box-shadow: none;
+	outline: none;
+}
+
+body.boi-login .forgetmenot {
+	float: none;
+	margin: 0 0 1.4rem;
+}
+
+body.boi-login .forgetmenot label {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	margin: 0;
+	font-weight: 500;
+}
+
+body.boi-login input[type="checkbox"] {
+	inline-size: 1.3rem;
+	block-size: 1.3rem;
+	margin: 0;
+	background: var(--boi-field);
+	border: 0;
+	border-radius: 5px;
+	box-shadow: none;
+}
+
+body.boi-login input[type="checkbox"]:focus {
+	box-shadow: 0 0 0 3px rgba(63, 169, 245, 0.45);
+}
+
+body.boi-login .submit {
+	margin: 0;
+}
+
+body.boi-login .button-primary,
+body.boi-login #wp-submit {
+	float: none;
+	display: block;
+	inline-size: 100%;
+	min-block-size: 3rem;
+	padding: 0.6rem 1.25rem;
+	font-family: inherit;
+	font-size: 1.02rem;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #FFFFFF;
+	background: var(--boi-azure);
+	border: 0;
+	border-radius: 10px;
+	box-shadow: none;
+	text-shadow: none;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body.boi-login .button-primary:hover,
+body.boi-login #wp-submit:hover {
+	background: var(--boi-gold);
+	color: var(--boi-navy);
+}
+
+body.boi-login .button-primary:focus,
+body.boi-login #wp-submit:focus {
+	box-shadow: 0 0 0 3px rgba(232, 179, 60, 0.55);
+	outline: none;
+}
+
+body.boi-login .button-secondary {
+	border-radius: 10px;
+}
+
+/* Links beneath the card. */
+body.boi-login #nav,
+body.boi-login #backtoblog,
+body.boi-login .privacy-policy-page-link {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 0.95rem;
+}
+
+body.boi-login #nav {
+	margin-block-start: 1.75rem;
+}
+
+body.boi-login #backtoblog {
+	margin-block-start: 0.35rem;
+}
+
+body.boi-login .privacy-policy-page-link {
+	margin-block-start: 0.6rem;
+	font-size: 0.85rem;
+}
+
+body.boi-login #nav a,
+body.boi-login #backtoblog a,
+body.boi-login .privacy-policy-page-link a {
+	display: inline-block;
+	padding-block: 0.25rem;
+	color: var(--boi-muted);
+	text-decoration: underline;
+	text-decoration-color: rgba(181, 200, 220, 0.4);
+	text-underline-offset: 0.25em;
+}
+
+body.boi-login #nav a:hover,
+body.boi-login #backtoblog a:hover,
+body.boi-login .privacy-policy-page-link a:hover {
+	color: #FFFFFF;
+	text-decoration-color: var(--boi-gold);
+}
+
+body.boi-login #nav a:focus-visible,
+body.boi-login #backtoblog a:focus-visible,
+body.boi-login .privacy-policy-page-link a:focus-visible {
+	outline: 2px solid var(--boi-gold);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+/* Messages and errors, above the card. */
+body.boi-login .message,
+body.boi-login .notice,
+body.boi-login .success,
+body.boi-login #login_error {
+	margin: 0 0 1.25rem;
+	padding: 0.85rem 1rem;
+	font-size: 0.95rem;
+	color: var(--boi-text);
+	background: rgba(234, 242, 251, 0.08);
+	border: 1px solid var(--boi-card-edge);
+	border-inline-start: 4px solid var(--boi-sky);
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+body.boi-login #login_error,
+body.boi-login .notice-error {
+	border-inline-start-color: var(--boi-error);
+}
+
+body.boi-login .message a,
+body.boi-login #login_error a {
+	color: #FFFFFF;
+	font-weight: 600;
+}
+
+body.boi-login #pass-strength-result {
+	border-radius: 8px;
+}
+
+body.boi-login .description,
+body.boi-login .indicator-hint {
+	color: var(--boi-muted);
+}
+
+/* Language switcher and credit, at the foot. */
+body.boi-login .language-switcher {
+	margin: 2rem 0 0;
+	padding: 0;
+}
+
+body.boi-login .language-switcher form {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0;
+	background: none;
+	border: 0;
+	box-shadow: none;
+	-webkit-backdrop-filter: none;
+	backdrop-filter: none;
+}
+
+body.boi-login .language-switcher label .dashicons {
+	color: var(--boi-muted);
+}
+
+body.boi-login .language-switcher select {
+	min-block-size: 2.4rem;
+	color: var(--boi-field-text);
+	background-color: var(--boi-field);
+	border: 0;
+	border-radius: 8px;
+}
+
+body.boi-login .language-switcher .button {
+	min-block-size: 2.4rem;
+	border-radius: 8px;
+}
+
+body.boi-login .boi-login-credit {
+	margin: auto 0 0;
+	padding-block-start: 2.5rem;
+	max-inline-size: 36rem;
+	text-align: center;
+	font-size: 0.75rem;
+	color: rgba(181, 200, 220, 0.75);
+}
+
+body.boi-login .boi-login-credit a {
+	color: inherit;
+}
+
+@media (max-width: 480px) {
+	body.boi-login form,
+	body.boi-login #loginform,
+	body.boi-login #lostpasswordform,
+	body.boi-login #registerform,
+	body.boi-login #resetpassform {
+		padding: 1.4rem;
+	}
+
+	body.boi-login .boi-login-brand {
+		margin-block-end: 1.25rem;
+	}
+}
+
+/* Mobile browsers handle fixed backgrounds poorly; let it scroll there. */
+@media (hover: none) {
+	body.boi-login {
+		background-attachment: scroll;
+	}
+}
+
+/* The pop-up login inside the dashboard: a plain column. */
+body.boi-login.interim-login {
+	display: block;
+	min-block-size: 0;
+	padding: 1.5rem 1rem;
+	background: var(--boi-navy);
+}
+
+body.boi-login.interim-login #login {
+	margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body.boi-login * {
+		transition: none !important;
+	}
+}

@@ -186,6 +186,42 @@ function boi_questions() {
 					'feat' => false,
 				),
 				array(
+					'q'    => __( 'Did any ancient writer mention the Kaaba before Islam?', 'bestofislam' ),
+					'a'    => __( 'Possibly. Diodorus of Sicily described a temple revered by all Arabians, and Ptolemy listed a town called Macoraba, but scholars dispute both identifications. The Quran makes the claim on its own authority.', 'bestofislam' ),
+					'slug' => 'kaaba-witnesses',
+					'feat' => false,
+				),
+				array(
+					'q'    => __( 'What do the Dome of the Rock inscriptions show about the Quran?', 'bestofislam' ),
+					'a'    => __( 'Dated 72 AH, about sixty years after the Prophet, they quote passages of the Quran that match the text recited today, and they allude to it in ways that assume their readers already knew it.', 'bestofislam' ),
+					'slug' => 'dome-inscriptions',
+					'feat' => false,
+				),
+				array(
+					'q'    => __( 'Did Muslims burn the Library of Alexandria?', 'bestofislam' ),
+					'a'    => __( 'No. The story of the caliph Umar ordering it burned first appears nearly six centuries after the conquest, and the library had largely vanished centuries before the Arabs arrived. Historians, Muslim and Western, regard the story as a legend.', 'bestofislam' ),
+					'slug' => 'library-of-alexandria',
+					'feat' => false,
+				),
+				array(
+					'q'    => __( 'What was the jizya?', 'bestofislam' ),
+					'a'    => __( 'A graduated annual tax on adult non-Muslim men under Muslim rule, with exemptions for women, children, monks and those unable to work. It was tied to protection and military service, and it also marked a difference of religion.', 'bestofislam' ),
+					'slug' => 'jizya',
+					'feat' => false,
+				),
+				array(
+					'q'    => __( 'Was the Quran perfectly preserved?', 'bestofislam' ),
+					'a'    => __( 'Academic scholarship finds a standard text fixed under Uthman within two decades of the Prophet, followed by every later manuscript but one, with modest variation in matters the Islamic tradition itself recorded, such as surah order and verse numbering.', 'bestofislam' ),
+					'slug' => 'quran-preservation-reddit',
+					'feat' => false,
+				),
+				array(
+					'q'    => __( 'Does Islam punish leaving it with death?', 'bestofislam' ),
+					'a'    => __( 'Mainstream Islamic law prescribes it, on the strength of the hadith, while the Quran condemns apostasy without naming a worldly penalty. Some senior scholars confine the penalty to treason; the question is debated among Muslims today.', 'bestofislam' ),
+					'slug' => 'apostasy-in-islam',
+					'feat' => false,
+				),
+				array(
 					'q'    => __( 'Did Islam spread by the sword?', 'bestofislam' ),
 					'a'    => __( 'The Quran forbids compulsion in belief and bounds fighting with a prohibition on transgression. Current data put jihadist violence far below the impression the coverage gives.', 'bestofislam' ),
 					'slug' => 'islam-religion-of-peace',
@@ -234,7 +270,7 @@ function boi_question_post( $item ) {
 
 	if ( ! array_key_exists( $item['slug'], $cache ) ) {
 		$post                   = get_page_by_path( $item['slug'], OBJECT, 'post' );
-		$cache[ $item['slug'] ] = ( $post && 'publish' === $post->post_status ) ? $post : null;
+		$cache[ $item['slug'] ] = ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) ? $post : null;
 	}
 
 	return $cache[ $item['slug'] ];

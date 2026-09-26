@@ -377,7 +377,7 @@
 }
 
 .wp-block-post-template.is-layout-grid > li .wp-block-post-terms {
-	font-size: 0.7rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
@@ -471,36 +471,146 @@
 	margin-inline-start: auto;
 }
 
+/* Header controls. The search field and the appearance toggle share one
+   height, one border and the fill language of the navigation pills, so the
+   three read as one set on the navy band. WordPress core styles the search
+   block with a grey border and a filled button; those are overridden here. */
+.boi-header {
+	--boi-control-h: 2.25rem;
+	--boi-control-border: rgba(255, 255, 255, 0.28);
+	--boi-control-border-strong: rgba(255, 255, 255, 0.6);
+	--boi-control-fill: rgba(255, 255, 255, 0.08);
+	--boi-control-fill-strong: rgba(255, 255, 255, 0.18);
+}
+
 .boi-header .boi-header__search {
-	inline-size: 11rem;
+	inline-size: 10.5rem;
+	margin: 0;
 }
 
 .boi-header .boi-header__search .wp-block-search__inside-wrapper {
-	background: rgba(255, 255, 255, 0.08);
-	border: 1px solid rgba(255, 255, 255, 0.28);
-	border-radius: 999px;
-	padding: 0.15rem 0.15rem 0.15rem 0.6rem;
+	display: flex;
+	align-items: center;
+	block-size: var(--boi-control-h);
+	padding: 0 0.2rem 0 0.95rem !important;
+	background: var(--boi-control-fill);
+	border: 1px solid var(--boi-control-border) !important;
+	border-radius: 999px !important;
+	transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.boi-header .boi-header__search input {
+.boi-header .boi-header__search .wp-block-search__inside-wrapper:hover {
+	border-color: var(--boi-control-border-strong) !important;
+}
+
+.boi-header .boi-header__search .wp-block-search__inside-wrapper:focus-within {
+	background: var(--boi-control-fill-strong);
+	border-color: var(--boi-control-border-strong) !important;
+	box-shadow: 0 0 0 2px rgba(63, 169, 245, 0.55);
+}
+
+.boi-header .boi-header__search input.wp-block-search__input {
+	flex: 1 1 auto;
+	min-inline-size: 0;
+	block-size: 100%;
+	min-block-size: 0;
+	margin: 0;
+	padding: 0 !important;
 	background: transparent;
-	border: 0;
+	border: 0 !important;
+	border-radius: 0 !important;
+	outline: none;
+	box-shadow: none;
 	color: #fff;
 	font-size: 0.85rem;
-	min-block-size: 1.75rem;
 }
 
 .boi-header .boi-header__search input::placeholder {
 	color: rgba(255, 255, 255, 0.6);
+	opacity: 1;
 }
 
-.boi-header .boi-header__search button {
-	background: #fff;
-	color: #0D2B4E;
-	border: 0;
+.boi-header .boi-header__search input::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+.boi-header .boi-header__search .wp-block-search__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	inline-size: 1.85rem;
+	block-size: 1.85rem;
+	min-block-size: 0;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: transparent !important;
+	color: rgba(255, 255, 255, 0.85) !important;
+	border: 0 !important;
+	border-radius: 50% !important;
+	box-shadow: none;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.boi-header .boi-header__search .wp-block-search__button:hover,
+.boi-header .boi-header__search .wp-block-search__button:focus-visible {
+	background: var(--boi-control-fill-strong) !important;
+	color: #fff !important;
+}
+
+.boi-header .boi-header__search .wp-block-search__button svg {
+	inline-size: 1.2rem;
+	block-size: 1.2rem;
+	min-inline-size: 0;
+	min-block-size: 0;
+	fill: currentColor;
+}
+
+/* The toggle, matched to the search field. */
+.boi-header .boi-appearance__frame {
+	inline-size: 4.5rem;
+	block-size: var(--boi-control-h);
+	background: var(--boi-control-fill);
+	border: 1px solid var(--boi-control-border);
+	transition: border-color 0.15s ease;
+}
+
+.boi-header .boi-appearance__frame:hover {
+	border-color: var(--boi-control-border-strong);
+}
+
+.boi-header .boi-appearance__frame:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(63, 169, 245, 0.55);
+}
+
+.boi-header .boi-appearance__block {
+	inset-block: 3px;
+	inset-inline-start: 3px;
+	inline-size: calc(50% - 3px);
+	background: var(--boi-control-fill-strong);
+	border: 1px solid var(--boi-control-border-strong);
 	border-radius: 999px;
-	padding: 0.25rem 0.5rem;
-	min-block-size: 1.75rem;
+}
+
+.boi-header .boi-appearance__cell {
+	color: #fff;
+	opacity: 0.5;
+}
+
+:root[data-theme="light"] .boi-header .boi-appearance__cell.is-light,
+:root[data-theme="dark"] .boi-header .boi-appearance__cell.is-dark {
+	color: #fff;
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-header .boi-header__search .wp-block-search__inside-wrapper,
+	.boi-header .boi-header__search .wp-block-search__button,
+	.boi-header .boi-appearance__frame {
+		transition: none;
+	}
 }
 
 .boi-footer__nav .wp-block-navigation-item__content {
@@ -537,7 +647,7 @@
 .boi-lead__kicker {
 	display: inline-block;
 	margin-block-end: 0.5rem;
-	font-size: 0.72rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
@@ -594,7 +704,7 @@
 }
 
 .boi-share__label {
-	font-size: 0.72rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
@@ -635,7 +745,7 @@
 
 .boi-author__label {
 	margin: 0;
-	font-size: 0.72rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
@@ -716,16 +826,20 @@
 		gap: 1.25rem;
 	}
 
-	/* The search stays on small screens. It fills the space between the
-	   menu button and the appearance toggle, so the row never overflows. */
+	/* On small screens the search stays. The tools row may wrap: the links
+	   take a row of their own while they are shown as links, and the search
+	   fills the row it shares with the toggle (and, below 600px, with the
+	   menu button WordPress swaps in for the links). */
 	.boi-header .boi-header__tools {
 		inline-size: 100%;
-		gap: 0.5rem;
+		flex-wrap: wrap !important;
+		gap: 0.6rem 0.5rem;
 	}
 
 	.boi-header .boi-header__search {
 		display: block;
-		flex: 1 1 auto;
+		flex: 1 1 10rem;
+		inline-size: auto;
 		min-inline-size: 0;
 		order: 2;
 	}
@@ -742,11 +856,48 @@
 
 	.boi-header .boi-header__tools .wp-block-navigation {
 		order: 1;
-		flex: 0 0 auto;
+		flex: 1 1 100%;
+		min-inline-size: 0;
+	}
+
+	.boi-header .boi-header__tools .wp-block-navigation__container {
+		justify-content: flex-start;
 	}
 
 	.boi-header .boi-header__tools .boi-appearance {
 		order: 3;
+		flex: 0 0 auto;
+	}
+}
+
+/* Between 600 and 781px the links are shown as links but six will not fit
+   one line. They stay on a single row that scrolls sideways, with a fade at
+   the right edge to show that more follow, so the header stays three rows
+   deep and no link sits alone on a line of its own. */
+@media (min-width: 600px) and (max-width: 781px) {
+	.boi-header .boi-header__tools .wp-block-navigation__container {
+		flex-wrap: nowrap !important;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scrollbar-width: none;
+		-webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+		mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+		padding-inline-end: 2rem;
+	}
+
+	.boi-header .boi-header__tools .wp-block-navigation__container::-webkit-scrollbar {
+		display: none;
+	}
+
+	.boi-header .boi-header__tools .wp-block-navigation-item {
+		flex: 0 0 auto;
+	}
+}
+
+/* Below 600px WordPress replaces the links with a menu button, which sits
+   on the same row as the search and the toggle. */
+@media (max-width: 599px) {
+	.boi-header .boi-header__tools .wp-block-navigation {
 		flex: 0 0 auto;
 	}
 }
@@ -778,7 +929,7 @@
 
 .boi-mission__label {
 	margin: 0 0 0.75rem;
-	font-size: 0.72rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
@@ -1005,9 +1156,15 @@ video {
 
 /* Tablet landscape: the tools cluster takes its own row under the brand,
    so seven pills, search and the toggle never fight the wordmark. */
-@media (max-width: 1024px) {
+/* Up to 1300px the header takes two rows: the wordmark, then the links,
+   search and toggle on a row of their own. Six section links, the search and
+   the toggle need about 1,200px beside the wordmark, so on common laptop
+   widths a single row would wrap by accident. */
+@media (max-width: 1300px) {
 	.boi-header__tools {
 		flex-basis: 100%;
+		flex-wrap: wrap !important;
+		row-gap: 0.6rem;
 		margin-inline-start: 0;
 		justify-content: space-between;
 	}
@@ -1015,7 +1172,9 @@ video {
 	.boi-header__tools .wp-block-navigation {
 		flex: 1 1 auto;
 	}
+}
 
+@media (max-width: 1024px) {
 	.boi-lead {
 		gap: 1.5rem;
 	}
@@ -1112,7 +1271,7 @@ video {
 	}
 
 	.boi-eyebrow {
-		font-size: 0.72rem;
+		font-size: 0.75rem;
 	}
 
 	/* The breadcrumb trail truncates the current title so it never wraps
@@ -1259,7 +1418,7 @@ video {
 
 .boi-answers__label {
 	margin: 0 0 0.5rem;
-	font-size: 0.72rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
@@ -1295,7 +1454,7 @@ video {
 
 .boi-next__label {
 	margin: 0 0 0.4rem;
-	font-size: 0.72rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
@@ -1499,4 +1658,69 @@ ul.boi-social > li::marker {
 
 .boi-footer__bottom > .boi-notice {
 	inline-size: 100%;
+}
+
+/* Touch targets. On phones every link and control a reader taps is at least
+   24px tall, the WCAG 2.2 minimum, and the main ones reach 40px or more.
+   Padding does the work, so the text and the layout stay as they were. */
+@media (max-width: 781px) {
+	.boi-breadcrumbs a,
+	.wp-block-post-terms a {
+		display: inline-block;
+		padding-block: 0.4rem;
+	}
+
+	.boi-footer__nav .wp-block-navigation-item__content,
+	.boi-footer__bar .wp-block-navigation-item__content {
+		display: inline-block;
+		padding-block: 0.35rem !important;
+	}
+
+	.boi-parts a {
+		padding-block: 0.3rem;
+	}
+
+	.boi-next__title {
+		padding-block: 0.2rem;
+	}
+
+	.boi-notice__top {
+		display: inline-block;
+		padding-block: 0.4rem;
+	}
+
+	.boi-sections__latest a,
+	.boi-objection__answer a,
+	.boi-result__entries a,
+	.boi-lead__kicker,
+	.boi-postnav a {
+		display: inline-block;
+		padding-block: 0.3rem;
+	}
+}
+
+.wp-block-query-pagination .page-numbers,
+.wp-block-query-pagination-previous,
+.wp-block-query-pagination-next {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-inline-size: 2.5rem;
+	min-block-size: 2.5rem;
+	padding-inline: 0.5rem;
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.wp-block-query-pagination .page-numbers.current {
+	background: var(--wp--preset--color--accent-3, transparent);
+	font-weight: 700;
+}
+
+.comment-form-cookies-consent input[type="checkbox"],
+.comment-form input[type="checkbox"] {
+	flex: 0 0 auto; /* its row is a flex container, which was squeezing it */
+	inline-size: 1.5rem;
+	block-size: 1.5rem;
+	margin-inline-end: 0.5rem;
+	vertical-align: middle;
 }

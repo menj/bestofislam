@@ -108,7 +108,7 @@ function boi_build_item_list( $listicle, $post ) {
 
 	foreach ( $entries as $offset => $entry ) {
 		$position = 'ascending' === $order ? $offset + 1 : $total - $offset;
-		$name     = isset( $entry['title'] ) ? wp_strip_all_tags( $entry['title'] ) : '';
+		$name     = isset( $entry['title'] ) ? boi_plain( $entry['title'] ) : '';
 
 		if ( '' === $name ) {
 			continue;
@@ -144,7 +144,7 @@ function boi_build_item_list( $listicle, $post ) {
 	return array(
 		'@context'        => 'https://schema.org',
 		'@type'           => 'ItemList',
-		'name'            => wp_strip_all_tags( get_the_title( $post ) ),
+		'name'            => boi_plain( get_the_title( $post ) ),
 		'url'             => get_permalink( $post ),
 		'numberOfItems'   => count( $elements ),
 		'itemListOrder'   => 'ascending' === $order

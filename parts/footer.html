@@ -1,33 +1,37 @@
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"},"margin":{"top":"var:preset|spacing|70"}},"color":{"background":"#0D2B4E","text":"#EAF2FB"}},"className":"boi-footer","layout":{"type":"constrained"}} -->
+<!-- wp:group {"className":"boi-footer","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"},"margin":{"top":"var:preset|spacing|70"}},"color":{"background":"#0D2B4E","text":"#EAF2FB"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group boi-footer has-text-color has-background" style="background-color:#0D2B4E;color:#EAF2FB;margin-top:var(--wp--preset--spacing--70);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
-	<!-- wp:group {"align":"wide","layout":{"type":"grid","minimumColumnWidth":"14rem"}} -->
-	<div class="wp-block-group alignwide">
 
-		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
-		<div class="wp-block-group">
-			<!-- wp:group {"className":"boi-brand boi-brand--footer","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group boi-brand boi-brand--footer">
-				<!-- wp:html -->
-				<span class="boi-brand__mark" aria-hidden="true"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect x="4" y="4" width="112" height="112" rx="22" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="5"/><g stroke-linecap="round"><line x1="30" y1="38" x2="92" y2="38" stroke="#E8B33C" stroke-width="10"/><line x1="30" y1="60" x2="78" y2="60" stroke="#3FA9F5" stroke-width="10"/><line x1="30" y1="82" x2="60" y2="82" stroke="#FFFFFF" stroke-width="10"/></g></svg></span>
-				<!-- /wp:html -->
+	<!-- wp:html -->
+	<div class="boi-footer__bars alignwide" aria-hidden="true"><span></span><span></span><span></span></div>
+	<!-- /wp:html -->
 
-				<!-- wp:site-title {"level":0,"className":"boi-brand__name","style":{"typography":{"fontWeight":"800","letterSpacing":"-0.035em","textTransform":"lowercase","fontSize":"1.3rem"},"elements":{"link":{"color":{"text":"#FFFFFF"}}}},"fontFamily":"vollkorn"} /-->
-			</div>
-			<!-- /wp:group -->
-			<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"color":{"text":"#9DB3C9"}}} -->
-			<p class="has-text-color" style="color:#9DB3C9;font-size:0.9rem">Ranked arguments on the questions that decide the matter.</p>
-			<!-- /wp:paragraph -->
+	<!-- wp:group {"align":"wide","className":"boi-footer__statement","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group alignwide boi-footer__statement">
+		<!-- wp:site-title {"level":0,"className":"boi-footer__wordmark","fontFamily":"vollkorn"} /-->
+		<!-- wp:paragraph {"className":"boi-footer__promise"} -->
+		<p class="boi-footer__promise">Every objection stated in its own terms, then answered from the sources.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
 
-			<!-- wp:bestofislam/social-icons /-->
+	<!-- wp:group {"align":"wide","className":"boi-footer__cols","layout":{"type":"default"}} -->
+	<div class="wp-block-group alignwide boi-footer__cols">
+
+		<!-- wp:group {"className":"boi-footer__col","layout":{"type":"default"}} -->
+		<div class="wp-block-group boi-footer__col">
+			<!-- wp:heading {"level":2,"className":"boi-footer__label"} -->
+			<h2 class="wp-block-heading boi-footer__label">The reading order</h2>
+			<!-- /wp:heading -->
+			<!-- wp:bestofislam/reading-parts /-->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
-		<div class="wp-block-group">
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"0.72rem","textTransform":"uppercase","letterSpacing":"0.09em"},"color":{"text":"#9DB3C9"}}} -->
-			<h2 class="wp-block-heading has-text-color" style="color:#9DB3C9;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase">Sections</h2>
+		<!-- wp:group {"className":"boi-footer__col","layout":{"type":"default"}} -->
+		<div class="wp-block-group boi-footer__col">
+			<!-- wp:heading {"level":2,"className":"boi-footer__label"} -->
+			<h2 class="wp-block-heading boi-footer__label">Sections</h2>
 			<!-- /wp:heading -->
-			<!-- wp:navigation {"overlayMenu":"never","className":"boi-footer__nav","style":{"typography":{"fontSize":"0.9rem"},"elements":{"link":{"color":{"text":"#EAF2FB"}}}},"layout":{"type":"flex","orientation":"vertical"}} -->
+			<!-- wp:navigation {"overlayMenu":"never","className":"boi-footer__nav","ariaLabel":"Sections","layout":{"type":"flex","orientation":"vertical"}} -->
 				<!-- wp:navigation-link {"label":"Belief &amp; Practices","url":"/topic/belief-and-practices/","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"Faith &amp; Reason","url":"/topic/faith-and-reason/","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"Comparative Religion","url":"/topic/comparative-religion/","kind":"custom"} /-->
@@ -38,16 +42,29 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
-		<div class="wp-block-group">
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"0.72rem","textTransform":"uppercase","letterSpacing":"0.09em"},"color":{"text":"#9DB3C9"}}} -->
-			<h2 class="wp-block-heading has-text-color" style="color:#9DB3C9;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase">Read</h2>
+		<!-- wp:group {"className":"boi-footer__col","layout":{"type":"default"}} -->
+		<div class="wp-block-group boi-footer__col">
+			<!-- wp:heading {"level":2,"className":"boi-footer__label"} -->
+			<h2 class="wp-block-heading boi-footer__label">Start</h2>
 			<!-- /wp:heading -->
-			<!-- wp:navigation {"overlayMenu":"never","className":"boi-footer__nav","style":{"typography":{"fontSize":"0.9rem"},"elements":{"link":{"color":{"text":"#EAF2FB"}}}},"layout":{"type":"flex","orientation":"vertical"}} -->
-				<!-- wp:navigation-link {"label":"Questions answered","url":"/#objections","kind":"custom"} /-->
+			<!-- wp:navigation {"overlayMenu":"never","className":"boi-footer__nav","ariaLabel":"Start","layout":{"type":"flex","orientation":"vertical"}} -->
 				<!-- wp:navigation-link {"label":"Start here","url":"/#start-here","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Questions answered","url":"/#objections","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Browse every piece","url":"/site-map/","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"Reflections","url":"/reflections/","kind":"custom"} /-->
 			<!-- /wp:navigation -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"boi-footer__col","layout":{"type":"default"}} -->
+		<div class="wp-block-group boi-footer__col">
+			<!-- wp:heading {"level":2,"className":"boi-footer__label"} -->
+			<h2 class="wp-block-heading boi-footer__label">Follow</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"boi-footer__note"} -->
+			<p class="boi-footer__note">New pieces when they are finished.</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:bestofislam/social-icons /-->
 		</div>
 		<!-- /wp:group -->
 
@@ -68,5 +85,6 @@
 		<!-- wp:bestofislam/footer-notice /-->
 	</div>
 	<!-- /wp:group -->
+</div>
 </div>
 <!-- /wp:group -->

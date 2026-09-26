@@ -37,7 +37,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
-			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies' ),
+			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit' ),
 		),
 		array(
 			'label' => __( 'Objections about the Prophet', 'bestofislam' ),
@@ -45,11 +45,11 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),
-			'slugs' => array( 'qibla-change', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters' ),
+			'slugs' => array( 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters' ),
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'islam-religion-of-peace', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study' ),
+			'slugs' => array( 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study' ),
 		),
 	);
 }
@@ -97,7 +97,7 @@ function boi_next_in_order( $slug ) {
 	for ( $i = $map[ $slug ][0] + 1; $i < count( $slugs ); $i++ ) {
 		$post = get_page_by_path( $slugs[ $i ], OBJECT, 'post' );
 
-		if ( $post && 'publish' === $post->post_status ) {
+		if ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) {
 			return array( $post, $map[ $slugs[ $i ] ][2], $map[ $slugs[ $i ] ][1] + 1 );
 		}
 	}
@@ -180,13 +180,13 @@ function boi_stagger_seed_dates() {
 			continue;
 		}
 
-		if ( ! isset( $hashes[ $slug ] ) || md5( $post->post_content ) !== $hashes[ $slug ] ) {
+		if ( ! isset( $hashes[ $slug ] ) || boi_content_fingerprint( $post->post_content ) !== $hashes[ $slug ] ) {
 			continue;
 		}
 
 		$gmt = gmdate( 'Y-m-d H:i:s', $end - ( $total - 1 - $i ) * DAY_IN_SECONDS );
 
-		wp_update_post(
+		boi_update_post(
 			array(
 				'ID'            => $post->ID,
 				'post_date'     => get_date_from_gmt( $gmt ),
@@ -196,4 +196,51 @@ function boi_stagger_seed_dates() {
 	}
 
 	update_option( 'boi_dates_signature', $signature, false );
+}
+
+/**
+ * Registers the reading-order list used in the footer.
+ *
+ * @return void
+ */
+function boi_register_reading_parts() {
+	register_block_type( 'bestofislam/reading-parts', array( 'render_callback' => 'boi_render_reading_parts' ) );
+}
+add_action( 'init', 'boi_register_reading_parts' );
+
+/**
+ * The seven parts of the reading order as a numbered list, each linking to
+ * the first published article of its part. The numbering is the site's
+ * countdown motif; the first numeral is gold, as on the mark.
+ *
+ * @return string
+ */
+function boi_render_reading_parts() {
+	$items = '';
+
+	foreach ( boi_reading_order() as $i => $part ) {
+		$url = '';
+
+		foreach ( $part['slugs'] as $slug ) {
+			$post = get_page_by_path( $slug, OBJECT, 'post' );
+
+			if ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) {
+				$url = get_permalink( $post );
+				break;
+			}
+		}
+
+		if ( '' === $url ) {
+			continue;
+		}
+
+		$items .= sprintf(
+			'<li><a href="%1$s"><span class="boi-parts__num">%2$s</span><span class="boi-parts__label">%3$s</span></a></li>',
+			esc_url( $url ),
+			esc_html( number_format_i18n( $i + 1 ) ),
+			esc_html( $part['label'] )
+		);
+	}
+
+	return '' === $items ? '' : '<ol class="boi-parts">' . $items . '</ol>';
 }

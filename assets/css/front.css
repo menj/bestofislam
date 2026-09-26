@@ -13,6 +13,11 @@
 
 .boi-front > .boi-band {
 	margin-block: 0 !important;
+	/* The front page removes the root padding from main, but WordPress still
+	   pulls full-width blocks outward by that padding. Without this reset
+	   every band overshoots the screen by the padding on each side. */
+	margin-inline: 0 !important;
+	max-inline-size: none;
 }
 
 .boi-band {
@@ -56,7 +61,7 @@
 }
 
 .boi-band__label {
-	font-size: 0.74rem !important;
+	font-size: 0.75rem !important;
 	font-weight: 600;
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
@@ -145,6 +150,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.85rem;
+	/* Room for the cards' stepped offset, so the last card stays inside. */
+	padding-inline-end: 2.5rem;
 }
 
 .boi-stack__from {
@@ -279,6 +286,9 @@
 .boi-objections {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
+	/* Each question keeps its own height. Grid rows stretch their items by
+	   default, so opening one question would stretch its closed neighbour. */
+	align-items: start;
 	gap: 0.85rem;
 	max-inline-size: 64rem;
 	margin-inline: auto;
@@ -326,7 +336,7 @@
 }
 
 .boi-objection__label {
-	font-size: 0.68rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
@@ -338,7 +348,6 @@
 	font-weight: 600;
 	font-size: 1.05rem;
 	line-height: 1.35;
-	font-style: italic;
 }
 
 .boi-objection__answer {
@@ -385,7 +394,7 @@
 
 .boi-picks__term {
 	margin: 0 0 0.4rem;
-	font-size: 0.7rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
@@ -513,6 +522,10 @@
 @media (max-width: 781px) {
 	.boi-hero__grid {
 		grid-template-columns: 1fr;
+	}
+
+	.boi-stack {
+		padding-inline-end: 0;
 	}
 
 	.boi-stack__card {
@@ -692,7 +705,7 @@
 	inset-block-end: 0.75rem;
 	margin: 0;
 	max-inline-size: 60%;
-	font-size: 0.7rem;
+	font-size: 0.75rem;
 	text-align: end;
 	color: rgba(234, 242, 251, 0.75);
 }

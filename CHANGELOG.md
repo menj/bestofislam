@@ -4,6 +4,228 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.55.0] - 2026-09-25
+
+From twelve transcripts of videos and debates critical of Islam, supplied by the owner: PragerU, Apostate Prophet interviews, a GotQuestions explainer and four debates. They were used as a survey of the objections being made to large audiences. The most frequent objection with no article on the site was apostasy, raised in 8 of the 12. The transcripts are not quoted, and no speaker is named, in keeping with the site's rule of answering arguments on their merits.
+
+### Added
+
+- Belief & Practices: **Apostasy in Islam: 6 facts about the death penalty debate.** It states first that mainstream Islamic law prescribes death for apostasy, and cites the two hadith it rests on, Sahih al-Bukhari 6922 and Sahih Muslim 1676, verified on sunnah.com. It then shows that the Quran condemns apostasy in five passages while naming no worldly penalty; sets out the dispute over the hadith's phrase on abandoning the community, where a modern minority reads a crime closer to treason; records Ali Gomaa's 2007 ruling as Grand Mufti of Egypt that a change of belief alone carries no worldly punishment, together with the criticism it drew; and corrects the common misuse of Pew's 2013 survey, whose apostasy figures describe only Muslims who favour sharia as official law, ranging from 86 percent in Egypt to 18 percent in Indonesia, while acknowledging the substantial support they show. Illustrated with the illuminated opening pages of a Quran by Khayr al-Din al-Marashi (CC0).
+- One question: "Does Islam punish leaving it with death?" The theme ships 35 articles and 32 questions.
+
+### Checked
+
+- Every claim against its source. The checks removed three statements that went beyond the evidence: a characterisation of the historical schools, a generalisation about legal systems, and a plural where only one senior scholar was verified.
+
+## [1.54.0] - 2026-09-25
+
+One page using the technique from the owner's transcript of David Quaid's interview: a resource page with "Reddit" in its address and title, for searches that add Reddit to a query, built from a real Reddit discussion. Applied once, as asked.
+
+### Added
+
+- History: **Quran preservation on Reddit: 5 points from the scholars' debate**, at `/quran-preservation-reddit/`. It summarises and answers a long review of the scholarship posted on r/AcademicQuran in December 2025 and revised after feedback from Marijn van Putten, among others. Its five points are ʿUthmān's standard text within two decades, followed by every manuscript but the Sanaa palimpsest; the correction that the Birmingham leaves do not date from the Prophet's lifetime; the features the Prophet did not fix, such as surah order and verse divisions, which the page shows the Islamic tradition itself recorded; the overstated reports of mass memorisation; and the review's conclusion that the variation is not considerable. Where the evidence tells against popular Muslim claims, the page concedes the point. It links the thread and a related one on Ibn Masʿūd's codex, and quotes no usernames. Illustrated with a leaf of the Sanaa palimpsest.
+- One question: "Was the Quran perfectly preserved?" The theme ships 34 articles and 31 questions.
+
+### Method
+
+- The thread was read in full through a public Redlib mirror, since Reddit itself blocks this environment; its text, not a guess at it, is the basis of every summary. The subreddit's existence and description were checked separately.
+
+## [1.53.0] - 2026-09-25
+
+Two articles chosen from the owner's Semrush exports for bismikaallahuma.org and islamicdilemma.com. Of 258 keywords, 62 brand or navigational searches were set aside; the two largest topics with no article on the site were jizya, at about 15,000 United States searches a month across its variants, and who burned the Library of Alexandria, at about 12,000. Both titles match the leading search phrase.
+
+### Added
+
+- History: **Who burned the Library of Alexandria? 5 facts behind the story.** The story of ʿUmar's order appears nearly six centuries after the conquest, first in ʿAbd al-Laṭīf al-Baghdādī (1203) and Ibn al-Qifṭī (about 1227); no earlier source mentions it; the library had declined through the fire of 48 BC, the wars of 270 to 275, Diocletian's siege of 298 and the demolition of the Serapeum in 391; and its sources are Muslim, which is why Bernard Lewis rejected the claim that it was anti-Muslim propaganda, while Shibli Nomani refuted it in 1892. Illustrated with O. Von Corven's 19th-century engraving.
+- History: **What was the jizya? 6 facts about the tax.** Abū Yūsuf's graduated rates of 48, 24 and 12 dirhams; the single Quranic verse and the dispute over its final word; the exemptions, and the critics' correct point that poverty alone did not exempt a man able to work; the return of the tax when protection failed; the link to military service and the Ottoman replacement of 1856, with the critics' objection; and the tax as a mark of religious status. The critics' strongest points are stated plainly. Illustrated with a manuscript of Abū Yūsuf's treatise copied in 961 AH.
+- Two questions, one for each article. The theme ships 33 articles and 30 questions.
+
+### Checked
+
+- Every claim against its source; the checks corrected one misquotation of the Jewish Encyclopedia and removed four details that could not be verified.
+- On the working install as an update: both articles seed with every entry title intact, belong to the administrator, carry Article markup with image licence metadata, and appear in the reading order and the questions.
+
+## [1.52.0] - 2026-09-25
+
+Material from the three Project files, used as maps to their sources: every claim is verified against the source it rests on, and claims that could not be verified are left out.
+
+### Added
+
+- History: **The Dome of the Rock: 6 things its inscriptions tell us about the Quran.** The foundation date of 72 AH that survived al-Maʾmun's substitution of his own name; the Quranic passages the mosaic bands quote, matching the standard text with minor variations; their address to Christians; the copper plaques, whose original lines survive beneath al-Maʾmun's replacement of 216 AH; Crone and Cook's objection and Estelle Whelan's answer; and al-Walid's inscription of surahs 91 to 114 at Madinah by 710. Chiefly from Whelan's study in the Journal of the American Oriental Society (1998), with the verses checked against the Quran. Illustrated with a 19th-century photograph of the interior, cropped to remove the source book's printed caption.
+- History: **The Kaaba before Islam: 5 ancient witnesses, weighed.** Diodorus's temple revered by all Arabians, checked against the Loeb text, with Gibbon's own doubt from his note; Ptolemy's Macoraba, with Bowersock for the identification and Crone and Morris against; a Qatabanic inscription published in 2025 bearing on the name; Psalm 84, shown on the evidence of two reference works not to describe Mecca; and the Quran's own claim. Illustrated with the 1482 Ulm printing of Ptolemy's map of Arabia.
+- Two questions, one for each article. The theme ships 31 articles and 28 questions.
+
+### Changed
+
+- Comparative Religion: the "Known additions versus a closed text" entry in the manuscript-transmission article gains the manuscripts themselves: Codex Vaticanus and Codex Sinaiticus ending Mark at the women's fear, the blank column in Vaticanus that suggests its scribe knew of more, and the saying Codex Bezae alone adds after the Sabbath grain-field passage in Luke. The article gains a notes section; the change reaches existing sites on update where the article has not been edited.
+
+### Fixed
+
+- **Entry titles lost on saving.** The theme passed content to WordPress unslashed, and WordPress removes one level of backslashes from what it saves. Entry titles containing quotation marks are stored with escaped quotes, so their settings became unreadable and the entries lost their titles. Three articles were affected: Verses read differently, the Indonesia piece and Why five prayers. Every save now goes through `boi_insert_post()` or `boi_update_post()`, which slash the data first. On update, articles damaged this way and otherwise untouched are repaired automatically; the damage is exactly identifiable, so no edit of the owner's can be mistaken for it.
+- **Seeded articles never refreshing on update.** The theme fingerprinted its own file, while WordPress rewrites the formatting of block settings on saving, so the fingerprint never matched the saved copy and every article looked edited. Fingerprints now use `boi_content_fingerprint()`, which passes content through WordPress's own block parser and serialiser, and are taken from what WordPress actually saved. The reading-date staggering and the standing-page refresh use the same function.
+- **Existing sites.** The old fingerprints cannot show whether the owner edited an article. On update, articles that already match this release's text are recorded as current, and damaged articles are repaired. Any other article that differs is left alone and listed on the Content tab, unticked, with a button that updates only the articles the owner ticks.
+
+### Checked
+
+- On a copy of a site seeded by the old code: the three damaged articles were repaired, with all 7, 6 and 5 entry titles restored; 30 of 31 fingerprints then matched; the one differing article was listed, and updating it from the Content tab in a browser brought in its new text and notes.
+- After a later change to the theme's text: an article the owner had edited kept the edit and was listed for a decision, while an unedited article refreshed automatically.
+- On a fresh install seeded by a logged-out request: all 168 entry titles intact, and all 31 fingerprints matching.
+
+### Not used
+
+- A quotation attributed to G. E. von Grunebaum on Mecca's name, found only in copies of one another; it could not be checked against the book, and is omitted.
+
+## [1.51.2] - 2026-09-25
+
+Documentation brought up to date with the theme. The changelog and the decision log had kept pace; the rest had not.
+
+### Changed
+
+- `README.md` rewritten. It now describes every feature, including those added since 1.40: the hero image, the icons, the footer, structured data and canonical links, unlisting, readable search addresses, the custom login address and the login page. It gains a section on each settings tab and one on moving from the plugins the theme replaces. Its file tree is corrected: 29 images (it said 23), and the `parts/`, `content/` and `assets/icons/` folders and `docs/CREDITS.md`, which it omitted.
+- `docs/UPGRADING.md` rewritten. It now describes an update as it runs, on the first page load in the admin or on the front end. It covers resetting a customised header or footer, moving from the three plugins, the emergency switch for the login address, and the `boi_unlisted` option. It states plainly that an update does not rebuild the rewrite rules.
+- `docs/SSOT.md`: D20 describes the header's current breakpoints. New decisions: D42, the hero image and its exception to D9; D43, the icon pack; D44, seeded images that never depend on the media library. The asset conventions now list every stylesheet and script and when each loads, checked against the loading code.
+- The Search engines tab's summary of what the theme handles now includes canonical links and the structured data added in 1.48.
+
+### Checked
+
+- Every module, template, template part, stylesheet and script on disk appears in the README, every stylesheet and script appears in the asset conventions, every count in the README matches the code, and no document contains a contraction.
+
+## [1.51.1] - 2026-09-25
+
+### Changed
+
+- The login page's design is permanent. The override that let a `login-logo.png` in wp-content replace the bars and wordmark is removed, along with the Login Logo credit, since nothing from that plugin remains.
+
+## [1.51.0] - 2026-09-25
+
+### Changed
+
+- The login page is designed as a whole page. The two-panel layout kept the identity in one half and left the form on a plain white page. Now the navy background with the Birmingham manuscript under the hero's overlay covers the entire screen at every size, and one centred column carries the three bars and the wordmark, the line "Editorial access only.", the form in a navy card with a gold top edge, pale fields and the blue button (gold on hover), the links, and the image credit at the foot. The page is navy in light and dark mode alike. A `login-logo.png` in wp-content takes the place of the bars and wordmark.
+- The "Log in" heading inside the form gives way to the line above it.
+
+### Checked
+
+- In a browser at 1833 by 902 (the owner's sample size), tablet, phone, dark mode, a wrong password and the lost-password screen: the background covers the page, the form is centred, nothing scrolls sideways, and logging in through the page works. Every text pairing measures at least 5.0:1 contrast.
+
+## [1.50.0] - 2026-09-25
+
+### Added
+
+- The login page takes the theme's identity, in `inc/login-screen.php` and `assets/css/login.css`. On wide screens it divides in two: a navy brand panel with the Birmingham manuscript under the hero's overlay, the mark's three bars, the wordmark and the site's promise, with the image credited; and the form, headed "Log in", in the theme's fonts, fields, pill button, links and messages. Below 900px the panel becomes a band above the form. It follows the device's light or dark setting, and the pop-up login inside the dashboard keeps a single column. Every login screen takes the design, including lost password, reset and the custom login address.
+- The logo follows the Login Logo plugin's convention: a `login-logo.png` file in wp-content replaces the theme's mark, sized from the file. The logo links to the site and carries its name.
+
+### Checked
+
+- In a browser on a working install: desktop, tablet, phone, dark mode, a wrong password and the lost-password screen. No sideways scrolling, all three fonts load, and after a wrong password the form still posts to the custom login address. Every text and background pairing measures at least 5.0:1 contrast; the dark-mode button's text was changed to navy after white measured 2.6:1.
+
+## [1.49.0] - 2026-09-25
+
+Three plugins rebuilt as part of the theme, each tested on a working WordPress install. All 26 checks pass.
+
+### Added
+
+- **Unlisted posts and pages**, from Unlist Posts & Pages. A "Visibility in listings" box in the editor sidebar unlists an item: it opens from its own address, marked noindex, but appears on no theme module, archive, search, feed, sitemap, page list or previous and next link, and no question links to it. Editors still see it throughout the admin. The plugin's filter is skipped by get_posts(), which builds most of the theme's modules, so the theme filters at pre_get_posts and its direct lookups check boi_is_unlisted(). Unlisted items are marked "Unlisted" in the admin lists and listed on the new Access tab.
+- **Readable search addresses**, from Pretty Search Permalinks. /?s=Paul moves to /search/Paul/ with a permanent redirect. Unlike the plugin, the redirect keeps every other query argument, so the search page's section filters survive, and it keeps the page number. The base word can be changed on the Search engines tab, and robots.txt keeps a changed base out of search engines. On by default.
+- **Custom login address**, from WPS Hide Login, on the new Access tab. The login page is served from an address of the owner's choosing; wp-login.php, wp-register.php and wp-admin answer with the site's 404 page for anyone not logged in; and every generated login link, including those in password-reset and privacy emails, uses the new address. Password-protected posts, admin-post.php (which the contact form uses) and admin-ajax.php keep working. Off by default. An address is refused, and the feature stays off, if it is under six characters, belongs to WordPress or the theme, or is already used by a page, post or section. `define( 'BOI_HIDE_LOGIN', false );` in wp-config.php switches it off at once.
+- Each feature stands aside while its original plugin is active, and imports that plugin's saved settings when it is deactivated.
+- `docs/CREDITS.md`, crediting the three plugins' authors, the icon pack and the images.
+
+### Changed
+
+- The rule against contractions now covers all English in the theme, including interface text, comments and documentation. A full scan found none.
+
+## [1.48.0] - 2026-09-25
+
+Checked against Google's SEO Starter Guide and Google's list of supported structured data (updated June 2026), on a working WordPress install: 14 page types for the guide's recommendations, and every article for structured data.
+
+### Added
+
+- Structured data for the features on Google's list that apply to this site, in `inc/structured-data.php`, one linked graph per page:
+  - Organization and WebSite on the front page: name, address, description, a 512px logo (`assets/images/logo-512.png`, or the site icon when one is set) and the follow links as sameAs.
+  - Article on every article: headline, description, publication and modification dates, author, publisher with logo, section, language and image.
+  - Image metadata on each article's image: licence (Public Domain Mark or CC0), the Commons page where the licence can be checked, a credit line and the creator, all from the credits the theme records.
+- A canonical link on section archives, the Reflections index and author archives, including their paginated pages. WordPress core adds one only to single posts and pages. It yields to SEO plugins, as the descriptions do.
+
+### Fixed
+
+- Seeded articles and pages had no author. Content is seeded on the first page load after an update, where nobody is logged in, and WordPress assigns new posts to the current user; the 29 articles belonged to user 0, so they showed no author card and had an empty author archive. Seeding now names the site's first administrator, and existing unowned seeded content is repaired on update. Tested both ways, on a fresh install and on an existing one, with a logged-out request.
+- The front page had no meta description. It is a static page with no content of its own; it now carries the site's promise within 130 characters, with a call to action.
+- The author archive had no description; it now uses the author's biography, or a line naming the author.
+- The Reflections index had no h1; the archive-title block prints nothing on the posts page.
+- The XML sitemap listed WordPress's default category archive, which the site does not use. Category and tag archives are now left out.
+- Names in all structured data are plain text. WordPress renders titles with typographic entities such as `&#8217;`, and stores `&` in section names as `&amp;`, which JSON carried literally into the ItemList, breadcrumbs and Article markup.
+
+### Not added, and why
+
+- An image sitemap. The starter guide suggests one, but WordPress core's sitemaps reject image entries, and Google finds images in the page's HTML without one.
+- The FAQ and list markup stay as they are. FAQ markup no longer appears on Google's list of supported features, and Google shows list carousels only for recipes, courses, restaurants and movies. Both remain valid descriptions of their pages and cost nothing.
+
+## [1.47.0] - 2026-09-25
+
+A responsive pass, tested on a working WordPress install (WordPress 7.1.1 on SQLite, Twenty Twenty-Five 1.5 as parent, all 29 articles seeded) in a real browser: 9 page types (front, article, section, search, About, Contact, Site map, Reflections, 404) at 12 widths from 320 to 1920px, 108 combinations in all. After the fixes below: no page scrolls sideways, nothing runs past the screen edge, no text is smaller than 12px, and every phone tap target is at least 24px.
+
+### Fixed
+
+- Every full-width band on the front page overshot the screen by 30px on each side, at every width. The front page removes the root padding from its main element, but WordPress still pulls full-width blocks outward by that padding. The overflow clipping hid the scrollbar but cut off the hero's image credit on phones and pushed the hero cards past the edge on tablets. The bands now sit exactly at the screen edges.
+- The hero's stepped cards overshot the screen on tablets; the stack now reserves room for their offset.
+- Text smaller than 12px: 19 font sizes below 0.75rem, in the stylesheets and templates, raised to the floor. They covered section tags, band labels, Read next, Share, Matching entries and the hero credit.
+- Touch targets on phones: breadcrumbs, section tags, footer links and the footer's page bar, Back to top, Read next, previous and next article links, the featured card's section tag and answer links all gain padding to at least 24px. Page numbers on archives become 40px squares, where "2" was 8px wide. The comment consent checkbox is 24px and no longer squeezed by its row.
+- The Indonesia photograph is cropped to remove the museum mount showing at both sides.
+
+### Changed
+
+- Card blurbs are left-aligned: post excerpts in grids, section descriptions, Start here steps, the featured card and the answers under each question. Justified across a narrow column they opened wide gaps between words. Articles and pages stay justified.
+
+## [1.46.4] - 2026-09-25
+
+### Fixed
+
+- Between 600 and 781px wide, the header's section links ran off the right edge and pushed the search field and toggle off screen. A rule from 1.38.2 stopped the link bar shrinking on the assumption that the links collapse into the menu button below 781px, but WordPress collapses them only below 600px. In two-row mode the tools row now wraps. Between 600 and 781px the links keep one row that scrolls sideways, with a fade at the right edge, and the search and toggle share the row beneath. Below 600px the menu button, search and toggle share one row. Checked in a browser at 13 widths from 360 to 1920px in light and dark appearance: nothing overlaps, nothing leaves the screen, the page never scrolls sideways, and the search field and toggle always share a height.
+
+## [1.46.3] - 2026-09-25
+
+### Fixed
+
+- Opening a question in the front-page accordion no longer stretches the closed question beside it. Grid rows stretch their items to the tallest by default; each question now keeps its own height. Checked in a browser: an opened question grows from 81 to 181px while its neighbour stays at 81px.
+
+## [1.46.2] - 2026-09-25
+
+### Fixed
+
+- The header search field and the appearance toggle are restyled as one set. WordPress core's search styles showed through as a solid white button inside the field, and the field and toggle had different heights, borders and fills; the toggle marked the current mode with a solid white half. Both are now 36px tall with the same thin border and faint fill, the current mode is marked by the outlined fill the navigation uses, the search button is a light icon, and the field lights with a blue focus ring while typing. Checked in a real browser in light and dark appearance, at 1440, 1366, 1301 and 1280px, and on a phone: the header keeps one row above 1300px and two below.
+
+## [1.46.1] - 2026-09-25
+
+### Fixed
+
+- The questions in the front-page accordion are no longer italic. The italics dated from when each item was a critic's objection and marked it as quoted speech; since 1.34.0 the items are questions, and the styling had outlived its reason.
+
+## [1.46.0] - 2026-09-25
+
+### Changed
+
+- The footer is redesigned around the site's identity. The three descending bars of the mark run full width across its top. The wordmark is set large opposite the site's promise, "Every objection stated in its own terms, then answered from the sources." Four columns span the full width: the reading order, its seven parts numbered in the countdown style and each linking to its first article; the sections; a Start column; and Follow, with the icon row. The standing pages and the notice close it. Styles live in `assets/css/footer.css`.
+- On the front page the last band runs straight into the footer. The white strip between them is gone.
+- The front page's Follow band is removed. It held only an RSS link when no channels were set, and the footer now carries the follow icons.
+- Short text is never justified. The footer, which runs to a line or two per item, is excluded from justification, which had opened wide gaps in its tagline.
+- The header takes two rows up to 1300px, up from 1024px. Six section links, the search and the toggle need about 1,200px beside the wordmark, so on common laptop widths the single row wrapped by accident.
+- A new theme screenshot shows the front page as it stands: the manuscript hero, the stats strip and the featured band, with live counts.
+
+### Added
+
+- `bestofislam/reading-parts`, the numbered reading-order list used in the footer.
+
+## [1.45.1] - 2026-09-25
+
+### Fixed
+
+- Cards in the Latest grid, archives and search showed a placeholder box over their section label and title. The placeholder was a link, and the image block, set to link its image, wrapped it in a second link. A link inside a link is invalid HTML, and browsers repaired it by moving the inner link out of its frame, over the card's text. The placeholder is now a plain element.
+- Seeded articles showed placeholders wherever their featured image had not yet been copied into the media library, which on some hosts never happens. Every image slot now falls back to the copy bundled with the theme: cards, the lead, related pieces, the article page with its credit line, and the hero background. The media library copy is still made in the background and takes over once it exists.
+
+### Added
+
+- The Content tab reports how many featured images have been copied into the media library, with a note on what to check if the count does not rise.
+
 ## [1.45.0] - 2026-09-23
 
 ### Added

@@ -223,6 +223,48 @@ function boi_image_manifest() {
 			'licence' => 'Public domain',
 			'source'  => 'https://commons.wikimedia.org/wiki/File:KITLV_-_105897_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Mosque_at_Kuala_Lumpur_-_circa_1900_-_small.jpg',
 		),
+		'kaaba-witnesses' => array(
+			'file'    => 'kaaba-witnesses.jpg',
+			'alt'     => __( 'A 1482 printing of Ptolemy\'s map of the Arabian peninsula, Ulm edition', 'bestofislam' ),
+			'artist'  => 'Claudius Ptolemy, Ulm edition of 1482',
+			'licence' => 'Public domain',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:1482_Ptolemaic_map_of_the_Arabian_peninsula_and_the_Persian_Gulf.jpg',
+		),
+		'dome-inscriptions' => array(
+			'file'    => 'dome-inscriptions.jpg',
+			'alt'     => __( 'The interior of the Dome of the Rock, 19th-century photograph', 'bestofislam' ),
+			'artist'  => 'From the collection Holy Land Photographed, Daniel B. Shepp',
+			'licence' => 'Public domain',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:Jerusalem,_Mosque_of_Omar_(interior_view,_Dom_of_Rock)._014.Holy_land_photographed._Daniel_B._Shepp._1894.jpg',
+		),
+		'library-of-alexandria' => array(
+			'file'    => 'library-of-alexandria.jpg',
+			'alt'     => __( 'An artist\'s impression of the ancient Library of Alexandria, 19th-century engraving', 'bestofislam' ),
+			'artist'  => 'O. Von Corven, 19th century',
+			'licence' => 'Public domain',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:Ancientlibraryalex.jpg',
+		),
+		'jizya' => array(
+			'file'    => 'jizya.jpg',
+			'alt'     => __( 'A manuscript of Abu Yusuf\'s treatise on taxation, copied in 961 AH', 'bestofislam' ),
+			'artist'  => 'Abu Yusuf, manuscript copied in 961 AH',
+			'licence' => 'Public domain',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:961_AH_manuscripts_of_Kitab_al-Kharaj.jpg',
+		),
+		'quran-preservation-reddit' => array(
+			'file'    => 'quran-preservation-reddit.jpg',
+			'alt'     => __( 'A leaf of the Sanaa palimpsest, an early Quran manuscript', 'bestofislam' ),
+			'artist'  => 'Sanaa manuscript, photographed for Stanford University',
+			'licence' => 'Public domain',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:Sana%27a1_Stanford_%2707_recto.jpg',
+		),
+		'apostasy-in-islam' => array(
+			'file'    => 'apostasy-in-islam.jpg',
+			'alt'     => __( 'Illuminated opening pages of a Quran by the calligrapher Khayr al-Din al-Marashi', 'bestofislam' ),
+			'artist'  => 'Khayr al-Din al-Marashi',
+			'licence' => 'CC0',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:Opening_pages_from_the_Qur%27an_by_Khayr_al-Din_al-Mar%E2%80%98ashi.jpg',
+		),
 	);
 }
 
@@ -373,7 +415,18 @@ function boi_render_image_credit() {
 	$id = get_post_thumbnail_id();
 
 	if ( ! $id ) {
-		return '';
+		$bundled = boi_bundled_image( get_post() );
+
+		if ( ! $bundled ) {
+			return '';
+		}
+
+		return sprintf(
+			'<p class="boi-credit">%1$s <a href="%2$s" rel="noopener">%3$s</a></p>',
+			esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $bundled['artist'], $bundled['licence'] ) ),
+			esc_url( $bundled['source'] ),
+			esc_html__( 'Wikimedia Commons', 'bestofislam' )
+		);
 	}
 
 	$credit = get_post_meta( $id, '_boi_credit', true );
@@ -413,4 +466,100 @@ function boi_render_image_credits() {
 	}
 
 	return '<ul class="boi-credits">' . $items . '</ul>';
+}
+
+/**
+ * The image bundled with the theme for a seeded article, whether or not it
+ * has been copied into the media library yet.
+ *
+ * Every seeded article ships with its image in assets/images/featured/. The
+ * media library copy is made in the background and can lag, or fail on hosts
+ * that restrict uploads. Wherever an attached image is missing, this bundled
+ * file stands in, so no seeded article is ever shown without its picture.
+ *
+ * @param int|WP_Post $post Post or identifier.
+ * @return array|null Manifest entry plus url, width and height, or null.
+ */
+function boi_bundled_image( $post ) {
+	static $cache = array();
+
+	$post = get_post( $post );
+
+	if ( ! $post ) {
+		return null;
+	}
+
+	if ( array_key_exists( $post->ID, $cache ) ) {
+		return $cache[ $post->ID ];
+	}
+
+	$manifest = boi_image_manifest();
+	$entry    = isset( $manifest[ $post->post_name ] ) ? $manifest[ $post->post_name ] : null;
+	$file     = $entry ? BOI_DIR . '/assets/images/featured/' . $entry['file'] : '';
+
+	if ( ! $entry || ! file_exists( $file ) ) {
+		$cache[ $post->ID ] = null;
+		return null;
+	}
+
+	$size = function_exists( 'wp_getimagesize' ) ? wp_getimagesize( $file ) : getimagesize( $file );
+
+	$entry['url']    = BOI_URI . '/assets/images/featured/' . $entry['file'];
+	$entry['width']  = $size ? (int) $size[0] : 0;
+	$entry['height'] = $size ? (int) $size[1] : 0;
+
+	$cache[ $post->ID ] = $entry;
+
+	return $entry;
+}
+
+/**
+ * The bundled image as an img element, carrying the class and inline style
+ * the requesting block passed, so it sits in the block's frame exactly as an
+ * attached image would.
+ *
+ * @param array $image Entry from boi_bundled_image().
+ * @param array $attr  Attributes requested by the caller.
+ * @return string
+ */
+function boi_bundled_image_html( $image, $attr = array() ) {
+	$attr  = is_array( $attr ) ? $attr : wp_parse_args( $attr );
+	$class = 'wp-post-image boi-bundled-image' . ( ! empty( $attr['class'] ) ? ' ' . $attr['class'] : '' );
+
+	return sprintf(
+		'<img src="%1$s" alt="%2$s" class="%3$s"%4$s%5$s loading="lazy" decoding="async"%6$s />',
+		esc_url( $image['url'] ),
+		esc_attr( $image['alt'] ),
+		esc_attr( $class ),
+		$image['width'] ? ' width="' . (int) $image['width'] . '"' : '',
+		$image['height'] ? ' height="' . (int) $image['height'] . '"' : '',
+		! empty( $attr['style'] ) ? ' style="' . esc_attr( $attr['style'] ) . '"' : ''
+	);
+}
+
+/**
+ * Counts seeded articles whose image is attached in the media library, for
+ * the Content tab.
+ *
+ * @return array Array( attached, total ).
+ */
+function boi_image_status() {
+	$total    = 0;
+	$attached = 0;
+
+	foreach ( array_keys( boi_image_manifest() ) as $slug ) {
+		$post = get_page_by_path( $slug, OBJECT, 'post' );
+
+		if ( ! $post ) {
+			continue;
+		}
+
+		++$total;
+
+		if ( has_post_thumbnail( $post ) ) {
+			++$attached;
+		}
+	}
+
+	return array( $attached, $total );
 }

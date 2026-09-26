@@ -1,0 +1,199 @@
+/**
+ * Footer.
+ *
+ * The footer carries the site's signature: the three descending bars of the
+ * mark, full width, then the wordmark set large opposite the site's promise,
+ * then four columns across the full width with the reading order first, its
+ * parts numbered in the countdown style. The standing pages and the notice
+ * close it.
+ */
+
+/* On the front page, the last band runs straight into the footer. */
+main.boi-front + footer,
+main.boi-front + footer .boi-footer,
+.wp-site-blocks > main.boi-front + .wp-block-template-part {
+	margin-block-start: 0 !important;
+}
+
+.boi-footer {
+	--boi-footer-link: #DEE9F5;
+	--boi-footer-mute: #9DB3C9;
+	--boi-footer-rule: #213E61;
+}
+
+/* Signature: the mark's three bars, full width. */
+.boi-footer__bars {
+	display: grid;
+	gap: 0.85rem;
+	margin-block: 0 clamp(2.5rem, 5vw, 3.75rem) !important;
+}
+
+.boi-footer__bars span {
+	display: block;
+	block-size: 0.5rem;
+	border-radius: 999px;
+}
+
+.boi-footer__bars span:nth-child(1) {
+	inline-size: 100%;
+	background: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-footer__bars span:nth-child(2) {
+	inline-size: 78%;
+	background: #3FA9F5;
+}
+
+.boi-footer__bars span:nth-child(3) {
+	inline-size: 52%;
+	background: #FFFFFF;
+}
+
+/* Statement: the wordmark, large, opposite the promise. */
+.boi-footer__statement {
+	gap: 1.5rem 3rem;
+	padding-block-end: clamp(1.75rem, 3vw, 2.5rem);
+	border-block-end: 1px solid var(--boi-footer-rule);
+}
+
+.boi-footer__wordmark,
+.boi-footer__wordmark a {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--vollkorn, Georgia, serif);
+	font-size: clamp(2.6rem, 5.5vw, 4.25rem) !important;
+	font-weight: 800;
+	line-height: 1 !important;
+	letter-spacing: -0.035em;
+	text-transform: lowercase;
+	color: #FFFFFF !important;
+	text-decoration: none;
+}
+
+.boi-footer__promise {
+	margin: 0 !important;
+	max-inline-size: 30rem;
+	font-family: var(--wp--preset--font-family--platypi, Georgia, serif);
+	font-size: clamp(1.25rem, 2.2vw, 1.75rem) !important;
+	font-weight: 500;
+	line-height: 1.3 !important;
+	text-align: end !important;
+	color: var(--boi-footer-link);
+	text-wrap: balance;
+}
+
+/* Four columns across the full width. */
+.boi-footer__cols {
+	display: grid !important;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 2.5rem 2rem;
+	margin-block-start: clamp(2rem, 4vw, 2.75rem) !important;
+}
+
+.boi-footer__col > * {
+	margin-block: 0 !important;
+}
+
+.boi-footer__label {
+	margin-block-end: 1.1rem !important;
+	font-family: var(--wp--preset--font-family--ysabeau-office, system-ui, sans-serif) !important;
+	font-size: 0.75rem !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-2, #E8B33C) !important;
+}
+
+.boi-footer__nav .wp-block-navigation__container {
+	gap: 0.7rem !important;
+}
+
+.boi-footer__nav .wp-block-navigation-item__content {
+	padding: 0 !important;
+	font-size: 1rem;
+	color: var(--boi-footer-link) !important;
+	text-decoration: none;
+}
+
+.boi-footer__nav .wp-block-navigation-item__content:hover,
+.boi-footer__nav .wp-block-navigation-item__content:focus-visible,
+.boi-parts a:hover .boi-parts__label,
+.boi-parts a:focus-visible .boi-parts__label {
+	color: #FFFFFF !important;
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+/* The reading order, numbered in the countdown style. */
+.boi-parts {
+	display: grid;
+	gap: 0.7rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-parts a {
+	display: grid;
+	grid-template-columns: 1.6rem 1fr;
+	align-items: baseline;
+	color: var(--boi-footer-link);
+	text-decoration: none;
+}
+
+.boi-parts__num {
+	font-family: var(--wp--preset--font-family--platypi, Georgia, serif);
+	font-weight: 700;
+	color: #3FA9F5;
+}
+
+.boi-parts li:first-child .boi-parts__num {
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-footer__note {
+	margin-block-end: 1rem !important;
+	font-size: 0.9rem;
+	color: var(--boi-footer-mute);
+}
+
+.boi-footer ul.boi-social {
+	margin-block-start: 0 !important;
+}
+
+/* The closing rows. */
+.boi-footer .boi-footer__bottom {
+	margin-block-start: clamp(2.5rem, 5vw, 3.5rem) !important;
+	border-top-color: var(--boi-footer-rule) !important;
+}
+
+.boi-footer .boi-notice {
+	color: var(--boi-footer-mute);
+}
+
+/* Smaller screens. */
+@media (max-width: 1024px) {
+	.boi-footer__cols {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 781px) {
+	.boi-footer__promise {
+		text-align: start !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.boi-footer__cols {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.boi-footer__bars {
+		gap: 0.6rem;
+	}
+
+	.boi-footer__bars span {
+		block-size: 0.4rem;
+	}
+}
