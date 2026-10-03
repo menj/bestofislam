@@ -265,6 +265,13 @@ function boi_image_manifest() {
 			'licence' => 'CC0',
 			'source'  => 'https://commons.wikimedia.org/wiki/File:Opening_pages_from_the_Qur%27an_by_Khayr_al-Din_al-Mar%E2%80%98ashi.jpg',
 		),
+		'crucifixion-quran' => array(
+			'file'    => 'crucifixion-quran.jpg',
+			'alt'     => __( 'The domes of the Church of the Holy Sepulchre in Jerusalem, photographed in 1870', 'bestofislam' ),
+			'artist'  => 'Félix Bonfils',
+			'licence' => 'Public domain',
+			'source'  => 'https://commons.wikimedia.org/wiki/File:Hospice_of_the_Knights_of_St._John,_Church_of_the_Holy_Sepulchre)_-_Bonfils_LCCN92500626.jpg',
+		),
 	);
 }
 

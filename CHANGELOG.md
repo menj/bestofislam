@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.56.0] - 2026-10-04
+
+Following the mapping of a critic's claims in Part C of the SEO workbook: claim C18, the largest tier-1 gap.
+
+### Added
+
+- Comparative Religion: **The crucifixion and the Quran: 6 facts about Quran 4:157.** As the mapping requires, it keeps three questions apart. On the history, it concedes that historians treat the crucifixion as well attested, citing Tacitus, and states that Muslims hold to the Quran on the authority of revelation. On the meaning of 4:157, it sets out the verse as a reply to a boast and concedes the critic's strongest point, that the classical commentaries disagree over who was made to resemble Jesus, showing from Todd Lawson's study and al-Rāzī's commentary that those stories are the commentators' and the Quran names no one. On atonement, it answers the appeal to blood from the Hebrew Bible itself: the flour sin offering of the poor in Leviticus 5, the principles of Ezekiel 18 and Deuteronomy 24, and the Day of Atonement, whose two goats are both described, the sin-bearing scapegoat being the one sent away alive. Every Quranic and biblical text was checked against its translation. Illustrated with Félix Bonfils's 1870 photograph of the Church of the Holy Sepulchre, cropped from its mount.
+- One question: "Does the Quran deny the crucifixion?" The theme ships 36 articles and 33 questions.
+
+### Checked
+
+- The checks removed four statements that went beyond the sources, and added the Day of Atonement's second goat, which an account of the scapegoat alone would have left out.
+- Built from the 1.55.0 package after the working environment was reset. Every article's markup was validated with WordPress's own block parser; the full test-site run of earlier releases was not repeated for this release.
+
 ## [1.55.0] - 2026-09-25
 
 From twelve transcripts of videos and debates critical of Islam, supplied by the owner: PragerU, Apostate Prophet interviews, a GotQuestions explainer and four debates. They were used as a survey of the objections being made to large audiences. The most frequent objection with no article on the site was apostasy, raised in 8 of the 12. The transcripts are not quoted, and no speaker is named, in keeping with the site's rule of answering arguments on their merits.

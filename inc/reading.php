@@ -33,7 +33,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'shared-prophets', 'jesus-not-god', 'verses-read-differently', 'paul-and-the-law', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism' ),
+			'slugs' => array( 'same-god', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),

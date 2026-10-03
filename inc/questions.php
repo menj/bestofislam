@@ -222,6 +222,12 @@ function boi_questions() {
 					'feat' => false,
 				),
 				array(
+					'q'    => __( 'Does the Quran deny the crucifixion?', 'bestofislam' ),
+					'a'    => __( 'It denies that Jesus was killed or crucified by his enemies, and says God raised him to Himself. Historians treat the crucifixion as well attested; Muslims hold to the Quran on the authority of revelation, and reject atonement by proxy on the Hebrew prophets\' own principle that each soul bears its own sin.', 'bestofislam' ),
+					'slug' => 'crucifixion-quran',
+					'feat' => false,
+				),
+				array(
 					'q'    => __( 'Did Islam spread by the sword?', 'bestofislam' ),
 					'a'    => __( 'The Quran forbids compulsion in belief and bounds fighting with a prohibition on transgression. Current data put jihadist violence far below the impression the coverage gives.', 'bestofislam' ),
 					'slug' => 'islam-religion-of-peace',

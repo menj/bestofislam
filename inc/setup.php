@@ -321,6 +321,12 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'Does Islam demand death for leaving it? What the Quran, the hadith, the jurists and the surveys say. 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
+		array(
+			'slug'    => 'crucifixion-quran',
+			'title'   => __( 'The crucifixion and the Quran: 6 facts about Quran 4:157', 'bestofislam' ),
+			'excerpt' => __( 'Was Jesus crucified? What historians hold, what Quran 4:157 says, and why Islam rejects atonement by proxy. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
 	);
 }
 
