@@ -235,5 +235,5 @@ function boi_enqueue_typography() {
 }
 add_action( 'wp_enqueue_scripts', 'boi_enqueue_typography', 100 );
 
-/* Cross-site content links between the sister sites. */
-require_once get_stylesheet_directory() . '/inc/network-links.php';
+/* Contextual in-content links. */
+require_once get_stylesheet_directory() . '/inc/contextual-links.php';
