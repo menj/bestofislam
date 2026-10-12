@@ -64,7 +64,7 @@ function boi_enqueue_assets() {
 		'boi-front',
 		BOI_URI . '/assets/css/front.css',
 		array( 'boi-navigation' ),
-		BOI_VERSION
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/front.css' )
 	);
 
 	if ( is_front_page() ) {

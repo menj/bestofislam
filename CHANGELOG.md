@@ -14,7 +14,7 @@ versioning.
 
 ### Fixed
 
-- Front page: removed the white strip between the header and the hero, which was the block gap WordPress places above `main`.
+- Front page: removed the white strip between the header and the hero, which was the block gap WordPress places above `main`. The selector now also covers the header's own bottom margin, and the front stylesheet's cache-busting query now includes the file's modified time. The first fix kept the same version string, so a cached `front.css` could keep showing the strip. The theme version is not bumped, because a version change re-runs content population.
 
 ## [1.56.0] - 2026-10-04
 
