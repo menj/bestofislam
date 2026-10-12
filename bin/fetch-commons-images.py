@@ -7,10 +7,12 @@ anything that is not public domain or CC0, downloads a 960px copy, stores it as
 AVIF in assets/images/inline/, and rewrites that article's entry in
 inc/images-data.json with the artist, licence and source page.
 
-Run it from a machine that Wikimedia is not rate-limiting, then run
-bin/convert-images.py to confirm nothing but AVIF remains:
+It is safe to run again: swaps already made are skipped. The workflow in
+.github/workflows/images.yml runs it, then bin/convert-images.py, on every pull
+request, and commits whatever changed. To run it by hand:
 
     python3 bin/fetch-commons-images.py
+    python3 bin/convert-images.py
 
 Needs Pillow 11.3 or later with AVIF support.
 """
@@ -50,6 +52,8 @@ data = json.load(open(data_path, encoding='utf-8'))
 failed = []
 
 for slug, (title, alt) in swaps.items():
+    if data[slug]['inline'][1]['source'].startswith('https://commons.wikimedia.org/'):
+        continue  # already swapped on an earlier run
     query = urllib.parse.urlencode({
         'action': 'query', 'format': 'json', 'titles': title, 'prop': 'imageinfo',
         'iiprop': 'url|extmetadata', 'iiurlwidth': '1400',

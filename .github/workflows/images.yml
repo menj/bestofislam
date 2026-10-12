@@ -1,0 +1,57 @@
+name: Images
+
+# Runs the image scripts automatically, so no release goes out with a JPEG in
+# it or with a Commons swap still waiting:
+#   1. bin/fetch-commons-images.py swaps in the Commons files (skips any
+#      already swapped, and never fails the run if Wikimedia is slow).
+#   2. bin/convert-images.py turns every image into AVIF, deletes the
+#      originals, and fails the run if anything but AVIF remains.
+# When either changes files, the result is committed back to the pull request.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: images-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow with AVIF support
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'pillow>=11.3'
+          python -c "from PIL import features; assert features.check('avif'), 'Pillow has no AVIF support'"
+
+      - name: Swap in Commons images
+        run: python bin/fetch-commons-images.py || echo "Some Commons images are still pending; they will be tried again on the next run."
+
+      - name: Convert to AVIF and check
+        run: python bin/convert-images.py
+
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Images: run fetch-commons-images and convert-images"
+            git push
+          fi

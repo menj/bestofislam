@@ -17,6 +17,7 @@ versioning.
 
 ### Changed
 
+- The image scripts run automatically: an Images workflow runs the Commons swap and the AVIF conversion on every pull request and commits the result, a Package theme workflow builds the release zip after checking the images, and an optional pre-commit hook does the same check locally.
 - Dome of the Rock and Seven Libraries move to Arts & Culture; taqiyya and war and killing move to Islamophobia.
 - The Sources page and footer no longer say every image is public domain.
 
