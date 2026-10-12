@@ -687,12 +687,19 @@ function boi_populate_content() {
 	boi_create_navigation( $topics, $pages );
 	boi_remove_sample_content();
 
-	if ( isset( $pages['home'] ) ) {
+	// Set the front page and posts page only when the site has not chosen
+	// its own: population runs again on updates, and must not undo a choice
+	// the owner made after activation.
+	$front = (int) get_option( 'page_on_front' );
+
+	if ( isset( $pages['home'] ) && ( 'page' !== get_option( 'show_on_front' ) || ! $front || ! get_post( $front ) ) ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $pages['home'] );
 	}
 
-	if ( isset( $pages['blog'] ) ) {
+	$posts_page = (int) get_option( 'page_for_posts' );
+
+	if ( isset( $pages['blog'] ) && ( ! $posts_page || ! get_post( $posts_page ) ) ) {
 		update_option( 'page_for_posts', $pages['blog'] );
 	}
 
@@ -813,14 +820,6 @@ function boi_migrate_seed( $topics ) {
 
 		$args = array();
 
-		if ( $post->post_title !== $listicle['title'] ) {
-			$args['post_title'] = $listicle['title'];
-		}
-
-		if ( $post->post_excerpt !== $listicle['excerpt'] ) {
-			$args['post_excerpt'] = $listicle['excerpt'];
-		}
-
 		// Refresh the body only while the owner has not edited it. Four cases:
 		// already current; damaged by the old unslashed save and otherwise
 		// untouched, which is repaired; recorded as written by the theme,
@@ -831,6 +830,11 @@ function boi_migrate_seed( $topics ) {
 		$slug    = $listicle['slug'];
 		$current = boi_content_fingerprint( $post->post_content );
 
+		// The theme's own text may be refreshed only while the owner has not
+		// touched the article. An edited body means the title and excerpt may
+		// have been edited too, so they are left alone as well.
+		$untouched = false;
+
 		if ( '' !== $fresh ) {
 			$target  = boi_content_fingerprint( $fresh );
 			$damaged = boi_content_fingerprint( wp_unslash( $fresh ) );
@@ -838,10 +842,22 @@ function boi_migrate_seed( $topics ) {
 			if ( $current === $target ) {
 				$hashes[ $slug ] = $current;
 				update_option( 'boi_article_hashes', $hashes, false );
+				$untouched = true;
 			} elseif ( ( isset( $hashes[ $slug ] ) && $hashes[ $slug ] === $current )
 				|| $current === $damaged
 				|| ( ! isset( $hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt ) ) {
 				$args['post_content'] = $fresh;
+				$untouched            = true;
+			}
+		}
+
+		if ( $untouched ) {
+			if ( $post->post_title !== $listicle['title'] ) {
+				$args['post_title'] = $listicle['title'];
+			}
+
+			if ( $post->post_excerpt !== $listicle['excerpt'] ) {
+				$args['post_excerpt'] = $listicle['excerpt'];
 			}
 		}
 
@@ -886,9 +902,13 @@ function boi_migrate_pages( $pages ) {
 
 		$current = boi_content_fingerprint( $post->post_content );
 
-		// Unedited means the stored content still matches what the theme last wrote.
-		if ( isset( $hashes[ $key ] ) && $hashes[ $key ] !== $current ) {
-			continue;
+		// Unedited means the stored content still matches what the theme last
+		// wrote. With no record of what it wrote, an edit cannot be ruled out,
+		// so the page is left as it is.
+		if ( ! isset( $hashes[ $key ] ) || $hashes[ $key ] !== $current ) {
+			if ( isset( $hashes[ $key ] ) || '' !== trim( $post->post_content ) ) {
+				continue;
+			}
 		}
 
 		$fresh = boi_seed_page_content( $key );
@@ -924,7 +944,8 @@ function boi_retire_questions_page() {
 
 	$hashes = (array) get_option( 'boi_page_hashes', array() );
 
-	if ( isset( $hashes['questions'] ) && md5( $page->post_content ) !== $hashes['questions'] && boi_content_fingerprint( $page->post_content ) !== $hashes['questions'] ) {
+	// Trash it only when the record proves the owner has not edited it.
+	if ( ! isset( $hashes['questions'] ) || ( md5( $page->post_content ) !== $hashes['questions'] && boi_content_fingerprint( $page->post_content ) !== $hashes['questions'] ) ) {
 		return;
 	}
 

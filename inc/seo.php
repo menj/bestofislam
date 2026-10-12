@@ -27,11 +27,16 @@ function boi_should_emit_description() {
 		return false;
 	}
 
-	if ( defined( 'WPSEO_VERSION' ) || defined( 'RANK_MATH_VERSION' ) || defined( 'AIOSEO_VERSION' ) || defined( 'SEOPRESS_VERSION' ) ) {
-		return false;
-	}
+	return ! boi_seo_plugin_active();
+}
 
-	return true;
+/**
+ * Whether an SEO plugin is active and so owns descriptions and canonicals.
+ *
+ * @return bool
+ */
+function boi_seo_plugin_active() {
+	return defined( 'WPSEO_VERSION' ) || defined( 'RANK_MATH_VERSION' ) || defined( 'AIOSEO_VERSION' ) || defined( 'SEOPRESS_VERSION' );
 }
 
 /**
@@ -358,7 +363,7 @@ function boi_render_breadcrumbs() {
  * @return void
  */
 function boi_canonical_link() {
-	if ( is_singular() || is_search() || is_404() || ! boi_should_emit_description() ) {
+	if ( is_singular() || is_search() || is_404() || boi_seo_plugin_active() ) {
 		return;
 	}
 

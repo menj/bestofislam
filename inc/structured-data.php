@@ -132,8 +132,9 @@ function boi_article_image_object( $post ) {
 		return null;
 	}
 
-	// The manifest is the record of every seeded image's credit.
-	if ( empty( $credit ) && function_exists( 'boi_image_manifest' ) ) {
+	// The manifest is the record of every seeded image's credit. It describes
+	// the seeded image only, so it is not applied to an image the owner chose.
+	if ( empty( $credit ) && ! $id && function_exists( 'boi_image_manifest' ) ) {
 		$manifest = boi_image_manifest();
 
 		if ( isset( $manifest[ $post->post_name ] ) ) {

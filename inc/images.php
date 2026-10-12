@@ -326,7 +326,13 @@ function boi_attach_featured_images( $limit = 3 ) {
 
 		$tmp = wp_tempnam( $image['file'] );
 
-		if ( ! $tmp || ! copy( $source, $tmp ) ) {
+		if ( ! $tmp ) {
+			continue;
+		}
+
+		if ( ! copy( $source, $tmp ) ) {
+			// wp_tempnam() already created the file, so remove it.
+			wp_delete_file( $tmp );
 			continue;
 		}
 
@@ -375,15 +381,23 @@ function boi_continue_featured_images() {
 		return;
 	}
 
-	// One request at a time: a short lock keeps concurrent visitors from
-	// sideloading the same image twice.
-	if ( get_transient( 'boi_images_lock' ) ) {
-		return;
+	// One request at a time. add_option() fails if the option exists, which
+	// makes taking the lock a single atomic insert; a transient would let two
+	// requests both see "unlocked" and sideload the same image twice. A lock
+	// older than a minute is treated as left behind by a request that died.
+	if ( ! add_option( 'boi_images_lock', time(), '', false ) ) {
+		wp_cache_delete( 'boi_images_lock', 'options' );
+		if ( time() - (int) get_option( 'boi_images_lock' ) <= MINUTE_IN_SECONDS ) {
+			return;
+		}
+		delete_option( 'boi_images_lock' );
+		if ( ! add_option( 'boi_images_lock', time(), '', false ) ) {
+			return;
+		}
 	}
 
-	set_transient( 'boi_images_lock', 1, MINUTE_IN_SECONDS );
 	boi_attach_featured_images();
-	delete_transient( 'boi_images_lock' );
+	delete_option( 'boi_images_lock' );
 }
 add_action( 'init', 'boi_continue_featured_images', 30 );
 

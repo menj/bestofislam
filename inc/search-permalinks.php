@@ -39,8 +39,10 @@ function boi_pretty_search_enabled() {
  * @return string
  */
 function boi_search_base() {
-	$options = boi_get_options();
-	$base    = isset( $options['search_base'] ) ? sanitize_title( $options['search_base'] ) : '';
+	// boi_get_options() always fills in a default, so read what is stored to
+	// tell "never set" from "set": only then is the plugin's base imported.
+	$stored = get_option( BOI_OPTION_KEY, array() );
+	$base   = is_array( $stored ) && isset( $stored['search_base'] ) ? sanitize_title( $stored['search_base'] ) : '';
 
 	if ( '' === $base ) {
 		$base = sanitize_title( (string) get_option( 'wpseosearch_base', 'search' ) );
@@ -100,7 +102,7 @@ function boi_redirect_search() {
 	unset( $args['s'], $args['paged'] );
 
 	if ( ! empty( $args ) ) {
-		$url = add_query_arg( array_map( 'rawurlencode', array_map( 'strval', array_filter( $args, 'is_scalar' ) ) ), $url );
+		$url = add_query_arg( array_map( 'strval', array_filter( $args, 'is_scalar' ) ), $url );
 	}
 
 	wp_safe_redirect( $url, 301 );

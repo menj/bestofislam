@@ -116,7 +116,11 @@ function boi_cl_filter( $content ) {
 			if ( isset( $used[ $key ] ) ) {
 				continue;
 			}
-			$re = '/(?<![\p{L}\p{N}])(' . preg_quote( $item['phrase'], '/' ) . ')(?![\p{L}\p{N}])/iu';
+			// The text is already HTML-escaped and texturized, so match the phrase
+			// as it appears there: & as &amp;, and an apostrophe in any form.
+			$needle = preg_quote( htmlspecialchars( $item['phrase'], ENT_NOQUOTES, 'UTF-8' ), '/' );
+			$needle = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
+			$re     = '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu';
 			if ( preg_match( $re, $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
 				$link          = '<a href="' . esc_url( $item['url'] ) . '"' . $rel . '>' . $mm[1][0] . '</a>';
 				$tokens[ $i ]  = $tok = substr_replace( $tok, $link, $mm[1][1], strlen( $mm[1][0] ) );

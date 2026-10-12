@@ -81,8 +81,9 @@ function boi_backfill_listicle_flags() {
 		array(
 			'post_type'      => 'post',
 			'post_status'    => 'any',
-			'posts_per_page' => 200,
+			'posts_per_page' => -1,
 			'fields'         => 'ids',
+			'no_found_rows'  => true,
 		)
 	);
 

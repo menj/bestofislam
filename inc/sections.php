@@ -58,6 +58,16 @@ function boi_render_sections() {
 			}
 		}
 
+		// The term count includes posts the unlisting feature hides from every
+		// listing, so take those off to match what a visitor can open.
+		if ( function_exists( 'boi_unlisted_ids' ) && function_exists( 'boi_unlist_enabled' ) && boi_unlist_enabled() ) {
+			foreach ( boi_unlisted_ids() as $unlisted_id ) {
+				if ( 'post' === get_post_type( $unlisted_id ) && 'publish' === get_post_status( $unlisted_id ) && has_term( $ids, 'listicle-topic', $unlisted_id ) ) {
+					--$count;
+				}
+			}
+		}
+
 		$latest = get_posts(
 			array(
 				'post_type'      => 'post',
