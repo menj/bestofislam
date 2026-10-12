@@ -44,7 +44,9 @@
    "akhira",
    "atoms"
   ],
-  "articles": [],
+  "articles": [
+   "natural-world-verses"
+  ],
   "aliases": [
    "Earthquake"
   ]
@@ -68,7 +70,8 @@
    "kaaba"
   ],
   "articles": [
-   "qibla-change"
+   "qibla-change",
+   "quranic-stories-and-history"
   ],
   "aliases": [
    "East And West (The)"
@@ -136,7 +139,10 @@
    "alim"
   ],
   "articles": [
-   "jizya"
+   "jizya",
+   "sharia-and-hudud",
+   "kharijites-and-takfir",
+   "hijab-and-modesty"
   ],
   "aliases": [
    "Schools",
@@ -238,7 +244,9 @@
    "elisha",
    "kutub"
   ],
-  "articles": [],
+  "articles": [
+   "prophets-you-may-not-know"
+  ],
   "aliases": [
    "Elias",
    "Ilyas"
@@ -260,7 +268,9 @@
    "elijah",
    "kutub"
   ],
-  "articles": [],
+  "articles": [
+   "prophets-you-may-not-know"
+  ],
   "aliases": [
    "Alyasa",
    "Al-Yasa"
@@ -310,7 +320,8 @@
   ],
   "articles": [
    "crucifixion-quran",
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "quranic-ethics"
   ],
   "aliases": []
  },
@@ -479,7 +490,10 @@
    "iblis",
    "qadar"
   ],
-  "articles": [],
+  "articles": [
+   "fate-and-free-will",
+   "six-articles-of-faith"
+  ],
   "aliases": []
  },
  {
@@ -551,7 +565,8 @@
    "fitna"
   ],
   "articles": [
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "kharijites-and-takfir"
   ],
   "aliases": [
    "Terrorism",
@@ -575,7 +590,8 @@
    "akhira"
   ],
   "articles": [
-   "crucifixion-quran"
+   "crucifixion-quran",
+   "prophets-you-may-not-know"
   ],
   "aliases": [
    "Hizqil"

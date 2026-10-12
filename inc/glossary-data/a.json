@@ -111,7 +111,11 @@
    "ibn-abbas",
    "abdul-muttalib"
   ],
-  "articles": [],
+  "articles": [
+   "quran-4-34",
+   "scholars-who-shaped-islamic-study",
+   "hajj-rites-explained"
+  ],
   "aliases": [
    "Abbas"
   ]
@@ -221,7 +225,9 @@
    "companions-of-the-prophet",
    "zakat"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": []
  },
  {
@@ -243,7 +249,11 @@
    "abdul-muttalib",
    "aminah"
   ],
-  "articles": [],
+  "articles": [
+   "kharijites-and-takfir",
+   "scholars-who-shaped-islamic-study",
+   "questions-about-aisha"
+  ],
   "aliases": [
    "Abdullah"
   ]
@@ -312,7 +322,9 @@
   "terms": [
    "hypocrites"
   ],
-  "articles": [],
+  "articles": [
+   "questions-about-aisha"
+  ],
   "aliases": []
  },
  {
@@ -440,7 +452,10 @@
    "quran"
   ],
   "articles": [
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "companions-who-started-with-nothing",
+   "women-in-the-prophets-life",
+   "war-and-killing-in-islam"
   ],
   "aliases": [
    "Bakr, Abu",
@@ -464,7 +479,12 @@
    "bukhari-al",
    "isnad"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study",
+   "end-of-time",
+   "why-no-interest",
+   "homosexuality-in-islam"
+  ],
   "aliases": [
    "Da'ud, Abu",
    "Sunan Abi Dawud"
@@ -487,7 +507,9 @@
    "greed-and-avarice",
    "ali-ibn-abi-talib"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": [
    "Dharr, Abu",
    "Abu Dharr Al-Ghifari"
@@ -511,7 +533,8 @@
    "sharia"
   ],
   "articles": [
-   "jizya"
+   "jizya",
+   "sharia-and-hudud"
   ],
   "aliases": [
    "Hanifah, Abu",
@@ -538,7 +561,9 @@
    "companions-of-the-prophet",
    "isnad"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": [
    "Huraira, Abu",
    "Abu Huraira"
@@ -563,7 +588,9 @@
    "quraysh",
    "mecca"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": [
    "Amr Ibn Hisham",
    "Abu Jahl"
@@ -703,7 +730,9 @@
    "salah",
    "tawhid"
   ],
-  "articles": [],
+  "articles": [
+   "before-your-first-friday-prayer"
+  ],
   "aliases": []
  },
  {
@@ -810,7 +839,10 @@
    "hadith"
   ],
   "articles": [
-   "manuscript-transmission"
+   "manuscript-transmission",
+   "sharia-and-hudud",
+   "homosexuality-in-islam",
+   "questions-about-aisha"
   ],
   "aliases": [
    "Zina",
@@ -918,7 +950,9 @@
   ],
   "articles": [
    "islam-religion-of-peace",
-   "ezra-and-mary"
+   "ezra-and-mary",
+   "questions-about-aisha",
+   "houris-and-paradise"
   ],
   "aliases": [
    "Attacks",
@@ -995,7 +1029,9 @@
   ],
   "articles": [
    "where-is-the-injil",
-   "al-zutt-allegation"
+   "al-zutt-allegation",
+   "companions-who-started-with-nothing",
+   "hajj-rites-explained"
   ],
   "aliases": [
    "Comforter",
@@ -1049,7 +1085,12 @@
    "age-of-responsibility",
    "sira"
   ],
-  "articles": [],
+  "articles": [
+   "questions-about-aisha",
+   "ramadan-last-ten-nights",
+   "women-in-the-prophets-life",
+   "child-marriage-in-islam"
+  ],
   "aliases": [
    "Aisha",
    "Aisha Bint Abu Bakr"
@@ -1161,7 +1202,9 @@
    "ashari",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Ghazali, Al-",
    "Ghazali"
@@ -1229,7 +1272,9 @@
   "terms": [
    "philosophy"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Abd Al-Masih Al-Kindi",
    "Apology Of Al-Kindi"
@@ -1277,7 +1322,10 @@
    "gog-and-magog",
    "thamud"
   ],
-  "articles": [],
+  "articles": [
+   "quran-mysteries-in-the-stories",
+   "quranic-stories-and-history"
+  ],
   "aliases": [
    "Dhu al-Qarnayn",
    "Dhu'L-Qarneyn"
@@ -1381,7 +1429,9 @@
    "tawhid",
    "salah"
   ],
-  "articles": [],
+  "articles": [
+   "before-your-first-friday-prayer"
+  ],
   "aliases": []
  },
  {
@@ -1425,7 +1475,9 @@
    "zakat",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "why-no-interest"
+  ],
   "aliases": [
    "Sadaqa",
    "Sadaq",
@@ -1471,7 +1523,10 @@
    "justice"
   ],
   "articles": [
-   "second-peter"
+   "second-peter",
+   "quranic-ethics",
+   "end-of-time",
+   "hajj-rites-explained"
   ],
   "aliases": [
    "Trust"
@@ -1532,7 +1587,9 @@
    "abdullah-ibn-abd-al-muttalib",
    "abu-talib"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
   "aliases": []
  },
  {
@@ -1609,7 +1666,9 @@
   ],
   "articles": [
    "ezra-and-mary",
-   "jesus-not-god"
+   "jesus-not-god",
+   "six-articles-of-faith",
+   "quran-mysteries-in-the-stories"
   ],
   "aliases": [
    "Malaika"
@@ -1657,7 +1716,10 @@
    "zakat"
   ],
   "articles": [
-   "crucifixion-quran"
+   "crucifixion-quran",
+   "war-and-killing-in-islam",
+   "quranic-stories-and-history",
+   "women-in-the-prophets-life"
   ],
   "aliases": [
    "Beasts",
@@ -1689,7 +1751,9 @@
    "hijra",
    "companions-of-the-prophet"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": [
    "Helpers"
   ]
@@ -1824,7 +1888,8 @@
    "hadith"
   ],
   "articles": [
-   "apostasy-in-islam"
+   "apostasy-in-islam",
+   "sharia-and-hudud"
   ],
   "aliases": [
    "Irtidad",
@@ -1880,7 +1945,8 @@
   "articles": [
    "verses-read-differently",
    "jesus-not-god",
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "kharijites-and-takfir"
   ],
   "aliases": [
    "Aqidah",
@@ -1988,7 +2054,9 @@
   ],
   "articles": [
    "library-of-alexandria",
-   "al-zutt-allegation"
+   "al-zutt-allegation",
+   "scholars-who-shaped-islamic-study",
+   "quranic-stories-and-history"
   ],
   "aliases": []
  },
@@ -2011,7 +2079,8 @@
    "riba"
   ],
   "articles": [
-   "five-pillars-explained"
+   "five-pillars-explained",
+   "hajj-rites-explained"
   ],
   "aliases": []
  },
@@ -2049,7 +2118,9 @@
    "ali-ibn-abi-talib",
    "kharijites"
   ],
-  "articles": [],
+  "articles": [
+   "kharijites-and-takfir"
+  ],
   "aliases": [
    "Hakam"
   ]
@@ -2076,7 +2147,8 @@
   "articles": [
    "dome-inscriptions",
    "manuscript-transmission",
-   "haman-anachronism"
+   "haman-anachronism",
+   "quranic-stories-and-history"
   ],
   "aliases": []
  },
@@ -2232,7 +2304,10 @@
    "aqeeda",
    "divine-attributes"
   ],
-  "articles": [],
+  "articles": [
+   "fate-and-free-will",
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Ash'Ari"
   ]
@@ -2256,7 +2331,10 @@
    "qadar",
    "tawhid"
   ],
-  "articles": [],
+  "articles": [
+   "fate-and-free-will",
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Ash'ari",
    "Asharite",
@@ -2357,7 +2435,9 @@
    "quran",
    "astronomy"
   ],
-  "articles": [],
+  "articles": [
+   "quran-science-claims-graded"
+  ],
   "aliases": [
    "Dharra"
   ]
@@ -2382,7 +2462,8 @@
    "tawhid"
   ],
   "articles": [
-   "crucifixion-quran"
+   "crucifixion-quran",
+   "sharia-and-hudud"
   ],
   "aliases": [
    "Atonement",
@@ -2498,7 +2579,9 @@
    "angels",
    "akhira"
   ],
-  "articles": [],
+  "articles": [
+   "six-articles-of-faith"
+  ],
   "aliases": [
    "'Azra'Il",
    "Angel of Death"

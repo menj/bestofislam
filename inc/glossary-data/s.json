@@ -100,7 +100,9 @@
    "trench-battle-of-the",
    "companions-of-the-prophet"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": [
    "Salman The Persian"
   ]
@@ -201,7 +203,9 @@
    "naskh"
   ],
   "articles": [
-   "apostasy-in-islam"
+   "apostasy-in-islam",
+   "sharia-and-hudud",
+   "child-marriage-in-islam"
   ],
   "type": "term",
   "aliases": []
@@ -308,7 +312,8 @@
    "ummah"
   ],
   "articles": [
-   "indonesia"
+   "indonesia",
+   "war-and-killing-in-islam"
   ],
   "aliases": [
    "Government",
@@ -334,7 +339,9 @@
    "hijra"
   ],
   "articles": [
-   "prophet-died-poisoning"
+   "prophet-died-poisoning",
+   "companions-who-started-with-nothing",
+   "women-in-the-prophets-life"
   ],
   "type": "term",
   "aliases": []
@@ -359,7 +366,9 @@
    "diya"
   ],
   "articles": [
-   "morality-without-god"
+   "morality-without-god",
+   "slavery-in-islam",
+   "companions-who-started-with-nothing"
   ],
   "aliases": [
    "Concubine",
@@ -387,7 +396,10 @@
    "jinn",
    "babel"
   ],
-  "articles": [],
+  "articles": [
+   "islam-in-china",
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Sulayman",
    "Builders",
@@ -466,7 +478,8 @@
    "sira"
   ],
   "articles": [
-   "why-five-prayers"
+   "why-five-prayers",
+   "ramadan-last-ten-nights"
   ],
   "type": "term",
   "aliases": []

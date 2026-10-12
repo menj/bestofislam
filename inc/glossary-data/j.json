@@ -43,7 +43,10 @@
    "joseph",
    "israel"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study",
+   "quranic-stories-and-history"
+  ],
   "aliases": [
    "Yaqub",
    "Yakob"
@@ -112,7 +115,8 @@
    "abu-jahl"
   ],
   "articles": [
-   "who-is-allah"
+   "who-is-allah",
+   "end-of-time"
   ],
   "aliases": [
    "Jahiliya",
@@ -222,7 +226,8 @@
    "naskh"
   ],
   "articles": [
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "war-and-killing-in-islam"
   ],
   "type": "term",
   "aliases": [
@@ -249,7 +254,9 @@
    "quran"
   ],
   "articles": [
-   "al-zutt-allegation"
+   "al-zutt-allegation",
+   "natural-world-verses",
+   "six-articles-of-faith"
   ],
   "aliases": [
    "Djinn",
@@ -346,7 +353,9 @@
    "istighfar",
    "dua"
   ],
-  "articles": [],
+  "articles": [
+   "quranic-stories-and-history"
+  ],
   "aliases": [
    "Yunus",
    "Dhul-Nun",

@@ -506,3 +506,17 @@ trashed entry is never recreated. Content takes a positive but sourced stance:
 each term states what it means to Muslims, the misunderstanding it is often
 given, and the passage or report that answers it, with Quran and hadith
 references that can be checked.
+
+### D20. Articles follow Islamic English conventions
+
+New articles follow the conventions of Ismail al-Faruqi's *Toward Islamic
+English*: terms that carry a settled Islamic meaning (*salah*, *zakah*, *hajj*,
+*fiqh*, *hadith*, *taqwa*, *tawhid*) stay in their Arabic form and are glossed
+once on first use, instead of being translated to "prayer", "charity" and the
+like; the Prophet's name is spelled Muhammad and is followed by an
+invocation of peace at first mention in an article; the words of the call to
+prayer and the names of the lunar months are given in Arabic. Where an article
+discusses divine transcendence, the Quran's language about God, or Islamic art,
+it draws on Faruqi's *Divine Transcendence and Its Expression*, and cites it
+in the Notes. The conventions are for clarity and respect, and apply to prose
+written for this site. They do not change quotations.

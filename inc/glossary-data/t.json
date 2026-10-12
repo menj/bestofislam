@@ -94,7 +94,9 @@
    "kufr",
    "kafir"
   ],
-  "articles": [],
+  "articles": [
+   "kharijites-and-takfir"
+  ],
   "aliases": [
    "Excommunication"
   ]
@@ -118,7 +120,9 @@
    "sharia",
    "hadith"
   ],
-  "articles": [],
+  "articles": [
+   "taqiyya-5-myths"
+  ],
   "type": "term",
   "aliases": []
  },
@@ -187,7 +191,10 @@
    "archaeology",
    "kutub"
   ],
-  "articles": [],
+  "articles": [
+   "quranic-stories-and-history",
+   "quran-mysteries-in-the-stories"
+  ],
   "aliases": [
    "Thamud",
    "Salih",
@@ -217,7 +224,9 @@
    "kaaba",
    "arabia"
   ],
-  "articles": [],
+  "articles": [
+   "quranic-stories-and-history"
+  ],
   "aliases": [
    "Elephant",
    "Year Of The Elephant",
@@ -243,7 +252,9 @@
   ],
   "articles": [
    "prophet-died-poisoning",
-   "five-pillars-explained"
+   "five-pillars-explained",
+   "why-no-interest",
+   "sharia-and-hudud"
   ],
   "aliases": [
    "Business",

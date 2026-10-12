@@ -41,7 +41,9 @@
    "akhira",
    "mahdi"
   ],
-  "articles": [],
+  "articles": [
+   "end-of-time"
+  ],
   "aliases": [
    "Ad-Dajjal",
    "Antichrist",
@@ -96,7 +98,8 @@
   "articles": [
    "quran-preservation-reddit",
    "uthman-copies",
-   "islamic-dilemma"
+   "islamic-dilemma",
+   "quran-mysteries-in-the-stories"
   ],
   "aliases": [
    "Date Palms",
@@ -124,7 +127,9 @@
   ],
   "articles": [
    "quran-preservation-reddit",
-   "same-god"
+   "same-god",
+   "scholars-who-shaped-islamic-study",
+   "end-of-time"
   ],
   "aliases": [
    "Daud",
@@ -366,7 +371,11 @@
    "dua",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "funeral-dhikr-dua",
+   "ramadan-last-ten-nights",
+   "before-your-first-friday-prayer"
+  ],
   "aliases": [
    "Remembrance"
   ]
@@ -565,7 +574,11 @@
    "aqeeda",
    "tawhid"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study",
+   "houris-and-paradise",
+   "fate-and-free-will"
+  ],
   "aliases": [
    "Anthropomorphism",
    "Tashbih"
@@ -612,7 +625,9 @@
    "sharia",
    "fiqh"
   ],
-  "articles": [],
+  "articles": [
+   "sharia-and-hudud"
+  ],
   "aliases": [
    "Bloodmoney",
    "Blood Money"
@@ -770,7 +785,9 @@
   "terms": [
    "china"
   ],
-  "articles": [],
+  "articles": [
+   "islam-in-china"
+  ],
   "aliases": []
  },
  {
@@ -793,7 +810,8 @@
    "intercession"
   ],
   "articles": [
-   "jesus-not-god"
+   "jesus-not-god",
+   "funeral-dhikr-dua"
   ],
   "aliases": [
    "Asking God",

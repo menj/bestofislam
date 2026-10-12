@@ -14,7 +14,9 @@
   "terms": [
    "isa"
   ],
-  "articles": [],
+  "articles": [
+   "end-of-time"
+  ],
   "aliases": [
    "Al-Mahdi"
   ]
@@ -58,7 +60,9 @@
   "terms": [
    "ibrahim-ibn-muhammad"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
   "aliases": [
    "Mariya",
    "Maria The Copt"
@@ -81,7 +85,12 @@
    "family",
    "idda"
   ],
-  "articles": [],
+  "articles": [
+   "child-marriage-in-islam",
+   "questions-about-aisha",
+   "quran-4-34",
+   "sharia-and-hudud"
+  ],
   "aliases": [
    "Nikah",
    "Wedlock",
@@ -192,7 +201,11 @@
    "ihsan",
    "taqwa"
   ],
-  "articles": [],
+  "articles": [
+   "hijab-and-modesty",
+   "quran-science-claims-graded",
+   "before-your-first-friday-prayer"
+  ],
   "aliases": [
    "Chastity",
    "Charms",
@@ -353,7 +366,8 @@
    "aisha-bint-abi-bakr"
   ],
   "articles": [
-   "instruments-islamic-world"
+   "instruments-islamic-world",
+   "scholars-who-shaped-islamic-study"
   ],
   "aliases": [
    "Drum-Playing",

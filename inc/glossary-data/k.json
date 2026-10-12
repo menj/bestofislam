@@ -19,7 +19,8 @@
   "articles": [
    "qibla-change",
    "kaaba-witnesses",
-   "five-pillars-explained"
+   "five-pillars-explained",
+   "hajj-rites-explained"
   ],
   "aliases": [
    "Ka'bah",
@@ -49,7 +50,10 @@
    "jihad"
   ],
   "articles": [
-   "jizya"
+   "jizya",
+   "kharijites-and-takfir",
+   "war-and-killing-in-islam",
+   "taqiyya-5-myths"
   ],
   "type": "term",
   "aliases": [
@@ -94,7 +98,9 @@
    "aisha-bint-abi-bakr",
    "muhammad"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
   "aliases": [
    "Khadijah",
    "Khadija Bint Khuwaylid",
@@ -144,7 +150,9 @@
    "takfir",
    "caliph"
   ],
-  "articles": [],
+  "articles": [
+   "kharijites-and-takfir"
+  ],
   "aliases": [
    "Khawarij",
    "Kharijis",
@@ -219,7 +227,9 @@
    "moses",
    "kutub"
   ],
-  "articles": [],
+  "articles": [
+   "quran-mysteries-in-the-stories"
+  ],
   "aliases": [
    "Green One",
    "Khadir",

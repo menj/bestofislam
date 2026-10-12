@@ -44,7 +44,9 @@
    "atonement-and-repentance",
    "hudud"
   ],
-  "articles": [],
+  "articles": [
+   "homosexuality-in-islam"
+  ],
   "aliases": [
    "Immorality",
    "Immoral",
@@ -140,7 +142,9 @@
    "amen"
   ],
   "articles": [
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "end-of-time",
+   "fate-and-free-will"
   ],
   "aliases": [
    "Fatihah",
@@ -164,7 +168,9 @@
    "ali-ibn-abi-talib",
    "ahl-al-bayt"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
   "aliases": [
    "Fatima Bint Muhammad",
    "Zahra"
@@ -238,7 +244,9 @@
    "hajj",
    "zakat"
   ],
-  "articles": [],
+  "articles": [
+   "slavery-in-islam"
+  ],
   "aliases": [
    "Fidayah",
    "Expiation"
@@ -260,7 +268,9 @@
    "quran",
    "moses"
   ],
-  "articles": [],
+  "articles": [
+   "natural-world-verses"
+  ],
   "aliases": [
    "Fig",
    "At-Tin",
@@ -287,7 +297,9 @@
    "fitna"
   ],
   "articles": [
-   "islam-religion-of-peace"
+   "islam-religion-of-peace",
+   "kharijites-and-takfir",
+   "war-and-killing-in-islam"
   ],
   "aliases": [
    "Sword Verse",
@@ -313,7 +325,9 @@
    "akhira",
    "commission-on-scientific-signs"
   ],
-  "articles": [],
+  "articles": [
+   "quran-science-claims-graded"
+  ],
   "aliases": []
  },
  {
@@ -334,7 +348,10 @@
    "sunnah",
    "tafsir"
   ],
-  "articles": [],
+  "articles": [
+   "sharia-and-hudud",
+   "why-no-interest"
+  ],
   "type": "term",
   "aliases": []
  },
@@ -356,7 +373,9 @@
   ],
   "articles": [
    "library-of-alexandria",
-   "apostasy-in-islam"
+   "apostasy-in-islam",
+   "quranic-ethics",
+   "taqiyya-5-myths"
   ],
   "aliases": []
  },
@@ -405,7 +424,9 @@
    "circumcision",
    "adam"
   ],
-  "articles": [],
+  "articles": [
+   "six-articles-of-faith"
+  ],
   "aliases": [
    "Fitrah",
    "Natural Disposition"
@@ -475,7 +496,10 @@
    "ihsan"
   ],
   "articles": [
-   "who-is-allah"
+   "who-is-allah",
+   "ramadan-last-ten-nights",
+   "sharia-and-hudud",
+   "funeral-dhikr-dua"
   ],
   "aliases": [
    "Forgiving",
@@ -501,7 +525,9 @@
   ],
   "articles": [
    "apostasy-in-islam",
-   "indonesia"
+   "indonesia",
+   "companions-who-started-with-nothing",
+   "slavery-in-islam"
   ],
   "aliases": [
    "Liberty"
@@ -548,7 +574,9 @@
    "akhira",
    "abel"
   ],
-  "articles": [],
+  "articles": [
+   "funeral-dhikr-dua"
+  ],
   "aliases": [
    "Burial",
    "Janaza",

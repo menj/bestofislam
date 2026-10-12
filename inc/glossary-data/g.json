@@ -19,7 +19,9 @@
    "khadija"
   ],
   "articles": [
-   "who-saw-gabriel"
+   "who-saw-gabriel",
+   "six-articles-of-faith",
+   "end-of-time"
   ],
   "aliases": [
    "Jibril",
@@ -118,7 +120,9 @@
    "fighting",
    "qurayza"
   ],
-  "articles": [],
+  "articles": [
+   "war-and-killing-in-islam"
+  ],
   "aliases": []
  },
  {
@@ -191,7 +195,10 @@
    "dajjal",
    "akhira"
   ],
-  "articles": [],
+  "articles": [
+   "end-of-time",
+   "quranic-stories-and-history"
+  ],
   "aliases": [
    "Yajuj And Majuj"
   ]
@@ -232,7 +239,9 @@
    "zakat",
    "paradise"
   ],
-  "articles": [],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
   "aliases": []
  },
  {
@@ -280,7 +289,9 @@
    "ihsan",
    "ethics-and-conduct"
   ],
-  "articles": [],
+  "articles": [
+   "quranic-ethics"
+  ],
   "aliases": []
  },
  {
@@ -376,7 +387,8 @@
    "ihsan"
   ],
   "articles": [
-   "five-pillars-explained"
+   "five-pillars-explained",
+   "companions-who-started-with-nothing"
   ],
   "aliases": [
    "Avarice",

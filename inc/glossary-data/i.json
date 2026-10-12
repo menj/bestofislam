@@ -42,7 +42,9 @@
    "jinn",
    "angels"
   ],
-  "articles": [],
+  "articles": [
+   "six-articles-of-faith"
+  ],
   "aliases": [
    "Devil",
    "Satan",
@@ -72,7 +74,11 @@
    "tafsir",
    "isnad"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study",
+   "quran-4-34",
+   "hajj-rites-explained"
+  ],
   "aliases": [
    "Abdullah Ibn Abbas",
    "Abdullah Bin Abbas"
@@ -97,7 +103,11 @@
    "hadith",
    "isnad"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study",
+   "companions-who-started-with-nothing",
+   "women-in-the-prophets-life"
+  ],
   "aliases": [
    "Muhammad Ibn Ishaq",
    "Sirat Rasul Allah",
@@ -190,7 +200,9 @@
    "prophets",
    "elijah"
   ],
-  "articles": [],
+  "articles": [
+   "prophets-you-may-not-know"
+  ],
   "aliases": [
    "Enoch"
   ]
@@ -212,7 +224,9 @@
    "umrah",
    "kaaba"
   ],
-  "articles": [],
+  "articles": [
+   "hajj-rites-explained"
+  ],
   "aliases": [
    "Pilgrim Dress"
   ]
@@ -287,7 +301,9 @@
    "qiyas",
    "hukm"
   ],
-  "articles": [],
+  "articles": [
+   "sharia-and-hudud"
+  ],
   "aliases": [
    "Mujtahid",
    "Independent Reasoning"
@@ -354,7 +370,9 @@
   "terms": [
    "caliph"
   ],
-  "articles": [],
+  "articles": [
+   "before-your-first-friday-prayer"
+  ],
   "aliases": [
    "Imams"
   ]
@@ -530,7 +548,10 @@
    "tawhid",
    "akhira"
   ],
-  "articles": [],
+  "articles": [
+   "end-of-time",
+   "funeral-dhikr-dua"
+  ],
   "aliases": [
    "Shafaa",
    "Shafa'a",
@@ -587,7 +608,9 @@
    "hud",
    "prophets"
   ],
-  "articles": [],
+  "articles": [
+   "quranic-stories-and-history"
+  ],
   "aliases": [
    "Iram Dhat Al-Imad",
    "Ubar"
@@ -668,7 +691,10 @@
    "jacob"
   ],
   "articles": [
-   "shared-prophets"
+   "shared-prophets",
+   "scholars-who-shaped-islamic-study",
+   "companions-who-started-with-nothing",
+   "women-in-the-prophets-life"
   ],
   "aliases": [
    "Ishaq",
@@ -697,7 +723,8 @@
   "articles": [
    "five-pillars-explained",
    "qibla-change",
-   "shared-prophets"
+   "shared-prophets",
+   "hajj-rites-explained"
   ],
   "aliases": [
    "Ismail",
@@ -753,7 +780,9 @@
    "trade-and-business",
    "zakat"
   ],
-  "articles": [],
+  "articles": [
+   "why-no-interest"
+  ],
   "aliases": [
    "Finance",
    "Shariah Finance",
@@ -880,7 +909,8 @@
   "articles": [
    "ezra-and-mary",
    "crucifixion-quran",
-   "qibla-change"
+   "qibla-change",
+   "war-and-killing-in-islam"
   ],
   "aliases": [
    "Children Of Israel",

@@ -47,7 +47,9 @@
    "mushaf",
    "abu-bakr"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
   "aliases": [
    "Hafsah"
   ]
@@ -71,7 +73,10 @@
    "bidah"
   ],
   "articles": [
-   "universe-demands-creator"
+   "universe-demands-creator",
+   "hajj-rites-explained",
+   "hijab-and-modesty",
+   "before-your-first-friday-prayer"
   ],
   "aliases": []
  },
@@ -122,7 +127,10 @@
    "hajj"
   ],
   "articles": [
-   "five-pillars-explained"
+   "five-pillars-explained",
+   "child-marriage-in-islam",
+   "questions-about-aisha",
+   "hajj-rites-explained"
   ],
   "aliases": [
    "Hagar",
@@ -149,7 +157,9 @@
    "kaaba",
    "shirk"
   ],
-  "articles": [],
+  "articles": [
+   "hajj-rites-explained"
+  ],
   "aliases": [
    "Hajarul Aswad",
    "Black Stone"
@@ -177,7 +187,8 @@
   "articles": [
    "five-pillars-explained",
    "kaaba-witnesses",
-   "dome-inscriptions"
+   "dome-inscriptions",
+   "hajj-rites-explained"
   ],
   "aliases": [
    "Haj",
@@ -381,7 +392,9 @@
    "babel",
    "solomon"
   ],
-  "articles": [],
+  "articles": [
+   "quran-mysteries-in-the-stories"
+  ],
   "aliases": [
    "Harut (Harat) And Marut",
    "Harut"
@@ -404,7 +417,9 @@
    "ahl-al-bayt",
    "fatima"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Hasan B. Ali. B. Abi Talib",
    "Al-Hasan"
@@ -452,7 +467,9 @@
    "enemies",
    "blasphemy"
   ],
-  "articles": [],
+  "articles": [
+   "quranic-ethics"
+  ],
   "aliases": [
    "Hate",
    "Hate Crime",
@@ -533,7 +550,8 @@
    "forgiveness"
   ],
   "articles": [
-   "library-of-alexandria"
+   "library-of-alexandria",
+   "taqiyya-5-myths"
   ],
   "aliases": [
    "The Fire",
@@ -578,7 +596,9 @@
    "sharia",
    "ummah"
   ],
-  "articles": [],
+  "articles": [
+   "hijab-and-modesty"
+  ],
   "type": "term",
   "aliases": [
    "Jilbab",
@@ -738,7 +758,9 @@
    "fiqh",
    "sharia"
   ],
-  "articles": [],
+  "articles": [
+   "homosexuality-in-islam"
+  ],
   "aliases": [
    "Liwat",
    "Lot's People",
@@ -812,7 +834,9 @@
    "ihsan",
    "family"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
   "aliases": [
    "Housing",
    "Home",
@@ -858,7 +882,10 @@
    "covenant",
    "fitna"
   ],
-  "articles": [],
+  "articles": [
+   "women-in-the-prophets-life",
+   "taqiyya-5-myths"
+  ],
   "aliases": [
    "Hudaybiyyah, Truce Of",
    "Pledge Of The Tree",
@@ -884,7 +911,9 @@
    "fahisha",
    "qisas"
   ],
-  "articles": [],
+  "articles": [
+   "sharia-and-hudud"
+  ],
   "aliases": [
    "Hadd",
    "Hudood",
@@ -980,7 +1009,8 @@
    "ansar"
   ],
   "articles": [
-   "prophet-died-poisoning"
+   "prophet-died-poisoning",
+   "scholars-who-shaped-islamic-study"
   ],
   "aliases": [
    "Huneyn"
@@ -1002,7 +1032,9 @@
    "abbasid-caliphate",
    "ahl-al-kitab"
   ],
-  "articles": [],
+  "articles": [
+   "scholars-who-shaped-islamic-study"
+  ],
   "aliases": [
    "Hunain"
   ]
@@ -1023,7 +1055,9 @@
    "halal-and-haram-food",
    "hajj"
   ],
-  "articles": [],
+  "articles": [
+   "hajj-rites-explained"
+  ],
   "aliases": []
  },
  {
