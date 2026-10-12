@@ -1,6 +1,6 @@
 # Glossary terms with no article
 
-Of the 465 Glossary entries, **about 290 have no article** in their "Read more" list. The match is by name (title and other names against the text of the 36 articles in `content/`), so a few are false gaps (for example a pillar that an article covers under another name). The remainder fall into nine clusters. Each cluster is one or more listicles; once a listicle is published, run the linker script to fill the entries' `articles` fields.
+Of the 466 Glossary entries, **about 290 have no article** in their "Read more" list. The match is by name (title and other names against the text of the 36 articles in `content/`), so a few are false gaps (for example a pillar that an article covers under another name). The remainder fall into nine clusters. Each cluster is one or more listicles; once a listicle is published, run the linker script to fill the entries' `articles` fields.
 
 | # | Cluster | Entries (slugs) | Suggested listicles |
 |---|---|---|---|

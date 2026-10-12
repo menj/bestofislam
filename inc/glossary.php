@@ -180,14 +180,31 @@ function boi_glossary_sync() {
 				return false;
 			}
 
+			// A Glossary page that already existed gets the index block it lacks, once.
+			if ( 'trash' !== $parent->post_status && false === strpos( $parent->post_content, 'bestofislam/glossary-index' ) ) {
+				boi_update_post( array( 'ID' => $parent->ID, 'post_content' => rtrim( $parent->post_content ) . "\n\n<!-- wp:bestofislam/glossary-index /-->\n" ) );
+			}
+
 			$hashes = (array) get_option( 'boi_glossary_hashes', array() );
 			$batch  = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
 
+			$failed = isset( $progress['failed'] ) && BOI_GLOSSARY_VERSION === $progress['version'] ? (int) $progress['failed'] : 0;
+
 			foreach ( $batch as $t ) {
-				boi_glossary_write_entry( $t, $parent, $author, $hashes );
+				if ( ! boi_glossary_write_entry( $t, $parent, $author, $hashes ) ) {
+					++$failed;
+				}
 			}
 
 			$cursor += count( $batch );
+			$passes  = isset( $progress['passes'] ) && BOI_GLOSSARY_VERSION === $progress['version'] ? (int) $progress['passes'] : 0;
+
+			// Every entry was tried; if some failed, go round again (at most three times).
+			if ( $cursor >= count( $terms ) && $failed && $passes < 3 ) {
+				$cursor = 0;
+				$failed = 0;
+				++$passes;
+			}
 
 			update_option( 'boi_glossary_hashes', $hashes, false );
 			update_option(
@@ -195,6 +212,8 @@ function boi_glossary_sync() {
 				array(
 					'version'  => BOI_GLOSSARY_VERSION,
 					'done'     => $cursor,
+					'failed'   => $failed,
+					'passes'   => $passes,
 					'complete' => $cursor >= count( $terms ) ? 1 : 0,
 				),
 				false
@@ -218,20 +237,30 @@ add_action( 'after_switch_theme', 'boi_glossary_sync' );
 add_action( 'boi_glossary_continue', 'boi_glossary_sync' );
 
 /**
+ * Fingerprint of what the theme writes for an entry: its content and excerpt.
+ *
+ * @param WP_Post $post Page.
+ * @return string
+ */
+function boi_glossary_fingerprint( $post ) {
+	return boi_content_fingerprint( $post->post_content . "\n" . $post->post_excerpt );
+}
+
+/**
  * Creates one entry, or refreshes it while it is exactly as the theme wrote it.
  *
  * @param array   $t      Entry.
  * @param WP_Post $parent Glossary page.
  * @param int     $author Author for new pages.
  * @param array   $hashes Recorded content fingerprints, updated in place.
- * @return void
+ * @return bool False when the page could not be created.
  */
 function boi_glossary_write_entry( $t, $parent, $author, &$hashes ) {
 	$content = boi_glossary_content( $t );
 	$page    = get_page_by_path( 'glossary/' . $t['slug'], OBJECT, 'page' );
 
 	if ( $page && 'trash' === $page->post_status ) {
-		return; // The owner removed it; do not bring it back.
+		return true; // The owner removed it; do not bring it back.
 	}
 
 	if ( ! $page ) {
@@ -249,16 +278,18 @@ function boi_glossary_write_entry( $t, $parent, $author, &$hashes ) {
 		);
 
 		if ( $id && ! is_wp_error( $id ) ) {
-			$hashes[ $t['slug'] ] = boi_content_fingerprint( get_post( $id )->post_content );
+			$hashes[ $t['slug'] ] = boi_glossary_fingerprint( get_post( $id ) );
 			boi_glossary_meta( $id, $t );
+			return true;
 		}
-		return;
+
+		return false;
 	}
 
 	// Refresh only an entry still exactly as the theme last wrote it.
-	$current = boi_content_fingerprint( $page->post_content );
+	$current = boi_glossary_fingerprint( $page );
 
-	if ( isset( $hashes[ $t['slug'] ] ) && $hashes[ $t['slug'] ] === $current && boi_content_fingerprint( $content ) !== $current ) {
+	if ( isset( $hashes[ $t['slug'] ] ) && $hashes[ $t['slug'] ] === $current && boi_content_fingerprint( $content . "\n" . $t['def'] ) !== $current ) {
 		boi_update_post(
 			array(
 				'ID'           => $page->ID,
@@ -266,10 +297,12 @@ function boi_glossary_write_entry( $t, $parent, $author, &$hashes ) {
 				'post_excerpt' => $t['def'],
 			)
 		);
-		$hashes[ $t['slug'] ] = boi_content_fingerprint( get_post( $page->ID )->post_content );
+		$hashes[ $t['slug'] ] = boi_glossary_fingerprint( get_post( $page->ID ) );
 	}
 
 	boi_glossary_meta( $page->ID, $t );
+
+	return true;
 }
 
 /**
@@ -327,8 +360,9 @@ function boi_glossary_entries() {
 
 	return get_pages(
 		array(
-			'child_of'    => $parent->ID,
-			'post_status' => 'publish',
+			'parent'       => $parent->ID,
+			'hierarchical' => 0,
+			'post_status'  => 'publish',
 			'sort_column' => 'post_title',
 			'sort_order'  => 'ASC',
 			'exclude'     => $exclude,

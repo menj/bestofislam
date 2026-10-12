@@ -501,7 +501,7 @@ the children, and a related-links block. A custom post type would add an A to Z
 archive and structured fields, but it would bind more data to the theme (D1)
 and make each entry harder to edit. Ordinary pages stay portable and
 editable by anyone. The Arabic script is kept as page meta for the index only.
-Entries are seeded once, refreshed only while unedited (as with D12), and a
+Entries are seeded once, refreshed only while neither content nor excerpt has been edited (as with D12), and a
 trashed entry is never recreated. Content takes a positive but sourced stance:
 each term states what it means to Muslims, the misunderstanding it is often
 given, and the passage or report that answers it, with Quran and hadith
