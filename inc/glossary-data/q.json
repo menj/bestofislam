@@ -1,53 +1,53 @@
 [
-    {
-        "slug": "quran",
-        "title": "Quran",
-        "ar": "القرآن",
-        "tr": "al-Qur’ān",
-        "def": "The recited scripture of Islam, revealed to Muhammad and kept in memory and in writing.",
-        "what": [
-            "“Quran” means “recitation”. It has 114 chapters (<em>suras</em>) and is recited in Arabic in prayer. Its first revelation was the command “Read” (96:1). Muslims believe it is God’s word, preserved: “We have sent down the Reminder, and We will guard it” (15:9).",
-            "From the beginning it was kept in two ways at once: memorised by the community and written down. Under Abu Bakr the written leaves were gathered in one place, and under Uthman standard copies were prepared and sent to the main cities."
-        ],
-        "misread": "That the Quran was edited, lost in part or rewritten by Uthman.",
-        "sources": [
-            "Reports of the collection are in Sahih al-Bukhari, which names Zayd ibn Thabit as the scribe. On the manuscripts, a Quran leaf in the University of Birmingham’s collection was radiocarbon dated to between 568 and 645 CE, with a probability of 95.4 per cent, which is within or very near the Prophet’s lifetime. Muslims also point to the unbroken chain of recitation, taught from teacher to student to this day."
-        ],
-        "terms": [
-            "mushaf",
-            "qiraat",
-            "tafsir"
-        ],
-        "articles": [
-            "manuscript-transmission",
-            "uthman-copies"
-        ],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "qiraat",
-        "title": "Qira’at",
-        "ar": "قراءات",
-        "tr": "Qirā’āt",
-        "def": "The recognised modes of reciting the Quran, taught by an unbroken chain of teachers.",
-        "what": [
-            "Ten readings are recognised as authentic, each traced through a named teacher back to the Prophet. They share the same written skeleton and differ mostly in vowelling and pronunciation. Two are common today: Hafs, from Asim, in most of the Muslim world, and Warsh, from Nafi, in North and West Africa.",
-            "A hadith in Sahih al-Bukhari relates that the Quran was “sent down in seven <em>aḥruf</em>”: Umar objected to how Hisham ibn Hakim was reciting, and the Prophet approved both recitations."
-        ],
-        "misread": "That there are different Qurans, or that the text is unstable.",
-        "sources": [
-            "The readings are variants within one text, and the great majority make no difference to the meaning. A few change a word in a way that adds a shade of meaning, and scholars treat these as additions to understanding rather than contradictions. The same standard text, in Hafs or Warsh, is in every mosque."
-        ],
-        "terms": [
-            "quran",
-            "mushaf",
-            "tafsir"
-        ],
-        "articles": [
-            "manuscript-transmission"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "qiraat",
+  "title": "Qira’at",
+  "ar": "قراءات",
+  "tr": "Qirā’āt",
+  "def": "The recognised modes of reciting the Quran, taught by an unbroken chain of teachers.",
+  "what": [
+   "Ten readings are recognised as authentic, each traced through a named teacher back to the Prophet. They share the same written skeleton and differ mostly in vowelling and pronunciation. Two are common today: Hafs, from Asim, in most of the Muslim world, and Warsh, from Nafi, in North and West Africa.",
+   "A hadith in Sahih al-Bukhari relates that the Quran was “sent down in seven <em>aḥruf</em>”: Umar objected to how Hisham ibn Hakim was reciting, and the Prophet approved both recitations."
+  ],
+  "misread": "That there are different Qurans, or that the text is unstable.",
+  "sources": [
+   "The readings are variants within one text, and the great majority make no difference to the meaning. A few change a word in a way that adds a shade of meaning, and scholars treat these as additions to understanding rather than contradictions. The same standard text, in Hafs or Warsh, is in every mosque."
+  ],
+  "terms": [
+   "quran",
+   "mushaf",
+   "tafsir"
+  ],
+  "articles": [
+   "manuscript-transmission"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "quran",
+  "title": "Quran",
+  "ar": "القرآن",
+  "tr": "al-Qur’ān",
+  "def": "The recited scripture of Islam, revealed to Muhammad and kept in memory and in writing.",
+  "what": [
+   "“Quran” means “recitation”. It has 114 chapters (<em>suras</em>) and is recited in Arabic in prayer. Its first revelation was the command “Read” (96:1). Muslims believe it is God’s word, preserved: “We have sent down the Reminder, and We will guard it” (15:9).",
+   "From the beginning it was kept in two ways at once: memorised by the community and written down. Under Abu Bakr the written leaves were gathered in one place, and under Uthman standard copies were prepared and sent to the main cities."
+  ],
+  "misread": "That the Quran was edited, lost in part or rewritten by Uthman.",
+  "sources": [
+   "Reports of the collection are in Sahih al-Bukhari, which names Zayd ibn Thabit as the scribe. On the manuscripts, a Quran leaf in the University of Birmingham’s collection was radiocarbon dated to between 568 and 645 CE, with a probability of 95.4 per cent, which is within or very near the Prophet’s lifetime. Muslims also point to the unbroken chain of recitation, taught from teacher to student to this day."
+  ],
+  "terms": [
+   "mushaf",
+   "qiraat",
+   "tafsir"
+  ],
+  "articles": [
+   "manuscript-transmission",
+   "uthman-copies"
+  ],
+  "type": "term",
+  "aliases": []
+ }
 ]

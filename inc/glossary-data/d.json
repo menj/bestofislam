@@ -1,27 +1,79 @@
 [
-    {
-        "slug": "dhimmi",
-        "title": "Dhimmi",
-        "ar": "ذمّي",
-        "tr": "Dhimmī",
-        "def": "A non-Muslim living under Muslim rule with the state’s pledge of protection.",
-        "what": [
-            "<em>Dhimma</em> means a pledge or covenant. A dhimmi’s life, property and place of worship were protected by it, and the community ran its own courts and affairs by its own law. The Prophet is reported to have said that whoever kills a person under a treaty will not smell the fragrance of Paradise (Sahih al-Bukhari).",
-            "The Maliki jurist al-Qarafi (d. 1285) wrote that the pledge puts duties on Muslims: to treat them as neighbours under God’s protection, to defend them and to prevent their being wronged."
-        ],
-        "misread": "That dhimmis were slaves, or hunted second-class people.",
-        "sources": [
-            "The classical law did place distinctions and restrictions, and Muslims do not need to deny this. But the status was a legal one, with rights, and it compares well with how religious minorities were treated elsewhere in the same centuries. When the Jews were expelled from Spain in 1492, the Ottoman sultan Bayezid II received many of them. Nobody on this site claims the record was perfect, only that it was not what the caricature suggests."
-        ],
-        "terms": [
-            "jizya",
-            "ahl-al-kitab",
-            "ummah"
-        ],
-        "articles": [
-            "jizya"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "dhimmi",
+  "title": "Dhimmi",
+  "ar": "ذمّي",
+  "tr": "Dhimmī",
+  "def": "A non-Muslim living under Muslim rule with the state’s pledge of protection.",
+  "what": [
+   "<em>Dhimma</em> means a pledge or covenant. A dhimmi’s life, property and place of worship were protected by it, and the community ran its own courts and affairs by its own law. The Prophet is reported to have said that whoever kills a person under a treaty will not smell the fragrance of Paradise (Sahih al-Bukhari).",
+   "The Maliki jurist al-Qarafi (d. 1285) wrote that the pledge puts duties on Muslims: to treat them as neighbours under God’s protection, to defend them and to prevent their being wronged."
+  ],
+  "misread": "That dhimmis were slaves, or hunted second-class people.",
+  "sources": [
+   "The classical law did place distinctions and restrictions, and Muslims do not need to deny this. But the status was a legal one, with rights, and it compares well with how religious minorities were treated elsewhere in the same centuries. When the Jews were expelled from Spain in 1492, the Ottoman sultan Bayezid II received many of them. Nobody on this site claims the record was perfect, only that it was not what the caricature suggests."
+  ],
+  "terms": [
+   "jizya",
+   "ahl-al-kitab",
+   "ummah"
+  ],
+  "articles": [
+   "jizya"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "divine-attributes",
+  "title": "Divine attributes",
+  "type": "topic",
+  "ar": "صفات",
+  "tr": "Ṣifāt",
+  "def": "How Muslims understand verses that speak of God’s hand, face or throne, without making Him like His creatures.",
+  "what": [
+   "The Quran says “there is nothing like Him, and He is the Hearing, the Seeing” (42:11). It also speaks of His face (55:27), His hands (38:75), and of His rising over the Throne (20:5). Muslim scholars have understood these in different ways. The earliest scholars affirmed the words as they came and left the manner unknown: Malik ibn Anas is reported to have said, “the rising is known; how is unknown; belief in it is obligatory; asking about it is an innovation.” The Ash’aris and others interpret them in a figurative sense."
+  ],
+  "misread": "That the Quran’s language makes Islam’s God a man-like being, in contradiction of its own statement.",
+  "sources": [
+   "The two ideas are held together: affirming what scripture says, and denying likeness to creation. The Quran itself uses the human language of a hand or face as the Bible does, in order to speak of God to human beings."
+  ],
+  "terms": [
+   "ashari",
+   "aqeeda",
+   "tawhid"
+  ],
+  "articles": [],
+  "aliases": [
+   "Anthropomorphism",
+   "Tashbih"
+  ]
+ },
+ {
+  "slug": "dua",
+  "title": "Du'a",
+  "type": "term",
+  "ar": "دعاء",
+  "tr": "Duʿāʾ",
+  "def": "Prayer of supplication: asking God directly for what one needs.",
+  "what": [
+   "“When My servants ask you about Me, I am near; I answer the call of the caller when he calls” (2:186). “Call upon Me; I will respond” (40:60). The Prophet said that supplication is worship (al-Tirmidhi). It can be made at any time, in any language, and needs no intermediary."
+  ],
+  "misread": "",
+  "sources": [
+   "The Muslim understanding is close to the verse in Matthew (“ask and it will be given to you”). The difference on which Islam insists is that one asks God directly, without a saint or priest between."
+  ],
+  "terms": [
+   "salah",
+   "dhikr",
+   "intercession"
+  ],
+  "articles": [],
+  "aliases": [
+   "Asking God",
+   "Dua",
+   "Duaa",
+   "Du`Aa"
+  ]
+ }
 ]

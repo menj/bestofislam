@@ -105,20 +105,24 @@ function boi_glossary_content( $t ) {
 		$out .= $p( $para );
 	}
 
-	$out .= "<!-- wp:group {\"className\":\"boi-term__misread\"} -->\n<div class=\"wp-block-group boi-term__misread\">";
-	$out .= '<p class="boi-term__label">Often misunderstood as</p>';
-	$out .= '<p>' . $t['misread'] . '</p>';
-	$out .= "</div>\n<!-- /wp:group -->\n\n";
+	if ( ! empty( $t['misread'] ) ) {
+		$out .= "<!-- wp:group {\"className\":\"boi-term__misread\"} -->\n<div class=\"wp-block-group boi-term__misread\">";
+		$out .= '<p class="boi-term__label">Often misunderstood as</p>';
+		$out .= '<p>' . $t['misread'] . '</p>';
+		$out .= "</div>\n<!-- /wp:group -->\n\n";
+	}
 
-	$out .= $h( 'What the sources say' );
-	foreach ( $t['sources'] as $para ) {
-		$out .= $p( $para );
+	if ( ! empty( $t['sources'] ) ) {
+		$out .= $h( 'What the sources say' );
+		foreach ( $t['sources'] as $para ) {
+			$out .= $p( $para );
+		}
 	}
 
 	$attrs = wp_json_encode(
 		array(
-			'terms'    => array_values( $t['terms'] ),
-			'articles' => array_values( $t['articles'] ),
+			'terms'    => array_values( isset( $t['terms'] ) ? $t['terms'] : array() ),
+			'articles' => array_values( isset( $t['articles'] ) ? $t['articles'] : array() ),
 		)
 	);
 

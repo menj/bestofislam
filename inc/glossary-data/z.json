@@ -1,26 +1,26 @@
 [
-    {
-        "slug": "zakat",
-        "title": "Zakat",
-        "ar": "زكاة",
-        "tr": "Zakāh",
-        "def": "Obligatory almsgiving: a fixed share of one’s savings, given to those in need each year.",
-        "what": [
-            "The word means “purification” and “growth”: the Quran says that by it believers are purified (9:103). It is one of the five pillars. In general it is 2.5 per cent of savings above a minimum (<em>niṣāb</em>) held for a lunar year. The Quran names eight kinds of recipient, first the poor and the needy (9:60)."
-        ],
-        "misread": "That it is a tax to fund war, or that it only helps Muslims.",
-        "sources": [
-            "The first two categories are the poor and the needy. Charity beyond the obligation, <em>ṣadaqa</em>, can go to anyone in need, and the Quran says that what you spend on good is for your own benefit (2:272). Abu Yusuf’s <em>Kitab al-Kharaj</em> reports that Umar ordered a stipend from the public treasury for an elderly Jewish man he saw begging, saying it would be unjust to take tax from him in his youth and abandon him in old age."
-        ],
-        "terms": [
-            "jizya",
-            "riba",
-            "ihsan"
-        ],
-        "articles": [
-            "five-pillars-explained"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "zakat",
+  "title": "Zakat",
+  "ar": "زكاة",
+  "tr": "Zakāh",
+  "def": "Obligatory almsgiving: a fixed share of one’s savings, given to those in need each year.",
+  "what": [
+   "The word means “purification” and “growth”: the Quran says that by it believers are purified (9:103). It is one of the five pillars. In general it is 2.5 per cent of savings above a minimum (<em>niṣāb</em>) held for a lunar year. The Quran names eight kinds of recipient, first the poor and the needy (9:60)."
+  ],
+  "misread": "That it is a tax to fund war, or that it only helps Muslims.",
+  "sources": [
+   "The first two categories are the poor and the needy. Charity beyond the obligation, <em>ṣadaqa</em>, can go to anyone in need, and the Quran says that what you spend on good is for your own benefit (2:272). Abu Yusuf’s <em>Kitab al-Kharaj</em> reports that Umar ordered a stipend from the public treasury for an elderly Jewish man he saw begging, saying it would be unjust to take tax from him in his youth and abandon him in old age."
+  ],
+  "terms": [
+   "jizya",
+   "riba",
+   "ihsan"
+  ],
+  "articles": [
+   "five-pillars-explained"
+  ],
+  "type": "term",
+  "aliases": []
+ }
 ]

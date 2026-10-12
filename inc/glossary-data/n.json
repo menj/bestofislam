@@ -1,27 +1,29 @@
 [
-    {
-        "slug": "naskh",
-        "title": "Naskh",
-        "ar": "نسخ",
-        "tr": "Naskh",
-        "def": "Abrogation: the replacing of one ruling by a later one, as God wills.",
-        "what": [
-            "The Quran says that whatever verse God abrogates or causes to be forgotten, He brings one better or similar (2:106). Muslims point to clear cases: the prayer direction changed from Jerusalem to Mecca (2:142–150), and the prohibition of wine came in stages (4:43, then 5:90–91).",
-            "The term is mainly about rulings of law. Later scholars cut the number of cases drastically: al-Suyuti kept about twenty, and Shah Waliullah five. Some, such as Abu Muslim al-Isfahani, denied abrogation within the Quran altogether."
-        ],
-        "misread": "That Muhammad cancelled the peaceful verses with violent ones, so Islam is violent.",
-        "sources": [
-            "Some early exegetes made sweeping claims that one verse cancelled many. Many scholars rejected this, and the principles the Quran repeats are not treated as cancelled: no compulsion in religion (2:256), kindness and justice to those who have not fought you over your religion (60:8), and the command to deal fairly even with those one dislikes (5:8)."
-        ],
-        "terms": [
-            "tafsir",
-            "asbab-al-nuzul",
-            "jihad"
-        ],
-        "articles": [
-            "verses-read-differently"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "naskh",
+  "title": "Naskh",
+  "ar": "نسخ",
+  "tr": "Naskh",
+  "def": "Abrogation: the replacing of one ruling by a later one, as God wills.",
+  "what": [
+   "The Quran says that whatever verse God abrogates or causes to be forgotten, He brings one better or similar (2:106). Muslims point to clear cases: the prayer direction changed from Jerusalem to Mecca (2:142–150), and the prohibition of wine came in stages (4:43, then 5:90–91).",
+   "The term is mainly about rulings of law. Later scholars cut the number of cases drastically: al-Suyuti kept about twenty, and Shah Waliullah five. Some, such as Abu Muslim al-Isfahani, denied abrogation within the Quran altogether."
+  ],
+  "misread": "That Muhammad cancelled the peaceful verses with violent ones, so Islam is violent.",
+  "sources": [
+   "Some early exegetes made sweeping claims that one verse cancelled many. Many scholars rejected this, and the principles the Quran repeats are not treated as cancelled: no compulsion in religion (2:256), kindness and justice to those who have not fought you over your religion (60:8), and the command to deal fairly even with those one dislikes (5:8)."
+  ],
+  "terms": [
+   "tafsir",
+   "asbab-al-nuzul",
+   "jihad"
+  ],
+  "articles": [
+   "verses-read-differently"
+  ],
+  "type": "term",
+  "aliases": [
+   "Abrogation"
+  ]
+ }
 ]

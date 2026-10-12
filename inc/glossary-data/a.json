@@ -1,79 +1,1993 @@
 [
-    {
-        "slug": "allah",
-        "title": "Allah",
-        "ar": "الله",
-        "tr": "Allāh",
-        "def": "The Arabic word for God, used by Arabic-speaking Muslims, Christians and Jews alike.",
-        "what": [
-            "Allah is the Arabic name for the one God, the Creator of everything. It is not the name of a separate Arab deity. Arabic-speaking Christians and Jews used the same word for God before Islam and use it today, and Arabic translations of the Bible render “God” as Allah.",
-            "The Quran describes God by many names, “the most beautiful names” (7:180): the Compassionate, the Merciful, the Creator, the Forgiving. Its shortest statement of who He is comes in chapter 112: He is Allah, One; the Eternal Refuge; He neither begets nor is begotten; and there is none comparable to Him."
-        ],
-        "misread": "That Allah is the name of a pagan moon god, or a different god from the God of the Bible.",
-        "sources": [
-            "The pre-Islamic Arabs knew Allah as the creator, though they joined partners to Him: asked who created the heavens and the earth, they would say “Allah” (Quran 29:61, 31:25). The Quran does not introduce a new god. It calls people back to worshipping Him alone, and tells Muslims to say to Jews and Christians, “our God and your God is one” (29:46)."
-        ],
-        "terms": [
-            "tawhid",
-            "shirk",
-            "ahl-al-kitab"
-        ],
-        "articles": [
-            "who-is-allah",
-            "same-god"
-        ],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "asbab-al-nuzul",
-        "title": "Asbab al-Nuzul",
-        "ar": "أسباب النزول",
-        "tr": "Asbāb al-nuzūl",
-        "def": "The occasions of revelation: the circumstances in which a verse was revealed.",
-        "what": [
-            "Many verses answer a question, a dispute or an event, and knowing the occasion helps to see what is being said. Al-Wahidi (d. 1076) wrote a well-known book collecting them. Scholars add a principle: the lesson is taken from the general wording of a verse, not only from its occasion."
-        ],
-        "misread": "That verses about fighting are timeless orders to attack anyone who disbelieves.",
-        "sources": [
-            "The “sword verse” (9:5) orders fighting those who broke their treaties. The verse just before it exempts the polytheists who kept their treaty (9:4), and the verse just after it says that if any of them asks for protection it must be granted, and he must be escorted to safety (9:6). Read with its context, it is a rule about a war already under way, not a general licence."
-        ],
-        "terms": [
-            "tafsir",
-            "jihad",
-            "naskh"
-        ],
-        "articles": [
-            "verses-read-differently",
-            "islam-religion-of-peace"
-        ],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "ahl-al-kitab",
-        "title": "Ahl al-Kitab",
-        "ar": "أهل الكتاب",
-        "tr": "Ahl al-Kitāb",
-        "def": "The People of the Book: Jews and Christians, who received earlier scriptures.",
-        "what": [
-            "The Quran gives them a place of their own. It invites them to “a common word” of worshipping God alone (3:64), tells Muslims to argue with them only in the best manner (29:46), permits eating their food and marrying their chaste women (5:5), and says that some of them are upright and pray through the night (3:113–115).",
-            "It says that the people nearest in affection to believers are those who say “we are Christians”, because among them are priests and monks who are not proud (5:82)."
-        ],
-        "misread": "That the Quran declares Jews and Christians enemies.",
-        "sources": [
-            "The Quran criticises specific beliefs and acts, and in specific situations, and it does so in the same chapters where it praises others. A Muslim’s relation to the People of the Book is one of respect, of disagreement on theology and, as the Quran says, of competing in good deeds (5:48)."
-        ],
-        "terms": [
-            "kutub",
-            "tahrif",
-            "dhimmi"
-        ],
-        "articles": [
-            "same-god",
-            "shared-prophets"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "aad",
+  "title": "Aad",
+  "type": "group",
+  "ar": "عاد",
+  "tr": "ʿĀd",
+  "def": "The people of the prophet Hud, destroyed for their arrogance, according to the Quran.",
+  "what": [
+   "The Quran describes ʿĀd as a powerful people who boasted “who is mightier than us in strength?” (41:15), built lofty monuments and rejected Hud, their prophet (7:65–72, 46:21–25). They were destroyed by a violent wind lasting seven nights and eight days (69:6–8). Their city is called Iram of the pillars (89:7)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran uses ʿĀd, with Thamud and the people of Noah, as a warning that nations are destroyed by their injustice and not by their wealth. Where exactly ʿĀd lived is not agreed among scholars, and claims to have found Iram are disputed."
+  ],
+  "terms": [
+   "hud",
+   "thamud"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ad",
+   "A'ad"
+  ]
+ },
+ {
+  "slug": "aaron",
+  "title": "Aaron",
+  "type": "prophet",
+  "ar": "هارون",
+  "tr": "Hārūn",
+  "def": "Moses’ brother and a prophet in the Quran, who stood by him before Pharaoh.",
+  "what": [
+   "In the Quran Moses asks God to make his brother Aaron his helper and a partner in his mission, and God grants it (20:29–36, 19:53). Aaron is named among the prophets and honoured with Moses, as in “peace upon Moses and Aaron” (37:114–120)."
+  ],
+  "misread": "That the Quran makes Aaron the maker of the golden calf, or confuses Mary with Aaron’s sister.",
+  "sources": [
+   "In the Quran it is not Aaron but al-Samiri who makes the calf (20:85–87), and Aaron warns the people that they are being tested and tells them to follow him (20:90–94). His words to Moses, “do not seize my beard or my head”, show him as a restrained brother (20:94). On “sister of Aaron” (19:28) see Maryam."
+  ],
+  "terms": [
+   "maryam",
+   "isa",
+   "kutub"
+  ],
+  "articles": [
+   "ezra-and-mary"
+  ],
+  "aliases": [
+   "Harun"
+  ]
+ },
+ {
+  "slug": "abad",
+  "title": "Abad",
+  "type": "term",
+  "ar": "أبد",
+  "tr": "Abad",
+  "def": "Everlastingness, being without end; the counterpart of azal, being without beginning.",
+  "what": [
+   "Muslim theologians use the pair for God’s attributes of eternity: azal, no beginning, and abad, no end. The Quran says of Him, “He is the First and the Last, the Manifest and the Hidden” (57:3), and “everything will perish except His face” (28:88)."
+  ],
+  "misread": "",
+  "sources": [
+   "The pair belongs to the later vocabulary of theology (kalam). It states in technical terms what the verses say plainly: that God is not a created being, and does not depend on time."
+  ],
+  "terms": [
+   "allah",
+   "tawhid"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "abasa",
+  "title": "Abasa",
+  "type": "term",
+  "ar": "عبس",
+  "tr": "ʿAbasa",
+  "def": "Chapter 80 of the Quran, “He frowned”, in which God rebukes the Prophet for turning away from a blind man.",
+  "what": [
+   "The chapter opens: “He frowned and turned away because the blind man came to him” (80:1–2). Classical commentators, following a report in al-Tirmidhi, say the blind man was Abdullah ibn Umm Maktum, who interrupted the Prophet while he was speaking with leaders of Quraysh."
+  ],
+  "misread": "That the incident casts doubt on the Prophet’s character.",
+  "sources": [
+   "Muslims see the opposite. A man composing a scripture to exalt himself would hardly record a rebuke to himself. Abdullah ibn Umm Maktum was afterwards honoured: the Prophet appointed him to lead the prayer in Medina in his own absence, and he was one of the Prophet’s muezzins."
+  ],
+  "terms": [
+   "ibn-umm-maktum",
+   "wahy",
+   "quran"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "abbas-ibn-abd-al-muttalib",
+  "title": "Abbas ibn Abd al-Muttalib",
+  "type": "person",
+  "ar": "العباس",
+  "tr": "al-ʿAbbās",
+  "def": "An uncle of the Prophet and a Companion, ancestor of the Abbasid caliphs.",
+  "what": [
+   "Abbas (d. about 653) was the Prophet’s uncle and close in age to him. His son Abdullah ibn Abbas became one of the great early authorities on the interpretation of the Quran. The Abbasid dynasty took its name from him."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abbasid-caliphate",
+   "ibn-abbas",
+   "abdul-muttalib"
+  ],
+  "articles": [],
+  "aliases": [
+   "Abbas"
+  ]
+ },
+ {
+  "slug": "abbasid-caliphate",
+  "title": "Abbasid caliphate",
+  "type": "group",
+  "ar": "",
+  "tr": "",
+  "def": "The dynasty that ruled the Muslim world from Baghdad from 750 to 1258.",
+  "what": [
+   "The Abbasids came to power in 750 by overthrowing the Umayyads, with support from Abu Muslim al-Khurasani and many non-Arab Muslims, and built Baghdad as their capital. They ruled until the Mongols sacked Baghdad in 1258."
+  ],
+  "misread": "",
+  "sources": [
+   "Their patronage of learning is among the best-known features of the age. Al-Khwarizmi, from whom “algorithm” takes its name, worked in the House of Wisdom in Baghdad, and the Christian physician Hunayn ibn Ishaq led a large translation of Greek medical and philosophical works into Arabic. This shows that Islam’s own sources were no barrier to learning, and in the Muslim reading encouraged it."
+  ],
+  "terms": [
+   "abu-muslim",
+   "hunayn-ibn-ishaq"
+  ],
+  "articles": [
+   "arabic-words-science"
+  ],
+  "aliases": [
+   "Abbassid"
+  ]
+ },
+ {
+  "slug": "abd",
+  "title": "Abd",
+  "type": "term",
+  "ar": "عبد",
+  "tr": "ʿAbd",
+  "def": "Servant or slave of God: the name for a human being in relation to his Creator.",
+  "what": [
+   "Many names begin with it: Abdullah is “servant of God”, Abd al-Rahman “servant of the Merciful”. In the Quran the highest title is to be God’s servant. Muhammad (17:1, 25:1), Jesus (19:30, 4:172), Job (38:41) and Noah (17:3) are all called His servants."
+  ],
+  "misread": "That Islam’s “slave of God” is degrading, in contrast to Jesus calling his disciples “friends” (John 15:15).",
+  "sources": [
+   "The Quran has both ideas. It calls Abraham God’s friend (<em>khalīl</em>, 4:125), and says that the friends of God (<em>awliyā’</em>) “have no fear, nor do they grieve” (10:62). Being His servant means freedom from serving anything else, and the word carries honour as well as obedience."
+  ],
+  "terms": [
+   "tawhid",
+   "taqwa"
+  ],
+  "articles": [],
+  "aliases": [
+   "'Abd"
+  ]
+ },
+ {
+  "slug": "abdul-muttalib",
+  "title": "Abdul Muttalib",
+  "type": "person",
+  "ar": "عبد المطلب",
+  "tr": "ʿAbd al-Muṭṭalib",
+  "def": "The Prophet’s grandfather, who cared for him after his mother’s death.",
+  "what": [
+   "Abdul Muttalib was a leader of Quraysh and keeper of the well of Zamzam. After the death of Muhammad’s mother Aminah, when he was six, he cared for him until his own death two years later. His son Abdullah was the Prophet’s father, and Abu Talib, Hamza and Abbas were among his other sons."
+  ],
+  "misread": "",
+  "sources": [
+   "Ibn Ishaq relates that when Abraha’s army came against Mecca in the “Year of the Elephant” (see Quran 105), Abdul Muttalib said: “I am the owner of the camels; the House has a Lord who will protect it.”"
+  ],
+  "terms": [
+   "aminah",
+   "abbas-ibn-abd-al-muttalib"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "abdul-qadir-al-jilani",
+  "title": "Abdul Qadir al-Jilani",
+  "type": "person",
+  "ar": "عبد القادر الجيلاني",
+  "tr": "ʿAbd al-Qādir al-Jīlānī",
+  "def": "A twelfth-century preacher and jurist of Baghdad, from whom the Qadiri Sufi order takes its name.",
+  "what": [
+   "Born in Jilan in about 1077, he taught in Baghdad as a Hanbali jurist and preacher, and died in 1166. The Qadiriyya order, among the oldest and most widespread, was formed after his death by his followers."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "taqwa"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "abdul-rahman-ibn-awf",
+  "title": "Abdul Rahman ibn Awf",
+  "type": "person",
+  "ar": "عبد الرحمن بن عوف",
+  "tr": "ʿAbd al-Raḥmān ibn ʿAwf",
+  "def": "A wealthy early Companion, one of the ten promised Paradise, known for honest trade and generosity.",
+  "what": [
+   "He accepted Islam early, emigrated to Abyssinia and then to Medina, and fought at Badr and Uhud, where he was badly wounded. He was a merchant. A report in Sahih al-Bukhari says that when an Ansari offered him half his wealth he declined and asked only to be shown the market."
+  ],
+  "misread": "",
+  "sources": [
+   "He was among the ten to whom the Prophet gave news of Paradise, and he gave large sums in charity for the army. He died in 652."
+  ],
+  "terms": [
+   "companions-of-the-prophet",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "abdullah-ibn-abd-al-muttalib",
+  "title": "Abdullah ibn Abd al-Muttalib",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "The Prophet’s father, who died before he was born.",
+  "what": [
+   "Abdullah was the youngest son of Abdul Muttalib and the husband of Aminah. He died in Medina on his way back from a trading journey to Gaza, shortly before or after Muhammad’s birth by differing accounts, so the Prophet was orphaned from the first."
+  ],
+  "misread": "",
+  "sources": [
+   "Abdullah means “servant of God”. That the Prophet’s father bore the name Abdullah is evidence that Allah was already known to the Arabs of Mecca as the name of God, as the Quran also says (29:61)."
+  ],
+  "terms": [
+   "allah",
+   "abdul-muttalib",
+   "aminah"
+  ],
+  "articles": [],
+  "aliases": [
+   "Abdullah"
+  ]
+ },
+ {
+  "slug": "abdullah-ibn-amr-ibn-al-as",
+  "title": "Abdullah ibn Amr ibn al-As",
+  "type": "person",
+  "ar": "عبد الله بن عمرو بن العاص",
+  "tr": "ʿAbd Allāh ibn ʿAmr",
+  "def": "A Companion who wrote down the Prophet’s sayings in his lifetime.",
+  "what": [
+   "Abu Hurayra said that no one had more hadith than Abdullah ibn Amr, “because he wrote and I did not” (Sahih al-Bukhari). He kept a record he called <em>al-Ṣādiqa</em>, “the truthful one”, with the Prophet’s permission."
+  ],
+  "misread": "That the hadith were passed on only by word of mouth for two centuries and are therefore unreliable.",
+  "sources": [
+   "His notebook is one of several records from the Prophet’s lifetime, along with those of Ali and Anas and the writings of the Companion Jabir. Hadith were taught from memory and from writing, side by side, from the first generation."
+  ],
+  "terms": [
+   "hadith",
+   "isnad"
+  ],
+  "articles": [
+   "manuscript-transmission"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "abdullah-ibn-sad",
+  "title": "Abdullah ibn Sa'd",
+  "type": "person",
+  "ar": "عبد الله بن سعد",
+  "tr": "ʿAbd Allāh ibn Saʿd",
+  "def": "A scribe of revelation who later left Islam and returned, and became governor of Egypt.",
+  "what": [
+   "Abdullah ibn Sa’d ibn Abi Sarh served for a time as one of the Prophet’s scribes, then left Medina for Mecca and abandoned Islam. At the conquest of Mecca he was among a few people named for execution, but Uthman, his foster-brother, brought him to the Prophet, who after a delay accepted his allegiance. He became governor of Egypt under Uthman and led campaigns in North Africa."
+  ],
+  "misread": "That he showed Muhammad “adding” to the Quran at will, so the book cannot be divine revelation.",
+  "sources": [
+   "The story is that he claimed credit for the words “so blessed be God, the best of creators” (23:14) and boasted that he could produce revelation like it (6:93). The report is in some commentaries with weak chains, and scholars note a difficulty with the timeline, since both verses are in chapters revealed in Mecca. An author seeking credibility would hardly preserve a scribe who left the faith. The tradition recorded both his departure and his return."
+  ],
+  "terms": [
+   "wahy",
+   "quran",
+   "hadith"
+  ],
+  "articles": [
+   "who-saw-gabriel"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "abdullah-ibn-ubayy",
+  "title": "Abdullah ibn Ubayy",
+  "type": "person",
+  "ar": "عبد الله بن أبي",
+  "tr": "ʿAbd Allāh ibn Ubayy",
+  "def": "A leading man of Medina, known as the chief of the hypocrites, whom the Prophet treated with restraint.",
+  "what": [
+   "Before the Prophet’s arrival Ibn Ubayy was in line to lead Medina. He outwardly joined the Muslims but repeatedly undermined them: he withdrew about 300 men on the way to Uhud, and said on one expedition, “when we return to Medina the mightier will expel the meaner from it” (63:8)."
+  ],
+  "misread": "",
+  "sources": [
+   "His own son, a sincere Muslim, offered to kill him. The Prophet refused, saying people must not say that Muhammad kills his own companions (Sahih al-Bukhari). When Ibn Ubayy died the Prophet prayed over him and asked forgiveness, until a revelation forbade it (9:84). Muslims cite this as an example of restraint toward a man who had caused grave harm."
+  ],
+  "terms": [
+   "hypocrites"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "abel",
+  "title": "Abel",
+  "type": "prophet",
+  "ar": "هابيل",
+  "tr": "Hābīl",
+  "def": "The son of Adam who was killed by his brother, in the Quran’s story of the first murder.",
+  "what": [
+   "The Quran tells the story without naming the brothers (5:27–31). One brother’s offering is accepted and the other’s is not. Threatened with murder, the righteous one says: “If you stretch out your hand to kill me, I shall not stretch out mine to kill you; I fear God, Lord of the worlds” (5:28)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran draws a lesson from it in the next verses: whoever kills a person, except for murder or corruption in the land, is as if he had killed all mankind, and whoever saves a life is as if he had saved all mankind (5:32). It addresses this to the Children of Israel and states it as a principle for everyone."
+  ],
+  "terms": [
+   "adam",
+   "fitna"
+  ],
+  "articles": [],
+  "aliases": [
+   "Habil"
+  ]
+ },
+ {
+  "slug": "ablutions",
+  "title": "Ablutions",
+  "type": "term",
+  "ar": "وضوء",
+  "tr": "Wuḍūʾ",
+  "def": "Washing before prayer: the minor wudu, the full bath (ghusl), and dry ablution (tayammum) where there is no water.",
+  "what": [
+   "The Quran commands it before prayer: wash the face and the arms to the elbows, wipe the head, and wash the feet (5:6). A full bath is required after sexual intercourse and similar states. Where there is no water, clean earth may be used (4:43, 5:6). God “loves those who repent and those who purify themselves” (2:222)."
+  ],
+  "misread": "",
+  "sources": [
+   "The schools differ on small details. Sunnis wash the feet, and Twelver Shias wipe them, because the word for “feet” in 5:6 can be read in two ways, with different vowels, and both readings are recognised. The Prophet is reported to have said that “cleanliness is half of faith” (Sahih Muslim)."
+  ],
+  "terms": [
+   "salah",
+   "taqwa",
+   "qiraat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Wudu",
+   "Ghusl",
+   "Tayammum"
+  ]
+ },
+ {
+  "slug": "abraham",
+  "title": "Abraham",
+  "type": "prophet",
+  "ar": "إبراهيم",
+  "tr": "Ibrāhīm",
+  "def": "The friend of God and father of prophets, honoured by Muslims, Jews and Christians.",
+  "what": [
+   "The Quran calls him “a nation in himself” (16:120) and God’s friend (4:125). It tells how he broke his people’s idols (21:51–70), was cast into a fire that God made “cool and safe” (21:69), and with his son Ishmael raised the foundations of the Kaaba (2:127). He is named in the daily prayer, which asks blessings on Muhammad as God blessed Abraham."
+  ],
+  "misread": "That the Quran’s Abraham contradicts Genesis, as in his father’s name or in which son was offered.",
+  "sources": [
+   "The Quran says Abraham “was neither a Jew nor a Christian, but a <em>ḥanīf</em>, a Muslim, submitting to God” (3:67), so that Jews, Christians and Muslims share him. The Quran does not name the son he was told to sacrifice (37:99–113), and early scholars were divided, some naming Isaac and later most naming Ishmael. On his father’s name see Azar."
+  ],
+  "terms": [
+   "azar",
+   "ibrahim",
+   "kutub"
+  ],
+  "articles": [
+   "shared-prophets"
+  ],
+  "aliases": [
+   "Ibrahim"
+  ]
+ },
+ {
+  "slug": "abu",
+  "title": "Abu",
+  "type": "term",
+  "ar": "أبو",
+  "tr": "Abū",
+  "def": "“Father of”: the form of name by which Arabs call a person after his eldest child, and its counterpart “Umm”, mother of.",
+  "what": [
+   "Abu Bakr, Abu Hurayra and Umm Salama are examples. The Prophet gave Companions such names, and the Quran uses one in Abu Lahab, “father of the flame” (111:1)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abu-bakr"
+  ],
+  "articles": [],
+  "aliases": [
+   "Umm",
+   "Kunya"
+  ]
+ },
+ {
+  "slug": "abu-muslim-al-khurasani",
+  "title": "Abu Muslim al-Khurasani",
+  "type": "person",
+  "ar": "أبو مسلم الخراساني",
+  "tr": "Abū Muslim al-Khurāsānī",
+  "def": "The leader of the movement in Khorasan that brought the Abbasids to power.",
+  "what": [
+   "He raised the revolt against the Umayyads in Khorasan in 747. The Abbasid caliph al-Mansur had him executed in 755, suspecting his influence."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abbasid-caliphate"
+  ],
+  "articles": [],
+  "aliases": [
+   "Abu Muslim"
+  ]
+ },
+ {
+  "slug": "acacia-flowers",
+  "title": "Acacia flowers",
+  "type": "topic",
+  "ar": "طلح",
+  "tr": "Ṭalḥ",
+  "def": "A tree of Paradise named in the Quran (56:29).",
+  "what": [
+   "The Quran describes the companions of the right hand among “thornless lote trees and layered <em>ṭalḥ</em>” (56:28–29). Commentators differ on what the word means: some say a kind of acacia, others the banana, and early reports differ."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "akhira"
+  ],
+  "articles": [],
+  "aliases": [
+   "Talh"
+  ]
+ },
+ {
+  "slug": "adam",
+  "title": "Adam",
+  "type": "prophet",
+  "ar": "آدم",
+  "tr": "Ādam",
+  "def": "The first human being and, in Islam, the first prophet.",
+  "what": [
+   "The Quran says God created Adam from clay (38:71, 15:26), taught him the names of things (2:31), and told the angels to prostrate to him. Iblis refused (2:34). Adam and his wife were told not to approach a tree, were led astray, and repented, and God accepted their repentance (2:37)."
+  ],
+  "misread": "That Islam teaches “original sin”, or that Adam’s mistake is held against all mankind.",
+  "sources": [
+   "Muslims believe the sin was Adam’s own, was forgiven, and was not inherited. The Quran says that “no bearer of burdens bears the burden of another” (6:164, 53:38). The angels’ prostration was an act of obedience to God’s command and not worship of Adam."
+  ],
+  "terms": [
+   "akhira",
+   "iblis",
+   "atonement-and-repentance"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "adhan",
+  "title": "Adhan",
+  "type": "term",
+  "ar": "أذان",
+  "tr": "Adhān",
+  "def": "The call to prayer, proclaimed from the mosque five times a day.",
+  "what": [
+   "Its words are “God is greater” four times, “I testify that there is no god but God”, “I testify that Muhammad is the messenger of God”, “come to prayer”, “come to success”, “God is greater”, and “there is no god but God”. At dawn the words “prayer is better than sleep” are added."
+  ],
+  "misread": "",
+  "sources": [
+   "Reports in Abu Dawud and al-Tirmidhi say the wording was seen in a dream by the Companion Abdullah ibn Zayd, and the Prophet approved it and told Bilal, who had a fine voice, to give it. Sahih al-Bukhari relates that Muslims at first gathered without a call, and some suggested a bell like the Christians or a horn like the Jews; instead, a man was appointed to call."
+  ],
+  "terms": [
+   "salah",
+   "tawhid"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "adoption",
+  "title": "Adoption",
+  "type": "term",
+  "ar": "تبني",
+  "tr": "Tabannī",
+  "def": "Islam forbids treating an adopted child as one’s own by blood, and urges caring for orphans.",
+  "what": [
+   "The Quran says God did not make adopted sons into your sons, and tells people to call them by their fathers’ names (33:4–5). The rule keeps lineage true, and so inheritance and the prohibited degrees of marriage. It does not discourage care. The Prophet said that he and the guardian of an orphan would be “like these two” in Paradise, putting two fingers together (Sahih al-Bukhari)."
+  ],
+  "misread": "That the ban shows Islam is hard on orphans.",
+  "sources": [
+   "Muslims practise fostering (<em>kafāla</em>), supporting a child as one’s own and giving him a share by gift or bequest. The Quran adds that the case of Zayd and Zaynab (33:37) was meant to break the old custom that treated an adopted son as a real one."
+  ],
+  "terms": [
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "adoptionism",
+  "title": "Adoptionism",
+  "type": "group",
+  "ar": "",
+  "tr": "",
+  "def": "An early Christian view that Jesus became God’s Son by adoption.",
+  "what": [
+   "Adoptionism, or dynamic monarchianism, held that Jesus was a man chosen and adopted by God because of his obedience. Church councils rejected it. The Quran differs from both this view and the Trinitarian one: it does not say God adopted Jesus, and it says that “it is not for God to take a son” (19:35)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "isa",
+   "injil"
+  ],
+  "articles": [
+   "jesus-not-god"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "adoration",
+  "title": "Adoration",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Prostration and worship belong to God alone, not to sun, moon or any creature (41:37).",
+  "what": [
+   "“Do not prostrate to the sun or the moon, but prostrate to God who created them, if it is Him you worship” (41:37). The Quran uses the verse to teach tawhid through creation: what is worshipped should not itself be among the things that are made."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "tawhid",
+   "shirk"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "adultery",
+  "title": "Adultery",
+  "type": "term",
+  "ar": "زنا",
+  "tr": "Zināʾ",
+  "def": "Sexual intercourse outside marriage, which the Quran forbids and surrounds with strict conditions of proof.",
+  "what": [
+   "“Do not come near adultery; it is an indecency and an evil way” (17:32). The Quran prescribes a hundred lashes for each offender (24:2). It requires four witnesses, and punishes with eighty lashes anyone who accuses a chaste person without them (24:4). A husband who charges his wife without witnesses swears oaths, and she may swear in reply (24:6–9)."
+  ],
+  "misread": "That Islam kills people on suspicion of adultery.",
+  "sources": [
+   "Stoning is not in the Quran. The majority of jurists hold it applies to a married offender, from reports of the Prophet’s own cases, while some early and modern scholars hold only the Quranic penalty applies. The evidence required, four eye-witnesses of the act itself, is almost never met, and the Prophet turned away from Maiz and the woman of Ghamid, who confessed, several times before ordering punishment (Sahih Muslim). Jurists derived the rule that penalties are waived where there is doubt."
+  ],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "hadith"
+  ],
+  "articles": [],
+  "aliases": [
+   "Zina",
+   "Fornication"
+  ]
+ },
+ {
+  "slug": "adversity",
+  "title": "Adversity",
+  "type": "topic",
+  "ar": "صبر",
+  "tr": "Ṣabr",
+  "def": "Patience in hardship: steadfastness, which the Quran promises God will reward without measure.",
+  "what": [
+   "“God does not burden a soul beyond what it can bear” (2:286). “Seek help through patience and prayer, for God is with the patient” (2:153). “Those who are patient will be paid their reward without account” (39:10). The Prophet taught that no fatigue, illness, worry or grief reaches a believer, even the prick of a thorn, but God expiates his sins by it (Sahih al-Bukhari)."
+  ],
+  "misread": "That the Quran asks believers to accept injustice and do nothing.",
+  "sources": [
+   "Patience in the Quran is active. It is joined with prayer, with doing good, and with resisting oppression. The same Quran adds that “no bearer of burdens will bear the burden of another” (6:164), so hardship is not a punishment passed down, and it comes with hope: “with hardship comes ease” (94:5–6)."
+  ],
+  "terms": [
+   "taqwa",
+   "ihsan",
+   "atonement-and-repentance"
+  ],
+  "articles": [],
+  "aliases": [
+   "Patience",
+   "Sabr"
+  ]
+ },
+ {
+  "slug": "afternoon-prayer",
+  "title": "Afternoon prayer",
+  "type": "term",
+  "ar": "عصر",
+  "tr": "ʿAṣr",
+  "def": "The third of the five daily prayers, between mid-afternoon and sunset.",
+  "what": [
+   "The Quran tells believers to “maintain the prayers, especially the middle prayer” (2:238). The Prophet said that the middle prayer is ʿAṣr (Sahih Muslim). Chapter 103 is named after it and swears “by time” that humanity is in loss except those who believe, do good, and urge one another to truth and patience."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "salah",
+   "adhan"
+  ],
+  "articles": [],
+  "aliases": [
+   "Asr",
+   "Afternoon"
+  ]
+ },
+ {
+  "slug": "age-of-responsibility",
+  "title": "Age of responsibility",
+  "type": "topic",
+  "ar": "بلوغ",
+  "tr": "Bulūgh",
+  "def": "The point at which a Muslim becomes accountable for religious duties, at puberty.",
+  "what": [
+   "Jurists hold that responsibility begins with puberty, shown by physical signs, or by a fixed age where there are none, which differs by school, most often fifteen lunar years. The Quran uses the idea of reaching maturity in 4:6 for managing one’s own property, and 46:15 speaks of a person reaching full strength and forty years."
+  ],
+  "misread": "",
+  "sources": [
+   "Before puberty a child is not held to prayer or fasting, though he is taught them. Mature judgement is also a condition: the Quran tells guardians to test orphans and return their property to them when they show sound judgement (4:6)."
+  ],
+  "terms": [
+   "salah",
+   "fiqh",
+   "aisha"
+  ],
+  "articles": [],
+  "aliases": [
+   "Age",
+   "Bulugh"
+  ]
+ },
+ {
+  "slug": "aggression",
+  "title": "Aggression",
+  "type": "topic",
+  "ar": "عدوان",
+  "tr": "ʿUdwān",
+  "def": "The Quran forbids transgression, allows only proportionate defence, and urges forgiveness and the better response.",
+  "what": [
+   "“Fight in the way of God those who fight you, but do not transgress; God does not love the transgressors” (2:190). “If they incline to peace, incline to it, and trust in God” (8:61). “If you punish, punish only as you were harmed; but if you are patient, that is better for the patient” (16:126). “Repel evil with what is better, and the one between whom and you was enmity will become as a close friend” (41:34)."
+  ],
+  "misread": "That Muhammad ordered mutilation and revenge.",
+  "sources": [
+   "Commentators say 16:126 was revealed at Uhud, where the body of Hamza had been mutilated and the Prophet said he would mutilate thirty of them in return; the verse held him back. Reports in Sahih al-Bukhari add that he forbade plunder and mutilation of the dead."
+  ],
+  "terms": [
+   "jihad",
+   "fitna",
+   "kafir"
+  ],
+  "articles": [],
+  "aliases": [
+   "Attacks",
+   "Arguments"
+  ]
+ },
+ {
+  "slug": "ahl-al-bayt",
+  "title": "Ahl al-Bayt",
+  "type": "group",
+  "ar": "أهل البيت",
+  "tr": "Ahl al-Bayt",
+  "def": "The Prophet’s household, held in special honour by all Muslims and in particular by Shias.",
+  "what": [
+   "The Quran says God wishes “to remove impurity from you, people of the House, and to purify you thoroughly” (33:33). Sunni and Shia scholars differ on who is meant. All include Fatima, Ali, Hasan and Husayn, whom the Prophet covered with his cloak (Sahih Muslim); Sunnis also include his wives, as the surrounding verses address them."
+  ],
+  "misread": "",
+  "sources": [
+   "Muslims of every school send blessings on the family of the Prophet in the daily prayer. The honour is shared, though the political and theological claims that Shias build on it are not."
+  ],
+  "terms": [
+   "ali-ibn-abi-talib",
+   "fatima",
+   "twelve-imams"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ahlul-Bayt"
+  ]
+ },
+ {
+  "slug": "ahl-al-kitab",
+  "title": "Ahl al-Kitab",
+  "ar": "أهل الكتاب",
+  "tr": "Ahl al-Kitāb",
+  "def": "The People of the Book: Jews and Christians, who received earlier scriptures.",
+  "what": [
+   "The Quran gives them a place of their own. It invites them to “a common word” of worshipping God alone (3:64), tells Muslims to argue with them only in the best manner (29:46), permits eating their food and marrying their chaste women (5:5), and says that some of them are upright and pray through the night (3:113–115).",
+   "It says that the people nearest in affection to believers are those who say “we are Christians”, because among them are priests and monks who are not proud (5:82)."
+  ],
+  "misread": "That the Quran declares Jews and Christians enemies.",
+  "sources": [
+   "The Quran criticises specific beliefs and acts, and in specific situations, and it does so in the same chapters where it praises others. A Muslim’s relation to the People of the Book is one of respect, of disagreement on theology and, as the Quran says, of competing in good deeds (5:48)."
+  ],
+  "terms": [
+   "kutub",
+   "tahrif",
+   "dhimmi"
+  ],
+  "articles": [
+   "same-god",
+   "shared-prophets"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "ahmad",
+  "title": "Ahmad",
+  "type": "term",
+  "ar": "أحمد",
+  "tr": "Aḥmad",
+  "def": "A name of the Prophet, “the most praised”, which the Quran gives in 61:6.",
+  "what": [
+   "Jesus tells the Children of Israel that he is “a messenger of God to you, confirming the Torah before me and bringing good news of a messenger to come after me whose name is Aḥmad” (61:6). Muslims take Aḥmad to be Muhammad: both come from the root <em>ḥ-m-d</em>, “to praise”. The Prophet is reported to have said, “I am Muhammad and Ahmad” (Sahih al-Bukhari)."
+  ],
+  "misread": "That Muslims invented a prophecy by changing “Paraclete” to “Periclyte”.",
+  "sources": [
+   "Some Muslim writers, from Ibn Ishaq on, read the Paraclete promised in John 14–16 as Muhammad, and some propose a Greek reading <em>periklytos</em>, “praised”. Many scholars do not rely on that argument, which is not made in the Quran. The Quran’s own claim is simpler: that Jesus foretold a messenger coming after him."
+  ],
+  "terms": [
+   "isa",
+   "injil",
+   "tahrif"
+  ],
+  "articles": [
+   "where-is-the-injil"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "ahmadiyya",
+  "title": "Ahmadiyya",
+  "type": "group",
+  "ar": "أحمدية",
+  "tr": "Aḥmadiyya",
+  "def": "A movement founded in 1889 by Mirza Ghulam Ahmad, which most Muslims do not count as part of Islam.",
+  "what": [
+   "Mirza Ghulam Ahmad (d. 1908), of Qadian in the Punjab, claimed to be the Promised Messiah and Mahdi. His followers differ about whether he was a prophet: the Qadiani branch says he was a prophet without a new law, the Lahore branch that he was a reformer."
+  ],
+  "misread": "",
+  "sources": [
+   "The view of the Muslim scholars is that the Quran calls Muhammad the “seal of the prophets” (33:40), so no prophet can follow him. Pakistan’s parliament declared the Ahmadis non-Muslim in 1974. Many Muslims also hold that whatever the theological dispute, violence against or legal discrimination against Ahmadis is wrong."
+  ],
+  "terms": [
+   "sharia",
+   "isa"
+  ],
+  "articles": [
+   "jesus-not-god"
+  ],
+  "aliases": [
+   "Ahmadiyyah"
+  ]
+ },
+ {
+  "slug": "aisha-bint-abi-bakr",
+  "title": "Aisha bint Abi Bakr",
+  "type": "person",
+  "ar": "عائشة",
+  "tr": "ʿĀʾisha",
+  "def": "The Prophet’s wife and a scholar of the first generation, one of the major narrators of hadith.",
+  "what": [
+   "Aisha, daughter of Abu Bakr, was the Prophet’s wife for nine years. Companions, including senior ones, came to her for rulings, and she is credited with over two thousand hadith. She corrected other Companions where she thought they had misremembered, and later led a force against Ali at the Battle of the Camel, which she regretted."
+  ],
+  "misread": "That Islam permits child marriage because of her marriage.",
+  "sources": [
+   "Sahih al-Bukhari reports that she was betrothed at six and the marriage was consummated at nine. Most scholars accept this and explain it from the customs of the time, when marriage at puberty was normal in Arabia and in other societies. Some modern scholars question the age, pointing to other reports on her age relative to her sister Asma, which would make her older. The Prophet is also reported to have said that a virgin should not be married until her permission is asked (Sahih al-Bukhari). Many scholars, citing that and Quran 4:6, hold that maturity and consent are required, and most Muslim-majority countries now set a minimum marriage age by law."
+  ],
+  "terms": [
+   "ahl-al-bayt",
+   "hadith",
+   "age-of-responsibility",
+   "sira"
+  ],
+  "articles": [],
+  "aliases": [
+   "Aisha",
+   "Aisha Bint Abu Bakr"
+  ]
+ },
+ {
+  "slug": "akhira",
+  "title": "Akhira",
+  "type": "term",
+  "ar": "آخرة",
+  "tr": "Ākhira",
+  "def": "The Hereafter: the life after death, judgement, and the abode of reward or punishment.",
+  "what": [
+   "Belief in the Last Day is one of the six articles of faith. The Quran says that “the life of this world is only play and amusement, but the home of the Hereafter is the real life” (29:64). It describes resurrection, the weighing of deeds (21:47), and Paradise and Hell."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "heaven",
+   "hell",
+   "judgment"
+  ],
+  "articles": [],
+  "aliases": [
+   "Akhirah",
+   "Hereafter"
+  ]
+ },
+ {
+  "slug": "al",
+  "title": "Al-",
+  "type": "term",
+  "ar": "ال",
+  "tr": "al-",
+  "def": "The Arabic definite article, “the”, which explains why the same name is spelled in several ways.",
+  "what": [
+   "<em>al-</em> assimilates before certain letters, called “sun letters”, so it is written <em>al-Rahman</em> but pronounced <em>ar-Rahman</em>, and <em>ash-Shams</em> for “the sun”. Writers choose either form, so al-Tabari and at-Tabari are one man, and al-Ghazali and Ghazali are the same. This glossary uses the written form."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "arabic"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "al-azhar",
+  "title": "Al-Azhar",
+  "type": "group",
+  "ar": "الأزهر",
+  "tr": "al-Azhar",
+  "def": "A mosque and university in Cairo, founded about 970, and the best-known centre of Sunni learning.",
+  "what": [
+   "Founded by the Fatimid dynasty in 970–972, Al-Azhar became a Sunni institution after the Ayyubids took Egypt in 1171. It trains scholars from across the Muslim world. Its rulings are advisory, and Muslims differ over how far they accept them."
+  ],
+  "misread": "",
+  "sources": [
+   "Positions attributed to it, such as one on apostasy, are those of particular scholars or of an Egyptian law, and should be read as such. Its leaders have also condemned terrorism in strong terms."
+  ],
+  "terms": [
+   "apostasy-riddah",
+   "fiqh"
+  ],
+  "articles": [],
+  "aliases": [
+   "Al-Azhar, University Of"
+  ]
+ },
+ {
+  "slug": "al-aziz",
+  "title": "Al-Aziz",
+  "type": "term",
+  "ar": "العزيز",
+  "tr": "al-ʿAzīz",
+  "def": "One of God’s names, “the Mighty”, and the Egyptian title of an official in the story of Joseph.",
+  "what": [
+   "In the Quran <em>al-ʿAzīz</em> is among God’s names, often paired with “the Wise” (2:129). The word is also used for the Egyptian official who bought Joseph (12:30) and, later, for Joseph himself as the ruler (12:78, 12:88)."
+  ],
+  "misread": "That the Quran gets the name of Potiphar wrong.",
+  "sources": [
+   "The Quran does not call him Potiphar. It uses a title, “al-Aziz”, which means the noble or the mighty, like “His Excellency”, for a man of high rank at the court of Egypt, as it does of Joseph later."
+  ],
+  "terms": [
+   "allah",
+   "joseph"
+  ],
+  "articles": [],
+  "aliases": [
+   "'Aziz, Al"
+  ]
+ },
+ {
+  "slug": "al-nadir-banu",
+  "title": "Al-Nadir, Banu",
+  "type": "group",
+  "ar": "بنو النضير",
+  "tr": "Banū al-Naḍīr",
+  "def": "A Jewish tribe of Medina, expelled in 625 after a plot against the Prophet.",
+  "what": [
+   "Banu al-Nadir were one of three Jewish tribes of Medina who had signed the agreement with the Prophet. According to the biographies, they were besieged and sent away with their goods after an attempt on his life, when they took what they could carry. Their lands are addressed in chapter 59."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran says of them “they thought no one could take them from their fortresses” (59:2). The other two tribes were Banu Qaynuqa, expelled earlier after a violation of the pact, and Banu Qurayza, whose fate is told in the entry on them. In each case the Muslim sources connect the action to a breach of the covenant."
+  ],
+  "terms": [
+   "ummah",
+   "sira",
+   "hijra"
+  ],
+  "articles": [],
+  "aliases": [
+   "Banu Nadir"
+  ]
+ },
+ {
+  "slug": "alexander-the-great",
+  "title": "Alexander the Great",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "Muslim tradition has often identified him with Dhu al-Qarnayn, but the Quran does not name him.",
+  "what": [
+   "Chapter 18 tells of Dhu al-Qarnayn, “the two-horned one”, a righteous ruler who travelled west and east and built a barrier against Gog and Magog (18:83–98). The Quran gives no name. Many early commentators, influenced by the Alexander legend, thought it was Alexander; others suggested a South Arabian king or a Persian ruler such as Cyrus."
+  ],
+  "misread": "That the Quran calls a pagan conqueror a believing Muslim.",
+  "sources": [
+   "The Quran describes only a ruler who is told to deal justly, believes in God, and says of the barrier “this is a mercy from my Lord” (18:98). Nothing there requires him to be Alexander, and Muslim scholars have long said the identity is uncertain."
+  ],
+  "terms": [
+   "gog-and-magog",
+   "thamud"
+  ],
+  "articles": [],
+  "aliases": [
+   "Dhu al-Qarnayn"
+  ]
+ },
+ {
+  "slug": "ali-ibn-abi-talib",
+  "title": "Ali ibn Abi Talib",
+  "type": "person",
+  "ar": "علي بن أبي طالب",
+  "tr": "ʿAlī ibn Abī Ṭālib",
+  "def": "The Prophet’s cousin and son-in-law, and the fourth of the rightly guided caliphs.",
+  "what": [
+   "Ali was raised in the Prophet’s household, married his daughter Fatima, and was among the first to accept Islam. He was a leading warrior and a respected judge, and became caliph in 656 after Uthman’s murder. His reign was troubled by civil war and he was killed by a Kharijite in 661."
+  ],
+  "misread": "",
+  "sources": [
+   "Sunnis honour him as the fourth caliph and Shias as the first imam, the rightful successor. Both hold that the Prophet said “whoever I am his protector, Ali is his protector” (al-Tirmidhi), and differ on what it means. The sayings attributed to him in the <em>Nahj al-Balagha</em> are widely admired, though their attribution is debated."
+  ],
+  "terms": [
+   "ahl-al-bayt",
+   "fatima",
+   "kharijites",
+   "twelve-imams"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ali",
+   "Ali B. Abi Talib"
+  ]
+ },
+ {
+  "slug": "alim",
+  "title": "Alim",
+  "type": "term",
+  "ar": "عالم",
+  "tr": "ʿĀlim",
+  "def": "A scholar of religion; the plural, ulama, is the learned class of Muslim societies.",
+  "what": [
+   "The Quran says: “Only those of His servants who have knowledge fear God” (35:28). It asks “are those who know equal to those who do not?” (39:9). The Prophet said that the scholars are the heirs of the prophets (Abu Dawud, al-Tirmidhi)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "ijtihad"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ulama"
+  ]
+ },
+ {
+  "slug": "allah",
+  "title": "Allah",
+  "ar": "الله",
+  "tr": "Allāh",
+  "def": "The Arabic word for God, used by Arabic-speaking Muslims, Christians and Jews alike.",
+  "what": [
+   "Allah is the Arabic name for the one God, the Creator of everything. It is not the name of a separate Arab deity. Arabic-speaking Christians and Jews used the same word for God before Islam and use it today, and Arabic translations of the Bible render “God” as Allah.",
+   "The Quran describes God by many names, “the most beautiful names” (7:180): the Compassionate, the Merciful, the Creator, the Forgiving. Its shortest statement of who He is comes in chapter 112: He is Allah, One; the Eternal Refuge; He neither begets nor is begotten; and there is none comparable to Him.",
+   "Arabic grammarians derive the word from <em>al-ilāh</em>, “the God”. It is closely related to the Aramaic <em>Alāhā</em> and the Hebrew <em>Eloah</em>, which is expected for sister languages and is no problem for Muslims: the word for God has been shared among the Semitic languages for thousands of years."
+  ],
+  "misread": "That Allah is the name of a pagan moon god, or a different god from the God of the Bible.",
+  "sources": [
+   "The pre-Islamic Arabs knew Allah as the creator, though they joined partners to Him: asked who created the heavens and the earth, they would say “Allah” (Quran 29:61, 31:25). The Quran does not introduce a new god. It calls people back to worshipping Him alone, and tells Muslims to say to Jews and Christians, “our God and your God is one” (29:46)."
+  ],
+  "terms": [
+   "tawhid",
+   "shirk",
+   "ahl-al-kitab"
+  ],
+  "articles": [
+   "who-is-allah",
+   "same-god"
+  ],
+  "type": "term",
+  "aliases": [
+   "Alah"
+  ]
+ },
+ {
+  "slug": "allahu-akbar",
+  "title": "Allahu Akbar",
+  "type": "term",
+  "ar": "الله أكبر",
+  "tr": "Allāhu akbar",
+  "def": "“God is greater”: the phrase that opens the prayer and the call to prayer, and is said in many other moments of life.",
+  "what": [
+   "It is said at the start of the prayer and between its movements, in the call to prayer, at Eid, at the slaughter of an animal for food, and in joy and in distress. “Greater” means greater than anything one might put in His place."
+  ],
+  "misread": "That it is a battle cry.",
+  "sources": [
+   "Muslims say it at every moment of the day and far more often in prayer than anywhere else. Some Muslims also say it in battle, and violent groups have used it. That does not change its meaning, which a Muslim hears several times a day in the adhan."
+  ],
+  "terms": [
+   "adhan",
+   "tawhid",
+   "salah"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "alliances",
+  "title": "Alliances",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran’s verses on alliance and friendship with Jews, Christians and others, which must be read with its call to justice and kindness.",
+  "what": [
+   "Verses such as 5:51, “do not take the Jews and Christians as <em>awliyā’</em>”, are read by many as forbidding alliances against the Muslims. The word <em>walī</em> means protector or ally, and the commentators connect the verse to Medinan Muslims who sought the protection of Jewish and Christian tribes against the Muslims themselves."
+  ],
+  "misread": "That Muslims are forbidden to befriend non-Muslims.",
+  "sources": [
+   "The same Quran says: “God does not forbid you from being kind and just to those who have not fought you over religion or driven you from your homes” (60:8). It permits eating the food of the People of the Book and marrying their women (5:5), and honours their upright people (3:113–115). The Prophet himself kept treaties, and traded and lived alongside non-Muslims all his life."
+  ],
+  "terms": [
+   "ahl-al-kitab",
+   "kafir",
+   "jihad"
+  ],
+  "articles": [],
+  "aliases": [
+   "Alliances With Non-Muslims"
+  ]
+ },
+ {
+  "slug": "almsgiving",
+  "title": "Almsgiving",
+  "type": "term",
+  "ar": "",
+  "tr": "",
+  "def": "Zakat is the obligatory share; sadaqa is voluntary giving beyond it.",
+  "what": [
+   "Zakat is a fixed duty on wealth. Sadaqa is any charity, in money or in kindness, and the Prophet said that even a smile to your brother is sadaqa (al-Tirmidhi). The Quran praises those who give “secretly and openly” (2:274), and says that charity given to please God is for the giver’s own benefit (2:272)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "zakat",
+   "ihsan"
+  ],
+  "articles": [],
+  "aliases": [
+   "Sadaqa",
+   "Sadaq"
+  ]
+ },
+ {
+  "slug": "alpha-and-omega",
+  "title": "Alpha and Omega",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Greek letters that Revelation uses for “the first and the last”, a title the Quran also gives to God alone (57:3).",
+  "what": [
+   "Revelation 1:8 and 21:6 use “the Alpha and the Omega” for the Lord God. The Quran has a parallel for God: “He is the First and the Last, the Manifest and the Hidden” (57:3). The Muslim position is that this describes God alone, and that Jesus, who is a created being and a messenger, is not the First and the Last."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abad",
+   "isa",
+   "tawhid"
+  ],
+  "articles": [
+   "jesus-not-god"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "amanah",
+  "title": "Amanah",
+  "type": "term",
+  "ar": "أمانة",
+  "tr": "Amāna",
+  "def": "A trust: what has been entrusted to a person, whether property, a secret or a duty.",
+  "what": [
+   "“God commands you to render trusts to those to whom they are due” (4:58). The Quran also says that God offered the trust to the heavens, the earth and the mountains, and they refused to bear it, and the human being took it up (33:72). The Prophet said that “there is no faith in one who has no trustworthiness” (Ahmad)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "taqwa",
+   "ihsan"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "amen",
+  "title": "Amen",
+  "type": "term",
+  "ar": "آمين",
+  "tr": "Āmīn",
+  "def": "The word said at the end of a prayer; in Islam it is said after the opening chapter.",
+  "what": [
+   "Muslims say <em>āmīn</em> aloud or silently after the Fatiha, in the prayer. The Prophet said that when the imam says it, the people should say it, and whoever’s “amen” coincides with the angels’ will have past sins forgiven (Sahih al-Bukhari). The word is Hebrew in origin, and shared by Jews, Christians and Muslims."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "fatiha",
+   "salah"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "aminah",
+  "title": "Aminah",
+  "type": "person",
+  "ar": "آمنة",
+  "tr": "Āmina",
+  "def": "The Prophet’s mother, who died when he was six.",
+  "what": [
+   "Aminah bint Wahb married Abdullah ibn Abdul Muttalib. After his early death she raised Muhammad with help from a wet-nurse of the Banu Sa’d, Halima, and died on the road from a visit to Medina at Abwa when he was about six. He was then cared for by his grandfather and then his uncle."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abdul-muttalib",
+   "abdullah-ibn-abd-al-muttalib",
+   "abu-talib"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "anatomy",
+  "title": "Anatomy",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran’s references to the human body are about God’s signs, and are not a textbook of anatomy.",
+  "what": [
+   "The verse often raised is “God has not placed two hearts in a man’s body” (33:4). In context it introduces the rules on adoption and on a man’s calling his wife “my mother”: a person cannot hold two contradictory loyalties. Commentators take “heart” (<em>qalb</em>) as the seat of intention and belief, not the organ."
+  ],
+  "misread": "That the Quran gets the body wrong, for example in counting 360 joints.",
+  "sources": [
+   "The 360 joints appear in a hadith (Sahih Muslim), not in the Quran. Muslim scholars describe it as an observation about the many places where the body can be given thanks, not a medical count. The Quran’s own verses on the body, such as those on creation from a drop (see Embryology), invite reflection rather than give a medical text."
+  ],
+  "terms": [
+   "embryology",
+   "quran"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "andalus-al",
+  "title": "Andalus, al-",
+  "type": "place",
+  "ar": "الأندلس",
+  "tr": "al-Andalus",
+  "def": "The Muslim-ruled parts of the Iberian peninsula from 711 to 1492.",
+  "what": [
+   "Muslim rule in Spain began in 711 and lasted in its last stronghold, Granada, until 1492. Cordoba under the Umayyads was among the largest cities in Europe, with great libraries. Jews, Christians and Muslims lived and worked together, with periods of stress."
+  ],
+  "misread": "",
+  "sources": [
+   "Scholars of the age, such as Ibn Rushd (Averroes), Ibn Hazm and Maimonides, who wrote in Arabic though a Jew, worked in this setting. After the Christian conquest, Muslims and Jews were forced to convert or leave, and Jews expelled in 1492 were welcomed in the Ottoman lands."
+  ],
+  "terms": [
+   "dhimmi",
+   "abbasid-caliphate"
+  ],
+  "articles": [],
+  "aliases": [
+   "Spain"
+  ]
+ },
+ {
+  "slug": "angels",
+  "title": "Angels",
+  "type": "term",
+  "ar": "ملائكة",
+  "tr": "Malāʾika",
+  "def": "Beings created from light to serve God, whom Muslims are required to believe in.",
+  "what": [
+   "Belief in angels is an article of faith (2:285). They do not eat or sleep, and cannot disobey (66:6). The Quran names Gabriel, who brings revelation (2:97), and Michael (2:98); Malik, the keeper of Hell, is named in 43:77. Others record deeds (82:10–12), and the angel of death takes souls (32:11). The hadith adds Israfil, who will blow the trumpet, as well as Munkar and Nakir who question the dead."
+  ],
+  "misread": "That Islam treats angels as divine or as God’s children.",
+  "sources": [
+   "The Quran says the pagans made the angels “daughters of God” and rejects it (43:19), and that angels do not disobey God. They are creatures and are never worshipped. Iblis is a jinn, not an angel (18:50)."
+  ],
+  "terms": [
+   "iblis",
+   "jinn",
+   "azrail"
+  ],
+  "articles": [],
+  "aliases": [
+   "Malaika"
+  ]
+ },
+ {
+  "slug": "anger",
+  "title": "Anger",
+  "type": "topic",
+  "ar": "غضب",
+  "tr": "Ghaḍab",
+  "def": "The Quran praises those who restrain anger and forgive.",
+  "what": [
+   "Among those prepared for Paradise are “those who spend in prosperity and adversity, who restrain their anger and pardon people; God loves the good-doers” (3:134). The Prophet said that the strong man is not the one who overcomes others in wrestling but the one who controls himself when angry (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "sabr",
+   "forgiveness"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "ansar",
+  "title": "Ansar",
+  "type": "group",
+  "ar": "أنصار",
+  "tr": "Anṣār",
+  "def": "“The Helpers”: the people of Medina who received the Prophet and his emigrant followers.",
+  "what": [
+   "The Ansar were the Aws and Khazraj tribes of Medina who invited the Prophet, gave a pledge at al-Aqaba, and shared their homes and wealth with the Muhajirun, the emigrants from Mecca. The Quran praises “the first forerunners among the Muhajirun and the Ansar” (9:100), and also those who “prefer others to themselves even if they are in need” (59:9)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hijra",
+   "companions-of-the-prophet"
+  ],
+  "articles": [],
+  "aliases": [
+   "Helpers"
+  ]
+ },
+ {
+  "slug": "ant",
+  "title": "Ant",
+  "type": "topic",
+  "ar": "نملة",
+  "tr": "Namla",
+  "def": "The Quran’s story of Solomon and the ant (27:18–19) and its use of a small creature as a sign.",
+  "what": [
+   "Solomon, who was given the knowledge of the speech of birds (27:16), passes a valley of ants, and an ant tells the others to go into their homes lest Solomon and his army crush them unawares. Solomon smiles and thanks God."
+  ],
+  "misread": "That the verse says ants talk in human language, which is absurd.",
+  "sources": [
+   "The Quran presents it as a gift to Solomon specifically, a miracle like those given to other prophets (21:79). Whether one understands it literally or as the communication that ants do have, the point stated in the passage is Solomon’s gratitude and justice. The Quran speaks of animals as “communities like you” (6:38)."
+  ],
+  "terms": [
+   "kutub",
+   "hud"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "antar",
+  "title": "Antar",
+  "type": "person",
+  "ar": "عنترة",
+  "tr": "ʿAntara",
+  "def": "A pre-Islamic poet-warrior and the hero of an Arab epic.",
+  "what": [
+   "Antara ibn Shaddad (late sixth century) was the son of an Arab chief and an Ethiopian slave mother. He rose by courage to become a poet of the <em>Muʿallaqāt</em>, the seven celebrated odes of pre-Islamic Arabia, and the hero of the later romance <em>Sīrat ʿAntar</em>."
+  ],
+  "misread": "",
+  "sources": [
+   "The pre-Islamic poets matter to Muslims for the Arabic they preserve, against which the Quran’s language was measured by its hearers. Early commentators such as Ibn Abbas quoted such poetry to explain rare words in the Quran."
+  ],
+  "terms": [
+   "jahiliyya",
+   "arabic",
+   "tafsir"
+  ],
+  "articles": [],
+  "aliases": [
+   "Antarah"
+  ]
+ },
+ {
+  "slug": "antisemitism",
+  "title": "Antisemitism",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Hatred of Jews, which Islam’s sources do not teach; the Quran distinguishes particular acts from a whole people.",
+  "what": [
+   "The Quran criticises some Jews for particular acts, and praises others (3:113–115, 7:159). It records Moses’ and the prophets’ honour (2:47, 45:16), and a hadith in Sahih al-Bukhari says the Prophet stood up for the funeral of a Jew, saying “is it not a soul?”."
+  ],
+  "misread": "That the Quran teaches that Jews as a race are cursed.",
+  "sources": [
+   "Modern hostility to Jews among some Muslims draws on political conflict and on imported European antisemitism, as well as on selective use of verses. Muslim scholars who condemn it point to the Quran’s statement that “no bearer of burdens bears another’s burden” (6:164) and to the law of the covenant that protected Jewish communities. Hatred of a people is not a doctrine of the faith."
+  ],
+  "terms": [
+   "dhimmi",
+   "ahl-al-kitab",
+   "apes"
+  ],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "apes",
+  "title": "Apes",
+  "type": "topic",
+  "ar": "قردة",
+  "tr": "Qirada",
+  "def": "The Quran says that a group who broke the Sabbath became “apes, despised” (2:65, 7:166); early commentators differed on whether this is literal.",
+  "what": [
+   "The Quran refers to “those among you who transgressed the Sabbath, and We said to them: ‘Be apes, despised’” (2:65; also 7:166). It is told as a lesson for the Children of Israel and not as a statement about Jews as a people."
+  ],
+  "misread": "",
+  "sources": [
+   "The earliest commentator, Mujahid ibn Jabr (d. about 722), said that their hearts were changed and not their bodies, and that the verse is a parable. Others took it as a physical change. Both views are recorded by al-Tabari. The Quran also says that the same punishment of being turned to apes and pigs applied to “those on whom God’s wrath fell” (5:60), and neither passage names Jews of any later time."
+  ],
+  "terms": [
+   "antisemitism",
+   "tafsir",
+   "asbab-al-nuzul"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "apologetics",
+  "title": "Apologetics",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The reasoned defence of a faith, which the Quran itself commands: to argue “in the best manner” (16:125).",
+  "what": [
+   "The Quran tells the Prophet: “Invite to the way of your Lord with wisdom and good counsel, and argue with them in the way that is best” (16:125). It also tells Muslims to “bring your proof, if you are truthful” (2:111). Muslim writers have defended and explained their faith in this spirit since the first centuries."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ahl-al-kitab",
+   "tafsir"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "apostasy",
+  "title": "Apostasy",
+  "type": "term",
+  "ar": "ردة",
+  "tr": "Riddah",
+  "def": "Leaving Islam. The Quran gives no worldly penalty for it; the classical law did, and Muslim scholars still differ.",
+  "what": [
+   "The Quran says “there is no compulsion in religion” (2:256) and “whoever wishes, let him believe, and whoever wishes, let him disbelieve” (18:29). It speaks of those who believe and then disbelieve, believe again and disbelieve again (4:137), and of apostates whose deeds are void and who face the punishment of the Hereafter (2:217, 3:90), without mentioning any penalty in this world."
+  ],
+  "misread": "That the Quran orders the killing of anyone who leaves Islam.",
+  "sources": [
+   "A hadith in Sahih al-Bukhari says “whoever changes his religion, kill him”. Most classical jurists applied it, usually after asking the person to repent. Others held that it applies to treason or rebellion, which is how the early wars with those who left Islam and fought the Muslims were remembered. Umar is reported to have asked, of a man who was killed, “why did you not imprison him for three days and give him bread each day, perhaps he would repent?” (al-Muwatta). Many contemporary scholars, citing 2:256, hold that belief cannot be compelled, and that only rebellion is punishable."
+  ],
+  "terms": [
+   "fitna",
+   "sharia",
+   "hadith"
+  ],
+  "articles": [
+   "apostasy-in-islam"
+  ],
+  "aliases": [
+   "Irtidad",
+   "Murtad",
+   "Riddah"
+  ]
+ },
+ {
+  "slug": "apostle",
+  "title": "Apostle",
+  "type": "term",
+  "ar": "رسول",
+  "tr": "Rasūl",
+  "def": "A messenger: a prophet sent with a message and, usually, a scripture to a people.",
+  "what": [
+   "The Quran distinguishes <em>nabī</em>, a prophet, from <em>rasūl</em>, a messenger; every messenger is a prophet, but not every prophet is a messenger. Messengers named include Noah, Abraham, Moses, Jesus and Muhammad. The Quran says that God sent a messenger to every community (10:47) and that Muslims make no distinction between them (2:285). “Apostle” renders the Greek <em>apostolos</em>, “one sent”; the disciples of Jesus are called <em>ḥawāriyyūn</em> (3:52)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "kutub",
+   "isa",
+   "ummah"
+  ],
+  "articles": [],
+  "aliases": [
+   "Rasul",
+   "Messenger"
+  ]
+ },
+ {
+  "slug": "aqeeda",
+  "title": "Aqeeda",
+  "type": "term",
+  "ar": "عقيدة",
+  "tr": "ʿAqīda",
+  "def": "Creed: the beliefs a Muslim holds about God, the prophets, the scriptures and the Last Day.",
+  "what": [
+   "The six articles of faith in the hadith of Gabriel (Sahih Muslim) are belief in God, His angels, His books, His messengers, the Last Day, and the divine decree. Schools of theology explain these in different ways: the Ashʿari and Maturidi schools by reasoned argument, and the Athari school by keeping to the wording of scripture."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ashari",
+   "tawhid",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": [
+   "Aqidah",
+   "Doctrine"
+  ]
+ },
+ {
+  "slug": "arabia",
+  "title": "Arabia",
+  "type": "place",
+  "ar": "",
+  "tr": "",
+  "def": "The peninsula where Islam began, in which Jews, Christians and idol-worshippers lived before the Quran.",
+  "what": [
+   "Arabia before Islam was not simply pagan. Jewish tribes lived in Medina and Khaybar, and Christians in Najran, Yemen and along the northern borders. The Himyarite kingdom in the south was ruled by Jewish kings in the early sixth century and then conquered by Christian Abyssinians. Inscriptions in the south from the fifth and sixth centuries use <em>Raḥmānān</em>, “the Merciful”, as a name of God in monotheist, Jewish and Christian contexts."
+  ],
+  "misread": "",
+  "sources": [
+   "This is how the Quran could address its audience as people who knew of Moses and Jesus, and why it speaks of a God known to them as “al-Rahman”. The Quran says its audience used to say “who is the Merciful?” (25:60) when told to prostrate to Him, which suggests unfamiliarity with the form for some, but not with the idea of a God above."
+  ],
+  "terms": [
+   "allah",
+   "jahiliyya",
+   "ahl-al-kitab"
+  ],
+  "articles": [
+   "who-is-allah"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "arabic",
+  "title": "Arabic",
+  "type": "topic",
+  "ar": "عربية",
+  "tr": "ʿArabiyya",
+  "def": "The language of the Quran, described in the Quran as “clear Arabic” (16:103).",
+  "what": [
+   "The Quran says that it was revealed in Arabic (12:2, 43:3), “in a clear Arabic tongue” (26:195). Muslims recite it in Arabic in prayer, and treat translations as renderings of its meaning. The rules of Arabic grammar were first set down largely to protect the reading of the Quran."
+  ],
+  "misread": "",
+  "sources": [
+   "The language gave the Quran its first test. Its first hearers were masters of poetry, and the Quran says that if they doubted it they should produce a chapter like it (2:23). Muslims point to the fact that none was recorded in the Prophet’s time."
+  ],
+  "terms": [
+   "quran",
+   "qiraat",
+   "tafsir"
+  ],
+  "articles": [
+   "arabic-words-science"
+  ],
+  "aliases": [
+   "Arabic Language"
+  ]
+ },
+ {
+  "slug": "arabic-dictionaries",
+  "title": "Arabic dictionaries",
+  "type": "book",
+  "ar": "",
+  "tr": "",
+  "def": "Standard dictionaries for reading the Quran’s Arabic: Lane’s Lexicon, Hans Wehr, and the classical <em>Lisān al-ʿArab</em>.",
+  "what": [
+   "Edward William Lane’s <em>Arabic-English Lexicon</em> (eight volumes, 1863–93) is based on classical Arabic dictionaries, mainly the <em>Tāj al-ʿArūs</em>. Hans Wehr’s <em>Dictionary of Modern Written Arabic</em> is a smaller one in wide use. The classical <em>Lisān al-ʿArab</em> of Ibn Manzur (d. 1311) is the great Arabic dictionary of the Arabic language."
+  ],
+  "misread": "",
+  "sources": [
+   "A reader of the Quran in English needs a lexicon, because many Quranic words have a range of meanings that translations choose among. This site gives the commentators’ range where it matters."
+  ],
+  "terms": [
+   "arabic",
+   "tafsir"
+  ],
+  "articles": [],
+  "aliases": [
+   "Arabic-English"
+  ]
+ },
+ {
+  "slug": "arabs",
+  "title": "Arabs",
+  "type": "group",
+  "ar": "عرب",
+  "tr": "ʿArab",
+  "def": "A people of the Arabian peninsula; Muslim tradition traces them to Ishmael and to Qahtan.",
+  "what": [
+   "Arab genealogists distinguish the “original” Arabs of the south, from Qahtan, from the “Arabized” Arabs of the north, descended from Ishmael through Adnan. Muhammad was of Quraysh, of the second group. Most Muslims today are not Arabs; Indonesia, Pakistan, Bangladesh and Nigeria have more Muslims than any Arab country."
+  ],
+  "misread": "That the tradition contradicts itself on whether Ishmael was the ancestor of the Arabs.",
+  "sources": [
+   "The genealogy in Ibn Ishaq makes Ishmael the ancestor of the northern Arabs (the Adnanites), and not of the southern Arabs, who were already there. The two accounts are consistent. The Quran itself says only that Abraham settled some of his descendants “in a valley without crops, by Your sacred House” (14:37). The Prophet taught: “no Arab has any merit over a non-Arab except in righteousness” (Ahmad)."
+  ],
+  "terms": [
+   "ishmael",
+   "abraham",
+   "ummah"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "arafat",
+  "title": "Arafat",
+  "type": "place",
+  "ar": "عرفات",
+  "tr": "ʿArafāt",
+  "def": "The plain near Mecca where pilgrims stand on the ninth of Dhu al-Hijja, the heart of the Hajj.",
+  "what": [
+   "The Prophet said “Hajj is Arafat” (al-Tirmidhi, Abu Dawud). Pilgrims stand there from noon to sunset, praying and asking forgiveness, and without it the Hajj is not valid. The Quran says “when you pour forth from Arafat, remember God” (2:198). It was there that the Prophet gave his Farewell Sermon in the year 10 AH."
+  ],
+  "misread": "",
+  "sources": [
+   "In that sermon, reported in Sahih Muslim, the Prophet declared the sanctity of life and property, the abolition of interest and of blood feuds, the rights of women over their husbands and husbands over wives, and that no Arab has merit over a non-Arab but in piety."
+  ],
+  "terms": [
+   "hajj",
+   "riba"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "arafat-yasser",
+  "title": "Arafat, Yasser",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "A Palestinian political leader (d. 2004); an entry in the source index, not a religious authority.",
+  "what": [
+   "Yasser Arafat led the Palestine Liberation Organization and later the Palestinian Authority. He is a political figure, and what he said carries no religious authority. Islamic teaching on honesty is clear: the Prophet said that the signs of a hypocrite are three, including that when he speaks he lies (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "kafir"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "arbitration",
+  "title": "Arbitration",
+  "type": "term",
+  "ar": "تحكيم",
+  "tr": "Taḥkīm",
+  "def": "Settling a dispute through a neutral third party, which the Quran commends.",
+  "what": [
+   "“If you fear a breach between a couple, appoint an arbiter from his family and one from hers; if they desire reconciliation, God will bring them together” (4:35). The Quran also says that “if two groups of the believers fight, make peace between them” (49:9). Arbitration at Siffin between Ali and Muawiya in 657 caused a lasting split, as the Kharijites rejected it."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ali-ibn-abi-talib",
+   "kharijites"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hakam"
+  ]
+ },
+ {
+  "slug": "archaeology",
+  "title": "Archaeology",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Archaeology bears on Islam’s early history: the Dome of the Rock, early manuscripts, and the places named in the Quran.",
+  "what": [
+   "The inscriptions in the Dome of the Rock in Jerusalem, completed in 691–692, are the oldest surviving dated passages from the Quran, and include verses on Jesus (4:171) and the oneness of God. Quran leaves in the University of Birmingham radiocarbon-date to 568–645 with 95.4 per cent probability. The rock tombs of Mada’in Salih (Hegra), the Nabataean city, are associated with Thamud, who are named in Assyrian records of the eighth century BC."
+  ],
+  "misread": "",
+  "sources": [
+   "The evidence is partial, and scholars disagree about much of it. Muslims do not rest their faith on archaeology, and the Quran presents its sites as a lesson (“travel through the land and see…”, 30:42)."
+  ],
+  "terms": [
+   "quran",
+   "mushaf",
+   "thamud"
+  ],
+  "articles": [
+   "dome-inscriptions",
+   "manuscript-transmission"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "arius",
+  "title": "Arius",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "A fourth-century priest of Alexandria who taught that the Son was created, and was condemned at Nicaea.",
+  "what": [
+   "Arius (c. 256–336) taught that the Son was the first of God’s creatures and “there was a time when he was not”. The Council of Nicaea (325) condemned him and affirmed that the Son is “of one substance” with the Father."
+  ],
+  "misread": "That Islam’s view of Jesus is simply Arianism.",
+  "sources": [
+   "Some writers, Muslim and others, have compared the Quran’s view of Jesus with Arian and Ebionite Christianity. The Quran’s own statements differ from Arianism in important ways: it calls Jesus a messenger, a servant, “a Word from God and a spirit from Him” (4:171), and has no pre-existing divine Son. Muslims hold that Jesus’ teaching was one of strict monotheism and do not derive it from any later Church party."
+  ],
+  "terms": [
+   "isa",
+   "adoptionism",
+   "ebionites"
+  ],
+  "articles": [
+   "jesus-not-god"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "ark",
+  "title": "Ark",
+  "type": "topic",
+  "ar": "سفينة",
+  "tr": "Safīna",
+  "def": "The Quran names two arks: Noah’s ship and the Ark of the Covenant (<em>tābūt</em>).",
+  "what": [
+   "Noah’s ark carried a pair of every kind and those who believed, and it came to rest on al-Judi (11:37–44). The Quran calls it a sign for all peoples (29:15). The Ark of the Covenant, <em>al-tābūt</em>, was a sign of the kingship of Saul, carrying “tranquillity (<em>sakīna</em>) from your Lord and a remnant of what the house of Moses and Aaron left” (2:248)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "aaron",
+   "noah",
+   "judi"
+  ],
+  "articles": [],
+  "aliases": [
+   "The Ark",
+   "Tabut"
+  ]
+ },
+ {
+  "slug": "armour",
+  "title": "Armour",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran mentions armour as a gift from God to David and as part of defence.",
+  "what": [
+   "God taught David how to make coats of mail “to protect you from your violence” (21:80), and told him “make full-length coats and measure the links” (34:10–11). The Quran also says that God has given garments “to protect you from the heat, and garments to protect you from your fighting” (16:81)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "david"
+  ],
+  "articles": [],
+  "aliases": [
+   "Armor"
+  ]
+ },
+ {
+  "slug": "armstrong-neil",
+  "title": "Armstrong, Neil",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "The American astronaut. A story that he heard the call to prayer on the moon and became a Muslim is a legend with no support.",
+  "what": [
+   "The story circulated after 1969 that Armstrong heard a call to prayer on the moon, and later converted. It has been repeated in sermons and by e-mail, and there is no evidence for it. He never became a Muslim."
+  ],
+  "misread": "",
+  "sources": [
+   "Muslim scholars generally decline to rest the case for Islam on such stories. The Quran’s claims are made in its own words, and do not depend on a report of this kind."
+  ],
+  "terms": [
+   "astronomy"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "asbab-al-nuzul",
+  "title": "Asbab al-Nuzul",
+  "ar": "أسباب النزول",
+  "tr": "Asbāb al-nuzūl",
+  "def": "The occasions of revelation: the circumstances in which a verse was revealed.",
+  "what": [
+   "Many verses answer a question, a dispute or an event, and knowing the occasion helps to see what is being said. Al-Wahidi (d. 1076) wrote a well-known book collecting them. Scholars add a principle: the lesson is taken from the general wording of a verse, not only from its occasion."
+  ],
+  "misread": "That verses about fighting are timeless orders to attack anyone who disbelieves.",
+  "sources": [
+   "The “sword verse” (9:5) orders fighting those who broke their treaties. The verse just before it exempts the polytheists who kept their treaty (9:4), and the verse just after it says that if any of them asks for protection it must be granted, and he must be escorted to safety (9:6). Read with its context, it is a rule about a war already under way, not a general licence."
+  ],
+  "terms": [
+   "tafsir",
+   "jihad",
+   "naskh"
+  ],
+  "articles": [
+   "verses-read-differently",
+   "islam-religion-of-peace"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "ashari-al",
+  "title": "Ash'ari, al-",
+  "type": "person",
+  "ar": "الأشعري",
+  "tr": "al-Ashʿarī",
+  "def": "Abu al-Hasan al-Ash’ari (d. 935), founder of the school of theology that most Sunnis follow.",
+  "what": [
+   "Al-Ash’ari lived in Basra and Baghdad. He was first a Mu’tazili and then left the school, and set out to defend the traditional creed with the method of reasoned argument. His followers are the Ash’aris, one of the two main Sunni theological schools with the Maturidis."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "aqeeda",
+   "divine-attributes"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ash'Ari"
+  ]
+ },
+ {
+  "slug": "asiya",
+  "title": "Asiya",
+  "type": "person",
+  "ar": "آسية",
+  "tr": "Āsiya",
+  "def": "The wife of Pharaoh, praised in the Quran as a model of faith, who raised Moses.",
+  "what": [
+   "The Quran says she told her husband of the infant Moses: “a joy of the eye for me and for you; do not kill him” (28:9). In 66:11 she is set as an example for believers: “My Lord, build me a house near You in Paradise, and save me from Pharaoh and his deeds.” The Quran does not give her name, which comes from the hadith, where the Prophet counts her among the perfect women (Sahih al-Bukhari)."
+  ],
+  "misread": "That the Quran contradicts the Bible, which says Pharaoh’s daughter found Moses (Exodus 2:5).",
+  "sources": [
+   "The Quran says that “the family of Pharaoh picked him up” (28:8), without saying who drew him from the water, and the Bible names the daughter as the one who found and drew him out. A household has several members; the accounts need not conflict."
+  ],
+  "terms": [
+   "moses",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "assassination-of-the-poets",
+  "title": "Assassination of the poets",
+  "type": "event",
+  "ar": "",
+  "tr": "",
+  "def": "Accounts of the killing of several people who mocked the Prophet and fought against him, which scholars treat very differently.",
+  "what": [
+   "The biographies tell of the killing of Ka’b ibn al-Ashraf, Abu Afak and Asma bint Marwan, who are said to have attacked the Prophet in verse, and others. Only the killing of Ka’b is in Sahih al-Bukhari, where it is part of a war: Ka’b had gone to Mecca after Badr to urge Quraysh to avenge their dead, and the Muslims of Medina were at war with Mecca."
+  ],
+  "misread": "That Muhammad had people killed for criticising him.",
+  "sources": [
+   "The reports on Abu Afak and Asma, in Ibn Ishaq and al-Waqidi, have weak chains, and several scholars have rejected them. The Prophet’s record elsewhere is of forgiveness for mockery: he pardoned Ka’b ibn Zuhayr, who had satirised him, and gave him his own cloak when he came in repentance; and at the conquest of Mecca he forgave nearly all his former enemies. He left Abdullah ibn Ubayy unpunished for years."
+  ],
+  "terms": [
+   "abdullah-ibn-ubayy",
+   "sira",
+   "hadith"
+  ],
+  "articles": [],
+  "aliases": [
+   "Assassination",
+   "Assassinations"
+  ]
+ },
+ {
+  "slug": "astronomy",
+  "title": "Astronomy",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran invites its readers to study sun, moon and stars as signs, but it is not a textbook of astronomy.",
+  "what": [
+   "The Quran says that He made the sun a radiant lamp and the moon a light (10:5), that “each swims in an orbit” (21:33, 36:40), and that the moon has stations by which to count years (10:5). Medieval Muslim astronomers, including al-Biruni, understood such verses as inviting study and they measured the earth’s circumference and developed astronomical tables."
+  ],
+  "misread": "That the Quran contains errors of astronomy, for example the sun setting in a muddy spring (18:86).",
+  "sources": [
+   "In the story of Dhu al-Qarnayn the verse says that he “found it setting in a spring of murky water”: that is, it appeared so to the traveller at the western sea. Commentators such as al-Tabari read it as appearance. The Quran’s own aim is stated: its signs are for “people who know” (10:5)."
+  ],
+  "terms": [
+   "quran",
+   "tafsir",
+   "alexander-the-great"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "atoms",
+  "title": "Atoms",
+  "type": "topic",
+  "ar": "ذرة",
+  "tr": "Dharra",
+  "def": "The Quran’s “weight of an atom” (<em>mithqāl dharra</em>) means the smallest thing one can think of.",
+  "what": [
+   "“Whoever does an atom’s weight of good will see it, and whoever does an atom’s weight of evil will see it” (99:7–8; also 10:61, 34:3). <em>Dharra</em> originally meant a tiny ant or a speck of dust, and translators now use “atom” for it as the smallest known thing."
+  ],
+  "misread": "That the Quran anticipates atomic physics, or that it makes an error about ants.",
+  "sources": [
+   "Neither claim is needed. The point of the verse is that no deed, however small, is lost with God. Muslim theologians did develop an atomism of their own, in the school of kalam, from reasoning and not from this verse."
+  ],
+  "terms": [
+   "quran",
+   "astronomy"
+  ],
+  "articles": [],
+  "aliases": [
+   "Dharra"
+  ]
+ },
+ {
+  "slug": "atonement-and-repentance",
+  "title": "Atonement and repentance",
+  "type": "topic",
+  "ar": "توبة",
+  "tr": "Tawba",
+  "def": "In Islam sins are forgiven by God on repentance, without a blood sacrifice or the suffering of another.",
+  "what": [
+   "“God accepts repentance from His servants and pardons sins” (42:25). “No bearer of burdens bears the burden of another” (6:164), and each person receives what he strives for (53:38–41). Of the sacrifice at Eid the Quran says “their flesh and blood do not reach God; it is your piety that reaches Him” (22:37)."
+  ],
+  "misread": "That without a blood atonement Islam has no way of forgiving sin.",
+  "sources": [
+   "A hadith qudsi reported in al-Tirmidhi has God saying: “O son of Adam, if you came to Me with sins as large as the earth and met Me without associating anything with Me, I would meet you with forgiveness as large.” The conditions of repentance are to stop, to regret, to resolve not to return, and to put right any wrong done to another."
+  ],
+  "terms": [
+   "istighfar",
+   "zakat",
+   "tawhid"
+  ],
+  "articles": [],
+  "aliases": [
+   "Atonement",
+   "Tawba",
+   "Repentance"
+  ]
+ },
+ {
+  "slug": "authority",
+  "title": "Authority",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Those in authority: the Quran tells Muslims to obey God, the Messenger and those in authority, and to refer disputes to God and the Messenger.",
+  "what": [
+   "“O you who believe, obey God and obey the Messenger and those in authority among you; and if you differ about anything, refer it to God and the Messenger” (4:59). Obedience to rulers is therefore conditional. The Prophet said “there is no obedience in disobedience to God; obedience is only in what is right” (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sharia",
+   "fiqh"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ulu al-Amr"
+  ]
+ },
+ {
+  "slug": "aya",
+  "title": "Aya",
+  "type": "term",
+  "ar": "آية",
+  "tr": "Āya",
+  "def": "A sign, and the word for a verse of the Quran.",
+  "what": [
+   "<em>Āya</em> means a sign or a miracle, and the Quran uses it for natural signs (30:22), for the miracles of the prophets, and for its own verses, each of which Muslims see as a sign of God. The Quran has about 6,200 verses, counted in slightly different ways in different traditions. The Throne Verse (2:255) is the best known."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "quran",
+   "qiraat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ayah",
+   "Ayat"
+  ]
+ },
+ {
+  "slug": "azar",
+  "title": "Azar",
+  "type": "person",
+  "ar": "آزر",
+  "tr": "Āzar",
+  "def": "The name the Quran gives to Abraham’s father (6:74), and the Bible’s Terah.",
+  "what": [
+   "“When Abraham said to his father Azar: ‘Do you take idols as gods?’” (6:74). Genesis gives the father’s name as Terah. Ibn Ishaq gave it as Tarikh, and the commentators offer several explanations: that Azar was a second name, a title or the name of an idol, or that he was Abraham’s uncle."
+  ],
+  "misread": "That the Quran contradicts Genesis.",
+  "sources": [
+   "Arabic uses <em>ab</em>, “father”, for an uncle as well, as the Quran does when Jacob’s sons say “your fathers Abraham, Ishmael and Isaac” (2:133), and Ishmael was Jacob’s uncle. The Quran also says that Abraham’s prayer for his father was ended when it became clear that he was an enemy of God (9:114)."
+  ],
+  "terms": [
+   "abraham",
+   "ishmael"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "azl",
+  "title": "Azl",
+  "type": "term",
+  "ar": "عزل",
+  "tr": "ʿAzl",
+  "def": "Withdrawal before ejaculation, a method of birth control that the Prophet’s Companions practised and that most jurists permit.",
+  "what": [
+   "The Companion Jabir said, “we practised <em>ʿazl</em> in the time of the Prophet while the Quran was being revealed” (Sahih al-Bukhari and Muslim). The Prophet said that if God wills a creation, nothing will prevent it. Most jurists allow it with the wife’s agreement, which has been taken as the basis of permitting contraception in marriage."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "sharia"
+  ],
+  "articles": [],
+  "aliases": [
+   "Coitus Interruptus"
+  ]
+ },
+ {
+  "slug": "azrail",
+  "title": "Azrail",
+  "type": "person",
+  "ar": "عزرائيل",
+  "tr": "ʿAzrāʾīl",
+  "def": "The angel of death, whose name comes from later tradition and not from the Quran or the sound hadith.",
+  "what": [
+   "The Quran speaks of “the angel of death who is put in charge of you” (32:11), of “Our messengers” who take the soul (6:61), and that “God takes souls at the time of their death” (39:42). The name Azrail comes from later tradition."
+  ],
+  "misread": "That the Quran contradicts itself about who takes the soul.",
+  "sources": [
+   "The three statements are compatible: God is the one who decrees death, the angel of death carries it out, and he has helpers, as the plural “Our messengers” shows. The Quran places the cause with God and the means with His servants."
+  ],
+  "terms": [
+   "angels",
+   "akhira"
+  ],
+  "articles": [],
+  "aliases": [
+   "'Azra'Il",
+   "Angel of Death"
+  ]
+ }
 ]

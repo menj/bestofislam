@@ -1,98 +1,147 @@
 [
-    {
-        "slug": "isnad",
-        "title": "Isnad",
-        "ar": "إسناد",
-        "tr": "Isnād",
-        "def": "The chain of narrators by which a report is traced back to its source.",
-        "what": [
-            "“The chain is part of the religion,” said Abd Allah ibn al-Mubarak, “and without the chain anyone could say what he liked” (quoted in the introduction to Sahih Muslim). Ibn Sirin said that at first people did not ask about chains, but after the civil strife of the first century they said, “Name your men.”",
-            "This produced a large literature on the narrators: who they were, where they lived, whom they met, how good their memory was and whether they were honest."
-        ],
-        "misread": "That Muslims accepted reports without any checking.",
-        "sources": [
-            "Whatever one concludes about the method, it was a deliberate attempt to test reports by their sources, and it was applied to the most revered figures as well as to unknowns. A report might be rejected because one narrator in the chain was unreliable, however attractive its content."
-        ],
-        "terms": [
-            "hadith",
-            "sunnah"
-        ],
-        "articles": [],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "isa",
-        "title": "Isa",
-        "ar": "عيسى",
-        "tr": "ʿĪsā",
-        "def": "Jesus, son of Mary: the Messiah and a mighty messenger of God in Islam.",
-        "what": [
-            "The Quran calls him the Messiah, “honoured in this world and the next” (3:45), and says he was born of the virgin Mary (3:47, 19:16–21), spoke as an infant (19:30–33), and, by God’s leave, healed the sick, raised the dead and gave life to clay birds (3:49, 5:110). It names him “a Word from God” and “a spirit from Him” (4:171).",
-            "Muslims love and honour him, and believe he will return before the end of time (Sahih al-Bukhari)."
-        ],
-        "misread": "That Islam denies or insults Jesus.",
-        "sources": [
-            "The Quran does not accept that he is God or God’s son (5:72–75, 5:116–117), and says that his creation was like Adam’s, from dust (3:59). The disagreement is about what Jesus said of himself, and about the crucifixion (4:157). Both are taken up in the articles linked here."
-        ],
-        "terms": [
-            "maryam",
-            "injil",
-            "tawhid"
-        ],
-        "articles": [
-            "jesus-not-god",
-            "crucifixion-quran",
-            "shared-prophets"
-        ],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "injil",
-        "title": "Injil",
-        "ar": "إنجيل",
-        "tr": "Injīl",
-        "def": "The Gospel: the revelation God gave to Jesus, which the Quran says confirmed the Torah.",
-        "what": [
-            "The Quran says God gave Jesus the Gospel, “in it guidance and light, confirming the Torah” (5:46), and tells “the people of the Gospel” to judge by what God revealed in it (5:47). Muslims understand the <em>Injīl</em> as the message revealed to Jesus himself, not as the four Gospels, which are accounts about him by his followers."
-        ],
-        "misread": "That Muslims have no use for the Gospels, or say they simply contradict the Quran.",
-        "sources": [
-            "Muslim scholars through the centuries have quoted the Gospels, for instance on the sayings of Jesus, and many see in them a record that carries much true teaching. They differ with the Christian view on the cross and on Jesus’ nature. The question of what became of the original Gospel is taken up in the article linked here."
-        ],
-        "terms": [
-            "kutub",
-            "tahrif",
-            "isa"
-        ],
-        "articles": [
-            "where-is-the-injil"
-        ],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "ihsan",
-        "title": "Ihsan",
-        "ar": "إحسان",
-        "tr": "Iḥsān",
-        "def": "Excellence in faith and conduct: to worship God as though you see Him.",
-        "what": [
-            "In the hadith of Gabriel, the Prophet defines <em>iḥsān</em> as worshipping God as though you see Him, for if you do not see Him, He sees you (Sahih al-Bukhari and Sahih Muslim). The Quran says God commands justice and ihsan (16:90), and asks: “Is the reward for ihsan anything but ihsan?” (55:60)."
-        ],
-        "misread": "That Islam is mostly rules and legal duties.",
-        "sources": [
-            "The hadith of Gabriel sets out three levels: <em>islām</em>, the acts of worship; <em>īmān</em>, belief; and <em>iḥsān</em>, the inward excellence behind both. The long tradition of Muslim spiritual writing, from al-Ghazali to Rumi, grew around this third level."
-        ],
-        "terms": [
-            "taqwa",
-            "sharia"
-        ],
-        "articles": [
-            "five-pillars-explained"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "ihsan",
+  "title": "Ihsan",
+  "ar": "إحسان",
+  "tr": "Iḥsān",
+  "def": "Excellence in faith and conduct: to worship God as though you see Him.",
+  "what": [
+   "In the hadith of Gabriel, the Prophet defines <em>iḥsān</em> as worshipping God as though you see Him, for if you do not see Him, He sees you (Sahih al-Bukhari and Sahih Muslim). The Quran says God commands justice and ihsan (16:90), and asks: “Is the reward for ihsan anything but ihsan?” (55:60)."
+  ],
+  "misread": "That Islam is mostly rules and legal duties.",
+  "sources": [
+   "The hadith of Gabriel sets out three levels: <em>islām</em>, the acts of worship; <em>īmān</em>, belief; and <em>iḥsān</em>, the inward excellence behind both. The long tradition of Muslim spiritual writing, from al-Ghazali to Rumi, grew around this third level."
+  ],
+  "terms": [
+   "taqwa",
+   "sharia"
+  ],
+  "articles": [
+   "five-pillars-explained"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "injil",
+  "title": "Injil",
+  "ar": "إنجيل",
+  "tr": "Injīl",
+  "def": "The Gospel: the revelation God gave to Jesus, which the Quran says confirmed the Torah.",
+  "what": [
+   "The Quran says God gave Jesus the Gospel, “in it guidance and light, confirming the Torah” (5:46), and tells “the people of the Gospel” to judge by what God revealed in it (5:47). Muslims understand the <em>Injīl</em> as the message revealed to Jesus himself, not as the four Gospels, which are accounts about him by his followers."
+  ],
+  "misread": "That Muslims have no use for the Gospels, or say they simply contradict the Quran.",
+  "sources": [
+   "Muslim scholars through the centuries have quoted the Gospels, for instance on the sayings of Jesus, and many see in them a record that carries much true teaching. They differ with the Christian view on the cross and on Jesus’ nature. The question of what became of the original Gospel is taken up in the article linked here."
+  ],
+  "terms": [
+   "kutub",
+   "tahrif",
+   "isa"
+  ],
+  "articles": [
+   "where-is-the-injil"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "isa",
+  "title": "Isa",
+  "ar": "عيسى",
+  "tr": "ʿĪsā",
+  "def": "Jesus, son of Mary: the Messiah and a mighty messenger of God in Islam.",
+  "what": [
+   "The Quran calls him the Messiah, “honoured in this world and the next” (3:45), and says he was born of the virgin Mary (3:47, 19:16–21), spoke as an infant (19:30–33), and, by God’s leave, healed the sick, raised the dead and gave life to clay birds (3:49, 5:110). It names him “a Word from God” and “a spirit from Him” (4:171).",
+   "Muslims love and honour him, and believe he will return before the end of time (Sahih al-Bukhari)."
+  ],
+  "misread": "That Islam denies or insults Jesus.",
+  "sources": [
+   "The Quran does not accept that he is God or God’s son (5:72–75, 5:116–117), and says that his creation was like Adam’s, from dust (3:59). The disagreement is about what Jesus said of himself, and about the crucifixion (4:157). Both are taken up in the articles linked here."
+  ],
+  "terms": [
+   "maryam",
+   "injil",
+   "tawhid"
+  ],
+  "articles": [
+   "jesus-not-god",
+   "crucifixion-quran",
+   "shared-prophets"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "isnad",
+  "title": "Isnad",
+  "ar": "إسناد",
+  "tr": "Isnād",
+  "def": "The chain of narrators by which a report is traced back to its source.",
+  "what": [
+   "“The chain is part of the religion,” said Abd Allah ibn al-Mubarak, “and without the chain anyone could say what he liked” (quoted in the introduction to Sahih Muslim). Ibn Sirin said that at first people did not ask about chains, but after the civil strife of the first century they said, “Name your men.”",
+   "This produced a large literature on the narrators: who they were, where they lived, whom they met, how good their memory was and whether they were honest."
+  ],
+  "misread": "That Muslims accepted reports without any checking.",
+  "sources": [
+   "Whatever one concludes about the method, it was a deliberate attempt to test reports by their sources, and it was applied to the most revered figures as well as to unknowns. A report might be rejected because one narrator in the chain was unreliable, however attractive its content."
+  ],
+  "terms": [
+   "hadith",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "isra-and-miraj",
+  "title": "Isra and Miraj",
+  "type": "event",
+  "ar": "الإسراء والمعراج",
+  "tr": "al-Isrāʾ wa-l-Miʿrāj",
+  "def": "The Prophet’s night journey from Mecca to Jerusalem and his ascent through the heavens, reported in the Quran and in hadith.",
+  "what": [
+   "The Quran begins chapter 17: “Glory to Him who took His servant by night from the Sacred Mosque to the Farthest Mosque, whose surroundings We have blessed” (17:1). Chapter 53 describes his seeing “at the Lote Tree of the Boundary” (53:13–18). The hadith, such as the long report in Sahih al-Bukhari, add the ascent through the seven heavens and the prayers being fixed at five a day."
+  ],
+  "misread": "That there was no “Farthest Mosque” (al-Aqsa) in Jerusalem in the Prophet’s time.",
+  "sources": [
+   "<em>Masjid</em> means a place of prostration, not a building. The Farthest Mosque is the sacred precinct in Jerusalem where the Temple had stood, which the Prophet’s contemporaries knew as Bayt al-Maqdis. The buildings now called al-Aqsa and the Dome of the Rock were built later. The Quran’s verse names the place, not a building."
+  ],
+  "terms": [
+   "salah",
+   "jerusalem",
+   "wahy"
+  ],
+  "articles": [
+   "dome-inscriptions"
+  ],
+  "aliases": [
+   "Ascension",
+   "Isra'",
+   "Journey (The, By Night)",
+   "Mi'raj"
+  ]
+ },
+ {
+  "slug": "istighfar",
+  "title": "Istighfar",
+  "type": "term",
+  "ar": "استغفار",
+  "tr": "Istighfār",
+  "def": "Asking God’s forgiveness, which the Quran urges and links with blessing and relief.",
+  "what": [
+   "“Seek forgiveness from your Lord; He is ever Forgiving; He will send down rain upon you in abundance” (71:10–11). The Prophet is reported to have sought God’s forgiveness more than seventy times a day (Sahih al-Bukhari). “Astaghfir Allah” is said after the prayer."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "du-a",
+   "atonement-and-repentance",
+   "common-phrases"
+  ],
+  "articles": [],
+  "aliases": []
+ }
 ]

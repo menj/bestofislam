@@ -1,52 +1,52 @@
 [
-    {
-        "slug": "jihad",
-        "title": "Jihad",
-        "ar": "جهاد",
-        "tr": "Jihād",
-        "def": "Striving in the cause of God, which includes the moral struggle, and, under strict rules, defensive fighting.",
-        "what": [
-            "The word means “striving”. The Quran commands Muslims to “strive for God as He deserves” (22:78) and, in an early Meccan verse, to strive against the unbelievers with the Quran itself (25:52). The word for armed fighting is a separate one, <em>qitāl</em>.",
-            "Permission to fight came after years of persecution, to “those who are fought, because they were wronged” (22:39). The same passage names monasteries, churches, synagogues and mosques as places that fighting is meant to protect (22:40)."
-        ],
-        "misread": "That jihad is holy war to convert or kill non-Muslims everywhere.",
-        "sources": [
-            "The Quran limits fighting to those who fight, and forbids exceeding the limit (2:190). The Prophet is reported to have forbidden killing women and children (Sahih al-Bukhari), and Abu Bakr’s instructions to an army, recorded in the Muwatta of Malik, forbid killing the elderly, monks and non-combatants and cutting down fruit trees. A saying reported in Abu Dawud and al-Tirmidhi calls the best jihad “a word of truth before an unjust ruler”."
-        ],
-        "terms": [
-            "fitna",
-            "asbab-al-nuzul",
-            "naskh"
-        ],
-        "articles": [
-            "islam-religion-of-peace"
-        ],
-        "type": "term",
-        "aliases": []
-    },
-    {
-        "slug": "jizya",
-        "title": "Jizya",
-        "ar": "جزية",
-        "tr": "Jizya",
-        "def": "A tax paid by non-Muslim adult men under Muslim rule, in return for protection and exemption from military service.",
-        "what": [
-            "The Quran mentions it once (9:29). In the classical law, women, children, the elderly, the poor and monks were exempt, and the tax was a due in place of the military service and the zakat that Muslims owed. In return the state owed protection of life, property and worship.",
-            "Abu Yusuf’s <em>Kitab al-Kharaj</em> reports that when Muslim forces in Syria could not protect a town, Abu Ubayda returned the tax they had collected, saying that without protection it was not owed."
-        ],
-        "misread": "That it was a ransom or extortion, “convert or pay”.",
-        "sources": [
-            "Treaties of the early period, such as that with the Christians of Najran, set a fixed sum and promise safety for their churches and clergy. The Quran’s phrase “while they are subdued” was read by some jurists, among them al-Shafi’i, as accepting the authority of the state’s law. Practice varied by time and ruler, and Muslims do not claim that every ruler honoured the ideal. Today the tax has no place in most states, where non-Muslims are citizens."
-        ],
-        "terms": [
-            "dhimmi",
-            "ahl-al-kitab",
-            "zakat"
-        ],
-        "articles": [
-            "jizya"
-        ],
-        "type": "term",
-        "aliases": []
-    }
+ {
+  "slug": "jihad",
+  "title": "Jihad",
+  "ar": "جهاد",
+  "tr": "Jihād",
+  "def": "Striving in the cause of God, which includes the moral struggle, and, under strict rules, defensive fighting.",
+  "what": [
+   "The word means “striving”. The Quran commands Muslims to “strive for God as He deserves” (22:78) and, in an early Meccan verse, to strive against the unbelievers with the Quran itself (25:52). The word for armed fighting is a separate one, <em>qitāl</em>.",
+   "Permission to fight came after years of persecution, to “those who are fought, because they were wronged” (22:39). The same passage names monasteries, churches, synagogues and mosques as places that fighting is meant to protect (22:40)."
+  ],
+  "misread": "That jihad is holy war to convert or kill non-Muslims everywhere.",
+  "sources": [
+   "The Quran limits fighting to those who fight, and forbids exceeding the limit (2:190). The Prophet is reported to have forbidden killing women and children (Sahih al-Bukhari), and Abu Bakr’s instructions to an army, recorded in the Muwatta of Malik, forbid killing the elderly, monks and non-combatants and cutting down fruit trees. A saying reported in Abu Dawud and al-Tirmidhi calls the best jihad “a word of truth before an unjust ruler”."
+  ],
+  "terms": [
+   "fitna",
+   "asbab-al-nuzul",
+   "naskh"
+  ],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "jizya",
+  "title": "Jizya",
+  "ar": "جزية",
+  "tr": "Jizya",
+  "def": "A tax paid by non-Muslim adult men under Muslim rule, in return for protection and exemption from military service.",
+  "what": [
+   "The Quran mentions it once (9:29). In the classical law, women, children, the elderly, the poor and monks were exempt, and the tax was a due in place of the military service and the zakat that Muslims owed. In return the state owed protection of life, property and worship.",
+   "Abu Yusuf’s <em>Kitab al-Kharaj</em> reports that when Muslim forces in Syria could not protect a town, Abu Ubayda returned the tax they had collected, saying that without protection it was not owed."
+  ],
+  "misread": "That it was a ransom or extortion, “convert or pay”.",
+  "sources": [
+   "Treaties of the early period, such as that with the Christians of Najran, set a fixed sum and promise safety for their churches and clergy. The Quran’s phrase “while they are subdued” was read by some jurists, among them al-Shafi’i, as accepting the authority of the state’s law. Practice varied by time and ruler, and Muslims do not claim that every ruler honoured the ideal. Today the tax has no place in most states, where non-Muslims are citizens."
+  ],
+  "terms": [
+   "dhimmi",
+   "ahl-al-kitab",
+   "zakat"
+  ],
+  "articles": [
+   "jizya"
+  ],
+  "type": "term",
+  "aliases": []
+ }
 ]
