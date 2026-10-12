@@ -25,7 +25,8 @@
 	text-underline-offset: 0.22em;
 }
 
-.boi-article .wp-block-post-content :is(p, li, dd, td) a:not([class*="boi-"], .wp-block-button__link):hover {
+.boi-article .wp-block-post-content :is(p, li, dd, td) a:not([class*="boi-"], .wp-block-button__link):hover,
+.boi-article .wp-block-post-content figcaption a:hover {
 	text-decoration-thickness: 2px;
 	text-decoration-color: currentColor;
 }
@@ -162,7 +163,8 @@
 .boi-article .wp-block-post-content :is(blockquote, .wp-block-quote, .wp-block-pullquote) {
 	box-sizing: border-box;
 	margin-block: 2rem;
-	padding: 0.25rem 0 0.25rem 1.5rem;
+	padding-block: 0.25rem;
+	padding-inline: 1.5rem 0;
 	border: 0;
 	border-inline-start: 3px solid var(--boi-gold);
 	font-family: var(--wp--preset--font-family--platypi, serif);
@@ -207,7 +209,7 @@
 }
 
 /* Notes: two columns on a wide screen. */
-.boi-article .wp-block-post-content > h3:nth-last-child(2) {
+.boi-article .wp-block-post-content > h3:has(+ ol:last-child) {
 	margin-block: 3rem 1rem;
 	padding-block-start: 1.25rem;
 	border-block-start: 1px solid var(--boi-rule);
