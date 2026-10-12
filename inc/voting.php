@@ -202,7 +202,7 @@ function boi_handle_vote( WP_REST_Request $request ) {
 	$post_id  = (int) $request->get_param( 'post_id' );
 	$entry_id = (string) $request->get_param( 'entry_id' );
 
-	if ( ! get_post( $post_id ) || '' === $entry_id ) {
+	if ( '' === $entry_id || ! boi_is_votable_entry( $post_id, $entry_id ) ) {
 		return new WP_Error( 'boi_invalid_target', __( 'Unknown entry.', 'bestofislam' ), array( 'status' => 400 ) );
 	}
 
@@ -226,6 +226,10 @@ function boi_handle_vote( WP_REST_Request $request ) {
 		)
 	);
 
+	if ( false === $inserted ) {
+		return new WP_Error( 'boi_vote_failed', __( 'Your vote could not be recorded. Please try again.', 'bestofislam' ), array( 'status' => 500 ) );
+	}
+
 	if ( ! $inserted ) {
 		return new WP_Error(
 			'boi_duplicate',
@@ -245,6 +249,36 @@ function boi_handle_vote( WP_REST_Request $request ) {
 			'count' => boi_get_vote_count( $post_id, $entry_id ),
 		)
 	);
+}
+
+/**
+ * Whether an entry identifier belongs to a published post that has such an
+ * entry, so votes cannot be stored against identifiers no page displays.
+ *
+ * @param int    $post_id  Post identifier.
+ * @param string $entry_id Entry identifier.
+ * @return bool
+ */
+function boi_is_votable_entry( $post_id, $entry_id ) {
+	$post = get_post( $post_id );
+
+	if ( ! $post || 'publish' !== $post->post_status || post_password_required( $post ) ) {
+		return false;
+	}
+
+	$walk = function ( $blocks ) use ( &$walk, $entry_id ) {
+		foreach ( $blocks as $block ) {
+			if ( 'bestofislam/entry' === $block['blockName'] && isset( $block['attrs']['entryId'] ) && (string) $block['attrs']['entryId'] === $entry_id ) {
+				return true;
+			}
+			if ( ! empty( $block['innerBlocks'] ) && $walk( $block['innerBlocks'] ) ) {
+				return true;
+			}
+		}
+		return false;
+	};
+
+	return $walk( parse_blocks( $post->post_content ) );
 }
 
 /**

@@ -333,13 +333,12 @@ function boi_render_breadcrumbs() {
 		$graph[] = $node;
 	}
 
-	$json = wp_json_encode(
+	$json = boi_json_ld(
 		array(
 			'@context'        => 'https://schema.org',
 			'@type'           => 'BreadcrumbList',
 			'itemListElement' => $graph,
-		),
-		JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		)
 	);
 
 	return sprintf(

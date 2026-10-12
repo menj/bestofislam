@@ -112,6 +112,10 @@ function boi_error_dropin_source( $kind ) {
 	);
 
 	$src  = "<?php\n// " . BOI_ERR_MARKER . ' ' . BOI_VERSION . " ({$kind}). Written by the Best of Islam theme; safe to delete.\n";
+	// WordPress includes these files with ABSPATH defined. A direct request
+	// has neither, so it gets nothing: it can neither read the page nor
+	// trigger the alert mail.
+	$src .= "if ( ! defined( 'ABSPATH' ) ) {\n\theader( 'HTTP/1.1 403 Forbidden', true, 403 );\n\texit;\n}\n";
 	$src .= "if ( ! headers_sent() ) {\n";
 	$src .= "\theader( 'HTTP/1.1 {$copy['status']}', true, {$copy['status']} );\n";
 	$src .= "\theader( 'Content-Type: text/html; charset=utf-8' );\n";
@@ -187,7 +191,7 @@ function boi_error_recipient() {
  * @return string
  */
 function boi_error_config_path() {
-	return WP_CONTENT_DIR . '/.boi-alert-config.json';
+	return WP_CONTENT_DIR . '/.boi-alert-config.php';
 }
 
 /**
@@ -196,8 +200,9 @@ function boi_error_config_path() {
  * @return array
  */
 function boi_error_saved_config() {
-	$raw  = is_readable( boi_error_config_path() ) ? file_get_contents( boi_error_config_path() ) : '';
-	$data = json_decode( (string) $raw, true );
+	// A PHP file that returns an array and exits when requested directly, so
+	// the recipient is never served as text from a public folder.
+	$data = is_readable( boi_error_config_path() ) ? include boi_error_config_path() : array();
 	return is_array( $data ) ? $data : array();
 }
 
@@ -302,14 +307,20 @@ function boi_error_sync() {
 	if ( is_writable( WP_CONTENT_DIR ) ) {
 		boi_error_write(
 			boi_error_config_path(),
-			wp_json_encode(
+			"<?php\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\nreturn " . var_export(
 				array(
 					'to'       => boi_error_recipient(),
 					'alerts'   => (int) $opts['errors_alerts'],
 					'cooldown' => (int) $opts['errors_cooldown'],
-				)
-			)
+				),
+				true
+			) . ";\n"
 		);
+	}
+
+	// An earlier version kept these settings in a readable JSON file.
+	if ( file_exists( WP_CONTENT_DIR . '/.boi-alert-config.json' ) ) {
+		wp_delete_file( WP_CONTENT_DIR . '/.boi-alert-config.json' );
 	}
 
 	update_option( 'boi_error_dropins_fingerprint', boi_error_fingerprint(), false );

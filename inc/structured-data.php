@@ -300,12 +300,11 @@ function boi_print_structured_data() {
 		return;
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . wp_json_encode(
+	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
 		array(
 			'@context' => 'https://schema.org',
 			'@graph'   => $nodes,
-		),
-		JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		)
 	) . "</script>\n";
 }
 add_action( 'wp_head', 'boi_print_structured_data', 19 );

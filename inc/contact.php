@@ -126,11 +126,24 @@ function boi_handle_contact() {
 		$redirect( 'sent' );
 	}
 
-	$ip   = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
-	$key  = 'boi_contact_' . md5( $ip );
-	$hits = (int) get_transient( $key );
+	$ip  = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+	$key = 'boi_contact_' . md5( $ip );
 
-	if ( $hits >= 3 ) {
+	// Take a slot under a lock, before sending, so simultaneous submissions
+	// cannot all read the same count and pass.
+	$allowed = boi_with_lock(
+		$key,
+		function () use ( $key ) {
+			$hits = (int) get_transient( $key );
+			if ( $hits >= 3 ) {
+				return false;
+			}
+			set_transient( $key, $hits + 1, HOUR_IN_SECONDS );
+			return true;
+		}
+	);
+
+	if ( ! $allowed ) {
 		$redirect( 'limit' );
 	}
 
@@ -165,8 +178,6 @@ function boi_handle_contact() {
 		$body,
 		$headers
 	);
-
-	set_transient( $key, $hits + 1, HOUR_IN_SECONDS );
 
 	$redirect( $sent ? 'sent' : 'error' );
 }

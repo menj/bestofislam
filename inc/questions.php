@@ -449,13 +449,12 @@ function boi_print_questions_schema() {
 		return;
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . wp_json_encode(
+	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
 		array(
 			'@context'   => 'https://schema.org',
 			'@type'      => 'FAQPage',
 			'mainEntity' => $entities,
-		),
-		JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		)
 	) . "</script>\n";
 }
 add_action( 'wp_head', 'boi_print_questions_schema', 21 );

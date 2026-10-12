@@ -11,6 +11,7 @@ define( 'BOI_VERSION', '1.56.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
+require_once BOI_DIR . '/inc/util.php';
 require_once BOI_DIR . '/inc/taxonomy.php';
 require_once BOI_DIR . '/inc/blocks.php';
 require_once BOI_DIR . '/inc/schema.php';

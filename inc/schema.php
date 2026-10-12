@@ -43,7 +43,7 @@ function boi_print_schema() {
 	$payload = 1 === count( $graphs ) ? $graphs[0] : $graphs;
 
 	echo "\n<script type=\"application/ld+json\">" .
-		wp_json_encode( $payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) .
+		boi_json_ld( $payload ) .
 		"</script>\n";
 }
 add_action( 'wp_head', 'boi_print_schema', 20 );
