@@ -10,7 +10,7 @@ versioning.
 
 ### Added
 
-- **Three images in every article**: one featured image and two in the text, from Pexels and Pixabay (and Wikimedia Commons for the original featured images). The credits are in `inc/images-data.json`; `inc/inline-images.php` adds the `bestofislam/figure` block that places an inline image and its credit, and the credit line and licence markup now name the right source site. 105 photographs were added to `assets/images/`.
+- **Three images in every article**: one featured image and two in the text, from Pexels and Pixabay (and Wikimedia Commons for the original featured images). The credits are in `inc/images-data.json`; `inc/inline-images.php` adds the `bestofislam/figure` block that places an inline image and its credit, and the credit line and licence markup now name the right source site. 174 photographs were added to `assets/images/`. Every article image, old and new, is stored as AVIF (`bin/convert-images.py` converts new ones, deletes the originals and checks that no other format remains), which brings the theme's images from 9 MB to 17 MB for three times as many pictures.
 - **Three articles**: the ideas behind Islamic art, five mosques that adapt to place, and five facts about Islamophobia.
 - **Eight sections on the front page**: Arts & Culture and Islamophobia are now sections in their own right, each with articles, and appear in the header and footer menus. Existing sites promote them on update.
 - **Fourteen questions on the front page**, from 45 in all; twelve new questions are answered by the new articles.

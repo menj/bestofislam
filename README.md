@@ -109,7 +109,7 @@ bestofislam/
 ├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office; script fonts guide
 ├── assets/icons/        45 SVG icons and their licence
 ├── assets/images/       mark.svg, mark-solid.svg, logo-512.png, and
-│                        featured/ and inline/ with the article images
+│                        featured/ and inline/ with the article images, in AVIF (run bin/convert-images.py before a release)
 └── docs/                SSOT, UPGRADING, CREDITS
 ```
 
