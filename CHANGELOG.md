@@ -8,6 +8,8 @@ versioning.
 
 ### Added
 
+- Branded error pages (`inc/error-pages.php`, `assets/error-pages/`): `maintenance.php`, `db-error.php` and `php-error.php` are generated into wp-content, self-contained, in light and dark. Files not written by the theme are never replaced or removed. They are restored on the next admin load if a folder upload removes them.
+- Failure alerts by email, rate limited per kind of failure: database connection lost, PHP fatal, a missing core table and a page answering HTTP 500, the conditions seen in the September 2026 server logs. Configured in the new Errors tab under Appearance, Listicles.
 - Fallback favicon (`inc/favicon.php`): the bundled mark is printed as the site, login and admin icon, with an Apple touch icon, whenever no Site Icon is set. A Site Icon chosen in the Customizer takes precedence.
 
 ### Fixed

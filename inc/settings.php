@@ -42,6 +42,10 @@ function boi_get_options() {
 		'login_enabled'       => 0,
 		'search_pretty'       => 1,
 		'search_base'         => 'search',
+		'errors_pages'        => 1,
+		'errors_alerts'       => 1,
+		'errors_email'        => '',
+		'errors_cooldown'     => 30,
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
@@ -143,6 +147,13 @@ function boi_sanitize_options( $input ) {
 			}
 			break;
 
+		case 'errors':
+			$current['errors_pages']    = empty( $input['errors_pages'] ) ? 0 : 1;
+			$current['errors_alerts']   = empty( $input['errors_alerts'] ) ? 0 : 1;
+			$current['errors_email']    = isset( $input['errors_email'] ) && is_email( $input['errors_email'] ) ? sanitize_email( $input['errors_email'] ) : '';
+			$current['errors_cooldown'] = max( 5, min( 1440, (int) ( isset( $input['errors_cooldown'] ) ? $input['errors_cooldown'] : 30 ) ) );
+			break;
+
 		case 'voting':
 			$current['voting_enabled']    = empty( $input['voting_enabled'] ) ? 0 : 1;
 			$current['voting_login_only'] = empty( $input['voting_login_only'] ) ? 0 : 1;
@@ -186,6 +197,7 @@ function boi_render_settings_page() {
 		'content' => __( 'Content', 'bestofislam' ),
 		'seo'     => __( 'Search engines', 'bestofislam' ),
 		'access'  => __( 'Access', 'bestofislam' ),
+		'errors'  => __( 'Errors', 'bestofislam' ),
 	);
 
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
@@ -232,6 +244,9 @@ function boi_render_settings_page() {
 			break;
 		case 'access':
 			boi_render_access_tab( $opts );
+			break;
+		case 'errors':
+			boi_render_errors_tab( $opts );
 			break;
 		default:
 			boi_render_display_tab( $opts );
