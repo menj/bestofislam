@@ -6,6 +6,10 @@ versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- **Header search is an icon.** The search field in the header is now a search icon; selecting it (or pressing `/`) opens a full-screen overlay with the search box. Esc, the close button or a click outside closes it, focus moves into the box and back, and without JavaScript the icon still opens the overlay through a `#boi-search` link. New `assets/css/header-search.css` and `assets/js/header-search.js`; the old inline-field rules are removed from `listicle.css`.
+
 ## [1.58.0] - 2026-10-12
 
 ### Added

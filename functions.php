@@ -96,6 +96,21 @@ function boi_enqueue_assets() {
 		'print'
 	);
 
+	wp_enqueue_style(
+		'boi-header-search',
+		BOI_URI . '/assets/css/header-search.css',
+		array( 'boi-scripts' ),
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/header-search.css' )
+	);
+
+	wp_enqueue_script(
+		'boi-header-search',
+		BOI_URI . '/assets/js/header-search.js',
+		array(),
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/js/header-search.js' ),
+		true
+	);
+
 	wp_enqueue_script(
 		'boi-theme-toggle',
 		BOI_URI . '/assets/js/theme-toggle.js',
