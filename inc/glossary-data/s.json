@@ -24,6 +24,36 @@
   ]
  },
  {
+  "slug": "sawm",
+  "title": "Sawm",
+  "type": "term",
+  "ar": "صوم",
+  "tr": "Ṣawm",
+  "def": "Fasting from dawn to sunset in Ramadan, one of the five pillars.",
+  "what": [
+   "“O you who believe, fasting has been prescribed for you as it was prescribed for those before you, that you may become righteous” (2:183). Ramadan is the month in which the Quran was revealed (2:185). Muslims refrain from food, drink and sexual relations from dawn to sunset. The sick, travellers, the elderly, and women who are menstruating, pregnant or nursing may postpone it, and those who cannot fast feed a poor person (2:184)."
+  ],
+  "misread": "",
+  "sources": [
+   "The fast is a private act of worship. In a hadith qudsi God says: “Every deed of the son of Adam is for himself, except fasting; it is for Me and I reward for it” (Sahih al-Bukhari). The Prophet urged breaking the fast promptly, and the evening meal is called <em>iftār</em>. Jesus’ teaching to fast without show (Matthew 6:16–18) is echoed in the hadith."
+  ],
+  "terms": [
+   "zakat",
+   "salah",
+   "hijri-calendar"
+  ],
+  "articles": [
+   "five-pillars-explained"
+  ],
+  "aliases": [
+   "Fasting",
+   "Ramadan",
+   "Iftar",
+   "Suhur",
+   "Siyam"
+  ]
+ },
+ {
   "slug": "secret-counsels",
   "title": "Secret counsels",
   "type": "topic",

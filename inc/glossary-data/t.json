@@ -122,6 +122,32 @@
   "aliases": []
  },
  {
+  "slug": "the-elephant",
+  "title": "The Elephant",
+  "type": "event",
+  "ar": "الفيل",
+  "tr": "al-Fīl",
+  "def": "Chapter 105 refers to an attack on Mecca by an army with elephants, in the year the Prophet was born.",
+  "what": [
+   "“Have you not seen how your Lord dealt with the companions of the elephant? Did He not make their plan go astray, and send against them flocks of birds, striking them with stones of baked clay, and make them like eaten straw?” (105:1–5). Muslim tradition says that Abraha, the Christian Abyssinian viceroy of Yemen, marched on Mecca with elephants and that his army was destroyed."
+  ],
+  "misread": "",
+  "sources": [
+   "Abraha is a historical figure. Inscriptions of his reign in Arabia record his rule over Yemen and a campaign into central Arabia, and he is mentioned in Byzantine and Ethiopian sources. Where the Muslim date of 570 differs from the epigraphic evidence, which suggests a campaign in the 550s, scholars have discussed how the “Year of the Elephant” relates to Muhammad’s birth."
+  ],
+  "terms": [
+   "abdul-muttalib",
+   "kaaba",
+   "arabia"
+  ],
+  "articles": [],
+  "aliases": [
+   "Elephant",
+   "Year Of The Elephant",
+   "Abraha"
+  ]
+ },
+ {
   "slug": "trade-and-business",
   "title": "Trade and business",
   "type": "topic",

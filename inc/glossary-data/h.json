@@ -23,6 +23,35 @@
   "aliases": []
  },
  {
+  "slug": "halal-and-haram-food",
+  "title": "Halal and haram food",
+  "type": "topic",
+  "ar": "حلال",
+  "tr": "Ḥalāl",
+  "def": "The Quran forbids carrion, blood, pork and meat over which a name other than God’s was invoked, and permits the rest.",
+  "what": [
+   "“He has forbidden you only carrion, blood, the flesh of swine, and that over which other than God has been invoked; but whoever is compelled, without desire or transgression, there is no sin on him” (2:173, 5:3, 6:145, 16:115). The food of the People of the Book is lawful for Muslims, and theirs for Muslims (5:5). Alcohol is forbidden (5:90). The Quran also says, “eat of the good things, and do good” (23:51)."
+  ],
+  "misread": "",
+  "sources": [
+   "The reasons given are obedience and the care of body and soul, and the Quran is silent about medical explanations. The permission under necessity is broad: a Muslim who has no other food may eat what is forbidden."
+  ],
+  "terms": [
+   "intoxicants",
+   "sharia",
+   "fiqh"
+  ],
+  "articles": [],
+  "aliases": [
+   "Food",
+   "Halal",
+   "Haram",
+   "Pork",
+   "Dietary Laws",
+   "Health Rules"
+  ]
+ },
+ {
   "slug": "hawariyyun",
   "title": "Hawariyyun",
   "type": "group",
@@ -98,7 +127,10 @@
    "qibla-change"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [
+   "Emigration",
+   "Migration"
+  ]
  },
  {
   "slug": "hijri-calendar",

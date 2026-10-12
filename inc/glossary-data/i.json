@@ -238,7 +238,35 @@
    "Jesus",
    "Christ",
    "Al-Masih",
-   "Messiah"
+   "Messiah",
+   "Easter"
+  ]
+ },
+ {
+  "slug": "islamic-finance",
+  "title": "Islamic finance",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Banking and investment that avoid interest (<em>ribā</em>) and speculation, using profit-sharing, sale and leasing instead.",
+  "what": [
+   "Islamic finance uses contracts such as <em>muḍāraba</em> (profit-sharing), <em>murābaḥa</em> (sale at an agreed mark-up), <em>ijāra</em> (leasing) and <em>ṣukūk</em> (asset-backed certificates). It has grown since the 1970s, and Islamic banks now operate in many countries, with Muslim and non-Muslim customers."
+  ],
+  "misread": "",
+  "sources": [
+   "Critics say that some products only imitate conventional loans, and Muslim economists have said the same. The aim in the law is to tie profit to risk and to real assets."
+  ],
+  "terms": [
+   "riba",
+   "trade-and-business",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Finance",
+   "Shariah Finance",
+   "Islamic Banking",
+   "Sukuk"
   ]
  },
  {

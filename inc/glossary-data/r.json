@@ -47,6 +47,32 @@
   ]
  },
  {
+  "slug": "reason-and-faith",
+  "title": "Reason and faith",
+  "type": "topic",
+  "ar": "عقل",
+  "tr": "ʿAql",
+  "def": "Islam does not call for blind belief; the Quran calls on people to reflect, reason and examine claims.",
+  "what": [
+   "The Quran asks: “Will they not reflect?” (47:24), “Do they not ponder?” (4:82), and says “bring your proof if you are truthful” (2:111). It uses the word for “reason” in many forms in about fifty places. Classical scholars from the Mu’tazilites to al-Ghazali and Averroes argued for reason in different ways, and the philosopher Ibn Rushd wrote that the study of nature is commanded by scripture."
+  ],
+  "misread": "That Muslims believe without reasoning.",
+  "sources": [
+   "Schools differ on how much reason can establish apart from revelation. The Muslim position is that revelation and sound reason do not contradict, and that when they appear to, one of them has been misread."
+  ],
+  "terms": [
+   "ashari",
+   "aqeeda",
+   "tafsir"
+  ],
+  "articles": [],
+  "aliases": [
+   "Fideism",
+   "Reason",
+   "Intellect"
+  ]
+ },
+ {
   "slug": "riba",
   "title": "Riba",
   "ar": "ربا",
