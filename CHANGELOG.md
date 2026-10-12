@@ -6,6 +6,11 @@ versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- Links are no longer underlined by default (`theme.json` and the Bestofislam style variation); they gain an underline on hover. Links inside running text in articles and pages stay underlined, with a fine rule that thickens on hover, so a link is never marked by colour alone. This removes the underline from the "Questions this piece answers" panel and similar blocks.
+- Articles and pages have a new stylesheet, `assets/css/article.css`: a larger article head (section, title, standfirst, and a meta line with gold diamond separators), a rounded featured image, an initial letter on the first paragraph, gold-ruled italic quotations, a diamond separator, two-column notes, a bordered author card and a centred "Related reading" heading. Questions panel type is reduced so it points rather than competes with the title.
+
 ### Added
 
 - Branded error pages (`inc/error-pages.php`, `assets/error-pages/`): `maintenance.php`, `db-error.php` and `php-error.php` are generated into wp-content, self-contained, in light and dark. Files not written by the theme are never replaced or removed. They are restored on the next admin load if a folder upload removes them.

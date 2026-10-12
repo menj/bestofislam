@@ -1,0 +1,301 @@
+/**
+ * Articles and pages: the head, the reading column and the endings.
+ *
+ * Links are not underlined by default (theme.json). Inside running text they
+ * are, so a link is never told apart from its sentence by colour alone.
+ * Everything here uses the palette tokens, so the Night variation and the
+ * reader's toggle recolour it without a second stylesheet.
+ */
+
+.boi-article {
+	--boi-ink: var(--wp--preset--color--contrast, #0D2B4E);
+	--boi-mute: var(--wp--preset--color--accent-5, #4A5A6E);
+	--boi-blue: var(--wp--preset--color--accent-1, #1F6FCC);
+	--boi-gold: var(--wp--preset--color--accent-2, #E8B33C);
+	--boi-tint: var(--wp--preset--color--accent-3, #EAF2FB);
+	--boi-rule: var(--wp--preset--color--accent-6, #D9E3EF);
+}
+
+/* Links in running text. */
+.boi-article .wp-block-post-content :is(p, li, dd, td) a:not([class*="boi-"], .wp-block-button__link),
+.boi-article .wp-block-post-content figcaption a {
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+	text-underline-offset: 0.22em;
+}
+
+.boi-article .wp-block-post-content :is(p, li, dd, td) a:not([class*="boi-"], .wp-block-button__link):hover {
+	text-decoration-thickness: 2px;
+	text-decoration-color: currentColor;
+}
+
+/* The head. */
+.boi-article__head {
+	margin-block-end: var(--wp--preset--spacing--40, 1.5rem);
+}
+
+.boi-article__head .wp-block-post-terms {
+	margin-block: 0 0.9rem;
+	font-weight: 600;
+	color: var(--boi-blue);
+}
+
+.boi-article__head .wp-block-post-terms a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-article__head .wp-block-post-terms a:hover {
+	text-decoration: underline;
+}
+
+.boi-article__head .wp-block-post-title {
+	margin-block: 0 1rem;
+	font-size: clamp(2.2rem, 1.6rem + 3vw, 3.5rem);
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	text-wrap: balance;
+}
+
+.boi-article__head .wp-block-post-excerpt {
+	margin-block: 0 1.5rem;
+}
+
+.boi-article__head .wp-block-post-excerpt__excerpt {
+	max-inline-size: 38rem;
+	font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem) !important;
+	line-height: 1.45;
+	text-align: start !important;
+	hyphens: manual !important;
+}
+
+.boi-article__meta {
+	gap: 0.35rem 0.9rem !important;
+	padding-block-start: 1rem;
+	border-block-start: 1px solid var(--boi-rule);
+	font-size: 0.85rem;
+}
+
+.boi-article__meta > * + *::before {
+	content: "";
+	display: inline-block;
+	inline-size: 0.32rem;
+	block-size: 0.32rem;
+	margin-inline-end: 0.9rem;
+	background: var(--boi-gold);
+	transform: rotate(45deg);
+	vertical-align: middle;
+}
+
+.boi-article__meta a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-article__meta a:hover {
+	text-decoration: underline;
+}
+
+.boi-article .wp-block-post-featured-image img {
+	border-radius: var(--wp--custom--radius--lg, 16px);
+}
+
+.boi-article .boi-credit {
+	margin-block: 0.6rem 2rem;
+	text-align: end;
+}
+
+/* The questions panel is a pointer, not the headline. */
+.boi-article .boi-answers {
+	margin-block-end: 1.5rem;
+}
+
+.boi-article .boi-answers li {
+	font-size: 1.05rem;
+	line-height: 1.35;
+}
+
+.boi-article .boi-answers a {
+	text-decoration: none;
+}
+
+.boi-article .boi-answers a:hover {
+	text-decoration: underline;
+}
+
+/* The reading column. */
+.boi-article .wp-block-post-content {
+	font-size: clamp(1.05rem, 1rem + 0.25vw, 1.2rem);
+}
+
+.boi-article .wp-block-post-content > p:first-of-type::first-letter {
+	float: inline-start;
+	margin-inline-end: 0.12em;
+	padding-block-end: 0.04em;
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-size: 3.4em;
+	font-weight: 700;
+	line-height: 0.9;
+	color: var(--boi-blue);
+	border-block-end: 3px solid var(--boi-gold);
+}
+
+.boi-article .wp-block-post-content > h2 {
+	margin-block: 2.75rem 0.9rem;
+	font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+	text-wrap: balance;
+}
+
+.boi-article .wp-block-post-content > h3 {
+	margin-block: 2rem 0.7rem;
+	font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+}
+
+.boi-article .wp-block-post-content sup {
+	font-size: 0.7em;
+	line-height: 0;
+	color: var(--boi-blue);
+}
+
+/* Quotations: a gold rule and an italic serif. */
+.boi-article .wp-block-post-content :is(blockquote, .wp-block-quote, .wp-block-pullquote) {
+	box-sizing: border-box;
+	margin-block: 2rem;
+	padding: 0.25rem 0 0.25rem 1.5rem;
+	border: 0;
+	border-inline-start: 3px solid var(--boi-gold);
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-size: 1.2em;
+	font-style: italic;
+	line-height: 1.45;
+	color: var(--boi-blue);
+}
+
+.boi-article .wp-block-post-content blockquote p {
+	margin-block: 0;
+	text-align: start;
+}
+
+.boi-article .wp-block-post-content :is(blockquote, .wp-block-quote) cite {
+	display: block;
+	margin-block-start: 0.6rem;
+	font-family: var(--wp--preset--font-family--ysabeau-office, sans-serif);
+	font-size: 0.8rem;
+	font-style: normal;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+}
+
+/* A separator is a diamond. */
+.boi-article .wp-block-separator {
+	margin-block: 2.5rem;
+	border: 0;
+	background: none;
+	text-align: center;
+	color: var(--boi-gold);
+}
+
+.boi-article .wp-block-separator::before {
+	content: "";
+	display: inline-block;
+	inline-size: 0.5rem;
+	block-size: 0.5rem;
+	background: currentColor;
+	transform: rotate(45deg);
+}
+
+/* Notes: two columns on a wide screen. */
+.boi-article .wp-block-post-content > h3:nth-last-child(2) {
+	margin-block: 3rem 1rem;
+	padding-block-start: 1.25rem;
+	border-block-start: 1px solid var(--boi-rule);
+	font-family: var(--wp--preset--font-family--ysabeau-office, sans-serif);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+}
+
+.boi-article .wp-block-post-content > ol:last-child {
+	columns: 2 17rem;
+	column-gap: 2.5rem;
+	padding-inline-start: 1.25rem;
+	font-size: 0.9rem;
+	line-height: 1.45;
+	color: var(--boi-mute);
+}
+
+.boi-article .wp-block-post-content > ol:last-child > li {
+	margin-block-end: 0.65rem;
+	break-inside: avoid;
+	text-align: start;
+	hyphens: manual;
+}
+
+/* Endings. */
+.boi-article .boi-share {
+	margin-block-start: 3rem;
+}
+
+.boi-article .boi-author {
+	margin-block-start: 1.5rem;
+	background: transparent;
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--lg, 16px);
+	padding: 1.5rem;
+}
+
+.boi-article .boi-related {
+	margin-block-start: 3.5rem;
+}
+
+.boi-article .boi-related__heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.7rem;
+	margin-block-end: 1.25rem;
+	color: var(--boi-blue);
+}
+
+.boi-article .boi-related__heading::before,
+.boi-article .boi-related__heading::after {
+	content: "";
+	inline-size: 0.4rem;
+	block-size: 0.4rem;
+	background: var(--boi-gold);
+	transform: rotate(45deg);
+}
+
+.boi-article .boi-related__item {
+	background: transparent;
+	transition: border-color 0.15s ease;
+}
+
+.boi-article .boi-related__item:hover,
+.boi-article .boi-related__item:focus-within {
+	border-color: var(--boi-blue);
+}
+
+.boi-article .boi-postnav {
+	margin-block-start: 2.5rem;
+}
+
+@media (max-width: 600px) {
+	.boi-article .wp-block-post-content > p:first-of-type::first-letter {
+		font-size: 2.9em;
+	}
+
+	.boi-article .boi-author {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-article .boi-related__item {
+		transition: none;
+	}
+}
