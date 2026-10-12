@@ -238,7 +238,10 @@ function boi_set_unlisted( $post_id, $unlisted ) {
 		'unlisted',
 		function () use ( $post_id, $unlisted ) {
 			// Read inside the lock, so two saves cannot overwrite each other.
+			// The option autoloads, so it also sits in the combined "alloptions"
+			// cache; clear both or the read below can return a stale list.
 			wp_cache_delete( BOI_UNLISTED_OPTION, 'options' );
+			wp_cache_delete( 'alloptions', 'options' );
 			$ids = boi_unlisted_ids();
 			$ids = $unlisted ? array_unique( array_merge( $ids, array( (int) $post_id ) ) ) : array_diff( $ids, array( (int) $post_id ) );
 

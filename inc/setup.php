@@ -690,26 +690,33 @@ function boi_populate_content() {
 	// Set the front page and posts page only when the site has not chosen
 	// its own: population runs again on updates, and must not undo a choice
 	// the owner made after activation.
+	// "Chosen" means a published page: a draft or trashed one is as good as none.
+	$usable = function ( $id ) {
+		$page = $id ? get_post( $id ) : null;
+		return $page && 'page' === $page->post_type && 'publish' === $page->post_status;
+	};
+
 	$front = (int) get_option( 'page_on_front' );
 
-	if ( isset( $pages['home'] ) && ( 'page' !== get_option( 'show_on_front' ) || ! $front || ! get_post( $front ) ) ) {
+	if ( isset( $pages['home'] ) && ( 'page' !== get_option( 'show_on_front' ) || ! $usable( $front ) ) ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $pages['home'] );
 	}
 
 	$posts_page = (int) get_option( 'page_for_posts' );
 
-	if ( isset( $pages['blog'] ) && ( ! $posts_page || ! get_post( $posts_page ) ) ) {
+	if ( isset( $pages['blog'] ) && ! $usable( $posts_page ) ) {
 		update_option( 'page_for_posts', $pages['blog'] );
 	}
 
 	boi_backfill_listicle_flags();
 	boi_migrate_seed( $topics );
 
-	if ( function_exists( 'boi_attach_featured_images' ) && ! get_transient( 'boi_images_lock' ) ) {
-		set_transient( 'boi_images_lock', 1, MINUTE_IN_SECONDS );
+	// The same atomic lock the front-end image import uses, so the two cannot
+	// sideload an image at once.
+	if ( function_exists( 'boi_attach_featured_images' ) && boi_images_lock_take() ) {
 		boi_attach_featured_images();
-		delete_transient( 'boi_images_lock' );
+		boi_images_lock_release();
 	}
 
 	boi_migrate_pages( $pages );
@@ -851,7 +858,16 @@ function boi_migrate_seed( $topics ) {
 			}
 		}
 
-		if ( $untouched ) {
+		// Title and excerpt are judged on their own record: a body left alone
+		// says nothing about whether the owner reworded the title.
+		$text_hashes = (array) get_option( 'boi_article_text_hashes', array() );
+		$text_now    = md5( $post->post_title . "\n" . $post->post_excerpt );
+		$text_seed   = md5( $listicle['title'] . "\n" . $listicle['excerpt'] );
+		$text_free   = $text_now === $text_seed
+			|| ( isset( $text_hashes[ $slug ] ) && $text_hashes[ $slug ] === $text_now )
+			|| ( ! isset( $text_hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt );
+
+		if ( $text_free ) {
 			if ( $post->post_title !== $listicle['title'] ) {
 				$args['post_title'] = $listicle['title'];
 			}
@@ -859,6 +875,9 @@ function boi_migrate_seed( $topics ) {
 			if ( $post->post_excerpt !== $listicle['excerpt'] ) {
 				$args['post_excerpt'] = $listicle['excerpt'];
 			}
+
+			$text_hashes[ $slug ] = $text_seed;
+			update_option( 'boi_article_text_hashes', $text_hashes, false );
 		}
 
 		if ( isset( $topics[ $listicle['topic'] ] ) ) {
@@ -911,7 +930,7 @@ function boi_migrate_pages( $pages ) {
 			if ( $hashes[ $key ] !== $current ) {
 				continue;
 			}
-		} elseif ( '' !== $fresh && boi_content_fingerprint( $fresh ) !== $current && '' !== trim( $post->post_content ) ) {
+		} elseif ( '' === $fresh || boi_content_fingerprint( $fresh ) !== $current ) {
 			continue;
 		}
 

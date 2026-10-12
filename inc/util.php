@@ -12,17 +12,23 @@ defined( 'ABSPATH' ) || exit;
  * on an option or counter cannot interleave with another request. If the lock
  * cannot be taken within three seconds, or the database does not offer
  * locks, the callback still runs: the lock narrows a race, it does not gate
- * the feature.
+ * the feature. In strict mode it does gate it: without the lock the callback
+ * does not run and null is returned, for work that must never double up.
  *
  * @param string   $name     Lock name.
  * @param callable $callback Work to do.
- * @return mixed The callback's result.
+ * @param bool     $strict   Skip the work if the lock cannot be taken.
+ * @return mixed The callback's result, or null if strict and not locked.
  */
-function boi_with_lock( $name, $callback ) {
+function boi_with_lock( $name, $callback, $strict = false ) {
 	global $wpdb;
 
 	$lock = 'boi_' . md5( $wpdb->prefix . $name );
 	$got  = (int) $wpdb->get_var( $wpdb->prepare( 'SELECT GET_LOCK( %s, 3 )', $lock ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+
+	if ( $strict && ! $got ) {
+		return null;
+	}
 
 	try {
 		return call_user_func( $callback );

@@ -237,6 +237,19 @@ function boi_render_picks() {
 		$top = get_transient( 'boi_auto_picks' );
 
 		if ( ! is_array( $top ) ) {
+			// The entry count is kept as post meta on save, so the largest lists
+			// come from one ordered query over every listicle, not a sample.
+			$ranked = get_posts(
+				array(
+					'post_type'      => 'post',
+					'posts_per_page' => 3,
+					'no_found_rows'  => true,
+					'meta_key'       => '_boi_entry_count', // phpcs:ignore WordPress.DB.SlowDBQuery
+					'orderby'        => 'meta_value_num',
+					'order'          => 'DESC',
+				)
+			);
+
 			$all = get_posts(
 				array(
 					'post_type'      => 'post',
@@ -251,14 +264,19 @@ function boi_render_picks() {
 				)
 			);
 
-			usort(
-				$all,
-				function ( $a, $b ) {
-					return substr_count( $b->post_content, '<!-- wp:bestofislam/entry ' ) <=> substr_count( $a->post_content, '<!-- wp:bestofislam/entry ' );
-				}
-			);
+			if ( count( $ranked ) >= 3 ) {
+				$top = array_map( 'intval', wp_list_pluck( $ranked, 'ID' ) );
+			} else {
+				// Posts saved before the count was kept: count the entries directly.
+				usort(
+					$all,
+					function ( $a, $b ) {
+						return substr_count( $b->post_content, '<!-- wp:bestofislam/entry ' ) <=> substr_count( $a->post_content, '<!-- wp:bestofislam/entry ' );
+					}
+				);
 
-			$top = array_map( 'intval', wp_list_pluck( array_slice( $all, 0, 3 ), 'ID' ) );
+				$top = array_map( 'intval', wp_list_pluck( array_slice( $all, 0, 3 ), 'ID' ) );
+			}
 			set_transient( 'boi_auto_picks', $top, 12 * HOUR_IN_SECONDS );
 		}
 

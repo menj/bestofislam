@@ -266,13 +266,26 @@ function boi_is_votable_entry( $post_id, $entry_id ) {
 		return false;
 	}
 
-	$walk = function ( $blocks ) use ( &$walk, $entry_id ) {
+	$seen = array();
+	$walk = function ( $blocks ) use ( &$walk, &$seen, $entry_id ) {
 		foreach ( $blocks as $block ) {
 			if ( 'bestofislam/entry' === $block['blockName'] && isset( $block['attrs']['entryId'] ) && (string) $block['attrs']['entryId'] === $entry_id ) {
 				return true;
 			}
 			if ( ! empty( $block['innerBlocks'] ) && $walk( $block['innerBlocks'] ) ) {
 				return true;
+			}
+			// A synced pattern is stored as a reference to another post, so
+			// follow it (once each, to stay clear of loops).
+			if ( 'core/block' === $block['blockName'] && ! empty( $block['attrs']['ref'] ) ) {
+				$ref = (int) $block['attrs']['ref'];
+				if ( ! isset( $seen[ $ref ] ) ) {
+					$seen[ $ref ] = true;
+					$pattern      = get_post( $ref );
+					if ( $pattern && 'wp_block' === $pattern->post_type && $walk( parse_blocks( $pattern->post_content ) ) ) {
+						return true;
+					}
+				}
 			}
 		}
 		return false;

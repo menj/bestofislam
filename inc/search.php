@@ -100,7 +100,7 @@ function boi_search_relevance( $orderby, $query ) {
 
 	// A multi-word search matches word by word, so rank a field that holds
 	// every word as well as one that holds the whole phrase.
-	$words = array_slice( array_filter( preg_split( '/\s+/', $term ) ), 0, 6 );
+	$words = array_slice( array_filter( preg_split( '/\s+/', $term ), 'strlen' ), 0, 6 );
 	$all   = function ( $column ) use ( $wpdb, $words ) {
 		$tests = array();
 		foreach ( $words as $word ) {

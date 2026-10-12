@@ -126,11 +126,21 @@ function boi_handle_contact() {
 		$redirect( 'sent' );
 	}
 
+	$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
+	$email   = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
+	$subject = isset( $_POST['subject'] ) ? sanitize_text_field( wp_unslash( $_POST['subject'] ) ) : '';
+	$message = isset( $_POST['message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['message'] ) ) : '';
+
+	if ( '' === $name || ! is_email( $email ) || '' === $subject || '' === $message ) {
+		$redirect( 'error' );
+	}
+
+	// Take a slot only for a message that will be sent, so a mistyped field
+	// does not use up one of the three. Strict: if the lock cannot be taken,
+	// ask the visitor to try again rather than let submissions through.
 	$ip  = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 	$key = 'boi_contact_' . md5( $ip );
 
-	// Take a slot under a lock, before sending, so simultaneous submissions
-	// cannot all read the same count and pass.
 	$allowed = boi_with_lock(
 		$key,
 		function () use ( $key ) {
@@ -140,20 +150,16 @@ function boi_handle_contact() {
 			}
 			set_transient( $key, $hits + 1, HOUR_IN_SECONDS );
 			return true;
-		}
+		},
+		true
 	);
+
+	if ( null === $allowed ) {
+		$redirect( 'error' );
+	}
 
 	if ( ! $allowed ) {
 		$redirect( 'limit' );
-	}
-
-	$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
-	$email   = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
-	$subject = isset( $_POST['subject'] ) ? sanitize_text_field( wp_unslash( $_POST['subject'] ) ) : '';
-	$message = isset( $_POST['message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['message'] ) ) : '';
-
-	if ( '' === $name || ! is_email( $email ) || '' === $subject || '' === $message ) {
-		$redirect( 'error' );
 	}
 
 	$body = sprintf(

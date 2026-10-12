@@ -10,6 +10,10 @@
 
 	var KEY = 'boi-appearance';
 
+	// Set when the reader chooses, so a choice that could not be saved still
+	// holds for this page view against later changes to the system setting.
+	var chosen = false;
+
 	/**
 	 * Returns the appearance currently applied.
 	 *
@@ -48,6 +52,8 @@
 		document.documentElement.setAttribute( 'data-theme', mode );
 
 		if ( ! follow ) {
+			chosen = true;
+
 			try {
 				window.localStorage.setItem( KEY, mode );
 			} catch ( error ) {
@@ -75,6 +81,10 @@
 		var query = window.matchMedia( '(prefers-color-scheme: dark)' );
 
 		query.addEventListener( 'change', function ( event ) {
+			if ( chosen ) {
+				return;
+			}
+
 			try {
 				if ( window.localStorage.getItem( KEY ) ) {
 					return;
