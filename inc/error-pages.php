@@ -196,11 +196,15 @@ function boi_error_state() {
  * @return void
  */
 function boi_error_sync() {
-	$opts    = boi_get_options();
-	$enabled = ! empty( $opts['errors_pages'] );
+	$opts = boi_get_options();
 
 	foreach ( boi_error_kinds() as $kind => $def ) {
 		$path = WP_CONTENT_DIR . '/' . $def['file'];
+
+		// A database or PHP failure happens before the theme loads, so the
+		// alert can only be sent from its drop-in. Those two stay installed
+		// while either the pages or the alerts are on.
+		$enabled = ! empty( $opts['errors_pages'] ) || ( $def['alert'] && ! empty( $opts['errors_alerts'] ) );
 
 		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) ) {
 			continue;
@@ -228,7 +232,7 @@ function boi_error_maybe_sync() {
 	if ( get_option( 'boi_error_dropins_version' ) === BOI_VERSION ) {
 		$state = boi_error_state();
 		$opts  = boi_get_options();
-		if ( empty( $opts['errors_pages'] ) || ! in_array( 'absent', $state, true ) ) {
+		if ( ( empty( $opts['errors_pages'] ) && empty( $opts['errors_alerts'] ) ) || ! in_array( 'absent', $state, true ) ) {
 			return;
 		}
 	}
@@ -328,6 +332,7 @@ function boi_render_errors_tab( $opts ) {
 			<th scope="row"><?php esc_html_e( 'Alerts', 'bestofislam' ); ?></th>
 			<td>
 				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[errors_alerts]" value="1" <?php checked( $opts['errors_alerts'], 1 ); ?> /> <?php esc_html_e( 'Email when the database fails, a PHP fatal occurs, a core table is missing or a page answers with HTTP 500', 'bestofislam' ); ?></label>
+				<p class="description"><?php esc_html_e( 'Database and PHP failures are reported by their error pages, which stay installed while alerts are on.', 'bestofislam' ); ?></p>
 			</td>
 		</tr>
 		<tr>
