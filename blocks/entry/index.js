@@ -22,7 +22,23 @@
 			var atts = props.attributes;
 
 			element.useEffect( function () {
-				if ( ! atts.entryId ) {
+				var duplicate = false;
+				var data = window.wp && window.wp.data;
+
+				// A duplicated entry arrives with its original's identifier, which
+				// would give both entries one vote count. Issue it a new one.
+				if ( atts.entryId && data && data.select( 'core/block-editor' ) ) {
+					( function scan( list ) {
+						list.forEach( function ( block ) {
+							if ( block.clientId !== props.clientId && block.name === 'bestofislam/entry' && block.attributes.entryId === atts.entryId ) {
+								duplicate = true;
+							}
+							scan( block.innerBlocks || [] );
+						} );
+					}( data.select( 'core/block-editor' ).getBlocks() ) );
+				}
+
+				if ( ! atts.entryId || duplicate ) {
 					props.setAttributes( { entryId: makeEntryId() } );
 				}
 			}, [] );

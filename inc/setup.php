@@ -901,17 +901,19 @@ function boi_migrate_pages( $pages ) {
 		}
 
 		$current = boi_content_fingerprint( $post->post_content );
+		$fresh   = boi_seed_page_content( $key );
 
 		// Unedited means the stored content still matches what the theme last
-		// wrote. With no record of what it wrote, an edit cannot be ruled out,
-		// so the page is left as it is.
-		if ( ! isset( $hashes[ $key ] ) || $hashes[ $key ] !== $current ) {
-			if ( isset( $hashes[ $key ] ) || '' !== trim( $post->post_content ) ) {
+		// wrote. With no record, the page counts as unedited only if it already
+		// holds the theme's text (a page the theme has just created); otherwise
+		// an edit cannot be ruled out and the page is left as it is.
+		if ( isset( $hashes[ $key ] ) ) {
+			if ( $hashes[ $key ] !== $current ) {
 				continue;
 			}
+		} elseif ( '' !== $fresh && boi_content_fingerprint( $fresh ) !== $current && '' !== trim( $post->post_content ) ) {
+			continue;
 		}
-
-		$fresh = boi_seed_page_content( $key );
 
 		if ( '' !== $fresh && boi_content_fingerprint( $fresh ) !== $current ) {
 			boi_update_post( array( 'ID' => $post->ID, 'post_content' => $fresh ) );

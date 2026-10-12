@@ -169,6 +169,7 @@ function boi_enqueue_assets() {
 			'postId'    => get_the_ID(),
 			'loginOnly' => boi_voting_requires_login(),
 			'loggedIn'  => is_user_logged_in(),
+			'userId'    => get_current_user_id(),
 			'strings'   => array(
 				'error'     => __( 'Your vote could not be recorded. Please try again.', 'bestofislam' ),
 				'duplicate' => __( 'You have already voted on this entry.', 'bestofislam' ),

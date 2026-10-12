@@ -6,6 +6,19 @@ versioning.
 
 ## [Unreleased]
 
+### Fixed
+
+Findings from a full-codebase review by CodeAnt.
+
+- **Security:** JSON-LD is escaped so a post title containing a closing script tag can no longer end the block (all four emitters share `boi_json_ld()`). The error-page drop-ins refuse direct requests and the alert settings now live in a PHP file that exits when requested, instead of a readable JSON file. Votes are accepted only for published posts and for entries that exist on them, and a database failure is reported as an error rather than as "already voted".
+- **Races:** the contact form's hourly limit, the unlisted list and the image-sideload lock no longer let concurrent requests slip past.
+- **Settings:** saving with voting off, or with the Pretty Search Permalinks plugin active, no longer resets saved values; the plugin's search base is now imported.
+- **Re-seeding:** updates no longer reset a front page or posts page the owner chose, edited titles and excerpts, or pages with no record of what the theme wrote; the retired Questions page is trashed only when the record proves it unedited.
+- **Search and listings:** Reflections filter returns posts only; multi-word search ranking; entry matching ignores template labels; unlisted items no longer supply the hero image, appear in the HTML sitemap or inflate section counts; the automatic picks look at more than the newest 30; section totals refresh when terms change; reading parts are cached.
+- **SEO and schema:** archive canonicals no longer depend on the meta-description switch; a seeded image credit is not applied to an image the owner chose.
+- **Blocks and scripts:** nested listicles restore the outer list's rank state; a duplicated entry gets its own vote identifier; the "already voted" record is per account and a 409 shows the current tally; the appearance toggle keeps following the system setting; entries lay out correctly with rank badges off and image entries alternate sides.
+- **Smaller:** temp file removed when an image copy fails; usernames no longer double-encoded in login links; search redirects no longer double-encode arguments; contextual links match phrases containing & and apostrophes.
+
 ### Changed
 
 - Links are no longer underlined by default (`theme.json` and the Bestofislam style variation); they gain an underline on hover. Links inside running text in articles and pages stay underlined, with a fine rule that thickens on hover, so a link is never marked by colour alone. This removes the underline from the "Questions this piece answers" panel and similar blocks.
