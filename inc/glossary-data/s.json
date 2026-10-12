@@ -207,34 +207,6 @@
   "aliases": []
  },
  {
-  "slug": "shia",
-  "title": "Shia",
-  "type": "group",
-  "ar": "شيعة",
-  "tr": "Shīʿa",
-  "def": "The second-largest branch of Islam, whose members hold that Ali and his descendants were the rightful leaders after the Prophet.",
-  "what": [
-   "The name comes from shi‘at Ali, “the party of Ali”. Shias form roughly a tenth to a fifth of Muslims, with the main branches Twelvers, Ismailis and Zaydis. They share the Quran, the five pillars and the Prophet, and differ chiefly on leadership and in some practices."
-  ],
-  "misread": "",
-  "sources": [],
-  "terms": [
-   "twelve-imams",
-   "ismailis",
-   "ali-ibn-abi-talib"
-  ],
-  "articles": [
-   "islam-religion-of-peace"
-  ],
-  "aliases": [
-   "Shiites",
-   "Shi'a",
-   "Shi'ite",
-   "Shi'is",
-   "Shiism"
-  ]
- },
- {
   "slug": "shirk",
   "title": "Shirk",
   "ar": "شرك",

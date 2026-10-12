@@ -345,16 +345,14 @@
   "type": "term",
   "ar": "إمام",
   "tr": "imām",
-  "def": "A leader: the one who leads prayer, a respected scholar, and for Shias a divinely guided successor of the Prophet.",
+  "def": "A leader: the one who leads prayer, and a title of respected scholars.",
   "what": [
-   "In every mosque the imam leads the congregation, and the Prophet said: “The imam is appointed to be followed” (Sahih al-Bukhari). The title is also given to great scholars, such as Imam Abu Hanifa or Imam al-Shafi‘i. Among Shias, the imams are successors of the Prophet in religious authority, being twelve for the Twelvers and seven for the Ismailis."
+   "In every mosque the imam leads the congregation, and the Prophet said: “The imam is appointed to be followed” (Sahih al-Bukhari). The title is also given to great scholars, such as Imam Abu Hanifa or Imam al-Shafi‘i."
   ],
   "misread": "",
   "sources": [],
   "terms": [
-   "caliph",
-   "ismailis",
-   "twelve-imams"
+   "caliph"
   ],
   "articles": [],
   "aliases": [
@@ -526,7 +524,7 @@
   "what": [
    "“Who is there that can intercede with Him except by His permission?” (2:255); “Intercession belongs wholly to God” (39:44). Yet the Prophet said he will be given the right of intercession on the Day of Judgement, and will fall in prostration before God before it is allowed (Sahih al-Bukhari, Sahih Muslim). It is for the believers who are in need of mercy, according to the majority."
   ],
-  "misread": "Some Muslims, among Shias and in popular Sufism, call on saints and imams to intercede. Other Muslims regard calling on anyone but God as shirk, and teach that one asks God directly, since He is near (2:186). This disagreement is within the community, and is not between Islam and its critics.",
+  "misread": "Some Muslims, in popular devotion, call on saints to intercede. Others regard calling on anyone but God as shirk, and teach that one asks God directly, since He is near (2:186). This is a disagreement within the community, and not between Islam and its critics.",
   "sources": [],
   "terms": [
    "shirk",
@@ -799,9 +797,7 @@
    "Muslim scholars hold that prophets are preserved from lying, from hiding the message and from grave sins. The Quran speaks openly of their lapses: Adam’s slip (20:121), Moses striking a man (28:15–16), David’s test (38:24) and the Prophet’s frown at the blind man (80:1). Each is followed by repentance and forgiveness. They show that prophets are human, and teach how to return to God."
   ],
   "misread": "",
-  "sources": [
-   "Sunni scholars generally allow minor errors that are corrected at once, while Shias hold the stricter view, and extend it to the imams."
-  ],
+  "sources": [],
   "terms": [
    "prophets",
    "istighfar",
@@ -812,31 +808,6 @@
    "Isma",
    "Impeccability",
    "Sinlessness Of Prophets"
-  ]
- },
- {
-  "slug": "ismailis",
-  "title": "Ismailis",
-  "type": "group",
-  "ar": "إسماعيلية",
-  "tr": "Ismāʿīliyya",
-  "def": "A branch of Shia Islam that follows Isma‘il, son of the sixth imam Ja‘far al-Sadiq, as the seventh imam.",
-  "what": [
-   "The Ismailis split from the Twelvers over the succession to Ja‘far al-Sadiq (d. 765). They founded the Fatimid caliphate (909–1171), which built Cairo and al-Azhar in 970. Today the two main branches are the Nizaris, led by the Aga Khan, and the Musta‘lis such as the Bohras."
-  ],
-  "misread": "",
-  "sources": [],
-  "terms": [
-   "imam",
-   "twelve-imams",
-   "shia"
-  ],
-  "articles": [],
-  "aliases": [
-   "Isma'ilis",
-   "Nizaris",
-   "Bohras",
-   "Fatimids"
   ]
  },
  {

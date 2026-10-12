@@ -1,6 +1,6 @@
 # Glossary terms with no article
 
-Of the 471 Glossary entries, **294 have no article** in their "Read more" list. The match is by name (title and other names against the text of the 36 articles in `content/`), so a few are false gaps (for example a pillar that an article covers under another name). The remainder fall into nine clusters. Each cluster is one or more listicles; once a listicle is published, run the linker script to fill the entries' `articles` fields.
+Of the 465 Glossary entries, **about 290 have no article** in their "Read more" list. The match is by name (title and other names against the text of the 36 articles in `content/`), so a few are false gaps (for example a pillar that an article covers under another name). The remainder fall into nine clusters. Each cluster is one or more listicles; once a listicle is published, run the linker script to fill the entries' `articles` fields.
 
 | # | Cluster | Entries (slugs) | Suggested listicles |
 |---|---|---|---|
@@ -10,8 +10,8 @@ Of the 471 Glossary entries, **294 have no article** in their "Read more" list. 
 | 4 | Science claims | embryology, iron, water-cycle, fingerprints, atoms, ant, eclipse, shooting-stars-and-the-jinn, earthquakes, genetics-and-heredity, biology, fig-and-olive, environment, birth-rate, bucaille-maurice, commission-on-scientific-signs | 7 scientific claims about the Quran, graded honestly |
 | 5 | Prophets and Quranic stories | idris, hud, thamud, aad, jonah, job, solomon, elijah, elisha, dhu-al-kifl, khidr, gog-and-magog, companions-of-the-cave, rass-people-of-the, harut-and-marut, manna-and-quails, the-elephant, goliath-and-talut, cow-the-yellow, ark, iram, qarun, canaan, balaam | 6 Quranic stories and what other sources say; 5 prophets you may not know |
 | 6 | Belief | iman, taqwa, qadar, divine-attributes, ashari, intercession, iblis, azrail, dajjal, mahdi, paradise, evil, fitra, istighfar, khawf, dhikr, hanif | 7 beliefs every Muslim shares; 5 questions about fate and free will |
-| 7 | Sects, history and regions | twelve-imams, ismailis, kharijites, takfir, taqiyya, kithman, khalifites, ummah, nation-of-islam, hui, china, du-wenxiu, jadidism, kubrawiyya, crusades, haj-amin-al-husseini-and-the-handschar, dar-al-islam-and-dar-al-harb, black-flag | 5 branches of Islam; 5 myths about the Crusades; Islam in China |
+| 7 | Sects, history and regions | kharijites, takfir, taqiyya, khalifites, ummah, nation-of-islam, hui, china, du-wenxiu, jadidism, kubrawiyya, crusades, haj-amin-al-husseini-and-the-handschar, dar-al-islam-and-dar-al-harb, black-flag | 5 myths about the Crusades; Islam in China |
 | 8 | Worship and daily life | adhan, ablutions, dua, itikaf, eid, friday, funeral, ihram, umrah, safa-and-marwa, hajar-al-aswad, almsgiving, fidya, laylat-al-qadr, honorifics, common-phrases, dreams, evil-eye, curses-and-cursing, houses-and-homes, chess, dogs | 7 things to know before your first Friday prayer; 5 Hajj rites explained |
 | 9 | Scholars and critics | al-ghazali, ibn-ishaq, ibn-abbas, abu-dawud, al-kalbi, al-kindi, baydawi-al, hunayn-ibn-ishaq, bucaille-maurice, deedat-ahmad, esposito-john-l, armstrong-neil, arthur-jeffery, geiger-abraham, caetani-leone, goitein-s-d, eusebius, john-of-damascus | 7 scholars who shaped how Islam is studied |
 
-Priority by how many other entries link to a term: fiqh (30), ummah (18), taqwa (12), Ali (10), isnad (10), Twelve Imams (10), iman (8). Clusters 1, 2 and 6 cover these.
+Priority by how many other entries link to a term: fiqh (30), ummah (18), taqwa (12), Ali (10), isnad (10), iman (8). Clusters 1, 2 and 6 cover these.
