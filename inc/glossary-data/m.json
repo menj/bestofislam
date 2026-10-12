@@ -1,0 +1,379 @@
+[
+ {
+  "slug": "mahdi",
+  "title": "Mahdi",
+  "type": "term",
+  "ar": "مهدي",
+  "tr": "mahdī",
+  "def": "The “guided one” whom many Muslims expect near the end of time to restore justice.",
+  "what": [
+   "Hadith in the collections of Abu Dawud and al-Tirmidhi speak of a man from the Prophet’s family who will fill the earth with justice as it was filled with injustice. The Quran does not mention the Mahdi."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "isa"
+  ],
+  "articles": [
+   "end-of-time"
+  ],
+  "aliases": [
+   "Al-Mahdi"
+  ]
+ },
+ {
+  "slug": "manna-and-quails",
+  "title": "Manna and quails",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran mentions the manna and quails God gave the Israelites in the wilderness, and their asking for herbs and onions instead (2:57, 2:61).",
+  "what": [
+   "“We shaded you with clouds and sent down to you manna and quails: eat of the good things We have provided you” (2:57). They then said: “Moses, we cannot endure one kind of food; ask your Lord to bring forth for us of what the earth grows: its herbs, cucumbers, garlic, lentils and onions” (2:61)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "moses",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": [
+   "Herbs",
+   "Manna",
+   "Quails",
+   "Salwa"
+  ]
+ },
+ {
+  "slug": "mariya-al-qibtiyya",
+  "title": "Mariya al-Qibtiyya",
+  "type": "person",
+  "ar": "مارية القبطية",
+  "tr": "Māriya al-Qibṭiyya",
+  "def": "An Egyptian Christian woman sent as a gift by the ruler of Egypt, and the mother of the Prophet’s son Ibrahim.",
+  "what": [
+   "Mariya was sent to the Prophet by the Muqawqis, governor of Egypt, in about 628 with her sister Sirin. She accepted Islam and bore him a son, Ibrahim, who died as an infant. She is counted among his household and was honoured after his death."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ibrahim-ibn-muhammad"
+  ],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
+  "aliases": [
+   "Mariya",
+   "Maria The Copt"
+  ]
+ },
+ {
+  "slug": "marriage",
+  "title": "Marriage",
+  "type": "topic",
+  "ar": "نكاح",
+  "tr": "nikāḥ",
+  "def": "Marriage is a solemn covenant in Islam, based on mutual consent, a dowry, and mercy between the spouses.",
+  "what": [
+   "“Among His signs is that He created for you spouses from yourselves that you may find rest in them, and put between you love and mercy” (30:21). Both parties must consent, and the bride receives a dowry for herself (4:4). The Prophet encouraged marriage, calling it half of the faith in some reports, and said, “The best of you is the best to his wives” (al-Tirmidhi)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "divorce",
+   "family",
+   "idda"
+  ],
+  "articles": [
+   "child-marriage-in-islam",
+   "questions-about-aisha",
+   "quran-4-34",
+   "sharia-and-hudud"
+  ],
+  "aliases": [
+   "Nikah",
+   "Wedlock",
+   "Husbands",
+   "Wives"
+  ]
+ },
+ {
+  "slug": "martyrdom-and-the-dead",
+  "title": "Martyrdom and the dead",
+  "type": "topic",
+  "ar": "شهيد",
+  "tr": "Shahīd",
+  "def": "The Quran says that those killed in God’s way are alive with their Lord (3:169).",
+  "what": [
+   "“Do not think of those who are killed in God’s way as dead; they are alive with their Lord, provided for” (3:169; also 2:154). A <em>shahīd</em> is a witness, and in practice a person killed defending the faith, or in defence of life and property, as the Prophet said (Sahih al-Bukhari). Those who die of plague, drowning or childbirth are also counted as such in hadith."
+  ],
+  "misread": "That Islam rewards killing oneself and others.",
+  "sources": [
+   "The Quran says “do not kill yourselves” (4:29), and the Prophet said that whoever kills himself will be punished by the same means in the Fire (Sahih al-Bukhari). Muslim scholars have broadly condemned suicide attacks on civilians, and the Prophet forbade killing of non-combatants."
+  ],
+  "terms": [
+   "jihad",
+   "akhira"
+  ],
+  "articles": [
+   "prophet-died-poisoning",
+   "islam-religion-of-peace",
+   "verses-read-differently",
+   "same-god"
+  ],
+  "aliases": [
+   "Dead",
+   "Martyr",
+   "Shahid"
+  ]
+ },
+ {
+  "slug": "maryam",
+  "title": "Maryam",
+  "ar": "مريم",
+  "tr": "Maryam",
+  "def": "Mary, mother of Jesus: the only woman named in the Quran, which gives her a chapter.",
+  "what": [
+   "The Quran says that the angels told her God had chosen and purified her above the women of the worlds (3:42). Chapter 19 is named after her, and chapter 66 holds her up as a model of faith and chastity (66:12). The Prophet is reported to have said that the best of women were Mary, daughter of Imran, and Khadija (Sahih al-Bukhari)."
+  ],
+  "misread": "That the Quran confuses Mary with Miriam, Aaron’s sister, because it calls her “sister of Aaron” (19:28).",
+  "sources": [
+   "A man once raised this with the Prophet’s Companion al-Mughira ibn Shu’ba, who asked the Prophet and was told that the people of that time used to take names from the prophets and righteous people who came before them (Sahih Muslim). “Sister of Aaron” can mean one of his line or his kind, as the Arabic <em>akh</em> and <em>ukht</em> often do. The Quran also gives her father’s name as Imran, as the Bible gives Amram for Aaron’s father."
+  ],
+  "terms": [
+   "isa",
+   "injil"
+  ],
+  "articles": [
+   "ezra-and-mary"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "mecca",
+  "title": "Mecca",
+  "type": "place",
+  "ar": "مكة",
+  "tr": "Makka",
+  "def": "The holy city of Islam, birthplace of the Prophet and site of the Kaaba.",
+  "what": [
+   "Mecca lies in a valley of the Hijaz in Saudi Arabia. The Quran calls it “this secure land” (95:3) and “Bakka” (3:96). Abraham prayed to make it a safe place (14:35). The Prophet was born there, received the first revelation nearby, and returned in 630 as a conqueror who forgave his opponents. Only Muslims may enter its sanctuary."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "kaaba",
+   "hajj",
+   "quraysh",
+   "umrah"
+  ],
+  "articles": [
+   "kaaba-witnesses",
+   "qibla-change",
+   "five-pillars-explained",
+   "prophet-died-poisoning"
+  ],
+  "aliases": [
+   "Makkah",
+   "Bakka",
+   "Makka",
+   "Bakkah"
+  ]
+ },
+ {
+  "slug": "modesty-and-dress",
+  "title": "Modesty and dress",
+  "type": "topic",
+  "ar": "حياء",
+  "tr": "Ḥayāʾ",
+  "def": "The Quran asks both men and women to guard their gaze and chastity and to dress modestly.",
+  "what": [
+   "“Tell the believing men to lower their gaze and guard their private parts… and tell the believing women to lower their gaze and guard their private parts and not display their adornment except what is apparent” (24:30–31). Among the signs of success are those who guard their chastity (23:5, 70:29). “The garment of piety, that is best” (7:26). The Prophet said that modesty is part of faith (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "The commands are given to both sexes, and are read by scholars differently on what counts as “apparent”. The Quran also tells believers to dress well for prayer: “take your adornment at every place of prayer” (7:31)."
+  ],
+  "terms": [
+   "hijab",
+   "ihsan",
+   "taqwa"
+  ],
+  "articles": [
+   "hijab-and-modesty",
+   "quran-science-claims-graded",
+   "before-your-first-friday-prayer"
+  ],
+  "aliases": [
+   "Chastity",
+   "Charms",
+   "Clothing",
+   "Adornment"
+  ]
+ },
+ {
+  "slug": "moses",
+  "title": "Moses",
+  "type": "prophet",
+  "ar": "موسى",
+  "tr": "Mūsā",
+  "def": "The prophet most often named in the Quran, to whom God spoke and gave the Torah.",
+  "what": [
+   "Moses is named about 136 times. The Quran tells of his birth and rescue from the river, his flight to Midian, God’s call at the burning bush (20:9–14), his confrontation with Pharaoh, the crossing of the sea and the giving of the Torah (7:142–145). “God spoke to Moses directly” (4:164)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "israel",
+   "pharaoh",
+   "aaron",
+   "prophets"
+  ],
+  "articles": [
+   "haman-anachronism",
+   "shared-prophets",
+   "who-is-allah",
+   "ezra-and-mary"
+  ],
+  "aliases": [
+   "Musa"
+  ]
+ },
+ {
+  "slug": "mosque",
+  "title": "Mosque",
+  "type": "place",
+  "ar": "مسجد",
+  "tr": "masjid",
+  "def": "A place of prostration: the house of prayer, and the centre of community life.",
+  "what": [
+   "“The mosques are for God, so do not call on anyone else along with God” (72:18). The Prophet’s own mosque in Medina was a simple building with palm trunks, and also served as a school and a council. The earth is a place of prayer, and a mosque is not needed for a valid prayer (Sahih al-Bukhari). Men and women may attend, and the Prophet said: “Do not prevent the female servants of God from the mosques of God” (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "salah",
+   "friday",
+   "itikaf"
+  ],
+  "articles": [
+   "indonesia",
+   "qibla-change",
+   "seven-libraries",
+   "five-pillars-explained"
+  ],
+  "aliases": [
+   "Masjid",
+   "Mosques"
+  ]
+ },
+ {
+  "slug": "mothers-and-childbirth",
+  "title": "Mothers and childbirth",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran honours mothers for the hardship of carrying and bearing children.",
+  "what": [
+   "“We have enjoined upon man kindness to his parents; his mother bore him in hardship and gave birth to him in hardship” (46:15; also 31:14). Mary’s labour pains are told in 19:23. The Prophet, asked who most deserved good company, said “your mother”, three times, before “your father” (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "children",
+   "ihsan"
+  ],
+  "articles": [],
+  "aliases": [
+   "Childbirth",
+   "Mothers"
+  ]
+ },
+ {
+  "slug": "muhammad",
+  "title": "Muhammad",
+  "type": "prophet",
+  "ar": "محمد",
+  "tr": "Muḥammad",
+  "def": "The final prophet of Islam (570–632), to whom the Quran was revealed.",
+  "what": [
+   "Born in Mecca, orphaned young and known as al-Amin, “the trustworthy”, he received the first revelation in the cave of Hira at about forty. After thirteen years of preaching and persecution he migrated to Medina in 622, and returned to Mecca in 630, forgiving his enemies. He died in 632. The Quran calls him “a mercy to the worlds” (21:107) and “an excellent example” (33:21)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "quran",
+   "khadija",
+   "sunnah",
+   "sira"
+  ],
+  "articles": [
+   "al-zutt-allegation",
+   "quran-preservation-reddit",
+   "who-is-allah",
+   "who-saw-gabriel"
+  ],
+  "aliases": [
+   "Prophet Muhammad",
+   "Mohammed",
+   "The Prophet",
+   "Messenger Of God"
+  ]
+ },
+ {
+  "slug": "mushaf",
+  "title": "Mushaf",
+  "ar": "مصحف",
+  "tr": "Muṣḥaf",
+  "def": "A written copy of the Quran bound between two covers.",
+  "what": [
+   "From <em>ṣaḥīfa</em>, “a leaf”. In the Prophet’s lifetime the Quran was written on whatever was at hand and memorised in full by many. After his death the leaves were collected, and in the time of Uthman copies in one agreed spelling were sent to the main centres. The standard copy is often called the Uthmanic <em>mushaf</em>.",
+   "A <em>mushaf</em> is handled with respect, and Muslims traditionally wash before touching it."
+  ],
+  "misread": "That Uthman “burned the rival Qurans”, destroying the true text.",
+  "sources": [
+   "Sahih al-Bukhari records that Uthman had the leaves copied, ordered the standard copies sent out, and asked that other individual leaves be destroyed to avoid disputes. Muslims read this as protecting one text for the whole community, and note that no major dispute over it was recorded in the early centuries."
+  ],
+  "terms": [
+   "quran",
+   "qiraat"
+  ],
+  "articles": [
+   "uthman-copies"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "music-and-singing",
+  "title": "Music and singing",
+  "type": "topic",
+  "ar": "غناء",
+  "tr": "Ghināʾ",
+  "def": "Muslim scholars have differed about music: some forbid instruments, many allow singing and the frame drum, and Muslim civilisations have produced much music.",
+  "what": [
+   "Reports show the Prophet allowing singing and drumming at weddings and at the feast of Eid, for example when Aisha’s household had girls singing and he told Abu Bakr to leave them (Sahih al-Bukhari). A woman who had vowed to play the <em>daf</em> if he returned safely was told to fulfil her vow (Abu Dawud, al-Tirmidhi). A report in Sahih al-Bukhari that speaks of people who will permit “musical instruments” is discussed by scholars for its wording."
+  ],
+  "misread": "",
+  "sources": [
+   "Al-Ghazali allowed music as long as it did not lead to sin, and Ibn Hazm denied that any sound hadith forbids it. Others, such as many Hanbalis and Salafis, forbid stringed instruments. Muslim societies have a long musical tradition, including Quranic recitation (<em>tajwīd</em>), the call to prayer, Sufi chant and classical music."
+  ],
+  "terms": [
+   "fiqh",
+   "hadith",
+   "aisha-bint-abi-bakr"
+  ],
+  "articles": [
+   "instruments-islamic-world",
+   "scholars-who-shaped-islamic-study"
+  ],
+  "aliases": [
+   "Drum-Playing",
+   "Drums",
+   "Music",
+   "Daf"
+  ]
+ }
+]

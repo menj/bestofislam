@@ -1,0 +1,408 @@
+[
+ {
+  "slug": "kaaba",
+  "title": "Kaaba",
+  "type": "place",
+  "ar": "الكعبة",
+  "tr": "al-Kaʿba",
+  "def": "The cube-shaped House in the Sacred Mosque in Mecca, built by Abraham and Ishmael, toward which Muslims face in prayer.",
+  "what": [
+   "“The first House established for people was that at Bakka, blessed and a guidance to the worlds” (3:96). Abraham and Ishmael raised its foundations (2:127), and God made it “a place of return for people and a sanctuary” (2:125). It stands empty, with a black cloth cover renewed each year, and is circled seven times in tawaf. Muslims worldwide pray toward it (2:144), which unites them in direction while they worship God alone and not the house."
+  ],
+  "misread": "Muslims do not worship the Kaaba or the Black Stone. Umar is reported to have said at the Stone: “I know you are only a stone that cannot harm or benefit; had I not seen the Prophet kiss you, I would not” (Sahih al-Bukhari).",
+  "sources": [],
+  "terms": [
+   "hajj",
+   "abraham",
+   "ishmael"
+  ],
+  "articles": [
+   "qibla-change",
+   "kaaba-witnesses",
+   "five-pillars-explained",
+   "hajj-rites-explained"
+  ],
+  "aliases": [
+   "Ka'bah",
+   "Kaabah",
+   "Kabah",
+   "Sacred House",
+   "Qibla"
+  ]
+ },
+ {
+  "slug": "kafir",
+  "title": "Kafir",
+  "ar": "كافر",
+  "tr": "Kāfir",
+  "def": "One who rejects or denies the truth; literally, one who covers it up.",
+  "what": [
+   "The root <em>k-f-r</em> means “to cover”. The Quran uses a related word for farmers, who cover seed with soil (57:20). As a religious term it describes a person who knows the truth and hides or rejects it, and it is a statement about belief, not a name for a people.",
+   "Chapter 109 ends “to you your religion, and to me mine”. The Quran does not forbid kindness and justice to those who do not fight Muslims over religion, and it says God loves those who act justly (60:8)."
+  ],
+  "misread": "That it is a slur, or a licence to kill anyone who is not a Muslim.",
+  "sources": [
+   "The decision about who has rejected God is left to God. A hadith in Sahih al-Bukhari warns that if a man calls his brother “kafir”, one of them has earned the word, and jurists accordingly forbade accusing Muslims of disbelief lightly. The Quran also gives separate words for the People of the Book and for polytheists, and does not use one label for all."
+  ],
+  "terms": [
+   "shirk",
+   "ahl-al-kitab",
+   "jihad"
+  ],
+  "articles": [
+   "jizya",
+   "kharijites-and-takfir",
+   "war-and-killing-in-islam",
+   "taqiyya-5-myths"
+  ],
+  "type": "term",
+  "aliases": [
+   "Disbelievers",
+   "Unbelievers"
+  ]
+ },
+ {
+  "slug": "kafur",
+  "title": "Kafur",
+  "type": "term",
+  "ar": "كافور",
+  "tr": "kāfūr",
+  "def": "A fragrant, cooling spring in Paradise, named in the Quran (76:5).",
+  "what": [
+   "“The righteous will drink from a cup mixed with kafur, a spring from which God’s servants drink, making it flow in abundance” (76:5–6). The word means camphor in Arabic; the Quran uses it as an image of coolness and fragrance in Paradise."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "paradise"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "khadija",
+  "title": "Khadija",
+  "type": "person",
+  "ar": "خديجة",
+  "tr": "Khadīja",
+  "def": "The first wife of the Prophet and the first person to accept Islam.",
+  "what": [
+   "Khadija bint Khuwaylid was a respected businesswoman of Mecca who employed Muhammad as her agent, and later proposed marriage to him. When he came back trembling from the cave of Hira, she consoled him: “You keep ties of kin, bear the burdens of the weak, help the poor and support those struck by calamity” (Sahih al-Bukhari). She believed first, spent her wealth for the cause, and died in 619, the “year of sorrow”. Gabriel sent her greetings from her Lord, according to Sahih al-Bukhari."
+  ],
+  "misread": "",
+  "sources": [
+   "The Prophet married no other woman while she lived. Aisha said she was never as jealous of anyone as of Khadija, from the Prophet’s frequent praise of her (Sahih al-Bukhari)."
+  ],
+  "terms": [
+   "cave-of-hira",
+   "aisha-bint-abi-bakr",
+   "muhammad"
+  ],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
+  "aliases": [
+   "Khadijah",
+   "Khadija Bint Khuwaylid",
+   "Khadija Bint Khuwailid"
+  ]
+ },
+ {
+  "slug": "khalifites",
+  "title": "Khalifites",
+  "type": "group",
+  "ar": "",
+  "tr": "",
+  "def": "A small modern movement following Rashad Khalifa (d. 1990) that accepts only the Quran, and which Muslim scholars regard as outside the mainstream.",
+  "what": [
+   "Rashad Khalifa, an Egyptian-American biochemist, claimed to have found a numerical code based on 19 in the Quran, and rejected the hadith. He denied the last two verses of Surah 9. Muslim scholars across the schools reject these claims, since the Quran itself tells believers to obey the Messenger (4:59, 59:7), and the verses were recited and written down from the time of the Prophet."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "sunnah",
+   "quran"
+  ],
+  "articles": [],
+  "aliases": [
+   "Submitters",
+   "Quranists",
+   "Rashad Khalifa"
+  ]
+ },
+ {
+  "slug": "kharijites",
+  "title": "Kharijites",
+  "type": "group",
+  "ar": "خوارج",
+  "tr": "Khawārij",
+  "def": "An early group who seceded from Ali’s army after Siffin (657), and who held that a Muslim committing a major sin ceases to be a believer.",
+  "what": [
+   "After Ali agreed to arbitration with Muawiya they left, saying “judgement belongs only to God”, and turned against both. They killed Ali in 661. The Prophet foretold a people who would recite the Quran without it passing their throats, and would leave religion like an arrow from its game (Sahih al-Bukhari, Sahih Muslim), and the mainstream understood this to mean them."
+  ],
+  "misread": "",
+  "sources": [
+   "Mainstream scholars made the Kharijite excess an object lesson: declaring other Muslims unbelievers (takfir) for sin is the error the Kharijites made and that the main schools have always warned against. The Ibadi school of Oman, which descends from moderate early Kharijism, rejects the extremist label."
+  ],
+  "terms": [
+   "ali-ibn-abi-talib",
+   "takfir",
+   "caliph"
+  ],
+  "articles": [
+   "kharijites-and-takfir"
+  ],
+  "aliases": [
+   "Khawarij",
+   "Kharijis",
+   "Seceders"
+  ]
+ },
+ {
+  "slug": "khawf",
+  "title": "Khawf",
+  "type": "term",
+  "ar": "خوف",
+  "tr": "Khawf",
+  "def": "Fear of God in Islam is joined with hope and love, and the Prophet taught that God’s mercy outstrips His wrath.",
+  "what": [
+   "The Quran says “fear Me, if you are believers” (3:175), and also “do not despair of the mercy of God” (39:53). The Prophet said that God wrote, before creating the world, “My mercy outstrips My wrath” (Sahih al-Bukhari). Scholars say a believer should be like a bird with two wings, fear and hope."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "taqwa",
+   "ihsan",
+   "forgiveness"
+  ],
+  "articles": [],
+  "aliases": [
+   "Fear",
+   "Fear Of God"
+  ]
+ },
+ {
+  "slug": "khaybar",
+  "title": "Khaybar",
+  "type": "event",
+  "ar": "خيبر",
+  "tr": "Khaybar",
+  "def": "An oasis north of Medina, where Muslims fought a campaign in 628–629 against a fortified group of the Jewish tribe of Banu Nadir and others.",
+  "what": [
+   "After the Treaty of Hudaybiyya the Prophet marched against Khaybar, whose people had joined the coalition against Medina at the Trench. The fortresses fell after weeks of siege, and he let the inhabitants stay and work the date palms for half the produce. The Quran refers to the victory in 48:18–21."
+  ],
+  "misread": "",
+  "sources": [
+   "Reports differ about the terms and the later events, including the poisoned lamb offered to the Prophet and the order of Umar in 641 to remove the Jews of Khaybar from Arabia. Historians read them in the context of the war, and the hostilities arose from the alliance with the enemies of Medina."
+  ],
+  "terms": [
+   "trench-battle-of-the",
+   "hudaybiyya",
+   "jews"
+  ],
+  "articles": [
+   "prophet-died-poisoning"
+  ],
+  "aliases": [
+   "Khaibar",
+   "Khayba"
+  ]
+ },
+ {
+  "slug": "khidr",
+  "title": "Khidr",
+  "type": "person",
+  "ar": "الخضر",
+  "tr": "al-Khiḍr",
+  "def": "A servant of God, named in the Quran only as one of “Our servants” (18:65), whose journey with Moses is told in chapter 18.",
+  "what": [
+   "Moses met “a servant of Ours to whom We had given mercy from Us and taught knowledge from Us” (18:65), and asked to follow him to learn. The man damaged a boat, killed a boy and rebuilt a wall, each for a reason he explained afterwards. Moses could not be patient, and so they parted (18:60–82). The Prophet named him Khidr in a hadith (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "Scholars differ on whether Khidr was a prophet, a saint or an angel, and whether he is alive. The story’s point is that a human being’s knowledge is limited, and that what looks like harm may hold a hidden good."
+  ],
+  "terms": [
+   "moses",
+   "kutub"
+  ],
+  "articles": [
+   "quran-mysteries-in-the-stories"
+  ],
+  "aliases": [
+   "Green One",
+   "Khadir",
+   "Khidhr"
+  ]
+ },
+ {
+  "slug": "killing",
+  "title": "Killing",
+  "type": "topic",
+  "ar": "قتل",
+  "tr": "qatl",
+  "def": "The Quran forbids killing and says that taking one life unjustly is as if one had killed all of humanity.",
+  "what": [
+   "“Whoever kills a person, other than for murder or corruption in the land, it is as if he had killed all people; and whoever saves one, it is as if he had saved all people” (5:32). “Do not kill the soul that God has made sacred except by right” (17:33; 6:151; 25:68). The law of equal retribution (2:178) includes the encouragement to forgive (2:178, 42:40) and blood-money. Women, children and the elderly may not be killed in war (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "Classical jurists required a court and due proof for a death sentence; the Prophet said that the first matters judged on the Day of Judgement will be blood-shed (Sahih al-Bukhari)."
+  ],
+  "terms": [
+   "jihad",
+   "qisas",
+   "justice"
+  ],
+  "articles": [],
+  "aliases": [
+   "Murder",
+   "Homicide",
+   "Retaliation"
+  ]
+ },
+ {
+  "slug": "kindness",
+  "title": "Kindness",
+  "type": "term",
+  "ar": "إحسان",
+  "tr": "iḥsān",
+  "def": "Kindness to parents, kin, neighbours, orphans and the poor, a duty throughout the Quran.",
+  "what": [
+   "“Worship God and associate nothing with Him; be kind to parents, relatives, orphans, the poor, the neighbour near and far, the companion at your side, the traveller, and those your right hands possess” (4:36). The Prophet said: “He who is not merciful to others will not be shown mercy” (Sahih al-Bukhari), and “God is kind and loves kindness in all things” (Sahih Muslim). The Prophet was sent “as a mercy to the worlds” (21:107)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "family",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Mercy",
+   "Compassion",
+   "Rahma"
+  ]
+ },
+ {
+  "slug": "kitab",
+  "title": "Kitab",
+  "type": "term",
+  "ar": "كتاب",
+  "tr": "kitāb",
+  "def": "The word for “book” in Arabic, used for the Quran, for earlier scripture and for God’s record of all things.",
+  "what": [
+   "The Quran is “the Book, in which is no doubt” (2:2). It speaks of God sending scripture to earlier prophets, such as the Torah to Moses and the Gospel to Jesus (3:3–4), and of the “Mother of the Book” (43:4), the source. Believers have faith in the books of God (2:285). The record of deeds is also a kitab (18:49)."
+  ],
+  "misread": "",
+  "sources": [
+   "Some scholars of Arabic think the word came from Aramaic or Akkadian roots; Muslims scholars note that Arabic has borrowed words, as other languages do, and that this does not alter its meaning."
+  ],
+  "terms": [
+   "quran",
+   "injil",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": [
+   "Book",
+   "Kitab Allah",
+   "Kitab Al-Allah"
+  ]
+ },
+ {
+  "slug": "knowledge",
+  "title": "Knowledge",
+  "type": "term",
+  "ar": "علم",
+  "tr": "ʿilm",
+  "def": "Seeking knowledge is a duty in Islam, from the first word of revelation, “Read”.",
+  "what": [
+   "The first revelation was “Read in the name of your Lord who created… who taught by the pen” (96:1–5). “Say: are those who know equal to those who do not know?” (39:9). The Prophet said that seeking knowledge is a duty on every Muslim (Ibn Majah), and that the path to knowledge is a path to Paradise (Sahih Muslim). The Quran asks people to study creation (3:190–191) and to travel to see (29:20)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "reason-and-faith",
+   "quran",
+   "alim"
+  ],
+  "articles": [],
+  "aliases": [
+   "Learning",
+   "Study",
+   "Literacy"
+  ]
+ },
+ {
+  "slug": "kubrawiyya",
+  "title": "Kubrawiyya",
+  "type": "group",
+  "ar": "كبروية",
+  "tr": "Kubrawiyya",
+  "def": "A Sufi order founded by Najm al-Din Kubra (d. 1221) in Central Asia, which is also found among Muslims in China.",
+  "what": [
+   "Najm al-Din Kubra of Khwarazm taught a method of remembrance with visions of colours and the stages of the soul, and died fighting the Mongols at the fall of Khiva. His order spread to Persia, India and China, where Dru Gladney found it small among the Hui."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sufism",
+   "hui"
+  ],
+  "articles": [],
+  "aliases": [
+   "Kubrawi"
+  ]
+ },
+ {
+  "slug": "kufr",
+  "title": "Kufr",
+  "type": "term",
+  "ar": "كفر",
+  "tr": "kufr",
+  "def": "Disbelief, or ingratitude: literally “covering” the truth, in the heart or in deed.",
+  "what": [
+   "“Kafara” means to cover, as a farmer covers seed, and the Quran uses it of rejecting the truth and also of being ungrateful for God’s favours (14:7, 27:40). Kufr in this sense can be of belief or of behaviour. It is not for people to decide in whose heart faith lies: the Prophet warned that whoever calls his brother a disbeliever, it returns on one of them (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "kafir",
+   "iman",
+   "takfir"
+  ],
+  "articles": [],
+  "aliases": [
+   "Kuffar",
+   "Disbelief",
+   "Infidel"
+  ]
+ },
+ {
+  "slug": "kutub",
+  "title": "Kutub",
+  "ar": "كتب",
+  "tr": "Kutub",
+  "def": "The scriptures God revealed: the Torah, the Psalms, the Gospel and the Quran.",
+  "what": [
+   "Belief in the scriptures is one of the six articles of faith, in the hadith of Gabriel (Sahih Muslim). The Quran names the Torah given to Moses (5:44), the Psalms (<em>Zabūr</em>) given to David (4:163), the Gospel given to Jesus, and the scrolls of Abraham and Moses (87:18–19). “We make no distinction between any of His messengers” (2:285)."
+  ],
+  "misread": "That Islam is a rival religion that sets out to cancel Judaism and Christianity.",
+  "sources": [
+   "The Quran presents itself as confirming what came before it and guarding it (5:48), and as the same message from the same God. Muslims do not hold that the earlier prophets taught something else. Their claim is that the message was one, was corrupted or misunderstood in places, and was finally given in a form kept intact."
+  ],
+  "terms": [
+   "injil",
+   "tahrif",
+   "ahl-al-kitab"
+  ],
+  "articles": [
+   "shared-prophets"
+  ],
+  "type": "term",
+  "aliases": []
+ }
+]

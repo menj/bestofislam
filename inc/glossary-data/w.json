@@ -1,0 +1,80 @@
+[
+ {
+  "slug": "wahy",
+  "title": "Wahy",
+  "ar": "وحي",
+  "tr": "Waḥy",
+  "def": "Revelation: God’s communication to His prophets.",
+  "what": [
+   "The Quran names three ways God speaks to a human being: by inspiration, from behind a veil, or by sending a messenger who conveys by His leave what He wills (42:51). Muslims hold that the Quran reached Muhammad through the angel Gabriel (26:192–195), in portions over about twenty-three years (17:106).",
+   "The first revelation came in the cave of Hira, as Aisha related (Sahih al-Bukhari, the first hadith in the collection)."
+  ],
+  "misread": "That Muhammad composed the Quran himself, perhaps from what a teacher told him.",
+  "sources": [
+   "The accusation is old, and the Quran records it: “It is only a human being who teaches him” (16:103). The reply is in the same verse: the language of the man they point to is foreign, while this is clear Arabic. The Quran also says Muhammad had not been reciting any book before it, nor writing one with his own hand (29:48)."
+  ],
+  "terms": [
+   "quran",
+   "sunnah",
+   "kutub"
+  ],
+  "articles": [
+   "who-saw-gabriel"
+  ],
+  "type": "term",
+  "aliases": [
+   "Ilham",
+   "Inspiration",
+   "Revelation"
+  ]
+ },
+ {
+  "slug": "wali",
+  "title": "Wali",
+  "type": "term",
+  "ar": "ولي",
+  "tr": "walī",
+  "def": "A “friend” or protector; and the title of a righteous person close to God.",
+  "what": [
+   "“God is the wali of those who believe” (2:257). “Indeed, the friends of God have no fear, nor will they grieve” (10:62). In the hadith qudsi God says that He loves the servant who draws near with obligatory acts and then with voluntary ones (Sahih al-Bukhari). In law, a wali is also the guardian who acts for a bride."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sufism",
+   "shirk",
+   "intercession"
+  ],
+  "articles": [],
+  "aliases": [
+   "Awliya",
+   "Saint",
+   "Friend Of God"
+  ]
+ },
+ {
+  "slug": "water-cycle",
+  "title": "Water cycle",
+  "type": "topic",
+  "ar": "ماء",
+  "tr": "Māʾ",
+  "def": "The Quran speaks of rain as God’s sign, which gives life to dead land.",
+  "what": [
+   "“It is He who sends down water from the sky, and We bring forth from it plants of every kind” (6:99). “Have you not seen that God sent down water from the sky and led it as springs in the earth?” (39:21). The Quran also compares truth and falsehood to the foam that rises with water (13:17), and says that “We made from water every living thing” (21:30)."
+  ],
+  "misread": "",
+  "sources": [
+   "Classical commentators explained the verses with the knowledge of their time, and some said the springs come from rain, and others from the earth. Muslim scholars generally hold that the verses invite thought, and are not a lesson in hydrology."
+  ],
+  "terms": [
+   "creation",
+   "biology"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hydrology",
+   "Rain",
+   "Water"
+  ]
+ }
+]

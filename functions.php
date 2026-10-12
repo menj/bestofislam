@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.56.0' );
+define( 'BOI_VERSION', '1.57.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -36,6 +36,8 @@ require_once BOI_DIR . '/inc/search-permalinks.php';
 require_once BOI_DIR . '/inc/login.php';
 require_once BOI_DIR . '/inc/login-screen.php';
 require_once BOI_DIR . '/inc/favicon.php';
+require_once BOI_DIR . '/inc/glossary.php';
+require_once BOI_DIR . '/inc/glossary-links.php';
 require_once BOI_DIR . '/inc/error-pages.php';
 
 /**
@@ -134,6 +136,15 @@ function boi_enqueue_assets() {
 			BOI_URI . '/assets/css/article.css',
 			array( 'boi-listicle' ),
 			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/article.css' )
+		);
+	}
+
+	if ( function_exists( 'boi_is_glossary_page' ) && boi_is_glossary_page() ) {
+		wp_enqueue_style(
+			'boi-glossary',
+			BOI_URI . '/assets/css/glossary.css',
+			array( 'boi-article' ),
+			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/glossary.css' )
 		);
 	}
 

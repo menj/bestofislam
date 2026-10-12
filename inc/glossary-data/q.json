@@ -1,0 +1,200 @@
+[
+ {
+  "slug": "qadar",
+  "title": "Qadar",
+  "type": "term",
+  "ar": "قدر",
+  "tr": "qadar",
+  "def": "God’s knowledge and decree of all things, held together with human responsibility for choices.",
+  "what": [
+   "“Indeed, We created all things by measure” (54:49). The Prophet taught that belief in qadar, its good and its bad, is a pillar of faith (Sahih Muslim). Yet the Quran holds each soul responsible: “Whoever does an atom’s weight of good will see it” (99:7). Scholars teach that God’s knowledge does not force anyone’s choices."
+  ],
+  "misread": "",
+  "sources": [
+   "Early thinkers divided over it: the Qadariyya stressed human freedom, and the Jabriyya compulsion. Al-Ash‘ari and al-Maturidi each worked out a middle position."
+  ],
+  "terms": [
+   "iman",
+   "akhira"
+  ],
+  "articles": [
+   "six-articles-of-faith",
+   "women-in-the-prophets-life"
+  ],
+  "aliases": [
+   "Predestination",
+   "Fate",
+   "Destiny",
+   "Free Will",
+   "Qada"
+  ]
+ },
+ {
+  "slug": "qarun",
+  "title": "Qarun",
+  "type": "person",
+  "ar": "قارون",
+  "tr": "Qārūn",
+  "def": "A man of Moses’ people whom the Quran gives as the example of wealth that leads to arrogance.",
+  "what": [
+   "“Qarun was of the people of Moses, but he oppressed them. We gave him such treasures that the keys alone weighed down a band of strong men” (28:76). His people told him, “Do not exult; God does not love the exultant,” but he claimed his wealth by his own knowledge, and God caused the earth to swallow him (28:78–81)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Bible calls him Korah (Numbers 16), where the story differs in detail (rebellion against Moses’ leadership). The Quran takes the story for its own lesson, wealth as a test."
+  ],
+  "terms": [
+   "moses",
+   "israel"
+  ],
+  "articles": [],
+  "aliases": [
+   "Korah",
+   "Karun"
+  ]
+ },
+ {
+  "slug": "qiraat",
+  "title": "Qira’at",
+  "ar": "قراءات",
+  "tr": "Qirā’āt",
+  "def": "The recognised modes of reciting the Quran, taught by an unbroken chain of teachers.",
+  "what": [
+   "Ten readings are recognised as authentic, each traced through a named teacher back to the Prophet. They share the same written skeleton and differ mostly in vowelling and pronunciation. Two are common today: Hafs, from Asim, in most of the Muslim world, and Warsh, from Nafi, in North and West Africa.",
+   "A hadith in Sahih al-Bukhari relates that the Quran was “sent down in seven <em>aḥruf</em>”: Umar objected to how Hisham ibn Hakim was reciting, and the Prophet approved both recitations."
+  ],
+  "misread": "That there are different Qurans, or that the text is unstable.",
+  "sources": [
+   "The readings are variants within one text, and the great majority make no difference to the meaning. A few change a word in a way that adds a shade of meaning, and scholars treat these as additions to understanding rather than contradictions. The same standard text, in Hafs or Warsh, is in every mosque."
+  ],
+  "terms": [
+   "quran",
+   "mushaf",
+   "tafsir"
+  ],
+  "articles": [
+   "manuscript-transmission"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "qisas",
+  "title": "Qisas",
+  "type": "term",
+  "ar": "قصاص",
+  "tr": "qiṣāṣ",
+  "def": "The law of equal retribution for killing and injury, with the strong encouragement to forgive or accept compensation.",
+  "what": [
+   "“O you who believe, retaliation is prescribed for you in the case of the killed” (2:178), followed by the words, “but whoever is forgiven by his brother, then let him follow it with fairness.” In the case of killing, the family of the victim may demand retribution, accept blood-money, or forgive for the sake of God (5:45, 42:40). Courts and proof are required."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "killing",
+   "justice"
+  ],
+  "articles": [],
+  "aliases": [
+   "Lex Talionis"
+  ]
+ },
+ {
+  "slug": "qiyas",
+  "title": "Qiyas",
+  "type": "term",
+  "ar": "قياس",
+  "tr": "qiyās",
+  "def": "Analogical reasoning, by which a ruling in the sources is applied to a new case sharing the same cause.",
+  "what": [
+   "Jurists apply a ruling to a new matter when the reason for the ruling is present there too, for example the ban on wine extended to other intoxicants. It is the fourth source of law for most Sunni schools after the Quran, the Sunna and consensus. The report of Mu‘adh ibn Jabal, who said he would use his own reasoning when sources were silent, is cited as support, although its chain is discussed."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ijma",
+   "ijtihad",
+   "hukm"
+  ],
+  "articles": [],
+  "aliases": [
+   "Analogy"
+  ]
+ },
+ {
+  "slug": "quran",
+  "title": "Quran",
+  "ar": "القرآن",
+  "tr": "al-Qur’ān",
+  "def": "The recited scripture of Islam, revealed to Muhammad and kept in memory and in writing.",
+  "what": [
+   "“Quran” means “recitation”. It has 114 chapters (<em>suras</em>) and is recited in Arabic in prayer. Its first revelation was the command “Read” (96:1). Muslims believe it is God’s word, preserved: “We have sent down the Reminder, and We will guard it” (15:9).",
+   "From the beginning it was kept in two ways at once: memorised by the community and written down. Under Abu Bakr the written leaves were gathered in one place, and under Uthman standard copies were prepared and sent to the main cities."
+  ],
+  "misread": "That the Quran was edited, lost in part or rewritten by Uthman.",
+  "sources": [
+   "Reports of the collection are in Sahih al-Bukhari, which names Zayd ibn Thabit as the scribe. On the manuscripts, a Quran leaf in the University of Birmingham’s collection was radiocarbon dated to between 568 and 645 CE, with a probability of 95.4 per cent, which is within or very near the Prophet’s lifetime. Muslims also point to the unbroken chain of recitation, taught from teacher to student to this day."
+  ],
+  "terms": [
+   "mushaf",
+   "qiraat",
+   "tafsir"
+  ],
+  "articles": [
+   "manuscript-transmission",
+   "uthman-copies",
+   "shared-prophets",
+   "crucifixion-quran"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "quraysh",
+  "title": "Quraysh",
+  "type": "group",
+  "ar": "قريش",
+  "tr": "Quraysh",
+  "def": "The leading tribe of Mecca, guardians of the Kaaba and the tribe of the Prophet.",
+  "what": [
+   "The Quran has a surah named for them, which reminds them of the security of their trade caravans and bids them “worship the Lord of this House” (106:1–4). The Prophet belonged to the clan of Hashim. Most Quraysh opposed him for years and many entered Islam after the conquest of Mecca in 630."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "mecca",
+   "kaaba",
+   "abu-jahl"
+  ],
+  "articles": [
+   "companions-who-started-with-nothing",
+   "questions-about-aisha"
+  ],
+  "aliases": [
+   "Quraish"
+  ]
+ },
+ {
+  "slug": "qurayza",
+  "title": "Qurayza",
+  "type": "group",
+  "ar": "قريظة",
+  "tr": "Qurayẓa",
+  "def": "A Jewish tribe of Medina whose siege and judgement in 627 followed their breach of the pact during the Battle of the Trench.",
+  "what": [
+   "In the siege of the Trench the Banu Qurayza were accused of conspiring with the besieging army against Medina. After the siege, they surrendered and requested that Sa‘d ibn Mu‘adh, their former ally, judge them. Sa‘d ruled by the law of the Torah, and the men who had fought were put to death (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "Historians dispute the number executed, and some modern scholars question details of the account. The Quran refers to the event at 33:26–27. Muslim scholars stress that it was a judgement on treason in wartime, not on a people for their faith."
+  ],
+  "terms": [
+   "trench-battle-of-the",
+   "jews"
+  ],
+  "articles": [],
+  "aliases": [
+   "Banu Qurayza"
+  ]
+ }
+]

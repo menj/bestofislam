@@ -1,0 +1,751 @@
+[
+ {
+  "slug": "caesar",
+  "title": "Caesar",
+  "type": "term",
+  "ar": "قيصر",
+  "tr": "Qayṣar",
+  "def": "The title the Arabs used for the Byzantine emperor, “Caesar of Rome”.",
+  "what": [
+   "In the hadith the Prophet writes to Heraclius as “the great one of the Romans”, and Qaysar is used for the emperor of Constantinople. A hadith in Sahih al-Bukhari says the first army to attack “the city of Caesar” would be forgiven, which Muslim scholars connected with the early sieges of Constantinople."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "byzantines"
+  ],
+  "articles": [
+   "library-of-alexandria"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "caetani-leone",
+  "title": "Caetani, Leone",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "An Italian scholar (1869–1935) whose <em>Annali dell’Islam</em> collected the early Muslim sources in order.",
+  "what": [
+   "Prince Leone Caetani learned several Eastern languages and between 1905 and 1926 published ten volumes of the <em>Annali</em>, a year-by-year record of early Islamic history from the Arabic sources. He is an example of a European scholar who relied on the Muslim sources and treated them critically."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sira",
+   "hadith"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "cair",
+  "title": "CAIR",
+  "type": "group",
+  "ar": "",
+  "tr": "",
+  "def": "An American Muslim civil rights and advocacy organisation founded in 1994.",
+  "what": [
+   "The Council on American-Islamic Relations works on civil rights, media representation and public education on Islam in the United States. It has been praised by some for this work and criticised by others for some of its positions and associations. It is an advocacy group, and it has no religious authority."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ummah"
+  ],
+  "articles": [],
+  "aliases": [
+   "Council On American-Islamic Relations"
+  ]
+ },
+ {
+  "slug": "caliph",
+  "title": "Caliph",
+  "type": "term",
+  "ar": "خليفة",
+  "tr": "Khalīfa",
+  "def": "A successor to the Prophet as leader of the Muslim community; the four rightly guided caliphs were Abu Bakr, Umar, Uthman and Ali.",
+  "what": [
+   "After the Prophet’s death in 632 the community chose Abu Bakr, then Umar (634), Uthman (644) and Ali (656). The Umayyads ruled from Damascus (661–750), the Abbasids from Baghdad (750–1258), and the Ottomans claimed the title until it was abolished in 1924. The Quran uses <em>khalīfa</em> of Adam as “a successor on earth” (2:30), and of David (38:26)."
+  ],
+  "misread": "",
+  "sources": [
+   "The caliphate was not an article of faith for most Muslims, and Muslims differ widely on whether it should be restored."
+  ],
+  "terms": [
+   "abu-bakr",
+   "ali-ibn-abi-talib",
+   "abbasid-caliphate"
+  ],
+  "articles": [
+   "dome-inscriptions",
+   "seven-libraries",
+   "quran-preservation-reddit",
+   "moon-craters"
+  ],
+  "aliases": [
+   "Khalifa",
+   "Khilafa",
+   "Caliphate"
+  ]
+ },
+ {
+  "slug": "canaan",
+  "title": "Canaan",
+  "type": "place",
+  "ar": "",
+  "tr": "",
+  "def": "The land between the Mediterranean and the Jordan; the Quran speaks of “the Holy Land” promised to the Israelites.",
+  "what": [
+   "The Quran does not use the name Canaan for the land. It tells how Moses told his people to enter “the Holy Land that God has assigned to you”, and they refused because it was held by a mighty people (5:20–26). The Bible’s commands to destroy the Canaanites (Deuteronomy 7, 20) are not part of the Quran, whose rules of war forbid killing non-combatants."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "jihad",
+   "moses"
+  ],
+  "articles": [],
+  "aliases": [
+   "Canaanites"
+  ]
+ },
+ {
+  "slug": "cave-of-hira",
+  "title": "Cave of Hira",
+  "type": "place",
+  "ar": "حراء",
+  "tr": "Ḥirāʾ",
+  "def": "The cave on the mountain outside Mecca where the Prophet used to retire and where the first revelation came.",
+  "what": [
+   "Aisha relates in Sahih al-Bukhari that the Prophet used to spend nights in worship in the cave of Hira, and that the angel came to him there and said “Read!” He answered “I cannot read”, and was pressed three times, then the words of 96:1–5 came: “Read in the name of your Lord who created.” He returned trembling to Khadija, who comforted him and took him to her cousin Waraqa."
+  ],
+  "misread": "",
+  "sources": [
+   "The account stands at the beginning of Sahih al-Bukhari and is the basis for the date of the revelation, in the month of Ramadan in about 610. The cave is on the hill known as Jabal al-Nour, a short climb from Mecca."
+  ],
+  "terms": [
+   "wahy",
+   "khadija",
+   "gabriel"
+  ],
+  "articles": [
+   "who-saw-gabriel",
+   "women-in-the-prophets-life"
+  ],
+  "aliases": [
+   "Hira, Mt.",
+   "Mount Hira",
+   "Jabal Al-Nour"
+  ]
+ },
+ {
+  "slug": "cham",
+  "title": "Cham",
+  "type": "group",
+  "ar": "",
+  "tr": "",
+  "def": "A Muslim minority of Cambodia and Vietnam, mostly Shafi’i Sunnis, who suffered greatly under the Khmer Rouge.",
+  "what": [
+   "The Cham are descendants of the people of the old kingdom of Champa, and became Muslim over several centuries. Before 1975 there were roughly 150,000 to 200,000 in Cambodia, and under the Khmer Rouge, who banned their religion and language, a large share were killed or died. Some live in Vietnam, and others have settled in Malaysia."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ummah"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "chess",
+  "title": "Chess",
+  "type": "topic",
+  "ar": "شطرنج",
+  "tr": "Shaṭranj",
+  "def": "A hadith compares playing chess to dyeing one’s hand in the blood and flesh of swine, but scholars have differed on it.",
+  "what": [
+   "Sahih Muslim has a report from Buraydah that whoever plays <em>nardashīr</em> (backgammon) is as one who dyes his hand with swine’s flesh and blood. The word in this hadith refers to backgammon, a dice game. Chess was played in the Muslim world from the seventh century on, and scholars differed: some considered it disliked or forbidden, others lawful if it does not distract from prayers or involve gambling."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "gambling",
+   "fiqh"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "child-marriage",
+  "title": "Child marriage",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran sets no minimum age of marriage but requires maturity (4:6); modern Muslim-majority countries have set minimum ages in law.",
+  "what": [
+   "The Quran speaks of orphans “reaching marriageable age” and of testing their sound judgement before returning their property (4:6). Classical jurists differed: some allowed a father to contract a minor’s marriage, with consummation delayed until she is able, and others held that consent and maturity are required. Reports on Aisha’s age are discussed in her entry."
+  ],
+  "misread": "",
+  "sources": [
+   "Egypt, Turkey, Tunisia, Morocco and others have set a minimum age, usually eighteen, by law, and Muslim scholars have defended such laws as being in line with the aims of sharia, which protect the person’s welfare. Child marriage today is more a matter of poverty and custom than of religion, and exists in non-Muslim societies too."
+  ],
+  "terms": [
+   "aisha-bint-abi-bakr",
+   "age-of-responsibility",
+   "fiqh"
+  ],
+  "articles": [
+   "child-marriage-in-islam"
+  ],
+  "aliases": [
+   "Child Brides"
+  ]
+ },
+ {
+  "slug": "children",
+  "title": "Children",
+  "type": "topic",
+  "ar": "أولاد",
+  "tr": "Awlād",
+  "def": "The Quran forbids infanticide, honours daughters, and asks that children be nursed and provided for.",
+  "what": [
+   "The Quran condemns the pre-Islamic practice of burying baby girls alive: “when the girl buried alive is asked for what sin she was killed” (81:8–9). It says “do not kill your children for fear of poverty; We provide for them and for you” (17:31). Mothers may nurse for two years (2:233). The Prophet said that whoever raises two girls until they reach adulthood will come on the Day of Resurrection beside him, and he held two fingers together (Sahih Muslim)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "adoption",
+   "mothers-and-childbirth",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Daughters",
+   "Infanticide",
+   "Children Of Adam"
+  ]
+ },
+ {
+  "slug": "china",
+  "title": "China",
+  "type": "place",
+  "ar": "",
+  "tr": "",
+  "def": "Muslims have lived in China since the seventh century, and the Hui and Uyghurs are among the largest groups.",
+  "what": [
+   "Arab and Persian traders reached China’s ports in the Tang dynasty, and tradition says Muslims came within the Prophet’s own lifetime. The Abbasid and Tang armies met at the Battle of Talas in 751, the only major clash, and prisoners from it are said to have brought the art of papermaking west. The admiral Zheng He, a Muslim, led the great Ming voyages (1405–1433)."
+  ],
+  "misread": "",
+  "sources": [
+   "A saying “seek knowledge even in China” is often quoted as a hadith, but hadith scholars judge it weak or fabricated. It shows the reputation of China for learning in the early Muslim world."
+  ],
+  "terms": [
+   "ummah",
+   "abbasid-caliphate"
+  ],
+  "articles": [
+   "islam-in-china"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "christians",
+  "title": "Christians",
+  "type": "group",
+  "ar": "نصارى",
+  "tr": "Naṣārā",
+  "def": "The Quran’s name for Christians; it praises their piety and disagrees with their doctrine.",
+  "what": [
+   "The Quran uses <em>Naṣārā</em> (“Nazarenes”) and also “People of the Gospel” (5:47). It says that “the nearest in affection to the believers are those who say ‘we are Christians’, because among them are priests and monks, and they are not arrogant” (5:82). It also says that those who say “God is the third of three” have disbelieved (5:73), and calls them to “a word common between us” (3:64)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Prophet received a Christian delegation from Najran in Medina and, by one report, allowed them to pray in his mosque (Ibn Ishaq). Christians and Muslims agree on Jesus’ virgin birth, miracles and return, and disagree on whether he is God and on the cross."
+  ],
+  "terms": [
+   "ahl-al-kitab",
+   "isa",
+   "injil"
+  ],
+  "articles": [
+   "jesus-not-god",
+   "verses-read-differently",
+   "same-god",
+   "fastest-growing-religion"
+  ],
+  "aliases": [
+   "Christianity",
+   "Nasara",
+   "Nazarenes"
+  ]
+ },
+ {
+  "slug": "christmas",
+  "title": "Christmas",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Muslims honour Jesus’ birth, which the Quran tells in detail, but do not celebrate Christmas as a religious feast; scholars differ on greeting Christians at the season.",
+  "what": [
+   "Chapter 19 tells of Mary’s retreat, her labour under a palm tree and the child’s speech in the cradle (19:16–33), and chapter 3 of the annunciation (3:45–47). Muslims do not hold that Jesus was born on 25 December, a date the early Church adopted later, and the Quran does not give a date."
+  ],
+  "misread": "",
+  "sources": [
+   "Some scholars, such as Ibn Taymiyya, discouraged taking part in other religions’ festivals, while many today, such as the late Yusuf al-Qaradawi, permit kind greetings to Christian neighbours, citing 60:8. The Quran’s injunction to “be kind and just” to those who do not fight Muslims is quoted in support."
+  ],
+  "terms": [
+   "isa",
+   "maryam",
+   "christians"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "churches-and-places-of-worship",
+  "title": "Churches and places of worship",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran lists churches, synagogues and monasteries with mosques as places in which God’s name is much remembered, and which fighting is meant to protect (22:40).",
+  "what": [
+   "“Had God not driven back some people by means of others, monasteries, churches, synagogues and mosques, in which God’s name is much remembered, would have been demolished” (22:40). When Umar entered Jerusalem in 637, the treaty he gave its Christians promised that their churches would not be seized or damaged (as reported by al-Tabari)."
+  ],
+  "misread": "",
+  "sources": [
+   "The classical law restricted the building of new churches in some conditions, and Muslim rulers did not always keep to the ideal, which Muslim scholars today acknowledge. Muslims today often cite 22:40 in calls to protect Christian minorities."
+  ],
+  "terms": [
+   "dhimmi",
+   "jerusalem",
+   "ahl-al-kitab"
+  ],
+  "articles": [
+   "paul-and-the-law",
+   "second-peter",
+   "crusades-5-facts"
+  ],
+  "aliases": [
+   "Churches",
+   "Synagogues",
+   "Monasteries"
+  ]
+ },
+ {
+  "slug": "circumcision",
+  "title": "Circumcision",
+  "type": "term",
+  "ar": "ختان",
+  "tr": "Khitān",
+  "def": "Male circumcision is a practice that most Muslim jurists treat as required or strongly recommended; the Quran does not mention it, and female cutting is not required.",
+  "what": [
+   "A hadith in Sahih al-Bukhari lists circumcision among the acts of <em>fiṭra</em>, the natural way. The schools differ: the Shafi’is and Hanbalis call it obligatory for men, the Hanafis and Malikis a tradition. Jews and Muslims share the practice, which goes back to Abraham."
+  ],
+  "misread": "That Islam requires female genital mutilation.",
+  "sources": [
+   "The Quran says nothing of female cutting. A report supporting it in Abu Dawud is graded weak, and the practice is cultural: it is found among some Muslim and Christian communities in Africa and not in most of the Muslim world. Egypt’s Dar al-Ifta and Al-Azhar scholars issued rulings in 2007 that it is forbidden, because it harms women, and many other scholars have followed."
+  ],
+  "terms": [
+   "fiqh",
+   "hadith",
+   "sharia"
+  ],
+  "articles": [],
+  "aliases": [
+   "Khitan",
+   "Female Circumcision",
+   "FGM"
+  ]
+ },
+ {
+  "slug": "commandments",
+  "title": "Commandments",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "Quran 6:151–153 and 17:22–39 give moral commandments close to the Ten Commandments.",
+  "what": [
+   "The Quran’s list in 6:151–153 begins “do not associate anything with God, be good to your parents, do not kill your children out of poverty, do not approach indecencies, do not kill the soul God has forbidden except by right”, and goes on with honesty in weights, justice in speech and keeping covenants. The list in 17:22–39 adds not to say “uff” to parents, not to be wasteful, and not to walk the earth arrogantly."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran says Moses received tablets containing “guidance and mercy” (7:145, 7:154), and Muslims believe that the Torah’s commandments, in the form God revealed them, correspond to these."
+  ],
+  "terms": [
+   "kutub",
+   "ihsan"
+  ],
+  "articles": [
+   "paul-and-the-law"
+  ],
+  "aliases": [
+   "Ten Commandments"
+  ]
+ },
+ {
+  "slug": "commission-on-scientific-signs",
+  "title": "Commission on Scientific Signs",
+  "type": "group",
+  "ar": "",
+  "tr": "",
+  "def": "A body formed under the Muslim World League to promote the idea that the Quran foretells modern science.",
+  "what": [
+   "Founded in Saudi Arabia in the mid-1980s, it has held conferences and produced books and videos on “scientific miracles” in the Quran and hadith. Its supporters point to what they see as correspondences with embryology and astronomy."
+  ],
+  "misread": "",
+  "sources": [
+   "Muslim scholars are divided. Some welcome it as a sign of the Quran’s truth, and others say the Quran is a book of guidance and should not be tied to the changing claims of science. This site follows the latter caution."
+  ],
+  "terms": [
+   "embryology",
+   "astronomy",
+   "bucaille-maurice"
+  ],
+  "articles": [],
+  "aliases": [
+   "Scientific Signs",
+   "I'jaz"
+  ]
+ },
+ {
+  "slug": "common-phrases",
+  "title": "Common phrases",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The short phrases Muslims say daily: “peace be upon you”, “praise be to God”, “God willing”, “in the name of God”.",
+  "what": [
+   "<em>As-salāmu ʿalaykum</em>, “peace be upon you”, is the greeting, to which one replies “and upon you peace and God’s mercy”. The Quran tells believers to return a greeting with a better one or the same (4:86). <em>Al-ḥamdu li-llāh</em> is “praise be to God”, and <em>astaghfir Allāh</em> “I seek God’s forgiveness”. <em>Jazāk Allāhu khayran</em> is “may God reward you well”. <em>Bi-smi llāh</em>, “in the name of God”, opens each action and all but one chapter of the Quran."
+  ],
+  "misread": "",
+  "sources": [
+   "<em>In shāʾ Allāh</em>, “if God wills”, follows the Quran’s instruction not to say “I will do this tomorrow” without adding “if God wills” (18:23–24). The Prophet taught his Companions to spread the greeting of peace (Sahih Muslim)."
+  ],
+  "terms": [
+   "dhikr",
+   "salah",
+   "istighfar"
+  ],
+  "articles": [],
+  "aliases": [
+   "Alhamadu Lillah",
+   "Astaghfir Allah",
+   "Assalamu Alaikum",
+   "Greetings",
+   "Jazakallah Khair",
+   "In Sha Allah",
+   "Bismillah",
+   "Subhan Allah"
+  ]
+ },
+ {
+  "slug": "companions-of-the-cave",
+  "title": "Companions of the Cave",
+  "type": "group",
+  "ar": "أصحاب الكهف",
+  "tr": "Aṣḥāb al-Kahf",
+  "def": "Young believers who fled persecution and slept in a cave for centuries, in Quran 18:9–26.",
+  "what": [
+   "The Quran tells of youths who took refuge in a cave, saying “our Lord, grant us mercy from Yourself and prepare right guidance for us”. God made them sleep for 309 years (18:25), and on waking they supposed they had slept a day or part of one. The Quran says the number of them is known to few, and that debating it is of no use (18:22)."
+  ],
+  "misread": "",
+  "sources": [
+   "A similar story of the Seven Sleepers of Ephesus was told by Syriac Christians. Muslim scholars say that the story is a true one, which was known among Christians and is told in the Quran for the lesson it carries: God’s power to raise the dead, and that He protects those who hold to faith."
+  ],
+  "terms": [
+   "akhira",
+   "kutub"
+  ],
+  "articles": [
+   "quranic-stories-and-history"
+  ],
+  "aliases": [
+   "Cave, The People Of",
+   "People Of The Cave",
+   "Seven Sleepers"
+  ]
+ },
+ {
+  "slug": "companions-of-the-prophet",
+  "title": "Companions of the Prophet",
+  "type": "group",
+  "ar": "صحابة",
+  "tr": "Ṣaḥāba",
+  "def": "Those who met the Prophet, believed in him, and died as Muslims; the first generation of the community.",
+  "what": [
+   "The Quran says: “God was pleased with the first forerunners among the Muhajirun and the Ansar, and those who followed them in goodness” (9:100), and also with those who pledged allegiance under the tree (48:18). The Prophet said “do not curse my Companions” (Sahih al-Bukhari). Sunnis hold that all were upright as transmitters, and the science of hadith still examines each narrator in detail."
+  ],
+  "misread": "",
+  "sources": [
+   "The Companions are the source of the Quran’s transmission and of the hadith. All the schools agree that their reports need to be examined."
+  ],
+  "terms": [
+   "ansar",
+   "hadith",
+   "isnad"
+  ],
+  "articles": [
+   "quran-preservation-reddit",
+   "who-saw-gabriel",
+   "ezra-and-mary",
+   "al-zutt-allegation"
+  ],
+  "aliases": [
+   "Ashab",
+   "Companions",
+   "Sahaba"
+  ]
+ },
+ {
+  "slug": "conception",
+  "title": "Conception",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Prophet’s sayings describe the child in the womb as written down by an angel, and the Quran affirms that God shapes it.",
+  "what": [
+   "A hadith in Sahih al-Bukhari says that an angel is put in charge of each womb, and asks God if the drop will be male or female, and of the provision and term. The Quran says God forms people “in the wombs as He wills” (3:6)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "embryology",
+   "birth"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "corruption",
+  "title": "Corruption",
+  "type": "topic",
+  "ar": "فساد",
+  "tr": "Fasād",
+  "def": "The Quran uses <em>fasād</em> for corruption of the earth and of society, and warns that wrongdoing brings its own harm (30:41).",
+  "what": [
+   "“Corruption has appeared on land and sea because of what people’s hands have earned, so that He may let them taste some of what they did, that they may return” (30:41). The Quran says that whoever kills a person “not for murder or for corruption in the land” is as one who kills all mankind (5:32). It condemns the powerful who spread corruption (28:4)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "bribery",
+   "ihsan"
+  ],
+  "articles": [
+   "islam-religion-of-peace",
+   "islamic-dilemma",
+   "war-and-killing-in-islam",
+   "quran-mysteries-in-the-stories"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "covenant",
+  "title": "Covenant",
+  "type": "topic",
+  "ar": "عهد",
+  "tr": "ʿAhd",
+  "def": "The Quran commands keeping covenants and treaties, and tells of the covenant God took from the prophets and the Children of Israel.",
+  "what": [
+   "“O you who believe, fulfil your covenants” (5:1). “Fulfil the covenant of God when you have made a covenant, and do not break oaths after confirming them” (16:91). “Fulfil the covenant; the covenant will be asked about” (17:34). God took a covenant from the prophets (3:81) and from the Children of Israel (2:83, 5:12). Treaties with unbelievers are to be kept to their term (9:4)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ummah",
+   "jihad"
+  ],
+  "articles": [
+   "paul-and-the-law",
+   "islam-religion-of-peace",
+   "jizya",
+   "taqiyya-5-myths"
+  ],
+  "aliases": [
+   "Covenant, The",
+   "Treaty",
+   "Mithaq"
+  ]
+ },
+ {
+  "slug": "cow-the-yellow",
+  "title": "Cow, the Yellow",
+  "type": "topic",
+  "ar": "البقرة",
+  "tr": "al-Baqara",
+  "def": "Chapter 2, the longest, named for the story of the yellow cow (2:67–73).",
+  "what": [
+   "Chapter 2 has 286 verses. It contains the Throne Verse (2:255), the verse of no compulsion (2:256), rules on fasting, pilgrimage and debts, and the story of the cow: Moses tells the Israelites to slaughter a cow, and after asking repeatedly about its colour and age they are told it is yellow (2:69). The meat is then used to reveal the identity of a murderer."
+  ],
+  "misread": "",
+  "sources": [
+   "Commentators draw the lesson that the Israelites made a simple command hard by their questioning. The Prophet said that the Quran’s chapter al-Baqara is such that Satan flees from a house in which it is read (Sahih Muslim)."
+  ],
+  "terms": [
+   "quran",
+   "moses"
+  ],
+  "articles": [
+   "quran-mysteries-in-the-stories"
+  ],
+  "aliases": [
+   "The Cow",
+   "Baqara",
+   "Cow, The Yellow"
+  ]
+ },
+ {
+  "slug": "creation",
+  "title": "Creation",
+  "type": "topic",
+  "ar": "خلق",
+  "tr": "Khalq",
+  "def": "The Quran says God created the heavens and the earth in six “days”, and gives “day” a wider sense than twenty-four hours.",
+  "what": [
+   "“He created the heavens and the earth in six days” (7:54, 10:3, 11:7). The Quran says that a day with God may be a thousand years of ours (22:47) or fifty thousand (70:4), so classical and modern commentators have often taken “days” as periods. It says the heavens and the earth were “joined together, and We split them apart” (21:30), which some commentators explain as the separation of rain and earth’s fruit, and some modern writers as a sign of a beginning of the cosmos."
+  ],
+  "misread": "",
+  "sources": [
+   "Muslim scholars hold that the Quran’s account does not set out the mechanics, and that science is free to study how creation unfolded: the Quran itself tells people to “travel through the earth and see how He began creation” (29:20)."
+  ],
+  "terms": [
+   "astronomy",
+   "biology",
+   "quran"
+  ],
+  "articles": [
+   "universe-demands-creator",
+   "moon-craters",
+   "indonesia",
+   "fastest-growing-religion"
+  ],
+  "aliases": [
+   "Cosmology",
+   "Day",
+   "Universe",
+   "Yawm"
+  ]
+ },
+ {
+  "slug": "crescent",
+  "title": "Crescent",
+  "type": "topic",
+  "ar": "هلال",
+  "tr": "Hilāl",
+  "def": "The crescent is a late symbol, not found in the Quran or the first centuries of Islam; Ramadan is begun by sighting the new moon.",
+  "what": [
+   "The Quran says that the new moons are “markers of time for people and for the pilgrimage” (2:189). The early Muslims had plain flags, and the crescent was adopted widely only under the Ottomans, who took it from the city of Constantinople, where it was an emblem of the Byzantines. It appears today on flags and in the name of the Red Crescent."
+  ],
+  "misread": "That the crescent shows Islam worships a moon god.",
+  "sources": [
+   "Muslim worship is directed to God alone, as the Quran says: “do not prostrate to the sun or the moon, but prostrate to God who created them” (41:37). A symbol on a flag adds no doctrine, and the crescent was as much a Christian-Byzantine emblem as a Muslim one."
+  ],
+  "terms": [
+   "allah",
+   "hijri-calendar",
+   "adoration"
+  ],
+  "articles": [
+   "who-is-allah"
+  ],
+  "aliases": [
+   "Crescent Moon Symbol"
+  ]
+ },
+ {
+  "slug": "crucifixion",
+  "title": "Crucifixion",
+  "type": "topic",
+  "ar": "صلب",
+  "tr": "Ṣalb",
+  "def": "The Quran says Jesus was not killed or crucified, “but it was made to appear so to them” (4:157).",
+  "what": [
+   "The Quran says of the Jews of the time: “They did not kill him, nor crucify him, but it appeared so to them… God raised him to Himself” (4:157–158). Commentators differ on how: many say God made another man resemble Jesus, as al-Tabari relates, and others that it was an appearance. The Quran also says that God told Jesus “I will take you and raise you to Myself” (3:55)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran does not say that the crucifixion did not occur in history as a Roman execution, only that Jesus was not killed or crucified. Historians view Jesus’ crucifixion as one of the best-attested events of antiquity, and Muslims respond that the Quran’s information is from God. The article linked here sets out the arguments of both sides."
+  ],
+  "terms": [
+   "isa",
+   "atonement-and-repentance"
+  ],
+  "articles": [
+   "crucifixion-quran",
+   "shared-prophets"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "crusades",
+  "title": "Crusades",
+  "type": "event",
+  "ar": "",
+  "tr": "",
+  "def": "The Latin Christian wars of 1095–1291 to take Jerusalem and the Holy Land; Muslims remember them as a Frankish invasion.",
+  "what": [
+   "Pope Urban II called the First Crusade in 1095, partly in answer to a request from the Byzantine emperor, and the crusaders took Jerusalem in 1099, killing many of its Muslim and Jewish people. The Muslim states were divided at first. Saladin, a Kurdish Muslim ruler, retook Jerusalem in 1187 and allowed most Christians to leave on payment of ransom or to remain as subjects. The last crusader strongholds fell in 1291."
+  ],
+  "misread": "",
+  "sources": [
+   "Muslim writers of the time called the invaders “Franks” and saw the war as one of defence. Historians of both traditions note that Muslims, Jews and Eastern Christians suffered at crusader hands, and that peace and trade also went on between the sides."
+  ],
+  "terms": [
+   "jerusalem",
+   "dhimmi",
+   "jihad"
+  ],
+  "articles": [
+   "crusades-5-facts"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "curses-and-cursing",
+  "title": "Curses and cursing",
+  "type": "topic",
+  "ar": "لعن",
+  "tr": "Laʿn",
+  "def": "The Prophet forbade cursing people, saying he was sent as a mercy and not a curser.",
+  "what": [
+   "The Quran does speak of God’s curse on the liars and wrongdoers (2:161, 11:18). The Prophet said that a believer is not one who curses much (al-Tirmidhi). When he was asked to curse the idolaters, he said: “I was not sent to curse; I was sent only as a mercy” (Sahih Muslim). The Quran also tells believers to repel evil with what is better (41:34)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "aggression"
+  ],
+  "articles": [],
+  "aliases": [
+   "Curses"
+  ]
+ },
+ {
+  "slug": "custom",
+  "title": "Custom",
+  "type": "topic",
+  "ar": "عرف",
+  "tr": "ʿUrf",
+  "def": "Local custom is respected where it agrees with the faith, but the Quran condemns following forefathers blindly.",
+  "what": [
+   "The Quran criticises people who say “we follow what we found our fathers following” (2:170, 5:104) and condemns pagan customs (6:138). It also tells the Prophet to “command what is customary and good” (7:199). The Hanafi and Maliki schools recognise <em>ʿurf</em> as a basis for rulings when it does not conflict with a text."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "sharia",
+   "ijma"
+  ],
+  "articles": [
+   "child-marriage-in-islam",
+   "quran-mysteries-in-the-stories"
+  ],
+  "aliases": [
+   "Customs",
+   "Urf"
+  ]
+ }
+]

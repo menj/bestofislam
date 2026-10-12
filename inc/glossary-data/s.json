@@ -1,0 +1,487 @@
+[
+ {
+  "slug": "safa-and-marwa",
+  "title": "Safa and Marwa",
+  "type": "place",
+  "ar": "الصفا والمروة",
+  "tr": "al-Ṣafā wa-l-Marwa",
+  "def": "Two small hills beside the Kaaba between which pilgrims walk seven times in the Hajj and Umra.",
+  "what": [
+   "The Quran says that “Safa and Marwa are among the signs of God” (2:158). The rite recalls Hagar’s search for water for her infant Ishmael, until the spring of Zamzam appeared, as Ibn Abbas related in Sahih al-Bukhari."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hajj",
+   "ishmael",
+   "abraham"
+  ],
+  "articles": [],
+  "aliases": [
+   "As-Safa",
+   "Safa",
+   "Marwah",
+   "Geographic Locations And History"
+  ]
+ },
+ {
+  "slug": "sahih",
+  "title": "Sahih",
+  "type": "term",
+  "ar": "صحيح",
+  "tr": "ṣaḥīḥ",
+  "def": "“Sound”: the highest grade of a hadith, and the title of the two most trusted hadith collections.",
+  "what": [
+   "A hadith is sahih if its chain is connected through upright and exact narrators, with no hidden defect. The collections of al-Bukhari (d. 870) and Muslim (d. 875), called the Sahihayn, are regarded as the most reliable books after the Quran. Other grades are hasan (good) and da‘if (weak)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "sunnah"
+  ],
+  "articles": [
+   "apostasy-in-islam",
+   "who-saw-gabriel",
+   "al-zutt-allegation",
+   "qibla-change"
+  ],
+  "aliases": [
+   "Sahih Bukhari",
+   "Sahih Muslim",
+   "Sahihayn"
+  ]
+ },
+ {
+  "slug": "salah",
+  "title": "Salah",
+  "type": "term",
+  "ar": "صلاة",
+  "tr": "ṣalāh",
+  "def": "The ritual prayer, performed five times a day, the second pillar of Islam.",
+  "what": [
+   "“Establish prayer; indeed prayer prevents shameful and wrong deeds” (29:45). The five prayers at dawn, noon, afternoon, sunset and night (11:114, 17:78) are said facing the Kaaba, with standing, bowing and prostration, after washing (5:6). The Prophet likened them to a river at one’s door in which one bathes five times a day (Sahih Muslim)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sawm",
+   "hajj",
+   "kaaba",
+   "five-pillars"
+  ],
+  "articles": [
+   "why-five-prayers",
+   "five-pillars-explained",
+   "moon-craters",
+   "qibla-change"
+  ],
+  "aliases": [
+   "Salat",
+   "Prayer",
+   "Namaz",
+   "Five Daily Prayers"
+  ]
+ },
+ {
+  "slug": "salman-al-farisi",
+  "title": "Salman al-Farisi",
+  "type": "person",
+  "ar": "سلمان الفارسي",
+  "tr": "Salmān al-Fārisī",
+  "def": "A Persian Companion who is said to have advised digging the trench around Medina.",
+  "what": [
+   "Salman is reported to have come from Persia in search of the truth, passed through Christian teachers, and found the Prophet in Medina. Though once a slave, he was freed and honoured; the Prophet said, “Salman is of us, the people of the house” (al-Hakim). He proposed the trench at the battle of 627."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "trench-battle-of-the",
+   "companions-of-the-prophet"
+  ],
+  "articles": [
+   "companions-who-started-with-nothing"
+  ],
+  "aliases": [
+   "Salman The Persian"
+  ]
+ },
+ {
+  "slug": "sawm",
+  "title": "Sawm",
+  "type": "term",
+  "ar": "صوم",
+  "tr": "Ṣawm",
+  "def": "Fasting from dawn to sunset in Ramadan, one of the five pillars.",
+  "what": [
+   "“O you who believe, fasting has been prescribed for you as it was prescribed for those before you, that you may become righteous” (2:183). Ramadan is the month in which the Quran was revealed (2:185). Muslims refrain from food, drink and sexual relations from dawn to sunset. The sick, travellers, the elderly, and women who are menstruating, pregnant or nursing may postpone it, and those who cannot fast feed a poor person (2:184)."
+  ],
+  "misread": "",
+  "sources": [
+   "The fast is a private act of worship. In a hadith qudsi God says: “Every deed of the son of Adam is for himself, except fasting; it is for Me and I reward for it” (Sahih al-Bukhari). The Prophet urged breaking the fast promptly, and the evening meal is called <em>iftār</em>. Jesus’ teaching to fast without show (Matthew 6:16–18) is echoed in the hadith."
+  ],
+  "terms": [
+   "zakat",
+   "salah",
+   "hijri-calendar"
+  ],
+  "articles": [
+   "five-pillars-explained"
+  ],
+  "aliases": [
+   "Fasting",
+   "Ramadan",
+   "Iftar",
+   "Suhur",
+   "Siyam"
+  ]
+ },
+ {
+  "slug": "secret-counsels",
+  "title": "Secret counsels",
+  "type": "topic",
+  "ar": "نجوى",
+  "tr": "Najwā",
+  "def": "The Quran forbids plotting in secret for sin and enmity, and allows private counsel for good (58:9).",
+  "what": [
+   "“O you who believe, when you confer in private, do not confer for sin and aggression and disobedience to the Messenger, but confer for righteousness and piety” (58:9). It is addressed to the believers of Medina, where a group of hypocrites had held private meetings to plot against the community."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hypocrites"
+  ],
+  "articles": [],
+  "aliases": [
+   "Conspiracy"
+  ]
+ },
+ {
+  "slug": "self-defence",
+  "title": "Self-defence",
+  "type": "topic",
+  "ar": "دفاع",
+  "tr": "Difāʿ",
+  "def": "The Quran allows defence against attack and tells believers to take precautions, within the limits of justice.",
+  "what": [
+   "“Whoever defends himself after being wronged, there is no blame on him” (42:41), though “forgiving is better” (42:43). Permission to fight was given to “those who are fought, because they were wronged” (22:39). Believers are told to “take your precautions” (4:71) against danger."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "jihad",
+   "aggression",
+   "fitna"
+  ],
+  "articles": [
+   "jizya"
+  ],
+  "aliases": [
+   "Defense",
+   "Defence",
+   "Danger"
+  ]
+ },
+ {
+  "slug": "sharia",
+  "title": "Sharia",
+  "ar": "شريعة",
+  "tr": "Sharīʿa",
+  "def": "The path of God: the ethical and legal way set out in the Quran and the Prophet’s example.",
+  "what": [
+   "The word first meant a path to water, and the Quran uses it for “a clear way” (45:18). Most of it concerns worship, honesty, family and contracts. Scholars also describe its aims: protecting faith, life, reason, family and property.",
+   "It is not a single written code. Rulings are worked out by jurists (see <em>fiqh</em>), and the schools differ on many points."
+  ],
+  "misread": "That sharia means a fixed list of harsh punishments imposed on everyone.",
+  "sources": [
+   "The fixed punishments (<em>ḥudūd</em>) are a small part of the whole and are hedged by strict proof. For adultery the Quran demands four eye-witnesses (24:4, 24:13), and false accusation is itself punished. Jurists held that such penalties are to be avoided where there is doubt. Muslims also differ widely on whether and how a modern state should apply any of it."
+  ],
+  "terms": [
+   "fiqh",
+   "sunnah",
+   "naskh"
+  ],
+  "articles": [
+   "apostasy-in-islam",
+   "sharia-and-hudud",
+   "child-marriage-in-islam"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "shirk",
+  "title": "Shirk",
+  "ar": "شرك",
+  "tr": "Shirk",
+  "def": "Associating partners with God: giving to anything in creation what belongs to God alone.",
+  "what": [
+   "Shirk means “partnership”. It is the one sin the Quran says God does not forgive without repentance (4:48), and Luqman tells his son that it is “a great injustice” (31:13). The Prophet listed it first among the gravest sins (Sahih al-Bukhari).",
+   "The word covers worshipping idols, but also treating wealth, status or one’s own desires as a rival to God in the heart."
+  ],
+  "misread": "That every non-Muslim is condemned as a pagan.",
+  "sources": [
+   "The Quran itself separates the categories. It speaks of “those who disbelieved among the People of the Book and the polytheists” as two groups (98:1), and it calls Jews and Christians by their own name, People of the Book. Classical scholars discussed at length whether and how Trinitarian belief falls under shirk; there was no single ruling that lumped everyone together."
+  ],
+  "terms": [
+   "tawhid",
+   "kafir",
+   "ahl-al-kitab",
+   "pre-islamic-arab-deities"
+  ],
+  "articles": [
+   "same-god",
+   "indonesia",
+   "who-is-allah"
+  ],
+  "type": "term",
+  "aliases": [
+   "Deities",
+   "Idolatry",
+   "Idolaters",
+   "Mushrik",
+   "Mushrikun",
+   "Polytheism",
+   "Association"
+  ]
+ },
+ {
+  "slug": "shooting-stars-and-the-jinn",
+  "title": "Shooting stars and the jinn",
+  "type": "topic",
+  "ar": "شهب",
+  "tr": "Shuhub",
+  "def": "The Quran says that jinn used to listen at the heavens and now find guards and flames (72:8–9).",
+  "what": [
+   "“We used to sit in places in it to listen, but whoever listens now finds a flame lying in wait” (72:9; also 15:17–18, 37:6–10, 67:5). Commentators differ on what is meant: some take it as a literal driving off of eavesdropping jinn by meteors; others take it as a figure for the end of such contact after revelation came."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "jinn",
+   "angels"
+  ],
+  "articles": [],
+  "aliases": [
+   "Communications",
+   "Shihab"
+  ]
+ },
+ {
+  "slug": "shuayb-and-midian",
+  "title": "Shuayb and Midian",
+  "type": "prophet",
+  "ar": "شعيب",
+  "tr": "Shuʿayb",
+  "def": "Shuayb, the prophet of Midian, sent to a people who cheated in trade; the “Companions of the Thicket” are linked to them.",
+  "what": [
+   "Shuayb told the people of Midian to “give full measure and weight and do not defraud people of their things, and do not spread corruption on the earth” (11:84–85; 7:85). They rejected him and were seized by an earthquake (7:91). The “Companions of the Thicket” (<em>aṣḥāb al-ayka</em>, 26:176–191) are described in the same terms, and some commentators think they were another branch of the same people."
+  ],
+  "misread": "",
+  "sources": [
+   "Moses’ marriage in Midian, to the daughter of an old man, is told in 28:22–28, and Muslim tradition has often named him Shuayb. Many scholars say the Bible’s Jethro is the same man, though the Quran does not say so."
+  ],
+  "terms": [
+   "moses",
+   "trade-and-business"
+  ],
+  "articles": [],
+  "aliases": [
+   "Midian",
+   "Madyan",
+   "Dwellers In The Woods",
+   "Jethro",
+   "Companions Of The Thicket"
+  ]
+ },
+ {
+  "slug": "shura",
+  "title": "Shura",
+  "type": "term",
+  "ar": "شورى",
+  "tr": "Shūrā",
+  "def": "Mutual consultation in decisions of the community, praised in the Quran (42:38).",
+  "what": [
+   "The Quran praises believers “whose affair is a matter of consultation among themselves” (42:38) and tells the Prophet: “consult them in the matter” (3:159), though he is the one chosen. Abu Bakr, Umar and Uthman were each chosen by a form of consultation. Modern scholars differ on how consultation relates to elected assemblies."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "caliph",
+   "ummah"
+  ],
+  "articles": [
+   "indonesia",
+   "war-and-killing-in-islam"
+  ],
+  "aliases": [
+   "Government",
+   "Consultation"
+  ]
+ },
+ {
+  "slug": "sira",
+  "title": "Sira",
+  "ar": "سيرة",
+  "tr": "Sīra",
+  "def": "The biography of the Prophet Muhammad, as written by early Muslim historians.",
+  "what": [
+   "The earliest full life is that of Ibn Ishaq (d. about 767), which survives through the edition of Ibn Hisham (d. 833). Others include al-Waqidi and Ibn Sa’d. These are narrative histories, which draw on hadith but are not collected to the same standard."
+  ],
+  "misread": "That every story in the biography has the same authority as the Quran or a sound hadith.",
+  "sources": [
+   "Classical scholars distinguished between what they accepted in law and creed, where the standard was strict, and what they accepted in historical narrative, where it was looser. A claim about the Prophet that rests on a weak or late report should be weighed as such. This is a method Muslim scholars used, and one that readers on this site are invited to apply."
+  ],
+  "terms": [
+   "hadith",
+   "sunnah",
+   "hijra"
+  ],
+  "articles": [
+   "prophet-died-poisoning",
+   "companions-who-started-with-nothing",
+   "women-in-the-prophets-life"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "slavery-and-concubinage",
+  "title": "Slavery and concubinage",
+  "type": "topic",
+  "ar": "رق",
+  "tr": "Riqq",
+  "def": "The Quran regulated an existing institution and urged freeing slaves; Muslim scholars today hold that slavery is forbidden.",
+  "what": [
+   "The Quran speaks of “those whom your right hands possess” (4:3, 23:6) and allowed relations with slave-women within limits. At the same time it made freeing slaves an act of atonement for killing by mistake (4:92), for broken oaths (5:89) and for a type of divorce oath (58:3); it counts it among the righteous deeds (2:177, 90:13), and sets aside a share of zakat for it (9:60). It tells owners to grant a contract of manumission to slaves who ask for it (24:33). The Prophet freed his own slaves and told Muslims that the one who frees a believing slave will be freed from Hell (Sahih al-Bukhari)."
+  ],
+  "misread": "That Islam endorses slavery and the sexual use of captives today.",
+  "sources": [
+   "Slavery was found throughout the world, and Islam’s legal rules limited and then closed its sources. In 2014 over a hundred Muslim scholars wrote to the leader of ISIS that slavery has been abolished by consensus, and cannot be reinstated. Saudi Arabia and Mauritania were among the last states to end it, in 1962 and 1981."
+  ],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "diya"
+  ],
+  "articles": [
+   "morality-without-god",
+   "slavery-in-islam",
+   "companions-who-started-with-nothing"
+  ],
+  "aliases": [
+   "Concubine",
+   "Slavery",
+   "Slaves",
+   "Ma Malakat Aymanukum"
+  ]
+ },
+ {
+  "slug": "solomon",
+  "title": "Solomon",
+  "type": "prophet",
+  "ar": "سليمان",
+  "tr": "Sulaymān",
+  "def": "Solomon, son of David, honoured in the Quran as a prophet-king with power over the winds, the jinn and the birds.",
+  "what": [
+   "God gave Solomon knowledge and the “speech of the birds” (27:16), the wind subdued to him (21:81), and jinn who worked for him, “every builder and diver” (38:37). He answered the Queen of Sheba’s kingdom with a letter beginning “in the name of God, the Merciful, the Compassionate” (27:30), and the Queen believed (27:44). When he died, only the creeping of a worm on his staff showed the jinn that he was gone (34:14)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran rejects the claim that Solomon practised magic: “Solomon did not disbelieve, but the devils disbelieved, teaching people magic” (2:102). It presents him as one who thanked God and prayed that he be among the righteous."
+  ],
+  "terms": [
+   "david",
+   "jinn",
+   "babel"
+  ],
+  "articles": [
+   "islam-in-china",
+   "scholars-who-shaped-islamic-study"
+  ],
+  "aliases": [
+   "Sulayman",
+   "Builders",
+   "Divers"
+  ]
+ },
+ {
+  "slug": "spoils-of-war",
+  "title": "Spoils of war",
+  "type": "topic",
+  "ar": "غنيمة",
+  "tr": "Ghanīma",
+  "def": "The Quran’s rules on property taken in war, with a fifth for charity and a rule against its staying among the rich.",
+  "what": [
+   "Chapter 8 (“al-Anfal”, the spoils) begins with the dispute after Badr and puts the spoils in the hands of God and the Messenger (8:1). A fifth goes to God, the Messenger, relatives, orphans, the poor and the wayfarer (8:41). Of property that comes without fighting, the Quran says it is so “that it may not circulate among the rich of you” (59:7)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "badr",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Booty",
+   "Anfal",
+   "Fay"
+  ]
+ },
+ {
+  "slug": "sufism",
+  "title": "Sufism",
+  "type": "term",
+  "ar": "تصوف",
+  "tr": "taṣawwuf",
+  "def": "The inner, devotional dimension of Islam, centred on remembrance of God and purification of the heart.",
+  "what": [
+   "Sufis take as their model the hadith of ihsan, to worship God as if you see Him (Sahih Muslim). The early ascetics and teachers such as al-Hasan al-Basri, al-Junayd and al-Ghazali stressed the law and inward sincerity, and brotherhoods (tariqas) later spread across Africa and Asia. Practices include dhikr, the repeated remembrance of God."
+  ],
+  "misread": "",
+  "sources": [
+   "Some scholars criticise practices such as saint-veneration as innovation, and others defend them. Al-Ghazali’s Revival of the Religious Sciences is the classic attempt to unite law and heart."
+  ],
+  "terms": [
+   "ihsan",
+   "junayd-al-baghdadi",
+   "al-ghazali"
+  ],
+  "articles": [
+   "moon-craters"
+  ],
+  "aliases": [
+   "Sufi",
+   "Tasawwuf",
+   "Tariqa",
+   "Dervish"
+  ]
+ },
+ {
+  "slug": "sunnah",
+  "title": "Sunnah",
+  "ar": "سنة",
+  "tr": "Sunna",
+  "def": "The Prophet’s example: his way of acting, which Muslims follow beside the Quran.",
+  "what": [
+   "The Quran says that in the Messenger of God there is a good example (33:21), and commands obedience to him (4:59, 59:7). Much of how Muslims practise comes from this: the Quran commands prayer and charity, and the sunnah shows how the prayer is performed and what share is due as zakat.",
+   "The sunnah is known mostly through hadith, but the two are not the same: the sunnah is the practice, and the hadith are the reports of it."
+  ],
+  "misread": "That Muslims follow hadith in place of the Quran.",
+  "sources": [
+   "The Quran is the first source, and the sunnah follows it; no sound report can overrule a clear statement of the Quran. The Quran itself directs readers to the Prophet to explain it, and a body of practice kept by the whole community, such as the number of daily prayers, is older and more widely attested than any individual report."
+  ],
+  "terms": [
+   "hadith",
+   "sharia",
+   "sira"
+  ],
+  "articles": [
+   "why-five-prayers",
+   "ramadan-last-ten-nights"
+  ],
+  "type": "term",
+  "aliases": []
+ }
+]

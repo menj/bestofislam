@@ -1,0 +1,103 @@
+[
+ {
+  "slug": "umar-ibn-al-khattab",
+  "title": "Umar ibn al-Khattab",
+  "type": "person",
+  "ar": "عمر بن الخطاب",
+  "tr": "ʿUmar ibn al-Khaṭṭāb",
+  "def": "The second caliph (r. 634–644), known for justice, who expanded the state from Egypt to Persia.",
+  "what": [
+   "Umar accepted Islam in Mecca and strengthened the early community. As caliph he took Jerusalem, set up courts and the diwan, and counted the calendar from the Hijra. A famous report has him walking at night to see that the poor were fed. He was killed by a Persian slave in 644. The Prophet called him “al-Faruq”, the one who separates truth from falsehood."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "caliph",
+   "abu-bakr",
+   "jerusalem"
+  ],
+  "articles": [
+   "sharia-and-hudud",
+   "women-in-the-prophets-life",
+   "fate-and-free-will",
+   "crusades-5-facts"
+  ],
+  "aliases": [
+   "Umar",
+   "Omar",
+   "Al-Faruq"
+  ]
+ },
+ {
+  "slug": "ummah",
+  "title": "Ummah",
+  "ar": "أمة",
+  "tr": "Umma",
+  "def": "The community of Muslims, united by faith across nations and cultures.",
+  "what": [
+   "The Quran calls the Muslims a “middle” or balanced community (2:143), and says that “this community of yours is one community” (21:92). A hadith in Sahih al-Bukhari compares the believers, in their mutual love and mercy, to one body: if one part suffers, the rest respond with sleeplessness and fever.",
+   "At the same time the Quran affirms diversity: peoples and tribes were made so that they should come to know one another, and the most honoured is the most God-conscious (49:13)."
+  ],
+  "misread": "That the ummah is a political bloc seeking to dominate the world.",
+  "sources": [
+   "The ummah is a community of faith and ethics. Muslims live in states of every kind and have fought and allied with one another and with non-Muslims for every reason. The word is also used in the Quran for other peoples with their own prophets (10:47), which shows it is not a political claim."
+  ],
+  "terms": [
+   "taqwa",
+   "dhimmi",
+   "hijra"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "ummi",
+  "title": "Ummi",
+  "type": "term",
+  "ar": "أمي",
+  "tr": "Ummī",
+  "def": "The Prophet is called <em>ummī</em>, “unlettered”, and the Quran uses <em>ummiyyūn</em> for the unlettered and for gentiles.",
+  "what": [
+   "“Those who follow the Messenger, the unlettered prophet” (7:157). The Quran tells the Prophet: “You did not recite any book before it, nor write it with your right hand; otherwise those who follow falsehood would have doubted” (29:48). The Prophet said: “We are an unlettered nation; we do not write or calculate” (Sahih al-Bukhari), speaking of the Arabs. In 3:75 some of the People of the Book say “there is no blame on us in regard to the <em>ummiyyīn</em>”, a term for those who are not Jews."
+  ],
+  "misread": "That the Prophet could not have known the stories of earlier prophets.",
+  "sources": [
+   "Muslims see the Prophet’s unlettered state as part of the sign of the Quran: it was not a work of a scholar. Some scholars say <em>ummī</em> means “from the Mother of Cities”, Mecca, or “of the nations”, and the sense is not disputed that he had no formal training in scripture."
+  ],
+  "terms": [
+   "wahy",
+   "quran",
+   "ahl-al-kitab"
+  ],
+  "articles": [],
+  "aliases": [
+   "Gentiles",
+   "Ummiyyin",
+   "Illiterate, Muhammad",
+   "Unlettered"
+  ]
+ },
+ {
+  "slug": "umrah",
+  "title": "Umrah",
+  "type": "term",
+  "ar": "عمرة",
+  "tr": "ʿumra",
+  "def": "The lesser pilgrimage, which can be made at any time of year.",
+  "what": [
+   "The rites are ihram, tawaf of the Kaaba, sa‘i between Safa and Marwa and shaving or trimming the hair. Unlike Hajj it is not tied to a date, and is highly recommended; the Prophet said that one umrah to the next expiates what is between (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hajj",
+   "ihram",
+   "kaaba"
+  ],
+  "articles": [],
+  "aliases": [
+   "Lesser Pilgrimage"
+  ]
+ }
+]

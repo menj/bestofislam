@@ -1,0 +1,611 @@
+[
+ {
+  "slug": "fables-and-legends",
+  "title": "Fables and legends",
+  "type": "topic",
+  "ar": "إسرائيليات",
+  "tr": "Isrāʾīliyyāt",
+  "def": "Muslim scholars separate the Quran’s own stories from the later tales, many from Jewish and Christian lore, that entered commentaries (<em>isrāʾīliyyāt</em>).",
+  "what": [
+   "The commentaries of the first centuries often add detail to the Quran’s stories from what was told by Jews and Christians who became Muslims. The Prophet is reported to have said: “Narrate from the Children of Israel; there is no harm” (Sahih al-Bukhari), and also “do not believe the People of the Book and do not disbelieve them” (Sahih al-Bukhari)."
+  ],
+  "misread": "That Islam teaches every fable that appears in Muslim books.",
+  "sources": [
+   "Ibn Kathir and Ibn Taymiyya set the rule: accept only what agrees with the Quran and sound hadith, reject what contradicts them, and suspend judgement on the rest. A report in Sahih al-Bukhari of a monkey stoned for adultery is a saying of a follower, Amr ibn Maymun, and not of the Prophet, and many scholars have criticised it. The Quran’s own accounts are brief and give no such details."
+  ],
+  "terms": [
+   "tafsir",
+   "hadith",
+   "ant"
+  ],
+  "articles": [],
+  "aliases": [
+   "Fables",
+   "Isra'iliyyat",
+   "Myths"
+  ]
+ },
+ {
+  "slug": "fahisha",
+  "title": "Fahisha",
+  "type": "term",
+  "ar": "فاحشة",
+  "tr": "fāḥisha",
+  "def": "Shameful and indecent conduct, and especially unlawful sexual relations, which the Quran forbids.",
+  "what": [
+   "God forbids “shameful deeds, whether open or hidden” (7:33), and prayer “prevents shameful and wrong deeds” (29:45). For adultery the Quran requires proof by four eyewitnesses (4:15, 24:4) and punishes the one who accuses without proof with eighty lashes (24:4). Repentance and amendment are accepted (24:5, 4:16)."
+  ],
+  "misread": "",
+  "sources": [
+   "The verses on punishment in 4:15–16 and 24:2 are read by jurists as stages of the law, and the very high standard of proof means that in practice conviction on witnesses alone is rare. The Prophet told people to conceal what they could, and to avoid suspicion."
+  ],
+  "terms": [
+   "adultery",
+   "atonement-and-repentance",
+   "hudud"
+  ],
+  "articles": [
+   "homosexuality-in-islam"
+  ],
+  "aliases": [
+   "Immorality",
+   "Immoral",
+   "Lewdness",
+   "Indecency"
+  ]
+ },
+ {
+  "slug": "fal-and-istikhara",
+  "title": "Fal and istikhara",
+  "type": "topic",
+  "ar": "استخارة",
+  "tr": "Istikhāra",
+  "def": "Islam forbids divination, but teaches the prayer of istikhara to ask God’s guidance in a decision.",
+  "what": [
+   "The prayer of istikhara was taught by the Prophet: two units of prayer followed by a supplication, “O God, if You know that this matter is good for me in my religion and my life and the end of my affair, then decree it for me…” (Sahih al-Bukhari). It is a request for guidance, and not a way of foretelling the future."
+  ],
+  "misread": "",
+  "sources": [
+   "Opening the Quran at random to predict the outcome of a venture, a custom of some, is disliked by most scholars as an innovation, and the Prophet said that whoever goes to a diviner and believes him has disbelieved in what was revealed to Muhammad (Abu Dawud)."
+  ],
+  "terms": [
+   "dua",
+   "divination-and-the-unseen",
+   "bidah"
+  ],
+  "articles": [],
+  "aliases": [
+   "Fal",
+   "Istihkara",
+   "Istikhara"
+  ]
+ },
+ {
+  "slug": "family",
+  "title": "Family",
+  "type": "topic",
+  "ar": "أسرة",
+  "tr": "Usra",
+  "def": "The Quran stresses ties of kinship, obedience to parents and mercy to children, and speaks of families reunited in Paradise (13:23).",
+  "what": [
+   "“Fear God, in whose name you ask one another, and the wombs (kinship ties)” (4:1). The Quran says that the righteous will enter gardens of Eden “with whoever was righteous among their parents, spouses and offspring” (13:23, 40:8). The Prophet said that the one who cuts the ties of kinship will not enter Paradise (Sahih al-Bukhari, Sahih Muslim)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "children",
+   "marriage"
+  ],
+  "articles": [],
+  "aliases": [
+   "Kinship",
+   "Silat Al-Rahm"
+  ]
+ },
+ {
+  "slug": "faqir",
+  "title": "Faqir",
+  "type": "term",
+  "ar": "فقير",
+  "tr": "Faqīr",
+  "def": "A poor person; the Quran uses it for those in need (9:60), and the term is also used of Sufi ascetics.",
+  "what": [
+   "The Quran lists the poor (<em>fuqarāʾ</em>) first among those who may receive zakat (9:60), and says that “you are the ones in need of God, and God is the Rich” (35:15). In Sufi usage <em>faqīr</em> means one who owns nothing before God."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "zakat",
+   "sufism"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "fatiha",
+  "title": "Fatiha",
+  "type": "term",
+  "ar": "الفاتحة",
+  "tr": "al-Fātiḥa",
+  "def": "The opening chapter of the Quran, recited in every unit of the prayer.",
+  "what": [
+   "Its seven verses begin “In the name of God, the Merciful, the Compassionate. Praise be to God, Lord of the worlds” and end with the prayer “guide us to the straight path, the path of those You have favoured, not of those who earn Your anger, nor of those who go astray” (1:1–7). The Prophet said that there is no prayer for one who does not recite it (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "Many commentators identified “those who earn anger” and “those who go astray” with Jews and Christians, from a hadith reported in al-Tirmidhi. Others, including many modern scholars, take the phrases as describing anyone who knows the truth and rejects it, or who strays from it without knowing, whatever his community."
+  ],
+  "terms": [
+   "salah",
+   "quran",
+   "amen"
+  ],
+  "articles": [
+   "islam-religion-of-peace",
+   "end-of-time",
+   "fate-and-free-will"
+  ],
+  "aliases": [
+   "Fatihah",
+   "The Opening",
+   "Umm Al-Kitab"
+  ]
+ },
+ {
+  "slug": "fatima",
+  "title": "Fatima",
+  "type": "person",
+  "ar": "فاطمة",
+  "tr": "Fāṭima",
+  "def": "The Prophet’s youngest daughter, wife of Ali and mother of Hasan and Husayn.",
+  "what": [
+   "Fatima (d. 632) was the only one of the Prophet’s children to survive him, dying about six months after him. The Prophet said that she is “part of me” (Sahih al-Bukhari) and “the leader of the women of Paradise” (al-Tirmidhi)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ali-ibn-abi-talib",
+   "ahl-al-bayt"
+  ],
+  "articles": [
+   "women-in-the-prophets-life"
+  ],
+  "aliases": [
+   "Fatima Bint Muhammad",
+   "Zahra"
+  ]
+ },
+ {
+  "slug": "fatra",
+  "title": "Fatra",
+  "type": "event",
+  "ar": "فترة",
+  "tr": "Fatra",
+  "def": "A pause in revelation after the first revelations; some reports of the Prophet’s distress at that time are not from Aisha.",
+  "what": [
+   "Revelation paused for a period after the first revelation at Hira, then resumed with chapter 74. The long report in Sahih al-Bukhari from Aisha ends with a sentence added by the narrator al-Zuhri, who says it reached him that the Prophet in his grief would go to the mountain tops to throw himself off."
+  ],
+  "misread": "That Muhammad tried to kill himself.",
+  "sources": [
+   "Hadith scholars such as Ibn Hajar point out that this sentence is al-Zuhri’s, “it has reached us”, and not part of Aisha’s account, so that it has no chain to the Prophet. The sound part of the report describes his fear and the comfort of Khadija, who said: “God will never disgrace you, for you keep family ties, bear the burdens of the weak and help in calamity.”"
+  ],
+  "terms": [
+   "wahy",
+   "khadija",
+   "hadith"
+  ],
+  "articles": [
+   "who-saw-gabriel"
+  ],
+  "aliases": [
+   "Fatrah",
+   "Pause In Revelation"
+  ]
+ },
+ {
+  "slug": "fatwa",
+  "title": "Fatwa",
+  "type": "term",
+  "ar": "فتوى",
+  "tr": "Fatwā",
+  "def": "A legal opinion given by a qualified scholar (<em>muftī</em>) in answer to a question; it is not binding.",
+  "what": [
+   "A fatwa states what a scholar judges the sources to require in a case. A questioner may take it to another scholar, and a ruling by one scholar can be opposed by another. In many countries an official mufti issues them, and in all of them the ruling is only as strong as its reasoning."
+  ],
+  "misread": "",
+  "sources": [
+   "Many Muslim scholars and authorities rejected it, saying that a sentence cannot be passed without a trial and a hearing, and that Islamic law does not allow Muslims to kill abroad on a decree from a ruler."
+  ],
+  "terms": [
+   "fiqh",
+   "ijtihad",
+   "blasphemy"
+  ],
+  "articles": [
+   "apostasy-in-islam"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "fidya",
+  "title": "Fidya",
+  "type": "term",
+  "ar": "فدية",
+  "tr": "Fidya",
+  "def": "A compensation, such as feeding the poor, in place of a fast or for a failure in the pilgrimage.",
+  "what": [
+   "The Quran says that those who cannot fast owe “a ransom: the feeding of a poor person” (2:184), and sets compensation for certain violations of the state of pilgrimage: fasting, almsgiving or a sacrifice (2:196). Compensation of this kind is also required for broken oaths (5:89)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sawm",
+   "hajj",
+   "zakat"
+  ],
+  "articles": [
+   "slavery-in-islam"
+  ],
+  "aliases": [
+   "Fidayah",
+   "Expiation"
+  ]
+ },
+ {
+  "slug": "fig-and-olive",
+  "title": "Fig and olive",
+  "type": "topic",
+  "ar": "تين",
+  "tr": "Tīn",
+  "def": "Chapter 95, “The Fig”, swears by the fig and the olive, and by Mount Sinai and the safe city of Mecca.",
+  "what": [
+   "“By the fig and the olive, and Mount Sinai, and this secure city” (95:1–3). The oaths are by places of prophets: the fig and olive lands of Syria-Palestine, where Jesus lived, Sinai, where Moses spoke with God, and Mecca. The chapter goes on to say that humanity was created in “the best form” (95:4)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "quran",
+   "moses"
+  ],
+  "articles": [
+   "natural-world-verses"
+  ],
+  "aliases": [
+   "Fig",
+   "At-Tin",
+   "Olive"
+  ]
+ },
+ {
+  "slug": "fighting",
+  "title": "Fighting",
+  "type": "topic",
+  "ar": "قتال",
+  "tr": "Qitāl",
+  "def": "The Quran’s rules on fighting are limited: against those who attack, in defence, with justice, and ending when they stop.",
+  "what": [
+   "Permission to fight was given after years of persecution, to those who are fought, because they were wronged (22:39), and it is limited: “fight in the way of God those who fight you, and do not transgress” (2:190). If the enemy inclines to peace, make peace (8:61). “If they withdraw from you and do not fight you and offer you peace, God has given you no way against them” (4:90). The “sword verse” (9:5) is about those who broke a treaty, and it is followed by 9:6, which says that if a polytheist asks for protection, he must be given it."
+  ],
+  "misread": "That the hadith “I was ordered to fight the people until they say there is no god but God” orders the killing of all non-Muslims.",
+  "sources": [
+   "Scholars such as al-Nawawi and Ibn Hajar explain that “the people” in the report are the idolaters of Arabia, who had attacked the Muslims, and not Jews, Christians or people at peace; the Prophet made treaties with them and took the jizya from the People of the Book. Verses on fighting are tied to their occasions, as asbab al-nuzul explains. The Prophet forbade killing women, children and monks."
+  ],
+  "terms": [
+   "jihad",
+   "asbab-al-nuzul",
+   "fitna"
+  ],
+  "articles": [
+   "islam-religion-of-peace",
+   "kharijites-and-takfir",
+   "war-and-killing-in-islam"
+  ],
+  "aliases": [
+   "Sword Verse",
+   "Sword",
+   "Fighting Unbelievers"
+  ]
+ },
+ {
+  "slug": "fingerprints",
+  "title": "Fingerprints",
+  "type": "topic",
+  "ar": "بنان",
+  "tr": "Banān",
+  "def": "Verse 75:4 says God can restore the very fingertips of a person on the Day of Judgement.",
+  "what": [
+   "“Does man think that We will not assemble his bones? Yes, We are able to restore in perfect order even his fingertips (<em>banān</em>)” (75:3–4). The translations say “fingertips”. Some modern Muslim writers have read it as a reference to fingerprints, which were not used in identification until the nineteenth century."
+  ],
+  "misread": "",
+  "sources": [
+   "The verse’s point is that God’s power reaches the finest detail of the body. Many scholars prefer the plain sense and do not insist on the fingerprint reading."
+  ],
+  "terms": [
+   "akhira",
+   "commission-on-scientific-signs"
+  ],
+  "articles": [
+   "quran-science-claims-graded"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "fiqh",
+  "title": "Fiqh",
+  "ar": "فقه",
+  "tr": "Fiqh",
+  "def": "Islamic jurisprudence: the scholars’ work of understanding and applying the sharia.",
+  "what": [
+   "Fiqh means “understanding”, and the Quran uses the idea of seeking understanding in the religion (9:122). The four main Sunni schools, Hanafi, Maliki, Shafi’i and Hanbali, and other schools such as the Ja’fari and Ibadi, each reached rulings by a method of reading the sources, and they often disagree."
+  ],
+  "misread": "That Islamic law is one rulebook with one answer on each question.",
+  "sources": [
+   "Disagreement among the schools is normal and long recognised. A ruling is a scholar’s judgement of what the sources require, offered with its evidence, and a Muslim chooses a qualified scholar to follow. Many things people call “Islamic law” in the news are a particular government’s choice among such opinions, or custom, not the sources themselves."
+  ],
+  "terms": [
+   "sharia",
+   "sunnah",
+   "tafsir"
+  ],
+  "articles": [
+   "sharia-and-hudud",
+   "why-no-interest"
+  ],
+  "type": "term",
+  "aliases": []
+ },
+ {
+  "slug": "fire",
+  "title": "Fire",
+  "type": "topic",
+  "ar": "نار",
+  "tr": "Nār",
+  "def": "The Quran uses fire as a sign of God’s provision (56:71) and as the image of Hell.",
+  "what": [
+   "“Have you seen the fire that you kindle? Is it you who made its tree grow, or are We the grower? We made it a reminder and a benefit for the wayfarers” (56:71–73). The Quran also says that the Fire is fuelled with “people and stones” (2:24), and calls Hell “the Fire”."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hell",
+   "creation"
+  ],
+  "articles": [
+   "library-of-alexandria",
+   "apostasy-in-islam",
+   "quranic-ethics",
+   "taqiyya-5-myths"
+  ],
+  "aliases": []
+ },
+ {
+  "slug": "fitna",
+  "title": "Fitna",
+  "ar": "فتنة",
+  "tr": "Fitna",
+  "def": "Trial, persecution or turmoil; in the Quran, mainly the persecution of believers for their faith.",
+  "what": [
+   "The root means to test, as gold is tried in fire. The Quran says God tests people with good and evil as a trial (21:35). In the verses on fighting it means persecution: “fitna is worse than killing” (2:191, also 2:217)."
+  ],
+  "misread": "That “fight them until there is no fitna” (2:193) means fighting until everyone converts.",
+  "sources": [
+   "The verse continues: “if they cease, there is no hostility except against the wrongdoers” (2:193). The fighting is to stop persecution, and the Muslims in Mecca had been tortured and driven out for their belief. It sits in the same chapter that says there is “no compulsion in religion” (2:256) and is read together with it."
+  ],
+  "terms": [
+   "jihad",
+   "asbab-al-nuzul"
+  ],
+  "articles": [
+   "islam-religion-of-peace",
+   "apostasy-in-islam"
+  ],
+  "type": "term",
+  "aliases": [
+   "Fitnah"
+  ]
+ },
+ {
+  "slug": "fitra",
+  "title": "Fitra",
+  "type": "term",
+  "ar": "فطرة",
+  "tr": "Fiṭra",
+  "def": "The innate disposition with which every person is born, inclined to recognise God.",
+  "what": [
+   "“So set your face to the religion, upright; the <em>fiṭra</em> of God upon which He created people” (30:30). The Prophet said: “Every child is born in a state of fiṭra; then his parents make him a Jew, a Christian or a Magian” (Sahih al-Bukhari). A list of acts of fitra includes clipping nails, trimming the moustache, circumcision, and shaving the pubic hair (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "The idea is that no child is born in sin: every person starts with a natural recognition of his Creator."
+  ],
+  "terms": [
+   "tawhid",
+   "circumcision",
+   "adam"
+  ],
+  "articles": [
+   "six-articles-of-faith"
+  ],
+  "aliases": [
+   "Fitrah",
+   "Natural Disposition"
+  ]
+ },
+ {
+  "slug": "five-pillars",
+  "title": "Five pillars",
+  "type": "topic",
+  "ar": "أركان الإسلام",
+  "tr": "arkān al-Islām",
+  "def": "The five basic acts of Islam: the declaration of faith, prayer, zakat, fasting in Ramadan and the pilgrimage.",
+  "what": [
+   "The Prophet said: “Islam is built on five: testifying that there is no god but God and that Muhammad is the Messenger of God, establishing prayer, giving zakat, pilgrimage to the House, and fasting Ramadan” (Sahih al-Bukhari, Sahih Muslim). Zakat is due on wealth above a minimum, and the pilgrimage only of those able."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "salah",
+   "zakat",
+   "sawm",
+   "hajj"
+  ],
+  "articles": [],
+  "aliases": [
+   "Pillars Of Islam",
+   "Arkan Al-Islam"
+  ]
+ },
+ {
+  "slug": "forgetting",
+  "title": "Forgetting",
+  "type": "topic",
+  "ar": "نسيان",
+  "tr": "Nisyān",
+  "def": "The Quran says that God will make the Prophet recite so that he does not forget except what God wills (87:6–7), and some verses were caused to be forgotten.",
+  "what": [
+   "“We shall make you recite, and you will not forget, except what God wills” (87:6–7). The Quran also says that whatever verse God abrogates or causes to be forgotten, He replaces by a better one (2:106). A report in Sahih al-Bukhari records the Prophet’s saying, on hearing a man recite, “May God have mercy on him: he reminded me of verses I had been caused to forget.”"
+  ],
+  "misread": "That Muhammad’s forgetting of verses shows the Quran was not preserved.",
+  "sources": [
+   "Muslims hold that these cases are what the Quran itself describes: verses lifted by God’s will, as part of naskh, and a human being’s forgetting of what he had not been commanded to keep. The Quran as it is was preserved by recitation and in writing, and Muslims believe God’s promise to guard it (15:9)."
+  ],
+  "terms": [
+   "naskh",
+   "quran",
+   "wahy"
+  ],
+  "articles": [],
+  "aliases": []
+ },
+ {
+  "slug": "forgiveness",
+  "title": "Forgiveness",
+  "type": "topic",
+  "ar": "مغفرة",
+  "tr": "Maghfira",
+  "def": "God forgives all sins for those who repent; the Quran also urges forgiveness between people.",
+  "what": [
+   "“Say: O My servants who have transgressed against themselves, do not despair of the mercy of God; God forgives all sins; He is the Forgiving, the Merciful” (39:53). Only associating partners with Him is not forgiven unless repented of (4:48). The Quran says: “let them pardon and overlook; do you not love that God should forgive you?” (24:22), a verse about Abu Bakr, who had cut off support to a relative who spread slander about his daughter Aisha, and then resumed it."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "istighfar",
+   "atonement-and-repentance",
+   "ihsan"
+  ],
+  "articles": [
+   "who-is-allah",
+   "ramadan-last-ten-nights",
+   "sharia-and-hudud",
+   "funeral-dhikr-dua"
+  ],
+  "aliases": [
+   "Forgiving",
+   "Pardon"
+  ]
+ },
+ {
+  "slug": "freedom",
+  "title": "Freedom",
+  "type": "topic",
+  "ar": "حرية",
+  "tr": "Ḥurriyya",
+  "def": "Islam teaches freedom of belief and liberation from servitude to anything but God; the Quran also retells the exodus from Egypt.",
+  "what": [
+   "“Whoever wills, let him believe, and whoever wills, let him disbelieve” (18:29). The Quran tells how Moses led the Israelites out of Egypt (20:77, 2:49–50). Muslims also say that submission to God sets a person free of submission to other human beings. A saying attributed to Caliph Umar asks: “Since when have you enslaved people, when their mothers bore them free?”"
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "no-compulsion-in-religion",
+   "slavery-and-concubinage",
+   "moses"
+  ],
+  "articles": [
+   "apostasy-in-islam",
+   "indonesia",
+   "companions-who-started-with-nothing",
+   "slavery-in-islam"
+  ],
+  "aliases": [
+   "Liberty"
+  ]
+ },
+ {
+  "slug": "friday",
+  "title": "Friday",
+  "type": "term",
+  "ar": "جمعة",
+  "tr": "Jumʿa",
+  "def": "The day of congregational prayer, which the Quran says should interrupt trade for a time and then allow people to disperse for their work (62:9–10).",
+  "what": [
+   "“O you who believe, when the call to prayer is made on Friday, hasten to the remembrance of God and leave trade. That is better for you… And when the prayer is done, disperse in the land and seek God’s bounty, and remember God often” (62:9–10). The Friday prayer has a sermon and two units. The Prophet said that Friday is the best day on which the sun rises (Sahih Muslim)."
+  ],
+  "misread": "",
+  "sources": [
+   "Friday is not a day of rest: the Quran says to resume work after the prayer. A hadith in Sahih Muslim says that God led earlier communities away from Friday, giving the Jews the Sabbath and the Christians Sunday, and guided the Muslims to it."
+  ],
+  "terms": [
+   "salah",
+   "adhan"
+  ],
+  "articles": [],
+  "aliases": [
+   "Jumah",
+   "Juma'Ah",
+   "Friday Prayer"
+  ]
+ },
+ {
+  "slug": "funeral",
+  "title": "Funeral",
+  "type": "topic",
+  "ar": "جنازة",
+  "tr": "Janāza",
+  "def": "The Muslim rites for the dead: washing, shrouding, a funeral prayer, and prompt burial in a simple grave.",
+  "what": [
+   "The body is washed, wrapped in plain white cloth, prayed over by the community in a prayer without bowing or prostration, and buried quickly, facing the Kaaba. The Prophet said “hasten with the funeral” (Sahih al-Bukhari), and discouraged mourning beyond three days, other than for a widow (four months and ten days). The Quran’s story of the raven that showed Cain how to bury his brother (5:31) is the earliest mention of burial."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "abel"
+  ],
+  "articles": [
+   "funeral-dhikr-dua"
+  ],
+  "aliases": [
+   "Burial",
+   "Janaza",
+   "Burial Rites"
+  ]
+ },
+ {
+  "slug": "furqan",
+  "title": "Furqan",
+  "type": "term",
+  "ar": "فرقان",
+  "tr": "Furqān",
+  "def": "“The criterion”: the Quran’s name for itself and for the Torah, and the day of Badr.",
+  "what": [
+   "“Blessed is He who sent down the Criterion upon His servant, that he may be a warner to all the worlds” (25:1). “The month of Ramadan in which the Quran was sent down, a guidance for people and clear proofs of guidance and the Criterion” (2:185). God also gave Moses and Aaron the Criterion (21:48), and the day of Badr is “the Day of the Criterion” (8:41). The word means that which separates truth from falsehood, and some scholars say it is a loanword from Aramaic <em>purqānā</em>, “salvation”."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "quran",
+   "badr",
+   "kutub"
+  ],
+  "articles": [
+   "islamic-dilemma"
+  ],
+  "aliases": [
+   "Furqaan",
+   "Criterion"
+  ]
+ }
+]
