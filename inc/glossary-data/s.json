@@ -124,28 +124,30 @@
  {
   "slug": "shirk",
   "title": "Shirk",
+  "type": "term",
   "ar": "شرك",
-  "tr": "Shirk",
-  "def": "Associating partners with God: giving to anything in creation what belongs to God alone.",
+  "tr": "shirk",
+  "def": "Associating anything with God in worship or in His divinity, which the Quran calls the gravest wrong.",
   "what": [
-   "Shirk means “partnership”. It is the one sin the Quran says God does not forgive without repentance (4:48), and Luqman tells his son that it is “a great injustice” (31:13). The Prophet listed it first among the gravest sins (Sahih al-Bukhari).",
-   "The word covers worshipping idols, but also treating wealth, status or one’s own desires as a rival to God in the heart."
+   "“God does not forgive that partners be associated with Him, but forgives what is less than that to whom He wills” (4:48); Luqman tells his son: “Do not associate others with God; shirk is a great wrong” (31:13). The Prophet named it first among the major sins (Sahih al-Bukhari). The word mushrikun mostly refers to the idol-worshippers of Mecca, and the Quran treats the People of the Book as a separate group (98:1)."
   ],
-  "misread": "That every non-Muslim is condemned as a pagan.",
+  "misread": "",
   "sources": [
-   "The Quran itself separates the categories. It speaks of “those who disbelieved among the People of the Book and the polytheists” as two groups (98:1), and it calls Jews and Christians by their own name, People of the Book. Classical scholars discussed at length whether and how Trinitarian belief falls under shirk; there was no single ruling that lumped everyone together."
+   "Islamic law has treated the unrepentant mushrikun of the Prophet’s Arabia differently from Jews and Christians. Scholars distinguish major shirk, which takes one out of the faith, from minor shirk such as showing off in worship."
   ],
   "terms": [
    "tawhid",
-   "kafir",
-   "ahl-al-kitab"
+   "pre-islamic-arab-deities",
+   "kafir"
   ],
-  "articles": [
-   "same-god"
-  ],
-  "type": "term",
+  "articles": [],
   "aliases": [
-   "Deities"
+   "Idolatry",
+   "Idolaters",
+   "Mushrik",
+   "Mushrikun",
+   "Polytheism",
+   "Association"
   ]
  },
  {
