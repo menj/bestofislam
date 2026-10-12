@@ -1,5 +1,35 @@
 [
  {
+  "slug": "iblis",
+  "title": "Iblis",
+  "type": "topic",
+  "ar": "إبليس",
+  "tr": "Iblīs",
+  "def": "The devil, who refused to prostrate to Adam and now tempts humanity; in the Quran he is one of the jinn, not an angel.",
+  "what": [
+   "The Quran says Iblis refused to prostrate to Adam, saying “I am better than him: You created me of fire and him of clay” (7:12). He asked for respite until the Day of Judgement and vowed to lead people astray, though “you have no authority over My servants” (7:14–18, 15:42). He is “one of the jinn” (18:50) and not an angel. “The Devil” and “devils” (<em>shayāṭīn</em>) also refer to evil beings who whisper to people (114:4–6)."
+  ],
+  "misread": "That Islam teaches Satan is an angel who rebelled, as in some Christian tradition.",
+  "sources": [
+   "The Quran says that angels “do not disobey God in what He commands them” (66:6), so Iblis, who disobeyed, is not one of them. The Prophet taught believers to seek refuge from Satan and said that he flows in the human being like blood (Sahih al-Bukhari); the remedy is the remembrance of God."
+  ],
+  "terms": [
+   "adam",
+   "jinn",
+   "angels"
+  ],
+  "articles": [],
+  "aliases": [
+   "Devil",
+   "Satan",
+   "Shaytan",
+   "Demons",
+   "Demonic",
+   "Devils",
+   "Shayatin"
+  ]
+ },
+ {
   "slug": "ihsan",
   "title": "Ihsan",
   "ar": "إحسان",
@@ -150,6 +180,34 @@
   ],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "intoxicants",
+  "title": "Intoxicants",
+  "type": "topic",
+  "ar": "خمر",
+  "tr": "Khamr",
+  "def": "The Quran prohibits intoxicants in stages, and calls them “an abomination of Satan’s handiwork” (5:90).",
+  "what": [
+   "The first verse says “in them is great sin and some benefit for people, but their sin is greater than their benefit” (2:219). The second says “do not approach prayer while you are intoxicated” (4:43). The last says: “Intoxicants, gambling, idols and divining arrows are an abomination of Satan’s work; avoid it” (5:90–91). The Prophet said “every intoxicant is <em>khamr</em>, and every <em>khamr</em> is forbidden” (Sahih Muslim), which scholars extend to drugs."
+  ],
+  "misread": "That the Quran promises wine in Paradise, so it contradicts its own ban.",
+  "sources": [
+   "The wine of Paradise is described as different: “no headache nor intoxication from it” (37:47, 56:19). Muslim scholars explain that what is forbidden here is the harm of the drink, and it is promised there without harm."
+  ],
+  "terms": [
+   "gambling",
+   "sharia",
+   "akhira"
+  ],
+  "articles": [],
+  "aliases": [
+   "Alcohol",
+   "Drink, Strong",
+   "Drugs",
+   "Wine",
+   "Drunkenness"
+  ]
  },
  {
   "slug": "isa",

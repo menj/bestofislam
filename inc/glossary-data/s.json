@@ -44,6 +44,30 @@
   ]
  },
  {
+  "slug": "self-defence",
+  "title": "Self-defence",
+  "type": "topic",
+  "ar": "دفاع",
+  "tr": "Difāʿ",
+  "def": "The Quran allows defence against attack and tells believers to take precautions, within the limits of justice.",
+  "what": [
+   "“Whoever defends himself after being wronged, there is no blame on him” (42:41), though “forgiving is better” (42:43). Permission to fight was given to “those who are fought, because they were wronged” (22:39). Believers are told to “take your precautions” (4:71) against danger."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "jihad",
+   "aggression",
+   "fitna"
+  ],
+  "articles": [],
+  "aliases": [
+   "Defense",
+   "Defence",
+   "Danger"
+  ]
+ },
+ {
   "slug": "sharia",
   "title": "Sharia",
   "ar": "شريعة",
@@ -89,7 +113,9 @@
    "same-god"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [
+   "Deities"
+  ]
  },
  {
   "slug": "shooting-stars-and-the-jinn",
@@ -111,6 +137,33 @@
   "aliases": [
    "Communications",
    "Shihab"
+  ]
+ },
+ {
+  "slug": "shuayb-and-midian",
+  "title": "Shuayb and Midian",
+  "type": "prophet",
+  "ar": "شعيب",
+  "tr": "Shuʿayb",
+  "def": "Shuayb, the prophet of Midian, sent to a people who cheated in trade; the “Companions of the Thicket” are linked to them.",
+  "what": [
+   "Shuayb told the people of Midian to “give full measure and weight and do not defraud people of their things, and do not spread corruption on the earth” (11:84–85; 7:85). They rejected him and were seized by an earthquake (7:91). The “Companions of the Thicket” (<em>aṣḥāb al-ayka</em>, 26:176–191) are described in the same terms, and some commentators think they were another branch of the same people."
+  ],
+  "misread": "",
+  "sources": [
+   "Moses’ marriage in Midian, to the daughter of an old man, is told in 28:22–28, and Muslim tradition has often named him Shuayb. Many scholars say the Bible’s Jethro is the same man, though the Quran does not say so."
+  ],
+  "terms": [
+   "moses",
+   "trade-and-business"
+  ],
+  "articles": [],
+  "aliases": [
+   "Midian",
+   "Madyan",
+   "Dwellers In The Woods",
+   "Jethro",
+   "Companions Of The Thicket"
   ]
  },
  {
@@ -162,6 +215,32 @@
    "Slavery",
    "Slaves",
    "Ma Malakat Aymanukum"
+  ]
+ },
+ {
+  "slug": "solomon",
+  "title": "Solomon",
+  "type": "prophet",
+  "ar": "سليمان",
+  "tr": "Sulaymān",
+  "def": "Solomon, son of David, honoured in the Quran as a prophet-king with power over the winds, the jinn and the birds.",
+  "what": [
+   "God gave Solomon knowledge and the “speech of the birds” (27:16), the wind subdued to him (21:81), and jinn who worked for him, “every builder and diver” (38:37). He answered the Queen of Sheba’s kingdom with a letter beginning “in the name of God, the Merciful, the Compassionate” (27:30), and the Queen believed (27:44). When he died, only the creeping of a worm on his staff showed the jinn that he was gone (34:14)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran rejects the claim that Solomon practised magic: “Solomon did not disbelieve, but the devils disbelieved, teaching people magic” (2:102). It presents him as one who thanked God and prayed that he be among the righteous."
+  ],
+  "terms": [
+   "david",
+   "jinn",
+   "babel"
+  ],
+  "articles": [],
+  "aliases": [
+   "Sulayman",
+   "Builders",
+   "Divers"
   ]
  },
  {

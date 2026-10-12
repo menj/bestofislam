@@ -1,5 +1,30 @@
 [
  {
+  "slug": "martyrdom-and-the-dead",
+  "title": "Martyrdom and the dead",
+  "type": "topic",
+  "ar": "شهيد",
+  "tr": "Shahīd",
+  "def": "The Quran says that those killed in God’s way are alive with their Lord (3:169).",
+  "what": [
+   "“Do not think of those who are killed in God’s way as dead; they are alive with their Lord, provided for” (3:169; also 2:154). A <em>shahīd</em> is a witness, and in practice a person killed defending the faith, or in defence of life and property, as the Prophet said (Sahih al-Bukhari). Those who die of plague, drowning or childbirth are also counted as such in hadith."
+  ],
+  "misread": "That Islam rewards killing oneself and others.",
+  "sources": [
+   "The Quran says “do not kill yourselves” (4:29), and the Prophet said that whoever kills himself will be punished by the same means in the Fire (Sahih al-Bukhari). Muslim scholars have broadly condemned suicide attacks on civilians, and the Prophet forbade killing of non-combatants."
+  ],
+  "terms": [
+   "jihad",
+   "akhira"
+  ],
+  "articles": [],
+  "aliases": [
+   "Dead",
+   "Martyr",
+   "Shahid"
+  ]
+ },
+ {
   "slug": "maryam",
   "title": "Maryam",
   "ar": "مريم",
@@ -94,5 +119,34 @@
   ],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "music-and-singing",
+  "title": "Music and singing",
+  "type": "topic",
+  "ar": "غناء",
+  "tr": "Ghināʾ",
+  "def": "Muslim scholars have differed about music: some forbid instruments, many allow singing and the frame drum, and Muslim civilisations have produced much music.",
+  "what": [
+   "Reports show the Prophet allowing singing and drumming at weddings and at the feast of Eid, for example when Aisha’s household had girls singing and he told Abu Bakr to leave them (Sahih al-Bukhari). A woman who had vowed to play the <em>daf</em> if he returned safely was told to fulfil her vow (Abu Dawud, al-Tirmidhi). A report in Sahih al-Bukhari that speaks of people who will permit “musical instruments” is discussed by scholars for its wording."
+  ],
+  "misread": "",
+  "sources": [
+   "Al-Ghazali allowed music as long as it did not lead to sin, and Ibn Hazm denied that any sound hadith forbids it. Others, such as many Hanbalis and Salafis, forbid stringed instruments. Muslim societies have a long musical tradition, including Quranic recitation (<em>tajwīd</em>), the call to prayer, Sufi chant and classical music."
+  ],
+  "terms": [
+   "fiqh",
+   "hadith",
+   "aisha-bint-abi-bakr"
+  ],
+  "articles": [
+   "instruments-islamic-world"
+  ],
+  "aliases": [
+   "Drum-Playing",
+   "Drums",
+   "Music",
+   "Daf"
+  ]
  }
 ]

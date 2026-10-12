@@ -23,6 +23,35 @@
   "aliases": []
  },
  {
+  "slug": "hawariyyun",
+  "title": "Hawariyyun",
+  "type": "group",
+  "ar": "حواريون",
+  "tr": "Ḥawāriyyūn",
+  "def": "The disciples of Jesus, whom the Quran calls the helpers of God, who said “we are Muslims” (3:52).",
+  "what": [
+   "“When Jesus sensed disbelief from them he said: ‘Who are my helpers toward God?’ The disciples said: ‘We are God’s helpers; we believe in God, and bear witness that we are Muslims (submitters)’” (3:52). The Quran does not give their number or names. “Muslim” here means those who submit to God."
+  ],
+  "misread": "That Muslims claim Paul corrupted the message of Jesus.",
+  "sources": [
+   "Some Muslim writers say Paul changed Jesus’ teaching, a view not found in the Quran or the hadith. Others hold that the disciples’ message was kept in part and distorted over time. Historians date Paul’s letters to before the Gospels. The Quran’s own claim is about what Jesus taught: the worship of one God."
+  ],
+  "terms": [
+   "isa",
+   "injil",
+   "apostle"
+  ],
+  "articles": [
+   "jesus-not-god",
+   "paul-and-the-law"
+  ],
+  "aliases": [
+   "Disciples Of Jesus",
+   "Twelve Disciples",
+   "Apostles Of Jesus"
+  ]
+ },
+ {
   "slug": "hijab",
   "title": "Hijab",
   "ar": "حجاب",
@@ -143,7 +172,8 @@
    "Dignity",
    "Humankind",
    "Human Rights",
-   "Equality"
+   "Equality",
+   "Diversity"
   ]
  }
 ]

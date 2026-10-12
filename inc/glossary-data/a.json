@@ -440,6 +440,52 @@
   ]
  },
  {
+  "slug": "abu-dawud",
+  "title": "Abu Dawud",
+  "type": "person",
+  "ar": "أبو داود",
+  "tr": "Abū Dāwūd",
+  "def": "Sulayman ibn al-Ash’ath al-Sijistani (817–889), compiler of the <em>Sunan</em>, one of the six canonical collections of hadith.",
+  "what": [
+   "Abu Dawud was born in Sijistan and studied in Basra, Baghdad and elsewhere. His <em>Sunan</em> holds about 4,800 reports, mostly on questions of law, with his own comments where a report is weak. Scholars rank it just below the two Sahihs."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "bukhari-al",
+   "isnad"
+  ],
+  "articles": [],
+  "aliases": [
+   "Da'ud, Abu",
+   "Sunan Abi Dawud"
+  ]
+ },
+ {
+  "slug": "abu-dharr",
+  "title": "Abu Dharr",
+  "type": "person",
+  "ar": "أبو ذر",
+  "tr": "Abū Dharr",
+  "def": "A Companion from the tribe of Ghifar, known for his asceticism and for his stand against hoarding of wealth.",
+  "what": [
+   "Abu Dharr accepted Islam early and returned to his tribe before joining the Prophet in Medina. The Prophet said of him that “the earth does not carry, nor the sky shade, one more truthful in speech than Abu Dharr” (al-Tirmidhi). He taught that those who store up gold and silver (9:34) must spend it, a view that brought him into conflict with Muawiya in Syria. He died in exile at al-Rabadha in 652."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "companions-of-the-prophet",
+   "greed-and-avarice",
+   "ali-ibn-abi-talib"
+  ],
+  "articles": [],
+  "aliases": [
+   "Dharr, Abu",
+   "Abu Dharr Al-Ghifari"
+  ]
+ },
+ {
   "slug": "abu-muslim-al-khurasani",
   "title": "Abu Muslim al-Khurasani",
   "type": "person",
@@ -988,7 +1034,8 @@
   ],
   "articles": [],
   "aliases": [
-   "Dhu al-Qarnayn"
+   "Dhu al-Qarnayn",
+   "Dhu'L-Qarneyn"
   ]
  },
  {
@@ -1330,7 +1377,6 @@
    "Camel",
    "Cattle",
    "Creatures",
-   "Dogs",
    "Donkeys",
    "Horses"
   ]
