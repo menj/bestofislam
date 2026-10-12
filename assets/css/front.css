@@ -13,8 +13,17 @@
 
 /* WordPress puts the block gap between the header and main. On the front page
    the hero is a full-bleed band, so the gap shows as a white strip. */
-.wp-site-blocks > main.boi-front {
+.wp-site-blocks > main.boi-front,
+.wp-site-blocks > .boi-front,
+.wp-site-blocks > header + main,
+.wp-site-blocks > .wp-block-template-part + .boi-front {
 	margin-block-start: 0 !important;
+}
+
+/* The header part can also carry a bottom margin of its own. */
+.wp-site-blocks > .wp-block-template-part:has(+ .boi-front),
+.wp-site-blocks > header:has(+ .boi-front) {
+	margin-block-end: 0 !important;
 }
 
 .boi-front > .boi-band {
