@@ -69,7 +69,7 @@ Under Appearance, Listicles, in six tabs:
 ## Installation
 
 1. Install Twenty Twenty-Five and keep it in the themes directory.
-2. Upload `bestofislam-1.56.0.zip` under Appearance, Themes, Add New, and activate it.
+2. Upload `bestofislam-1.57.0.zip` under Appearance, Themes, Add New, and activate it.
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 36 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
 4. Configure under Appearance, Listicles.
 

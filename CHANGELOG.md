@@ -6,6 +6,8 @@ versioning.
 
 ## [Unreleased]
 
+## [1.57.0] - 2026-10-12
+
 ### Added
 
 - **Glossary** (`inc/glossary.php`, `inc/glossary-data.php`, `inc/glossary-data/*.json`, `inc/glossary-links.php`, `assets/css/glossary.css`): a Glossary page at `/glossary/` with a generated A to Z index and 466 entries as child pages, covering the terms, people, places, events, groups and topics of the A to K sections of the Comparative Index to Islam (the only part of that index supplied), each written in our own words with checked Quran and hadith references. Each entry gives the Arabic and transliteration, a one-line definition, what the term means, the common misunderstanding where there is one, what the sources say, and links to related terms and articles; other names an entry is known by appear as "see" lines in the index. Entries are ordinary pages, seeded in batches of 30 with a cron continuation, so they can be edited or added to like any page; the theme refreshes an entry only while it is exactly as the theme wrote it, and never brings back one that was trashed. Articles link to the Glossary: the first mention of a defined term in a paragraph of a single article becomes an ordinary link (common English words are never linked), and each entry's Read more list names the articles that discuss it. The index and related-links blocks, and DefinedTerm / DefinedTermSet structured data, are generated. A footer link is added.
@@ -13,6 +15,9 @@ versioning.
 
 ### Fixed
 
+
+- The Glossary index keeps the italic markup in definitions, where it printed the tags.
+- The version is raised so existing sites run the content population and receive the new listicles.
 Findings from a full-codebase review by CodeAnt.
 
 - **Security:** JSON-LD is escaped so a post title containing a closing script tag can no longer end the block (all four emitters share `boi_json_ld()`). The error-page drop-ins refuse direct requests and the alert settings now live in a PHP file that exits when requested, instead of a readable JSON file. Votes are accepted only for published posts and for entries that exist on them, and a database failure is reported as an error rather than as "already voted".

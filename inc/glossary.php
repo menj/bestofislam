@@ -463,7 +463,7 @@ function boi_render_glossary_index() {
 				esc_html( get_the_title( $entry ) ),
 				$tag,
 				'' !== $ar ? '<span class="boi-glossary__ar" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
-				esc_html( $entry->post_excerpt )
+				wp_kses( $entry->post_excerpt, array( 'em' => array() ) )
 			);
 		}
 
