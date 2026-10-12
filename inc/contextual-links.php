@@ -111,15 +111,16 @@ function boi_cl_filter( $content ) {
 		if ( ! $in_p || $done_p || $budget < 1 || array_sum( $depth ) ) {
 			continue;
 		}
-		foreach ( $items as $n => $item ) {
-			if ( isset( $used[ $n ] ) ) {
+		foreach ( $items as $item ) {
+			$key = function_exists( 'mb_strtolower' ) ? mb_strtolower( $item['phrase'] ) : strtolower( $item['phrase'] );
+			if ( isset( $used[ $key ] ) ) {
 				continue;
 			}
 			$re = '/(?<![\p{L}\p{N}])(' . preg_quote( $item['phrase'], '/' ) . ')(?![\p{L}\p{N}])/iu';
 			if ( preg_match( $re, $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
 				$link          = '<a href="' . esc_url( $item['url'] ) . '"' . $rel . '>' . $mm[1][0] . '</a>';
 				$tokens[ $i ]  = $tok = substr_replace( $tok, $link, $mm[1][1], strlen( $mm[1][0] ) );
-				$used[ $n ]    = true;
+				$used[ $key ]  = true;
 				$done_p        = true;
 				--$budget;
 				break;
@@ -184,7 +185,7 @@ function boi_cl_page() {
 		<h1><?php esc_html_e( 'Contextual Links', 'bestofislam' ); ?></h1>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'boi_cl' ); ?>
-			<nav class="cl-admin__tabs" role="tablist">
+			<nav class="cl-admin__tabs" role="tablist" aria-label="<?php esc_attr_e( 'Contextual Links settings', 'bestofislam' ); ?>">
 				<button type="button" class="cl-admin__tab" role="tab" data-tab="domains"><?php esc_html_e( 'Domains', 'bestofislam' ); ?></button>
 				<button type="button" class="cl-admin__tab" role="tab" data-tab="phrases"><?php esc_html_e( 'Phrases', 'bestofislam' ); ?></button>
 				<button type="button" class="cl-admin__tab" role="tab" data-tab="rules"><?php esc_html_e( 'Rules', 'bestofislam' ); ?></button>
