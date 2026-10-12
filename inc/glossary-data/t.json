@@ -25,6 +25,29 @@
   "aliases": []
  },
  {
+  "slug": "tafsir-al-jalalayn",
+  "title": "Tafsir al-Jalalayn",
+  "type": "book",
+  "ar": "تفسير الجلالين",
+  "tr": "Tafsīr al-Jalālayn",
+  "def": "A short commentary on the whole Quran, written by two scholars both named Jalal al-Din.",
+  "what": [
+   "Jalal al-Din al-Mahalli (d. 1459) began it from Surah al-Kahf to the end and his student Jalal al-Din al-Suyuti (d. 1505) completed it from al-Baqara to al-Isra. Its brevity, in about a line to a verse, has made it a first textbook of tafsir in Muslim schools."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "tafsir",
+   "quran"
+  ],
+  "articles": [],
+  "aliases": [
+   "Jalalan",
+   "Al-Jalalan",
+   "Jalalayn"
+  ]
+ },
+ {
   "slug": "tahrif",
   "title": "Tahrif",
   "ar": "تحريف",

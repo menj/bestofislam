@@ -536,6 +536,31 @@
   ]
  },
  {
+  "slug": "abu-jahl",
+  "title": "Abu Jahl",
+  "type": "person",
+  "ar": "أبو جهل",
+  "tr": "Abū Jahl",
+  "def": "A leader of Quraysh and a bitter enemy of the Prophet, killed at Badr.",
+  "what": [
+   "His name was Amr ibn Hisham, and the Prophet’s followers called him Abu Jahl, “father of folly”. He led the opposition in Mecca, mocking the Prophet and persecuting the weak Muslims, among them Sumayya, who is regarded as the first martyr of Islam. He was killed at the battle of Badr in 2 AH."
+  ],
+  "misread": "",
+  "sources": [
+   "The Prophet is reported to have called him “the pharaoh of this community” (Musnad Ahmad). His son Ikrima later accepted Islam and was forgiven."
+  ],
+  "terms": [
+   "badr",
+   "quraysh",
+   "makkah"
+  ],
+  "articles": [],
+  "aliases": [
+   "Amr Ibn Hisham",
+   "Abu Jahl"
+  ]
+ },
+ {
   "slug": "abu-muslim-al-khurasani",
   "title": "Abu Muslim al-Khurasani",
   "type": "person",
@@ -1088,6 +1113,53 @@
   "aliases": [
    "Hallaj, Al-",
    "Mansur Al-Hallaj"
+  ]
+ },
+ {
+  "slug": "al-kalbi",
+  "title": "Al-Kalbi",
+  "type": "person",
+  "ar": "الكلبي",
+  "tr": "al-Kalbī",
+  "def": "A scholar of Kufa (d. around 819) who wrote on Arab genealogy and on pre-Islamic religion, including The Book of Idols.",
+  "what": [
+   "Hisham ibn Muhammad al-Kalbi was a prolific historian and genealogist. His Kitab al-Asnam describes the idols of pre-Islamic Arabia such as al-Lat, al-Uzza and Manat, and is a main Arabic source on them. Because his father was linked to a Shia circle and a weak transmitter of hadith, scholars use him as a source of Arab history but not of religious law."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "pre-islamic-arab-deities",
+   "jahiliyya"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hisham Ibn Al-Kalbi",
+   "Book Of Idols",
+   "Kitab Al-Asnam"
+  ]
+ },
+ {
+  "slug": "al-kindi",
+  "title": "Al-Kindi",
+  "type": "person",
+  "ar": "الكندي",
+  "tr": "al-Kindī",
+  "def": "Two figures: the philosopher Yaqub al-Kindi (d. around 873), and the author of a debated Christian apology.",
+  "what": [
+   "Yaqub ibn Ishaq al-Kindi, “the philosopher of the Arabs”, worked in Baghdad on mathematics, optics and medicine, and promoted translation of Greek texts. The “Apology of al-Kindi” is a separate and anonymous Christian polemic written in the ninth century in the name of a Christian courtier."
+  ],
+  "misread": "",
+  "sources": [
+   "Scholars of the Apology question its date and authorship, and it is not evidence of what early Muslims held. It was answered by Muslim writers in the genre of debate, and the philosophical al-Kindi is a figure of Muslim learning."
+  ],
+  "terms": [
+   "philosophy",
+   "translation-movement"
+  ],
+  "articles": [],
+  "aliases": [
+   "Abd Al-Masih Al-Kindi",
+   "Apology Of Al-Kindi"
   ]
  },
  {
@@ -1961,6 +2033,30 @@
   ],
   "articles": [],
   "aliases": []
+ },
+ {
+  "slug": "arthur-jeffery",
+  "title": "Arthur Jeffery",
+  "type": "person",
+  "ar": "",
+  "tr": "",
+  "def": "A twentieth-century Orientalist (1892–1959) who studied the early texts and the foreign words of the Quran.",
+  "what": [
+   "Arthur Jeffery, an Australian scholar who taught in Cairo and at Columbia University, edited early variant readings in Materials for the History of the Text of the Qur'an (1937) and wrote on foreign vocabulary in the Quran (1938). His work is used by scholars of all views."
+  ],
+  "misread": "",
+  "sources": [
+   "Muslim scholars reply that Arabic is rich in borrowed and shared words, as the Quran itself says of Arabic as “clear” (16:103, 26:195), and that the Quran’s text was kept by memorisation and by many written copies, so that variant readings, the qira’at, are known, studied and traced to the Prophet."
+  ],
+  "terms": [
+   "quran",
+   "qiraat",
+   "mushaf"
+  ],
+  "articles": [],
+  "aliases": [
+   "Jeffery, Arthur"
+  ]
  },
  {
   "slug": "asbab-al-nuzul",

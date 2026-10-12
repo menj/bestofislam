@@ -1,5 +1,29 @@
 [
  {
+  "slug": "qarun",
+  "title": "Qarun",
+  "type": "person",
+  "ar": "قارون",
+  "tr": "Qārūn",
+  "def": "A man of Moses’ people whom the Quran gives as the example of wealth that leads to arrogance.",
+  "what": [
+   "“Qarun was of the people of Moses, but he oppressed them. We gave him such treasures that the keys alone weighed down a band of strong men” (28:76). His people told him, “Do not exult; God does not love the exultant,” but he claimed his wealth by his own knowledge, and God caused the earth to swallow him (28:78–81)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Bible calls him Korah (Numbers 16), where the story differs in detail (rebellion against Moses’ leadership). The Quran takes the story for its own lesson, wealth as a test."
+  ],
+  "terms": [
+   "moses",
+   "israel"
+  ],
+  "articles": [],
+  "aliases": [
+   "Korah",
+   "Karun"
+  ]
+ },
+ {
   "slug": "qiraat",
   "title": "Qira’at",
   "ar": "قراءات",
