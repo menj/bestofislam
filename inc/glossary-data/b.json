@@ -56,7 +56,10 @@
    "harut-and-marut",
    "angels"
   ],
-  "articles": [],
+  "articles": [
+   "ezra-and-mary",
+   "haman-anachronism"
+  ],
   "aliases": [
    "Babylon"
   ]
@@ -99,7 +102,9 @@
    "hajj",
    "kaaba"
   ],
-  "articles": [],
+  "articles": [
+   "kaaba-witnesses"
+  ],
   "aliases": []
  },
  {
@@ -359,7 +364,8 @@
    "shirk"
   ],
   "articles": [
-   "jesus-not-god"
+   "jesus-not-god",
+   "dome-inscriptions"
   ],
   "aliases": [
    "Beget"
@@ -428,7 +434,10 @@
    "tahrif"
   ],
   "articles": [
-   "where-is-the-injil"
+   "where-is-the-injil",
+   "second-peter",
+   "manuscript-transmission",
+   "shared-prophets"
   ],
   "aliases": [
    "Biblos"
@@ -455,6 +464,28 @@
   "aliases": [
    "Bid`Ah",
    "Innovation"
+  ]
+ },
+ {
+  "slug": "bilal",
+  "title": "Bilal",
+  "type": "person",
+  "ar": "بلال",
+  "tr": "Bilāl",
+  "def": "A former slave from Abyssinia who became the first muezzin of Islam.",
+  "what": [
+   "Bilal ibn Rabah accepted Islam early and was tortured by his master Umayya ibn Khalaf, who laid a rock on his chest in the sun, until Abu Bakr bought and freed him. The Prophet appointed him to call the prayer, and he climbed on the Kaaba to call after the conquest of Mecca. His story is told as proof that the faith overrides race and rank."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abu-bakr",
+   "equality",
+   "ibn-umm-maktum"
+  ],
+  "articles": [],
+  "aliases": [
+   "Bilal Ibn Rabah"
   ]
  },
  {
@@ -517,7 +548,9 @@
    "embryology",
    "conception"
   ],
-  "articles": [],
+  "articles": [
+   "shared-prophets"
+  ],
   "aliases": []
  },
  {
@@ -582,7 +615,9 @@
    "sharia",
    "abdullah-ibn-ubayy"
   ],
-  "articles": [],
+  "articles": [
+   "verses-read-differently"
+  ],
   "aliases": []
  },
  {
@@ -704,7 +739,12 @@
    "isnad",
    "sahih"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam",
+   "uthman-copies",
+   "qibla-change",
+   "who-saw-gabriel"
+  ],
   "aliases": [
    "Bukhari"
   ]
@@ -748,7 +788,9 @@
    "wahy",
    "sira"
   ],
-  "articles": [],
+  "articles": [
+   "paul-and-the-law"
+  ],
   "aliases": [
    "Romans",
    "Rum"

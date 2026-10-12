@@ -1,5 +1,29 @@
 [
  {
+  "slug": "umar-ibn-al-khattab",
+  "title": "Umar ibn al-Khattab",
+  "type": "person",
+  "ar": "عمر بن الخطاب",
+  "tr": "ʿUmar ibn al-Khaṭṭāb",
+  "def": "The second caliph (r. 634–644), known for justice, who expanded the state from Egypt to Persia.",
+  "what": [
+   "Umar accepted Islam in Mecca and strengthened the early community. As caliph he took Jerusalem, set up courts and the diwan, and counted the calendar from the Hijra. A famous report has him walking at night to see that the poor were fed. He was killed by a Persian slave in 644. The Prophet called him “al-Faruq”, the one who separates truth from falsehood."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "caliph",
+   "abu-bakr",
+   "jerusalem"
+  ],
+  "articles": [],
+  "aliases": [
+   "Umar",
+   "Omar",
+   "Al-Faruq"
+  ]
+ },
+ {
   "slug": "ummah",
   "title": "Ummah",
   "ar": "أمة",
@@ -47,6 +71,28 @@
    "Ummiyyin",
    "Illiterate, Muhammad",
    "Unlettered"
+  ]
+ },
+ {
+  "slug": "umrah",
+  "title": "Umrah",
+  "type": "term",
+  "ar": "عمرة",
+  "tr": "ʿumra",
+  "def": "The lesser pilgrimage, which can be made at any time of year.",
+  "what": [
+   "The rites are ihram, tawaf of the Kaaba, sa‘i between Safa and Marwa and shaving or trimming the hair. Unlike Hajj it is not tied to a date, and is highly recommended; the Prophet said that one umrah to the next expiates what is between (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hajj",
+   "ihram",
+   "kaaba"
+  ],
+  "articles": [],
+  "aliases": [
+   "Lesser Pilgrimage"
   ]
  }
 ]

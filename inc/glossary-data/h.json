@@ -18,7 +18,12 @@
    "sunnah",
    "sira"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam",
+   "second-peter",
+   "who-saw-gabriel",
+   "who-is-allah"
+  ],
   "type": "term",
   "aliases": [
    "Traditions",
@@ -63,9 +68,11 @@
   ],
   "terms": [
    "hajj",
-   "bid-ah"
+   "bidah"
   ],
-  "articles": [],
+  "articles": [
+   "universe-demands-creator"
+  ],
   "aliases": []
  },
  {
@@ -114,7 +121,9 @@
    "safa-and-marwa",
    "hajj"
   ],
-  "articles": [],
+  "articles": [
+   "five-pillars-explained"
+  ],
   "aliases": [
    "Hagar",
    "Hajar",
@@ -167,7 +176,8 @@
   ],
   "articles": [
    "five-pillars-explained",
-   "kaaba-witnesses"
+   "kaaba-witnesses",
+   "dome-inscriptions"
   ],
   "aliases": [
    "Haj",
@@ -198,7 +208,12 @@
    "sharia",
    "fiqh"
   ],
-  "articles": [],
+  "articles": [
+   "paul-and-the-law",
+   "prophet-died-poisoning",
+   "islam-religion-of-peace",
+   "five-pillars-explained"
+  ],
   "aliases": [
    "Food",
    "Halal",
@@ -316,7 +331,12 @@
    "allah",
    "divine-attributes"
   ],
-  "articles": [],
+  "articles": [
+   "verses-read-differently",
+   "islamic-dilemma",
+   "who-saw-gabriel",
+   "islam-religion-of-peace"
+  ],
   "aliases": [
    "Haq",
    "Truth",
@@ -513,7 +533,9 @@
    "paradise",
    "forgiveness"
   ],
-  "articles": [],
+  "articles": [
+   "library-of-alexandria"
+  ],
   "aliases": [
    "The Fire",
    "Blazing Flame, The",
@@ -585,7 +607,8 @@
    "maryam"
   ],
   "articles": [
-   "qibla-change"
+   "qibla-change",
+   "prophet-died-poisoning"
   ],
   "type": "term",
   "aliases": [
@@ -613,7 +636,9 @@
    "hajj",
    "sawm"
   ],
-  "articles": [],
+  "articles": [
+   "haman-anachronism"
+  ],
   "aliases": [
    "A.H.",
    "Calendar",
@@ -641,7 +666,12 @@
    "isnad",
    "archaeology"
   ],
-  "articles": [],
+  "articles": [
+   "haman-anachronism",
+   "kaaba-witnesses",
+   "library-of-alexandria",
+   "qibla-change"
+  ],
   "aliases": [
    "History",
    "Historicity",
@@ -837,6 +867,32 @@
   ]
  },
  {
+  "slug": "hudud",
+  "title": "Hudud",
+  "type": "term",
+  "ar": "حدود",
+  "tr": "ḥudūd",
+  "def": "The fixed punishments of Islamic law for a small number of offences, hedged with strict conditions.",
+  "what": [
+   "The word means “limits”. The offences are theft, highway robbery, adultery, false accusation of adultery and, for some jurists, drinking and apostasy. The Prophet said: “Avoid the hudud wherever you can” (al-Tirmidhi, in other versions “avert”). Proof is demanding, any doubt prevents them, and repentance can remove them."
+  ],
+  "misread": "",
+  "sources": [
+   "Umar suspended the penalty for theft during a famine. Many modern scholars hold the hudud are rarely applicable without conditions that are hard to meet."
+  ],
+  "terms": [
+   "adultery",
+   "fahisha",
+   "qisas"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hadd",
+   "Hudood",
+   "Islamic Penalties"
+  ]
+ },
+ {
   "slug": "hui",
   "title": "Hui",
   "type": "group",
@@ -877,7 +933,6 @@
   ],
   "articles": [],
   "aliases": [
-   "Judgement",
    "Ruling"
   ]
  },
@@ -897,12 +952,13 @@
    "ummah",
    "race-and-skin-colour"
   ],
-  "articles": [],
+  "articles": [
+   "ex-muslim-blog-study"
+  ],
   "aliases": [
    "Dignity",
    "Humankind",
    "Human Rights",
-   "Equality",
    "Diversity"
   ]
  },
@@ -924,7 +980,9 @@
    "sira",
    "ansar"
   ],
-  "articles": [],
+  "articles": [
+   "prophet-died-poisoning"
+  ],
   "aliases": [
    "Huneyn"
   ]

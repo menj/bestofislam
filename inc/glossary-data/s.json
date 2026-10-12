@@ -25,6 +25,87 @@
   ]
  },
  {
+  "slug": "sahih",
+  "title": "Sahih",
+  "type": "term",
+  "ar": "صحيح",
+  "tr": "ṣaḥīḥ",
+  "def": "“Sound”: the highest grade of a hadith, and the title of the two most trusted hadith collections.",
+  "what": [
+   "A hadith is sahih if its chain is connected through upright and exact narrators, with no hidden defect. The collections of al-Bukhari (d. 870) and Muslim (d. 875), called the Sahihayn, are regarded as the most reliable books after the Quran. Other grades are hasan (good) and da‘if (weak)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "sunnah"
+  ],
+  "articles": [
+   "apostasy-in-islam",
+   "who-saw-gabriel",
+   "al-zutt-allegation",
+   "qibla-change"
+  ],
+  "aliases": [
+   "Sahih Bukhari",
+   "Sahih Muslim",
+   "Sahihayn"
+  ]
+ },
+ {
+  "slug": "salah",
+  "title": "Salah",
+  "type": "term",
+  "ar": "صلاة",
+  "tr": "ṣalāh",
+  "def": "The ritual prayer, performed five times a day, the second pillar of Islam.",
+  "what": [
+   "“Establish prayer; indeed prayer prevents shameful and wrong deeds” (29:45). The five prayers at dawn, noon, afternoon, sunset and night (11:114, 17:78) are said facing the Kaaba, with standing, bowing and prostration, after washing (5:6). The Prophet likened them to a river at one’s door in which one bathes five times a day (Sahih Muslim)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sawm",
+   "hajj",
+   "kaaba",
+   "five-pillars"
+  ],
+  "articles": [
+   "why-five-prayers",
+   "five-pillars-explained",
+   "moon-craters",
+   "qibla-change"
+  ],
+  "aliases": [
+   "Salat",
+   "Prayer",
+   "Namaz",
+   "Five Daily Prayers"
+  ]
+ },
+ {
+  "slug": "salman-al-farisi",
+  "title": "Salman al-Farisi",
+  "type": "person",
+  "ar": "سلمان الفارسي",
+  "tr": "Salmān al-Fārisī",
+  "def": "A Persian Companion who is said to have advised digging the trench around Medina.",
+  "what": [
+   "Salman is reported to have come from Persia in search of the truth, passed through Christian teachers, and found the Prophet in Medina. Though once a slave, he was freed and honoured; the Prophet said, “Salman is of us, the people of the house” (al-Hakim). He proposed the trench at the battle of 627."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "trench-battle-of-the",
+   "companions-of-the-prophet"
+  ],
+  "articles": [],
+  "aliases": [
+   "Salman The Persian"
+  ]
+ },
+ {
   "slug": "sawm",
   "title": "Sawm",
   "type": "term",
@@ -91,7 +172,9 @@
    "aggression",
    "fitna"
   ],
-  "articles": [],
+  "articles": [
+   "jizya"
+  ],
   "aliases": [
    "Defense",
    "Defence",
@@ -117,31 +200,68 @@
    "sunnah",
    "naskh"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam"
+  ],
   "type": "term",
   "aliases": []
  },
  {
-  "slug": "shirk",
-  "title": "Shirk",
-  "type": "term",
-  "ar": "شرك",
-  "tr": "shirk",
-  "def": "Associating anything with God in worship or in His divinity, which the Quran calls the gravest wrong.",
+  "slug": "shia",
+  "title": "Shia",
+  "type": "group",
+  "ar": "شيعة",
+  "tr": "Shīʿa",
+  "def": "The second-largest branch of Islam, whose members hold that Ali and his descendants were the rightful leaders after the Prophet.",
   "what": [
-   "“God does not forgive that partners be associated with Him, but forgives what is less than that to whom He wills” (4:48); Luqman tells his son: “Do not associate others with God; shirk is a great wrong” (31:13). The Prophet named it first among the major sins (Sahih al-Bukhari). The word mushrikun mostly refers to the idol-worshippers of Mecca, and the Quran treats the People of the Book as a separate group (98:1)."
+   "The name comes from shi‘at Ali, “the party of Ali”. Shias form roughly a tenth to a fifth of Muslims, with the main branches Twelvers, Ismailis and Zaydis. They share the Quran, the five pillars and the Prophet, and differ chiefly on leadership and in some practices."
   ],
   "misread": "",
+  "sources": [],
+  "terms": [
+   "twelve-imams",
+   "ismailis",
+   "ali-ibn-abi-talib"
+  ],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
+  "aliases": [
+   "Shiites",
+   "Shi'a",
+   "Shi'ite",
+   "Shi'is",
+   "Shiism"
+  ]
+ },
+ {
+  "slug": "shirk",
+  "title": "Shirk",
+  "ar": "شرك",
+  "tr": "Shirk",
+  "def": "Associating partners with God: giving to anything in creation what belongs to God alone.",
+  "what": [
+   "Shirk means “partnership”. It is the one sin the Quran says God does not forgive without repentance (4:48), and Luqman tells his son that it is “a great injustice” (31:13). The Prophet listed it first among the gravest sins (Sahih al-Bukhari).",
+   "The word covers worshipping idols, but also treating wealth, status or one’s own desires as a rival to God in the heart."
+  ],
+  "misread": "That every non-Muslim is condemned as a pagan.",
   "sources": [
-   "Islamic law has treated the unrepentant mushrikun of the Prophet’s Arabia differently from Jews and Christians. Scholars distinguish major shirk, which takes one out of the faith, from minor shirk such as showing off in worship."
+   "The Quran itself separates the categories. It speaks of “those who disbelieved among the People of the Book and the polytheists” as two groups (98:1), and it calls Jews and Christians by their own name, People of the Book. Classical scholars discussed at length whether and how Trinitarian belief falls under shirk; there was no single ruling that lumped everyone together."
   ],
   "terms": [
    "tawhid",
-   "pre-islamic-arab-deities",
-   "kafir"
+   "kafir",
+   "ahl-al-kitab",
+   "pre-islamic-arab-deities"
   ],
-  "articles": [],
+  "articles": [
+   "same-god",
+   "indonesia",
+   "who-is-allah"
+  ],
+  "type": "term",
   "aliases": [
+   "Deities",
    "Idolatry",
    "Idolaters",
    "Mushrik",
@@ -215,7 +335,9 @@
    "caliph",
    "ummah"
   ],
-  "articles": [],
+  "articles": [
+   "indonesia"
+  ],
   "aliases": [
    "Government",
    "Consultation"
@@ -264,7 +386,9 @@
    "fiqh",
    "diya"
   ],
-  "articles": [],
+  "articles": [
+   "morality-without-god"
+  ],
   "aliases": [
    "Concubine",
    "Slavery",
@@ -319,6 +443,35 @@
    "Booty",
    "Anfal",
    "Fay"
+  ]
+ },
+ {
+  "slug": "sufism",
+  "title": "Sufism",
+  "type": "term",
+  "ar": "تصوف",
+  "tr": "taṣawwuf",
+  "def": "The inner, devotional dimension of Islam, centred on remembrance of God and purification of the heart.",
+  "what": [
+   "Sufis take as their model the hadith of ihsan, to worship God as if you see Him (Sahih Muslim). The early ascetics and teachers such as al-Hasan al-Basri, al-Junayd and al-Ghazali stressed the law and inward sincerity, and brotherhoods (tariqas) later spread across Africa and Asia. Practices include dhikr, the repeated remembrance of God."
+  ],
+  "misread": "",
+  "sources": [
+   "Some scholars criticise practices such as saint-veneration as innovation, and others defend them. Al-Ghazali’s Revival of the Religious Sciences is the classic attempt to unite law and heart."
+  ],
+  "terms": [
+   "ihsan",
+   "junayd-al-baghdadi",
+   "al-ghazali"
+  ],
+  "articles": [
+   "moon-craters"
+  ],
+  "aliases": [
+   "Sufi",
+   "Tasawwuf",
+   "Tariqa",
+   "Dervish"
   ]
  },
  {

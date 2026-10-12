@@ -18,7 +18,6 @@
   "articles": [],
   "aliases": [
    "Hami",
-   "Bahira",
    "Saiba",
    "Wasila",
    "Ham",
@@ -41,7 +40,9 @@
    "quran",
    "zakat"
   ],
-  "articles": [],
+  "articles": [
+   "manuscript-transmission"
+  ],
   "aliases": [
    "Gnat",
    "Mosquito",
@@ -107,6 +108,55 @@
   ]
  },
  {
+  "slug": "pharaoh",
+  "title": "Pharaoh",
+  "type": "person",
+  "ar": "فرعون",
+  "tr": "Fir‘awn",
+  "def": "The king of Egypt who opposed Moses, a figure of tyranny and pride in the Quran.",
+  "what": [
+   "“Pharaoh exalted himself in the land and divided its people into factions, oppressing a group of them” (28:4). He said, “I am your lord, the most high” (79:24). He was drowned in the sea, and his body is said to be kept as a sign for later generations (10:90–92)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "moses"
+  ],
+  "articles": [
+   "haman-anachronism",
+   "shared-prophets"
+  ],
+  "aliases": [
+   "Fir'awn",
+   "Firaun"
+  ]
+ },
+ {
+  "slug": "philosophy",
+  "title": "Philosophy",
+  "type": "topic",
+  "ar": "فلسفة",
+  "tr": "falsafa",
+  "def": "Muslim thinkers translated and developed Greek philosophy and science, and Islamic thought has a long tradition of reasoned enquiry.",
+  "what": [
+   "In ninth-century Baghdad the House of Wisdom supported translation of Greek works into Arabic. Philosophers such as al-Kindi, al-Farabi and Ibn Sina (Avicenna) wrote on logic, metaphysics and medicine, and Ibn Rushd (Averroes) commented on Aristotle, which fed the European universities. Others, such as al-Ghazali, criticised some philosophical claims."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "reason-and-faith",
+   "al-ghazali",
+   "al-kindi"
+  ],
+  "articles": [
+   "seven-libraries"
+  ],
+  "aliases": [
+   "Falsafa",
+   "Greek Learning"
+  ]
+ },
+ {
   "slug": "pre-islamic-arab-deities",
   "title": "Pre-Islamic Arab deities",
   "type": "topic",
@@ -155,12 +205,43 @@
   "terms": [
    "badr",
    "jihad",
-   "slavery"
+   "slavery-and-concubinage"
   ],
   "articles": [],
   "aliases": [
    "Captives",
    "Prisoners"
+  ]
+ },
+ {
+  "slug": "prophets",
+  "title": "Prophets",
+  "type": "topic",
+  "ar": "أنبياء",
+  "tr": "anbiyāʾ",
+  "def": "Humans chosen by God to deliver His guidance; the Quran names twenty-five and says there were many more.",
+  "what": [
+   "“We sent a messenger to every community: worship God and avoid false gods” (16:36). The Quran names Adam, Noah, Abraham, Moses, Jesus and others, and says Muhammad is “the seal of the prophets” (33:40). Muslims believe in all of them without distinction (2:285)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "iman",
+   "ismah",
+   "isa",
+   "moses"
+  ],
+  "articles": [
+   "crucifixion-quran",
+   "paul-and-the-law",
+   "prophet-died-poisoning",
+   "verses-read-differently"
+  ],
+  "aliases": [
+   "Prophethood",
+   "Messengers",
+   "Nabi",
+   "Nubuwwa"
   ]
  }
 ]

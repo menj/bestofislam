@@ -17,7 +17,12 @@
    "astronomy",
    "creation"
   ],
-  "articles": [],
+  "articles": [
+   "moon-craters",
+   "indonesia",
+   "fastest-growing-religion",
+   "universe-demands-creator"
+  ],
   "aliases": [
    "Shape Of The Earth",
    "Flat Earth"
@@ -66,8 +71,7 @@
    "qibla-change"
   ],
   "aliases": [
-   "East And West (The)",
-   "Qibla"
+   "East And West (The)"
   ]
  },
  {
@@ -116,6 +120,31 @@
   "aliases": []
  },
  {
+  "slug": "education",
+  "title": "Education",
+  "type": "topic",
+  "ar": "تعليم",
+  "tr": "taʿlīm",
+  "def": "Islam makes seeking knowledge a duty, and Muslim societies built schools, libraries and universities.",
+  "what": [
+   "The first revelation begins “Read” (96:1). The Prophet freed Badr captives who could teach ten Muslims to read (Musnad Ahmad). The madrasa system, from the eleventh century, set up endowed schools, and al-Qarawiyyin in Fez, founded by Fatima al-Fihri in 859, is often called the oldest continuously operating university."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "knowledge",
+   "alim"
+  ],
+  "articles": [
+   "jizya"
+  ],
+  "aliases": [
+   "Schools",
+   "Madrasa",
+   "Madrasah"
+  ]
+ },
+ {
   "slug": "egypt",
   "title": "Egypt",
   "type": "place",
@@ -133,11 +162,13 @@
    "haman"
   ],
   "articles": [
-   "haman-anachronism"
+   "haman-anachronism",
+   "apostasy-in-islam",
+   "shared-prophets",
+   "library-of-alexandria"
   ],
   "aliases": [
-   "Plagues Of Egypt",
-   "Pharaoh"
+   "Plagues Of Egypt"
   ]
  },
  {
@@ -257,7 +288,6 @@
   "articles": [],
   "aliases": [
    "Gestation",
-   "Conception",
    "Creation Of Man"
   ]
  },
@@ -278,7 +308,10 @@
    "ihsan",
    "curses-and-cursing"
   ],
-  "articles": [],
+  "articles": [
+   "crucifixion-quran",
+   "islam-religion-of-peace"
+  ],
   "aliases": []
  },
  {
@@ -343,9 +376,7 @@
    "dhimmi"
   ],
   "articles": [],
-  "aliases": [
-   "Justice"
-  ]
+  "aliases": []
  },
  {
   "slug": "esposito-john-l",
@@ -444,7 +475,7 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "sabr",
+   "adversity",
    "iblis",
    "qadar"
   ],
@@ -495,7 +526,9 @@
    "creation",
    "biology"
   ],
-  "articles": [],
+  "articles": [
+   "morality-without-god"
+  ],
   "aliases": []
  },
  {
@@ -517,7 +550,9 @@
    "jihad",
    "fitna"
   ],
-  "articles": [],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
   "aliases": [
    "Terrorism",
    "Radicalism"
@@ -539,7 +574,9 @@
    "kutub",
    "akhira"
   ],
-  "articles": [],
+  "articles": [
+   "crucifixion-quran"
+  ],
   "aliases": [
    "Hizqil"
   ]

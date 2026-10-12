@@ -13,10 +13,14 @@
   "sources": [],
   "terms": [
    "hajj",
-   "ibrahim",
+   "abraham",
    "ishmael"
   ],
-  "articles": [],
+  "articles": [
+   "qibla-change",
+   "kaaba-witnesses",
+   "five-pillars-explained"
+  ],
   "aliases": [
    "Ka'bah",
    "Kaabah",
@@ -44,7 +48,9 @@
    "ahl-al-kitab",
    "jihad"
   ],
-  "articles": [],
+  "articles": [
+   "jizya"
+  ],
   "type": "term",
   "aliases": [
    "Disbelievers",
@@ -85,7 +91,7 @@
   ],
   "terms": [
    "cave-of-hira",
-   "aisha",
+   "aisha-bint-abi-bakr",
    "muhammad"
   ],
   "articles": [],
@@ -187,7 +193,9 @@
    "hudaybiyya",
    "jews"
   ],
-  "articles": [],
+  "articles": [
+   "prophet-died-poisoning"
+  ],
   "aliases": [
    "Khaibar",
    "Khayba"
@@ -241,7 +249,6 @@
   "aliases": [
    "Murder",
    "Homicide",
-   "Qisas",
    "Retaliation"
   ]
  },
@@ -260,7 +267,7 @@
   "terms": [
    "ihsan",
    "family",
-   "charity"
+   "zakat"
   ],
   "articles": [],
   "aliases": [
@@ -313,7 +320,6 @@
   ],
   "articles": [],
   "aliases": [
-   "Taqiyya",
    "Concealment"
   ]
  },
@@ -332,12 +338,11 @@
   "terms": [
    "reason-and-faith",
    "quran",
-   "ulama"
+   "alim"
   ],
   "articles": [],
   "aliases": [
    "Learning",
-   "Education",
    "Study",
    "Literacy"
   ]

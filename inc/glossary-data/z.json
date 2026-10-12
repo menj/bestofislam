@@ -1,5 +1,28 @@
 [
  {
+  "slug": "zakariyya",
+  "title": "Zakariyya",
+  "type": "prophet",
+  "ar": "زكريا",
+  "tr": "Zakariyyā",
+  "def": "A prophet and the father of Yahya (John), who prayed for an heir in his old age.",
+  "what": [
+   "“Zakariyya called to his Lord: ‘My Lord, grant me from Yourself a good offspring; You are the Hearer of prayer’” (3:38; 19:2–6). The angels gave him the news of Yahya. He was the guardian of Mary (3:37)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "yahya",
+   "maryam"
+  ],
+  "articles": [],
+  "aliases": [
+   "Zechariah",
+   "Zacharias",
+   "Zakaria"
+  ]
+ },
+ {
   "slug": "zakat",
   "title": "Zakat",
   "ar": "زكاة",
@@ -18,7 +41,8 @@
    "ihsan"
   ],
   "articles": [
-   "five-pillars-explained"
+   "five-pillars-explained",
+   "jizya"
   ],
   "type": "term",
   "aliases": []

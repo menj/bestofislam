@@ -40,8 +40,8 @@
    "The verses on punishment in 4:15–16 and 24:2 are read by jurists as stages of the law, and the very high standard of proof means that in practice conviction on witnesses alone is rare. The Prophet told people to conceal what they could, and to avoid suspicion."
   ],
   "terms": [
-   "zina",
-   "tawba",
+   "adultery",
+   "atonement-and-repentance",
    "hudud"
   ],
   "articles": [],
@@ -67,9 +67,9 @@
    "Opening the Quran at random to predict the outcome of a venture, a custom of some, is disliked by most scholars as an innovation, and the Prophet said that whoever goes to a diviner and believes him has disbelieved in what was revealed to Muhammad (Abu Dawud)."
   ],
   "terms": [
-   "du-a",
+   "dua",
    "divination-and-the-unseen",
-   "bid-ah"
+   "bidah"
   ],
   "articles": [],
   "aliases": [
@@ -139,7 +139,9 @@
    "quran",
    "amen"
   ],
-  "articles": [],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
   "aliases": [
    "Fatihah",
    "The Opening",
@@ -215,7 +217,9 @@
    "ijtihad",
    "blasphemy"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam"
+  ],
   "aliases": []
  },
  {
@@ -351,7 +355,10 @@
    "hell",
    "creation"
   ],
-  "articles": [],
+  "articles": [
+   "library-of-alexandria",
+   "apostasy-in-islam"
+  ],
   "aliases": []
  },
  {
@@ -406,6 +413,30 @@
   ]
  },
  {
+  "slug": "five-pillars",
+  "title": "Five pillars",
+  "type": "topic",
+  "ar": "أركان الإسلام",
+  "tr": "arkān al-Islām",
+  "def": "The five basic acts of Islam: the declaration of faith, prayer, zakat, fasting in Ramadan and the pilgrimage.",
+  "what": [
+   "The Prophet said: “Islam is built on five: testifying that there is no god but God and that Muhammad is the Messenger of God, establishing prayer, giving zakat, pilgrimage to the House, and fasting Ramadan” (Sahih al-Bukhari, Sahih Muslim). Zakat is due on wealth above a minimum, and the pilgrimage only of those able."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "salah",
+   "zakat",
+   "sawm",
+   "hajj"
+  ],
+  "articles": [],
+  "aliases": [
+   "Pillars Of Islam",
+   "Arkan Al-Islam"
+  ]
+ },
+ {
   "slug": "forgetting",
   "title": "Forgetting",
   "type": "topic",
@@ -444,7 +475,9 @@
    "atonement-and-repentance",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "who-is-allah"
+  ],
   "aliases": [
    "Forgiving",
    "Pardon"
@@ -467,7 +500,10 @@
    "slavery-and-concubinage",
    "moses"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam",
+   "indonesia"
+  ],
   "aliases": [
    "Liberty"
   ]
@@ -537,7 +573,9 @@
    "badr",
    "kutub"
   ],
-  "articles": [],
+  "articles": [
+   "islamic-dilemma"
+  ],
   "aliases": [
    "Furqaan",
    "Criterion"

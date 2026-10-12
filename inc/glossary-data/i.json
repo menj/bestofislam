@@ -142,7 +142,7 @@
   "sources": [],
   "terms": [
    "eclipse",
-   "mariya",
+   "mariya-al-qibtiyya",
    "muhammad"
   ],
   "articles": [],
@@ -166,7 +166,9 @@
    "divorce",
    "marriage"
   ],
-  "articles": [],
+  "articles": [
+   "five-pillars-explained"
+  ],
   "aliases": [
    "'Idda",
    "Waiting Period"
@@ -257,7 +259,10 @@
    "fiqh",
    "ijtihad"
   ],
-  "articles": [],
+  "articles": [
+   "morality-without-god",
+   "crucifixion-quran"
+  ],
   "aliases": [
    "Consensus",
    "Ijmaa"
@@ -399,10 +404,12 @@
   "sources": [],
   "terms": [
    "isa",
-   "mary",
+   "maryam",
    "adam"
   ],
-  "articles": [],
+  "articles": [
+   "shared-prophets"
+  ],
   "aliases": [
    "Virgin Birth"
   ]
@@ -420,7 +427,7 @@
   "misread": "Mary is called “sister of Aaron” (19:28). The Prophet explained that the people of earlier times were named after the righteous before them (Sahih Muslim). Muslim scholars hold that it does not mean she was the sister of Moses’ brother, and the Imran here is not the father of Moses.",
   "sources": [],
   "terms": [
-   "mary",
+   "maryam",
    "isa",
    "moses"
   ],
@@ -444,7 +451,7 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "arabic-language",
+   "arabic",
    "jahiliyya",
    "quran"
   ],
@@ -524,7 +531,7 @@
   "terms": [
    "shirk",
    "tawhid",
-   "day-of-judgement"
+   "akhira"
   ],
   "articles": [],
   "aliases": [
@@ -552,7 +559,10 @@
    "sharia",
    "akhira"
   ],
-  "articles": [],
+  "articles": [
+   "instruments-islamic-world",
+   "arabic-words-science"
+  ],
   "aliases": [
    "Alcohol",
    "Drink, Strong",
@@ -576,7 +586,7 @@
    "Commentators differed whether Iram is a tribe, a city or an ancestor. Claims that the lost city of Ubar has been found are not established, and the Quran’s lesson is the fall of the proud, which does not depend on the location."
   ],
   "terms": [
-   "ad",
+   "aad",
    "hud",
    "prophets"
   ],
@@ -601,7 +611,7 @@
   "terms": [
    "commission-on-scientific-signs",
    "david",
-   "dhu-al-qarnayn"
+   "alexander-the-great"
   ],
   "articles": [],
   "aliases": [
@@ -660,7 +670,9 @@
    "ishmael",
    "jacob"
   ],
-  "articles": [],
+  "articles": [
+   "shared-prophets"
+  ],
   "aliases": [
    "Ishaq",
    "Ishak"
@@ -685,12 +697,14 @@
    "hajj",
    "kaaba"
   ],
-  "articles": [],
+  "articles": [
+   "five-pillars-explained",
+   "qibla-change",
+   "shared-prophets"
+  ],
   "aliases": [
    "Ismail",
-   "Isma'il",
-   "Hagar",
-   "Hajar"
+   "Isma'il"
   ]
  },
  {
@@ -710,7 +724,12 @@
    "ihsan",
    "five-pillars"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam",
+   "fastest-growing-religion",
+   "indonesia",
+   "library-of-alexandria"
+  ],
   "aliases": [
    "Al-Islam",
    "Surrender",
@@ -761,7 +780,7 @@
   ],
   "terms": [
    "justice",
-   "people-of-the-book"
+   "ahl-al-kitab"
   ],
   "articles": [],
   "aliases": [
@@ -786,7 +805,7 @@
   "terms": [
    "prophets",
    "istighfar",
-   "tawba"
+   "atonement-and-repentance"
   ],
   "articles": [],
   "aliases": [
@@ -886,9 +905,13 @@
   "terms": [
    "jacob",
    "moses",
-   "people-of-the-book"
+   "ahl-al-kitab"
   ],
-  "articles": [],
+  "articles": [
+   "ezra-and-mary",
+   "crucifixion-quran",
+   "qibla-change"
+  ],
   "aliases": [
    "Children Of Israel",
    "Banu Israil",
@@ -908,7 +931,7 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "du-a",
+   "dua",
    "atonement-and-repentance",
    "common-phrases"
   ],

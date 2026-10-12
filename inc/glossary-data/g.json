@@ -161,7 +161,12 @@
    "begotten",
    "divine-attributes"
   ],
-  "articles": [],
+  "articles": [
+   "jesus-not-god",
+   "ezra-and-mary",
+   "shared-prophets",
+   "verses-read-differently"
+  ],
   "aliases": [
    "Father",
    "Fatherhood Of God"
@@ -249,7 +254,9 @@
    "moses",
    "shirk"
   ],
-  "articles": [],
+  "articles": [
+   "shared-prophets"
+  ],
   "aliases": [
    "Calf, The Golden",
    "Samiri"
@@ -318,7 +325,10 @@
    "ihsan"
   ],
   "articles": [
-   "jesus-not-god"
+   "jesus-not-god",
+   "morality-without-god",
+   "paul-and-the-law",
+   "where-is-the-injil"
   ],
   "aliases": []
  },
@@ -338,7 +348,10 @@
    "funeral",
    "akhira"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam",
+   "manuscript-transmission"
+  ],
   "aliases": [
    "Barzakh",
    "Barzakh",
@@ -362,7 +375,9 @@
    "riba",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "five-pillars-explained"
+  ],
   "aliases": [
    "Avarice",
    "Greed",
@@ -391,7 +406,6 @@
   ],
   "articles": [],
   "aliases": [
-   "Greetings",
    "Salam To Non-Muslims"
   ]
  }

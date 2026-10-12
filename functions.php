@@ -37,6 +37,7 @@ require_once BOI_DIR . '/inc/login.php';
 require_once BOI_DIR . '/inc/login-screen.php';
 require_once BOI_DIR . '/inc/favicon.php';
 require_once BOI_DIR . '/inc/glossary.php';
+require_once BOI_DIR . '/inc/glossary-links.php';
 require_once BOI_DIR . '/inc/error-pages.php';
 
 /**

@@ -40,10 +40,12 @@
   "terms": [
    "maryam",
    "isa",
-   "kutub"
+   "kutub",
+   "moses"
   ],
   "articles": [
-   "ezra-and-mary"
+   "ezra-and-mary",
+   "shared-prophets"
   ],
   "aliases": [
    "Harun"
@@ -129,7 +131,6 @@
    "Their patronage of learning is among the best-known features of the age. Al-Khwarizmi, from whom “algorithm” takes its name, worked in the House of Wisdom in Baghdad, and the Christian physician Hunayn ibn Ishaq led a large translation of Greek medical and philosophical works into Arabic. This shows that Islam’s own sources were no barrier to learning, and in the Muslim reading encouraged it."
   ],
   "terms": [
-   "abu-muslim",
    "hunayn-ibn-ishaq"
   ],
   "articles": [
@@ -332,7 +333,9 @@
    "adam",
    "fitna"
   ],
-  "articles": [],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
   "aliases": [
    "Habil",
    "Cain",
@@ -384,11 +387,13 @@
   ],
   "terms": [
    "azar",
-   "ibrahim",
    "kutub"
   ],
   "articles": [
-   "shared-prophets"
+   "shared-prophets",
+   "qibla-change",
+   "same-god",
+   "who-is-allah"
   ],
   "aliases": [
    "Ibrahim"
@@ -434,7 +439,9 @@
    "aisha-bint-abi-bakr",
    "quran"
   ],
-  "articles": [],
+  "articles": [
+   "islam-religion-of-peace"
+  ],
   "aliases": [
    "Bakr, Abu",
    "Abu Bakr Al-Siddiq"
@@ -503,7 +510,9 @@
    "ijma",
    "sharia"
   ],
-  "articles": [],
+  "articles": [
+   "jizya"
+  ],
   "aliases": [
    "Hanifah, Abu",
    "Abu Hanifah",
@@ -552,7 +561,7 @@
   "terms": [
    "badr",
    "quraysh",
-   "makkah"
+   "mecca"
   ],
   "articles": [],
   "aliases": [
@@ -578,6 +587,52 @@
   "articles": [],
   "aliases": [
    "Abu Muslim"
+  ]
+ },
+ {
+  "slug": "abu-sufyan",
+  "title": "Abu Sufyan",
+  "type": "person",
+  "ar": "أبو سفيان",
+  "tr": "Abū Sufyān",
+  "def": "A leader of Quraysh who fought the Muslims for years, then accepted Islam at the conquest of Mecca.",
+  "what": [
+   "Abu Sufyan ibn Harb led the Meccan forces at Uhud and the Trench. When the Muslim army came to Mecca in 630 the Prophet announced that whoever enters the house of Abu Sufyan is safe. His son Muawiya later founded the Umayyad dynasty."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "quraysh",
+   "mecca",
+   "trench-battle-of-the"
+  ],
+  "articles": [],
+  "aliases": [
+   "Abu Sufyan Ibn Harb"
+  ]
+ },
+ {
+  "slug": "abu-talib",
+  "title": "Abu Talib",
+  "type": "person",
+  "ar": "أبو طالب",
+  "tr": "Abū Ṭālib",
+  "def": "The Prophet’s uncle, who raised him after his grandfather’s death and protected him from Quraysh.",
+  "what": [
+   "Abu Talib was the father of Ali. He took the orphaned Muhammad into his household and defended him when Quraysh pressed him to hand over his nephew, even through the three-year boycott of the clan. He died in about 619, shortly before Khadija."
+  ],
+  "misread": "",
+  "sources": [
+   "He is not reported to have accepted Islam. Verses such as 28:56 say that guidance is God’s to give. Sunni scholars hold he died a non-Muslim, while Shias hold he believed in secret."
+  ],
+  "terms": [
+   "abdul-muttalib",
+   "khadija",
+   "ali-ibn-abi-talib"
+  ],
+  "articles": [],
+  "aliases": [
+   "Abu Talib Ibn Abd Al-Muttalib"
   ]
  },
  {
@@ -619,7 +674,12 @@
    "iblis",
    "atonement-and-repentance"
   ],
-  "articles": [],
+  "articles": [
+   "kaaba-witnesses",
+   "same-god",
+   "shared-prophets",
+   "where-is-the-injil"
+  ],
   "aliases": [
    "Fall",
    "Fall Of Man"
@@ -749,7 +809,9 @@
    "fiqh",
    "hadith"
   ],
-  "articles": [],
+  "articles": [
+   "manuscript-transmission"
+  ],
   "aliases": [
    "Zina",
    "Fornication"
@@ -774,7 +836,12 @@
    "ihsan",
    "atonement-and-repentance"
   ],
-  "articles": [],
+  "articles": [
+   "verses-read-differently",
+   "crucifixion-quran",
+   "al-zutt-allegation",
+   "universe-demands-creator"
+  ],
   "aliases": [
    "Patience",
    "Sabr",
@@ -797,7 +864,9 @@
    "salah",
    "adhan"
   ],
-  "articles": [],
+  "articles": [
+   "five-pillars-explained"
+  ],
   "aliases": [
    "Asr",
    "Afternoon"
@@ -820,7 +889,7 @@
   "terms": [
    "salah",
    "fiqh",
-   "aisha"
+   "aisha-bint-abi-bakr"
   ],
   "articles": [],
   "aliases": [
@@ -847,7 +916,10 @@
    "fitna",
    "kafir"
   ],
-  "articles": [],
+  "articles": [
+   "islam-religion-of-peace",
+   "ezra-and-mary"
+  ],
   "aliases": [
    "Attacks",
    "Arguments"
@@ -923,7 +995,8 @@
    "tahrif"
   ],
   "articles": [
-   "where-is-the-injil"
+   "where-is-the-injil",
+   "al-zutt-allegation"
   ],
   "aliases": [
    "Comforter",
@@ -996,11 +1069,13 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "heaven",
+   "paradise",
    "hell",
-   "judgment"
+   "judgement"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam"
+  ],
   "aliases": [
    "Akhirah",
    "Hereafter"
@@ -1039,7 +1114,7 @@
    "Positions attributed to it, such as one on apostasy, are those of particular scholars or of an Egyptian law, and should be read as such. Its leaders have also condemned terrorism in strong terms."
   ],
   "terms": [
-   "apostasy-riddah",
+   "apostasy",
    "fiqh"
   ],
   "articles": [],
@@ -1153,8 +1228,7 @@
    "Scholars of the Apology question its date and authorship, and it is not evidence of what early Muslims held. It was answered by Muslim writers in the genre of debate, and the philosophical al-Kindi is a figure of Muslim learning."
   ],
   "terms": [
-   "philosophy",
-   "translation-movement"
+   "philosophy"
   ],
   "articles": [],
   "aliases": [
@@ -1252,7 +1326,9 @@
    "fiqh",
    "ijtihad"
   ],
-  "articles": [],
+  "articles": [
+   "indonesia"
+  ],
   "aliases": [
    "Ulama"
   ]
@@ -1279,7 +1355,8 @@
   ],
   "articles": [
    "who-is-allah",
-   "same-god"
+   "same-god",
+   "crucifixion-quran"
   ],
   "type": "term",
   "aliases": [
@@ -1380,6 +1457,29 @@
   "aliases": []
  },
  {
+  "slug": "amana",
+  "title": "Amana",
+  "type": "term",
+  "ar": "أمانة",
+  "tr": "amāna",
+  "def": "Trust: a responsibility entrusted by God, and honesty in keeping what is entrusted.",
+  "what": [
+   "“We offered the trust to the heavens, the earth and the mountains, and they refused to bear it and feared it; but man bore it” (33:72). “God commands you to render trusts to their owners” (4:58). The Prophet was known as al-Amin, and listed the signs of a hypocrite: when trusted he betrays."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hypocrites",
+   "justice"
+  ],
+  "articles": [
+   "second-peter"
+  ],
+  "aliases": [
+   "Trust"
+  ]
+ },
+ {
   "slug": "amanah",
   "title": "Amanah",
   "type": "term",
@@ -1455,7 +1555,12 @@
    "embryology",
    "quran"
   ],
-  "articles": [],
+  "articles": [
+   "al-zutt-allegation",
+   "quran-preservation-reddit",
+   "library-of-alexandria",
+   "apostasy-in-islam"
+  ],
   "aliases": [
    "Heart"
   ]
@@ -1478,7 +1583,9 @@
    "dhimmi",
    "abbasid-caliphate"
   ],
-  "articles": [],
+  "articles": [
+   "arabic-words-science"
+  ],
   "aliases": [
    "Spain"
   ]
@@ -1502,7 +1609,10 @@
    "jinn",
    "azrail"
   ],
-  "articles": [],
+  "articles": [
+   "ezra-and-mary",
+   "jesus-not-god"
+  ],
   "aliases": [
    "Malaika"
   ]
@@ -1521,10 +1631,12 @@
   "sources": [],
   "terms": [
    "ihsan",
-   "sabr",
+   "adversity",
    "forgiveness"
   ],
-  "articles": [],
+  "articles": [
+   "ex-muslim-blog-study"
+  ],
   "aliases": []
  },
  {
@@ -1546,7 +1658,9 @@
    "ant",
    "zakat"
   ],
-  "articles": [],
+  "articles": [
+   "crucifixion-quran"
+  ],
   "aliases": [
    "Beasts",
    "Bees",
@@ -1737,7 +1851,12 @@
    "isa",
    "ummah"
   ],
-  "articles": [],
+  "articles": [
+   "who-is-allah",
+   "crucifixion-quran",
+   "second-peter",
+   "why-five-prayers"
+  ],
   "aliases": [
    "Rasul",
    "Messenger"
@@ -1760,7 +1879,11 @@
    "tawhid",
    "kutub"
   ],
-  "articles": [],
+  "articles": [
+   "verses-read-differently",
+   "jesus-not-god",
+   "islam-religion-of-peace"
+  ],
   "aliases": [
    "Aqidah",
    "Doctrine",
@@ -1787,7 +1910,10 @@
    "ahl-al-kitab"
   ],
   "articles": [
-   "who-is-allah"
+   "who-is-allah",
+   "kaaba-witnesses",
+   "ezra-and-mary",
+   "quran-preservation-reddit"
   ],
   "aliases": []
  },
@@ -1811,7 +1937,10 @@
    "tafsir"
   ],
   "articles": [
-   "arabic-words-science"
+   "arabic-words-science",
+   "who-is-allah",
+   "al-zutt-allegation",
+   "moon-craters"
   ],
   "aliases": [
    "Arabic Language"
@@ -1859,7 +1988,10 @@
    "abraham",
    "ummah"
   ],
-  "articles": [],
+  "articles": [
+   "library-of-alexandria",
+   "al-zutt-allegation"
+  ],
   "aliases": []
  },
  {
@@ -1880,7 +2012,9 @@
    "hajj",
    "riba"
   ],
-  "articles": [],
+  "articles": [
+   "five-pillars-explained"
+  ],
   "aliases": []
  },
  {
@@ -1943,7 +2077,8 @@
   ],
   "articles": [
    "dome-inscriptions",
-   "manuscript-transmission"
+   "manuscript-transmission",
+   "haman-anachronism"
   ],
   "aliases": []
  },
@@ -2105,6 +2240,33 @@
   ]
  },
  {
+  "slug": "ashari",
+  "title": "Ashari",
+  "type": "group",
+  "ar": "أشعرية",
+  "tr": "Ashʿarī",
+  "def": "The theological school of Abu al-Hasan al-Ash‘ari (d. 936) that became the most widely followed creed among Sunnis.",
+  "what": [
+   "Al-Ash‘ari, once a Mu‘tazili, took a middle path between rationalists and literalists. He held that God’s attributes are real and eternal, that the Quran is God’s uncreated speech, and that God creates human acts while humans “acquire” them and are responsible for them. Scholars such as al-Baqillani and al-Ghazali developed the school, which is widely taught in Muslim universities, notably al-Azhar."
+  ],
+  "misread": "",
+  "sources": [
+   "Another large school, the Maturidi, is close to it, and the Athari or traditionalist school holds to the texts without interpretation. All three are accepted as within Sunni orthodoxy."
+  ],
+  "terms": [
+   "al-ghazali",
+   "qadar",
+   "tawhid"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ash'ari",
+   "Asharite",
+   "Ashariyya",
+   "Al-Ash'ari"
+  ]
+ },
+ {
   "slug": "asiya",
   "title": "Asiya",
   "type": "person",
@@ -2144,7 +2306,9 @@
    "sira",
    "hadith"
   ],
-  "articles": [],
+  "articles": [
+   "prophet-died-poisoning"
+  ],
   "aliases": [
    "Assassination",
    "Assassinations"
@@ -2169,7 +2333,12 @@
    "tafsir",
    "alexander-the-great"
   ],
-  "articles": [],
+  "articles": [
+   "seven-libraries",
+   "moon-craters",
+   "qibla-change",
+   "instruments-islamic-world"
+  ],
   "aliases": []
  },
  {
@@ -2214,7 +2383,9 @@
    "zakat",
    "tawhid"
   ],
-  "articles": [],
+  "articles": [
+   "crucifixion-quran"
+  ],
   "aliases": [
    "Atonement",
    "Tawba",
@@ -2237,7 +2408,12 @@
    "sharia",
    "fiqh"
   ],
-  "articles": [],
+  "articles": [
+   "crucifixion-quran",
+   "haman-anachronism",
+   "kaaba-witnesses",
+   "islamic-dilemma"
+  ],
   "aliases": [
    "Ulu al-Amr"
   ]

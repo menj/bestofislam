@@ -1,29 +1,5 @@
 [
  {
-  "slug": "wahi",
-  "title": "Wahi",
-  "type": "term",
-  "ar": "وحي",
-  "tr": "waḥy",
-  "def": "Revelation: the way God communicates guidance to His prophets, and in a wider sense to His creatures.",
-  "what": [
-   "“It is not for any human that God should speak to him except by revelation, or from behind a veil, or by sending a messenger who reveals by His permission what He wills” (42:51). The Prophet said revelation came to him sometimes like the ringing of a bell, and sometimes the angel appeared as a man (Sahih al-Bukhari). The Quran uses the same word for the bee (16:68) and for the mother of Moses (28:7), for a guidance placed in the heart. Ilham is such inspiration, and is not a source of law."
-  ],
-  "misread": "",
-  "sources": [],
-  "terms": [
-   "quran",
-   "gabriel",
-   "prophets"
-  ],
-  "articles": [],
-  "aliases": [
-   "Ilham",
-   "Inspiration",
-   "Revelation"
-  ]
- },
- {
   "slug": "wahy",
   "title": "Wahy",
   "ar": "وحي",
@@ -46,7 +22,37 @@
    "who-saw-gabriel"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [
+   "Ilham",
+   "Inspiration",
+   "Revelation"
+  ]
+ },
+ {
+  "slug": "wali",
+  "title": "Wali",
+  "type": "term",
+  "ar": "ولي",
+  "tr": "walī",
+  "def": "A “friend” or protector; and the title of a righteous person close to God.",
+  "what": [
+   "“God is the wali of those who believe” (2:257). “Indeed, the friends of God have no fear, nor will they grieve” (10:62). In the hadith qudsi God says that He loves the servant who draws near with obligatory acts and then with voluntary ones (Sahih al-Bukhari). In law, a wali is also the guardian who acts for a bride."
+  ],
+  "misread": "",
+  "sources": [
+   "Sunni and Shia scholars understand sainthood differently, and some criticise veneration at tombs as a path to shirk."
+  ],
+  "terms": [
+   "sufism",
+   "shirk",
+   "intercession"
+  ],
+  "articles": [],
+  "aliases": [
+   "Awliya",
+   "Saint",
+   "Friend Of God"
+  ]
  },
  {
   "slug": "water-cycle",

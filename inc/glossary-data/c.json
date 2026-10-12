@@ -14,7 +14,9 @@
   "terms": [
    "byzantines"
   ],
-  "articles": [],
+  "articles": [
+   "library-of-alexandria"
+  ],
   "aliases": []
  },
  {
@@ -75,12 +77,16 @@
    "ali-ibn-abi-talib",
    "abbasid-caliphate"
   ],
-  "articles": [],
+  "articles": [
+   "dome-inscriptions",
+   "seven-libraries",
+   "quran-preservation-reddit",
+   "moon-craters"
+  ],
   "aliases": [
    "Khalifa",
    "Khilafa",
-   "Caliphate",
-   "Khalifites"
+   "Caliphate"
   ]
  },
  {
@@ -279,7 +285,10 @@
    "injil"
   ],
   "articles": [
-   "jesus-not-god"
+   "jesus-not-god",
+   "verses-read-differently",
+   "same-god",
+   "fastest-growing-religion"
   ],
   "aliases": [
    "Christianity",
@@ -328,7 +337,10 @@
    "jerusalem",
    "ahl-al-kitab"
   ],
-  "articles": [],
+  "articles": [
+   "paul-and-the-law",
+   "second-peter"
+  ],
   "aliases": [
    "Churches",
    "Synagogues",
@@ -379,7 +391,9 @@
    "kutub",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "paul-and-the-law"
+  ],
   "aliases": [
    "Ten Commandments"
   ]
@@ -484,7 +498,12 @@
    "hadith",
    "isnad"
   ],
-  "articles": [],
+  "articles": [
+   "quran-preservation-reddit",
+   "who-saw-gabriel",
+   "ezra-and-mary",
+   "al-zutt-allegation"
+  ],
   "aliases": [
    "Ashab",
    "Companions",
@@ -526,7 +545,10 @@
    "bribery",
    "ihsan"
   ],
-  "articles": [],
+  "articles": [
+   "islam-religion-of-peace",
+   "islamic-dilemma"
+  ],
   "aliases": []
  },
  {
@@ -545,7 +567,11 @@
    "ummah",
    "jihad"
   ],
-  "articles": [],
+  "articles": [
+   "paul-and-the-law",
+   "islam-religion-of-peace",
+   "jizya"
+  ],
   "aliases": [
    "Covenant, The",
    "Treaty",
@@ -596,11 +622,15 @@
    "biology",
    "quran"
   ],
-  "articles": [],
+  "articles": [
+   "universe-demands-creator",
+   "moon-craters",
+   "indonesia",
+   "fastest-growing-religion"
+  ],
   "aliases": [
    "Cosmology",
    "Day",
-   "Earth",
    "Universe",
    "Yawm"
   ]
@@ -624,7 +654,9 @@
    "hijri-calendar",
    "adoration"
   ],
-  "articles": [],
+  "articles": [
+   "who-is-allah"
+  ],
   "aliases": [
    "Crescent Moon Symbol"
   ]
@@ -648,7 +680,8 @@
    "atonement-and-repentance"
   ],
   "articles": [
-   "crucifixion-quran"
+   "crucifixion-quran",
+   "shared-prophets"
   ],
   "aliases": []
  },

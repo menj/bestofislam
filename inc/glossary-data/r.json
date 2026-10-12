@@ -16,7 +16,7 @@
   "terms": [
    "ummah",
    "bilal",
-   "slavery"
+   "slavery-and-concubinage"
   ],
   "articles": [],
   "aliases": [
@@ -75,23 +75,25 @@
  {
   "slug": "riba",
   "title": "Riba",
-  "type": "term",
   "ar": "ربا",
-  "tr": "ribā",
-  "def": "Interest or unjust gain on loans, which the Quran forbids.",
+  "tr": "Ribā",
+  "def": "Usury: gain taken from a loan at the borrower’s expense, which the Quran forbids.",
   "what": [
-   "“God has permitted trade and forbidden riba” (2:275). The Quran warns believers to give up what remains of it (2:278–279) and not to take it “doubled and redoubled” (3:130). The Prophet cursed the one who takes it, the one who gives it, the one who writes it and the two witnesses (Sahih Muslim). The reason is that lending is a matter of kindness, and gain without risk or work lets wealth grow at the cost of the poor."
+   "The Quran says that God has permitted trade and forbidden <em>ribā</em> (2:275), and warns of a war from God against those who continue it (2:278–279). It adds that if the debtor is in difficulty, there should be time for him, and that to forgive the debt is better (2:280). A hadith in Sahih Muslim says the Prophet cursed the one who takes it, the one who gives it, the one who records it and the two who witness it.",
+   "Muslims have developed finance on other principles, such as profit-sharing, sale at an agreed mark-up and leasing."
   ],
-  "misread": "",
+  "misread": "That Islam is simply against business.",
   "sources": [
-   "Jurists debate which transactions count as riba, but all agree that fixed interest on a loan does. Islamic finance builds on partnership and sale in place of interest."
+   "The same teaching is found in the other scriptures: the Torah forbids charging interest to the poor (Exodus 22:25), and the medieval Church banned usury for centuries. Islam is a religion in which trade is praised, and the Prophet was himself a merchant. The prohibition is aimed at gain from the weakness of a debtor, and not at commerce."
   ],
   "terms": [
-   "islamic-finance",
    "zakat",
-   "charity"
+   "sharia",
+   "fiqh",
+   "islamic-finance"
   ],
   "articles": [],
+  "type": "term",
   "aliases": [
    "Interest",
    "Interest On Loans",

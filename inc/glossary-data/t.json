@@ -76,6 +76,30 @@
   ]
  },
  {
+  "slug": "takfir",
+  "title": "Takfir",
+  "type": "term",
+  "ar": "تكفير",
+  "tr": "takfīr",
+  "def": "Declaring another Muslim to be an unbeliever, which classical scholars treated with extreme caution.",
+  "what": [
+   "The Prophet said: “If a man says to his brother, ‘O unbeliever’, it returns upon one of them” (Sahih al-Bukhari). Mainstream scholars held that a person who pronounces the declaration of faith is not to be called an unbeliever unless there is clear proof of rejecting a certain, essential part of the faith, and only a court of qualified judges may rule."
+  ],
+  "misread": "",
+  "sources": [
+   "Extremist groups have used takfir to justify violence against Muslims, and the great majority of scholars have condemned that usage."
+  ],
+  "terms": [
+   "kharijites",
+   "kufr",
+   "kafir"
+  ],
+  "articles": [],
+  "aliases": [
+   "Excommunication"
+  ]
+ },
+ {
   "slug": "taqiyya",
   "title": "Taqiyya",
   "ar": "تقية",
@@ -217,7 +241,10 @@
    "zakat",
    "amana"
   ],
-  "articles": [],
+  "articles": [
+   "prophet-died-poisoning",
+   "five-pillars-explained"
+  ],
   "aliases": [
    "Business",
    "Honest Dealing",
@@ -249,6 +276,31 @@
    "Clans, Battle Of The",
    "Ahzab",
    "Khandaq"
+  ]
+ },
+ {
+  "slug": "twelve-imams",
+  "title": "Twelve Imams",
+  "type": "group",
+  "ar": "الأئمة الاثنا عشر",
+  "tr": "al-aʾimma al-ithnā ʿashar",
+  "def": "The twelve successors of the Prophet in religious authority, according to the largest branch of Shia Islam.",
+  "what": [
+   "They are Ali, Hasan, Husayn, and then their descendants down to Muhammad al-Mahdi, who Twelvers believe went into concealment in 874 and will return. Twelver law follows the Jafari school. Sunnis honour them as members of the Prophet’s family but do not hold them to be divinely appointed."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ali-ibn-abi-talib",
+   "husayn-ibn-ali",
+   "mahdi",
+   "jafar-al-sadiq"
+  ],
+  "articles": [],
+  "aliases": [
+   "Twelvers",
+   "Ithna Ashari",
+   "Imamiyya"
   ]
  }
 ]

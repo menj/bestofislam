@@ -17,7 +17,9 @@
    "quran",
    "prophets"
   ],
-  "articles": [],
+  "articles": [
+   "arabic-words-science"
+  ],
   "aliases": [
    "Jubra",
    "Jabr",
@@ -108,7 +110,9 @@
    "imru-al-qais",
    "abu-jahl"
   ],
-  "articles": [],
+  "articles": [
+   "who-is-allah"
+  ],
   "aliases": [
    "Jahiliya",
    "Age Of Ignorance",
@@ -139,27 +143,6 @@
   ]
  },
  {
-  "slug": "jazakallah-khair",
-  "title": "Jazakallah Khair",
-  "type": "term",
-  "ar": "جزاك الله خيرا",
-  "tr": "jazāka Llāhu khayran",
-  "def": "A phrase of thanks meaning “May God reward you with good.”",
-  "what": [
-   "The Prophet said: “Whoever is done a kindness and says to the doer, ‘May God reward you well,’ has done the best in thanking him” (al-Tirmidhi). Used for a favour of any size."
-  ],
-  "misread": "",
-  "sources": [],
-  "terms": [
-   "common-phrases"
-  ],
-  "articles": [],
-  "aliases": [
-   "Jazak Allah",
-   "Jazakallah"
-  ]
- },
- {
   "slug": "jerusalem",
   "title": "Jerusalem",
   "type": "place",
@@ -173,10 +156,15 @@
   "sources": [],
   "terms": [
    "isra-and-miraj",
-   "qibla",
+   "kaaba",
    "umar-ibn-al-khattab"
   ],
-  "articles": [],
+  "articles": [
+   "qibla-change",
+   "kaaba-witnesses",
+   "dome-inscriptions",
+   "manuscript-transmission"
+  ],
   "aliases": [
    "Al-Quds",
    "Bayt Al-Maqdis",
@@ -198,10 +186,15 @@
   "sources": [],
   "terms": [
    "israel",
-   "people-of-the-book",
+   "ahl-al-kitab",
    "moses"
   ],
-  "articles": [],
+  "articles": [
+   "ezra-and-mary",
+   "kaaba-witnesses",
+   "same-god",
+   "jizya"
+  ],
   "aliases": [
    "Jewish",
    "Judaism",
@@ -254,7 +247,9 @@
    "angels",
    "quran"
   ],
-  "articles": [],
+  "articles": [
+   "al-zutt-allegation"
+  ],
   "aliases": [
    "Djinn",
    "Genie",
@@ -300,7 +295,7 @@
   "sources": [],
   "terms": [
    "prophets",
-   "sabr"
+   "adversity"
   ],
   "articles": [],
   "aliases": [
@@ -324,7 +319,7 @@
   ],
   "terms": [
    "isa",
-   "people-of-the-book"
+   "ahl-al-kitab"
   ],
   "articles": [],
   "aliases": [
@@ -373,9 +368,12 @@
   "terms": [
    "jacob",
    "prophets",
-   "sabr"
+   "adversity"
   ],
-  "articles": [],
+  "articles": [
+   "haman-anachronism",
+   "shared-prophets"
+  ],
   "aliases": [
    "Yusuf"
   ]
@@ -393,11 +391,14 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "day-of-judgement",
+   "akhira",
    "justice",
    "equality"
   ],
-  "articles": [],
+  "articles": [
+   "apostasy-in-islam",
+   "islamic-dilemma"
+  ],
   "aliases": [
    "Judging",
    "Last Judgement",

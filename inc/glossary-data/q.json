@@ -1,5 +1,32 @@
 [
  {
+  "slug": "qadar",
+  "title": "Qadar",
+  "type": "term",
+  "ar": "قدر",
+  "tr": "qadar",
+  "def": "God’s knowledge and decree of all things, held together with human responsibility for choices.",
+  "what": [
+   "“Indeed, We created all things by measure” (54:49). The Prophet taught that belief in qadar, its good and its bad, is a pillar of faith (Sahih Muslim). Yet the Quran holds each soul responsible: “Whoever does an atom’s weight of good will see it” (99:7). Scholars teach that God’s knowledge does not force anyone’s choices."
+  ],
+  "misread": "",
+  "sources": [
+   "Early thinkers divided over it: the Qadariyya stressed human freedom, and the Jabriyya compulsion. Al-Ash‘ari and al-Maturidi each worked out a middle position."
+  ],
+  "terms": [
+   "iman",
+   "akhira"
+  ],
+  "articles": [],
+  "aliases": [
+   "Predestination",
+   "Fate",
+   "Destiny",
+   "Free Will",
+   "Qada"
+  ]
+ },
+ {
   "slug": "qarun",
   "title": "Qarun",
   "type": "person",
@@ -49,6 +76,49 @@
   "aliases": []
  },
  {
+  "slug": "qisas",
+  "title": "Qisas",
+  "type": "term",
+  "ar": "قصاص",
+  "tr": "qiṣāṣ",
+  "def": "The law of equal retribution for killing and injury, with the strong encouragement to forgive or accept compensation.",
+  "what": [
+   "“O you who believe, retaliation is prescribed for you in the case of the killed” (2:178), followed by the words, “but whoever is forgiven by his brother, then let him follow it with fairness.” In the case of killing, the family of the victim may demand retribution, accept blood-money, or forgive for the sake of God (5:45, 42:40). Courts and proof are required."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "killing",
+   "justice"
+  ],
+  "articles": [],
+  "aliases": [
+   "Lex Talionis"
+  ]
+ },
+ {
+  "slug": "qiyas",
+  "title": "Qiyas",
+  "type": "term",
+  "ar": "قياس",
+  "tr": "qiyās",
+  "def": "Analogical reasoning, by which a ruling in the sources is applied to a new case sharing the same cause.",
+  "what": [
+   "Jurists apply a ruling to a new matter when the reason for the ruling is present there too, for example the ban on wine extended to other intoxicants. It is the fourth source of law for most Sunni schools after the Quran, the Sunna and consensus. The report of Mu‘adh ibn Jabal, who said he would use his own reasoning when sources were silent, is cited as support, although its chain is discussed."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ijma",
+   "ijtihad",
+   "hukm"
+  ],
+  "articles": [],
+  "aliases": [
+   "Analogy"
+  ]
+ },
+ {
   "slug": "quran",
   "title": "Quran",
   "ar": "القرآن",
@@ -69,9 +139,56 @@
   ],
   "articles": [
    "manuscript-transmission",
-   "uthman-copies"
+   "uthman-copies",
+   "shared-prophets",
+   "crucifixion-quran"
   ],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "quraysh",
+  "title": "Quraysh",
+  "type": "group",
+  "ar": "قريش",
+  "tr": "Quraysh",
+  "def": "The leading tribe of Mecca, guardians of the Kaaba and the tribe of the Prophet.",
+  "what": [
+   "The Quran has a surah named for them, which reminds them of the security of their trade caravans and bids them “worship the Lord of this House” (106:1–4). The Prophet belonged to the clan of Hashim. Most Quraysh opposed him for years and many entered Islam after the conquest of Mecca in 630."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "mecca",
+   "kaaba",
+   "abu-jahl"
+  ],
+  "articles": [],
+  "aliases": [
+   "Quraish"
+  ]
+ },
+ {
+  "slug": "qurayza",
+  "title": "Qurayza",
+  "type": "group",
+  "ar": "قريظة",
+  "tr": "Qurayẓa",
+  "def": "A Jewish tribe of Medina whose siege and judgement in 627 followed their breach of the pact during the Battle of the Trench.",
+  "what": [
+   "In the siege of the Trench the Banu Qurayza were accused of conspiring with the besieging army against Medina. After the siege, they surrendered and requested that Sa‘d ibn Mu‘adh, their former ally, judge them. Sa‘d ruled by the law of the Torah, and the men who had fought were put to death (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "Historians dispute the number executed, and some modern scholars question details of the account. The Quran refers to the event at 33:26–27. Muslim scholars stress that it was a judgement on treason in wartime, not on a people for their faith."
+  ],
+  "terms": [
+   "trench-battle-of-the",
+   "jews"
+  ],
+  "articles": [],
+  "aliases": [
+   "Banu Qurayza"
+  ]
  }
 ]
