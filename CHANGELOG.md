@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [Unreleased]
+
+### Added
+
+- Fallback favicon (`inc/favicon.php`): the bundled mark is printed as the site, login and admin icon, with an Apple touch icon, whenever no Site Icon is set. A Site Icon chosen in the Customizer takes precedence.
+
+### Fixed
+
+- Front page: removed the white strip between the header and the hero, which was the block gap WordPress places above `main`.
+
 ## [1.56.0] - 2026-10-04
 
 Following the mapping of a critic's claims in Part C of the SEO workbook: claim C18, the largest tier-1 gap.
