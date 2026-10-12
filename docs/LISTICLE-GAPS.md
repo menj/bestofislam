@@ -1,4 +1,4 @@
-> **Status:** all nine clusters now have articles (31 listicles in `content/`). The seven under cluster 3 are seeded as drafts pending review. Remaining gaps are individual entries that no article mentions by name.
+> **Status:** all nine clusters now have articles (31 listicles in `content/`). All are published. Remaining gaps are individual entries that no article mentions by name.
 
 # Glossary terms with no article
 
