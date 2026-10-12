@@ -1,5 +1,31 @@
 [
  {
+  "slug": "pagan-animal-customs",
+  "title": "Pagan animal customs",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran condemns pagan Arab customs of dedicating certain animals to their gods (5:103).",
+  "what": [
+   "“God has not made any <em>baḥīra</em>, <em>sāʾiba</em>, <em>waṣīla</em> or <em>ḥām</em>; but those who disbelieve invent a lie against God” (5:103). They were camels set free or exempted from use as offerings to idols. The Quran counts this among the false rules made by the Meccans in their religion (6:138–139)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "shirk",
+   "pre-islamic-arab-deities"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hami",
+   "Bahira",
+   "Saiba",
+   "Wasila",
+   "Ham",
+   "Sa'iba"
+  ]
+ },
+ {
   "slug": "parables",
   "title": "Parables",
   "type": "topic",
@@ -54,6 +80,30 @@
    "Ginger",
    "Crystal",
    "Gardens"
+  ]
+ },
+ {
+  "slug": "people-of-the-heights",
+  "title": "People of the Heights",
+  "type": "group",
+  "ar": "أصحاب الأعراف",
+  "tr": "Aṣḥāb al-Aʿrāf",
+  "def": "Those on the elevations (<em>al-aʿrāf</em>) between Paradise and Hell on the Day of Judgement (7:46–49).",
+  "what": [
+   "“Between them is a veil, and on the heights are men who know each by his mark” (7:46). They greet the people of Paradise, and speak to the people of Hell. Commentators differ on who they are: some say those whose good and bad deeds are balanced, others the righteous or prophets. The chapter that mentions them, al-A’raf, is the seventh."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "paradise",
+   "hell"
+  ],
+  "articles": [],
+  "aliases": [
+   "Heights, The Dwellers On The",
+   "Araf",
+   "Al-Araf"
   ]
  },
  {

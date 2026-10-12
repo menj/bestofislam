@@ -122,6 +122,36 @@
   "aliases": []
  },
  {
+  "slug": "thamud",
+  "title": "Thamud and Salih",
+  "type": "group",
+  "ar": "ثمود",
+  "tr": "Thamūd",
+  "def": "The people of the prophet Salih in the north of Arabia, destroyed after they killed the she-camel; their rock-cut tombs are at al-Hijr (Hegra).",
+  "what": [
+   "Salih told Thamud: “This is the she-camel of God, a sign for you; let her graze on God’s earth and do not harm her” (7:73). They killed her (7:77, 91:14), and an earthquake seized them (7:78). The Quran says they “carved houses out of the mountains” (15:82, 26:149). The Quran calls them “companions of al-Hijr” (15:80)."
+  ],
+  "misread": "",
+  "sources": [
+   "Thamud are mentioned in Assyrian inscriptions of the eighth century BC. The rock tombs at Mada’in Salih (Hegra), a UNESCO site, are Nabataean, from the first centuries BC and AD. The Prophet, passing by on the way to Tabuk, told the Muslims not to drink from its wells nor enter it except weeping, and not to be heedless (Sahih al-Bukhari)."
+  ],
+  "terms": [
+   "aad",
+   "archaeology",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": [
+   "Thamud",
+   "Salih",
+   "Hijr",
+   "Hijr, Al-",
+   "Al-Hijr",
+   "Camel Of Salih",
+   "She-Camel"
+  ]
+ },
+ {
   "slug": "the-elephant",
   "title": "The Elephant",
   "type": "event",

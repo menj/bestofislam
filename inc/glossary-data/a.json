@@ -364,7 +364,8 @@
    "Wudu",
    "Ghusl",
    "Tayammum",
-   "Cleanliness"
+   "Cleanliness",
+   "Hadath"
   ]
  },
  {
@@ -483,6 +484,55 @@
   "aliases": [
    "Dharr, Abu",
    "Abu Dharr Al-Ghifari"
+  ]
+ },
+ {
+  "slug": "abu-hanifa",
+  "title": "Abu Hanifa",
+  "type": "person",
+  "ar": "أبو حنيفة",
+  "tr": "Abū Ḥanīfa",
+  "def": "Al-Nu’man ibn Thabit (699–767), the jurist of Kufa from whom the Hanafi school, the largest of the four Sunni schools, takes its name.",
+  "what": [
+   "Born in Kufa, he was a silk merchant and a jurist known for his use of reason, analogy and the practice of choosing the more equitable ruling (<em>istiḥsān</em>). He declined to serve as a judge under the Abbasids, and is reported to have died in prison in Baghdad. His students Abu Yusuf and al-Shaybani wrote down his teaching."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "ijma",
+   "sharia"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hanifah, Abu",
+   "Abu Hanifah",
+   "Hanafi"
+  ]
+ },
+ {
+  "slug": "abu-hurayra",
+  "title": "Abu Hurayra",
+  "type": "person",
+  "ar": "أبو هريرة",
+  "tr": "Abū Hurayra",
+  "def": "A Companion who narrated more hadith than any other, and was a close companion of the Prophet for his last years.",
+  "what": [
+   "Abu Hurayra of the tribe of Daws came to Medina in the year of Khaybar (628–29) and stayed with the Prophet, with little else to do than learn from him. He is credited with about 5,300 hadith. He explained why he narrated more than the others: the Muhajirun were busy in the markets and the Ansar with their land, while he stayed to keep his stomach full and to hear (Sahih al-Bukhari). His name means “father of the kitten”."
+  ],
+  "misread": "",
+  "sources": [
+   "Some Shias and others have criticised him, and Sunni scholars have defended him, noting that other Companions confirmed much of what he said, and that Aisha and others corrected him where they thought he was mistaken. His narrations are among the most used in hadith collections."
+  ],
+  "terms": [
+   "hadith",
+   "companions-of-the-prophet",
+   "isnad"
+  ],
+  "articles": [],
+  "aliases": [
+   "Huraira, Abu",
+   "Abu Huraira"
   ]
  },
  {
@@ -1019,6 +1069,28 @@
   ]
  },
  {
+  "slug": "al-hallaj",
+  "title": "Al-Hallaj",
+  "type": "person",
+  "ar": "الحلاج",
+  "tr": "al-Ḥallāj",
+  "def": "A Sufi of Baghdad (c. 858–922), executed for saying “I am the Truth”, whom some Muslims honour as a martyr and others as a heretic.",
+  "what": [
+   "Husayn ibn Mansur al-Hallaj travelled widely and taught in Baghdad. His saying <em>anā al-ḥaqq</em>, “I am the Truth” (God being al-Ḥaqq), was taken by his accusers as a claim to divinity, and he was tried and executed in 922. Many Sufis understood the saying as describing a state in which the self is annihilated in God, and not as a claim to be God."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sufism",
+   "haqq"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hallaj, Al-",
+   "Mansur Al-Hallaj"
+  ]
+ },
+ {
   "slug": "al-nadir-banu",
   "title": "Al-Nadir, Banu",
   "type": "group",
@@ -1312,7 +1384,9 @@
    "quran"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [
+   "Heart"
+  ]
  },
  {
   "slug": "andalus-al",
@@ -1389,7 +1463,8 @@
   "tr": "Ḥayawān",
   "def": "The Quran describes animals as communities like humans, as signs of God, and as creatures owed kindness.",
   "what": [
-   "“There is no creature on the earth or bird flying with its wings except they are communities like you” (6:38). A bee is inspired by its Lord to make homes in the mountains and trees (16:68–69). Cattle and horses are listed among God’s gifts (16:5–8). The ant (27:18), the hoopoe (27:20) and the dog of the cave’s sleepers (18:18) have their places in stories."
+   "“There is no creature on the earth or bird flying with its wings except they are communities like you” (6:38). A bee is inspired by its Lord to make homes in the mountains and trees (16:68–69). Cattle and horses are listed among God’s gifts (16:5–8). The ant (27:18), the hoopoe (27:20) and the dog of the cave’s sleepers (18:18) have their places in stories.",
+   "The Quran says of bees that “from their bellies comes a drink of varying colours in which is healing for people” (16:69), and the Prophet recommended honey for a man with an upset stomach (Sahih al-Bukhari). The hoopoe, <em>hudhud</em>, brings Solomon news of the Queen of Sheba (27:20–22)."
   ],
   "misread": "",
   "sources": [
@@ -1408,7 +1483,10 @@
    "Cattle",
    "Creatures",
    "Donkeys",
-   "Horses"
+   "Horses",
+   "Honey",
+   "Hudhud",
+   "Hoopoe"
   ]
  },
  {

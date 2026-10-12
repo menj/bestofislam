@@ -105,6 +105,34 @@
   ]
  },
  {
+  "slug": "cave-of-hira",
+  "title": "Cave of Hira",
+  "type": "place",
+  "ar": "حراء",
+  "tr": "Ḥirāʾ",
+  "def": "The cave on the mountain outside Mecca where the Prophet used to retire and where the first revelation came.",
+  "what": [
+   "Aisha relates in Sahih al-Bukhari that the Prophet used to spend nights in worship in the cave of Hira, and that the angel came to him there and said “Read!” He answered “I cannot read”, and was pressed three times, then the words of 96:1–5 came: “Read in the name of your Lord who created.” He returned trembling to Khadija, who comforted him and took him to her cousin Waraqa."
+  ],
+  "misread": "",
+  "sources": [
+   "The account stands at the beginning of Sahih al-Bukhari and is the basis for the date of the revelation, in the month of Ramadan in about 610. The cave is on the hill known as Jabal al-Nour, a short climb from Mecca."
+  ],
+  "terms": [
+   "wahy",
+   "khadija",
+   "gabriel"
+  ],
+  "articles": [
+   "who-saw-gabriel"
+  ],
+  "aliases": [
+   "Hira, Mt.",
+   "Mount Hira",
+   "Jabal Al-Nour"
+  ]
+ },
+ {
   "slug": "cham",
   "title": "Cham",
   "type": "group",

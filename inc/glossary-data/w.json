@@ -23,5 +23,30 @@
   ],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "water-cycle",
+  "title": "Water cycle",
+  "type": "topic",
+  "ar": "ماء",
+  "tr": "Māʾ",
+  "def": "The Quran speaks of rain as God’s sign, which gives life to dead land.",
+  "what": [
+   "“It is He who sends down water from the sky, and We bring forth from it plants of every kind” (6:99). “Have you not seen that God sent down water from the sky and led it as springs in the earth?” (39:21). The Quran also compares truth and falsehood to the foam that rises with water (13:17), and says that “We made from water every living thing” (21:30)."
+  ],
+  "misread": "",
+  "sources": [
+   "Classical commentators explained the verses with the knowledge of their time, and some said the springs come from rain, and others from the earth. Muslim scholars generally hold that the verses invite thought, and are not a lesson in hydrology."
+  ],
+  "terms": [
+   "creation",
+   "biology"
+  ],
+  "articles": [],
+  "aliases": [
+   "Hydrology",
+   "Rain",
+   "Water"
+  ]
  }
 ]
