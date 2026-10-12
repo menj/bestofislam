@@ -35,6 +35,7 @@ require_once BOI_DIR . '/inc/search-permalinks.php';
 require_once BOI_DIR . '/inc/login.php';
 require_once BOI_DIR . '/inc/login-screen.php';
 require_once BOI_DIR . '/inc/favicon.php';
+require_once BOI_DIR . '/inc/error-pages.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.
