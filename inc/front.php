@@ -177,9 +177,15 @@ function boi_site_counts() {
  */
 function boi_flush_site_counts() {
 	delete_transient( 'boi_site_counts' );
+	delete_transient( 'boi_auto_picks' );
+	delete_transient( 'boi_reading_urls' );
 }
 add_action( 'save_post_post', 'boi_flush_site_counts' );
 add_action( 'deleted_post', 'boi_flush_site_counts' );
+// The section total counts top-level terms, so changing the terms changes it.
+add_action( 'created_listicle-topic', 'boi_flush_site_counts' );
+add_action( 'edited_listicle-topic', 'boi_flush_site_counts' );
+add_action( 'delete_listicle-topic', 'boi_flush_site_counts' );
 
 /**
  * Renders the stats strip.
@@ -228,27 +234,53 @@ function boi_render_picks() {
 	}
 
 	if ( empty( $posts ) ) {
-		$all = get_posts(
-			array(
-				'post_type'      => 'post',
-				'posts_per_page' => 30,
-				'meta_query'     => array(
-					array(
-						'key'     => BOI_LISTICLE_META,
-						'compare' => 'EXISTS',
+		$top = get_transient( 'boi_auto_picks' );
+
+		if ( ! is_array( $top ) ) {
+			// The entry count is kept as post meta on save, so the largest lists
+			// come from one ordered query over every listicle, not a sample.
+			$ranked = get_posts(
+				array(
+					'post_type'      => 'post',
+					'posts_per_page' => 3,
+					'no_found_rows'  => true,
+					'meta_key'       => '_boi_entry_count', // phpcs:ignore WordPress.DB.SlowDBQuery
+					'orderby'        => 'meta_value_num',
+					'order'          => 'DESC',
+				)
+			);
+
+			$all = get_posts(
+				array(
+					'post_type'      => 'post',
+					'posts_per_page' => 200,
+					'no_found_rows'  => true,
+					'meta_query'     => array(
+						array(
+							'key'     => BOI_LISTICLE_META,
+							'compare' => 'EXISTS',
+						),
 					),
-				),
-			)
-		);
+				)
+			);
 
-		usort(
-			$all,
-			function ( $a, $b ) {
-				return substr_count( $b->post_content, '<!-- wp:bestofislam/entry ' ) <=> substr_count( $a->post_content, '<!-- wp:bestofislam/entry ' );
+			if ( count( $ranked ) >= 3 ) {
+				$top = array_map( 'intval', wp_list_pluck( $ranked, 'ID' ) );
+			} else {
+				// Posts saved before the count was kept: count the entries directly.
+				usort(
+					$all,
+					function ( $a, $b ) {
+						return substr_count( $b->post_content, '<!-- wp:bestofislam/entry ' ) <=> substr_count( $a->post_content, '<!-- wp:bestofislam/entry ' );
+					}
+				);
+
+				$top = array_map( 'intval', wp_list_pluck( array_slice( $all, 0, 3 ), 'ID' ) );
 			}
-		);
+			set_transient( 'boi_auto_picks', $top, 12 * HOUR_IN_SECONDS );
+		}
 
-		$posts = array_slice( $all, 0, 3 );
+		$posts = array_filter( array_map( 'get_post', $top ) );
 	}
 
 	if ( empty( $posts ) ) {
@@ -371,7 +403,14 @@ function boi_render_html_sitemap() {
 		}
 	}
 
-	$pages = get_pages( array( 'sort_column' => 'menu_order,post_title' ) );
+	// get_pages() does not run the page-list exclusion filter, so pass the
+	// unlisted identifiers directly.
+	$pages = get_pages(
+		array(
+			'sort_column' => 'menu_order,post_title',
+			'exclude'     => function_exists( 'boi_unlist_enabled' ) && boi_unlist_enabled() ? boi_unlisted_ids() : array(),
+		)
+	);
 	$list  = '';
 
 	foreach ( $pages as $page ) {
@@ -409,7 +448,9 @@ function boi_hero_post() {
 
 	$post = get_page_by_path( '' !== $choice ? $choice : 'manuscript-transmission', OBJECT, 'post' );
 
-	return ( $post && 'publish' === $post->post_status ) ? $post : null;
+	// The query hook cannot filter this direct lookup, so check it here: an
+	// unlisted article must not supply the front page's image.
+	return ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) ? $post : null;
 }
 
 /**

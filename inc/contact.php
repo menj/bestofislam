@@ -126,14 +126,6 @@ function boi_handle_contact() {
 		$redirect( 'sent' );
 	}
 
-	$ip   = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
-	$key  = 'boi_contact_' . md5( $ip );
-	$hits = (int) get_transient( $key );
-
-	if ( $hits >= 3 ) {
-		$redirect( 'limit' );
-	}
-
 	$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
 	$email   = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
 	$subject = isset( $_POST['subject'] ) ? sanitize_text_field( wp_unslash( $_POST['subject'] ) ) : '';
@@ -141,6 +133,33 @@ function boi_handle_contact() {
 
 	if ( '' === $name || ! is_email( $email ) || '' === $subject || '' === $message ) {
 		$redirect( 'error' );
+	}
+
+	// Take a slot only for a message that will be sent, so a mistyped field
+	// does not use up one of the three. Strict: if the lock cannot be taken,
+	// ask the visitor to try again rather than let submissions through.
+	$ip  = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+	$key = 'boi_contact_' . md5( $ip );
+
+	$allowed = boi_with_lock(
+		$key,
+		function () use ( $key ) {
+			$hits = (int) get_transient( $key );
+			if ( $hits >= 3 ) {
+				return false;
+			}
+			set_transient( $key, $hits + 1, HOUR_IN_SECONDS );
+			return true;
+		},
+		true
+	);
+
+	if ( null === $allowed ) {
+		$redirect( 'error' );
+	}
+
+	if ( ! $allowed ) {
+		$redirect( 'limit' );
 	}
 
 	$body = sprintf(
@@ -165,8 +184,6 @@ function boi_handle_contact() {
 		$body,
 		$headers
 	);
-
-	set_transient( $key, $hits + 1, HOUR_IN_SECONDS );
 
 	$redirect( $sent ? 'sent' : 'error' );
 }

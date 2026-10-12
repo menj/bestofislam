@@ -11,6 +11,7 @@ define( 'BOI_VERSION', '1.56.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
+require_once BOI_DIR . '/inc/util.php';
 require_once BOI_DIR . '/inc/taxonomy.php';
 require_once BOI_DIR . '/inc/blocks.php';
 require_once BOI_DIR . '/inc/schema.php';
@@ -168,6 +169,7 @@ function boi_enqueue_assets() {
 			'postId'    => get_the_ID(),
 			'loginOnly' => boi_voting_requires_login(),
 			'loggedIn'  => is_user_logged_in(),
+			'userId'    => get_current_user_id(),
 			'strings'   => array(
 				'error'     => __( 'Your vote could not be recorded. Please try again.', 'bestofislam' ),
 				'duplicate' => __( 'You have already voted on this entry.', 'bestofislam' ),

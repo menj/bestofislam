@@ -234,10 +234,20 @@ add_action( 'save_post', 'boi_unlist_save' );
  * @return void
  */
 function boi_set_unlisted( $post_id, $unlisted ) {
-	$ids = boi_unlisted_ids();
-	$ids = $unlisted ? array_unique( array_merge( $ids, array( (int) $post_id ) ) ) : array_diff( $ids, array( (int) $post_id ) );
+	boi_with_lock(
+		'unlisted',
+		function () use ( $post_id, $unlisted ) {
+			// Read inside the lock, so two saves cannot overwrite each other.
+			// The option autoloads, so it also sits in the combined "alloptions"
+			// cache; clear both or the read below can return a stale list.
+			wp_cache_delete( BOI_UNLISTED_OPTION, 'options' );
+			wp_cache_delete( 'alloptions', 'options' );
+			$ids = boi_unlisted_ids();
+			$ids = $unlisted ? array_unique( array_merge( $ids, array( (int) $post_id ) ) ) : array_diff( $ids, array( (int) $post_id ) );
 
-	update_option( BOI_UNLISTED_OPTION, array_values( array_map( 'intval', $ids ) ), true );
+			update_option( BOI_UNLISTED_OPTION, array_values( array_map( 'intval', $ids ) ), true );
+		}
+	);
 
 	if ( function_exists( 'boi_flush_site_counts' ) ) {
 		boi_flush_site_counts();

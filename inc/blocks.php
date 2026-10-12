@@ -59,6 +59,9 @@ function boi_render_listicle( $attributes, $content, $block ) {
 		}
 	}
 
+	// A listicle nested in another's entry must not leave the outer list's
+	// count and index overwritten, so keep the outer state and put it back.
+	$outer_state                 = $GLOBALS['boi_render_state'];
 	$GLOBALS['boi_render_state'] = array(
 		'index' => 0,
 		'total' => $total,
@@ -81,6 +84,8 @@ function boi_render_listicle( $attributes, $content, $block ) {
 			'data-total' => (string) $total,
 		)
 	);
+
+	$GLOBALS['boi_render_state'] = $outer_state;
 
 	$jump = '';
 

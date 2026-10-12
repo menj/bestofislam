@@ -40,6 +40,8 @@ function boi_search_query( $query ) {
 			)
 		);
 	} elseif ( 'reflections' === $kind ) {
+		// Pages carry no listicle flag either, so limit this to posts.
+		$query->set( 'post_type', 'post' );
 		$query->set(
 			'meta_query',
 			array(
@@ -96,10 +98,23 @@ function boi_search_relevance( $orderby, $query ) {
 	$like  = '%' . $wpdb->esc_like( $term ) . '%';
 	$like  = $wpdb->prepare( '%s', $like );
 
+	// A multi-word search matches word by word, so rank a field that holds
+	// every word as well as one that holds the whole phrase.
+	$words = array_slice( array_filter( preg_split( '/\s+/', $term ), 'strlen' ), 0, 6 );
+	$all   = function ( $column ) use ( $wpdb, $words ) {
+		$tests = array();
+		foreach ( $words as $word ) {
+			$tests[] = $wpdb->prepare( "{$column} LIKE %s", '%' . $wpdb->esc_like( $word ) . '%' );
+		}
+		return $tests ? '(' . implode( ' AND ', $tests ) . ')' : '0';
+	};
+
 	return "CASE
 		WHEN {$wpdb->posts}.post_title = {$exact} THEN 1
 		WHEN {$wpdb->posts}.post_title LIKE {$like} THEN 2
+		WHEN {$all( $wpdb->posts . '.post_title' )} THEN 2
 		WHEN {$wpdb->posts}.post_excerpt LIKE {$like} THEN 3
+		WHEN {$all( $wpdb->posts . '.post_excerpt' )} THEN 3
 		ELSE 4
 	END ASC, {$wpdb->posts}.post_date DESC";
 }
@@ -136,7 +151,12 @@ function boi_matching_entries( $post_id, $term, $limit = 3 ) {
 				continue;
 			}
 
-			$body = wp_strip_all_tags( render_block( $inner ) );
+			// The objection and the answer, without the labels the entry's own
+			// template adds ("Number", "The objection"), which are not content.
+			$body = isset( $attrs['claim'] ) ? wp_strip_all_tags( $attrs['claim'] ) : '';
+			foreach ( $inner['innerBlocks'] as $answer ) {
+				$body .= ' ' . wp_strip_all_tags( render_block( $answer ) );
+			}
 			$hay  = function_exists( 'mb_strtolower' ) ? mb_strtolower( $title . ' ' . $body ) : strtolower( $title . ' ' . $body );
 
 			if ( false === strpos( $hay, $needle ) ) {

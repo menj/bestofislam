@@ -222,10 +222,8 @@ function boi_filter_login_address( $url, $scheme = null ) {
 	if ( isset( $parts[1] ) ) {
 		parse_str( $parts[1], $args );
 
-		if ( isset( $args['login'] ) ) {
-			$args['login'] = rawurlencode( $args['login'] );
-		}
-
+		// parse_str() has decoded the values and add_query_arg() encodes them
+		// again, so encoding here would double-encode a reserved character.
 		$new = add_query_arg( $args, $new );
 	}
 

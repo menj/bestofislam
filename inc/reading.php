@@ -217,18 +217,31 @@ add_action( 'init', 'boi_register_reading_parts' );
  */
 function boi_render_reading_parts() {
 	$items = '';
+	$urls  = get_transient( 'boi_reading_urls' );
 
-	foreach ( boi_reading_order() as $i => $part ) {
-		$url = '';
+	// One lookup per part would run seven queries on every render, so the
+	// resolved addresses are kept until an article is saved or unlisted.
+	if ( ! is_array( $urls ) ) {
+		$urls = array();
 
-		foreach ( $part['slugs'] as $slug ) {
-			$post = get_page_by_path( $slug, OBJECT, 'post' );
+		foreach ( boi_reading_order() as $i => $part ) {
+			$urls[ $i ] = '';
 
-			if ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) {
-				$url = get_permalink( $post );
-				break;
+			foreach ( $part['slugs'] as $slug ) {
+				$post = get_page_by_path( $slug, OBJECT, 'post' );
+
+				if ( $post && 'publish' === $post->post_status && ! boi_is_unlisted( $post ) ) {
+					$urls[ $i ] = get_permalink( $post );
+					break;
+				}
 			}
 		}
+
+		set_transient( 'boi_reading_urls', $urls, 12 * HOUR_IN_SECONDS );
+	}
+
+	foreach ( boi_reading_order() as $i => $part ) {
+		$url = isset( $urls[ $i ] ) ? $urls[ $i ] : '';
 
 		if ( '' === $url ) {
 			continue;

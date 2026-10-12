@@ -58,6 +58,26 @@ function boi_render_sections() {
 			}
 		}
 
+		// Count distinct posts that a visitor can open. The term counts would
+		// count a post filed in both a section and its child twice, and would
+		// include posts the unlisting feature hides from every listing.
+		$visible = new WP_Query(
+			array(
+				'post_type'      => 'post',
+				'post_status'    => 'publish',
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'listicle-topic',
+						'field'    => 'term_id',
+						'terms'    => $ids,
+					),
+				),
+			)
+		);
+		$count   = (int) $visible->found_posts;
+
 		$latest = get_posts(
 			array(
 				'post_type'      => 'post',

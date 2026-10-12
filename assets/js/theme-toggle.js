@@ -10,6 +10,10 @@
 
 	var KEY = 'boi-appearance';
 
+	// Set when the reader chooses, so a choice that could not be saved still
+	// holds for this page view against later changes to the system setting.
+	var chosen = false;
+
 	/**
 	 * Returns the appearance currently applied.
 	 *
@@ -37,18 +41,24 @@
 	}
 
 	/**
-	 * Applies an appearance and records the choice.
+	 * Applies an appearance, and records it as the reader's choice unless it
+	 * is only following the system setting.
 	 *
-	 * @param {string} mode Appearance to apply.
+	 * @param {string}  mode   Appearance to apply.
+	 * @param {boolean} follow True when applying the system setting.
 	 * @return {void}
 	 */
-	function apply( mode ) {
+	function apply( mode, follow ) {
 		document.documentElement.setAttribute( 'data-theme', mode );
 
-		try {
-			window.localStorage.setItem( KEY, mode );
-		} catch ( error ) {
-			// Storage unavailable; the choice lasts for this page view only.
+		if ( ! follow ) {
+			chosen = true;
+
+			try {
+				window.localStorage.setItem( KEY, mode );
+			} catch ( error ) {
+				// Storage unavailable; the choice lasts for this page view only.
+			}
 		}
 
 		document.querySelectorAll( '[data-boi-appearance]' ).forEach( function ( button ) {
@@ -71,15 +81,21 @@
 		var query = window.matchMedia( '(prefers-color-scheme: dark)' );
 
 		query.addEventListener( 'change', function ( event ) {
+			if ( chosen ) {
+				return;
+			}
+
 			try {
 				if ( window.localStorage.getItem( KEY ) ) {
 					return;
 				}
 			} catch ( error ) {
-				return;
+				// Storage is blocked, so there is no saved choice: keep following.
 			}
 
-			apply( event.matches ? 'dark' : 'light' );
+			// Following the system is not a choice, so it is not saved; later
+			// changes to the system setting then keep being followed.
+			apply( event.matches ? 'dark' : 'light', true );
 		} );
 	} );
 } )();

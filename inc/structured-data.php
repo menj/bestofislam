@@ -132,8 +132,9 @@ function boi_article_image_object( $post ) {
 		return null;
 	}
 
-	// The manifest is the record of every seeded image's credit.
-	if ( empty( $credit ) && function_exists( 'boi_image_manifest' ) ) {
+	// The manifest is the record of every seeded image's credit. It describes
+	// the seeded image only, so it is not applied to an image the owner chose.
+	if ( empty( $credit ) && ! $id && function_exists( 'boi_image_manifest' ) ) {
 		$manifest = boi_image_manifest();
 
 		if ( isset( $manifest[ $post->post_name ] ) ) {
@@ -300,12 +301,11 @@ function boi_print_structured_data() {
 		return;
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . wp_json_encode(
+	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
 		array(
 			'@context' => 'https://schema.org',
 			'@graph'   => $nodes,
-		),
-		JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		)
 	) . "</script>\n";
 }
 add_action( 'wp_head', 'boi_print_structured_data', 19 );

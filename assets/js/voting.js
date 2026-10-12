@@ -12,7 +12,9 @@
 	}
 
 	var config = window.boiVoting;
-	var storageKey = 'boi-voted-' + config.postId;
+	// Per account as well as per post, so a second account in the same browser
+	// is not shown as having voted.
+	var storageKey = 'boi-voted-' + config.postId + '-' + ( config.userId || 0 );
 
 	/**
 	 * Reads the locally recorded votes for this post.
@@ -103,6 +105,10 @@
 				}
 
 				if ( result.status === 409 ) {
+					// The error carries the current tally; show it rather than a stale one.
+					if ( result.data && result.data.data && typeof result.data.data.count !== 'undefined' ) {
+						count.textContent = result.data.data.count;
+					}
 					message.textContent = config.strings.duplicate;
 					rememberVote( entryId );
 					markVoted( button );

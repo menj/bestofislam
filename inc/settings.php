@@ -124,11 +124,15 @@ function boi_sanitize_options( $input ) {
 
 		case 'seo':
 			$current['seo_description'] = empty( $input['seo_description'] ) ? 0 : 1;
-			$current['search_pretty']   = empty( $input['search_pretty'] ) ? 0 : 1;
-			$base                       = isset( $input['search_base'] ) ? sanitize_title( $input['search_base'] ) : 'search';
-			$current['search_base']     = '' !== $base ? $base : 'search';
-			// The base changes the rewrite rules; rebuild them on the next load.
-			update_option( 'boi_flush_rewrites', 1, false );
+			// With the plugin active these inputs are not shown, so absent
+			// values mean "not offered", not "switched off": keep what is saved.
+			if ( ! function_exists( 'wpseosearch_base' ) ) {
+				$current['search_pretty'] = empty( $input['search_pretty'] ) ? 0 : 1;
+				$base                     = isset( $input['search_base'] ) ? sanitize_title( $input['search_base'] ) : 'search';
+				$current['search_base']   = '' !== $base ? $base : 'search';
+				// The base changes the rewrite rules; rebuild them on the next load.
+				update_option( 'boi_flush_rewrites', 1, false );
+			}
 			break;
 
 		case 'access':
@@ -155,9 +159,13 @@ function boi_sanitize_options( $input ) {
 			break;
 
 		case 'voting':
-			$current['voting_enabled']    = empty( $input['voting_enabled'] ) ? 0 : 1;
-			$current['voting_login_only'] = empty( $input['voting_login_only'] ) ? 0 : 1;
-			$current['voting_rate_limit'] = max( 1, min( 100, (int) ( isset( $input['voting_rate_limit'] ) ? $input['voting_rate_limit'] : 10 ) ) );
+			$current['voting_enabled'] = empty( $input['voting_enabled'] ) ? 0 : 1;
+			// The two dependent fields are disabled, and so not submitted, while
+			// voting is off. Keep their saved values rather than resetting them.
+			if ( $current['voting_enabled'] ) {
+				$current['voting_login_only'] = empty( $input['voting_login_only'] ) ? 0 : 1;
+				$current['voting_rate_limit'] = max( 1, min( 100, (int) ( isset( $input['voting_rate_limit'] ) ? $input['voting_rate_limit'] : 10 ) ) );
+			}
 			break;
 	}
 

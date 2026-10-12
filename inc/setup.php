@@ -687,22 +687,36 @@ function boi_populate_content() {
 	boi_create_navigation( $topics, $pages );
 	boi_remove_sample_content();
 
-	if ( isset( $pages['home'] ) ) {
+	// Set the front page and posts page only when the site has not chosen
+	// its own: population runs again on updates, and must not undo a choice
+	// the owner made after activation.
+	// "Chosen" means a published page: a draft or trashed one is as good as none.
+	$usable = function ( $id ) {
+		$page = $id ? get_post( $id ) : null;
+		return $page && 'page' === $page->post_type && 'publish' === $page->post_status;
+	};
+
+	$front = (int) get_option( 'page_on_front' );
+
+	if ( isset( $pages['home'] ) && ( 'page' !== get_option( 'show_on_front' ) || ! $usable( $front ) ) ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $pages['home'] );
 	}
 
-	if ( isset( $pages['blog'] ) ) {
+	$posts_page = (int) get_option( 'page_for_posts' );
+
+	if ( isset( $pages['blog'] ) && ! $usable( $posts_page ) ) {
 		update_option( 'page_for_posts', $pages['blog'] );
 	}
 
 	boi_backfill_listicle_flags();
 	boi_migrate_seed( $topics );
 
-	if ( function_exists( 'boi_attach_featured_images' ) && ! get_transient( 'boi_images_lock' ) ) {
-		set_transient( 'boi_images_lock', 1, MINUTE_IN_SECONDS );
+	// The same atomic lock the front-end image import uses, so the two cannot
+	// sideload an image at once.
+	if ( function_exists( 'boi_attach_featured_images' ) && boi_images_lock_take() ) {
 		boi_attach_featured_images();
-		delete_transient( 'boi_images_lock' );
+		boi_images_lock_release();
 	}
 
 	boi_migrate_pages( $pages );
@@ -813,14 +827,6 @@ function boi_migrate_seed( $topics ) {
 
 		$args = array();
 
-		if ( $post->post_title !== $listicle['title'] ) {
-			$args['post_title'] = $listicle['title'];
-		}
-
-		if ( $post->post_excerpt !== $listicle['excerpt'] ) {
-			$args['post_excerpt'] = $listicle['excerpt'];
-		}
-
 		// Refresh the body only while the owner has not edited it. Four cases:
 		// already current; damaged by the old unslashed save and otherwise
 		// untouched, which is repaired; recorded as written by the theme,
@@ -831,6 +837,11 @@ function boi_migrate_seed( $topics ) {
 		$slug    = $listicle['slug'];
 		$current = boi_content_fingerprint( $post->post_content );
 
+		// The theme's own text may be refreshed only while the owner has not
+		// touched the article. An edited body means the title and excerpt may
+		// have been edited too, so they are left alone as well.
+		$untouched = false;
+
 		if ( '' !== $fresh ) {
 			$target  = boi_content_fingerprint( $fresh );
 			$damaged = boi_content_fingerprint( wp_unslash( $fresh ) );
@@ -838,11 +849,35 @@ function boi_migrate_seed( $topics ) {
 			if ( $current === $target ) {
 				$hashes[ $slug ] = $current;
 				update_option( 'boi_article_hashes', $hashes, false );
+				$untouched = true;
 			} elseif ( ( isset( $hashes[ $slug ] ) && $hashes[ $slug ] === $current )
 				|| $current === $damaged
 				|| ( ! isset( $hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt ) ) {
 				$args['post_content'] = $fresh;
+				$untouched            = true;
 			}
+		}
+
+		// Title and excerpt are judged on their own record: a body left alone
+		// says nothing about whether the owner reworded the title.
+		$text_hashes = (array) get_option( 'boi_article_text_hashes', array() );
+		$text_now    = md5( $post->post_title . "\n" . $post->post_excerpt );
+		$text_seed   = md5( $listicle['title'] . "\n" . $listicle['excerpt'] );
+		$text_free   = $text_now === $text_seed
+			|| ( isset( $text_hashes[ $slug ] ) && $text_hashes[ $slug ] === $text_now )
+			|| ( ! isset( $text_hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt );
+
+		if ( $text_free ) {
+			if ( $post->post_title !== $listicle['title'] ) {
+				$args['post_title'] = $listicle['title'];
+			}
+
+			if ( $post->post_excerpt !== $listicle['excerpt'] ) {
+				$args['post_excerpt'] = $listicle['excerpt'];
+			}
+
+			$text_hashes[ $slug ] = $text_seed;
+			update_option( 'boi_article_text_hashes', $text_hashes, false );
 		}
 
 		if ( isset( $topics[ $listicle['topic'] ] ) ) {
@@ -885,13 +920,19 @@ function boi_migrate_pages( $pages ) {
 		}
 
 		$current = boi_content_fingerprint( $post->post_content );
+		$fresh   = boi_seed_page_content( $key );
 
-		// Unedited means the stored content still matches what the theme last wrote.
-		if ( isset( $hashes[ $key ] ) && $hashes[ $key ] !== $current ) {
+		// Unedited means the stored content still matches what the theme last
+		// wrote. With no record, the page counts as unedited only if it already
+		// holds the theme's text (a page the theme has just created); otherwise
+		// an edit cannot be ruled out and the page is left as it is.
+		if ( isset( $hashes[ $key ] ) ) {
+			if ( $hashes[ $key ] !== $current ) {
+				continue;
+			}
+		} elseif ( '' === $fresh || boi_content_fingerprint( $fresh ) !== $current ) {
 			continue;
 		}
-
-		$fresh = boi_seed_page_content( $key );
 
 		if ( '' !== $fresh && boi_content_fingerprint( $fresh ) !== $current ) {
 			boi_update_post( array( 'ID' => $post->ID, 'post_content' => $fresh ) );
@@ -924,7 +965,8 @@ function boi_retire_questions_page() {
 
 	$hashes = (array) get_option( 'boi_page_hashes', array() );
 
-	if ( isset( $hashes['questions'] ) && md5( $page->post_content ) !== $hashes['questions'] && boi_content_fingerprint( $page->post_content ) !== $hashes['questions'] ) {
+	// Trash it only when the record proves the owner has not edited it.
+	if ( ! isset( $hashes['questions'] ) || ( md5( $page->post_content ) !== $hashes['questions'] && boi_content_fingerprint( $page->post_content ) !== $hashes['questions'] ) ) {
 		return;
 	}
 

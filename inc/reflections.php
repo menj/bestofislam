@@ -32,10 +32,13 @@ function boi_flag_listicle( $post_id, $post ) {
 
 	if ( has_block( 'bestofislam/listicle', $post ) ) {
 		update_post_meta( $post_id, BOI_LISTICLE_META, '1' );
+		// Kept so the front page can pick the largest lists with one query.
+		update_post_meta( $post_id, '_boi_entry_count', substr_count( $post->post_content, '<!-- wp:bestofislam/entry ' ) );
 		return;
 	}
 
 	delete_post_meta( $post_id, BOI_LISTICLE_META );
+	delete_post_meta( $post_id, '_boi_entry_count' );
 }
 add_action( 'save_post', 'boi_flag_listicle', 10, 2 );
 
@@ -77,22 +80,33 @@ add_action( 'pre_get_posts', 'boi_filter_reflections' );
  * @return void
  */
 function boi_backfill_listicle_flags() {
-	$posts = get_posts(
-		array(
-			'post_type'      => 'post',
-			'post_status'    => 'any',
-			'posts_per_page' => 200,
-			'fields'         => 'ids',
-		)
-	);
+	// In batches, so a large site is never loaded into memory at once.
+	$paged = 1;
 
-	foreach ( $posts as $post_id ) {
-		$post = get_post( $post_id );
+	do {
+		$posts = get_posts(
+			array(
+				'post_type'      => 'post',
+				'post_status'    => 'any',
+				'posts_per_page' => 200,
+				'paged'          => $paged,
+				'orderby'        => 'ID',
+				'order'          => 'ASC',
+				'fields'         => 'ids',
+				'no_found_rows'  => true,
+			)
+		);
 
-		if ( $post ) {
-			boi_flag_listicle( $post_id, $post );
+		foreach ( $posts as $post_id ) {
+			$post = get_post( $post_id );
+
+			if ( $post ) {
+				boi_flag_listicle( $post_id, $post );
+			}
 		}
-	}
+
+		++$paged;
+	} while ( count( $posts ) === 200 );
 }
 
 /**

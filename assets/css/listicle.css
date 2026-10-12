@@ -24,6 +24,12 @@
 }
 
 /* The numeral reads as a display figure, aligned to the title baseline. */
+/* With rank badges switched off there is no rank column, so the body must
+   not fall into the narrow first one. */
+.boi-entry:not(:has(> .boi-entry__rank)) {
+	grid-template-columns: 1fr;
+}
+
 .boi-entry__rank {
 	display: block;
 	inline-size: var(--wp--custom--listicle--rank--size, 3.25rem);
@@ -1300,11 +1306,11 @@ video {
 		margin: 0;
 	}
 
-	.boi-listicle .boi-entry:has(.boi-entry__media):nth-child(even of .boi-entry) .boi-entry__body {
+	.boi-listicle .boi-entry:has(.boi-entry__media):nth-child(even of .boi-entry:has(.boi-entry__media)) .boi-entry__body {
 		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	}
 
-	.boi-listicle .boi-entry:has(.boi-entry__media):nth-child(even of .boi-entry) .boi-entry__media {
+	.boi-listicle .boi-entry:has(.boi-entry__media):nth-child(even of .boi-entry:has(.boi-entry__media)) .boi-entry__media {
 		grid-column: 2;
 	}
 }
