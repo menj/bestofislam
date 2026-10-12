@@ -130,14 +130,17 @@ Where a section grows large enough to justify subdivision, the taxonomy is
 hierarchical and narrower terms nest beneath the section rather than sitting
 beside it. The seed set reproduces the section scheme the Best of Islam
 property has used since its earlier incarnation: Belief & Practices, Arts &
-Culture, History, Science, The Muslim World, with Islamophobia as a child of
-the last, with one addition. Faith & Reason was added because argument and
+Culture, History, Science, The Muslim World and Islamophobia, with one
+addition. Faith & Reason was added because argument and
 rebuttal content serves a different reader and a different search intent from
 explanatory content, and routing both into Belief & Practices blurred the
 signal for each.
 
-Three rules govern the taxonomy from here. The top level is capped at six
-terms, since beyond that the navigation wraps and each archive thins. A post
+Three rules govern the taxonomy from here. The top level is capped at eight
+terms, one row of four on each of two rows on the front page, since beyond that
+the navigation wraps and each archive thins. Arts & Culture and Islamophobia
+were promoted from children to sections so that each of the eight has its own
+latest article. A post
 takes exactly one section, because multiple assignment creates duplicate
 archive paths for the same content. Child terms are created on evidence rather
 than in advance, once a section holds roughly a dozen articles and a recurring
@@ -318,11 +321,14 @@ picks, an HTML site map and a print stylesheet, sit alongside. Every module
 renders from live data and hides itself when it has nothing to show, so no
 band can advertise content that does not exist.
 
-### D30. Images come from Commons, are verified, and never depict a prophet
+### D30. Images are from free sources, are credited, and never depict a prophet
 
-Every bundled image is taken from Wikimedia Commons and accepted only when
-its own licence metadata reads public domain or CC0; a file is never assumed
-to be free. A second rule sits above the licence: no image depicts a prophet.
+The original bundled images are taken from Wikimedia Commons and accepted only
+when their own licence metadata reads public domain or CC0. Later articles use
+photographs from Pexels and Pixabay, whose licences allow free use without
+attribution; they are bundled with the theme and credited all the same. A file
+is never assumed to be free, and every article carries one featured image and
+two in its text, placed with the figure block. A second rule sits above the licence: no image depicts a prophet.
 Articles about Jesus, Abraham, Moses or Muhammad are illustrated by
 manuscripts, places and objects. Credit is shown beneath every image and
 collected on the Sources page, although neither licence requires it, because
@@ -402,7 +408,7 @@ of at least 24px.
 The site emits the structured data features Google Search supports that fit
 it: Article, Breadcrumb, Image metadata and Organization, plus WebSite. Each
 page's entities form one graph joined by @id. Image metadata is built from the
-same Commons credits shown beneath each image, so the licence a reader sees
+same credits shown beneath each image, so the licence a reader sees
 and the licence Google reads are one record. Markup Google no longer rewards,
 FAQ and list carousels, stays only because it describes its page accurately.
 

@@ -20,6 +20,8 @@ License. See `assets/icons/LICENSE.txt`.
 
 ## Images
 
-Every article image comes from Wikimedia Commons and is in the public domain
-or dedicated under CC0. Each is credited beneath it on the site and on the
-Sources and standards page.
+Article images come from Wikimedia Commons (public domain or CC0), Pexels
+(Pexels licence) and Pixabay (Pixabay Content Licence). Each article has one
+featured image and two in its text. Each is credited beneath it on the site and
+on the Sources and standards page, and the credits are recorded in
+`inc/images-data.json` and `inc/images.php`.

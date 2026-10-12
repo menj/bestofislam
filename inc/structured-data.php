@@ -87,6 +87,14 @@ function boi_licence_url( $licence ) {
 		return 'https://creativecommons.org/publicdomain/mark/1.0/';
 	}
 
+	if ( 0 === strpos( $label, 'pexels' ) ) {
+		return 'https://www.pexels.com/license/';
+	}
+
+	if ( 0 === strpos( $label, 'pixabay' ) ) {
+		return 'https://pixabay.com/service/license-summary/';
+	}
+
 	return '';
 }
 
@@ -158,7 +166,7 @@ function boi_article_image_object( $post ) {
 			'@type' => 'Person',
 			'name'  => $credit['artist'],
 		);
-		$image['creditText'] = $credit['artist'] . ', via Wikimedia Commons';
+		$image['creditText'] = $credit['artist'] . ', via ' . boi_image_source_name( isset( $credit['source'] ) ? $credit['source'] : '' );
 	}
 
 	if ( ! empty( $credit['licence'] ) ) {

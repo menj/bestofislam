@@ -6,6 +6,20 @@ versioning.
 
 ## [Unreleased]
 
+## [1.58.0] - 2026-10-12
+
+### Added
+
+- **Three images in every article**: one featured image and two in the text, from Pexels and Pixabay (and Wikimedia Commons for the original featured images). The credits are in `inc/images-data.json`; `inc/inline-images.php` adds the `bestofislam/figure` block that places an inline image and its credit, and the credit line and licence markup now name the right source site. 105 photographs were added to `assets/images/`.
+- **Three articles**: the ideas behind Islamic art, five mosques that adapt to place, and five facts about Islamophobia.
+- **Eight sections on the front page**: Arts & Culture and Islamophobia are now sections in their own right, each with articles, and appear in the header and footer menus. Existing sites promote them on update.
+- **Fourteen questions on the front page**, from 45 in all; twelve new questions are answered by the new articles.
+
+### Changed
+
+- Dome of the Rock and Seven Libraries move to Arts & Culture; taqiyya and war and killing move to Islamophobia.
+- The Sources page and footer no longer say every image is public domain.
+
 ## [1.57.0] - 2026-10-12
 
 ### Added

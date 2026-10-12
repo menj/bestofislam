@@ -13,10 +13,10 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 36 published articles with 196 entries across six sections, each illustrated with a verified public-domain or CC0 image from Wikimedia Commons, and the About, FAQ, Contact, Sources and standards, Privacy and Site map pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 70 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Site map pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
-- **Questions answered.** 33 questions with short answers, each linked to its article: in an accordion on the front page, in a panel on every article, and as FAQ markup.
+- **Questions answered.** 45 questions with short answers, 14 of them on the front page, each linked to its article: in an accordion on the front page, in a panel on every article, and as FAQ markup.
 - **Voting.** Optional, rate-limited visitor voting stored in a dedicated table, with a moderation log. Off by default.
 - **Contact form.** A native form with a nonce, a honeypot and a rate limit, sent through `wp_mail`.
 
@@ -69,7 +69,7 @@ Under Appearance, Listicles, in six tabs:
 ## Installation
 
 1. Install Twenty Twenty-Five and keep it in the themes directory.
-2. Upload `bestofislam-1.57.0.zip` under Appearance, Themes, Add New, and activate it.
+2. Upload `bestofislam-1.58.0.zip` under Appearance, Themes, Add New, and activate it.
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 36 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
 4. Configure under Appearance, Listicles.
 
@@ -109,7 +109,7 @@ bestofislam/
 ├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office; script fonts guide
 ├── assets/icons/        45 SVG icons and their licence
 ├── assets/images/       mark.svg, mark-solid.svg, logo-512.png, and
-│                        featured/ with 36 Commons images
+│                        featured/ and inline/ with the article images
 └── docs/                SSOT, UPGRADING, CREDITS
 ```
 

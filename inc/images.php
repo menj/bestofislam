@@ -19,6 +19,15 @@ defined( 'ABSPATH' ) || exit;
  * @return array
  */
 function boi_image_manifest() {
+	return array_merge( boi_image_manifest_base(), boi_images_data_featured() );
+}
+
+/**
+ * The hand-listed manifest entries, from Wikimedia Commons.
+ *
+ * @return array
+ */
+function boi_image_manifest_base() {
 	return array(
 		'universe-demands-creator' => array(
 			'file'    => 'universe-demands-creator.jpg',
@@ -432,10 +441,11 @@ add_action( 'init', 'boi_continue_featured_images', 30 );
  */
 function boi_credit_text( $image ) {
 	return sprintf(
-		/* translators: 1: artist, 2: licence. */
-		__( 'Image: %1$s. %2$s, via Wikimedia Commons.', 'bestofislam' ),
+		/* translators: 1: artist, 2: licence, 3: source site. */
+		__( 'Image: %1$s. %2$s, via %3$s.', 'bestofislam' ),
 		$image['artist'],
-		$image['licence']
+		$image['licence'],
+		boi_image_source_name( isset( $image['source'] ) ? $image['source'] : '' )
 	);
 }
 
@@ -449,6 +459,26 @@ function boi_register_image_blocks() {
 	register_block_type( 'bestofislam/image-credits', array( 'render_callback' => 'boi_render_image_credits' ) );
 }
 add_action( 'init', 'boi_register_image_blocks' );
+
+/**
+ * The name of the site an image comes from, for its credit line.
+ *
+ * @param string $url Source page of the image.
+ * @return string
+ */
+function boi_image_source_name( $url ) {
+	$host = (string) wp_parse_url( (string) $url, PHP_URL_HOST );
+
+	if ( false !== strpos( $host, 'pexels.com' ) ) {
+		return 'Pexels';
+	}
+
+	if ( false !== strpos( $host, 'pixabay.com' ) ) {
+		return 'Pixabay';
+	}
+
+	return 'Wikimedia Commons';
+}
 
 /**
  * Credit beneath the featured image on a single post.
@@ -469,7 +499,7 @@ function boi_render_image_credit() {
 			'<p class="boi-credit">%1$s <a href="%2$s" rel="noopener">%3$s</a></p>',
 			esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $bundled['artist'], $bundled['licence'] ) ),
 			esc_url( $bundled['source'] ),
-			esc_html__( 'Wikimedia Commons', 'bestofislam' )
+			esc_html( boi_image_source_name( $bundled['source'] ) )
 		);
 	}
 
@@ -484,7 +514,7 @@ function boi_render_image_credit() {
 		'<p class="boi-credit">%1$s <a href="%2$s" rel="noopener">%3$s</a></p>',
 		esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $credit['artist'], $credit['licence'] ) ),
 		esc_url( $credit['source'] ),
-		esc_html__( 'Wikimedia Commons', 'bestofislam' )
+		esc_html( boi_image_source_name( $credit['source'] ) )
 	);
 }
 
@@ -507,6 +537,21 @@ function boi_render_image_credits() {
 			esc_url( $image['source'] ),
 			esc_html__( 'Source', 'bestofislam' )
 		);
+	}
+
+	foreach ( boi_images_data() as $slug => $entry ) {
+		$post = get_page_by_path( $slug, OBJECT, 'post' );
+
+		foreach ( (array) $entry['inline'] as $image ) {
+			$items .= sprintf(
+				'<li><strong>%1$s</strong>: %2$s. %3$s. <a href="%4$s" rel="noopener">%5$s</a></li>',
+				esc_html( $post ? get_the_title( $post ) : $slug ),
+				esc_html( $image['artist'] ),
+				esc_html( $image['licence'] ),
+				esc_url( $image['source'] ),
+				esc_html__( 'Source', 'bestofislam' )
+			);
+		}
 	}
 
 	return '<ul class="boi-credits">' . $items . '</ul>';
