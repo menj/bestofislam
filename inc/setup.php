@@ -84,7 +84,7 @@ function boi_seed_topics() {
 		),
 		'arts-and-culture'     => array(
 			'name'        => __( 'Arts & Culture', 'bestofislam' ),
-			'parent'      => 'history',
+			'parent'      => '',
 			'description' => __( 'Architecture, calligraphy, literature, music, and cuisine.', 'bestofislam' ),
 		),
 		'the-muslim-world'     => array(
@@ -94,7 +94,7 @@ function boi_seed_topics() {
 		),
 		'islamophobia'         => array(
 			'name'        => __( 'Islamophobia', 'bestofislam' ),
-			'parent'      => 'the-muslim-world',
+			'parent'      => '',
 			'description' => __( 'Prejudice against Muslims: its forms, its sources, and its consequences.', 'bestofislam' ),
 		),
 	);
@@ -169,7 +169,7 @@ function boi_seed_listicles() {
 			'slug'    => 'seven-libraries',
 			'title'   => __( '7 libraries of the Islamic world, and what happened to each', 'bestofislam' ),
 			'excerpt' => __( '7 great libraries of the Islamic world, from Baghdad to Timbuktu, and the fate of each. Read what survived and what burned.', 'bestofislam' ),
-			'topic'   => 'history',
+			'topic'   => 'arts-and-culture',
 		),
 		array(
 			'slug'    => 'same-god',
@@ -295,7 +295,7 @@ function boi_seed_listicles() {
 			'slug'    => 'dome-inscriptions',
 			'title'   => __( 'The Dome of the Rock: 6 things its inscriptions tell us about the Quran', 'bestofislam' ),
 			'excerpt' => __( 'Dated 72 AH, the Dome of the Rock quotes the Quran Muslims recite today. 6 things its inscriptions show. Read on.', 'bestofislam' ),
-			'topic'   => 'history',
+			'topic'   => 'arts-and-culture',
 		),
 		array(
 			'slug'    => 'library-of-alexandria',
@@ -421,7 +421,7 @@ function boi_seed_listicles() {
 			'slug'    => 'war-and-killing-in-islam',
 			'title'   => __( 'War, killing and execution in Islam: 5 facts', 'bestofislam' ),
 			'excerpt' => __( 'What does Islam say about killing, beheading and genocide? 5 facts on Quran 5:32 and 47:4, the rules of war and what scholars have condemned.', 'bestofislam' ),
-			'topic'   => 'belief-and-practices',
+			'topic'   => 'islamophobia',
 		),
 		array(
 			'slug'    => 'quran-science-claims-graded',
@@ -475,7 +475,7 @@ function boi_seed_listicles() {
 			'slug'    => 'taqiyya-5-myths',
 			'title'   => __( '5 myths about taqiyya', 'bestofislam' ),
 			'excerpt' => __( 'Does Islam permit Muslims to lie to unbelievers? 5 myths about taqiyya, answered from the Quran and the hadith. Read on.', 'bestofislam' ),
-			'topic'   => 'comparative-religion',
+			'topic'   => 'islamophobia',
 		),
 		array(
 			'slug'    => 'before-your-first-friday-prayer',
@@ -512,6 +512,24 @@ function boi_seed_listicles() {
 			'title'   => __( '5 Western scholars of Islam and where Muslims differ with them', 'bestofislam' ),
 			'excerpt' => __( 'Geiger, Caetani, Jeffery, Goitein and Armstrong: 5 Western scholars who shaped the study of Islam, what they argued and where Muslims disagree.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'islamic-art-and-the-one-god',
+			'title'   => __( '5 ideas behind Islamic art, and what the arabesque is for', 'bestofislam' ),
+			'excerpt' => __( 'Why Islamic art avoids images of God, what stylisation and geometry do, and what the arabesque is for. 5 ideas that explain the look of a mosque.', 'bestofislam' ),
+			'topic'   => 'arts-and-culture',
+		),
+		array(
+			'slug'    => 'mosques-adapt-to-place',
+			'title'   => __( '5 mosques that show how Islamic architecture adapts to place', 'bestofislam' ),
+			'excerpt' => __( 'Medina, Cordoba, Xi\'an, Djenne and Istanbul: 5 mosques that show how one simple idea of a house of prayer takes the shape of each land.', 'bestofislam' ),
+			'topic'   => 'arts-and-culture',
+		),
+		array(
+			'slug'    => 'islamophobia-5-facts',
+			'title'   => __( 'Islamophobia: 5 facts about the word and the harm', 'bestofislam' ),
+			'excerpt' => __( 'What does Islamophobia mean, how is it different from criticism, and what harm does it do? 5 facts, and what the Quran asks of Muslims in return.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
 		),
 	);
 }
@@ -559,6 +577,14 @@ function boi_create_topics() {
 
 		if ( $existing ) {
 			$map[ $slug ] = (int) $existing['term_id'];
+
+			// A section that was once nested under another is promoted when the seed says so.
+			$current = get_term( $map[ $slug ], 'listicle-topic' );
+			$parent  = ( '' !== $topic['parent'] && isset( $map[ $topic['parent'] ] ) ) ? $map[ $topic['parent'] ] : 0;
+
+			if ( $current && ! is_wp_error( $current ) && (int) $current->parent !== $parent && '' === $topic['parent'] ) {
+				wp_update_term( $map[ $slug ], 'listicle-topic', array( 'parent' => 0 ) );
+			}
 			continue;
 		}
 
@@ -687,7 +713,7 @@ function boi_seed_pages() {
 				. $h( __( 'What gets conceded', 'bestofislam' ) )
 				. $p( __( 'Where a critic is right, the article says so. Where Muslim scholars disagree, the article names the disagreement. A site that concedes nothing cannot be trusted when it concedes nothing.', 'bestofislam' ) )
 				. $h( __( 'Images', 'bestofislam' ) )
-				. $p( __( 'Every image on the site is drawn from Wikimedia Commons and is in the public domain or dedicated under CC0. No image depicts a prophet. Each is credited beneath it, and in full here.', 'bestofislam' ) )
+				. $p( __( 'Every image on the site comes from Wikimedia Commons, Pexels or Pixabay. The Commons images are in the public domain or dedicated under CC0; the Pexels and Pixabay images are used under the free licences of those sites. No image depicts a prophet. Each is credited beneath it, and in full here.', 'bestofislam' ) )
 				. "<!-- wp:bestofislam/image-credits /-->\n\n"
 				. $h( __( 'Corrections', 'bestofislam' ) )
 				. $p( __( 'Errors of fact are corrected in the article and noted at the foot of it. Errors of argument are answered, if at all, in a new piece.', 'bestofislam' ) ),

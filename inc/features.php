@@ -342,10 +342,10 @@ function boi_render_footer_notice() {
 	$images = $sources
 		? sprintf(
 			/* translators: %s: link to the Sources and standards page. */
-			esc_html__( 'Images are in the public domain, credited on each page and in %s.', 'bestofislam' ),
+			esc_html__( 'Images are free to use, credited on each page and in %s.', 'bestofislam' ),
 			'<a href="' . esc_url( get_permalink( $sources ) ) . '">' . esc_html__( 'Sources and standards', 'bestofislam' ) . '</a>'
 		)
-		: esc_html__( 'Images are in the public domain and credited on each page.', 'bestofislam' );
+		: esc_html__( 'Images are free to use and credited on each page.', 'bestofislam' );
 
 	return sprintf(
 		'<div class="boi-notice"><p class="boi-notice__text">%1$s %2$s %3$s</p><a class="boi-notice__top" href="#top">%4$s</a></div>',

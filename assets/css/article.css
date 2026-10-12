@@ -301,3 +301,26 @@
 		transition: none;
 	}
 }
+
+/* Images set in the text of an article, with their credit. */
+.boi-figure {
+	margin-block: var(--wp--preset--spacing--40, 1.5rem);
+	margin-inline: 0;
+}
+
+.boi-figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 26rem;
+	object-fit: cover;
+	border-radius: 0.75rem;
+	border: 1px solid var(--boi-rule);
+}
+
+.boi-figure figcaption {
+	margin-block-start: 0.5rem;
+	font-size: 0.8125rem;
+	line-height: 1.5;
+	color: var(--wp--preset--color--accent-5, #5B6B80);
+}

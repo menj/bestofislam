@@ -1,0 +1,5 @@
+#!/bin/sh
+# Converts article images to AVIF before every commit and stages the result.
+# Enable once per clone:  sh bin/install-hooks.sh
+python3 bin/convert-images.py || exit 1
+git add -A assets/images inc/images.php inc/images-data.json
