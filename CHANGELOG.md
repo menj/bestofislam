@@ -6,6 +6,10 @@ versioning.
 
 ## [Unreleased]
 
+### Added
+
+- **Glossary** (`inc/glossary.php`, `inc/glossary-data.php`, `assets/css/glossary.css`): a Glossary page at `/glossary/` with a generated A to Z index, and 35 entries as child pages: Allah, Tawhid, Shirk, Wahy, Quran, Mushaf, Qira'at, Tafsir, Asbab al-Nuzul, Naskh, Hadith, Isnad, Sunnah, Sira, Sharia, Fiqh, Jihad, Fitna, Jizya, Dhimmi, Kafir, Taqiyya, Hijab, Hijra, Ummah, Ahl al-Kitab, Tahrif, Isa, Maryam, Injil, Kutub, Taqwa, Ihsan, Zakat and Riba. Each gives the Arabic and transliteration, a one-line definition, what the term means, the common misunderstanding, what the sources say, and links to related terms and articles. Entries are ordinary pages, so they can be edited or added to like any page; the theme refreshes an entry only while it is exactly as the theme wrote it, and never brings back one that was trashed. The index and related-links blocks, and DefinedTerm / DefinedTermSet structured data, are generated. A footer link is added. The entries were written for this site; an A to Z index of another site was used only to see which terms are commonly raised.
+
 ### Fixed
 
 Findings from a full-codebase review by CodeAnt.
