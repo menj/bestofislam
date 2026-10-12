@@ -11,6 +11,12 @@
 	padding: 0 !important;
 }
 
+/* WordPress puts the block gap between the header and main. On the front page
+   the hero is a full-bleed band, so the gap shows as a white strip. */
+.wp-site-blocks > main.boi-front {
+	margin-block-start: 0 !important;
+}
+
 .boi-front > .boi-band {
 	margin-block: 0 !important;
 	/* The front page removes the root padding from main, but WordPress still
