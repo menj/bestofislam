@@ -1,17 +1,17 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
-	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--40)">
+<!-- wp:group {"tagName":"main","className":"boi-article","layout":{"type":"constrained"}} -->
+<main class="wp-block-group boi-article">
+	<!-- wp:group {"className":"boi-article__head","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group boi-article__head" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--40)">
 		<!-- wp:bestofislam/breadcrumbs /-->
 
 		<!-- wp:post-terms {"term":"listicle-topic","style":{"typography":{"fontSize":"0.75rem","textTransform":"uppercase","letterSpacing":"0.09em"}}} /-->
 		<!-- wp:post-title {"level":1} /-->
 		<!-- wp:post-excerpt {"style":{"typography":{"fontSize":"1.15rem"},"color":{"text":"var:preset|color|accent-5"}}} /-->
 
-		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-		<div class="wp-block-group">
+		<!-- wp:group {"className":"boi-article__meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group boi-article__meta">
 			<!-- wp:post-date {"style":{"typography":{"fontSize":"0.85rem"},"color":{"text":"var:preset|color|accent-5"}}} /-->
 			<!-- wp:bestofislam/reading-time /-->
 			<!-- wp:post-author-name {"isLink":true,"style":{"typography":{"fontSize":"0.85rem"},"color":{"text":"var:preset|color|accent-5"}}} /-->

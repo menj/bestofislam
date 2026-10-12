@@ -127,6 +127,15 @@ function boi_enqueue_assets() {
 		BOI_VERSION
 	);
 
+	if ( is_singular() ) {
+		wp_enqueue_style(
+			'boi-article',
+			BOI_URI . '/assets/css/article.css',
+			array( 'boi-listicle' ),
+			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/article.css' )
+		);
+	}
+
 	if ( ! $has_listicle ) {
 		return;
 	}
