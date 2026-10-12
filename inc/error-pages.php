@@ -107,6 +107,7 @@ function boi_error_dropin_source( $kind ) {
 			'{{LINE1}}'   => esc_html( $copy['line1'] ),
 			'{{LINE2}}'   => esc_html( $copy['line2'] ),
 			'{{AGAIN}}'   => esc_html( $copy['again'] ),
+			'{{HOME}}'    => esc_url( home_url( '/' ) ),
 		)
 	);
 
@@ -127,20 +128,31 @@ function boi_error_dropin_source( $kind ) {
 		$src    .= "\$boi_stamp = __DIR__ . '/.boi-alert-{$kind}';\n";
 		$src    .= "\$boi_gap   = " . (int) $opts['errors_cooldown'] * 60 . ";\n";
 		$src    .= <<<'PHP'
-if ( ! file_exists( $boi_stamp ) || time() - (int) @filemtime( $boi_stamp ) > $boi_gap ) {
-	@touch( $boi_stamp );
-	$boi_detail = '';
-	if ( isset( $error ) && is_array( $error ) ) {
-		$boi_detail = ( isset( $error['message'] ) ? $error['message'] : '' ) . "\n" . ( isset( $error['file'] ) ? $error['file'] : '' ) . ':' . ( isset( $error['line'] ) ? $error['line'] : '' );
+$boi_fh = @fopen( $boi_stamp, 'c' );
+if ( $boi_fh && @flock( $boi_fh, LOCK_EX | LOCK_NB ) ) {
+	if ( time() - (int) @filemtime( $boi_stamp ) > $boi_gap ) {
+		@touch( $boi_stamp );
+		$boi_root   = defined( 'ABSPATH' ) ? ABSPATH : '';
+		$boi_detail = '';
+		if ( isset( $error ) && is_array( $error ) ) {
+			$boi_detail = ( isset( $error['message'] ) ? $error['message'] : '' ) . "\n" . ( isset( $error['file'] ) ? $error['file'] : '' ) . ':' . ( isset( $error['line'] ) ? $error['line'] : '' );
+			if ( '' !== $boi_root ) {
+				$boi_detail = str_replace( $boi_root, '', $boi_detail );
+			}
+		}
+		$boi_host = isset( $_SERVER['HTTP_HOST'] ) ? preg_replace( '/[^A-Za-z0-9.:-]/', '', $_SERVER['HTTP_HOST'] ) : '';
+		$boi_uri  = isset( $_SERVER['REQUEST_URI'] ) ? preg_replace( '/[\r\n]+/', '', (string) strtok( $_SERVER['REQUEST_URI'], '?' ) ) : '';
+		$boi_body = "The visitor-facing error page was shown.\n\nHost: {$boi_host}\nPath: {$boi_uri}\nTime: " . gmdate( 'c' ) . "\n" . ( '' !== $boi_detail ? "\n{$boi_detail}\n" : '' );
+		if ( function_exists( 'wp_mail' ) ) {
+			@wp_mail( $boi_to, $boi_subj, $boi_body );
+		} else {
+			@mail( $boi_to, $boi_subj, $boi_body );
+		}
 	}
-	$boi_host = isset( $_SERVER['HTTP_HOST'] ) ? preg_replace( '/[^A-Za-z0-9.:-]/', '', $_SERVER['HTTP_HOST'] ) : '';
-	$boi_uri  = isset( $_SERVER['REQUEST_URI'] ) ? preg_replace( '/[\r\n]+/', '', $_SERVER['REQUEST_URI'] ) : '';
-	$boi_body = "The visitor-facing error page was shown.\n\nHost: {$boi_host}\nRequest: {$boi_uri}\nTime: " . gmdate( 'c' ) . "\n" . ( '' !== $boi_detail ? "\n{$boi_detail}\n" : '' );
-	if ( function_exists( 'wp_mail' ) ) {
-		@wp_mail( $boi_to, $boi_subj, $boi_body );
-	} else {
-		@mail( $boi_to, $boi_subj, $boi_body );
-	}
+	@flock( $boi_fh, LOCK_UN );
+}
+if ( $boi_fh ) {
+	@fclose( $boi_fh );
 }
 
 PHP;
@@ -158,7 +170,75 @@ function boi_error_recipient() {
 	$opts = boi_get_options();
 	$to   = isset( $opts['errors_email'] ) ? $opts['errors_email'] : '';
 	$to   = is_email( $to ) ? $to : get_option( 'admin_email' );
+
+	if ( ! is_email( $to ) ) {
+		// The options table may be the thing that is missing: use the copy
+		// saved to wp-content when the drop-ins were last written.
+		$saved = boi_error_saved_config();
+		$to    = isset( $saved['to'] ) ? $saved['to'] : '';
+	}
+
 	return is_email( $to ) ? $to : '';
+}
+
+/**
+ * Path of the alert settings copy kept outside the database.
+ *
+ * @return string
+ */
+function boi_error_config_path() {
+	return WP_CONTENT_DIR . '/.boi-alert-config.json';
+}
+
+/**
+ * Reads the saved alert settings.
+ *
+ * @return array
+ */
+function boi_error_saved_config() {
+	$raw  = is_readable( boi_error_config_path() ) ? file_get_contents( boi_error_config_path() ) : '';
+	$data = json_decode( (string) $raw, true );
+	return is_array( $data ) ? $data : array();
+}
+
+/**
+ * Writes a file atomically, so a request that includes it never reads a
+ * half-written copy.
+ *
+ * @param string $path     Destination.
+ * @param string $contents File contents.
+ * @return void
+ */
+function boi_error_write( $path, $contents ) {
+	$tmp = $path . '.' . wp_generate_password( 8, false ) . '.tmp';
+	if ( false !== file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
+		if ( ! rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
+			wp_delete_file( $tmp );
+		}
+	}
+}
+
+/**
+ * A fingerprint of everything the generated files embed.
+ *
+ * @return string
+ */
+function boi_error_fingerprint() {
+	$opts = boi_get_options();
+	return md5(
+		wp_json_encode(
+			array(
+				BOI_VERSION,
+				get_bloginfo( 'name' ),
+				get_bloginfo( 'language' ),
+				home_url( '/' ),
+				boi_error_recipient(),
+				$opts['errors_pages'],
+				$opts['errors_alerts'],
+				$opts['errors_cooldown'],
+			)
+		)
+	);
 }
 
 /**
@@ -212,14 +292,27 @@ function boi_error_sync() {
 
 		if ( $enabled ) {
 			if ( is_writable( WP_CONTENT_DIR ) || is_writable( $path ) ) {
-				file_put_contents( $path, boi_error_dropin_source( $kind ), LOCK_EX ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+				boi_error_write( $path, boi_error_dropin_source( $kind ) );
 			}
 		} elseif ( file_exists( $path ) ) {
 			wp_delete_file( $path );
 		}
 	}
 
-	update_option( 'boi_error_dropins_version', BOI_VERSION, false );
+	if ( is_writable( WP_CONTENT_DIR ) ) {
+		boi_error_write(
+			boi_error_config_path(),
+			wp_json_encode(
+				array(
+					'to'       => boi_error_recipient(),
+					'alerts'   => (int) $opts['errors_alerts'],
+					'cooldown' => (int) $opts['errors_cooldown'],
+				)
+			)
+		);
+	}
+
+	update_option( 'boi_error_dropins_fingerprint', boi_error_fingerprint(), false );
 }
 
 /**
@@ -229,13 +322,16 @@ function boi_error_sync() {
  * @return void
  */
 function boi_error_maybe_sync() {
-	if ( get_option( 'boi_error_dropins_version' ) === BOI_VERSION ) {
-		$state = boi_error_state();
-		$opts  = boi_get_options();
-		if ( ( empty( $opts['errors_pages'] ) && empty( $opts['errors_alerts'] ) ) || ! in_array( 'absent', $state, true ) ) {
-			return;
-		}
+	$opts = boi_get_options();
+
+	if ( empty( $opts['errors_pages'] ) && empty( $opts['errors_alerts'] ) ) {
+		return;
 	}
+
+	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! in_array( 'absent', boi_error_state(), true ) ) {
+		return;
+	}
+
 	boi_error_sync();
 }
 add_action( 'admin_init', 'boi_error_maybe_sync' );
@@ -254,23 +350,43 @@ add_action( 'after_switch_theme', 'boi_error_sync' );
 function boi_error_alert( $key, $subject, $detail ) {
 	$opts = boi_get_options();
 	$to   = boi_error_recipient();
+
+	// With the options table unreadable the defaults would apply, so honour
+	// the settings last saved to wp-content instead.
+	if ( false === get_option( BOI_OPTION_KEY, false ) ) {
+		$saved                   = boi_error_saved_config();
+		$opts['errors_alerts']   = isset( $saved['alerts'] ) ? $saved['alerts'] : $opts['errors_alerts'];
+		$opts['errors_cooldown'] = isset( $saved['cooldown'] ) ? $saved['cooldown'] : $opts['errors_cooldown'];
+	}
+
 	if ( empty( $opts['errors_alerts'] ) || '' === $to ) {
 		return;
 	}
-	$transient = 'boi_err_' . md5( $key );
-	if ( get_transient( $transient ) ) {
+	$stamp = WP_CONTENT_DIR . '/.boi-alert-' . sanitize_key( $key );
+	$fh    = @fopen( $stamp, 'c' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions
+	if ( ! $fh ) {
 		return;
 	}
-	set_transient( $transient, 1, max( 1, (int) $opts['errors_cooldown'] ) * MINUTE_IN_SECONDS );
 
-	$name = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( get_bloginfo( 'name' ) ) ) );
-	// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-	$uri = isset( $_SERVER['REQUEST_URI'] ) ? preg_replace( '/[\r\n]+/', '', wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
-	wp_mail(
-		$to,
-		'[' . $name . '] ' . $subject,
-		$detail . "\n\nRequest: " . $uri . "\nTime: " . gmdate( 'c' ) . "\n"
-	);
+	// An exclusive, non-blocking lock lets one of several concurrent requests
+	// send the alert; the rest return.
+	if ( flock( $fh, LOCK_EX | LOCK_NB ) ) {
+		if ( time() - (int) filemtime( $stamp ) > max( 5, (int) $opts['errors_cooldown'] ) * MINUTE_IN_SECONDS ) {
+			touch( $stamp );
+
+			$name = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( get_bloginfo( 'name' ) ) ) );
+			// The path only: a query string can carry reset or login tokens.
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+			$path = isset( $_SERVER['REQUEST_URI'] ) ? preg_replace( '/[\r\n]+/', '', (string) strtok( wp_unslash( $_SERVER['REQUEST_URI'] ), '?' ) ) : '';
+			wp_mail(
+				$to,
+				'[' . $name . '] ' . $subject,
+				str_replace( ABSPATH, '', $detail ) . "\n\nPath: " . $path . "\nTime: " . gmdate( 'c' ) . "\n"
+			);
+		}
+		flock( $fh, LOCK_UN );
+	}
+	fclose( $fh ); // phpcs:ignore WordPress.WP.AlternativeFunctions
 }
 
 /**
