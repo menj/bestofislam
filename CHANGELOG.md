@@ -15,10 +15,10 @@ versioning.
 
 ### Fixed
 
+Findings from a full-codebase review by CodeAnt.
 
 - The Glossary index keeps the italic markup in definitions, where it printed the tags.
 - The version is raised so existing sites run the content population and receive the new listicles.
-Findings from a full-codebase review by CodeAnt.
 
 - **Security:** JSON-LD is escaped so a post title containing a closing script tag can no longer end the block (all four emitters share `boi_json_ld()`). The error-page drop-ins refuse direct requests and the alert settings now live in a PHP file that exits when requested, instead of a readable JSON file. Votes are accepted only for published posts and for entries that exist on them, and a database failure is reported as an error rather than as "already voted".
 - **Races:** the contact form's hourly limit, the unlisted list and the image-sideload lock no longer let concurrent requests slip past.
