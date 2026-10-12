@@ -24,6 +24,26 @@
   ]
  },
  {
+  "slug": "secret-counsels",
+  "title": "Secret counsels",
+  "type": "topic",
+  "ar": "نجوى",
+  "tr": "Najwā",
+  "def": "The Quran forbids plotting in secret for sin and enmity, and allows private counsel for good (58:9).",
+  "what": [
+   "“O you who believe, when you confer in private, do not confer for sin and aggression and disobedience to the Messenger, but confer for righteousness and piety” (58:9). It is addressed to the believers of Medina, where a group of hypocrites had held private meetings to plot against the community."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hypocrites"
+  ],
+  "articles": [],
+  "aliases": [
+   "Conspiracy"
+  ]
+ },
+ {
   "slug": "sharia",
   "title": "Sharia",
   "ar": "شريعة",
@@ -72,6 +92,28 @@
   "aliases": []
  },
  {
+  "slug": "shooting-stars-and-the-jinn",
+  "title": "Shooting stars and the jinn",
+  "type": "topic",
+  "ar": "شهب",
+  "tr": "Shuhub",
+  "def": "The Quran says that jinn used to listen at the heavens and now find guards and flames (72:8–9).",
+  "what": [
+   "“We used to sit in places in it to listen, but whoever listens now finds a flame lying in wait” (72:9; also 15:17–18, 37:6–10, 67:5). Commentators differ on what is meant: some take it as a literal driving off of eavesdropping jinn by meteors; others take it as a figure for the end of such contact after revelation came."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "jinn",
+   "angels"
+  ],
+  "articles": [],
+  "aliases": [
+   "Communications",
+   "Shihab"
+  ]
+ },
+ {
   "slug": "sira",
   "title": "Sira",
   "ar": "سيرة",
@@ -94,6 +136,56 @@
   ],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "slavery-and-concubinage",
+  "title": "Slavery and concubinage",
+  "type": "topic",
+  "ar": "رق",
+  "tr": "Riqq",
+  "def": "The Quran regulated an existing institution and urged freeing slaves; Muslim scholars today hold that slavery is forbidden.",
+  "what": [
+   "The Quran speaks of “those whom your right hands possess” (4:3, 23:6) and allowed relations with slave-women within limits. At the same time it made freeing slaves an act of atonement for killing by mistake (4:92), for broken oaths (5:89) and for a type of divorce oath (58:3); it counts it among the righteous deeds (2:177, 90:13), and sets aside a share of zakat for it (9:60). It tells owners to grant a contract of manumission to slaves who ask for it (24:33). The Prophet freed his own slaves and told Muslims that the one who frees a believing slave will be freed from Hell (Sahih al-Bukhari)."
+  ],
+  "misread": "That Islam endorses slavery and the sexual use of captives today.",
+  "sources": [
+   "Slavery was found throughout the world, and Islam’s legal rules limited and then closed its sources. In 2014 over a hundred Muslim scholars wrote to the leader of ISIS that slavery has been abolished by consensus, and cannot be reinstated. Saudi Arabia and Mauritania were among the last states to end it, in 1962 and 1981."
+  ],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "diya"
+  ],
+  "articles": [],
+  "aliases": [
+   "Concubine",
+   "Slavery",
+   "Slaves",
+   "Ma Malakat Aymanukum"
+  ]
+ },
+ {
+  "slug": "spoils-of-war",
+  "title": "Spoils of war",
+  "type": "topic",
+  "ar": "غنيمة",
+  "tr": "Ghanīma",
+  "def": "The Quran’s rules on property taken in war, with a fifth for charity and a rule against its staying among the rich.",
+  "what": [
+   "Chapter 8 (“al-Anfal”, the spoils) begins with the dispute after Badr and puts the spoils in the hands of God and the Messenger (8:1). A fifth goes to God, the Messenger, relatives, orphans, the poor and the wayfarer (8:41). Of property that comes without fighting, the Quran says it is so “that it may not circulate among the rich of you” (59:7)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "badr",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Booty",
+   "Anfal",
+   "Fay"
+  ]
  },
  {
   "slug": "sunnah",

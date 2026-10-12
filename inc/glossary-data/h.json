@@ -41,7 +41,10 @@
   ],
   "articles": [],
   "type": "term",
-  "aliases": []
+  "aliases": [
+   "Jilbab",
+   "Khimar"
+  ]
  },
  {
   "slug": "hijra",
@@ -117,6 +120,30 @@
    "PBUH",
    "Salawat",
    "Alayhi Salam"
+  ]
+ },
+ {
+  "slug": "human-dignity",
+  "title": "Human dignity",
+  "type": "topic",
+  "ar": "كرامة",
+  "tr": "Karāma",
+  "def": "The Quran says God has honoured the children of Adam (17:70) and that all are of one origin (4:1, 49:13).",
+  "what": [
+   "“We have honoured the children of Adam, and carried them on land and sea” (17:70). “O mankind, fear your Lord who created you from a single soul” (4:1). The Farewell Sermon states the sanctity of life, property and honour, and that all are descended from Adam. Muslim scholars have drawn on these texts in forming statements of human rights, for example the 1990 Cairo Declaration and the 1981 Universal Islamic Declaration."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ummah",
+   "race-and-skin-colour"
+  ],
+  "articles": [],
+  "aliases": [
+   "Dignity",
+   "Humankind",
+   "Human Rights",
+   "Equality"
   ]
  }
 ]

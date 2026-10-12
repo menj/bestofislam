@@ -25,6 +25,31 @@
   "aliases": []
  },
  {
+  "slug": "disability",
+  "title": "Disability",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The Quran lifts the burden of duties that a person cannot bear, and urges care for the blind, the sick and the weak.",
+  "what": [
+   "“No blame is on the blind, nor on the lame, nor on the sick” (24:61; 48:17). When 4:95 said that those who sit at home were not equal to those who fight, the blind Companion Ibn Umm Maktum objected, and the words “except those who are disabled” were added (Sahih al-Bukhari). The Quran also tells guardians not to hand property to those who cannot manage it (4:5), and to treat them kindly."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "abasa",
+   "ibn-umm-maktum",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Blind",
+   "Handicapped",
+   "Feeble-Minded",
+   "Ill"
+  ]
+ },
+ {
   "slug": "divine-attributes",
   "title": "Divine attributes",
   "type": "topic",
@@ -47,6 +72,53 @@
   "aliases": [
    "Anthropomorphism",
    "Tashbih"
+  ]
+ },
+ {
+  "slug": "diya",
+  "title": "Diya",
+  "type": "term",
+  "ar": "دية",
+  "tr": "Diya",
+  "def": "Blood money: compensation paid to the family of a person killed unintentionally, and sometimes accepted in place of retaliation.",
+  "what": [
+   "“It is not for a believer to kill a believer except by mistake, and whoever kills a believer by mistake must free a believing slave and pay blood money to his family” (4:92). The same verse applies it when the dead person belonged to a people with whom there is a treaty. For intentional killing the Quran sets equal retaliation, but praises pardon (2:178, 5:45)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sharia",
+   "fiqh"
+  ],
+  "articles": [],
+  "aliases": [
+   "Bloodmoney",
+   "Blood Money"
+  ]
+ },
+ {
+  "slug": "domestic-discipline-quran-4-34",
+  "title": "Domestic discipline (Quran 4:34)",
+  "type": "topic",
+  "ar": "",
+  "tr": "",
+  "def": "The verse on men’s responsibility in the family which includes the word “strike”; its meaning has been debated and restricted by many scholars.",
+  "what": [
+   "The verse says men are responsible for women (<em>qawwāmūn</em>), and for wives who show ill will it gives steps: advise them, leave them in bed, and “<em>iḍribūhunna</em>” (4:34). The next verse (4:35) calls for arbiters from both families. “Strike” is the usual translation, and some read the word as “separate from them”."
+  ],
+  "misread": "That Islam allows a husband to beat his wife.",
+  "sources": [
+   "Classical commentators set limits. Ibn Abbas said it should be with a tooth-stick, a symbolic touch; the Prophet in his Farewell Sermon said “not severely” (Sahih Muslim); and no striking of the face. Aisha said he never struck a woman or a servant (Sahih Muslim), and he condemned any man who beats his wife as he would a slave and then lies with her (Sahih al-Bukhari). He said: “the best of you are the best to their wives” (al-Tirmidhi). Many contemporary scholars say that violence is a crime, and that the verse’s steps have to be understood in this light."
+  ],
+  "terms": [
+   "sharia",
+   "tafsir",
+   "hadith"
+  ],
+  "articles": [],
+  "aliases": [
+   "Beating Of Women",
+   "Wife-Beating"
   ]
  },
  {

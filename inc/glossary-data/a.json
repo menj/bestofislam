@@ -334,7 +334,10 @@
   ],
   "articles": [],
   "aliases": [
-   "Habil"
+   "Habil",
+   "Cain",
+   "Cain And Abel",
+   "Qabil"
   ]
  },
  {
@@ -360,7 +363,8 @@
   "aliases": [
    "Wudu",
    "Ghusl",
-   "Tayammum"
+   "Tayammum",
+   "Cleanliness"
   ]
  },
  {
@@ -408,6 +412,31 @@
   "aliases": [
    "Umm",
    "Kunya"
+  ]
+ },
+ {
+  "slug": "abu-bakr",
+  "title": "Abu Bakr",
+  "type": "person",
+  "ar": "أبو بكر",
+  "tr": "Abū Bakr",
+  "def": "The Prophet’s closest friend and the first caliph (632–634).",
+  "what": [
+   "Abu Bakr was among the first to accept Islam and spent his wealth freeing slaves who were tortured for their belief, including Bilal. The Quran refers to him as the Prophet’s companion in the cave during the hijra, “the second of two when they were in the cave” (9:40). The Prophet named him to lead the prayer in his last illness. As caliph he put down the revolts of the tribes and had the Quran’s leaves gathered at Umar’s urging, with Zayd ibn Thabit as scribe (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "He was called <em>al-Ṣiddīq</em>, “the truthful”, because he believed the Prophet’s account of the night journey without hesitation. He died in 634 and was buried beside the Prophet."
+  ],
+  "terms": [
+   "companions-of-the-prophet",
+   "aisha-bint-abi-bakr",
+   "quran"
+  ],
+  "articles": [],
+  "aliases": [
+   "Bakr, Abu",
+   "Abu Bakr Al-Siddiq"
   ]
  },
  {
@@ -554,6 +583,30 @@
   "aliases": []
  },
  {
+  "slug": "adult-breastfeeding",
+  "title": "Adult breastfeeding",
+  "type": "topic",
+  "ar": "رضاع الكبير",
+  "tr": "Raḍāʿ al-kabīr",
+  "def": "A single report about adult breastfeeding, understood by most scholars as a special case.",
+  "what": [
+   "The Quran speaks of mothers nursing for two years (2:233) and of foster-mothers as mothers (4:23). A report in Sahih Muslim tells of Sahla, who asked the Prophet about Salim, a young man brought up in her household, and was told to nurse him. Most scholars hold that fosterage creates a bond only in infancy, since the Prophet said “nursing is only from hunger”, meaning when it nourishes the child (Sahih al-Bukhari), and treat the report as a case limited to that household."
+  ],
+  "misread": "",
+  "sources": [
+   "Aisha held a different view, and the other wives of the Prophet did not follow it. The Hanafis allow two and a half years and the majority two years."
+  ],
+  "terms": [
+   "fiqh",
+   "hadith",
+   "aisha-bint-abi-bakr"
+  ],
+  "articles": [],
+  "aliases": [
+   "Breast-Feeding (adult)"
+  ]
+ },
+ {
   "slug": "adultery",
   "title": "Adultery",
   "type": "term",
@@ -600,7 +653,8 @@
   "articles": [],
   "aliases": [
    "Patience",
-   "Sabr"
+   "Sabr",
+   "Burden"
   ]
  },
  {
@@ -747,7 +801,10 @@
   "articles": [
    "where-is-the-injil"
   ],
-  "aliases": []
+  "aliases": [
+   "Comforter",
+   "Paraclete"
+  ]
  },
  {
   "slug": "ahmadiyya",
@@ -1075,7 +1132,8 @@
   "articles": [],
   "aliases": [
    "Sadaqa",
-   "Sadaq"
+   "Sadaq",
+   "Charity"
   ]
  },
  {
@@ -1245,6 +1303,37 @@
   ],
   "articles": [],
   "aliases": []
+ },
+ {
+  "slug": "animals",
+  "title": "Animals",
+  "type": "topic",
+  "ar": "حيوان",
+  "tr": "Ḥayawān",
+  "def": "The Quran describes animals as communities like humans, as signs of God, and as creatures owed kindness.",
+  "what": [
+   "“There is no creature on the earth or bird flying with its wings except they are communities like you” (6:38). A bee is inspired by its Lord to make homes in the mountains and trees (16:68–69). Cattle and horses are listed among God’s gifts (16:5–8). The ant (27:18), the hoopoe (27:20) and the dog of the cave’s sleepers (18:18) have their places in stories."
+  ],
+  "misread": "",
+  "sources": [
+   "Reports in Sahih al-Bukhari tell of a woman who was punished for locking up a cat, and of a man forgiven for giving water to a thirsty dog. The Prophet forbade burning ants and overloading beasts of burden. Modern writers use these to argue for animal welfare as a part of the faith."
+  ],
+  "terms": [
+   "ant",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Beasts",
+   "Bees",
+   "Birds",
+   "Camel",
+   "Cattle",
+   "Creatures",
+   "Dogs",
+   "Donkeys",
+   "Horses"
+  ]
  },
  {
   "slug": "ansar",
@@ -1448,7 +1537,8 @@
   "articles": [],
   "aliases": [
    "Aqidah",
-   "Doctrine"
+   "Doctrine",
+   "Creed"
   ]
  },
  {

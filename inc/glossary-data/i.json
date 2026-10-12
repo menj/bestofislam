@@ -23,6 +23,111 @@
   "aliases": []
  },
  {
+  "slug": "ijma",
+  "title": "Ijma",
+  "type": "term",
+  "ar": "إجماع",
+  "tr": "Ijmāʿ",
+  "def": "Consensus of the scholars of a period on a ruling; one of the sources of Islamic law.",
+  "what": [
+   "The Sunni schools take four sources of law: the Quran, the Sunnah, <em>ijmāʿ</em> and analogy (<em>qiyās</em>). Consensus means agreement among qualified scholars of an age on a point of law. The Prophet is reported to have said that his community will not agree on error (Ibn Majah, graded hasan by some), and the idea is also argued from the Quran (4:115)."
+  ],
+  "misread": "",
+  "sources": [
+   "Scholars have debated whether it can truly be known, and the schools differ on its scope. A few matters, such as the five daily prayers, are accepted by all Muslims."
+  ],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "ijtihad"
+  ],
+  "articles": [],
+  "aliases": [
+   "Consensus",
+   "Ijmaa"
+  ]
+ },
+ {
+  "slug": "images-and-depiction",
+  "title": "Images and depiction",
+  "type": "topic",
+  "ar": "صور",
+  "tr": "Ṣuwar",
+  "def": "Why many Muslims avoid images of the Prophet, and why the Danish cartoons of 2005–06 caused such anger.",
+  "what": [
+   "Islamic tradition discourages depicting prophets and worshipping images, as a safeguard against idolatry. Many hadith warn against picture-makers (Sahih al-Bukhari). Pictures of the Prophet were nonetheless painted in some Persian and Ottoman manuscripts, with the face veiled or left blank in later periods. In 2005 a Danish newspaper printed cartoons mocking the Prophet and there were protests in many countries, some violent."
+  ],
+  "misread": "That Islam demands violence in answer to insult.",
+  "sources": [
+   "The Quran says to leave those who mock (4:140, 6:68), and the Prophet bore insults with patience. Many Muslim scholars and organisations condemned the violent reaction, which they said did more harm to the Prophet’s reputation than the cartoons."
+  ],
+  "terms": [
+   "blasphemy",
+   "shirk"
+  ],
+  "articles": [],
+  "aliases": [
+   "Cartoons",
+   "Pictures",
+   "Images"
+  ]
+ },
+ {
+  "slug": "iman",
+  "title": "Iman",
+  "type": "term",
+  "ar": "إيمان",
+  "tr": "Īmān",
+  "def": "Faith: belief in God, His angels, scriptures and messengers, the Last Day and the decree, which the Quran joins with righteous deeds.",
+  "what": [
+   "“The righteous man is he who believes in God, the Last Day, the angels, the Book and the prophets” (2:177). The Quran adds works: “those who believe and do righteous deeds” appears dozens of times. It describes the believers as those whose hearts tremble when God is mentioned and whose faith grows when His verses are recited (8:2–4). It distinguishes outward submission (<em>islām</em>) from faith (<em>īmān</em>) in the heart (49:14)."
+  ],
+  "misread": "",
+  "sources": [
+   "The Quran asks Muslims to believe in all revelations: “we make no distinction between any of His messengers” (2:285). That includes the earlier scriptures, and the Quran tells the Prophet that if he doubts, he should ask those who have been reading the Book before him (10:94)."
+  ],
+  "terms": [
+   "ihsan",
+   "aqeeda",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": [
+   "Belief",
+   "Believers",
+   "Faith",
+   "Faith And Good Works",
+   "Iman Al-Mufassal"
+  ]
+ },
+ {
+  "slug": "inheritance",
+  "title": "Inheritance",
+  "type": "topic",
+  "ar": "ميراث",
+  "tr": "Mīrāth",
+  "def": "The Quran sets fixed shares for family heirs and allows a bequest of up to a third.",
+  "what": [
+   "The Quran fixes shares for children, parents, spouses and siblings (4:11–12, 4:176). A son receives twice the share of a daughter, but each parent receives a sixth, and the mother and father may receive equal shares. A person can leave a bequest of up to one third of his estate to others, as the Prophet told Sa’d ibn Abi Waqqas (Sahih al-Bukhari)."
+  ],
+  "misread": "That Islam values a woman as half a man.",
+  "sources": [
+   "The reason usually given for the difference in the son’s share is that the male is required to support the household, to pay the dowry and to maintain his wife and children, while a woman’s inheritance, dowry and earnings are hers alone and she is under no obligation to spend them. The Quran gave women a right to inherit at a time when in many societies they did not (4:7)."
+  ],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Bequests",
+   "Heir",
+   "Wills",
+   "Wasiyya"
+  ]
+ },
+ {
   "slug": "injil",
   "title": "Injil",
   "ar": "إنجيل",
@@ -71,7 +176,12 @@
    "shared-prophets"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [
+   "Jesus",
+   "Christ",
+   "Al-Masih",
+   "Messiah"
+  ]
  },
  {
   "slug": "isnad",
