@@ -201,7 +201,7 @@ function boi_render_featured_lead() {
 				%2$s
 				<h2 class="boi-lead__title"><a href="%3$s">%4$s</a></h2>
 				<p class="boi-lead__excerpt">%5$s</p>
-				<a class="boi-lead__cta" href="%3$s">%6$s</a>
+				<a class="boi-lead__cta" href="%3$s">%6$s<span class="screen-reader-text">: %4$s</span></a>
 			</div>
 		</article>',
 		$thumb,

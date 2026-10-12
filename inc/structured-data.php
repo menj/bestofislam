@@ -161,27 +161,83 @@ function boi_article_image_object( $post ) {
 		$image['height'] = (int) $height;
 	}
 
+	return array_merge( $image, boi_image_credit_fields( $credit ) );
+}
+
+/**
+ * The licence and credit properties of an ImageObject, from an image credit.
+ *
+ * @param array $credit Credit: artist, licence, source.
+ * @return array creator, creditText, license and acquireLicensePage, as known.
+ */
+function boi_image_credit_fields( $credit ) {
+	$fields = array();
+
 	if ( ! empty( $credit['artist'] ) ) {
-		$image['creator']    = array(
+		$fields['creator']    = array(
 			'@type' => 'Person',
 			'name'  => $credit['artist'],
 		);
-		$image['creditText'] = $credit['artist'] . ', via ' . boi_image_source_name( isset( $credit['source'] ) ? $credit['source'] : '' );
+		$fields['creditText'] = $credit['artist'] . ', via ' . boi_image_source_name( isset( $credit['source'] ) ? $credit['source'] : '' );
 	}
 
 	if ( ! empty( $credit['licence'] ) ) {
 		$licence = boi_licence_url( $credit['licence'] );
 
 		if ( '' !== $licence ) {
-			$image['license'] = $licence;
+			$fields['license'] = $licence;
 		}
 	}
 
 	if ( ! empty( $credit['source'] ) ) {
-		$image['acquireLicensePage'] = $credit['source'];
+		$fields['acquireLicensePage'] = $credit['source'];
 	}
 
-	return $image;
+	return $fields;
+}
+
+/**
+ * The images set in the text of an article, as ImageObjects with licence
+ * metadata, so Google Images can show who made each and how it may be used.
+ *
+ * @param WP_Post $post Article.
+ * @return array ImageObjects, in page order.
+ */
+function boi_inline_image_objects( $post ) {
+	$data = function_exists( 'boi_images_data' ) ? boi_images_data() : array();
+
+	if ( empty( $data[ $post->post_name ]['inline'] ) ) {
+		return array();
+	}
+
+	$objects = array();
+
+	foreach ( $data[ $post->post_name ]['inline'] as $i => $credit ) {
+		$file = BOI_DIR . '/assets/images/inline/' . $credit['file'];
+
+		if ( ! file_exists( $file ) ) {
+			continue;
+		}
+
+		$size = function_exists( 'wp_getimagesize' ) ? wp_getimagesize( $file ) : getimagesize( $file );
+		$url  = BOI_URI . '/assets/images/inline/' . $credit['file'];
+		$node = array(
+			'@type'      => 'ImageObject',
+			'@id'        => get_permalink( $post ) . '#inline-image-' . ( $i + 1 ),
+			'url'        => $url,
+			'contentUrl' => $url,
+			'caption'    => boi_plain( $credit['alt'] ),
+		);
+
+		if ( $size ) {
+			$node['width']  = (int) $size[0];
+			$node['height'] = (int) $size[1];
+		}
+
+		$objects[] = array_merge( $node, boi_image_credit_fields( $credit ) );
+	}
+
+	return $objects;
 }
 
 /**
@@ -278,13 +334,62 @@ function boi_article_entities( $post ) {
 		$article['articleSection'] = $section;
 	}
 
-	$image = boi_article_image_object( $post );
+	$images = array();
+	$image  = boi_article_image_object( $post );
 
 	if ( $image ) {
-		$article['image'] = array( $image );
+		$images[] = $image;
 	}
 
-	return array( $article );
+	$inline = boi_inline_image_objects( $post );
+
+	foreach ( $inline as $node ) {
+		$images[] = array( '@id' => $node['@id'] );
+	}
+
+	if ( $images ) {
+		$article['image'] = $images;
+	}
+
+	return array_merge( array( $article ), $inline );
+}
+
+/**
+ * ProfilePage for an author archive: a page about one person tied to the site.
+ *
+ * @param WP_User|null $author Author.
+ * @return array Graph nodes, empty when the author has nothing to show.
+ */
+function boi_profile_entities( $author ) {
+	if ( ! $author instanceof WP_User || ! count_user_posts( $author->ID, 'post', true ) ) {
+		return array();
+	}
+
+	$url    = get_author_posts_url( $author->ID );
+	$person = array(
+		'@type' => 'Person',
+		'@id'   => $url . '#person',
+		'name'  => $author->display_name,
+		'url'   => $url,
+	);
+
+	$bio = boi_plain( get_the_author_meta( 'description', $author->ID ) );
+
+	if ( '' !== $bio ) {
+		$person['description'] = $bio;
+	}
+
+	$profile = array(
+		'@type'      => 'ProfilePage',
+		'@id'        => $url . '#profilepage',
+		'url'        => $url,
+		'name'       => $author->display_name,
+		'inLanguage' => get_bloginfo( 'language' ),
+		'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+		'mainEntity' => array( '@id' => $person['@id'] ),
+	);
+
+	return array( $profile, $person );
 }
 
 /**
@@ -293,6 +398,11 @@ function boi_article_entities( $post ) {
  * @return void
  */
 function boi_print_structured_data() {
+	// Rank Math prints its own graph; boi_rank_math_json_ld() adds to it.
+	if ( function_exists( 'boi_rank_math_active' ) && boi_rank_math_active() ) {
+		return;
+	}
+
 	$nodes = array();
 
 	if ( is_front_page() ) {
@@ -303,6 +413,8 @@ function boi_print_structured_data() {
 		if ( $post ) {
 			$nodes = boi_article_entities( $post );
 		}
+	} elseif ( is_author() ) {
+		$nodes = boi_profile_entities( get_queried_object() );
 	}
 
 	if ( empty( $nodes ) ) {

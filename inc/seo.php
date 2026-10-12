@@ -58,7 +58,8 @@ add_filter( 'document_title_separator', 'boi_title_separator' );
  */
 function boi_title_parts( $parts ) {
 	if ( is_front_page() ) {
-		unset( $parts['tagline'] );
+		// The guide: a home page title can carry the name and the main focus.
+		$parts['tagline'] = apply_filters( 'boi_front_title_focus', __( 'Objections to Islam, answered', 'bestofislam' ) );
 	}
 
 	if ( is_tax( 'listicle-topic' ) ) {
@@ -68,6 +69,31 @@ function boi_title_parts( $parts ) {
 	return $parts;
 }
 add_filter( 'document_title_parts', 'boi_title_parts' );
+
+/**
+ * Prints the Search Console and Bing Webmaster Tools verification tags, so the
+ * site can use the free webmaster tools the guide recommends. An SEO plugin has
+ * its own fields for these, and the theme leaves them to it.
+ *
+ * @return void
+ */
+function boi_print_verification_tags() {
+	if ( boi_seo_plugin_active() ) {
+		return;
+	}
+
+	$options = boi_get_options();
+
+	foreach ( array(
+		'verify_google' => 'google-site-verification',
+		'verify_bing'   => 'msvalidate.01',
+	) as $key => $name ) {
+		if ( ! empty( $options[ $key ] ) ) {
+			printf( '<meta name="%1$s" content="%2$s">' . "\n", esc_attr( $name ), esc_attr( $options[ $key ] ) );
+		}
+	}
+}
+add_action( 'wp_head', 'boi_print_verification_tags', 1 );
 
 /**
  * Builds the description for the current view.
@@ -161,6 +187,11 @@ add_action( 'wp_head', 'boi_print_meta_description', 1 );
  * @return array
  */
 function boi_robots( $robots ) {
+	// Rank Math prints the robots tag; boi_rank_math_robots() hands it the same rule.
+	if ( function_exists( 'boi_rank_math_active' ) && boi_rank_math_active() ) {
+		return $robots;
+	}
+
 	if ( is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
 		$robots['noindex'] = true;
 		$robots['follow']  = true;
@@ -338,20 +369,24 @@ function boi_render_breadcrumbs() {
 		$graph[] = $node;
 	}
 
-	$json = boi_json_ld(
+	$nav = sprintf(
+		'<nav class="boi-breadcrumbs" aria-label="%1$s"><ol>%2$s</ol></nav>',
+		esc_attr__( 'Breadcrumb', 'bestofislam' ),
+		$items
+	);
+
+	// Rank Math adds a BreadcrumbList to its own graph; two would be a duplicate.
+	if ( function_exists( 'boi_rank_math_breadcrumb_schema' ) && boi_rank_math_breadcrumb_schema() ) {
+		return $nav;
+	}
+
+	return $nav . '<script type="application/ld+json">' . boi_json_ld(
 		array(
 			'@context'        => 'https://schema.org',
 			'@type'           => 'BreadcrumbList',
 			'itemListElement' => $graph,
 		)
-	);
-
-	return sprintf(
-		'<nav class="boi-breadcrumbs" aria-label="%1$s"><ol>%2$s</ol></nav><script type="application/ld+json">%3$s</script>',
-		esc_attr__( 'Breadcrumb', 'bestofislam' ),
-		$items,
-		$json
-	);
+	) . '</script>';
 }
 
 /**

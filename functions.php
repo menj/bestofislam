@@ -32,6 +32,7 @@ require_once BOI_DIR . '/inc/images.php';
 require_once BOI_DIR . '/inc/questions.php';
 require_once BOI_DIR . '/inc/reading.php';
 require_once BOI_DIR . '/inc/structured-data.php';
+require_once BOI_DIR . '/inc/rank-math.php';
 require_once BOI_DIR . '/inc/unlist.php';
 require_once BOI_DIR . '/inc/search-permalinks.php';
 require_once BOI_DIR . '/inc/login.php';
