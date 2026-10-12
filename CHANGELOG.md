@@ -14,6 +14,10 @@ versioning.
 - **Webmaster tools fields** for the Google Search Console and Bing verification codes (Search engines tab); an SEO plugin's own fields take over when one is active.
 - `docs/SEO.md`: the Search Engine Optimization Starter Guide and Google's supported structured data, practice by practice, and how each behaves beside Rank Math.
 
+### Fixed
+
+- The jump list at the head of a listicle, and the other lists of links the site builds (glossary index and related terms, site map, reading lists), were underlined by the rule meant for links in running text. That rule now leaves them out.
+
 ### Changed
 
 - The front page title carries the site's focus as well as its name, as the guide suggests; the lead card's button carries the article title in its link text.
