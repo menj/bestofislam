@@ -8,6 +8,7 @@ versioning.
 
 ### Added
 
+- **Internal linking for every article.** The 34 articles added with this release join the reading order, so all 70 have a "Read next" card, and the Keep reading list at the foot of an article now offers the four most closely related articles (shared glossary terms first, then section and reading part) instead of the newest three in its section (`inc/related-articles.json`, built by `bin/build-related.py`). Four articles that no glossary entry pointed to now have entries that do. Part 5 of the reading order is renamed "The Prophet and the hard questions".
 - **Rank Math compatibility** (`inc/rank-math.php`). With Rank Math active the theme no longer prints its own robots directives, structured-data graph or breadcrumb markup, and adds its image licence data and in-text images to Rank Math's graph, a description where Rank Math has none, noindex for search results and paged archives, and the exclusion of unlisted articles from its sitemap, through the plugin's hooks.
 - **Image metadata on the images in the text** of an article, not only the featured image, as ImageObjects with licence, creator and credit.
 - **ProfilePage markup** on author archives.
