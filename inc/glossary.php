@@ -15,7 +15,10 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '1';
+const BOI_GLOSSARY_VERSION = '2';
+
+/** Entries created or refreshed per request, so a large glossary seeds in steps. */
+const BOI_GLOSSARY_BATCH = 30;
 
 /**
  * Pages have no excerpt by default; each term keeps its one-line definition
@@ -80,9 +83,19 @@ function boi_glossary_content( $t ) {
 		return "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">" . $text . "</h2>\n<!-- /wp:heading -->\n\n";
 	};
 
+	$types = boi_glossary_types();
+	$kind  = isset( $t['type'], $types[ $t['type'] ] ) ? $types[ $t['type'] ] : '';
+
 	$out  = "<!-- wp:group {\"className\":\"boi-term\"} -->\n<div class=\"wp-block-group boi-term\">";
-	$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
-	$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
+	if ( ! empty( $t['ar'] ) ) {
+		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
+	}
+	if ( ! empty( $t['tr'] ) ) {
+		$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
+	}
+	if ( 'term' !== $t['type'] && '' !== $kind ) {
+		$out .= '<p class="boi-term__kind">' . $kind . '</p>';
+	}
 	$out .= "</div>\n<!-- /wp:group -->\n\n";
 
 	$out .= $p( $t['def'], 'boi-term__def' );
@@ -122,19 +135,25 @@ function boi_glossary_parent_content() {
 }
 
 /**
- * Creates the Glossary and its first entries, and refreshes entries the owner
- * has not edited. Runs once per glossary version.
+ * Creates the Glossary and its entries, and refreshes entries the owner has
+ * not edited. A large glossary is seeded in steps of BOI_GLOSSARY_BATCH
+ * entries, each step scheduling the next, so no single request has to create
+ * hundreds of pages.
  *
  * @return void
  */
 function boi_glossary_sync() {
-	if ( get_option( 'boi_glossary_version' ) === BOI_GLOSSARY_VERSION ) {
+	$progress = (array) get_option( 'boi_glossary_progress', array() );
+
+	if ( isset( $progress['version'], $progress['done'] ) && BOI_GLOSSARY_VERSION === $progress['version'] && ! empty( $progress['complete'] ) ) {
 		return;
 	}
 
-	boi_with_lock(
+	$next = boi_with_lock(
 		'glossary',
-		function () {
+		function () use ( $progress ) {
+			$cursor = ( isset( $progress['version'] ) && BOI_GLOSSARY_VERSION === $progress['version'] ) ? (int) $progress['done'] : 0;
+			$terms  = boi_glossary_terms();
 			$author = function_exists( 'boi_seed_author' ) ? boi_seed_author() : 0;
 			$parent = boi_glossary_parent();
 
@@ -144,7 +163,7 @@ function boi_glossary_sync() {
 						'post_title'   => 'Glossary',
 						'post_name'    => 'glossary',
 						'post_content' => boi_glossary_parent_content(),
-						'post_excerpt' => 'The words that come up most often when Islam is discussed: what they mean, how Muslims understand them, and what the sources say.',
+						'post_excerpt' => 'The words, people and places that come up most often when Islam is discussed: what they mean, how Muslims understand them, and what the sources say.',
 						'post_status'  => 'publish',
 						'post_author'  => $author,
 						'post_type'    => 'page',
@@ -154,68 +173,113 @@ function boi_glossary_sync() {
 			}
 
 			if ( ! $parent ) {
-				return;
+				return false;
 			}
 
 			$hashes = (array) get_option( 'boi_glossary_hashes', array() );
+			$batch  = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
 
-			foreach ( boi_glossary_terms() as $t ) {
-				$content = boi_glossary_content( $t );
-				$page    = get_page_by_path( 'glossary/' . $t['slug'], OBJECT, 'page' );
-
-				if ( $page && 'trash' === $page->post_status ) {
-					continue; // The owner removed it; do not bring it back.
-				}
-
-				if ( ! $page ) {
-					$id = boi_insert_post(
-						array(
-							'post_title'   => $t['title'],
-							'post_name'    => $t['slug'],
-							'post_parent'  => $parent->ID,
-							'post_content' => $content,
-							'post_excerpt' => $t['def'],
-							'post_status'  => 'publish',
-							'post_author'  => $author,
-							'post_type'    => 'page',
-						)
-					);
-
-					if ( $id && ! is_wp_error( $id ) ) {
-						$hashes[ $t['slug'] ] = boi_content_fingerprint( get_post( $id )->post_content );
-						update_post_meta( $id, '_boi_term_ar', $t['ar'] );
-					}
-					continue;
-				}
-
-				// Refresh only an entry still exactly as the theme last wrote it.
-				$current = boi_content_fingerprint( $page->post_content );
-
-				if ( isset( $hashes[ $t['slug'] ] ) && $hashes[ $t['slug'] ] === $current && boi_content_fingerprint( $content ) !== $current ) {
-					boi_update_post(
-						array(
-							'ID'           => $page->ID,
-							'post_content' => $content,
-							'post_excerpt' => $t['def'],
-						)
-					);
-					$hashes[ $t['slug'] ] = boi_content_fingerprint( get_post( $page->ID )->post_content );
-				}
-
-				if ( '' === (string) get_post_meta( $page->ID, '_boi_term_ar', true ) ) {
-					update_post_meta( $page->ID, '_boi_term_ar', $t['ar'] );
-				}
+			foreach ( $batch as $t ) {
+				boi_glossary_write_entry( $t, $parent, $author, $hashes );
 			}
 
+			$cursor += count( $batch );
+
 			update_option( 'boi_glossary_hashes', $hashes, false );
-			update_option( 'boi_glossary_version', BOI_GLOSSARY_VERSION, false );
-			delete_transient( 'boi_site_counts' );
+			update_option(
+				'boi_glossary_progress',
+				array(
+					'version'  => BOI_GLOSSARY_VERSION,
+					'done'     => $cursor,
+					'complete' => $cursor >= count( $terms ) ? 1 : 0,
+				),
+				false
+			);
+
+			return $cursor < count( $terms );
 		},
 		true
 	);
+
+	if ( $next ) {
+		if ( ! wp_next_scheduled( 'boi_glossary_continue' ) ) {
+			wp_schedule_single_event( time() + 10, 'boi_glossary_continue' );
+		}
+	} else {
+		delete_transient( 'boi_site_counts' );
+	}
 }
 add_action( 'admin_init', 'boi_glossary_sync' );
 add_action( 'after_switch_theme', 'boi_glossary_sync' );
+add_action( 'boi_glossary_continue', 'boi_glossary_sync' );
+
+/**
+ * Creates one entry, or refreshes it while it is exactly as the theme wrote it.
+ *
+ * @param array   $t      Entry.
+ * @param WP_Post $parent Glossary page.
+ * @param int     $author Author for new pages.
+ * @param array   $hashes Recorded content fingerprints, updated in place.
+ * @return void
+ */
+function boi_glossary_write_entry( $t, $parent, $author, &$hashes ) {
+	$content = boi_glossary_content( $t );
+	$page    = get_page_by_path( 'glossary/' . $t['slug'], OBJECT, 'page' );
+
+	if ( $page && 'trash' === $page->post_status ) {
+		return; // The owner removed it; do not bring it back.
+	}
+
+	if ( ! $page ) {
+		$id = boi_insert_post(
+			array(
+				'post_title'   => $t['title'],
+				'post_name'    => $t['slug'],
+				'post_parent'  => $parent->ID,
+				'post_content' => $content,
+				'post_excerpt' => $t['def'],
+				'post_status'  => 'publish',
+				'post_author'  => $author,
+				'post_type'    => 'page',
+			)
+		);
+
+		if ( $id && ! is_wp_error( $id ) ) {
+			$hashes[ $t['slug'] ] = boi_content_fingerprint( get_post( $id )->post_content );
+			boi_glossary_meta( $id, $t );
+		}
+		return;
+	}
+
+	// Refresh only an entry still exactly as the theme last wrote it.
+	$current = boi_content_fingerprint( $page->post_content );
+
+	if ( isset( $hashes[ $t['slug'] ] ) && $hashes[ $t['slug'] ] === $current && boi_content_fingerprint( $content ) !== $current ) {
+		boi_update_post(
+			array(
+				'ID'           => $page->ID,
+				'post_content' => $content,
+				'post_excerpt' => $t['def'],
+			)
+		);
+		$hashes[ $t['slug'] ] = boi_content_fingerprint( get_post( $page->ID )->post_content );
+	}
+
+	boi_glossary_meta( $page->ID, $t );
+}
+
+/**
+ * Keeps the index's data about an entry: its script, kind and other names.
+ *
+ * @param int   $id Page identifier.
+ * @param array $t  Entry.
+ * @return void
+ */
+function boi_glossary_meta( $id, $t ) {
+	update_post_meta( $id, '_boi_term_ar', isset( $t['ar'] ) ? $t['ar'] : '' );
+	update_post_meta( $id, '_boi_term_type', isset( $t['type'] ) ? $t['type'] : 'term' );
+	update_post_meta( $id, '_boi_term_aliases', isset( $t['aliases'] ) ? array_values( (array) $t['aliases'] ) : array() );
+}
 
 /**
  * Registers the two dynamic blocks.
@@ -281,7 +345,8 @@ function boi_glossary_letter( $title ) {
 }
 
 /**
- * Renders the A to Z index.
+ * Renders the A to Z index. An entry known by other names also appears under
+ * each of them, as a short line pointing to the entry.
  *
  * @return string
  */
@@ -292,10 +357,38 @@ function boi_render_glossary_index() {
 		return '';
 	}
 
-	$groups = array();
+	$types = boi_glossary_types();
+	$rows  = array();
 
 	foreach ( $entries as $entry ) {
-		$groups[ boi_glossary_letter( $entry->post_title ) ][] = $entry;
+		$rows[] = array(
+			'name'  => get_the_title( $entry ),
+			'entry' => $entry,
+			'alias' => false,
+		);
+
+		foreach ( (array) get_post_meta( $entry->ID, '_boi_term_aliases', true ) as $alias ) {
+			if ( '' !== trim( (string) $alias ) ) {
+				$rows[] = array(
+					'name'  => (string) $alias,
+					'entry' => $entry,
+					'alias' => true,
+				);
+			}
+		}
+	}
+
+	usort(
+		$rows,
+		function ( $a, $b ) {
+			return strnatcasecmp( remove_accents( wp_strip_all_tags( $a['name'] ) ), remove_accents( wp_strip_all_tags( $b['name'] ) ) );
+		}
+	);
+
+	$groups = array();
+
+	foreach ( $rows as $row ) {
+		$groups[ boi_glossary_letter( $row['name'] ) ][] = $row;
 	}
 
 	ksort( $groups );
@@ -308,12 +401,29 @@ function boi_render_glossary_index() {
 		$nav .= sprintf( '<li><a href="#%1$s">%2$s</a></li>', esc_attr( $id ), esc_html( $letter ) );
 
 		$list = '';
-		foreach ( $items as $entry ) {
-			$ar    = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+		foreach ( $items as $row ) {
+			$entry = $row['entry'];
+
+			if ( $row['alias'] ) {
+				$list .= sprintf(
+					'<li class="boi-glossary__item is-alias"><span class="boi-glossary__name">%1$s</span><span class="boi-glossary__see">%2$s <a href="%3$s">%4$s</a></span></li>',
+					esc_html( $row['name'] ),
+					esc_html__( 'see', 'bestofislam' ),
+					esc_url( get_permalink( $entry ) ),
+					esc_html( get_the_title( $entry ) )
+				);
+				continue;
+			}
+
+			$ar   = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+			$type = (string) get_post_meta( $entry->ID, '_boi_term_type', true );
+			$tag  = ( '' !== $type && 'term' !== $type && isset( $types[ $type ] ) ) ? '<span class="boi-glossary__type">' . esc_html( $types[ $type ] ) . '</span>' : '';
+
 			$list .= sprintf(
-				'<li class="boi-glossary__item"><a class="boi-glossary__term" href="%1$s">%2$s</a>%3$s<p class="boi-glossary__def">%4$s</p></li>',
+				'<li class="boi-glossary__item"><a class="boi-glossary__term" href="%1$s">%2$s</a>%3$s%4$s<p class="boi-glossary__def">%5$s</p></li>',
 				esc_url( get_permalink( $entry ) ),
 				esc_html( get_the_title( $entry ) ),
+				$tag,
 				'' !== $ar ? '<span class="boi-glossary__ar" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
 				esc_html( $entry->post_excerpt )
 			);

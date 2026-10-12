@@ -1,0 +1,27 @@
+[
+    {
+        "slug": "dhimmi",
+        "title": "Dhimmi",
+        "ar": "ذمّي",
+        "tr": "Dhimmī",
+        "def": "A non-Muslim living under Muslim rule with the state’s pledge of protection.",
+        "what": [
+            "<em>Dhimma</em> means a pledge or covenant. A dhimmi’s life, property and place of worship were protected by it, and the community ran its own courts and affairs by its own law. The Prophet is reported to have said that whoever kills a person under a treaty will not smell the fragrance of Paradise (Sahih al-Bukhari).",
+            "The Maliki jurist al-Qarafi (d. 1285) wrote that the pledge puts duties on Muslims: to treat them as neighbours under God’s protection, to defend them and to prevent their being wronged."
+        ],
+        "misread": "That dhimmis were slaves, or hunted second-class people.",
+        "sources": [
+            "The classical law did place distinctions and restrictions, and Muslims do not need to deny this. But the status was a legal one, with rights, and it compares well with how religious minorities were treated elsewhere in the same centuries. When the Jews were expelled from Spain in 1492, the Ottoman sultan Bayezid II received many of them. Nobody on this site claims the record was perfect, only that it was not what the caricature suggests."
+        ],
+        "terms": [
+            "jizya",
+            "ahl-al-kitab",
+            "ummah"
+        ],
+        "articles": [
+            "jizya"
+        ],
+        "type": "term",
+        "aliases": []
+    }
+]

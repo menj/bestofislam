@@ -100,6 +100,44 @@
 	hyphens: manual;
 }
 
+/* Another name for an entry: a short line pointing to it. */
+.boi-glossary__item.is-alias {
+	padding-block: 0.5rem;
+	border-block-end: 0;
+}
+
+.boi-glossary__name {
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-weight: 600;
+	color: var(--wp--preset--color--accent-5, #4A5A6E);
+}
+
+.boi-glossary__see {
+	grid-column: 2;
+	grid-row: 1;
+	font-size: 0.9rem;
+	color: var(--wp--preset--color--accent-5, #4A5A6E);
+}
+
+.boi-glossary__type,
+.boi-article .boi-term__kind {
+	display: inline-block;
+	margin-inline-start: 0.6rem;
+	padding: 0.05rem 0.5rem;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent-5, #4A5A6E);
+	background: var(--wp--preset--color--accent-3, #EAF2FB);
+	border-radius: 999px;
+	vertical-align: middle;
+}
+
+.boi-article .boi-term__kind {
+	margin: 0.4rem 0 0;
+}
+
 /* An entry. */
 .boi-article .boi-term {
 	margin-block-end: 0.5rem;

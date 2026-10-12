@@ -1,0 +1,122 @@
+[
+    {
+        "slug": "tawhid",
+        "title": "Tawhid",
+        "ar": "توحيد",
+        "tr": "Tawḥīd",
+        "def": "The oneness of God: one Creator and Sustainer, to whom worship belongs alone.",
+        "what": [
+            "From the root <em>w-ḥ-d</em>, “to make one”. Tawhid is the centre of Islam and the meaning of the first half of the shahada, “there is no god but God”. Scholars often describe three aspects: God’s oneness as Lord and Creator, His oneness in worship, and the oneness of His names and attributes, for “there is nothing like Him” (42:11).",
+            "The Quran argues for it rather than only asserting it. Had there been gods besides Allah in the heavens and the earth, both would have been ruined (21:22), and each god would have gone off with what he created (23:91)."
+        ],
+        "misread": "A bare slogan, or a claim made only to oppose the Trinity.",
+        "sources": [
+            "A hadith in Sahih al-Bukhari says chapter 112, which states God’s oneness, equals a third of the Quran in weight. Islam’s disagreement with Trinitarian doctrine is a disagreement about God’s nature, which Muslims argue from the Quran and from the words of Jesus as they understand them. It is not a denial of the love and honour Muslims hold for him."
+        ],
+        "terms": [
+            "allah",
+            "shirk",
+            "isa"
+        ],
+        "articles": [
+            "jesus-not-god"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "tafsir",
+        "title": "Tafsir",
+        "ar": "تفسير",
+        "tr": "Tafsīr",
+        "def": "Commentary on the Quran: explaining what its verses mean and how they were understood.",
+        "what": [
+            "Classical commentators explained a verse first from the rest of the Quran, then from the Prophet’s explanations, then from the Companions, then from the Arabic language itself. The great early works include al-Tabari (d. 923) and Ibn Kathir (d. 1373), and each gathers earlier views rather than offering a single opinion.",
+            "A verse read alone, in English translation, may be read very differently from how its first audience and its scholars understood it."
+        ],
+        "misread": "That any reader can lift a verse out and say what “Islam teaches”.",
+        "sources": [
+            "Muslims do not read the Quran as a list of separate sentences. The commentary tradition records the context, the grammar and the range of readings, and often shows that the apparently harsh or strange reading is not the one the scholars settled on. This is the reason this site sets objections beside the explanations that exist for them."
+        ],
+        "terms": [
+            "quran",
+            "asbab-al-nuzul",
+            "naskh"
+        ],
+        "articles": [
+            "verses-read-differently"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "taqiyya",
+        "title": "Taqiyya",
+        "ar": "تقية",
+        "tr": "Taqiyya",
+        "def": "Concealing one’s belief to escape persecution or grave harm; a concession, not a licence to deceive.",
+        "what": [
+            "The Quran allows a believer under compulsion to speak words of disbelief while his heart is at peace in faith (16:106), and refers to taking precaution against those who threaten one’s safety (3:28). The best-known case is Ammar ibn Yasir, whom the Meccans tortured until he said what they wished.",
+            "The idea is stressed most in Shia thought, as the practice of a persecuted minority. Sunni scholars discuss the same permission under the name <em>ruḵṣa</em>, “a concession”."
+        ],
+        "misread": "That Muslims may lie to non-Muslims to advance Islam.",
+        "sources": [
+            "The permission applies to preserving life under real threat, not to ordinary dealings. The Quran commands keeping covenants and oaths (16:91), and a hadith in Sahih al-Bukhari names lying in speech as one of the marks of a hypocrite. Claims that taqiyya is a general doctrine of deceiving unbelievers come chiefly from outsiders, not from the sources."
+        ],
+        "terms": [
+            "kafir",
+            "sharia",
+            "hadith"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "tahrif",
+        "title": "Tahrif",
+        "ar": "تحريف",
+        "tr": "Taḥrīf",
+        "def": "The Quranic charge that some of the earlier scriptures were altered or misread by their custodians.",
+        "what": [
+            "The Quran says that some among the Jews “distort the words from their places” (4:46, 5:13; compare 2:75). Muslim scholars have long differed on what this means. Some hold the main distortion was in <em>meaning</em>, by wrong interpretation (<em>taḥrīf al-ma’nā</em>). Others hold there was also change to the wording (<em>taḥrīf al-lafẓ</em>).",
+            "A statement of Ibn Abbas is quoted in Sahih al-Bukhari: no one can alter a word of God’s books, but they twist them by misinterpretation."
+        ],
+        "misread": "That Muslims simply say the Bible is corrupt, to avoid reading it.",
+        "sources": [
+            "The Quran says that the Torah contains guidance and light (5:44) and that the Gospel does (5:46). It tells the Prophet, in case of doubt, to ask those who had been reading the Book before him (10:94), which assumes the earlier scriptures were in people’s hands. Muslims who hold that the texts also changed point to differences among surviving manuscripts, a field that Biblical scholars themselves study and debate."
+        ],
+        "terms": [
+            "kutub",
+            "injil",
+            "ahl-al-kitab"
+        ],
+        "articles": [
+            "where-is-the-injil",
+            "manuscript-transmission"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "taqwa",
+        "title": "Taqwa",
+        "ar": "تقوى",
+        "tr": "Taqwā",
+        "def": "God-consciousness: living mindful of God, as one who guards oneself against wrongdoing.",
+        "what": [
+            "From a root meaning “to shield”. It is often translated “fear of God”, but it is closer to awareness and care: acting well because one knows God sees. The Quran opens by calling itself guidance for the <em>muttaqīn</em>, the God-conscious (2:2), and says that the most honoured before God are the most God-conscious (49:13)."
+        ],
+        "misread": "That Islam is a religion of fear.",
+        "sources": [
+            "The Quran joins taqwa to hope and love: “those who believe are stronger in love for God” (2:165). The Prophet taught his companions to fear God wherever they were, to follow a bad deed with a good one so that it wipes it out, and to treat people with good character (al-Tirmidhi)."
+        ],
+        "terms": [
+            "ihsan",
+            "ummah"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    }
+]

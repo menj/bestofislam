@@ -1,0 +1,79 @@
+[
+    {
+        "slug": "allah",
+        "title": "Allah",
+        "ar": "الله",
+        "tr": "Allāh",
+        "def": "The Arabic word for God, used by Arabic-speaking Muslims, Christians and Jews alike.",
+        "what": [
+            "Allah is the Arabic name for the one God, the Creator of everything. It is not the name of a separate Arab deity. Arabic-speaking Christians and Jews used the same word for God before Islam and use it today, and Arabic translations of the Bible render “God” as Allah.",
+            "The Quran describes God by many names, “the most beautiful names” (7:180): the Compassionate, the Merciful, the Creator, the Forgiving. Its shortest statement of who He is comes in chapter 112: He is Allah, One; the Eternal Refuge; He neither begets nor is begotten; and there is none comparable to Him."
+        ],
+        "misread": "That Allah is the name of a pagan moon god, or a different god from the God of the Bible.",
+        "sources": [
+            "The pre-Islamic Arabs knew Allah as the creator, though they joined partners to Him: asked who created the heavens and the earth, they would say “Allah” (Quran 29:61, 31:25). The Quran does not introduce a new god. It calls people back to worshipping Him alone, and tells Muslims to say to Jews and Christians, “our God and your God is one” (29:46)."
+        ],
+        "terms": [
+            "tawhid",
+            "shirk",
+            "ahl-al-kitab"
+        ],
+        "articles": [
+            "who-is-allah",
+            "same-god"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "asbab-al-nuzul",
+        "title": "Asbab al-Nuzul",
+        "ar": "أسباب النزول",
+        "tr": "Asbāb al-nuzūl",
+        "def": "The occasions of revelation: the circumstances in which a verse was revealed.",
+        "what": [
+            "Many verses answer a question, a dispute or an event, and knowing the occasion helps to see what is being said. Al-Wahidi (d. 1076) wrote a well-known book collecting them. Scholars add a principle: the lesson is taken from the general wording of a verse, not only from its occasion."
+        ],
+        "misread": "That verses about fighting are timeless orders to attack anyone who disbelieves.",
+        "sources": [
+            "The “sword verse” (9:5) orders fighting those who broke their treaties. The verse just before it exempts the polytheists who kept their treaty (9:4), and the verse just after it says that if any of them asks for protection it must be granted, and he must be escorted to safety (9:6). Read with its context, it is a rule about a war already under way, not a general licence."
+        ],
+        "terms": [
+            "tafsir",
+            "jihad",
+            "naskh"
+        ],
+        "articles": [
+            "verses-read-differently",
+            "islam-religion-of-peace"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "ahl-al-kitab",
+        "title": "Ahl al-Kitab",
+        "ar": "أهل الكتاب",
+        "tr": "Ahl al-Kitāb",
+        "def": "The People of the Book: Jews and Christians, who received earlier scriptures.",
+        "what": [
+            "The Quran gives them a place of their own. It invites them to “a common word” of worshipping God alone (3:64), tells Muslims to argue with them only in the best manner (29:46), permits eating their food and marrying their chaste women (5:5), and says that some of them are upright and pray through the night (3:113–115).",
+            "It says that the people nearest in affection to believers are those who say “we are Christians”, because among them are priests and monks who are not proud (5:82)."
+        ],
+        "misread": "That the Quran declares Jews and Christians enemies.",
+        "sources": [
+            "The Quran criticises specific beliefs and acts, and in specific situations, and it does so in the same chapters where it praises others. A Muslim’s relation to the People of the Book is one of respect, of disagreement on theology and, as the Quran says, of competing in good deeds (5:48)."
+        ],
+        "terms": [
+            "kutub",
+            "tahrif",
+            "dhimmi"
+        ],
+        "articles": [
+            "same-god",
+            "shared-prophets"
+        ],
+        "type": "term",
+        "aliases": []
+    }
+]

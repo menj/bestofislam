@@ -1,0 +1,48 @@
+[
+    {
+        "slug": "fiqh",
+        "title": "Fiqh",
+        "ar": "فقه",
+        "tr": "Fiqh",
+        "def": "Islamic jurisprudence: the scholars’ work of understanding and applying the sharia.",
+        "what": [
+            "Fiqh means “understanding”, and the Quran uses the idea of seeking understanding in the religion (9:122). The four main Sunni schools, Hanafi, Maliki, Shafi’i and Hanbali, and other schools such as the Ja’fari and Ibadi, each reached rulings by a method of reading the sources, and they often disagree."
+        ],
+        "misread": "That Islamic law is one rulebook with one answer on each question.",
+        "sources": [
+            "Disagreement among the schools is normal and long recognised. A ruling is a scholar’s judgement of what the sources require, offered with its evidence, and a Muslim chooses a qualified scholar to follow. Many things people call “Islamic law” in the news are a particular government’s choice among such opinions, or custom, not the sources themselves."
+        ],
+        "terms": [
+            "sharia",
+            "sunnah",
+            "tafsir"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "fitna",
+        "title": "Fitna",
+        "ar": "فتنة",
+        "tr": "Fitna",
+        "def": "Trial, persecution or turmoil; in the Quran, mainly the persecution of believers for their faith.",
+        "what": [
+            "The root means to test, as gold is tried in fire. The Quran says God tests people with good and evil as a trial (21:35). In the verses on fighting it means persecution: “fitna is worse than killing” (2:191, also 2:217)."
+        ],
+        "misread": "That “fight them until there is no fitna” (2:193) means fighting until everyone converts.",
+        "sources": [
+            "The verse continues: “if they cease, there is no hostility except against the wrongdoers” (2:193). The fighting is to stop persecution, and the Muslims in Mecca had been tortured and driven out for their belief. It sits in the same chapter that says there is “no compulsion in religion” (2:256) and is read together with it."
+        ],
+        "terms": [
+            "jihad",
+            "asbab-al-nuzul"
+        ],
+        "articles": [
+            "islam-religion-of-peace",
+            "apostasy-in-islam"
+        ],
+        "type": "term",
+        "aliases": []
+    }
+]

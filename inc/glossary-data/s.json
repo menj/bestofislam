@@ -1,0 +1,99 @@
+[
+    {
+        "slug": "shirk",
+        "title": "Shirk",
+        "ar": "شرك",
+        "tr": "Shirk",
+        "def": "Associating partners with God: giving to anything in creation what belongs to God alone.",
+        "what": [
+            "Shirk means “partnership”. It is the one sin the Quran says God does not forgive without repentance (4:48), and Luqman tells his son that it is “a great injustice” (31:13). The Prophet listed it first among the gravest sins (Sahih al-Bukhari).",
+            "The word covers worshipping idols, but also treating wealth, status or one’s own desires as a rival to God in the heart."
+        ],
+        "misread": "That every non-Muslim is condemned as a pagan.",
+        "sources": [
+            "The Quran itself separates the categories. It speaks of “those who disbelieved among the People of the Book and the polytheists” as two groups (98:1), and it calls Jews and Christians by their own name, People of the Book. Classical scholars discussed at length whether and how Trinitarian belief falls under shirk; there was no single ruling that lumped everyone together."
+        ],
+        "terms": [
+            "tawhid",
+            "kafir",
+            "ahl-al-kitab"
+        ],
+        "articles": [
+            "same-god"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "sunnah",
+        "title": "Sunnah",
+        "ar": "سنة",
+        "tr": "Sunna",
+        "def": "The Prophet’s example: his way of acting, which Muslims follow beside the Quran.",
+        "what": [
+            "The Quran says that in the Messenger of God there is a good example (33:21), and commands obedience to him (4:59, 59:7). Much of how Muslims practise comes from this: the Quran commands prayer and charity, and the sunnah shows how the prayer is performed and what share is due as zakat.",
+            "The sunnah is known mostly through hadith, but the two are not the same: the sunnah is the practice, and the hadith are the reports of it."
+        ],
+        "misread": "That Muslims follow hadith in place of the Quran.",
+        "sources": [
+            "The Quran is the first source, and the sunnah follows it; no sound report can overrule a clear statement of the Quran. The Quran itself directs readers to the Prophet to explain it, and a body of practice kept by the whole community, such as the number of daily prayers, is older and more widely attested than any individual report."
+        ],
+        "terms": [
+            "hadith",
+            "sharia",
+            "sira"
+        ],
+        "articles": [
+            "why-five-prayers"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "sira",
+        "title": "Sira",
+        "ar": "سيرة",
+        "tr": "Sīra",
+        "def": "The biography of the Prophet Muhammad, as written by early Muslim historians.",
+        "what": [
+            "The earliest full life is that of Ibn Ishaq (d. about 767), which survives through the edition of Ibn Hisham (d. 833). Others include al-Waqidi and Ibn Sa’d. These are narrative histories, which draw on hadith but are not collected to the same standard."
+        ],
+        "misread": "That every story in the biography has the same authority as the Quran or a sound hadith.",
+        "sources": [
+            "Classical scholars distinguished between what they accepted in law and creed, where the standard was strict, and what they accepted in historical narrative, where it was looser. A claim about the Prophet that rests on a weak or late report should be weighed as such. This is a method Muslim scholars used, and one that readers on this site are invited to apply."
+        ],
+        "terms": [
+            "hadith",
+            "sunnah",
+            "hijra"
+        ],
+        "articles": [
+            "prophet-died-poisoning"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "sharia",
+        "title": "Sharia",
+        "ar": "شريعة",
+        "tr": "Sharīʿa",
+        "def": "The path of God: the ethical and legal way set out in the Quran and the Prophet’s example.",
+        "what": [
+            "The word first meant a path to water, and the Quran uses it for “a clear way” (45:18). Most of it concerns worship, honesty, family and contracts. Scholars also describe its aims: protecting faith, life, reason, family and property.",
+            "It is not a single written code. Rulings are worked out by jurists (see <em>fiqh</em>), and the schools differ on many points."
+        ],
+        "misread": "That sharia means a fixed list of harsh punishments imposed on everyone.",
+        "sources": [
+            "The fixed punishments (<em>ḥudūd</em>) are a small part of the whole and are hedged by strict proof. For adultery the Quran demands four eye-witnesses (24:4, 24:13), and false accusation is itself punished. Jurists held that such penalties are to be avoided where there is doubt. Muslims also differ widely on whether and how a modern state should apply any of it."
+        ],
+        "terms": [
+            "fiqh",
+            "sunnah",
+            "naskh"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    }
+]

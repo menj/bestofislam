@@ -1,0 +1,49 @@
+[
+    {
+        "slug": "mushaf",
+        "title": "Mushaf",
+        "ar": "مصحف",
+        "tr": "Muṣḥaf",
+        "def": "A written copy of the Quran bound between two covers.",
+        "what": [
+            "From <em>ṣaḥīfa</em>, “a leaf”. In the Prophet’s lifetime the Quran was written on whatever was at hand and memorised in full by many. After his death the leaves were collected, and in the time of Uthman copies in one agreed spelling were sent to the main centres. The standard copy is often called the Uthmanic <em>mushaf</em>.",
+            "A <em>mushaf</em> is handled with respect, and Muslims traditionally wash before touching it."
+        ],
+        "misread": "That Uthman “burned the rival Qurans”, destroying the true text.",
+        "sources": [
+            "Sahih al-Bukhari records that Uthman had the leaves copied, ordered the standard copies sent out, and asked that other individual leaves be destroyed to avoid disputes. Muslims read this as protecting one text for the whole community, and note that no major dispute over it was recorded in the early centuries."
+        ],
+        "terms": [
+            "quran",
+            "qiraat"
+        ],
+        "articles": [
+            "uthman-copies"
+        ],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "maryam",
+        "title": "Maryam",
+        "ar": "مريم",
+        "tr": "Maryam",
+        "def": "Mary, mother of Jesus: the only woman named in the Quran, which gives her a chapter.",
+        "what": [
+            "The Quran says that the angels told her God had chosen and purified her above the women of the worlds (3:42). Chapter 19 is named after her, and chapter 66 holds her up as a model of faith and chastity (66:12). The Prophet is reported to have said that the best of women were Mary, daughter of Imran, and Khadija (Sahih al-Bukhari)."
+        ],
+        "misread": "That the Quran confuses Mary with Miriam, Aaron’s sister, because it calls her “sister of Aaron” (19:28).",
+        "sources": [
+            "A man once raised this with the Prophet’s Companion al-Mughira ibn Shu’ba, who asked the Prophet and was told that the people of that time used to take names from the prophets and righteous people who came before them (Sahih Muslim). “Sister of Aaron” can mean one of his line or his kind, as the Arabic <em>akh</em> and <em>ukht</em> often do. The Quran also gives her father’s name as Imran, as the Bible gives Amram for Aaron’s father."
+        ],
+        "terms": [
+            "isa",
+            "injil"
+        ],
+        "articles": [
+            "ezra-and-mary"
+        ],
+        "type": "term",
+        "aliases": []
+    }
+]

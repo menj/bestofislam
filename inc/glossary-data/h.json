@@ -1,0 +1,71 @@
+[
+    {
+        "slug": "hadith",
+        "title": "Hadith",
+        "ar": "حديث",
+        "tr": "Ḥadīth",
+        "def": "A report of the sayings, actions or approvals of the Prophet Muhammad.",
+        "what": [
+            "Each hadith has two parts: the <em>matn</em>, the text, and the <em>isnād</em>, the chain of people who passed it on. Collectors graded reports by the reliability of the narrators and by whether the text agreed with better-attested reports and with the Quran. The best known collections are Sahih al-Bukhari and Sahih Muslim, with four others, Abu Dawud, al-Tirmidhi, al-Nasa’i and Ibn Majah, usually counted with them.",
+            "Scholars themselves wrote works listing fabricated reports, and graded many as weak or false."
+        ],
+        "misread": "That hadith are late forgeries, and all of them are treated as equally binding.",
+        "sources": [
+            "Bukhari is traditionally said to have chosen roughly seven thousand reports, counting repetitions, from several hundred thousand he examined. The criticism that some reports are weak is one Muslim scholars made first, in their own books. For the Muslim, the issue is not whether a report exists but how well it is attested."
+        ],
+        "terms": [
+            "isnad",
+            "sunnah",
+            "sira"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "hijab",
+        "title": "Hijab",
+        "ar": "حجاب",
+        "tr": "Ḥijāb",
+        "def": "Modest dress, and in particular the head covering worn by many Muslim women.",
+        "what": [
+            "In the Quran <em>ḥijāb</em> means a screen or barrier, as in the verse about speaking to the Prophet’s wives from behind a screen (33:53). The covering of the head and chest is described by other words: <em>khimār</em> (24:31) and <em>jilbāb</em> (33:59). Scholars agree that modest dress is required of men and of women, and they differ on the details, including the face."
+        ],
+        "misread": "That the hijab is a sign of oppression imposed on Muslim women.",
+        "sources": [
+            "The Quran says that there is “no compulsion in religion” (2:256), and many Muslim scholars hold that forcing a woman to veil, as some states do, has no basis in the sources. Many Muslim women who wear it describe it as their own choice and an expression of faith, and many others do not wear it. The issue for the Muslim is consent: being made to veil and being forbidden to veil are both an infringement."
+        ],
+        "terms": [
+            "sharia",
+            "ummah"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "hijra",
+        "title": "Hijra",
+        "ar": "هجرة",
+        "tr": "Hijra",
+        "def": "Emigration for the sake of faith, above all the Prophet’s move from Mecca to Medina in 622 CE.",
+        "what": [
+            "After thirteen years of persecution in Mecca, the Prophet and his followers left for Medina in 622 CE. Under Umar the Islamic calendar was counted from this year. Hijra also means leaving what God forbids, as in the hadith “the emigrant is the one who abandons what God has forbidden” (Sahih al-Bukhari).",
+            "An earlier emigration, around 615, took a group of Muslims across the Red Sea to Abyssinia, where a Christian king, the Negus, gave them refuge."
+        ],
+        "misread": "That the move was the start of a policy of conquest.",
+        "sources": [
+            "Ibn Ishaq relates that Ja’far ibn Abi Talib recited from chapter 19, on Mary, before the Negus, who wept and said that this and what Jesus brought came from the same lamp. The first Muslims were refugees from persecution who were sheltered by a Christian ruler. Medina’s early constitution, preserved in Ibn Ishaq’s biography, treats the Jews of the city as a community alongside the Muslims."
+        ],
+        "terms": [
+            "ummah",
+            "sira",
+            "maryam"
+        ],
+        "articles": [
+            "qibla-change"
+        ],
+        "type": "term",
+        "aliases": []
+    }
+]

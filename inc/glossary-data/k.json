@@ -1,0 +1,49 @@
+[
+    {
+        "slug": "kafir",
+        "title": "Kafir",
+        "ar": "كافر",
+        "tr": "Kāfir",
+        "def": "One who rejects or denies the truth; literally, one who covers it up.",
+        "what": [
+            "The root <em>k-f-r</em> means “to cover”. The Quran uses a related word for farmers, who cover seed with soil (57:20). As a religious term it describes a person who knows the truth and hides or rejects it, and it is a statement about belief, not a name for a people.",
+            "Chapter 109 ends “to you your religion, and to me mine”. The Quran does not forbid kindness and justice to those who do not fight Muslims over religion, and it says God loves those who act justly (60:8)."
+        ],
+        "misread": "That it is a slur, or a licence to kill anyone who is not a Muslim.",
+        "sources": [
+            "The decision about who has rejected God is left to God. A hadith in Sahih al-Bukhari warns that if a man calls his brother “kafir”, one of them has earned the word, and jurists accordingly forbade accusing Muslims of disbelief lightly. The Quran also gives separate words for the People of the Book and for polytheists, and does not use one label for all."
+        ],
+        "terms": [
+            "shirk",
+            "ahl-al-kitab",
+            "jihad"
+        ],
+        "articles": [],
+        "type": "term",
+        "aliases": []
+    },
+    {
+        "slug": "kutub",
+        "title": "Kutub",
+        "ar": "كتب",
+        "tr": "Kutub",
+        "def": "The scriptures God revealed: the Torah, the Psalms, the Gospel and the Quran.",
+        "what": [
+            "Belief in the scriptures is one of the six articles of faith, in the hadith of Gabriel (Sahih Muslim). The Quran names the Torah given to Moses (5:44), the Psalms (<em>Zabūr</em>) given to David (4:163), the Gospel given to Jesus, and the scrolls of Abraham and Moses (87:18–19). “We make no distinction between any of His messengers” (2:285)."
+        ],
+        "misread": "That Islam is a rival religion that sets out to cancel Judaism and Christianity.",
+        "sources": [
+            "The Quran presents itself as confirming what came before it and guarding it (5:48), and as the same message from the same God. Muslims do not hold that the earlier prophets taught something else. Their claim is that the message was one, was corrupted or misunderstood in places, and was finally given in a form kept intact."
+        ],
+        "terms": [
+            "injil",
+            "tahrif",
+            "ahl-al-kitab"
+        ],
+        "articles": [
+            "shared-prophets"
+        ],
+        "type": "term",
+        "aliases": []
+    }
+]
