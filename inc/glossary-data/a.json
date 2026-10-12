@@ -877,7 +877,9 @@
    "jesus-not-god"
   ],
   "aliases": [
-   "Ahmadiyyah"
+   "Ahmadiyyah",
+   "Ghulam Ahmad",
+   "Mirza Ghulam Ahmad"
   ]
  },
  {
@@ -991,6 +993,29 @@
   "articles": [],
   "aliases": [
    "'Aziz, Al"
+  ]
+ },
+ {
+  "slug": "al-ghazali",
+  "title": "Al-Ghazali",
+  "type": "person",
+  "ar": "الغزالي",
+  "tr": "al-Ghazālī",
+  "def": "Abu Hamid al-Ghazali (1058–1111), the theologian, jurist and Sufi, author of <em>The Revival of the Religious Sciences</em>.",
+  "what": [
+   "Born in Tus, al-Ghazali taught at the Nizamiyya college in Baghdad, left his post after a spiritual crisis and spent years in retreat. His <em>Iḥyāʾ ʿulūm al-dīn</em> (“Revival of the Religious Sciences”) joins law, theology and Sufism, and his <em>Tahāfut al-falāsifa</em> (“Incoherence of the Philosophers”) criticised Muslim followers of Aristotle. He is called <em>Ḥujjat al-Islām</em>, “the proof of Islam”."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "sufism",
+   "ashari",
+   "ihsan"
+  ],
+  "articles": [],
+  "aliases": [
+   "Ghazali, Al-",
+   "Ghazali"
   ]
  },
  {
@@ -1114,7 +1139,8 @@
   ],
   "type": "term",
   "aliases": [
-   "Alah"
+   "Alah",
+   "God"
   ]
  },
  {

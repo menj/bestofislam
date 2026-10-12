@@ -49,6 +49,31 @@
   ]
  },
  {
+  "slug": "khidr",
+  "title": "Khidr",
+  "type": "person",
+  "ar": "الخضر",
+  "tr": "al-Khiḍr",
+  "def": "A servant of God, named in the Quran only as one of “Our servants” (18:65), whose journey with Moses is told in chapter 18.",
+  "what": [
+   "Moses met “a servant of Ours to whom We had given mercy from Us and taught knowledge from Us” (18:65), and asked to follow him to learn. The man damaged a boat, killed a boy and rebuilt a wall, each for a reason he explained afterwards. Moses could not be patient, and so they parted (18:60–82). The Prophet named him Khidr in a hadith (Sahih al-Bukhari)."
+  ],
+  "misread": "",
+  "sources": [
+   "Scholars differ on whether Khidr was a prophet, a saint or an angel, and whether he is alive. The story’s point is that a human being’s knowledge is limited, and that what looks like harm may hold a hidden good."
+  ],
+  "terms": [
+   "moses",
+   "kutub"
+  ],
+  "articles": [],
+  "aliases": [
+   "Green One",
+   "Khadir",
+   "Khidhr"
+  ]
+ },
+ {
   "slug": "kutub",
   "title": "Kutub",
   "ar": "كتب",

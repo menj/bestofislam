@@ -20,7 +20,8 @@
   "aliases": [
    "As-Safa",
    "Safa",
-   "Marwah"
+   "Marwah",
+   "Geographic Locations And History"
   ]
  },
  {
@@ -194,6 +195,28 @@
    "Dwellers In The Woods",
    "Jethro",
    "Companions Of The Thicket"
+  ]
+ },
+ {
+  "slug": "shura",
+  "title": "Shura",
+  "type": "term",
+  "ar": "شورى",
+  "tr": "Shūrā",
+  "def": "Mutual consultation in decisions of the community, praised in the Quran (42:38).",
+  "what": [
+   "The Quran praises believers “whose affair is a matter of consultation among themselves” (42:38) and tells the Prophet: “consult them in the matter” (3:159), though he is the one chosen. Abu Bakr, Umar and Uthman were each chosen by a form of consultation. Modern scholars differ on how consultation relates to elected assemblies."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "caliph",
+   "ummah"
+  ],
+  "articles": [],
+  "aliases": [
+   "Government",
+   "Consultation"
   ]
  },
  {

@@ -1,5 +1,94 @@
 [
  {
+  "slug": "parables",
+  "title": "Parables",
+  "type": "topic",
+  "ar": "أمثال",
+  "tr": "Amthāl",
+  "def": "The Quran teaches through similes, including that of a gnat (2:26), a grain that multiplies (2:261) and a spider’s house (29:41).",
+  "what": [
+   "“God is not ashamed to strike a parable of a gnat or something above it” (2:26). “The likeness of those who spend their wealth in God’s way is like a grain that grows seven ears, in each ear a hundred grains” (2:261). “The likeness of those who take protectors besides God is that of the spider, which builds a house; the frailest of houses is the spider’s house” (29:41). A good word is “like a good tree, its root firm and its branches in the sky” (14:24)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "quran",
+   "zakat"
+  ],
+  "articles": [],
+  "aliases": [
+   "Gnat",
+   "Mosquito",
+   "Grain",
+   "Spider",
+   "Similes"
+  ]
+ },
+ {
+  "slug": "paradise",
+  "title": "Paradise",
+  "type": "topic",
+  "ar": "جنة",
+  "tr": "Janna",
+  "def": "The garden of the righteous, described in the Quran with gardens, rivers, companions and, above all, God’s good pleasure.",
+  "what": [
+   "“Gardens of Eden beneath which rivers flow” (9:72), where the people of Paradise are “adorned with bracelets of gold and pearls, and their clothing is silk” (35:33). They drink from cups “mixed with ginger” (76:17) and from vessels of silver and crystal (76:15–16). They will have “no idle talk”, but “peace” (56:25–26). “Their greeting is peace” (10:10). The greatest of the rewards is God’s good pleasure (9:72)."
+  ],
+  "misread": "That Islam’s Paradise is only sensual.",
+  "sources": [
+   "The Prophet said that God has prepared for His righteous servants “what no eye has seen, no ear has heard, and no human heart has imagined” (Sahih al-Bukhari, Sahih Muslim). Scholars read the images of food and drink as made known to us in terms we understand. On whether the garden of Adam was this Paradise, Muslim scholars differ: most say it was, and some, among them Abu Hanifa’s followers and the Mu’tazilites, say it was a garden on earth."
+  ],
+  "terms": [
+   "akhira",
+   "hell",
+   "adam"
+  ],
+  "articles": [],
+  "aliases": [
+   "Garden Of Eden",
+   "Eden",
+   "Heaven",
+   "Jannah",
+   "Gold",
+   "Golden Armlets",
+   "Ginger",
+   "Crystal",
+   "Gardens"
+  ]
+ },
+ {
+  "slug": "pre-islamic-arab-deities",
+  "title": "Pre-Islamic Arab deities",
+  "type": "topic",
+  "ar": "أصنام",
+  "tr": "Aṣnām",
+  "def": "The idols the Meccans worshipped: al-Lat, al-Uzza and Manat, and Wadd, Suwa, Yaghuth, Yauq and Nasr, named in the Quran.",
+  "what": [
+   "The Quran asks: “Have you considered al-Lat and al-Uzza, and Manat, the third, the other?” (53:19–20). Noah’s people are said to have worshipped Wadd, Suwa, Yaghuth, Yauq and Nasr (71:23). Hubal was the chief idol in the Kaaba. The Quran says that these “are but names which you and your fathers have named; God has sent down no authority for them” (53:23)."
+  ],
+  "misread": "That the Prophet once recited verses allowing prayer to these goddesses (the “Satanic verses”).",
+  "sources": [
+   "The story of the “high-flying cranes” (<em>gharānīq</em>) is told in the biography of Ibn Sa’d and in al-Tabari, with chains that are broken. Hadith scholars such as Ibn Hajar and al-Albani judged them unsound, and Qadi Iyad and others refuted the story. The verse sometimes cited for it (22:52) is explained by most commentators as saying that Satan throws doubts and obstacles in the way of a prophet’s mission, and that God removes them; it does not say that he adds words to revelation. The Quran says of the Prophet that “he does not speak from desire” (53:3)."
+  ],
+  "terms": [
+   "shirk",
+   "tawhid",
+   "kaaba"
+  ],
+  "articles": [],
+  "aliases": [
+   "Goddesses Of The Pagan Arabs",
+   "Gods Of Pre-Islamic Arabs By Name",
+   "Idols (Names Of)",
+   "Al-Lat",
+   "Al-Uzza",
+   "Manat",
+   "Wadd",
+   "Satanic Verses",
+   "Gharaniq"
+  ]
+ },
+ {
   "slug": "prisoners-of-war",
   "title": "Prisoners of war",
   "type": "topic",

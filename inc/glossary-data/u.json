@@ -21,5 +21,32 @@
   "articles": [],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "ummi",
+  "title": "Ummi",
+  "type": "term",
+  "ar": "أمي",
+  "tr": "Ummī",
+  "def": "The Prophet is called <em>ummī</em>, “unlettered”, and the Quran uses <em>ummiyyūn</em> for the unlettered and for gentiles.",
+  "what": [
+   "“Those who follow the Messenger, the unlettered prophet” (7:157). The Quran tells the Prophet: “You did not recite any book before it, nor write it with your right hand; otherwise those who follow falsehood would have doubted” (29:48). The Prophet said: “We are an unlettered nation; we do not write or calculate” (Sahih al-Bukhari), speaking of the Arabs. In 3:75 some of the People of the Book say “there is no blame on us in regard to the <em>ummiyyīn</em>”, a term for those who are not Jews."
+  ],
+  "misread": "That the Prophet could not have known the stories of earlier prophets.",
+  "sources": [
+   "Muslims see the Prophet’s unlettered state as part of the sign of the Quran: it was not a work of a scholar. Some scholars say <em>ummī</em> means “from the Mother of Cities”, Mecca, or “of the nations”, and the sense is not disputed that he had no formal training in scripture."
+  ],
+  "terms": [
+   "wahy",
+   "quran",
+   "ahl-al-kitab"
+  ],
+  "articles": [],
+  "aliases": [
+   "Gentiles",
+   "Ummiyyin",
+   "Illiterate, Muhammad",
+   "Unlettered"
+  ]
  }
 ]
