@@ -28,8 +28,8 @@ on the Sources and standards page, and the credits are recorded in
 
 ## Fonts
 
-- **EB Garamond** (`assets/fonts/eb-garamond/`), by Georg Duffner, Octavio Pardo and the EB Garamond Project Authors, under the SIL Open Font Licence 1.1. Regular, Medium, Bold, Italic and Bold Italic, converted to WOFF2. It sets the running text.
+- **EB Garamond** (`assets/fonts/eb-garamond/`), by Georg Duffner, Octavio Pardo and the EB Garamond Project Authors, under the SIL Open Font Licence 1.1. Regular, Medium, Bold, Italic and Bold Italic, converted to WOFF2. It sets the running text. The licence text travels with the files in `assets/fonts/eb-garamond/OFL.txt`.
 - **Noto Naskh Arabic** (`assets/fonts/scripts/noto-naskh-arabic.woff2`), by
   Google and the Noto Project Authors, under the SIL Open Font Licence 1.1,
   https://openfontlicense.org/. It sets the Arabic in the Glossary and in
-  running text. The file is the variable font converted to WOFF2.
+  running text. The file is the variable font converted to WOFF2, with the licence text in `assets/fonts/scripts/OFL-NotoNaskhArabic.txt`.

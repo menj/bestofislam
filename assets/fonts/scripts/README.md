@@ -3,7 +3,8 @@
 `assets/css/scripts.css` declares six range-scoped faces. Noto Naskh Arabic is
 bundled (`noto-naskh-arabic.woff2`, a variable file for weights 400 to 700,
 under the SIL Open Font Licence 1.1, which allows redistribution with the
-theme); it sets the Arabic of the Glossary and every other Arabic passage that
+theme; its copyright notice and the licence text are in
+`OFL-NotoNaskhArabic.txt`); it sets the Arabic of the Glossary and every other Arabic passage that
 is not Quranic. The other files are not bundled, since their licences require
 the site owner to obtain them. Drop each woff2 into this directory under the exact filename below
 and the declaration activates with no code change.
