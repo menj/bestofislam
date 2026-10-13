@@ -372,6 +372,7 @@
 .boi-glossary__ar {
 	grid-column: 2;
 	grid-row: 1;
+	font-family: "BOI Arabic", "Noto Naskh Arabic", serif;
 	font-size: 1.3rem;
 	color: var(--boi-mute);
 }
@@ -442,6 +443,8 @@
 
 .boi-article .boi-term__script {
 	margin: 0;
+	font-family: "BOI Arabic", "Noto Naskh Arabic", serif;
+	font-weight: 500;
 	font-size: clamp(2.6rem, 2rem + 3vw, 3.8rem);
 	line-height: 1.3;
 	color: var(--wp--preset--color--accent-1, #1F6FCC);

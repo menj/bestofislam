@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 70 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Site map pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 76 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Site map pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
 - **Questions answered.** 45 questions with short answers, 14 of them on the front page, each linked to its article: in an accordion on the front page, in a panel on every article, and as FAQ markup.
@@ -42,7 +42,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Design
 
 - **Identity.** The mark is three descending bars, gold, azure and white, describing the countdown format. The wordmark is set lowercase in Vollkorn. The palette is navy, azure and gold over white.
-- **Typography.** Platypi for headings and numerals, Ysabeau Office for text, Vollkorn for the wordmark, all bundled as variable fonts. Running text is justified with hyphenation at 1.5 line spacing; short text is left-aligned. Arabic, Hebrew, Greek, Syriac and Akkadian faces are scoped by `unicode-range`; see `assets/fonts/scripts/README.md`.
+- **Typography.** Platypi for headings and numerals, EB Garamond for running text, Ysabeau Office for labels and interface text, Vollkorn for the wordmark, all bundled (Platypi, Ysabeau Office and Vollkorn as variable fonts, EB Garamond as five static WOFF2 files). Running text is justified with hyphenation at 1.5 line spacing; short text is left-aligned. Arabic, Hebrew, Greek, Syriac and Akkadian faces are scoped by `unicode-range`; see `assets/fonts/scripts/README.md`.
 - **Light and dark.** A toggle in the header switches the whole site; colour tokens live in `theme.json`.
 - **Header.** One row above 1300px; two rows below, with the section links scrolling sideways between 600 and 781px; a menu button below 600px. The search field and toggle share one height and style.
 - **Footer.** The mark's bars run full width, then the wordmark and the site's promise, then four columns (the reading order, sections, a start column and follow links), then a bar of standing pages.
@@ -107,7 +107,7 @@ bestofislam/
 │                        footer, front, listicle, login, navigation, print,
 │                        scripts, search, theme-toggle, typography, voting
 ├── assets/js/           admin-settings, questions, theme-toggle, voting
-├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office; script fonts guide
+├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office, EB Garamond; script fonts guide
 ├── assets/icons/        45 SVG icons and their licence
 ├── assets/images/       mark.svg, mark-solid.svg, logo-512.png, and
 │                        featured/ and inline/ with the article images, in AVIF (run bin/convert-images.py before a release)

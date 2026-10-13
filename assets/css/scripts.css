@@ -5,10 +5,11 @@
  * when the page actually contains glyphs in that block. A listicle with no
  * Arabic citation therefore costs nothing.
  *
- * Font files are not bundled with this theme. See assets/fonts/scripts/README.md
- * for the expected filenames and where to obtain each face. Until a file is
- * present the declaration is inert and the browser falls back to the system
- * stack named below.
+ * Noto Naskh Arabic (SIL Open Font Licence) is bundled, as one variable file
+ * covering weights 400 to 700. The other faces are not; see
+ * assets/fonts/scripts/README.md for their filenames and where to obtain them.
+ * Until a file is present its declaration is inert and the browser falls back
+ * to the system stack named below.
  */
 
 @font-face {
@@ -21,6 +22,7 @@
 @font-face {
 	font-family: "BOI Arabic";
 	src: url("../fonts/scripts/noto-naskh-arabic.woff2") format("woff2");
+	font-weight: 400 700;
 	font-display: swap;
 	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
 }
@@ -60,7 +62,7 @@
  */
 body {
 	font-family:
-		var(--wp--preset--font-family--ysabeau-office, sans-serif),
+		var(--wp--preset--font-family--eb-garamond, serif),
 		"BOI Quran",
 		"BOI Arabic",
 		"BOI Hebrew",

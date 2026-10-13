@@ -531,6 +531,42 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'What does Islamophobia mean, how is it different from criticism, and what harm does it do? 5 facts, and what the Quran asks of Muslims in return.', 'bestofislam' ),
 			'topic'   => 'islamophobia',
 		),
+		array(
+			'slug'    => 'black-stone-and-kissing',
+			'title'   => __( '5 facts about the Black Stone and why Muslims touch it', 'bestofislam' ),
+			'excerpt' => __( 'What the Black Stone is, what the rite involves, what Umar said and what Islam counts as idolatry: 5 facts about the stone at the Kaaba.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'camel-urine-hadith',
+			'title'   => __( 'The camel urine hadith: 5 things the report says', 'bestofislam' ),
+			'excerpt' => __( 'The hadith of the men of Ukl and Uraynah, read in full: what it says, what it does not command and what scholars make of it. 5 points.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'who-wrote-the-quran',
+			'title'   => __( 'Who wrote the Quran? 5 answers to the authorship claim', 'bestofislam' ),
+			'excerpt' => __( 'Revelation or composition? How the claim was argued from the start, how the text was fixed and what each side can and cannot show. 5 answers.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'preservation-and-truth',
+			'title'   => __( 'Does a preserved text prove it is true? 5 answers', 'bestofislam' ),
+			'excerpt' => __( 'Accurate copying shows continuity, not truth. 5 answers on what preservation establishes for the Quran and for other scriptures.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'relationship-with-god',
+			'title'   => __( 'Do Muslims have a relationship with God? 5 answers', 'bestofislam' ),
+			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 5 answers on how Muslims relate to God.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'buraq-and-miracle-stories',
+			'title'   => __( '5 miracle stories critics call a fairy tale, and what the sources say', 'bestofislam' ),
+			'excerpt' => __( 'The Night Journey, the Buraq, a talking donkey and the Bible\'s own miracles: 5 miracle stories critics mock, and what the sources say.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
 	);
 }
 

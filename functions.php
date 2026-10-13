@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.59.0' );
+define( 'BOI_VERSION', '1.61.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -269,15 +269,30 @@ function boi_maybe_install() {
 		return;
 	}
 
-	boi_install_votes_table();
+	// One request migrates; the others skip and try again on a later request.
+	// Without the lock two requests arriving together after an update would
+	// both run the migration, and the second could overwrite an edit saved
+	// after the first one checked the article.
+	boi_with_lock(
+		'migrate',
+		function () {
+			// Another request may have finished while this one waited.
+			if ( get_option( 'boi_db_version' ) === BOI_VERSION ) {
+				return;
+			}
 
-	// Population is idempotent and migrates its own earlier records, so an
-	// update carries every seed fix to an existing site without a reinstall.
-	if ( get_option( 'boi_content_populated' ) && function_exists( 'boi_populate_content' ) ) {
-		boi_populate_content();
-	}
+			boi_install_votes_table();
 
-	update_option( 'boi_db_version', BOI_VERSION );
+			// Population is idempotent and migrates its own earlier records, so an
+			// update carries every seed fix to an existing site without a reinstall.
+			if ( get_option( 'boi_content_populated' ) && function_exists( 'boi_populate_content' ) ) {
+				boi_populate_content();
+			}
+
+			update_option( 'boi_db_version', BOI_VERSION );
+		},
+		true
+	);
 }
 add_action( 'after_switch_theme', 'boi_maybe_install' );
 add_action( 'admin_init', 'boi_maybe_install' );
