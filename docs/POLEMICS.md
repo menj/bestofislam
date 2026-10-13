@@ -18,7 +18,7 @@ Saved 13 October 2026 from `x.com/TaymiApologia/status/2109053692364079460`. The
 
 | # | Reply, in summary | Kind | Answered in | Status |
 |---|---|---|---|---|
-| R1 | "Go kiss your black rock" | Idolatry charge | `black-stone-and-kissing` (**new**), `hajj-rites-explained` (Umar's saying), `same-god`, `who-is-allah` | Covered by the new article |
+| R1 | "Go kiss your black rock" | Idolatry charge | `black-stone-and-kissing` (**new**, includes the comparison with the Western Wall and the Stone of Anointing), `hajj-rites-explained` (Umar's saying), `same-god`, `who-is-allah` | Covered by the new article |
 | R2 | Pilgrims travel to kiss a stone set in a sink-like object | Idolatry charge | `black-stone-and-kissing` (**new**) | Covered by the new article |
 | R3 | The poster is a propagandist too stingy to be verified | Personal attack | None needed | Not an argument |
 | R4 | The poster is effeminate; the Prophet would ban him from funerals | Personal attack with an unclear reference to a report | None | Not an argument; the report it points to is unclear, so nothing was written |
