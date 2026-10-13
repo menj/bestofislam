@@ -25,3 +25,10 @@ Article images come from Wikimedia Commons (public domain or CC0), Pexels
 featured image and two in its text. Each is credited beneath it on the site and
 on the Sources and standards page, and the credits are recorded in
 `inc/images-data.json` and `inc/images.php`.
+
+## Fonts
+
+- **Noto Naskh Arabic** (`assets/fonts/scripts/noto-naskh-arabic.woff2`), by
+  Google and the Noto Project Authors, under the SIL Open Font Licence 1.1,
+  https://openfontlicense.org/. It sets the Arabic in the Glossary and in
+  running text. The file is the variable font converted to WOFF2.

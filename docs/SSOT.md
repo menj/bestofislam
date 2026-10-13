@@ -100,8 +100,9 @@ before the response, so the claim-then-answer rhythm is visible on the page.
 
 Six faces covering Arabic, Hebrew, Greek, Syriac, and Akkadian are declared in
 `assets/css/scripts.css` under `unicode-range`, so a page without those glyphs
-downloads nothing. The files themselves are not shipped; licence terms put that
-on the site owner. `assets/fonts/scripts/README.md` names each expected file.
+downloads nothing. Noto Naskh Arabic ships with the theme (SIL Open Font Licence
+allows it) and sets the Glossary's Arabic; the other files are not shipped, as
+licence terms put that on the site owner. `assets/fonts/scripts/README.md` names each expected file.
 
 ### D12. Population is idempotent and reversible by hand
 

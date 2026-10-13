@@ -1,14 +1,17 @@
 # Script fonts
 
-`assets/css/scripts.css` declares six range-scoped faces. The files are not
-bundled with this release, since their licences require the site owner to
-obtain them. Drop each woff2 into this directory under the exact filename below
+`assets/css/scripts.css` declares six range-scoped faces. Noto Naskh Arabic is
+bundled (`noto-naskh-arabic.woff2`, a variable file for weights 400 to 700,
+under the SIL Open Font Licence 1.1, which allows redistribution with the
+theme); it sets the Arabic of the Glossary and every other Arabic passage that
+is not Quranic. The other files are not bundled, since their licences require
+the site owner to obtain them. Drop each woff2 into this directory under the exact filename below
 and the declaration activates with no code change.
 
 | Filename | Face | Scripts covered |
 | --- | --- | --- |
 | `uthmanic-hafs.woff2` | KFGQPC HAFS Uthmanic | Quranic Arabic |
-| `noto-naskh-arabic.woff2` | Noto Naskh Arabic | General Arabic |
+| `noto-naskh-arabic.woff2` (bundled) | Noto Naskh Arabic | General Arabic |
 | `sbl-hebrew.woff2` | SBL Hebrew | Hebrew, Hebrew Presentation Forms |
 | `sbl-greek.woff2` | SBL Greek | Greek, Greek Extended |
 | `evangelion-cpa.woff2` | Evangelion CPA | Syriac, Syriac Supplement |
