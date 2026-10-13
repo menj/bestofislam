@@ -6,6 +6,10 @@ versioning.
 
 ## [Unreleased]
 
+### Fixed
+
+- **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
+
 ### Added
 
 - **Internal linking for every article.** The 34 articles added with this release join the reading order, so all 70 have a "Read next" card, and the Keep reading list at the foot of an article now offers the four most closely related articles (shared glossary terms first, then section and reading part) instead of the newest three in its section (`inc/related-articles.json`, built by `bin/build-related.py`). Four articles that no glossary entry pointed to now have entries that do. Part 5 of the reading order is renamed "The Prophet and the hard questions".
