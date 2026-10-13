@@ -6,8 +6,11 @@ versioning.
 
 ## [Unreleased]
 
-### Fixed
+### Added
 
+- **A Glossary that is easier to move around in.** Every Glossary page, the index and each entry, now has a Glossary bar under the header (`templates/page-glossary.html`): a link back to the index, a search box that finds a term as you type (aliases too), and the letters A to Z. The index is a grid of cards instead of one long list, with filters by kind (Person, Prophet, Place and so on), a live count, and a letter view that shows only one letter at a time. Each letter has its own Back to top link. Entries get a tinted head panel and Previous term and Next term links (`assets/js/glossary.js`, `assets/css/glossary.css`). Without JavaScript the index is still the full list and the letters are plain links.
+- **A Back to top button on every page** (`assets/js/back-to-top.js`, `assets/css/back-to-top.css`). It appears after the reader has scrolled down a long page, and respects reduced motion.
+- **Fuller Glossary structured data.** The index is a DefinedTermSet that lists every DefinedTerm; each entry is a DefinedTerm with its `termCode`, other names and Arabic script (`alternateName`), and its set, inside a CollectionPage or WebPage that links to the related terms and articles. With Rank Math's schema active, the page node is Rank Math's and these nodes refer to it by id.
 - **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
 
 ### Added
