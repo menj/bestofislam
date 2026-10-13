@@ -31,7 +31,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 - **Following Google's SEO Starter Guide.** Unique titles; meta descriptions of up to 130 characters, including the front and author pages; canonical links on every indexable view; breadcrumbs; a clean heading outline; search results kept out of the index; and an XML sitemap limited to useful pages.
 - **Structured data on Google's supported list.** Article on every article, with its image's licence metadata drawn from the Commons credits; Organization and WebSite on the front page, with a 512px logo; BreadcrumbList throughout; ItemList on every list; FAQ markup for the questions. All names are plain text.
-- **Steps aside for SEO plugins.** Descriptions and canonical links yield to Yoast SEO, Rank Math, All in One SEO and SEOPress.
+- **Steps aside for SEO plugins.** Descriptions and canonical links yield to Yoast SEO, Rank Math, All in One SEO and SEOPress. With Rank Math the theme also yields robots, sitemap and structured data, and adds its image credits to Rank Math's graph through the plugin's own hooks. See `docs/SEO.md`.
 
 ### Access
 

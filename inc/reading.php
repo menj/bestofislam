@@ -25,31 +25,31 @@ function boi_reading_order() {
 	return array(
 		array(
 			'label' => __( 'What Islam teaches', 'bestofislam' ),
-			'slugs' => array( 'who-is-allah', 'five-pillars-explained', 'why-five-prayers' ),
+			'slugs' => array( 'who-is-allah', 'five-pillars-explained', 'why-five-prayers', 'six-articles-of-faith', 'fate-and-free-will', 'end-of-time', 'prophets-you-may-not-know', 'quranic-ethics', 'before-your-first-friday-prayer', 'hajj-rites-explained', 'ramadan-last-ten-nights', 'funeral-dhikr-dua' ),
 		),
 		array(
 			'label' => __( 'Whether belief is reasonable', 'bestofislam' ),
-			'slugs' => array( 'universe-demands-creator', 'morality-without-god', 'who-saw-gabriel' ),
+			'slugs' => array( 'universe-demands-creator', 'morality-without-god', 'who-saw-gabriel', 'quran-science-claims-graded', 'natural-world-verses' ),
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism' ),
+			'slugs' => array( 'same-god', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
 			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit' ),
 		),
 		array(
-			'label' => __( 'Objections about the Prophet', 'bestofislam' ),
-			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation' ),
+			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),
+			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'quran-4-34', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise' ),
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),
-			'slugs' => array( 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters' ),
+			'slugs' => array( 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters', 'crusades-5-facts', 'kharijites-and-takfir', 'scholars-who-shaped-islamic-study', 'western-scholars-of-islam', 'islamic-art-and-the-one-god', 'mosques-adapt-to-place' ),
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study' ),
+			'slugs' => array( 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'why-no-interest' ),
 		),
 	);
 }

@@ -6,6 +6,28 @@ versioning.
 
 ## [Unreleased]
 
+### Fixed
+
+- **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
+
+### Added
+
+- **Internal linking for every article.** The 34 articles added with this release join the reading order, so all 70 have a "Read next" card, and the Keep reading list at the foot of an article now offers the four most closely related articles (shared glossary terms first, then section and reading part) instead of the newest three in its section (`inc/related-articles.json`, built by `bin/build-related.py`). Four articles that no glossary entry pointed to now have entries that do. Part 5 of the reading order is renamed "The Prophet and the hard questions".
+- **Rank Math compatibility** (`inc/rank-math.php`). With Rank Math active the theme no longer prints its own robots directives, structured-data graph or breadcrumb markup, and adds its image licence data and in-text images to Rank Math's graph, a description where Rank Math has none, noindex for search results and paged archives, and the exclusion of unlisted articles from its sitemap, through the plugin's hooks.
+- **Image metadata on the images in the text** of an article, not only the featured image, as ImageObjects with licence, creator and credit.
+- **ProfilePage markup** on author archives.
+- **Webmaster tools fields** for the Google Search Console and Bing verification codes (Search engines tab); an SEO plugin's own fields take over when one is active.
+- `docs/SEO.md`: the Search Engine Optimization Starter Guide and Google's supported structured data, practice by practice, and how each behaves beside Rank Math.
+
+### Fixed
+
+- The jump list at the head of a listicle, and the other lists of links the site builds (glossary index and related terms, site map, reading lists), were underlined by the rule meant for links in running text. That rule now leaves them out.
+
+### Changed
+
+- The front page title carries the site's focus as well as its name, as the guide suggests; the lead card's button carries the article title in its link text.
+- **Header search is an icon.** The search field in the header is now a search icon; selecting it (or pressing `/`) opens a full-screen overlay with the search box. Esc, the close button or a click outside closes it, focus moves into the box and back, and without JavaScript the icon still opens the overlay through a `#boi-search` link. New `assets/css/header-search.css` and `assets/js/header-search.js`; the old inline-field rules are removed from `listicle.css`.
+
 ## [1.58.0] - 2026-10-12
 
 ### Added

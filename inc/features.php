@@ -52,32 +52,70 @@ function boi_render_reading_time() {
 }
 
 /**
- * Renders up to three pieces from the same section.
+ * The related-articles map, slug to slugs, from inc/related-articles.json.
+ *
+ * @return array
+ */
+function boi_related_map() {
+	static $map = null;
+
+	if ( null === $map ) {
+		$path = BOI_DIR . '/inc/related-articles.json';
+		$raw  = file_exists( $path ) ? file_get_contents( $path ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		$map  = json_decode( (string) $raw, true );
+		$map  = is_array( $map ) ? $map : array();
+	}
+
+	return $map;
+}
+
+/**
+ * Renders the Keep reading list: up to four related articles, each linked by
+ * its title.
  *
  * @return string
  */
 function boi_render_related() {
 	$post_id = get_the_ID();
-	$terms   = get_the_terms( $post_id, 'listicle-topic' );
+	$post    = get_post( $post_id );
+	$related = array();
 
-	if ( ! $terms || is_wp_error( $terms ) ) {
-		return '';
+	// The curated list: articles that share glossary terms, then the section
+	// (bin/build-related.py). A new article not in it falls back to its section.
+	$map = boi_related_map();
+
+	if ( $post && isset( $map[ $post->post_name ] ) ) {
+		foreach ( $map[ $post->post_name ] as $slug ) {
+			$item = get_page_by_path( $slug, OBJECT, 'post' );
+
+			if ( $item && 'publish' === $item->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $item ) ) ) {
+				$related[] = $item;
+			}
+		}
 	}
 
-	$related = get_posts(
-		array(
-			'post_type'      => 'post',
-			'posts_per_page' => 3,
-			'post__not_in'   => array( $post_id ),
-			'tax_query'      => array(
-				array(
-					'taxonomy' => 'listicle-topic',
-					'field'    => 'term_id',
-					'terms'    => wp_list_pluck( $terms, 'term_id' ),
+	if ( empty( $related ) ) {
+		$terms = get_the_terms( $post_id, 'listicle-topic' );
+
+		if ( ! $terms || is_wp_error( $terms ) ) {
+			return '';
+		}
+
+		$related = get_posts(
+			array(
+				'post_type'      => 'post',
+				'posts_per_page' => 3,
+				'post__not_in'   => array( $post_id ),
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'listicle-topic',
+						'field'    => 'term_id',
+						'terms'    => wp_list_pluck( $terms, 'term_id' ),
+					),
 				),
-			),
-		)
-	);
+			)
+		);
+	}
 
 	if ( empty( $related ) ) {
 		return '';
@@ -102,7 +140,7 @@ function boi_render_related() {
 
 	return sprintf(
 		'<section class="boi-related" aria-labelledby="boi-related-heading"><h2 id="boi-related-heading" class="boi-related__heading">%1$s</h2><ul class="boi-related__list">%2$s</ul></section>',
-		esc_html__( 'More in this section', 'bestofislam' ),
+		esc_html__( 'Keep reading', 'bestofislam' ),
 		$items
 	);
 }
@@ -201,7 +239,7 @@ function boi_render_featured_lead() {
 				%2$s
 				<h2 class="boi-lead__title"><a href="%3$s">%4$s</a></h2>
 				<p class="boi-lead__excerpt">%5$s</p>
-				<a class="boi-lead__cta" href="%3$s">%6$s</a>
+				<a class="boi-lead__cta" href="%3$s">%6$s<span class="screen-reader-text">: %4$s</span></a>
 			</div>
 		</article>',
 		$thumb,

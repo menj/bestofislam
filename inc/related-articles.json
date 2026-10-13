@@ -1,0 +1,422 @@
+{
+ "al-zutt-allegation": [
+  "western-scholars-of-islam",
+  "women-in-the-prophets-life",
+  "scholars-who-shaped-islamic-study",
+  "why-no-interest"
+ ],
+ "apostasy-in-islam": [
+  "sharia-and-hudud",
+  "fate-and-free-will",
+  "child-marriage-in-islam",
+  "hijab-and-modesty"
+ ],
+ "arabic-words-science": [
+  "instruments-islamic-world",
+  "moon-craters",
+  "quran-science-claims-graded",
+  "natural-world-verses"
+ ],
+ "before-your-first-friday-prayer": [
+  "five-pillars-explained",
+  "ramadan-last-ten-nights",
+  "six-articles-of-faith",
+  "funeral-dhikr-dua"
+ ],
+ "child-marriage-in-islam": [
+  "women-in-the-prophets-life",
+  "apostasy-in-islam",
+  "quran-4-34",
+  "quranic-ethics"
+ ],
+ "companions-who-started-with-nothing": [
+  "questions-about-aisha",
+  "women-in-the-prophets-life",
+  "slavery-in-islam",
+  "taqiyya-5-myths"
+ ],
+ "crucifixion-quran": [
+  "shared-prophets",
+  "verses-read-differently",
+  "islamic-dilemma",
+  "same-god"
+ ],
+ "crusades-5-facts": [
+  "kaaba-witnesses",
+  "dome-inscriptions",
+  "slavery-in-islam",
+  "qibla-change"
+ ],
+ "dome-inscriptions": [
+  "five-pillars-explained",
+  "mosques-adapt-to-place",
+  "qibla-change",
+  "crusades-5-facts"
+ ],
+ "end-of-time": [
+  "six-articles-of-faith",
+  "who-is-allah",
+  "scholars-who-shaped-islamic-study",
+  "funeral-dhikr-dua"
+ ],
+ "ex-muslim-blog-study": [
+  "fastest-growing-religion",
+  "islam-religion-of-peace",
+  "indonesia",
+  "islam-in-china"
+ ],
+ "ezra-and-mary": [
+  "jesus-not-god",
+  "crucifixion-quran",
+  "haman-anachronism",
+  "same-god"
+ ],
+ "fastest-growing-religion": [
+  "indonesia",
+  "ex-muslim-blog-study",
+  "islam-religion-of-peace",
+  "islam-in-china"
+ ],
+ "fate-and-free-will": [
+  "six-articles-of-faith",
+  "scholars-who-shaped-islamic-study",
+  "apostasy-in-islam",
+  "funeral-dhikr-dua"
+ ],
+ "five-pillars-explained": [
+  "hajj-rites-explained",
+  "before-your-first-friday-prayer",
+  "funeral-dhikr-dua",
+  "qibla-change"
+ ],
+ "funeral-dhikr-dua": [
+  "hajj-rites-explained",
+  "ramadan-last-ten-nights",
+  "five-pillars-explained",
+  "before-your-first-friday-prayer"
+ ],
+ "hajj-rites-explained": [
+  "five-pillars-explained",
+  "funeral-dhikr-dua",
+  "before-your-first-friday-prayer",
+  "sharia-and-hudud"
+ ],
+ "haman-anachronism": [
+  "shared-prophets",
+  "crucifixion-quran",
+  "islamic-dilemma",
+  "ezra-and-mary"
+ ],
+ "hijab-and-modesty": [
+  "quran-4-34",
+  "questions-about-aisha",
+  "women-in-the-prophets-life",
+  "islamophobia-5-facts"
+ ],
+ "homosexuality-in-islam": [
+  "sharia-and-hudud",
+  "questions-about-aisha",
+  "apostasy-in-islam",
+  "why-no-interest"
+ ],
+ "houris-and-paradise": [
+  "al-zutt-allegation",
+  "companions-who-started-with-nothing",
+  "women-in-the-prophets-life",
+  "taqiyya-5-myths"
+ ],
+ "indonesia": [
+  "islam-in-china",
+  "fastest-growing-religion",
+  "islam-religion-of-peace",
+  "ex-muslim-blog-study"
+ ],
+ "instruments-islamic-world": [
+  "moon-craters",
+  "quran-science-claims-graded",
+  "seven-libraries",
+  "qibla-change"
+ ],
+ "islam-in-china": [
+  "five-pillars-explained",
+  "dome-inscriptions",
+  "indonesia",
+  "mosques-adapt-to-place"
+ ],
+ "islam-religion-of-peace": [
+  "war-and-killing-in-islam",
+  "taqiyya-5-myths",
+  "quranic-ethics",
+  "questions-about-aisha"
+ ],
+ "islamic-art-and-the-one-god": [
+  "mosques-adapt-to-place",
+  "dome-inscriptions",
+  "who-is-allah",
+  "islam-in-china"
+ ],
+ "islamic-dilemma": [
+  "crucifixion-quran",
+  "haman-anachronism",
+  "quran-mysteries-in-the-stories",
+  "manuscript-transmission"
+ ],
+ "islamophobia-5-facts": [
+  "taqiyya-5-myths",
+  "war-and-killing-in-islam",
+  "islam-religion-of-peace",
+  "crusades-5-facts"
+ ],
+ "jesus-not-god": [
+  "ezra-and-mary",
+  "verses-read-differently",
+  "same-god",
+  "six-articles-of-faith"
+ ],
+ "jizya": [
+  "kharijites-and-takfir",
+  "crusades-5-facts",
+  "kaaba-witnesses",
+  "library-of-alexandria"
+ ],
+ "kaaba-witnesses": [
+  "qibla-change",
+  "crusades-5-facts",
+  "five-pillars-explained",
+  "dome-inscriptions"
+ ],
+ "kharijites-and-takfir": [
+  "taqiyya-5-myths",
+  "war-and-killing-in-islam",
+  "islam-religion-of-peace",
+  "apostasy-in-islam"
+ ],
+ "library-of-alexandria": [
+  "scholars-who-shaped-islamic-study",
+  "crusades-5-facts",
+  "seven-libraries",
+  "jizya"
+ ],
+ "manuscript-transmission": [
+  "crucifixion-quran",
+  "same-god",
+  "apostasy-in-islam",
+  "haman-anachronism"
+ ],
+ "moon-craters": [
+  "quran-science-claims-graded",
+  "seven-libraries",
+  "instruments-islamic-world",
+  "library-of-alexandria"
+ ],
+ "morality-without-god": [
+  "who-saw-gabriel",
+  "slavery-in-islam",
+  "crucifixion-quran",
+  "companions-who-started-with-nothing"
+ ],
+ "mosques-adapt-to-place": [
+  "islamic-art-and-the-one-god",
+  "islam-in-china",
+  "dome-inscriptions",
+  "before-your-first-friday-prayer"
+ ],
+ "natural-world-verses": [
+  "six-articles-of-faith",
+  "quran-science-claims-graded",
+  "moon-craters",
+  "instruments-islamic-world"
+ ],
+ "paul-and-the-law": [
+  "where-is-the-injil",
+  "crucifixion-quran",
+  "same-god",
+  "verses-read-differently"
+ ],
+ "prophet-died-poisoning": [
+  "same-god",
+  "five-pillars-explained",
+  "shared-prophets",
+  "qibla-change"
+ ],
+ "prophets-you-may-not-know": [
+  "six-articles-of-faith",
+  "crucifixion-quran",
+  "end-of-time",
+  "five-pillars-explained"
+ ],
+ "qibla-change": [
+  "kaaba-witnesses",
+  "five-pillars-explained",
+  "dome-inscriptions",
+  "before-your-first-friday-prayer"
+ ],
+ "questions-about-aisha": [
+  "companions-who-started-with-nothing",
+  "women-in-the-prophets-life",
+  "scholars-who-shaped-islamic-study",
+  "uthman-copies"
+ ],
+ "quran-4-34": [
+  "hijab-and-modesty",
+  "child-marriage-in-islam",
+  "questions-about-aisha",
+  "quranic-ethics"
+ ],
+ "quran-mysteries-in-the-stories": [
+  "quranic-stories-and-history",
+  "six-articles-of-faith",
+  "ezra-and-mary",
+  "islamic-dilemma"
+ ],
+ "quran-preservation-reddit": [
+  "questions-about-aisha",
+  "uthman-copies",
+  "slavery-in-islam",
+  "women-in-the-prophets-life"
+ ],
+ "quran-science-claims-graded": [
+  "six-articles-of-faith",
+  "moon-craters",
+  "before-your-first-friday-prayer",
+  "natural-world-verses"
+ ],
+ "quranic-ethics": [
+  "taqiyya-5-myths",
+  "child-marriage-in-islam",
+  "fate-and-free-will",
+  "women-in-the-prophets-life"
+ ],
+ "quranic-stories-and-history": [
+  "quran-mysteries-in-the-stories",
+  "scholars-who-shaped-islamic-study",
+  "women-in-the-prophets-life",
+  "questions-about-aisha"
+ ],
+ "ramadan-last-ten-nights": [
+  "before-your-first-friday-prayer",
+  "funeral-dhikr-dua",
+  "sharia-and-hudud",
+  "five-pillars-explained"
+ ],
+ "same-god": [
+  "shared-prophets",
+  "six-articles-of-faith",
+  "crucifixion-quran",
+  "jesus-not-god"
+ ],
+ "scholars-who-shaped-islamic-study": [
+  "fate-and-free-will",
+  "questions-about-aisha",
+  "end-of-time",
+  "quranic-stories-and-history"
+ ],
+ "second-peter": [
+  "shared-prophets",
+  "manuscript-transmission",
+  "prophet-died-poisoning",
+  "crucifixion-quran"
+ ],
+ "seven-libraries": [
+  "dome-inscriptions",
+  "moon-craters",
+  "library-of-alexandria",
+  "scholars-who-shaped-islamic-study"
+ ],
+ "shared-prophets": [
+  "six-articles-of-faith",
+  "same-god",
+  "crucifixion-quran",
+  "haman-anachronism"
+ ],
+ "sharia-and-hudud": [
+  "apostasy-in-islam",
+  "why-no-interest",
+  "war-and-killing-in-islam",
+  "jizya"
+ ],
+ "six-articles-of-faith": [
+  "who-is-allah",
+  "five-pillars-explained",
+  "fate-and-free-will",
+  "end-of-time"
+ ],
+ "slavery-in-islam": [
+  "companions-who-started-with-nothing",
+  "questions-about-aisha",
+  "crusades-5-facts",
+  "quran-preservation-reddit"
+ ],
+ "taqiyya-5-myths": [
+  "kharijites-and-takfir",
+  "war-and-killing-in-islam",
+  "islamophobia-5-facts",
+  "islam-religion-of-peace"
+ ],
+ "universe-demands-creator": [
+  "six-articles-of-faith",
+  "quran-science-claims-graded",
+  "before-your-first-friday-prayer",
+  "who-saw-gabriel"
+ ],
+ "uthman-copies": [
+  "questions-about-aisha",
+  "quran-preservation-reddit",
+  "companions-who-started-with-nothing",
+  "women-in-the-prophets-life"
+ ],
+ "verses-read-differently": [
+  "crucifixion-quran",
+  "jesus-not-god",
+  "same-god",
+  "shared-prophets"
+ ],
+ "war-and-killing-in-islam": [
+  "islam-religion-of-peace",
+  "kharijites-and-takfir",
+  "crusades-5-facts",
+  "jizya"
+ ],
+ "western-scholars-of-islam": [
+  "al-zutt-allegation",
+  "ezra-and-mary",
+  "scholars-who-shaped-islamic-study",
+  "jesus-not-god"
+ ],
+ "where-is-the-injil": [
+  "same-god",
+  "shared-prophets",
+  "crucifixion-quran",
+  "jesus-not-god"
+ ],
+ "who-is-allah": [
+  "six-articles-of-faith",
+  "end-of-time",
+  "crucifixion-quran",
+  "five-pillars-explained"
+ ],
+ "who-saw-gabriel": [
+  "end-of-time",
+  "who-is-allah",
+  "six-articles-of-faith",
+  "questions-about-aisha"
+ ],
+ "why-five-prayers": [
+  "fate-and-free-will",
+  "five-pillars-explained",
+  "who-is-allah",
+  "before-your-first-friday-prayer"
+ ],
+ "why-no-interest": [
+  "sharia-and-hudud",
+  "quranic-ethics",
+  "jizya",
+  "instruments-islamic-world"
+ ],
+ "women-in-the-prophets-life": [
+  "questions-about-aisha",
+  "companions-who-started-with-nothing",
+  "quran-4-34",
+  "hijab-and-modesty"
+ ]
+}

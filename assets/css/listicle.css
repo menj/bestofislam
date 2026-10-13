@@ -477,100 +477,16 @@
 	margin-inline-start: auto;
 }
 
-/* Header controls. The search field and the appearance toggle share one
+/* Header controls. The search icon and the appearance toggle share one
    height, one border and the fill language of the navigation pills, so the
-   three read as one set on the navy band. WordPress core styles the search
-   block with a grey border and a filled button; those are overridden here. */
+   set reads as one on the navy band. The search box itself opens in an
+   overlay styled in header-search.css. */
 .boi-header {
 	--boi-control-h: 2.25rem;
 	--boi-control-border: rgba(255, 255, 255, 0.28);
 	--boi-control-border-strong: rgba(255, 255, 255, 0.6);
 	--boi-control-fill: rgba(255, 255, 255, 0.08);
 	--boi-control-fill-strong: rgba(255, 255, 255, 0.18);
-}
-
-.boi-header .boi-header__search {
-	inline-size: 10.5rem;
-	margin: 0;
-}
-
-.boi-header .boi-header__search .wp-block-search__inside-wrapper {
-	display: flex;
-	align-items: center;
-	block-size: var(--boi-control-h);
-	padding: 0 0.2rem 0 0.95rem !important;
-	background: var(--boi-control-fill);
-	border: 1px solid var(--boi-control-border) !important;
-	border-radius: 999px !important;
-	transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.boi-header .boi-header__search .wp-block-search__inside-wrapper:hover {
-	border-color: var(--boi-control-border-strong) !important;
-}
-
-.boi-header .boi-header__search .wp-block-search__inside-wrapper:focus-within {
-	background: var(--boi-control-fill-strong);
-	border-color: var(--boi-control-border-strong) !important;
-	box-shadow: 0 0 0 2px rgba(63, 169, 245, 0.55);
-}
-
-.boi-header .boi-header__search input.wp-block-search__input {
-	flex: 1 1 auto;
-	min-inline-size: 0;
-	block-size: 100%;
-	min-block-size: 0;
-	margin: 0;
-	padding: 0 !important;
-	background: transparent;
-	border: 0 !important;
-	border-radius: 0 !important;
-	outline: none;
-	box-shadow: none;
-	color: #fff;
-	font-size: 0.85rem;
-}
-
-.boi-header .boi-header__search input::placeholder {
-	color: rgba(255, 255, 255, 0.6);
-	opacity: 1;
-}
-
-.boi-header .boi-header__search input::-webkit-search-cancel-button {
-	-webkit-appearance: none;
-}
-
-.boi-header .boi-header__search .wp-block-search__button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex: 0 0 auto;
-	inline-size: 1.85rem;
-	block-size: 1.85rem;
-	min-block-size: 0;
-	margin: 0 !important;
-	padding: 0 !important;
-	background: transparent !important;
-	color: rgba(255, 255, 255, 0.85) !important;
-	border: 0 !important;
-	border-radius: 50% !important;
-	box-shadow: none;
-	cursor: pointer;
-	transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-.boi-header .boi-header__search .wp-block-search__button:hover,
-.boi-header .boi-header__search .wp-block-search__button:focus-visible {
-	background: var(--boi-control-fill-strong) !important;
-	color: #fff !important;
-}
-
-.boi-header .boi-header__search .wp-block-search__button svg {
-	inline-size: 1.2rem;
-	block-size: 1.2rem;
-	min-inline-size: 0;
-	min-block-size: 0;
-	fill: currentColor;
 }
 
 /* The toggle, matched to the search field. */
@@ -612,8 +528,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.boi-header .boi-header__search .wp-block-search__inside-wrapper,
-	.boi-header .boi-header__search .wp-block-search__button,
 	.boi-header .boi-appearance__frame {
 		transition: none;
 	}
@@ -675,6 +589,18 @@
 .boi-lead__excerpt {
 	margin: 0 0 1.25rem;
 	color: var(--wp--preset--color--accent-5, inherit);
+}
+
+.boi-lead__cta .screen-reader-text {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
 }
 
 .boi-lead__cta {
@@ -832,32 +758,14 @@
 		gap: 1.25rem;
 	}
 
-	/* On small screens the search stays. The tools row may wrap: the links
-	   take a row of their own while they are shown as links, and the search
-	   fills the row it shares with the toggle (and, below 600px, with the
-	   menu button WordPress swaps in for the links). */
+	/* On small screens the search icon stays. The tools row may wrap: the links
+	   take a row of their own while they are shown as links, and the icon
+	   shares the row with the toggle (and, below 600px, with the menu button
+	   WordPress swaps in for the links). */
 	.boi-header .boi-header__tools {
 		inline-size: 100%;
 		flex-wrap: wrap !important;
 		gap: 0.6rem 0.5rem;
-	}
-
-	.boi-header .boi-header__search {
-		display: block;
-		flex: 1 1 10rem;
-		inline-size: auto;
-		min-inline-size: 0;
-		order: 2;
-	}
-
-	.boi-header .boi-header__search .wp-block-search__inside-wrapper {
-		inline-size: 100%;
-	}
-
-	.boi-header .boi-header__search input {
-		min-inline-size: 0;
-		inline-size: 100%;
-		font-size: 16px; /* prevents iOS zoom on focus */
 	}
 
 	.boi-header .boi-header__tools .wp-block-navigation {

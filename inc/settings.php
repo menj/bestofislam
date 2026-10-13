@@ -26,6 +26,8 @@ function boi_get_options() {
 		'voting_login_only'   => 0,
 		'voting_rate_limit'   => 10,
 		'seo_description'     => 1,
+		'verify_google'       => '',
+		'verify_bing'         => '',
 		'follow_youtube'      => '',
 		'follow_x'            => '',
 		'follow_facebook'     => '',
@@ -124,6 +126,22 @@ function boi_sanitize_options( $input ) {
 
 		case 'seo':
 			$current['seo_description'] = empty( $input['seo_description'] ) ? 0 : 1;
+
+			// Accept the bare code or the whole meta tag pasted from the console.
+			foreach ( array( 'verify_google', 'verify_bing' ) as $field ) {
+				// With an SEO plugin active the fields are not shown: keep what is saved.
+				if ( ! isset( $input[ $field ] ) ) {
+					continue;
+				}
+
+				$code = trim( (string) $input[ $field ] );
+
+				if ( preg_match( '/content=["\']([^"\']+)["\']/', $code, $match ) ) {
+					$code = $match[1];
+				}
+
+				$current[ $field ] = preg_match( '/^[A-Za-z0-9_\-]{10,100}$/', $code ) ? $code : '';
+			}
 			// With the plugin active these inputs are not shown, so absent
 			// values mean "not offered", not "switched off": keep what is saved.
 			if ( ! function_exists( 'wpseosearch_base' ) ) {
@@ -547,6 +565,34 @@ function boi_render_seo_tab( $opts ) {
 			</td>
 		</tr>
 		<tr>
+			<th scope="row"><?php esc_html_e( 'Webmaster tools', 'bestofislam' ); ?></th>
+			<td>
+				<?php if ( function_exists( 'boi_seo_plugin_active' ) && boi_seo_plugin_active() ) : ?>
+					<p class="description"><?php esc_html_e( 'An SEO plugin is active, so verification codes are entered there.', 'bestofislam' ); ?></p>
+				<?php else : ?>
+					<p>
+						<label for="boi-verify-google"><?php esc_html_e( 'Google Search Console', 'bestofislam' ); ?></label><br />
+						<input type="text" id="boi-verify-google" class="regular-text" name="<?php echo esc_attr( $key ); ?>[verify_google]" value="<?php echo esc_attr( $opts['verify_google'] ); ?>" />
+					</p>
+					<p>
+						<label for="boi-verify-bing"><?php esc_html_e( 'Bing Webmaster Tools', 'bestofislam' ); ?></label><br />
+						<input type="text" id="boi-verify-bing" class="regular-text" name="<?php echo esc_attr( $key ); ?>[verify_bing]" value="<?php echo esc_attr( $opts['verify_bing'] ); ?>" />
+					</p>
+					<p class="description"><?php esc_html_e( 'Paste the verification code, or the whole meta tag, from the console. The sitemap to submit is at /wp-sitemap.xml.', 'bestofislam' ); ?></p>
+				<?php endif; ?>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row"><?php esc_html_e( 'Rank Math', 'bestofislam' ); ?></th>
+			<td>
+				<?php if ( function_exists( 'boi_rank_math_active' ) && boi_rank_math_active() ) : ?>
+					<p><?php esc_html_e( 'Rank Math is active. It owns titles, descriptions, canonical links, robots directives, the XML sitemap and the site-wide structured data. The theme adds only what Rank Math cannot know: each image\'s licence and credit, the images in the text of an article, search results and paged archives kept out of the index, unlisted articles kept out of the sitemap, and its list and question markup.', 'bestofislam' ); ?></p>
+				<?php else : ?>
+					<p class="description"><?php esc_html_e( 'If you install Rank Math, the theme steps back from everything it would repeat and adds its image credits to Rank Math\'s structured data.', 'bestofislam' ); ?></p>
+				<?php endif; ?>
+			</td>
+		</tr>
+		<tr>
 			<th scope="row"><?php esc_html_e( 'Readable search addresses', 'bestofislam' ); ?></th>
 			<td>
 				<?php if ( function_exists( 'wpseosearch_base' ) ) : ?>
@@ -565,7 +611,7 @@ function boi_render_seo_tab( $opts ) {
 			</td>
 		</tr>
 	</table>
-	<p><?php esc_html_e( 'Also handled by the theme: unique titles per page; canonical links on every indexable view; breadcrumbs; Article markup on every article, with image licence metadata; Organization and WebSite markup on the front page; list and FAQ markup; search results kept out of the index and out of robots.txt; and an XML sitemap limited to articles, pages and sections.', 'bestofislam' ); ?></p>
+	<p><?php esc_html_e( 'Also handled by the theme: unique titles per page; canonical links on every indexable view; breadcrumbs; Article markup on every article, with licence metadata on its featured image and the images in its text; Organization and WebSite markup on the front page; ProfilePage on author pages; list and FAQ markup; search results kept out of the index and out of robots.txt; and an XML sitemap limited to articles, pages and sections.', 'bestofislam' ); ?></p>
 	<?php
 }
 

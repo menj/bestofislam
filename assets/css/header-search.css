@@ -1,0 +1,196 @@
+/* Header search: an icon in the header that opens a full-screen overlay with
+   the search box. Without JavaScript the icon links to #boi-search and the
+   overlay is shown with :target, so search still works. */
+
+.boi-header .boi-search-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: var(--boi-control-h, 2.25rem);
+	block-size: var(--boi-control-h, 2.25rem);
+	flex: 0 0 auto;
+	color: rgba(255, 255, 255, 0.9);
+	background: var(--boi-control-fill, rgba(255, 255, 255, 0.08));
+	border: 1px solid var(--boi-control-border, rgba(255, 255, 255, 0.28));
+	border-radius: 50%;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.boi-header .boi-search-toggle:hover,
+.boi-header .boi-search-toggle:focus-visible {
+	color: #fff;
+	background: var(--boi-control-fill-strong, rgba(255, 255, 255, 0.18));
+	border-color: var(--boi-control-border-strong, rgba(255, 255, 255, 0.6));
+}
+
+.boi-header .boi-search-toggle:focus-visible {
+	outline: 2px solid #3fa9f5;
+	outline-offset: 2px;
+}
+
+/* The overlay. */
+.boi-search-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: none;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 18vh 1.25rem 1.25rem;
+	background: rgba(7, 24, 46, 0.94);
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	color: #fff;
+}
+
+.boi-search-overlay:target,
+.boi-search-overlay.is-open {
+	display: flex;
+}
+
+body.boi-search-open {
+	overflow: hidden;
+}
+
+.boi-search-overlay__panel {
+	position: relative;
+	inline-size: min(40rem, 100%);
+}
+
+.boi-search-overlay__label {
+	margin: 0 0 0.75rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.boi-search-overlay__hint {
+	margin: 0.9rem 0 0;
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.boi-search-overlay__close {
+	position: absolute;
+	inset-block-start: -3.5rem;
+	inset-inline-end: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: 2.5rem;
+	block-size: 2.5rem;
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	border-radius: 50%;
+	text-decoration: none;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.boi-search-overlay__close:hover,
+.boi-search-overlay__close:focus-visible {
+	background: rgba(255, 255, 255, 0.16);
+	border-color: #fff;
+}
+
+.boi-search-overlay .wp-block-search__inside-wrapper {
+	display: flex;
+	align-items: center;
+	block-size: 3.5rem;
+	padding: 0 0.4rem 0 1.4rem !important;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.35) !important;
+	border-radius: 999px !important;
+	transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boi-search-overlay .wp-block-search__inside-wrapper:focus-within {
+	background: rgba(255, 255, 255, 0.16);
+	border-color: #fff !important;
+	box-shadow: 0 0 0 3px rgba(63, 169, 245, 0.55);
+}
+
+.boi-search-overlay input.wp-block-search__input {
+	flex: 1 1 auto;
+	min-inline-size: 0;
+	block-size: 100%;
+	margin: 0;
+	padding: 0 !important;
+	background: transparent;
+	border: 0 !important;
+	border-radius: 0 !important;
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+	font-size: 1.25rem;
+}
+
+.boi-search-overlay input::placeholder {
+	color: rgba(255, 255, 255, 0.55);
+	opacity: 1;
+}
+
+.boi-search-overlay input::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+.boi-search-overlay .wp-block-search__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	inline-size: 2.75rem;
+	block-size: 2.75rem;
+	min-block-size: 0;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: rgba(255, 255, 255, 0.16) !important;
+	color: #fff !important;
+	border: 0 !important;
+	border-radius: 50% !important;
+	box-shadow: none;
+	cursor: pointer;
+	transition: background-color 0.15s ease;
+}
+
+.boi-search-overlay .wp-block-search__button:hover,
+.boi-search-overlay .wp-block-search__button:focus-visible {
+	background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.boi-search-overlay .wp-block-search__button svg {
+	inline-size: 1.4rem;
+	block-size: 1.4rem;
+	min-inline-size: 0;
+	min-block-size: 0;
+	fill: currentColor;
+}
+
+@media (max-width: 600px) {
+	.boi-search-overlay {
+		padding-block-start: 6rem;
+	}
+
+	.boi-search-overlay input.wp-block-search__input {
+		font-size: 16px; /* prevents iOS zoom on focus */
+	}
+}
+
+/* Narrow screens: the icon shares the row with the appearance switch. */
+@media (max-width: 781px) {
+	.boi-header .boi-header__tools .boi-search-toggle {
+		order: 2;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-header .boi-search-toggle,
+	.boi-search-overlay__close,
+	.boi-search-overlay .wp-block-search__inside-wrapper,
+	.boi-search-overlay .wp-block-search__button {
+		transition: none;
+	}
+}
