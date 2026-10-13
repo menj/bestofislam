@@ -755,8 +755,12 @@ function boi_seed_pages() {
 				. $p( __( 'Errors of fact are corrected in the article and noted at the foot of it. Errors of argument are answered, if at all, in a new piece.', 'bestofislam' ) ),
 		),
 		'sitemap'   => array(
-			'title'   => __( 'Site map', 'bestofislam' ),
+			'title'   => __( 'Sitemap', 'bestofislam' ),
 			'slug'    => 'sitemap',
+			'legacy'  => array(
+				'slug'  => 'site-map',
+				'title' => 'Site map',
+			),
 			'content' => $p( __( 'Every section and every piece on the site, in one place.', 'bestofislam' ) ) . "<!-- wp:bestofislam/html-sitemap /-->\n",
 		),
 		'privacy'   => array(
@@ -801,15 +805,25 @@ function boi_create_pages() {
 		$slug       = isset( $page['slug'] ) ? $page['slug'] : $title_slug;
 		$existing   = get_page_by_path( $slug, OBJECT, 'page' );
 
-		// A page the theme made at the address its title gives (Site map at
-		// /site-map/) is deleted outright, without a redirect, and the page is
-		// created again at the address the seed now names.
-		if ( ! $existing && $slug !== $title_slug ) {
-			$old = get_page_by_path( $title_slug, OBJECT, 'page' );
+		// A page the theme made under an earlier name (Site map at /site-map/) is
+		// deleted outright, without a redirect, and the page is made again at the
+		// address the seed now names. A page already at the new address that still
+		// carries the earlier title is renamed.
+		if ( ! empty( $page['legacy']['slug'] ) && $page['legacy']['slug'] !== $slug ) {
+			$old = get_page_by_path( $page['legacy']['slug'], OBJECT, 'page' );
 
 			if ( $old ) {
 				wp_delete_post( $old->ID, true );
 			}
+		}
+
+		if ( $existing && ! empty( $page['legacy']['title'] ) && $existing->post_title === $page['legacy']['title'] ) {
+			boi_update_post(
+				array(
+					'ID'         => $existing->ID,
+					'post_title' => $page['title'],
+				)
+			);
 		}
 
 		if ( $existing ) {

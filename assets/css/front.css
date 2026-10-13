@@ -500,7 +500,7 @@
 }
 
 
-/* HTML site map. */
+/* HTML sitemap. */
 .boi-sitemap {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));

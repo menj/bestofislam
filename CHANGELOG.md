@@ -24,6 +24,7 @@ versioning.
 
 ### Fixed
 
+- **The page and its menu label are spelt "Sitemap", not "Site map".** The seed renames a Site map page already at `/sitemap/`, and the footer link reads Sitemap. This release raises the theme version to 1.63.0 so the update migration runs.
 - **`/sitemap/` returned 404 after the Site map page was given its new address.** The seed now deletes the old page at `/site-map/` outright, with no redirect, and creates the page again at `/sitemap/`. This runs in the update migration, which runs when the theme version changes; this release raises it to 1.62.0.
 - **The Site map page is at `/sitemap/`, not `/site-map/`.** The seed gives the page its own slug, deletes a page already at the old address without a redirect, and the front page and footer link to the new one.
 - **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).

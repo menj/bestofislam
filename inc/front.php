@@ -354,7 +354,7 @@ function boi_render_start_here() {
 }
 
 /**
- * HTML site map, as the Search Engine Optimization Starter Guide recommends:
+ * HTML sitemap, as the Search Engine Optimization Starter Guide recommends:
  * every section with its pieces, then the standing pages.
  *
  * @return string
