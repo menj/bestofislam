@@ -108,6 +108,14 @@
 							"src": [
 								"file:./assets/fonts/eb-garamond/EBGaramond-Italic.woff2"
 							]
+						},
+						{
+							"fontFamily": "\"EB Garamond\"",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-BoldItalic.woff2"
+							]
 						}
 					]
 				},
