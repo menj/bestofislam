@@ -325,6 +325,7 @@ function boi_glossary_meta( $id, $t ) {
  */
 function boi_glossary_register_blocks() {
 	register_block_type( 'bestofislam/glossary-index', array( 'render_callback' => 'boi_render_glossary_index' ) );
+	register_block_type( 'bestofislam/glossary-bar', array( 'render_callback' => 'boi_render_glossary_bar' ) );
 	register_block_type(
 		'bestofislam/term-related',
 		array(
@@ -383,22 +384,21 @@ function boi_glossary_letter( $title ) {
 }
 
 /**
- * Renders the A to Z index. An entry known by other names also appears under
- * each of them, as a short line pointing to the entry.
+ * The index rows grouped by letter. An entry known by other names also appears
+ * under each of them, as a short line pointing to the entry.
  *
- * @return string
+ * @return array[] Letter => rows; each row has name, entry and alias.
  */
-function boi_render_glossary_index() {
-	$entries = boi_glossary_entries();
+function boi_glossary_groups() {
+	static $groups = null;
 
-	if ( empty( $entries ) ) {
-		return '';
+	if ( null !== $groups ) {
+		return $groups;
 	}
 
-	$types = boi_glossary_types();
-	$rows  = array();
+	$rows = array();
 
-	foreach ( $entries as $entry ) {
+	foreach ( boi_glossary_entries() as $entry ) {
 		$rows[] = array(
 			'name'  => get_the_title( $entry ),
 			'entry' => $entry,
@@ -431,56 +431,189 @@ function boi_render_glossary_index() {
 
 	ksort( $groups );
 
-	$nav  = '';
-	$body = '';
+	return $groups;
+}
+
+/**
+ * The anchor identifier for a letter group.
+ *
+ * @param string $letter A to Z, or #.
+ * @return string
+ */
+function boi_glossary_letter_id( $letter ) {
+	return 'letter-' . ( '#' === $letter ? 'other' : strtolower( $letter ) );
+}
+
+/**
+ * Renders the index: filters by kind, then the entries as cards, a group for
+ * each letter. The filters are enabled by assets/js/glossary.js; without it
+ * the page is the plain list and the letter links in the bar are anchors.
+ *
+ * @return string
+ */
+function boi_render_glossary_index() {
+	$groups = boi_glossary_groups();
+
+	if ( empty( $groups ) ) {
+		return '';
+	}
+
+	$types  = boi_glossary_types();
+	$counts = array();
+	$total  = 0;
+	$body   = '';
 
 	foreach ( $groups as $letter => $items ) {
-		$id   = 'letter-' . ( '#' === $letter ? 'other' : strtolower( $letter ) );
-		$nav .= sprintf( '<li><a href="#%1$s">%2$s</a></li>', esc_attr( $id ), esc_html( $letter ) );
-
+		$id   = boi_glossary_letter_id( $letter );
 		$list = '';
+		$n    = 0;
+
 		foreach ( $items as $row ) {
 			$entry = $row['entry'];
+			$type  = (string) get_post_meta( $entry->ID, '_boi_term_type', true );
+			$type  = isset( $types[ $type ] ) ? $type : 'term';
 
 			if ( $row['alias'] ) {
 				$list .= sprintf(
-					'<li class="boi-glossary__item is-alias"><span class="boi-glossary__name">%1$s</span><span class="boi-glossary__see">%2$s <a href="%3$s">%4$s</a></span></li>',
+					'<li class="boi-glossary__item is-alias" data-type="%5$s"><span class="boi-glossary__name">%1$s</span><span class="boi-glossary__see">%2$s <a href="%3$s">%4$s</a></span></li>',
 					esc_html( $row['name'] ),
 					esc_html__( 'see', 'bestofislam' ),
 					esc_url( get_permalink( $entry ) ),
-					esc_html( get_the_title( $entry ) )
+					esc_html( get_the_title( $entry ) ),
+					esc_attr( $type )
 				);
 				continue;
 			}
 
-			$ar   = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
-			$type = (string) get_post_meta( $entry->ID, '_boi_term_type', true );
-			$tag  = ( '' !== $type && 'term' !== $type && isset( $types[ $type ] ) ) ? '<span class="boi-glossary__type">' . esc_html( $types[ $type ] ) . '</span>' : '';
+			++$n;
+			++$total;
+			$counts[ $type ] = isset( $counts[ $type ] ) ? $counts[ $type ] + 1 : 1;
+
+			$ar  = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+			$tag = 'term' !== $type ? '<span class="boi-glossary__type">' . esc_html( $types[ $type ] ) . '</span>' : '';
 
 			$list .= sprintf(
-				'<li class="boi-glossary__item"><a class="boi-glossary__term" href="%1$s">%2$s</a>%3$s%4$s<p class="boi-glossary__def">%5$s</p></li>',
+				'<li class="boi-glossary__item" data-type="%6$s"><a class="boi-glossary__term" href="%1$s">%2$s</a>%3$s%4$s<p class="boi-glossary__def">%5$s</p></li>',
 				esc_url( get_permalink( $entry ) ),
 				esc_html( get_the_title( $entry ) ),
 				$tag,
 				'' !== $ar ? '<span class="boi-glossary__ar" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
-				wp_kses( $entry->post_excerpt, array( 'em' => array() ) )
+				wp_kses( $entry->post_excerpt, array( 'em' => array() ) ),
+				esc_attr( $type )
 			);
 		}
 
 		$body .= sprintf(
-			'<section class="boi-glossary__group" id="%1$s" aria-labelledby="%1$s-h"><h2 class="boi-glossary__letter" id="%1$s-h">%2$s</h2><ul class="boi-glossary__list">%3$s</ul></section>',
+			'<section class="boi-glossary__group" id="%1$s" aria-labelledby="%1$s-h"><h2 class="boi-glossary__letter" id="%1$s-h">%2$s<span class="boi-glossary__n">%3$s</span><a class="boi-glossary__top" href="#top">%4$s</a></h2><ul class="boi-glossary__list">%5$s</ul></section>',
 			esc_attr( $id ),
 			esc_html( $letter ),
+			esc_html( number_format_i18n( $n ) ),
+			esc_html__( 'Back to top', 'bestofislam' ),
 			$list
 		);
 	}
 
+	$chips = sprintf( '<button type="button" class="boi-chip is-active" data-type="" aria-pressed="true">%1$s <span>%2$s</span></button>', esc_html__( 'All', 'bestofislam' ), esc_html( number_format_i18n( $total ) ) );
+
+	foreach ( $types as $slug => $label ) {
+		if ( ! empty( $counts[ $slug ] ) ) {
+			$chips .= sprintf( '<button type="button" class="boi-chip" data-type="%1$s" aria-pressed="false">%2$s <span>%3$s</span></button>', esc_attr( $slug ), esc_html( $label ), esc_html( number_format_i18n( $counts[ $slug ] ) ) );
+		}
+	}
+
 	return sprintf(
-		'<div class="boi-glossary"><nav class="boi-glossary__nav" aria-label="%1$s"><ul>%2$s</ul></nav>%3$s</div>',
-		esc_attr__( 'Jump to a letter', 'bestofislam' ),
-		$nav,
-		$body
+		'<div class="boi-glossary" data-total="%1$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%2$s">%3$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%4$s</button></div>%5$s<p class="boi-glossary__empty" hidden>%6$s</p></div>',
+		(int) $total,
+		esc_attr__( 'Filter by kind', 'bestofislam' ),
+		$chips,
+		esc_html__( 'Show every letter', 'bestofislam' ),
+		$body,
+		esc_html__( 'Nothing matches. Try another spelling, or clear the filters.', 'bestofislam' )
 	);
+}
+
+/**
+ * Renders the Glossary bar shown on the Glossary and every entry: a way back
+ * to the index, a search box that finds a term as you type, and the letters.
+ * The terms for the search are printed once as JSON.
+ *
+ * @return string
+ */
+function boi_render_glossary_bar() {
+	$groups = boi_glossary_groups();
+
+	if ( empty( $groups ) ) {
+		return '';
+	}
+
+	$types = boi_glossary_types();
+	$base  = home_url( '/glossary/' );
+	$az    = '';
+	$data  = array();
+
+	foreach ( $groups as $letter => $items ) {
+		$id  = boi_glossary_letter_id( $letter );
+		$n   = count( $items );
+		$az .= sprintf( '<li><a href="%1$s" data-letter="%2$s" title="%3$s">%4$s</a></li>', esc_url( $base . '#' . $id ), esc_attr( $id ), esc_attr( sprintf( /* translators: %d: number of entries. */ _n( '%d entry', '%d entries', $n, 'bestofislam' ), $n ) ), esc_html( $letter ) );
+
+		foreach ( $items as $row ) {
+			$entry = $row['entry'];
+			$type  = (string) get_post_meta( $entry->ID, '_boi_term_type', true );
+			$data[] = array(
+				'n' => wp_strip_all_tags( $row['name'] ),
+				'u' => get_permalink( $entry ),
+				't' => ( isset( $types[ $type ] ) && 'term' !== $type ) ? $types[ $type ] : '',
+				's' => $row['alias'] ? wp_strip_all_tags( get_the_title( $entry ) ) : '',
+			);
+		}
+	}
+
+	return sprintf(
+		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" aria-controls="boi-gresults" aria-expanded="false"><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
+		esc_url( $base ),
+		esc_html__( 'Glossary', 'bestofislam' ),
+		esc_attr__( 'Find a term', 'bestofislam' ),
+		esc_attr__( 'Jump to a letter', 'bestofislam' ),
+		$az,
+		wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES )
+	);
+}
+
+/**
+ * The entries either side of this one in the index, for the pager.
+ *
+ * @param int $id Page identifier.
+ * @return string
+ */
+function boi_glossary_pager( $id ) {
+	$entries = boi_glossary_entries();
+	$at      = null;
+
+	foreach ( $entries as $i => $entry ) {
+		if ( (int) $entry->ID === (int) $id ) {
+			$at = $i;
+			break;
+		}
+	}
+
+	if ( null === $at ) {
+		return '';
+	}
+
+	$link = function ( $entry, $dir, $label ) {
+		return sprintf(
+			'<a class="boi-term__%1$s" href="%2$s" rel="%1$s"><span>%3$s</span>%4$s</a>',
+			esc_attr( $dir ),
+			esc_url( get_permalink( $entry ) ),
+			esc_html( $label ),
+			esc_html( get_the_title( $entry ) )
+		);
+	};
+
+	$prev = isset( $entries[ $at - 1 ] ) ? $link( $entries[ $at - 1 ], 'prev', __( 'Previous term', 'bestofislam' ) ) : '<span></span>';
+	$next = isset( $entries[ $at + 1 ] ) ? $link( $entries[ $at + 1 ], 'next', __( 'Next term', 'bestofislam' ) ) : '<span></span>';
+
+	return '<nav class="boi-term__pager" aria-label="' . esc_attr__( 'Neighbouring terms', 'bestofislam' ) . '">' . $prev . $next . '</nav>';
 }
 
 /**
@@ -510,8 +643,10 @@ function boi_render_term_related( $attributes ) {
 		}
 	}
 
+	$pager = boi_glossary_pager( get_queried_object_id() );
+
 	if ( '' === $terms && '' === $articles ) {
-		return '';
+		return $pager;
 	}
 
 	$html = '<aside class="boi-term__related"><h2 class="boi-term__label">' . esc_html__( 'Related', 'bestofislam' ) . '</h2>';
@@ -524,11 +659,16 @@ function boi_render_term_related( $attributes ) {
 		$html .= '<div><h3>' . esc_html__( 'Read more', 'bestofislam' ) . '</h3><ul>' . $articles . '</ul></div>';
 	}
 
-	return $html . '<p class="boi-term__back"><a href="' . esc_url( home_url( '/glossary/' ) ) . '">' . esc_html__( 'All terms', 'bestofislam' ) . '</a></p></aside>';
+	return $html . '<p class="boi-term__back"><a href="' . esc_url( home_url( '/glossary/' ) ) . '">' . esc_html__( 'All terms', 'bestofislam' ) . '</a><a href="#top">' . esc_html__( 'Back to top', 'bestofislam' ) . '</a></p></aside>' . $pager;
 }
 
 /**
- * Structured data: the Glossary is a DefinedTermSet and each entry a DefinedTerm.
+ * Structured data for the Glossary. The Glossary is a DefinedTermSet and each
+ * entry a DefinedTerm with its other names, its Arabic script and the terms
+ * and articles it points to. Under the theme's own graph the pages also get a
+ * CollectionPage (the index) or a WebPage (an entry); with Rank Math's schema
+ * active that page node is Rank Math's, and these nodes refer to it by id. The
+ * breadcrumb trail comes from the breadcrumbs block.
  *
  * @return void
  */
@@ -545,6 +685,15 @@ function boi_glossary_schema() {
 	}
 
 	$set_url = get_permalink( $parent );
+	$set_id  = $set_url . '#glossary';
+	$set_ref = array(
+		'@type' => 'DefinedTermSet',
+		'@id'   => $set_id,
+		'name'  => wp_strip_all_tags( get_the_title( $parent ) ),
+		'url'   => $set_url,
+	);
+	$page_id = get_permalink( $post ) . '#webpage';
+	$graph   = array();
 
 	if ( $post->ID === $parent->ID ) {
 		$terms = array();
@@ -552,34 +701,143 @@ function boi_glossary_schema() {
 		foreach ( boi_glossary_entries() as $entry ) {
 			$terms[] = array(
 				'@type'       => 'DefinedTerm',
+				'@id'         => get_permalink( $entry ) . '#term',
 				'name'        => wp_strip_all_tags( get_the_title( $entry ) ),
 				'description' => wp_strip_all_tags( $entry->post_excerpt ),
 				'url'         => get_permalink( $entry ),
 			);
 		}
 
-		$data = array(
-			'@context'       => 'https://schema.org',
-			'@type'          => 'DefinedTermSet',
-			'name'           => wp_strip_all_tags( get_the_title( $parent ) ),
-			'url'            => $set_url,
+		$graph[] = $set_ref + array(
+			'description'    => wp_strip_all_tags( $parent->post_excerpt ),
+			'inLanguage'     => get_bloginfo( 'language' ),
 			'hasDefinedTerm' => $terms,
+			'mainEntityOfPage' => array( '@id' => $page_id ),
 		);
+
+		if ( ! boi_glossary_rank_math() ) {
+			$graph[] = array(
+				'@type'      => 'CollectionPage',
+				'@id'        => $page_id,
+				'url'        => $set_url,
+				'name'       => wp_strip_all_tags( get_the_title( $parent ) ),
+				'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+				'inLanguage' => get_bloginfo( 'language' ),
+				'mainEntity' => array( '@id' => $set_id ),
+			);
+		}
 	} else {
-		$data = array(
-			'@context'         => 'https://schema.org',
+		$url     = get_permalink( $post );
+		$aliases = array_values( array_filter( array_map( 'strval', (array) get_post_meta( $post->ID, '_boi_term_aliases', true ) ) ) );
+		$ar      = (string) get_post_meta( $post->ID, '_boi_term_ar', true );
+
+		if ( '' !== $ar ) {
+			$aliases[] = $ar;
+		}
+
+		$related = array();
+
+		if ( preg_match( '/<!-- wp:bestofislam\/term-related (\{.*?\}) \/-->/s', $post->post_content, $m ) ) {
+			$attrs = json_decode( $m[1], true );
+
+			foreach ( (array) ( isset( $attrs['terms'] ) ? $attrs['terms'] : array() ) as $slug ) {
+				$rel = get_page_by_path( 'glossary/' . sanitize_title( $slug ), OBJECT, 'page' );
+
+				if ( $rel && 'publish' === $rel->post_status ) {
+					$related[] = get_permalink( $rel );
+				}
+			}
+
+			foreach ( (array) ( isset( $attrs['articles'] ) ? $attrs['articles'] : array() ) as $slug ) {
+				$rel = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
+
+				if ( $rel && 'publish' === $rel->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $rel ) ) ) {
+					$related[] = get_permalink( $rel );
+				}
+			}
+		}
+
+		$term = array(
 			'@type'            => 'DefinedTerm',
+			'@id'              => $url . '#term',
 			'name'             => wp_strip_all_tags( get_the_title( $post ) ),
 			'description'      => wp_strip_all_tags( $post->post_excerpt ),
-			'url'              => get_permalink( $post ),
-			'inDefinedTermSet' => array(
-				'@type' => 'DefinedTermSet',
-				'name'  => wp_strip_all_tags( get_the_title( $parent ) ),
-				'url'   => $set_url,
-			),
+			'url'              => $url,
+			'termCode'         => $post->post_name,
+			'inDefinedTermSet' => array( '@id' => $set_id ),
+			'mainEntityOfPage' => array( '@id' => $page_id ),
 		);
+
+		if ( $aliases ) {
+			$term['alternateName'] = $aliases;
+		}
+
+		$graph[] = $term;
+		$graph[] = $set_ref;
+
+		if ( ! boi_glossary_rank_math() ) {
+			$page = array(
+				'@type'      => 'WebPage',
+				'@id'        => $page_id,
+				'url'        => $url,
+				'name'       => wp_strip_all_tags( get_the_title( $post ) ),
+				'isPartOf'   => array( '@id' => $set_id ),
+				'inLanguage' => get_bloginfo( 'language' ),
+				'mainEntity' => array( '@id' => $url . '#term' ),
+			);
+
+			if ( $related ) {
+				$page['relatedLink'] = $related;
+			}
+
+			$graph[] = $page;
+		}
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld( $data ) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
+		array(
+			'@context' => 'https://schema.org',
+			'@graph'   => $graph,
+		)
+	) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 add_action( 'wp_head', 'boi_glossary_schema', 22 );
+
+/**
+ * Whether Rank Math's schema is active, so it supplies the page node.
+ *
+ * @return bool
+ */
+function boi_glossary_rank_math() {
+	return function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active();
+}
+
+/**
+ * Marks the body on the Glossary page (the wide index) and on its entries.
+ *
+ * @param string[] $classes Body classes.
+ * @return string[]
+ */
+function boi_glossary_body_class( $classes ) {
+	if ( boi_is_glossary_page() ) {
+		$classes[] = get_queried_object()->post_parent ? 'boi-glossary-entry' : 'boi-glossary-index';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'boi_glossary_body_class' );
+
+/**
+ * Entries use the Glossary template, with its bar, like the Glossary itself.
+ *
+ * @param string[] $templates Template hierarchy.
+ * @return string[]
+ */
+function boi_glossary_template_hierarchy( $templates ) {
+	if ( boi_is_glossary_page() ) {
+		array_unshift( $templates, 'page-glossary' );
+	}
+
+	return $templates;
+}
+add_filter( 'page_template_hierarchy', 'boi_glossary_template_hierarchy' );

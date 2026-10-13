@@ -1,122 +1,419 @@
 /**
- * Glossary: the A to Z index and the entry pages.
+ * Glossary: the bar, the index and the entry pages.
  *
  * Loaded on the Glossary page and its children, after article.css. Palette
  * tokens only, so the Night variation and the reader's toggle apply.
  */
 
-/* The index. */
-.boi-glossary__nav ul {
+.boi-glossary-page,
+.boi-gbar {
+	--boi-ink: var(--wp--preset--color--contrast, #0D2B4E);
+	--boi-mute: var(--wp--preset--color--accent-5, #4A5A6E);
+	--boi-blue: var(--wp--preset--color--accent-1, #1F6FCC);
+	--boi-gold: var(--wp--preset--color--accent-2, #E8B33C);
+	--boi-tint: var(--wp--preset--color--accent-3, #EAF2FB);
+	--boi-rule: var(--wp--preset--color--accent-6, #D9E3EF);
+	--boi-base: var(--wp--preset--color--base, #fff);
+}
+
+/* The bar: the way back to the index, search and the letters. It stays in
+   view, so any term is one step away from wherever the reader is. */
+.boi-gbar {
+	position: sticky;
+	inset-block-start: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 20;
+	background: color-mix(in srgb, var(--boi-base) 94%, transparent);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	border-block-end: 1px solid var(--boi-rule);
+}
+
+.boi-gbar__inner {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.4rem;
-	margin: 0 0 2.5rem;
+	align-items: center;
+	gap: 0.6rem 1.25rem;
+	max-inline-size: var(--wp--style--global--wide-size, 1200px);
+	margin-inline: auto;
+	padding: 0.6rem var(--wp--preset--spacing--30, 1rem);
+}
+
+.boi-gbar__brand {
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: var(--boi-ink);
+	text-decoration: none;
+}
+
+.boi-gbar__brand::before {
+	content: "";
+	display: inline-block;
+	inline-size: 0.5rem;
+	block-size: 0.5rem;
+	margin-inline-end: 0.5rem;
+	border-radius: 50%;
+	background: var(--boi-gold);
+}
+
+.boi-gbar__search {
+	position: relative;
+	flex: 1 1 14rem;
+	max-inline-size: 22rem;
+}
+
+.boi-gbar__search input {
+	inline-size: 100%;
+	padding: 0.5rem 0.9rem;
+	font: inherit;
+	font-size: 0.95rem;
+	color: var(--boi-ink);
+	background: var(--boi-tint);
+	border: 1px solid transparent;
+	border-radius: 999px;
+}
+
+.boi-gbar__search input:focus {
+	outline: 2px solid var(--boi-blue);
+	outline-offset: 1px;
+	background: var(--boi-base);
+	border-color: var(--boi-rule);
+}
+
+.boi-gbar__results {
+	position: absolute;
+	inset-inline: 0;
+	inset-block-start: calc(100% + 0.35rem);
+	margin: 0;
+	padding: 0.3rem;
+	list-style: none;
+	background: var(--boi-base);
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--md, 10px);
+	box-shadow: 0 10px 30px rgb(0 0 0 / 0.12);
+}
+
+.boi-gbar__results li a {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding: 0.45rem 0.65rem;
+	color: var(--boi-ink);
+	text-decoration: none;
+	border-radius: 8px;
+}
+
+.boi-gbar__results li a small {
+	color: var(--boi-mute);
+}
+
+.boi-gbar__results li a:hover,
+.boi-gbar__results li a[aria-selected="true"] {
+	background: var(--boi-tint);
+}
+
+.boi-gbar__az {
+	flex: 1 1 100%;
+	min-inline-size: 0;
+	overflow-x: auto;
+	scrollbar-width: thin;
+}
+
+.boi-gbar__az ul {
+	display: flex;
+	gap: 0.15rem;
+	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.boi-glossary__nav a {
+.boi-gbar__az a {
 	display: grid;
 	place-items: center;
-	inline-size: 2.4rem;
-	block-size: 2.4rem;
-	font-family: var(--wp--preset--font-family--platypi, serif);
+	min-inline-size: 1.9rem;
+	block-size: 1.9rem;
+	font-size: 0.9rem;
 	font-weight: 600;
-	color: var(--wp--preset--color--accent-1, #1F6FCC);
-	border: 1px solid var(--wp--preset--color--accent-6, #D9E3EF);
-	border-radius: var(--wp--custom--radius--md, 10px);
+	color: var(--boi-mute);
 	text-decoration: none;
+	border-radius: 8px;
 }
 
-.boi-glossary__nav a:hover,
-.boi-glossary__nav a:focus-visible {
-	background: var(--wp--preset--color--accent-3, #EAF2FB);
-	border-color: var(--wp--preset--color--accent-1, #1F6FCC);
+.boi-gbar__az a:hover,
+.boi-gbar__az a:focus-visible {
+	color: var(--boi-blue);
+	background: var(--boi-tint);
 }
 
+.boi-gbar__az a.is-active {
+	color: var(--boi-base);
+	background: var(--boi-blue);
+}
+
+@media (min-width: 62em) {
+	.boi-gbar__az {
+		flex: 0 1 auto;
+		margin-inline-start: auto;
+	}
+}
+
+/* The index page is wide; entries stay in a reading column. */
+.boi-glossary-index .boi-glossary-page > .wp-block-post-content,
+.boi-glossary-index .boi-glossary-page > .boi-article__head {
+	max-inline-size: var(--wp--style--global--wide-size, 1200px);
+}
+
+.boi-glossary-index .boi-glossary-page > .boi-article__head > * {
+	max-inline-size: none;
+}
+
+.boi-glossary-index .boi-glossary-page .wp-block-post-content > p {
+	max-inline-size: 44rem;
+	margin-inline: 0;
+	font-size: 1.1rem;
+	text-align: start;
+}
+
+/* The tools: kind filters and the count. */
+.boi-glossary {
+	max-inline-size: none;
+	margin-block-start: 1.5rem;
+}
+
+.boi-glossary__tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.6rem 1rem;
+	margin-block-end: 2rem;
+}
+
+.boi-glossary__tools[hidden] {
+	display: none;
+}
+
+.boi-glossary__types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.boi-chip {
+	padding: 0.3rem 0.85rem;
+	font: inherit;
+	font-size: 0.9rem;
+	color: var(--boi-ink);
+	background: transparent;
+	border: 1px solid var(--boi-rule);
+	border-radius: 999px;
+	cursor: pointer;
+}
+
+.boi-chip span {
+	color: var(--boi-mute);
+	font-size: 0.8em;
+}
+
+.boi-chip:hover {
+	background: var(--boi-tint);
+}
+
+.boi-chip.is-active {
+	color: var(--boi-base);
+	background: var(--boi-blue);
+	border-color: var(--boi-blue);
+}
+
+.boi-chip.is-active span {
+	color: inherit;
+	opacity: 0.8;
+}
+
+.boi-glossary__count {
+	margin: 0 0 0 auto;
+	font-size: 0.9rem;
+	color: var(--boi-mute);
+}
+
+.boi-glossary__reset {
+	padding: 0.3rem 0.85rem;
+	font: inherit;
+	font-size: 0.9rem;
+	color: var(--boi-blue);
+	background: none;
+	border: 1px solid var(--boi-blue);
+	border-radius: 999px;
+	cursor: pointer;
+}
+
+.boi-glossary__reset[hidden] {
+	display: none;
+}
+
+.boi-glossary__empty {
+	padding: 2rem 0;
+	color: var(--boi-mute);
+}
+
+/* A letter and its entries, as cards. */
 .boi-glossary__group {
-	margin-block-end: 2.5rem;
-	scroll-margin-block-start: 5rem;
+	margin-block-end: 3rem;
+	scroll-margin-block-start: 8rem;
+}
+
+.boi-glossary__group[hidden] {
+	display: none;
 }
 
 .boi-glossary__letter {
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	gap: 0.75rem;
 	margin: 0 0 1rem;
-	font-size: 2rem;
-	color: var(--wp--preset--color--accent-1, #1F6FCC);
+	font-size: 2.4rem;
+	line-height: 1;
+	color: var(--boi-blue);
 }
 
 .boi-glossary__letter::after {
 	content: "";
+	order: 1;
 	flex: 1;
+	align-self: center;
 	block-size: 1px;
-	background: var(--wp--preset--color--accent-6, #D9E3EF);
+	background: var(--boi-rule);
+}
+
+.boi-glossary__n {
+	font-family: var(--wp--preset--font-family--ysabeau-office, sans-serif);
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--boi-mute);
+}
+
+.boi-glossary__top {
+	order: 2;
+	font-family: var(--wp--preset--font-family--ysabeau-office, sans-serif);
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--boi-mute);
+	text-decoration: none;
+}
+
+.boi-glossary__top::before {
+	content: "\2191\00a0";
+}
+
+.boi-glossary__top:hover {
+	color: var(--boi-blue);
 }
 
 .boi-glossary__list {
 	display: grid;
-	gap: 0.25rem;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr));
+	gap: 0.9rem;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
 .boi-glossary__item {
+	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
-	column-gap: 1rem;
-	padding-block: 0.85rem;
-	border-block-end: 1px solid var(--wp--preset--color--accent-6, #D9E3EF);
+	align-content: start;
+	column-gap: 0.75rem;
+	padding: 1rem 1.1rem;
+	background: var(--boi-tint);
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--md, 10px);
+	transition: border-color 0.15s, transform 0.15s;
+}
+
+.boi-glossary__item[hidden] {
+	display: none;
+}
+
+.boi-glossary__item:not(.is-alias):hover,
+.boi-glossary__item:not(.is-alias):focus-within {
+	border-color: var(--boi-blue);
+	transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-glossary__item {
+		transition: none;
+	}
+
+	.boi-glossary__item:hover {
+		transform: none;
+	}
 }
 
 .boi-glossary__term {
 	font-family: var(--wp--preset--font-family--platypi, serif);
-	font-size: 1.2rem;
+	font-size: 1.15rem;
 	font-weight: 600;
-	color: var(--wp--preset--color--contrast, #0D2B4E);
+	color: var(--boi-ink);
 	text-decoration: none;
 }
 
+/* The whole card is the link. */
+.boi-glossary__term::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
 .boi-glossary__term:hover {
-	color: var(--wp--preset--color--accent-1, #1F6FCC);
-	text-decoration: underline;
+	color: var(--boi-blue);
 }
 
 .boi-glossary__ar {
 	grid-column: 2;
 	grid-row: 1;
-	font-size: 1.35rem;
-	color: var(--wp--preset--color--accent-5, #4A5A6E);
+	font-size: 1.3rem;
+	color: var(--boi-mute);
 }
 
 .boi-article .boi-glossary__def {
 	grid-column: 1 / -1;
-	margin: 0.2rem 0 0;
-	font-size: 0.95rem;
-	color: var(--wp--preset--color--accent-5, #4A5A6E);
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	overflow: hidden;
+	margin: 0.35rem 0 0;
+	font-size: 0.92rem;
+	line-height: 1.5;
+	color: var(--boi-mute);
 	text-align: start;
 	hyphens: manual;
 }
 
 /* Another name for an entry: a short line pointing to it. */
 .boi-glossary__item.is-alias {
-	padding-block: 0.5rem;
-	border-block-end: 0;
+	align-items: baseline;
+	padding: 0.6rem 1.1rem;
+	background: transparent;
+	border-style: dashed;
 }
 
 .boi-glossary__name {
 	font-family: var(--wp--preset--font-family--platypi, serif);
 	font-weight: 600;
-	color: var(--wp--preset--color--accent-5, #4A5A6E);
+	color: var(--boi-mute);
 }
 
 .boi-glossary__see {
 	grid-column: 2;
 	grid-row: 1;
-	font-size: 0.9rem;
-	color: var(--wp--preset--color--accent-5, #4A5A6E);
+	font-size: 0.85rem;
+	color: var(--boi-mute);
+}
+
+.boi-glossary__see a {
+	color: var(--boi-blue);
 }
 
 .boi-glossary__type,
@@ -231,4 +528,59 @@
 .boi-article .boi-term__back {
 	margin: 0;
 	font-size: 0.9rem;
+}
+
+
+/* An entry's head, as a panel. */
+.boi-article .boi-term:has(.boi-term__script),
+.boi-article .boi-term:has(.boi-term__translit) {
+	padding: 1.5rem 1.75rem;
+	background: var(--boi-tint);
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--lg, 14px);
+}
+
+/* Back to the index, and on to the next term. */
+.boi-article .boi-term__back {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+}
+
+.boi-article .boi-term__pager {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin-block: 2rem 1rem;
+}
+
+.boi-article .boi-term__pager a {
+	display: grid;
+	gap: 0.15rem;
+	padding: 0.9rem 1.1rem;
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-weight: 600;
+	color: var(--boi-ink);
+	text-decoration: none;
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+.boi-article .boi-term__pager a:hover {
+	border-color: var(--boi-blue);
+	color: var(--boi-blue);
+}
+
+.boi-article .boi-term__pager span {
+	font-family: var(--wp--preset--font-family--ysabeau-office, sans-serif);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+}
+
+.boi-article .boi-term__next {
+	grid-column: 2;
+	text-align: end;
 }

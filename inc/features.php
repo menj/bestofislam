@@ -403,3 +403,17 @@ function boi_top_anchor() {
 	echo '<span id="top" class="screen-reader-text"></span>';
 }
 add_action( 'wp_body_open', 'boi_top_anchor' );
+
+/**
+ * The floating Back to top button. It stays hidden until assets/js/back-to-top.js
+ * shows it on a long page, so without the script nothing is shown.
+ *
+ * @return void
+ */
+function boi_render_back_to_top() {
+	printf(
+		'<a class="boi-totop" href="#top" hidden aria-label="%1$s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>',
+		esc_attr__( 'Back to top', 'bestofislam' )
+	);
+}
+add_action( 'wp_footer', 'boi_render_back_to_top' );

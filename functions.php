@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.58.0' );
+define( 'BOI_VERSION', '1.59.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -112,6 +112,21 @@ function boi_enqueue_assets() {
 		true
 	);
 
+	wp_enqueue_style(
+		'boi-back-to-top',
+		BOI_URI . '/assets/css/back-to-top.css',
+		array( 'boi-scripts' ),
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/back-to-top.css' )
+	);
+
+	wp_enqueue_script(
+		'boi-back-to-top',
+		BOI_URI . '/assets/js/back-to-top.js',
+		array(),
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/js/back-to-top.js' ),
+		true
+	);
+
 	wp_enqueue_script(
 		'boi-theme-toggle',
 		BOI_URI . '/assets/js/theme-toggle.js',
@@ -162,6 +177,14 @@ function boi_enqueue_assets() {
 			BOI_URI . '/assets/css/glossary.css',
 			array( 'boi-article' ),
 			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/glossary.css' )
+		);
+
+		wp_enqueue_script(
+			'boi-glossary',
+			BOI_URI . '/assets/js/glossary.js',
+			array(),
+			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/js/glossary.js' ),
+			true
 		);
 	}
 
