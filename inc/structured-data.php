@@ -399,7 +399,7 @@ function boi_profile_entities( $author ) {
  */
 function boi_print_structured_data() {
 	// Rank Math prints its own graph; boi_rank_math_json_ld() adds to it.
-	if ( function_exists( 'boi_rank_math_active' ) && boi_rank_math_active() ) {
+	if ( function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active() ) {
 		return;
 	}
 

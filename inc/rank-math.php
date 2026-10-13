@@ -33,12 +33,30 @@ function boi_rank_math_active() {
 }
 
 /**
+ * Whether Rank Math is active and printing structured data. Its Schema module
+ * can be switched off, and then the theme's own graph is needed.
+ *
+ * @return bool
+ */
+function boi_rank_math_schema_active() {
+	if ( ! boi_rank_math_active() ) {
+		return false;
+	}
+
+	if ( class_exists( '\RankMath\Helper' ) && method_exists( '\RankMath\Helper', 'is_module_active' ) ) {
+		return (bool) \RankMath\Helper::is_module_active( 'rich-snippet' );
+	}
+
+	return true;
+}
+
+/**
  * Whether Rank Math will print a BreadcrumbList of its own.
  *
  * @return bool
  */
 function boi_rank_math_breadcrumb_schema() {
-	return boi_rank_math_active()
+	return boi_rank_math_schema_active()
 		&& class_exists( '\RankMath\Helper' )
 		&& method_exists( '\RankMath\Helper', 'is_breadcrumbs_enabled' )
 		&& \RankMath\Helper::is_breadcrumbs_enabled();
@@ -68,14 +86,35 @@ function boi_rank_math_json_ld( $data, $jsonld = null ) {
 		$fields = array_diff_key( $image, array_flip( array( '@type', 'url', 'contentUrl', 'width', 'height' ) ) );
 
 		foreach ( $data as $key => $node ) {
-			if ( is_array( $node ) && isset( $node['@type'], $node['@id'] ) && 'ImageObject' === $node['@type'] && '#primaryImage' === substr( (string) $node['@id'], -13 ) ) {
+			// Plugins spell the id #primaryImage or #primaryimage; match either.
+			if ( is_array( $node ) && isset( $node['@type'], $node['@id'] ) && 'ImageObject' === $node['@type'] && '#primaryimage' === strtolower( substr( (string) $node['@id'], -13 ) ) ) {
 				$data[ $key ] = array_merge( $node, $fields );
 			}
 		}
 	}
 
+	$refs = array();
+
 	foreach ( boi_inline_image_objects( $post ) as $i => $node ) {
 		$data[ 'boi_inline_image_' . ( $i + 1 ) ] = $node;
+		$refs[]                                   = array( '@id' => $node['@id'] );
+	}
+
+	// Tie the in-text images to the article, as the theme's own graph does.
+	if ( $refs ) {
+		foreach ( $data as $key => $node ) {
+			if ( ! is_array( $node ) || ! isset( $node['@type'] ) || ! array_intersect( (array) $node['@type'], array( 'Article', 'BlogPosting', 'NewsArticle' ) ) ) {
+				continue;
+			}
+
+			$existing = isset( $node['image'] ) ? $node['image'] : array();
+
+			if ( ! is_array( $existing ) || isset( $existing['@id'] ) || isset( $existing['url'] ) ) {
+				$existing = array( $existing );
+			}
+
+			$data[ $key ]['image'] = array_values( array_filter( array_merge( $existing, $refs ) ) );
+		}
 	}
 
 	return $data;
@@ -104,7 +143,9 @@ function boi_rank_math_description( $description ) {
  * @return array
  */
 function boi_rank_math_robots( $robots ) {
-	if ( is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
+	$unlisted = is_singular() && function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( get_queried_object_id() );
+
+	if ( $unlisted || is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
 		$robots['index']  = 'noindex';
 		$robots['follow'] = 'follow';
 	}
