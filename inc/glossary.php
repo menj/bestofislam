@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '3';
+const BOI_GLOSSARY_VERSION = '4';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -119,6 +119,8 @@ function boi_glossary_content( $t ) {
 		}
 	}
 
+	$out .= boi_glossary_faruqi_note( $t );
+
 	$attrs = wp_json_encode(
 		array(
 			'terms'    => array_values( isset( $t['terms'] ) ? $t['terms'] : array() ),
@@ -127,6 +129,37 @@ function boi_glossary_content( $t ) {
 	);
 
 	return $out . '<!-- wp:bestofislam/term-related ' . $attrs . " /-->\n";
+}
+
+/**
+ * The note naming where an entry's term and Arabic come from: the lists in
+ * Ismail al-Faruqi's Toward Islamic English. An entry written first from other
+ * sources and later found in the book carries a list of its book entries.
+ *
+ * @param array $t Entry.
+ * @return string Block markup.
+ */
+function boi_glossary_faruqi_note( $t ) {
+	if ( empty( $t['faruqi'] ) ) {
+		return '';
+	}
+
+	$items = isset( $t['faruqi'][0] ) ? $t['faruqi'] : array( $t['faruqi'] );
+	$bits  = array();
+
+	foreach ( $items as $item ) {
+		if ( empty( $item['page'] ) ) {
+			continue;
+		}
+
+		$bits[] = sprintf( 'p. %d', (int) $item['page'] ) . ( ! empty( $item['term'] ) ? ', listed as ' . esc_html( $item['term'] ) : '' );
+	}
+
+	if ( ! $bits ) {
+		return '';
+	}
+
+	return "<!-- wp:paragraph {\"className\":\"boi-term__source\"} -->\n<p class=\"boi-term__source\">" . 'Term and Arabic as listed in Ismail al-Faruqi, <em>Toward Islamic English</em> (International Institute of Islamic Thought, 1995), ' . implode( '; ', $bits ) . ". The definition is restated here.</p>\n<!-- /wp:paragraph -->\n\n";
 }
 
 /**
@@ -483,17 +516,51 @@ function boi_glossary_images() {
 /**
  * One Glossary photograph with its address.
  *
- * @param string $key Key from boi_glossary_images().
+ * @param string $key `hero`, or a kind of entry (its first photograph).
  * @return array|null
  */
 function boi_glossary_image( $key ) {
 	$all = boi_glossary_images();
 
-	if ( empty( $all[ $key ]['file'] ) ) {
+	if ( 'hero' === $key ) {
+		$image = isset( $all['hero'] ) ? $all['hero'] : null;
+	} else {
+		$image = ! empty( $all['kinds'][ $key ][0] ) ? $all['kinds'][ $key ][0] : null;
+	}
+
+	return $image ? boi_glossary_image_url( $image ) : null;
+}
+
+/**
+ * The photograph for an entry: one of several for its kind, chosen from its
+ * address so that an entry always shows the same one and neighbours differ.
+ *
+ * @param string $kind Kind of entry.
+ * @param string $slug Entry slug.
+ * @return array|null
+ */
+function boi_glossary_entry_image( $kind, $slug ) {
+	$all  = boi_glossary_images();
+	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : ( isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array() );
+
+	if ( empty( $pool ) ) {
 		return null;
 	}
 
-	$image        = $all[ $key ];
+	return boi_glossary_image_url( $pool[ (int) sprintf( '%u', crc32( $slug ) ) % count( $pool ) ] );
+}
+
+/**
+ * Adds the address to a photograph's record.
+ *
+ * @param array $image Record from inc/glossary-images.json.
+ * @return array|null
+ */
+function boi_glossary_image_url( $image ) {
+	if ( empty( $image['file'] ) ) {
+		return null;
+	}
+
 	$image['url'] = BOI_URI . '/assets/images/glossary/' . rawurlencode( $image['file'] );
 
 	return $image;
@@ -563,8 +630,11 @@ function boi_render_glossary_index() {
 			$aliases = array_slice( boi_glossary_aliases( $entry ), 0, 3 );
 			$aka     = $aliases ? '<span class="boi-glossary__aka">' . esc_html( sprintf( /* translators: %s: other names. */ __( 'Also: %s', 'bestofislam' ), implode( ', ', $aliases ) ) ) . '</span>' : '';
 
+			$thumb = boi_glossary_entry_image( $type, $entry->post_name );
+			$img   = $thumb ? '<img class="boi-glossary__thumb" src="' . esc_url( $thumb['url'] ) . '" alt="" width="' . (int) $thumb['width'] . '" height="' . (int) $thumb['height'] . '" loading="lazy" decoding="async">' : '';
+
 			$list .= sprintf(
-				'<li class="boi-glossary__item" data-type="%1$s">%2$s<a class="boi-glossary__term" href="%3$s">%4$s</a>%5$s%6$s<p class="boi-glossary__def">%7$s</p></li>',
+				'<li class="boi-glossary__item" data-type="%1$s">' . $img . '%2$s<a class="boi-glossary__term" href="%3$s">%4$s</a>%5$s%6$s<p class="boi-glossary__def">%7$s</p></li>',
 				esc_attr( $type ),
 				$kind,
 				esc_url( get_permalink( $entry ) ),
@@ -609,13 +679,7 @@ function boi_render_glossary_index() {
 
 	return sprintf(
 		'%1$s<div class="boi-glossary" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
-		$hero ? '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>' : '', // phpcs:ignore WordPress.Security.EscapeOutput
-		(int) $total,
-		esc_attr__( 'Filter by kind', 'bestofislam' ),
-		$tiles, // phpcs:ignore WordPress.Security.EscapeOutput
-		esc_html__( 'Show every letter', 'bestofislam' ),
-		$body, // phpcs:ignore WordPress.Security.EscapeOutput
-		esc_html__( 'Nothing matches. Try another spelling, or clear the filters.', 'bestofislam' )
+		( $hero ? '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>' : '' ) . '<p class="boi-glossary__basis">' . esc_html__( 'The terms and their Arabic forms follow the lists in Ismail al-Faruqi\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ) . '</p>', // phpcs:ignore WordPress.Security.EscapeOutputar the filters.', 'bestofislam' )
 	);
 }
 
@@ -681,7 +745,7 @@ function boi_render_term_hero() {
 	}
 
 	$type  = (string) get_post_meta( $post->ID, '_boi_term_type', true );
-	$image = boi_glossary_image( isset( boi_glossary_types()[ $type ] ) ? $type : 'term' );
+	$image = boi_glossary_entry_image( isset( boi_glossary_types()[ $type ] ) ? $type : 'term', $post->post_name );
 
 	if ( ! $image ) {
 		return '';

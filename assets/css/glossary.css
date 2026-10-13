@@ -838,3 +838,53 @@
 	max-inline-size: 42%;
 	font-size: 1.3rem;
 }
+
+/* The basis of the terms, under the index photograph. */
+.boi-article .boi-glossary__basis {
+	max-inline-size: 44rem;
+	margin: 0 0 1.5rem;
+	font-size: 0.95rem;
+	color: var(--boi-mute);
+	text-align: start;
+}
+
+.boi-article .boi-term__source {
+	margin-block-start: 1.5rem;
+	font-size: 0.85rem;
+	color: var(--boi-mute);
+	text-align: start;
+}
+
+/* A photograph at the head of each card. */
+.boi-glossary__item {
+	overflow: hidden;
+	padding-block-start: 0;
+}
+
+.boi-glossary__item .boi-glossary__thumb {
+	grid-column: 1 / -1;
+	display: block;
+	inline-size: calc(100% + 2.4rem);
+	max-inline-size: none;
+	block-size: 7rem;
+	margin: 0 -1.2rem 0.85rem;
+	object-fit: cover;
+}
+
+.boi-glossary__item .boi-glossary__type,
+.boi-glossary__item .boi-glossary__term,
+.boi-glossary__item .boi-glossary__ar {
+	grid-row: auto;
+}
+
+.boi-glossary__item .boi-glossary__type {
+	grid-row: 2;
+}
+
+.boi-glossary__item .boi-glossary__term {
+	grid-row: 3;
+}
+
+.boi-glossary__item .boi-glossary__ar {
+	grid-row: 2 / span 2;
+}
