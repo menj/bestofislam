@@ -23,6 +23,7 @@ versioning.
 
 ### Fixed
 
+- **The Site map page is at `/sitemap/`, not `/site-map/`.** The seed gives the page its own slug, moves a page already at the old address (WordPress redirects the old link), and the front page and footer link to the new one.
 - **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
 - The jump list at the head of a listicle, and the other lists of links the site builds (glossary index and related terms, site map, reading lists), were underlined by the rule meant for links in running text. That rule now leaves them out.
 
