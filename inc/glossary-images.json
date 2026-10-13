@@ -1,0 +1,83 @@
+{
+ "hero": {
+  "file": "hero.avif",
+  "alt": "The Prophet's Mosque in Medina at dusk",
+  "artist": "Konevi",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/masjid-prophetic-medina-religion-9883639/",
+  "width": 1280,
+  "height": 512
+ },
+ "person": {
+  "file": "person.avif",
+  "alt": "An open old book with reading glasses",
+  "artist": "DariuszSankowski",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/glasses-book-education-eyeglasses-1052010/",
+  "width": 960,
+  "height": 640
+ },
+ "prophet": {
+  "file": "prophet.avif",
+  "alt": "Sunlight breaking over mountains",
+  "artist": "Sinousxl",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/mountains-light-rays-light-bright-7881314/",
+  "width": 960,
+  "height": 640
+ },
+ "place": {
+  "file": "place.avif",
+  "alt": "The Prophet's Mosque in Medina at dawn",
+  "artist": "Konevi",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/mosque-masjid-al-nabawi-medina-3724921/",
+  "width": 960,
+  "height": 640
+ },
+ "event": {
+  "file": "event.avif",
+  "alt": "A canyon in the early light",
+  "artist": "12019",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/mountains-valley-landscape-139012/",
+  "width": 960,
+  "height": 640
+ },
+ "group": {
+  "file": "group.avif",
+  "alt": "A worshipper in prostration among rows of people at prayer",
+  "artist": "chidioc",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/kid-praying-muslim-islam-faith-1077793/",
+  "width": 960,
+  "height": 640
+ },
+ "book": {
+  "file": "book.avif",
+  "alt": "Old bound books on a shelf",
+  "artist": "garten-gg",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/christmas-background-book-read-old-1659717/",
+  "width": 960,
+  "height": 640
+ },
+ "topic": {
+  "file": "topic.avif",
+  "alt": "The geometric pattern of a tiled dome",
+  "artist": "hoomarg",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/persian-art-tradiotional-islamic-809945/",
+  "width": 960,
+  "height": 640
+ },
+ "term": {
+  "file": "term.avif",
+  "alt": "Arabic script on a page",
+  "artist": "kevinamrulloh",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/book-islamic-arabic-religion-2477164/",
+  "width": 960,
+  "height": 640
+ }
+}

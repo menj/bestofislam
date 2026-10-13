@@ -33,3 +33,7 @@ on the Sources and standards page, and the credits are recorded in
   Google and the Noto Project Authors, under the SIL Open Font Licence 1.1,
   https://openfontlicense.org/. It sets the Arabic in the Glossary and in
   running text. The file is the variable font converted to WOFF2, with the licence text in `assets/fonts/scripts/OFL-NotoNaskhArabic.txt`.
+
+## Glossary photographs
+
+Nine Pixabay photographs (Pixabay licence) open the Glossary index and its entries; each is credited by photographer and source page in `inc/glossary-images.json`, under every use and on the Sources and standards page.
