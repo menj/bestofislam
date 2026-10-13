@@ -45,6 +45,151 @@
    "jizya"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 34,
+    "term": "ZAKĀH"
+   }
+  ]
+ },
+ {
+  "slug": "zahir-al",
+  "title": "Zahir, al-",
+  "ar": "الظاهر",
+  "tr": "al-Ẓāhir",
+  "def": "A divine name: He Who is manifest, evident through all phenomena",
+  "what": [
+   "<em>Al-Ẓāhir</em> is one of the beautiful names of Allah, meaning the Manifest. The Quran says: “He is the First and the Last, the Manifest and the Hidden” (57:3). Scholars explain that Allah is manifest through His signs in creation and through the proofs of His existence, while He remains hidden in His essence. The name pairs with <em>al-Bāṭin</em>, the Hidden. The word <em>ẓāhir</em> is also used in the study of texts for the apparent meaning of a verse or hadith, which is a separate use. As a divine name it speaks of Allah’s evident power and presence."
+  ],
+  "misread": "That it makes Allah identical with the world, when it says that His signs are evident in creation.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "tawhid",
+   "creation"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Zahir",
+   "Zahir"
+  ],
+  "faruqi": {
+   "page": 38,
+   "term": "AL ẒĀHIR"
+  }
+ },
+ {
+  "slug": "zalim",
+  "title": "Zalim",
+  "ar": "ظالم",
+  "tr": "Ẓālim",
+  "def": "One who commits injustice (zulm): a wrongdoer or oppressor; the plural is zalimun",
+  "what": [
+   "<em>Ẓālim</em> is the one who commits <em>ẓulm</em>, injustice. The plural is <em>ẓālimūn</em>. The Quran uses the word often, as in the verse that closes the rules on divorce: “those who transgress the limits of Allah, they are the wrongdoers” (2:229). It also says that Allah is not unaware of what the wrongdoers do (14:42). The word is used of a person who wrongs others, who wrongs himself by sin, or who commits the gravest wrong of associating partners with Allah. One verse speaks of a group among the believers who wrong themselves (35:32). In English it is rendered as wrongdoer, oppressor or tyrant according to context."
+  ],
+  "misread": "That it means only an oppressor of others, when the Quran also uses it of one who wrongs himself.",
+  "sources": [],
+  "terms": [
+   "zulm",
+   "tagha",
+   "justice",
+   "shirk"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Zalimun",
+   "Dhalim"
+  ],
+  "faruqi": {
+   "page": 38,
+   "term": "ẒĀLIM"
+  }
+ },
+ {
+  "slug": "zann",
+  "title": "Zann",
+  "ar": "ظن",
+  "tr": "Ẓann",
+  "def": "Doubt, suspicion or conjecture in the weightier matters of religion and ethics; the opposite of iman and yaqin",
+  "what": [
+   "<em>Ẓann</em> is supposition, a judgement held without certainty. In the weighty matters of religion and ethics Ismail al-Faruqi presents it as the opposite of <em>īmān</em> and <em>yaqīn</em>. The Quran rebukes those who follow nothing but conjecture (10:36), and says that conjecture is no substitute for the truth (53:28). It is also applied to ethics: “avoid much suspicion, for some suspicion is a sin” (49:12). Legal usage gives the word a different sense. Jurists call a ruling <em>ẓannī</em> when it rests on probable evidence, and they accept such evidence for most practical rulings. The context shows which meaning is intended."
+  ],
+  "misread": "That it can be rendered as “opinion” or “thought”, which hides the Quranic criticism of conjecture on matters of belief.",
+  "sources": [],
+  "terms": [
+   "yaqin",
+   "iman",
+   "backbiting",
+   "knowledge"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Zan",
+   "Dhann"
+  ],
+  "faruqi": {
+   "page": 38,
+   "term": "ẒANN"
+  }
+ },
+ {
+  "slug": "zinah",
+  "title": "Zinah",
+  "ar": "زينة",
+  "tr": "Zīnah",
+  "def": "Adornment: a thing or act of beautification regarded as a source of enjoyment",
+  "what": [
+   "<em>Zīnah</em> is ornament or adornment, anything that beautifies and gives enjoyment. The Quran treats it as legitimate: “Take your adornment at every place of worship” (7:31), and asks who has forbidden the adornment that Allah brought forth for His servants (7:32). It also states that wealth and children are the adornment of the life of this world (18:46). The word carries both approval and warning. Beauty in moderation is lawful, while excessive attachment to display is criticised, and the Quran speaks of Qarun’s adornment that deceived his people (28:79). The word <em>zīnah</em> should be kept apart from <em>zinā</em>, the unlawful sexual act, which is spelled differently."
+  ],
+  "misread": "That it is confused with zina, adultery, when the two words differ in spelling and meaning.",
+  "sources": [],
+  "terms": [
+   "modesty-and-dress",
+   "hijab",
+   "qarun",
+   "ihsan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Zeenah"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "ZĪNAH"
+  }
+ },
+ {
+  "slug": "zulm",
+  "title": "Zulm",
+  "ar": "ظلم",
+  "tr": "Ẓulm",
+  "def": "The act of committing injustice; wrongdoing, which puts something where it does not belong",
+  "what": [
+   "<em>Ẓulm</em> is injustice or wrongdoing. Classical definitions describe it as putting a thing in a place that is not its own. The act may be done to others, to oneself or to Allah. The Quran counts the worship of anything besides Him as a great <em>ẓulm</em> (31:13). Ismail al-Faruqi derives it from the verb <em>ẓalama</em>, with the doer called a <em>ẓālim</em>. Islamic teaching treats it very seriously. A divine saying reported in Sahih Muslim has Allah say that He has forbidden <em>ẓulm</em> to Himself and has made it forbidden among people, and a saying recorded in the Sahih collections says that it will be darknesses on the Day of Resurrection."
+  ],
+  "misread": "That it is only injustice done to other people, when the Quran also names wrong done to oneself and wrong against Allah.",
+  "sources": [],
+  "terms": [
+   "zalim",
+   "justice",
+   "tagha",
+   "shirk"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dhulm",
+   "Zulm"
+  ],
+  "faruqi": {
+   "page": 38,
+   "term": "ẒULM"
+  }
  }
 ]

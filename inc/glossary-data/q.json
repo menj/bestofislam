@@ -27,6 +27,16 @@
    "Destiny",
    "Free Will",
    "Qada"
+  ],
+  "faruqi": [
+   {
+    "page": 43,
+    "term": "QADAR"
+   },
+   {
+    "page": 44,
+    "term": "QAḌĀ'"
+   }
   ]
  },
  {
@@ -199,5 +209,253 @@
   "aliases": [
    "Banu Qurayza"
   ]
+ },
+ {
+  "slug": "qaddara",
+  "title": "Qaddara",
+  "ar": "قدر",
+  "tr": "Qaddara",
+  "def": "To measure, assign and bring about according to plan; also to be able to make something happen.",
+  "what": [
+   "<em>Qaddara</em> means to measure out, to assign a thing its measure and to bring it about according to a plan. It also carries the sense of having the power to make something happen. The Quran uses it of God, who created everything and ordained it in due measure (25:2), and states that He created all things by measure (54:49). From this root come <em>qadar</em>, the measure or decree that God has set, and <em>qudrah</em>, power, together with the divine name <em>al-Qadīr</em>, the All-Powerful. Muslim teaching on <em>qadar</em> holds that nothing happens outside God’s knowledge and ordering, while a person remains responsible for choices and conduct."
+  ],
+  "misread": "That it means blind fate, when it points to a plan made by a knowing and powerful Lord.",
+  "sources": [],
+  "terms": [
+   "qadar",
+   "divine-attributes",
+   "allah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Qaddar"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "QADDARA"
+  }
+ },
+ {
+  "slug": "qasas",
+  "title": "Qasas",
+  "ar": "قصص",
+  "tr": "Qaṣaṣ",
+  "def": "The reports and narratives of those who relate, as in qaṣṣa; in the Quran, accounts of earlier peoples.",
+  "what": [
+   "<em>Qaṣaṣ</em> is the plural noun for accounts that are related, formed from the verb <em>qaṣṣa</em>, to relate. It is the word for the stories and reports narrated, above all those of earlier prophets and peoples that the Quran tells in order to teach. The Quran speaks of itself as the best of narratives (12:3), and a whole chapter, <em>al-Qaṣaṣ</em> (chapter 28), takes its name from the word. Muslims read these accounts as lessons and warnings, set down with a purpose, and not as entertainment."
+  ],
+  "misread": "That the Quranic stories are legends or folktales, when the term means true reports told for guidance.",
+  "sources": [],
+  "terms": [
+   "qassa",
+   "prophets",
+   "quran",
+   "fables-and-legends"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Qasas al-Anbiya"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "QAṢAṢ"
+  }
+ },
+ {
+  "slug": "qassa",
+  "title": "Qassa",
+  "ar": "قص",
+  "tr": "Qaṣṣa",
+  "def": "To relate reports or matters about earlier times, especially about earlier prophets.",
+  "what": [
+   "<em>Qaṣṣa</em> is an Arabic verb meaning to relate, to tell a report or a matter, particularly one from earlier times. It is used of the telling of the stories of earlier prophets and peoples, and the Quran uses it of God Himself, who relates the best of narratives to Muhammad (peace be upon him) in the Quran (12:3). The related noun <em>qaṣaṣ</em> names the reports that are related. The root also gives <em>qiṣṣah</em>, a story, and the Quran adds that in the accounts of the earlier prophets there is a lesson for people of understanding (12:111)."
+  ],
+  "misread": "That the telling of prophetic history is idle story, when the verb carries a truthful reporting of the past.",
+  "sources": [],
+  "terms": [
+   "qasas",
+   "prophets",
+   "quran"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Qassa"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "QAṢṢA"
+  }
+ },
+ {
+  "slug": "qiblah",
+  "title": "Qiblah",
+  "ar": "قبلة",
+  "tr": "Qiblah",
+  "def": "The direction of Makkah al-Mukarramah, which Muslims face in salah.",
+  "what": [
+   "The <em>qiblah</em> is the direction of the Kaaba in Makkah al-Mukarramah, which Muslims face when they perform the <em>salah</em>. It is also the direction in which a Muslim is laid in the grave. A mosque is built so that its prayer niche (<em>miḥrāb</em>) marks it. In the first years after the migration to Madinah, the Prophet Muhammad (peace be upon him) and the believers faced Jerusalem. The Quran then directed him to turn his face toward the Sacred Mosque, and the believers with him (2:144). Muslims everywhere, wherever they are on earth, turn toward that one point, which gives the community a shared centre in worship."
+  ],
+  "misread": "That Muslims worship the Kaaba, when it is only the direction they face in worshipping God alone.",
+  "sources": [],
+  "terms": [
+   "kaaba",
+   "salah",
+   "mecca",
+   "mosque"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Qibla",
+   "Kibla"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "QIBLAH"
+  }
+ },
+ {
+  "slug": "qisas-al",
+  "title": "Qisas, al-",
+  "ar": "القصاص",
+  "tr": "al-Qiṣāṣ",
+  "def": "The retributive and compensatory punishment prescribed for homicide and for injury to a person.",
+  "what": [
+   "<em>Al-Qiṣāṣ</em> is the law of equal retribution for killing and for bodily injury. It allows the victim or the family of the victim to demand a penalty equal to the harm done, and it also allows them to forgive the offender or to accept compensation instead. The compensation for a life or an injury is called <em>diya</em>. The Quran prescribes it for the killed (2:178) and says that in <em>qiṣāṣ</em> there is life for people of understanding (2:179). It also lists the principle of a life for a life and like for like in wounds, and calls forgiveness an act of charity that wipes away sins for the one who forgives (5:45)."
+  ],
+  "misread": "That it is only vengeance, when it limits the response to the harm done and invites forgiveness.",
+  "sources": [
+   "The jurists treat <em>qiṣāṣ</em> as a right of the injured party, and the state carries out the judgment after the court has proved the case. The Quran puts forgiveness above retribution, and a judge may not impose it where the family has pardoned."
+  ],
+  "terms": [
+   "diya",
+   "hudud",
+   "fiqh",
+   "justice"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Qisas",
+   "Qisas"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL QIṢĀṢ"
+  }
+ },
+ {
+  "slug": "qist",
+  "title": "Qist",
+  "ar": "قسط",
+  "tr": "Qisṭ",
+  "def": "Justice, equity and uprightness in all dealings; the verbal noun of aqsaṭa.",
+  "what": [
+   "<em>Qisṭ</em> means justice, equity and uprightness in dealing with all matters. It is the verbal noun of the verb <em>aqsaṭa</em>, to act justly, and the one who acts justly is the <em>muqsiṭ</em>. It stresses even-handed fairness in weight, judgment and treatment of others. The Quran commands believers to stand firmly for justice (<em>qisṭ</em>), as witnesses for God, even against themselves or their kin (4:135; see also 5:8). It says that God loves the just (<em>al-muqsiṭīn</em>) (49:9), and that He sent His messengers with the Book and the balance so that people may uphold justice (57:25)."
+  ],
+  "misread": "That it is only a legal term, when the Quran treats it as a standing duty in every dealing.",
+  "sources": [],
+  "terms": [
+   "justice",
+   "taqwa",
+   "quran"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Qist"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "QIST"
+  }
+ },
+ {
+  "slug": "qiyas-al",
+  "title": "Qiyas, al-",
+  "ar": "القياس",
+  "tr": "al-Qiyās",
+  "def": "Reasoning by analogy from the Quran and the Sunnah, as a source of Islamic law.",
+  "what": [
+   "<em>Al-Qiyās</em> is logical deduction applied to the sources of Islamic law. When no text of the Quran or of the Sunnah, nor consensus (<em>ijmāʿ</em>), settles a new case, the jurist compares it with a case that a text does settle, finds the shared reason (<em>ʿillah</em>), and extends the ruling to the new case. Most Sunni jurists count it as the fourth source of law, after the Quran, the Sunnah and consensus, and the schools differ on how widely they apply it. It is the main means by which the law meets circumstances the early community did not face."
+  ],
+  "misread": "That jurists invent law from opinion, when <em>qiyās</em> works from a stated reason found in the sources.",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "ijma",
+   "ijtihad",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Qiyas",
+   "Qiyas"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL QIYĀS"
+  }
+ },
+ {
+  "slug": "quran-al-karim-al",
+  "title": "Qur'an Al-Karim, al-",
+  "ar": "القرآن الكريم",
+  "tr": "al-Qurʾān al-Karīm",
+  "def": "God’s final revelation to Muhammad (peace be upon him), given in Arabic, memorized and recited from the start, and written in its present form by order of Uthman.",
+  "what": [
+   "<em>Al-Qurʾān al-Karīm</em>, the Noble Quran, is the final revelation of God’s will, given in Arabic to the Prophet Muhammad (peace be upon him). His Companions memorized it word for word and recited it publicly and continuously, as their descendants have done to the present day. Its present written form was prepared by order of Uthman ibn Affan (may God be pleased with him), the third of the Rashidun caliphs, in about 24-25 A.H. (646-647 C.E.). The Quran states that God sent down the reminder and will guard it (15:9). Muslims treat the Arabic text as the Quran itself, and a translation as an interpretation of its meanings."
+  ],
+  "misread": "That the Quran is the Prophet’s own writing or a translated book, when Muslims hold its wording to be from God.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "mushaf",
+   "wahy",
+   "kitab"
+  ],
+  "articles": [],
+  "type": "book",
+  "aliases": [
+   "Al-Qur'an Al-Karim",
+   "Al-Quran Al-Karim",
+   "Quran Karim",
+   "Noble Quran"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "AL QUR'ĀN AL KARĪM"
+  }
+ },
+ {
+  "slug": "quud",
+  "title": "Qu'ud",
+  "ar": "قعود",
+  "tr": "Quʿūd",
+  "def": "The act of sitting during the salah.",
+  "what": [
+   "<em>Quʿūd</em> is sitting in the <em>salah</em>. It is one of the postures of the prayer, along with standing (<em>qiyām</em>), bowing (<em>rukūʿ</em>) and prostration (<em>sujūd</em>). The worshipper sits after the prostrations, and sits again at the end of the unit of prayer to recite the <em>tashahhud</em> and invoke blessings on the Prophet Muhammad (peace be upon him). The sitting takes the place of standing for a person who cannot stand. The Quran praises those who remember God standing, sitting and lying on their sides (3:191). Sitting is a part of the structure that the Prophet taught and that Muslims follow in every prayer."
+  ],
+  "misread": "That any rest during prayer is optional, when sitting is a set part of the prayer.",
+  "sources": [],
+  "terms": [
+   "salah",
+   "ruku",
+   "dhikr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Quud",
+   "Qu’ud"
+  ],
+  "faruqi": {
+   "page": 55,
+   "term": "QU‘ŪD"
+  }
  }
 ]

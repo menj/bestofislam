@@ -381,6 +381,16 @@
    "Tayammum",
    "Cleanliness",
    "Hadath"
+  ],
+  "faruqi": [
+   {
+    "page": 41,
+    "term": "GHUSL"
+   },
+   {
+    "page": 54,
+    "term": "WUḌŪ'"
+   }
   ]
  },
  {
@@ -734,7 +744,13 @@
   "articles": [
    "before-your-first-friday-prayer"
   ],
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 23,
+    "term": "ADHĀN"
+   }
+  ]
  },
  {
   "slug": "adoption",
@@ -848,6 +864,12 @@
   "aliases": [
    "Zina",
    "Fornication"
+  ],
+  "faruqi": [
+   {
+    "page": 34,
+    "term": "ZINĀ"
+   }
   ]
  },
  {
@@ -1007,7 +1029,13 @@
    "shared-prophets"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 45,
+    "term": "AHL AL KITĀB"
+   }
+  ]
  },
  {
   "slug": "ahmad",
@@ -1184,6 +1212,12 @@
   "articles": [],
   "aliases": [
    "'Aziz, Al"
+  ],
+  "faruqi": [
+   {
+    "page": 39,
+    "term": "AL ʿAZĪZ"
+   }
   ]
  },
  {
@@ -1410,6 +1444,12 @@
   "aliases": [
    "Alah",
    "God"
+  ],
+  "faruqi": [
+   {
+    "page": 23,
+    "term": "ALLAH"
+   }
   ]
  },
  {
@@ -1434,7 +1474,13 @@
   "articles": [
    "before-your-first-friday-prayer"
   ],
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 56,
+    "term": "ALLĀHU AKBAR."
+   }
+  ]
  },
  {
   "slug": "alliances",
@@ -1484,6 +1530,12 @@
    "Sadaqa",
    "Sadaq",
    "Charity"
+  ],
+  "faruqi": [
+   {
+    "page": 35,
+    "term": "ṢADAQA"
+   }
   ]
  },
  {
@@ -1758,6 +1810,12 @@
   ],
   "aliases": [
    "Helpers"
+  ],
+  "faruqi": [
+   {
+    "page": 46,
+    "term": "ANṢĀR"
+   }
   ]
  },
  {
@@ -1897,6 +1955,12 @@
    "Irtidad",
    "Murtad",
    "Riddah"
+  ],
+  "faruqi": [
+   {
+    "page": 33,
+    "term": "RIDDAH"
+   }
   ]
  },
  {
@@ -2292,7 +2356,13 @@
    "islam-religion-of-peace"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 48,
+    "term": "ASBĀB AL NUZŪL"
+   }
+  ]
  },
  {
   "slug": "ashari-al",
@@ -2523,6 +2593,12 @@
   "aliases": [
    "Ayah",
    "Ayat"
+  ],
+  "faruqi": [
+   {
+    "page": 24,
+    "term": "ĀYAH"
+   }
   ]
  },
  {
@@ -2592,5 +2668,1615 @@
    "'Azra'Il",
    "Angel of Death"
   ]
+ },
+ {
+  "slug": "aazza",
+  "title": "Aʿazza",
+  "ar": "أعزّ",
+  "tr": "Aʿazza",
+  "def": "To ennoble a person by raising him in honour and standing in society, an act the Quran ascribes to God.",
+  "what": [
+   "The verb <em>aʿazza</em> is the causative of <em>ʿazza</em>, to be mighty or honoured, and means to give someone honour, rank and strength among others. The Quran says to God: “You honour whom You will and You humble whom You will” (3:26), using the related verb <em>tuʿizzu</em>. The Muslim therefore sees honour as a gift conferred by God, and a person who rises in standing owes that rise to Him. Among people the verb describes the act of ennobling or promoting someone, for example by granting a post, a title or the respect of the community."
+  ],
+  "misread": "Rendered as “to promote” or “to exalt”, it loses the sense that true honour is granted by God.",
+  "sources": [],
+  "terms": [
+   "al-aziz",
+   "divine-attributes",
+   "amala"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Aazza",
+   "Azza"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "AʿAZZA"
+  }
+ },
+ {
+  "slug": "abada",
+  "title": "'Abada",
+  "ar": "عبد",
+  "tr": "ʿAbada",
+  "def": "To serve, worship and obey God as He has ordered, following Muhammad (peace be upon him); the sense is noble when God is the object and degrading otherwise.",
+  "what": [
+   "The verb <em>ʿabada</em> joins worship and service in a single act. When God is its object, it names the highest and most honourable thing a human being can do: to serve Him, worship Him and obey what He has ordered, following the example of Muhammad (peace be upon him). When the object is anything other than God, the same verb takes its lowest and most degrading sense, since it then describes the slavery of a person to a creature, an idol or a passion. The Quran says that humans and jinn were created to worship God (51:56), and the believer says in every prayer, “You alone we worship” (1:5). The nouns <em>ʿibādah</em> and <em>ʿabd</em> come from this root."
+  ],
+  "misread": "Translating it as “worship” alone hides that it covers obedience and service in the whole of life, ritual included.",
+  "sources": [],
+  "terms": [
+   "ibadah",
+   "abd-2",
+   "tawhid",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Abada"
+  ],
+  "faruqi": {
+   "page": 38,
+   "term": "'ABADA"
+  }
+ },
+ {
+  "slug": "abd-2",
+  "title": "ʿAbd",
+  "ar": "عبد ، عابد",
+  "tr": "ʿAbd, ʿĀbid",
+  "def": "The person who serves God; the plural of ʿabd is ʿibād and that of ʿābid is ʿābidūn.",
+  "what": [
+   "<em>ʿAbd</em> and <em>ʿābid</em> name the person who performs <em>ʿabada</em>, the service and worship of God. The Quran calls the Prophet God’s <em>ʿabd</em> in the verse of the Night Journey, “Glory to Him who took His servant by night” (17:1), and the witness of faith declares that Muhammad (peace be upon him) is His servant and messenger. God addresses believers in the plural: “O My servants who have transgressed against themselves, do not despair of the mercy of God” (39:53). The Quran also describes the servants of the Most Merciful as those who walk on the earth in humility (25:63). Many Muslim names, such as ʿAbd Allāh, combine <em>ʿabd</em> with one of the names of God."
+  ],
+  "misread": "The usual English rendering is “slave”, which suggests forced bondage to a master; the ʿabd of the Quran is a free person who chooses to serve God.",
+  "sources": [],
+  "terms": [
+   "abada",
+   "ibadah",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "ʿAbid",
+   "Abd",
+   "Abid",
+   "Ibad"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "ʿABD, ʿĀBID"
+  }
+ },
+ {
+  "slug": "adhab",
+  "title": "ʿAdhab",
+  "ar": "عذاب",
+  "tr": "ʿAdhāb",
+  "def": "Punishment, pain and suffering in this world or the next, which God inflicts on humans who violate His Shariah.",
+  "what": [
+   "<em>ʿAdhāb</em> is the pain or suffering that follows from breaking the law of God, whether it falls in this world or in the next. The Quran warns of it often, and it also sets it beside mercy: “My punishment is what I inflict on whom I will, and My mercy encompasses all things” (7:156). It asks, “Why would God punish you if you are grateful and believe?” (4:147), which shows that gratitude and faith lie within the reach of every person. Scholars of the law treat <em>ʿadhāb</em> as the just consequence of disobedience after warning has been given, and the door of repentance remains open until death."
+  ],
+  "misread": "Rendered “torment” or “wrath”, it can suggest cruelty for its own sake, while the Quran presents it as the just consequence of breaking God’s law after warning.",
+  "sources": [],
+  "terms": [
+   "sharia",
+   "akhira",
+   "hell",
+   "forgiveness"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Adhab",
+   "Azab"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "ʿADHĀB"
+  }
+ },
+ {
+  "slug": "aflaha",
+  "title": "Aflaha",
+  "ar": "أفلح",
+  "tr": "Aflaḥa",
+  "def": "To succeed in one’s endeavour; the Quran uses it for the believers who attain lasting success.",
+  "what": [
+   "The verb <em>aflaḥa</em> means to succeed, to flourish and to reach what one strives for. The twenty-third surah opens with it: “Successful indeed are the believers” (23:1), and it goes on to name humility in prayer, avoidance of idle talk, giving <em>zakāh</em> and guarding chastity (23:2–5). The noun <em>falāḥ</em> comes from the same root, and the call to prayer invites people with the words <em>ḥayya ʿalā l-falāḥ</em>, “come to success”. Success in this sense is measured by a person’s standing before God, so it includes this world and the next."
+  ],
+  "misread": "“Success” in English usually means worldly achievement, whereas <em>falāḥ</em> in the Quran extends to the outcome in the hereafter.",
+  "sources": [],
+  "terms": [
+   "adhan",
+   "salah",
+   "akhira",
+   "taqwa"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Aflah",
+   "Falah"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "AFLAḤA"
+  }
+ },
+ {
+  "slug": "ahd-al",
+  "title": "ʿAhd, al-",
+  "ar": "العهد",
+  "tr": "al-ʿAhd",
+  "def": "The covenant between God and humankind, by which people pledge obedience and God rewards or punishes accordingly; a lawful pledge between people is also binding.",
+  "what": [
+   "<em>Al-ʿahd</em> is the covenant by which every human being commits to obey God, while God undertakes to reward or punish according to that obedience. The Quran recalls a pledge taken from the descendants of Adam, when God asked, “Am I not your Lord?” and they answered, “Yes, we bear witness” (7:172). When two humans make a legitimate <em>ʿahd</em>, Islamic law counts it as a most serious commitment. The Quran commands, “Fulfil the covenant, for the covenant will be asked about” (17:34). Keeping promises is therefore a duty owed to God as well as to the other party."
+  ],
+  "misread": "The English word “covenant” carries Biblical overtones of a pact with one chosen people, whereas the Quranic covenant is with all humanity.",
+  "sources": [],
+  "terms": [
+   "covenant",
+   "amanah",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-ʿAhd",
+   "Ahd",
+   "Covenant With God"
+  ],
+  "faruqi": {
+   "page": 41,
+   "term": "AL ʿAHD"
+  }
+ },
+ {
+  "slug": "ahkam-al-quran",
+  "title": "Ahkam al-Qur'an",
+  "ar": "أحكام القرآن",
+  "tr": "Aḥkām al-Qurʾān",
+  "def": "The rulings and prescriptions taken directly from the text of the Quran, and the name of a genre of works that gather them.",
+  "what": [
+   "In the sciences of the Quran, <em>aḥkām</em> (singular <em>ḥukm</em>) are the rulings that the text itself prescribes, such as those on prayer, fasting, marriage, inheritance and contracts. They stand apart from rulings that jurists reach by deduction from the hadith, consensus or analogy. Scholars collected the verses with legal content and arranged them by subject. Works titled <em>Aḥkām al-Qurʾān</em> were composed by jurists such as al-Jaṣṣāṣ and Ibn al-ʿArabī, and they remain a tool for students of <em>fiqh</em> and <em>tafsīr</em>."
+  ],
+  "misread": "It is sometimes taken for a law code separate from the Quran, but the <em>aḥkām</em> are the legal content of the Quran itself.",
+  "sources": [],
+  "terms": [
+   "hukm",
+   "fiqh",
+   "tafsir",
+   "sharia"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Ahkam Al-Quran",
+   "Verses Of Rulings"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "AḤKĀM AL QUR'ĀN"
+  }
+ },
+ {
+  "slug": "ahl-al-sunnah-wal-jamaah",
+  "title": "Ahl al-Sunnah wal-Jama'ah",
+  "ar": "أهل السنّة والجماعة",
+  "tr": "Ahl al-Sunna wa-l-Jamāʿa",
+  "def": "The community that stands united behind the Sunnah of the Prophet, the name by which the Sunni majority of Muslims know themselves.",
+  "what": [
+   "The phrase means “the people of the Sunnah and the congregation”. It names the mainstream community of Muslims who hold to the practice of Muhammad (peace be upon him) and keep to the unity of the body of believers. The word <em>Sunnī</em> is its usual short form. In law this community includes the four Sunni schools, and in creed it includes the theological schools of al-Ashʿarī and al-Māturīdī. The two halves of the name express its two commitments: loyalty to the example of the Prophet and loyalty to the community that carries it."
+  ],
+  "misread": "Shortened to “Sunni”, it is sometimes taken as the name of a sect, while the Arabic phrase stresses fidelity to the Prophet’s practice and to the unity of the community.",
+  "sources": [],
+  "terms": [
+   "sunnah",
+   "jamaat",
+   "ummah",
+   "ashari"
+  ],
+  "articles": [],
+  "type": "group",
+  "aliases": [
+   "Sunni",
+   "Ahl Al-Sunna"
+  ],
+  "faruqi": {
+   "page": 64,
+   "term": "AHL AL SUNNAH WAL JAMĀ‘AH"
+  }
+ },
+ {
+  "slug": "ahmad-2",
+  "title": "Ahmad",
+  "ar": "أحمد ، محمود",
+  "tr": "Aḥmad, Maḥmūd",
+  "def": "Two names of the Prophet Muhammad (peace be upon him), meaning the praiseworthy and the praised, for his virtue and righteousness.",
+  "what": [
+   "<em>Aḥmad</em> and <em>Maḥmūd</em> come from the same root as Muhammad (peace be upon him), <em>ḥ-m-d</em>, which means praise. The Quran reports Jesus giving good news of “a messenger who will come after me, whose name is Aḥmad” (61:6), and Muslims understand this as a reference to Muhammad. The Quran also promises him a “praised station”, <em>maqām maḥmūd</em> (17:79). A report in Sahih al-Bukhari has the Prophet saying that he had several names, among them Muhammad and Aḥmad. The names express the esteem in which his virtue and righteousness are held."
+  ],
+  "misread": "Aḥmad is sometimes treated as a different person from Muhammad, whereas it is one of his own names.",
+  "sources": [],
+  "terms": [
+   "muhammad",
+   "honorifics",
+   "sira",
+   "quran"
+  ],
+  "articles": [],
+  "type": "person",
+  "aliases": [
+   "Mahmud",
+   "Ahmed"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AḤMAD, MAḤMŪD"
+  }
+ },
+ {
+  "slug": "ahsana",
+  "title": "Ahsana",
+  "ar": "أحصن",
+  "tr": "Aḥṣana",
+  "def": "To keep oneself pure from illegitimate sexual contact; muḥṣin and muḥṣana name a man or woman who guards chastity.",
+  "what": [
+   "The root <em>ḥ-ṣ-n</em> gives the idea of a fortress, and <em>aḥṣana</em> means to protect oneself within one, here against illegitimate sexual contact. The derived forms are <em>muḥṣin</em> (plural <em>muḥṣinūn</em>) for a man and <em>muḥṣana</em> (plural <em>muḥṣanāt</em>) for a woman. The Quran uses <em>muḥṣanāt</em> for chaste women, as in the verse on those who accuse them falsely (24:4), and for married women (4:24). In the law of <em>zinā</em> the status of <em>iḥṣān</em> affects the ruling, and jurists set out its conditions in detail."
+  ],
+  "misread": "It is often rendered simply as “chaste” or “married”, whereas the Arabic covers both as forms of protecting one’s purity.",
+  "sources": [],
+  "terms": [
+   "adultery",
+   "marriage",
+   "modesty-and-dress",
+   "hudud"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Ihsan Of Chastity",
+   "Muhsan",
+   "Muhsana",
+   "Muhsanat"
+  ],
+  "faruqi": {
+   "page": 29,
+   "term": "AḤṢANA"
+  }
+ },
+ {
+  "slug": "ajal",
+  "title": "Ajal",
+  "ar": "أجل",
+  "tr": "Ajal",
+  "def": "The time that God has appointed for any event, above all the span of a life or the end of a nation.",
+  "what": [
+   "<em>Ajal</em> is the term that God has fixed for an event. The Quran says: “For every nation there is a term; when their term comes, they can neither delay it by an hour nor bring it forward” (7:34), and “God never delays a soul when its term has come” (63:11). The word also serves in everyday dealings, as in the verse on debts, “a stated term” (2:282). Muslims therefore hold that the hour of death is known to God and fixed by Him, and that no one can hasten or postpone it."
+  ],
+  "misread": "Rendered “fate” or “doom”, it suggests a blind force, while <em>ajal</em> is a term known to God within which people remain responsible for their deeds.",
+  "sources": [],
+  "terms": [
+   "qadar",
+   "death",
+   "akhira"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Appointed Term"
+  ],
+  "faruqi": {
+   "page": 23,
+   "term": "AJAL"
+  }
+ },
+ {
+  "slug": "ajrukum-ala-allah",
+  "title": "Ajrukum 'ala Allah",
+  "ar": "أجركم على الله",
+  "tr": "Ajrukum ʿalā Allāh",
+  "def": "“Your reward rests with God”: said to a person who deserves compensation, as a prayer that God repay what the person gave or lost.",
+  "what": [
+   "The words mean literally “your reward is upon God”. A Muslim says them to someone who has spent effort or money, or who has suffered a loss or inconvenience on another person’s behalf, and so deserves compensation. The speaker asks that God repay the person, since God repays far better than any human can. The thought behind it is stated in the Quran: “Whatever good you send ahead for yourselves, you will find it with God, better and greater in reward” (73:20). The phrase turns a debt of gratitude into a prayer."
+  ],
+  "misread": "Often reduced to “thank you”, it is a prayer that places the reward with God.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "common-phrases",
+   "kindness"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Ajrukum Ala Allah"
+  ],
+  "faruqi": {
+   "page": 60,
+   "term": "AJRUKUM ‘ALĀ ALLAH."
+  }
+ },
+ {
+  "slug": "akbar",
+  "title": "Akbar",
+  "ar": "أكبر",
+  "tr": "Akbar",
+  "def": "A divine attribute meaning the Greater: God is greater than anything that can be named or compared, as in the takbir Allahu akbar.",
+  "what": [
+   "<em>Akbar</em> is the comparative of <em>kabīr</em>, great, and as a divine attribute it means that God is greater than all that exists and beyond every comparison. Scholars explain that no description of Him can reach His greatness. The Quran says, “The remembrance of God is greater” (29:45). The attribute gives the <em>takbīr</em>, <em>Allāhu akbar</em>, which opens the call to prayer, begins the ritual prayer and is said at the festivals. Muslims also say it at moments of joy and of difficulty, to recall that God is greater than the matter at hand."
+  ],
+  "misread": "<em>Allāhu akbar</em> is often presented in English as a battle cry, whereas Muslims say it in prayer, at birth and at every occasion that recalls God’s greatness.",
+  "sources": [],
+  "terms": [
+   "allahu-akbar",
+   "adhan",
+   "divine-attributes",
+   "salah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Takbir"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "AKBAR"
+  }
+ },
+ {
+  "slug": "akh",
+  "title": "Akh",
+  "ar": "أخ",
+  "tr": "Akh",
+  "def": "A brother in faith; the plurals are ikhwah and ikhwān.",
+  "what": [
+   "<em>Akh</em> means a brother, and in Islamic usage it also names a fellow believer. The Quran says, “The believers are but brothers” (49:10), and the Prophet is reported to have said that none of you truly believes until he loves for his brother what he loves for himself (Sahih al-Bukhari and Sahih Muslim). The feminine form is <em>ukht</em>, sister. After the migration to Medina, the Prophet joined emigrants from Mecca and helpers from Medina as brothers in pairs, and the bond of faith was given the weight of kinship. Muslims greet one another as <em>akhī</em>, my brother, for this reason."
+  ],
+  "misread": "Translated only as “brother”, it loses the bond of shared faith that Muslims extend to one another across lineage.",
+  "sources": [],
+  "terms": [
+   "brotherhood",
+   "ummah",
+   "ansar"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Ikhwah",
+   "Ikhwan",
+   "Brother"
+  ],
+  "faruqi": {
+   "page": 23,
+   "term": "AKH"
+  }
+ },
+ {
+  "slug": "akhirah-al",
+  "title": "Akhirah, al-",
+  "ar": "الآخرة",
+  "tr": "al-Ākhira",
+  "def": "The hereafter: the judgment, and the eternal consummation of that judgment in Paradise or Hell.",
+  "what": [
+   "<em>Al-Ākhira</em> means “the last” or “the later”, and it is the counterpart of <em>al-dunyā</em>, this present life. Belief in it is one of the articles of Islamic faith. It includes the resurrection, the reckoning of deeds, and the eternal outcome in Paradise or Hell. The Quran describes the believers as those who are certain of the hereafter (2:4) and says, “The hereafter is better and more lasting” (87:17). Awareness of the <em>ākhira</em> shapes conduct in this life, because deeds are weighed and judged by God, who is both just and merciful."
+  ],
+  "misread": "Rendered “afterlife”, it suggests a mere continuation of life, while the <em>ākhira</em> is a judgment that gives moral weight to conduct now.",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "paradise",
+   "hell",
+   "judgement"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Akhirah",
+   "Al-Akhira",
+   "Hereafter"
+  ],
+  "faruqi": {
+   "page": 23,
+   "term": "AL ĀKHIRAH"
+  }
+ },
+ {
+  "slug": "al-amr-bil-maruf-wal-nahy-an-al-munkar",
+  "title": "Al-Amr bil-Ma'ruf wal-Nahy 'an al-Munkar",
+  "ar": "الأمر بالمعروف والنهي عن المنكر",
+  "tr": "al-Amr bi-l-Maʿrūf wa-l-Nahy ʿan al-Munkar",
+  "def": "Commanding what is commonly known as good and forbidding what is evil or undesirable, a duty laid on the Muslim community.",
+  "what": [
+   "<em>Maʿrūf</em> is what is known and recognised as good, and <em>munkar</em> is what is rejected as evil or undesirable. The Quran says, “Let there be among you a community who call to good, enjoin what is right and forbid what is wrong” (3:104), and it describes the believers as “the best community brought forth for people” because they do so (3:110). The duty belongs to the whole community, and scholars attach conditions to it: knowledge of the matter, gentleness in manner, and care that the correction does not cause a greater harm."
+  ],
+  "misread": "It is often equated with a religious police, whereas in the Quran it is a duty of the whole community carried out with knowledge and gentleness.",
+  "sources": [
+   "A hadith in Sahih Muslim, reported by Abu Said al-Khudri, says that whoever sees a wrong should change it by hand, and if unable then by tongue, and if unable then by heart, which is the weakest degree of faith."
+  ],
+  "terms": [
+   "ummah",
+   "ethics-and-conduct",
+   "haqq",
+   "kindness"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Hisba",
+   "Enjoining Good And Forbidding Evil",
+   "Amr Bil Maruf"
+  ],
+  "faruqi": {
+   "page": 63,
+   "term": "AL AMR BIL MA‘RŪF WAL NAHY ‘AN AL MUNKAR"
+  }
+ },
+ {
+  "slug": "al-bayt-al",
+  "title": "Al-Bayt, al-",
+  "ar": "آل البيت",
+  "tr": "Āl al-Bayt",
+  "def": "The household of the Prophet Muhammad (peace be upon him), whom Muslims honour and include in their blessings on him.",
+  "what": [
+   "<em>Āl</em> means family and <em>bayt</em> means house, so the name is “the family of the house”, the household of Muhammad (peace be upon him). The Quran addresses his household in surah 33, where God wishes to remove impurity from them and purify them (33:33). In the prayer of blessing on the Prophet, which Muslims say in every ritual prayer, they ask God to bless him and his family (<em>āl</em>). Scholars differ on the exact limits of the household, but all include his wives, his children and his close kin. Muslims of every school honour them for their closeness to the Prophet."
+  ],
+  "misread": "The household is sometimes treated as the concern of one sect, yet all Muslims honour it and bless it in prayer.",
+  "sources": [],
+  "terms": [
+   "ahl-al-bayt",
+   "fatima",
+   "muhammad",
+   "honorifics"
+  ],
+  "articles": [],
+  "type": "group",
+  "aliases": [
+   "Al al-Bayt",
+   "Al Al-Bayt",
+   "Ahl Al-Bayt",
+   "Household Of The Prophet"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "ĀL AL BAYT"
+  }
+ },
+ {
+  "slug": "al-bayt-al-haram",
+  "title": "Al-Bayt al-Haram",
+  "ar": "البيت الحرام",
+  "tr": "al-Bayt al-Ḥarām",
+  "def": "The Sacred House, a name of the Kaaba in Mecca, toward which Muslims face in prayer and around which they circle in the hajj.",
+  "what": [
+   "<em>Al-Bayt al-Ḥarām</em> means “the Sacred House” and is a name of the Kaaba. The Quran says, “God has made the Kaaba, the Sacred House, a standing place for people” (5:97). <em>Ḥarām</em> here means inviolable: the House and the precinct around it in Mecca are a sanctuary with special rules of conduct. Muslims face it in each ritual prayer (2:144), and pilgrims circle it during the hajj and the <em>ʿumra</em>. The Quran links it to Abraham, who raised its foundations with Ishmael (2:127)."
+  ],
+  "misread": "Called “the House of God” in English, it can seem that God dwells there, but Muslims hold that God is not confined to a place and that the Kaaba is the direction of worship.",
+  "sources": [],
+  "terms": [
+   "kaaba",
+   "hajj",
+   "mecca",
+   "mosque"
+  ],
+  "articles": [],
+  "type": "place",
+  "aliases": [
+   "Sacred House",
+   "Holy House"
+  ],
+  "faruqi": {
+   "page": 64,
+   "term": "AL BAYT AL ḤARĀM"
+  }
+ },
+ {
+  "slug": "al-dhawq-al-shari",
+  "title": "Al-Dhawq al-Shar'i",
+  "ar": "الذوق الشرعي",
+  "tr": "al-Dhawq al-Sharʿī",
+  "def": "The informed, intuitive and critical sense by which a judge reaches verdicts that fulfil, or come closest to fulfilling, the purposes of the Shariah.",
+  "what": [
+   "<em>Dhawq</em> means taste, and <em>al-dhawq al-sharʿī</em> is the trained sensibility of a jurist or judge. Through long familiarity with the texts of the Quran and the Sunnah and with the purposes of the Shariah, such a person senses which verdict serves those purposes most completely, or comes nearest to doing so. The faculty is intuitive and also informed and critical, because it rests on knowledge. Discussions of the objectives of the Shariah (<em>maqāṣid</em>) rely on it where the texts leave room for judgment."
+  ],
+  "misread": "It is mistaken for personal whim, whereas it is a disciplined sense formed by knowledge of the texts and the purposes of the law.",
+  "sources": [],
+  "terms": [
+   "sharia",
+   "ijtihad",
+   "fiqh",
+   "hukm"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Dhawq Shari",
+   "Legal Taste"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "AL DHAWQ AL SHAR'Ī"
+  }
+ },
+ {
+  "slug": "al-hamdu-lillah",
+  "title": "Al-Hamdu Lillah",
+  "ar": "الحمد لله",
+  "tr": "al-Ḥamdu li-llāh",
+  "def": "“All praise and thanksgiving be to Allah”: said after finishing eating, drinking or any other activity.",
+  "what": [
+   "The words mean that praise and thanks belong to God. They open the Fatiha, “Praise be to God, Lord of the worlds” (1:2), and they come to the lips of a Muslim after a meal, after a drink, after sneezing, on good news, on safe arrival and at the close of any task. A hadith in Sahih Muslim, reported by Anas, says that God is pleased with the servant who eats a morsel or drinks a draught and praises Him for it. The phrase is also the ordinary answer to the question “How are you?”, and it keeps the thought of God close in daily speech."
+  ],
+  "misread": "Rendered “thank God”, it captures the gratitude but leaves out the praise that <em>ḥamd</em> includes.",
+  "sources": [],
+  "terms": [
+   "al-hamdu-lillahi",
+   "dhikr",
+   "dua",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Alhamdulillah",
+   "Alhamdu Lillah",
+   "Hamdala"
+  ],
+  "faruqi": {
+   "page": 61,
+   "term": "AL ḤAMDU LILLAH."
+  }
+ },
+ {
+  "slug": "al-hamdu-lillah-alladhi-atamana",
+  "title": "Al-Hamdu Lillah alladhi At'amana",
+  "ar": "الحمد لله الذي أطعمنا وسقانا وجعلنا مسلمين",
+  "tr": "al-Ḥamdu li-llāhi alladhī aṭʿamanā wa saqānā wa jaʿalanā muslimīn",
+  "def": "“Praise be to Allah who gave us to eat and drink and made us Muslims”: said at the conclusion of every meal.",
+  "what": [
+   "The words close a meal with praise of God for food, drink and Islam itself. They place the gift of faith beside the gifts of nourishment, so that the Muslim remembers that both come from God. The phrase is reported in a hadith in Abu Dawud. The Quran commands, “Eat of the good things We have provided for you, and give thanks to God” (2:172). Saying these words at the end of a meal answers that command and completes the blessing with which a Muslim begins, the <em>basmala</em>."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "al-hamdu-lillah",
+   "dua",
+   "halal-and-haram-food",
+   "dhikr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dua After Eating"
+  ],
+  "faruqi": {
+   "page": 62,
+   "term": "AL ḤAMDU LILLAH ALLADHĪ AṬ‘AMANĀ WA SAQĀNĀ WA JA‘ALANĀ MUSLIMĪN."
+  }
+ },
+ {
+  "slug": "al-hamdu-lillah-alladhi-kasani",
+  "title": "Al-Hamdu Lillah alladhi Kasani",
+  "ar": "الحمد لله الذي كساني",
+  "tr": "al-Ḥamdu li-llāhi alladhī kasānī",
+  "def": "“Praise be to Allah who clothed me”: said each time one puts on one’s clothes.",
+  "what": [
+   "The Muslim thanks God each time he or she dresses. The words recognise clothing as a gift from God: “O children of Adam, We have sent down to you clothing to cover your nakedness, and as adornment” (7:26). A longer wording of the phrase is reported in the hadith collections of Abu Dawud and al-Tirmidhi, in which the person adds that the clothing came without any power or strength of his own. Saying it connects an ordinary action to gratitude and to the modesty that clothing serves."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "modesty-and-dress",
+   "al-hamdu-lillah",
+   "dua",
+   "hijab"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dua For Clothing",
+   "Dua For Dressing"
+  ],
+  "faruqi": {
+   "page": 61,
+   "term": "AL ḤAMDU LILLAH ALLADHĪ KASĀNĪ."
+  }
+ },
+ {
+  "slug": "al-hamdu-lillah-rabb-al-alamin-rahimakum-allah-ajmain",
+  "title": "Al-Hamdu Lillah Rabb al-'Alamin... Rahimakum Allah... Ajma'in",
+  "ar": "الحمد لله رب العالمين رحمكم الله أجمعين",
+  "tr": "al-Ḥamdu li-llāhi rabbi l-ʿālamīn... Raḥimakum Allāh... Ajmaʿīn",
+  "def": "The exchange after a sneeze: the sneezer praises God, those present answer with a prayer for mercy, and the sneezer replies with a prayer for all.",
+  "what": [
+   "When a Muslim sneezes, he or she says <em>al-ḥamdu li-llāhi rabbi l-ʿālamīn</em>, “praise belongs to God, Lord of the worlds”. Those present answer <em>raḥimakum Allāh</em>, “may God have mercy on you”, and the one who sneezed replies with a prayer that includes everyone, <em>ajmaʿīn</em>, “all of us together”. Sahih al-Bukhari reports from Abu Hurayra that the Prophet taught this courtesy: the sneezer says <em>al-ḥamdu li-llāh</em>, the brother answers <em>yarḥamuka llāh</em>, and the sneezer replies <em>yahdīkumu llāhu wa yuṣliḥu bālakum</em>, “may God guide you and set your affairs right”. The wording of the reply varies, and the exchange binds believers in mutual good will."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "al-hamdu-lillah",
+   "dua",
+   "brotherhood",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sneezing",
+   "Yarhamuk Allah"
+  ],
+  "faruqi": {
+   "page": 63,
+   "term": "AL ḤAMDU LILLAH RABB AL ‘ĀLAMĪN... RAḤIMAKUM ALLAH... AJMA‘ĪN."
+  }
+ },
+ {
+  "slug": "al-hamdu-lillahi",
+  "title": "Al-Hamdu Lillahi",
+  "ar": "الحمد لله / الحمد لله رب العالمين",
+  "tr": "al-Ḥamdu li-llāhi / al-Ḥamdu li-llāhi rabbi l-ʿālamīn",
+  "def": "Praise and thanksgiving to Allah, Lord of the universe, said at the end of any activity.",
+  "what": [
+   "The longer form is the second verse of the Fatiha, “Praise be to God, Lord of the worlds” (1:2). The Quran says that the last prayer of those in Paradise will be “Praise be to God, Lord of the worlds” (10:10), and the same words close the account of the judgment (39:75). Muslims therefore use them to end a task, a speech or a prayer. The phrase unites praise and gratitude and ascribes every success to God. It is among the most frequent words on Muslim lips."
+  ],
+  "misread": "",
+  "sources": [
+   "A hadith in Sahih Muslim, reported by Abu Malik al-Ashʿarī, says that <em>al-ḥamdu li-llāh</em> fills the scale of deeds."
+  ],
+  "terms": [
+   "al-hamdu-lillah",
+   "fatiha",
+   "alamin-al",
+   "dhikr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Alhamdulillah Rabb Al-Alamin"
+  ],
+  "faruqi": {
+   "page": 56,
+   "term": "AL ḤAMDU LILLAHI or AL ḤAMDU LILLAHI RABB AL ‘ĀLAMĪN"
+  }
+ },
+ {
+  "slug": "al-muallafah-qulubuhum",
+  "title": "Al-Mu'allafah Qulubuhum",
+  "ar": "المؤلفة قلوبهم",
+  "tr": "al-Muʾallafa Qulūbuhum",
+  "def": "Those whose hearts are yet to be reconciled; the Quran lists them among the recipients of zakah.",
+  "what": [
+   "The phrase means “those whose hearts are to be reconciled”. The Quran names them in its list of eight classes who may receive <em>zakāh</em> (9:60). They are people whose goodwill or friendship is to be won, such as new converts, or leaders whose support would help the community. The Prophet gave gifts to some leading men of Quraysh after the battle of Hunayn to win their hearts, and the practice rests on that example. Jurists differ on whether the class applies in later times."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "zakat",
+   "hunayn",
+   "almsgiving"
+  ],
+  "articles": [],
+  "type": "group",
+  "aliases": [
+   "Muallafat Al-Qulub",
+   "Reconciled Hearts"
+  ],
+  "faruqi": {
+   "page": 63,
+   "term": "AL MU’ALLAFAH QULŪBUHUM"
+  }
+ },
+ {
+  "slug": "al-qawaid-al-fiqhiyyah",
+  "title": "Al-Qawa'id al-Fiqhiyyah",
+  "ar": "القواعد الفقهية",
+  "tr": "al-Qawāʿid al-Fiqhiyya",
+  "def": "The general maxims that jurists follow in the legal process, each stating a principle that runs through many cases.",
+  "what": [
+   "<em>Al-qawāʿid al-fiqhiyya</em> are short legal maxims that sum up a principle found across many chapters of <em>fiqh</em>. Five are widely taught: “matters are judged by their purposes”, “certainty is not removed by doubt”, “hardship brings ease”, “harm is to be removed” and “custom is a basis of judgment”. Jurists use the maxims to organise the law and to reason about new cases. Each maxim draws on the Quran, the hadith and the experience of generations of scholars, and none of them replaces the texts."
+  ],
+  "misread": "The maxims are mistaken for a list of fixed rulings, whereas they are guiding principles from which jurists decide cases.",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "qiyas",
+   "hukm",
+   "al-qawaid-al-usuliyyah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Legal Maxims",
+   "Qawaid Fiqhiyya"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "AL QAWĀ'ID AL FIQHIYYAH"
+  }
+ },
+ {
+  "slug": "al-qawaid-al-usuliyyah",
+  "title": "Al-Qawa'id al-Usuliyyah",
+  "ar": "القواعد الأصولية",
+  "tr": "al-Qawāʿid al-Uṣūliyya",
+  "def": "The general rules of juristic deduction, whether linguistic or contextual, by which rulings are drawn from the Quran and the hadith.",
+  "what": [
+   "<em>Al-qawāʿid al-uṣūliyya</em> belong to <em>uṣūl al-fiqh</em>, the principles of jurisprudence. They govern how a jurist reads a text and draws a ruling from it. Some are linguistic, such as the rules on whether a command indicates obligation or a prohibition indicates that an act is forbidden, and on how general and specific wording interact. Others are contextual and attend to the circumstances, purpose and place of a text among other texts. Al-Shāfiʿī’s <em>Risāla</em> is the early work most often cited as the foundation of the discipline."
+  ],
+  "misread": "They are confused with the legal maxims, whereas the <em>uṣūlī</em> rules concern how texts are read and the <em>fiqhī</em> maxims concern the content of the law.",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "ijtihad",
+   "qiyas",
+   "ijma"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Usul Rules",
+   "Qawaid Usuliyya"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "AL QAWĀ'ID AL UṢŪLIYYAH"
+  }
+ },
+ {
+  "slug": "al-salamu-alaykum-wa-rahmah-allah",
+  "title": "Al-Salamu 'Alaykum wa Rahmah Allah",
+  "ar": "السلام عليكم ورحمة الله",
+  "tr": "al-Salāmu ʿalaykum wa raḥmatu llāh",
+  "def": "“Peace be upon you and the mercy of God”: said whenever a Muslim meets a Muslim and on entering a house or room.",
+  "what": [
+   "This is the Muslim greeting in its fuller form, and the short form is <em>al-salāmu ʿalaykum</em>. The reply is <em>wa ʿalaykumu l-salām wa raḥmatu llāh</em>. The Quran commands, “When you are greeted with a greeting, return it with a better one or the same” (4:86), and it tells people entering houses to greet one another with a greeting from God, blessed and good (24:61). A hadith in Sahih Muslim, reported by Abu Hurayra, tells believers to spread the greeting among themselves, and it names this as a means of mutual love."
+  ],
+  "misread": "The words are sometimes heard as a password for insiders, whereas the greeting is a prayer for peace and mercy offered to every person addressed.",
+  "sources": [],
+  "terms": [
+   "greeting-non-muslims",
+   "brotherhood",
+   "common-phrases",
+   "honorifics"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Assalamu Alaikum",
+   "As-Salamu Alaykum",
+   "Salam"
+  ],
+  "faruqi": {
+   "page": 59,
+   "term": "AL SALĀMU ‘ALAYKUM WA RAḤMAH ALLAH."
+  }
+ },
+ {
+  "slug": "al-salatu-wal-salamu-ala-sayyidina-muhammad",
+  "title": "Al-Salatu wal-Salamu 'ala Sayyidina Muhammad",
+  "ar": "الصلاة والسلام على سيدنا محمد وعلى آله وصحبه أجمعين",
+  "tr": "al-Ṣalātu wa-l-salāmu ʿalā sayyidinā Muḥammad wa ʿalā ālihi wa ṣaḥbihi ajmaʿīn",
+  "def": "“Blessings and peace on our master Muhammad, on his family and on all his companions”: it opens speeches and writings and may be said at any time.",
+  "what": [
+   "The formula asks God’s blessing and peace for Muhammad (peace be upon him), his family and all his companions. The Quran says, “God and His angels send blessings on the Prophet; O you who believe, send blessings on him and greet him with peace” (33:56). A hadith in Sahih Muslim, reported by Abu Hurayra, says that whoever asks for one blessing on him receives ten from God. Together with the <em>ḥamdala</em> it opens a speech, an essay or a book, and Muslims may say it on any occasion."
+  ],
+  "misread": "The word <em>sayyid</em> is sometimes read as raising Muhammad above his human rank, whereas it means master or leader and the formula obeys a command of the Quran.",
+  "sources": [],
+  "terms": [
+   "honorifics",
+   "muhammad",
+   "companions-of-the-prophet",
+   "ahl-al-bayt"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Salawat",
+   "Salat Ala Al-Nabi"
+  ],
+  "faruqi": {
+   "page": 57,
+   "term": "AL ṢALĀTU WAL SALĀMU ‘ALĀ SAYYIDINĀ MUḤAMMAD WA ‘ALĀ ĀLIHI WA ṢAḤBIHI AJMA‘ĪN."
+  }
+ },
+ {
+  "slug": "al-urwah-al-wuthqa",
+  "title": "Al-'Urwah al-Wuthqa",
+  "ar": "العروة الوثقى",
+  "tr": "al-ʿUrwa al-Wuthqā",
+  "def": "The firmest handhold: the indissoluble bond of Islam to which a believer holds fast.",
+  "what": [
+   "<em>ʿUrwa</em> is a handle by which something is grasped, and <em>wuthqā</em> means the firmest. The Quran says that whoever believes in God has grasped “the firmest handhold that never breaks” (2:256), and that whoever submits his whole self to God while doing good has grasped the same handhold (31:22). Commentators explain it as faith itself, or the declaration of God’s oneness, and Muslims use the phrase for the bond of Islam that cannot be dissolved."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "islam",
+   "iman",
+   "tawhid",
+   "no-compulsion-in-religion"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Firmest Handhold",
+   "Urwa Wuthqa"
+  ],
+  "faruqi": {
+   "page": 64,
+   "term": "AL ‘URWAH AL WUTHQĀ"
+  }
+ },
+ {
+  "slug": "al-uswah-al-hasanah",
+  "title": "Al-Uswah al-Hasanah",
+  "ar": "الأسوة الحسنة",
+  "tr": "al-Uswa al-Ḥasana",
+  "def": "The good example of the Prophet Muhammad (peace be upon him), which Muslims follow in worship, conduct and character.",
+  "what": [
+   "The Quran says, “You have in the Messenger of God a good example for whoever hopes for God and the Last Day and remembers God often” (33:21). <em>Uswa</em> means a model to be followed, and <em>ḥasana</em> means good. The example of Muhammad (peace be upon him) is preserved in the hadith and in the biography, and it forms the Sunnah. Aisha, his wife, is reported to have said that his character was the Quran (Sahih Muslim). Muslims look to his example in devotion, justice, patience and kindness."
+  ],
+  "misread": "The example is sometimes reduced to dress and appearance, yet the Quranic model covers conduct and character as well.",
+  "sources": [],
+  "terms": [
+   "sunnah",
+   "sira",
+   "muhammad",
+   "hadith"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Uswa Hasana",
+   "Good Example"
+  ],
+  "faruqi": {
+   "page": 64,
+   "term": "AL USWAH AL ḤASANAH"
+  }
+ },
+ {
+  "slug": "alamin-al",
+  "title": "ʿAlamin, al-",
+  "ar": "العالمين",
+  "tr": "al-ʿĀlamīn",
+  "def": "The worlds: creation in its totality in space and time, of which God is the Lord.",
+  "what": [
+   "<em>Al-ʿālamīn</em> is the plural of <em>ʿālam</em>, world, and it names the whole of creation across every realm and every age. It includes humans, jinn, angels and everything else that God has made. The Quran begins with it: “Praise be to God, Lord of the worlds” (1:2), and it says of the Prophet, “We sent you only as a mercy to the worlds” (21:107). The plural makes the point that God is Lord of everything in space and time, and the believer’s praise is addressed to that Lord."
+  ],
+  "misread": "“The universe” and “mankind” each narrow the word, since the plural covers every realm and every age.",
+  "sources": [],
+  "terms": [
+   "allah",
+   "creation",
+   "fatiha",
+   "al-hamdu-lillahi"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-ʿAlamin",
+   "Al-Alamin",
+   "Worlds"
+  ],
+  "faruqi": {
+   "page": 40,
+   "term": "AL ʿĀLAMĪN"
+  }
+ },
+ {
+  "slug": "alayh-al-salam",
+  "title": "'Alayh al-Salam",
+  "ar": "عليه السلام / عليهم السلام",
+  "tr": "ʿalayhi l-salām / ʿalayhim al-salām",
+  "def": "“Peace be upon him” or “upon them”: said when a prophet other than Muhammad is mentioned by name, and abbreviated AS in writing.",
+  "what": [
+   "The words are a prayer for peace on a prophet. Muslims say them when they name a prophet other than Muhammad (peace be upon him), and in writing they abbreviate them to AS. The Quran uses the same words for earlier messengers: “Peace be upon Noah among the worlds” (37:79), “Peace be upon Abraham” (37:109) and “Peace be upon Moses and Aaron” (37:120). For Muhammad the fuller formula <em>ṣallā llāhu ʿalayhi wa sallam</em> is used. Each formula honours the prophet named and keeps the memory of the whole line of prophets."
+  ],
+  "misread": "The abbreviation (AS) is often copied without it being known that it stands for a prayer of peace.",
+  "sources": [],
+  "terms": [
+   "honorifics",
+   "prophets",
+   "common-phrases",
+   "muhammad"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Alayhi Salam",
+   "AS",
+   "Alaihis Salam"
+  ],
+  "faruqi": {
+   "page": 59,
+   "term": "‘ALAYH AL SALĀM OR ‘ALAYHIM AL SALĀM (AS)"
+  }
+ },
+ {
+  "slug": "alim-al",
+  "title": "ʿAlim, al-",
+  "ar": "العليم",
+  "tr": "al-ʿAlīm",
+  "def": "A divine name meaning the All-Knowing, He whose knowledge extends to everything.",
+  "what": [
+   "<em>Al-ʿAlīm</em> is one of the names of God and occurs many times in the Quran. It teaches that God’s knowledge encompasses everything, seen and unseen: “With Him are the keys of the unseen; none knows them but He” (6:59). It appears in the Quran alongside other names, such as <em>al-ḥakīm</em>, the Wise. A hadith in Sahih al-Bukhari and Sahih Muslim speaks of ninety-nine names of God. The believer who recalls that God knows every action and every intention is moved to sincerity and to trust."
+  ],
+  "misread": "Rendered “Omniscient”, a philosophical label, the name loses its relational sense: God knows each creature and responds with mercy and justice.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "aliyy-al",
+   "alim"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-ʿAlim",
+   "Al-Alim",
+   "Alim"
+  ],
+  "faruqi": {
+   "page": 40,
+   "term": "AL ʿALĪM"
+  }
+ },
+ {
+  "slug": "aliyy-al",
+  "title": "ʿAliyy, al-",
+  "ar": "العليّ",
+  "tr": "al-ʿAliyy",
+  "def": "A divine name meaning the Highest, God being exalted above all creation and every comparison.",
+  "what": [
+   "<em>Al-ʿAliyy</em> is one of the names of God. The verse of the Throne ends with “He is the Most High, the Most Great” (2:255), and the same pair of names appears in 42:4. The name expresses God’s rank and transcendence: the Quran says, “There is nothing like Him” (42:11). The Muslim keeps this together with the closeness of God, who answers those who call on Him, and the two together describe the relation between Creator and creature."
+  ],
+  "misread": "The word is sometimes taken in a spatial sense, as though God sat somewhere high up, whereas the name asserts rank and transcendence.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "tawhid",
+   "allah",
+   "alim-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-ʿAliyy",
+   "Al-Aliyy",
+   "Aliy"
+  ],
+  "faruqi": {
+   "page": 40,
+   "term": "AL ʿALIYY"
+  }
+ },
+ {
+  "slug": "allahumma",
+  "title": "Allahumma",
+  "ar": "اللهم",
+  "tr": "Allāhumma",
+  "def": "The invocation form of the name Allah, used to call on God in worship and prayer.",
+  "what": [
+   "<em>Allāhumma</em> is the form of the name <em>Allāh</em> used in direct address, and grammarians explain the final <em>-umma</em> as standing for the call <em>yā</em>. It is used to open a supplication. The Quran has it in the prayer, “O God, Master of sovereignty” (3:26), and in the prayer of Jesus, “O God, our Lord, send down to us a table” (5:114). Muslims say it at the start of a <em>duʿāʾ</em>, and it occurs in the opening supplication of the ritual prayer, <em>subḥānaka llāhumma wa bi-ḥamdika</em>."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "allah",
+   "dua",
+   "dhikr",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Allahumma",
+   "Allahuma"
+  ],
+  "faruqi": {
+   "page": 23,
+   "term": "ALLAHUMMA"
+  }
+ },
+ {
+  "slug": "allahumma-ahillahu-alayna-bil-yumni",
+  "title": "Allahumma Ahillahu 'Alayna bil-Yumni",
+  "ar": "اللهم أهلّه علينا باليمن والايمان والسلامة والاسلام والتوفيق لما تحب وترضى",
+  "tr": "Allāhumma ahillahu ʿalaynā bi-l-yumni wa-l-īmān wa-l-salāmati wa-l-islām wa-l-tawfīq limā tuḥibbu wa tarḍā",
+  "def": "A prayer on sighting the new moon, asking that the month bring benefit, faith, security, Islam and success in what God loves.",
+  "what": [
+   "Muslims say this prayer when they see the new crescent, which marks the start of a lunar month. It asks that the month bring blessing and faith, safety and Islam, and success in what pleases God. The Quran says that the new moons are “measures of time for people and for the hajj” (2:189). A prayer of this kind is reported from the Prophet in the collection of al-Tirmidhi. The Islamic calendar runs by the moon, so each month opens with a sighting and a supplication."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "crescent",
+   "hijri-calendar",
+   "dua",
+   "sawm"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Moon Sighting Dua",
+   "Dua For New Moon"
+  ],
+  "faruqi": {
+   "page": 63,
+   "term": "ALLAHUMMA AHILLAHU ‘ALAYNĀ BIL YUMNI WA AL ĪMĀNI WA AL SALĀMATI WA AL ISLĀMI WA AL TAWFĪQI LIMĀ TUḤIBBU WA TARḌĀ."
+  }
+ },
+ {
+  "slug": "allahumma-akfini-bi-halalika",
+  "title": "Allahumma Akfini bi Halalika",
+  "ar": "اللهم اكفني بحلالك عن حرامك، واغنني بفضلك عمن سواك",
+  "tr": "Allāhumma ikfinī bi-ḥalālika ʿan ḥarāmika wa aghninī bi-faḍlika ʿamman siwāk",
+  "def": "A prayer for sufficiency from lawful gain, freedom from need of the forbidden, and enrichment by God’s grace alone; said before any enterprise or day of work.",
+  "what": [
+   "The supplication asks God for three things: enough from what is lawful (<em>ḥalāl</em>) so that no need of the forbidden arises, freedom from dependence on anyone other than God, and enrichment from His grace. A Muslim says it before beginning an enterprise or a day of productive work. It rests on the Quranic command, “Eat of what is lawful and good on the earth” (2:168), and on the belief that provision comes from God. The prayer is the usual dua for lawful earning."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "dua",
+   "halal-and-haram-food",
+   "trade-and-business",
+   "riba"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dua For Halal Income",
+   "Dua For Rizq"
+  ],
+  "faruqi": {
+   "page": 61,
+   "term": "ALLAHUMMA AKFINĪ BI ḤALĀLIKA ‘AN ḤARĀMIK, WA AGHNINĪ BI FAḌLIKA ‘AMMAN SIWĀK."
+  }
+ },
+ {
+  "slug": "allahumma-anta-rabbi",
+  "title": "Allahumma Anta Rabbi",
+  "ar": "اللهم أنت ربي. لا اله الا أنت. عليك توكلت وأنت رب العرش العظيم",
+  "tr": "Allāhumma anta rabbī, lā ilāha illā anta, ʿalayka tawakkaltu wa anta rabbu l-ʿarshi l-ʿaẓīm",
+  "def": "“O God, You are my Lord; there is no god but You; in You I put my trust, Lord of the great Throne”: said when one sets out on an activity.",
+  "what": [
+   "Muslims say these words at the start of an undertaking. They declare God to be Lord, affirm that there is no god but Him, and place trust (<em>tawakkul</em>) in Him. The last words echo the end of surah 9: “I have put my trust in Him, and He is Lord of the Great Throne” (9:129). The Quran also instructs the believer, “When you have decided, put your trust in God” (3:159). The prayer joins effort with reliance on God for the result."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "tawhid",
+   "dua",
+   "dhikr",
+   "allah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dua Before Starting"
+  ],
+  "faruqi": {
+   "page": 59,
+   "term": "ALLAHUMMA ANTA RABBĪ. LĀ ILAHA ILLĀ ANT. ‘ALAYKA TAWAKKALTU WA ANTA RABB AL ‘ARSH AL ‘AẒĪM."
+  }
+ },
+ {
+  "slug": "allahumma-inni-audhu-bika-min-al-hamm-wal-hazan",
+  "title": "Allahumma Inni A'udhu bika min al-Hamm wal-Hazan",
+  "ar": "اللهم اني أعوذ بك من الهم والحزن ومن العجز والكسل ومن الجبن والبخل ومن غلبة الدين وقهر الرجال",
+  "tr": "Allāhumma innī aʿūdhu bika mina l-hammi wa-l-ḥazan, mina l-ʿajzi wa-l-kasal, mina l-jubni wa-l-bukhl, min ghalabati l-dayni wa qahri l-rijāl",
+  "def": "A prayer for refuge in God from cares, weakness, laziness, cowardice, miserliness, heavy debt and the tyranny of men; said in trouble or grave concern.",
+  "what": [
+   "The prayer seeks God’s refuge from burdens of the heart and failings of conduct: <em>hamm</em>, anxiety about what lies ahead, and <em>ḥazan</em>, grief over what is past; <em>ʿajz</em>, inability, and <em>kasal</em>, laziness; <em>jubn</em>, cowardice, and <em>bukhl</em>, miserliness; the weight of debt and the domination of other people. Sahih al-Bukhari reports from Anas that the Prophet often prayed in these words. A Muslim says it when facing trouble or grave concern, and it asks for the strength to act as well as for relief."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "dua",
+   "dhikr",
+   "allahumma",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dua For Anxiety",
+   "Dua Hamm Hazan"
+  ],
+  "faruqi": {
+   "page": 61,
+   "term": "ALLAHUMMA INNĪ A‘ŪDHU BIKA MIN AL HAMM WAL ḤAZAN, MIN AL ‘AJZI WAL KASAL, MIN AL JUBNI WAL BUKHL, MIN GHALABAH AL DAYN WA QAHR AL RIJĀL."
+  }
+ },
+ {
+  "slug": "allahumma-rabba-hadhihi-al-dawah-al-tammah",
+  "title": "Allahumma Rabba Hadhihi al-Da'wah al-Tammah",
+  "ar": "اللهم رب هذه الدعوة التامة والصلاة القائمة آت محمدا الوسيلة والفضيلة وابعثه مقاما محمودا الذي وعدته",
+  "tr": "Allāhumma rabba hādhihi l-daʿwati l-tāmma wa-l-ṣalāti l-qāʾima, āti Muḥammadan al-wasīlata wa-l-faḍīla wa-bʿathhu maqāman maḥmūdan alladhī waʿadtah",
+  "def": "The supplication said after hearing a complete adhan, asking God to grant Muhammad (peace be upon him) the highest station and the place of praise He promised.",
+  "what": [
+   "After the call to prayer is finished, the listener asks God, Lord of this perfect call and of the prayer about to be established, to grant Muhammad (peace be upon him) the <em>wasīla</em> and the <em>faḍīla</em>, and to raise him to the praised station that God promised. The promise is in the Quran: “Perhaps your Lord will raise you to a praised station” (17:79). The supplication is said after hearing a complete <em>adhān</em>, and it joins the believer’s love for the Prophet to the call to prayer."
+  ],
+  "misread": "",
+  "sources": [
+   "Sahih al-Bukhari reports from Jabir that whoever says these words after hearing the call will be granted the Prophet’s intercession on the Day of Resurrection."
+  ],
+  "terms": [
+   "adhan",
+   "dua",
+   "muhammad",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Dua After Adhan",
+   "Dua After Azan"
+  ],
+  "faruqi": {
+   "page": 59,
+   "term": "ALLAHUMMA! RABBA HĀDHIHI AL DA‘WAH AL TĀMMAH WAL ṢALĀH AL QĀ’IMAH, ĀTI MUḤAMMADAN AL WASĪLAH WAL FAḌĪLAH, WA IB‘ATHHU MAQĀMAN MAḤMŪDAN ALLADHĪ WA‘ADTAH."
+  }
+ },
+ {
+  "slug": "amala",
+  "title": "ʿAmala",
+  "ar": "عمل",
+  "tr": "ʿAmala",
+  "def": "To do good or evil works in an active, participatory life, fully engaged with the processes of history.",
+  "what": [
+   "The verb <em>ʿamila</em> and its noun <em>ʿamal</em> cover deeds of every kind, good or evil, done by a person who takes part actively in the life of the world and its history. The Quran joins faith to action again and again, in the phrase “those who believe and do righteous deeds” (103:3), and it says that whoever does an atom’s weight of good will see it, and whoever does an atom’s weight of evil will see it (99:7–8). Islam therefore asks the believer to engage in the affairs of this life with faith and responsibility, since every deed is recorded and will be judged."
+  ],
+  "misread": "Rendered “to work”, it loses the sense that every deed, good or evil, carries moral weight before God.",
+  "sources": [],
+  "terms": [
+   "iman",
+   "akhira",
+   "judgement",
+   "ethics-and-conduct"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Amal",
+   "Deeds"
+  ],
+  "faruqi": {
+   "page": 41,
+   "term": "ʿAMALA"
+  }
+ },
+ {
+  "slug": "amara",
+  "title": "ʿAmara",
+  "ar": "عمّر",
+  "tr": "ʿAmara",
+  "def": "To build or operate a land, site, building or piece of equipment so that it fulfils its purpose.",
+  "what": [
+   "<em>ʿAmara</em> comes from a root meaning to build, inhabit and keep in good order. In Faruqi’s usage it describes the work of making a place or a thing serve the purpose for which it exists, so that a field is cultivated, a building is lived in and a tool is used for what it was made to do. The sense is practical and carries an ethical weight, because the Muslim is expected to leave the earth better ordered than he found it.",
+   "The Quran uses forms of the root in several places. It says that God made humankind settle in the earth and bade them develop it (11:61), and it speaks of those who keep God’s mosques in use and in repair as the true believers (9:18). The word therefore joins ordinary building and cultivation to devotion, and it shows that worship and the care of the earth belong to one life."
+  ],
+  "misread": "That it only means to construct buildings, when it also covers cultivating and operating whatever one has been given to use.",
+  "sources": [
+   "The two verses cited above, 11:61 and 9:18, are the usual starting points. Later writers drew on the same root for the word <em>ʿumrān</em>, the flourishing of settled life, which Ibn Khaldun made central to his study of society."
+  ],
+  "terms": [
+   "ibadah",
+   "environment",
+   "mosque",
+   "ihsan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 40,
+   "term": "ʿAMARA"
+  }
+ },
+ {
+  "slug": "anama-allahu-alayk",
+  "title": "An'ama Allahu 'Alayk",
+  "ar": "أنعم الله عليك",
+  "tr": "Anʿama Allāhu ʿAlayk",
+  "def": "“May Allah bless you too”: the reply to <em>naʿīman</em>, a wish of comfort and well-being.",
+  "what": [
+   "<em>Anʿama Allāhu ʿalayk</em> means “May Allah grant you favour”, and Faruqi lists it as the answer to the greeting <em>naʿīman</em>. The first greeting is a wish that the other person enjoy comfort and well-being. The reply returns the wish and turns it to God, who is the giver of every favour. The expression belongs to the daily courtesies of Muslim speech, where a kind wish is met with a prayer rather than with a bare word of thanks. The root <em>n-ʿ-m</em>, from which <em>niʿma</em> (favour) comes, is common in the Quran, which repeatedly reminds people to remember the favour of God upon them."
+  ],
+  "misread": "That it is only a polite filler, when it is a short prayer that sends the blessing back and acknowledges God as its source.",
+  "sources": [],
+  "terms": [
+   "common-phrases",
+   "dua",
+   "greeting-non-muslims"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 62,
+   "term": "AN‘AMA ALLAHU ‘ALAYK."
+  }
+ },
+ {
+  "slug": "aqala",
+  "title": "ʿAqala",
+  "ar": "عقل",
+  "tr": "ʿAqala",
+  "def": "To reason, and by reasoning to arrive at knowledge (<em>ʿilm</em>).",
+  "what": [
+   "<em>ʿAqala</em> is the verb of reasoning. In Faruqi’s account it names the act of the mind that ties evidence together and so reaches knowledge, which is <em>ʿilm</em>. The root originally pictured tying a camel’s leg, and the sense of holding the mind back from error and tying one thing to another has stayed with it. The Quran uses forms of this verb dozens of times, and it does not use the noun <em>ʿaql</em>. Its question “Will you not reason?” (<em>afalā taʿqilūn</em>, as in 2:44) invites the listener to weigh the evidence before him. Revelation here appeals to the mind and does not bypass it."
+  ],
+  "misread": "That Islam sets faith against reason, when the Quran repeatedly calls on people to reason.",
+  "sources": [
+   "The Quran ends many verses with the thought that signs are for “a people who reason” (<em>yaʿqilūn</em>). Muslim scholars took this as a duty to use the mind within what revelation teaches."
+  ],
+  "terms": [
+   "aqil",
+   "knowledge",
+   "reason-and-faith"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 40,
+   "term": "ʿAQALA"
+  }
+ },
+ {
+  "slug": "aqama",
+  "title": "Aqama",
+  "ar": "أقام",
+  "tr": "Aqāma",
+  "def": "To establish, hold or fulfil something; to make it present again.",
+  "what": [
+   "<em>Aqāma</em> means to set something upright and make it stand, and so to establish, hold or carry out. Faruqi adds the sense of making present again, which suits an act that is renewed each time it is performed. It is the verb used with prayer in the Quran, where believers are told <em>aqīmū al-ṣalāh</em>, that is, to establish the prayer (2:43). The choice of this verb is deliberate. Establishing the <em>salah</em> means more than saying words: it means performing it fully and regularly and making it a living institution. The related noun <em>iqāma</em> names the second call, said just before the congregational prayer begins, which in this sense establishes the prayer."
+  ],
+  "misread": "That “to pray” fully renders <em>aqāma al-ṣalāh</em>, when the verb adds the sense of setting the prayer up and keeping it in being.",
+  "sources": [],
+  "terms": [
+   "salah",
+   "adhan",
+   "ibadah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 44,
+   "term": "AQĀMA"
+  }
+ },
+ {
+  "slug": "aqil",
+  "title": "ʿAqil",
+  "ar": "عاقل",
+  "tr": "ʿĀqil",
+  "def": "The person who reasons and by reasoning arrives at knowledge (<em>ʿilm</em>); plural <em>ʿāqilūn</em>.",
+  "what": [
+   "<em>ʿĀqil</em> is the active participle of <em>ʿaqala</em>, to reason. It names the person who uses his mind to tie evidence together and so reaches <em>ʿilm</em>, knowledge. The plural is <em>ʿāqilūn</em>. In law the same word has a further sense, since a sane adult who can reason is the person on whom religious duties and legal responsibility rest. The Quran praises those who reason and criticises those who refuse to. It says that the signs of God are plain to a people who use their minds, and it condemns blind adherence to the customs of the ancestors. The <em>ʿāqil</em> is therefore the ideal hearer of revelation."
+  ],
+  "misread": "That the word means merely “clever”, when it describes a mind that is sound and used responsibly.",
+  "sources": [
+   "Jurists treat sound reason (<em>ʿaql</em>) as one of the conditions of legal responsibility: a person who lacks it, as a child or someone insane, is not charged with religious duties."
+  ],
+  "terms": [
+   "aqala",
+   "knowledge",
+   "reason-and-faith",
+   "age-of-responsibility"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 40,
+   "term": "ʿĀQIL"
+  }
+ },
+ {
+  "slug": "aqsata",
+  "title": "Aqsata",
+  "ar": "أقسط",
+  "tr": "Aqsaṭa",
+  "def": "To do justice; to act with fairness and equity.",
+  "what": [
+   "<em>Aqsaṭa</em> means to act justly, to give each party its due share. Its participle <em>muqsiṭ</em> names the one who acts with equity. It is close in meaning to <em>ʿadala</em> and the noun <em>ʿadl</em>, and the Quran uses both groups of words for the same duty. The Quran says that God loves those who act justly (<em>al-muqsiṭīn</em>) in the passages dealing with settlement between two parties (49:9) and with dealings with those who have not fought against the believers (60:8). The command to be just is addressed to every Muslim in every dealing, whatever the feelings he holds toward the other party."
+  ],
+  "misread": "That justice is a matter for judges alone, when the Quran asks every believer to act with equity.",
+  "sources": [
+   "The Quran also says that hatred of a people must not lead the believers to be unjust, and bids them be just because that is nearer to <em>taqwa</em> (5:8)."
+  ],
+  "terms": [
+   "justice",
+   "taqwa",
+   "diya"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 44,
+   "term": "AQSAṬA"
+  }
+ },
+ {
+  "slug": "asma-allah-al-husna",
+  "title": "Asma' Allah al-Husna",
+  "ar": "أسماء الله الحسنى",
+  "tr": "Asmāʾ Allāh al-Ḥusnā",
+  "def": "The most beautiful names of Allah, by which He is called upon and known.",
+  "what": [
+   "<em>Asmāʾ Allāh al-ḥusnā</em> means “the most beautiful names of God”. They include <em>al-Raḥmān</em>, <em>al-Raḥīm</em>, <em>al-Malik</em>, <em>al-Ḥayy</em>, <em>al-ʿAzīm</em> and many more. Each name points to a quality that belongs to God in perfection, and the names are used in prayer, remembrance (<em>dhikr</em>) and the study of God’s attributes. The Quran says that to God belong the most beautiful names and that people should call on Him by them (7:180); a similar statement appears at 17:110 and 59:24. A well-known hadith, in the collections of al-Bukhari and Muslim, speaks of ninety-nine names. Scholars differ over the exact list, and the Quran names more than ninety-nine."
+  ],
+  "misread": "That the names are mere titles, when they are descriptions of real attributes that believers use to call on God.",
+  "sources": [
+   "Al-Ghazali wrote a commentary on the names, <em>al-Maqṣad al-asnā</em>, in which he explained each one and how a servant may reflect its meaning in his own conduct."
+  ],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "dhikr",
+   "dua"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 64,
+   "term": "ASMĀ’ ALLAH AL ḤUSNĀ"
+  }
+ },
+ {
+  "slug": "astaghfir-allah-alladhi-la-ilaha-illa-huwa",
+  "title": "Astaghfir Allah alladhi la Ilaha illa Huwa",
+  "ar": "أستغفر الله الذي لا إله إلا هو الحي القيوم وأتوب إليه",
+  "tr": "Astaghfir Allāh alladhī lā ilāha illā Huwa",
+  "def": "“I seek the forgiveness of Allah, other than Whom there is no god, the Ever-Living, the Sustainer, and I turn to Him in repentance.”",
+  "what": [
+   "The phrase is a prayer for forgiveness. The speaker asks God to pardon his faults, names Him as the one besides whom there is no god, the Ever-Living (<em>al-Ḥayy</em>) and the Self-Subsisting Sustainer (<em>al-Qayyūm</em>), and ends with a pledge to return to Him in repentance. Faruqi notes that it is said on rising, on going to bed and after every <em>salah</em>. Seeking forgiveness (<em>istighfār</em>) is a regular part of Muslim devotion. The Quran urges it many times and describes God as most forgiving. The names <em>al-Ḥayy al-Qayyūm</em> also appear together at the start of the Throne Verse (2:255)."
+  ],
+  "misread": "That repentance is something one does only after a grave sin, when this phrase is said daily by believers as a habit of turning back to God.",
+  "sources": [
+   "A report in the collections of Abu Dawud and al-Tirmidhi says that whoever says this phrase will be forgiven. Hadith scholars have discussed its chain of narration, and it is also valued for its place in daily practice."
+  ],
+  "terms": [
+   "istighfar",
+   "atonement-and-repentance",
+   "forgiveness",
+   "salah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 58,
+   "term": "ASTAGHFIR ALLAH ALLADHĪ LĀ ILAHA ILLĀ HUWA, AL ḤAYY AL QAYYŪM, WA ATUBU ILAYH."
+  }
+ },
+ {
+  "slug": "astaghfiru-allah-li-wa-lakum",
+  "title": "Astaghfiru Allah Li wa Lakum",
+  "ar": "أستغفر الله لي ولكم، استغفروه",
+  "tr": "Astaghfiru Allāh lī wa lakum",
+  "def": "“I seek Allah’s forgiveness for myself and for you; seek His forgiveness too.” Said by the imam at the end of the first Friday and ʿId sermon.",
+  "what": [
+   "The imam says the phrase at the close of the first <em>khuṭba</em> on Friday and on the day of ʿId. It means “I ask Allah’s forgiveness for myself and for you.” The congregation answers by asking for forgiveness themselves, which is the meaning of <em>istaghfirūh</em>, “seek His forgiveness”. The imam places himself among those who need forgiveness, with no claim to be above his hearers. The phrase closes the first part of the sermon, after which the imam sits briefly and then rises for the second part. It reflects the Quranic encouragement to seek forgiveness, since God is oft-forgiving."
+  ],
+  "misread": "That the imam speaks as one who is free of fault, when he joins himself with the congregation in asking for pardon.",
+  "sources": [],
+  "terms": [
+   "istighfar",
+   "friday",
+   "eid",
+   "imam"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 56,
+   "term": "ASTAGHFIRU ALLAH LĪ WA LAKUM."
+  }
+ },
+ {
+  "slug": "astawdi-allah-dinaka",
+  "title": "Astawdi' Allah Dinaka",
+  "ar": "أستودع الله دينك وأمانتك وخواتيم عملك",
+  "tr": "Astawdiʿ Allāh dīnaka wa amānataka wa khawātīma ʿamalik",
+  "def": "“I entrust to Allah your faith, your trust and the seal of your deeds.” Said by a person departing to those who remain, or by them to him.",
+  "what": [
+   "The sentence is a farewell prayer. The speaker places in God’s keeping three things of the one departing: his religion (<em>dīn</em>), his trust (<em>amāna</em>) and the final state of his deeds (<em>khawātīm ʿamalik</em>). Faruqi gives it as said by the one setting out to friends or relatives. The prayer asks that the traveller stay firm in faith, remain faithful to his trusts and that his deeds end well. Reports in the collections of Abu Dawud and al-Tirmidhi relate that the Prophet Muhammad (peace be upon him) used a farewell of this kind. It treats a parting as an occasion for prayer, since the one who leaves and those who stay are all in God’s care."
+  ],
+  "misread": "That a farewell is merely a courtesy, when this one is a prayer that commits both parties to God’s protection.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "amanah",
+   "common-phrases",
+   "ihsan"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 62,
+   "term": "ASTAWDI‘ ALLAH DĪNAKA WA AMĀNATAKA WAKHAWĀTĪMA ‘AMĀLIK."
+  }
+ },
+ {
+  "slug": "audhu-billahi-min-al-shaytan-al-rajim",
+  "title": "A'udhu Billahi min al-Shaytan al-Rajim",
+  "ar": "أعوذ بالله من الشيطان الرجيم",
+  "tr": "Aʿūdhu billāhi min al-shayṭān al-rajīm",
+  "def": "“I take refuge in Allah from Satan, the accursed”: said whenever one feels threatened, and before reciting the Quran.",
+  "what": [
+   "The phrase is a plea for protection. <em>Aʿūdhu</em> means “I seek refuge”, and the one sought against is <em>al-shayṭān al-rajīm</em>, Satan the accursed. Faruqi says it is said whenever one feels threatened in any way. It is also spoken before reciting the Quran, and many Muslims say it when angry or afraid. The Quran commands it. When you recite the Quran, it says, seek refuge in God from Satan the accursed (16:98). The phrase places the speaker under God’s protection and admits that no one can guard himself against the whisperings of evil without God’s help. It is followed in recitation by the <em>basmala</em>."
+  ],
+  "misread": "That it is a charm against evil, when it is a prayer that asks God for protection and expresses the speaker’s dependence on Him.",
+  "sources": [
+   "The Quran also tells the believer to seek refuge in God when an evil prompting from Satan comes to him (7:200)."
+  ],
+  "terms": [
+   "iblis",
+   "dua",
+   "quran",
+   "fatiha"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 57,
+   "term": "A‘ŪDHU BILLAHI MIN AL SHAYṬĀN AL RAJĪM."
+  }
+ },
+ {
+  "slug": "awwab",
+  "title": "Awwab",
+  "ar": "أواب",
+  "tr": "Awwāb",
+  "def": "The Muslim who repeatedly turns back to God in repentance after any misdeed; plural <em>awwābūn</em>.",
+  "what": [
+   "<em>Awwāb</em> comes from the root meaning to return. It names the believer who turns back to God again and again, particularly after a lapse. The form of the word suggests repetition: this is a person who returns every time he strays, with no single return that ends the matter. The Quran uses the word for several prophets. David is called <em>awwāb</em> (38:17) and so is Solomon (38:30). It also promises Paradise to everyone who is <em>awwāb</em> and mindful (50:32). The word therefore carries honour: constant repentance belongs to the best of God’s servants."
+  ],
+  "misread": "That repentance marks a bad person, when the Quran gives this title to prophets.",
+  "sources": [
+   "Quranic usage links the <em>awwāb</em> with those who keep God’s limits and guard their duty to Him, in the passage promising Paradise at 50:32."
+  ],
+  "terms": [
+   "atonement-and-repentance",
+   "istighfar",
+   "taqwa",
+   "forgiveness"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Awwabun"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "AWWĀB"
+  }
+ },
+ {
+  "slug": "awwal-al",
+  "title": "Awwal, al-",
+  "ar": "الأول",
+  "tr": "al-Awwal",
+  "def": "A divine name: the First, before whom there is nothing.",
+  "what": [
+   "<em>Al-Awwal</em> means “the First”. It is a name of God and teaches that He has no beginning and that nothing existed before Him. It is usually recited together with <em>al-Ākhir</em>, the Last, and Faruqi lists it among the divine names in his word list. The Quran pairs it with three other names: He is the First and the Last, the Manifest and the Hidden, and He knows all things (57:3). Believers think of this name when they reflect that creation had a beginning and God did not. The pairing with <em>al-Ākhir</em> includes the whole of time."
+  ],
+  "misread": "That the name says only that God came first among many beings, when it says that He has no beginning and every other thing depends on Him.",
+  "sources": [
+   "The verse (57:3) is the Quranic source for the name, and Muslim theologians used it in arguments that the world has a Creator who is not a part of it."
+  ],
+  "terms": [
+   "divine-attributes",
+   "baqi-al",
+   "batin-al",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Awwal",
+   "al-Awwal"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "AL AWWAL"
+  }
+ },
+ {
+  "slug": "awwala",
+  "title": "Awwala",
+  "ar": "أول",
+  "tr": "Awwala",
+  "def": "To interpret what is not plainly known, such as dreams or the hidden meanings of a text; verbal noun <em>taʾwīl</em>.",
+  "what": [
+   "<em>Awwala</em> means to interpret, and its verbal noun is <em>taʾwīl</em>. Faruqi applies it to what lies beyond ordinary knowledge, such as the meaning of dreams or the inner sense of a text. The root carries the idea of bringing a matter back to its source or final outcome. It comes from the same root as <em>awwal</em>, first, because it traces a matter back to its beginning.",
+   "The Quran uses <em>taʾwīl</em> for the interpretation of dreams, as in the story of Joseph, to whom God taught the interpretation of events (12:6). It also uses the word in 3:7, which says that no one knows the <em>taʾwīl</em> of the ambiguous verses except God, and the reading of that verse is discussed by scholars. In later usage <em>taʾwīl</em> came to mean a reading of a text that departs from its apparent sense. For this reason jurists and theologians set conditions for when such a reading is allowed."
+  ],
+  "misread": "That <em>taʾwīl</em> is the same as <em>tafsīr</em>, when the Quran uses it for a deeper interpretation or the final outcome of a matter.",
+  "sources": [
+   "Scholars differ on whether the stop in 3:7 comes before or after “those firmly grounded in knowledge”, and so on whether they too know the <em>taʾwīl</em>."
+  ],
+  "terms": [
+   "tafsir",
+   "dreams",
+   "quran",
+   "knowledge"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 24,
+   "term": "AWWALA"
+  }
+ },
+ {
+  "slug": "ayibun-taibun-li-rabbina-hamidun",
+  "title": "Ayibun, Ta'ibun, li Rabbina Hamidun",
+  "ar": "آيبون تائبون لربنا حامدون",
+  "tr": "Āyibūn, tāʾibūn, li-rabbinā ḥāmidūn",
+  "def": "“We return, repenting, praising our Lord”: said by a traveller on returning home.",
+  "what": [
+   "The phrase is spoken by those who come back from a journey. <em>Āyibūn</em> means “returning”, <em>tāʾibūn</em> “repenting” and <em>ḥāmidūn</em> “praising”. The returning traveller thus gives thanks that he has arrived safely and repents of any fault committed on the way. Faruqi says it is said by the returnee upon his return. The words are part of a longer prayer reported from the Prophet Muhammad (peace be upon him) on returning from a journey, in the collections of al-Bukhari and Muslim. The usual report also includes the word <em>ʿābidūn</em>, “worshipping”, which is absent from the form in Faruqi’s list. The phrase turns an ordinary homecoming into an act of gratitude."
+  ],
+  "misread": "That travel prayers are only for the departure, when the return also has its own words of thanks.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "atonement-and-repentance",
+   "common-phrases",
+   "awwab"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 62,
+   "term": "ĀYIBŪN, TĀ’IBŪN, LI RABBINĀ ḤĀMIDŪN."
+  }
+ },
+ {
+  "slug": "azim-al",
+  "title": "ʿAzim, al-",
+  "ar": "العظيم",
+  "tr": "al-ʿAẓīm",
+  "def": "A divine name meaning the Great, the Mighty and the Glorious.",
+  "what": [
+   "<em>Al-ʿAẓīm</em> is a name of God, and means the Great, the Magnificent, the One whose greatness is beyond measure. Faruqi glosses it as the Great, the High, the Glorious and the Mighty. It is among the names most often used in worship, since the Muslim says <em>subḥāna rabbiya al-ʿaẓīm</em>, “glory to my Lord, the Great”, when bowing in the prayer. The Quran uses the name often. The Throne Verse ends by describing God as the High (<em>al-ʿAlī</em>) and the Great (<em>al-ʿAẓīm</em>) (2:255), and believers are told to glorify the name of their Lord, the Great (56:74). The name calls on people to hold God above every thing they might wrongly treat as great."
+  ],
+  "misread": "That the name describes mere size, when it speaks of a majesty that has no equal.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "asma-allah-al-husna",
+   "salah",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-ʿAzim",
+   "al-Azim"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "AL ʿAẒĪM"
+  }
  }
 ]

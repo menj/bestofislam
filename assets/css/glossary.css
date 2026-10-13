@@ -888,3 +888,17 @@
 .boi-glossary__item .boi-glossary__ar {
 	grid-row: 2 / span 2;
 }
+
+/* A long Arabic phrase takes its own line under the name. */
+.boi-glossary__item.has-long-ar .boi-glossary__ar {
+	grid-column: 1 / -1;
+	grid-row: auto;
+	justify-self: stretch;
+	max-inline-size: none;
+	margin-block: 0.15rem 0.2rem;
+	font-size: 1.25rem;
+}
+
+.boi-glossary__item.has-long-ar .boi-glossary__term {
+	grid-column: 1 / -1;
+}

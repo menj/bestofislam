@@ -27,5 +27,86 @@
    "John",
    "Yuhanna"
   ]
+ },
+ {
+  "slug": "ya-arham-al-rahimin",
+  "title": "Ya Arham al-Rahimin",
+  "ar": "يا أرحم الراحمين",
+  "tr": "Yā Arḥama’l-Rāḥimīn",
+  "def": "O Most Merciful of those who show mercy; said in any need of help",
+  "what": [
+   "This is an invocation of Allah, meaning “O Most Merciful of those who show mercy”. Muslims say it when they need help, in illness, distress, fear or ordinary requests. The phrase comes from the Quran, where Moses prays “You are the Most Merciful of the merciful” (7:151) and Job calls on his Lord with the same words (21:83). The superlative places Allah’s mercy above that of every human being. People say the phrase aloud or silently, singly or as part of a longer supplication, and it often accompanies other names of Allah. It is a form of <em>duʿāʾ</em>, an address to Allah, and needs no special occasion or place."
+  ],
+  "misread": "That it can be reduced to “O Merciful”, which loses the superlative above all who show mercy.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "allah",
+   "divine-attributes",
+   "istighfar"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Ya Arham ar-Rahimin"
+  ],
+  "faruqi": {
+   "page": 59,
+   "term": "YĀ ARḤAM AL RĀḤIMĪN."
+  }
+ },
+ {
+  "slug": "yaqin",
+  "title": "Yaqin",
+  "ar": "يقين",
+  "tr": "Yaqīn",
+  "def": "Certainty about the truth of Islam and its claims, needing no further proof",
+  "what": [
+   "<em>Yaqīn</em> is certainty, a settled conviction that leaves no room for doubt. In Ismail al-Faruqi’s account it is certainty about the truth of Islam and its claims, which requires no further proof. The Quran commands the Prophet to worship his Lord until certainty comes to him (15:99), and commentators generally take this to mean death. The Quran names three levels of certainty: <em>ʿilm al-yaqīn</em> (102:5), <em>ʿayn al-yaqīn</em> (102:7) and <em>ḥaqq al-yaqīn</em> (69:51). Scholars, especially the Sufis, have used them to describe growth from knowledge to sight to direct experience. The opposite of <em>yaqīn</em> is doubt, <em>ẓann</em> or <em>shakk</em>."
+  ],
+  "misread": "That it is blind belief, when the sources join certainty to knowledge and reflection.",
+  "sources": [],
+  "terms": [
+   "iman",
+   "zann",
+   "knowledge",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Yaqeen"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "YAQĪN"
+  }
+ },
+ {
+  "slug": "yusr",
+  "title": "Yusr",
+  "ar": "يسر",
+  "tr": "Yusr",
+  "def": "That which is possible without hardship; ease",
+  "what": [
+   "<em>Yusr</em> means ease: what a person can do without hardship. The Quran says “Allah intends ease for you and does not intend hardship” (2:185) and “with hardship comes ease” (94:5-6). Another verse promises that Allah will bring ease after hardship (65:7). The principle shapes the law. Jurists hold that hardship calls for relief, and the sharia allows concessions: the traveller may shorten the prayer, and the sick and the traveller may postpone the fast. A saying of the Prophet (peace be upon him) in Sahih al-Bukhari states that the religion is ease. The word <em>ʿusr</em>, hardship, is its opposite."
+  ],
+  "misread": "That ease means laxity, when it is a stated principle of the law with defined concessions.",
+  "sources": [],
+  "terms": [
+   "sharia",
+   "sawm",
+   "salah",
+   "fiqh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Yusr and Usr"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "YUSR"
+  }
  }
 ]

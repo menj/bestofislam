@@ -21,6 +21,12 @@
   "aliases": [
    "Ibadat",
    "Worship"
+  ],
+  "faruqi": [
+   {
+    "page": 39,
+    "term": "ʿIBĀDAH"
+   }
   ]
  },
  {
@@ -252,7 +258,13 @@
    "five-pillars-explained"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 29,
+    "term": "IḤSĀN"
+   }
+  ]
  },
  {
   "slug": "ijma",
@@ -377,6 +389,12 @@
   ],
   "aliases": [
    "Imams"
+  ],
+  "faruqi": [
+   {
+    "page": 23,
+    "term": "IMĀM"
+   }
   ]
  },
  {
@@ -405,6 +423,12 @@
    "Faith",
    "Faith And Good Works",
    "Iman Al-Mufassal"
+  ],
+  "faruqi": [
+   {
+    "page": 23,
+    "term": "ĪMĀN"
+   }
   ]
  },
  {
@@ -453,6 +477,12 @@
    "'Imran",
    "Family of Imran",
    "Aal Imran"
+  ],
+  "faruqi": [
+   {
+    "page": 40,
+    "term": "ʿIMRĀN"
+   }
   ]
  },
  {
@@ -763,6 +793,12 @@
    "Surrender",
    "Submission",
    "Muslim"
+  ],
+  "faruqi": [
+   {
+    "page": 35,
+    "term": "MUSLIM"
+   }
   ]
  },
  {
@@ -842,6 +878,12 @@
    "Isma",
    "Impeccability",
    "Sinlessness Of Prophets"
+  ],
+  "faruqi": [
+   {
+    "page": 39,
+    "term": "ʿIṢMAH"
+   }
   ]
  },
  {
@@ -967,5 +1009,705 @@
    "I'tikaf",
    "Seclusion"
   ]
+ },
+ {
+  "slug": "id-mubarak",
+  "title": "'Id Mubarak",
+  "ar": "عيد مبارك / كل عام وأنتم بخير",
+  "tr": "ʿĪd Mubārak; Kull ʿām wa-antum bi-khayr",
+  "def": "“Blessed feast; may you be well every year”: the greeting said at ʿĪd al-Fiṭr, ʿĪd al-Aḍḥā and other annual celebrations.",
+  "what": [
+   "<em>ʿĪd Mubārak</em> means “a blessed festival”. <em>Kull ʿām wa-antum bi-khayr</em> means “every year, may you be well”, a wish that the person will see the day again in good health and happiness. Muslims say the two together, or either alone, to family, friends and neighbours on the mornings of ʿĪd al-Fiṭr, which ends Ramadan, and ʿĪd al-Aḍḥā, which falls at the end of the pilgrimage rites. People also use the greeting at weddings, anniversaries and other yearly celebrations. It is a custom of courtesy and goodwill and does not come from a text of the Quran. Many Muslims also add a prayer, such as asking God to accept their fasting or worship."
+  ],
+  "misread": "Non-Muslims sometimes think it is a prayer formula with a fixed ritual setting, while it is an ordinary greeting that anyone may use.",
+  "sources": [],
+  "terms": [
+   "eid",
+   "common-phrases",
+   "greeting-non-muslims",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 60,
+   "term": "‘ĪD MUBĀRAK. KULL ‘ĀM WA ANTUM BI KHAYR."
+  }
+ },
+ {
+  "slug": "ijaz-al-quran",
+  "title": "I'jaz al-Qur'an",
+  "ar": "إعجاز القرآن",
+  "tr": "Iʿjāz al-Qurʾān",
+  "def": "The inimitability of the Quran: the claim that no one can produce its like, which shows its divine origin.",
+  "what": [
+   "<em>Iʿjāz</em> means making others unable to match something. <em>Iʿjāz al-Qurʾān</em> is the doctrine that the Quran cannot be equalled in its language, meaning and effect, and that this is evidence of its divine origin. The Quran itself issues the challenge to produce a surah like it (2:23, 10:38), and to bring ten (11:13) or even the whole of it (17:88), even if humans and jinn united to try.",
+   "Muslims have found the inimitability in the Quran’s Arabic style and rhythm, its structure, its knowledge of the unseen and its effect on listeners. Scholars such as al-Baqillani and al-Jurjani wrote on its eloquence. Faruqi stresses that the Quran is the verbatim word of God, and on this view its form cannot be separated from its meaning, which is why translation never reproduces it fully."
+  ],
+  "misread": "It is mistaken for a claim that the Quran is simply beautiful poetry, while the claim is that the whole work cannot be matched by any human effort.",
+  "sources": [
+   "Scholars differ on the grounds of inimitability: some stress eloquence, others the content, others that God withheld the ability to imitate. All agree that the challenge was never met."
+  ],
+  "terms": [
+   "quran",
+   "wahy",
+   "arabic",
+   "tafsir"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "I‘jaz Al-Quran",
+   "Ijaz",
+   "Inimitability Of The Quran"
+  ],
+  "faruqi": {
+   "page": 49,
+   "term": "I'JĀZ AL QUR'ĀN"
+  }
+ },
+ {
+  "slug": "ijma-al",
+  "title": "Ijma', al-",
+  "ar": "الإجماع",
+  "tr": "al-Ijmāʿ",
+  "def": "Consensus: the agreement of qualified scholars on a ruling, accepted as a source of Islamic law after the Quran and Sunna.",
+  "what": [
+   "<em>Ijmāʿ</em> means agreement. In Islamic law it names the agreement of the qualified jurists of a given age on a legal question, and the schools count it among the sources of law after the Quran and the Sunna. Once such agreement is established, later scholars treat the ruling as settled. Jurists base the authority of consensus on texts such as 4:115, which warns against following a path other than that of the believers, and on a saying reported in several forms that the Prophet’s community will not agree on an error. Faruqi counts it with the sources from which Islamic law is derived."
+  ],
+  "misread": "Some picture it as a vote of the general public or a majority decision, but it refers to the agreement of those qualified to give legal rulings.",
+  "sources": [
+   "Scholars disagree about who counts for consensus, whether it extends beyond the Companions, and whether it can be known to have taken place. Some, such as Ahmad ibn Hanbal, were cautious about claiming it."
+  ],
+  "terms": [
+   "ijma",
+   "ijtihad",
+   "qiyas",
+   "sharia"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Ijma'",
+   "Ijma"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL IJMĀ'"
+  }
+ },
+ {
+  "slug": "ijma-al-sarih-al",
+  "title": "Ijma' al-Sarih, al-",
+  "ar": "الإجماع الصريح",
+  "tr": "al-Ijmāʿ al-Ṣarīḥ",
+  "def": "Explicit consensus: agreement of the jurists stated openly, each by word or act, on a legal question.",
+  "what": [
+   "<em>Al-ijmāʿ al-ṣarīḥ</em> is the clearly expressed form of consensus. The word <em>ṣarīḥ</em> means plain or explicit. Here every jurist of the age states his view on a question, whether in speech or by deed, and the statements all agree. Jurists treat this as the strongest kind of consensus, and they contrast it with silent agreement (<em>al-ijmāʿ al-sukūtī</em>). Since the agreement is declared, the schools generally accept it as proof for a ruling, while they disagree among themselves about how often it has actually occurred."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ijma-al",
+   "ijma-al-sukuti-al",
+   "ijtihad",
+   "sharia"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Ijma' al-Sarih",
+   "Explicit Consensus"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL IJMĀ' AL ṢARĪḤ"
+  }
+ },
+ {
+  "slug": "ijma-al-sukuti-al",
+  "title": "Ijma' al-Sukuti, al-",
+  "ar": "الإجماع السكوتي",
+  "tr": "al-Ijmāʿ al-Sukūtī",
+  "def": "Tacit consensus: one or more jurists give a ruling and the others, aware of it, raise no objection.",
+  "what": [
+   "<em>Al-ijmāʿ al-sukūtī</em> means silent consensus. It arises when a jurist or several jurists derive a ruling from a source and the other jurists of the age know of it and do not object, so their silence is read as acceptance. Faruqi defines it by the jurists’ not objecting to the derivation of a given prescription from a source. Schools differ on its weight. Some, including many Hanafi scholars, accept it as a proof, with conditions, while others, among them many Shafiʿi scholars, hold that silence alone cannot establish agreement. It is the weaker of the two kinds, set against express consensus (<em>al-ijmāʿ al-ṣarīḥ</em>)."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "ijma-al",
+   "ijma-al-sarih-al",
+   "ijtihad",
+   "fiqh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Ijma' al-Sukuti",
+   "Silent Consensus",
+   "Tacit Consensus"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL IJMĀ' AL SUKŪTĪ"
+  }
+ },
+ {
+  "slug": "ijtihad-al",
+  "title": "Ijtihad, al-",
+  "ar": "الاجتهاد",
+  "tr": "al-Ijtihād",
+  "def": "Independent reasoning by a qualified scholar to derive rulings from the Quran, the Sunna and the other legitimate sources.",
+  "what": [
+   "<em>Ijtihād</em> comes from the root <em>j-h-d</em>, meaning to exert effort, and it names the exertion of a qualified jurist to reach a ruling on a matter that the sources do not settle directly. Faruqi calls it creative self-exertion to derive laws from the legitimate sources. It works with the Quran, the Sunna, consensus and analogy, and the person doing it is called a <em>mujtahid</em>. A well-known hadith says that a judge who exerts himself and judges correctly has two rewards, and one who errs has one (Sahih al-Bukhari, Sahih Muslim). The saying shows that sincere effort is valued even when the result is mistaken."
+  ],
+  "misread": "It is mistaken for private opinion or freedom to reinterpret the religion at will, but it is a disciplined method that only trained scholars may use.",
+  "sources": [
+   "Scholars set conditions for the mujtahid: knowledge of Arabic, the Quran, hadith and the principles of jurisprudence. A long-running debate asks whether the “gate” of ijtihad closed in later centuries, and many modern scholars say that it did not."
+  ],
+  "terms": [
+   "ijtihad",
+   "ijma",
+   "qiyas",
+   "fiqh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Ijtihad",
+   "Ijtihad"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL IJTIHĀD"
+  }
+ },
+ {
+  "slug": "ikhlas",
+  "title": "Ikhlas",
+  "ar": "إخلاص",
+  "tr": "Ikhlāṣ",
+  "def": "Sincerity: pure devotion to God, with firm conviction and loyalty to Him and commitment to His will.",
+  "what": [
+   "<em>Ikhlāṣ</em> means purifying one’s religion and one’s deeds for God alone. The Quran commands: “They were commanded only to worship God, being sincere to Him in religion” (98:5; also 39:2). It is the inner side of worship, joined to firm belief, faithfulness to God and the resolve to do what He wills. A hadith in Sahih al-Bukhari and Sahih Muslim says that deeds are judged by their intentions, and scholars cite it on the place of sincerity in every act. Surah 112, which declares God’s oneness, is called Surat al-Ikhlāṣ, and the sincerity of faith is understood as the opposite of showing off (<em>riyāʾ</em>) and of associating partners with God."
+  ],
+  "misread": "It is rendered “sincerity” only, though in Islam it means directing the whole intention to God, not simply being honest about one’s feelings.",
+  "sources": [],
+  "terms": [
+   "tawhid",
+   "iman",
+   "ihsan",
+   "ibadah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 31,
+   "term": "IKHLĀṢ"
+  }
+ },
+ {
+  "slug": "ilal-al-hadith",
+  "title": "'Ilal al-Hadith",
+  "ar": "علل الحديث",
+  "tr": "ʿIlal al-Ḥadīth",
+  "def": "The science of hidden defects in hadith: flaws in a report that look sound on the surface but weaken it.",
+  "what": [
+   "<em>ʿIlal</em> is the plural of <em>ʿilla</em>, here a hidden defect. The science of <em>ʿilal al-ḥadīth</em> studies the qualities or circumstances that may weaken a report that otherwise seems sound. Examples include a break in a chain that is not apparent, a narrator who attributed to the Prophet (peace be upon him) the words of a Companion, or a mix-up of two chains. It is regarded as one of the most demanding branches of hadith criticism, since spotting such defects needs wide knowledge of narrators and their reports. Early critics such as Ali ibn al-Madini worked in it, and Ibn Abi Hatim al-Razi (d. 938) wrote a well-known work on the subject."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "sahih",
+   "isnad",
+   "jarh-wal-tadil-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Ilal",
+   "Ilal Al-Hadith"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "'ILAL AL ḤADĪTH"
+  }
+ },
+ {
+  "slug": "ilm-al",
+  "title": "ʿIlm, al-",
+  "ar": "العلم",
+  "tr": "al-ʿIlm",
+  "def": "Knowledge of the patterns God has set in creation, in nature, in the person and in society, reached through the senses, intuition and reason.",
+  "what": [
+   "<em>ʿIlm</em> means knowledge, and the Quran gives it great honour: “Are those who know equal to those who do not know?” (39:9). Faruqi defines it as knowledge of the patterns of God in creation. These patterns are found in nature, which the natural and exact sciences study, in the personal realm, which the humanities study, and in society, which the social sciences study. The patterns can be known through the senses, through intuition, theoretical and practical, and through reason. The Quran also commands the prayer, “My Lord, increase me in knowledge” (20:114). On this view, to study creation is to study the signs of God, and no real conflict exists between faith and the pursuit of knowledge."
+  ],
+  "misread": "It is often limited to religious learning, though the word covers every field in which the patterns of creation are studied.",
+  "sources": [
+   "The Quran says that those who truly fear God among His servants are the people of knowledge (35:28). Muslim scholars of the classical period carried the word into medicine, astronomy, mathematics and other fields."
+  ],
+  "terms": [
+   "knowledge",
+   "education",
+   "reason-and-faith",
+   "philosophy"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-ʿIlm",
+   "Ilm",
+   "Al-Ilm"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "AL ʿILM"
+  }
+ },
+ {
+  "slug": "immah",
+  "title": "'Immah",
+  "ar": "عمامة",
+  "tr": "ʿImāmah",
+  "def": "The turban, a head-covering worn by many Muslim men and by some scholars as a mark of their calling.",
+  "what": [
+   "<em>ʿImāmah</em> is the turban, a cloth wound around the head. Faruqi lists it among the garments of Muslim dress as a head-covering. The Prophet (peace be upon him) is reported to have worn a black turban when he entered Mecca (Sahih Muslim), and many Muslims, especially scholars, wear it for the sake of that example. It is not an obligation of the faith. Colours, styles and the way it is wound differ widely between regions, from the Arabian peninsula to South Asia and West Africa. In many places a turban marks a scholar, a pilgrim or a person of standing, and in others it is worn only on special occasions."
+  ],
+  "misread": "It is often assumed to be a required religious uniform, but it is a customary garment that carries a sunna-inspired meaning for some.",
+  "sources": [],
+  "terms": [
+   "jubbah",
+   "modesty-and-dress",
+   "hair",
+   "hijab"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Imamah",
+   "Amama",
+   "Turban"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "'IMMAH"
+  }
+ },
+ {
+  "slug": "in-shaa-allah",
+  "title": "In Sha'a Allah",
+  "ar": "إن شاء الله",
+  "tr": "In shāʾ Allāh",
+  "def": "“If God wills”: said whenever one speaks of the future, in acknowledgement that outcomes rest with God.",
+  "what": [
+   "<em>In shāʾ Allāh</em> means “if God wills”. Muslims say it whenever they speak of something they intend to do, and they say it as an acknowledgement that no plan comes to pass unless God allows it. The Quran teaches it directly: “Never say of anything, ‘I will do that tomorrow,’ without adding, ‘if God wills’” (18:23–24). Examples of the phrase appear in the Quran in the speech of prophets, as when Ishmael tells his father that he will find him patient “if God wills” (37:102). People use the phrase when making promises, arranging meetings and stating hopes. It reminds the speaker that his own effort is real but depends on God’s decree."
+  ],
+  "misread": "It is often taken as a polite way of saying “maybe” or “probably not”, while the phrase expresses the speaker’s intention together with trust in God.",
+  "sources": [],
+  "terms": [
+   "common-phrases",
+   "allah",
+   "qadar",
+   "taqwa"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Insha Allah",
+   "Inshallah",
+   "Insha'allah",
+   "If God Wills"
+  ],
+  "faruqi": {
+   "page": 58,
+   "term": "IN SHĀ’A ALLAH."
+  }
+ },
+ {
+  "slug": "inna-allah-wa-malaikatahu-yusalluna-ala-al-nabiyy",
+  "title": "Inna Allah wa Mala'ikatahu Yusalluna 'ala al-Nabiyy",
+  "ar": "إن الله وملائكته يصلون على النبي. يا أيها الذين آمنوا صلوا عليه وسلموا تسليما",
+  "tr": "Inna Allāha wa-malāʾikatahu yuṣallūna ʿalā al-nabiyy; yā ayyuhā alladhīna āmanū ṣallū ʿalayhi wa-sallimū taslīmā",
+  "def": "“God and His angels bless the Prophet; O believers, invoke blessings and peace upon him”: the verse recited in the Friday sermon.",
+  "what": [
+   "These words are the Quran’s verse 33:56. They state that God and His angels bless the Prophet Muhammad (peace be upon him) and call on the believers to ask for blessings and peace on him. The imam recites the verse in the <em>khuṭba</em>, the Friday sermon, and the congregation answers quietly with the proper invocation, such as “May God bless him and grant him peace”. The verse is the basis for the practice of invoking blessings on the Prophet whenever his name is spoken or heard. Scholars teach that the invocation expresses love and gratitude toward the messenger through whom the Quran came. In the daily prayer, Muslims also recite the blessings in the closing sitting."
+  ],
+  "misread": "The invocation is sometimes mistaken for worship of the Prophet, but the verse asks for God’s blessings on him and so keeps all worship for God.",
+  "sources": [
+   "The Prophet is reported to have said that whoever invokes a blessing on him once, God will bless that person tenfold (Sahih Muslim)."
+  ],
+  "terms": [
+   "muhammad",
+   "honorifics",
+   "angels",
+   "friday"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 55,
+   "term": "INNA ALLAH WA MALĀ’IKATAHU YUṢALLŪNA ‘ALĀ AL NABIYY. YĀ AYYUHA ALLADHĪNA ĀMANŪ ṢALLŪ ‘ALAYHI WA SALLIMŪ TASLĪMAN."
+  }
+ },
+ {
+  "slug": "inna-lillahi-wa-inna-ilayhi-rajiun",
+  "title": "Inna Lillahi wa Inna Ilayhi Raji'un",
+  "ar": "إنا لله وإنا إليه راجعون",
+  "tr": "Innā lillāhi wa-innā ilayhi rājiʿūn",
+  "def": "“We belong to God and to Him we shall return”: said on meeting loss, grief or the news of a death.",
+  "what": [
+   "This phrase comes from the Quran (2:156), which describes those who are patient as the ones “who, when affliction strikes them, say: ‘We belong to God, and to Him we shall return.’” Muslims say it on hearing of a death, and on any loss, tragedy or sorrow. It affirms that life, health and possessions all belong to God, and that every person will return to Him. The saying is reported in Sahih Muslim, in the account of Umm Salama, that the Prophet (peace be upon him) taught it together with a prayer: “O God, reward me in my affliction and give me something better in its place.” People often say it at funerals and when they offer condolences."
+  ],
+  "misread": "Observers sometimes see it as a statement of resignation, whereas it is a statement of trust in God and an expression of patience.",
+  "sources": [],
+  "terms": [
+   "death",
+   "funeral",
+   "adversity",
+   "akhira"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Inna Lillahi",
+   "Innalillahi"
+  ],
+  "faruqi": {
+   "page": 57,
+   "term": "INNĀ LILLAHI WA INNĀ ILAYHI RĀJI‘ŪN."
+  }
+ },
+ {
+  "slug": "inni-dain-fa-amminu",
+  "title": "Inni Da'in fa Amminu",
+  "ar": "إني داع فآمنوا",
+  "tr": "Innī dāʿin fa-āminū",
+  "def": "“I am about to supplicate, so say Amin”: the imam’s call for the congregation to join his prayer.",
+  "what": [
+   "The words mean “I am a supplicant, so say <em>Āmīn</em>.” The imam says them at the end of the sermon or after the prayer, before reciting supplications, to ask those who are present to join him by saying <em>Āmīn</em> after each invocation. <em>Āmīn</em> means “may it be so” or “answer, O God”. The phrase belongs to the customs of the Friday sermon and congregational prayer, and the text does not come from the Quran or a fixed hadith. Muslims find a basis for the practice in the value that their tradition gives to supplication together, and in the Prophet’s example of saying <em>Āmīn</em> after reciting al-Fātiḥa. Practice differs by region."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "amen",
+   "dua",
+   "friday",
+   "salah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 56,
+   "term": "INNĪ DĀ‘IN FA AMMINŪ."
+  }
+ },
+ {
+  "slug": "iqamah",
+  "title": "Iqamah",
+  "ar": "إقامة",
+  "tr": "Iqāmah",
+  "def": "The second call, given just before a congregational prayer begins; from the root meaning to establish.",
+  "what": [
+   "<em>Iqāmah</em> comes from <em>aqāma</em>, meaning to set up or establish. Faruqi defines it as the beginning of <em>ṣalāh</em> or of any other ritual of worship. In practice the word names the call said inside the mosque just before a congregational prayer starts, in words close to those of the <em>adhān</em>, with the addition of <em>qad qāmat al-ṣalāh</em>, “the prayer has begun”. The congregation stands in rows after the call and the imam begins. The related Quranic phrase <em>aqīmū al-ṣalāh</em> (2:43) means to establish the prayer, which is to perform it fully and regularly. The term thus links the call with the larger idea of keeping the ritual of worship in being."
+  ],
+  "misread": "It is sometimes called a second adhan, as if it only repeated the first, whereas it announces that the prayer itself is starting.",
+  "sources": [],
+  "terms": [
+   "adhan",
+   "salah",
+   "friday",
+   "imam"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Iqama",
+   "Iqamat"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "IQĀMAH"
+  }
+ },
+ {
+  "slug": "isra-al",
+  "title": "Isra', al-",
+  "ar": "الإسراء",
+  "tr": "al-Isrāʾ",
+  "def": "The Prophet’s night journey from Mecca to Jerusalem, and back to Mecca, named in Quran 17:1.",
+  "what": [
+   "<em>Al-Isrāʾ</em> is the night journey of Muhammad (peace be upon him) from Mecca to Jerusalem (<em>al-Quds</em>) and back. The Quran begins surah 17: “Glory to Him who took His servant by night from the Sacred Mosque to the Farthest Mosque, around which We have blessed” (17:1). The surah takes its name from this event, which the tradition places in the later Meccan years.",
+   "Hadith accounts add that the Prophet then ascended through the heavens, an event called the <em>miʿrāj</em>, and that the daily prayers were prescribed on that occasion (Sahih al-Bukhari, Sahih Muslim). Many Muslims commemorate the night with prayer. Scholars hold different views on whether the journey was of the body and spirit together, though most take it as a physical and spiritual journey."
+  ],
+  "misread": "",
+  "sources": [
+   "The verse names no date and no details beyond the two mosques, so the story of the night comes from the hadith literature."
+  ],
+  "terms": [
+   "isra-and-miraj",
+   "jerusalem",
+   "muhammad",
+   "kaaba"
+  ],
+  "articles": [],
+  "type": "event",
+  "aliases": [
+   "Al-Isra'",
+   "Al-Isra",
+   "Night Journey"
+  ],
+  "faruqi": {
+   "page": 23,
+   "term": "AL ISRĀ'"
+  }
+ },
+ {
+  "slug": "istadafa",
+  "title": "Istad'afa",
+  "ar": "استضعف",
+  "tr": "Istaḍʿafa",
+  "def": "To exploit the weak or to impose domination over them; the act of the oppressor toward the vulnerable.",
+  "what": [
+   "<em>Istaḍʿafa</em> means to treat someone as weak and so to exploit or dominate him. The Quran uses the verb for Pharaoh, who “oppressed a group of them, killing their sons and sparing their women” (28:4). The passive form describes the victims, “those who were oppressed in the land” (28:5), whom God promises to favour. The related word <em>mustaḍʿafūn</em>, the oppressed, appears in 4:75, where believers are urged to fight for the oppressed men, women and children who cry out for a protector. Faruqi includes the verb among the key terms because it names a basic wrong: to take advantage of the helplessness of others or to impose imperial rule over them."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "pharaoh",
+   "istikbar",
+   "justice",
+   "moses"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 36,
+   "term": "ISTAḌ'AFA"
+  }
+ },
+ {
+  "slug": "istaghfara",
+  "title": "Istaghfara",
+  "ar": "استغفر",
+  "tr": "Istaghfara",
+  "def": "To seek God’s forgiveness by asking Him to cover and pardon one’s sins.",
+  "what": [
+   "<em>Istaghfara</em> means to ask for forgiveness (<em>maghfira</em>), and in Islamic usage to ask God to pardon one’s sins. The Quran presents it as a path open to all: “Seek forgiveness of your Lord; He is ever Forgiving” (71:10), and it describes the God-conscious as those who remember God and seek forgiveness for their sins when they err (3:135). Muslims say <em>astaghfir Allāh</em>, “I seek God’s forgiveness”, after prayers and in daily life. The Prophet (peace be upon him) himself sought forgiveness more than seventy times a day, according to Sahih al-Bukhari, which shows that the practice is for the best of people and not only for sinners. The noun is <em>istighfār</em>."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "istighfar",
+   "forgiveness",
+   "atonement-and-repentance",
+   "dua"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 41,
+   "term": "ISTAGHFARA"
+  }
+ },
+ {
+  "slug": "istakbara",
+  "title": "Istakbara",
+  "ar": "استكبر",
+  "tr": "Istakbara",
+  "def": "To be arrogant by falsely supposing oneself greater than others, and above God’s command.",
+  "what": [
+   "<em>Istakbara</em> means to consider oneself great and to behave accordingly. Faruqi defines it as falsely assuming that one is the greater. The Quran uses the verb of Iblis, who refused to bow to Adam: “He refused and was arrogant, and he was one of the unbelievers” (2:34). It uses it also for Pharaoh and his hosts, who “were arrogant in the land without right” (28:39). The Quran treats arrogance as a root of rejecting the truth, because it keeps a person from accepting guidance. The related noun <em>istikbār</em> names the condition. In Islamic teaching only God is truly great (<em>al-Kabīr</em>), and anyone who claims greatness for himself takes a position that belongs to God alone."
+  ],
+  "misread": "",
+  "sources": [
+   "A hadith in Sahih Muslim says that no one with an atom’s weight of arrogance in his heart will enter paradise."
+  ],
+  "terms": [
+   "iblis",
+   "istikbar",
+   "pharaoh",
+   "kufr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 45,
+   "term": "ISTAKBARA"
+  }
+ },
+ {
+  "slug": "istawu-yarhamukum-allah",
+  "title": "Istawu Yarhamukum Allah",
+  "ar": "استووا يرحمكم الله",
+  "tr": "Istawū yarḥamukum Allāh",
+  "def": "“Straighten your rows; may God have mercy on you”: the imam’s call to the congregation before the prayer begins.",
+  "what": [
+   "The words mean “Straighten yourselves; may God show you mercy.” The imam says them to the congregation before the prayer so that the worshippers stand in straight rows, shoulder to shoulder and heel to heel, with no gaps. The phrase follows the <em>iqāmah</em> and comes just before the opening <em>takbīr</em>. It rests on the Prophet’s practice of straightening the rows before the prayer. He said that straightening them is part of the perfection of the prayer (Sahih al-Bukhari, Sahih Muslim). The rows express the equality of the worshippers, since rich and poor, young and old stand side by side before God. The wording of the call varies among imams and regions."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "salah",
+   "imam",
+   "jamaat",
+   "friday"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 55,
+   "term": "ISTAWŪ YARḤAMUKUM ALLAH."
+  }
+ },
+ {
+  "slug": "istihsan-al",
+  "title": "Istihsan, al-",
+  "ar": "الاستحسان",
+  "tr": "al-Istiḥsān",
+  "def": "Juristic preference: setting aside an established ruling for a case because another ruling is fairer.",
+  "what": [
+   "<em>Istiḥsān</em> means to hold something to be better. In the law it names the practice of leaving a ruling that strict analogy would give, in favour of another that is more equitable in the particular case. Faruqi describes it as the acceptance of a rule because its equity is superior to that of an already established law. The Hanafi school developed it, and the Maliki school used a close counterpart. Other jurists, among them al-Shafiʿi, objected that it could let personal taste displace the revealed texts. Its defenders replied that it rests on evidence from the sources, such as necessity, custom or the public good, and that it protects the spirit of the law against rigid analogy."
+  ],
+  "misread": "It is sometimes translated “personal preference” or “arbitrary opinion”, while it is a disciplined method that requires a reason grounded in the sources.",
+  "sources": [],
+  "terms": [
+   "qiyas",
+   "ijtihad",
+   "abu-hanifa",
+   "sharia"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Istihsan",
+   "Istihsan"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL ISTIḤSĀN"
+  }
+ },
+ {
+  "slug": "istikbar",
+  "title": "Istikbar",
+  "ar": "استكبار",
+  "tr": "Istikbār",
+  "def": "Arrogant power: the excessive and unjust claim to greatness made by tyrants.",
+  "what": [
+   "<em>Istikbār</em> is the noun of <em>istakbara</em>. It names the assumption of excessive power by tyrants, a claim to greatness that no human has. The Quran gives Pharaoh and his armies as the standing example: “He and his hosts were arrogant in the land without right, and thought they would not be returned to Us” (28:39). In Quranic teaching, <em>istikbār</em> goes together with refusing the truth and with oppressing the weak (<em>istiḍʿāf</em>). The powerful who think themselves above accountability stand opposed to those they exploit. Modern Muslim writers sometimes use the word for the arrogant powers of the world that dominate other peoples, in the same sense as the Quran’s account of earlier tyrants."
+  ],
+  "misread": "",
+  "sources": [
+   ""
+  ],
+  "terms": [
+   "istakbara",
+   "istadafa",
+   "pharaoh",
+   "iblis"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 45,
+   "term": "ISTIKBĀR"
+  }
+ },
+ {
+  "slug": "istimar",
+  "title": "Istiʿmar",
+  "ar": "استعمار",
+  "tr": "Istiʿmār",
+  "def": "Mankind’s commission to build up the earth and human society in line with the patterns God revealed to the Prophet.",
+  "what": [
+   "The root of <em>istiʿmār</em> means to inhabit, cultivate and build. The Quran says: “He produced you from the earth and made you settle in it” (11:61), using the verb <em>istaʿmara</em>. Faruqi takes the word in this Quranic sense: the divine commission to reconstruct the material and human world in fulfilment of the patterns that God revealed to His Prophet (peace be upon him). It makes human beings responsible for developing the earth, in farming, building, learning and just social order. The task is part of the trust (<em>amāna</em>) that God gave to humankind. On this view work in the world is a form of obedience when it follows God’s guidance."
+  ],
+  "misread": "In modern Arabic the word means colonialism, which is the opposite of the Quranic sense of building the earth for the good of its people.",
+  "sources": [],
+  "terms": [
+   "earth",
+   "environment",
+   "knowledge",
+   "amanah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Isti'mar",
+   "Istimar"
+  ],
+  "faruqi": {
+   "page": 40,
+   "term": "ISTIʿMĀR"
+  }
+ },
+ {
+  "slug": "istishab-al",
+  "title": "Istishab, al-",
+  "ar": "الاستصحاب",
+  "tr": "al-Istiṣḥāb",
+  "def": "Presumption of continuity: an established ruling or state remains in force until evidence shows that it has changed.",
+  "what": [
+   "<em>Istiṣḥāb</em> means keeping something as a companion, and in the law it is the principle that an established rule or condition is presumed to continue unless proof shows that it was revoked or has altered. The default is continuity. Faruqi defines it as the continuation of an established law that is not known to have been revoked or rescinded by any later evidence.",
+   "Jurists express the principle in the well-known rule that certainty is not removed by doubt, and they draw support from a hadith in which a man felt something during prayer, and the Prophet (peace be upon him) told him not to leave unless he heard a sound or smelled an odour (Sahih al-Bukhari, Sahih Muslim). Jurists agree on its use in practice, but they differ on how much weight it has as a source."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "qiyas",
+   "ijma",
+   "istihsan-al",
+   "ijtihad"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Istishab",
+   "Istishab"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL ISTIṢḤĀB"
+  }
+ },
+ {
+  "slug": "izzah",
+  "title": "ʿIzzah",
+  "ar": "عزة",
+  "tr": "ʿIzza",
+  "def": "Might and honour: the high standing that belongs to God, to His Prophet and to the believers.",
+  "what": [
+   "<em>ʿIzza</em> means might, honour and a standing that cannot be overcome. The Quran assigns it first to God: “Whoever desires honour, to God belongs all honour” (35:10). It then names those who share in it by His grant: “Honour belongs to God, to His Messenger and to the believers, but the hypocrites do not know” (63:8). Faruqi lists it as the high position that belongs to God, to the Prophet Muhammad (peace be upon him) and to the Muslims in their own realms. The same root gives the divine name <em>al-ʿAzīz</em>, the Almighty. Muslims draw on the word to say that the dignity of the community comes from faithfulness to God and does not depend on worldly power."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "al-aziz",
+   "muhammad",
+   "ummah",
+   "hypocrites"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Izza",
+   "Izzat",
+   "Izzah"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "ʿIZZAH"
+  }
  }
 ]

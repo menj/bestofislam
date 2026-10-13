@@ -809,5 +809,580 @@
    "Romans",
    "Rum"
   ]
+ },
+ {
+  "slug": "badi-al",
+  "title": "Badi', al-",
+  "ar": "البادئ",
+  "tr": "al-Bādiʾ",
+  "def": "A divine name meaning the Beginner of all things; also given as <em>al-Mubdiʾ</em>.",
+  "what": [
+   "<em>Al-Bādiʾ</em> means the One who begins, who brings creation into being at the start. Faruqi also gives the form <em>al-Mubdiʾ</em>, from the same root. The name teaches that every thing was begun by God and has no origin apart from Him. The Quran speaks of God as the One who originates creation and then repeats it (85:13), and in several places it calls Him the one who begins the creation and will bring it back (10:4). The name is often thought of together with <em>al-Muʿīd</em>, the Restorer. Together they cover creation and resurrection, so that the beginning and the return both belong to God."
+  ],
+  "misread": "That creation was set in motion and left, when the name teaches that God begins every thing and brings it back again.",
+  "sources": [
+   "The Quranic phrase “He originates and repeats” (85:13) is the source commonly cited for the pair of names <em>al-Mubdiʾ</em> and <em>al-Muʿīd</em>."
+  ],
+  "terms": [
+   "divine-attributes",
+   "bari-al",
+   "creation",
+   "bath-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Badi'",
+   "al-Badi'",
+   "al-Bādiʾ",
+   "al-Mubdiʾ"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "AL BĀDI'"
+  }
+ },
+ {
+  "slug": "baghy-al",
+  "title": "Baghy, al-",
+  "ar": "البغي",
+  "tr": "al-Baghy",
+  "def": "A false or evil endeavour, spoiled by a false or evil intention, a false or evil result, or both.",
+  "what": [
+   "<em>Al-baghy</em> is wrongful conduct that goes beyond its limits. Faruqi defines it as an endeavour that is false or evil because of its intention or its consequence, or both. The word can cover oppression, rebellion against rightful authority, and aggression against others. The Quran lists it with the gravest wrongs. It says that God has forbidden immoral deeds, whether open or hidden, sin, and <em>baghy</em> without right (7:33). Another verse says God commands justice, kindness and giving to kin, and forbids immorality, wrongdoing and <em>baghy</em> (16:90). The word is the reverse of <em>ʿadl</em> and <em>iḥsān</em>, which the second verse sets beside it."
+  ],
+  "misread": "That the word means only political rebellion, when its range includes any wrongful transgression against right.",
+  "sources": [
+   "The jurists later used <em>bughāt</em>, the plural form of the same root, for those who rebel against a lawful ruler, and they set rules for dealing with them."
+  ],
+  "terms": [
+   "justice",
+   "ihsan",
+   "fahisha",
+   "aggression"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Baghy"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BAGHY"
+  }
+ },
+ {
+  "slug": "balagh-al",
+  "title": "Balagh, al-",
+  "ar": "البلاغ",
+  "tr": "al-Balāgh",
+  "def": "A name of the Quran: that which has reached humankind from God.",
+  "what": [
+   "<em>Al-balāgh</em> comes from the root meaning to arrive or to reach. As a name of the Quran, Faruqi explains, it refers to the message that has reached human beings from God. The word stresses that the Quran is a message delivered to its recipients, and the word is also tied to the task of the Messenger, which is to convey it. The Quran uses the word of itself: it says “this is a message (<em>balāgh</em>) for mankind” (14:52). It also describes the duty of the Messenger as plain delivery (5:99). The name therefore joins the content of revelation with the duty of conveying it, which Muslims inherit as a duty to pass the message on."
+  ],
+  "misread": "That it is only a general word for “message”, when it is a name given to the Quran as the message that has reached humankind.",
+  "sources": [
+   "Several verses, among them 5:67 and 5:99, describe the Prophet’s duty as <em>balāgh</em>, conveying what was revealed."
+  ],
+  "terms": [
+   "quran",
+   "wahy",
+   "dawah",
+   "bayan-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Balagh"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BALĀGH"
+  }
+ },
+ {
+  "slug": "baqi-al",
+  "title": "Baqi, al-",
+  "ar": "الباقي",
+  "tr": "al-Bāqī",
+  "def": "A divine name meaning He who exists forever and remains after all else has passed away.",
+  "what": [
+   "<em>Al-Bāqī</em> means the Everlasting. It is a name of God and says that He alone does not end. Everything else, including every created thing, will pass away, and He will remain. Faruqi glosses it as the one who survives after all else has perished. The Quran says that everything on earth will perish, and the face of your Lord will remain, full of majesty and honour (55:26-27). Another verse says that all things perish except His face (28:88). The name reminds believers that the world is temporary and that their dependence rests on the One who is permanent."
+  ],
+  "misread": "That the name means only long life, when it says that God’s existence has no end and is not like that of created things.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "awwal-al",
+   "death",
+   "asma-allah-al-husna"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Baqi"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BĀQĪ"
+  }
+ },
+ {
+  "slug": "baraka",
+  "title": "Baraka",
+  "ar": "بارك",
+  "tr": "Bāraka",
+  "def": "To fill with the grace and approval of God.",
+  "what": [
+   "<em>Bāraka</em> is the verb for conferring <em>baraka</em>, blessing. To say that God has <em>bāraka</em> something is to say that He has filled it with increase, goodness and His approval. People use the verb in prayer for one another, and the noun <em>baraka</em> names the blessing itself. The Quran uses the root of places and persons God has blessed. The opening verse of Surah al-Isra speaks of the Sacred Mosque and the farthest mosque “whose surroundings We have blessed” (17:1). The word is not tied to any object as such: blessing is God’s gift, and a believer asks for it in his dealings."
+  ],
+  "misread": "That <em>baraka</em> is a magical property of objects, when it is a gift that comes from God alone.",
+  "sources": [],
+  "terms": [
+   "baraka-allah-fik",
+   "dua",
+   "ihsan",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 24,
+   "term": "BĀRAKA"
+  }
+ },
+ {
+  "slug": "baraka-allah-fik",
+  "title": "Baraka Allah Fik",
+  "ar": "بارك الله فيك",
+  "tr": "Bāraka Allāh fīk",
+  "def": "“May Allah bless you,” to one person (<em>fīk</em>) or several (<em>fīkum</em>), said as a compliment on any occasion.",
+  "what": [
+   "The phrase means “May Allah bless you”. It is said to one person as <em>fīk</em> or to a group as <em>fīkum</em>, and Faruqi says it is a compliment suited to any occasion. A Muslim uses it to thank someone, to praise good work or to wish another well, and so it often takes the place of a plain “thank you”. The phrase turns thanks into a prayer. Instead of rewarding the other person himself, the speaker asks God, who is the source of all reward, to bless him. It uses the verb <em>bāraka</em>, to fill with God’s grace. A common reply is <em>wa fīka bārak Allāh</em>, “and may Allah bless you”."
+  ],
+  "misread": "That it is only an alternative to “thank you”, when it asks God to bless the person.",
+  "sources": [],
+  "terms": [
+   "baraka",
+   "common-phrases",
+   "dua",
+   "anama-allahu-alayk"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 60,
+   "term": "BĀRAKA ALLAH FĪK (or FĪKUM)."
+  }
+ },
+ {
+  "slug": "bari-al",
+  "title": "Bari', al-",
+  "ar": "البارئ",
+  "tr": "al-Bāriʾ",
+  "def": "A divine name meaning the Creator who brings things into being.",
+  "what": [
+   "<em>Al-Bāriʾ</em> is a name of God that means the Maker, the Creator who brings things into being. Faruqi glosses it as the Creator of all things. Muslim scholars often noted that it points to creation that is free of defect and without any previous model. The Quran names it among three: He is God, the Creator (<em>al-Khāliq</em>), the Maker (<em>al-Bāriʾ</em>) and the Fashioner (<em>al-Muṣawwir</em>) (59:24). In the story of Moses, his people are told to turn in repentance to their <em>Bāriʾ</em> (2:54). The name reminds the believer that creatures owe their existence to God and that He knows them from the beginning."
+  ],
+  "misread": "That it is a duplicate of <em>al-Khāliq</em>, when the Quran gives it its own place beside the other names.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "badi-al",
+   "creation",
+   "asma-allah-al-husna"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Bari'",
+   "al-Bāriʾ"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "AL BĀRI'"
+  }
+ },
+ {
+  "slug": "bashir",
+  "title": "Bashir",
+  "ar": "بشير",
+  "tr": "Bashīr",
+  "def": "A name of the Prophet Muhammad (peace be upon him): the bearer of glad tidings.",
+  "what": [
+   "<em>Bashīr</em> means the bearer of good news. It is one of the names of the Prophet Muhammad (peace be upon him), whom the Quran sends as a bearer of glad tidings (<em>bashīr</em>) and a warner (<em>nadhīr</em>). Good news is for those who believe and do good, while the warning concerns the result of rejecting the message. The Quran says God sent him with the truth as a bearer of glad tidings and a warner (2:119). It also says that he was sent to all humankind in this role (34:28). The title is thus tied to his mission as a messenger, and the two roles are always named together."
+  ],
+  "misread": "That the Prophet’s mission was only to threaten, when the Quran gives him first the role of one who brings good news.",
+  "sources": [],
+  "terms": [
+   "muhammad",
+   "quran",
+   "prophets",
+   "honorifics"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 24,
+   "term": "BASHĪR"
+  }
+ },
+ {
+  "slug": "basir-al",
+  "title": "Basir, al-",
+  "ar": "البصير",
+  "tr": "al-Baṣīr",
+  "def": "A divine name meaning He who sees everything.",
+  "what": [
+   "<em>Al-Baṣīr</em> means the All-Seeing. It is a name of God and it teaches that nothing is hidden from Him. Faruqi glosses it as the One who sees everything. Believers think of the name when they need to remember that their deeds are known to God in every place and at every hour, in public and in private. It teaches that no deed, however small, escapes God.",
+   "The Quran often pairs it with <em>al-Samīʿ</em>, the All-Hearing, as in the verse which says there is nothing like Him, and He is the All-Hearing, the All-Seeing (42:11). The same verse protects against comparison with creatures, since God’s seeing is not like the sight of any created thing. The name is a basis for <em>iḥsān</em>, which a famous hadith defines as worshipping God as though one sees Him, for if one does not see Him, He sees one."
+  ],
+  "misread": "That God’s sight resembles human sight, when the Quran says that nothing is like Him.",
+  "sources": [
+   "The hadith of Jibril, reported by Muslim, defines <em>iḥsān</em> in this way."
+  ],
+  "terms": [
+   "divine-attributes",
+   "ihsan",
+   "asma-allah-al-husna",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Basir"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BAṢĪR"
+  }
+ },
+ {
+  "slug": "bath-al",
+  "title": "Ba'th, al-",
+  "ar": "البعث",
+  "tr": "al-Baʿth",
+  "def": "Resurrection, when all people are raised to face God’s judgment.",
+  "what": [
+   "<em>Al-baʿth</em> means the raising of the dead. At the end of time God will raise all human beings from death to stand before Him for judgment. It is one of the articles of faith, together with belief in God, His angels, His books and His messengers. The Quran affirms that God will resurrect those in the graves (22:7). It answers those who deny resurrection by pointing to creation: the One who made people the first time can make them again. The resurrection is followed by reckoning and the entrance to Paradise or Hell. Belief in <em>al-baʿth</em> gives the believer a reason for accountability."
+  ],
+  "misread": "That the afterlife is a symbol, when the Quran speaks of a real bodily raising for reckoning.",
+  "sources": [],
+  "terms": [
+   "judgement",
+   "death",
+   "grave",
+   "paradise"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Ba'th",
+   "Baʿth"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BA'TH"
+  }
+ },
+ {
+  "slug": "batil",
+  "title": "Batil",
+  "ar": "باطل",
+  "tr": "Bāṭil",
+  "def": "The opposite of <em>ḥaqq</em>: the false in belief, and the evil or wrong in conduct.",
+  "what": [
+   "<em>Bāṭil</em> is the opposite of <em>ḥaqq</em>. In knowledge it is what is false, and in action it is what is evil or wrong. Faruqi pairs the two as the two ends of truth and falsehood. In law the word also describes a contract or act that has no legal force. The Quran says that the truth has come and falsehood has vanished, for falsehood is bound to vanish (17:81). It also forbids consuming wealth among yourselves <em>bi’l-bāṭil</em>, by unlawful means (2:188). The word thus covers false belief and wrongful dealing alike."
+  ],
+  "misread": "That it only describes false statements, when it also names wrong deeds and invalid acts.",
+  "sources": [
+   "In legal writing a <em>bāṭil</em> contract is void from the start. The Hanafi school distinguishes it from a <em>fāsid</em>, a defective but not void contract."
+  ],
+  "terms": [
+   "haqq",
+   "fitna",
+   "hukm",
+   "evil"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 25,
+   "term": "BĀṬIL"
+  }
+ },
+ {
+  "slug": "batin-al",
+  "title": "Batin, al-",
+  "ar": "الباطن",
+  "tr": "al-Bāṭin",
+  "def": "A divine name meaning He who is hidden behind all phenomena; the opposite of <em>al-Ẓāhir</em>.",
+  "what": [
+   "<em>Al-Bāṭin</em> means the Hidden. Faruqi explains that it names God as the One hidden behind all appearances, and gives <em>al-Ẓāhir</em>, the Manifest, as its opposite. The name does not say that God is absent. It says that His reality cannot be grasped by the senses, although His signs are everywhere. The Quran joins the two names with <em>al-Awwal</em> and <em>al-Ākhir</em> in a single verse: He is the First and the Last, the Manifest and the Hidden (57:3). The verse ends with the statement that He has knowledge of everything. Taken together, the four names describe a God who is before and after all things and is both evident in His works and beyond sight."
+  ],
+  "misread": "That God is distant, when the name says He is beyond the senses and yet close in knowledge.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "awwal-al",
+   "tawhid",
+   "asma-allah-al-husna"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Batin"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BĀṬIN"
+  }
+ },
+ {
+  "slug": "bayah",
+  "title": "Bay'ah",
+  "ar": "بيعة",
+  "tr": "Bayʿah",
+  "def": "The nomination of the Khalifah by the leaders of the Ummah, or its endorsement by the community; also the pledge given to the Prophet (peace be upon him) at Madinah.",
+  "what": [
+   "<em>Bayʿah</em> is a pledge of allegiance, from a root meaning to give a hand in agreement. Faruqi lists two senses. In the first it is the nomination of the <em>khalīfa</em> by the leaders of the <em>ummah</em>, or the endorsement of that choice by the community at large. In the second it is the covenant that the first Muslims of Madinah made with the Prophet Muhammad (peace be upon him), promising obedience, allegiance and protection.",
+   "The Quran says that those who pledge allegiance to the Prophet are pledging it to God (48:10), and that God was pleased with the believers who pledged under the tree (48:18). After the Prophet’s death the practice was used for the succession of the caliphs, and it remains the model for a ruler’s acceptance by the community. The oath is a mutual agreement between ruler and ruled."
+  ],
+  "misread": "That it is a feudal oath of submission, when it is a mutual covenant that binds both the ruler and the community.",
+  "sources": [
+   "The pledge under the tree was taken at Hudaybiyya, and Muslim writers on government have treated <em>bayʿa</em> as the legal basis of the caliphate."
+  ],
+  "terms": [
+   "caliph",
+   "shura",
+   "ummah",
+   "hudaybiyya"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Bay'ah"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "BAY'AH"
+  }
+ },
+ {
+  "slug": "bayan-al",
+  "title": "Bayan, al-",
+  "ar": "البيان",
+  "tr": "al-Bayān",
+  "def": "A name of the Quran: that which is clear and makes other things clear; also eloquence of expression.",
+  "what": [
+   "<em>Al-bayān</em> comes from a root meaning to be clear. As a name of the Quran, Faruqi says, it denotes that which is itself clear and makes other things clear. The word also names eloquence in speech and gave its name to the branch of Arabic rhetoric that studies clear and effective expression. The Quran uses the word of itself: “this is a declaration (<em>bayān</em>) for humankind, a guidance and an admonition for the mindful” (3:138). Another passage says that God taught humankind <em>bayān</em> (55:4), which here means the power of clear speech. The name expresses the claim that the Quran is both lucid and an instrument of clarity for its readers."
+  ],
+  "misread": "That the Quran is obscure and needs a code to read it, when it names itself as a clear declaration.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "balagh-al",
+   "bayyinah-al",
+   "furqan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Bayan"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "AL BAYĀN"
+  }
+ },
+ {
+  "slug": "bayt-al",
+  "title": "Bayt, al-",
+  "ar": "البيت",
+  "tr": "al-Bayt",
+  "def": "A name of the Kaʿba, the first house built for the worship of God, raised by Ibrahim and his son Ismaʿil (peace be upon them).",
+  "what": [
+   "<em>Al-Bayt</em> means “the House”. It is a name of the Kaʿba in Makkah, which Faruqi describes as the first house built for devotion to God, raised by Ibrahim and his son Ismaʿil (peace be upon them). Muslims face it in prayer and walk around it in the rites of <em>ḥajj</em> and <em>ʿumra</em>. The Quran says that the first house established for people was the one at Bakkah (3:96), and that Ibrahim and Ismaʿil raised its foundations (2:127). It calls the Kaʿba the Sacred House (5:97) and the Ancient House (22:29). The names stress both its sanctity and its great age, going back to the first worship of the one God."
+  ],
+  "misread": "That the Kaʿba is itself worshipped, when it is the house to which Muslims turn in worship of God alone.",
+  "sources": [],
+  "terms": [
+   "kaaba",
+   "mecca",
+   "hajj",
+   "abraham"
+  ],
+  "articles": [],
+  "type": "place",
+  "aliases": [
+   "Al-Bayt"
+  ],
+  "faruqi": {
+   "page": 25,
+   "term": "AL BAYT"
+  }
+ },
+ {
+  "slug": "bayyinah-al",
+  "title": "Bayyinah, al-",
+  "ar": "البينة",
+  "tr": "al-Bayyinah",
+  "def": "A name for each verse of the Quran, and in the plural (<em>bayyināt</em>) for all its verses: the clear proof that establishes truth against falsehood.",
+  "what": [
+   "<em>Al-bayyina</em> means a clear proof. Faruqi says that the name applies to every verse of the Quran, and in the plural, <em>bayyināt</em>, to all its verses. Each verse is a clear evidence that establishes truth against falsehood. The word is used also for clear signs given to earlier prophets. The Quran uses <em>bayyināt</em> of the clear signs given to Jesus (2:87) and to other messengers. A Quranic chapter, the ninety-eighth, takes the word for its title, <em>al-Bayyina</em>, opening with the people who rejected faith until the clear proof came to them. The word reflects the Quran’s method of arguing from evidence."
+  ],
+  "misread": "That verses are only pronouncements, when each is called a clear proof.",
+  "sources": [],
+  "terms": [
+   "aya",
+   "quran",
+   "bayan-al",
+   "furqan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Bayyinah",
+   "Bayyinat"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "AL BAYYINAH"
+  }
+ },
+ {
+  "slug": "birr-al",
+  "title": "Birr, al-",
+  "ar": "البر",
+  "tr": "al-Birr",
+  "def": "A collective name for all conduct that God approves.",
+  "what": [
+   "<em>Al-birr</em> is a broad word for righteousness and goodness. Faruqi defines it as the collective name for all conduct that God approves. It includes faith, worship, kindness to parents and relatives, generosity, keeping promises and patience in hardship, and it is often rendered as “piety” or “righteousness”, though neither English word fully covers its range or its stress on action.",
+   "The Quran explains it in a long verse: righteousness does not consist of turning toward east or west, but of belief in God, the last day, the angels, the Book and the prophets, giving of one’s wealth to relatives, orphans and the needy, establishing the prayer, keeping promises and being steadfast (2:177). Another verse says that people will not attain <em>birr</em> until they spend of what they love (3:92)."
+  ],
+  "misread": "That it is only outward religious show, when the Quran joins faith, worship and conduct under it.",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "taqwa",
+   "kindness",
+   "ethics-and-conduct"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Birr"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "AL BIRR"
+  }
+ },
+ {
+  "slug": "bismi-allah-al-rahman-al-rahim",
+  "title": "Bismi Allah al-Rahman al-Rahim",
+  "ar": "بسم الله الرحمن الرحيم",
+  "tr": "Bismi Allāh al-Raḥmān al-Raḥīm",
+  "def": "“In the name of Allah, the Beneficent, the Merciful”: said at the start of any activity.",
+  "what": [
+   "This phrase is called the <em>basmala</em>. It means “In the name of Allah, the Beneficent, the Merciful.” Faruqi says it is said at the beginning of any activity. A Muslim starts a task, a meal, a journey or a piece of writing with it, so that the action begins under God’s name and with a reminder of His mercy. It is among the most frequently spoken phrases in Muslim life.",
+   "It opens every chapter of the Quran except the ninth, and it also appears within chapter 27, in the letter of Solomon to the queen of Sheba (27:30). The two names it ends with, <em>al-Raḥmān</em> and <em>al-Raḥīm</em>, both come from the root of mercy. The phrase therefore opens each undertaking by recalling God’s mercy, which is the first quality named in the Quran."
+  ],
+  "misread": "That it is a ritual formula without meaning, when it places an act under God’s name and mercy.",
+  "sources": [
+   "Its exact status as a verse of each chapter was discussed by scholars, and the schools differ on whether it is recited aloud in the prayer."
+  ],
+  "terms": [
+   "fatiha",
+   "allah",
+   "dua",
+   "quran"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 56,
+   "term": "BISMI ALLAH AL RAḤMĀN AL RAḤĪM."
+  }
+ },
+ {
+  "slug": "bismi-allah-al-rahman-al-rahim-2",
+  "title": "Bismi Allah al-Rahman al-Rahim",
+  "ar": "بسم الله الرحمن الرحيم",
+  "tr": "Bismi Allāh al-Raḥmān al-Raḥīm",
+  "def": "“In the name of Allah, the Beneficent, the Merciful”: said before eating, drinking or any other activity.",
+  "what": [
+   "Faruqi lists this phrase a second time, in the section on daily expressions, as a prelude to eating, drinking and other activities. It means “In the name of Allah, the Beneficent, the Merciful.” The speaker begins his act under God’s name and acknowledges that the food, the drink and the capacity to enjoy them come from Him. The same words open the chapters of the Quran and the letter of Solomon (27:30). At meals they give the household a moment of gratitude before eating. Many Muslims teach children to say them before they begin, so that mindfulness of God is part of ordinary life from an early age."
+  ],
+  "misread": "That a blessing is said only in the mosque, when this phrase attends ordinary meals and daily tasks.",
+  "sources": [],
+  "terms": [
+   "bismi-allah-al-rahman-al-rahim",
+   "dua",
+   "common-phrases",
+   "dhikr"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 61,
+   "term": "BISMI ALLAH AL RAḤMĀN AL RAḤĪM."
+  }
+ },
+ {
+  "slug": "bismi-allah-alladhi-la-ilaha-illa-huwa",
+  "title": "Bismi Allah alladhi la Ilaha illa Huwa",
+  "ar": "بسم الله الذي لا إله إلا هو",
+  "tr": "Bismi Allāh alladhī lā ilāha illā Huwa",
+  "def": "“In the name of Allah, other than Whom there is no god”: said each time one undresses.",
+  "what": [
+   "The phrase means “In the name of Allah, other than Whom there is no god.” Faruqi records that it is said each time one undresses. It places a private act under God’s name and affirms His oneness (<em>tawḥīd</em>) in the words <em>lā ilāha illā Huwa</em>, “there is no god but He”. The practice reflects the Muslim habit of beginning even small, private acts with God’s name. It is also an act of modesty, since undressing is an occasion when a person is exposed and in need of protection. The wording joins the <em>basmala</em> with the declaration of God’s oneness."
+  ],
+  "misread": "That religious phrases belong only to public worship, when Muslims also use them in private matters.",
+  "sources": [],
+  "terms": [
+   "tawhid",
+   "dua",
+   "modesty-and-dress",
+   "bismi-allah-al-rahman-al-rahim"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 61,
+   "term": "BISMI ALLAH ALLADHĪ LĀ ILAHA ILLĀ HUWA."
+  }
+ },
+ {
+  "slug": "bismi-allah-majraha-wa-mursaha",
+  "title": "Bismi Allah Majraha wa Mursaha",
+  "ar": "بسم الله مجراها ومرساها",
+  "tr": "Bismi Allāh majrāhā wa mursāhā",
+  "def": "“In the name of Allah be its course and its mooring”: said when boarding a ship, aeroplane or other vehicle.",
+  "what": [
+   "The phrase means “In the name of Allah be its course and its mooring.” Faruqi gives it as the words said when boarding a ship, an aeroplane or another vehicle. <em>Majrāhā</em> is the moving and <em>mursāhā</em> the coming to rest. The traveller asks that the whole journey, from departure to arrival, be under God’s name and care. The words come from the Quranic story of Noah. He told his people to board the ark, saying that in God’s name be its course and its mooring (11:41). Muslims have taken the phrase as a general prayer for safe travel, whatever the means of transport."
+  ],
+  "misread": "That it applies only to ships, when Muslims say it for any vehicle.",
+  "sources": [],
+  "terms": [
+   "noah",
+   "dua",
+   "ayibun-taibun-li-rabbina-hamidun",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 62,
+   "term": "BISMI ALLAH MAJRĀHĀ WA MURSĀHĀ."
+  }
  }
 ]

@@ -24,5 +24,83 @@
    "Night Of Destiny",
    "Lailat Al-Qadr"
   ]
+ },
+ {
+  "slug": "la-hawla-wa-la-quwwata-illa-billah",
+  "title": "La Hawla wa la Quwwata illa Billah",
+  "ar": "لا حول ولا قوة إلا بالله",
+  "tr": "Lā ḥawla wa lā quwwata illā billāh",
+  "def": "“There is no power and no strength except through God”, said when one meets a power greater than oneself.",
+  "what": [
+   "The phrase means that no one can turn aside from harm or gain strength for good except through God. It is said when a person meets something beyond his or her ability: hardship, fear, a heavy task or a sudden shock. A form of it appears in the Quran, where a believer tells a man proud of his garden to say, “What God has willed! There is no strength but in God” (18:39).",
+   "Muhammad (peace be upon him) is reported to have called it a treasure from the treasures of Paradise (Sahih al-Bukhari and Sahih Muslim). Muslims also say it in reply to the words <em>ḥayya ʿalā al-ṣalāh</em> in the call to prayer, as a way of admitting that they can only pray with God’s help. The phrase is also a common remedy for fear, since it places the matter in His hands."
+  ],
+  "misread": "It is sometimes taken as a phrase of resignation, when it is a declaration that strength comes from God alone and is asked of Him.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "dhikr",
+   "tawhid",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 57,
+   "term": "LĀ ḤAWLA WA LĀ QUWWATA ILLĀ BILLĀH."
+  }
+ },
+ {
+  "slug": "la-ilaha-illa-allah",
+  "title": "La Ilaha illa Allah",
+  "ar": "لا إله إلا الله",
+  "tr": "Lā ilāha illā Allāh",
+  "def": "“There is no god but God”: the first part of the declaration of faith, said on all occasions.",
+  "what": [
+   "This is the central statement of Islam. It means that no being has the right to be worshipped except God, and the Quran commands, “Know that there is no god but God” (47:19). It is the first half of the <em>shahādah</em>, the declaration of faith, which is completed by testifying that Muhammad (peace be upon him) is the Messenger of God. Muslims say it in daily remembrance (<em>dhikr</em>), in distress, and in the call to prayer, and a person who wishes to enter Islam declares it. A hadith reported by al-Tirmidhi calls it the best of remembrance. Its two parts, a denial and an affirmation, set aside every object of worship and then affirm God alone."
+  ],
+  "misread": "The Arabic “Allah” is sometimes treated as the name of a god distinct from the God of other faiths, but the word simply means God, and Arabic-speaking Christians use it too.",
+  "sources": [],
+  "terms": [
+   "tawhid",
+   "shirk",
+   "dhikr",
+   "iman"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 56,
+   "term": "LĀ ILĀHA ILLA ALLAH."
+  }
+ },
+ {
+  "slug": "la-ilaha-illa-allah-la-sharika-lah",
+  "title": "La Ilaha illa Allah, La Sharika Lah",
+  "ar": "لا إله إلا الله لا شريك له له الملك وله الحمد وهو على كل شيء قدير",
+  "tr": "Lā ilāha illā Allāh, lā sharīka lah",
+  "def": "A longer declaration of God’s oneness: no god but God, without partner, to Him belong dominion and praise, and He has power over all things.",
+  "what": [
+   "This is the declaration of oneness with its additions. After “there is no god but God”, it says that He has no partner, that dominion and praise belong to Him, and that He has power over all things. Each clause restates a part of <em>tawḥīd</em>: God is one, He shares His authority with none, and everything in creation is under His power. It is reported in Sahih al-Bukhari and Sahih Muslim that the Prophet Muhammad (peace be upon him) used to say it after the obligatory prayers, and many Muslims say it then. Many also repeat it in the morning and evening and at the rites of pilgrimage."
+  ],
+  "misread": "Reading it as a slogan overlooks that each of its clauses states a specific point of belief about God’s oneness and authority.",
+  "sources": [
+   "The reports of the hadith collections give several forms of the phrase with small differences in wording, and some add the word <em>waḥdahu</em>, “alone”, after the opening declaration."
+  ],
+  "terms": [
+   "la-ilaha-illa-allah",
+   "tawhid",
+   "dhikr",
+   "shirk"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 57,
+   "term": "LĀ ILĀHA ILLĀ ALLAH. LĀ SHARĪKA LAH. LAHU AL MULK WA LAHU AL ḤAMD. WA HUWA ‘ALĀ KULLI SHAY’IN QADĪR."
+  }
  }
 ]

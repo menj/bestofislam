@@ -50,7 +50,13 @@
   ],
   "articles": [],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 23,
+    "term": "UMMAH"
+   }
+  ]
  },
  {
   "slug": "ummi",
@@ -102,5 +108,115 @@
   "aliases": [
    "Lesser Pilgrimage"
   ]
+ },
+ {
+  "slug": "urf-al",
+  "title": "'Urf, al-",
+  "ar": "العرف",
+  "tr": "al-ʿUrf",
+  "def": "The common and approved custom of a people, used in the absence of a contrary ruling as a basis from which law is derived",
+  "what": [
+   "<em>ʿUrf</em> means what is known and approved among people. Jurists accept it as a source of rulings where no text or other source decides the matter. The Quran tells the Prophet to “enjoin what is customary and good” (7:199), and the word there is <em>ʿurf</em>. Custom helps fix matters the texts leave open, such as what counts as reasonable maintenance in a marriage or the usual meaning of a word in a contract. Its limits are clear: a custom that contradicts the Quran or the Sunnah has no force. The jurists’ maxim holds that custom may serve as a basis for judgement."
+  ],
+  "misread": "That custom can override the Quran, when the law accepts custom only where the texts are silent.",
+  "sources": [],
+  "terms": [
+   "custom",
+   "fiqh",
+   "usul-al-fiqh",
+   "hukm"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-'Urf",
+   "Urf"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL 'URF"
+  }
+ },
+ {
+  "slug": "usul-al-fiqh",
+  "title": "Usul al-Fiqh",
+  "ar": "أصول الفقه",
+  "tr": "Uṣūl al-Fiqh",
+  "def": "The sources of Islamic law: the Quran, the Sunnah, consensus and analogy, together with the principles for using them",
+  "what": [
+   "<em>Uṣūl al-fiqh</em> means the roots of the law. The agreed sources are the Quran, the Sunnah of the Prophet (peace be upon him), the consensus of qualified scholars (<em>ijmāʿ</em>) and analogy (<em>qiyās</em>). Jurists also discuss further principles, such as public interest, custom and presumption of continuity, on which the schools differ. The distinction between the two terms is one of level. <em>Fiqh</em> is the body of rulings, and <em>uṣūl al-fiqh</em> is the set of sources and rules from which the rulings are drawn. Al-Shāfiʿī’s <em>Risālah</em> is the earliest surviving systematic treatment."
+  ],
+  "misread": "That it is the same as fiqh, when it names the sources from which fiqh is derived.",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "ijma",
+   "qiyas",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Usul al-Fiqh",
+   "Usool al-Fiqh"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "UṢŪL AL FIQH"
+  }
+ },
+ {
+  "slug": "usul-fiqh",
+  "title": "Usul Fiqh",
+  "ar": "أصول فقه",
+  "tr": "Uṣūl Fiqh",
+  "def": "Islamic jurisprudence: the method of deriving laws from the sources of Islam and of establishing their juristic validity",
+  "what": [
+   "<em>Uṣūl fiqh</em> is the discipline of legal method. It teaches how a ruling is drawn from the Quran, the Sunnah and the other sources, how a command or prohibition is to be read, how an apparent conflict between texts is resolved, and who is qualified to exercise <em>ijtihād</em>. Ismail al-Faruqi presents it as the means by which the validity of a law, both juristic and constitutional, is established. The field has its own literature, with chapters on language, on the weight of evidence and on the effect of general and specific wording. Students study it alongside <em>fiqh</em>, the rulings themselves."
+  ],
+  "misread": "That Islamic law is a fixed list of rules, when it is a method of reasoning from sources.",
+  "sources": [],
+  "terms": [
+   "usul-al-fiqh",
+   "ijtihad",
+   "hukm",
+   "fiqh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Usul-i Fiqh"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "UṢŪL FIQH"
+  }
+ },
+ {
+  "slug": "uswah-hasanah",
+  "title": "Uswah Hasanah",
+  "ar": "أسوة حسنة",
+  "tr": "Uswah Ḥasanah",
+  "def": "The good and normative example of the Prophet (peace be upon him), whose conduct makes up the sunnah",
+  "what": [
+   "<em>Uswah ḥasanah</em> means a good example. The Quran says: “In the Messenger of Allah you have a good example for whoever hopes for Allah and the Last Day and remembers Allah often” (33:21). The same expression is used of Abraham and his followers (60:4). Muslims understand the conduct of Muhammad (peace be upon him) as the model for belief, worship and character, and they learn it from hadith and from his biography. The Quran praises him as “of great moral character” (68:4). His example is that of a human being, and it forms the <em>sunnah</em>, the second source of law after the Quran."
+  ],
+  "misread": "That following the Prophet means treating him as divine, when the Quran presents him as a human being who sets an example.",
+  "sources": [],
+  "terms": [
+   "sunnah",
+   "muhammad",
+   "hadith",
+   "ihsan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Uswa Hasana"
+  ],
+  "faruqi": {
+   "page": 23,
+   "term": "USWAH ḤASANAH"
+  }
  }
 ]

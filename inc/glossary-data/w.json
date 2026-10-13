@@ -77,5 +77,276 @@
    "Rain",
    "Water"
   ]
+ },
+ {
+  "slug": "wa-akhiru-dawana-anna-al-hamda-lillahi-rabb-al-alamin",
+  "title": "Wa Akhiru Da'wana anna al-Hamda Lillahi Rabb al-'Alamin",
+  "ar": "وآخر دعوانا أن الحمد لله رب العالمين",
+  "tr": "Wa Ākhiru Daʿwānā anna al-Ḥamda li-Llāhi Rabbi’l-ʿĀlamīn",
+  "def": "Our final word is that all praise belongs to Allah, Lord of the worlds; said at the end of a speech, a meeting or any undertaking",
+  "what": [
+   "Muslims say these words to close a talk, a gathering, a meal or a piece of work. They mean: “The last of our call is that praise belongs to Allah, Lord of the worlds.” The wording comes from the Quran, which describes the people of Paradise greeting one another with peace, and says that “the last of their call is: Praise be to Allah, Lord of the worlds” (10:10). In this way every undertaking ends with thanks, as it began with the name of Allah. The usual Quranic form has “their call”, and speakers who use it of themselves change the pronoun to “our”."
+  ],
+  "misread": "That it is an empty closing formula, when it turns the end of any activity into thanks to Allah.",
+  "sources": [],
+  "terms": [
+   "dhikr",
+   "dua",
+   "common-phrases",
+   "allah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 58,
+   "term": "WA ĀKHIRU DA‘WĀNĀ ANNA AL ḤAMDA LILLAHI RABB AL ‘ĀLAMĪN."
+  }
+ },
+ {
+  "slug": "wa-alaykum-al-salam-wa-rahmah-allah-wa-barakatuh",
+  "title": "Wa 'Alaykum al-Salam wa Rahmah Allah wa Barakatuh",
+  "ar": "وعليكم السلام ورحمة الله وبركاته",
+  "tr": "Wa ʿAlaykum al-Salām wa Raḥmatu’llāhi wa Barakātuh",
+  "def": "And upon you be peace, and the mercy of Allah and His blessings; the full reply to the greeting of peace",
+  "what": [
+   "This is the full reply to <em>al-salāmu ʿalaykum</em>, “peace be upon you”. It means: “And upon you be peace, and the mercy of Allah and His blessings.” The shortest reply is <em>wa ʿalaykum al-salām</em>, and the longer form adds a prayer for mercy and for blessing. The Quran tells the believer: “When you are greeted with a greeting, answer with a better one, or at least return it” (4:86). Jurists therefore treat the return of a greeting as a duty. The exchange of greeting is a mark of Muslim fellowship, and it is the first words spoken when two Muslims meet."
+  ],
+  "misread": "That it is a casual “hello” in Arabic, when it is a prayer for peace and mercy returned in kind.",
+  "sources": [],
+  "terms": [
+   "greeting-non-muslims",
+   "salah",
+   "taslim",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 59,
+   "term": "WA ‘ALAYKUM AL SALĀM WA RAḤMAH ALLAH WA BARAKĀTUH."
+  }
+ },
+ {
+  "slug": "wa-itasimu-bi-habl-allahi-jamian",
+  "title": "Wa I'tasimu bi Habl Allahi Jami'an",
+  "ar": "واعتصموا بحبل الله جميعا ولا تفرقوا",
+  "tr": "Wa-ʿtaṣimū bi-Ḥabli’llāhi Jamīʿan wa lā Tafarraqū",
+  "def": "Hold fast, all together, to the rope of Allah and do not separate (Quran 3:103); a call to Muslim unity",
+  "what": [
+   "These words are from the Quran: “And hold firm to the rope of Allah, all together, and do not separate” (3:103). The verse goes on to remind the believers that they had been enemies and that Allah joined their hearts, so that they became brothers. Commentators have understood the rope of Allah as the Quran, as the religion of Islam, or as the covenant with Allah. The verse is often quoted in appeals for unity among Muslims. It calls for common attachment to the shared source, and the schools of law have long accepted that scholars may differ within it."
+  ],
+  "misread": "That it demands identical opinions, when it calls for unity around the Quran while the law recognises scholarly difference.",
+  "sources": [],
+  "terms": [
+   "ummah",
+   "brotherhood",
+   "quran",
+   "jamaat"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 64,
+   "term": "WA I‘TAṢIMŪ BI ḤABL ALLAHI JAMĪ‘AN WA LĀ TAFARRAQŪ."
+  }
+ },
+ {
+  "slug": "wad-al",
+  "title": "Wa'd, al-",
+  "ar": "الوعد",
+  "tr": "al-Waʿd",
+  "def": "The divine promise of reward for good deeds; it is Allah’s part of the covenant (ʿahd, mithaq) between Him and humanity",
+  "what": [
+   "<em>Al-Waʿd</em> is the promise of Allah to reward good deeds. Ismail al-Faruqi presents it as His part of the <em>ʿahd</em> or <em>mīthāq</em>, the covenant between Allah and human beings, in which humans in turn take on obligations. The Quran affirms that “the promise of Allah is true” (10:4). The promise gives believers hope and balances the fear of punishment. It is matched by <em>al-waʿīd</em>, the warning of punishment for evil, so that the two together form the divine side of the covenant. Muslims rely on the promise because they hold that Allah does not break His word."
+  ],
+  "misread": "That it is a mere promise in the human sense, when it is part of a covenant in which humans also have obligations.",
+  "sources": [],
+  "terms": [
+   "waid-al",
+   "thawab",
+   "covenant",
+   "khawf"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Wa'd",
+   "Wad"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "AL WA'D"
+  }
+ },
+ {
+  "slug": "wahy-al",
+  "title": "Wahy, al-",
+  "ar": "الوحي",
+  "tr": "al-Waḥy",
+  "def": "Revelation: the verbatim communication of a verse or more from Allah to the Prophet, as in the case of the noble Quran",
+  "what": [
+   "<em>Al-Waḥy</em> is revelation, a communication from Allah to His prophets. The root means a swift or hidden signal. The Quran says Allah speaks to a human being only by inspiration, from behind a veil, or by sending a messenger who conveys the revelation (42:51). Ismail al-Faruqi uses the term for the verbatim revelation of one or more verses, as in the Quran, whose words are held to be the words of Allah. Scholars also speak of the Sunnah as inspired in meaning, although its wording is the Prophet’s own. The Quran says of Muhammad (peace be upon him) that “it is nothing but a revelation revealed” (53:4)."
+  ],
+  "misread": "That revelation is the inspiration or insight of the Prophet himself, when the Quran is held to be the word of Allah.",
+  "sources": [],
+  "terms": [
+   "wahy",
+   "quran",
+   "tanzil",
+   "gabriel"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Wahy",
+   "Wahy"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "AL WAḤY"
+  }
+ },
+ {
+  "slug": "waid-al",
+  "title": "Wa'id, al-",
+  "ar": "الوعيد",
+  "tr": "al-Waʿīd",
+  "def": "The divine promise of punishment for evil deeds; it is part of Allah’s covenant (ʿahd, mithaq) with humanity",
+  "what": [
+   "<em>Al-Waʿīd</em> is the divine warning of punishment for evil deeds. Ismail al-Faruqi places it beside <em>al-waʿd</em>, the promise of reward, as the second part of the covenant between Allah and human beings. The Quran speaks of it as something already sent in warning: “I sent the warning (<em>al-waʿīd</em>) to you beforehand” (50:28). The word is used for the punishment promised in the Hereafter. The Quran also says that Allah may forgive anything short of associating partners with Him (4:48), and the theologians discussed whether Allah must carry out His warning in every case. The Ashʿarites held that He may pardon, while the Muʿtazilites argued the opposite."
+  ],
+  "misread": "That it is the threat of arbitrary vengeance, when the Quran joins the warning to the offer of repentance and forgiveness.",
+  "sources": [],
+  "terms": [
+   "wad-al",
+   "khawf",
+   "hell",
+   "atonement-and-repentance"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Wa'id",
+   "Waeed"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "AL WA'ĪD"
+  }
+ },
+ {
+  "slug": "wajh",
+  "title": "Wajh",
+  "ar": "وجه",
+  "tr": "Wajh",
+  "def": "Face, or by extension direction, aspect or path; said of Allah it means His Face, or His sake",
+  "what": [
+   "<em>Wajh</em> means face, and by extension a side, aspect, record or way. When the word is used of Allah it has two main senses. One is His Face, as in the verse “everything will perish except His Face” (28:88; see also 55:27). The other is His sake: the Quran speaks of giving food “only for the sake of Allah” (76:9), which in Arabic uses <em>wajh</em>. Here the word means the intention to please Him.",
+   "The Quran also tells the believer that wherever he turns, there is the <em>wajh</em> of Allah (2:115). Scholars have differed on how to understand the attribute: some affirm it as stated without asking how, and others interpret it figuratively. In the Muslim use, doing a deed for the <em>wajh</em> of Allah means doing it solely for Him, with no thought of praise or gain from people."
+  ],
+  "misread": "That a human face is attributed to Allah, when the Face of Allah is affirmed without likening Him to creation.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "tawhid",
+   "ihsan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Wajh Allah"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "WAJH"
+  }
+ },
+ {
+  "slug": "wajib-al",
+  "title": "Wajib, al-",
+  "ar": "الواجب",
+  "tr": "al-Wājib",
+  "def": "The obligatory: a law or deed that the law requires, rewarded when done and punishable when left without excuse",
+  "what": [
+   "<em>Al-Wājib</em> is what the law makes obligatory. It is the highest of the five legal categories (<em>al-aḥkām al-khamsah</em>): obligatory, recommended, permitted, disliked and forbidden. A person who performs an obligation is rewarded, and one who neglects it without excuse is held to account. The five daily prayers are an example. Most jurists treat <em>wājib</em> and <em>farḍ</em> as the same, while the Ḥanafī school reserves <em>farḍ</em> for what rests on a definitive text and <em>wājib</em> for what rests on a probable one. Jurists also distinguish a duty on every individual (<em>wājib ʿaynī</em>) from a duty on the community that is met when enough people do it (<em>wājib kifāʾī</em>)."
+  ],
+  "misread": "That it can be translated as “duty” without distinction, which hides the grades of obligation that the law keeps.",
+  "sources": [],
+  "terms": [
+   "hukm",
+   "fiqh",
+   "sharia",
+   "usul-al-fiqh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Wajib",
+   "Wajib",
+   "Fard"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL WĀJIB"
+  }
+ },
+ {
+  "slug": "waliyy",
+  "title": "Waliyy",
+  "ar": "وليّ",
+  "tr": "Waliyy",
+  "def": "Friend, ally or protector; used of one close to Allah and often rendered saint, with the plural awliya",
+  "what": [
+   "<em>Waliyy</em> comes from a root meaning to be near. It means a friend, ally, patron or protector. The Quran says that Allah is the <em>waliyy</em> of the believers (2:257) and speaks of the <em>awliyāʾ</em> of Allah, on whom there is no fear and who do not grieve (10:62). The next verse describes them as those who believe and fear Allah (10:63). In English the word is often rendered “saint”, and Muslims use it of pious people believed to be close to Allah. Islam has no process of canonisation and no clergy, and every believer who has faith and <em>taqwā</em> belongs to the <em>awliyāʾ</em>. The word <em>walī</em> is also used for a guardian, as in marriage."
+  ],
+  "misread": "That it means saint in the Christian sense of a canonised person, when Islam has no canonisation.",
+  "sources": [],
+  "terms": [
+   "wali",
+   "sufism",
+   "taqwa",
+   "iman"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Wali Allah",
+   "Awliya"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "WALIYY"
+  }
+ },
+ {
+  "slug": "wuquf",
+  "title": "Wuquf",
+  "ar": "وقوف",
+  "tr": "Wuqūf",
+  "def": "Standing upright in the salah; the same word names the standing at Arafat in the Hajj",
+  "what": [
+   "<em>Wuqūf</em> means standing. In the account given by Ismail al-Faruqi it is the standing in <em>ṣalāh</em>, an act that stands among the postures of the prayer. More usually this posture is called <em>qiyām</em>, and the Quran commands the believers to stand before Allah in devotion (2:238). A worshipper who cannot stand may pray sitting, and one who cannot sit may pray lying on his side, as reported in Sahih al-Bukhari. The same word <em>wuqūf</em> is used for the standing at Arafat on the ninth day of Dhu’l-Hijjah, which is the central rite of the Hajj. The context shows which sense is meant."
+  ],
+  "misread": "That it is a bodily posture alone, when standing in the salah is an act of worship before Allah.",
+  "sources": [],
+  "terms": [
+   "salah",
+   "arafat",
+   "hajj",
+   "taslim"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Qiyam"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "WUQŪF"
+  }
  }
 ]

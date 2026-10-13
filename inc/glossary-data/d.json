@@ -303,6 +303,12 @@
    "Deed",
    "Amal",
    "Works"
+  ],
+  "faruqi": [
+   {
+    "page": 41,
+    "term": "ʿAMAL"
+   }
   ]
  },
  {
@@ -378,6 +384,12 @@
   ],
   "aliases": [
    "Remembrance"
+  ],
+  "faruqi": [
+   {
+    "page": 32,
+    "term": "DHIKR"
+   }
   ]
  },
  {
@@ -428,6 +440,12 @@
   "type": "term",
   "aliases": [
    "Dhimmitude"
+  ],
+  "faruqi": [
+   {
+    "page": 32,
+    "term": "DHIMMĪ"
+   }
   ]
  },
  {
@@ -553,6 +571,12 @@
    "Future",
    "Fortune-Telling",
    "Astrology"
+  ],
+  "faruqi": [
+   {
+    "page": 42,
+    "term": "GHAYB"
+   }
   ]
  },
  {
@@ -819,6 +843,202 @@
    "Dua",
    "Duaa",
    "Du`Aa"
+  ],
+  "faruqi": [
+   {
+    "page": 32,
+    "term": "DU'Ā'"
+   }
   ]
+ },
+ {
+  "slug": "dalal",
+  "title": "Dalal",
+  "ar": "ضلال",
+  "tr": "Ḍalāl",
+  "def": "The verbal noun of <em>ḍalla</em>: error, going astray from God’s guidance.",
+  "what": [
+   "<em>Ḍalāl</em> is the noun for the act of <em>ḍalla</em>, to go astray. Faruqi lists it simply as the verbal noun of that verb. It names the state of someone who has strayed from the straight path that God has shown. The Quran uses it in several settings. It warns those who turn away from God’s message, and in the Fatiha the believers ask to be guided to the straight path, not that of those who have gone astray (1:7). The word is therefore tied to the main petition of every prayer. In ordinary Arabic it can mean being lost in a literal sense, and the Quran uses it of both senses."
+  ],
+  "misread": "That it means only “sin” in the sense of a moral lapse, when it describes losing the way altogether.",
+  "sources": [],
+  "terms": [
+   "dalla",
+   "dall",
+   "fatiha",
+   "kufr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 36,
+   "term": "ḌALĀL"
+  }
+ },
+ {
+  "slug": "dall",
+  "title": "Dall",
+  "ar": "ضال",
+  "tr": "Ḍāll",
+  "def": "A person who errs and strays from God’s straight path, especially in the course of history; plural <em>ḍāllūn</em>.",
+  "what": [
+   "<em>Ḍāll</em> is the active participle of <em>ḍalla</em>: one who has gone astray. Faruqi describes him as a person who strays from the straight path of God, especially as that falls within human history. The plural is <em>ḍāllūn</em>, which takes the form <em>ḍāllīn</em> when it follows a preposition or serves as an object. The word is a general description of error and carries no claim about any one group.",
+   "The word occurs in the last verse of the Fatiha, where Muslims ask to be guided to the straight path and not the path of those who have earned anger or of those who have gone astray (<em>al-ḍāllīn</em>) (1:7). Since the chapter is recited in every cycle of prayer, every Muslim repeats this petition many times a day. Interpreters differ on whom the phrase singles out, and many read it as a warning against all error."
+  ],
+  "misread": "That the word is an insult for non-Muslims, when it names a condition of straying that anyone can fall into.",
+  "sources": [
+   "Some early commentators related the two groups in 1:7 to particular communities, while others read both as general types of error."
+  ],
+  "terms": [
+   "dalla",
+   "dalal",
+   "fatiha",
+   "kufr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 36,
+   "term": "ḌĀLL"
+  }
+ },
+ {
+  "slug": "dalla",
+  "title": "Dalla",
+  "ar": "ضل",
+  "tr": "Ḍalla",
+  "def": "To err and stray from the straight path of God revealed to the Prophet Muhammad (peace be upon him).",
+  "what": [
+   "<em>Ḍalla</em> means to lose the way, and so to err and stray. Faruqi uses it for straying from the straight path of God that was revealed to the Prophet Muhammad (peace be upon him). The related noun is <em>ḍalāl</em> and the participle is <em>ḍāll</em>. The Quran uses the verb in both literal and moral senses. It says that whoever follows guidance does so for his own good, and whoever goes astray does so to his own loss (17:15). The verse adds that no soul bears the burden of another. The word thus sets individual responsibility next to guidance: each person chooses whether to follow or to stray."
+  ],
+  "misread": "That it names a permanent state, when the Quran treats going astray as something a person can turn from.",
+  "sources": [],
+  "terms": [
+   "dalal",
+   "dall",
+   "fatiha",
+   "atonement-and-repentance"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 36,
+   "term": "ḌALLA"
+  }
+ },
+ {
+  "slug": "din-al",
+  "title": "Din, al-",
+  "ar": "الدين",
+  "tr": "al-Dīn",
+  "def": "The normative, perfect religion that God ordained for humanity, covering faith, ethics, law, worship, institutions and judgment.",
+  "what": [
+   "<em>Al-dīn</em> is the word for religion, but it is wider than the English term. Faruqi defines it as the norm, the perfect way God ordained for humankind. It includes belief, ethics, law, devotion, institutions and the final reckoning. Religion in the narrow sense of private belief does not capture it. The Quran says that the <em>dīn</em> with God is Islam (3:19). At the end of the Prophet’s mission it says that God has perfected the <em>dīn</em> for believers and completed His favour on them (5:3). The word also means judgment, as in <em>yawm al-dīn</em>, the Day of Judgment (1:4), where the same root points to accountability."
+  ],
+  "misread": "That it translates as “religion” in the sense of a private matter, when it is a whole way of life with a day of reckoning.",
+  "sources": [
+   "The root <em>d-y-n</em> carries the senses of obedience, debt and judgment, which scholars find joined in the single concept."
+  ],
+  "terms": [
+   "islam",
+   "iman",
+   "sharia",
+   "judgement"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Din",
+   "Deen"
+  ],
+  "faruqi": {
+   "page": 32,
+   "term": "AL DĪN"
+  }
+ },
+ {
+  "slug": "dirayah-al-hadith",
+  "title": "Dirayah al-Hadith",
+  "ar": "دراية الحديث",
+  "tr": "Dirāyah al-Ḥadīth",
+  "def": "The studies concerned with the validity of the reporting of the Prophet’s words and acts, and of what is reported.",
+  "what": [
+   "<em>Dirāyah al-ḥadīth</em> is the branch of study that tests the reliability of reports from the Prophet Muhammad (peace be upon him). Faruqi lists it among the sciences and describes it as the study of the validity of the reporting and of what is reported. Its counterpart is <em>riwāyah al-ḥadīth</em>, the work of transmitting the reports themselves. Its methods include examining the chain of narrators (<em>isnād</em>), judging the character and memory of each narrator, and comparing a report with the Quran and with other reports. The science gave Muslims a framework for sorting sound reports from weak and fabricated ones. The great collections, such as those of al-Bukhari and Muslim, were compiled using such criteria."
+  ],
+  "misread": "That hadith were accepted without any checking, when scholars built a detailed science of verification.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "sahih",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [],
+  "faruqi": {
+   "page": 49,
+   "term": "DIRĀYAH AL ḤADĪTH"
+  }
+ },
+ {
+  "slug": "duha-al",
+  "title": "Duha, al-",
+  "ar": "الضحى",
+  "tr": "al-Ḍuḥā",
+  "def": "The part of the day from when the sun has risen high until noon, and the name of the supererogatory prayer offered in that time.",
+  "what": [
+   "<em>Al-ḍuḥā</em> is the forenoon, once the sun has climbed well above the horizon and the morning is bright. The Quran swears by it at the opening of surah 93, which is named <em>al-Ḍuḥā</em>: “By the morning brightness” (93:1). The time ends as the sun reaches its height at midday, when the noon prayer approaches. Many Muslims treat this bright part of the day as a good time for work and for remembrance.",
+   "Muslims also use the word for the voluntary prayer offered in this period, called <em>ṣalāt al-ḍuḥā</em>. It is not obligatory. Abu Dharr reported that the Prophet said two <em>rakʿas</em> of <em>ḍuḥā</em> are enough to stand for the charity owed by every joint of the body each day (Sahih Muslim). Most people pray two to eight <em>rakʿas</em>, a number that scholars treat as a matter of choice."
+  ],
+  "misread": "Often rendered simply as “morning”, which blurs the exact span the term names: after sunrise has become full daylight and before noon.",
+  "sources": [],
+  "terms": [
+   "salah",
+   "afternoon-prayer"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Duha",
+   "Duha",
+   "Salat al-Duha"
+  ],
+  "faruqi": {
+   "page": 36,
+   "term": "AL ḌUḤĀ"
+  }
+ },
+ {
+  "slug": "dunya-al",
+  "title": "Dunya, al-",
+  "ar": "الدنيا",
+  "tr": "al-Dunyā",
+  "def": "The nearer life of this world, whose values rank below those of the Hereafter, and by extension a life given over to pursuing such values.",
+  "what": [
+   "<em>Al-dunyā</em> comes from a root meaning “nearer” or “lower”. It is the life in front of us, set against <em>al-ākhira</em>, the life to come. The Quran calls it “only the enjoyment of delusion” when it becomes the whole aim of a person (3:185), and says: “This worldly life is nothing but diversion and play; the home of the Hereafter is the true life” (29:64).",
+   "The term therefore carries a judgment of value as well as of place. A person described as devoted to <em>al-dunyā</em> has made the lower goods of wealth, rank and comfort the center of life. The Quran does not forbid the good things of this world, and asks believers for “good in this world and good in the Hereafter” (2:201). The fault lies in letting the lower values rule."
+  ],
+  "misread": "Rendered “the world” or “worldliness”, which loses the contrast of nearer and lower values against those of the Hereafter that the Arabic holds.",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "deeds"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Dunya",
+   "Dunya",
+   "Duniya",
+   "The Dunya"
+  ],
+  "faruqi": {
+   "page": 32,
+   "term": "AL DUNYĀ"
+  }
  }
 ]

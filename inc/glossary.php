@@ -412,9 +412,20 @@ function boi_glossary_entries() {
  * @return string A to Z, or #.
  */
 function boi_glossary_letter( $title ) {
-	$plain = strtoupper( substr( remove_accents( wp_strip_all_tags( $title ) ), 0, 1 ) );
+	$plain = strtoupper( substr( remove_accents( boi_glossary_sort_key( $title ) ), 0, 1 ) );
 
 	return preg_match( '/^[A-Z]$/', $plain ) ? $plain : '#';
+}
+
+/**
+ * A title with its leading apostrophe, ayn and hamza marks removed, so that
+ * 'Abd and Abd are filed and sorted together.
+ *
+ * @param string $title Title.
+ * @return string
+ */
+function boi_glossary_sort_key( $title ) {
+	return preg_replace( '/^[\x{02BF}\x{02BE}\x{2018}\x{2019}\x{0027}`\s]+/u', '', wp_strip_all_tags( (string) $title ) );
 }
 
 /**
@@ -459,7 +470,7 @@ function boi_glossary_groups( $with_aliases = false ) {
 	usort(
 		$rows,
 		function ( $a, $b ) {
-			return strnatcasecmp( remove_accents( wp_strip_all_tags( $a['name'] ) ), remove_accents( wp_strip_all_tags( $b['name'] ) ) );
+			return strnatcasecmp( remove_accents( boi_glossary_sort_key( $a['name'] ) ), remove_accents( boi_glossary_sort_key( $b['name'] ) ) );
 		}
 	);
 
@@ -633,8 +644,9 @@ function boi_render_glossary_index() {
 			$thumb = boi_glossary_entry_image( $type, $entry->post_name );
 			$img   = $thumb ? '<img class="boi-glossary__thumb" src="' . esc_url( $thumb['url'] ) . '" alt="" width="' . (int) $thumb['width'] . '" height="' . (int) $thumb['height'] . '" loading="lazy" decoding="async">' : '';
 
+			$long  = mb_strlen( $ar ) > 14 ? ' has-long-ar' : '';
 			$list .= sprintf(
-				'<li class="boi-glossary__item" data-type="%1$s">' . $img . '%2$s<a class="boi-glossary__term" href="%3$s">%4$s</a>%5$s%6$s<p class="boi-glossary__def">%7$s</p></li>',
+				'<li class="boi-glossary__item' . $long . '" data-type="%1$s">' . $img . '%2$s<a class="boi-glossary__term" href="%3$s">%4$s</a>%5$s%6$s<p class="boi-glossary__def">%7$s</p></li>',
 				esc_attr( $type ),
 				$kind,
 				esc_url( get_permalink( $entry ) ),
@@ -675,11 +687,24 @@ function boi_render_glossary_index() {
 		}
 	}
 
-	$hero = boi_glossary_image( 'hero' );
+	$hero  = boi_glossary_image( 'hero' );
+	$intro = '';
+
+	if ( $hero ) {
+		$intro .= '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>';
+	}
+
+	$intro .= '<p class="boi-glossary__basis">' . esc_html__( 'The terms and their Arabic forms follow the lists in Ismail al-Faruqi\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ) . '</p>';
 
 	return sprintf(
 		'%1$s<div class="boi-glossary" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
-		( $hero ? '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>' : '' ) . '<p class="boi-glossary__basis">' . esc_html__( 'The terms and their Arabic forms follow the lists in Ismail al-Faruqi\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ) . '</p>', // phpcs:ignore WordPress.Security.EscapeOutputar the filters.', 'bestofislam' )
+		$intro, // phpcs:ignore WordPress.Security.EscapeOutput
+		(int) $total,
+		esc_attr__( 'Filter by kind', 'bestofislam' ),
+		$tiles, // phpcs:ignore WordPress.Security.EscapeOutput
+		esc_html__( 'Show every letter', 'bestofislam' ),
+		$body, // phpcs:ignore WordPress.Security.EscapeOutput
+		esc_html__( 'Nothing matches. Try another spelling, or clear the filters.', 'bestofislam' )
 	);
 }
 
