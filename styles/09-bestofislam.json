@@ -73,6 +73,45 @@
 					]
 				},
 				{
+					"name": "EB Garamond",
+					"slug": "eb-garamond",
+					"fontFamily": "\"EB Garamond\", Garamond, serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"EB Garamond\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-Regular.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"EB Garamond\"",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-Medium.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"EB Garamond\"",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-Bold.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"EB Garamond\"",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/eb-garamond/EBGaramond-Italic.woff2"
+							]
+						}
+					]
+				},
+				{
 					"name": "Ysabeau Office",
 					"slug": "ysabeau-office",
 					"fontFamily": "\"Ysabeau Office\", sans-serif",
@@ -127,7 +166,8 @@
 			"text": "var(--wp--preset--color--contrast)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--ysabeau-office)",
+			"fontFamily": "var(--wp--preset--font-family--eb-garamond)",
+			"fontSize": "1.1875rem",
 			"lineHeight": "1.5"
 		},
 		"elements": {

@@ -26,6 +26,7 @@ versioning.
 
 ### Changed
 
+- **Running text is set in EB Garamond** (Regular, Medium, Bold and Italic, bundled as WOFF2), at 1.1875rem to suit its small x-height. Platypi still sets headings; Ysabeau Office remains for labels and interface text.
 - Errors in the old text were corrected during the expansion, among them that everyone wears two white cloths for hajj (men only), that Hudaybiyyah followed Khaybar, and that two Greek verbs in Paul's letters were the same.
 - The front page title carries the site's focus as well as its name, as the guide suggests; the lead card's button carries the article title in its link text.
 - **Header search is an icon.** The search field in the header is now a search icon; selecting it (or pressing `/`) opens a full-screen overlay with the search box. Esc, the close button or a click outside closes it, focus moves into the box and back, and without JavaScript the icon still opens the overlay through a `#boi-search` link. New `assets/css/header-search.css` and `assets/js/header-search.js`; the old inline-field rules are removed from `listicle.css`.

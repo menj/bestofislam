@@ -62,7 +62,7 @@
  */
 body {
 	font-family:
-		var(--wp--preset--font-family--ysabeau-office, sans-serif),
+		var(--wp--preset--font-family--eb-garamond, serif),
 		"BOI Quran",
 		"BOI Arabic",
 		"BOI Hebrew",

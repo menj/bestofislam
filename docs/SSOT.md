@@ -66,7 +66,7 @@ directly through `block.json`. No npm toolchain, no compiled bundle.
 The .org property carries its own visual identity. It inherits one constraint
 from the .com theme: the chrome must not read as overtly Islamic at first
 glance, so religious typography appears only where the content calls for it.
-Typography is Platypi for display and Ysabeau Office for text, both bundled
+Typography is Platypi for display and EB Garamond for running text (Ysabeau Office remains for labels and interface text), all bundled
 from the parent theme's font set as variable woff2. The wordmark is a third
 face, Vollkorn at 800, set lowercase and tightened, so the site name reads as a
 mark rather than as a heading that happens to sit in the header. It is
