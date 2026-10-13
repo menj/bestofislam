@@ -11,10 +11,6 @@ versioning.
 - **A Glossary that is easier to move around in.** Every Glossary page, the index and each entry, now has a Glossary bar under the header (`templates/page-glossary.html`): a link back to the index, a search box that finds a term as you type (aliases too), and the letters A to Z. The index is a grid of cards instead of one long list, with filters by kind (Person, Prophet, Place and so on), a live count, and a letter view that shows only one letter at a time. Each letter has its own Back to top link. Entries get a tinted head panel and Previous term and Next term links (`assets/js/glossary.js`, `assets/css/glossary.css`). Without JavaScript the index is still the full list and the letters are plain links.
 - **A Back to top button on every page** (`assets/js/back-to-top.js`, `assets/css/back-to-top.css`). It appears after the reader has scrolled down a long page, and respects reduced motion.
 - **Fuller Glossary structured data.** The index is a DefinedTermSet that lists every DefinedTerm; each entry is a DefinedTerm with its `termCode`, other names and Arabic script (`alternateName`), and its set, inside a CollectionPage or WebPage that links to the related terms and articles. With Rank Math's schema active, the page node is Rank Math's and these nodes refer to it by id.
-- **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
-
-### Added
-
 - **Internal linking for every article.** The 34 articles added with this release join the reading order, so all 70 have a "Read next" card, and the Keep reading list at the foot of an article now offers the four most closely related articles (shared glossary terms first, then section and reading part) instead of the newest three in its section (`inc/related-articles.json`, built by `bin/build-related.py`). Four articles that no glossary entry pointed to now have entries that do. Part 5 of the reading order is renamed "The Prophet and the hard questions".
 - **Rank Math compatibility** (`inc/rank-math.php`). With Rank Math active the theme no longer prints its own robots directives, structured-data graph or breadcrumb markup, and adds its image licence data and in-text images to Rank Math's graph, a description where Rank Math has none, noindex for search results and paged archives, and the exclusion of unlisted articles from its sitemap, through the plugin's hooks.
 - **Image metadata on the images in the text** of an article, not only the featured image, as ImageObjects with licence, creator and credit.
@@ -24,6 +20,7 @@ versioning.
 
 ### Fixed
 
+- **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
 - The jump list at the head of a listicle, and the other lists of links the site builds (glossary index and related terms, site map, reading lists), were underlined by the rule meant for links in running text. That rule now leaves them out.
 
 ### Changed
