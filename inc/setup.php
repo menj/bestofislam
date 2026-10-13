@@ -802,19 +802,13 @@ function boi_create_pages() {
 		$existing   = get_page_by_path( $slug, OBJECT, 'page' );
 
 		// A page the theme made at the address its title gives (Site map at
-		// /site-map/) moves to the address the seed now names. WordPress keeps
-		// the old slug and redirects it, so the old link still works.
+		// /site-map/) is deleted outright, without a redirect, and the page is
+		// created again at the address the seed now names.
 		if ( ! $existing && $slug !== $title_slug ) {
 			$old = get_page_by_path( $title_slug, OBJECT, 'page' );
 
 			if ( $old ) {
-				boi_update_post(
-					array(
-						'ID'        => $old->ID,
-						'post_name' => $slug,
-					)
-				);
-				$existing = $old;
+				wp_delete_post( $old->ID, true );
 			}
 		}
 
