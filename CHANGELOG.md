@@ -8,6 +8,7 @@ versioning.
 
 ### Added
 
+- **Fuller listicles.** All 70 articles are expanded, from about 39,000 words to about 90,000. Each entry now runs to two or three paragraphs with the primary text, the context, how scholars read it and the strongest objection. Every article ends with a filled-in bottom line (34 had the heading with no text under it, and 20 had no such section), and citations were added throughout. Titles, entry order and images are unchanged. `docs/CONTENT-REVIEW.md` lists the details that need checking against the sources.
 - **A Glossary that is easier to move around in.** Every Glossary page, the index and each entry, now has a Glossary bar under the header (`templates/page-glossary.html`): a link back to the index, a search box that finds a term as you type (aliases too), and the letters A to Z. The index is a grid of cards instead of one long list, with filters by kind (Person, Prophet, Place and so on), a live count, and a letter view that shows only one letter at a time. Each letter has its own Back to top link. Entries get a tinted head panel and Previous term and Next term links (`assets/js/glossary.js`, `assets/css/glossary.css`). Without JavaScript the index is still the full list and the letters are plain links.
 - **A Back to top button on every page** (`assets/js/back-to-top.js`, `assets/css/back-to-top.css`). It appears after the reader has scrolled down a long page, and respects reduced motion.
 - **Fuller Glossary structured data.** The index is a DefinedTermSet that lists every DefinedTerm; each entry is a DefinedTerm with its `termCode`, other names and Arabic script (`alternateName`), and its set, inside a CollectionPage or WebPage that links to the related terms and articles. With Rank Math's schema active, the page node is Rank Math's and these nodes refer to it by id.
@@ -25,6 +26,7 @@ versioning.
 
 ### Changed
 
+- Errors in the old text were corrected during the expansion, among them that everyone wears two white cloths for hajj (men only), that Hudaybiyyah followed Khaybar, and that two Greek verbs in Paul's letters were the same.
 - The front page title carries the site's focus as well as its name, as the guide suggests; the lead card's button carries the article title in its link text.
 - **Header search is an icon.** The search field in the header is now a search icon; selecting it (or pressing `/`) opens a full-screen overlay with the search box. Esc, the close button or a click outside closes it, focus moves into the box and back, and without JavaScript the icon still opens the overlay through a `#boi-search` link. New `assets/css/header-search.css` and `assets/js/header-search.js`; the old inline-field rules are removed from `listicle.css`.
 
