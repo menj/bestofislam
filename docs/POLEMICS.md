@@ -53,3 +53,18 @@ Saved 13 October 2026 from `x.com/TaymiApologia/status/2109053692364079460`. The
 - **The afterlife as wishful thinking** (R15) is explained but not argued.
 - **A sourced count of Quran manuscripts** (O3) would let the manuscript articles answer the figure directly. Nothing here states one.
 - The details in the new articles that need checking against sources are in `docs/CONTENT-REVIEW.md`.
+
+## Source 2: a thread under the same post, with a critic of the Quran and hadith
+
+Saved 13 October 2026 from `x.com/jacriaz/status/2109439881596617021`. A critic replies to the post in Source 1; the thread has six turns.
+
+| # | Claim, in summary | Kind | Answered in | Status |
+|---|---|---|---|---|
+| S1 | "Islam is like a fairy tale" | Charge that the miraculous is absurd | `buraq-and-miracle-stories` (**new**) | Covered by the new article |
+| S2 | The Prophet's donkey Yafur "is a joke" | Hadith ridicule | `buraq-and-miracle-stories` (**new**, entry on the donkey: the talking-donkey narration is graded fabricated by hadith critics) | Covered |
+| S3 | The winged Buraq carrying a man to heaven "is a joke" | Hadith ridicule | `buraq-and-miracle-stories` (**new**, entry on the Buraq: the sound reports do not mention wings), `why-five-prayers` (the Night Journey) | Covered |
+| S4 | Reply from the Muslim side: the Bible has miracles too (Matthew 27:51 to 53) | Tu quoque | `buraq-and-miracle-stories` (**new**, entry on the same charge against the Bible) | Covered |
+| S5 | "I am a critic of the Quran and hadith. I do not read the Bible" | Declines to apply one standard to both | `buraq-and-miracle-stories` (**new**, closing entry on how to weigh a miracle report and reading the other side) | Covered |
+| S6 | "Name-calling is a sign that someone has run out of valid arguments" | Remark on tone | None | Not a claim about Islam |
+
+The `buraq-and-miracle-stories` article does not mention the thread or the people in it.

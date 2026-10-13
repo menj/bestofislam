@@ -561,6 +561,12 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 5 answers on how Muslims relate to God.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
+		array(
+			'slug'    => 'buraq-and-miracle-stories',
+			'title'   => __( '5 miracle stories critics call a fairy tale, and what the sources say', 'bestofislam' ),
+			'excerpt' => __( 'The Night Journey, the Buraq, a talking donkey and the Bible\'s own miracles: 5 miracle stories critics mock, and what the sources say.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
 	);
 }
 

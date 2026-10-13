@@ -1657,5 +1657,30 @@
     "source": "https://pixabay.com/photos/hands-human-old-human-age-seniors-4051469/"
    }
   ]
+ },
+ "buraq-and-miracle-stories": {
+  "featured": {
+   "file": "buraq-and-miracle-stories.avif",
+   "alt": "The Dome of the Rock among olive trees on the Temple Mount, Jerusalem",
+   "artist": "jdblack",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/jerusalem-dome-of-the-rock-islam-4657867/"
+  },
+  "inline": [
+   {
+    "file": "buraq-and-miracle-stories-1.avif",
+    "alt": "The Milky Way over desert dunes at night",
+    "artist": "Venrike",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/sky-stars-galaxy-milky-way-night-6811874/"
+   },
+   {
+    "file": "buraq-and-miracle-stories-2.avif",
+    "alt": "An old open Bible resting on another book",
+    "artist": "congerdesign",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/bible-old-bible-historical-1215861/"
+   }
+  ]
  }
 }
