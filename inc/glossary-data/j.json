@@ -176,6 +176,12 @@
    "Bayt Al-Maqdis",
    "Al-Aqsa",
    "Aqsa"
+  ],
+  "faruqi": [
+   {
+    "page": 64,
+    "term": "AL QUDS or BAYT AL MAQDIS"
+   }
   ]
  },
  {
@@ -233,6 +239,12 @@
   "type": "term",
   "aliases": [
    "Qital"
+  ],
+  "faruqi": [
+   {
+    "page": 27,
+    "term": "JIHĀD"
+   }
   ]
  },
  {
@@ -263,6 +275,12 @@
    "Djinn",
    "Genie",
    "Genies"
+  ],
+  "faruqi": [
+   {
+    "page": 27,
+    "term": "JINN"
+   }
   ]
  },
  {
@@ -483,5 +501,262 @@
    "Just Dealing",
    "Fairness"
   ]
+ },
+ {
+  "slug": "jabbar-al",
+  "title": "Jabbar, al-",
+  "ar": "الجبار",
+  "tr": "al-Jabbār",
+  "def": "A divine name: the Almighty, whose might determines everything in truth.",
+  "what": [
+   "<em>Al-Jabbār</em> is one of the names of God and appears in the Quran’s closing verses of surah 59 among His names (59:23). It is a name of power: Faruqi renders it as He Who is almighty and Whose might truly determines everything. Some scholars derive it from a root meaning to mend, so that it also holds the sense of One who restores the broken and repairs the weak.",
+   "The same word is used for human beings in a bad sense, as in the Quran’s description of obstinate tyrants (11:59, 14:15). Scholars note that the divine name has a different character, since only God has real, unlimited might, and He uses it with justice and mercy. The name is used in supplications asking Him to repair what is broken."
+  ],
+  "misread": "The name is often rendered “the Tyrant” or “the Compeller”, but for God it describes lawful and just might, unlike the human jabbar, who abuses power.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "al-aziz",
+   "allah",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Jabbar",
+   "Jabbar"
+  ],
+  "faruqi": {
+   "page": 27,
+   "term": "AL JABBĀR"
+  }
+ },
+ {
+  "slug": "jahiliyyah-al",
+  "title": "Jahiliyyah, al-",
+  "ar": "الجاهلية",
+  "tr": "al-Jāhiliyya",
+  "def": "The order in which God’s law does not govern; also the Arabia that preceded Islam.",
+  "what": [
+   "<em>Al-jāhiliyya</em> names the condition of a society that does not live under the law of God. The word has a historical meaning, the Arabia before Islam, and Faruqi adds a wider one: any order or regime where God’s law is not in force. The Quran asks, “Is it the judgement of the <em>jāhiliyya</em> they seek? Who is better than God in judgement for people who are certain?” (5:50). The Quran uses the word four times, for the pride of the unbelievers (48:26), for the display of former times (33:33), for wrong thoughts about God (3:154) and for false judgement (5:50). Some modern Muslim writers apply the word to societies of any age that set aside divine guidance."
+  ],
+  "misread": "It is often taken to mean a lack of intelligence or learning, when the word refers to disregard of divine guidance in conduct and law.",
+  "sources": [],
+  "terms": [
+   "jahiliyya",
+   "pre-islamic-arab-deities",
+   "hukm",
+   "judgement"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Jahiliyyah",
+   "Jahiliyyah",
+   "Al-Jahiliyya"
+  ],
+  "faruqi": {
+   "page": 28,
+   "term": "AL JĀHILIYYAH"
+  }
+ },
+ {
+  "slug": "janabah-al",
+  "title": "Janabah, al-",
+  "ar": "الجنابة",
+  "tr": "al-Janāba",
+  "def": "A state of major ritual impurity, and any act that brings it about, which requires a full bath before prayer.",
+  "what": [
+   "<em>Janāba</em> is the state of major ritual impurity. A person in this state is called <em>junub</em>, and the Quran says: “If you are in a state of impurity, purify yourselves” (5:6; also 4:43). Faruqi defines the term as any act that breaks the ritual purity of the Muslim, together with the state itself. The jurists specify the causes, chiefly sexual relations and emission, and the remedy is the full bath, <em>ghusl</em>. A person in this state does not pray, touch the Quran in the view of most scholars, or perform the circumambulation of the Kaaba until he has washed. The state is a ritual condition and it carries no moral stain; it is a normal part of married life."
+  ],
+  "misread": "It is mistaken for a sin or for dirt, whereas it is a temporary ritual state that is removed by washing.",
+  "sources": [],
+  "terms": [
+   "ablutions",
+   "salah",
+   "itikaf",
+   "quran"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Janabah",
+   "Janaba",
+   "Junub",
+   "Major Impurity"
+  ],
+  "faruqi": {
+   "page": 27,
+   "term": "AL JANĀBAH"
+  }
+ },
+ {
+  "slug": "jarh-wal-tadil-al",
+  "title": "Jarh wal-Ta'dil, al-",
+  "ar": "الجرح والتعديل",
+  "tr": "al-Jarḥ wa-l-Taʿdīl",
+  "def": "The science of assessing hadith narrators: their faults (jarḥ) or their reliability (taʿdīl).",
+  "what": [
+   "<em>Jarḥ</em> means wounding, that is, finding fault in a narrator, and <em>taʿdīl</em> means declaring him upright. The science investigates the people who passed on hadith so as to judge whether each is trustworthy or not, looking at their honesty, memory and accuracy. It is a main tool for judging the strength of a chain of transmission. The practice rests on the Quranic instruction to verify news brought by a wrongdoer (49:6). Early critics such as Yahya ibn Maʿin and Ahmad ibn Hanbal gave opinions on thousands of narrators, and Ibn Abi Hatim al-Razi compiled a large work titled <em>al-Jarḥ wa-l-Taʿdīl</em>. The science produced detailed biographical dictionaries of narrators."
+  ],
+  "misread": "Some read it as slander or backbiting, though scholars treated it as a duty of protecting the religion from false reports.",
+  "sources": [
+   "Scholars set rules for the science, including that criticism must be based on knowledge and explained when it is severe, and that it must be done for the sake of the faith and not out of personal dislike."
+  ],
+  "terms": [
+   "hadith",
+   "isnad",
+   "sahih",
+   "ilal-al-hadith"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Jarh wal-Ta'dil",
+   "Jarh Wa Tadil",
+   "Jarh And Tadil"
+  ],
+  "faruqi": {
+   "page": 49,
+   "term": "AL JARḤ WAL TA'DĪL"
+  }
+ },
+ {
+  "slug": "jaza",
+  "title": "Jaza",
+  "ar": "جزى",
+  "tr": "Jazā",
+  "def": "To repay each person on the Day of Judgement: reward for a life of virtue, or punishment for a life of sin.",
+  "what": [
+   "<em>Jazā</em> means to repay, and the noun <em>jazāʾ</em> is the recompense. In the Quran it is God’s requital on the Last Day, when each person is given his due according to what he did. “Whoever does an atom’s weight of good will see it, and whoever does an atom’s weight of evil will see it” (99:7–8). The reward for good is generous: “Whoever brings a good deed will have ten times its like, and whoever brings an evil deed will be repaid only its like” (6:160). The same root yields <em>jazāk Allāh khayran</em>, the phrase people use to thank one another. Faruqi’s definition shows that the word covers both reward and punishment, as a matter of justice."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "judgement",
+   "paradise",
+   "hell"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 27,
+   "term": "JAZĀ"
+  }
+ },
+ {
+  "slug": "jazakum-allah-khayr-al-jaza",
+  "title": "Jazakum Allah Khayr al-Jaza'",
+  "ar": "جزاكم الله خير الجزاء",
+  "tr": "Jazākum Allāhu khayra al-jazāʾ",
+  "def": "“May God grant you the best reward”: an expression of thanks to someone who has given a gift or done a service.",
+  "what": [
+   "The words mean “May God repay you with the best of repayments.” Muslims say them to thank anyone who has given something or helped. The form with <em>-kum</em> addresses several people, while <em>jazāka Allāhu khayran</em> addresses one man, and <em>jazāki Allāhu khayran</em> one woman. The speaker leaves the reward to God, who can give more than any person can. Al-Tirmidhi reports a saying of the Prophet (peace be upon him) that whoever is shown kindness and says to the giver “May God reward you with good” has done the utmost in praise. Muslims use the phrase in many settings and often as a reply to a favour. It sits alongside the plain <em>shukran</em>, “thank you”, which Muslims also use."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "jaza",
+   "common-phrases",
+   "kindness",
+   "dua"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Jazak Allah Khayran",
+   "Jazakallah",
+   "Jazakallahu Khayran"
+  ],
+  "faruqi": {
+   "page": 60,
+   "term": "JAZĀKUM ALLAH KHAYR AL JAZĀ’."
+  }
+ },
+ {
+  "slug": "jizyah",
+  "title": "Jizyah",
+  "ar": "جزية",
+  "tr": "Jizya",
+  "def": "The tax paid by non-Muslim adult men of means in an Islamic state, in place of the zakat required of Muslims.",
+  "what": [
+   "<em>Jizya</em> is the poll tax that the Islamic state took from its non-Muslim citizens who were free, adult, male and able to pay. Faruqi’s definition notes that the rate could differ by year or place, and that it stood in place of the <em>zakāh</em> that every Muslim must pay. The Quran mentions it once (9:29). In return for payment the state protected the lives, property and worship of those who paid, and it exempted them from military service. The classical jurists excused women, children, the poor, the sick and monks. The tax ceased to apply in most modern states, where non-Muslims are citizens with equal duties."
+  ],
+  "misread": "It is often described as a punishment or a payment to avoid conversion, whereas jurists treated it as a fixed due in return for protection and exemption from service.",
+  "sources": [],
+  "terms": [
+   "jizya",
+   "dhimmi",
+   "zakat",
+   "ahl-al-kitab"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 27,
+   "term": "JIZYAH"
+  }
+ },
+ {
+  "slug": "jubbah",
+  "title": "Jubbah",
+  "ar": "جبة",
+  "tr": "Jubba",
+  "def": "A long, loose outer garment, open at the front, worn over other clothes.",
+  "what": [
+   "<em>Jubba</em> is an outer garment, commonly long, loose and open at the front, often with wide sleeves, worn over the other clothes. Faruqi lists it among the items of Muslim dress described as outer covering clothes. It is worn by scholars and by many other men in the Arab world and parts of Africa and Asia, in a range of fabrics and cuts. A hadith in Sahih al-Bukhari and Sahih Muslim reports that on a journey the Prophet (peace be upon him) wore a Syrian <em>jubba</em> with narrow sleeves, and washed his arms by drawing them from beneath it. The garment is a matter of custom and not a requirement of the faith."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "immah",
+   "modesty-and-dress",
+   "hijab",
+   "hair"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Jubba",
+   "Jibba"
+  ],
+  "faruqi": {
+   "page": 54,
+   "term": "JUBBAH"
+  }
+ },
+ {
+  "slug": "jumuah-al",
+  "title": "Jumu'ah, al-",
+  "ar": "الجمعة",
+  "tr": "al-Jumuʿa",
+  "def": "Friday congregational worship, held at noon with a sermon, and the name of the day itself.",
+  "what": [
+   "<em>Al-Jumuʿa</em> is the congregational prayer that Muslims perform on Friday just after midday, and the name of the day. Faruqi calls it the supreme act of worship of the Muslim congregation. The Quran commands: “O you who believe, when the call is made for the prayer on the day of congregation, hasten to the remembrance of God and leave off trading” (62:9). The service has two parts: a sermon (<em>khuṭba</em>) given by the imam, and a prayer of two units. It is required of Muslim men who are resident and able, and women may attend. After the prayer, people disperse to seek God’s bounty (62:10). A hadith in Sahih Muslim calls Friday the best day on which the sun rises."
+  ],
+  "misread": "It is sometimes called the “Muslim Sabbath”, but Friday is not a day of mandatory rest, since the Quran permits work after the prayer.",
+  "sources": [],
+  "terms": [
+   "friday",
+   "salah",
+   "jamaat",
+   "imam"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Jumu'ah",
+   "Jumua",
+   "Jumah",
+   "Jummah",
+   "Jumuʿa"
+  ],
+  "faruqi": {
+   "page": 27,
+   "term": "AL JUMU'AH"
+  }
  }
 ]

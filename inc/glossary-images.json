@@ -1,0 +1,461 @@
+{
+ "hero": {
+  "file": "hero.avif",
+  "alt": "The Prophet's Mosque in Medina at dusk",
+  "artist": "Konevi",
+  "licence": "Pixabay licence",
+  "source": "https://pixabay.com/photos/masjid-prophetic-medina-religion-9883639/",
+  "width": 1280,
+  "height": 512
+ },
+ "kinds": {
+  "term": [
+   {
+    "file": "term-1.avif",
+    "alt": "Arabic script on a page",
+    "artist": "kevinamrulloh",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/book-islamic-arabic-religion-2477164/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "term-2.avif",
+    "alt": "A Quran on soft cloth",
+    "artist": "shzern",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/quran-light-recite-spirituality-5385901/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "term-3.avif",
+    "alt": "An open Quran",
+    "artist": "Afshad",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/holy-quran-ramadan-holy-month-1528446/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "term-4.avif",
+    "alt": "A mosque corridor",
+    "artist": "NoblePrime",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/mosque-islam-architecture-columns-8547944/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "term-5.avif",
+    "alt": "Prayer beads",
+    "artist": "soramang",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/buddhism-tree-crafts-religion-biz-1160610/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "term-6.avif",
+    "alt": "A lantern in a window",
+    "artist": "Ahmedsaborty",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/ramadan-egypt-lantern-3434919/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "person": [
+   {
+    "file": "person-1.avif",
+    "alt": "A quill beside an old book",
+    "artist": "Ghinzo",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/calligraphy-story-ink-feather-7188024/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "person-2.avif",
+    "alt": "An old manuscript",
+    "artist": "garten-gg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/a-book-old-old-book-historical-632430/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "person-3.avif",
+    "alt": "A quill and paper",
+    "artist": "Bru-nO",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/bird-feather-feather-paper-2505306/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "person-4.avif",
+    "alt": "Old books on a shelf",
+    "artist": "jarmoluk",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/old-books-book-old-library-436498/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "person-5.avif",
+    "alt": "Rows of old books",
+    "artist": "stux",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/library-books-old-books-419254/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "person-6.avif",
+    "alt": "An open book by candlelight",
+    "artist": "sachbearbeitung",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/read-a-book-candle-bible-2890857/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "prophet": [
+   {
+    "file": "prophet-1.avif",
+    "alt": "An old olive tree",
+    "artist": "Angeleses",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/olive-old-olive-tree-trunk-age-3687482/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "prophet-2.avif",
+    "alt": "An olive grove path",
+    "artist": "dimitrisvetsikas1969",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/olive-grove-olive-tree-agriculture-4588219/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "prophet-3.avif",
+    "alt": "Sunlight through mountains",
+    "artist": "12322747",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/landscape-landscape-vietnam-4175977/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "prophet-4.avif",
+    "alt": "Sunlight breaking over mountains",
+    "artist": "Sinousxl",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/mountains-light-rays-light-bright-7881314/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "prophet-5.avif",
+    "alt": "A cave entrance",
+    "artist": "Pexels",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/cave-light-person-rocky-silhouette-1835825/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "prophet-6.avif",
+    "alt": "Sunrise over water",
+    "artist": "cowins",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/river-stream-curved-prairie-679011/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "place": [
+   {
+    "file": "place-1.avif",
+    "alt": "The Prophet's Mosque in Medina at dawn",
+    "artist": "Konevi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/mosque-masjid-al-nabawi-medina-3724921/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "place-2.avif",
+    "alt": "The Prophet's Mosque at dusk",
+    "artist": "Konevi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/mosque-masjid-al-nabawi-sunrise-4525144/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "place-3.avif",
+    "alt": "Pilgrims around the Kaaba",
+    "artist": "Konevi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/kaaba-pilgrimage-mecca-masjid-4372290/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "place-4.avif",
+    "alt": "The old city of Jerusalem",
+    "artist": "shereif",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/old-palestine-dome-of-the-rock-3965239/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "place-5.avif",
+    "alt": "The hills of Jerusalem",
+    "artist": "interlax",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/jerusalem-holandia-travel-old-city-4131791/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "place-6.avif",
+    "alt": "A kasbah in the desert",
+    "artist": "Walkerssk",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/morocco-city-historic-village-clay-2349647/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "event": [
+   {
+    "file": "event-1.avif",
+    "alt": "A camel caravan at Petra",
+    "artist": "mikaelthunberg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/jordan-petra-camels-dromedary-1846284/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "event-2.avif",
+    "alt": "Camels resting in the desert",
+    "artist": "manfredrichter",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/dromedary-caravan-desert-ship-7572602/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "event-3.avif",
+    "alt": "Camels on the dunes",
+    "artist": "mufaddalap",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/camel-desert-sand-animal-dry-4598113/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "event-4.avif",
+    "alt": "An old map and compass",
+    "artist": "Ylanite",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/compass-map-direction-degrees-2946959/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "event-5.avif",
+    "alt": "A map, coins and a key",
+    "artist": "Ghinzo",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/vintage-map-compass-atlas-coins-4896141/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "event-6.avif",
+    "alt": "A stone relief of a battle",
+    "artist": "Pignatta",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/art-sculpture-medieval-knight-6598445/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "group": [
+   {
+    "file": "group-1.avif",
+    "alt": "A worshipper in prostration",
+    "artist": "chidioc",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/kid-praying-muslim-islam-faith-1077793/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "group-2.avif",
+    "alt": "Pilgrims gathered at Arafat",
+    "artist": "Konevi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/the-pilgrims-guide-arafat-mecca-4682145/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "group-3.avif",
+    "alt": "The Mount of Mercy at Arafat",
+    "artist": "Konevi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/the-pilgrims-guide-gibraltar-womb-4525107/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "group-4.avif",
+    "alt": "A mosque courtyard",
+    "artist": "LoggaWiggler",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/bukhara-mosque-kalon-mosque-islam-198728/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "group-5.avif",
+    "alt": "The Dome of the Rock",
+    "artist": "best-biketours",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/jerusalem-dome-of-the-rock-israel-475110/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "group-6.avif",
+    "alt": "The Blue Mosque at dusk",
+    "artist": "Konevi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/turkey-istanbul-prayer-mosque-10476496/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "book": [
+   {
+    "file": "book-1.avif",
+    "alt": "Old bound books on a shelf",
+    "artist": "garten-gg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/christmas-background-book-read-old-1659717/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "book-2.avif",
+    "alt": "An open book with a rose",
+    "artist": "DGlodowska",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/book-rose-book-mark-open-book-419589/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "book-3.avif",
+    "alt": "An open book with reading glasses",
+    "artist": "DariuszSankowski",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/glasses-book-education-eyeglasses-1052010/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "book-4.avif",
+    "alt": "An old open book",
+    "artist": "MorningbirdPhoto",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/book-reading-literature-classics-856151/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "book-5.avif",
+    "alt": "Handwriting on aged paper",
+    "artist": "cocoparisienne",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/s%C3%BCtterlin-handwriting-typography-1362879/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "book-6.avif",
+    "alt": "A great library hall",
+    "artist": "cadop",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/architecture-building-law-library-3536005/",
+    "width": 800,
+    "height": 533
+   }
+  ],
+  "topic": [
+   {
+    "file": "topic-1.avif",
+    "alt": "A pattern of Moroccan tiles",
+    "artist": "2427999",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/morocco-essaouira-tile-pattern-4792752/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "topic-2.avif",
+    "alt": "Arches of a mosque",
+    "artist": "sharonang",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/interior-design-amazing-pray-3169974/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "topic-3.avif",
+    "alt": "The interior of Hagia Sophia",
+    "artist": "Mojpe",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/hagia-sofia-istanbul-church-sofia-705689/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "topic-4.avif",
+    "alt": "A mosque chandelier",
+    "artist": "Abdullah_Shakoor",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/prophet-mosque-masjid-islam-muslim-2249734/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "topic-5.avif",
+    "alt": "A crescent moon at night",
+    "artist": "Bru-nO",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/heaven-stars-moon-venus-universe-5114501/",
+    "width": 800,
+    "height": 533
+   },
+   {
+    "file": "topic-6.avif",
+    "alt": "A drop falling into water",
+    "artist": "fernandozhiminaicela",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/water-drop-toilet-nature-gout-4531474/",
+    "width": 800,
+    "height": 533
+   }
+  ]
+ }
+}

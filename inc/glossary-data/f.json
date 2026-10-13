@@ -225,7 +225,13 @@
   "articles": [
    "apostasy-in-islam"
   ],
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 42,
+    "term": "FATWĀ"
+   }
+  ]
  },
  {
   "slug": "fidya",
@@ -353,7 +359,13 @@
    "why-no-interest"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 51,
+    "term": "FIQH"
+   }
+  ]
  },
  {
   "slug": "fire",
@@ -403,6 +415,12 @@
   "type": "term",
   "aliases": [
    "Fitnah"
+  ],
+  "faruqi": [
+   {
+    "page": 42,
+    "term": "FITNAH"
+   }
   ]
  },
  {
@@ -607,5 +625,401 @@
    "Furqaan",
    "Criterion"
   ]
+ },
+ {
+  "slug": "fahishah-al",
+  "title": "Fahishah, al-",
+  "ar": "الفاحشة / الفحشاء",
+  "tr": "al-Fāḥisha, al-Faḥshāʾ",
+  "def": "A grave and shameful sin, such as adultery.",
+  "what": [
+   "<em>Al-fāḥisha</em> and <em>al-faḥshāʾ</em> name an act so gross that it offends both revelation and decency. The Quran uses the word for adultery: “Do not approach adultery; it is an indecency and an evil way” (17:32). It also says that God has forbidden “shameful deeds, whether open or hidden” (7:33), which shows that the term covers private wrongs as well as public ones.",
+   "Scholars read it as a class of major sins with a fixed penalty or a strong moral censure, and adultery is the clearest case. The Quran links prayer with the restraint of such conduct: “Prayer keeps one away from indecency and what is wrong” (29:45). The plural <em>fawāḥish</em> is used for these deeds in general. The word therefore serves as a standing warning against the gravest moral failings."
+  ],
+  "misread": "Translated as “immorality” or “lewdness”, which can suggest a matter of taste; the Arabic names an act of grave sin that God has forbidden.",
+  "sources": [],
+  "terms": [
+   "adultery",
+   "fasaqa"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Fahishah",
+   "Al-Fahsha'",
+   "Fahisha",
+   "Fahsha",
+   "Al-Fahisha"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "AL FĀḤISHAH, AL FAḤSHĀ'"
+  }
+ },
+ {
+  "slug": "fakkara",
+  "title": "Fakkara",
+  "ar": "فكّر",
+  "tr": "fakkara",
+  "def": "To think and ponder, and in the end to perceive and know the patterns and will of God.",
+  "what": [
+   "<em>Fakkara</em> means to reflect with effort, turning a matter over until its meaning is clear. In the Quran this reflection has a direction: it moves from the signs of creation to their Maker. After naming rain, crops, night and day, sun and moon, the Quran says: “In that are signs for people who reflect” (16:11–12). Believers are described as those who “reflect on the creation of the heavens and the earth” (3:191). The verb is one of the Quran’s favored ways to invite the reader to think.",
+   "The same word underlies <em>tafakkur</em>, the practice of contemplating the world as evidence of God’s power and care. Faruqi treats it as the thinking that ends in knowledge of the divine patterns and will, so that thought is an act of worship as well as an exercise of the mind. For this reason, the Muslim tradition has never treated serious thought as opposed to faith."
+  ],
+  "misread": "Thought is sometimes taken to be a secular activity apart from faith; the Quran presents reflection on creation as a path to knowing God.",
+  "sources": [],
+  "terms": [
+   "fikr",
+   "knowledge",
+   "reason-and-faith"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tafakkur"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "FAKKARA"
+  }
+ },
+ {
+  "slug": "falah",
+  "title": "Falah",
+  "ar": "فلاح",
+  "tr": "falāḥ",
+  "def": "Success in reaching full conviction and realization of the divine will; the lasting success promised to those who obey God.",
+  "what": [
+   "<em>Falāḥ</em> is the success that endures, and the Quran reserves it for those who live by God’s guidance. Surah 23 opens: “Successful indeed are the believers” (23:1), and describes them by their humble prayer, their trustworthiness and their care for charity. Another verse says: “He who purifies himself has succeeded” (87:14). The Quran uses the verb form <em>aflaḥa</em>, “has succeeded”, for such people.",
+   "The word is heard five times a day in the call to prayer, in the phrase <em>ḥayya ʿalā al-falāḥ</em>, “come to success”. Placed beside “come to prayer”, it tells the listener where real success lies. Faruqi defines it as full conviction and realization of God’s will, which is a larger idea than prosperity or winning. Its opposite is <em>khusrān</em>, loss. Success in this sense is measured by the verdict of God and not by the world."
+  ],
+  "misread": "Usually translated “prosperity” or “success”, which suggests worldly gain; the Quranic term means success before God, in this life and the next.",
+  "sources": [],
+  "terms": [
+   "adhan",
+   "taqwa",
+   "iman"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Aflaha",
+   "Muflihun"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "FALĀḤ"
+  }
+ },
+ {
+  "slug": "faqaha",
+  "title": "Faqaha",
+  "ar": "فقه",
+  "tr": "faqaha",
+  "def": "To understand the ordinances of God, His revelation and His patterns in creation, which makes it a synonym of ʿilm; also to know Islamic law and apply it properly.",
+  "what": [
+   "<em>Faqaha</em> means to grasp a matter with understanding, and it is the verb from which <em>fiqh</em> comes. The Quran calls on a party from every group to go out “to gain deep understanding in religion” and to warn their people on return (9:122). It also speaks of those who have hearts with which they “do not understand” (7:179), and the word there is the same root.",
+   "In its wide sense the verb is close to <em>ʿilm</em>, knowledge of what God has revealed and of how He has ordered creation. In its narrower sense it names knowledge of the rules of Islamic law and the skill to apply them. The Prophet said: “If God wants good for a person, He gives him understanding in religion” (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "misread": "Reduced to “jurisprudence”, which drops the first and wider sense of understanding God’s revelation and His order in creation.",
+  "sources": [],
+  "terms": [
+   "fiqh",
+   "faqih",
+   "knowledge"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Fiqh"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "FAQAHA"
+  }
+ },
+ {
+  "slug": "faqih",
+  "title": "Faqih",
+  "ar": "فقيه",
+  "tr": "faqīh",
+  "def": "A person of deep understanding of religion, used for a jurist and as a synonym of ʿālim; the plural is fuqahāʾ.",
+  "what": [
+   "A <em>faqīh</em> is one who has <em>fiqh</em>, a thorough understanding of the religion. The plural is <em>fuqahāʾ</em>. In the sense Faruqi gives, it is a synonym of <em>ʿālim</em>, a person of knowledge. In common use it names a jurist who can draw out legal rulings from the Quran and the <em>sunna</em> and give an answer to a question of practice.",
+   "The Quran’s call for people to gain understanding in religion and to teach it (9:122) is the basis for the standing of such scholars. The great jurists, among them Abu Hanifa, Malik, al-Shafiʿi and Ahmad ibn Hanbal, are called <em>fuqahāʾ</em>. The title does not require a state office; it rests on learning and character, and the community looks to the <em>faqīh</em> for guidance."
+  ],
+  "misread": "Rendered “jurist” alone, which omits the older sense in which the <em>faqīh</em> is simply a scholar who understands the religion.",
+  "sources": [],
+  "terms": [
+   "alim",
+   "fiqh",
+   "faqaha",
+   "fatwa"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Fuqaha",
+   "Fuqaha'"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "FAQĪH"
+  }
+ },
+ {
+  "slug": "fasaqa",
+  "title": "Fasaqa",
+  "ar": "فسق",
+  "tr": "fasaqa",
+  "def": "To commit sin, or to follow a course of sinfulness and evil that stops short of apostasy or blasphemy.",
+  "what": [
+   "<em>Fasaqa</em> means to depart from obedience to God by sinning, while remaining within the faith. The one who does so is a <em>fāsiq</em>, and the state is <em>fisq</em> or <em>fusūq</em>. The Quran lists three things that God has made hateful to the believer: disbelief, <em>fusūq</em> and disobedience (49:7). The word thus marks a lesser rank than disbelief but a serious one.",
+   "Jurists apply the title <em>fāsiq</em> to a Muslim who persists in major sins or openly disregards the law. The Quran tells believers: “If a <em>fāsiq</em> brings you news, verify it” (49:6), and the jurists take from this that the testimony of such a person is to be examined with care. The term does not strip a person of Islam. The term thus marks a grave failing within the community of the faithful."
+  ],
+  "misread": "Translated “wickedness” or “evil”, which can read as unbelief; the term names sinful conduct that falls short of apostasy or blasphemy.",
+  "sources": [],
+  "terms": [
+   "kufr",
+   "fahisha",
+   "kafir"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Fisq",
+   "Fasiq",
+   "Fusuq"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "FASAQA"
+  }
+ },
+ {
+  "slug": "fataha",
+  "title": "Fataha",
+  "ar": "فتح",
+  "tr": "fataha",
+  "def": "Said of God: to grant His servants victory over their enemies, or to open a way out of their difficulties, moral or material.",
+  "what": [
+   "<em>Fataha</em> means to open. When God is the subject, it means He opens a path for His servants, whether by giving them victory over an enemy or by releasing them from a hardship. “Whatever mercy God opens for people, none can withhold it” (35:2). Surah 48 begins: “Truly We have granted you a clear victory” (48:1), using the same root.",
+   "The Quran also uses the verb for blessings opened to those of faith: “Had the people of the towns believed and been mindful of God, We would have opened upon them blessings from heaven and earth” (7:96). In this sense the verb joins the moral and the material. A breakthrough in the heart, such as guidance or relief from despair, is as much a gift of God as success in battle."
+  ],
+  "misread": "Rendered “to conquer”, which narrows an act of divine opening that may be moral as well as military.",
+  "sources": [],
+  "terms": [
+   "fath",
+   "fatih-al",
+   "futuhat-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 42,
+   "term": "FATAḤA"
+  }
+ },
+ {
+  "slug": "fatana",
+  "title": "Fatana",
+  "ar": "فتن",
+  "tr": "fatana",
+  "def": "To beguile, mislead or draw someone away from the straight path, al-ṣirāṭ al-mustaqīm.",
+  "what": [
+   "<em>Fatana</em> means to put to trial, and by extension to lure a person off course. The Quran uses it of efforts to turn the Prophet from his message: “They were about to tempt you away from what We revealed to you” (17:73). Another verse warns him to “beware lest they tempt you away from part of what God has sent down to you” (5:49). In each case the verb describes an attempt to separate a person from what God has revealed.",
+   "The same root gives <em>fitna</em>, a trial or a cause of temptation, and <em>maftūn</em>, one who has been led astray. Faruqi’s gloss stresses the direction: the person is drawn away from <em>al-ṣirāṭ al-mustaqīm</em>, the path of guidance that Muslims ask for in every <em>rakʿa</em> of prayer. The verb can describe the work of a human tempter or of Satan. It is therefore a word of warning for every believer."
+  ],
+  "misread": "Often rendered “to tempt” alone, which does not show that the temptation leads away from the straight path.",
+  "sources": [],
+  "terms": [
+   "fitna",
+   "hada",
+   "iblis"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Fitna"
+  ],
+  "faruqi": {
+   "page": 42,
+   "term": "FATANA"
+  }
+ },
+ {
+  "slug": "fath",
+  "title": "Fath",
+  "ar": "فتح",
+  "tr": "fatḥ",
+  "def": "The act of opening or granting, as in fataha, and the victory or breakthrough that is granted; the plural is al-futūḥāt.",
+  "what": [
+   "<em>Fatḥ</em> is the noun of <em>fataha</em>: the opening that God grants and the victory or breakthrough that results. Surah 48 is called <em>al-Fatḥ</em>, and its first verse reads: “We have granted you a clear victory” (48:1). Surah 110 opens: “When the help of God and the victory (<em>al-fatḥ</em>) come” (110:1). The word is thus linked to the greatest events of the Prophet’s life.",
+   "Muslim writers have often used <em>fatḥ</em> for the peaceful entry of the Prophet into Mecca in the eighth year after the <em>hijra</em>, where the term implies the opening of a city and of hearts to the faith. Its plural, <em>al-futūḥāt</em>, names the successive victories of the early community. Faruqi asks that the Arabic term be kept, because “conquest” shows only the material side. It also conveys that the result belongs to God, who grants it."
+  ],
+  "misread": "Translated “conquest”, which reads as military seizure; the Arabic term stresses an opening granted by God.",
+  "sources": [],
+  "terms": [
+   "fataha",
+   "futuhat-al",
+   "fatih-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Fatah"
+  ],
+  "faruqi": {
+   "page": 42,
+   "term": "FATḤ"
+  }
+ },
+ {
+  "slug": "fatih-al",
+  "title": "Fatih, al-",
+  "ar": "الفاتح ، الفتّاح",
+  "tr": "al-Fātiḥ, al-Fattāḥ",
+  "def": "Divine names meaning He Who grants fatḥ, and He Who always grants it: the Opener, the One Who opens the way to victory and relief.",
+  "what": [
+   "<em>Al-Fattāḥ</em> is among the traditional ninety-nine names of God, and it occurs in the Quran: “He is the All-Knowing <em>Fattāḥ</em>” (34:26), a phrase usually rendered “the All-Knowing Judge”, because the word also means one who decides a matter. <em>Al-Fātiḥ</em> is the plain agent form, God as the one who opens. Both forms are drawn from <em>fataha</em>, which means to open.",
+   "The intensive <em>fattāḥ</em> says that God opens again and again. He opens the way to victory, as in 48:1, and the doors of mercy and provision (35:2). Believers invoke the name when they ask for relief from a hardship, and for the opening of understanding. Faruqi’s gloss ties both names to <em>fatḥ</em>, the breakthrough that God alone grants. The believer may therefore ask Him to open a door that seems closed."
+  ],
+  "misread": "Rendered “the Judge” or “the Opener” as though one meaning exhausted it; the Quranic usage joins opening a way with deciding a matter.",
+  "sources": [],
+  "terms": [
+   "fath",
+   "fataha",
+   "divine-attributes",
+   "allah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Fatih",
+   "Al-Fattah",
+   "Fattah"
+  ],
+  "faruqi": {
+   "page": 42,
+   "term": "AL FĀTIḤ, AL FATTĀḤ"
+  }
+ },
+ {
+  "slug": "fatihah-al",
+  "title": "Fatihah, al-",
+  "ar": "الفاتحة",
+  "tr": "al-Fātiḥa",
+  "def": "The opening surah of the Noble Quran.",
+  "what": [
+   "<em>Al-Fātiḥa</em> is the first surah of the Quran, of seven verses. Its name means “the Opening”. It begins with praise of God, Lord of the worlds, and states the pledge “You alone we worship, and from You alone we seek help” (1:5). It closes with the prayer to be guided on the straight path (1:6–7). The Quran refers to “the seven oft-repeated verses” (15:87), which commentators relate to it.",
+   "Muslims recite <em>al-Fātiḥa</em> in every <em>rakʿa</em> of the prayer. The Prophet said that there is no prayer for one who does not recite the Opening of the Book (Sahih al-Bukhari and Sahih Muslim). It is also recited at many other moments, including the opening of gatherings, and over the sick in supplication. It holds in brief the aims of the whole Quran."
+  ],
+  "misread": "Sometimes called “the Lord’s Prayer of Islam”, which borrows a Christian category; the Muslim term is the Opening of the Book, recited within each prayer.",
+  "sources": [],
+  "terms": [
+   "fatiha",
+   "quran",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Fatihah",
+   "Fatihah",
+   "Al-Fatiha",
+   "Umm Al-Kitab"
+  ],
+  "faruqi": {
+   "page": 42,
+   "term": "AL FĀTIḤAH"
+  }
+ },
+ {
+  "slug": "fawatih-al-suwar",
+  "title": "Fawatih al-Suwar",
+  "ar": "فواتح السور",
+  "tr": "fawātiḥ al-suwar",
+  "def": "The letters of the Arabic alphabet that stand at the head of a number of surahs.",
+  "what": [
+   "Twenty-nine surahs of the Quran open with one or more letters of the Arabic alphabet, read out by their names and not as words. The first is surah 2, which begins <em>Alif Lām Mīm</em> (2:1). Others include <em>Yā Sīn</em> (36:1), <em>Qāf</em> (50:1) and <em>Nūn</em> (68:1). In all, fourteen different letters are used, alone or in combination. The Quran’s reciters pronounce them letter by letter.",
+   "Their meaning is not settled. Some commentators say they are among the matters that God alone knows. Others propose that they point to the fact that the Quran is built of the very letters the Arabs used, and yet cannot be matched (compare 2:23). Many of these surahs go on at once to speak of the Book’s revelation. The term is also given as <em>al-ḥurūf al-muqaṭṭaʿa</em>, the disjoined letters."
+  ],
+  "misread": "Called “mysterious letters” as if a hidden code; scholars treat them as an opening feature of the revelation whose sense is disputed or known to God.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "tafsir",
+   "qiraat"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Muqattaat",
+   "Disjointed Letters",
+   "Huruf Muqattaat"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "FAWĀTIḤ AL SUWAR"
+  }
+ },
+ {
+  "slug": "fikr",
+  "title": "Fikr",
+  "ar": "فكر",
+  "tr": "fikr",
+  "def": "Thought and intellection in their general sense.",
+  "what": [
+   "<em>Fikr</em> is the general word for thought: the act of the mind in considering a matter, together with its product. It is the noun related to the verb <em>fakkara</em>, to ponder. Where <em>fakkara</em> in the Quran leads to the signs of God in creation, <em>fikr</em> is used in later Arabic writing for thought of every kind, including philosophy and the thinking of a school or a movement.",
+   "Muslim authors have produced a long literature on <em>fikr</em>. The phrase <em>al-fikr al-islāmī</em>, Islamic thought, refers to the body of thinking developed by scholars in theology, law, ethics and the sciences. In the Quran the related verbal forms are always positive, and the book urges people to reflect (6:50, 16:44). The noun itself is not found in the Quran, which uses verb forms."
+  ],
+  "misread": "Treated as a neutral word for any thinking; in Muslim usage it is tied to the call to reflect on God’s signs.",
+  "sources": [],
+  "terms": [
+   "fakkara",
+   "reason-and-faith",
+   "knowledge"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Fikr",
+   "Islamic Thought"
+  ],
+  "faruqi": {
+   "page": 43,
+   "term": "FIKR"
+  }
+ },
+ {
+  "slug": "futuhat-al",
+  "title": "Futuhat, al-",
+  "ar": "الفتوحات",
+  "tr": "al-Futūḥāt",
+  "def": "The moral and material victories granted to Muhammad (peace be upon him) and his early followers, and so the conversion of whole populations to Islam.",
+  "what": [
+   "<em>Al-futūḥāt</em> is the plural of <em>fatḥ</em>, an opening or victory granted by God. It names the series of victories that came to Muhammad (peace be upon him) and the early community, beginning with the opening of Mecca and extending to Syria, Iraq, Egypt, Persia and further. The word covers both the military outcome and the spread of the faith. The unit of meaning is thus the victory as God’s gift, whatever its field.",
+   "Faruqi’s definition goes further than the common sense of “the conquests”. He includes the moral victories, and the entry of whole populations into Islam, as part of what the term means. The Quran gives the pattern: “When the help of God and the victory come, and you see people entering the religion of God in crowds” (110:1–2). The book of Ibn ʿArabī called <em>al-Futūḥāt al-Makkiyya</em> uses the same word for another kind of opening, the spiritual. The meaning is therefore wider than the English word “conquests” allows."
+  ],
+  "misread": "Rendered “the Islamic conquests”, which reduces the term to military expansion; it also covers the moral victories and the entry of peoples into Islam.",
+  "sources": [],
+  "terms": [
+   "fath",
+   "fataha",
+   "umar-ibn-al-khattab",
+   "andalus-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Futuhat",
+   "Futuhat",
+   "Islamic Conquests"
+  ],
+  "faruqi": {
+   "page": 42,
+   "term": "AL FUTŪḤĀT"
+  }
  }
 ]

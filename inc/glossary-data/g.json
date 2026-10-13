@@ -30,6 +30,12 @@
    "Holy Spirit",
    "Ruh Al-Qudus",
    "Ruh Al-Amin"
+  ],
+  "faruqi": [
+   {
+    "page": 27,
+    "term": "JIBRĪL"
+   }
   ]
  },
  {
@@ -425,5 +431,92 @@
   "aliases": [
    "Salam To Non-Muslims"
   ]
+ },
+ {
+  "slug": "ghafara",
+  "title": "Ghafara",
+  "ar": "غفر",
+  "tr": "ghafara",
+  "def": "God’s act of forgiving, and His acceptance of the repentant person as restored in relation to Him.",
+  "what": [
+   "<em>Ghafara</em> is the verb for God’s forgiveness. Lexicographers connect the root with covering, as when the sin is covered and the person restored. The Quran calls out to those who have wronged themselves: “Do not despair of the mercy of God; God forgives all sins” (39:53). The condition is turning back to Him in repentance, since “I am Ever-Forgiving to the one who repents, believes and does good” (20:82).",
+   "Faruqi’s gloss stresses that God accepts the applicant as rehabilitated. Forgiveness is not the mere cancelling of a penalty. It brings the person back into right relation with God. The verb is paired with the request <em>istighfār</em>, “seeking forgiveness”. The Quran also notes that death in the state of <em>shirk</em> is not forgiven (4:48), because the sinner has not turned back."
+  ],
+  "misread": "Rendered “to pardon” as if a ruler waived a penalty; the term includes the restoring of the repentant person to a right relation with God.",
+  "sources": [],
+  "terms": [
+   "forgiveness",
+   "istighfar",
+   "atonement-and-repentance",
+   "ghafur-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Maghfira"
+  ],
+  "faruqi": {
+   "page": 41,
+   "term": "GHAFARA"
+  }
+ },
+ {
+  "slug": "ghafur-al",
+  "title": "Ghafur, al-",
+  "ar": "الغفور ، الغفّار",
+  "tr": "al-Ghafūr, al-Ghaffār",
+  "def": "Divine names meaning the Forgiver and the One Who forgives again and again.",
+  "what": [
+   "<em>Al-Ghafūr</em> and <em>al-Ghaffār</em> are two of the ninety-nine names of God. Both come from <em>ghafara</em>, to forgive, and the forms are intensive. <em>Al-Ghafūr</em> is by far the more frequent in the Quran, often joined with <em>al-Raḥīm</em>, the Merciful: “God is Forgiving and Merciful” (2:173). <em>Al-Ghaffār</em> appears in verses such as “the Almighty, the Ever-Forgiving” (38:66). Believers recall these names whenever they ask for pardon.",
+   "The second form says that God forgives again and again. A verse says: “I am Ever-Forgiving to the one who repents, believes, does good and then follows guidance” (20:82). Believers use the names in supplication after prayer and when they ask for pardon. Many Muslims are named ʿAbd al-Ghaffār or ʿAbd al-Ghafūr, “servant of the Forgiver”. In this way, the names invite sinners to return and not to despair."
+  ],
+  "misread": "Both names are rendered “the Forgiving” alike, which blurs the intensive form of <em>al-Ghaffār</em>, the One Who forgives repeatedly.",
+  "sources": [],
+  "terms": [
+   "ghafara",
+   "forgiveness",
+   "divine-attributes",
+   "istighfar"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Ghafur",
+   "Al-Ghaffar",
+   "Ghaffar",
+   "Ghafur"
+  ],
+  "faruqi": {
+   "page": 41,
+   "term": "AL GHAFŪR, AL GHAFFĀR"
+  }
+ },
+ {
+  "slug": "ghalib-al",
+  "title": "Ghalib, al-",
+  "ar": "الغالب",
+  "tr": "al-Ghālib",
+  "def": "A divine name meaning He Who always prevails, the One Who conquers.",
+  "what": [
+   "<em>Al-Ghālib</em> is the active participle of <em>ghalaba</em>, to overcome. The Quran says: “God prevails over His affair, but most people do not know” (12:21). The sense is that no force can hinder what He has decreed. It is not found in the commonly counted list of the ninety-nine names, and is a descriptive name drawn from this verse. The name is therefore an assurance that no hostile force will finally overturn His will.",
+   "The Quran gives the promise that follows from it: “God has decreed: I shall surely prevail, I and My messengers” (58:21). The verse offers comfort to believers who face a stronger party, as Joseph did when his brothers plotted against him. The name should be read with <em>al-ʿAzīz</em>, the Almighty, and <em>al-Qahhār</em>, the Subduer, which are closely related names. For this reason, the early Muslims drew confidence from it in times of hardship."
+  ],
+  "misread": "Taken as a license for aggression; the Quran uses the name to assure the faithful that God’s purpose will prevail.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "al-aziz",
+   "allah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Ghalib",
+   "Ghalib"
+  ],
+  "faruqi": {
+   "page": 41,
+   "term": "AL GHĀLIB"
+  }
  }
 ]

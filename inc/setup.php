@@ -756,6 +756,7 @@ function boi_seed_pages() {
 		),
 		'sitemap'   => array(
 			'title'   => __( 'Site map', 'bestofislam' ),
+			'slug'    => 'sitemap',
 			'content' => $p( __( 'Every section and every piece on the site, in one place.', 'bestofislam' ) ) . "<!-- wp:bestofislam/html-sitemap /-->\n",
 		),
 		'privacy'   => array(
@@ -796,7 +797,26 @@ function boi_create_pages() {
 	$map = array();
 
 	foreach ( $pages as $key => $page ) {
-		$existing = get_page_by_path( sanitize_title( $page['title'] ), OBJECT, 'page' );
+		$title_slug = sanitize_title( $page['title'] );
+		$slug       = isset( $page['slug'] ) ? $page['slug'] : $title_slug;
+		$existing   = get_page_by_path( $slug, OBJECT, 'page' );
+
+		// A page the theme made at the address its title gives (Site map at
+		// /site-map/) moves to the address the seed now names. WordPress keeps
+		// the old slug and redirects it, so the old link still works.
+		if ( ! $existing && $slug !== $title_slug ) {
+			$old = get_page_by_path( $title_slug, OBJECT, 'page' );
+
+			if ( $old ) {
+				boi_update_post(
+					array(
+						'ID'        => $old->ID,
+						'post_name' => $slug,
+					)
+				);
+				$existing = $old;
+			}
+		}
 
 		if ( $existing ) {
 			$map[ $key ] = (int) $existing->ID;
@@ -806,6 +826,7 @@ function boi_create_pages() {
 		$post_id = boi_insert_post(
 			array(
 				'post_title'   => $page['title'],
+				'post_name'    => $slug,
 				'post_content' => (string) $page['content'],
 				'post_status'  => 'publish',
 				'post_author'  => boi_seed_author(),

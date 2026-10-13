@@ -554,6 +554,32 @@ function boi_render_image_credits() {
 		}
 	}
 
+	if ( function_exists( 'boi_glossary_images' ) ) {
+		$all   = boi_glossary_images();
+		$group = array();
+
+		if ( ! empty( $all['hero'] ) ) {
+			$group[ __( 'Glossary', 'bestofislam' ) ] = array( $all['hero'] );
+		}
+
+		foreach ( (array) ( isset( $all['kinds'] ) ? $all['kinds'] : array() ) as $kind => $pool ) {
+			$group[ sprintf( /* translators: %s: kind of entry. */ __( 'Glossary, %s entries', 'bestofislam' ), $kind ) ] = $pool;
+		}
+
+		foreach ( $group as $label => $images ) {
+			foreach ( $images as $image ) {
+				$items .= sprintf(
+					'<li><strong>%1$s</strong>: %2$s. %3$s. <a href="%4$s" rel="noopener">%5$s</a></li>',
+					esc_html( $label ),
+					esc_html( $image['artist'] ),
+					esc_html( $image['licence'] ),
+					esc_url( $image['source'] ),
+					esc_html__( 'Source', 'bestofislam' )
+				);
+			}
+		}
+	}
+
 	return '<ul class="boi-credits">' . $items . '</ul>';
 }
 

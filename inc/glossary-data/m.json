@@ -126,6 +126,12 @@
    "Dead",
    "Martyr",
    "Shahid"
+  ],
+  "faruqi": [
+   {
+    "page": 37,
+    "term": "SHAHĪD"
+   }
   ]
  },
  {
@@ -268,6 +274,12 @@
   "aliases": [
    "Masjid",
    "Mosques"
+  ],
+  "faruqi": [
+   {
+    "page": 34,
+    "term": "MASJID"
+   }
   ]
  },
  {
@@ -346,7 +358,13 @@
    "preservation-and-truth"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 54,
+    "term": "MUṢḤAF"
+   }
+  ]
  },
  {
   "slug": "music-and-singing",
@@ -377,5 +395,975 @@
    "Music",
    "Daf"
   ]
+ },
+ {
+  "slug": "ma-shaa-allah",
+  "title": "Ma Sha'a Allah",
+  "ar": "ما شاء الله",
+  "tr": "Mā shāʾa Allāh",
+  "def": "“What God has willed”: said on seeing something good or admirable, to credit it to God.",
+  "what": [
+   "The phrase means “what God has willed” and is said when a person sees something good, beautiful or impressive: a child, a harvest, a skill, a new home. It acknowledges that the good thing exists because God willed it. The Quran gives its origin in the story of the man with two gardens, where his companion tells him that on entering his garden he should have said, “What God has willed! There is no strength but in God” (18:39).",
+   "In use it often serves as praise for a person or thing without pride and as a reminder that the blessing is from God. It differs from <em>inshāʾ Allāh</em>, “if God wills”, which speaks of the future, while <em>mā shāʾa Allāh</em> speaks of what already is. It keeps praise from turning into pride, because the speaker names God as the one who gave the good thing."
+  ],
+  "misread": "It is often confused with <em>inshāʾ Allāh</em>, and English glosses such as “wonderful” miss that the phrase credits the good thing to God’s will.",
+  "sources": [],
+  "terms": [
+   "evil-eye",
+   "la-hawla-wa-la-quwwata-illa-billah",
+   "allah",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 58,
+   "term": "MĀ SHĀ’A ALLAH."
+  }
+ },
+ {
+  "slug": "maa-salamah-allah",
+  "title": "Ma'a Salamah Allah",
+  "ar": "مع سلامة الله وبحفظه",
+  "tr": "Maʿa salāmat Allāh wa bi-ḥifẓihi",
+  "def": "“With the safety of God and His protection”: said to a person who is leaving, by those who remain.",
+  "what": [
+   "The phrase is a farewell wish. Those who stay behind say it to one who departs, asking that the traveller go in God’s safety and keeping. <em>Salāmah</em> means safety and soundness, and <em>ḥifẓ</em> means guarding or protection. A shorter form, <em>maʿa al-salāmah</em>, is common in everyday Arabic speech, and the full form adds the name of God. The phrase belongs with the Muslim habit of turning even small partings into a prayer. Greeting and parting are marked by wishes of peace and protection, in the way that <em>al-salāmu ʿalaykum</em> is used on meeting. The traveller is placed in God’s care, since only He can guard a person on the road and at home."
+  ],
+  "misread": "English “goodbye” began as “God be with you” too, but the Arabic wording keeps the name of God and the specific request for safety and protection.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "common-phrases",
+   "allah",
+   "greeting-non-muslims"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 62,
+   "term": "MA‘A SALĀMAH ALLAH WA BI ḤIFẒIHI"
+  }
+ },
+ {
+  "slug": "madhahib-al-khamsah-al",
+  "title": "Madhahib al-Khamsah, al-",
+  "ar": "المذاهب الخمسة",
+  "tr": "al-Madhāhib al-Khamsah",
+  "def": "The five schools of Islamic law, each a body of method and rulings built by a founding jurist and his students.",
+  "what": [
+   "A <em>madhhab</em> is a school of law, a way (from a root meaning to go) of deriving rulings from the Quran, the Sunnah and the methods of reasoning. The four Sunni schools are the Hanafi, Maliki, Shafii and Hanbali, named for Abu Hanifa, Malik ibn Anas, al-Shafii and Ahmad ibn Hanbal. Lists that speak of five schools add one more to these four.",
+   "The schools agree on the main duties of the faith, such as the five daily prayers and the fast of Ramadan. They differ on details of method and on some rulings, and each school regards the others as valid readings of the law, reached by honest effort. A Muslim usually follows the school of his or her community or teacher, and many today study the views of more than one school."
+  ],
+  "misread": "The schools are sometimes taken for rival sects, when they are legal methods within one faith that disagree on details and not on belief.",
+  "sources": [
+   "Jurists explained the differences as a result of <em>ijtihād</em>, the effort to reach a ruling where the text allows more than one reading. Medieval scholars treated that variety as a mercy for the community."
+  ],
+  "terms": [
+   "fiqh",
+   "ijtihad",
+   "abu-hanifa",
+   "sharia"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Madhahib al-Khamsah"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL MADHĀHIB AL KHAMSAH"
+  }
+ },
+ {
+  "slug": "makki-al",
+  "title": "Makki, al-",
+  "ar": "المكي والمدني",
+  "tr": "al-Makkī, al-Madanī",
+  "def": "Terms for the Quran’s Meccan and Medinan verses and surahs, those revealed before and after the move to Medina.",
+  "what": [
+   "<em>Al-Makkī</em> is the Meccan part of the Quran and <em>al-Madanī</em> the Medinan. Scholars of the Quranic sciences define the division in two ways: by place, so that verses revealed in Mecca are Meccan, or, more often, by time, so that verses revealed before the <em>hijrah</em> are Meccan and those revealed after it are Medinan, even when they came down elsewhere. Meccan surahs tend to be shorter and urgent in tone, and they speak of God’s oneness, the Last Day and the stories of earlier prophets. Medinan surahs are longer and deal with the laws and affairs of the new community. The distinction helps readers place a verse, and it is part of the study of the occasions of revelation."
+  ],
+  "misread": "It is easy to take the division as purely geographic, when most scholars count it by whether the verse came before or after the move to Medina.",
+  "sources": [
+   "The scholars discuss which surahs belong to each group, and they differ on a few. The classification is drawn from the reports of the Companions and their students and not from any marking in the text of the Quran."
+  ],
+  "terms": [
+   "hijra",
+   "asbab-al-nuzul",
+   "naskh",
+   "quran"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Makki",
+   "Al-Madani"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "AL MAKKĪ, AL MADANĪ"
+  }
+ },
+ {
+  "slug": "makruh-al",
+  "title": "Makruh, al-",
+  "ar": "المكروه",
+  "tr": "al-Makrūh",
+  "def": "In Islamic law, an act that is disliked and discouraged but not forbidden.",
+  "what": [
+   "<em>Al-makrūh</em> is one of the five legal categories that jurists use to grade human acts. It names an act that the law dislikes and advises against. A person who avoids it is rewarded, and a person who does it is not punished, although the habit of doing it is discouraged. The word comes from a root meaning to dislike. The category lies between the permitted (<em>mubāḥ</em>) and the forbidden (<em>ḥarām</em>). Jurists of the Hanafi school further divide it into a stronger and a lighter kind, while others treat it as one. In practice, the category teaches a Muslim to keep a margin of caution from what is forbidden."
+  ],
+  "misread": "Because of the root meaning, it is sometimes translated “hated”, but the legal term is milder: a discouraged act that carries no punishment.",
+  "sources": [],
+  "terms": [
+   "mandub-al",
+   "mubah-al",
+   "fiqh",
+   "halal-and-haram-food"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Makruh"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL MAKRŪH"
+  }
+ },
+ {
+  "slug": "mandub-al",
+  "title": "Mandub, al-",
+  "ar": "المندوب",
+  "tr": "al-Mandūb",
+  "def": "In Islamic law, an act that is recommended and rewarded but not required; also called mustaḥabb or sunnah.",
+  "what": [
+   "<em>Al-mandūb</em> is the recommended act, one of the five legal categories into which jurists grade human acts. The person who does it receives a reward, and the person who omits it is not blamed. The word comes from a root meaning to call or to urge. Other names for it are <em>mustaḥabb</em> and, in some usages, <em>sunnah</em> or <em>nāfilah</em>. Examples include the voluntary prayers offered besides the five required ones and the voluntary fasts. The category recognises that a good deal of religious life lies in what is encouraged and not demanded, and it gives room for the believer to go beyond the minimum."
+  ],
+  "misread": "Translating it as “optional” suggests an act of no consequence, when it is a recommended act that earns reward.",
+  "sources": [],
+  "terms": [
+   "makruh-al",
+   "mubah-al",
+   "fiqh",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Mandub"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL MANDŪB"
+  }
+ },
+ {
+  "slug": "mansukh-al",
+  "title": "Mansukh, al-",
+  "ar": "المنسوخ",
+  "tr": "al-Mansūkh",
+  "def": "A verse whose ruling has been replaced by a later verse, which is called al-nāsikh.",
+  "what": [
+   "<em>Al-mansūkh</em> is the verse whose ruling has been abrogated, and <em>al-nāsikh</em> is the later verse that replaces it. The root meaning is to remove or to replace. The doctrine rests on the verse, “Whatever verse We abrogate or cause to be forgotten, We bring one better than it or like it” (2:106). Scholars have written about which verses fall into this group. Early writers applied the term widely, and later scholars such as al-Suyuti reduced the list to a small number of verses. The study is part of the Quranic sciences and of legal method, because a jurist must know which of two verses on a subject came later."
+  ],
+  "misread": "It is sometimes read as meaning that parts of the Quran are void; the doctrine concerns changes of ruling over time, and the text itself stays.",
+  "sources": [
+   "Some scholars hold that abrogation takes place in the Quran, while a few have held that no verse is abrogated and that the verses concerned deal with different circumstances. The majority view affirms it."
+  ],
+  "terms": [
+   "naskh",
+   "asbab-al-nuzul",
+   "quran",
+   "makki-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Mansukh"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "AL MANSŪKH"
+  }
+ },
+ {
+  "slug": "maqasid-al-shariah",
+  "title": "Maqasid al-Shari'ah",
+  "ar": "مقاصد الشريعة",
+  "tr": "Maqāṣid al-sharīʿah",
+  "def": "The ultimate purposes of Islamic law: the protection of religion, life, reason, honour and property.",
+  "what": [
+   "<em>Maqāṣid</em> means aims or purposes. <em>Maqāṣid al-sharīʿah</em> are the purposes that the law as a whole is meant to serve, and jurists have grouped them under five protected goods: religion, life, reason, honour (or lineage) and property. Al-Ghazali listed five of them, and al-Shatibi of Granada developed the theory at length in his work <em>al-Muwāfaqāt</em>. The idea is used in legal reasoning. When a jurist faces a new case, he asks not only what a rule says but what good it is meant to secure and what harm to prevent. It also gives reformers a way to judge whether a modern ruling serves those aims."
+  ],
+  "misread": "It is sometimes presented as a way to set the text aside in favour of convenience, but the jurists who developed it held that the purposes are drawn from the sources and bound by them.",
+  "sources": [],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "ijtihad",
+   "al-ghazali"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 54,
+   "term": "MAQĀṢID AL SHARĪ'AH"
+  }
+ },
+ {
+  "slug": "maruf-al",
+  "title": "Maʿruf, al-",
+  "ar": "المعروف",
+  "tr": "al-Maʿrūf",
+  "def": "What is known to be good, and so is desirable and required of everyone; the opposite of al-munkar.",
+  "what": [
+   "<em>Al-maʿrūf</em> comes from a root meaning to know or to recognise. It is the good that is recognised as good by sound reason and by the revelation, and so is the standard of right conduct. The Quran speaks of the community that calls to the good, “enjoins <em>al-maʿrūf</em> and forbids <em>al-munkar</em>” (3:104), and it calls the Muslim community the best raised up for people because of this duty (3:110). The Quran also tells Muhammad (peace be upon him), “Hold to forgiveness, command what is right (<em>al-ʿurf</em>), and turn away from the ignorant” (7:199). In law the word is used for fair dealing, as in the maintenance of a wife and the treatment of parents."
+  ],
+  "misread": "It is sometimes taken to mean mere custom or social convention, but the Quran ties it to what God has approved.",
+  "sources": [
+   "Scholars speak of the duty of enjoining <em>al-maʿrūf</em> as one that each person fulfils by the means available, with gentleness and knowledge of what is being asked."
+  ],
+  "terms": [
+   "munkar-al",
+   "khayr",
+   "ummah",
+   "good"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Maʿruf"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "AL MAʿRŪF"
+  }
+ },
+ {
+  "slug": "masalih-al-mursalah-al",
+  "title": "Masalih al-Mursalah, al-",
+  "ar": "المصالح المرسلة",
+  "tr": "al-Maṣāliḥ al-mursalah",
+  "def": "Public welfare on which no source gives a ruling, taken by some jurists as a basis of Islamic law.",
+  "what": [
+   "<em>Maṣlaḥah</em> means benefit or public interest, and <em>mursalah</em> means “left free”, that is, not tied to a particular text. The term names a benefit for which the Quran and the Sunnah give neither a command nor a prohibition. Many jurists, and especially the Maliki school, allow rulings based on such benefit where it serves the aims of the law and harms no one.",
+   "Examples often cited are the gathering of the Quran into one volume under Abu Bakr and Uthman and the state registers set up by Umar, which no text commanded but which served the community. The jurists set conditions: the benefit must be real and general, and it must not contradict any text. Al-Ghazali accepted it in this limited way, and it is related to the wider theory of the purposes of the law, and later jurists such as al-Shatibi built on it."
+  ],
+  "misread": "It is sometimes treated as a licence to follow whatever seems useful, though jurists limited it by conditions and by the texts of revelation.",
+  "sources": [],
+  "terms": [
+   "maqasid-al-shariah",
+   "fiqh",
+   "qiyas",
+   "ijtihad"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Masalih al-Mursalah"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL MAṢĀLIḤ AL MURSALAH"
+  }
+ },
+ {
+  "slug": "mathani-al",
+  "title": "Mathani, al-",
+  "ar": "المثاني",
+  "tr": "al-Mathānī",
+  "def": "The oft-repeated verses of the Quran, understood as the seven verses of the first surah, al-Fātiḥah.",
+  "what": [
+   "<em>Al-mathānī</em> means the repeated ones. The Quran says to Muhammad (peace be upon him), “We have given you seven of the oft-repeated and the great Quran” (15:87). The Prophet is reported to have identified the seven verses with <em>al-Fātiḥah</em>, which he called “the seven oft-repeated and the great Quran” (Sahih al-Bukhari). The Fatiha is recited in every unit of the ritual prayer, so Muslims repeat it many times each day. The Quran also calls itself a book “consistent, oft-repeated” (39:23), using the same root. Commentators explain the title as referring to this repetition, and some add that the Quran repeats its lessons and stories."
+  ],
+  "misread": "The word is sometimes read as “the seconds” or as a general adjective, while the commentators usually refer it to the Fatiha.",
+  "sources": [
+   "Some commentators held that the term in 15:87 meant the seven long surahs of the Quran, but the identification with the Fatiha is the more common."
+  ],
+  "terms": [
+   "quran",
+   "salah",
+   "tafsir",
+   "kitab-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Mathani"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "AL MATHĀNĪ"
+  }
+ },
+ {
+  "slug": "mihrab",
+  "title": "Mihrab",
+  "ar": "محراب",
+  "tr": "Miḥrāb",
+  "def": "The niche in a mosque wall that shows the direction of Mecca, toward which worshippers pray.",
+  "what": [
+   "The <em>miḥrāb</em> is a recess in the wall of a mosque that faces Mecca, the <em>qiblah</em>, and the imam stands before it to lead the prayer. It marks the direction so that worshippers need not search for it, and it usually lies in the centre of the wall, often richly decorated. Early mosques did not have one. The word is also in the Quran, where it names a private chamber or place of worship. Zechariah would enter the <em>miḥrāb</em> where Mary stayed and find her provided with food (3:37), and David’s opponents climbed into his (38:21). In architecture the niche became a central feature of Muslim art, with calligraphy and carved arches."
+  ],
+  "misread": "It is sometimes called an altar, but it carries no offering and holds nothing sacred; it only indicates the direction of prayer.",
+  "sources": [],
+  "terms": [
+   "kaaba",
+   "mosque",
+   "salah",
+   "imam"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 54,
+   "term": "MIḤRĀB"
+  }
+ },
+ {
+  "slug": "miraj-al",
+  "title": "Mi'raj, al-",
+  "ar": "المعراج",
+  "tr": "al-Miʿrāj",
+  "def": "The ascension of the Prophet Muhammad (peace be upon him) through the heavens and his return, which came before the move to Medina.",
+  "what": [
+   "<em>Al-miʿrāj</em> means the ladder or ascent. It names the journey in which Muhammad (peace be upon him) was taken up through the heavens, met earlier prophets and was brought into the presence of God. The Quran refers to what he saw near the Lote Tree of the Boundary (53:13–18). The journey is joined in the tradition to the <em>isrāʾ</em>, the night journey from Mecca to Jerusalem (17:1). The reports in Sahih al-Bukhari and Sahih Muslim say that the five daily prayers were prescribed during this journey, after Moses advised the Prophet to ask for a reduction in the number. Scholars date the event to about three years before the <em>hijrah</em>, in the year 619 or near it."
+  ],
+  "misread": "It is often confused with the night journey (<em>isrāʾ</em>), but the Quran names the journey to Jerusalem (17:1) and alludes to the ascent through the heavens (53:13–18) as separate passages.",
+  "sources": [
+   "The date in the book, 3 A.H., cannot be right for an event before the move to Medina; the usual reckoning is about three years before the <em>hijrah</em>. Scholars also differ on whether the journey was of body and soul or of the soul only, and on its exact date. The majority hold that it happened with body and soul while the Prophet was awake."
+  ],
+  "terms": [
+   "isra-and-miraj",
+   "muhammad",
+   "salah",
+   "jerusalem"
+  ],
+  "articles": [],
+  "type": "event",
+  "aliases": [
+   "Al-Mi'raj"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "AL MI'RĀJ"
+  }
+ },
+ {
+  "slug": "mubah-al",
+  "title": "Mubah, al-",
+  "ar": "المباح",
+  "tr": "al-Mubāḥ",
+  "def": "In Islamic law, an act that is permitted and falls under none of the other categories, carrying neither reward nor blame.",
+  "what": [
+   "<em>Al-mubāḥ</em> is the permitted, the fifth of the legal categories into which jurists grade human acts. The word comes from a root meaning to make allowable. An act in this class is neither commanded nor recommended, and neither discouraged nor forbidden. A person who does it or leaves it incurs neither reward nor blame, although the intention can raise a permitted act to an act of worship. The general principle held by most jurists is that the default for things and customs is permission unless a text forbids them. Eating lawful food, trading and travelling belong here. A person who eats to keep strong for worship is rewarded for the intention, not for the act itself."
+  ],
+  "misread": "Describing it as “neither legitimate nor illegitimate” can suggest that the act is doubtful; the legal term means permitted, and it is lawful.",
+  "sources": [],
+  "terms": [
+   "mandub-al",
+   "makruh-al",
+   "fiqh",
+   "halal-and-haram-food"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Mubah"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL MUBĀḤ"
+  }
+ },
+ {
+  "slug": "mubarak",
+  "title": "Mubarak",
+  "ar": "مبارك",
+  "tr": "Mubārak",
+  "def": "The past participle of baraka: blessed, meaning something that God has given increase and good.",
+  "what": [
+   "<em>Mubārak</em> means blessed. It is the participle of the verb <em>bāraka</em>, to bless, and so describes something to which God has given <em>barakah</em>, an increase of good. The Quran uses it of the Quran itself (6:92), of the night in which it was sent down (44:3), of the Sacred House at Mecca (3:96) and of Jesus: “He has made me blessed wherever I am” (19:31). The related noun <em>barakah</em> names that increase, and the verb is used in prayers for others. The word is also a common personal name. In greetings it appears in phrases such as <em>ʿīd mubārak</em>, a blessed festival."
+  ],
+  "misread": "Translating it as “lucky” or “fortunate” misses that the blessing in view comes from God.",
+  "sources": [],
+  "terms": [
+   "mubarak-2",
+   "quran",
+   "isa",
+   "eid"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 24,
+   "term": "MUBĀRAK"
+  }
+ },
+ {
+  "slug": "mubarak-2",
+  "title": "Mubarak",
+  "ar": "مبارك / مبروك",
+  "tr": "Mubārak, mabrūk",
+  "def": "“May it be blessed”: said when someone acquires something new or marks a happy event.",
+  "what": [
+   "<em>Mubārak</em>, or <em>mabrūk</em> in many dialects, is the congratulation said when a person acquires something new, such as a house, a car or a garment, or marks a happy event. It means “may it be blessed”. The speaker prays that God will place blessing in what the person has received. Muslims also say <em>bārak Allāhu laka</em>, “may God bless you”, to a bridegroom, in the manner of a supplication reported from the Prophet Muhammad (peace be upon him) in the hadith collections. The festivals have their own form, <em>ʿīd mubārak</em>. A common reply is <em>Allāhu yubārik fīk</em>, “may God bless you”."
+  ],
+  "misread": "It is easy to hear it as a wish for luck, when it is a prayer for God’s blessing.",
+  "sources": [],
+  "terms": [
+   "mubarak",
+   "dua",
+   "eid",
+   "common-phrases"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 60,
+   "term": "MUBĀRAK, OR MUBRŪK."
+  }
+ },
+ {
+  "slug": "muddaththir",
+  "title": "Muddaththir",
+  "ar": "مدثر",
+  "tr": "al-Muddaththir",
+  "def": "A name of the Prophet Muhammad (peace be upon him), “the one wrapped in his cloak”, with which God addresses him in the Quran (74:1).",
+  "what": [
+   "<em>Al-muddaththir</em> means the one covering himself with a cloak. God addresses the Prophet Muhammad (peace be upon him) with it in the opening of the seventy-fourth surah: “O you who are wrapped in your cloak, arise and warn” (74:1–2). The surah takes its name from the word. The reports say that after the first revelation in the cave of Hira, the Prophet returned shaking and asked to be covered, and later this surah was sent (Sahih al-Bukhari). The address turns him from rest to the task of warning, and it is often cited as the start of the public call. The seventy-third surah, <em>al-Muzzammil</em>, addresses him in a similar way."
+  ],
+  "misread": "It is a Quranic address to the Prophet and not a title of rank, and it should be read with its command to arise and warn.",
+  "sources": [],
+  "terms": [
+   "muhammad",
+   "wahy",
+   "cave-of-hira",
+   "quran"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 32,
+   "term": "MUDDATHTHIR"
+  }
+ },
+ {
+  "slug": "muflih",
+  "title": "Muflih",
+  "ar": "مفلح",
+  "tr": "Mufliḥ",
+  "def": "A person who has succeeded in his or her commitment to Islam; the plural is muflihūn.",
+  "what": [
+   "<em>Muflih</em> is the one who has succeeded or prospered, from the root <em>f-l-ḥ</em>, whose noun is <em>falāḥ</em>. The Quran uses it of the believers who have kept their commitment: “Those are on guidance from their Lord, and those are the successful (<em>al-muflihūn</em>)” (2:5). The twenty-third surah opens, “The believers have succeeded” (23:1). The root has a place in daily worship, because the call to prayer says <em>ḥayya ʿalā al-falāḥ</em>, “come to success”. The measure of success is lasting: it concerns the standing of a person before God in the next life, and not wealth or status."
+  ],
+  "misread": "Rendering it as “prosperous” suggests worldly gain, while the Quran uses it for success in the sight of God.",
+  "sources": [],
+  "terms": [
+   "iman",
+   "taqwa",
+   "akhira",
+   "mumin"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 43,
+   "term": "MUFLIḤ"
+  }
+ },
+ {
+  "slug": "muhajir",
+  "title": "Muhajir",
+  "ar": "مهاجر",
+  "tr": "Muhājir",
+  "def": "A person who moves from one place to another for the sake of Islam; the plural is muhājirūn.",
+  "what": [
+   "<em>Muhājir</em> comes from the root of <em>hijrah</em>, to leave or migrate. It describes a person who leaves home for the sake of God and of Islam. In history the <em>muhājirūn</em> are the Meccans who migrated to Medina with Muhammad (peace be upon him), giving up their property and homes, and the Quran praises them together with the <em>anṣār</em>, the Medinans who received them (9:100). The word carries a moral meaning too. A hadith in Sahih al-Bukhari says that the <em>muhājir</em> is the one who abandons what God has forbidden. In modern use it is also the word for refugees and migrants in several Muslim languages."
+  ],
+  "misread": "Translating it only as “emigrant” or “refugee” loses that the move is made for a religious reason and with a commitment to God.",
+  "sources": [],
+  "terms": [
+   "hijra",
+   "ansar",
+   "companions-of-the-prophet",
+   "hijri-calendar"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 46,
+   "term": "MUHĀJIR"
+  }
+ },
+ {
+  "slug": "muhammad-khatam-al-nabiyyin-wa-sayyid-al-mursalin",
+  "title": "Muhammad, Khatam al-Nabiyyin wa Sayyid al-Mursalin",
+  "ar": "محمد خاتم النبيين وسيد المرسلين",
+  "tr": "Muḥammad, khātam al-nabiyyīn wa sayyid al-mursalīn",
+  "def": "“Muhammad, the seal of the prophets and the master of the messengers”: a phrase of praise used for the Prophet.",
+  "what": [
+   "The first title in the phrase comes from the Quran, which calls Muhammad (peace be upon him) “the Messenger of God and the seal of the prophets” (33:40). The word <em>khātam</em> means seal, and Muslims understand that no prophet comes after him. The second title, <em>sayyid al-mursalīn</em>, “master of the messengers”, is the traditional epithet that expresses his standing among them. Muslims use the phrase in praise and in writing about him. It recalls the saying of the Prophet in Sahih Muslim that he is the master of the children of Adam on the Day of Resurrection. After the name of the Prophet, Muslims also say <em>ṣallā Allāhu ʿalayhi wa sallam</em>, “may God send blessings and peace on him”."
+  ],
+  "misread": "“Seal” is sometimes read as a mere ornament, when Muslims take it as stating that prophecy was completed with him.",
+  "sources": [],
+  "terms": [
+   "muhammad",
+   "prophets",
+   "honorifics",
+   "wahy"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 64,
+   "term": "MUḤAMMAD, KHĀTAM AL NABIYYĪN WA SAYYID AL MURSALĪN"
+  }
+ },
+ {
+  "slug": "muhkam-al",
+  "title": "Muhkam, al-",
+  "ar": "المحكم والمتشابه",
+  "tr": "al-Muḥkam, al-mutashābih",
+  "def": "Verses with a clear and precise meaning (muḥkam) and verses that can bear more than one interpretation (mutashābih).",
+  "what": [
+   "The Quran divides its verses in the third surah: “He it is who sent down to you the Book, of which some verses are <em>muḥkamāt</em>, they are the mother of the Book, and others are <em>mutashābihāt</em>” (3:7). The <em>muḥkam</em> verses are clear and specific in their commands and meaning, and they form the base of the Book. The <em>mutashābih</em> verses allow more than one reading or application.",
+   "The verse goes on to say that those with deviation in their hearts follow what is <em>mutashābih</em> to seek confusion, while those firmly grounded in knowledge say, “We believe in it, all is from our Lord”. Scholars teach that the unclear verses should be read in the light of the clear ones, so that no verse is set against another. Where the Quran speaks of God, for instance, the reader takes the clear teaching of His oneness and transcendence as the guide."
+  ],
+  "misread": "“Ambiguous” is a poor rendering of <em>mutashābih</em>, since the term means a verse that resembles another or that allows several readings, not one that is meaningless.",
+  "sources": [
+   "Commentators differ on where to stop in reading 3:7, and so on whether the interpretation of the <em>mutashābih</em> is known only to God or also to the scholars."
+  ],
+  "terms": [
+   "quran",
+   "tafsir",
+   "ijtihad",
+   "mansukh-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Muhkam",
+   "Al-Mutashabah"
+  ],
+  "faruqi": {
+   "page": 49,
+   "term": "AL MUḤKAM, AL MUTASHĀBAH"
+  }
+ },
+ {
+  "slug": "muhtadi",
+  "title": "Muhtadi",
+  "ar": "مهتدي",
+  "tr": "Muhtadī",
+  "def": "A person who has received guidance (hudā) from God; the plural is muhtadūn.",
+  "what": [
+   "<em>Muhtadī</em> is the one who has been guided, from the root <em>h-d-y</em>, whose noun is <em>hudā</em>, guidance. The Quran says, “Whomever God guides is the guided one (<em>al-muhtadī</em>), and whomever He leaves astray, they are the losers” (7:178). The same sentence also appears in 17:97. It teaches that guidance comes from God and is not achieved by a person alone. The believer asks for it in every prayer, in the Fatiha: “Guide us to the straight path” (1:6). The Quran also describes the guided as those who recognise the truth and follow it, and it asks believers to continue to seek guidance."
+  ],
+  "misread": "Seeing guidance as one’s own achievement is the error that the word corrects: the Quran presents it as a gift from God that a person must accept and follow.",
+  "sources": [],
+  "terms": [
+   "fatiha",
+   "iman",
+   "muflih",
+   "islam"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 47,
+   "term": "MUHTADĪ"
+  }
+ },
+ {
+  "slug": "mujahid",
+  "title": "Mujahid",
+  "ar": "مجاهد",
+  "tr": "Mujāhid",
+  "def": "A person who practises jihad, that is, who strives in the cause of God; the plural is mujāhidūn.",
+  "what": [
+   "<em>Mujāhid</em> is the one who strives, the active participle of the verb <em>jāhada</em>. It names a person who practises <em>jihād</em>, striving for the cause of God. The Quran uses the plural in the verse that says God has favoured “the strivers (<em>al-mujāhidūn</em>)” over those who sit at home (4:95). Jihad includes struggle against one’s own faults, the effort to do good and, under the strict rules set by the law, defence of the community by fighting. A saying reported in the hadith collections calls the greatest jihad a word of truth before an unjust ruler. In the modern period the word has also been used for fighters in particular conflicts."
+  ],
+  "misread": "It is sometimes translated “holy warrior”, which narrows to fighting what the Quran uses for any effort made for God.",
+  "sources": [],
+  "terms": [
+   "jihad",
+   "martyrdom-and-the-dead",
+   "fighting",
+   "self-defence"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 28,
+   "term": "MUJĀHID"
+  }
+ },
+ {
+  "slug": "mujam-al",
+  "title": "Mu'jam, al-",
+  "ar": "المعجم",
+  "tr": "al-Muʿjam",
+  "def": "A collection of hadith whose items are arranged alphabetically, for example by the names of the Companions or the teachers.",
+  "what": [
+   "<em>Al-muʿjam</em> is a collection of hadith arranged in alphabetical order. The usual arrangement is by the names of the narrators, such as the Companions or the compiler’s own teachers, which makes it easier to find reports. The best-known examples are the three <em>Muʿjams</em> of al-Tabarani: <em>al-Kabīr</em>, <em>al-Awsaṭ</em> and <em>al-Ṣaghīr</em>. The same word, <em>muʿjam</em>, came to mean a dictionary, since a dictionary also arranges its entries by the letters of the alphabet. The two meanings are linked by the principle of arrangement. Collections of this type are consulted by scholars as sources of reports and not as lists of verified material, because they contain reports of different grades."
+  ],
+  "misread": "In modern Arabic the word is usually a dictionary, but in hadith study it is a collection arranged by names.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "musnad-al",
+   "arabic-dictionaries"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Mu'jam"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "AL MU'JAM"
+  }
+ },
+ {
+  "slug": "mujib-al",
+  "title": "Mujib, al-",
+  "ar": "المجيب",
+  "tr": "al-Mujīb",
+  "def": "A divine name meaning the One who answers prayer.",
+  "what": [
+   "<em>Al-Mujīb</em> means the One who answers. It is a name of God, from the root <em>j-w-b</em>, to respond. The Quran says of Him through the prophet Salih, “My Lord is near and responsive” (11:61). Elsewhere it says, “When My servants ask you about Me, I am near. I answer the call of the caller when he calls on Me” (2:186). Muslims call on God by this name when they pray, and they take it as an assurance that the prayer is heard. The answer may come in different forms: as what was asked, as a better gift, or as relief from a harm. It does not mean that every wish is granted in the form asked."
+  ],
+  "misread": "It does not mean that every request is met in the form the person wants; the answer is according to God’s wisdom.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "allah",
+   "divine-attributes",
+   "mustaan-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Mujib"
+  ],
+  "faruqi": {
+   "page": 28,
+   "term": "AL MUJĪB"
+  }
+ },
+ {
+  "slug": "mukhlis",
+  "title": "Mukhlis",
+  "ar": "مخلص",
+  "tr": "Mukhliṣ",
+  "def": "The active participle of ikhlāṣ: a person who is sincere in devotion to God; the plural is mukhliṣūn.",
+  "what": [
+   "<em>Mukhliṣ</em> is the person who acts with <em>ikhlāṣ</em>, sincerity, which means doing a deed purely for God. The Quran commands, “Worship God, making your religion sincere to Him” (39:2), and it describes those who call on God in distress as “sincere to Him in religion” (29:65). The word names the person who directs worship to God alone, with no show and no partner. The passive form, <em>mukhlaṣ</em>, means one chosen and purified by God. It is used of Joseph (12:24) and of prophets and servants whom Satan cannot lead astray (15:40). The 112th surah is called <em>al-Ikhlāṣ</em>, since it declares God’s oneness."
+  ],
+  "misread": "It is sometimes read as a social virtue of honesty, when in the Quran it concerns directing worship to God alone.",
+  "sources": [],
+  "terms": [
+   "iman",
+   "ihsan",
+   "tawhid",
+   "deeds"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 31,
+   "term": "MUKHLIṢ"
+  }
+ },
+ {
+  "slug": "mukhtalaf-al-hadith",
+  "title": "Mukhtalaf al-Hadith",
+  "ar": "مختلف الحديث",
+  "tr": "Mukhtalaf al-ḥadīth",
+  "def": "The science that studies hadith that seem to conflict, with the aim of reconciling them.",
+  "what": [
+   "<em>Mukhtalaf al-ḥadīth</em> is the branch of hadith study that deals with reports which appear to contradict one another. The scholar first tries to reconcile them, for example by showing that they address different circumstances or that one is general and the other specific. If that fails, he checks whether one report abrogates the other, and only then prefers the stronger on grounds of its chain and text. Early works include al-Shafii’s <em>Ikhtilāf al-ḥadīth</em> and Ibn Qutayba’s <em>Taʾwīl mukhtalaf al-ḥadīth</em>. The science rests on the view that a sound report cannot truly contradict another or the Quran, so apparent conflict points to a limit in understanding."
+  ],
+  "misread": "A conflict between two reports is often taken as proof that one is false, whereas the science first looks for a way to read both.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "sahih",
+   "isnad",
+   "naskh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 50,
+   "term": "MUKHTALAF AL ḤADĪTH"
+  }
+ },
+ {
+  "slug": "mumin",
+  "title": "Mu'min",
+  "ar": "مؤمن",
+  "tr": "Muʾmin",
+  "def": "A man who has iman, faith; the plural is muʾminūn.",
+  "what": [
+   "<em>Muʾmin</em> is a man who holds <em>īmān</em>, faith, meaning belief in God, His angels, His books, His messengers, the Last Day and the divine decree. The Quran says, “The believers are only those who believe in God and His Messenger and then do not doubt” (49:15). <em>Al-Muʾmin</em> is also one of the names of God (59:23). The Quran distinguishes it from <em>muslim</em>. In one passage the desert Arabs say, “We believe”, and the Quran replies that they should say, “We have submitted”, since faith has not yet entered their hearts (49:14). The word <em>muʾmin</em> thus names a faith held inwardly and shown in action."
+  ],
+  "misread": "Translating it as “believer” is acceptable, but “faithful” alone can lose that the word means a person with settled inner faith as well as outward practice.",
+  "sources": [],
+  "terms": [
+   "iman",
+   "muminah",
+   "islam",
+   "kafir"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 23,
+   "term": "MU'MIN"
+  }
+ },
+ {
+  "slug": "muminah",
+  "title": "Mu'minah",
+  "ar": "مؤمنة",
+  "tr": "Muʾminah",
+  "def": "A woman who has iman, faith; the plural is muʾmināt.",
+  "what": [
+   "<em>Muʾminah</em> is the feminine of <em>muʾmin</em>: a woman who holds <em>īmān</em>, faith. The Quran addresses women and men together, with the same standing before God. One verse lists them side by side: the Muslim men and women, the believing men and women, and so on through the qualities of devotion, truthfulness, patience, humility and remembrance, and it promises forgiveness and a great reward to them all (33:35). Another verse says that the believing men and women are protectors of one another, enjoining what is right and forbidding what is wrong (9:71). The plural, <em>muʾmināt</em>, is used for believing women as a group."
+  ],
+  "misread": "The Quran’s address to “the believing men and women” is sometimes missed in translations that render the masculine plural alone.",
+  "sources": [],
+  "terms": [
+   "mumin",
+   "iman",
+   "islam",
+   "family"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 24,
+   "term": "MU'MINAH"
+  }
+ },
+ {
+  "slug": "munkar-al",
+  "title": "Munkar, al-",
+  "ar": "المنكر",
+  "tr": "al-Munkar",
+  "def": "What is wrong and unacceptable, condemned by the sharia and not merely a matter of social custom; the opposite of al-maʿrūf.",
+  "what": [
+   "<em>Al-munkar</em> is the wrong that is rejected and condemned by revelation. It is the opposite of <em>al-maʿrūf</em>. The Quran describes the Muslim community as one that enjoins the right and forbids <em>al-munkar</em> (3:104, 3:110). The word comes from a root meaning to deny or to disapprove. The Prophet Muhammad (peace be upon him) taught, “Whoever of you sees a wrong, let him change it with his hand; if he cannot, then with his tongue; if he cannot, then with his heart, and that is the weakest of faith” (Sahih Muslim). The duty is carried out according to ability and with gentleness. In hadith science the word has a separate technical sense: a weak report that contradicts a stronger one."
+  ],
+  "misread": "It is sometimes taken to mean what is socially disapproved, while the Quran bases it on what God has forbidden.",
+  "sources": [],
+  "terms": [
+   "maruf-al",
+   "khayr",
+   "fahisha",
+   "evil"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Munkar"
+  ],
+  "faruqi": {
+   "page": 46,
+   "term": "AL MUNKAR"
+  }
+ },
+ {
+  "slug": "musnad-al",
+  "title": "Musnad, al-",
+  "ar": "المسند",
+  "tr": "al-Musnad",
+  "def": "A collection of hadith arranged by the Companion who reported them, such as the Musnad of Ahmad ibn Hanbal.",
+  "what": [
+   "<em>Al-musnad</em> is a hadith collection arranged under the names of the Companions who narrated the reports, so that all those from Abu Hurayra are grouped together, then those of another Companion. This differs from the arrangement by subject, as in the collections of al-Bukhari and Muslim. The word also describes a single report whose chain of narrators runs unbroken back to the Prophet. The best-known example is the <em>Musnad</em> of Ahmad ibn Hanbal, a very large collection. Another is the <em>Musnad</em> of Abu Dawud al-Tayalisi. Scholars use these books as sources for reports, but the collections include reports of differing grades, so each must be assessed separately."
+  ],
+  "misread": "A <em>musnad</em> is not a book arranged by topic, and the word is not a mark of reliability.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "abu-hurayra",
+   "sahih"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Musnad"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "AL MUSNAD"
+  }
+ },
+ {
+  "slug": "mustaan-al",
+  "title": "Mustaʿan, al-",
+  "ar": "المستعان",
+  "tr": "al-Mustaʿān",
+  "def": "A divine name meaning the One whose help is sought, and whose help alone is finally effective.",
+  "what": [
+   "<em>Al-Mustaʿān</em> is the One whose help is asked, from the root <em>ʿ-w-n</em>, to help. The Quran uses it in the words of Jacob, “God is the one whose help is sought against what you describe” (12:18), and in the verse, “Our Lord is the Merciful, the one whose help is sought” (21:112). The same root is in the Fatiha: “You alone we worship, and You alone we ask for help” (1:5). Muhammad (peace be upon him) is reported to have told Ibn Abbas, “When you ask, ask God; when you seek help, seek help from God” (al-Tirmidhi). Muslims recite the Fatiha many times a day, and with it renew the statement that help comes from God alone."
+  ],
+  "misread": "It does not forbid asking people for help in ordinary matters; it teaches that final help rests with God.",
+  "sources": [],
+  "terms": [
+   "fatiha",
+   "dua",
+   "allah",
+   "mujib-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Mustaʿan"
+  ],
+  "faruqi": {
+   "page": 41,
+   "term": "AL MUSTAʿĀN"
+  }
+ },
+ {
+  "slug": "mustadafun-al",
+  "title": "Mustad'afun, al-",
+  "ar": "المستضعفون",
+  "tr": "al-Mustaḍʿafūn",
+  "def": "The people regarded as weak, who are exploited and oppressed by the powerful of the earth.",
+  "what": [
+   "<em>Al-Mustaḍʿafūn</em> is the plural of a word for a person treated as weak. It names those whom the powerful of the land exploit, oppress and push aside, and who are held to be of little account because they lack strength or standing. The Quran uses it of the weak among earlier peoples and in the time of Muhammad (peace be upon him). The Quran speaks of this group in several places. It asks believers why they do not fight in God’s cause for the oppressed men, women and children who pray for deliverance (4:75), and it says that God willed to show favour to those who were treated as weak in the land (28:5)."
+  ],
+  "misread": "That the word means simply the poor, when it refers to people held down by the power of others.",
+  "sources": [
+   "The Quran also records the dispute on the Day of Judgement between the arrogant and those who were treated as weak, each side blaming the other (34:31-33). Muslim scholars read these passages as a charge on the strong to protect the weak and on the community to come to their aid."
+  ],
+  "terms": [
+   "justice",
+   "ummah",
+   "fighting"
+  ],
+  "articles": [],
+  "type": "group",
+  "aliases": [
+   "Al-Mustad'afun",
+   "Al-Mustad’afun",
+   "Mustadafun",
+   "Mustadafin"
+  ],
+  "faruqi": {
+   "page": 36,
+   "term": "AL MUSTAḌ'AFŪN"
+  }
+ },
+ {
+  "slug": "mustalah-al-hadith",
+  "title": "Mustalah al-Hadith",
+  "ar": "مصطلح الحديث",
+  "tr": "Muṣṭalaḥ al-Ḥadīth",
+  "def": "The science that studies the method by which hadith are examined, graded and accepted or rejected.",
+  "what": [
+   "<em>Muṣṭalaḥ al-ḥadīth</em> means the technical terminology of hadith. It is the discipline that sets out how a report from the Prophet Muhammad (peace be upon him) is examined: the soundness of its chain of narrators, the reliability of each narrator, and the text itself. From these checks scholars grade a report as sound (<em>ṣaḥīḥ</em>), good (<em>ḥasan</em>) or weak (<em>ḍaʿīf</em>). Hadith scholars developed this method over the early centuries of Islam, and it gave Muslims a way to separate reports that can be relied on from those that cannot. Students of hadith learn it before they use the large collections, since it explains why a collector accepted one report and set another aside."
+  ],
+  "misread": "That hadith were accepted without any scrutiny, when a developed method governed what counted as sound.",
+  "sources": [
+   "The discipline is also called <em>ʿulūm al-ḥadīth</em>, the sciences of hadith. It draws on related fields, including the study of the narrators themselves (<em>rijāl</em>) and of reports that cancel one another (<em>nāsikh</em> and <em>mansūkh</em>)."
+  ],
+  "terms": [
+   "hadith",
+   "isnad",
+   "rijal-al-hadith",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Mustalah al-Hadith",
+   "Ulum al-Hadith"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "MUṢṬALAḤ AL ḤADĪTH"
+  }
+ },
+ {
+  "slug": "muttaqi",
+  "title": "Muttaqi",
+  "ar": "متقي",
+  "tr": "Muttaqī",
+  "def": "One who acts out of taqwa, the conscious fear and awareness of God; the plural is muttaqūn.",
+  "what": [
+   "A <em>muttaqī</em> is a person who acts in pursuit of <em>taqwa</em>, or because he possesses it. <em>Taqwa</em> is the mindfulness of God that makes a person guard against what God has forbidden and hold to what He has commanded. The plural is <em>muttaqūn</em>, and the Quran uses it for those who live with that awareness. The Quran opens its second chapter by calling itself guidance for the <em>muttaqīn</em> (2:2), and it promises them Paradise (3:133). It also teaches that the most honoured of people in God’s sight are the most <em>muttaqī</em> among them (49:13), so that the measure is conduct and awareness, not lineage or wealth."
+  ],
+  "misread": "That it means simply a pious or religious person, which loses the sense of awareness of God.",
+  "sources": [],
+  "terms": [
+   "taqwa",
+   "quran",
+   "paradise"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Muttaqun",
+   "Muttaqin",
+   "Muttaqoon"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "MUTTAQĪ"
+  }
+ },
+ {
+  "slug": "muzzammil-al",
+  "title": "Muzzammil, al-",
+  "ar": "المزمل",
+  "tr": "al-Muzzammil",
+  "def": "A name of the Prophet Muhammad (peace be upon him), “the one enwrapped”, used by God in the Quran (73:1).",
+  "what": [
+   "<em>Al-Muzzammil</em> means the one wrapped in a cloak. God addresses Muhammad (peace be upon him) with it at the start of the seventy-third chapter of the Quran (73:1), which is named after it. The same chapter tells him to rise for much of the night and to recite the Quran slowly and clearly (73:2-4). Because God addressed him by a name drawn from his own situation, Muslims count it among the titles of the Prophet. The chapter is among the early revelations, and it is read for its teaching on night prayer and on patience."
+  ],
+  "misread": "That it is a mere description of his dress, when it is a form of address from God that opens a chapter.",
+  "sources": [
+   "The chapter that follows begins with a similar address, <em>al-Muddaththir</em>, the one covered (74:1). Muslims commonly pair the two as titles that God gave the Prophet at the opening of his mission."
+  ],
+  "terms": [
+   "muhammad",
+   "quran",
+   "salah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Muzzammil",
+   "Muzzammil"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "AL MUZZAMMIL"
+  }
  }
 ]

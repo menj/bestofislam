@@ -30,6 +30,12 @@
   "aliases": [
    "Traditions",
    "Ahadith"
+  ],
+  "faruqi": [
+   {
+    "page": 28,
+    "term": "ḤADĪTH"
+   }
   ]
  },
  {
@@ -201,6 +207,12 @@
    "Halq",
    "Hadi",
    "Hady"
+  ],
+  "faruqi": [
+   {
+    "page": 28,
+    "term": "ḤAJJ"
+   }
   ]
  },
  {
@@ -236,6 +248,16 @@
    "Dietary Laws",
    "Health Rules",
    "Halal And Haram"
+  ],
+  "faruqi": [
+   {
+    "page": 28,
+    "term": "ḤARĀM"
+   },
+   {
+    "page": 30,
+    "term": "ḤALĀL"
+   }
   ]
  },
  {
@@ -327,6 +349,12 @@
   "articles": [],
   "aliases": [
    "Hunafa"
+  ],
+  "faruqi": [
+   {
+    "page": 30,
+    "term": "ḤANĪF"
+   }
   ]
  },
  {
@@ -426,6 +454,12 @@
   "aliases": [
    "Hasan B. Ali. B. Abi Talib",
    "Al-Hasan"
+  ],
+  "faruqi": [
+   {
+    "page": 29,
+    "term": "AL ḤASAN"
+   }
   ]
  },
  {
@@ -561,6 +595,12 @@
    "Blazing Flame, The",
    "Jahannam",
    "Naar"
+  ],
+  "faruqi": [
+   {
+    "page": 28,
+    "term": "JAHANNAM"
+   }
   ]
  },
  {
@@ -607,6 +647,12 @@
    "Jilbab",
    "Khimar",
    "H.J.B"
+  ],
+  "faruqi": [
+   {
+    "page": 28,
+    "term": "ḤIJĀB"
+   }
   ]
  },
  {
@@ -1112,5 +1158,794 @@
    "Munafiqun",
    "Hypocrisy"
   ]
+ },
+ {
+  "slug": "hada",
+  "title": "Hada",
+  "ar": "هدى",
+  "tr": "hadā",
+  "def": "To guide to the truth and value of Islam.",
+  "what": [
+   "<em>Hadā</em> means to guide, to show the way to a destination. In the Quran guidance is the first gift of revelation: the Book is “a guidance for those mindful of God” (2:2). In every prayer Muslims ask: “Guide us to the straight path” (1:6). The noun <em>hudā</em> is the guidance itself, and the one who gives it is <em>hādī</em>. The verb is therefore used both of God and of the messengers He sent.",
+   "The Quran distinguishes between the guide who shows the way and the one who grants the arrival. The Prophet is a messenger who conveys: “You do not guide whom you love, but God guides whom He wills” (28:56). Another verse says: “You surely guide to a straight path” (42:52), meaning by pointing it out through revelation. Faruqi defines the verb as guiding to the truth and value of Islam."
+  ],
+  "misread": "Translated “to lead” in a general sense; the Quranic verb names guidance to the truth that God has revealed, which He alone finally grants.",
+  "sources": [],
+  "terms": [
+   "hadi-al",
+   "wahy",
+   "quran"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Huda",
+   "Hidaya",
+   "Hidayah",
+   "Guidance"
+  ],
+  "faruqi": {
+   "page": 46,
+   "term": "HADĀ"
+  }
+ },
+ {
+  "slug": "hadi-al",
+  "title": "Hadi, al-",
+  "ar": "الهادي",
+  "tr": "al-Hādī",
+  "def": "A divine name meaning the ultimate Guide to truth and value.",
+  "what": [
+   "<em>Al-Hādī</em> is one of the ninety-nine names of God. It means the One Who guides. The Quran uses the term of Him: “Your Lord suffices as a guide and helper” (25:31), and “God is the guide of those who believe to a straight path” (22:54). Every human guide who points to the truth does so by what God has revealed.",
+   "The name is the basis of the believer’s daily request in the <em>Fātiḥa</em>: “Guide us to the straight path” (1:6). Faruqi calls God the ultimate Guide to truth and value, which means that He gives the revelation and the capacity to receive it. People are named ʿAbd al-Hādī, “servant of the Guide”. Many Muslims recall the name when they seek direction in a decision."
+  ],
+  "misread": "Rendered “the Leader”, which suggests command; the name speaks of God showing the way and granting the ability to follow it.",
+  "sources": [],
+  "terms": [
+   "hada",
+   "divine-attributes",
+   "fatiha",
+   "allah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hadi",
+   "Hadi"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "AL HĀDĪ"
+  }
+ },
+ {
+  "slug": "hadith-al-daif-al",
+  "title": "Hadith al-Da'if, al-",
+  "ar": "الحديث الضعيف",
+  "tr": "al-Ḥadīth al-Ḍaʿīf",
+  "def": "A hadith that falls short of the standard of soundness in its text, its chain of reporters, or both; there are as many kinds as there are defects.",
+  "what": [
+   "A <em>ḥadīth ḍaʿīf</em>, “weak report”, is a report attributed to the Prophet whose truth is not established beyond question. The doubt may lie in the <em>matn</em>, the text, or in the <em>sanad</em>, the chain of reporters, for example when a link is missing or a reporter is known for a poor memory or a doubtful character. Scholars named many types of weakness, such as <em>mursal</em> and <em>munqaṭiʿ</em>, according to the defect.",
+   "A weak report is not the same as a forged one. It stands below the <em>ṣaḥīḥ</em> and the <em>ḥasan</em> and above the <em>mawḍūʿ</em>. Scholars differ on its use: some allow it for encouragement to good deeds when it does not touch on creed or law and its weakness is slight, and others reject it altogether. It cannot establish a legal ruling."
+  ],
+  "misread": "Equated with a false report; <em>ḍaʿīf</em> means a report not proven to the required standard, which is different from a fabrication.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "hadith-al-sahih-al",
+   "hadith-al-mawdu-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hadith al-Da'if",
+   "Weak Hadith",
+   "Daif Hadith"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "AL ḤADĪTH AL ḌA'ĪF"
+  }
+ },
+ {
+  "slug": "hadith-al-hasan-al",
+  "title": "Hadith al-Hasan, al-",
+  "ar": "الحديث الحسن",
+  "tr": "al-Ḥadīth al-Ḥasan",
+  "def": "A hadith of sound text whose reporters do not fully meet the test of reliability; it ranks between the ṣaḥīḥ and the ḍaʿīf.",
+  "what": [
+   "A <em>ḥadīth ḥasan</em>, “good report”, is one that lies between the strongest and the weak. By the usual account of the scholars, its chain is connected and its reporters are upright, but one or more falls a little short of the best memory and precision. Faruqi describes it as a report whose text is sound but whose reporters do not fully pass the test.",
+   "Al-Tirmidhi made the term well known by applying it in his collection, where he often writes <em>ḥasan ṣaḥīḥ</em> or <em>ḥasan gharīb</em>. Jurists generally accept a <em>ḥasan</em> report as evidence in matters of law, and treat it as close in standing to the <em>ṣaḥīḥ</em>. A report of lower rank may also be raised to this level when several chains support one another."
+  ],
+  "misread": "Read as a mere “fair” report; the grade is an accepted category of evidence for scholars.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "hadith-al-sahih-al",
+   "hadith-al-daif-al",
+   "isnad"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hadith al-Hasan",
+   "Hasan Hadith"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "AL ḤADĪTH AL ḤASAN"
+  }
+ },
+ {
+  "slug": "hadith-al-mawdu-al",
+  "title": "Hadith al-Mawdu', al-",
+  "ar": "الحديث الموضوع",
+  "tr": "al-Ḥadīth al-Mawḍūʿ",
+  "def": "A fabricated report, spurious in its text or its chain of reporters.",
+  "what": [
+   "A <em>ḥadīth mawḍūʿ</em> is a saying falsely attributed to the Prophet. The word means “placed” or “invented”. Such reports arose for several reasons, among them party feeling, the wish to promote pious acts, and plain invention. Scholars identified them by examining the <em>sanad</em>, the chain, and the <em>matn</em>, the text. A chain with a known liar, or a text that contradicts the Quran or sound reason, was grounds for rejection.",
+   "The Prophet warned: “Whoever lies about me on purpose, let him take his seat in the Fire” (Sahih al-Bukhari and Sahih Muslim). In answer, hadith scholars compiled collections of fabricated reports, such as the <em>Mawḍūʿāt</em> of Ibn al-Jawzi, so that Muslims could recognize and avoid them. It is forbidden to relate such a report as the Prophet’s word, except to show that it is false."
+  ],
+  "misread": "Confused with a weak report; the <em>mawḍūʿ</em> is a fabrication and is rejected altogether.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "isnad",
+   "hadith-al-daif-al",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hadith al-Mawdu'",
+   "Fabricated Hadith",
+   "Forged Hadith"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "AL ḤADĪTH AL MAWḌŪ'"
+  }
+ },
+ {
+  "slug": "hadith-al-sahih-al",
+  "title": "Hadith al-Sahih, al-",
+  "ar": "الحديث الصحيح",
+  "tr": "al-Ḥadīth al-Ṣaḥīḥ",
+  "def": "A hadith whose truth is established beyond question; the highest grade of report.",
+  "what": [
+   "A <em>ḥadīth ṣaḥīḥ</em>, “sound report”, is a report of the Prophet that has met every condition of authenticity. By the usual rule of the scholars, its chain of reporters is connected, each reporter is upright and has a reliable memory, and it is free of hidden defect and of contradiction with better evidence. The text, too, must be free of defect.",
+   "The grade rests on the work of critics who studied the lives of reporters, a discipline called <em>ʿilm al-rijāl</em>. The two most trusted collections are those of al-Bukhari and Muslim, each called <em>al-Ṣaḥīḥ</em>. Their authors set strict standards, and the community has received their collections with wide agreement. A sound report is accepted as evidence in belief and law, although the text must still be understood in its context."
+  ],
+  "misread": "Taken to mean any report found in a hadith book; the grade is a judgment on the chain and the text.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "sahih",
+   "isnad",
+   "hadith-al-hasan-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hadith al-Sahih",
+   "Sahih Hadith",
+   "Authentic Hadith"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "AL ḤADĪTH AL ṢAḤĪḤ"
+  }
+ },
+ {
+  "slug": "hafiz-al",
+  "title": "Hafiz, al-",
+  "ar": "الحافظ",
+  "tr": "al-Ḥāfiẓ",
+  "def": "A divine name meaning the Keeper of all things; without the article, a person who has memorized the Quran.",
+  "what": [
+   "As a name of God, <em>al-Ḥāfiẓ</em> means the Guardian and Keeper. The Quran says: “God is the best Guardian” (12:64) and, of the Book, “It is We who sent down the Reminder, and We shall be its guardian” (15:9). He keeps the heavens and the earth, and “their preservation does not weary Him” (2:255). God’s guardianship thus extends to the whole creation and to the Quran itself.",
+   "Without the article, <em>ḥāfiẓ</em> is the title of one who has the Quran by heart, plural <em>ḥuffāẓ</em>. The memorizers have carried the revelation from the time of the Prophet to the present, and many Muslims, children and adults, learn the whole text. The title was also given to hadith masters of exceptional memory, as in al-Ḥāfiẓ Ibn Ḥajar. The two senses share the root meaning of keeping safe."
+  ],
+  "misread": "Translated “the Protector” alone; the same word names the memorizer who keeps the Quran in memory.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "hafiz-al-2",
+   "divine-attributes",
+   "qiraat"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hafiz",
+   "Hafiz",
+   "Huffaz"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤĀFIẒ"
+  }
+ },
+ {
+  "slug": "hafiz-al-2",
+  "title": "Hafiz, al-",
+  "ar": "الحفيظ",
+  "tr": "al-Ḥafīẓ",
+  "def": "A divine name meaning He Who keeps, constantly and for ever.",
+  "what": [
+   "<em>Al-Ḥafīẓ</em> is an intensive form from the root of <em>ḥafiẓa</em>, to keep or guard. The Quran says: “My Lord is Guardian over all things” (11:57), and “Your Lord is Guardian over all things” (34:21). The form tells of a keeping that does not lapse. The sense includes preserving creation, guarding the believer from harm, and keeping a record of deeds.",
+   "A recorded account is also part of this keeping, since the Quran says every soul has a guardian over it (86:4). Believers recite verses of protection at night and morning, trusting in the Keeper. The name appears in the Quran with both the form <em>ḥāfiẓ</em> and <em>ḥafīẓ</em>. The second is the intensive and is the one that Faruqi’s entry stresses with the words constantly and eternally."
+  ],
+  "misread": "Confused with the form <em>al-Ḥāfiẓ</em> for the Quran memorizer; <em>al-Ḥafīẓ</em> is the divine name for the constant Keeper.",
+  "sources": [],
+  "terms": [
+   "hafiz-al",
+   "divine-attributes",
+   "allah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hafiz",
+   "Hafeez"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤAFĪẒ"
+  }
+ },
+ {
+  "slug": "hajara",
+  "title": "Hajara",
+  "ar": "هجر",
+  "tr": "hajara",
+  "def": "To emigrate; to leave something unattended.",
+  "what": [
+   "<em>Hajara</em> has two linked senses. The first is to leave a place, which gives <em>hijra</em>, emigration for the sake of the faith. The Quran says: “Those who believed, emigrated and struggled in the way of God have hope of God’s mercy” (2:218). The second is to leave a thing alone or neglect it. The Prophet is reported to have said that the true emigrant is the one who abandons what God has forbidden (Sahih al-Bukhari).",
+   "Neglect is also meant when the Prophet complains in the Quran: “My Lord, my people have treated this Quran as something abandoned” (25:30). The command to “part from them in a gracious manner” (73:10) uses the same verb for withdrawing from those who mock the message, without hostility. The noun <em>hijra</em> and the participle <em>muhājir</em>, “emigrant”, come from this verb."
+  ],
+  "misread": "Rendered “to leave” alone; in the Quran the verb covers moving for the faith and also neglecting something.",
+  "sources": [],
+  "terms": [
+   "hijra",
+   "hijrah",
+   "ansar"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Muhajir",
+   "Muhajirun"
+  ],
+  "faruqi": {
+   "page": 46,
+   "term": "HAJARA"
+  }
+ },
+ {
+  "slug": "hakim-al",
+  "title": "Hakim, al-",
+  "ar": "الحكيم",
+  "tr": "al-Ḥakīm",
+  "def": "A divine name meaning He Whose words and deeds constitute ḥikma, wisdom.",
+  "what": [
+   "<em>Al-Ḥakīm</em> is one of the ninety-nine names of God and one of the most frequent in the Quran. It often follows <em>al-ʿAzīz</em>: “You are the Almighty, the All-Wise” (2:129). The Book itself is called by it: “<em>Yā Sīn</em>. By the wise Quran” (36:1–2). It describes a Being whose every command and act has a purpose, even where people cannot see it.",
+   "The name comes from the root of <em>ḥikma</em>, which means wisdom, and also <em>ḥukm</em>, judgment. Faruqi says the divine words and deeds constitute <em>ḥikma</em>. For the believer, this is a ground for trust in events that seem hard. A verse says: “You may dislike something that is good for you” (2:216). People are named ʿAbd al-Ḥakīm, “servant of the All-Wise”."
+  ],
+  "misread": "Rendered “the Wise” as human cleverness; the name speaks of a wisdom that is the standard of all wisdom.",
+  "sources": [],
+  "terms": [
+   "hikmah",
+   "divine-attributes",
+   "allah",
+   "al-aziz"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hakim",
+   "Hakim"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤAKĪM"
+  }
+ },
+ {
+  "slug": "hamada",
+  "title": "Hamada",
+  "ar": "حمد",
+  "tr": "ḥamada",
+  "def": "To praise God and thank Him for all His deeds.",
+  "what": [
+   "<em>Ḥamada</em> is the verb of praise offered to God, joined with gratitude for what He has done. It is at the center of the believer’s speech. The Quran opens with it in the <em>Fātiḥa</em>: “Praise be to God, Lord of the worlds” (1:2). Surah 17 says that all creation praises Him: “The seven heavens and the earth and all within them glorify Him” (17:44).",
+   "The Prophet’s own name Muhammad (peace be upon him) and the name Aḥmad come from this root, meaning one much praised, and one who praises most. A believer says <em>al-ḥamdu lillāh</em> on rising, eating, and after sneezing, and the listener replies <em>yarḥamuka Allāh</em>, “God have mercy on you” (Sahih al-Bukhari). The Prophet is also reported to have taught that the praise of God fills the scale on the Day of Judgment, in a hadith in Sahih Muslim."
+  ],
+  "misread": "Translated “to praise” alone, which leaves out the thanks for specific deeds that Faruqi includes.",
+  "sources": [],
+  "terms": [
+   "hamd-al",
+   "hamid-al",
+   "dhikr",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Hamd"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "ḤAMADA"
+  }
+ },
+ {
+  "slug": "hamd-al",
+  "title": "Hamd, al-",
+  "ar": "الحمد",
+  "tr": "al-Ḥamd",
+  "def": "The noun of ḥamada: praise of God, with thanks to Him for all His deeds.",
+  "what": [
+   "<em>Al-ḥamd</em> is the act and the content of praise that is offered to God. The opening verse of the Quran after the <em>basmala</em> reads: <em>al-ḥamdu lillāhi rabbi l-ʿālamīn</em>, “Praise belongs to God, Lord of the worlds” (1:2). The definite article is often read as meaning that every praise belongs to Him, since all good in creation comes from Him. The phrase thus opens the whole Book.",
+   "Scholars set <em>ḥamd</em> beside <em>shukr</em>, thanks. They note that <em>ḥamd</em> praises God for His qualities and for His acts, while <em>shukr</em> responds to the gifts one has received. Many surahs begin with it, among them surahs 6, 18, 34 and 35. The Prophet is reported to have said that <em>al-ḥamdu lillāh</em> fills the scale (Sahih Muslim). The phrase ends supplication and meals and is the first thing a believer says on waking. For these reasons, the word is among the most frequently heard in a Muslim’s day."
+  ],
+  "misread": "Rendered “praise” without the thanks it contains.",
+  "sources": [],
+  "terms": [
+   "hamada",
+   "fatiha",
+   "dhikr",
+   "hamid-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hamd",
+   "Alhamdulillah",
+   "Al-Hamdu Lillah"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤAMD"
+  }
+ },
+ {
+  "slug": "hamid-al",
+  "title": "Hamid, al-",
+  "ar": "الحميد",
+  "tr": "al-Ḥamīd",
+  "def": "A divine name meaning He Who is worthy of being the object of al-ḥamd, praise.",
+  "what": [
+   "<em>Al-Ḥamīd</em> is one of the ninety-nine names of God. It marks a Being who deserves praise for what He is, whether or not anyone praises Him. The Quran says: “God is Self-Sufficient and Praiseworthy” (14:8), and in another place “He is the Praiseworthy, the Glorious” (11:73). The form names the one who is the object of <em>ḥamd</em>. The name is often paired with <em>al-Majīd</em>, the Glorious, in the Quran.",
+   "The name shows that praise is due to God from His own perfection and not from any need, for He is “Self-Sufficient” in every case. The believer’s <em>ḥamd</em> answers this worthiness. In the blessing on the Prophet that Muslims say in the final sitting of the prayer, the words close with <em>innaka ḥamīdun majīd</em>, “You are Praiseworthy and Glorious”. The name differs from the participle <em>ḥāmid</em>, “one who praises”, which Faruqi’s transliteration shows, but his definition fits <em>al-Ḥamīd</em>."
+  ],
+  "misread": "Confused with the active form <em>ḥāmid</em>, the one who praises; the divine name denotes the One Who is worthy of praise.",
+  "sources": [],
+  "terms": [
+   "hamd-al",
+   "hamada",
+   "divine-attributes",
+   "allah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hamid",
+   "Hamid"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤĀMID"
+  }
+ },
+ {
+  "slug": "haqq-al",
+  "title": "Haqq, al-",
+  "ar": "الحق",
+  "tr": "al-Ḥaqq",
+  "def": "A divine name meaning the ultimately True, Righteous and Real; also the quality of ultimate truth, righteousness and reality.",
+  "what": [
+   "<em>Al-Ḥaqq</em> is a name of God that means the Real and the True, the One Whose being is certain and Whose word is right. The Quran says: “That is because God is the Truth, and what they call on besides Him is falsehood” (22:62), and “Exalted is God, the Sovereign, the Truth” (20:114). The same word, with the article, is also used for the revelation: “The truth has come and falsehood has vanished” (17:81).",
+   "The root carries a wide family of meanings: a thing that is real, a right owed to another, and a claim that is just. For this reason <em>ḥaqq</em> also means “right” in law, and Faruqi gives the second sense: the quality of ultimate truth, righteousness and reality. The believer’s speech and conduct are called to follow it. Sufis have used the name for God Himself."
+  ],
+  "misread": "Reduced to “truth” as a statement; the Arabic joins truth, reality and right in one word.",
+  "sources": [],
+  "terms": [
+   "haqq",
+   "divine-attributes",
+   "allah",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Haqq"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤAQQ"
+  }
+ },
+ {
+  "slug": "haram-al",
+  "title": "Haram, al-",
+  "ar": "الحرام",
+  "tr": "al-Ḥarām",
+  "def": "What the law forbids: a deed or thing that is prohibited.",
+  "what": [
+   "<em>Al-ḥarām</em> is what God has forbidden, and in the law it is the fifth category of acts, set against <em>ḥalāl</em>, what is allowed. The jurists list five rulings for any act: obligatory, recommended, permitted, disliked and forbidden. A <em>ḥarām</em> act is to be avoided, and doing it is a sin. The Quran lists forbidden things such as shameful deeds and wrongful killing (7:33; 17:33).",
+   "The Quran warns against claiming a thing to be forbidden without proof: “Do not say falsely with your tongues, ‘This is lawful and this is forbidden,’ so as to invent lies about God” (16:116). For this reason the scholars hold that the default in food, dress and dealings is permission, unless a text forbids it. The same root names the sanctuary of Mecca, <em>al-Ḥaram</em>, and <em>iḥrām</em>, the state of the pilgrim."
+  ],
+  "misread": "Translated “taboo”, which suggests an unexplained prohibition; the term is a legal ruling that rests on a text of revelation.",
+  "sources": [],
+  "terms": [
+   "halal-and-haram-food",
+   "sharia",
+   "fiqh",
+   "ihram"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Haram",
+   "Haram",
+   "Forbidden"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL ḤARĀM"
+  }
+ },
+ {
+  "slug": "hasanah-al",
+  "title": "Hasanah, al-",
+  "ar": "الحسنة",
+  "tr": "al-Ḥasana",
+  "def": "A deed done with iḥsān that merits God’s pleasure; a good deed or deed of righteousness. The plural is al-ḥasanāt.",
+  "what": [
+   "<em>Al-ḥasana</em> is a good deed, the opposite of <em>al-sayyiʾa</em>, the evil deed. The Quran says that the reward is multiplied: “Whoever brings a good deed will have ten times the like of it” (6:160). Another verse says that “good deeds remove evil deeds” (11:114), and that God “multiplies” a good deed and gives from Himself a great reward (4:40). A good deed is thus given more weight than its outward size.",
+   "The word has a second use in prayer. The supplication that Muslims make most often is: “Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire” (2:201), where <em>ḥasana</em> means good of every kind. In Faruqi’s account a <em>ḥasana</em> is a deed done with <em>iḥsān</em>, in which excellence and sincerity meet. The plural <em>ḥasanāt</em> is also used for the credit in the record of deeds. Sincerity and excellence therefore decide the worth of the deed, more than its size."
+  ],
+  "misread": "Rendered “good work” as if any act of kindness counted; the term refers to a deed done with excellence for the sake of God.",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "deeds",
+   "good",
+   "evil"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hasanah",
+   "Hasanat",
+   "Hasana",
+   "Hasanah"
+  ],
+  "faruqi": {
+   "page": 29,
+   "term": "AL ḤASANAH"
+  }
+ },
+ {
+  "slug": "hasbuna-allahu-wa-nima-al-wakil",
+  "title": "Hasbuna Allahu wa Ni'ma al-Wakil",
+  "ar": "حسبنا الله ونعم الوكيل",
+  "tr": "Ḥasbunā Allāhu wa niʿma al-wakīl",
+  "def": "“God is enough for us, and He is the best Guardian.” It is said when one is reckoned with or reckons, trusting everything to God.",
+  "what": [
+   "The phrase means “God is sufficient for us, and He is the best disposer of affairs”. The Quran gives it as the reply of the believers when they were told that a large force had gathered against them: “They said, ‘God is enough for us, and He is the best Guardian’” (3:173). The verse adds that the threat increased their faith. It expresses trust in God (<em>tawakkul</em>) when danger is real.",
+   "Ibn ʿAbbas reported that Abraham said it when he was cast into the fire, and that Muhammad (peace be upon him) said it when people warned the believers of the enemy (Sahih al-Bukhari). Muslims say it in fear, loss, and when they have been wronged, and as a statement of trust when another reckons with them. The word <em>wakīl</em> means one to whom a matter is entrusted, which is why it is translated “Guardian” or “Trustee”."
+  ],
+  "misread": "Said to be a phrase of resignation; the Quran presents it as a statement of trust that increased faith.",
+  "sources": [],
+  "terms": [
+   "dua",
+   "dhikr",
+   "hisab-al",
+   "allah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Hasbunallah",
+   "Hasbunallah Wa Nimal Wakil",
+   "Hasbi Allah"
+  ],
+  "faruqi": {
+   "page": 57,
+   "term": "ḤASBUNĀ ALLAHU WA NI‘MA AL WAKĪL."
+  }
+ },
+ {
+  "slug": "hashr-al",
+  "title": "Hashr, al-",
+  "ar": "الحشر",
+  "tr": "al-Ḥashr",
+  "def": "The resurrection and the bringing together of all people to receive judgment.",
+  "what": [
+   "<em>Al-ḥashr</em> is the gathering of all humankind on the Day of Resurrection. The word means to assemble. The Quran says that every creature will be brought before the Lord: “To their Lord they will be gathered” (6:38). A scene of the day reads: “We shall gather them, and We shall not leave out any of them” (18:47). Surah 99 describes the earth shaking and people coming forth to be shown their deeds.",
+   "Surah 59 bears the name <em>al-Ḥashr</em> because of its mention of the expulsion of a tribe in Medina, which it calls “the first gathering” (59:2). On the Day, people will stand before God for the reckoning of their deeds, which is called <em>al-ḥisāb</em>. The gathering is a prelude to judgment, and it is one of the matters of the Last Day that Muslims affirm as part of belief in the Hereafter."
+  ],
+  "misread": "Rendered “resurrection” alone; the term stresses the assembling of all people before God.",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "hisab-al",
+   "judgement",
+   "death"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hashr",
+   "Hashr",
+   "Day Of Gathering",
+   "Resurrection"
+  ],
+  "faruqi": {
+   "page": 29,
+   "term": "AL ḤASHR"
+  }
+ },
+ {
+  "slug": "hasib-al",
+  "title": "Hasib, al-",
+  "ar": "الحسيب",
+  "tr": "al-Ḥasīb",
+  "def": "A divine name meaning He Who reckons human deeds and renders judgment on them.",
+  "what": [
+   "<em>Al-Ḥasīb</em> is one of the ninety-nine names of God. It means the One Who takes account. The Quran says: “God is ever a Reckoner over all things” (4:86), and “God suffices as a Reckoner” (33:39). It also means the One Who is sufficient, since the same root gives <em>ḥasb</em>, enough, as in <em>ḥasbunā Allāh</em>, “God is enough for us”. The two meanings fit together in the believer’s trust in God.",
+   "In the sense Faruqi gives, God keeps exact account of every deed and will judge it. “So whoever does an atom’s weight of good will see it, and whoever does an atom’s weight of evil will see it” (99:7–8). The name is both a warning and a comfort. Nothing is lost from the record of the righteous, and no one is wronged in the judgment. People are named ʿAbd al-Ḥasīb."
+  ],
+  "misread": "Taken to describe a harsh bookkeeper; the name also means the One Who is sufficient for His servants.",
+  "sources": [],
+  "terms": [
+   "hisab-al",
+   "judgement",
+   "divine-attributes",
+   "deeds"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hasib",
+   "Hasib"
+  ],
+  "faruqi": {
+   "page": 29,
+   "term": "AL ḤASĪB"
+  }
+ },
+ {
+  "slug": "hayy-al",
+  "title": "Hayy, al-",
+  "ar": "الحيّ ، المحيي",
+  "tr": "al-Ḥayy, al-Muḥyī",
+  "def": "Two divine names: the Ever-Living, and the One Who gives life.",
+  "what": [
+   "<em>Al-Ḥayy</em> is the Ever-Living. It appears at the opening of the Throne Verse: “God, there is no god but He, the Ever-Living, the Self-Subsisting” (2:255), and in surah 3 (3:2). The Quran also says: “Put your trust in the Ever-Living, who does not die” (25:58). His life has no beginning and no end, and it is the source of the life of all else.",
+   "<em>Al-Muḥyī</em> is the One Who gives life. The Quran points to the revival of dead land after rain as a sign that He raises the dead: “Look at the traces of God’s mercy, how He gives life to the earth after its death” (30:50). Faruqi joins the two names, since the Ever-Living is the giver of life. The pair appears in prayers such as the supplication <em>yā ḥayyu yā qayyūm</em>, “O Ever-Living, O Self-Subsisting”."
+  ],
+  "misread": "Both are rendered with the English “living” alone; the Quran presents the Ever-Living as the source of every other life.",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "death",
+   "akhira"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Hayy",
+   "Al-Muhyi",
+   "Muhyi",
+   "Hayy"
+  ],
+  "faruqi": {
+   "page": 31,
+   "term": "AL ḤAYY, AL MUḤYĪ"
+  }
+ },
+ {
+  "slug": "hijrah",
+  "title": "Hijrah",
+  "ar": "هجرة",
+  "tr": "hijra",
+  "def": "The departure of Muhammad (peace be upon him) from Mecca to Yathrib, later Medina; also the name of the Islamic lunar calendar, counted from July 622 CE.",
+  "what": [
+   "The <em>hijra</em> is the migration of the Prophet, Muhammad (peace be upon him), from Mecca to Yathrib in 622 CE, after years of persecution. Yathrib became known as <em>Madīnat al-Nabī</em>, “the city of the Prophet”, and then simply as Medina. Many of his Companions had left before him. The Quran praises “those who believed, emigrated and struggled in the way of God” (2:218), and the first emigrants are called the <em>Muhājirūn</em>.",
+   "Caliph ʿUmar fixed the beginning of the Muslim era in the year of the <em>hijra</em>, so the lunar calendar is called the <em>hijrī</em> calendar, abbreviated AH. Its first year began with the month of Muharram, which fell in July 622 CE. The event marks the founding of the first Muslim community-state at Medina, and the date is a reminder of the sacrifice made for the faith."
+  ],
+  "misread": "Called “the flight”, which suggests escape; the Arabic names a migration for the sake of faith and the founding of the community.",
+  "sources": [],
+  "terms": [
+   "hijra",
+   "hijri-calendar",
+   "ansar",
+   "mecca"
+  ],
+  "articles": [],
+  "type": "event",
+  "aliases": [
+   "Hijra",
+   "Migration",
+   "Hegira",
+   "Hejira"
+  ],
+  "faruqi": {
+   "page": 46,
+   "term": "HIJRAH"
+  }
+ },
+ {
+  "slug": "hikmah",
+  "title": "Hikmah",
+  "ar": "حكمة",
+  "tr": "ḥikma",
+  "def": "Wisdom that rests on the revelation of God’s will.",
+  "what": [
+   "<em>Ḥikma</em> is wisdom, the sound judgment that puts each matter in its right place. In the Quran it is a gift of God: “He gives wisdom to whom He wills, and whoever is given wisdom has been given much good” (2:269). The Prophet’s mission included teaching it: he recites the verses, purifies the people, and teaches “the Book and wisdom” (2:151). Luqman is the one given <em>ḥikma</em> in surah 31 (31:12).",
+   "The Quran also commands: “Call to the way of your Lord with wisdom and good counsel” (16:125). Faruqi ties wisdom to revelation, so it is the knowledge of God’s will applied to the case in hand. Scholars have taken the Quran’s “wisdom” to include the <em>sunna</em>. The same root gives <em>ḥukm</em>, judgment, and <em>al-Ḥakīm</em>, the divine name. Seeking wisdom is therefore a religious duty as well as a practical one."
+  ],
+  "misread": "Rendered “philosophy” in some historical translations; the Quranic term is wisdom grounded in revelation.",
+  "sources": [],
+  "terms": [
+   "hakim-al",
+   "knowledge",
+   "sunnah",
+   "reason-and-faith"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Hikma",
+   "Wisdom"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "ḤIKMAH"
+  }
+ },
+ {
+  "slug": "hisab-al",
+  "title": "Hisab, al-",
+  "ar": "الحساب",
+  "tr": "al-Ḥisāb",
+  "def": "The Final Judgment given by God, in which every human act is reckoned for its merit or demerit.",
+  "what": [
+   "<em>Al-ḥisāb</em> is the reckoning on the Day of Judgment. Every person will be shown the record of deeds. The Quran says: “As for him who is given his record in his right hand, he will be reckoned with an easy reckoning” (84:7–8). The scales will be set up with justice, “and if it be the weight of a mustard seed, We shall bring it” (21:47).",
+   "The Quran says God is “swift in reckoning” (2:202). It speaks of an exact account: “Whoever does an atom’s weight of good will see it, and whoever does an atom’s weight of evil will see it” (99:7–8). Muslims believe this to be part of their faith in the Last Day. The same root gives the name <em>al-Ḥasīb</em>, the Reckoner. In daily life, <em>muḥāsaba</em> is the habit of examining oneself before one is brought to account."
+  ],
+  "misread": "Rendered “accounting” as in a ledger; the Quranic term refers to the Final Judgment, with mercy as well as justice.",
+  "sources": [],
+  "terms": [
+   "judgement",
+   "hashr-al",
+   "hasib-al",
+   "akhira"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hisab",
+   "Hisab",
+   "Day Of Reckoning"
+  ],
+  "faruqi": {
+   "page": 29,
+   "term": "AL ḤISĀB"
+  }
+ },
+ {
+  "slug": "huda",
+  "title": "Huda",
+  "ar": "هدى",
+  "tr": "Hudā",
+  "def": "Divine guidance: the direction God gives humankind through revelation, and the Quran’s own description of itself.",
+  "what": [
+   "<em>Hudā</em> means guidance, and in Islamic usage it is the guidance that comes from God through revelation. The Quran opens by describing itself as “a guidance for the God-conscious” (2:2), and its first surah asks, “Guide us to the straight path” (1:6). The Quran says that the guidance of God is the true guidance (2:120), and it presents each prophet as bringing it to his people. Faruqi lists the word among the terms that name the revelation of Islam. It is a gift that people receive from God and must then act on. The same root gives <em>hidāya</em> (guidance) and <em>mahdī</em> (one who is guided)."
+  ],
+  "misread": "It is sometimes rendered “instruction” or “religion” in general, which loses the sense that guidance is something God gives and people accept.",
+  "sources": [
+   "The Quran treats guidance as God’s to give while leaving people responsible for their response: God guides whom He wills (2:213), yet the Book is sent for all people (2:185). Scholars read this as an invitation that can be accepted or refused."
+  ],
+  "terms": [
+   "quran",
+   "wahy",
+   "prophets",
+   "mahdi"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 47,
+   "term": "HUDĀ"
+  }
+ },
+ {
+  "slug": "hudud-al",
+  "title": "Hudud, al-",
+  "ar": "الحدود",
+  "tr": "al-Ḥudūd",
+  "def": "The fixed limits and penalties set by God or the Prophet for six offences: intoxication, theft, armed rebellion, adultery, false accusation of adultery and apostasy.",
+  "what": [
+   "<em>Ḥudūd</em> is the plural of <em>ḥadd</em>, meaning a limit or boundary. The Quran speaks of “the limits of God” (2:229) for the bounds that a believer must not cross. In the law, the word names the penalties that God or the Prophet (peace be upon him) fixed for particular offences. Faruqi lists six: intoxication, theft, armed rebellion, adultery, false accusation of adultery, and apostasy. The classical jurists differed on the exact list and on the basis for some items. They also surrounded these penalties with strict conditions of proof and treated any doubt as a reason not to apply them. They are matters for a court and never for private individuals."
+  ],
+  "misread": "The word is often translated as “Islamic criminal code” or simply “punishments”, which hides that the root meaning is limits.",
+  "sources": [
+   "The Quran gives penalties for theft (5:38), for those who wage war against society (5:33) and for false accusation (24:4), and it sets out the case of adultery in surah 24. Jurists drew the other penalties from the Prophet’s practice and debated them at length."
+  ],
+  "terms": [
+   "hudud",
+   "sharia",
+   "fiqh",
+   "qisas"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Hudud"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL ḤUDŪD"
+  }
+ },
+ {
+  "slug": "hujjah",
+  "title": "Hujjah",
+  "ar": "حجة",
+  "tr": "Ḥujjah",
+  "def": "Conclusive proof: the unanswerable evidence of God’s work, revelation or purpose.",
+  "what": [
+   "<em>Ḥujjah</em> means an argument or proof that settles a matter. In the Quran it is God’s proof against which no excuse stands: “Say: with God is the conclusive argument” (6:149). The Quran also says that messengers were sent so that people would have no argument against God after them (4:165). Revelation and the signs in creation are the proofs referred to. In later scholarship the word came to serve as a title of honour for eminent authorities, as in <em>Ḥujjat al-Islām</em>, the title given to al-Ghazali."
+  ],
+  "misread": "It is sometimes read only as a legal or debating term for an argument in court, while in the Quran it means the proof God has already given to every people.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "wahy",
+   "al-ghazali",
+   "prophets"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 28,
+   "term": "ḤUJJAH"
+  }
+ },
+ {
+  "slug": "husna-al",
+  "title": "Husna, al-",
+  "ar": "الحسنى",
+  "tr": "al-Ḥusnā",
+  "def": "The best reward God gives for virtue and righteousness; in the dual, al-Husnayayn, His rewards in this world and in the next.",
+  "what": [
+   "<em>Al-Ḥusnā</em> is the feminine form meaning “the best”. The Quran promises it to the doers of good: “For those who do good is the best (<em>al-ḥusnā</em>) and more” (10:26). In the sense of God’s positive reward for virtue and righteousness, it points to what awaits believers in the next life. The dual form <em>al-ḥusnayayn</em> means God’s rewards on earth and in paradise, the two kinds of good. The Quran uses the same dual in 9:52 for “one of the two best things”. The same adjective appears in the phrase “the most beautiful names” (<em>al-asmāʾ al-ḥusnā</em>) in 7:180."
+  ],
+  "misread": "It is easily confused with the Beautiful Names of God, which share the adjective but name a different subject.",
+  "sources": [],
+  "terms": [
+   "ihsan",
+   "akhira",
+   "paradise",
+   "divine-attributes"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Husna",
+   "Al-Husnayayn"
+  ],
+  "faruqi": {
+   "page": 29,
+   "term": "AL ḤUSNĀ"
+  }
  }
 ]

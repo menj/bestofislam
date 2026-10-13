@@ -88,7 +88,7 @@ function boi_login_url_base( $scheme = null ) {
  * @return string Empty when allowed, otherwise the reason.
  */
 function boi_login_slug_problem( $slug ) {
-	$reserved = array( 'wp-admin', 'wp-login', 'wp-login-php', 'admin', 'login', 'dashboard', 'wp-content', 'wp-includes', 'wp-json', 'feed', 'search', 'page', 'comments', 'embed', 'topic', 'author', 'reflections', 'site-map' );
+	$reserved = array( 'wp-admin', 'wp-login', 'wp-login-php', 'admin', 'login', 'dashboard', 'wp-content', 'wp-includes', 'wp-json', 'feed', 'search', 'page', 'comments', 'embed', 'topic', 'author', 'reflections', 'site-map', 'sitemap' );
 
 	if ( '' === $slug ) {
 		return __( 'Choose an address.', 'bestofislam' );

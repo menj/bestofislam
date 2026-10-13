@@ -84,6 +84,12 @@
    "Prayer",
    "Namaz",
    "Five Daily Prayers"
+  ],
+  "faruqi": [
+   {
+    "page": 36,
+    "term": "ṢALĀH"
+   }
   ]
  },
  {
@@ -247,6 +253,16 @@
    "Mushrikun",
    "Polytheism",
    "Association"
+  ],
+  "faruqi": [
+   {
+    "page": 37,
+    "term": "SHIRK"
+   },
+   {
+    "page": 37,
+    "term": "MUSHRIK"
+   }
   ]
  },
  {
@@ -321,6 +337,12 @@
   "aliases": [
    "Government",
    "Consultation"
+  ],
+  "faruqi": [
+   {
+    "page": 37,
+    "term": "SHŪRĀ"
+   }
   ]
  },
  {
@@ -485,6 +507,1160 @@
    "ramadan-last-ten-nights"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 35,
+    "term": "SUNNAH"
+   }
+  ]
+ },
+ {
+  "slug": "sabara",
+  "title": "Sabara",
+  "ar": "صبر",
+  "tr": "Ṣabara",
+  "def": "To resist evil or tragedy and remain firm in adherence to the cause of Islam; the root of ṣabr, patience.",
+  "what": [
+   "<em>Ṣabara</em> is the verb for holding firm. It means to resist evil or hardship and to remain steady in obeying God and in loyalty to the cause of Islam. The noun <em>ṣabr</em> is usually rendered “patience”, but it names active endurance, not passive waiting. The Quran tells believers to seek help through patience and prayer, and says that God is with the patient (2:153). It promises that the patient will be given their reward without measure (39:10). The prophets are held up as examples of this steadfastness under trials."
+  ],
+  "misread": "That patience means passive resignation, when <em>ṣabr</em> is firm resistance and perseverance.",
+  "sources": [],
+  "terms": [
+   "taqwa",
+   "dua",
+   "adversity"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sabr",
+   "Sabara"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "ṢABARA"
+  }
+ },
+ {
+  "slug": "sabatu-ahrufin",
+  "title": "Sab'atu Ahrufin",
+  "ar": "سبعة أحرف",
+  "tr": "Sabʿatu Aḥrufin",
+  "def": "The seven ways, or modes, in which certain words of the Quran were revealed and may be pronounced.",
+  "what": [
+   "<em>Sabʿatu aḥrufin</em> means “seven <em>aḥruf</em>”. It refers to the seven renderings, or ways of pronouncing certain words, in which the Quranic text was revealed. The report that the Quran was sent down in seven <em>aḥruf</em> is found in the collections of al-Bukhari and Muslim. The meaning of <em>aḥruf</em> has been much discussed. Scholars have given several views, and none is held by all. The topic is tied to the recitations (<em>qirāʾāt</em>) that Muslims still read today, all of which go back to the Prophet Muhammad (peace be upon him) through a chain of reciters."
+  ],
+  "misread": "That there are seven different Qurans, when the term refers to approved variations in reading one text.",
+  "sources": [
+   "The reason usually given is ease for a community of many tribes with differing speech. Scholars hold that the codex Uthman had copied preserved the text with these variations, and they distinguish the seven <em>aḥruf</em> from the later seven or ten canonical readings."
+  ],
+  "terms": [
+   "qiraat",
+   "quran",
+   "mushaf",
+   "rasm-al-qurani-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Sabatu Ahruf",
+   "Seven Ahruf"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "SAB'ATU AḤRUFIN"
+  }
+ },
+ {
+  "slug": "sabbaha",
+  "title": "Sabbaha",
+  "ar": "سبّح",
+  "tr": "Sabbaḥa",
+  "def": "To glorify God and declare Him free of every fault, with praise and thanks for what He has done.",
+  "what": [
+   "The verb <em>sabbaḥa</em> means to declare God exalted above every imperfection, and it is closely joined with praise and thanks. The Quran says that everything in the heavens and the earth glorifies Him (17:44), and it commands the believers to glorify Him morning and evening (33:42). The verbal noun is <em>tasbīḥ</em>, and the phrase <em>subḥāna Allāh</em> is its most familiar form. Muslims practise <em>tasbīḥ</em> inside the ritual prayer, in the bowing and the prostration, and after the prayer, where many repeat <em>subḥāna Allāh</em> thirty-three times. Faruqi lists the verb among the words whose sense of thanking God for His deeds is lost when it is rendered only as “to praise”."
+  ],
+  "misread": "Rendering the verb as plain praise loses the sense of declaring God free of every defect and of thanking Him for what He has done.",
+  "sources": [
+   "The Quran uses the verb in the past, present and imperative forms, and so shows that glorification belongs to all creation at all times (57:1, 62:1). The Prophet Muhammad (peace be upon him) taught that two phrases light on the tongue and heavy in the scale are <em>subḥāna Allāh wa bi-ḥamdihi</em> and <em>subḥāna Allāh al-ʿAẓīm</em> (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "terms": [
+   "subhana-allah",
+   "subhanahu",
+   "dhikr",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sabbaha",
+   "Sabbah",
+   "Tasbih"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "SABBAḤA"
+  }
+ },
+ {
+  "slug": "sabir",
+  "title": "Sabir",
+  "ar": "صابر",
+  "tr": "Ṣābir",
+  "def": "One who keeps firm against evil and hardship and holds to Islam under pressure; the plural is sabirun.",
+  "what": [
+   "A <em>ṣābir</em> is a person who practises <em>ṣabr</em>, the steady endurance that holds to obedience, refrains from sin and meets hardship without giving way. The word covers resisting evil or tragedy and also keeping a commitment to Islam when that is difficult. The plural is <em>ṣābirūn</em> or, in the accusative, <em>ṣābirīn</em>. The Quran says, “God is with the patient” (2:153), and promises that the patient will be given their reward “without measure” (39:10). Prophets such as Job and Jacob are presented as examples. The usual English word “patient” suggests passive waiting, whereas the Arabic describes an active and persistent firmness."
+  ],
+  "misread": "The English rendering “patient” suggests passive waiting, while the Arabic describes active and persistent resistance and loyalty.",
+  "sources": [
+   "The Quran links patience with prayer as the two supports of the believer (2:45, 2:153) and praises those who remain patient in poverty, illness and in times of danger (2:177). Scholars divide <em>ṣabr</em> into patience in obeying God, patience in avoiding what He forbids, and patience in what He decrees."
+  ],
+  "terms": [
+   "adversity",
+   "job",
+   "jacob",
+   "taqwa"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sabir",
+   "Sabirun",
+   "Sabirin",
+   "Sabirin"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "ṢĀBIR"
+  }
+ },
+ {
+  "slug": "sahih-al",
+  "title": "Sahih, al-",
+  "ar": "الصحيح",
+  "tr": "al-Ṣaḥīḥ",
+  "def": "A hadith collection whose reports meet strict standards of soundness; the name is given to the two sahihs and to the other four main collections.",
+  "what": [
+   "<em>Al-Ṣaḥīḥ</em> means “the sound” or “the authentic”. As a title it belongs to the collections of Muhammad ibn Ismaʿil al-Bukhari and Muslim ibn al-Hajjaj, who each set out to include only reports whose chain of narrators and text met strict tests. Faruqi uses the name for the six widely trusted collections: al-Bukhari, Muslim, Abu Dawud al-Sijistani, al-Tirmidhi, al-Nasaʾi and Ibn Majah. Readers should know that the title <em>Ṣaḥīḥ</em> is strictly carried by the first two, while the other four are called <em>Sunan</em>, and they include reports that scholars grade as good or weak as well as sound. The six together are known as <em>al-kutub al-sitta</em>, “the six books”."
+  ],
+  "misread": "The six books are sometimes treated as equal in rank, although scholars place al-Bukhari and Muslim above the rest and grade individual reports in all of them.",
+  "sources": [
+   "Scholars generally rank Sahih al-Bukhari first and Sahih Muslim second, and reports found in both carry the highest standing. Later scholars such as Ibn al-Salah set out the conditions of a sound report: a connected chain, trustworthy and accurate narrators, and no hidden defect or irregularity."
+  ],
+  "terms": [
+   "hadith",
+   "bukhari-al",
+   "isnad",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "book",
+  "aliases": [
+   "Al-Sahih",
+   "Sahih",
+   "Sahihayn",
+   "Al-Sihah"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "AL ṢAḤĪḤ"
+  }
+ },
+ {
+  "slug": "sajada",
+  "title": "Sajada",
+  "ar": "سجد",
+  "tr": "Sajada",
+  "def": "To prostrate in worship of God, with forehead, nose, palms, knees and toes on the ground.",
+  "what": [
+   "<em>Sajada</em> means to bow down to the ground in worship. In the ritual prayer the worshipper places the forehead, nose, palms, knees and toes on the floor, which is the lowest and humblest posture, and says words of glorification. The act is directed to God alone. The Quran commands, “Prostrate and draw near” (96:19), and it states that all creation prostrates to God (22:18). The angels were told to prostrate to Adam as a mark of honour, and Iblis refused (2:34). The Prophet Muhammad (peace be upon him) said that the servant is nearest to his Lord when in prostration (Sahih Muslim). Certain verses of the Quran call for a prostration of recitation, <em>sajdat al-tilāwa</em>."
+  ],
+  "misread": "Prostration is sometimes read as the self-abasement of a slave before a king, when it is an act of closeness to God and is offered to Him alone.",
+  "sources": [
+   "A report in Sahih al-Bukhari and Sahih Muslim has the Prophet say that he was commanded to prostrate on seven parts: the forehead (with the nose), the two hands, the two knees and the two feet. Scholars cite it as the source for the posture."
+  ],
+  "terms": [
+   "sujud",
+   "salah",
+   "adam",
+   "iblis"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sajada",
+   "Sajdah",
+   "Sajda"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "SAJADA"
+  }
+ },
+ {
+  "slug": "sakhkhara",
+  "title": "Sakhkhara",
+  "ar": "سخّر",
+  "tr": "Sakhkhara",
+  "def": "To make something subservient to human beings by God’s command, so that they may use it with gratitude.",
+  "what": [
+   "The verb <em>sakhkhara</em> means to put something at the service of another and to bend it to a use. In the Quran it is God who does this: “He has made subservient to you what is in the heavens and on the earth” (45:13). The idea carries two points. The world is created fit for human use, and human beings, who did not make it, owe thanks to the One who did. Muslim thinkers have taken the idea to support inquiry into nature, and also trusteeship, since what is placed at one’s service is a trust and not unlimited property."
+  ],
+  "misread": "Rendering the verb as “to subdue” or “to conquer” suggests human mastery by force, whereas the Quran says that God, and not man, makes things serve.",
+  "sources": [
+   "The verb is also used in the invocation said on mounting a ride, “Glory to Him who has made this subservient to us” (43:13), which reminds the traveller that the animal or vehicle is a favour from God."
+  ],
+  "terms": [
+   "subhana-alladhi-sakhkhara-lana-hadha",
+   "environment",
+   "animals",
+   "creation"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sakhkhara",
+   "Taskhir",
+   "Sakhar"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "SAKHKHARA"
+  }
+ },
+ {
+  "slug": "salah-al-fard",
+  "title": "Salah al-Fard",
+  "ar": "صلاة الفرض",
+  "tr": "Ṣalāh al-Farḍ",
+  "def": "The obligatory ritual prayer: the five daily prayers that every adult Muslim must perform; neglecting them without excuse is a sin.",
+  "what": [
+   "<em>Ṣalāh al-farḍ</em> is the prayer that the <em>sharīʿa</em> makes a binding duty. The five daily prayers are the chief example: <em>fajr</em> (dawn), <em>ẓuhr</em> (midday), <em>ʿaṣr</em> (afternoon), <em>maghrib</em> (sunset) and <em>ʿishāʾ</em> (night). The Quran says that prayer is “prescribed for the believers at fixed times” (4:103). Most schools also place the Friday congregational prayer and the funeral prayer in the obligatory class, the Friday prayer as a personal duty for men who are resident and able, the funeral prayer as a duty on the community. The word <em>farḍ</em> contrasts with <em>nāfila</em> and <em>sunna</em>, which are optional and recommended prayers. A Muslim who misses an obligatory prayer is expected to make it up."
+  ],
+  "misread": "The book’s listing for this phrase describes it as commendable but not obligatory, which reverses the sense of the word farḍ, meaning an obligation.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that Islam is built on five, and prayer is named after the declaration of faith (Sahih al-Bukhari and Sahih Muslim). A man asked him whether he had any duty beyond the five daily prayers, and the Prophet answered that he had none unless he chose to do more."
+  ],
+  "terms": [
+   "salah",
+   "salah-al-nafilah",
+   "salah-al-sunnah",
+   "five-pillars"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Salat al-Fard",
+   "Fard Prayer",
+   "Obligatory Prayer",
+   "Salah Fard"
+  ],
+  "faruqi": {
+   "page": 55,
+   "term": "ṢALAH AL FARḌ"
+  }
+ },
+ {
+  "slug": "salah-al-nafilah",
+  "title": "Salah al-Nafilah",
+  "ar": "صلاة النافلة",
+  "tr": "Ṣalāh al-Nāfila",
+  "def": "A voluntary ritual prayer offered in addition to the obligatory ones; it earns reward when performed and carries no blame when omitted.",
+  "what": [
+   "<em>Nāfila</em> means an addition or a surplus, and <em>ṣalāh al-nāfila</em> is the optional prayer that a Muslim adds to the obligatory ones. The best known is the night vigil, <em>tahajjud</em>. The Quran tells the Prophet to rise at night for it as an additional duty for him (17:79). Voluntary prayers are offered at many times: before or after the obligatory prayers, in the forenoon (<em>ḍuḥā</em>), and on greeting a mosque. Their purpose is to bring the worshipper nearer to God and to make up any shortfall in the obligatory prayers. Performing them is commendable, and leaving them out brings no sin."
+  ],
+  "misread": "Calling these prayers optional can suggest that they matter little, although the tradition treats them as a major means of growing close to God.",
+  "sources": [
+   "A hadith qudsi in Sahih al-Bukhari reports God saying that His servant keeps drawing near to Him through voluntary acts of worship until He loves him. The Prophet Muhammad (peace be upon him) also said that the best prayer after the obligatory prayers is the prayer in the middle of the night (Sahih Muslim)."
+  ],
+  "terms": [
+   "salah",
+   "salah-al-fard",
+   "salah-al-sunnah",
+   "dua"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Salat al-Nafila",
+   "Nafl Prayer",
+   "Nafilah",
+   "Voluntary Prayer",
+   "Supererogatory Prayer"
+  ],
+  "faruqi": {
+   "page": 55,
+   "term": "SALAH AL NĀFILAH"
+  }
+ },
+ {
+  "slug": "salah-al-sunnah",
+  "title": "Salah al-Sunnah",
+  "ar": "صلاة السنّة",
+  "tr": "Ṣalāh al-Sunna",
+  "def": "A ritual prayer that follows the example of the Prophet and is strongly encouraged; Muslims who omit it are not punished but forgo its reward.",
+  "what": [
+   "<em>Ṣalāh al-sunna</em> is the prayer that the Prophet Muhammad (peace be upon him) offered regularly alongside the obligatory prayers, and that he encouraged others to offer. Typical examples are two <em>rakʿas</em> before the dawn prayer, and sets of <em>rakʿas</em> before and after the midday prayer and after the sunset and night prayers. Jurists call the most regular of these <em>sunna muʾakkada</em>, the confirmed sunna. Faruqi describes the class as obligatory in the sense of a strong duty of conscience, while he notes that no punishment follows from neglecting it. Most jurists place it below the <em>farḍ</em> and so call it recommended and not required. Muslims who keep these prayers gain reward and make up any shortfall in the obligatory prayers."
+  ],
+  "misread": "The book’s wording calls the sunna prayer obligatory, which can mislead; the schools treat it as strongly recommended and distinct from the farḍ.",
+  "sources": [
+   "Umm Habiba reported that the Prophet said that whoever prays twelve <em>rakʿas</em> in a day and night apart from the obligatory prayers will have a house built for him in Paradise (Sahih Muslim). Scholars cite this and similar reports as the basis for the regular sunna prayers."
+  ],
+  "terms": [
+   "salah",
+   "salah-al-fard",
+   "salah-al-nafilah",
+   "sunnah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Salat al-Sunna",
+   "Sunnah Prayer",
+   "Sunna Prayer",
+   "Sunan Prayers"
+  ],
+  "faruqi": {
+   "page": 55,
+   "term": "ṢALAH AL SUNNAH"
+  }
+ },
+ {
+  "slug": "salam",
+  "title": "Salam",
+  "ar": "سلام",
+  "tr": "Salām",
+  "def": "Peace; God’s peace, meaning His greeting and blessing, and the greeting that Muslims give one another.",
+  "what": [
+   "<em>Salām</em> means peace, safety and freedom from harm. In the Quran it is a word of greeting from God to the people of Paradise: “‘Peace’ is a word from a Merciful Lord” (36:58). It shares its root with <em>Islām</em> and with <em>al-Salām</em>, a name of God. Muslims greet one another with <em>as-salāmu ʿalaykum</em>, “peace be upon you”, and the reply is <em>wa ʿalaykum as-salām</em>. Faruqi explains the word as the peace of God, that is, His greeting and blessing, so that a person who gives the greeting is invoking God’s peace on the one greeted. It also closes the ritual prayer, when the worshipper turns right and left and says it."
+  ],
+  "misread": "Translating salam as “peace” alone drops the sense of a blessing given by God and wished for others, and it hides the link to the name al-Salam.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) told his Companions to spread the greeting among themselves, and said that they would not believe until they loved one another (Sahih Muslim). The Quran asks believers to reply to a greeting with a better one or at least with the same (4:86)."
+  ],
+  "terms": [
+   "salam-al",
+   "greeting-non-muslims",
+   "islam",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Salam",
+   "Salaam",
+   "Peace Of God"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "SALĀM"
+  }
+ },
+ {
+  "slug": "salam-al",
+  "title": "Salam, al-",
+  "ar": "السلام",
+  "tr": "al-Salām",
+  "def": "A name of God: the Source of peace, safety and blessing, who grants security to His creatures.",
+  "what": [
+   "<em>Al-Salām</em> is among the beautiful names of God. The Quran lists it in the closing verses of Surah al-Hashr, between “the Holy” and “the Granter of security”: “He is God, other than whom there is no god, the Sovereign, the Holy, the Source of Peace (<em>al-Salām</em>)” (59:23). Faruqi glosses it as the Source of peace and blessing. Commentators understood it to mean that God is free of every fault and that He grants safety and peace to His servants. The name stands behind the Muslim greeting, because a person who says <em>as-salāmu ʿalaykum</em> asks God to give His peace to the other. The Quran also calls Paradise <em>dār al-salām</em>, the abode of peace (6:127)."
+  ],
+  "misread": "Taken only as a word for the absence of conflict, the name loses its sense of safety and wholeness that comes from God alone.",
+  "sources": [
+   "A report in Sahih Muslim says that after the final greeting of the prayer the Prophet Muhammad (peace be upon him) used to say, “O God, You are Peace, and from You comes peace; blessed are You, O Possessor of majesty and honour.” Many Muslims repeat it after each prayer."
+  ],
+  "terms": [
+   "salam",
+   "divine-attributes",
+   "allah",
+   "salah"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Salam",
+   "As-Salam",
+   "Assalam"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "AL SALĀM"
+  }
+ },
+ {
+  "slug": "salihat-al",
+  "title": "Salihat, al-",
+  "ar": "الصالحات",
+  "tr": "al-Ṣāliḥāt",
+  "def": "The righteous deeds that God calls on men and women to perform, which earn the reward of Paradise.",
+  "what": [
+   "<em>Al-Ṣāliḥāt</em> is the plural of <em>ṣāliḥa</em>, a deed that is sound, right and fitting. The Quran uses the phrase more than fifty times, nearly always joined to belief: “Those who believe and do righteous deeds, theirs are gardens beneath which rivers flow” (2:25). Faith and action are paired, and neither is complete without the other. The term covers acts of worship, honest dealing, kindness to family, care for the poor, and the avoidance of harm. It addresses both men and women: “Whoever does righteous deeds, male or female, and is a believer, We shall give a good life” (16:97). A deed counts as <em>ṣāliḥ</em> when it is done for God and in line with what He has taught."
+  ],
+  "misread": "Translating the phrase as “good works” can suggest earning salvation by deeds alone, while the Quran always joins the deeds to faith and relies on God’s mercy.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that deeds are judged by intentions (Sahih al-Bukhari and Sahih Muslim). He also said that none will enter Paradise by his deeds alone, and he added that this applied even to himself unless God covered him with mercy (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "terms": [
+   "deeds",
+   "iman",
+   "paradise",
+   "good"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Salihat",
+   "Salihat",
+   "Righteous Deeds",
+   "Good Works",
+   "Salihah"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "AL ṢĀLIḤĀT"
+  }
+ },
+ {
+  "slug": "salla",
+  "title": "Salla",
+  "ar": "صلّى",
+  "tr": "Ṣallā",
+  "def": "To perform the ritual prayer of Islam, which every adult Muslim must offer five times a day at set hours.",
+  "what": [
+   "The verb <em>ṣallā</em> means to perform the <em>ṣalāh</em>, the ritual prayer of Islam. It has a fixed form of standing, recitation, bowing, prostration and sitting, and it is performed at five set times: dawn, midday, afternoon, sunset and night. Every adult Muslim who is of sound mind must offer it, and it is the second pillar of Islam. The Quran commands, “Establish the prayer”",
+   "(2:43), and says that prayer is prescribed at fixed times (4:103). The noun is <em>ṣalāh</em>, the plural <em>ṣalawāt</em>. The word is also used when God and the angels “send blessings” on the Prophet (33:56), where it means mercy and blessing. Faruqi lists it as a term to be kept in Arabic form, because “to pray” in English covers any petition."
+  ],
+  "misread": "The English verb “to pray” covers any request addressed to God, while ṣallā names one specific act of worship with a set form and set times.",
+  "sources": [
+   "Jurists rely on the prophetic practice for the details of the prayer. The Prophet Muhammad (peace be upon him) told his Companions, “Pray as you have seen me pray” (Sahih al-Bukhari)."
+  ],
+  "terms": [
+   "salah",
+   "salah-al-fard",
+   "five-pillars",
+   "ablutions"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Salla",
+   "Salat",
+   "Sala"
+  ],
+  "faruqi": {
+   "page": 36,
+   "term": "ṢALLĀ"
+  }
+ },
+ {
+  "slug": "salla-allahu-alayhi-wa-sallam",
+  "title": "Salla Allahu 'Alayhi wa Sallam",
+  "ar": "صلى الله عليه وسلم",
+  "tr": "Ṣallā Allāhu ʿalayhi wa sallam",
+  "def": "May God bless him and grant him peace: said after the name of the Prophet Muhammad or when he is called the Prophet of God.",
+  "what": [
+   "The phrase <em>ṣallā Allāhu ʿalayhi wa sallam</em> means “may God send blessings and peace upon him”. Muslims say or write it every time they mention the Prophet Muhammad (peace be upon him), and also when they call him the Prophet of God. In English texts it is often given as “peace be upon him”. The Quran gives the basis: “God and His angels send blessings upon the Prophet. O you who believe, send blessings upon him and greet him with peace” (33:56). The practice shows love and respect for the one who brought the message. Faruqi lists it among the expressions that are said in Arabic and not replaced by a vague English equivalent."
+  ],
+  "misread": "The abbreviations SAW and PBUH can read as bare labels, whereas the phrase is a full invocation to God for blessing and peace upon the Prophet.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that whoever sends one blessing upon him, God sends ten upon that person (Sahih Muslim). Scholars therefore encourage Muslims to say the phrase in full whenever they mention him, in speech and in writing."
+  ],
+  "terms": [
+   "muhammad",
+   "honorifics",
+   "common-phrases",
+   "salam"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sallallahu Alayhi Wasallam",
+   "Sallallahu Alaihi Wasallam",
+   "SAW",
+   "SAWS",
+   "Peace Be Upon Him",
+   "PBUH",
+   "Salawat"
+  ],
+  "faruqi": {
+   "page": 58,
+   "term": "ṢALLĀ ALLAHU ‘ALAYHI WA SALLAM."
+  }
+ },
+ {
+  "slug": "sami-al",
+  "title": "Sami', al-",
+  "ar": "السميع",
+  "tr": "al-Samīʿ",
+  "def": "A name of God: the All-Hearing, who hears every call and responds to those who turn to Him.",
+  "what": [
+   "<em>Al-Samīʿ</em> means the One who hears everything, near or far, spoken aloud or kept silent. The Quran pairs it often with <em>al-ʿAlīm</em>, the All-Knowing, and with <em>al-Baṣīr</em>, the All-Seeing: “There is nothing like Him, and He is the All-Hearing, the All-Seeing” (42:11). Faruqi adds that He hears and responds to all calls. Believers draw comfort from the name because every prayer is heard. Ibrahim and Ismail built the Kaaba with the words, “Our Lord, accept this from us; You are the All-Hearing, the All-Knowing” (2:127). The name also warns, because God hears what people say in secret. In the ritual prayer the worshipper rising from the bow says, <em>samiʿa Allāhu li-man ḥamidah</em>, “God hears those who praise Him”."
+  ],
+  "misread": "Understood as simple hearing, the name loses the Quranic point that God also responds, which Faruqi stresses.",
+  "sources": [
+   "The Quran says that God heard the plea of the woman who disputed with the Prophet about her husband, and that He hears the conversation of both parties (58:1). Scholars cite the verse to show that nothing escapes His hearing, and the Muslim tradition teaches that He answers supplication."
+  ],
+  "terms": [
+   "divine-attributes",
+   "dua",
+   "allah",
+   "salam-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Sami",
+   "As-Sami",
+   "Al-Sami'",
+   "Sami"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "AL SAMĪ'"
+  }
+ },
+ {
+  "slug": "shafa",
+  "title": "Shaf'a",
+  "ar": "شفع",
+  "tr": "Shafaʿa",
+  "def": "To intercede with God on the Day of Judgement, which only those to whom He grants permission may do.",
+  "what": [
+   "The verb <em>shafaʿa</em> means to intercede, to plead for someone before another. In the Quran, intercession before God belongs to Him alone to allow: “Who is there that can intercede with Him except by His permission?” (2:255). The Quran adds that on the Day of Judgement intercession will benefit only those to whom God gives leave and with whose word He is pleased (20:109, 21:28). Faruqi therefore stresses that this act is permissible only for those to whom God has granted it. Muslims accept intercession by the Prophet Muhammad (peace be upon him) and others whom God permits, and they reject any mediator between a person and God in this life."
+  ],
+  "misread": "Intercession is sometimes taken as a claim that holy persons can force God’s hand, whereas the Quran makes every act of intercession depend on His permission.",
+  "sources": [
+   "The Prophet is reported to have said that each prophet had a prayer that was answered, and that he had kept his in reserve as intercession for his community on the Day of Judgement (Sahih al-Bukhari and Sahih Muslim). Scholars treat this as the basis for belief in his great intercession."
+  ],
+  "terms": [
+   "shafaah",
+   "intercession",
+   "akhira",
+   "muhammad"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Shafaʿa",
+   "Shafa",
+   "Shafaa"
+  ],
+  "faruqi": {
+   "page": 37,
+   "term": "SHAF'A"
+  }
+ },
+ {
+  "slug": "shafaah",
+  "title": "Shafa'ah",
+  "ar": "شفاعة",
+  "tr": "Shafāʿa",
+  "def": "Intercession with God: a plea made on behalf of another, which on the Day of Judgement is possible only with God’s permission.",
+  "what": [
+   "<em>Shafāʿa</em> is the noun for intercession, the act of pleading with God for another person. Faruqi defines it simply as intercession with God. The Quran treats it as something that belongs wholly to God: “Say, ‘To God belongs all intercession’” (39:44), and no one can intercede “except after His permission” (10:3). Muslims believe the Prophet Muhammad (peace be upon him)",
+   "will be granted the right to intercede on the Day of Judgement. Scholars also hold that others whom God permits, such as prophets, the righteous and martyrs, may intercede. Intercession differs from the idea of a priest or saint who stands between a worshipper and God. In this life every believer addresses God directly, and the Quran says that He is near and answers (2:186)."
+  ],
+  "misread": "Intercession is often compared with the Christian idea of a mediator, although in Islam no one acts as a mediator in this life and every act of intercession in the next depends on God’s leave.",
+  "sources": [
+   "The Quran rejects the claim of the idolaters who worshipped others in the hope of intercession, and says that those they invoke have no power to intercede (10:18, 39:43). The hadith reports on intercession are many, and scholars of the main schools affirm it as part of belief, while they disagree about who will receive it."
+  ],
+  "terms": [
+   "shafa",
+   "intercession",
+   "akhira",
+   "shirk"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Shafaah",
+   "Shafaʿa",
+   "Shafa'a",
+   "Intercession"
+  ],
+  "faruqi": {
+   "page": 37,
+   "term": "SHAFĀ'AH"
+  }
+ },
+ {
+  "slug": "shafakum-allah-wa-afakum",
+  "title": "Shafakum Allah wa 'Afakum",
+  "ar": "شفاكم الله وعافاكم",
+  "tr": "Shafākum Allāh wa ʿāfākum",
+  "def": "May God heal you and grant you well-being: a wish said to a person who is ill, especially when visiting the sick.",
+  "what": [
+   "The phrase <em>shafākum Allāh wa ʿāfākum</em> means “may God cure you and give you health”. The first verb, <em>shafā</em>, is to heal, and the second, <em>ʿāfā</em>, is to grant safety and well-being. Muslims say it to someone who is ill, and it is often heard when visiting the sick, in the form <em>shafāka Allāh</em> to one person. Visiting the sick is a duty of one Muslim toward another, and the visitor is encouraged to pray for the patient and to speak with hope. In the Quran, Abraham says of God, “When I am ill, it is He who heals me” (26:80), which gives the believer the sense that healing comes from God, while the physician is the means."
+  ],
+  "misread": "English “get well soon” is a wish about the patient, but the Arabic form turns it into a prayer to God for healing and for well-being.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) listed visiting the sick among the rights of a Muslim over another (Sahih al-Bukhari and Sahih Muslim). He used to pray over a sick person, “Remove the harm, O Lord of the people, and heal; You are the Healer, and there is no healing except Your healing” (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "terms": [
+   "dua",
+   "common-phrases",
+   "kindness",
+   "brotherhood"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Shafakum Allah",
+   "Shafakumullah",
+   "Shafakallah",
+   "Shafaka Allah"
+  ],
+  "faruqi": {
+   "page": 60,
+   "term": "SHAFĀKUM ALLAH WA ‘AFĀKUM."
+  }
+ },
+ {
+  "slug": "shahada",
+  "title": "Shahada",
+  "ar": "شهد",
+  "tr": "Shahida",
+  "def": "To bear witness that there is no god but God and that Muhammad is His servant and messenger.",
+  "what": [
+   "The verb <em>shahida</em> means to witness, to testify to what one knows and has seen. Faruqi gives it, in the religious sense, as to bear witness that there is no God but God and that Muhammad (peace be upon him) is His prophet, servant and messenger. The Quran uses it of God Himself (3:18). The same root yields <em>shahāda</em>, the declaration of faith; <em>shāhid</em>, a witness; and <em>shahīd</em>, one who dies bearing witness to the truth. In the declaration the verb is in the first person, <em>ashhadu</em>, “I bear witness”, so the believer takes part in the act."
+  ],
+  "misread": "The English “witness” may suggest only a spectator, while the Arabic verb carries the duty of a person who testifies to the truth with full knowledge and commitment.",
+  "sources": [
+   "The Quran calls the Muslim community a witness over mankind (2:143). The first of the five pillars is the <em>shahāda</em>, which the Prophet Muhammad (peace be upon him) placed first when he said that Islam is built on five, and the first of these is the witnessing that there is no god but God and that Muhammad is the Messenger of God (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "terms": [
+   "shahadah-al",
+   "five-pillars",
+   "tawhid",
+   "iman"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Shahada",
+   "Shahida",
+   "Shahid"
+  ],
+  "faruqi": {
+   "page": 37,
+   "term": "SHAHADA"
+  }
+ },
+ {
+  "slug": "shahadah-al",
+  "title": "Shahadah, al-",
+  "ar": "الشهادة",
+  "tr": "al-Shahāda",
+  "def": "The declaration of faith, witnessing that there is no god but God and that Muhammad is His servant and messenger; also the words of that declaration.",
+  "what": [
+   "<em>Al-shahāda</em> is both the act of bearing witness and the wording that is spoken. Faruqi notes the two senses: the act of witnessing that there is no god but God and that Muhammad (peace be upon him) is His prophet, servant and messenger, and the verbal content of the act. The words are <em>ashhadu an lā ilāha illā Allāh wa ashhadu anna Muḥammadan rasūl Allāh</em>.",
+   "A person enters Islam by saying these words sincerely, and Muslims repeat them in the call to prayer, in the ritual prayer, and at the end of life. The first half affirms <em>tawḥīd</em>, the oneness of God, and the second affirms the prophethood of Muhammad. The word <em>shahāda</em> also appears in <em>al-ghayb wa al-shahāda</em>, “the unseen and the seen”, in the Quran (6:73)."
+  ],
+  "misread": "The shahada is sometimes called a creed to be recited, although it is a personal act of witnessing that carries commitment.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) is reported to have said that whoever says <em>lā ilāha illā Allāh</em> sincerely will enter Paradise (Musnad Ahmad). Scholars add that the statement has conditions of knowledge, sincerity and truthfulness, so that it is expressed in deeds as well as words."
+  ],
+  "terms": [
+   "shahada",
+   "tawhid",
+   "five-pillars",
+   "adhan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Shahadah",
+   "Shahadah",
+   "Shahada",
+   "Kalimat Al-Shahada",
+   "Declaration Of Faith"
+  ],
+  "faruqi": {
+   "page": 37,
+   "term": "AL SHAHĀDAH"
+  }
+ },
+ {
+  "slug": "shakur-al",
+  "title": "Shakur, al-",
+  "ar": "الشكور",
+  "tr": "al-Shakūr",
+  "def": "A name of God: the Appreciative, ever worthy of thanks, who rewards even a little good generously.",
+  "what": [
+   "<em>Al-Shakūr</em> is one of the beautiful names of God. It comes from the root <em>sh-k-r</em>, which means both to thank and to reward. Faruqi glosses it as the One who is always worthy of being thanked. Commentators add that God recognises the smallest good deed and rewards it many times over. The Quran uses it in the words of the people of Paradise: “Praise be to God who has removed all sorrow from us; our Lord is Forgiving and Appreciative” (35:34). It also says that God multiplies what is given and forgives (64:17). The name teaches the believer to be thankful in return, because the One who is thanked is also the One who gives."
+  ],
+  "misread": "Taking the name as a plain “Thankful” gives the odd picture of God thanking creatures, when it describes His generous acceptance and reward of the good that they do.",
+  "sources": [
+   "Scholars also relate the name to the human word <em>shākir</em>, a person who gives thanks. The Prophet Muhammad (peace be upon him) prayed at night until his feet swelled, and when Aisha asked why, he said, “Should I not be a thankful servant?” (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "forgiveness",
+   "dhikr"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Shakur",
+   "As-Shakur",
+   "Shakur"
+  ],
+  "faruqi": {
+   "page": 37,
+   "term": "AL SHAKŪR"
+  }
+ },
+ {
+  "slug": "sharaa",
+  "title": "Shara'a",
+  "ar": "شرع",
+  "tr": "Sharaʿa",
+  "def": "To lay down law: God’s act of legislating for any matter of human life, personal, family or public.",
+  "what": [
+   "The verb <em>sharaʿa</em> means to set out a path or ordain a rule. In the Quran God is the subject: “He has ordained for you of religion what He enjoined upon Noah” (42:13). Faruqi describes the act as legislation by God for any matter of concern in human life, personal, family or public. The Quran also criticises those who set up laws that God has not given: “Or do they have partners who have laid down (<em>sharaʿū</em>) for them in religion what God has not permitted?” (42:21). In Islamic thought the lawgiver is God alone, and scholars interpret His law."
+  ],
+  "misread": "Translating the verb as “to legislate” may suggest human lawmaking, while the Islamic usage reserves the act for God.",
+  "sources": [
+   "Jurists call the revealed rulings <em>aḥkām sharʿiyya</em> and distinguish them from rules fixed by custom or reason. They treat the ruler’s regulations as valid only when they fall within the limits God has set."
+  ],
+  "terms": [
+   "shariah-al",
+   "sharia",
+   "hukm",
+   "fiqh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Shara'a",
+   "Shaaraa",
+   "Sharaa",
+   "Shariʿa Verb"
+  ],
+  "faruqi": {
+   "page": 36,
+   "term": "SHARA'A"
+  }
+ },
+ {
+  "slug": "shariah-al",
+  "title": "Shari'ah, al-",
+  "ar": "الشريعة",
+  "tr": "al-Sharīʿa",
+  "def": "The whole body of God’s law in Islam: its worship and ritual, its ethics, and its legal rules.",
+  "what": [
+   "<em>Al-Sharīʿa</em> originally meant the path to a watering place. The Quran uses it of the way God sets for a community: “Then We put you on a clear way (<em>sharīʿa</em>) of the matter, so follow it” (45:18). Faruqi defines it as the collective name for all the laws of Islam, including its religious and liturgical, ethical and legal systems. The sharia is therefore wider than a penal code. It covers prayer, fasting and charity, family life, business, and conduct toward neighbours, and each act is placed in one of five classes: required, recommended, permitted, disliked or forbidden."
+  ],
+  "misread": "In popular English “sharia” is reduced to harsh punishments, although criminal penalties form a small part of a system that is mainly about worship, ethics and daily dealings.",
+  "sources": [
+   "Scholars of the four Sunni schools and others agree on the general aims of the law, which later jurists such as al-Ghazali and al-Shatibi summed up as protecting religion, life, intellect, lineage and property. The details of rulings vary by school and by period."
+  ],
+  "terms": [
+   "sharia",
+   "fiqh",
+   "sunnah",
+   "sharaa"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Shariah",
+   "Al-Shari'a",
+   "Shariʿa",
+   "Shari'ah",
+   "Shariah",
+   "Sharia Law"
+  ],
+  "faruqi": {
+   "page": 36,
+   "term": "AL SHARĪ'AH"
+  }
+ },
+ {
+  "slug": "sidq",
+  "title": "Sidq",
+  "ar": "صدق",
+  "tr": "Ṣidq",
+  "def": "Truthfulness and sincerity; the verbal noun of sadaqa, to speak the truth and keep one’s word.",
+  "what": [
+   "<em>Ṣidq</em> is the verbal noun of <em>ṣadaqa</em>, to speak truly. It means truthfulness in speech, and also sincerity of intention and faithfulness in action, so that a person’s word, belief and conduct agree. The Quran says, “O you who believe, fear God and be with the truthful” (9:119). The word appears in praise of the prophets. Abraham asks for “a tongue of truth among the later generations” (26:84), and Ismail and Idris are called truthful (19:54, 19:56). A person marked by great truthfulness is a <em>ṣiddīq</em>, the title given to Abu Bakr. The related word <em>ṣadaqa</em>, charity, comes from the same root, because giving shows that a person’s faith is true."
+  ],
+  "misread": "Rendering sidq only as “honesty” covers speech alone, while the Arabic also includes sincerity of heart and fidelity in deeds.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that truthfulness leads to righteousness and righteousness leads to Paradise, and that lying leads to wrongdoing and wrongdoing to the Fire (Sahih al-Bukhari and Sahih Muslim). Before his mission the Meccans called him al-Amin, the trustworthy."
+  ],
+  "terms": [
+   "ethics-and-conduct",
+   "abu-bakr",
+   "taqwa",
+   "iman"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sidq",
+   "Sadaqa",
+   "Truthfulness",
+   "Siddiq"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "ṢIDQ"
+  }
+ },
+ {
+  "slug": "sirat-al",
+  "title": "Sirat, al-",
+  "ar": "الصراط",
+  "tr": "al-Ṣirāṭ",
+  "def": "The straight path of righteousness revealed through the Prophet Muhammad for humanity’s guidance, usually joined to al-Mustaqim.",
+  "what": [
+   "<em>Al-Ṣirāṭ</em> means the road, and in the Quran it is nearly always called <em>al-ṣirāṭ al-mustaqīm</em>, the straight path. The opening surah asks, “Guide us to the straight path” (1:6), a prayer that every Muslim recites in each unit of the ritual prayer. Faruqi defines it as the straight path of righteousness revealed through the Prophet Muhammad (peace be upon him) for the guidance of humanity.",
+   "The Quran describes the path as that of those whom God has favoured, and not of those who earned His anger or went astray (1:7). It also says that God’s way is what He has taught: “This is My straight path, so follow it” (6:153). In later Islamic teaching the same word names the bridge across Hell that people cross on the Day of Judgement."
+  ],
+  "misread": "The path is sometimes taken to mean mere strictness, although the word means a clear and direct way that avoids both excess and neglect.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) is reported to have drawn a line in the sand and said that this is the way of God, then drew lines to either side and said that on each of these is a devil calling to it (Musnad Ahmad). Scholars cite the report to explain the single straight way and the many roads that lead away."
+  ],
+  "terms": [
+   "salah",
+   "quran",
+   "muhammad",
+   "hukm"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Sirat",
+   "As-Sirat",
+   "Sirat Al-Mustaqim",
+   "The Straight Path",
+   "Straight Path"
+  ],
+  "faruqi": {
+   "page": 35,
+   "term": "AL ṢIRĀṬ"
+  }
+ },
+ {
+  "slug": "subhana-alladhi-sakhkhara-lana-hadha",
+  "title": "Subhana alladhi Sakhkhara Lana Hadha",
+  "ar": "سبحان الذي سخّر لنا هذا وما كنا له مقرنين",
+  "tr": "Subḥāna alladhī sakhkhara lanā hādhā wa mā kunnā lahu muqrinīn",
+  "def": "Glory to Him who has put this at our service, for we could not have managed it ourselves: said on mounting any means of transport.",
+  "what": [
+   "This invocation is said when a person boards a mount or any vehicle: a camel or horse in the past, and a car, a ship or an aircraft today. Its words come from the Quran: “Glory be to Him who has made this subservient to us, for we could not have mastered it ourselves” (43:13). The last word, <em>muqrinīn</em>, means those able to control or bring under control.",
+   "The invocation reminds the traveller that the means of travel is a favour from God, since human beings did not create it and could not have made it serve them. The Quran continues with the words, “And to our Lord we shall return” (43:14), which remind the traveller of the final journey. Many Muslims add these words and ask God for a safe journey."
+  ],
+  "misread": "The phrase is sometimes heard as a charm for safety, although it is an expression of thanks that places the credit with God.",
+  "sources": [
+   "It is reported that the Prophet Muhammad (peace be upon him) said it when he had mounted and settled on his animal, after saying God’s name and praise, and then he asked for forgiveness (Sunan Abi Dawud and Jami al-Tirmidhi). The words follow the Quran’s verse about riding ships and animals (43:12–14)."
+  ],
+  "terms": [
+   "sakhkhara",
+   "subhana-allah",
+   "dua",
+   "dhikr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Subhana Alladhi Sakhkhara Lana",
+   "Travel Dua",
+   "Dua Of Riding",
+   "Dua For Travel"
+  ],
+  "faruqi": {
+   "page": 62,
+   "term": "SUBḤĀNA ALLADHĪ SAKHKHARA LANĀ HĀDHA WA MĀ KUNNA LAHU MUQRINĪN."
+  }
+ },
+ {
+  "slug": "subhana-allah",
+  "title": "Subhana Allah",
+  "ar": "سبحان الله",
+  "tr": "Subḥāna Allāh",
+  "def": "Glory be to God: a declaration that God is free of every fault, said in praise or wonder on any occasion.",
+  "what": [
+   "<em>Subḥāna Allāh</em> literally declares God far above any imperfection or any likeness to creatures. Muslims say it in wonder at something beautiful, in surprise, and in worship. Faruqi notes that it may be said on all occasions. The Quran uses the phrase often, as in “Glory be to God, above what they associate with Him” (23:91). The phrase is part of daily remembrance (<em>dhikr</em>). Many Muslims repeat it thirty-three times after the ritual prayer, together with <em>al-ḥamdu li-llāh</em> and <em>Allāhu akbar</em>. English renderings such as “Glory to God” are acceptable only as a gloss, because the Arabic stresses God’s freedom from fault, which affirms His oneness and transcendence."
+  ],
+  "misread": "English “praise God” or “wow” captures the wonder but loses the meaning that God is far above every defect.",
+  "sources": [
+   "The Quran says that all creatures glorify Him but that human beings do not understand their glorification (17:44). The Prophet Muhammad (peace be upon him) is reported to have said that to say <em>subḥāna Allāh</em> is to plant a tree in Paradise (Jami al-Tirmidhi)."
+  ],
+  "terms": [
+   "subhana-allah-wa-bi-hamdih",
+   "subhanahu",
+   "dhikr",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Subhanallah",
+   "Subhan Allah",
+   "Subhanu Allah",
+   "Glory Be To God"
+  ],
+  "faruqi": {
+   "page": 56,
+   "term": "SUBḤANA ALLAH."
+  }
+ },
+ {
+  "slug": "subhana-allah-wa-bi-hamdih",
+  "title": "Subhana Allah wa bi Hamdih",
+  "ar": "سبحان الله وبحمده",
+  "tr": "Subḥāna Allāh wa bi-ḥamdih",
+  "def": "Glory be to God and praise be to Him: a phrase joining the declaration of His freedom from fault with thanks, said on any occasion.",
+  "what": [
+   "The phrase joins two acts: <em>tasbīḥ</em>, declaring God free of all imperfection, and <em>ḥamd</em>, praising and thanking Him for His perfection and His gifts. It can be rendered “Glory be to God, and I praise Him”. Faruqi renders it as praise and thanksgiving that belong to God, and says it may be said on all occasions. The Quran has the combined form, as in “Glorify the praise of your Lord before the rising of the sun and before its setting” (20:130). Muslims say it in the ritual prayer, in the morning and evening remembrance, and at the close of a gathering."
+  ],
+  "misread": "Treating it as a repeated word for “thank you” misses that it joins glorification with praise.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that there are two phrases that are light on the tongue, heavy in the scale and loved by the Merciful: <em>subḥāna Allāh wa bi-ḥamdihi, subḥāna Allāh al-ʿAẓīm</em> (Sahih al-Bukhari and Sahih Muslim). He also said that whoever says it a hundred times in a day has his sins wiped away even if they are like the foam of the sea (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "terms": [
+   "subhana-allah",
+   "subhanahu-wa-taala",
+   "dhikr",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Subhanallahi Wa Bihamdihi",
+   "Subhan Allah Wa Bihamdihi",
+   "Subhanallah Wabihamdihi"
+  ],
+  "faruqi": {
+   "page": 57,
+   "term": "SUBḤĀNA ALLAH WA BI ḤAMDIH."
+  }
+ },
+ {
+  "slug": "subhanahu",
+  "title": "Subhanahu",
+  "ar": "سبحانه",
+  "tr": "Subḥānahu",
+  "def": "Glory be to Him: an invocation that Muslims say or write whenever God is mentioned.",
+  "what": [
+   "<em>Subḥānahu</em> is a form of <em>subḥāna</em>, “glory be”, with the pronoun “Him”. Muslims add it after the name of God, in the form <em>Allāh subḥānahu</em>, to declare Him free of every fault and above every comparison. The Quran has the word several times: “Glory be to Him! He is exalted above what they associate with Him” (10:18). It is usually followed by <em>wa taʿālā</em>, “and may He be exalted”. Faruqi lists the single word in his section on words and the longer pair among the expressions. The practice keeps the believer aware that God has no likeness, so that His mention always carries an act of respect."
+  ],
+  "misread": "English writers often replace it with a bare abbreviation, which hides the fact that it is a short prayer of exaltation.",
+  "sources": [
+   "The Quran uses the form both in God’s own voice and in the speech of prophets and angels, as in the angels’ reply, “Glory be to You, we have no knowledge except what You taught us” (2:32). Scholars regard it as an act of remembrance that gains reward."
+  ],
+  "terms": [
+   "subhanahu-wa-taala",
+   "subhana-allah",
+   "taala",
+   "honorifics"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Subhanahu",
+   "Subhanahu Wa Taala",
+   "SWT"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "SUBḤĀNAHU"
+  }
+ },
+ {
+  "slug": "subhanahu-wa-taala",
+  "title": "Subhanahu wa Ta'ala",
+  "ar": "سبحانه وتعالى",
+  "tr": "Subḥānahu wa taʿālā",
+  "def": "Glory be to Him and may He be exalted: said after the name of God, and abbreviated SWT in English texts.",
+  "what": [
+   "The phrase joins two verbs of exaltation. <em>Subḥānahu</em> declares God free of every fault, and <em>wa taʿālā</em> adds that He is high above all things. Muslims say it, or write it, after the name of God, as in “Allah <em>subḥānahu wa taʿālā</em>”. Faruqi notes that it may be said on all occasions. Its two parts appear together in the Quran: “Glory be to Him, and exalted is He above what they associate with Him” (6:100; also 16:1). In English texts it is often abbreviated to SWT. Faruqi’s approach is to keep the Arabic in full and to gloss it, since an abbreviation hides the fact that the words are an expression of reverence."
+  ],
+  "misread": "The abbreviation SWT looks like a mere label, but the full Arabic is a prayer that exalts God above any limit or comparison.",
+  "sources": [
+   "Scholars of language note that <em>taʿālā</em> is a verb of high rank and that the Quran reserves it for God when it speaks of exaltation above partners and likenesses (7:190, 27:63). Recording the phrase after His name is regarded as a mark of respect, though not a fixed duty."
+  ],
+  "terms": [
+   "subhanahu",
+   "taala",
+   "subhana-allah",
+   "honorifics"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Subhanahu Wa Taala",
+   "Subhanahu Wata'ala",
+   "SWT",
+   "S.W.T."
+  ],
+  "faruqi": {
+   "page": 56,
+   "term": "SUBḤANAHU WA TA‘ĀLĀ. (SWT)"
+  }
+ },
+ {
+  "slug": "sujud",
+  "title": "Sujud",
+  "ar": "سجود",
+  "tr": "Sujūd",
+  "def": "Prostration in the ritual prayer, with the forehead on the ground; the singular is sajda.",
+  "what": [
+   "<em>Sujūd</em> is the plural of <em>sajda</em> and also the general noun for prostrating. In every unit (<em>rakʿa</em>) of the ritual prayer the worshipper makes two prostrations, placing the forehead, nose, palms, knees and toes on the ground and saying words of glorification. It is the lowest posture of the prayer. The Quran refers to those who bow and prostrate as a mark of the believers (48:29) and commands, “O you who believe, bow and prostrate and worship your Lord” (22:77). Beyond the daily prayer, there are also prostrations for reciting certain verses, called <em>sajdat al-tilāwa</em>, and the prostration of thanks, <em>sajdat al-shukr</em>, which some schools allow."
+  ],
+  "misread": "The posture is often described in English as self-abasement, but it is an act of worship in which the worshipper draws close to God and shows that all honour belongs to Him.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that the closest a servant is to his Lord is when in prostration, so one should make many supplications in it (Sahih Muslim). The wording most Muslims say in it is <em>subḥāna rabbiya al-aʿlā</em>, “glory to my Lord, the Most High”."
+  ],
+  "terms": [
+   "sajada",
+   "salah",
+   "dua",
+   "subhana-allah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sujud",
+   "Sajdah",
+   "Sajda",
+   "Prostration"
+  ],
+  "faruqi": {
+   "page": 55,
+   "term": "SUJŪD"
+  }
+ },
+ {
+  "slug": "sunnah-al",
+  "title": "Sunnah, al-",
+  "ar": "السنّة",
+  "tr": "al-Sunna",
+  "def": "The path and example of the Prophet Muhammad, made up of what he said, did, approved or condemned.",
+  "what": [
+   "<em>Al-Sunna</em> means a way or a customary practice. In Islamic law it names the example of the Prophet Muhammad (peace be upon him): what he said, what he did, and what he approved or disapproved. It is the second source of Islamic guidance after the Quran, and it is largely known through the hadith, the reports passed down by his Companions. The Quran tells believers, “In the Messenger of God you have a good example” (33:21), and “Whatever the Messenger gives you, take it, and whatever he forbids you, abstain from it” (59:7). Faruqi divides the sunna into three kinds: his words (<em>qawliyya</em>), his deeds (<em>fiʿliyya</em>) and his tacit approvals (<em>taqrīriyya</em>)."
+  ],
+  "misread": "The sunna is sometimes treated as a synonym of hadith, although the hadith are the reports and the sunna is the way of life they describe.",
+  "sources": [
+   "Most jurists treat the sunna as an authority that explains the Quran: it details the prayer, the fast, the alms and the pilgrimage. Muslim scholars developed the science of hadith to separate sound reports from weak ones, and the sunna in its legal sense rests on the reports that meet their standards."
+  ],
+  "terms": [
+   "sunnah",
+   "hadith",
+   "sunnah-al-filiyyah-al",
+   "sunnah-al-qawliyyah-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Sunnah",
+   "Al-Sunna",
+   "Sunna"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "AL SUNNAH"
+  }
+ },
+ {
+  "slug": "sunnah-al-filiyyah-al",
+  "title": "Sunnah al-Fi'liyyah, al-",
+  "ar": "السنة الفعلية",
+  "tr": "al-Sunna al-Fiʿliyya",
+  "def": "The sunna of action: what the Prophet Muhammad did and taught his Companions to do, as Muslims have practised ever since.",
+  "what": [
+   "<em>Al-sunna al-fiʿliyya</em> is the part of the Prophet’s example made up of his actions. The Companions watched how he prayed, fasted, performed the pilgrimage and dealt with people, and they passed the practice on, so that the community has repeated it in every generation. Faruqi describes it as the body of deeds and practices that he taught them to do and that Muslims have performed ever since. The Prophet Muhammad (peace be upon him) told his followers, “Pray as you have seen me pray” (Sahih al-Bukhari) and, during the pilgrimage, “Take your rites from me” (Sahih Muslim). The way of performing the daily prayer, which the Quran commands without describing in detail, is the chief example of this sunna."
+  ],
+  "misread": "People sometimes think the Quran alone specifies the prayer, when its form was shown by the Prophet’s actions and carried on by the community.",
+  "sources": [
+   "Scholars treat deeds that the Prophet did as part of his role as a prophet and teacher as binding examples, and deeds that came from his human nature, such as how he dressed or ate, as optional models. Jurists discuss which of his acts were obligatory and which were recommended or permitted."
+  ],
+  "terms": [
+   "sunnah-al",
+   "sunnah",
+   "sunnah-al-qawliyyah-al",
+   "salah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Sunnah al-Fiʿliyya",
+   "Sunnah Fi'liyyah",
+   "Practical Sunnah",
+   "Sunna Fi'liyya"
+  ],
+  "faruqi": {
+   "page": 51,
+   "term": "AL SUNNAH AL FI'LIYYAH"
+  }
+ },
+ {
+  "slug": "sunnah-al-qawliyyah-al",
+  "title": "Sunnah al-Qawliyyah, al-",
+  "ar": "السنة القولية",
+  "tr": "al-Sunna al-Qawliyya",
+  "def": "The sunna of speech: the sayings of the Prophet Muhammad that lay down guidance for Muslims.",
+  "what": [
+   "<em>Al-sunna al-qawliyya</em> is the part of the Prophet’s example made up of his words. It consists of his sayings that set out commands, prohibitions, advice and teachings, and Faruqi describes it as the body of sayings that contain prescriptions for Muslims. This is the part of the sunna that is most clearly preserved in the collections of hadith. Examples include his statement that deeds are judged by their intentions (Sahih al-Bukhari and Sahih Muslim). The Quran stresses the duty to heed him: “Whoever obeys the Messenger has obeyed God” (4:80). The Prophet Muhammad (peace be upon him) spoke concisely, and his sayings, called <em>jawāmiʿ al-kalim</em>, are valued for their brevity and breadth."
+  ],
+  "misread": "Equating the sunna only with the Prophet’s sayings overlooks that it also includes his actions and approvals.",
+  "sources": [
+   "Hadith scholars classify sayings by the strength of their chain of narrators and by how many people transmitted them. A saying reported by so many that agreement on a falsehood is impossible is called <em>mutawātir</em>, and the great majority are reports by fewer narrators, which are examined one by one."
+  ],
+  "terms": [
+   "sunnah-al",
+   "hadith",
+   "isnad",
+   "sunnah-al-filiyyah-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Sunnah al-Qawliyya",
+   "Sunnah Qawliyyah",
+   "Verbal Sunnah",
+   "Sunna Qawliyya"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL SUNNAH AL QAWLIYYAH"
+  }
+ },
+ {
+  "slug": "sunnah-al-taqririyyah-al",
+  "title": "Sunnah al-Taqririyyah, al-",
+  "ar": "السنة التقريرية",
+  "tr": "al-Sunna al-Taqrīriyya",
+  "def": "The sunna of approval: reports that the Prophet approved or disapproved of conduct done in his presence or brought to his notice.",
+  "what": [
+   "<em>Al-sunna al-taqrīriyya</em> is the third kind of prophetic example, after his words and his deeds. The word <em>taqrīr</em> means confirming or approving. It covers occasions when a Companion did or said something in the presence of the Prophet Muhammad (peace be upon him), or when it was reported to him, and he either approved it or disapproved. Faruqi describes it as the hadith reports in which the Prophet approved or disapproved, praised or condemned, certain kinds of conduct. His silence in front of an act that he could have forbidden was taken as approval, since a prophet does not leave wrongdoing unchallenged."
+  ],
+  "misread": "Silence is sometimes assumed to mean indifference, but in this category the Prophet’s silence is read as approval of the act because of his duty to correct what is wrong.",
+  "sources": [
+   "Scholars note that this sunna applies only when the act was done with the Prophet’s knowledge and he was able to object. They also hold that it shows what is permitted and does not make an act obligatory, unless other evidence says so."
+  ],
+  "terms": [
+   "sunnah-al",
+   "sunnah",
+   "sunnah-al-qawliyyah-al",
+   "sunnah-al-filiyyah-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Sunnah al-Taqririyya",
+   "Sunnah Taqririyyah",
+   "Tacit Sunnah",
+   "Sunna Taqririyya",
+   "Taqrir"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL SUNNAH AL TAQRĪRIYYAH"
+  }
  }
 ]

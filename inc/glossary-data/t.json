@@ -146,7 +146,13 @@
   ],
   "articles": [],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "faruqi": [
+   {
+    "page": 47,
+    "term": "TAQWĀ"
+   }
+  ]
  },
  {
   "slug": "tawhid",
@@ -290,5 +296,693 @@
    "Ahzab",
    "Khandaq"
   ]
+ },
+ {
+  "slug": "taala",
+  "title": "Taʿala",
+  "ar": "تعالى",
+  "tr": "Taʿālā",
+  "def": "To be exalted above all things, which only God can be; used after His name to affirm His transcendence.",
+  "what": [
+   "<em>Taʿālā</em> is a verb from the root <em>ʿ-l-w</em>, meaning to be high. Faruqi explains it as to transcend everything, an act of which only God is capable. When said after His name, as in <em>Allāh taʿālā</em>, it means “may God be affirmed as standing high above all things”. The Quran uses it in this sense: “Exalted is God, the True King” (20:114), and “Exalted is God above what they associate with Him” (7:190). The word expresses the Islamic teaching that God is unlike His creation and is beyond every comparison, which Faruqi called divine transcendence. Muslims use it after the name of God in speech and writing."
+  ],
+  "misread": "English “Most High” or “Exalted” is a fair gloss, but a simple adjective hides that the Arabic is a verb stating what God is above.",
+  "sources": [
+   "The Quran says there is nothing like Him (42:11), and it joins the verb with the denial that He has partners or offspring (23:91–92). Scholars of creed cite these verses to teach that God’s attributes are not to be compared with those of creatures."
+  ],
+  "terms": [
+   "subhanahu-wa-taala",
+   "tawhid",
+   "divine-attributes",
+   "allah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Taala",
+   "Ta'ala",
+   "Tala"
+  ],
+  "faruqi": {
+   "page": 40,
+   "term": "TAʿĀLĀ"
+  }
+ },
+ {
+  "slug": "taawanu-ala-al-birri-wal-taqwa",
+  "title": "Ta'awanu 'ala al-Birri wal-Taqwa",
+  "ar": "تعاونوا على البر والتقوى ولا تعاونوا على الإثم والعدوان",
+  "tr": "Taʿāwanū ʿalā al-birri wa al-taqwā wa lā taʿāwanū ʿalā al-ithmi wa al-ʿudwān",
+  "def": "Cooperate in goodness and piety, and do not cooperate in sin and aggression: a Quranic command (5:2) used as a rule for joint action.",
+  "what": [
+   "These words are part of Quran 5:2: “Cooperate in righteousness and piety, and do not cooperate in sin and aggression.” The first half commands help toward <em>birr</em>, which means goodness and dutiful kindness, and <em>taqwā</em>, awareness of God that guards a person from wrong. The second half forbids joining in <em>ithm</em>, sin, and <em>ʿudwān</em>, transgression against others. Muslims quote the verse as a guide for working with others, whether in a charity, in business or in public life. The test is the purpose of the act and not the identity of the partner. Faruqi lists it among the Quranic expressions that serve as a standing rule for the community."
+  ],
+  "misread": "The verse is sometimes read as limiting cooperation to Muslims, whereas it sets a moral test on the aim of the joint work.",
+  "sources": [
+   "Commentators, including al-Tabari, took the verse to command mutual help in all that pleases God and to forbid helping a wrongdoer. A hadith in Sahih al-Bukhari has the Prophet Muhammad (peace be upon him) say that one should help a brother, whether he is the wrongdoer or the wronged, and he explained that helping the wrongdoer means restraining him."
+  ],
+  "terms": [
+   "taqwa",
+   "aggression",
+   "brotherhood",
+   "ethics-and-conduct"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Taawanu Ala Al-Birr Wa Al-Taqwa",
+   "Cooperate In Righteousness And Piety",
+   "Wa Ta'awanu Alal Birri Wat Taqwa"
+  ],
+  "faruqi": {
+   "page": 63,
+   "term": "TA‘ĀWANŪ ‘ALĀ AL BIRRI WA AL TAQWĀ WA LĀ TA‘ĀWANŪ ‘ALĀ AL ITHMI WA'L ‘UDWĀN."
+  }
+ },
+ {
+  "slug": "taba",
+  "title": "Taba",
+  "ar": "تاب",
+  "tr": "Tāba",
+  "def": "To repent to God for sins and resolve not to repeat them; the verbal noun is tawba.",
+  "what": [
+   "<em>Tāba</em> means to turn back, and in religion it means to turn back to God from sin. The noun is <em>tawba</em>. Faruqi describes it as repenting to God for one's sins and committing oneself never to repeat them. Scholars name three conditions: to stop the sin, to feel regret, and to resolve not to return to it. If the sin wronged another person, the wrong must also be put right. The Quran invites everyone: “O you who believe, turn to God in sincere repentance” (66:8), and “Do not despair of God’s mercy; God forgives all sins” (39:53). God is called <em>al-Tawwāb</em>, the Ever-Returning, because He turns to the repentant in mercy."
+  ],
+  "misread": "The English “repent” can suggest guilt and penance, while the Arabic stresses turning back to God and His readiness to accept the return.",
+  "sources": [
+   "The Prophet Muhammad (peace be upon him) said that God stretches out His hand by night to accept the repentance of the one who sinned by day, and by day for the one who sinned by night, until the sun rises from the west (Sahih Muslim). He himself asked God for forgiveness more than seventy times a day (Sahih al-Bukhari)."
+  ],
+  "terms": [
+   "atonement-and-repentance",
+   "istighfar",
+   "forgiveness",
+   "taqwa"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Taba",
+   "Tawba",
+   "Tawbah",
+   "Repentance"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "TĀBA"
+  }
+ },
+ {
+  "slug": "tabaraka-ismu-rabbika-dhi-al-jalal-wal-ikram",
+  "title": "Tabaraka Ismu Rabbika dhi al-Jalal wal-Ikram",
+  "ar": "تبارك اسم ربك ذي الجلال والإكرام",
+  "tr": "Tabāraka ismu rabbika dhī al-jalāli wa al-ikrām",
+  "def": "Blessed be the name of your Lord, Lord of majesty and honour: said whenever the name of God is mentioned.",
+  "what": [
+   "This sentence is the last verse of Surah al-Rahman: “Blessed is the name of your Lord, Possessor of majesty and honour” (55:78). The verb <em>tabāraka</em> means to be blessed and exalted, rich in good. The phrase <em>dhū al-jalāl wa al-ikrām</em>, Possessor of majesty and honour, is a title of God. Muslims say these words, or part of them, when the name of God is mentioned, to show reverence. It is one of several expressions, among them <em>subḥānahu wa taʿālā</em> and <em>jalla jalāluhu</em>, with which the believer marks the divine name. The Quran also uses the same title earlier in the surah (55:27), where it says that the Face of the Lord will remain."
+  ],
+  "misread": "The phrase is not a name of God itself, although people sometimes take it that way; it is a verse of the Quran used as a sign of respect.",
+  "sources": [
+   "A report says that after the final greeting of the prayer the Prophet Muhammad (peace be upon him) would say, “O God, You are Peace and from You comes peace; blessed are You, O Possessor of majesty and honour” (Sahih Muslim). It joins the same title to the prayer’s close."
+  ],
+  "terms": [
+   "salam-al",
+   "subhanahu-wa-taala",
+   "honorifics",
+   "divine-attributes"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tabaraka Ismu Rabbika",
+   "Tabarak Ismu Rabbika Dhil Jalali Wal Ikram"
+  ],
+  "faruqi": {
+   "page": 58,
+   "term": "TABĀRAKA ISMU RABBIKA DHĪ AL JALĀL WAL IKRĀM."
+  }
+ },
+ {
+  "slug": "tabarraja",
+  "title": "Tabarraja",
+  "ar": "تبرّج",
+  "tr": "Tabarraja",
+  "def": "To display oneself, one’s beauty or one’s wealth out of vanity; the verbal noun is tabarruj.",
+  "what": [
+   "The verb <em>tabarraja</em> means to show off, to expose oneself or one’s adornment so as to be noticed. Faruqi gives it as to expose oneself, one's beauty or one's property in vanity. The point lies in the motive: display for the sake of pride or attention. The Quran forbids it to the wives of the Prophet Muhammad (peace be upon him): “Do not display yourselves as in the former times of ignorance” (33:33). It also exempts older women who no longer expect marriage from some outer requirements, provided they do not display adornment (24:60). Scholars apply the word to both sexes and to wealth, speech and manners as well as dress."
+  ],
+  "misread": "Tabarruj is commonly narrowed to a rule about women’s clothing, when the Quran uses it for vain display in general.",
+  "sources": [
+   "Commentators on 33:33 connect the phrase “former times of ignorance” with the pre-Islamic habit of women walking before men with exposed adornment in order to attract them. Jurists derived from the verse and from 24:31 the guidance that modesty applies in dress, manner and speech."
+  ],
+  "terms": [
+   "hijab",
+   "modesty-and-dress",
+   "jahiliyya",
+   "ethics-and-conduct"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tabarraja",
+   "Tabarruj",
+   "Tabarruj Al-Jahiliyya"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "TABARRAJA"
+  }
+ },
+ {
+  "slug": "tabattala",
+  "title": "Tabattala",
+  "ar": "تبتّل",
+  "tr": "Tabattala",
+  "def": "To devote oneself wholly to God, in purity and single-minded worship; the noun is tabtil.",
+  "what": [
+   "The verb <em>tabattala</em> comes from a root meaning to cut off or separate. In religion it means to detach oneself from distractions and to give oneself fully to God. Faruqi describes it as to pursue a life of total purity and devotion to God. The Quran says to the Prophet, “Remember the name of your Lord and devote yourself to Him with complete devotion (<em>tabtīlan</em>)” (73:8).",
+   "The devotion it asks is inward and does not require leaving society. The Quran criticises the monasticism that people invented without a command from God (57:27). The Prophet Muhammad (peace be upon him) refused when a Companion wished to give up marriage, and said that he himself prayed and slept, fasted and broke the fast, and married (Sahih al-Bukhari and Sahih Muslim)."
+  ],
+  "misread": "Tabattul is sometimes read as a call to celibacy and withdrawal, though the Prophet explicitly rejected giving up marriage and ordinary life.",
+  "sources": [
+   "In reports from the early scholars, the word was glossed as devoting oneself to God and cutting the heart off from others in the act of worship. The Prophet forbade the Companion Uthman ibn Mazʿun from living in abstinence, and said that he was sent with a gentle and tolerant religion (Sahih al-Bukhari and Musnad Ahmad)."
+  ],
+  "terms": [
+   "ihsan",
+   "taqwa",
+   "dhikr",
+   "marriage"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tabattala",
+   "Tabattul",
+   "Tabtil"
+  ],
+  "faruqi": {
+   "page": 24,
+   "term": "TABATTALA"
+  }
+ },
+ {
+  "slug": "tabi-al",
+  "title": "Tabi', al-",
+  "ar": "التابع",
+  "tr": "al-Tābiʿ",
+  "def": "A follower: a Muslim of the generation after the Companions who met and learned from them; the plural is al-tabiun.",
+  "what": [
+   "<em>Al-tābiʿ</em> means “the follower”. The term names a Muslim of the generation after the Companions who met one or more of them, without meeting the Prophet Muhammad (peace be upon him) himself. The plural is <em>al-tābiʿūn</em>. They were the first to receive the Quran and the sunna from the Companions, and so they form the second link in the chain of transmission. The Quran praises “those who followed them in excellence” (9:100). The Prophet is reported to have said that the best generation is his own, then those who follow them, then those who follow the latter (Sahih al-Bukhari and Sahih Muslim). Well-known followers include Sa‘id ibn al-Musayyib and al-Hasan al-Basri. Many early commentators and jurists belonged to this generation."
+  ],
+  "misread": "The word is sometimes rendered “successors”, which suggests rulers, when it names scholars and pious Muslims who learned directly from the Companions.",
+  "sources": [
+   "Hadith scholars treat the followers as a key stage in the chain of narrators, since reports passed from the Prophet to a Companion and then to a follower. The next generation, who learned from the followers, are called <em>atbāʿ al-tābiʿīn</em>."
+  ],
+  "terms": [
+   "companions-of-the-prophet",
+   "hadith",
+   "isnad",
+   "tafsir"
+  ],
+  "articles": [],
+  "type": "group",
+  "aliases": [
+   "Al-Tabi",
+   "At-Tabi",
+   "Tabi",
+   "Tabiun",
+   "Tabiin",
+   "Successors"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "AL TĀBI'"
+  }
+ },
+ {
+  "slug": "tafsir-bil-mathur-al",
+  "title": "Tafsir bil-Ma'thur, al-",
+  "ar": "التفسير بالمأثور",
+  "tr": "al-Tafsīr bi-l-maʾthūr",
+  "def": "Interpretation of the Quran by transmitted material: other Quranic verses, the Prophet’s sayings, and the words of the Companions and their followers.",
+  "what": [
+   "<em>Al-tafsīr bi-l-maʾthūr</em> is the way of explaining the Quran that rests on what has been handed down. It draws first on other verses of the Quran, since the Quran explains itself, and then on the sayings and example of the Prophet Muhammad (peace be upon him). After these come the explanations of the Companions and, in some accounts, of the followers. Faruqi defines it as exegesis carried out by means of traditions received from the Prophet and his Companions. It differs from <em>tafsīr bi-l-raʾy</em>, which relies on reasoned judgement within the rules of the Arabic language and the law. Well-known works of the transmitted type include <em>Jāmiʿ al-bayān</em> by al-Tabari and the commentary of Ibn Kathir."
+  ],
+  "misread": "The transmitted type is sometimes assumed to be uncritical, although its scholars grade each report by its chain of narrators.",
+  "sources": [
+   "Scholars generally hold that the strongest explanation of a verse is another verse, followed by the Prophet’s explanation, then the Companions’ reports, since they witnessed the revelation. Caution is applied because weak or invented reports, including borrowed tales called <em>isrāʾīliyyāt</em>, entered some works and are screened out by critics."
+  ],
+  "terms": [
+   "tafsir",
+   "quran",
+   "hadith",
+   "tabi-al"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Tafsir bi-l-Mathur",
+   "Tafsir Bil Mathur",
+   "Tafsir Bi al-Ma'thur",
+   "Tafsir Bi-L-Ma'thur",
+   "Transmitted Exegesis"
+  ],
+  "faruqi": {
+   "page": 49,
+   "term": "AL TAFSĪR BIL MA'THŪR"
+  }
+ },
+ {
+  "slug": "tafsir-bil-ray-al",
+  "title": "Tafsir bil-Ra'y, al-",
+  "ar": "التفسير بالرأي",
+  "tr": "al-Tafsīr bi’l-Raʾy",
+  "def": "Interpretation of the Quran by the free exercise of the interpreter’s own reasoning, as distinct from interpretation handed down from the Prophet and earlier generations",
+  "what": [
+   "The phrase means “interpretation by opinion”. Scholars of <em>tafsīr</em> traditionally set it beside <em>al-tafsīr bi’l-ma’thūr</em>, the interpretation that is transmitted: the Quran explained by the Quran, by the sayings of the Prophet (peace be upon him), and by the Companions. Interpretation by reason uses the mind, together with knowledge of the Arabic language and the Quranic sciences, to draw out meaning that no transmitted report states. Scholars distinguished a praiseworthy kind of <em>raʾy</em>, which rests on language, sound method and knowledge, from a blameworthy kind, which bends the text to desire or speaks without knowledge. Many large commentaries combine both approaches, and the debate concerns the conditions for sound reasoning rather than whether reasoning is allowed."
+  ],
+  "misread": "That it means reading the Quran however one likes, when the tradition sets strict conditions on the use of reason.",
+  "sources": [],
+  "terms": [
+   "tafsir",
+   "quran",
+   "ijtihad",
+   "asbab-al-nuzul"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Tafsir bil-Ra'y",
+   "Tafsir bi’l-Ray",
+   "Tafsir bi al-Ray"
+  ],
+  "faruqi": {
+   "page": 49,
+   "term": "AL TAFSĪR BIL RA'Y"
+  }
+ },
+ {
+  "slug": "tagha",
+  "title": "Tagha",
+  "ar": "طغى",
+  "tr": "Ṭaghā",
+  "def": "To exceed all limits by seizing illegitimate power or by enforcing rules that violate the Shariah",
+  "what": [
+   "The verb <em>ṭaghā</em> carries the sense of overflowing a boundary. The Quran uses it of water that rose beyond its bounds (69:11) and of Pharaoh, who is told to go to the one who “has transgressed” (20:24). It also warns that a person becomes <em>yaṭghā</em> when he sees himself as self-sufficient (96:6). In the sense given by Ismail al-Faruqi, the word names the abuse of power: a ruler or authority assumes a right that belongs to Allah alone, or imposes prescriptions that contradict the divine law. Related words are <em>ṭāghiyah</em>, a tyrant, and its plural <em>ṭughāh</em>."
+  ],
+  "misread": "That it is a general word for any wrongdoing, when it names the overstepping of limits by someone who holds power.",
+  "sources": [],
+  "terms": [
+   "taghiyah",
+   "zulm",
+   "sharia",
+   "pharaoh"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 38,
+   "term": "ṬAGHĀ"
+  }
+ },
+ {
+  "slug": "taghammada-allah-al-faqid-bi-rahmatih",
+  "title": "Taghammada Allah al-Faqid bi Rahmatih",
+  "ar": "تغمد الله الفقيد برحمته وأسكنه جنته وألهمكم الصبر والعزاء",
+  "tr": "Taghammada Allāhu al-Faqīda bi-Raḥmatih",
+  "def": "A condolence to the bereaved: may Allah cover the departed with His mercy, house him in Paradise, and grant you patience and consolation",
+  "what": [
+   "This is a customary prayer said to a family that has lost a member, at the house of mourning or at the funeral. Literally it means: “May Allah envelop the departed in His mercy, settle him in His garden, and inspire you with patience and consolation.” The verb <em>taghammada</em> means to cover or wrap, and <em>al-faqīd</em> is the one who has been lost, that is, the deceased. The words are spoken softly and briefly, as a gesture of sharing in the family’s loss.",
+   "It combines a prayer for the dead with a prayer for the living. Muslims turn to patience at a death in the spirit of the Quranic words “Surely we belong to Allah, and to Him we return” (2:156). The wording is a long-established courtesy, and people also use shorter words of comfort in their own language. Visitors usually say it on first meeting the family and may repeat it when they leave."
+  ],
+  "misread": "That a condolence in English, such as “my condolences”, carries the same meaning, when the Arabic is a prayer for the dead and for the family.",
+  "sources": [],
+  "terms": [
+   "funeral",
+   "dua",
+   "death",
+   "grave"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 60,
+   "term": "TAGHAMMADA ALLAH AL FAQĪD BI RAḤMATIH WA ASKANAHU JANNATAH WA ALHAMAKUM AL ṢABRA WA'L AZĀ’."
+  }
+ },
+ {
+  "slug": "taghiyah",
+  "title": "Taghiyah",
+  "ar": "طاغية",
+  "tr": "Ṭāghiyah",
+  "def": "Noun from the verb tagha, naming the overstepping of all limits and used for a tyrant; the plural is tughah",
+  "what": [
+   "<em>Ṭāghiyah</em> is formed from the verb <em>ṭaghā</em>, to exceed every limit. Ismail al-Faruqi lists it as a verbal noun, with the plural <em>ṭughāh</em>. In Arabic it can name the act of transgression and also the person who commits it, a tyrant who rules without regard for any bound. The Quran uses the word in the account of Thamud, who were destroyed by the <em>ṭāghiyah</em> (69:5), a term that commentators explain as the overwhelming blast or as the transgression that brought it on. Because the word concerns power used without limit, it is closely linked with <em>zulm</em>, injustice."
+  ],
+  "misread": "That it is a purely political word for a dictator, when the root describes any exceeding of the bounds set by Allah.",
+  "sources": [],
+  "terms": [
+   "tagha",
+   "zulm",
+   "zalim",
+   "thamud"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 38,
+   "term": "ṬAGHĪYAH"
+  }
+ },
+ {
+  "slug": "taharah",
+  "title": "Taharah",
+  "ar": "طهارة",
+  "tr": "Ṭahārah",
+  "def": "The state of purity, and the body of law on ritual and physical cleanliness and the means of attaining it",
+  "what": [
+   "<em>Ṭahārah</em> means purity. It covers the removal of impurity from the body, clothes and place of prayer, and the ritual states reached by <em>wuḍūʾ</em> (the minor ablution), <em>ghusl</em> (the full washing) and <em>tayammum</em> (dry ablution with clean earth when water is unavailable, 5:6). Purity is a condition for the validity of the <em>ṣalāh</em>. Books of <em>fiqh</em> usually open with a chapter on purity, because worship depends on it. The Quran says that Allah loves those who purify themselves (2:222), and the Prophet (peace be upon him) is reported in Sahih Muslim to have said that purity is half of faith. The word also names the whole subject of these rules as a branch of the law."
+  ],
+  "misread": "That it means cleanliness, a rendering that leaves out its place as a legal condition of worship.",
+  "sources": [],
+  "terms": [
+   "ablutions",
+   "salah",
+   "fiqh",
+   "sharia"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 38,
+   "term": "ṬAHĀRAH"
+  }
+ },
+ {
+  "slug": "tala",
+  "title": "Tala",
+  "ar": "تلا",
+  "tr": "Talā",
+  "def": "To recite the Quran; the verbal noun is tilawah",
+  "what": [
+   "<em>Talā</em> means to recite the Quran, and its verbal noun is <em>tilāwah</em>. The root also carries the sense of following, since the reciter follows the words of the text one after another. The Quran speaks of those who recite the Book as it should be recited (2:121) and commands the believer to recite what has been revealed of the Book (29:45). In practice <em>tilāwah</em> means reciting aloud or quietly with attention to the words and their sound, at prayer and in private devotion. The manner of reciting is set out in the rules of <em>tajwīd</em>, and a person who recites is called a <em>tālī</em> or, more often, a <em>qāriʾ</em>."
+  ],
+  "misread": "That it can be rendered simply as “read”, which loses the sense of devotional recitation and of following the text.",
+  "sources": [],
+  "terms": [
+   "tartil",
+   "quran",
+   "qiraat",
+   "tanzil"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tilawah"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "TALĀ"
+  }
+ },
+ {
+  "slug": "tanzil",
+  "title": "Tanzil",
+  "ar": "تنزيل",
+  "tr": "Tanzīl",
+  "def": "Any message that God has sent down to humanity through the prophets; the verbal noun of nazzala, to send down",
+  "what": [
+   "<em>Tanzīl</em> is the verbal noun of <em>nazzala</em>, to send down in stages. Ismail al-Faruqi uses it for any message that Allah has sent to humanity through the prophets. The Quran applies the idea to the Quran itself, calling it a <em>tanzīl</em> from the Lord of the worlds (26:192), and says also that Allah sent down the Torah and the Gospel before it (3:3). The word fixes the direction of revelation: the message comes from Allah and descends to the prophet, who receives and conveys it. Because the sending is in stages, the Quran came to Muhammad (peace be upon him) over about twenty-three years, according to the tradition."
+  ],
+  "misread": "That it is the same as “revelation” in the sense of inspiration or insight, when it names a message sent down from Allah.",
+  "sources": [],
+  "terms": [
+   "tanzil-al",
+   "wahy",
+   "quran",
+   "injil"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 46,
+   "term": "TANZĪL"
+  }
+ },
+ {
+  "slug": "tanzil-al",
+  "title": "Tanzil, al-",
+  "ar": "التنزيل",
+  "tr": "al-Tanzīl",
+  "def": "The message sent down through Muhammad (peace be upon him), that is, the noble Quran",
+  "what": [
+   "<em>Al-Tanzīl</em>, with the article, names the particular message sent down through Muhammad (peace be upon him), which is <em>al-Qurʾān al-Karīm</em>, the noble Quran. The Quran describes itself in these terms: “It is a revelation (<em>tanzīl</em>) from the Lord of the worlds” (26:192; see also 69:43). Muslims hold that the angel Gabriel brought the text to the Prophet over about twenty-three years and that its words are those of Allah. The name stresses that the Quran was sent down to him from outside, and Muslims therefore speak of it as the speech of Allah that was revealed and recited."
+  ],
+  "misread": "That the Quran is a text composed by Muhammad, when its own name states that it was sent down to him.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "tanzil",
+   "wahy",
+   "gabriel"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Tanzil"
+  ],
+  "faruqi": {
+   "page": 46,
+   "term": "AL TANZĪL"
+  }
+ },
+ {
+  "slug": "tartil",
+  "title": "Tartil",
+  "ar": "ترتيل وتجويد",
+  "tr": "Tartīl, Tajwīd",
+  "def": "Measured, melodious recitation of the Quran, carried out according to the rules of pronunciation known as tajwid",
+  "what": [
+   "<em>Tartīl</em> is slow, measured and clear recitation. The Quran commands the Prophet to recite it “in slow, rhythmic tones” (73:4). <em>Tajwīd</em> is the science that sets out how each letter is to be pronounced, which sounds are lengthened, and where the reciter pauses. Recitation is learned by listening to a qualified teacher and repeating, and many reciters hold a chain of instruction that reaches back to the Prophet (peace be upon him). The aim is to preserve the sound of the text exactly and to recite it with reverence. Reciters are trained in different recognised readings, the <em>qirāʾāt</em>."
+  ],
+  "misread": "That chanting the Quran is singing, when it is a regulated devotional act with its own rules.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "qiraat",
+   "tala",
+   "music-and-singing"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tajwid",
+   "Tartil",
+   "Tajweed"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "TARTĪL, TAJWĪD"
+  }
+ },
+ {
+  "slug": "taskhir",
+  "title": "Taskhir",
+  "ar": "تسخير",
+  "tr": "Taskhīr",
+  "def": "The act of subjecting or subduing; the verbal noun of sakhkhara, used of Allah making nature serviceable to human beings",
+  "what": [
+   "<em>Taskhīr</em> is the verbal noun of <em>sakhkhara</em>, to subject or press into service. In the Quran Allah is the one who subjects things: He has made what is in the heavens and on the earth subject to humanity (45:13), and the sun, the moon, the night and the day (14:32-33). Muslim writers read these verses as saying that the natural world is open to human understanding and use, and so as a basis for the study of nature. The same verses present the subjection as a favour from Allah, and they call for gratitude and responsibility from those who benefit from it."
+  ],
+  "misread": "That the subjection of nature is a licence for unlimited exploitation, when the verses present it as a favour that carries responsibility.",
+  "sources": [],
+  "terms": [
+   "creation",
+   "earth",
+   "environment",
+   "knowledge"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Taskheer"
+  ],
+  "faruqi": {
+   "page": 34,
+   "term": "TASKHĪR"
+  }
+ },
+ {
+  "slug": "taslim",
+  "title": "Taslim",
+  "ar": "تسليم",
+  "tr": "Taslīm",
+  "def": "The closing of the salah with the greeting of peace, al-salamu alaykum wa rahmat Allah, said to the right and then to the left",
+  "what": [
+   "<em>Taslīm</em> is the act of ending the <em>ṣalāh</em>. The worshipper, still seated after the final recitation, turns the head to the right and says “Peace be upon you and the mercy of Allah”, then turns to the left and says it again. The words are those given by Ismail al-Faruqi, and some add “and His blessings”. With the <em>taslīm</em> the worshipper leaves the state of prayer and may speak and act freely again. The word comes from <em>salām</em>, peace. It is the same greeting that Muslims give one another in daily life, and so the prayer ends in the manner in which a meeting begins."
+  ],
+  "misread": "That it is only a polite goodbye to those nearby, when it is the act that concludes the prayer.",
+  "sources": [],
+  "terms": [
+   "salah",
+   "wuquf",
+   "wa-alaykum-al-salam-wa-rahmah-allah-wa-barakatuh",
+   "dua"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tasleem"
+  ],
+  "faruqi": {
+   "page": 55,
+   "term": "TASLĪM"
+  }
+ },
+ {
+  "slug": "tawaf",
+  "title": "Tawaf",
+  "ar": "طواف",
+  "tr": "Ṭawāf",
+  "def": "The rite of circling the Kaaba seven times, anticlockwise, performed in the Hajj and the Umrah",
+  "what": [
+   "<em>Ṭawāf</em> is the rite of walking around the Kaaba with the building on the left, seven times, anticlockwise. It begins and ends at the line of the Black Stone. The Quran refers to it when it says “and let them circle the Ancient House” (22:29). It forms part of the Hajj and the Umrah. There are several kinds, including the <em>ṭawāf</em> of arrival, the essential <em>ṭawāf al-ifāḍah</em> of the Hajj, and the farewell <em>ṭawāf</em>. Pilgrims remember Allah and pray as they walk. The rite is addressed to Allah alone, and the Kaaba is the focus of direction."
+  ],
+  "misread": "That pilgrims worship the Kaaba or the Black Stone, when the rite is directed to Allah alone.",
+  "sources": [
+   "Umar ibn al-Khattab is reported in the Sahih collections to have said, as he kissed the Black Stone, that he knew it was only a stone that neither harms nor benefits, and that he kissed it only because he had seen the Prophet (peace be upon him) do so."
+  ],
+  "terms": [
+   "kaaba",
+   "hajj",
+   "umrah",
+   "hajar-al-aswad"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tawwaf"
+  ],
+  "faruqi": {
+   "page": 38,
+   "term": "ṬAWĀF"
+  }
+ },
+ {
+  "slug": "tawakkul",
+  "title": "Tawakkul",
+  "ar": "توكل",
+  "tr": "Tawakkul",
+  "def": "Absolute confidence that Allah is the cause of all that is or will be, together with reliance upon Him as such",
+  "what": [
+   "<em>Tawakkul</em> is reliance on Allah. It rests on the belief that He is the cause of everything that exists or will exist, and it leads the believer to place the outcome of his effort in His hands. The Quran says “when you have decided, put your trust in Allah” (3:159) and “whoever relies on Allah, He is sufficient for him” (65:3). Scholars teach that <em>tawakkul</em> follows effort and does not replace it: a person plans and acts, and then entrusts the result to Allah. A saying attributed to the Prophet (peace be upon him) and recorded in al-Tirmidhi tells a man to tie his camel and then trust in Allah."
+  ],
+  "misread": "That it means fatalism or passivity, when the sources join reliance on Allah to effort.",
+  "sources": [],
+  "terms": [
+   "qadar",
+   "iman",
+   "taqwa",
+   "dua"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Tawakul"
+  ],
+  "faruqi": {
+   "page": 47,
+   "term": "TAWAKKUL"
+  }
+ },
+ {
+  "slug": "tawwab-al",
+  "title": "Tawwab, al-",
+  "ar": "التواب",
+  "tr": "al-Tawwāb",
+  "def": "A divine name: He Who accepts repentance again and again, and Himself turns to His servants in mercy",
+  "what": [
+   "<em>Al-Tawwāb</em> is one of the beautiful names of Allah. It comes from the root <em>t-w-b</em>, to return, and is an intensive form: Allah turns again and again to those who return to Him. The Quran has it at the moment Adam was forgiven (2:37) and in the prayer of Abraham and Ishmael, “accept our repentance, for You are the Acceptor of repentance, the Merciful” (2:128). The name is often joined with <em>al-Raḥīm</em>, the Merciful. The Quran also uses the plural of the human side of the relation, saying that Allah loves <em>al-tawwābīn</em>, those who repent often (2:222). Muslims turn to Allah directly in repentance."
+  ],
+  "misread": "That forgiveness in Islam needs a mediator or a sacrifice, when the name states that Allah accepts repentance directly.",
+  "sources": [],
+  "terms": [
+   "istighfar",
+   "atonement-and-repentance",
+   "forgiveness",
+   "divine-attributes"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Tawwab",
+   "Tawwab"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "AL TAWWĀB"
+  }
+ },
+ {
+  "slug": "tazir-al",
+  "title": "Ta'zir, al-",
+  "ar": "التعزير",
+  "tr": "al-Taʿzīr",
+  "def": "Discretionary punishments that the Islamic judiciary decides as fitting for an offence that has no fixed penalty in the law",
+  "what": [
+   "<em>Taʿzīr</em> names the punishments that a judge or ruling authority fixes by judgement. They apply to offences for which the Quran and the Sunnah lay down no set penalty, and they range from a warning to a fine, imprisonment or a lesser physical penalty, decided according to the offence and the offender. Jurists distinguish <em>taʿzīr</em> from the <em>ḥudūd</em>, whose penalties are fixed by the text, and from <em>qiṣāṣ</em>, retaliation in cases of bodily harm. The judge is bound by the principle of proportion and the public good, and the details differ among the schools of law. The root means to discipline or to rebuke."
+  ],
+  "misread": "That every Islamic punishment is fixed by text, when a large share of the penal law is left to the discretion of the judge.",
+  "sources": [],
+  "terms": [
+   "hudud",
+   "qisas",
+   "fiqh",
+   "diya"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Ta'zir",
+   "Tazir",
+   "Ta’zir",
+   "Al-Ta’azir",
+   "التعازير"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL TA'ZĪR"
+  }
+ },
+ {
+  "slug": "thawab",
+  "title": "Thawab",
+  "ar": "ثواب",
+  "tr": "Thawāb",
+  "def": "The reward that Allah grants for good deeds, above all on the Day of Judgement",
+  "what": [
+   "<em>Thawāb</em> is the reward that Allah gives for good deeds. The root means to return, and the sense is what comes back to the person who has done good. The Quran speaks of the reward of this world and the reward of the Hereafter (3:145), and says that whoever brings a good deed will receive ten times the like (6:160). Muslims hope for <em>thawāb</em> when they pray, fast, give and help others, and they say that a deed done sincerely for the sake of Allah is recorded. The final reward is Paradise. The sources present it as bounty from Allah, who multiplies what a person does."
+  ],
+  "misread": "That it is a payment earned by works, when the sources describe it as generosity from Allah.",
+  "sources": [],
+  "terms": [
+   "judgement",
+   "deeds",
+   "akhira",
+   "paradise"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Sawab"
+  ],
+  "faruqi": {
+   "page": 26,
+   "term": "THAWĀB"
+  }
  }
 ]

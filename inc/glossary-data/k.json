@@ -60,6 +60,12 @@
   "aliases": [
    "Disbelievers",
    "Unbelievers"
+  ],
+  "faruqi": [
+   {
+    "page": 45,
+    "term": "KĀFIR"
+   }
   ]
  },
  {
@@ -311,6 +317,12 @@
    "Book",
    "Kitab Allah",
    "Kitab Al-Allah"
+  ],
+  "faruqi": [
+   {
+    "page": 45,
+    "term": "KITĀB"
+   }
   ]
  },
  {
@@ -380,6 +392,12 @@
    "Kuffar",
    "Disbelief",
    "Infidel"
+  ],
+  "faruqi": [
+   {
+    "page": 45,
+    "term": "KUFR"
+   }
   ]
  },
  {
@@ -405,5 +423,305 @@
   ],
   "type": "term",
   "aliases": []
+ },
+ {
+  "slug": "kabbara",
+  "title": "Kabbara",
+  "ar": "كبّر",
+  "tr": "Kabbara",
+  "def": "To proclaim, in the prayer or otherwise, that God is the Greater: to say Allāhu akbar.",
+  "what": [
+   "<em>Kabbara</em> means to declare God’s greatness by saying <em>Allāhu akbar</em>, “God is the Greater”. The noun is <em>takbīr</em>. The Quran commands: “Your Lord, magnify Him” (74:3), and “Magnify Him with a great magnification” (17:111). Faruqi defines the verb as proclaiming, within worship or outside it, that God is the Greater. The <em>takbīr</em> opens the ritual prayer, marks movements within it, and is called in the <em>adhān</em>. Muslims also say it at the festival prayers of ʿĪd, during the days of the pilgrimage, and in daily life when they see something wonderful or meet a difficulty. It reminds the speaker that God is greater than every worldly thing."
+  ],
+  "misread": "It is often presented in the media as a battle cry, whereas Muslims say it in prayer, at festivals and in everyday life.",
+  "sources": [],
+  "terms": [
+   "allahu-akbar",
+   "salah",
+   "adhan",
+   "eid"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Takbir",
+   "Takbeer"
+  ],
+  "faruqi": {
+   "page": 44,
+   "term": "KABBARA"
+  }
+ },
+ {
+  "slug": "kafara",
+  "title": "Kafara",
+  "ar": "كفر",
+  "tr": "Kafara",
+  "def": "To deny in declared words that God is God, that Muhammad is His Prophet, or that the Quran is wholly God’s truth and revelation.",
+  "what": [
+   "The root <em>k-f-r</em> means to cover or to deny. In religious use <em>kafara</em> means to reject faith openly. Faruqi gives the sense of solemnly saying that God is not God, or that He lacks any of His attributes, that Muhammad (peace be upon him) is not the Prophet of God, or that anything in the Quran is not verbatim truth and revelation from God. The noun is <em>kufr</em> and the one who does it is a <em>kāfir</em>. Jurists urge great care in applying it. A hadith in Sahih al-Bukhari and Sahih Muslim warns that if a man calls his brother a <em>kāfir</em>, the charge falls on one of them."
+  ],
+  "misread": "It is rendered “infidel” in older English, a word that carries a sense of contempt that the Arabic term does not have.",
+  "sources": [],
+  "terms": [
+   "kufr",
+   "kafir",
+   "takfir",
+   "iman"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Kufr"
+  ],
+  "faruqi": {
+   "page": 45,
+   "term": "KAFARA"
+  }
+ },
+ {
+  "slug": "khabir-al",
+  "title": "Khabir, al-",
+  "ar": "الخبير",
+  "tr": "al-Khabīr",
+  "def": "A divine name: the All-Aware, who knows the inner reality of all things.",
+  "what": [
+   "<em>Al-Khabīr</em> is one of the names of God. It means the One who is fully aware, whose knowledge reaches the inner nature of things. The Quran pairs it often with other names: “He is the Wise, the All-Aware” (6:18; 34:1), and it says of Him, “Does He who created not know? He is the Subtle, the All-Aware” (67:14). The name tells believers that nothing escapes God, neither deeds, nor intentions, nor what lies hidden in hearts. Scholars teach that it brings reassurance to those wronged and a warning to those who do wrong in secret. Faruqi glosses it as the All-Knowing, and it is close in sense to <em>al-ʿAlīm</em>, with the stress on awareness of inner detail."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "divine-attributes",
+   "allah",
+   "knowledge",
+   "ilm-al"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Khabir",
+   "Khabir"
+  ],
+  "faruqi": {
+   "page": 31,
+   "term": "AL KHABĪR"
+  }
+ },
+ {
+  "slug": "khabith-al",
+  "title": "Khabith, al-",
+  "ar": "الخبيث",
+  "tr": "al-Khabīth",
+  "def": "What is foul and evil: whatever goes against God’s will and is judged bad and wrong.",
+  "what": [
+   "<em>Al-khabīth</em> is that which is bad, foul or evil. Faruqi defines it as what goes against the will of God and is counted as bad, wrong and evil. The Quran sets it against <em>al-ṭayyib</em>, the good and pure: “Say: the bad and the good are not equal, even if the abundance of the bad pleases you” (5:100). The Prophet (peace be upon him) is described as one who “makes lawful for them the good things and forbids for them the foul” (7:157). The word covers wrong things in food, conduct and character, and jurists use it when they discuss what is forbidden. Its plural, <em>khabāʾith</em>, means wicked deeds."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "halal-and-haram-food",
+   "evil",
+   "good",
+   "fahisha"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Khabith",
+   "Khabith",
+   "Khabeeth"
+  ],
+  "faruqi": {
+   "page": 31,
+   "term": "AL KHABĪTH"
+  }
+ },
+ {
+  "slug": "khabithah-al",
+  "title": "Khabithah, al-",
+  "ar": "الخبيثة",
+  "tr": "al-Khabīthah",
+  "def": "The feminine form of khabīth, meaning a deed, word or thing that is foul, impure or bad; its plural is khabāʾith.",
+  "what": [
+   "<em>Khabīth</em> means foul, impure or bad, and it is the opposite of <em>ṭayyib</em>, which means wholesome and pure. <em>Al-khabīthah</em> is the feminine form with the article, and it names a deed, word or thing that has this quality; its plural is <em>khabāʾith</em>. The Quran uses the root in several settings. It likens an evil word to an evil tree (14:26), it calls the shameful acts of the people of Lot <em>khabāʾith</em> (21:74), and it says that the Prophet Muhammad (peace be upon him) makes good things lawful and foul things unlawful (7:157). The word therefore joins moral badness and physical impurity in one term."
+  ],
+  "misread": "Rendering it only as “evil” hides that the word also covers what is physically foul or impure, not just what is morally bad.",
+  "sources": [],
+  "terms": [
+   "fahisha",
+   "evil",
+   "good",
+   "khayr"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Khabithah"
+  ],
+  "faruqi": {
+   "page": 31,
+   "term": "AL KHABĪTHAH"
+  }
+ },
+ {
+  "slug": "khalifah",
+  "title": "Khalifah",
+  "ar": "خليفة",
+  "tr": "Khalīfah",
+  "def": "The vicegerent of God in space and time; the word is also used for the successor who leads the Muslim community.",
+  "what": [
+   "<em>Khalīfah</em> comes from a root meaning to succeed or to stand in the place of another. The Quran uses it when God tells the angels, “I am placing on the earth a <em>khalīfah</em>” (2:30), and it addresses David with the same word (38:26). In this sense the human being holds the earth as a trust, answerable to God for how it is used. The same word came to mean the leader of the Muslim community after Muhammad (peace be upon him), beginning with Abu Bakr, who was called <em>khalīfat rasūl Allāh</em>, the successor of the Messenger of God. English “caliph” is the usual form of this second sense."
+  ],
+  "misread": "Translating it as “successor” or “caliph” alone loses the Quranic sense of the human being as God’s vicegerent on earth.",
+  "sources": [
+   "The classical commentators differ on who is meant in 2:30: some take it to be Adam and his descendants, and some take it to mean a people who succeed one another. All agree that it describes a responsibility given by God and not a share in His authority."
+  ],
+  "terms": [
+   "khilafah",
+   "caliph",
+   "adam",
+   "david"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 31,
+   "term": "KHALĪFAH"
+  }
+ },
+ {
+  "slug": "khaliq-al",
+  "title": "Khaliq, al-",
+  "ar": "الخالق",
+  "tr": "al-Khāliq",
+  "def": "A divine name meaning the Creator, the One who brings things into being from nothing and gives each its measure.",
+  "what": [
+   "<em>Al-Khāliq</em>, the Creator, is one of the names of God. The Quran uses it in the verse, “He is God, the Creator, the Maker, the Fashioner” (59:24), and says, “God is the Creator of all things” (13:16). The root <em>kh-l-q</em> carries the sense of bringing into existence and of giving a measure or proportion, and the same verb is used for the creation of the heavens and the earth. Muslims use the name to affirm that everything other than God was created and depends on Him. For that reason the Quran presents worship of anything created as a mistake about what is real, and it asks its hearers to look at the creation as a sign of its Creator."
+  ],
+  "misread": "The name is often translated “the Creator” as though it meant a first cause that then withdraws; the Quran presents God as continually sustaining what He created.",
+  "sources": [],
+  "terms": [
+   "allah",
+   "creation",
+   "divine-attributes",
+   "tawhid"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Khaliq"
+  ],
+  "faruqi": {
+   "page": 31,
+   "term": "AL KHĀLIQ"
+  }
+ },
+ {
+  "slug": "khayr",
+  "title": "Khayr",
+  "ar": "خير",
+  "tr": "Khayr",
+  "def": "The good, meaning whatever is good in the sight of God, including wealth, deeds, and what leads a person to Him.",
+  "what": [
+   "<em>Khayr</em> is the general Arabic word for good and for what is better. The Quran uses it for moral good: “Whoever does an atom’s weight of good will see it” (99:7). It also uses it for the best course of action, as in the call to “invite to the good” (3:104), and for the guidance that is sent from God (2:105). In a few places it is used for wealth, as in the verse that speaks of leaving <em>khayr</em> for one’s heirs (2:180).",
+   "Muslims use the word in everyday speech too. A person may say <em>jazāk Allāhu khayran</em>, “may God reward you with good”, as thanks, and <em>inshāʾ Allāh khayr</em>, “if God wills, it is for the good”, when the outcome is not yet known. In both cases the speaker treats God as the source of whatever good comes, which matches the Quranic use of the word."
+  ],
+  "misread": "A single English word such as “good” hides that <em>khayr</em> is measured by what God has commanded and approved, and not by custom or personal taste.",
+  "sources": [
+   "The Quran says that a person may dislike a thing in which God has placed much <em>khayr</em> (4:19), and it teaches that good which is done for God is never lost (3:115)."
+  ],
+  "terms": [
+   "maruf-al",
+   "good",
+   "munkar-al",
+   "deeds"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 31,
+   "term": "KHAYR"
+  }
+ },
+ {
+  "slug": "khaza",
+  "title": "Khaza",
+  "ar": "خزى",
+  "tr": "Khazā",
+  "def": "To bring shame and disgrace on a person who breaks the commandments of God, in this world and in the next; the verbal noun is khizy.",
+  "what": [
+   "<em>Khazā</em> means to disgrace or to put to shame, and its verbal noun is <em>khizy</em>, disgrace. The Quran uses it of the humiliation that follows rebellion against God, and it speaks of disgrace in this world and a greater punishment in the next (5:33). It also appears in prayers. Believers ask God not to disgrace them on the Day of Resurrection (3:194), and they say, “Our Lord, whomever You admit to the Fire, You have disgraced” (3:192). The word names a public and inward shame, one that falls on the person who has broken God’s commandments and been shown to have done so. It is the opposite of the honour that God gives to those who obey Him."
+  ],
+  "misread": "It is often translated plainly as “humiliation” or “disgrace”, which loses that the Quran ties this shame to breaking God’s commandments and to the Day of Judgement.",
+  "sources": [],
+  "terms": [
+   "akhira",
+   "hell",
+   "commandments",
+   "deeds"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 31,
+   "term": "KHAZĀ"
+  }
+ },
+ {
+  "slug": "khilafah",
+  "title": "Khilafah",
+  "ar": "خلافة",
+  "tr": "Khilāfah",
+  "def": "The institution of man as God’s vicegerent on earth, and the government that continued the worldly rule of the Prophet Muhammad (peace be upon him).",
+  "what": [
+   "<em>Khilāfah</em> is the noun for the office or institution of the <em>khalīfah</em>. It has two senses. The first is the human responsibility, given by God, to act as His vicegerent on earth (2:30). The second is the government that carried on the worldly leadership of Muhammad (peace be upon him) after his death, beginning with Abu Bakr, then Umar, Uthman and Ali. These four are called the rightly guided caliphs. Later dynasties, including the Umayyads, Abbasids and Ottomans, also held the office. The consultation of the community in choosing and advising its leader is linked in the Quran to the principle of <em>shūrā</em> (42:38)."
+  ],
+  "misread": "“Caliphate” in English news writing usually means a state of one ruler; the word in Arabic also names the human duty of stewardship over the earth.",
+  "sources": [
+   "Scholars of the classical period, such as al-Mawardi, wrote works on the office, and they differed on how the <em>khalīfah</em> should be chosen. Muslims today hold different views on whether the institution should be revived."
+  ],
+  "terms": [
+   "khalifah",
+   "caliph",
+   "shura",
+   "ummah"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [],
+  "faruqi": {
+   "page": 31,
+   "term": "KHILĀFAH"
+  }
+ },
+ {
+  "slug": "kitab-al",
+  "title": "Kitab, al-",
+  "ar": "الكتاب",
+  "tr": "al-Kitāb",
+  "def": "“The Book”, used in the Quran for the Quran itself; the word also names earlier scriptures and the record of what God has decreed.",
+  "what": [
+   "<em>Al-Kitāb</em> means “the Book”, from a root meaning to write. The Quran opens its second surah, “This is the Book, in which there is no doubt, a guidance for the God-fearing” (2:2), and in this use the word names the Quran itself. Faruqi lists it as another name for <em>al-Qurʾān al-Karīm</em>, the Noble Quran. The word is also used in other ways. The Quran calls the earlier scriptures given to Moses and Jesus <em>kitāb</em>, and it calls their followers <em>ahl al-kitāb</em>, the People of the Book. It also speaks of a record in which God’s decree and each person’s deeds are written."
+  ],
+  "misread": "Reading it only as “book” as in any printed volume hides that the Quran uses the word as a name of the revelation itself.",
+  "sources": [],
+  "terms": [
+   "quran",
+   "kutub",
+   "ahl-al-kitab",
+   "furqan"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Al-Kitab"
+  ],
+  "faruqi": {
+   "page": 45,
+   "term": "AL KITĀB"
+  }
  }
 ]

@@ -114,5 +114,146 @@
    "Deluge",
    "The Flood"
   ]
+ },
+ {
+  "slug": "nabiyy",
+  "title": "Nabiyy",
+  "ar": "نبي",
+  "tr": "Nabiyy",
+  "def": "A prophet: one who receives God’s message word for word, is ordered to convey it, and exemplifies its precepts in his own life; plural anbiyā’.",
+  "what": [
+   "A <em>nabiyy</em> is a person chosen by God to receive a message from Him word for word, with the express order to convey it to people and to show its precepts in his own life. The plural is <em>anbiyā’</em>. The Quran names many of them, from Adam and Noah to Abraham, Moses, Jesus and Muhammad (peace be upon them all). The Quran calls Muhammad the seal of the prophets (33:40). Muslims therefore hold that prophethood ended with him, and that every earlier prophet brought the same call to worship God alone. A <em>nabiyy</em> is distinguished in common usage from a <em>rasūl</em>, the bearer of a message to a people, although the two words often overlap."
+  ],
+  "misread": "That “prophet” in English means a foreteller of the future, when the Arabic word is about receiving and delivering revelation.",
+  "sources": [],
+  "terms": [
+   "prophets",
+   "rasul",
+   "muhammad",
+   "wahy"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Nabi",
+   "Anbiya",
+   "Prophet"
+  ],
+  "faruqi": {
+   "page": 45,
+   "term": "NABIYY"
+  }
+ },
+ {
+  "slug": "naiman",
+  "title": "Na'iman",
+  "ar": "نعيما",
+  "tr": "Naʿīman",
+  "def": "“May you be blessed.” It is said to a person who has just bathed, shaved or had a haircut.",
+  "what": [
+   "<em>Naʿīman</em> is a short good wish said to a person who has just finished a bath, a shave or a haircut. It carries the sense of comfort and well-being, and the speaker is wishing that the freshness and ease of the moment be a blessing for the other person. It is a courtesy of everyday life. A Muslim who sees a friend or relative freshly groomed says it as a greeting, and the one addressed answers with a prayer of his own for the speaker. It belongs with the many ordinary expressions by which Muslims turn small occasions into a remembrance of God’s favour."
+  ],
+  "misread": "",
+  "sources": [],
+  "terms": [
+   "honorifics",
+   "common-phrases",
+   "hair"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Naiman",
+   "Naeeman"
+  ],
+  "faruqi": {
+   "page": 62,
+   "term": "NA‘ĪMAN."
+  }
+ },
+ {
+  "slug": "nasikh-al",
+  "title": "Nasikh, al-",
+  "ar": "الناسخ",
+  "tr": "al-Nāsikh",
+  "def": "The verses of the Quran whose content revokes a ruling or meaning in another verse, which is then called al-mansūkh.",
+  "what": [
+   "<em>Al-Nāsikh</em> is the abrogating verse: a verse of the Quran whose content has removed a ruling given in another verse. The verse that is superseded is called <em>al-mansūkh</em>. The scholars of the Quran treat it as a matter of the order in which God revealed His commands to a growing community. The principle rests on the Quran’s own statement that whatever verse God abrogates or causes to be forgotten, He replaces with one better or like it (2:106; see also 16:101). Scholars have differed on how many verses are affected, and many have narrowed the number a great deal."
+  ],
+  "misread": "That abrogation shows the Quran contradicting itself, when it describes a staged revelation to a community.",
+  "sources": [
+   "Knowing which verse is earlier and which later is a condition for those who derive rulings from the Quran. It depends on the circumstances of revelation (<em>asbāb al-nuzūl</em>) and on reports from the Companions of the Prophet."
+  ],
+  "terms": [
+   "naskh",
+   "asbab-al-nuzul",
+   "quran",
+   "tafsir"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Al-Nasikh",
+   "Nasikh"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "AL NĀSIKH"
+  }
+ },
+ {
+  "slug": "nasikh-al-hadith-wa-mansukhuhu",
+  "title": "Nasikh al-Hadith wa Mansukhuhu",
+  "ar": "ناسخ الحديث ومنسوخه",
+  "tr": "Nāsikh al-Ḥadīth wa Mansūkhuhu",
+  "def": "The science that studies hadith whose content revokes the meaning of other hadith, or that were themselves revoked by them.",
+  "what": [
+   "This science examines pairs of hadith in which a later report has cancelled the ruling of an earlier one. The hadith that revokes is the <em>nāsikh</em> and the one revoked is the <em>mansūkh</em>. The aim is to know which of two apparently conflicting reports from the Prophet Muhammad (peace be upon him) applies, so that a ruling is not drawn from a report whose ruling was later withdrawn. Scholars establish the order by the words of the Prophet himself, by the statement of a Companion, or by dating the reports through the events they describe. The topic is linked to the study of how the Prophet’s commands changed over the twenty-three years of his mission."
+  ],
+  "misread": "That differing hadith are simply contradictions, when some are earlier rulings that a later one replaced.",
+  "sources": [],
+  "terms": [
+   "hadith",
+   "naskh",
+   "nasikh-al",
+   "mustalah-al-hadith"
+  ],
+  "articles": [],
+  "type": "topic",
+  "aliases": [
+   "Nasikh al-Hadith",
+   "Nasikh wa Mansukh al-Hadith"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "NĀSIKH AL ḤADĪTH WA MANSŪKHUHU"
+  }
+ },
+ {
+  "slug": "nazzala",
+  "title": "Nazzala",
+  "ar": "نزل",
+  "tr": "Nazzala",
+  "def": "To bring down from heaven to earth, the verb used in the Quran for God’s sending down of revelation.",
+  "what": [
+   "<em>Nazzala</em> is an Arabic verb meaning to bring something down from above, here from heaven to earth. The Quran uses it of God sending down the revelation, as in the verse that speaks of what He has sent down upon His servant (2:23), and of the Book that He sent down to Muhammad (peace be upon him) with the truth (3:3). The verb is a form that carries the sense of repeated or gradual sending down. Muslims cite it for the fact that the Quran came in parts over the years of the Prophet’s mission. The related noun <em>tanzīl</em> names the sending down of revelation."
+  ],
+  "misread": "That revelation is a human composition, when the term describes something sent down from God.",
+  "sources": [],
+  "terms": [
+   "wahy",
+   "quran",
+   "asbab-al-nuzul"
+  ],
+  "articles": [],
+  "type": "term",
+  "aliases": [
+   "Nazzal",
+   "Nazala"
+  ],
+  "faruqi": {
+   "page": 46,
+   "term": "NAZZALA"
+  }
  }
 ]
