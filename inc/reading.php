@@ -45,7 +45,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),
-			'slugs' => array( 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters', 'crusades-5-facts', 'kharijites-and-takfir', 'scholars-who-shaped-islamic-study', 'western-scholars-of-islam', 'islamic-art-and-the-one-god', 'mosques-adapt-to-place' ),
+			'slugs' => array( 'raids-badr-and-the-conquest-of-mecca', 'medina-jewish-tribes-and-qurayza', 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters', 'crusades-5-facts', 'kharijites-and-takfir', 'scholars-who-shaped-islamic-study', 'western-scholars-of-islam', 'islamic-art-and-the-one-god', 'mosques-adapt-to-place' ),
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
