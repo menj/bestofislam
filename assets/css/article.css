@@ -19,7 +19,7 @@
 /* Links in running text. */
 /* Not the site's own lists and navigation, whose links sit in list items but
    are not running text: the jump list, the glossary index and related terms,
-   the site map, the reading lists and the answers panel. */
+   the sitemap, the reading lists and the answers panel. */
 .boi-article .wp-block-post-content :is(p, li, dd, td) a:not([class*="boi-"], .wp-block-button__link, :is(.boi-jump, .boi-glossary__nav, .boi-glossary__list, .boi-term__related, .boi-answers, .boi-sitemap__group, .boi-path, .boi-parts, .boi-next, .boi-picks, .boi-strip, .boi-qgroup, .boi-credits, .boi-author, .boi-breadcrumbs) a),
 .boi-article .wp-block-post-content figcaption a {
 	text-decoration-line: underline;

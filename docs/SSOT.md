@@ -318,7 +318,7 @@ The front page is a run of full-bleed bands, each with one job and a centred
 head of label, title and subtitle, alternating white, tint and dark. The
 pattern is taken from the Abrahamic theme, where fifteen such bands give a
 long page room without monotony. Features borrowed from Kolofon, editor's
-picks, an HTML site map and a print stylesheet, sit alongside. Every module
+picks, an HTML sitemap and a print stylesheet, sit alongside. Every module
 renders from live data and hides itself when it has nothing to show, so no
 band can advertise content that does not exist.
 
