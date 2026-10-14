@@ -95,3 +95,19 @@ Five spreadsheets (a single-source-of-truth workbook, two article-proposal sheet
 
 - Tier 2 and later proposals in the workbooks (A13, A14, A19, A24, A27, A34, A08, A42, A43, A46 and others) are not written.
 - Every citation in these 15 articles was written from memory; `docs/CONTENT-REVIEW.md` lists what to check.
+
+### Source 3, second tier
+
+| Plan ref | Title | Slug |
+|---|---|---|
+| A13 | The fighting verses in context: 6 facts from the sources | `fighting-verses-in-context` |
+| A27 | 5 facts about why the first Muslims kept the faith in Mecca | `first-muslims-kept-the-faith` |
+| A34 | 6 answers to the claim that the Quran gets its history wrong | `quran-anachronism-claims` |
+| A14 | 5 facts about jihad in the Quran, the hadith and the jurists | `jihad-meaning-quran-hadith-jurists` |
+| A24 | Talmud, midrash and apocrypha: 6 answers on borrowing claims | `talmud-midrash-apocrypha-borrowing` |
+| A19 | 5 facts about the Hanif poets, Musaylima and the Quran | `hanif-poets-and-musaylima` |
+| A08 | Schacht, isnads and the dating of hadith: 5 answers | `schacht-isnads-dating-hadith` |
+| A42 | Was Muhammad illiterate? 5 answers on ummi, Iqra and clots | `was-muhammad-illiterate-ummi` |
+| A43 | 5 facts about Abu Bakr, the Ridda wars and the Fadak dispute | `ridda-wars-abu-bakr-fadak` |
+
+The concordance of hadith citations (A46) and the lower-priority proposals are not written.

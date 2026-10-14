@@ -657,6 +657,60 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 6 answers on what the Quran says about Christians.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
+		array(
+			'slug'    => 'fighting-verses-in-context',
+			'title'   => __( 'The fighting verses in context: 6 facts from the sources', 'bestofislam' ),
+			'excerpt' => __( 'Nine war verses are quoted against Islam. The setting, the classical commentary and the limits each verse carries, with fair concessions.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'first-muslims-kept-the-faith',
+			'title'   => __( '5 facts about why the first Muslims kept the faith in Mecca', 'bestofislam' ),
+			'excerpt' => __( 'Refused offers of wealth, a small but growing community, boycott and exile: 5 facts that fit poorly with an invented scheme.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'quran-anachronism-claims',
+			'title'   => __( '6 answers to the claim that the Quran gets its history wrong', 'bestofislam' ),
+			'excerpt' => __( 'Six alleged historical slips, from Nimrod and Talut to Job and Pharaoh\'s punishment, checked against what the verses say and what commentators added.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'jihad-meaning-quran-hadith-jurists',
+			'title'   => __( '5 facts about jihad in the Quran, the hadith and the jurists', 'bestofislam' ),
+			'excerpt' => __( 'Jihad means effort, and in Medinan verses and the law books often fighting; 5 facts on the ranking hadith and the jurists.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'talmud-midrash-apocrypha-borrowing',
+			'title'   => __( 'Talmud, midrash and apocrypha: 6 answers on borrowing claims', 'bestofislam' ),
+			'excerpt' => __( 'Six answers on the claimed Jewish and Christian sources of Quranic stories: dates, direction of influence and the Muslim response.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'hanif-poets-and-musaylima',
+			'title'   => __( '5 facts about the Hanif poets, Musaylima and the Quran', 'bestofislam' ),
+			'excerpt' => __( 'Zayd ibn Amr, Waraqa and Musaylima are said to have supplied the Quran\'s early content; the dates and surviving texts show otherwise.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'schacht-isnads-dating-hadith',
+			'title'   => __( 'Schacht, isnads and the dating of hadith: 5 answers', 'bestofislam' ),
+			'excerpt' => __( 'Hadith were forged and Muslim scholars said so first, but writing began early, chains were tested and the quoted figures mislead.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'was-muhammad-illiterate-ummi',
+			'title'   => __( 'Was Muhammad illiterate? 5 answers on ummi, Iqra and clots', 'bestofislam' ),
+			'excerpt' => __( 'What ummi can mean, what Quran 29:48 claims, what Iqra asked, what alaq means and how the reports of his writing are weighed.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'ridda-wars-abu-bakr-fadak',
+			'title'   => __( '5 facts about Abu Bakr, the Ridda wars and the Fadak dispute', 'bestofislam' ),
+			'excerpt' => __( 'Zakah, rival prophets and tribal secession all fed the Ridda wars, and Sunni and Shia sources tell the Fadak story differently.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
 	);
 }
 

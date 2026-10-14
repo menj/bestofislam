@@ -33,15 +33,15 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians' ),
+			'slugs' => array( 'same-god', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
-			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit', 'who-wrote-the-quran', 'preservation-and-truth', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari' ),
+			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit', 'who-wrote-the-quran', 'preservation-and-truth', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
 		),
 		array(
 			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),
-			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'quran-4-34', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise', 'camel-urine-hadith', 'first-revelation-demonic-claim', 'satanic-verses-report', 'prophets-marriages-zaynab-and-others', 'magic-jinn-and-satan-hadiths', 'islamic-rites-before-islam', 'abrogation-and-the-sword-verse', 'end-of-the-world-1110-claim' ),
+			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'quran-4-34', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise', 'camel-urine-hadith', 'first-revelation-demonic-claim', 'satanic-verses-report', 'prophets-marriages-zaynab-and-others', 'magic-jinn-and-satan-hadiths', 'islamic-rites-before-islam', 'abrogation-and-the-sword-verse', 'end-of-the-world-1110-claim', 'was-muhammad-illiterate-ummi', 'hanif-poets-and-musaylima', 'first-muslims-kept-the-faith' ),
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),
@@ -49,7 +49,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith' ),
+			'slugs' => array( 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
 		),
 	);
 }
