@@ -68,3 +68,46 @@ Saved 13 October 2026 from `x.com/jacriaz/status/2109439881596617021`. A critic 
 | S6 | "Name-calling is a sign that someone has run out of valid arguments" | Remark on tone | None | Not a claim about Islam |
 
 The `buraq-and-miracle-stories` article does not mention the thread or the people in it.
+
+## Source 3: the Winn workbooks (rebuttal plan for a critique of Islam)
+
+Five spreadsheets (a single-source-of-truth workbook, two article-proposal sheets, a missed-claims sheet and a master list) plan rebuttals of the claims in one critic's two volumes. The site does not name the critic or the books in any article. Tier 1 of the plan is now written:
+
+| Plan ref | Title | Slug |
+|---|---|---|
+| A01 | 6 facts about Medina's Jewish tribes and Banu Qurayza | `medina-jewish-tribes-and-qurayza` |
+| A02 | Muhammad's raids, Badr and the conquest of Mecca: 6 facts | `raids-badr-and-the-conquest-of-mecca` |
+| A03 | The Satanic Verses report: 5 facts about a disputed story | `satanic-verses-report` |
+| A04 | Was the first revelation demonic? 5 answers from the sources | `first-revelation-demonic-claim` |
+| A06 | Magic, jinn and Satan hadiths: 6 reports that critics cite | `magic-jinn-and-satan-hadiths` |
+| A07 | Ibn Ishaq, Ibn Hisham, Tabari: how reliable is the Sira? 5 facts | `sira-ibn-ishaq-hisham-tabari` |
+| A09 | The revisionist case: 6 answers on manuscripts, coins and Mecca | `revisionist-case-weighed` |
+| A12 | Abrogation (naskh) and the Sword Verse: 5 facts to know | `abrogation-and-the-sword-verse` |
+| A15 | 6 facts about Muhammad's marriages: Zaynab, Safiyya and others | `prophets-marriages-zaynab-and-others` |
+| A18 | Which rites existed before Islam? 6 answers from the sources | `islamic-rites-before-islam` |
+| A20 | Apes and pigs and the Jews in the Quran and hadith: 6 facts | `apes-and-pigs-and-the-jews` |
+| A22 | Terrorism and Muslims: 5 facts about the data and the texts | `terrorism-and-muslims-the-data` |
+| A39 | Did Muhammad predict the end in 1110? 5 facts on the reports | `end-of-the-world-1110-claim` |
+| A40 | Five answers on race in the Quran and the hadith reports critics cite | `race-in-quran-and-hadith` |
+| A41 | What the Quran says about Christians and Christianity: 6 answers | `quran-on-christians` |
+
+### Still open
+
+- Tier 2 and later proposals in the workbooks (A13, A14, A19, A24, A27, A34, A08, A42, A43, A46 and others) are not written.
+- Every citation in these 15 articles was written from memory; `docs/CONTENT-REVIEW.md` lists what to check.
+
+### Source 3, second tier
+
+| Plan ref | Title | Slug |
+|---|---|---|
+| A13 | The fighting verses in context: 6 facts from the sources | `fighting-verses-in-context` |
+| A27 | 5 facts about why the first Muslims kept the faith in Mecca | `first-muslims-kept-the-faith` |
+| A34 | 6 answers to the claim that the Quran gets its history wrong | `quran-anachronism-claims` |
+| A14 | 5 facts about jihad in the Quran, the hadith and the jurists | `jihad-meaning-quran-hadith-jurists` |
+| A24 | Talmud, midrash and apocrypha: 6 answers on borrowing claims | `talmud-midrash-apocrypha-borrowing` |
+| A19 | 5 facts about the Hanif poets, Musaylima and the Quran | `hanif-poets-and-musaylima` |
+| A08 | Schacht, isnads and the dating of hadith: 5 answers | `schacht-isnads-dating-hadith` |
+| A42 | Was Muhammad illiterate? 5 answers on ummi, Iqra and clots | `was-muhammad-illiterate-ummi` |
+| A43 | 5 facts about Abu Bakr, the Ridda wars and the Fadak dispute | `ridda-wars-abu-bakr-fadak` |
+
+The concordance of hadith citations (A46) and the lower-priority proposals are not written.
