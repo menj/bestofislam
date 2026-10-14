@@ -567,6 +567,96 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'The Night Journey, the Buraq, a talking donkey and the Bible\'s own miracles: 5 miracle stories critics mock, and what the sources say.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
+		array(
+			'slug'    => 'raids-badr-and-the-conquest-of-mecca',
+			'title'   => __( 'Muhammad\'s raids, Badr and the conquest of Mecca: 6 facts', 'bestofislam' ),
+			'excerpt' => __( 'The caravan raids, the battle at Badr and the entry into Mecca: 6 facts from the early sources, with the critics\' strongest points conceded.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'revisionist-case-weighed',
+			'title'   => __( 'The revisionist case: 6 answers on manuscripts, coins and Mecca', 'bestofislam' ),
+			'excerpt' => __( 'Early manuscripts, coins, inscriptions and the location of Mecca: 6 answers on what the revisionist case shows and what it does not.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'medina-jewish-tribes-and-qurayza',
+			'title'   => __( '6 facts about Medina\'s Jewish tribes and Banu Qurayza', 'bestofislam' ),
+			'excerpt' => __( 'The Constitution of Medina, the exile of two tribes and the fate of Banu Qurayza: 6 facts from the earliest reports.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'first-revelation-demonic-claim',
+			'title'   => __( 'Was the first revelation demonic? 5 answers from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 5 answers on the claim that the first revelation was demonic.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'islamic-rites-before-islam',
+			'title'   => __( 'Which rites existed before Islam? 6 answers from the sources', 'bestofislam' ),
+			'excerpt' => __( 'Pilgrimage, the Black Stone, fasting and prayer: 6 answers on which rites pre-date Islam and what the Quran says about them.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'terrorism-and-muslims-the-data',
+			'title'   => __( 'Terrorism and Muslims: 5 facts about the data and the texts', 'bestofislam' ),
+			'excerpt' => __( 'What the casualty data, the polling and the texts show about terrorism and Muslims: 5 facts, with the limits of each source.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
+		),
+		array(
+			'slug'    => 'magic-jinn-and-satan-hadiths',
+			'title'   => __( 'Magic, jinn and Satan hadiths: 6 reports that critics cite', 'bestofislam' ),
+			'excerpt' => __( 'The spell on the Prophet, the jinn and the devil\'s touch: 6 reports that critics cite, read with their grading and context.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'sira-ibn-ishaq-hisham-tabari',
+			'title'   => __( 'Ibn Ishaq, Ibn Hisham, Tabari: how reliable is the Sira? 5 facts', 'bestofislam' ),
+			'excerpt' => __( 'How the biography of the Prophet reached us, what each compiler did and how historians weigh it: 5 facts.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'prophets-marriages-zaynab-and-others',
+			'title'   => __( '6 facts about Muhammad\'s marriages: Zaynab, Safiyya and others', 'bestofislam' ),
+			'excerpt' => __( 'Zaynab, Safiyya, Juwayriyah, Rayhana, Mariya and verse 33:50: 6 facts from the Quran, hadith and early biographies.', 'bestofislam' ),
+			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'apes-and-pigs-and-the-jews',
+			'title'   => __( 'Apes and pigs and the Jews in the Quran and hadith: 6 facts', 'bestofislam' ),
+			'excerpt' => __( 'What the verses on apes and pigs say, who they address, and how commentators read them: 6 facts.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'satanic-verses-report',
+			'title'   => __( 'The Satanic Verses report: 5 facts about a disputed story', 'bestofislam' ),
+			'excerpt' => __( 'The chains, the grading and the Quranic text: 5 facts about the report of the Satanic Verses.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'abrogation-and-the-sword-verse',
+			'title'   => __( 'Abrogation (naskh) and the Sword Verse: 5 facts to know', 'bestofislam' ),
+			'excerpt' => __( 'What naskh means, how many verses scholars say it covers and how the Sword Verse is read: 5 facts.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'end-of-the-world-1110-claim',
+			'title'   => __( 'Did Muhammad predict the end in 1110? 5 facts on the reports', 'bestofislam' ),
+			'excerpt' => __( 'The reports about the end of the world and the 1110 claim, traced to their sources: 5 facts.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'race-in-quran-and-hadith',
+			'title'   => __( 'Five answers on race in the Quran and the hadith reports critics cite', 'bestofislam' ),
+			'excerpt' => __( 'What the Quran says about colour and descent, and how the reports critics cite are graded: 5 answers.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
+		),
+		array(
+			'slug'    => 'quran-on-christians',
+			'title'   => __( 'What the Quran says about Christians and Christianity: 6 answers', 'bestofislam' ),
+			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 6 answers on what the Quran says about Christians.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
 	);
 }
 
