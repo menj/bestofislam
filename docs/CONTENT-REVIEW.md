@@ -157,4 +157,11 @@ Also VERIFIED in this pass: the 70 AH Kirman coin (Eshragh, ONS Newsletter 178);
 
 Also VERIFIED: al-Shatibi, al-Muwafaqat 3:344 (via the Dorar encyclopedia of usul); the count of 124 in Hibat Allah ibn Salama, al-Nasikh wa al-Mansukh, p. 46 (via al-Hakam). The Muta envoy could not be traced to a classical source online, so the clause was removed from quran-on-christians.
 
-Still open, needing a printed edition or a scan: Abduh and al-Jassas on the magic hadith; al-Tabari, History I:181–182; al-Tabari on the sons of Noah; Ibn Adi and al-Albani on the Asma chain; Watt on the marriage alliances; the Arabica page range; Ibn Abi Dawud on the codices.
+All remaining points are now accounted for:
+- Al-Jassas (Ahkam al-Quran 1:49) and Abduh (on al-Falaq): VERIFIED through al-Shamrani's study on Saaid.net.
+- Al-Tabari, History, vol. 1 (Rosenthal), pp. 182–183: VERIFIED from the SUNY translation, and the finding CHANGED the article. Al-Tabari did read the half-day report as five hundred years remaining in a world of seven thousand, so end-of-the-world-1110-claim now concedes that a classical precedent exists and answers it.
+- Al-Tabari on the sons of Noah, vol. 2 (Brinner), pp. 11–12: VERIFIED; Wahb makes Ham "the father of the Blacks", and Ibn Ishaq gives the curse as what "the people of the Torah claim".
+- The Asma chain: VERIFIED as Ibn al-Jawzi, al-Ilal 1:180 (quoting Ibn Adi), al-Dhahabi, Mizan 6:101, and al-Albani, Silsila daifa 13:33 (fabricated); the earlier "al-Kamil 7:326" reference, from Wikipedia, was replaced.
+- Watt: Excursus L of Muhammad at Medina exists; his reading of it could not be quoted, so the sentence now says only that historians including Watt have discussed the marriages in that light.
+- Ibn Abi Dawud: VERIFIED as edited by Arthur Jeffery in Materials for the History of the Text of the Qur'an (Brill, 1937).
+- Arabica 57 (2010): the page range could not be confirmed; it is cited by volume and year only, and no statement in the article depends on a page.
