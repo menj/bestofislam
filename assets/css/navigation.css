@@ -100,3 +100,28 @@
 .wp-block-navigation a:focus-visible {
 	text-decoration: none !important;
 }
+
+/* Heading icons (Lucide, stroked in the text colour, gold-tinted). The icon
+   sits inline before the text, so left, centred and wrapped headings all hold. */
+.boi-hicon {
+	display: inline-block;
+	inline-size: 1.05em;
+	block-size: 1.05em;
+	margin-inline-end: 0.5em;
+	vertical-align: -0.15em;
+	stroke-width: 2;
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+/* Larger headings carry the icon in a soft tile. */
+h2.has-hicon:not(.boi-term__label):not(.boi-footer__label):not(.boi-eyebrow) .boi-hicon {
+	box-sizing: content-box;
+	inline-size: 0.62em;
+	block-size: 0.62em;
+	padding: 0.28em;
+	margin-inline-end: 0.45em;
+	vertical-align: -0.12em;
+	color: var(--wp--preset--color--accent-1, #1F6FCC);
+	background: var(--wp--preset--color--accent-3, #EAF2FB);
+	border-radius: 0.35em;
+}

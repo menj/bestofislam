@@ -107,7 +107,7 @@ function boi_glossary_content( $t ) {
 
 	if ( ! empty( $t['misread'] ) ) {
 		$out .= "<!-- wp:group {\"className\":\"boi-term__misread\"} -->\n<div class=\"wp-block-group boi-term__misread\">";
-		$out .= '<p class="boi-term__label">Often misunderstood as</p>';
+		$out .= boi_add_heading_icon( '<p class="boi-term__label">Often misunderstood as</p>' );
 		$out .= '<p>' . $t['misread'] . '</p>';
 		$out .= "</div>\n<!-- /wp:group -->\n\n";
 	}
@@ -684,7 +684,7 @@ function boi_render_glossary_index() {
 			continue;
 		}
 
-		$body .= sprintf( '<h2 class="boi-glossary__part" id="glossary-%1$s">%2$s</h2>', esc_attr( $part ), esc_html( $part_titles[ $part ] ) );
+		$body .= boi_add_heading_icon( sprintf( '<h2 class="boi-glossary__part" id="glossary-%1$s">%2$s</h2>', esc_attr( $part ), esc_html( $part_titles[ $part ] ) ) );
 
 	foreach ( $part_groups as $letter => $items ) {
 		$letter_id = boi_glossary_letter_id( $letter );
@@ -920,14 +920,14 @@ function boi_render_term_related( $attributes ) {
 		return $pager;
 	}
 
-	$html = '<aside class="boi-term__related"><h2 class="boi-term__label">' . esc_html__( 'Related', 'bestofislam' ) . '</h2>';
+	$html = '<aside class="boi-term__related">' . boi_add_heading_icon( '<h2 class="boi-term__label">' . esc_html__( 'Related', 'bestofislam' ) . '</h2>' );
 
 	if ( '' !== $terms ) {
-		$html .= '<div class="boi-term__group boi-term__group--terms"><h3>' . esc_html__( 'Terms', 'bestofislam' ) . '</h3><ul>' . $terms . '</ul></div>';
+		$html .= '<div class="boi-term__group boi-term__group--terms">' . boi_add_heading_icon( '<h3>' . esc_html__( 'Terms', 'bestofislam' ) . '</h3>' ) . '<ul>' . $terms . '</ul></div>';
 	}
 
 	if ( '' !== $articles ) {
-		$html .= '<div class="boi-term__group boi-term__group--reads"><h3>' . esc_html__( 'Read more', 'bestofislam' ) . '</h3><ul>' . $articles . '</ul></div>';
+		$html .= '<div class="boi-term__group boi-term__group--reads">' . boi_add_heading_icon( '<h3>' . esc_html__( 'Read more', 'bestofislam' ) . '</h3>' ) . '<ul>' . $articles . '</ul></div>';
 	}
 
 	return $html . '<p class="boi-term__back"><a href="' . esc_url( home_url( '/glossary/' ) ) . '">' . esc_html__( 'All terms', 'bestofislam' ) . '</a><a href="#top">' . esc_html__( 'Back to top', 'bestofislam' ) . '</a></p></aside>' . $pager;
