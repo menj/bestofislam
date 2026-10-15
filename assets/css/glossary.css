@@ -255,6 +255,24 @@
 	color: var(--boi-mute);
 }
 
+/* The two parts of the index: terms, then people. */
+.boi-glossary__part {
+	margin: 3.5rem 0 1.5rem;
+	padding-block-end: 0.5rem;
+	border-block-end: 2px solid var(--boi-blue);
+	font-size: 1.9rem;
+	line-height: 1.2;
+	scroll-margin-block-start: 8rem;
+}
+
+.boi-glossary__part:first-of-type {
+	margin-block-start: 1.5rem;
+}
+
+.boi-glossary__part[hidden] {
+	display: none;
+}
+
 /* A letter and its entries, as cards. */
 .boi-glossary__group {
 	margin-block-end: 3rem;

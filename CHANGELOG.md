@@ -6,6 +6,23 @@ versioning.
 
 ## [Unreleased]
 
+## [1.67.0] - 2026-10-15
+
+### Added
+
+- **A Glossary entry for Isma'il Raji al Faruqi**, the scholar whose *Toward Islamic English* the Glossary follows, at `/glossary/ismail-raji-al-faruqi/`. His biography is cited to the front matter of his *Islam: Religion, Practice, Culture and World Order* (IIIT, 2012), and the entry links back to the 30 articles that cite him.
+- **His name links to the entry wherever it appears:** at its first mention in each of the 30 articles, on the Glossary index, and in the source line of all 387 entries that carry one. A new rule, `boi_gl_always()`, links his entry even when an article has used its budget of twelve Glossary links; on the test site, all 30 articles had done so.
+
+### Changed
+
+- **The Glossary index is in two parts, Terms and People**, each with its own A to Z. People holds persons and prophets; Terms holds terms, topics, groups, places, events and books. The kind filters, the letter bar and the search work across both, and a part heading hides when a filter leaves nothing under it.
+- **The Sitemap page no longer lists Glossary entries**, which buried the standing pages; the Glossary index itself is still listed, and the entries stay in the XML sitemap.
+
+### Checked
+
+- On a WordPress install built from this branch: the index splits into Terms (683) and People (116), with al Faruqi under People; letter and kind filters work in a browser with no script errors; the Sitemap page lists no Glossary entry; all 387 source lines and all 30 articles link to his entry.
+
+
 ## [1.66.0] - 2026-10-15
 
 ### Added

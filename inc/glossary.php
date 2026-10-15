@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '4';
+const BOI_GLOSSARY_VERSION = '5';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -159,7 +159,48 @@ function boi_glossary_faruqi_note( $t ) {
 		return '';
 	}
 
-	return "<!-- wp:paragraph {\"className\":\"boi-term__source\"} -->\n<p class=\"boi-term__source\">" . 'Term and Arabic as listed in Ismail al Faruqi, <em>Toward Islamic English</em> (International Institute of Islamic Thought, 1995), ' . implode( '; ', $bits ) . ". The definition is restated here.</p>\n<!-- /wp:paragraph -->\n\n";
+	return "<!-- wp:paragraph {\"className\":\"boi-term__source\"} -->\n<p class=\"boi-term__source\">" . 'Term and Arabic as listed in ' . boi_glossary_faruqi_name() . ', <em>Toward Islamic English</em> (International Institute of Islamic Thought, 1995), ' . implode( '; ', $bits ) . ". The definition is restated here.</p>\n<!-- /wp:paragraph -->\n\n";
+}
+
+/**
+ * The address of a Glossary entry, by slug, or an empty string.
+ *
+ * @param string $slug Entry slug.
+ * @return string
+ */
+function boi_glossary_entry_url( $slug ) {
+	static $cache = array();
+
+	if ( isset( $cache[ $slug ] ) ) {
+		return $cache[ $slug ];
+	}
+
+	$url    = '';
+	$parent = boi_glossary_parent();
+
+	if ( $parent ) {
+		// Pages are found by their path, parent included.
+		$found = get_page_by_path( get_page_uri( $parent ) . '/' . $slug );
+		$url   = ( $found && 'publish' === $found->post_status ) ? get_permalink( $found ) : '';
+	}
+
+	$cache[ $slug ] = $url;
+
+	return $url;
+}
+
+/**
+ * Ismail al Faruqi's name, linked to his Glossary entry when it exists.
+ *
+ * @return string HTML.
+ */
+function boi_glossary_faruqi_name() {
+	// Built from the Glossary's own address, so the link is right even when
+	// it is written into an entry before his entry exists in the sync.
+	$parent = boi_glossary_parent();
+	$url    = $parent ? trailingslashit( get_permalink( $parent ) ) . user_trailingslashit( 'ismail-raji-al-faruqi' ) : '';
+
+	return $url ? '<a href="' . esc_url( $url ) . '">Ismail al Faruqi</a>' : 'Ismail al Faruqi';
 }
 
 /**
@@ -622,10 +663,34 @@ function boi_render_glossary_index() {
 	$total  = 0;
 	$body   = '';
 
+	// Two parts, each with its own A to Z: terms first, then people.
+	$people_types = array( 'person', 'prophet' );
+	$parts        = array( 'terms' => array(), 'people' => array() );
+
 	foreach ( $groups as $letter => $items ) {
-		$id   = boi_glossary_letter_id( $letter );
-		$list = '';
-		$n    = 0;
+		foreach ( $items as $row ) {
+			$t = (string) get_post_meta( $row['entry']->ID, '_boi_term_type', true );
+			$parts[ in_array( $t, $people_types, true ) ? 'people' : 'terms' ][ $letter ][] = $row;
+		}
+	}
+
+	$part_titles = array(
+		'terms'  => __( 'Terms', 'bestofislam' ),
+		'people' => __( 'People', 'bestofislam' ),
+	);
+
+	foreach ( $parts as $part => $part_groups ) {
+		if ( ! $part_groups ) {
+			continue;
+		}
+
+		$body .= sprintf( '<h2 class="boi-glossary__part" id="glossary-%1$s">%2$s</h2>', esc_attr( $part ), esc_html( $part_titles[ $part ] ) );
+
+	foreach ( $part_groups as $letter => $items ) {
+		$letter_id = boi_glossary_letter_id( $letter );
+		$id        = 'terms' === $part ? $letter_id : 'people-' . $letter_id;
+		$list      = '';
+		$n         = 0;
 
 		foreach ( $items as $row ) {
 			$entry = $row['entry'];
@@ -658,13 +723,15 @@ function boi_render_glossary_index() {
 		}
 
 		$body .= sprintf(
-			'<section class="boi-glossary__group" id="%1$s" aria-labelledby="%1$s-h"><h2 class="boi-glossary__letter" id="%1$s-h">%2$s<span class="boi-glossary__n">%3$s</span><a class="boi-glossary__top" href="#top">%4$s</a></h2><ul class="boi-glossary__list">%5$s</ul></section>',
+			'<section class="boi-glossary__group" id="%1$s" data-letter="%6$s" aria-labelledby="%1$s-h"><h3 class="boi-glossary__letter" id="%1$s-h">%2$s<span class="boi-glossary__n">%3$s</span><a class="boi-glossary__top" href="#top">%4$s</a></h3><ul class="boi-glossary__list">%5$s</ul></section>',
 			esc_attr( $id ),
 			esc_html( $letter ),
 			esc_html( number_format_i18n( $n ) ),
 			esc_html__( 'Back to top', 'bestofislam' ),
-			$list
+			$list,
+			esc_attr( $letter_id )
 		);
+	}
 	}
 
 	$tile = function ( $slug, $label, $count, $image, $active ) {
@@ -694,7 +761,11 @@ function boi_render_glossary_index() {
 		$intro .= '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>';
 	}
 
-	$intro .= '<p class="boi-glossary__basis">' . esc_html__( 'The terms and their Arabic forms follow the lists in Ismail al Faruqi\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ) . '</p>';
+	$intro .= '<p class="boi-glossary__basis">' . sprintf(
+		/* translators: %s: the scholar's name, linked to his entry. */
+		esc_html__( 'The terms and their Arabic forms follow the lists in %s\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ),
+		boi_glossary_faruqi_name() // phpcs:ignore WordPress.Security.EscapeOutput
+	) . '</p>';
 
 	return sprintf(
 		'%1$s<div class="boi-glossary" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
