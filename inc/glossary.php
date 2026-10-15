@@ -133,7 +133,7 @@ function boi_glossary_content( $t ) {
 
 /**
  * The note naming where an entry's term and Arabic come from: the lists in
- * Ismail al-Faruqi's Toward Islamic English. An entry written first from other
+ * Ismail al Faruqi's Toward Islamic English. An entry written first from other
  * sources and later found in the book carries a list of its book entries.
  *
  * @param array $t Entry.
@@ -159,7 +159,7 @@ function boi_glossary_faruqi_note( $t ) {
 		return '';
 	}
 
-	return "<!-- wp:paragraph {\"className\":\"boi-term__source\"} -->\n<p class=\"boi-term__source\">" . 'Term and Arabic as listed in Ismail al-Faruqi, <em>Toward Islamic English</em> (International Institute of Islamic Thought, 1995), ' . implode( '; ', $bits ) . ". The definition is restated here.</p>\n<!-- /wp:paragraph -->\n\n";
+	return "<!-- wp:paragraph {\"className\":\"boi-term__source\"} -->\n<p class=\"boi-term__source\">" . 'Term and Arabic as listed in Ismail al Faruqi, <em>Toward Islamic English</em> (International Institute of Islamic Thought, 1995), ' . implode( '; ', $bits ) . ". The definition is restated here.</p>\n<!-- /wp:paragraph -->\n\n";
 }
 
 /**
@@ -694,7 +694,7 @@ function boi_render_glossary_index() {
 		$intro .= '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>';
 	}
 
-	$intro .= '<p class="boi-glossary__basis">' . esc_html__( 'The terms and their Arabic forms follow the lists in Ismail al-Faruqi\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ) . '</p>';
+	$intro .= '<p class="boi-glossary__basis">' . esc_html__( 'The terms and their Arabic forms follow the lists in Ismail al Faruqi\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ) . '</p>';
 
 	return sprintf(
 		'%1$s<div class="boi-glossary" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
