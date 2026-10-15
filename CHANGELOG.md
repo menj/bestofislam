@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.69.0] - 2026-10-15
+
+### Fixed
+
+- **The fifteen Tier 1 articles from the Winn workbooks, first written from memory, are checked against live sources.** Hadith citations now carry their numbers and, where given, their gradings; every correction is listed per article in docs/CONTENT-REVIEW.md. The substantive corrections: the 500-year figure in the "half a day" report is the narrator Sa'd's, not the Prophet's; al-Tabari judges none of the three occasions of 5:51 established; Aisha's "he would have concealed this verse" is in Bukhari 7420 (the Tirmidhi version is weak); Bukhari 30 does not name Bilal; Qaynuqa's exile "with their families" and the claim that Qurayza "never launched an assault" were removed as unsupported; Zaynab's age at marriage follows al-Tabari; Amr ibn Luhayy is credited only with what Bukhari says; Ibn Ishaq's counts of 27 expeditions and 38 missions replace estimates; the terrorism figures now come from GAO-17-300, TE-SAT 2018 and the Global Terrorism Index 2025; a misattributed reservation about the Birmingham dating was removed.
+- **No Wikipedia entry is cited as a reference.** Sixteen such citations in ten articles now name the works those entries cite.
+- **The banned word "honestly" is gone**, including from one article title ("7 scientific claims about the Quran, graded on the evidence") and one Glossary entry (Glossary version 6).
+
 ## [1.68.0] - 2026-10-15
 
 ### Added
