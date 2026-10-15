@@ -6,6 +6,17 @@ versioning.
 
 ## [Unreleased]
 
+## [1.68.0] - 2026-10-15
+
+### Added
+
+- **Material from al Faruqi's essay on Islam in the *Historical Atlas of the Religions of the World*** (ed. Isma'il Ragi al Faruqi and David E. Sopher, Macmillan, 1974), attributed and cited to the printed page in four articles: the rites before Islam (the Quraysh offices of sidana, siqaya and rifada; what Islam kept and what it removed; the absence of an afterlife in Meccan religion, pp. 240, 245), the Kharijites (the majority answer that a grave sinner remains a Muslim, p. 265), the raids and the conquest of Mecca (Hudaybiyah and the growth of the community in the two years of peace, p. 244, with al-Zuhri's remark in Ibn Ishaq), and the hanifs (Islam's claim to the hanifiyya, p. 237).
+- **Material from *The Cultural Atlas of Islam*** by Isma'il R. al Faruqi and Lois Lamya al Faruqi (Macmillan, 1986) in five articles: Islamic art (the six characteristics and their model in the structure of the Quran, pp. 164–171), Islam as a religion of peace (the conditions of the call to Islam, p. 188), jizya (the ruling on the Hindus and Buddhists of Sind, p. 199, with the early accounts in al-Baladhuri and the Chachnama), the mosques that adapt to place (Cordoba as an endless pattern, pp. 416–436), and Schacht and the isnads (al-Bukhari's selection figures, p. 261).
+
+### Fixed
+
+- **A doubled year in the citation of al Faruqi's *Islam: Religion, Practice, Culture and World Order*** ("2012), 2012)") in fifteen articles, introduced in 1.66.0. The fix was made on that release's branch and carried forward.
+
 ## [1.67.0] - 2026-10-15
 
 ### Added
