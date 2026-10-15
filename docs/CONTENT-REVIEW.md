@@ -155,4 +155,6 @@ Points left open in the first pass and now VERIFIED: the Meccan army of nine hun
 
 Also VERIFIED in this pass: the 70 AH Kirman coin (Eshragh, ONS Newsletter 178); Doctrina Jacobi V.16 (Dagron and Déroche, pp. 208–213); Sebeos ch. 42; Wasit and Kufa (Crone, Meccan Trade, p. 198; the article now says al-Baladhuri's passage concerns Kufa, and that Wasit points to neither Mecca nor Jerusalem); Umm Habiba (Abu Dawud 2107, sound).
 
-Still open: Abduh and al-Jassas on the magic hadith (the MDPI article on Tafsir al-Manar was rate-limited); al-Shatibi; the "over a hundred" abrogation count; al-Tabari I:181–182; al-Tabari on Noah's sons; Ibn Adi and al-Albani on the Asma chain; Watt on the alliances; the Arabica page range; Ibn Abi Dawud; the Muta envoy.
+Also VERIFIED: al-Shatibi, al-Muwafaqat 3:344 (via the Dorar encyclopedia of usul); the count of 124 in Hibat Allah ibn Salama, al-Nasikh wa al-Mansukh, p. 46 (via al-Hakam). The Muta envoy could not be traced to a classical source online, so the clause was removed from quran-on-christians.
+
+Still open, needing a printed edition or a scan: Abduh and al-Jassas on the magic hadith; al-Tabari, History I:181–182; al-Tabari on the sons of Noah; Ibn Adi and al-Albani on the Asma chain; Watt on the marriage alliances; the Arabica page range; Ibn Abi Dawud on the codices.
