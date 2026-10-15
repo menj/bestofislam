@@ -425,7 +425,7 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'quran-science-claims-graded',
-			'title'   => __( '7 scientific claims about the Quran, graded honestly', 'bestofislam' ),
+			'title'   => __( '7 scientific claims about the Quran, graded on the evidence', 'bestofislam' ),
 			'excerpt' => __( 'Embryology, the water cycle, iron, fingerprints and more: 7 popular scientific claims about the Quran, each graded for how well it holds up.', 'bestofislam' ),
 			'topic'   => 'science',
 		),
