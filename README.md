@@ -69,7 +69,7 @@ Under Appearance, Listicles, in six tabs:
 ## Installation
 
 1. Install Twenty Twenty-Five and keep it in the themes directory.
-2. Upload `bestofislam-1.67.0.zip` under Appearance, Themes, Add New, and activate it.
+2. Upload `bestofislam-1.68.0.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once.
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 36 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
 4. Configure under Appearance, Listicles.

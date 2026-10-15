@@ -128,3 +128,14 @@ Still to fix, outside this change: the word "honestly", on the owner's banned li
 
 Checked against Ahmad Shafaat, *The Gospel According to Islam* (New York: Vantage Press, 1979); printed page numbers equal the PDF page less 18, and the year comes from the UiTM library record, since the scanned copyright page is unreadable. Only his notes are cited, never his narrative, which is his own composition. His claim that the oldest manuscripts known to Origen read "Jesus Barabbas" was not used as he states it: the article gives the witnesses as Tyndale House, Cambridge lists them, and the comment attributed to Origen is of uncertain authorship.
 
+## Material from the two atlases (1.68.0)
+
+Checked against the scans. *Historical Atlas of the Religions of the World* (New York: Macmillan, 1974): printed page equals the PDF page less 26; only al Faruqi's own chapter on Islam is cited. *The Cultural Atlas of Islam* (New York: Macmillan, 1986): printed page equals the PDF page less 15. Every added passage was compared with the cited page.
+
+Left out on purpose, because the sources disagree or the claim overreaches:
+
+- Historical Atlas: that the Jews of Qurayza were "banished" (p. 244), against the main sources; that Quraysh delegates "returned converted" (p. 241); the date 659 for Nahrawan (p. 265), where 658 is usual; the claim that apart from the Kharijites no Muslims judged the faith of other Muslims except under the law of apostasy (p. 265); the figures and order of events in the Crusades section (pp. 270–272).
+- Historical Atlas: that a slave woman "rose to the status of the free wife" on conceiving (p. 245); the rule of the umm walad, already in the slavery article, is narrower.
+- Cultural Atlas: that Muslims invented the pendulum clock, the magnetic compass and the astrolabe (p. 328); the statistics for tenth-century Cordoba (p. 319); that the jizya from Egypt "dwindled to nothing" under Umar ibn Abd al-Aziz (p. 222); the account of Ibn Mas'ud as "the exegete of the Quran" (p. 244), a title usually given to Ibn Abbas; the count of 1,500 reports shared by al-Bukhari and Muslim (p. 261).
+
+To check: the Sind ruling is given in the Cultural Atlas as a council of scholars called by the caliph; the article gives it as theirs and adds that the early accounts set it in letters between Muhammad ibn al-Qasim and al-Hajjaj. A reviewer with al-Baladhuri to hand should confirm the wording.
