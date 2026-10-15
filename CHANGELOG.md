@@ -6,6 +6,18 @@ versioning.
 
 ## [Unreleased]
 
+## [1.66.0] - 2026-10-15
+
+### Added
+
+- **Material from Ismail Raji al Faruqi's *Islam: Religion, Practice, Culture and World Order*** (IIIT, 2012) in fifteen articles, each passage attributed to him and cited to the printed page: the pillars (shahadah, the difference between salah and du'a, zakat as "the sweetening"), why five prayers (the Sunnah as the "how" of revelation), the hajj (ihram and equality; Arafat as the rite that cannot be missed), interest (risk and the lender; zakat on idle wealth; cooperative credit), jizya (voluntary service and exemption), the Quran on Christians (the Christian delegation in the Prophet's mosque), Medina's Jewish tribes (the covenant as charter), war and killing (coercion and sedition as crimes; the three legitimate uses of force), apostasy (freedom of religion within the state), child marriage (the right to reject a marriage on reaching adulthood), Quran 4:34 (maintenance and the half share), the Prophet's marriages, Uthman's copies (correcting the recitation in prayer), Schacht and the isnads (Muslim awareness of forged reports), and race (the hajj and Malcolm X). Every passage was checked against the book; where he states as fact what is his own reading, the text attributes it to him.
+- **Material from Ahmad Shafaat's *The Gospel According to Islam*** (Vantage Press, 1979) in two articles, attributed and cited to the page: in the crucifixion article, his reading of 4:157 that a namesake of Jesus was crucified by mistake, with the "Jesus Barabbas" manuscripts verified independently against Tyndale House, Cambridge (p. 88); and in the Paul article, Peter's reluctance in Acts to enter a Gentile's house, read with Quran 3:50 as evidence that Jesus kept the law while relaxing some details (p. 71). Left out: his placing of the Gospel of Barnabas among early teachings (p. 90), since it is late medieval, and his identification of the Paraclete with the Qumran figure Geber (pp. 85–86), as too speculative for the site.
+
+### Changed
+
+- **Notes in reading order.** In the seventeen articles the notes are renumbered so they run in the order the reader meets them.
+- **"al Faruqi" without a hyphen** throughout, by the owner's rule: in the articles, the glossary data, the glossary code and the documentation.
+
 ### Fixed
 
 - **The version records agree again.** The theme header in `style.css` had stayed at 1.58.0 while `functions.php` moved on to 1.65.0, so Appearance, Themes understated the installed version; it now reads 1.65.0. The changelog entries collected under Unreleased are filed under the releases that shipped them, 1.59.0 to 1.65.0, as traced from each pull request's version change. The README names the 1.65.0 package.
@@ -38,7 +50,7 @@ versioning.
 
 ### Added
 
-- **The Glossary is now based on Ismail al-Faruqi's *Toward Islamic English*.** All 391 terms in the book's lists (Islamic words and concepts, terms of the Islamic sciences, and devotional and social expressions) are in the Glossary, 332 as new entries and the rest added to entries that already existed. The glossary grows from 466 to 798 entries. Each entry gives the term and Arabic as the book lists them, with the definition restated in our own words and a note of the book page. Every card and entry also carries a photograph, chosen from a set of six for its kind (48 Pixabay photographs, credited on the Sources and standards page). `docs/CONTENT-REVIEW.md` lists what to check.
+- **The Glossary is now based on Ismail al Faruqi's *Toward Islamic English*.** All 391 terms in the book's lists (Islamic words and concepts, terms of the Islamic sciences, and devotional and social expressions) are in the Glossary, 332 as new entries and the rest added to entries that already existed. The glossary grows from 466 to 798 entries. Each entry gives the term and Arabic as the book lists them, with the definition restated in our own words and a note of the book page. Every card and entry also carries a photograph, chosen from a set of six for its kind (48 Pixabay photographs, credited on the Sources and standards page). `docs/CONTENT-REVIEW.md` lists what to check.
 - **Photographs in the Glossary.** The index opens with a photograph and filters by kind through nine photograph tiles (All, Term, Person, Prophet, Place, Event, Group, Book, Topic), and each entry opens with a photograph chosen by its kind. Credits are in `inc/glossary-images.json` and on the Sources and standards page.
 - **Six new articles** answering objections that had no answer on the site (`docs/POLEMICS.md` catalogues them and the articles that cover each): the Black Stone, the camel urine hadith, who wrote the Quran, whether a preserved text proves it true, whether Muslims have a relationship with God, and the miracle stories (the Buraq, the donkey Yafur and the Bible's own miracles) that critics call a fairy tale. Each has a featured image and two in the text (Pixabay licence), a place in the reading order and links from the glossary. The site now has 76 articles.
 

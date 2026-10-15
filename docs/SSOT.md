@@ -516,7 +516,7 @@ references that can be checked.
 
 ### D20. Articles follow Islamic English conventions
 
-New articles follow the conventions of Ismail al-Faruqi's *Toward Islamic
+New articles follow the conventions of Ismail al Faruqi's *Toward Islamic
 English*: terms that carry a settled Islamic meaning (*salah*, *zakah*, *hajj*,
 *fiqh*, *hadith*, *taqwa*, *tawhid*) stay in their Arabic form and are glossed
 once on first use, instead of being translated to "prayer", "charity" and the
