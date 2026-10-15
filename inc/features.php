@@ -297,13 +297,13 @@ function boi_render_reflections_strip() {
 		);
 	}
 
-	return sprintf(
+	return boi_add_heading_icon( sprintf(
 		'<section class="boi-strip alignwide"><div class="boi-strip__head"><h2 class="boi-eyebrow">%1$s</h2><a class="boi-strip__more" href="%2$s">%3$s</a></div><ul class="boi-strip__list">%4$s</ul></section>',
 		esc_html__( 'Reflections', 'bestofislam' ),
 		esc_url( get_permalink( get_option( 'page_for_posts' ) ) ),
 		esc_html__( 'All reflections', 'bestofislam' ),
 		$items
-	);
+	) );
 }
 
 /**
@@ -348,12 +348,12 @@ function boi_render_follow() {
 		);
 	}
 
-	return sprintf(
+	return boi_add_heading_icon( sprintf(
 		'<section class="boi-follow alignwide"><h2 class="boi-eyebrow">%1$s</h2><p class="boi-follow__text">%2$s</p><div class="boi-follow__links">%3$s</div></section>',
 		esc_html__( 'Follow', 'bestofislam' ),
 		esc_html__( 'New pieces are published as they are finished. Follow wherever suits you.', 'bestofislam' ),
 		$items
-	);
+	) );
 }
 
 /**

@@ -6,6 +6,26 @@ versioning.
 
 ## [Unreleased]
 
+## [1.70.0] - 2026-10-15
+
+### Changed
+
+- **Glossary entries: the Related panel is redesigned.** It sits in a tinted panel with a gold top edge; related terms are chips; related articles are numbered cards with an arrow; "All terms" and "Back to top" are buttons. It works in light and dark styles and stacks on phones.
+- **Interface text uses the sans (Ysabeau Office):** the main navigation, the Glossary bar (search and letters) and the footer's links, notice and reading order. Headings and article text keep their serif faces.
+- **Footer:** the standing-page links are a quiet uppercase row with a gold underline on hover; the separator dots are gone; the notice and "Back to top" share one line on wide screens and stack on phones; the four columns start on the same line.
+
+- **Heading icons.** Standing headings and labels carry a line icon from Lucide (ISC licence, bundled in assets/icons/ui with its licence): The bottom line, Notes, the front page's section headings, the footer's column labels, the Glossary's Terms and People parts and its Related panel. Icons take the text colour, gold on labels and in a soft tile on larger headings. New helper boi_ui_icon() and a heading-text map in inc/icons.php.
+- **Footer columns refined:** the reading order is the widest column with its numbers in gold badges; section and start links sit in ruled rows with an arrow on hover.
+
+### Fixed
+
+- **No underline on navigation hover.** Navigation links show the hover with their pill or underline bar only.
+- **"Sources and standards" appeared twice in the footer.** It is removed from the link row and stays in the notice.
+
+### Fact-checking (Tier 2, in progress)
+
+- fighting-verses-in-context and first-muslims-kept-the-faith checked against live sources; corrections are listed in docs/CONTENT-REVIEW.md.
+
 ## [1.69.0] - 2026-10-15
 
 ### Fixed
