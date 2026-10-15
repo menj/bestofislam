@@ -6,14 +6,65 @@ versioning.
 
 ## [Unreleased]
 
+### Fixed
+
+- **The version records agree again.** The theme header in `style.css` had stayed at 1.58.0 while `functions.php` moved on to 1.65.0, so Appearance, Themes understated the installed version; it now reads 1.65.0. The changelog entries collected under Unreleased are filed under the releases that shipped them, 1.59.0 to 1.65.0, as traced from each pull request's version change. The README names the 1.65.0 package.
+
+## [1.65.0] - 2026-10-14
+
 ### Added
 
 - **Nine more articles from the second tier of the critique** (`docs/POLEMICS.md`, Source 3): the fighting verses in context, why the first Muslims kept the faith, claims that the Quran gets its history wrong, the meaning of jihad, Jewish and Christian borrowing claims, the Hanif poets and Musaylima, Schacht and the dating of hadith, whether Muhammad was illiterate, and the Ridda wars and Fadak. Each has a featured image and two in the text, a place in the reading order and a review list in `docs/CONTENT-REVIEW.md`. The site now has 100 articles.
+
+## [1.64.0] - 2026-10-14
+
+### Added
+
 - **Fifteen new articles** answering the first tier of claims in a published critique of Islam (`docs/POLEMICS.md`, Source 3): Medina's Jewish tribes and Banu Qurayza, the raids and Badr and the conquest of Mecca, the Satanic Verses report, the claim that the first revelation was demonic, magic and jinn hadiths, the reliability of the Sira, the revisionist case, abrogation and the Sword Verse, the Prophet's marriages, rites before Islam, apes and pigs, terrorism and the data, the 1110 end-of-the-world claim, race, and what the Quran says about Christians. Each has a featured image and two in the text (Pixabay licence) and a place in the reading order. The site now has 91 articles. The citations were written from memory, and `docs/CONTENT-REVIEW.md` lists every one to check before the articles are treated as final.
+
+## [1.63.0] - 2026-10-14
+
+### Fixed
+
+- **The page and its menu label are spelt "Sitemap", not "Site map".** The seed renames a Site map page already at `/sitemap/`, and the footer link reads Sitemap. This release raises the theme version to 1.63.0 so the update migration runs.
+
+## [1.62.0] - 2026-10-13
+
+### Fixed
+
+- **`/sitemap/` returned 404 after the Site map page was given its new address.** The seed now deletes the old page at `/site-map/` outright, with no redirect, and creates the page again at `/sitemap/`. This runs in the update migration, which runs when the theme version changes; this release raises it to 1.62.0.
+
+## [1.61.0] - 2026-10-13
+
+### Added
+
 - **The Glossary is now based on Ismail al-Faruqi's *Toward Islamic English*.** All 391 terms in the book's lists (Islamic words and concepts, terms of the Islamic sciences, and devotional and social expressions) are in the Glossary, 332 as new entries and the rest added to entries that already existed. The glossary grows from 466 to 798 entries. Each entry gives the term and Arabic as the book lists them, with the definition restated in our own words and a note of the book page. Every card and entry also carries a photograph, chosen from a set of six for its kind (48 Pixabay photographs, credited on the Sources and standards page). `docs/CONTENT-REVIEW.md` lists what to check.
 - **Photographs in the Glossary.** The index opens with a photograph and filters by kind through nine photograph tiles (All, Term, Person, Prophet, Place, Event, Group, Book, Topic), and each entry opens with a photograph chosen by its kind. Credits are in `inc/glossary-images.json` and on the Sources and standards page.
 - **Six new articles** answering objections that had no answer on the site (`docs/POLEMICS.md` catalogues them and the articles that cover each): the Black Stone, the camel urine hadith, who wrote the Quran, whether a preserved text proves it true, whether Muslims have a relationship with God, and the miracle stories (the Buraq, the donkey Yafur and the Bible's own miracles) that critics call a fairy tale. Each has a featured image and two in the text (Pixabay licence), a place in the reading order and links from the glossary. The site now has 76 articles.
+
+### Fixed
+
+- **The Site map page is at `/sitemap/`, not `/site-map/`.** The seed gives the page its own slug, deletes a page already at the old address without a redirect, and the front page and footer link to the new one.
+
+### Changed
+
+- **The Glossary index no longer lists other names as empty cards.** An entry's other names now appear beneath its name ("Also: ...") and in the search, and each card sets the kind, the name and the Arabic on a clean header with no overlap. Entry names are no longer justified, which had stretched two-word names across the card. The intro has no drop cap, and a letter's count is of its entries.
+
+## [1.60.0] - 2026-10-13
+
+### Added
+
 - **Fuller listicles.** All 70 articles are expanded, from about 39,000 words to about 90,000. Each entry now runs to two or three paragraphs with the primary text, the context, how scholars read it and the strongest objection. Every article ends with a filled-in bottom line (34 had the heading with no text under it, and 20 had no such section), and citations were added throughout. Titles, entry order and images are unchanged. `docs/CONTENT-REVIEW.md` lists the details that need checking against the sources. Two articles also draw on Cornelia B. Horn's study of the Quran and the Protoevangelium of James (*Apocrypha* 17, 2006): `where-is-the-injil` on the absence of direct Gospel quotations in the Quran, and `shared-prophets` on the infancy-gospel parallels in Quran 3 and 19.
+
+### Changed
+
+- **Running text is set in EB Garamond** (Regular, Medium, Bold, Italic and Bold Italic, bundled as WOFF2), at 1.1875rem to suit its small x-height. Platypi still sets headings; Ysabeau Office remains for labels and interface text.
+- Errors in the old text were corrected during the expansion, among them that everyone wears two white cloths for hajj (men only), that Hudaybiyyah followed Khaybar, and that two Greek verbs in Paul's letters were the same.
+
+## [1.59.0] - 2026-10-13
+
+### Added
+
 - **A Glossary that is easier to move around in.** Every Glossary page, the index and each entry, now has a Glossary bar under the header (`templates/page-glossary.html`): a link back to the index, a search box that finds a term as you type (aliases too), and the letters A to Z. The index is a grid of cards instead of one long list, with filters by kind (Person, Prophet, Place and so on), a live count, and a letter view that shows only one letter at a time. Each letter has its own Back to top link. Entries get a tinted head panel and Previous term and Next term links (`assets/js/glossary.js`, `assets/css/glossary.css`). Without JavaScript the index is still the full list and the letters are plain links.
 - **A Back to top button on every page** (`assets/js/back-to-top.js`, `assets/css/back-to-top.css`). It appears after the reader has scrolled down a long page, and respects reduced motion.
 - **Fuller Glossary structured data.** The index is a DefinedTermSet that lists every DefinedTerm; each entry is a DefinedTerm with its `termCode`, other names and Arabic script (`alternateName`), and its set, inside a CollectionPage or WebPage that links to the related terms and articles. With Rank Math's schema active, the page node is Rank Math's and these nodes refer to it by id.
@@ -26,17 +77,11 @@ versioning.
 
 ### Fixed
 
-- **The page and its menu label are spelt "Sitemap", not "Site map".** The seed renames a Site map page already at `/sitemap/`, and the footer link reads Sitemap. This release raises the theme version to 1.63.0 so the update migration runs.
-- **`/sitemap/` returned 404 after the Site map page was given its new address.** The seed now deletes the old page at `/site-map/` outright, with no redirect, and creates the page again at `/sitemap/`. This runs in the update migration, which runs when the theme version changes; this release raises it to 1.62.0.
-- **The Site map page is at `/sitemap/`, not `/site-map/`.** The seed gives the page its own slug, deletes a page already at the old address without a redirect, and the front page and footer link to the new one.
 - **"Recently published" on the front page showed six articles, not eight.** The query now returns eight, filling two rows of four to match the eight standing sections (`templates/front-page.html`).
 - The jump list at the head of a listicle, and the other lists of links the site builds (glossary index and related terms, site map, reading lists), were underlined by the rule meant for links in running text. That rule now leaves them out.
 
 ### Changed
 
-- **The Glossary index no longer lists other names as empty cards.** An entry's other names now appear beneath its name ("Also: ...") and in the search, and each card sets the kind, the name and the Arabic on a clean header with no overlap. Entry names are no longer justified, which had stretched two-word names across the card. The intro has no drop cap, and a letter's count is of its entries.
-- **Running text is set in EB Garamond** (Regular, Medium, Bold, Italic and Bold Italic, bundled as WOFF2), at 1.1875rem to suit its small x-height. Platypi still sets headings; Ysabeau Office remains for labels and interface text.
-- Errors in the old text were corrected during the expansion, among them that everyone wears two white cloths for hajj (men only), that Hudaybiyyah followed Khaybar, and that two Greek verbs in Paul's letters were the same.
 - The front page title carries the site's focus as well as its name, as the guide suggests; the lead card's button carries the article title in its link text.
 - **Header search is an icon.** The search field in the header is now a search icon; selecting it (or pressing `/`) opens a full-screen overlay with the search box. Esc, the close button or a click outside closes it, focus moves into the box and back, and without JavaScript the icon still opens the overlay through a `#boi-search` link. New `assets/css/header-search.css` and `assets/js/header-search.js`; the old inline-field rules are removed from `listicle.css`.
 
