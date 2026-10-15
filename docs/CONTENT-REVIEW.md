@@ -164,4 +164,4 @@ All remaining points are now accounted for:
 - The Asma chain: VERIFIED as Ibn al-Jawzi, al-Ilal 1:180 (quoting Ibn Adi), al-Dhahabi, Mizan 6:101, and al-Albani, Silsila daifa 13:33 (fabricated); the earlier "al-Kamil 7:326" reference, from Wikipedia, was replaced.
 - Watt: Excursus L of Muhammad at Medina exists; his reading of it could not be quoted, so the sentence now says only that historians including Watt have discussed the marriages in that light.
 - Ibn Abi Dawud: VERIFIED as edited by Arthur Jeffery in Materials for the History of the Text of the Qur'an (Brill, 1937).
-- Arabica 57 (2010): the page range could not be confirmed; it is cited by volume and year only, and no statement in the article depends on a page.
+- Arabica 57, no. 4 (2010), pp. 343–436: VERIFIED (Brill, DOI 10.1163/157005810X504518).
