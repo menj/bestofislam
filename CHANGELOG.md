@@ -6,6 +6,34 @@ versioning.
 
 ## [Unreleased]
 
+## [1.68.0] - 2026-10-15
+
+### Added
+
+- **Material from al Faruqi's essay on Islam in the *Historical Atlas of the Religions of the World*** (ed. Isma'il Ragi al Faruqi and David E. Sopher, Macmillan, 1974), attributed and cited to the printed page in four articles: the rites before Islam (the Quraysh offices of sidana, siqaya and rifada; what Islam kept and what it removed; the absence of an afterlife in Meccan religion, pp. 240, 245), the Kharijites (the majority answer that a grave sinner remains a Muslim, p. 265), the raids and the conquest of Mecca (Hudaybiyah and the growth of the community in the two years of peace, p. 244, with al-Zuhri's remark in Ibn Ishaq), and the hanifs (Islam's claim to the hanifiyya, p. 237).
+- **Material from *The Cultural Atlas of Islam*** by Isma'il R. al Faruqi and Lois Lamya al Faruqi (Macmillan, 1986) in five articles: Islamic art (the six characteristics and their model in the structure of the Quran, pp. 164–171), Islam as a religion of peace (the conditions of the call to Islam, p. 188), jizya (the ruling on the Hindus and Buddhists of Sind, p. 199, with the early accounts in al-Baladhuri and the Chachnama), the mosques that adapt to place (Cordoba as an endless pattern, pp. 416–436), and Schacht and the isnads (al-Bukhari's selection figures, p. 261).
+
+### Fixed
+
+- **A doubled year in the citation of al Faruqi's *Islam: Religion, Practice, Culture and World Order*** ("2012), 2012)") in fifteen articles, introduced in 1.66.0. The fix was made on that release's branch and carried forward.
+
+## [1.67.0] - 2026-10-15
+
+### Added
+
+- **A Glossary entry for Isma'il Raji al Faruqi**, the scholar whose *Toward Islamic English* the Glossary follows, at `/glossary/ismail-raji-al-faruqi/`. His biography is cited to the front matter of his *Islam: Religion, Practice, Culture and World Order* (IIIT, 2012), and the entry links back to the 30 articles that cite him.
+- **His name links to the entry wherever it appears:** at its first mention in each of the 30 articles, on the Glossary index, and in the source line of all 387 entries that carry one. A new rule, `boi_gl_always()`, links his entry even when an article has used its budget of twelve Glossary links; on the test site, all 30 articles had done so.
+
+### Changed
+
+- **The Glossary index is in two parts, Terms and People**, each with its own A to Z. People holds persons and prophets; Terms holds terms, topics, groups, places, events and books. The kind filters, the letter bar and the search work across both, and a part heading hides when a filter leaves nothing under it.
+- **The Sitemap page no longer lists Glossary entries**, which buried the standing pages; the Glossary index itself is still listed, and the entries stay in the XML sitemap.
+
+### Checked
+
+- On a WordPress install built from this branch: the index splits into Terms (683) and People (116), with al Faruqi under People; letter and kind filters work in a browser with no script errors; the Sitemap page lists no Glossary entry; all 387 source lines and all 30 articles link to his entry.
+
+
 ## [1.66.0] - 2026-10-15
 
 ### Added

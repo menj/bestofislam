@@ -413,7 +413,15 @@ function boi_render_html_sitemap() {
 	);
 	$list  = '';
 
+	// Glossary entries have their own index on the Glossary page; listing
+	// several hundred of them here would bury the standing pages.
+	$glossary = function_exists( 'boi_glossary_parent' ) ? boi_glossary_parent() : null;
+
 	foreach ( $pages as $page ) {
+		if ( $glossary && in_array( $glossary->ID, get_post_ancestors( $page ), true ) ) {
+			continue;
+		}
+
 		$list .= sprintf( '<li><a href="%1$s">%2$s</a></li>', esc_url( get_permalink( $page ) ), esc_html( get_the_title( $page ) ) );
 	}
 
