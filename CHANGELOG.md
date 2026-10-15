@@ -6,6 +6,23 @@ versioning.
 
 ## [Unreleased]
 
+## [1.70.0] - 2026-10-15
+
+### Changed
+
+- **Glossary entries: the Related panel is redesigned.** It sits in a tinted panel with a gold top edge; related terms are chips; related articles are numbered cards with an arrow; "All terms" and "Back to top" are buttons. It works in light and dark styles and stacks on phones.
+- **Interface text uses the sans (Ysabeau Office):** the main navigation, the Glossary bar (search and letters) and the footer's links, notice and reading order. Headings and article text keep their serif faces.
+- **Footer:** the standing-page links are a quiet uppercase row with a gold underline on hover; the separator dots are gone; the notice and "Back to top" share one line on wide screens and stack on phones; the four columns start on the same line.
+
+### Fixed
+
+- **No underline on navigation hover.** Navigation links show the hover with their pill or underline bar only.
+- **"Sources and standards" appeared twice in the footer.** It is removed from the link row and stays in the notice.
+
+### Fact-checking (Tier 2, in progress)
+
+- fighting-verses-in-context and first-muslims-kept-the-faith checked against live sources; corrections are listed in docs/CONTENT-REVIEW.md.
+
 ## [1.69.0] - 2026-10-15
 
 ### Fixed

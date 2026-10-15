@@ -119,8 +119,7 @@ main.boi-front + footer .boi-footer,
 .boi-parts a:hover .boi-parts__label,
 .boi-parts a:focus-visible .boi-parts__label {
 	color: #FFFFFF !important;
-	text-decoration: underline;
-	text-underline-offset: 0.2em;
+	text-decoration: none !important;
 }
 
 /* The reading order, numbered in the countdown style. */
@@ -166,8 +165,100 @@ main.boi-front + footer .boi-footer,
 	border-top-color: var(--boi-footer-rule) !important;
 }
 
+/* Interface text in the footer is set in the sans. */
+.boi-footer .wp-block-navigation-item__content,
+.boi-footer .boi-footer__note,
 .boi-footer .boi-notice {
+	font-family: var(--wp--preset--font-family--ysabeau-office, system-ui, sans-serif) !important;
+}
+
+/* The standing pages: a quiet row of links, no pills, no underline. */
+.boi-footer .boi-footer__bar .wp-block-navigation__container {
+	gap: 0.25rem 1.5rem !important;
+}
+
+.boi-footer .boi-footer__bar .wp-block-navigation-item__content {
+	padding: 0.15rem 0 !important;
+	font-size: 0.85rem !important;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--boi-footer-link) !important;
+	background: none !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: inset 0 -2px 0 transparent;
+	transition: color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boi-footer .boi-footer__bar .wp-block-navigation-item__content:hover,
+.boi-footer .boi-footer__bar .wp-block-navigation-item__content:focus-visible {
+	color: #FFFFFF !important;
+	box-shadow: inset 0 -2px 0 var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+/* No separator dots between the links. */
+.boi-footer .boi-footer__bar .wp-block-navigation-item + .wp-block-navigation-item::before {
+	content: none !important;
+	display: none !important;
+}
+
+/* The column links: no pill padding, so they sit flush with their heading. */
+.boi-footer .boi-footer__nav .wp-block-navigation-item__content {
+	background: none !important;
+	border: 0 !important;
+}
+
+/* The notice and the way back up, on one line. */
+.boi-footer .boi-notice {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem 2rem;
 	color: var(--boi-footer-mute);
+}
+
+.boi-footer .boi-notice__text {
+	margin: 0;
+	flex: 1 1 32rem;
+	max-inline-size: none !important;
+	font-size: 0.8rem;
+	line-height: 1.6;
+}
+
+.boi-footer .boi-notice__text a {
+	color: var(--boi-footer-link);
+	text-decoration: none;
+	border-block-end: 1px solid var(--boi-footer-rule);
+}
+
+.boi-footer .boi-notice__text a:hover,
+.boi-footer .boi-notice__text a:focus-visible {
+	color: #FFFFFF;
+	border-block-end-color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-footer .boi-notice__top {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.45rem 1rem;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-decoration: none !important;
+	border: 1px solid var(--boi-footer-rule);
+	border-radius: 999px;
+	transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.boi-footer .boi-notice__top:hover,
+.boi-footer .boi-notice__top:focus-visible {
+	background: rgb(255 255 255 / 0.06);
+	border-color: var(--wp--preset--color--accent-2, #E8B33C);
 }
 
 /* Smaller screens. */
@@ -195,5 +286,34 @@ main.boi-front + footer .boi-footer,
 
 	.boi-footer__bars span {
 		block-size: 0.4rem;
+	}
+}
+
+/* Every column starts on the same line. */
+.boi-footer .boi-footer__cols {
+	align-items: start;
+}
+
+.boi-footer .boi-footer__col {
+	margin-block-start: 0 !important;
+}
+
+.boi-footer .boi-footer__col > .boi-footer__label {
+	margin-block-start: 0 !important;
+}
+
+.boi-footer .boi-parts__label {
+	font-family: var(--wp--preset--font-family--ysabeau-office, system-ui, sans-serif);
+	font-size: 1rem;
+}
+
+@media (max-width: 781px) {
+	.boi-footer .boi-notice {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.boi-footer .boi-notice__text {
+		flex: none;
 	}
 }

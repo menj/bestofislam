@@ -923,11 +923,11 @@ function boi_render_term_related( $attributes ) {
 	$html = '<aside class="boi-term__related"><h2 class="boi-term__label">' . esc_html__( 'Related', 'bestofislam' ) . '</h2>';
 
 	if ( '' !== $terms ) {
-		$html .= '<div><h3>' . esc_html__( 'Terms', 'bestofislam' ) . '</h3><ul>' . $terms . '</ul></div>';
+		$html .= '<div class="boi-term__group boi-term__group--terms"><h3>' . esc_html__( 'Terms', 'bestofislam' ) . '</h3><ul>' . $terms . '</ul></div>';
 	}
 
 	if ( '' !== $articles ) {
-		$html .= '<div><h3>' . esc_html__( 'Read more', 'bestofislam' ) . '</h3><ul>' . $articles . '</ul></div>';
+		$html .= '<div class="boi-term__group boi-term__group--reads"><h3>' . esc_html__( 'Read more', 'bestofislam' ) . '</h3><ul>' . $articles . '</ul></div>';
 	}
 
 	return $html . '<p class="boi-term__back"><a href="' . esc_url( home_url( '/glossary/' ) ) . '">' . esc_html__( 'All terms', 'bestofislam' ) . '</a><a href="#top">' . esc_html__( 'Back to top', 'bestofislam' ) . '</a></p></aside>' . $pager;
