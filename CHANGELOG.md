@@ -11,10 +11,11 @@ versioning.
 ### Added
 
 - **Material from Ismail Raji al Faruqi's *Islam: Religion, Practice, Culture and World Order*** (IIIT, 2012) in fifteen articles, each passage attributed to him and cited to the printed page: the pillars (shahadah, the difference between salah and du'a, zakat as "the sweetening"), why five prayers (the Sunnah as the "how" of revelation), the hajj (ihram and equality; Arafat as the rite that cannot be missed), interest (risk and the lender; zakat on idle wealth; cooperative credit), jizya (voluntary service and exemption), the Quran on Christians (the Christian delegation in the Prophet's mosque), Medina's Jewish tribes (the covenant as charter), war and killing (coercion and sedition as crimes; the three legitimate uses of force), apostasy (freedom of religion within the state), child marriage (the right to reject a marriage on reaching adulthood), Quran 4:34 (maintenance and the half share), the Prophet's marriages, Uthman's copies (correcting the recitation in prayer), Schacht and the isnads (Muslim awareness of forged reports), and race (the hajj and Malcolm X). Every passage was checked against the book; where he states as fact what is his own reading, the text attributes it to him.
+- **Material from Ahmad Shafaat's *The Gospel According to Islam*** (Vantage Press, 1979) in two articles, attributed and cited to the page: in the crucifixion article, his reading of 4:157 that a namesake of Jesus was crucified by mistake, with the "Jesus Barabbas" manuscripts verified independently against Tyndale House, Cambridge (p. 88); and in the Paul article, Peter's reluctance in Acts to enter a Gentile's house, read with Quran 3:50 as evidence that Jesus kept the law while relaxing some details (p. 71). Left out: his placing of the Gospel of Barnabas among early teachings (p. 90), since it is late medieval, and his identification of the Paraclete with the Qumran figure Geber (pp. 85–86), as too speculative for the site.
 
 ### Changed
 
-- **Notes in reading order.** In the fifteen articles the notes are renumbered so they run in the order the reader meets them.
+- **Notes in reading order.** In the seventeen articles the notes are renumbered so they run in the order the reader meets them.
 - **"al Faruqi" without a hyphen** throughout, by the owner's rule: in the articles, the glossary data, the glossary code and the documentation.
 
 ### Fixed

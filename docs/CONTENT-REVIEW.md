@@ -123,3 +123,8 @@ Written from memory with no source opened, like the first tier. Check every hadi
 Checked against the book itself: Ismail Raji al Faruqi, *Islam: Religion, Practice, Culture and World Order* (IIIT, 2012). Printed page numbers equal the PDF page less 20. Every added passage and quotation was compared with the cited page. Three of his statements were deliberately left out: that Muslims claim no miracles for Muhammad (p. 27); that no faction ever accused another of altering the Quran (p. 26), which later Shia polemic did; and that Khadija bore all the Prophet's children (p. 62), since Mariya bore Ibrahim.
 
 Still to fix, outside this change: the word "honestly", on the owner's banned list, appears in jesus-not-god, quran-anachronism-claims, quran-on-christians, relationship-with-god and was-muhammad-illiterate-ummi.
+
+## Material from Shafaat (1.66.0)
+
+Checked against Ahmad Shafaat, *The Gospel According to Islam* (New York: Vantage Press, 1979); printed page numbers equal the PDF page less 18, and the year comes from the UiTM library record, since the scanned copyright page is unreadable. Only his notes are cited, never his narrative, which is his own composition. His claim that the oldest manuscripts known to Origen read "Jesus Barabbas" was not used as he states it: the article gives the witnesses as Tyndale House, Cambridge lists them, and the comment attributed to Origen is of uncertain authorship.
+
