@@ -21,6 +21,16 @@ function boi_gl_max() {
 }
 
 /**
+ * Entries linked at their first mention in every article, even when the
+ * article has used up its budget of links: the scholars the site relies on.
+ *
+ * @return string[] Entry slugs.
+ */
+function boi_gl_always() {
+	return (array) apply_filters( 'boi_gl_always', array( 'ismail-raji-al-faruqi' ) );
+}
+
+/**
  * Words too common to link, whatever entry they belong to.
  *
  * @return string[] Lowercase.
@@ -73,7 +83,7 @@ function boi_gl_map() {
 				}
 
 				$seen[ $low ] = true;
-				$map[]        = array( 'phrase' => $name, 'url' => get_permalink( $page ), 'id' => $page->ID );
+				$map[]        = array( 'phrase' => $name, 'url' => get_permalink( $page ), 'id' => $page->ID, 'always' => in_array( $page->post_name, boi_gl_always(), true ) );
 			}
 		}
 
@@ -134,14 +144,14 @@ function boi_gl_filter( $content ) {
 			continue;
 		}
 
-		if ( ! $in_p || $budget < 1 || array_sum( $depth ) || '' === trim( $tok ) ) {
+		if ( ! $in_p || array_sum( $depth ) || '' === trim( $tok ) ) {
 			continue;
 		}
 
 		$found = array();
 
 		foreach ( $items as $item ) {
-			if ( isset( $used[ $item['id'] ] ) ) {
+			if ( isset( $used[ $item['id'] ] ) || ( $budget < 1 && empty( $item['always'] ) ) ) {
 				continue;
 			}
 
@@ -162,7 +172,7 @@ function boi_gl_filter( $content ) {
 
 				$found[] = array( 'start' => $start, 'end' => $end, 'item' => $item );
 
-				if ( count( $found ) >= 3 || count( $found ) >= $budget ) {
+				if ( count( $found ) >= 3 || ( empty( $item['always'] ) && count( $found ) >= $budget ) ) {
 					break;
 				}
 			}
@@ -180,7 +190,10 @@ function boi_gl_filter( $content ) {
 			$link = '<a href="' . esc_url( $f['item']['url'] ) . '" class="boi-gl-link">' . substr( $tok, $f['start'], $f['end'] - $f['start'] ) . '</a>';
 			$tok  = substr_replace( $tok, $link, $f['start'], $f['end'] - $f['start'] );
 			$used[ $f['item']['id'] ] = true;
-			--$budget;
+
+			if ( empty( $f['item']['always'] ) ) {
+				--$budget;
+			}
 		}
 
 		$tokens[ $i ] = $tok;

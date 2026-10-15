@@ -62,7 +62,7 @@
 
 		groups.forEach( function ( g ) {
 			var any = false;
-			var inLetter = ! state.letter || g.id === state.letter;
+			var inLetter = ! state.letter || ( g.getAttribute( 'data-letter' ) || g.id ) === state.letter;
 
 			Array.prototype.forEach.call( g.querySelectorAll( '.boi-glossary__item' ), function ( li ) {
 				var ok = inLetter && ( ! state.type || li.getAttribute( 'data-type' ) === state.type ) && ( ! q || li.getAttribute( 'data-q' ).indexOf( q ) > -1 );
@@ -76,6 +76,19 @@
 			} );
 
 			g.hidden = ! any;
+		} );
+
+		// Hide a part heading (Terms, People) when nothing under it is shown.
+		Array.prototype.forEach.call( index.querySelectorAll( '.boi-glossary__part' ), function ( h ) {
+			var el = h.nextElementSibling;
+			var visible = false;
+			while ( el && ! el.classList.contains( 'boi-glossary__part' ) ) {
+				if ( el.classList.contains( 'boi-glossary__group' ) && ! el.hidden ) {
+					visible = true;
+				}
+				el = el.nextElementSibling;
+			}
+			h.hidden = ! visible;
 		} );
 
 		var total = index.getAttribute( 'data-total' );
