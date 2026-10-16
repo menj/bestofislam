@@ -8,7 +8,7 @@ versioning.
 
 ### Changed
 
-- **Ten articles cite al Faruqi's *Essential Writings* (2021) directly:** jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
+- **Ten articles cite al Faruqi's *Essential Writings* (2021) directly:** jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. Four further articles cite his *Christian Ethics* (1967), checked against the page images because the PDF's text layer is poor OCR: morality-without-god (pp. 22 to 23), quranic-ethics (pp. 252 to 253), shared-prophets (pp. 193 to 194) and paul-and-the-law (p. 81, given as a dissenting reading). In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
 
 ## [1.70.0] - 2026-10-15
 

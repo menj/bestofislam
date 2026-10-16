@@ -137,6 +137,10 @@ Checked against the PDF of Ismail Raji al Faruqi, *Essential Writings*, ed. Imti
 
 Not yet used: p. 69 (Hindus and Buddhists), already covered through the *Cultural Atlas*, and p. 193.
 
+## Material from *Christian Ethics* (unreleased)
+
+Checked against the page images of Ismail R. al Faruqi, *Christian Ethics: A Historical and Systematic Analysis of Its Dominant Ideas* (McGill University Press and Djambatan, 1967); the PDF's text layer is poor OCR, so every quotation was read from the image. Printed page equals PDF page less 13. Used: pp. 22 to 23 (fact and value; morality-without-god, with the note that his argument establishes a standard, not God); pp. 252 to 253 (the Islamic ethic adds action in the world; quranic-ethics, with the hadith on intentions as a counterweight); pp. 193 to 194 (peccatism, from Newbigin; shared-prophets); p. 81 (no law in Jesus's ethic; paul-and-the-law, flagged as contrary to Matthew 5:17 to 19 and the Quran). Not used: his Part One on Hebrew racialism and his chapters on Paul and the Reformation, which are polemic and mostly OCR-damaged. No passage fitted fate-and-free-will, second-peter or jesus-not-god beyond what *Essential Writings* already supplied, so those are unchanged.
+
 ## Material from Shafaat (1.66.0)
 
 Checked against Ahmad Shafaat, *The Gospel According to Islam* (New York: Vantage Press, 1979); printed page numbers equal the PDF page less 18, and the year comes from the UiTM library record, since the scanned copyright page is unreadable. Only his notes are cited, never his narrative, which is his own composition. His claim that the oldest manuscripts known to Origen read "Jesus Barabbas" was not used as he states it: the article gives the witnesses as Tyndale House, Cambridge lists them, and the comment attributed to Origen is of uncertain authorship.
