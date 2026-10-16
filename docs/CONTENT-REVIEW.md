@@ -131,6 +131,10 @@ Checked against the book itself: Ismail Raji al Faruqi, *Islam: Religion, Practi
 
 The word "honestly", on the owner's banned list, was removed from jesus-not-god, quran-on-christians and relationship-with-god, and from the title of quran-science-claims-graded ("graded on the evidence"), which also changes the links in quran-anachronism-claims and was-muhammad-illiterate-ummi.
 
+## Material from *Essential Writings* (unreleased)
+
+Checked against the PDF of Ismail Raji al Faruqi, *Essential Writings*, ed. Imtiyaz Yusuf (CICW and Islamic Book Trust, 2021). Printed page numbers are those in the book's own index, which lists jizyah at 48, 61, 69, 133, 166 and 193. The jizya article now quotes pp. 47 to 48 (charter of Aelia, including the clause barring Jews from Aelia), p. 61 (jizya "a far lesser economic and financial burden than the zakah"; stated as his judgment), p. 133 (refund to a non-Muslim who serves) and p. 166 (revenue falling "from numerous millions of dinars to a trifle"; flagged as in tension with the reports of converts still being charged). Not yet used: p. 69 (Hindus and Buddhists), already covered through the *Cultural Atlas*, and p. 193.
+
 ## Material from Shafaat (1.66.0)
 
 Checked against Ahmad Shafaat, *The Gospel According to Islam* (New York: Vantage Press, 1979); printed page numbers equal the PDF page less 18, and the year comes from the UiTM library record, since the scanned copyright page is unreadable. Only his notes are cited, never his narrative, which is his own composition. His claim that the oldest manuscripts known to Origen read "Jesus Barabbas" was not used as he states it: the article gives the witnesses as Tyndale House, Cambridge lists them, and the comment attributed to Origen is of uncertain authorship.

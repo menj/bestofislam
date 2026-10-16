@@ -6,6 +6,10 @@ versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- **jizya cites al Faruqi's *Essential Writings* (2021) directly.** Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
+
 ## [1.70.0] - 2026-10-15
 
 ### Changed
