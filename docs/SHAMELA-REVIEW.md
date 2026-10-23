@@ -68,6 +68,9 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | revisionist-case-weighed | Partly done: Bukhari 40 (Fath 1/95). Remaining: Ibn Hisham and secondary sources |
 | war-and-killing-in-islam | Partly done: Bukhari 6871, 6533, 3015, 2474 (Fath pages); Muslim 1678a, 1731a checked. Remaining: Muwatta (Abu Bakr's instructions), Marrakesh Declaration is modern |
 | qibla-change | Partly done: Bukhari 40, 4486, 3366, 403 (Fath pages); Muslim 520a; Tirmidhi 342 checked |
+| hijab-and-modesty | Partly done: Bukhari 24, 4758 (Fath pages); Abu Dawud 2149, 4104; Tirmidhi 2777 checked. Corrected: Aisha praised the early emigrant women (Bukhari 4758), not the Ansar; Abu Dawud 4104 is called mursal by Abu Dawud and sahih by al-Albani. Remaining: Muslim 36 |
+| ridda-wars-abu-bakr-fadak | Partly done: Bukhari 1399-1400, 4375, 5357, 2904, 4240-4241 (Fath pages). Corrected the Fadak sentence to rest on Umar's report on Banu al-Nadir (Bukhari 2904). Remaining: Tabari on year 11 AH |
+| islamic-dilemma | Partly done: Bukhari 4485, 7363, 6841 (Fath pages). Remaining: Muslim stoning report, Lazarus-Yafeh |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
