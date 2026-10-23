@@ -743,7 +743,7 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'schacht-isnads-dating-hadith',
-			'title'   => __( 'Schacht, isnads and the dating of hadith: 5 answers', 'bestofislam' ),
+			'title'   => __( 'Schacht, isnads and the dating of hadith: 8 answers', 'bestofislam' ),
 			'excerpt' => __( 'Hadith were forged and Muslim scholars said so first, but writing began early, chains were tested and the quoted figures mislead.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
