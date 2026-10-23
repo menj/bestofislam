@@ -127,3 +127,6 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | quranic-stories-and-history | Partly done: Bukhari 4419 verified (Fath vol. 8, p. 125). Remaining: Tabari on Cyrus proposals. |
 | crucifixion-quran | Partly done: Tabari 4:157 (vol. 9, pp. 367–371), Bukhari gloss on mutawaffika (Fath vol. 8, p. 283), Abu Dawud 4324 verified on sunnah.com. Remaining: Razi 4:157. |
 | who-is-allah, relationship-with-god | Added Bukhari 7554 ("My mercy has preceded My wrath"; Fath vol. 13, p. 522) in body and notes, from the text supplied by the site owner. |
+| dome-inscriptions | Partly done: Bukhari 4987 verified on sunnah.com; Fath vol. 9, p. 11. |
+| ezra-and-mary | Partly done: Tabari 9:30 report 16620 (vol. 14, p. 202). Remaining: Ibn Kathir on 9:30. |
+| second-peter, jesus-not-god, same-god, verses-read-differently, seven-libraries, haman-anachronism | Reviewed: notes cite only modern scholarship or the Bible; no classical Arabic source to verify. |
