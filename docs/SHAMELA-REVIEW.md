@@ -55,6 +55,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | ramadan-last-ten-nights | Partly done: Bukhari 2017, 49, 2024, 2026 (Fath pages); Muslim 762a, 1174, 1175; Ibn Majah 3850 checked. Remaining: Tirmidhi 3513 (sunnah.com fetch failed), Bukhari 6, Muslim 1172 |
 | quran-4-34 | Partly done: Muslim 1218a, 2328a, 974b; Abu Dawud 2142, 2146; Ibn Majah 1977, 2340 checked on sunnah.com. Remaining: Tirmidhi 3895, Tabari tafsir, Muwatta |
 | who-is-allah | Partly done: Bukhari 7405, 2736, 3668, 3445 (Fath pages); Muslim 2751a, 2677a checked. Remaining: Tirmidhi 3507 (name list), Ibn Hisham on Abd Allah |
+| sharia-and-hudud | Partly done: Bukhari 3017, 6824, 7352 (Fath pages); Muslim 1716a; Tirmidhi 1424 (weak); Abu Dawud 4394 checked. Remaining: Bukhari 6922 (sunnah.com fetch failed), Nasai, Ibn Majah and Muwatta for Safwan, Muslim for Maiz |
+| magic-jinn-and-satan-hadiths | Partly done: Bukhari 5763, 6226, 1142, 1144, 3295, 608, 3860 (Fath pages); Muslim 2189a, 450a, 2814a checked. Remaining: Muslim 2815 (sunnah.com fetch failed), Bukhari 2 / Aisha note 13 (see first-revelation) |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
