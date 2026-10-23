@@ -2307,5 +2307,30 @@
     "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
    }
   ]
+ },
+ "quran-grammar-errors-claim": {
+  "featured": {
+   "file": "quran-grammar-errors-claim.avif",
+   "alt": "An open Quran on a wooden stand with prayer beads",
+   "artist": "Pexels",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/book-quran-open-pages-open-book-1283468/"
+  },
+  "inline": [
+   {
+    "file": "quran-grammar-errors-claim-1.avif",
+    "alt": "An open Quran in soft light",
+    "artist": "shzern",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/quran-light-recite-spirituality-5385904/"
+   },
+   {
+    "file": "quran-grammar-errors-claim-2.avif",
+    "alt": "A page of an illuminated Quran manuscript in gold and blue",
+    "artist": "fendt1",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/quran-islam-alanya-a-book-holy-586569/"
+   }
+  ]
  }
 }

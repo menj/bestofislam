@@ -550,6 +550,12 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'quran-grammar-errors-claim',
+			'title'   => __( '4 facts about the claim of grammatical errors in the Quran', 'bestofislam' ),
+			'excerpt' => __( 'The challenge to match the Quran, the report from A\'isha and the verses critics cite, 4:162 and 20:63, read with al-Tabari.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
 			'slug'    => 'who-wrote-the-quran',
 			'title'   => __( 'Who wrote the Quran? 5 answers to the authorship claim', 'bestofislam' ),
 			'excerpt' => __( 'Revelation or composition? How the claim was argued from the start, how the text was fixed and what each side can and cannot show. 5 answers.', 'bestofislam' ),
