@@ -86,6 +86,14 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | natural-world-verses | Partly done: Muslim 2229a checked. Remaining: Bukhari chapter heading quoting Qatada |
 | islamophobia-5-facts | Partly done: Bukhari 10 (Fath 1/53) |
 | prophets-you-may-not-know | Partly done: Bukhari 4485 (Fath 8/170) |
+| prophet-died-poisoning | Partly done: Bukhari 2617 (5/230); Muslim 2190a; Abu Dawud 4510 (weak per al-Albani, Bishr not named in that wording) checked. Remaining: Ibn Ishaq on Bishr |
+| satanic-verses-report | Partly done: Bukhari 1071 (2/553) checked. Remaining: Tabari, Ibn Saad, Qadi Iyad, Ibn Hajar on sura 53 |
+| who-saw-gabriel | Partly done: Bukhari 3 checked. Remaining: Muslim Dihya report |
+| hanif-poets-and-musaylima | Partly done: Bukhari 3826-3828 (Fath 7/142-143; Ibn Hajar says Zayd died before the mission). Remaining: Ibn Ishaq, Tabari |
+| end-of-the-world-1110-claim | Partly done: Bukhari 6504 (Fath 11/347) |
+| shared-prophets | Partly done: Bukhari 1385, 122 (Fath pages) |
+| scholars-who-shaped-islamic-study | Partly done: Bukhari 143, 75 (Fath pages) |
+| kaaba-witnesses | Partly done: Bukhari 4355, 1583 (Fath pages) |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
