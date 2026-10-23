@@ -45,7 +45,7 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | taqiyya-5-myths | Partly done: Bukhari 2692 and 3029 checked on sunnah.com; Quran commentary and remaining hadith notes (Muslim, Kab ibn Malik, Hudaybiyya) still to verify |
 | apes-and-pigs-and-the-jews | Partly done: Muslim 2663b and 2922, Bukhari 2916, 2926 and 4121, Abu Dawud 3002 checked on sunnah.com and Shamela; Tabari and Ibn Hisham notes still to verify |
 | questions-about-aisha | Partly done: Bukhari 2664, 2880, 3894, 4141, 5133, 5136, 5158, Muslim 177a, Tirmidhi 3883 checked; Hisham ibn Urwa sentence corrected from Tahdhib al-Tahdhib; Taqrib on Asma, Zarkashi and Tabari notes still to verify |
-| quranic-ethics | To do |
+| quranic-ethics | Partly done: Bukhari 13, 33, 2620, 5304, 6979 (Fath pages); Muslim 45a, 1787, 2589; Abu Dawud 3580; Tirmidhi 1337 checked. Remaining: Tabarani (note 5), Nawawi Riyad al-Salihin (note 16), Muslim and Bukhari in notes 9 to 22 where no number given |
 | all other listicles | To do, densest first |
 
 ## sunnah.com checks (non-Bukhari hadith)
