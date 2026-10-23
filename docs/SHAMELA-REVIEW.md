@@ -61,6 +61,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | slavery-in-islam | Partly done: Bukhari 1936, 2517, 4261 (Fath pages); Muslim 3029a, 1661a, 1657a checked. Remaining: Ahmad on Salman, Bukhari 4469 (Fath 8/152 earlier) |
 | five-pillars-explained | Partly done: Bukhari 349, 1399-1400, 1903 (Fath pages); Muslim 96a checked; Bukhari 3364 and Muslim 1218a earlier. Remaining: Muslim 8 / Bukhari 8 already; Gabriel hadith numbering (Muslim 8) |
 | fate-and-free-will | Partly done: Bukhari 5729, 4949 (Fath pages); Muslim 771a, 2219a; Tirmidhi 2517 (hasan Darussalam; al-Qattan called it munkar) checked. Remaining: Tabari on 3:54 |
+| companions-who-started-with-nothing | Partly done: Bukhari 3861, 2350, 3780 (Fath pages). Remaining: Ibn Ishaq, Ibn Sa'd, Ahmad notes, Bukhari on Bilal |
+| houris-and-paradise | Partly done: Bukhari 3244, 5778 (Fath pages); Muslim 2824a, 109a; Tirmidhi 1663, Ibn Majah 2799 checked; sentence on Tirmidhi grading revised. Remaining: Ahmad |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
