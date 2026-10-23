@@ -2332,5 +2332,30 @@
     "source": "https://pixabay.com/photos/quran-islam-alanya-a-book-holy-586569/"
    }
   ]
+ },
+ "fly-hadith-and-adult-suckling": {
+  "featured": {
+   "file": "fly-hadith-and-adult-suckling.avif",
+   "alt": "Head of a dromedary camel against desert sand",
+   "artist": "Manuela_Burkhalter",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/morocco-camel-desert-sand-sahara-5271734/"
+  },
+  "inline": [
+   {
+    "file": "fly-hadith-and-adult-suckling-1.avif",
+    "alt": "A camel resting on a dune in the Sahara",
+    "artist": "stofinho",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/camel-sahara-sand-dunes-desert-8430227/"
+   },
+   {
+    "file": "fly-hadith-and-adult-suckling-2.avif",
+    "alt": "A camel caravan crossing the desert",
+    "artist": "Hoeneisen",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/caravan-desert-sahara-sand-camel-4483792/"
+   }
+  ]
  }
 }

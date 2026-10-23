@@ -544,6 +544,12 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'fly-hadith-and-adult-suckling',
+			'title'   => __( 'The fly hadith and the adult suckling report: 4 points', 'bestofislam' ),
+			'excerpt' => __( 'The fly in the drink and Sahla\'s nursing of Salim, read in full with what the Prophet\'s wives and the jurists made of them. 4 points.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'camel-urine-hadith',
 			'title'   => __( 'The camel urine hadith: 5 things the report says', 'bestofislam' ),
 			'excerpt' => __( 'The hadith of the men of Ukl and Uraynah, read in full: what it says, what it does not command and what scholars make of it. 5 points.', 'bestofislam' ),
