@@ -48,6 +48,9 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | quranic-ethics | Partly done: Bukhari 13, 33, 2620, 5304, 6979 (Fath pages); Muslim 45a, 1787, 2589; Abu Dawud 3580; Tirmidhi 1337 checked. Remaining: Tabarani (note 5), Nawawi Riyad al-Salihin (note 16), Muslim and Bukhari in notes 9 to 22 where no number given |
 | all other listicles | To do, densest first |
 | hajj-rites-explained | Partly done: Bukhari 1, 1549, 1562, 1542, 1597, 1643, 3364 (Fath pages); Abu Dawud 1949; Muslim 1218a, 1955a checked. Remaining: Muslim reports in notes 3, 4, 6, 9, 11, Tirmidhi, Ahmad, Ibn Kathir |
+| fighting-verses-in-context | Partly done: Muslim 1731a and Bukhari 4905 (Fath 8/648) checked. Remaining: Tabari tafsir, Ibn Kathir, Ibn Hisham, Mishnah notes (no Shamela id yet) |
+| medina-jewish-tribes-and-qurayza | Partly done: Bukhari 4028, 2329, 4121, 4037, 4039, 6153 checked on sunnah.com with Fath pages. Remaining: Ibn Ishaq, Tabari, Abu Ubayd notes |
+| first-revelation-demonic-claim | Partly done: Bukhari 2, 3, 7, 2731 checked on sunnah.com with Fath pages; Muslim 177a earlier. Remaining: Bukhari 6982 (sunnah.com fetch failed; Fath 12/359 already cited), Ibn Hisham, Tabari, Ibn Kathir |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
