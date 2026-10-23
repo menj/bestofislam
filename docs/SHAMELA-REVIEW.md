@@ -132,3 +132,4 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | second-peter, jesus-not-god, same-god, verses-read-differently, seven-libraries, haman-anachronism | Reviewed: notes cite only modern scholarship or the Bible; no classical Arabic source to verify. |
 | islam-in-china | Partly done: Bukhari 335 and 428 verified on sunnah.com; Fath vol. 1, pp. 435, 524–525, 540. |
 | crusades-5-facts | Partly done: Tabari History vol. 3, p. 609 (terms of Aelia) text checked on Shamela. |
+| kharijites-and-takfir | Added a point on Ibn Abbas's debate with the Haruriyya (Nasa'i, Sunan al-Kubra 8575). |

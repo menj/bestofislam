@@ -491,8 +491,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'kharijites-and-takfir',
-			'title'   => __( 'The Kharijites and takfir: 5 facts', 'bestofislam' ),
-			'excerpt' => __( 'Who were the Kharijites, what did the Prophet say about them, and why do mainstream scholars refuse takfir? 5 facts. Read on.', 'bestofislam' ),
+			'title'   => __( 'The Kharijites and takfir: 6 facts', 'bestofislam' ),
+			'excerpt' => __( 'Who were the Kharijites, what did the Prophet say about them, and why do mainstream scholars refuse takfir? 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'history',
 		),
 		array(
