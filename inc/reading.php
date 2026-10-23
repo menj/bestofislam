@@ -37,7 +37,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
-			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'preservation-and-truth', 'quran-contradictions-claims', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
+			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'seven-ahruf-cairo-edition-stoning-verse', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'preservation-and-truth', 'quran-contradictions-claims', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
 		),
 		array(
 			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),

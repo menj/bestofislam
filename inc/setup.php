@@ -232,6 +232,12 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'seven-ahruf-cairo-edition-stoning-verse',
+			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 4 points', 'bestofislam' ),
+			'excerpt' => __( 'Seven modes versus seven readings, the Cairo printing and the report of Umar on the stoning verse. 4 points. Read on.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
 			'slug'    => 'uthman-copies',
 			'title'   => __( 'Uthman\'s copies: 5 facts about the Quran\'s earliest manuscripts', 'bestofislam' ),
 			'excerpt' => __( 'Where are Uthman\'s copies of the Quran? 5 facts on the earliest manuscripts, from Birmingham to Samarkand. Read them.', 'bestofislam' ),

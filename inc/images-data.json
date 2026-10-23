@@ -2426,5 +2426,24 @@
     "source": "https://pixabay.com/photos/old-books-book-old-library-436498/"
    }
   ]
+ },
+ "seven-ahruf-cairo-edition-stoning-verse": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-1.avif",
+    "alt": "Intricate Arabic calligraphy on an open page of a religious book, showcasing artistic detail.",
+    "artist": "Jahra Tasfia Reza",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-calligraphy-on-sacred-text-36188888/"
+   },
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-2.avif",
+    "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
+    "artist": "Unknown artistUnknown artist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg"
+   }
+  ]
  }
 }
