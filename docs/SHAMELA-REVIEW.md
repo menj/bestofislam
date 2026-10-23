@@ -60,6 +60,7 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | was-muhammad-illiterate-ummi | Partly done: Hudaybiyya report corrected (the words "did not write well" are in Bukhari 4251, Maghazi, not in the Peacemaking version; Ibn Hajar 7/503); Bukhari 2698, 2699, 4251 (Fath pages), Muslim 1783a checked. Remaining: Tabari and Ibn Kathir on 7:157, 29:48; Lane |
 | slavery-in-islam | Partly done: Bukhari 1936, 2517, 4261 (Fath pages); Muslim 3029a, 1661a, 1657a checked. Remaining: Ahmad on Salman, Bukhari 4469 (Fath 8/152 earlier) |
 | five-pillars-explained | Partly done: Bukhari 349, 1399-1400, 1903 (Fath pages); Muslim 96a checked; Bukhari 3364 and Muslim 1218a earlier. Remaining: Muslim 8 / Bukhari 8 already; Gabriel hadith numbering (Muslim 8) |
+| fate-and-free-will | Partly done: Bukhari 5729, 4949 (Fath pages); Muslim 771a, 2219a; Tirmidhi 2517 (hasan Darussalam; al-Qattan called it munkar) checked. Remaining: Tabari on 3:54 |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
