@@ -116,3 +116,8 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 - Aisha, taqiyya, apes and pigs: see the status table.
 | abrogation-and-the-sword-verse | Partly done: Tabari 2:62 (vol. 2, p. 155, Ibn Abbas via Ali ibn Abi Talha) and 2:256 (vol. 5, p. 407) located. Remaining: Razi and Ibn Kathir pages. |
 | quran-contradictions-claims | Partly done: Tabari 41:9–10 (vol. 21, pp. 431–435) and 39:42 (vol. 21, pp. 298–299) located. Remaining: Ibn Kathir 70:4. |
+| quran-on-christians | Partly done: Bukhari 1601 (Fath vol. 3, p. 468), 435–436 (vol. 1, p. 532), Muslim 2767a verified on sunnah.com; Tabari 12156 located. Remaining: Ibn Kathir pages. |
+| al-zutt-allegation | Partly done: Muslim 450a verified on sunnah.com. Remaining: Ahmad 3788 and 3782 (not on sunnah.com). |
+| preservation-and-truth | Partly done: Tabari 15:9 (vol. 17, p. 68) and 18:86 (vol. 18, pp. 95–96) located. |
+| quran-grammar-errors-claim | Partly done: Tabari 4:162 report 10838 (vol. 9, p. 395) and 20:63 (vol. 18, pp. 326–328) located. |
+| talmud-midrash-apocrypha-borrowing | Partly done: Tabari 2:259 located (vol. 5, pp. 438–439). Remaining: Talmud Taanit 23a. |
