@@ -172,6 +172,12 @@ function boi_seed_listicles() {
 			'topic'   => 'arts-and-culture',
 		),
 		array(
+			'slug'    => 'deuteronomy-18-and-the-paraclete',
+			'title'   => __( 'Deuteronomy 18 and the Paraclete: 4 points on Muhammad in the Bible', 'bestofislam' ),
+			'excerpt' => __( 'The prophet like Moses, the Comforter in John and Ibn Ishaq\'s Syriac source: the Muslim case and the Christian reply. 4 points.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'same-god',
 			'title'   => __( '7 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
 			'excerpt' => __( '7 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
