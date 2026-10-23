@@ -66,6 +66,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | apostasy-in-islam | Partly done: Bukhari 6922 (read in Fath 12/267), 6878 (12/201), 3017; Muslim 1676a, 1676c checked. Remaining: modern sources (Islamonweb, Pew, Gomaa) are not classical |
 | kharijites-and-takfir | Partly done: Bukhari 6931, 6104 (Fath pages); Muslim 1066a-g checked. Remaining: Tabari on Siffin, Nahrawan and 5:44 |
 | revisionist-case-weighed | Partly done: Bukhari 40 (Fath 1/95). Remaining: Ibn Hisham and secondary sources |
+| war-and-killing-in-islam | Partly done: Bukhari 6871, 6533, 3015, 2474 (Fath pages); Muslim 1678a, 1731a checked. Remaining: Muwatta (Abu Bakr's instructions), Marrakesh Declaration is modern |
+| qibla-change | Partly done: Bukhari 40, 4486, 3366, 403 (Fath pages); Muslim 520a; Tirmidhi 342 checked |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
