@@ -538,6 +538,12 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'women-in-islamic-law-testimony-inheritance',
+			'title'   => __( '5 facts about women, testimony, inheritance and marriage in Islamic law', 'bestofislam' ),
+			'excerpt' => __( 'Two women witnesses, the half share, polygamy, honour killing and genital cutting: what the texts say and what the jurists made of them.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'camel-urine-hadith',
 			'title'   => __( 'The camel urine hadith: 5 things the report says', 'bestofislam' ),
 			'excerpt' => __( 'The hadith of the men of Ukl and Uraynah, read in full: what it says, what it does not command and what scholars make of it. 5 points.', 'bestofislam' ),

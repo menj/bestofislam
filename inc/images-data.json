@@ -2282,5 +2282,30 @@
     "source": "https://pixabay.com/photos/morocco-city-historic-village-clay-2349647/"
    }
   ]
+ },
+ "women-in-islamic-law-testimony-inheritance": {
+  "featured": {
+   "file": "women-in-islamic-law-testimony-inheritance.avif",
+   "alt": "An open Quran on a wooden stand atop a prayer rug, emphasizing Islamic faith.",
+   "artist": "GR  Stocks",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522572/"
+  },
+  "inline": [
+   {
+    "file": "women-in-islamic-law-testimony-inheritance-1.avif",
+    "alt": "A Quran set on a wooden lectern with soft lighting creating a serene ambiance.",
+    "artist": "Yaşar Başkurt",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/"
+   },
+   {
+    "file": "women-in-islamic-law-testimony-inheritance-2.avif",
+    "alt": "An open Quran placed on a wooden stand with visible Arabic calligraphy, symbolizing faith and tradition.",
+    "artist": "GR  Stocks",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
+   }
+  ]
  }
 }
