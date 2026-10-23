@@ -21,6 +21,7 @@ versioning.
 
 - **Classical-source notes in more than 70 articles were checked against Shamela and sunnah.com.** Notes now give the book, volume and page of the Shamela text (Fath al-Bari, al-Nawawi on Muslim, al-Tabari, Ibn Kathir, al-Muhalla, Tahdhib al-Tahdhib and others), and mark hadith verified on sunnah.com.
 - **Corrections found in the review:** the grading of Abu Dawud 4462, 4104 and Tirmidhi 1663; the source for the Hudaybiyya "did not write well" report; Aisha's praise of the Muhajirat (Bukhari 4758); the Fadak and Banu al-Nadir sentence; the al-Tabari report number for 5:33 (11842).
+- **Footer: the brandmark sits beside the wordmark.** It matches the header mark, reverses on the navy band and scales with the wordmark. The favicon (SVG, 32 px PNG and Apple touch icon) was already in place and loads whenever no Site Icon is set.
 - **who-is-allah and relationship-with-god:** quote Bukhari 7554, "My mercy has preceded My wrath".
 - **Schacht and the Sira articles:** new answers from Azami's *On Schacht's Origins of Muhammadan Jurisprudence*, including the argument from silence, the common-link example and omitted chains.
 - **Ahruf and qiraat articles:** new points from al-Imam's *Variant Readings of the Qur'an*.
