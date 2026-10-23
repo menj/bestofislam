@@ -1444,17 +1444,17 @@
   "inline": [
    {
     "file": "western-scholars-of-islam-1.avif",
-    "alt": "A spacious historic library with wooden tables and stained glass windows.",
-    "artist": "Louie  Cepeda",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/suzallo-library-28436228/"
+    "alt": "Portrait of the rabbi and scholar Abraham Geiger",
+    "artist": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Geiger_a.jpg"
    },
    {
     "file": "western-scholars-of-islam-2.avif",
-    "alt": "Empty study desks in a modern library with natural lighting in Berlin, Germany.",
-    "artist": "Shay T",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/quiet-study-area-in-modern-berlin-library-39983762/"
+    "alt": "Portrait of the historian Leone Caetani, Prince of Teano",
+    "artist": "Unknown photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Photo_of_Prince_Leone_Caetani.jpg"
    }
   ]
  },
@@ -2280,6 +2280,288 @@
     "artist": "Walkerssk",
     "licence": "Pixabay licence",
     "source": "https://pixabay.com/photos/morocco-city-historic-village-clay-2349647/"
+   }
+  ]
+ },
+ "women-in-islamic-law-testimony-inheritance": {
+  "featured": {
+   "file": "women-in-islamic-law-testimony-inheritance.avif",
+   "alt": "An open Quran on a wooden stand atop a prayer rug, emphasizing Islamic faith.",
+   "artist": "GR  Stocks",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522572/"
+  },
+  "inline": [
+   {
+    "file": "women-in-islamic-law-testimony-inheritance-1.avif",
+    "alt": "A Quran set on a wooden lectern with soft lighting creating a serene ambiance.",
+    "artist": "Yaşar Başkurt",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/"
+   },
+   {
+    "file": "women-in-islamic-law-testimony-inheritance-2.avif",
+    "alt": "An open Quran placed on a wooden stand with visible Arabic calligraphy, symbolizing faith and tradition.",
+    "artist": "GR  Stocks",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
+   }
+  ]
+ },
+ "quran-grammar-errors-claim": {
+  "featured": {
+   "file": "quran-grammar-errors-claim.avif",
+   "alt": "An open Quran on a wooden stand with prayer beads",
+   "artist": "Pexels",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/book-quran-open-pages-open-book-1283468/"
+  },
+  "inline": [
+   {
+    "file": "quran-grammar-errors-claim-1.avif",
+    "alt": "An open Quran in soft light",
+    "artist": "shzern",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/quran-light-recite-spirituality-5385904/"
+   },
+   {
+    "file": "quran-grammar-errors-claim-2.avif",
+    "alt": "A page of an illuminated Quran manuscript in gold and blue",
+    "artist": "fendt1",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/quran-islam-alanya-a-book-holy-586569/"
+   }
+  ]
+ },
+ "fly-hadith-and-adult-suckling": {
+  "featured": {
+   "file": "fly-hadith-and-adult-suckling.avif",
+   "alt": "Head of a dromedary camel against desert sand",
+   "artist": "Manuela_Burkhalter",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/morocco-camel-desert-sand-sahara-5271734/"
+  },
+  "inline": [
+   {
+    "file": "fly-hadith-and-adult-suckling-1.avif",
+    "alt": "A camel resting on a dune in the Sahara",
+    "artist": "stofinho",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/camel-sahara-sand-dunes-desert-8430227/"
+   },
+   {
+    "file": "fly-hadith-and-adult-suckling-2.avif",
+    "alt": "A camel caravan crossing the desert",
+    "artist": "Hoeneisen",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/caravan-desert-sahara-sand-camel-4483792/"
+   }
+  ]
+ },
+ "blasphemy-and-insults-to-the-prophet": {
+  "featured": {
+   "file": "blasphemy-and-insults-to-the-prophet.avif",
+   "alt": "Elegant neoclassical facade of Dublin's Four Courts with iconic white columns.",
+   "artist": "Joaquin Carfagna",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/columns-of-four-courts-in-dublin-ireland-20185389/"
+  },
+  "inline": [
+   {
+    "file": "blasphemy-and-insults-to-the-prophet-1.avif",
+    "alt": "A black and white view of the historic courthouse facade in Hampton, Virginia, showcasing classic architecture.",
+    "artist": "Phil Evenden",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/historic-courthouse-facade-in-hampton-virginia-36595111/"
+   },
+   {
+    "file": "blasphemy-and-insults-to-the-prophet-2.avif",
+    "alt": "Front view of the iconic US Supreme Court building showcasing its grand columns and classic architecture.",
+    "artist": "Guohua Song",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/majestic-view-of-the-us-supreme-court-building-39241857/"
+   }
+  ]
+ },
+ "deuteronomy-18-and-the-paraclete": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "deuteronomy-18-and-the-paraclete-1.avif",
+    "alt": "A close-up of three vintage hardbound books stacked on a white surface, showcasing their aged textures.",
+    "artist": "Ylanite Koppens",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/brown-hardbound-books-on-white-surface-7682364/"
+   },
+   {
+    "file": "deuteronomy-18-and-the-paraclete-2.avif",
+    "alt": "A stack of vintage books on a wooden table, capturing classic literary charm.",
+    "artist": "Arturo A",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-books-13745530/"
+   }
+  ]
+ },
+ "quran-contradictions-claims": {
+  "featured": {
+   "file": "quran-contradictions-claims.avif",
+   "alt": "An open handwritten manuscript",
+   "artist": "pcdazero",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/manuscript-ancient-writing-document-547042/"
+  },
+  "inline": [
+   {
+    "file": "quran-contradictions-claims-1.avif",
+    "alt": "A medieval manuscript examined under a magnifying glass",
+    "artist": "myrfa",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/manuscript-magnify-glass-glass-1614234/"
+   },
+   {
+    "file": "quran-contradictions-claims-2.avif",
+    "alt": "Old bound books on a library shelf",
+    "artist": "jarmoluk",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/old-books-book-old-library-436498/"
+   }
+  ]
+ },
+ "seven-ahruf-cairo-edition-stoning-verse": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-1.avif",
+    "alt": "Intricate Arabic calligraphy on an open page of a religious book, showcasing artistic detail.",
+    "artist": "Jahra Tasfia Reza",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-calligraphy-on-sacred-text-36188888/"
+   },
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-2.avif",
+    "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
+    "artist": "Unknown artistUnknown artist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg"
+   }
+  ]
+ },
+ "aisha-sheep-report-stoning-and-suckling-verses": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "aisha-sheep-report-stoning-and-suckling-verses-1.avif",
+    "alt": "A detailed view of ancient book pages showcasing intricate Arabic calligraphy.",
+    "artist": "Adam Noor",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/old-book-with-handwriting-18491910/"
+   },
+   {
+    "file": "aisha-sheep-report-stoning-and-suckling-verses-2.avif",
+    "alt": "Close-up of an ancient manuscript featuring elaborate Arabic calligraphy and geometric designs.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/"
+   }
+  ]
+ },
+ "gods-attributes-and-anthropomorphism": {
+  "featured": {
+   "file": "gods-attributes-and-anthropomorphism.avif",
+   "alt": "Concentric gold, blue and white star outlines on a navy ground.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "gods-attributes-and-anthropomorphism-1.avif",
+    "alt": "Nested star outlines around a gold centre on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "gods-attributes-and-anthropomorphism-2.avif",
+    "alt": "Layered star outlines in gold, blue and white on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "temporary-marriage-mutah": {
+  "featured": {
+   "file": "temporary-marriage-mutah.avif",
+   "alt": "Gold, blue and white star outlines around a gold centre on a navy ground.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "temporary-marriage-mutah-1.avif",
+    "alt": "Star outlines in gold, blue and white on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "temporary-marriage-mutah-2.avif",
+    "alt": "Concentric star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "do-muslims-worship-muhammad": {
+  "featured": {
+   "file": "do-muslims-worship-muhammad.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "do-muslims-worship-muhammad-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "do-muslims-worship-muhammad-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "muslims-by-the-numbers-2020": {
+  "featured": {
+   "file": "muslims-by-the-numbers-2020.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "muslims-by-the-numbers-2020-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "muslims-by-the-numbers-2020-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
    }
   ]
  }

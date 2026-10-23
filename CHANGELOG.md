@@ -10,6 +10,59 @@ versioning.
 
 - **Ten articles cite al Faruqi's *Essential Writings* (2021) directly:** jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. Four further articles cite his *Christian Ethics* (1967), checked against the page images because the PDF's text layer is poor OCR: morality-without-god (pp. 22 to 23), quranic-ethics (pp. 252 to 253), shared-prophets (pp. 193 to 194) and paul-and-the-law (p. 81, given as a dissenting reading). In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
 
+## [1.73.0] - 2026-10-23
+
+### Added
+
+- **New article: God's hand, face and throne in the Quran: 7 points.** Quran 42:11 as the rule, the verses of hand, face and rising, Malik's reply, the six positions in Ibn Hajar's survey, and the hadith of Adam's image and the nightly descent.
+- **New article: Mutah, temporary marriage: 6 points from the sources.** Quran 4:24, the short permission on campaign, the prohibition and its final wording, Umar's announcement, and the dissent of Ibn Abbas and the Shia.
+- **New article: Do Muslims worship Muhammad? 7 points from the sources.** The Quran on his servanthood, his refusal of exaggerated praise, the eclipse of Ibrahim's death, the warning about graves, and Abu Bakr's speech.
+- **New article: Muslims by the numbers: 7 facts from the 2020 count.** Figures from Pew Research Center's June 2025 report on the decade 2010 to 2020.
+- **crusades-5-facts** gains a sixth point on the terms of Aelia, and **kharijites-and-takfir** gains a point on Ibn Abbas's debate with the Haruriyya. Their titles now say 6.
+- **bin/make-original-graphics.py** draws the featured and in-text images for articles with no suitable public-domain photograph, in the site palette.
+
+### Changed
+
+- **bin/fetch-commons-images.py** can replace either in-text image and can search Commons by name. A search that finds no public-domain file leaves the existing image in place instead of failing the run.
+- **western-scholars-of-islam:** the Geiger and Caetani entries carry portrait slots, filled from Commons when a public-domain portrait exists.
+- **Second-tier review:** classical-source notes in a further 30 articles now give book, volume and page. See docs/SHAMELA-REVIEW.md and docs/CONTENT-REVIEW.md.
+
+## [1.72.0] - 2026-10-23
+
+### Added
+
+- **New article: Blasphemy and insults to the Prophet: 4 facts.** The Quranic response to mockery, the Hanafi position in Ibn Abidin's *Tanbih al-Wulat*, and the colonial origin of Pakistan's statute.
+- **New article: Deuteronomy 18 and the Paraclete: 4 points on Muhammad in the Bible.** Deuteronomy 18:18, John's Comforter, Ibn Ishaq on the Munahhemana, and the Christian objections.
+- **New article: Contradictions in the Quran? 4 points on the cases critics cite.** The days of creation (41:9 to 12), the fifty-thousand-year day, and who takes the soul at death.
+- **New article: The seven ahruf, the 1924 Cairo edition and the stoning verse: 10 points.** The ahruf, the ten readings by tawatur, and printed recitations, drawing on al-Imam, al-Qurtubi, Ibn al-Jazari and three IslamWeb fatwas.
+- **New article: The sheep that ate the verse: 5 points on A'isha's report.** The chain, the gradings, and the replies of Ibn Hazm and al-Baqillani.
+- **docs/SHAMELA-REVIEW.md** tracks which articles have been checked against Shamela and sunnah.com, and what remains.
+
+### Changed
+
+- **Classical-source notes in more than 70 articles were checked against Shamela and sunnah.com.** Notes now give the book, volume and page of the Shamela text (Fath al-Bari, al-Nawawi on Muslim, al-Tabari, Ibn Kathir, al-Muhalla, Tahdhib al-Tahdhib and others), and mark hadith verified on sunnah.com.
+- **Corrections found in the review:** the grading of Abu Dawud 4462, 4104 and Tirmidhi 1663; the source for the Hudaybiyya "did not write well" report; Aisha's praise of the Muhajirat (Bukhari 4758); the Fadak and Banu al-Nadir sentence; the al-Tabari report number for 5:33 (11842).
+- **Footer: the brandmark sits beside the wordmark.** It matches the header mark, reverses on the navy band and scales with the wordmark. The favicon (SVG, 32 px PNG and Apple touch icon) was already in place and loads whenever no Site Icon is set.
+- **who-is-allah and relationship-with-god:** quote Bukhari 7554, "My mercy has preceded My wrath".
+- **Schacht and the Sira articles:** new answers from Azami's *On Schacht's Origins of Muhammadan Jurisprudence*, including the argument from silence, the common-link example and omitted chains.
+- **Ahruf and qiraat articles:** new points from al-Imam's *Variant Readings of the Qur'an*.
+
+## [1.71.0] - 2026-10-23
+
+### Added
+
+- **New article: 6 facts about women, testimony, inheritance and marriage in Islamic law.** Quran 2:282 and al-Alwani (AJIS 13:2, 1996), 4:11 with 4:4 and 4:34, 4:3 and 4:129, Sahih Muslim 1498a on honour killing, Abu Dawud 5271 with al-Azhar and Ali Gomaa on FGM, and Bukhari 3237 on consent within marriage.
+- **New article: 4 facts about the claim of grammatical errors in the Quran.** The challenge (2:23, 17:88), 4:162 and the A'isha report with al-Tabari's rebuttal, 20:63 in the Hafs reading and the Balharith dialect.
+- **New article: The fly hadith and the adult suckling report: 4 points.** Muslim 2363, Bukhari 3320, Muslim 1453a–c and 1454, Bukhari 5102, Quran 2:233 and 33:4–5.
+
+### Changed
+
+- **first-revelation-demonic-claim:** new point on the epilepsy claim (Bukhari 2; Watt, Muhammad at Mecca, p. 57).
+- **quran-4-34:** answers the Muslim 974b report.
+- **quran-on-christians:** new point on the "ransom" hadith (Muslim 2767) with al-Nawawi and al-Bayhaqi.
+- **fate-and-free-will:** new point on "best of plotters" (3:54, 8:30, al-Tabari).
+- **same-god:** new point on the claim that Allah is Satan (16:98, 35:6, 7:11–13).
+
 ## [1.70.0] - 2026-10-15
 
 ### Changed

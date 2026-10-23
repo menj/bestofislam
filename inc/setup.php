@@ -172,9 +172,15 @@ function boi_seed_listicles() {
 			'topic'   => 'arts-and-culture',
 		),
 		array(
+			'slug'    => 'deuteronomy-18-and-the-paraclete',
+			'title'   => __( 'Deuteronomy 18 and the Paraclete: 4 points on Muhammad in the Bible', 'bestofislam' ),
+			'excerpt' => __( 'The prophet like Moses, the Comforter in John and Ibn Ishaq\'s Syriac source: the Muslim case and the Christian reply. 4 points.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'same-god',
-			'title'   => __( '6 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
-			'excerpt' => __( '6 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
+			'title'   => __( '7 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
+			'excerpt' => __( '7 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(
@@ -224,6 +230,18 @@ function boi_seed_listicles() {
 			'title'   => __( 'Ezra and Mary in the Quran: 5 points on two contested verses', 'bestofislam' ),
 			'excerpt' => __( 'Critics say no Jews called Ezra son of God and no Christians put Mary in the Trinity. 5 points on both verses. Read them.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'aisha-sheep-report-stoning-and-suckling-verses',
+			'title'   => __( 'The sheep that ate the verse: 5 points on A\'isha\'s report', 'bestofislam' ),
+			'excerpt' => __( 'One narrator, a disputed grade and two classical replies: 5 points on the report of the sheet under A\'isha\'s pillow.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'seven-ahruf-cairo-edition-stoning-verse',
+			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 10 points', 'bestofislam' ),
+			'excerpt' => __( 'Seven modes versus seven readings, the ten readings, the personal codices, the conditions for an accepted reading, the Cairo printing and the stoning verse. 10 points.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
 		),
 		array(
 			'slug'    => 'uthman-copies',
@@ -335,8 +353,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'fate-and-free-will',
-			'title'   => __( 'Fate and free will in Islam: 5 questions answered', 'bestofislam' ),
-			'excerpt' => __( 'If God knows everything, are we free? Five questions about qadar, answered from the Quran, the hadith and the scholars. Read on.', 'bestofislam' ),
+			'title'   => __( 'Fate and free will in Islam: 6 questions answered', 'bestofislam' ),
+			'excerpt' => __( 'If God knows everything, are we free? Six questions about qadar, answered from the Quran, the hadith and the scholars. Read on.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
@@ -344,6 +362,12 @@ function boi_seed_listicles() {
 			'title'   => __( '5 things Muslims believe about the end of time', 'bestofislam' ),
 			'excerpt' => __( 'The Hour, its signs, the Dajjal, the Mahdi and intercession: 5 things to know about the Islamic end times, and what the Quran leaves out.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'blasphemy-and-insults-to-the-prophet',
+			'title'   => __( 'Blasphemy and insults to the Prophet: 4 facts', 'bestofislam' ),
+			'excerpt' => __( 'What the Quran says about mockery, how the Prophet answered insults, what Hanafi law held and where Pakistan\'s law began. 4 facts.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
 		),
 		array(
 			'slug'    => 'sharia-and-hudud',
@@ -454,10 +478,34 @@ function boi_seed_listicles() {
 			'topic'   => 'history',
 		),
 		array(
+			'slug'    => 'gods-attributes-and-anthropomorphism',
+			'title'   => __( 'God\'s hand, face and throne in the Quran: 7 points', 'bestofislam' ),
+			'excerpt' => __( 'Does the Quran describe a God with a body? 7 points on 42:11, the verses of hand and face, Malik\'s reply and the classical schools. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'temporary-marriage-mutah',
+			'title'   => __( 'Mutah, temporary marriage: 6 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'Was mutah ever allowed, who forbade it, and what does Quran 4:24 say? 6 points from the Quran, hadith and Ibn Hajar\'s survey. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'do-muslims-worship-muhammad',
+			'title'   => __( 'Do Muslims worship Muhammad? 7 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The Quran calls him a servant, the Prophet refused exaggerated praise, and Abu Bakr answered the charge on the day he died. 7 points. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'crusades-5-facts',
-			'title'   => __( '5 facts about the Crusades that get lost', 'bestofislam' ),
-			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 5 facts. Read on.', 'bestofislam' ),
+			'title'   => __( '6 facts about the Crusades that get lost', 'bestofislam' ),
+			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'muslims-by-the-numbers-2020',
+			'title'   => __( 'Muslims by the numbers: 7 facts from the 2020 count', 'bestofislam' ),
+			'excerpt' => __( 'How many Muslims are there, where do they live, and what share of Europe do they make up? 7 facts from Pew\'s 2020 count. Read on.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
 		),
 		array(
 			'slug'    => 'islam-in-china',
@@ -467,8 +515,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'kharijites-and-takfir',
-			'title'   => __( 'The Kharijites and takfir: 5 facts', 'bestofislam' ),
-			'excerpt' => __( 'Who were the Kharijites, what did the Prophet say about them, and why do mainstream scholars refuse takfir? 5 facts. Read on.', 'bestofislam' ),
+			'title'   => __( 'The Kharijites and takfir: 6 facts', 'bestofislam' ),
+			'excerpt' => __( 'Who were the Kharijites, what did the Prophet say about them, and why do mainstream scholars refuse takfir? 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'history',
 		),
 		array(
@@ -538,15 +586,39 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'women-in-islamic-law-testimony-inheritance',
+			'title'   => __( '6 facts about women, testimony, inheritance and marriage in Islamic law', 'bestofislam' ),
+			'excerpt' => __( 'Two women witnesses, the half share, polygamy, honour killing, genital cutting and consent: what the texts say.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'fly-hadith-and-adult-suckling',
+			'title'   => __( 'The fly hadith and the adult suckling report: 4 points', 'bestofislam' ),
+			'excerpt' => __( 'The fly in the drink and Sahla\'s nursing of Salim, read in full with what the Prophet\'s wives and the jurists made of them. 4 points.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'camel-urine-hadith',
 			'title'   => __( 'The camel urine hadith: 5 things the report says', 'bestofislam' ),
 			'excerpt' => __( 'The hadith of the men of Ukl and Uraynah, read in full: what it says, what it does not command and what scholars make of it. 5 points.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'quran-grammar-errors-claim',
+			'title'   => __( '4 facts about the claim of grammatical errors in the Quran', 'bestofislam' ),
+			'excerpt' => __( 'The challenge to match the Quran, the report from A\'isha and the verses critics cite, 4:162 and 20:63, read with al-Tabari.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
 			'slug'    => 'who-wrote-the-quran',
 			'title'   => __( 'Who wrote the Quran? 5 answers to the authorship claim', 'bestofislam' ),
 			'excerpt' => __( 'Revelation or composition? How the claim was argued from the start, how the text was fixed and what each side can and cannot show. 5 answers.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'quran-contradictions-claims',
+			'title'   => __( 'Contradictions in the Quran? 4 points on the cases critics cite', 'bestofislam' ),
+			'excerpt' => __( 'Six days or eight, a thousand years or fifty thousand, and who takes the soul: the classical answers. 4 points. Read on.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
@@ -558,7 +630,7 @@ function boi_seed_listicles() {
 		array(
 			'slug'    => 'relationship-with-god',
 			'title'   => __( 'Do Muslims have a relationship with God? 5 answers', 'bestofislam' ),
-			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 5 answers on how Muslims relate to God.', 'bestofislam' ),
+			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 6 answers on how Muslims relate to God.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
@@ -587,8 +659,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'first-revelation-demonic-claim',
-			'title'   => __( 'Was the first revelation demonic? 5 answers from the sources', 'bestofislam' ),
-			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 5 answers on the claim that the first revelation was demonic.', 'bestofislam' ),
+			'title'   => __( 'Was the first revelation demonic? 6 answers from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 6 answers on the claims of demonic origin and epilepsy.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
@@ -653,8 +725,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'quran-on-christians',
-			'title'   => __( 'What the Quran says about Christians and Christianity: 6 answers', 'bestofislam' ),
-			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 6 answers on what the Quran says about Christians.', 'bestofislam' ),
+			'title'   => __( 'What the Quran says about Christians and Christianity: 7 answers', 'bestofislam' ),
+			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 7 answers on what the Quran says about Christians.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(
@@ -695,7 +767,7 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'schacht-isnads-dating-hadith',
-			'title'   => __( 'Schacht, isnads and the dating of hadith: 5 answers', 'bestofislam' ),
+			'title'   => __( 'Schacht, isnads and the dating of hadith: 8 answers', 'bestofislam' ),
 			'excerpt' => __( 'Hadith were forged and Muslim scholars said so first, but writing began early, chains were tested and the quoted figures mislead.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
