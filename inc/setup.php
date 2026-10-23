@@ -479,8 +479,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'crusades-5-facts',
-			'title'   => __( '5 facts about the Crusades that get lost', 'bestofislam' ),
-			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 5 facts. Read on.', 'bestofislam' ),
+			'title'   => __( '6 facts about the Crusades that get lost', 'bestofislam' ),
+			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'history',
 		),
 		array(
