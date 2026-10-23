@@ -63,6 +63,9 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | fate-and-free-will | Partly done: Bukhari 5729, 4949 (Fath pages); Muslim 771a, 2219a; Tirmidhi 2517 (hasan Darussalam; al-Qattan called it munkar) checked. Remaining: Tabari on 3:54 |
 | companions-who-started-with-nothing | Partly done: Bukhari 3861, 2350, 3780 (Fath pages). Remaining: Ibn Ishaq, Ibn Sa'd, Ahmad notes, Bukhari on Bilal |
 | houris-and-paradise | Partly done: Bukhari 3244, 5778 (Fath pages); Muslim 2824a, 109a; Tirmidhi 1663, Ibn Majah 2799 checked; sentence on Tirmidhi grading revised. Remaining: Ahmad |
+| apostasy-in-islam | Partly done: Bukhari 6922 (read in Fath 12/267), 6878 (12/201), 3017; Muslim 1676a, 1676c checked. Remaining: modern sources (Islamonweb, Pew, Gomaa) are not classical |
+| kharijites-and-takfir | Partly done: Bukhari 6931, 6104 (Fath pages); Muslim 1066a-g checked. Remaining: Tabari on Siffin, Nahrawan and 5:44 |
+| revisionist-case-weighed | Partly done: Bukhari 40 (Fath 1/95). Remaining: Ibn Hisham and secondary sources |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
