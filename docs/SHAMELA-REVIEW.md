@@ -114,3 +114,5 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 - Islamic rites before Islam: Abu Dawud 1919 (sahih, al-Albani); Muslim 1134a, 1218a.
 - Women in the Prophet's life: Muslim 976a and 976b (the weeping is in 976b); Abu Dawud 3887 (sahih, al-Albani); Tirmidhi 3883 (hasan, Darussalam).
 - Aisha, taqiyya, apes and pigs: see the status table.
+| abrogation-and-the-sword-verse | Partly done: Tabari 2:62 (vol. 2, p. 155, Ibn Abbas via Ali ibn Abi Talha) and 2:256 (vol. 5, p. 407) located. Remaining: Razi and Ibn Kathir pages. |
+| quran-contradictions-claims | Partly done: Tabari 41:9–10 (vol. 21, pp. 431–435) and 39:42 (vol. 21, pp. 298–299) located. Remaining: Ibn Kathir 70:4. |
