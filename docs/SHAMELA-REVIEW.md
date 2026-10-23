@@ -34,8 +34,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | sira-ibn-ishaq-hisham-tabari | Azami Appendix 1 added; Shamela check of the remaining notes pending |
 | end-of-time | Partly done: Bukhari 50, 59, 80, 3337, 3439, 6503 and Muslim 8, 588, 809, 2901 verified with Shamela pages; notes 3, 13, 14, 15 (Abu Dawud, Tirmidhi, Ibn Khaldun, Ibn Taymiyya) still to verify |
 | prophets-marriages-zaynab-and-others | Partly done: Bukhari 4782, 4788, 4138, 5086, 7420 and Qurtubi on 33:37 verified; Muslim, Abu Dawud, Tirmidhi, Ibn Sad notes still to verify |
-| race-in-quran-and-hadith | To do |
-| islamic-rites-before-islam | To do |
+| race-in-quran-and-hadith | Partly done: Bukhari 30, 1245, 2886, 3754, 4469, 7139, 7142 verified with Fath al-Bari pages; Ahmad, Tirmidhi, Ibn Kathir, Tabari and Wahidi notes still to verify |
+| islamic-rites-before-islam | Partly done: Bukhari 876, 1582, 1622, 1664, 2002, 2050, 3364, 3521, 3828 verified with Fath al-Bari pages; Muslim, Abu Dawud and Ibn Ishaq notes still to verify |
 | jihad-meaning-quran-hadith-jurists | To do |
 | first-muslims-kept-the-faith | To do |
 | funeral-dhikr-dua | To do |
