@@ -32,8 +32,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | women-in-the-prophets-life | Partly done: Bukhari notes 3, 5-11, 17, 19, 20 carry hadith numbers and Fath al-Bari pages; notes 4 (Muslim), 8 (Tirmidhi part), 12, 13, 14, 16, 18 still to verify |
 | schacht-isnads-dating-hadith | Extended with Azami, On Schacht's Origins (pp. 117-122, 182-185, 197-201) |
 | sira-ibn-ishaq-hisham-tabari | Azami Appendix 1 added; Shamela check of the remaining notes pending |
-| end-of-time | To do |
-| prophets-marriages-zaynab-and-others | To do |
+| end-of-time | Partly done: Bukhari 50, 59, 80, 3337, 3439, 6503 and Muslim 8, 588, 809, 2901 verified with Shamela pages; notes 3, 13, 14, 15 (Abu Dawud, Tirmidhi, Ibn Khaldun, Ibn Taymiyya) still to verify |
+| prophets-marriages-zaynab-and-others | Partly done: Bukhari 4782, 4788, 4138, 5086, 7420 and Qurtubi on 33:37 verified; Muslim, Abu Dawud, Tirmidhi, Ibn Sad notes still to verify |
 | race-in-quran-and-hadith | To do |
 | islamic-rites-before-islam | To do |
 | jihad-meaning-quran-hadith-jurists | To do |
