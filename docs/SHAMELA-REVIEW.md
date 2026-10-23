@@ -28,7 +28,7 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | women-in-islamic-law-testimony-inheritance | Done (Ibn Rushd, Bidayat al-mujtahid) |
 | fly-hadith-and-adult-suckling | Done (Fath al-Bari on the fly hadith) |
 | aisha-sheep-report-stoning-and-suckling-verses | Done (Tahdhib al-Tahdhib, al-Muhalla, al-Intisar) |
-| seven-ahruf-cairo-edition-stoning-verse | Done (Qurtubi, al-Nashr); IslamWeb fatwas added |
+| seven-ahruf-cairo-edition-stoning-verse | Done (Qurtubi, al-Nashr); IslamWeb fatwas and al-Imam, Variant Readings of the Qur'an added (10 points) |
 | women-in-the-prophets-life | Partly done: Bukhari notes 3, 5-11, 17, 19, 20 carry hadith numbers and Fath al-Bari pages; notes 4 (Muslim), 8 (Tirmidhi part), 12, 13, 14, 16, 18 still to verify |
 | schacht-isnads-dating-hadith | Extended with Azami, On Schacht's Origins (pp. 117-122, 182-185, 197-201) |
 | sira-ibn-ishaq-hisham-tabari | Azami Appendix 1 added; Shamela check of the remaining notes pending |
