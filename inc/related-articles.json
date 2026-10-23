@@ -319,6 +319,7 @@
   "ezra-and-mary"
  ],
  "preservation-and-truth": [
+  "quran-contradictions-claims",
   "quran-anachronism-claims",
   "haman-anachronism",
   "revisionist-case-weighed",
@@ -440,6 +441,7 @@
   "companions-who-started-with-nothing"
  ],
  "same-god": [
+  "deuteronomy-18-and-the-paraclete",
   "quran-anachronism-claims",
   "verses-read-differently",
   "shared-prophets",
@@ -482,6 +484,7 @@
   "verses-read-differently"
  ],
  "sharia-and-hudud": [
+  "blasphemy-and-insults-to-the-prophet",
   "apostasy-in-islam",
   "why-no-interest",
   "war-and-killing-in-islam",
@@ -530,6 +533,7 @@
   "crucifixion-quran"
  ],
  "uthman-copies": [
+  "seven-ahruf-cairo-edition-stoning-verse",
   "questions-about-aisha",
   "hanif-poets-and-musaylima",
   "women-in-the-prophets-life",
@@ -616,5 +620,30 @@
   "camel-urine-hadith",
   "magic-jinn-and-satan-hadiths",
   "schacht-isnads-dating-hadith"
+ ],
+ "blasphemy-and-insults-to-the-prophet": [
+  "sharia-and-hudud",
+  "apostasy-in-islam",
+  "kharijites-and-takfir"
+ ],
+ "deuteronomy-18-and-the-paraclete": [
+  "jesus-not-god",
+  "quran-on-christians",
+  "same-god"
+ ],
+ "quran-contradictions-claims": [
+  "quran-grammar-errors-claim",
+  "preservation-and-truth",
+  "who-wrote-the-quran"
+ ],
+ "seven-ahruf-cairo-edition-stoning-verse": [
+  "uthman-copies",
+  "aisha-sheep-report-stoning-and-suckling-verses",
+  "manuscript-transmission"
+ ],
+ "aisha-sheep-report-stoning-and-suckling-verses": [
+  "seven-ahruf-cairo-edition-stoning-verse",
+  "uthman-copies",
+  "preservation-and-truth"
  ]
 }

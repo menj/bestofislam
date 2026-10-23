@@ -172,6 +172,12 @@ function boi_seed_listicles() {
 			'topic'   => 'arts-and-culture',
 		),
 		array(
+			'slug'    => 'deuteronomy-18-and-the-paraclete',
+			'title'   => __( 'Deuteronomy 18 and the Paraclete: 4 points on Muhammad in the Bible', 'bestofislam' ),
+			'excerpt' => __( 'The prophet like Moses, the Comforter in John and Ibn Ishaq\'s Syriac source: the Muslim case and the Christian reply. 4 points.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'same-god',
 			'title'   => __( '7 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
 			'excerpt' => __( '7 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
@@ -224,6 +230,18 @@ function boi_seed_listicles() {
 			'title'   => __( 'Ezra and Mary in the Quran: 5 points on two contested verses', 'bestofislam' ),
 			'excerpt' => __( 'Critics say no Jews called Ezra son of God and no Christians put Mary in the Trinity. 5 points on both verses. Read them.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'aisha-sheep-report-stoning-and-suckling-verses',
+			'title'   => __( 'The sheep that ate the verse: 5 points on A\'isha\'s report', 'bestofislam' ),
+			'excerpt' => __( 'One narrator, a disputed grade and two classical replies: 5 points on the report of the sheet under A\'isha\'s pillow.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
+			'slug'    => 'seven-ahruf-cairo-edition-stoning-verse',
+			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 10 points', 'bestofislam' ),
+			'excerpt' => __( 'Seven modes versus seven readings, the ten readings, the personal codices, the conditions for an accepted reading, the Cairo printing and the stoning verse. 10 points.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
 		),
 		array(
 			'slug'    => 'uthman-copies',
@@ -344,6 +362,12 @@ function boi_seed_listicles() {
 			'title'   => __( '5 things Muslims believe about the end of time', 'bestofislam' ),
 			'excerpt' => __( 'The Hour, its signs, the Dajjal, the Mahdi and intercession: 5 things to know about the Islamic end times, and what the Quran leaves out.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'blasphemy-and-insults-to-the-prophet',
+			'title'   => __( 'Blasphemy and insults to the Prophet: 4 facts', 'bestofislam' ),
+			'excerpt' => __( 'What the Quran says about mockery, how the Prophet answered insults, what Hanafi law held and where Pakistan\'s law began. 4 facts.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
 		),
 		array(
 			'slug'    => 'sharia-and-hudud',
@@ -568,6 +592,12 @@ function boi_seed_listicles() {
 			'topic'   => 'faith-and-reason',
 		),
 		array(
+			'slug'    => 'quran-contradictions-claims',
+			'title'   => __( 'Contradictions in the Quran? 4 points on the cases critics cite', 'bestofislam' ),
+			'excerpt' => __( 'Six days or eight, a thousand years or fifty thousand, and who takes the soul: the classical answers. 4 points. Read on.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
 			'slug'    => 'preservation-and-truth',
 			'title'   => __( 'Does a preserved text prove it is true? 5 answers', 'bestofislam' ),
 			'excerpt' => __( 'Accurate copying shows continuity, not truth. 5 answers on what preservation establishes for the Quran and for other scriptures.', 'bestofislam' ),
@@ -713,7 +743,7 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'schacht-isnads-dating-hadith',
-			'title'   => __( 'Schacht, isnads and the dating of hadith: 5 answers', 'bestofislam' ),
+			'title'   => __( 'Schacht, isnads and the dating of hadith: 8 answers', 'bestofislam' ),
 			'excerpt' => __( 'Hadith were forged and Muslim scholars said so first, but writing began early, chains were tested and the quoted figures mislead.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),

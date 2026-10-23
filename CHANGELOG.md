@@ -6,6 +6,26 @@ versioning.
 
 ## [Unreleased]
 
+## [1.72.0] - 2026-10-23
+
+### Added
+
+- **New article: Blasphemy and insults to the Prophet: 4 facts.** The Quranic response to mockery, the Hanafi position in Ibn Abidin's *Tanbih al-Wulat*, and the colonial origin of Pakistan's statute.
+- **New article: Deuteronomy 18 and the Paraclete: 4 points on Muhammad in the Bible.** Deuteronomy 18:18, John's Comforter, Ibn Ishaq on the Munahhemana, and the Christian objections.
+- **New article: Contradictions in the Quran? 4 points on the cases critics cite.** The days of creation (41:9 to 12), the fifty-thousand-year day, and who takes the soul at death.
+- **New article: The seven ahruf, the 1924 Cairo edition and the stoning verse: 10 points.** The ahruf, the ten readings by tawatur, and printed recitations, drawing on al-Imam, al-Qurtubi, Ibn al-Jazari and three IslamWeb fatwas.
+- **New article: The sheep that ate the verse: 5 points on A'isha's report.** The chain, the gradings, and the replies of Ibn Hazm and al-Baqillani.
+- **docs/SHAMELA-REVIEW.md** tracks which articles have been checked against Shamela and sunnah.com, and what remains.
+
+### Changed
+
+- **Classical-source notes in more than 70 articles were checked against Shamela and sunnah.com.** Notes now give the book, volume and page of the Shamela text (Fath al-Bari, al-Nawawi on Muslim, al-Tabari, Ibn Kathir, al-Muhalla, Tahdhib al-Tahdhib and others), and mark hadith verified on sunnah.com.
+- **Corrections found in the review:** the grading of Abu Dawud 4462, 4104 and Tirmidhi 1663; the source for the Hudaybiyya "did not write well" report; Aisha's praise of the Muhajirat (Bukhari 4758); the Fadak and Banu al-Nadir sentence; the al-Tabari report number for 5:33 (11842).
+- **Footer: the brandmark sits beside the wordmark.** It matches the header mark, reverses on the navy band and scales with the wordmark. The favicon (SVG, 32 px PNG and Apple touch icon) was already in place and loads whenever no Site Icon is set.
+- **who-is-allah and relationship-with-god:** quote Bukhari 7554, "My mercy has preceded My wrath".
+- **Schacht and the Sira articles:** new answers from Azami's *On Schacht's Origins of Muhammadan Jurisprudence*, including the argument from silence, the common-link example and omitted chains.
+- **Ahruf and qiraat articles:** new points from al-Imam's *Variant Readings of the Qur'an*.
+
 ## [1.71.0] - 2026-10-23
 
 ### Added

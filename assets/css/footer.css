@@ -56,6 +56,27 @@ main.boi-front + footer .boi-footer,
 	border-block-end: 1px solid var(--boi-footer-rule);
 }
 
+/* Brandmark beside the wordmark; it takes the footer's light text colour and
+   scales with the wordmark. */
+.boi-footer__brand {
+	gap: clamp(0.7rem, 1.5vw, 1.1rem);
+	align-items: center;
+}
+
+.boi-footer__mark {
+	display: block;
+	flex: 0 0 auto;
+	inline-size: clamp(2.6rem, 5.5vw, 4.25rem);
+	block-size: clamp(2.6rem, 5.5vw, 4.25rem);
+	color: #FFFFFF;
+}
+
+.boi-footer__mark svg {
+	display: block;
+	inline-size: 100%;
+	block-size: 100%;
+}
+
 .boi-footer__wordmark,
 .boi-footer__wordmark a {
 	margin: 0;
