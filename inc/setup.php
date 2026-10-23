@@ -173,8 +173,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'same-god',
-			'title'   => __( '6 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
-			'excerpt' => __( '6 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
+			'title'   => __( '7 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
+			'excerpt' => __( '7 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(
