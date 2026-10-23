@@ -6,6 +6,23 @@ versioning.
 
 ## [Unreleased]
 
+## [1.73.0] - 2026-10-23
+
+### Added
+
+- **New article: God's hand, face and throne in the Quran: 7 points.** Quran 42:11 as the rule, the verses of hand, face and rising, Malik's reply, the six positions in Ibn Hajar's survey, and the hadith of Adam's image and the nightly descent.
+- **New article: Mutah, temporary marriage: 6 points from the sources.** Quran 4:24, the short permission on campaign, the prohibition and its final wording, Umar's announcement, and the dissent of Ibn Abbas and the Shia.
+- **New article: Do Muslims worship Muhammad? 7 points from the sources.** The Quran on his servanthood, his refusal of exaggerated praise, the eclipse of Ibrahim's death, the warning about graves, and Abu Bakr's speech.
+- **New article: Muslims by the numbers: 7 facts from the 2020 count.** Figures from Pew Research Center's June 2025 report on the decade 2010 to 2020.
+- **crusades-5-facts** gains a sixth point on the terms of Aelia, and **kharijites-and-takfir** gains a point on Ibn Abbas's debate with the Haruriyya. Their titles now say 6.
+- **bin/make-original-graphics.py** draws the featured and in-text images for articles with no suitable public-domain photograph, in the site palette.
+
+### Changed
+
+- **bin/fetch-commons-images.py** can replace either in-text image and can search Commons by name. A search that finds no public-domain file leaves the existing image in place instead of failing the run.
+- **western-scholars-of-islam:** the Geiger and Caetani entries carry portrait slots, filled from Commons when a public-domain portrait exists.
+- **Second-tier review:** classical-source notes in a further 30 articles now give book, volume and page. See docs/SHAMELA-REVIEW.md and docs/CONTENT-REVIEW.md.
+
 ## [1.72.0] - 2026-10-23
 
 ### Added
