@@ -130,3 +130,4 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | dome-inscriptions | Partly done: Bukhari 4987 verified on sunnah.com; Fath vol. 9, p. 11. |
 | ezra-and-mary | Partly done: Tabari 9:30 report 16620 (vol. 14, p. 202). Remaining: Ibn Kathir on 9:30. |
 | second-peter, jesus-not-god, same-god, verses-read-differently, seven-libraries, haman-anachronism | Reviewed: notes cite only modern scholarship or the Bible; no classical Arabic source to verify. |
+| islam-in-china | Partly done: Bukhari 335 and 428 verified on sunnah.com; Fath vol. 1, pp. 435, 524–525, 540. |
