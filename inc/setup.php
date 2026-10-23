@@ -665,8 +665,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'quran-on-christians',
-			'title'   => __( 'What the Quran says about Christians and Christianity: 6 answers', 'bestofislam' ),
-			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 6 answers on what the Quran says about Christians.', 'bestofislam' ),
+			'title'   => __( 'What the Quran says about Christians and Christianity: 7 answers', 'bestofislam' ),
+			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 7 answers on what the Quran says about Christians.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(
