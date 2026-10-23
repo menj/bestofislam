@@ -37,9 +37,9 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | race-in-quran-and-hadith | Partly done: Bukhari 30, 1245, 2886, 3754, 4469, 7139, 7142 verified with Fath al-Bari pages; Ahmad, Tirmidhi, Ibn Kathir, Tabari and Wahidi notes still to verify |
 | islamic-rites-before-islam | Partly done: Bukhari 876, 1582, 1622, 1664, 2002, 2050, 3364, 3521, 3828 verified with Fath al-Bari pages; Muslim, Abu Dawud and Ibn Ishaq notes still to verify |
 | jihad-meaning-quran-hadith-jurists | Partly done: Bukhari 8, 26, 53, 527, 2785, 2875, 3004, 4594 verified with Fath al-Bari pages; Tirmidhi, Abu Dawud, Ibn Majah, Ahmad, Muwatta, Shaybani and Ibn Qudama notes still to verify |
-| first-muslims-kept-the-faith | To do |
-| funeral-dhikr-dua | To do |
-| raids-badr-and-the-conquest-of-mecca | To do |
+| first-muslims-kept-the-faith | Partly done: Bukhari 3231 and 3612 verified; Ibn Ishaq (Guillaume), Tabari, Ahmad notes still to verify |
+| funeral-dhikr-dua | Partly done: Bukhari 1245, 1253, 1264, 1303, 1315, 1325, 6340, 6407 verified with Fath al-Bari pages; Muslim, Abu Dawud and Tirmidhi notes still to verify |
+| raids-badr-and-the-conquest-of-mecca | Partly done: Bukhari 1846, 2048, 3045, 3957, 3986, 4276 verified; Badr casualty nuance added from Ibn Hajar; Bukhari 4086, 4318, 4339, Abu Dawud, Ahmad and Ibn Ishaq notes still to verify |
 | taqiyya-5-myths | To do |
 | apes-and-pigs-and-the-jews | To do |
 | questions-about-aisha | To do |
