@@ -47,3 +47,14 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | questions-about-aisha | Partly done: Bukhari 2664, 2880, 3894, 4141, 5133, 5136, 5158, Muslim 177a, Tirmidhi 3883 checked; Hisham ibn Urwa sentence corrected from Tahdhib al-Tahdhib; Taqrib on Asma, Zarkashi and Tabari notes still to verify |
 | quranic-ethics | To do |
 | all other listicles | To do, densest first |
+
+## sunnah.com checks (non-Bukhari hadith)
+
+Checked for number, book, chapter, narrator and grade, and matching the claim in the article:
+
+- Prophet's marriages: Muslim 1428b, 1438a, 1456a, 2972a; Abu Dawud 2107 (sahih, al-Albani), 3931 (hasan, al-Albani); Tirmidhi 3207 (weak, Darussalam), 3894 (sahih, Darussalam).
+- Raids, Badr and the conquest of Mecca: Abu Dawud 2683 (sahih, al-Albani), 2766 (hasan, al-Albani).
+- Race in the Quran and hadith: Tirmidhi 3931 (weak per Darussalam; Tirmidhi called it hasan).
+- Islamic rites before Islam: Abu Dawud 1919 (sahih, al-Albani); Muslim 1134a, 1218a.
+- Women in the Prophet's life: Muslim 976a and 976b (the weeping is in 976b); Abu Dawud 3887 (sahih, al-Albani); Tirmidhi 3883 (hasan, Darussalam).
+- Aisha, taqiyya, apes and pigs: see the status table.
