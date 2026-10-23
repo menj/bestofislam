@@ -346,6 +346,12 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'blasphemy-and-insults-to-the-prophet',
+			'title'   => __( 'Blasphemy and insults to the Prophet: 4 facts', 'bestofislam' ),
+			'excerpt' => __( 'What the Quran says about mockery, how the Prophet answered insults, what Hanafi law held and where Pakistan\'s law began. 4 facts.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
+		),
+		array(
 			'slug'    => 'sharia-and-hudud',
 			'title'   => __( '5 myths about sharia and the hudud punishments', 'bestofislam' ),
 			'excerpt' => __( 'Is sharia a fixed code and the hudud its core? 5 myths about Islamic law, answered from the sources and the jurists. Read on.', 'bestofislam' ),

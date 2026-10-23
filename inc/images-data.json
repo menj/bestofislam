@@ -2357,5 +2357,30 @@
     "source": "https://pixabay.com/photos/caravan-desert-sahara-sand-camel-4483792/"
    }
   ]
+ },
+ "blasphemy-and-insults-to-the-prophet": {
+  "featured": {
+   "file": "blasphemy-and-insults-to-the-prophet.avif",
+   "alt": "Elegant neoclassical facade of Dublin's Four Courts with iconic white columns.",
+   "artist": "Joaquin Carfagna",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/columns-of-four-courts-in-dublin-ireland-20185389/"
+  },
+  "inline": [
+   {
+    "file": "blasphemy-and-insults-to-the-prophet-1.avif",
+    "alt": "A black and white view of the historic courthouse facade in Hampton, Virginia, showcasing classic architecture.",
+    "artist": "Phil Evenden",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/historic-courthouse-facade-in-hampton-virginia-36595111/"
+   },
+   {
+    "file": "blasphemy-and-insults-to-the-prophet-2.avif",
+    "alt": "Front view of the iconic US Supreme Court building showcasing its grand columns and classic architecture.",
+    "artist": "Guohua Song",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/majestic-view-of-the-us-supreme-court-building-39241857/"
+   }
+  ]
  }
 }

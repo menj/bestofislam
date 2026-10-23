@@ -482,6 +482,7 @@
   "verses-read-differently"
  ],
  "sharia-and-hudud": [
+  "blasphemy-and-insults-to-the-prophet",
   "apostasy-in-islam",
   "why-no-interest",
   "war-and-killing-in-islam",
@@ -616,5 +617,10 @@
   "camel-urine-hadith",
   "magic-jinn-and-satan-hadiths",
   "schacht-isnads-dating-hadith"
+ ],
+ "blasphemy-and-insults-to-the-prophet": [
+  "sharia-and-hudud",
+  "apostasy-in-islam",
+  "kharijites-and-takfir"
  ]
 }
