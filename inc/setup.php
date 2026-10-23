@@ -539,8 +539,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'women-in-islamic-law-testimony-inheritance',
-			'title'   => __( '5 facts about women, testimony, inheritance and marriage in Islamic law', 'bestofislam' ),
-			'excerpt' => __( 'Two women witnesses, the half share, polygamy, honour killing and genital cutting: what the texts say and what the jurists made of them.', 'bestofislam' ),
+			'title'   => __( '6 facts about women, testimony, inheritance and marriage in Islamic law', 'bestofislam' ),
+			'excerpt' => __( 'Two women witnesses, the half share, polygamy, honour killing, genital cutting and consent: what the texts say.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
