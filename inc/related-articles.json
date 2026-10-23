@@ -638,7 +638,12 @@
  ],
  "seven-ahruf-cairo-edition-stoning-verse": [
   "uthman-copies",
-  "manuscript-transmission",
+  "aisha-sheep-report-stoning-and-suckling-verses",
+  "manuscript-transmission"
+ ],
+ "aisha-sheep-report-stoning-and-suckling-verses": [
+  "seven-ahruf-cairo-edition-stoning-verse",
+  "uthman-copies",
   "preservation-and-truth"
  ]
 }

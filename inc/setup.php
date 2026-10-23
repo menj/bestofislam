@@ -232,6 +232,12 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'aisha-sheep-report-stoning-and-suckling-verses',
+			'title'   => __( 'The sheep that ate the verse: 5 points on A\'isha\'s report', 'bestofislam' ),
+			'excerpt' => __( 'One narrator, a disputed grade and two classical replies: 5 points on the report of the sheet under A\'isha\'s pillow.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
 			'slug'    => 'seven-ahruf-cairo-edition-stoning-verse',
 			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 4 points', 'bestofislam' ),
 			'excerpt' => __( 'Seven modes versus seven readings, the Cairo printing and the report of Umar on the stoning verse. 4 points. Read on.', 'bestofislam' ),
