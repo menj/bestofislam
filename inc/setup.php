@@ -335,8 +335,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'fate-and-free-will',
-			'title'   => __( 'Fate and free will in Islam: 5 questions answered', 'bestofislam' ),
-			'excerpt' => __( 'If God knows everything, are we free? Five questions about qadar, answered from the Quran, the hadith and the scholars. Read on.', 'bestofislam' ),
+			'title'   => __( 'Fate and free will in Islam: 6 questions answered', 'bestofislam' ),
+			'excerpt' => __( 'If God knows everything, are we free? Six questions about qadar, answered from the Quran, the hadith and the scholars. Read on.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
