@@ -580,6 +580,12 @@ function boi_seed_listicles() {
 			'topic'   => 'faith-and-reason',
 		),
 		array(
+			'slug'    => 'quran-contradictions-claims',
+			'title'   => __( 'Contradictions in the Quran? 4 points on the cases critics cite', 'bestofislam' ),
+			'excerpt' => __( 'Six days or eight, a thousand years or fifty thousand, and who takes the soul: the classical answers. 4 points. Read on.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
+		),
+		array(
 			'slug'    => 'preservation-and-truth',
 			'title'   => __( 'Does a preserved text prove it is true? 5 answers', 'bestofislam' ),
 			'excerpt' => __( 'Accurate copying shows continuity, not truth. 5 answers on what preservation establishes for the Quran and for other scriptures.', 'bestofislam' ),

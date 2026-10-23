@@ -319,6 +319,7 @@
   "ezra-and-mary"
  ],
  "preservation-and-truth": [
+  "quran-contradictions-claims",
   "quran-anachronism-claims",
   "haman-anachronism",
   "revisionist-case-weighed",
@@ -628,5 +629,10 @@
   "jesus-not-god",
   "quran-on-christians",
   "same-god"
+ ],
+ "quran-contradictions-claims": [
+  "quran-grammar-errors-claim",
+  "preservation-and-truth",
+  "who-wrote-the-quran"
  ]
 }

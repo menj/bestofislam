@@ -2401,5 +2401,30 @@
     "source": "https://www.pexels.com/photo/close-up-shot-of-books-13745530/"
    }
   ]
+ },
+ "quran-contradictions-claims": {
+  "featured": {
+   "file": "quran-contradictions-claims.avif",
+   "alt": "An open handwritten manuscript",
+   "artist": "pcdazero",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/manuscript-ancient-writing-document-547042/"
+  },
+  "inline": [
+   {
+    "file": "quran-contradictions-claims-1.avif",
+    "alt": "A medieval manuscript examined under a magnifying glass",
+    "artist": "myrfa",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/manuscript-magnify-glass-glass-1614234/"
+   },
+   {
+    "file": "quran-contradictions-claims-2.avif",
+    "alt": "Old bound books on a library shelf",
+    "artist": "jarmoluk",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/old-books-book-old-library-436498/"
+   }
+  ]
  }
 }
