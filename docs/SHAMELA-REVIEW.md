@@ -58,6 +58,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | sharia-and-hudud | Partly done: Bukhari 3017, 6824, 7352 (Fath pages); Muslim 1716a; Tirmidhi 1424 (weak); Abu Dawud 4394 checked. Remaining: Bukhari 6922 (sunnah.com fetch failed), Nasai, Ibn Majah and Muwatta for Safwan, Muslim for Maiz |
 | magic-jinn-and-satan-hadiths | Partly done: Bukhari 5763, 6226, 1142, 1144, 3295, 608, 3860 (Fath pages); Muslim 2189a, 450a, 2814a checked. Remaining: Muslim 2815 (sunnah.com fetch failed), Bukhari 2 / Aisha note 13 (see first-revelation) |
 | was-muhammad-illiterate-ummi | Partly done: Hudaybiyya report corrected (the words "did not write well" are in Bukhari 4251, Maghazi, not in the Peacemaking version; Ibn Hajar 7/503); Bukhari 2698, 2699, 4251 (Fath pages), Muslim 1783a checked. Remaining: Tabari and Ibn Kathir on 7:157, 29:48; Lane |
+| slavery-in-islam | Partly done: Bukhari 1936, 2517, 4261 (Fath pages); Muslim 3029a, 1661a, 1657a checked. Remaining: Ahmad on Salman, Bukhari 4469 (Fath 8/152 earlier) |
+| five-pillars-explained | Partly done: Bukhari 349, 1399-1400, 1903 (Fath pages); Muslim 96a checked; Bukhari 3364 and Muslim 1218a earlier. Remaining: Muslim 8 / Bukhari 8 already; Gabriel hadith numbering (Muslim 8) |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
