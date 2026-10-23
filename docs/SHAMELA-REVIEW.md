@@ -135,3 +135,4 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | kharijites-and-takfir | Added a point on Ibn Abbas's debate with the Haruriyya (Nasa'i, Sunan al-Kubra 8575). |
 | gods-attributes-and-anthropomorphism | New article. Fath vol. 13, pp. 406–408 (istawa, Malik via Ibn Wahb, Juwayni, six positions), vol. 5, p. 183 (pronoun in the image hadith), vol. 11, p. 3 (Bukhari 6227); Bukhari 1145 on sunnah.com; Tabari vol. 22, pp. 375–376 (Quran 50:38). |
 | temporary-marriage-mutah | New article. Fath vol. 9, pp. 167–173 (Bukhari 5115–5119 commentary, the six occasions, Umar's announcement, consensus reports); Bukhari 5071, 5115, 4216, Muslim 1405a and 1406d on sunnah.com; Tabari vol. 8, pp. 175–181 (Quran 4:24). |
+| do-muslims-worship-muhammad | New article. Bukhari 3445, 1043, 435, 3416, 3667–3668 and Muslim 2278 on sunnah.com; Fath vol. 6, pp. 478, 490; vol. 7, p. 19 on Shamela. |

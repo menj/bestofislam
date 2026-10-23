@@ -490,6 +490,12 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'do-muslims-worship-muhammad',
+			'title'   => __( 'Do Muslims worship Muhammad? 7 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The Quran calls him a servant, the Prophet refused exaggerated praise, and Abu Bakr answered the charge on the day he died. 7 points. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'crusades-5-facts',
 			'title'   => __( '6 facts about the Crusades that get lost', 'bestofislam' ),
 			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 6 facts. Read on.', 'bestofislam' ),

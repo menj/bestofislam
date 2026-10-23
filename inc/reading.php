@@ -25,7 +25,7 @@ function boi_reading_order() {
 	return array(
 		array(
 			'label' => __( 'What Islam teaches', 'bestofislam' ),
-			'slugs' => array( 'who-is-allah', 'gods-attributes-and-anthropomorphism', 'five-pillars-explained', 'temporary-marriage-mutah', 'why-five-prayers', 'six-articles-of-faith', 'fate-and-free-will', 'end-of-time', 'prophets-you-may-not-know', 'quranic-ethics', 'before-your-first-friday-prayer', 'hajj-rites-explained', 'ramadan-last-ten-nights', 'funeral-dhikr-dua', 'relationship-with-god', 'black-stone-and-kissing' ),
+			'slugs' => array( 'who-is-allah', 'gods-attributes-and-anthropomorphism', 'five-pillars-explained', 'do-muslims-worship-muhammad', 'temporary-marriage-mutah', 'why-five-prayers', 'six-articles-of-faith', 'fate-and-free-will', 'end-of-time', 'prophets-you-may-not-know', 'quranic-ethics', 'before-your-first-friday-prayer', 'hajj-rites-explained', 'ramadan-last-ten-nights', 'funeral-dhikr-dua', 'relationship-with-god', 'black-stone-and-kissing' ),
 		),
 		array(
 			'label' => __( 'Whether belief is reasonable', 'bestofislam' ),
