@@ -47,6 +47,7 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | questions-about-aisha | Partly done: Bukhari 2664, 2880, 3894, 4141, 5133, 5136, 5158, Muslim 177a, Tirmidhi 3883 checked; Hisham ibn Urwa sentence corrected from Tahdhib al-Tahdhib; Taqrib on Asma, Zarkashi and Tabari notes still to verify |
 | quranic-ethics | Partly done: Bukhari 13, 33, 2620, 5304, 6979 (Fath pages); Muslim 45a, 1787, 2589; Abu Dawud 3580; Tirmidhi 1337 checked. Remaining: Tabarani (note 5), Nawawi Riyad al-Salihin (note 16), Muslim and Bukhari in notes 9 to 22 where no number given |
 | all other listicles | To do, densest first |
+| hajj-rites-explained | Partly done: Bukhari 1, 1549, 1562, 1542, 1597, 1643, 3364 (Fath pages); Abu Dawud 1949; Muslim 1218a, 1955a checked. Remaining: Muslim reports in notes 3, 4, 6, 9, 11, Tirmidhi, Ahmad, Ibn Kathir |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
