@@ -6,6 +6,22 @@ versioning.
 
 ## [Unreleased]
 
+## [1.71.0] - 2026-10-23
+
+### Added
+
+- **New article: 6 facts about women, testimony, inheritance and marriage in Islamic law.** Quran 2:282 and al-Alwani (AJIS 13:2, 1996), 4:11 with 4:4 and 4:34, 4:3 and 4:129, Sahih Muslim 1498a on honour killing, Abu Dawud 5271 with al-Azhar and Ali Gomaa on FGM, and Bukhari 3237 on consent within marriage.
+- **New article: 4 facts about the claim of grammatical errors in the Quran.** The challenge (2:23, 17:88), 4:162 and the A'isha report with al-Tabari's rebuttal, 20:63 in the Hafs reading and the Balharith dialect.
+- **New article: The fly hadith and the adult suckling report: 4 points.** Muslim 2363, Bukhari 3320, Muslim 1453a–c and 1454, Bukhari 5102, Quran 2:233 and 33:4–5.
+
+### Changed
+
+- **first-revelation-demonic-claim:** new point on the epilepsy claim (Bukhari 2; Watt, Muhammad at Mecca, p. 57).
+- **quran-4-34:** answers the Muslim 974b report.
+- **quran-on-christians:** new point on the "ransom" hadith (Muslim 2767) with al-Nawawi and al-Bayhaqi.
+- **fate-and-free-will:** new point on "best of plotters" (3:54, 8:30, al-Tabari).
+- **same-god:** new point on the claim that Allah is Satan (16:98, 35:6, 7:11–13).
+
 ## [1.70.0] - 2026-10-15
 
 ### Changed
