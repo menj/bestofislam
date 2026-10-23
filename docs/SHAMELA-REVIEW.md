@@ -123,3 +123,5 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | talmud-midrash-apocrypha-borrowing | Partly done: Tabari 2:259 located (vol. 5, pp. 438–439). Remaining: Talmud Taanit 23a. |
 | schacht-isnads-dating-hadith | Partly done: Bukhari 111–113 located (Fath vol. 1, pp. 204–206), 112 verified on sunnah.com. Remaining: Muslim Introduction reports. |
 | quran-anachronism-claims | Partly done: Bukhari 3326 verified on sunnah.com. Remaining: Tabari 2:258, 6:84; Ibn Hibban scrolls report. |
+| six-articles-of-faith | Partly done: Muslim 8a, 2996 and Bukhari 4949 verified on sunnah.com; Fath vol. 8, p. 709. Remaining: Tabari on 18:50 and 2:34. |
+| quranic-stories-and-history | Partly done: Bukhari 4419 verified (Fath vol. 8, p. 125). Remaining: Tabari on Cyrus proposals. |
