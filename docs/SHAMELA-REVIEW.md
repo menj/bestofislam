@@ -76,6 +76,10 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | before-your-first-friday-prayer | Partly done: Bukhari 912, 934, 717 (Fath pages) checked |
 | mosques-adapt-to-place | Partly done: Bukhari 335, 446 (Fath pages) checked. Remaining: Ibn Ishaq on Medina mosque |
 | islam-religion-of-peace | Partly done: cross-checked with the war-and-killing and kharijites entries; Muslim 54 unverified (sunnah.com fetch failed) |
+| camel-urine-hadith | Partly done: Bukhari 233, 5685 (Fath pages); Muslim 1671a checked. Remaining: Muslim 2362 (palm pollination; sunnah.com fetch failed) |
+| buraq-and-miracle-stories | Partly done: Bukhari 3207 (Fath 6/302), 2856; Muslim 162a checked. Remaining: Ibn Ishaq and Tabari on 17:1 |
+| why-five-prayers | Partly done: Bukhari 46, 521-522, 349 (Fath pages) checked |
+| relationship-with-god | Partly done: Muslim 395a; Bukhari 7405, 2736 checked. Remaining: Muslim repentance report |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
