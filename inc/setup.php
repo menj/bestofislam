@@ -478,10 +478,34 @@ function boi_seed_listicles() {
 			'topic'   => 'history',
 		),
 		array(
+			'slug'    => 'gods-attributes-and-anthropomorphism',
+			'title'   => __( 'God\'s hand, face and throne in the Quran: 7 points', 'bestofislam' ),
+			'excerpt' => __( 'Does the Quran describe a God with a body? 7 points on 42:11, the verses of hand and face, Malik\'s reply and the classical schools. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'temporary-marriage-mutah',
+			'title'   => __( 'Mutah, temporary marriage: 6 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'Was mutah ever allowed, who forbade it, and what does Quran 4:24 say? 6 points from the Quran, hadith and Ibn Hajar\'s survey. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'do-muslims-worship-muhammad',
+			'title'   => __( 'Do Muslims worship Muhammad? 7 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The Quran calls him a servant, the Prophet refused exaggerated praise, and Abu Bakr answered the charge on the day he died. 7 points. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'crusades-5-facts',
-			'title'   => __( '5 facts about the Crusades that get lost', 'bestofislam' ),
-			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 5 facts. Read on.', 'bestofislam' ),
+			'title'   => __( '6 facts about the Crusades that get lost', 'bestofislam' ),
+			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'history',
+		),
+		array(
+			'slug'    => 'muslims-by-the-numbers-2020',
+			'title'   => __( 'Muslims by the numbers: 7 facts from the 2020 count', 'bestofislam' ),
+			'excerpt' => __( 'How many Muslims are there, where do they live, and what share of Europe do they make up? 7 facts from Pew\'s 2020 count. Read on.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
 		),
 		array(
 			'slug'    => 'islam-in-china',
@@ -491,8 +515,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'kharijites-and-takfir',
-			'title'   => __( 'The Kharijites and takfir: 5 facts', 'bestofislam' ),
-			'excerpt' => __( 'Who were the Kharijites, what did the Prophet say about them, and why do mainstream scholars refuse takfir? 5 facts. Read on.', 'bestofislam' ),
+			'title'   => __( 'The Kharijites and takfir: 6 facts', 'bestofislam' ),
+			'excerpt' => __( 'Who were the Kharijites, what did the Prophet say about them, and why do mainstream scholars refuse takfir? 6 facts. Read on.', 'bestofislam' ),
 			'topic'   => 'history',
 		),
 		array(

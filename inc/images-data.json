@@ -1444,17 +1444,17 @@
   "inline": [
    {
     "file": "western-scholars-of-islam-1.avif",
-    "alt": "A spacious historic library with wooden tables and stained glass windows.",
-    "artist": "Louie  Cepeda",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/suzallo-library-28436228/"
+    "alt": "Portrait of the rabbi and scholar Abraham Geiger",
+    "artist": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Geiger_a.jpg"
    },
    {
     "file": "western-scholars-of-islam-2.avif",
-    "alt": "Empty study desks in a modern library with natural lighting in Berlin, Germany.",
-    "artist": "Shay T",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/quiet-study-area-in-modern-berlin-library-39983762/"
+    "alt": "Portrait of the historian Leone Caetani, Prince of Teano",
+    "artist": "Unknown photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Photo_of_Prince_Leone_Caetani.jpg"
    }
   ]
  },
@@ -2462,6 +2462,106 @@
     "artist": "mohamed abdelghaffar",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/"
+   }
+  ]
+ },
+ "gods-attributes-and-anthropomorphism": {
+  "featured": {
+   "file": "gods-attributes-and-anthropomorphism.avif",
+   "alt": "Concentric gold, blue and white star outlines on a navy ground.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "gods-attributes-and-anthropomorphism-1.avif",
+    "alt": "Nested star outlines around a gold centre on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "gods-attributes-and-anthropomorphism-2.avif",
+    "alt": "Layered star outlines in gold, blue and white on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "temporary-marriage-mutah": {
+  "featured": {
+   "file": "temporary-marriage-mutah.avif",
+   "alt": "Gold, blue and white star outlines around a gold centre on a navy ground.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "temporary-marriage-mutah-1.avif",
+    "alt": "Star outlines in gold, blue and white on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "temporary-marriage-mutah-2.avif",
+    "alt": "Concentric star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "do-muslims-worship-muhammad": {
+  "featured": {
+   "file": "do-muslims-worship-muhammad.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "do-muslims-worship-muhammad-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "do-muslims-worship-muhammad-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "muslims-by-the-numbers-2020": {
+  "featured": {
+   "file": "muslims-by-the-numbers-2020.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "muslims-by-the-numbers-2020-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "muslims-by-the-numbers-2020-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
    }
   ]
  }

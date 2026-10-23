@@ -132,3 +132,8 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | second-peter, jesus-not-god, same-god, verses-read-differently, seven-libraries, haman-anachronism | Reviewed: notes cite only modern scholarship or the Bible; no classical Arabic source to verify. |
 | islam-in-china | Partly done: Bukhari 335 and 428 verified on sunnah.com; Fath vol. 1, pp. 435, 524–525, 540. |
 | crusades-5-facts | Partly done: Tabari History vol. 3, p. 609 (terms of Aelia) text checked on Shamela. |
+| kharijites-and-takfir | Added a point on Ibn Abbas's debate with the Haruriyya (Nasa'i, Sunan al-Kubra 8575). |
+| gods-attributes-and-anthropomorphism | New article. Fath vol. 13, pp. 406–408 (istawa, Malik via Ibn Wahb, Juwayni, six positions), vol. 5, p. 183 (pronoun in the image hadith), vol. 11, p. 3 (Bukhari 6227); Bukhari 1145 on sunnah.com; Tabari vol. 22, pp. 375–376 (Quran 50:38). |
+| temporary-marriage-mutah | New article. Fath vol. 9, pp. 167–173 (Bukhari 5115–5119 commentary, the six occasions, Umar's announcement, consensus reports); Bukhari 5071, 5115, 4216, Muslim 1405a and 1406d on sunnah.com; Tabari vol. 8, pp. 175–181 (Quran 4:24). |
+| do-muslims-worship-muhammad | New article. Bukhari 3445, 1043, 435, 3416, 3667–3668 and Muslim 2278 on sunnah.com; Fath vol. 6, pp. 478, 490; vol. 7, p. 19 on Shamela. |
+| muslims-by-the-numbers-2020 | New data article. Figures checked against Pew Research Center reports of 9 June 2025 (muslim-population-change and the global religious landscape report). |

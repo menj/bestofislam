@@ -51,37 +51,65 @@ data_path = os.path.join(ROOT, 'inc', 'images-data.json')
 data = json.load(open(data_path, encoding='utf-8'))
 failed = []
 
-for slug, (title, alt) in swaps.items():
-    if data[slug]['inline'][1]['source'].startswith('https://commons.wikimedia.org/'):
+def lookup(title):
+    """Return (page, info, meta) for a Commons file title, or None. A title that
+    starts with "search:" is a Commons search; the first public domain or CC0
+    image whose title contains the last search word is used."""
+    if title.startswith('search:'):
+        term = title[7:].strip()
+        raw = get(API + urllib.parse.urlencode({
+            'action': 'query', 'format': 'json', 'list': 'search', 'srsearch': term,
+            'srnamespace': '6', 'srlimit': '10'}))
+        if raw is None:
+            return None
+        hits = [h['title'] for h in json.loads(raw).get('query', {}).get('search', [])]
+        key = term.split()[-1].lower()
+        candidates = [h for h in hits if key in h.lower() and re.search(r'\.(jpe?g|png|tiff?)$', h, re.I)]
+    else:
+        candidates = [title]
+    for candidate in candidates:
+        raw = get(API + urllib.parse.urlencode({
+            'action': 'query', 'format': 'json', 'titles': candidate, 'prop': 'imageinfo',
+            'iiprop': 'url|extmetadata', 'iiurlwidth': '1400',
+            'iiextmetadatafilter': 'LicenseShortName|Artist'}))
+        if raw is None:
+            continue
+        page = next(iter(json.loads(raw)['query']['pages'].values()))
+        if 'imageinfo' not in page:
+            print('MISSING', candidate)
+            continue
+        meta = page['imageinfo'][0]['extmetadata']
+        licence = meta.get('LicenseShortName', {}).get('value', '')
+        if not re.match(r'^(public domain|pd|cc0|cc 0)', licence, re.I):
+            print('SKIPPED, licence is', licence or 'unknown', '-', candidate)
+            continue
+        return page, page['imageinfo'][0], meta
+    return None
+
+
+for key, (title, alt) in swaps.items():
+    # "slug" swaps the second in-text image, "slug#1" the first.
+    slug, _, slot_no = key.partition('#')
+    slot = 0 if slot_no == '1' else 1
+    if data[slug]['inline'][slot]['source'].startswith('https://commons.wikimedia.org/'):
         continue  # already swapped on an earlier run
-    query = urllib.parse.urlencode({
-        'action': 'query', 'format': 'json', 'titles': title, 'prop': 'imageinfo',
-        'iiprop': 'url|extmetadata', 'iiurlwidth': '1400',
-        'iiextmetadatafilter': 'LicenseShortName|Artist',
-    })
-    raw = get(API + query)
-    if raw is None:
-        failed.append(slug)
+    found = lookup(title)
+    if found is None:
+        failed.append(key)
         continue
-    page = next(iter(json.loads(raw)['query']['pages'].values()))
-    info = page['imageinfo'][0]
-    meta = info['extmetadata']
+    page, info, meta = found
     licence = meta['LicenseShortName']['value']
-    if not re.match(r'^(public domain|pd|cc0|cc 0)', licence, re.I):
-        print('SKIPPED, licence is', licence, '-', title)
-        failed.append(slug)
-        continue
     artist = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', html.unescape(meta.get('Artist', {}).get('value', 'Unknown')))).strip()[:110] or 'Unknown'
     blob = get(info.get('thumburl') or info['url'])
     if blob is None:
-        failed.append(slug)
+        failed.append(key)
         continue
     image = Image.open(io.BytesIO(blob)).convert('RGB')
     if image.width > 960:
         image = image.resize((960, round(image.height * 960 / image.width)))
-    name = slug + '-2.avif'
+    name = '%s-%d.avif' % (slug, slot + 1)
     image.save(os.path.join(ROOT, 'assets', 'images', 'inline', name), 'AVIF', quality=55, speed=4)
-    data[slug]['inline'][1] = {
+    data[slug]['inline'][slot] = {
         'file': name,
         'alt': alt,
         'artist': artist,
@@ -89,8 +117,10 @@ for slug, (title, alt) in swaps.items():
         'source': 'https://commons.wikimedia.org/wiki/' + page['title'].replace(' ', '_'),
     }
     json.dump(data, open(data_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print('ok', slug)
+    print('ok', key)
     time.sleep(3)
 
 print('failed:', failed or 'none')
-sys.exit(1 if failed else 0)
+# A swap that finds no suitable file leaves the existing image in place, so a
+# miss is reported but does not fail the run.
+sys.exit(0)
