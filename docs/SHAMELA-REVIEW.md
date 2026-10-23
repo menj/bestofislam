@@ -80,6 +80,12 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | buraq-and-miracle-stories | Partly done: Bukhari 3207 (Fath 6/302), 2856; Muslim 162a checked. Remaining: Ibn Ishaq and Tabari on 17:1 |
 | why-five-prayers | Partly done: Bukhari 46, 521-522, 349 (Fath pages) checked |
 | relationship-with-god | Partly done: Muslim 395a; Bukhari 7405, 2736 checked. Remaining: Muslim repentance report |
+| why-no-interest | Partly done: Tirmidhi 1285 checked. Remaining: Muslim 1598 and Abu Dawud 3508 (sunnah.com fetch failed) |
+| who-wrote-the-quran | Partly done: Bukhari 113 (Fath 1/206). Remaining: Muslim 3004 (fetch failed), Bukhari on collection |
+| uthman-copies | Partly done: Bukhari 4998 (9/43), 4987 (9/11) checked |
+| natural-world-verses | Partly done: Muslim 2229a checked. Remaining: Bukhari chapter heading quoting Qatada |
+| islamophobia-5-facts | Partly done: Bukhari 10 (Fath 1/53) |
+| prophets-you-may-not-know | Partly done: Bukhari 4485 (Fath 8/170) |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
