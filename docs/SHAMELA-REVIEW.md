@@ -2,6 +2,8 @@
 
 Purpose: every classical-source note in a listicle is checked against the Arabic text on shamela.ws, and the note records the edition, volume and page (marked "Shamela text"). Where Shamela cannot confirm a claim, the claim is softened or removed. al-Islam.org and Wikipedia entries are never used as sources.
 
+Hadith are also checked on sunnah.com (hadith number, book, chapter, narrator, grade), which is the numbering cited in the notes.
+
 Method: find the book id with a search restricted to shamela.ws, locate the page, read the Arabic with diacritics stripped, then edit the article note. Hadith of al-Bukhari are located by hadith number in Ibn Hajar, Fath al-Bari (Salafiyya edition, Shamela book 1673).
 
 ## Reference book ids
@@ -40,8 +42,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | first-muslims-kept-the-faith | Partly done: Bukhari 3231 and 3612 verified; Ibn Ishaq (Guillaume), Tabari, Ahmad notes still to verify |
 | funeral-dhikr-dua | Partly done: Bukhari 1245, 1253, 1264, 1303, 1315, 1325, 6340, 6407 verified with Fath al-Bari pages; Muslim, Abu Dawud and Tirmidhi notes still to verify |
 | raids-badr-and-the-conquest-of-mecca | Partly done: Bukhari 1846, 2048, 3045, 3957, 3986, 4276 verified; Badr casualty nuance added from Ibn Hajar; Bukhari 4086, 4318, 4339, Abu Dawud, Ahmad and Ibn Ishaq notes still to verify |
-| taqiyya-5-myths | To do |
-| apes-and-pigs-and-the-jews | To do |
-| questions-about-aisha | To do |
+| taqiyya-5-myths | Partly done: Bukhari 2692 and 3029 checked on sunnah.com; Quran commentary and remaining hadith notes (Muslim, Kab ibn Malik, Hudaybiyya) still to verify |
+| apes-and-pigs-and-the-jews | Partly done: Muslim 2663b and 2922, Bukhari 2916, 2926 and 4121, Abu Dawud 3002 checked on sunnah.com and Shamela; Tabari and Ibn Hisham notes still to verify |
+| questions-about-aisha | Partly done: Bukhari 2664, 2880, 3894, 4141, 5133, 5136, 5158, Muslim 177a, Tirmidhi 3883 checked; Hisham ibn Urwa sentence corrected from Tahdhib al-Tahdhib; Taqrib on Asma, Zarkashi and Tabari notes still to verify |
 | quranic-ethics | To do |
 | all other listicles | To do, densest first |
