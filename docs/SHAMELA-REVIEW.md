@@ -94,6 +94,15 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | shared-prophets | Partly done: Bukhari 1385, 122 (Fath pages) |
 | scholars-who-shaped-islamic-study | Partly done: Bukhari 143, 75 (Fath pages) |
 | kaaba-witnesses | Partly done: Bukhari 4355, 1583 (Fath pages) |
+| terrorism-and-muslims-the-data | Partly done: Bukhari 25, 3015 (Fath pages). Remaining: Bukhari 3166, Muslim 1853 (fetch failed), Muwatta 971; Pew is secondary |
+| islamic-art-and-the-one-god | Partly done: Bukhari 5950 (Fath 10/382) |
+| indonesia | Partly done: Bukhari 1909 (Fath 4/119) |
+| western-scholars-of-islam | Partly done: Bukhari 4992 (Fath 9/23) |
+| quran-mysteries-in-the-stories | Partly done: Bukhari 122, 3346 (Fath pages). Remaining: Muslim 2880, Tabari on 25:38 |
+| manuscript-transmission | Partly done: Bukhari 4998, 4987, 6829 (Fath pages) |
+| quran-preservation-reddit | Partly done: Bukhari 4986-4987 |
+| where-is-the-injil | Partly done: Bukhari 7363 |
+| morality-without-god | Partly done: Bukhari 1385 |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
