@@ -484,6 +484,12 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'temporary-marriage-mutah',
+			'title'   => __( 'Mutah, temporary marriage: 6 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'Was mutah ever allowed, who forbade it, and what does Quran 4:24 say? 6 points from the Quran, hadith and Ibn Hajar\'s survey. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'crusades-5-facts',
 			'title'   => __( '6 facts about the Crusades that get lost', 'bestofislam' ),
 			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 6 facts. Read on.', 'bestofislam' ),

@@ -27,7 +27,7 @@
   "sharia-and-hudud",
   "why-no-interest",
   "homosexuality-in-islam",
-  "kharijites-and-takfir"
+  "prophets-marriages-zaynab-and-others"
  ],
  "arabic-words-science": [
   "moon-craters",
@@ -91,8 +91,8 @@
  ],
  "deuteronomy-18-and-the-paraclete": [
   "crucifixion-quran",
-  "quran-on-christians",
   "paul-and-the-law",
+  "quran-on-christians",
   "verses-read-differently"
  ],
  "dome-inscriptions": [
@@ -103,8 +103,8 @@
  ],
  "end-of-the-world-1110-claim": [
   "quran-4-34",
-  "abrogation-and-the-sword-verse",
   "end-of-time",
+  "abrogation-and-the-sword-verse",
   "first-muslims-kept-the-faith"
  ],
  "end-of-time": [
@@ -117,7 +117,7 @@
   "fate-and-free-will",
   "sharia-and-hudud",
   "apostasy-in-islam",
-  "paul-and-the-law"
+  "same-god"
  ],
  "ezra-and-mary": [
   "shared-prophets",
@@ -145,8 +145,8 @@
  ],
  "first-muslims-kept-the-faith": [
   "questions-about-aisha",
-  "first-revelation-demonic-claim",
   "hanif-poets-and-musaylima",
+  "first-revelation-demonic-claim",
   "islamic-rites-before-islam"
  ],
  "first-revelation-demonic-claim": [
@@ -165,7 +165,7 @@
   "women-in-islamic-law-testimony-inheritance",
   "gods-attributes-and-anthropomorphism",
   "jihad-meaning-quran-hadith-jurists",
-  "women-in-the-prophets-life"
+  "quran-on-christians"
  ],
  "funeral-dhikr-dua": [
   "hajj-rites-explained",
@@ -176,8 +176,8 @@
  "gods-attributes-and-anthropomorphism": [
   "six-articles-of-faith",
   "who-is-allah",
-  "magic-jinn-and-satan-hadiths",
-  "same-god"
+  "temporary-marriage-mutah",
+  "magic-jinn-and-satan-hadiths"
  ],
  "hajj-rites-explained": [
   "islamic-rites-before-islam",
@@ -207,7 +207,7 @@
   "sharia-and-hudud",
   "apostasy-in-islam",
   "women-in-islamic-law-testimony-inheritance",
-  "quran-4-34"
+  "temporary-marriage-mutah"
  ],
  "houris-and-paradise": [
   "taqiyya-5-myths",
@@ -273,7 +273,7 @@
   "women-in-the-prophets-life",
   "war-and-killing-in-islam",
   "black-stone-and-kissing",
-  "raids-badr-and-the-conquest-of-mecca"
+  "apes-and-pigs-and-the-jews"
  ],
  "jizya": [
   "kharijites-and-takfir",
@@ -501,7 +501,7 @@
   "fate-and-free-will",
   "apes-and-pigs-and-the-jews",
   "kharijites-and-takfir",
-  "questions-about-aisha"
+  "raids-badr-and-the-conquest-of-mecca"
  ],
  "second-peter": [
   "buraq-and-miracle-stories",
@@ -519,7 +519,7 @@
   "arabic-words-science",
   "quran-on-christians",
   "scholars-who-shaped-islamic-study",
-  "moon-craters"
+  "apostasy-in-islam"
  ],
  "shared-prophets": [
   "quran-anachronism-claims",
@@ -536,8 +536,8 @@
  "sira-ibn-ishaq-hisham-tabari": [
   "revisionist-case-weighed",
   "black-stone-and-kissing",
-  "women-in-the-prophets-life",
-  "quran-on-christians"
+  "quran-on-christians",
+  "women-in-the-prophets-life"
  ],
  "six-articles-of-faith": [
   "who-is-allah",
@@ -562,6 +562,12 @@
   "war-and-killing-in-islam",
   "islamophobia-5-facts",
   "islam-religion-of-peace"
+ ],
+ "temporary-marriage-mutah": [
+  "kharijites-and-takfir",
+  "questions-about-aisha",
+  "hajj-rites-explained",
+  "scholars-who-shaped-islamic-study"
  ],
  "terrorism-and-muslims-the-data": [
   "war-and-killing-in-islam",
@@ -642,8 +648,8 @@
   "instruments-islamic-world"
  ],
  "women-in-islamic-law-testimony-inheritance": [
-  "sharia-and-hudud",
   "women-in-the-prophets-life",
+  "sharia-and-hudud",
   "homosexuality-in-islam",
   "child-marriage-in-islam"
  ],
