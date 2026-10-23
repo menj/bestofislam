@@ -51,6 +51,8 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | fighting-verses-in-context | Partly done: Muslim 1731a and Bukhari 4905 (Fath 8/648) checked. Remaining: Tabari tafsir, Ibn Kathir, Ibn Hisham, Mishnah notes (no Shamela id yet) |
 | medina-jewish-tribes-and-qurayza | Partly done: Bukhari 4028, 2329, 4121, 4037, 4039, 6153 checked on sunnah.com with Fath pages. Remaining: Ibn Ishaq, Tabari, Abu Ubayd notes |
 | first-revelation-demonic-claim | Partly done: Bukhari 2, 3, 7, 2731 checked on sunnah.com with Fath pages; Muslim 177a earlier. Remaining: Bukhari 6982 (sunnah.com fetch failed; Fath 12/359 already cited), Ibn Hisham, Tabari, Ibn Kathir |
+| homosexuality-in-islam | Partly done: Bukhari 5269, 5066, 48 (Fath pages); Muslim 2699a; Abu Dawud 4462 (hasan sahih per al-Albani; sentence on grading revised). Remaining: Tirmidhi 1456 (sunnah.com fetch failed), Kugle |
+| ramadan-last-ten-nights | Partly done: Bukhari 2017, 49, 2024, 2026 (Fath pages); Muslim 762a, 1174, 1175; Ibn Majah 3850 checked. Remaining: Tirmidhi 3513 (sunnah.com fetch failed), Bukhari 6, Muslim 1172 |
 
 ## sunnah.com checks (non-Bukhari hadith)
 
