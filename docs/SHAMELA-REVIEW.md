@@ -126,3 +126,4 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | six-articles-of-faith | Partly done: Muslim 8a, 2996 and Bukhari 4949 verified on sunnah.com; Fath vol. 8, p. 709. Remaining: Tabari on 18:50 and 2:34. |
 | quranic-stories-and-history | Partly done: Bukhari 4419 verified (Fath vol. 8, p. 125). Remaining: Tabari on Cyrus proposals. |
 | crucifixion-quran | Partly done: Tabari 4:157 (vol. 9, pp. 367–371), Bukhari gloss on mutawaffika (Fath vol. 8, p. 283), Abu Dawud 4324 verified on sunnah.com. Remaining: Razi 4:157. |
+| who-is-allah, relationship-with-god | Added Bukhari 7554 ("My mercy has preceded My wrath"; Fath vol. 13, p. 522) in body and notes, from the text supplied by the site owner. |
