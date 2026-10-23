@@ -121,3 +121,5 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | preservation-and-truth | Partly done: Tabari 15:9 (vol. 17, p. 68) and 18:86 (vol. 18, pp. 95–96) located. |
 | quran-grammar-errors-claim | Partly done: Tabari 4:162 report 10838 (vol. 9, p. 395) and 20:63 (vol. 18, pp. 326–328) located. |
 | talmud-midrash-apocrypha-borrowing | Partly done: Tabari 2:259 located (vol. 5, pp. 438–439). Remaining: Talmud Taanit 23a. |
+| schacht-isnads-dating-hadith | Partly done: Bukhari 111–113 located (Fath vol. 1, pp. 204–206), 112 verified on sunnah.com. Remaining: Muslim Introduction reports. |
+| quran-anachronism-claims | Partly done: Bukhari 3326 verified on sunnah.com. Remaining: Tabari 2:258, 6:84; Ibn Hibban scrolls report. |
