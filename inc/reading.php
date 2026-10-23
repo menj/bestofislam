@@ -37,11 +37,11 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
-			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit', 'who-wrote-the-quran', 'preservation-and-truth', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
+			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'preservation-and-truth', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
 		),
 		array(
 			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),
-			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'quran-4-34', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise', 'camel-urine-hadith', 'first-revelation-demonic-claim', 'satanic-verses-report', 'prophets-marriages-zaynab-and-others', 'magic-jinn-and-satan-hadiths', 'islamic-rites-before-islam', 'abrogation-and-the-sword-verse', 'end-of-the-world-1110-claim', 'was-muhammad-illiterate-ummi', 'hanif-poets-and-musaylima', 'first-muslims-kept-the-faith' ),
+			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'quran-4-34', 'women-in-islamic-law-testimony-inheritance', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise', 'camel-urine-hadith', 'fly-hadith-and-adult-suckling', 'first-revelation-demonic-claim', 'satanic-verses-report', 'prophets-marriages-zaynab-and-others', 'magic-jinn-and-satan-hadiths', 'islamic-rites-before-islam', 'abrogation-and-the-sword-verse', 'end-of-the-world-1110-claim', 'was-muhammad-illiterate-ummi', 'hanif-poets-and-musaylima', 'first-muslims-kept-the-faith' ),
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),

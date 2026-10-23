@@ -48,6 +48,7 @@
   "apes-and-pigs-and-the-jews"
  ],
  "camel-urine-hadith": [
+  "fly-hadith-and-adult-suckling",
   "sharia-and-hudud",
   "war-and-killing-in-islam",
   "questions-about-aisha",
@@ -354,6 +355,7 @@
   "slavery-in-islam"
  ],
  "quran-4-34": [
+  "women-in-islamic-law-testimony-inheritance",
   "hijab-and-modesty",
   "child-marriage-in-islam",
   "questions-about-aisha",
@@ -576,6 +578,7 @@
   "black-stone-and-kissing"
  ],
  "who-wrote-the-quran": [
+  "quran-grammar-errors-claim",
   "satanic-verses-report",
   "taqiyya-5-myths",
   "schacht-isnads-dating-hadith",
@@ -598,5 +601,20 @@
   "companions-who-started-with-nothing",
   "quran-4-34",
   "hijab-and-modesty"
+ ],
+ "women-in-islamic-law-testimony-inheritance": [
+  "quran-4-34",
+  "women-in-the-prophets-life",
+  "sharia-and-hudud"
+ ],
+ "quran-grammar-errors-claim": [
+  "who-wrote-the-quran",
+  "uthman-copies",
+  "preservation-and-truth"
+ ],
+ "fly-hadith-and-adult-suckling": [
+  "camel-urine-hadith",
+  "magic-jinn-and-satan-hadiths",
+  "schacht-isnads-dating-hadith"
  ]
 }

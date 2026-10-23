@@ -173,8 +173,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'same-god',
-			'title'   => __( '6 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
-			'excerpt' => __( '6 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
+			'title'   => __( '7 reasons why Allah of the Quran is the same God as the God of the Bible', 'bestofislam' ),
+			'excerpt' => __( '7 reasons Muslims say the God of the Quran and the God of the Bible are one, each answered against the objection. Read them.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(
@@ -335,8 +335,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'fate-and-free-will',
-			'title'   => __( 'Fate and free will in Islam: 5 questions answered', 'bestofislam' ),
-			'excerpt' => __( 'If God knows everything, are we free? Five questions about qadar, answered from the Quran, the hadith and the scholars. Read on.', 'bestofislam' ),
+			'title'   => __( 'Fate and free will in Islam: 6 questions answered', 'bestofislam' ),
+			'excerpt' => __( 'If God knows everything, are we free? Six questions about qadar, answered from the Quran, the hadith and the scholars. Read on.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
@@ -538,10 +538,28 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
+			'slug'    => 'women-in-islamic-law-testimony-inheritance',
+			'title'   => __( '6 facts about women, testimony, inheritance and marriage in Islamic law', 'bestofislam' ),
+			'excerpt' => __( 'Two women witnesses, the half share, polygamy, honour killing, genital cutting and consent: what the texts say.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'fly-hadith-and-adult-suckling',
+			'title'   => __( 'The fly hadith and the adult suckling report: 4 points', 'bestofislam' ),
+			'excerpt' => __( 'The fly in the drink and Sahla\'s nursing of Salim, read in full with what the Prophet\'s wives and the jurists made of them. 4 points.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'camel-urine-hadith',
 			'title'   => __( 'The camel urine hadith: 5 things the report says', 'bestofislam' ),
 			'excerpt' => __( 'The hadith of the men of Ukl and Uraynah, read in full: what it says, what it does not command and what scholars make of it. 5 points.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'quran-grammar-errors-claim',
+			'title'   => __( '4 facts about the claim of grammatical errors in the Quran', 'bestofislam' ),
+			'excerpt' => __( 'The challenge to match the Quran, the report from A\'isha and the verses critics cite, 4:162 and 20:63, read with al-Tabari.', 'bestofislam' ),
+			'topic'   => 'faith-and-reason',
 		),
 		array(
 			'slug'    => 'who-wrote-the-quran',
@@ -558,7 +576,7 @@ function boi_seed_listicles() {
 		array(
 			'slug'    => 'relationship-with-god',
 			'title'   => __( 'Do Muslims have a relationship with God? 5 answers', 'bestofislam' ),
-			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 5 answers on how Muslims relate to God.', 'bestofislam' ),
+			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 6 answers on how Muslims relate to God.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
@@ -587,8 +605,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'first-revelation-demonic-claim',
-			'title'   => __( 'Was the first revelation demonic? 5 answers from the sources', 'bestofislam' ),
-			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 5 answers on the claim that the first revelation was demonic.', 'bestofislam' ),
+			'title'   => __( 'Was the first revelation demonic? 6 answers from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 6 answers on the claims of demonic origin and epilepsy.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
@@ -653,8 +671,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'quran-on-christians',
-			'title'   => __( 'What the Quran says about Christians and Christianity: 6 answers', 'bestofislam' ),
-			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 6 answers on what the Quran says about Christians.', 'bestofislam' ),
+			'title'   => __( 'What the Quran says about Christians and Christianity: 7 answers', 'bestofislam' ),
+			'excerpt' => __( 'Praise, disagreement and the command to dialogue: 7 answers on what the Quran says about Christians.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(
