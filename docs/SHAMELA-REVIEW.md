@@ -133,3 +133,4 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | islam-in-china | Partly done: Bukhari 335 and 428 verified on sunnah.com; Fath vol. 1, pp. 435, 524–525, 540. |
 | crusades-5-facts | Partly done: Tabari History vol. 3, p. 609 (terms of Aelia) text checked on Shamela. |
 | kharijites-and-takfir | Added a point on Ibn Abbas's debate with the Haruriyya (Nasa'i, Sunan al-Kubra 8575). |
+| gods-attributes-and-anthropomorphism | New article. Fath vol. 13, pp. 406–408 (istawa, Malik via Ibn Wahb, Juwayni, six positions), vol. 5, p. 183 (pronoun in the image hadith), vol. 11, p. 3 (Bukhari 6227); Bukhari 1145 on sunnah.com; Tabari vol. 22, pp. 375–376 (Quran 50:38). |

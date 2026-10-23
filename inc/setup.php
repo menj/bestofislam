@@ -478,6 +478,12 @@ function boi_seed_listicles() {
 			'topic'   => 'history',
 		),
 		array(
+			'slug'    => 'gods-attributes-and-anthropomorphism',
+			'title'   => __( 'God\'s hand, face and throne in the Quran: 7 points', 'bestofislam' ),
+			'excerpt' => __( 'Does the Quran describe a God with a body? 7 points on 42:11, the verses of hand and face, Malik\'s reply and the classical schools. Read on.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
 			'slug'    => 'crusades-5-facts',
 			'title'   => __( '6 facts about the Crusades that get lost', 'bestofislam' ),
 			'excerpt' => __( 'Who started the Crusades, what happened in Jerusalem in 1099 and 1187, and why Eastern Christians suffered too: 6 facts. Read on.', 'bestofislam' ),

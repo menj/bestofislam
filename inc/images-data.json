@@ -2464,5 +2464,30 @@
     "source": "https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/"
    }
   ]
+ },
+ "gods-attributes-and-anthropomorphism": {
+  "featured": {
+   "file": "gods-attributes-and-anthropomorphism.avif",
+   "alt": "Concentric gold, blue and white star outlines on a navy ground.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "gods-attributes-and-anthropomorphism-1.avif",
+    "alt": "Nested star outlines around a gold centre on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "gods-attributes-and-anthropomorphism-2.avif",
+    "alt": "Layered star outlines in gold, blue and white on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
  }
 }
