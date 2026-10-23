@@ -570,7 +570,7 @@ function boi_seed_listicles() {
 		array(
 			'slug'    => 'relationship-with-god',
 			'title'   => __( 'Do Muslims have a relationship with God? 5 answers', 'bestofislam' ),
-			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 5 answers on how Muslims relate to God.', 'bestofislam' ),
+			'excerpt' => __( 'Nearness, forgiveness without a mediator, the names of God and what an experience can prove: 6 answers on how Muslims relate to God.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
 		),
 		array(
@@ -599,8 +599,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'first-revelation-demonic-claim',
-			'title'   => __( 'Was the first revelation demonic? 5 answers from the sources', 'bestofislam' ),
-			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 5 answers on the claim that the first revelation was demonic.', 'bestofislam' ),
+			'title'   => __( 'Was the first revelation demonic? 6 answers from the sources', 'bestofislam' ),
+			'excerpt' => __( 'The cave of Hira, Khadija and Waraqa, and the report of fear: 6 answers on the claims of demonic origin and epilepsy.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
