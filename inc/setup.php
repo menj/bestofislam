@@ -239,8 +239,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'seven-ahruf-cairo-edition-stoning-verse',
-			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 4 points', 'bestofislam' ),
-			'excerpt' => __( 'Seven modes versus seven readings, the Cairo printing and the report of Umar on the stoning verse. 4 points. Read on.', 'bestofislam' ),
+			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 6 points', 'bestofislam' ),
+			'excerpt' => __( 'Seven modes versus seven readings, the transmission of the ten readings, the Cairo printing and the report of Umar on the stoning verse. 6 points.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
