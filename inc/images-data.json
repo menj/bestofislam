@@ -2539,5 +2539,30 @@
     "source": "bin/make-original-graphics.py"
    }
   ]
+ },
+ "muslims-by-the-numbers-2020": {
+  "featured": {
+   "file": "muslims-by-the-numbers-2020.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "muslims-by-the-numbers-2020-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "muslims-by-the-numbers-2020-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
  }
 }

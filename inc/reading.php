@@ -49,7 +49,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
+			'slugs' => array( 'muslims-by-the-numbers-2020', 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
 		),
 	);
 }

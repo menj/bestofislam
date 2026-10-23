@@ -502,6 +502,12 @@ function boi_seed_listicles() {
 			'topic'   => 'history',
 		),
 		array(
+			'slug'    => 'muslims-by-the-numbers-2020',
+			'title'   => __( 'Muslims by the numbers: 7 facts from the 2020 count', 'bestofislam' ),
+			'excerpt' => __( 'How many Muslims are there, where do they live, and what share of Europe do they make up? 7 facts from Pew\'s 2020 count. Read on.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
+		),
+		array(
 			'slug'    => 'islam-in-china',
 			'title'   => __( 'Islam in China: 5 facts about a 1,300-year-old community', 'bestofislam' ),
 			'excerpt' => __( 'Where did Chinese Muslims come from, what are the Hui, and what was the Panthay rebellion? 5 facts on Islam in China. Read the list.', 'bestofislam' ),
