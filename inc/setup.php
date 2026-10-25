@@ -581,6 +581,12 @@ function boi_seed_listicles() {
 			'topic'   => 'islamophobia',
 		),
 		array(
+			'slug'    => 'islamisation-of-the-west',
+			'title'   => __( '5 facts behind the "Islamisation of the West" claim', 'bestofislam' ),
+			'excerpt' => __( 'Sharia in Dearborn, the Ground Zero mosque, CAIR as a front group, and the demographic numbers: 5 claims checked against the record, and the theory tying them together.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
+		),
+		array(
 			'slug'    => 'black-stone-and-kissing',
 			'title'   => __( '5 facts about the Black Stone and why Muslims touch it', 'bestofislam' ),
 			'excerpt' => __( 'What the Black Stone is, what the rite involves, what Umar said and what Islam counts as idolatry: 5 facts about the stone at the Kaaba.', 'bestofislam' ),
