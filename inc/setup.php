@@ -125,6 +125,12 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'muhammad-false-prophet-claim',
+			'title'   => __( 'Did Muhammad fail as a prophet? 5 answers on miracles, signs and the Al-Rum prophecy', 'bestofislam' ),
+			'excerpt' => __( 'Critics say Muhammad showed no miracles, made a failed prophecy and might have been epileptic. 5 answers from the record. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'al-zutt-allegation',
 			'title'   => __( '5 things wrong with the al-Zutt allegation', 'bestofislam' ),
 			'excerpt' => __( 'A recent polemic reads a hadith about al-Zutt as sexual assault. 5 reasons the reading collapses. Read the philology.', 'bestofislam' ),
