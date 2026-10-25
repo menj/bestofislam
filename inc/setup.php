@@ -104,8 +104,9 @@ function boi_seed_topics() {
  * Returns the listicles created on activation.
  *
  * Each entry names a file in /content/, which holds the finished article as
- * block markup. Keeping the prose out of PHP means an editor can revise an
- * article without touching code, and the seed stays readable.
+ * block markup inside a JSON file. Keeping the prose out of PHP means an
+ * editor can revise an article without touching code, and the seed stays
+ * readable.
  *
  * @return array
  */
@@ -789,17 +790,28 @@ function boi_seed_listicles() {
 /**
  * Loads an article's block markup from the content directory.
  *
+ * Articles are stored as JSON, each holding its block markup under a
+ * "content" key, rather than as raw .html files.
+ *
  * @param string $slug Article slug.
- * @return string Block markup, or an empty string when the file is missing.
+ * @return string Block markup, or an empty string when the file is missing
+ *                or malformed.
  */
 function boi_load_article( $slug ) {
-	$path = BOI_DIR . '/content/' . sanitize_file_name( $slug ) . '.html';
+	$path = BOI_DIR . '/content/' . sanitize_file_name( $slug ) . '.json';
 
 	if ( ! file_exists( $path ) ) {
 		return '';
 	}
 
-	return (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	$raw  = (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	$data = json_decode( $raw, true );
+
+	if ( ! is_array( $data ) || ! isset( $data['content'] ) || ! is_string( $data['content'] ) ) {
+		return '';
+	}
+
+	return $data['content'];
 }
 
 /**
