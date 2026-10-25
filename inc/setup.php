@@ -588,8 +588,8 @@ function boi_seed_listicles() {
 		),
 		array(
 			'slug'    => 'islamisation-of-the-west',
-			'title'   => __( '5 facts behind the "Islamisation of the West" claim', 'bestofislam' ),
-			'excerpt' => __( 'Sharia in Dearborn, the Ground Zero mosque, CAIR as a front group, and the demographic numbers: 5 claims checked against the record, and the theory tying them together.', 'bestofislam' ),
+			'title'   => __( '6 facts behind the "Islamisation of the West" claim', 'bestofislam' ),
+			'excerpt' => __( 'Sharia in Dearborn, the Ground Zero mosque, CAIR as a front group, the demographic numbers, and a school prayer room: 6 claims checked against the record, and the theory tying them together.', 'bestofislam' ),
 			'topic'   => 'islamophobia',
 		),
 		array(
