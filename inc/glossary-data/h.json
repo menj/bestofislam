@@ -44,6 +44,7 @@
   "type": "person",
   "ar": "حفصة",
   "tr": "Ḥafṣa",
+  "epithet": "رضي الله عنها",
   "def": "A wife of the Prophet, daughter of Umar, who kept the first written collection of the Quran.",
   "what": [
    "Hafsa bint Umar married the Prophet after her first husband died at Badr. After the collection of the Quran’s leaves under Abu Bakr, the copy was kept in her care, and Uthman later borrowed it to make the standard copies, then returned it (Sahih al-Bukhari)."
@@ -314,6 +315,7 @@
   "type": "person",
   "ar": "حمزة",
   "tr": "Ḥamza",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s uncle and foster-brother, called “the Lion of God”, killed at Uhud in 625.",
   "what": [
    "Hamza accepted Islam in the second year after the Prophet’s call, after he struck Abu Jahl for insulting him, and was among the strongest of the Muslims. He fought at Badr, and was killed at Uhud by Wahshi, a slave of the Quraysh, and his body was mutilated. The Prophet is said to have wept for him, and called him “the master of the martyrs”."
@@ -437,6 +439,7 @@
   "type": "person",
   "ar": "الحسن",
   "tr": "al-Ḥasan",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s elder grandson (625–670), who made peace with Muawiya to end the civil war.",
   "what": [
    "Hasan, son of Ali and Fatima, was the Prophet’s grandson. The Prophet said of him “this son of mine is a master; God will make peace between two great groups of Muslims through him” (Sahih al-Bukhari). He became caliph after Ali’s death in 661 and gave up the office to Muawiya within months, to end the fighting. He died in 670, reportedly poisoned."
@@ -468,6 +471,7 @@
   "type": "person",
   "ar": "حسان بن ثابت",
   "tr": "Ḥassān ibn Thābit",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s poet, who answered the satires of the Quraysh in verse.",
   "what": [
    "Hassan ibn Thabit of Medina, a Khazraji, was known as the poet of the Prophet. The Prophet set a pulpit for him in the mosque and said: “O Hassan, answer for the Messenger of God; O God, support him with the Holy Spirit” (Sahih al-Bukhari). He wrote elegies for the dead of Uhud and Hamza."
@@ -898,6 +902,7 @@
   "type": "prophet",
   "ar": "هود",
   "tr": "Hūd",
+  "epithet": "عليه السلام",
   "def": "The prophet sent to the people of ʿĀd (7:65–72, 11:50–60), who rejected him.",
   "what": [
    "Hud told his people to worship God alone, and said he asked no reward for it (11:50–51). They called him foolish and said that their gods had afflicted him (11:53–54). He answered: “I put my trust in God, my Lord and your Lord; there is no creature but He holds it by its forelock” (11:56). A violent wind destroyed them (69:6–8). Chapter 11 is named after him."
@@ -1115,6 +1120,7 @@
   "type": "person",
   "ar": "الحسين",
   "tr": "al-Ḥusayn",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s younger grandson (626–680), killed at Karbala, whose death Muslims regard as a great crime.",
   "what": [
    "Husayn, son of Ali and Fatima, was loved by the Prophet, who called him and Hasan “the masters of the youth of Paradise” (al-Tirmidhi). After Muawiya’s death in 680 he refused to give allegiance to Yazid and was killed with his small band at Karbala on the tenth of Muharram, 61 AH."

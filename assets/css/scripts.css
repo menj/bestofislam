@@ -98,3 +98,30 @@ body {
 .boi-script-greek {
 	font-family: "BOI Greek", serif;
 }
+
+/*
+ * Epithets: the Arabic formula that follows a name (the blessing on the
+ * Prophet, the peace on the prophets, "may God be pleased with" on the
+ * Companions). It rides on the first linked mention in an article and on the
+ * entry's own page. The rubric variant sets it in red ink, after the
+ * manuscript convention of rubrication.
+ */
+:root {
+	--boi-rubric: #B3261E;
+}
+
+:root[data-theme="dark"] {
+	--boi-rubric: #E5736A;
+}
+
+.boi-epithet {
+	font-family: "BOI Arabic", "Noto Naskh Arabic", serif;
+	font-size: 0.95em;
+	margin-inline-start: 0.15em;
+	white-space: nowrap;
+	unicode-bidi: isolate;
+}
+
+.boi-epithet--rubric {
+	color: var(--boi-rubric);
+}

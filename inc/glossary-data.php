@@ -8,7 +8,10 @@
  * event, group, topic or book), Arabic script and transliteration where they
  * apply, a one-line definition (also the page excerpt), the explanation, the
  * common misunderstanding it answers, what the sources say, other names it is
- * listed under (aliases), and links to related terms and articles. References
+ * listed under (aliases), and links to related terms and articles. A person
+ * or prophet may carry an "epithet", the Arabic formula that follows the name
+ * (see boi_glossary_epithet_html()), and "epithet_rubric" sets it in red
+ * ink. References
  * are to the Quran by chapter and verse and to hadith by collection. Written
  * for this site.
  *

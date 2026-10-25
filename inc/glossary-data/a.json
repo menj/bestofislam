@@ -29,6 +29,7 @@
   "type": "prophet",
   "ar": "هارون",
   "tr": "Hārūn",
+  "epithet": "عليه السلام",
   "def": "Moses’ brother and a prophet in the Quran, who stood by him before Pharaoh.",
   "what": [
    "In the Quran Moses asks God to make his brother Aaron his helper and a partner in his mission, and God grants it (20:29–36, 19:53). Aaron is named among the prophets and honoured with Moses, as in “peace upon Moses and Aaron” (37:114–120)."
@@ -100,6 +101,7 @@
   "type": "person",
   "ar": "العباس",
   "tr": "al-ʿAbbās",
+  "epithet": "رضي الله عنه",
   "def": "An uncle of the Prophet and a Companion, ancestor of the Abbasid caliphs.",
   "what": [
    "Abbas (d. about 653) was the Prophet’s uncle and close in age to him. His son Abdullah ibn Abbas became one of the great early authorities on the interpretation of the Quran. The Abbasid dynasty took its name from him."
@@ -213,6 +215,7 @@
   "type": "person",
   "ar": "عبد الرحمن بن عوف",
   "tr": "ʿAbd al-Raḥmān ibn ʿAwf",
+  "epithet": "رضي الله عنه",
   "def": "A wealthy early Companion, one of the ten promised Paradise, known for honest trade and generosity.",
   "what": [
    "He accepted Islam early, emigrated to Abyssinia and then to Medina, and fought at Badr and Uhud, where he was badly wounded. He was a merchant. A report in Sahih al-Bukhari says that when an Ansari offered him half his wealth he declined and asked only to be shown the market."
@@ -264,6 +267,7 @@
   "type": "person",
   "ar": "عبد الله بن عمرو بن العاص",
   "tr": "ʿAbd Allāh ibn ʿAmr",
+  "epithet": "رضي الله عنه",
   "def": "A Companion who wrote down the Prophet’s sayings in his lifetime.",
   "what": [
    "Abu Hurayra said that no one had more hadith than Abdullah ibn Amr, “because he wrote and I did not” (Sahih al-Bukhari). He kept a record he called <em>al-Ṣādiqa</em>, “the truthful one”, with the Prophet’s permission."
@@ -287,6 +291,7 @@
   "type": "person",
   "ar": "عبد الله بن سعد",
   "tr": "ʿAbd Allāh ibn Saʿd",
+  "epithet": "رضي الله عنه",
   "def": "A scribe of revelation who later left Islam and returned, and became governor of Egypt.",
   "what": [
    "Abdullah ibn Sa’d ibn Abi Sarh served for a time as one of the Prophet’s scribes, then left Medina for Mecca and abandoned Islam. At the conquest of Mecca he was among a few people named for execution, but Uthman, his foster-brother, brought him to the Prophet, who after a delay accepted his allegiance. He became governor of Egypt under Uthman and led campaigns in North Africa."
@@ -399,6 +404,7 @@
   "type": "prophet",
   "ar": "إبراهيم",
   "tr": "Ibrāhīm",
+  "epithet": "عليه السلام",
   "def": "The friend of God and father of prophets, honoured by Muslims, Jews and Christians.",
   "what": [
    "The Quran calls him “a nation in himself” (16:120) and God’s friend (4:125). It tells how he broke his people’s idols (21:51–70), was cast into a fire that God made “cool and safe” (21:69), and with his son Ishmael raised the foundations of the Kaaba (2:127). He is named in the daily prayer, which asks blessings on Muhammad as God blessed Abraham."
@@ -448,6 +454,7 @@
   "type": "person",
   "ar": "أبو بكر",
   "tr": "Abū Bakr",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s closest friend and the first caliph (632–634).",
   "what": [
    "Abu Bakr was among the first to accept Islam and spent his wealth freeing slaves who were tortured for their belief, including Bilal. The Quran refers to him as the Prophet’s companion in the cave during the hijra, “the second of two when they were in the cave” (9:40). The Prophet named him to lead the prayer in his last illness. As caliph he put down the revolts of the tribes and had the Quran’s leaves gathered at Umar’s urging, with Zayd ibn Thabit as scribe (Sahih al-Bukhari)."
@@ -507,6 +514,7 @@
   "type": "person",
   "ar": "أبو ذر",
   "tr": "Abū Dharr",
+  "epithet": "رضي الله عنه",
   "def": "A Companion from the tribe of Ghifar, known for his asceticism and for his stand against hoarding of wealth.",
   "what": [
    "Abu Dharr accepted Islam early and returned to his tribe before joining the Prophet in Medina. The Prophet said of him that “the earth does not carry, nor the sky shade, one more truthful in speech than Abu Dharr” (al-Tirmidhi). He taught that those who store up gold and silver (9:34) must spend it, a view that brought him into conflict with Muawiya in Syria. He died in exile at al-Rabadha in 652."
@@ -559,6 +567,7 @@
   "type": "person",
   "ar": "أبو هريرة",
   "tr": "Abū Hurayra",
+  "epithet": "رضي الله عنه",
   "def": "A Companion who narrated more hadith than any other, and was a close companion of the Prophet for his last years.",
   "what": [
    "Abu Hurayra of the tribe of Daws came to Medina in the year of Khaybar (628–29) and stayed with the Prophet, with little else to do than learn from him. He is credited with about 5,300 hadith. He explained why he narrated more than the others: the Muhajirun were busy in the markets and the Ansar with their land, while he stayed to keep his stomach full and to hear (Sahih al-Bukhari). His name means “father of the kitten”."
@@ -633,6 +642,7 @@
   "type": "person",
   "ar": "أبو سفيان",
   "tr": "Abū Sufyān",
+  "epithet": "رضي الله عنه",
   "def": "A leader of Quraysh who fought the Muslims for years, then accepted Islam at the conquest of Mecca.",
   "what": [
    "Abu Sufyan ibn Harb led the Meccan forces at Uhud and the Trench. When the Muslim army came to Mecca in 630 the Prophet announced that whoever enters the house of Abu Sufyan is safe. His son Muawiya later founded the Umayyad dynasty."
@@ -699,6 +709,7 @@
   "type": "prophet",
   "ar": "آدم",
   "tr": "Ādam",
+  "epithet": "عليه السلام",
   "def": "The first human being and, in Islam, the first prophet.",
   "what": [
    "The Quran says God created Adam from clay (38:71, 15:26), taught him the names of things (2:31), and told the angels to prostrate to him. Iblis refused (2:34). Adam and his wife were told not to approach a tree, were led astray, and repented, and God accepted their repentance (2:37)."
@@ -1100,6 +1111,7 @@
   "type": "person",
   "ar": "عائشة",
   "tr": "ʿĀʾisha",
+  "epithet": "رضي الله عنها",
   "def": "The Prophet’s wife and a scholar of the first generation, one of the major narrators of hadith.",
   "what": [
    "Aisha, daughter of Abu Bakr, was the Prophet’s wife for nine years. Companions, including senior ones, came to her for rulings, and she is credited with over two thousand hadith. She corrected other Companions where she thought they had misremembered, and later led a force against Ali at the Battle of the Camel, which she regretted."
@@ -1372,6 +1384,7 @@
   "type": "person",
   "ar": "علي بن أبي طالب",
   "tr": "ʿAlī ibn Abī Ṭālib",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s cousin and son-in-law, and the fourth of the rightly guided caliphs.",
   "what": [
    "Ali was raised in the Prophet’s household, married his daughter Fatima, and was among the first to accept Islam. He was a leading warrior and a respected judge, and became caliph in 656 after Uthman’s murder. His reign was troubled by civil war and he was killed by a Kharijite in 661."

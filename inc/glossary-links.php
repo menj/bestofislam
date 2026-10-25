@@ -83,7 +83,13 @@ function boi_gl_map() {
 				}
 
 				$seen[ $low ] = true;
-				$map[]        = array( 'phrase' => $name, 'url' => get_permalink( $page ), 'id' => $page->ID, 'always' => in_array( $page->post_name, boi_gl_always(), true ) );
+				$map[]        = array(
+					'phrase'  => $name,
+					'url'     => get_permalink( $page ),
+					'id'      => $page->ID,
+					'always'  => in_array( $page->post_name, boi_gl_always(), true ),
+					'epithet' => function_exists( 'boi_glossary_epithet_html' ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
+				);
 			}
 		}
 
@@ -187,7 +193,8 @@ function boi_gl_filter( $content ) {
 		} );
 
 		foreach ( $found as $f ) {
-			$link = '<a href="' . esc_url( $f['item']['url'] ) . '" class="boi-gl-link">' . substr( $tok, $f['start'], $f['end'] - $f['start'] ) . '</a>';
+			// The epithet rides on the first mention only, with the link.
+			$link = '<a href="' . esc_url( $f['item']['url'] ) . '" class="boi-gl-link">' . substr( $tok, $f['start'], $f['end'] - $f['start'] ) . '</a>' . ( isset( $f['item']['epithet'] ) ? $f['item']['epithet'] : '' );
 			$tok  = substr_replace( $tok, $link, $f['start'], $f['end'] - $f['start'] );
 			$used[ $f['item']['id'] ] = true;
 

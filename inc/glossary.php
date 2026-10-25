@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '7';
+const BOI_GLOSSARY_VERSION = '8';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -92,7 +92,9 @@ function boi_glossary_content( $t ) {
 		// the Uthmani text, not just claimed) rather than a name, term or
 		// non-Quranic formula; those alone get the Uthmanic Quran face.
 		$script_class = ! empty( $t['quran_ref'] ) ? 'boi-term__script boi-script-quran' : 'boi-term__script';
-		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
+		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . boi_glossary_epithet_html( $t ) . '</p>';
+	} elseif ( '' !== boi_glossary_epithet_html( $t, false ) ) {
+		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . boi_glossary_epithet_html( $t, false ) . '</p>';
 	}
 	if ( ! empty( $t['tr'] ) ) {
 		$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
@@ -625,6 +627,18 @@ function boi_glossary_entry_image( $kind, $slug ) {
  *                     null when the entry has none.
  */
 function boi_glossary_entry_portrait( $slug ) {
+	$term = boi_glossary_term_by_slug( $slug );
+
+	return ( $term && ! empty( $term['portrait'] ) && ! empty( $term['portrait']['file'] ) ) ? $term['portrait'] : null;
+}
+
+/**
+ * An entry's raw data record, by slug.
+ *
+ * @param string $slug Entry slug.
+ * @return array|null
+ */
+function boi_glossary_term_by_slug( $slug ) {
 	static $by_slug = null;
 
 	if ( null === $by_slug ) {
@@ -636,9 +650,28 @@ function boi_glossary_entry_portrait( $slug ) {
 		}
 	}
 
-	$term = isset( $by_slug[ $slug ] ) ? $by_slug[ $slug ] : null;
+	return isset( $by_slug[ $slug ] ) ? $by_slug[ $slug ] : null;
+}
 
-	return ( $term && ! empty( $term['portrait'] ) && ! empty( $term['portrait']['file'] ) ) ? $term['portrait'] : null;
+/**
+ * The Arabic epithet that follows a name: the blessing on the Prophet, the
+ * peace on the other prophets, the "may God be pleased with" on the
+ * Companions. An entry carries it in its "epithet" field; "epithet_rubric"
+ * sets it in red ink, after the manuscript convention.
+ *
+ * @param array|null $t    Entry.
+ * @param bool       $lead Whether to lead with a non-breaking space, so the
+ *                         epithet stays on the same line as the name.
+ * @return string Markup, or '' when the entry has no epithet.
+ */
+function boi_glossary_epithet_html( $t, $lead = true ) {
+	if ( ! is_array( $t ) || empty( $t['epithet'] ) || ! is_string( $t['epithet'] ) ) {
+		return '';
+	}
+
+	$class = 'boi-epithet' . ( ! empty( $t['epithet_rubric'] ) ? ' boi-epithet--rubric' : '' );
+
+	return ( $lead ? '&nbsp;' : '' ) . '<span class="' . esc_attr( $class ) . '" lang="ar" dir="rtl">' . esc_html( $t['epithet'] ) . '</span>';
 }
 
 /**
