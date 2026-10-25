@@ -593,6 +593,12 @@ function boi_seed_listicles() {
 			'topic'   => 'islamophobia',
 		),
 		array(
+			'slug'    => 'muslim-societies-backwardness-claim',
+			'title'   => __( '5 facts behind the claim that Muslim-majority countries are "backward"', 'bestofislam' ),
+			'excerpt' => __( 'Low scores on development, freedom and women\'s rights get pinned on Islam itself. 5 facts about what actually predicts them, from oil rents to colonial timing, and what does not.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
+		),
+		array(
 			'slug'    => 'black-stone-and-kissing',
 			'title'   => __( '5 facts about the Black Stone and why Muslims touch it', 'bestofislam' ),
 			'excerpt' => __( 'What the Black Stone is, what the rite involves, what Umar said and what Islam counts as idolatry: 5 facts about the stone at the Kaaba.', 'bestofislam' ),
