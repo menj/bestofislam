@@ -1,17 +1,26 @@
 # Script fonts
 
-`assets/css/scripts.css` declares six range-scoped faces. Noto Naskh Arabic is
-bundled (`noto-naskh-arabic.woff2`, a variable file for weights 400 to 700,
-under the SIL Open Font Licence 1.1, which allows redistribution with the
-theme; its copyright notice and the licence text are in
-`OFL-NotoNaskhArabic.txt`); it sets the Arabic of the Glossary and every other Arabic passage that
-is not Quranic. The other files are not bundled, since their licences require
-the site owner to obtain them. Drop each woff2 into this directory under the exact filename below
-and the declaration activates with no code change.
+`assets/css/scripts.css` declares six range-scoped faces. Two are bundled:
+
+- `noto-naskh-arabic.woff2`, a variable file for weights 400 to 700, under the
+  SIL Open Font Licence 1.1 (`OFL-NotoNaskhArabic.txt`); it sets the Arabic of
+  the Glossary and every other Arabic passage that is not Quranic.
+- `uthmanic-hafs.woff2`, KFGQPC HAFS Uthmanic Script, under the free
+  no-cost end-user licence embedded in the font and reproduced in
+  `KFGQPC-LICENSE.txt` (use, copy and distribute are permitted; the font may
+  not be sold, modified or reverse engineered). It sets only text in the
+  `.boi-script-quran` class (`.boi-term__script.boi-script-quran` on a
+  Glossary entry), reserved for Arabic verified against the Uthmani Quran
+  text, not applied to Arabic generally; the `body` stack lists `"BOI
+  Arabic"` before `"BOI Quran"` so unmarked Arabic never resolves to it.
+
+The remaining four files are not bundled, since their licences require the
+site owner to obtain them. Drop each woff2 into this directory under the
+exact filename below and the declaration activates with no code change.
 
 | Filename | Face | Scripts covered |
 | --- | --- | --- |
-| `uthmanic-hafs.woff2` | KFGQPC HAFS Uthmanic | Quranic Arabic |
+| `uthmanic-hafs.woff2` (bundled) | KFGQPC HAFS Uthmanic | Quranic Arabic |
 | `noto-naskh-arabic.woff2` (bundled) | Noto Naskh Arabic | General Arabic |
 | `sbl-hebrew.woff2` | SBL Hebrew | Hebrew, Hebrew Presentation Forms |
 | `sbl-greek.woff2` | SBL Greek | Greek, Greek Extended |

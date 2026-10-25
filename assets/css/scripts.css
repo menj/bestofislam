@@ -59,12 +59,19 @@
  * The stack is applied globally to body text. Because every face above is
  * range-scoped, Latin text never touches them and the Latin faces declared in
  * theme.json continue to resolve first.
+ *
+ * "BOI Arabic" (Naskh) comes before "BOI Quran" here on purpose. Both cover
+ * the same Arabic blocks, and KFGQPC HAFS Uthmanic includes ordinary Arabic
+ * letters as well as Quranic ones, so if "BOI Quran" led the stack it would
+ * win for every Arabic passage, not only Quranic citations. The Uthmanic
+ * face is reserved for text explicitly marked .boi-script-quran, whose own
+ * font-family declaration below overrides this stack for that text.
  */
 body {
 	font-family:
 		var(--wp--preset--font-family--eb-garamond, serif),
-		"BOI Quran",
 		"BOI Arabic",
+		"BOI Quran",
 		"BOI Hebrew",
 		"BOI Greek",
 		"BOI Syriac",

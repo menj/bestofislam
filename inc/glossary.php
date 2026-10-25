@@ -88,7 +88,11 @@ function boi_glossary_content( $t ) {
 
 	$out  = "<!-- wp:group {\"className\":\"boi-term\"} -->\n<div class=\"wp-block-group boi-term\">";
 	if ( ! empty( $t['ar'] ) ) {
-		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
+		// A handful of entries quote actual Quranic text (verified against
+		// the Uthmani text, not just claimed) rather than a name, term or
+		// non-Quranic formula; those alone get the Uthmanic Quran face.
+		$script_class = ! empty( $t['quran_ref'] ) ? 'boi-term__script boi-script-quran' : 'boi-term__script';
+		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
 	}
 	if ( ! empty( $t['tr'] ) ) {
 		$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
