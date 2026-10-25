@@ -4,13 +4,19 @@
  */
 
 .boi-settings {
-	--boi-accent: #1f6fcc;
-	--boi-accent-contrast: #ffffff;
-	--boi-ink: #0d2b4e;
-	--boi-muted: #4a5a6e;
-	--boi-border: #d9e3ef;
-	--boi-surface: #ffffff;
-	--boi-surface-muted: #eaf2fb;
+	/*
+	 * Each property reads the matching theme.json palette slug first, so a
+	 * colour scheme change in the Site Editor carries over here; the literal
+	 * value after the comma is only the fallback for when that custom
+	 * property is not defined in this admin context.
+	 */
+	--boi-accent: var( --wp--preset--color--accent-1, #1f6fcc );
+	--boi-accent-contrast: var( --wp--preset--color--base, #ffffff );
+	--boi-ink: var( --wp--preset--color--contrast, #0d2b4e );
+	--boi-muted: var( --wp--preset--color--accent-5, #4a5a6e );
+	--boi-border: var( --wp--preset--color--accent-6, #d9e3ef );
+	--boi-surface: var( --wp--preset--color--base, #ffffff );
+	--boi-surface-muted: var( --wp--preset--color--accent-3, #eaf2fb );
 	--boi-radius: 8px;
 
 	max-inline-size: 60rem;
@@ -143,4 +149,18 @@
 
 .boi-settings__log code {
 	font-size: 0.75rem;
+}
+
+/* Narrow admin widths: WordPress core stacks .form-table rows below this
+ * breakpoint, so the fixed label column and generous card padding need to
+ * relax too, or they fight that stacked layout instead of fitting it. */
+@media ( max-width: 782px ) {
+	.boi-settings__form {
+		padding: 1.25rem;
+	}
+
+	.boi-settings__form .form-table th {
+		inline-size: auto;
+		padding-block-end: 0.5rem;
+	}
 }
