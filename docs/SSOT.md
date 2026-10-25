@@ -150,12 +150,13 @@ archives, which was the weakness of the earlier scheme.
 
 ### D15. Articles ship as files, not as PHP arrays
 
-Finished prose lives in `/content/<slug>.html` as block markup and is read at
-seed time. Embedding articles in PHP string literals makes both the code and
-the prose harder to revise, and it puts editorial work behind a deployment. The
-loader resolves the slug through `sanitize_file_name()` and returns an empty
-string when the file is absent, in which case that post is skipped rather than
-created empty.
+Finished prose lives in `/content/<slug>.json` as block markup under a
+`content` key, and is read at seed time. Embedding articles in PHP string
+literals makes both the code and the prose harder to revise, and it puts
+editorial work behind a deployment. Files are stored as JSON rather than raw
+`.html` for safer handling on disk. The loader resolves the slug through
+`sanitize_file_name()` and returns an empty string when the file is absent or
+malformed, in which case that post is skipped rather than created empty.
 
 Seeded articles publish rather than draft, because they carry finished content.
 Each declares its own slug so the URL is fixed by the theme.

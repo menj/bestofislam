@@ -38,8 +38,9 @@ for f in glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json')):
             terms.append((entry['slug'], names))
 
 text = {}
-for f in glob.glob(os.path.join(ROOT, 'content', '*.html')):
-    raw = re.sub(r'<!--.*?-->', '', open(f, encoding='utf-8').read(), flags=re.S)
+for f in glob.glob(os.path.join(ROOT, 'content', '*.json')):
+    body = json.load(open(f, encoding='utf-8'))['content']
+    raw = re.sub(r'<!--.*?-->', '', body, flags=re.S)
     paragraphs = re.findall(r'<p>(.*?)</p>', raw, re.S)
     text[os.path.basename(f)[:-5]] = html.unescape(' '.join(re.sub(r'<[^>]+>', '', p) for p in paragraphs)).replace('’', "'")
 
