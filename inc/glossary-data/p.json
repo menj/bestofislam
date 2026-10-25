@@ -95,6 +95,44 @@
   ]
  },
  {
+  "slug": "paul",
+  "title": "Paul",
+  "type": "person",
+  "ar": "بولس",
+  "tr": "Būlus",
+  "def": "Saul of Tarsus (died around 64), the author of the earliest Christian letters, who claimed apostleship from a vision and taught that the Law no longer bound believers.",
+  "what": [
+   "Paul was a Pharisee from Tarsus in Cilicia who, by his own account, persecuted the followers of Jesus and then reversed course after a vision on the road to Damascus (Galatians 1:13 to 16; Acts 9). He never met Jesus in his lifetime, and he rested his authority on that vision alone, saying he received his gospel through no human teacher (Galatians 1:11 to 12). Thirteen letters in the New Testament carry his name; critical scholars regard 7 of them as certainly his.",
+   "His letters are the earliest Christian writings to survive, older than any Gospel, and they set the shape of later Christian doctrine: Jesus as the Son who died for sin, salvation by faith apart from the works of the Law, and the Gentile mission without circumcision. Each of these put him in open conflict with the Jerusalem community led by James and Peter, a conflict he records himself (Galatians 2:11 to 14)."
+  ],
+  "misread": "A disciple of Jesus, one of the Twelve. He was neither. The Twelve were chosen in Jesus's lifetime; Paul's claim rested on a later vision, and Acts 1:21 to 22 makes companionship with Jesus the test of apostleship.",
+  "sources": [
+   "The Quran does not name Paul. Muslim writers from the tenth century onward identified him as the point at which the teaching of Jesus was altered: ʿAbd al-Jabbār (died 1025) in his <em>Tathbīt dalāʾil al-nubuwwa</em> gives a long account of Paul as the man who remade the religion of Jesus for the Romans, and a legend transmitted by Sayf ibn ʿUmar (died around 796) and preserved by al-Ṭabarī tells the same story in narrative form. The Ebionites, Jewish followers of Jesus in the second century, held the same view before any Muslim did: Irenaeus records that they kept the Law and rejected Paul as an apostate from it.",
+   "Christian scholarship confirms the historical outline while rejecting the judgement. Bart Ehrman, Gerd Lüdemann and James Tabor each treat the gap between Paul and the Jerusalem apostles, and the later authorship of 6 of the letters, as settled findings of the critical method."
+  ],
+  "terms": [
+   "apostle",
+   "isa",
+   "injil",
+   "tahrif",
+   "barnabas",
+   "bible"
+  ],
+  "articles": [
+   "paul-and-the-law",
+   "paul-claim-to-apostleship",
+   "pauline-letters-authorship"
+  ],
+  "aliases": [
+   "Paul the Apostle",
+   "Saul of Tarsus",
+   "Paul of Tarsus",
+   "Saint Paul",
+   "St Paul",
+   "Bulus"
+  ]
+ },
+ {
   "slug": "people-of-the-heights",
   "title": "People of the Heights",
   "type": "group",

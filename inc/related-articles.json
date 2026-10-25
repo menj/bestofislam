@@ -9,13 +9,13 @@
   "seven-ahruf-cairo-edition-stoning-verse",
   "questions-about-aisha",
   "sira-ibn-ishaq-hisham-tabari",
-  "who-wrote-the-quran"
+  "first-muslims-kept-the-faith"
  ],
  "al-zutt-allegation": [
   "quran-on-christians",
-  "crucifixion-quran",
-  "who-wrote-the-quran",
-  "hajj-rites-explained"
+  "hajj-rites-explained",
+  "satanic-verses-report",
+  "crucifixion-quran"
  ],
  "apes-and-pigs-and-the-jews": [
   "quran-on-christians",
@@ -25,9 +25,9 @@
  ],
  "apostasy-in-islam": [
   "sharia-and-hudud",
+  "jizya",
   "why-no-interest",
-  "homosexuality-in-islam",
-  "prophets-marriages-zaynab-and-others"
+  "homosexuality-in-islam"
  ],
  "arabic-words-science": [
   "moon-craters",
@@ -48,10 +48,10 @@
   "revisionist-case-weighed"
  ],
  "blasphemy-and-insults-to-the-prophet": [
+  "jizya",
+  "sharia-and-hudud",
   "schacht-isnads-dating-hadith",
-  "race-in-quran-and-hadith",
-  "taqiyya-5-myths",
-  "crucifixion-quran"
+  "race-in-quran-and-hadith"
  ],
  "buraq-and-miracle-stories": [
   "quran-on-christians",
@@ -63,13 +63,13 @@
   "sharia-and-hudud",
   "women-in-islamic-law-testimony-inheritance",
   "war-and-killing-in-islam",
-  "black-stone-and-kissing"
+  "questions-about-aisha"
  ],
  "child-marriage-in-islam": [
   "prophets-marriages-zaynab-and-others",
-  "women-in-islamic-law-testimony-inheritance",
-  "women-in-the-prophets-life",
-  "quranic-ethics"
+  "questions-about-aisha",
+  "quranic-ethics",
+  "women-in-islamic-law-testimony-inheritance"
  ],
  "companions-who-started-with-nothing": [
   "women-in-the-prophets-life",
@@ -80,20 +80,20 @@
  "crucifixion-quran": [
   "shared-prophets",
   "quran-on-christians",
-  "paul-and-the-law",
+  "paul-claim-to-apostleship",
   "apes-and-pigs-and-the-jews"
  ],
  "crusades-5-facts": [
+  "jizya",
+  "quran-on-christians",
   "paul-and-the-law",
-  "slavery-in-islam",
-  "raids-badr-and-the-conquest-of-mecca",
-  "quran-on-christians"
+  "slavery-in-islam"
  ],
  "deuteronomy-18-and-the-paraclete": [
   "crucifixion-quran",
-  "paul-and-the-law",
   "quran-on-christians",
-  "verses-read-differently"
+  "verses-read-differently",
+  "paul-and-the-law"
  ],
  "do-muslims-worship-muhammad": [
   "black-stone-and-kissing",
@@ -101,47 +101,53 @@
   "women-in-the-prophets-life",
   "funeral-dhikr-dua"
  ],
+ "does-the-quran-allow-wife-beating": [
+  "hijab-and-modesty",
+  "child-marriage-in-islam",
+  "questions-about-aisha",
+  "quranic-ethics"
+ ],
  "dome-inscriptions": [
   "revisionist-case-weighed",
   "mosques-adapt-to-place",
   "qibla-change",
-  "who-is-allah"
+  "islamic-rites-before-islam"
  ],
  "end-of-the-world-1110-claim": [
-  "quran-4-34",
+  "does-the-quran-allow-wife-beating",
   "end-of-time",
   "abrogation-and-the-sword-verse",
-  "do-muslims-worship-muhammad"
+  "women-in-the-prophets-life"
  ],
  "end-of-time": [
-  "black-stone-and-kissing",
   "fate-and-free-will",
-  "do-muslims-worship-muhammad",
-  "funeral-dhikr-dua"
+  "black-stone-and-kissing",
+  "funeral-dhikr-dua",
+  "do-muslims-worship-muhammad"
  ],
  "ex-muslim-blog-study": [
+  "shared-prophets",
   "fate-and-free-will",
   "sharia-and-hudud",
-  "apostasy-in-islam",
-  "paul-and-the-law"
+  "apostasy-in-islam"
  ],
  "ezra-and-mary": [
-  "shared-prophets",
-  "paul-and-the-law",
   "quran-on-christians",
-  "apes-and-pigs-and-the-jews"
+  "paul-claim-to-apostleship",
+  "jesus-not-god",
+  "shared-prophets"
  ],
  "fastest-growing-religion": [
   "muslims-by-the-numbers-2020",
   "islam-in-china",
-  "race-in-quran-and-hadith",
-  "uthman-copies"
+  "ex-muslim-blog-study",
+  "indonesia"
  ],
  "fate-and-free-will": [
   "six-articles-of-faith",
   "scholars-who-shaped-islamic-study",
-  "women-in-the-prophets-life",
-  "end-of-time"
+  "end-of-time",
+  "women-in-the-prophets-life"
  ],
  "fighting-verses-in-context": [
   "kharijites-and-takfir",
@@ -151,9 +157,9 @@
  ],
  "first-muslims-kept-the-faith": [
   "questions-about-aisha",
-  "first-revelation-demonic-claim",
   "hanif-poets-and-musaylima",
-  "islamic-rites-before-islam"
+  "islamic-rites-before-islam",
+  "first-revelation-demonic-claim"
  ],
  "first-revelation-demonic-claim": [
   "first-muslims-kept-the-faith",
@@ -169,9 +175,9 @@
  ],
  "fly-hadith-and-adult-suckling": [
   "women-in-islamic-law-testimony-inheritance",
+  "quran-on-christians",
   "gods-attributes-and-anthropomorphism",
-  "jihad-meaning-quran-hadith-jurists",
-  "women-in-the-prophets-life"
+  "jihad-meaning-quran-hadith-jurists"
  ],
  "funeral-dhikr-dua": [
   "hajj-rites-explained",
@@ -181,9 +187,9 @@
  ],
  "gods-attributes-and-anthropomorphism": [
   "six-articles-of-faith",
-  "who-is-allah",
-  "temporary-marriage-mutah",
-  "same-god"
+  "fate-and-free-will",
+  "relationship-with-god",
+  "who-is-allah"
  ],
  "hajj-rites-explained": [
   "islamic-rites-before-islam",
@@ -194,8 +200,8 @@
  "haman-anachronism": [
   "quran-anachronism-claims",
   "shared-prophets",
-  "preservation-and-truth",
-  "islamic-dilemma"
+  "muhammad-false-prophet-claim",
+  "preservation-and-truth"
  ],
  "hanif-poets-and-musaylima": [
   "islamic-rites-before-islam",
@@ -204,28 +210,28 @@
   "qibla-change"
  ],
  "hijab-and-modesty": [
-  "quran-4-34",
+  "does-the-quran-allow-wife-beating",
   "questions-about-aisha",
   "women-in-the-prophets-life",
   "islamophobia-5-facts"
  ],
  "homosexuality-in-islam": [
   "sharia-and-hudud",
-  "apostasy-in-islam",
   "women-in-islamic-law-testimony-inheritance",
+  "apostasy-in-islam",
   "temporary-marriage-mutah"
  ],
  "houris-and-paradise": [
-  "taqiyya-5-myths",
   "kharijites-and-takfir",
   "quran-on-christians",
+  "taqiyya-5-myths",
   "jihad-meaning-quran-hadith-jurists"
  ],
  "indonesia": [
+  "islamisation-of-the-west",
   "islam-in-china",
-  "who-is-allah",
-  "islamophobia-5-facts",
-  "islam-religion-of-peace"
+  "sharia-and-hudud",
+  "jizya"
  ],
  "instruments-islamic-world": [
   "qibla-change",
@@ -241,8 +247,8 @@
  ],
  "islam-religion-of-peace": [
   "war-and-killing-in-islam",
-  "fighting-verses-in-context",
-  "quran-on-christians",
+  "jizya",
+  "terrorism-and-muslims-the-data",
   "kharijites-and-takfir"
  ],
  "islamic-art-and-the-one-god": [
@@ -253,15 +259,21 @@
  ],
  "islamic-dilemma": [
   "apes-and-pigs-and-the-jews",
-  "crucifixion-quran",
+  "talmud-midrash-apocrypha-borrowing",
   "quran-on-christians",
-  "talmud-midrash-apocrypha-borrowing"
+  "crucifixion-quran"
  ],
  "islamic-rites-before-islam": [
   "black-stone-and-kissing",
   "hajj-rites-explained",
   "hanif-poets-and-musaylima",
   "revisionist-case-weighed"
+ ],
+ "islamisation-of-the-west": [
+  "islamophobia-5-facts",
+  "indonesia",
+  "terrorism-and-muslims-the-data",
+  "jizya"
  ],
  "islamophobia-5-facts": [
   "taqiyya-5-myths",
@@ -270,28 +282,28 @@
   "crusades-5-facts"
  ],
  "jesus-not-god": [
-  "verses-read-differently",
   "quran-on-christians",
+  "shared-prophets",
   "same-god",
-  "shared-prophets"
+  "verses-read-differently"
  ],
  "jihad-meaning-quran-hadith-jurists": [
-  "women-in-the-prophets-life",
   "war-and-killing-in-islam",
-  "black-stone-and-kissing",
-  "apes-and-pigs-and-the-jews"
+  "women-in-the-prophets-life",
+  "quran-on-christians",
+  "black-stone-and-kissing"
  ],
  "jizya": [
-  "kharijites-and-takfir",
-  "war-and-killing-in-islam",
-  "raids-badr-and-the-conquest-of-mecca",
-  "quran-on-christians"
+  "quran-on-christians",
+  "islam-religion-of-peace",
+  "crusades-5-facts",
+  "kharijites-and-takfir"
  ],
  "kaaba-witnesses": [
   "islamic-rites-before-islam",
   "qibla-change",
-  "revisionist-case-weighed",
-  "hanif-poets-and-musaylima"
+  "quran-on-christians",
+  "revisionist-case-weighed"
  ],
  "kharijites-and-takfir": [
   "taqiyya-5-myths",
@@ -301,27 +313,27 @@
  ],
  "library-of-alexandria": [
   "slavery-in-islam",
-  "jizya",
+  "hanif-poets-and-musaylima",
   "revisionist-case-weighed",
   "crusades-5-facts"
  ],
  "magic-jinn-and-satan-hadiths": [
+  "muhammad-false-prophet-claim",
   "six-articles-of-faith",
   "satanic-verses-report",
-  "ramadan-last-ten-nights",
-  "women-in-the-prophets-life"
+  "ramadan-last-ten-nights"
  ],
  "manuscript-transmission": [
   "uthman-copies",
   "who-wrote-the-quran",
-  "quran-preservation-reddit",
-  "women-in-the-prophets-life"
+  "women-in-the-prophets-life",
+  "quran-preservation-reddit"
  ],
  "medina-jewish-tribes-and-qurayza": [
   "raids-badr-and-the-conquest-of-mecca",
   "apes-and-pigs-and-the-jews",
-  "prophets-marriages-zaynab-and-others",
-  "slavery-in-islam"
+  "slavery-in-islam",
+  "prophets-marriages-zaynab-and-others"
  ],
  "moon-craters": [
   "arabic-words-science",
@@ -331,9 +343,9 @@
  ],
  "morality-without-god": [
   "slavery-in-islam",
-  "sira-ibn-ishaq-hisham-tabari",
   "schacht-isnads-dating-hadith",
-  "satanic-verses-report"
+  "sira-ibn-ishaq-hisham-tabari",
+  "kharijites-and-takfir"
  ],
  "mosques-adapt-to-place": [
   "islamic-art-and-the-one-god",
@@ -341,29 +353,53 @@
   "dome-inscriptions",
   "before-your-first-friday-prayer"
  ],
+ "muhammad-false-prophet-claim": [
+  "quran-on-christians",
+  "magic-jinn-and-satan-hadiths",
+  "shared-prophets",
+  "first-revelation-demonic-claim"
+ ],
+ "muslim-societies-backwardness-claim": [
+  "indonesia",
+  "islam-in-china",
+  "terrorism-and-muslims-the-data",
+  "islam-religion-of-peace"
+ ],
  "muslims-by-the-numbers-2020": [
   "fastest-growing-religion",
   "islam-religion-of-peace",
-  "indonesia",
-  "islam-in-china"
+  "jizya",
+  "indonesia"
  ],
  "natural-world-verses": [
-  "quran-science-claims-graded",
   "quran-on-christians",
+  "quran-science-claims-graded",
   "satanic-verses-report",
   "six-articles-of-faith"
  ],
  "paul-and-the-law": [
-  "crucifixion-quran",
-  "crusades-5-facts",
-  "apes-and-pigs-and-the-jews",
-  "verses-read-differently"
+  "paul-claim-to-apostleship",
+  "quran-on-christians",
+  "jizya",
+  "pauline-letters-authorship"
+ ],
+ "paul-claim-to-apostleship": [
+  "paul-and-the-law",
+  "pauline-letters-authorship",
+  "shared-prophets",
+  "crucifixion-quran"
+ ],
+ "pauline-letters-authorship": [
+  "paul-claim-to-apostleship",
+  "paul-and-the-law",
+  "shared-prophets",
+  "second-peter"
  ],
  "preservation-and-truth": [
   "quran-anachronism-claims",
   "haman-anachronism",
   "revisionist-case-weighed",
-  "who-wrote-the-quran"
+  "pauline-letters-authorship"
  ],
  "prophet-died-poisoning": [
   "raids-badr-and-the-conquest-of-mecca",
@@ -375,13 +411,13 @@
   "women-in-the-prophets-life",
   "slavery-in-islam",
   "quran-on-christians",
-  "child-marriage-in-islam"
+  "questions-about-aisha"
  ],
  "prophets-you-may-not-know": [
   "quran-anachronism-claims",
   "six-articles-of-faith",
-  "islamic-rites-before-islam",
-  "shared-prophets"
+  "shared-prophets",
+  "islamic-rites-before-islam"
  ],
  "qibla-change": [
   "islamic-rites-before-islam",
@@ -392,14 +428,8 @@
  "questions-about-aisha": [
   "women-in-the-prophets-life",
   "first-muslims-kept-the-faith",
-  "kharijites-and-takfir",
-  "seven-ahruf-cairo-edition-stoning-verse"
- ],
- "quran-4-34": [
-  "hijab-and-modesty",
-  "child-marriage-in-islam",
-  "questions-about-aisha",
-  "quranic-ethics"
+  "temporary-marriage-mutah",
+  "kharijites-and-takfir"
  ],
  "quran-anachronism-claims": [
   "shared-prophets",
@@ -426,10 +456,10 @@
   "verses-read-differently"
  ],
  "quran-on-christians": [
-  "apes-and-pigs-and-the-jews",
-  "schacht-isnads-dating-hadith",
   "shared-prophets",
-  "taqiyya-5-myths"
+  "jizya",
+  "apes-and-pigs-and-the-jews",
+  "islamic-rites-before-islam"
  ],
  "quran-preservation-reddit": [
   "uthman-copies",
@@ -445,9 +475,9 @@
  ],
  "quranic-ethics": [
   "slavery-in-islam",
+  "child-marriage-in-islam",
   "women-in-the-prophets-life",
-  "companions-who-started-with-nothing",
-  "child-marriage-in-islam"
+  "companions-who-started-with-nothing"
  ],
  "quranic-stories-and-history": [
   "quran-mysteries-in-the-stories",
@@ -457,9 +487,9 @@
  ],
  "race-in-quran-and-hadith": [
   "islamic-rites-before-islam",
-  "schacht-isnads-dating-hadith",
+  "same-god",
   "companions-who-started-with-nothing",
-  "same-god"
+  "schacht-isnads-dating-hadith"
  ],
  "raids-badr-and-the-conquest-of-mecca": [
   "hajj-rites-explained",
@@ -470,14 +500,14 @@
  "ramadan-last-ten-nights": [
   "magic-jinn-and-satan-hadiths",
   "questions-about-aisha",
-  "hijab-and-modesty",
-  "hajj-rites-explained"
+  "hajj-rites-explained",
+  "hijab-and-modesty"
  ],
  "relationship-with-god": [
-  "who-is-allah",
+  "quran-on-christians",
   "shared-prophets",
-  "six-articles-of-faith",
-  "quran-on-christians"
+  "who-is-allah",
+  "six-articles-of-faith"
  ],
  "revisionist-case-weighed": [
   "islamic-rites-before-islam",
@@ -493,20 +523,20 @@
  ],
  "same-god": [
   "quran-anachronism-claims",
-  "verses-read-differently",
+  "quran-on-christians",
   "six-articles-of-faith",
-  "quran-on-christians"
+  "verses-read-differently"
  ],
  "satanic-verses-report": [
   "black-stone-and-kissing",
   "magic-jinn-and-satan-hadiths",
   "fighting-verses-in-context",
-  "who-wrote-the-quran"
+  "muhammad-false-prophet-claim"
  ],
  "schacht-isnads-dating-hadith": [
   "quran-on-christians",
-  "race-in-quran-and-hadith",
   "shared-prophets",
+  "race-in-quran-and-hadith",
   "sira-ibn-ishaq-hisham-tabari"
  ],
  "scholars-who-shaped-islamic-study": [
@@ -516,28 +546,28 @@
   "raids-badr-and-the-conquest-of-mecca"
  ],
  "second-peter": [
+  "pauline-letters-authorship",
   "buraq-and-miracle-stories",
-  "shared-prophets",
-  "prophet-died-poisoning",
-  "preservation-and-truth"
+  "paul-claim-to-apostleship",
+  "quran-on-christians"
  ],
  "seven-ahruf-cairo-edition-stoning-verse": [
-  "aisha-sheep-report-stoning-and-suckling-verses",
   "questions-about-aisha",
-  "uthman-copies",
-  "sira-ibn-ishaq-hisham-tabari"
+  "aisha-sheep-report-stoning-and-suckling-verses",
+  "sira-ibn-ishaq-hisham-tabari",
+  "uthman-copies"
  ],
  "seven-libraries": [
   "arabic-words-science",
   "quran-on-christians",
-  "scholars-who-shaped-islamic-study",
-  "apostasy-in-islam"
+  "jizya",
+  "scholars-who-shaped-islamic-study"
  ],
  "shared-prophets": [
-  "quran-anachronism-claims",
   "six-articles-of-faith",
+  "quran-anachronism-claims",
   "quran-on-christians",
-  "crucifixion-quran"
+  "verses-read-differently"
  ],
  "sharia-and-hudud": [
   "apostasy-in-islam",
@@ -548,8 +578,8 @@
  "sira-ibn-ishaq-hisham-tabari": [
   "revisionist-case-weighed",
   "black-stone-and-kissing",
-  "quran-on-christians",
-  "women-in-the-prophets-life"
+  "women-in-the-prophets-life",
+  "quran-on-christians"
  ],
  "six-articles-of-faith": [
   "who-is-allah",
@@ -560,8 +590,8 @@
  "slavery-in-islam": [
   "prophets-marriages-zaynab-and-others",
   "companions-who-started-with-nothing",
-  "women-in-the-prophets-life",
-  "kharijites-and-takfir"
+  "kharijites-and-takfir",
+  "women-in-the-prophets-life"
  ],
  "talmud-midrash-apocrypha-borrowing": [
   "quran-anachronism-claims",
@@ -576,15 +606,15 @@
   "islam-religion-of-peace"
  ],
  "temporary-marriage-mutah": [
-  "kharijites-and-takfir",
   "questions-about-aisha",
+  "kharijites-and-takfir",
   "hajj-rites-explained",
   "scholars-who-shaped-islamic-study"
  ],
  "terrorism-and-muslims-the-data": [
   "war-and-killing-in-islam",
+  "islam-religion-of-peace",
   "taqiyya-5-myths",
-  "islamophobia-5-facts",
   "kharijites-and-takfir"
  ],
  "universe-demands-creator": [
@@ -595,9 +625,9 @@
  ],
  "uthman-copies": [
   "quran-preservation-reddit",
+  "questions-about-aisha",
   "seven-ahruf-cairo-edition-stoning-verse",
-  "manuscript-transmission",
-  "questions-about-aisha"
+  "manuscript-transmission"
  ],
  "verses-read-differently": [
   "same-god",
@@ -615,19 +645,19 @@
   "first-revelation-demonic-claim",
   "women-in-the-prophets-life",
   "islamic-rites-before-islam",
-  "satanic-verses-report"
+  "magic-jinn-and-satan-hadiths"
  ],
  "western-scholars-of-islam": [
   "quran-on-christians",
-  "islamic-rites-before-islam",
+  "shared-prophets",
   "talmud-midrash-apocrypha-borrowing",
-  "shared-prophets"
+  "islamic-rites-before-islam"
  ],
  "where-is-the-injil": [
   "quran-on-christians",
+  "shared-prophets",
   "apes-and-pigs-and-the-jews",
-  "crucifixion-quran",
-  "shared-prophets"
+  "verses-read-differently"
  ],
  "who-is-allah": [
   "quran-on-christians",
@@ -642,10 +672,10 @@
   "women-in-the-prophets-life"
  ],
  "who-wrote-the-quran": [
-  "manuscript-transmission",
   "satanic-verses-report",
+  "manuscript-transmission",
   "revisionist-case-weighed",
-  "uthman-copies"
+  "women-in-the-prophets-life"
  ],
  "why-five-prayers": [
   "five-pillars-explained",
@@ -668,7 +698,7 @@
  "women-in-the-prophets-life": [
   "questions-about-aisha",
   "companions-who-started-with-nothing",
-  "quran-4-34",
+  "does-the-quran-allow-wife-beating",
   "hijab-and-modesty"
  ]
 }

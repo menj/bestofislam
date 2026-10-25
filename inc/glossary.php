@@ -266,7 +266,12 @@ function boi_glossary_sync() {
 			}
 
 			$hashes = (array) get_option( 'boi_glossary_hashes', array() );
-			$batch  = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
+
+			if ( 0 === $cursor ) {
+				boi_glossary_migrate_slugs( $hashes );
+			}
+
+			$batch = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
 
 			$failed = isset( $progress['failed'] ) && BOI_GLOSSARY_VERSION === $progress['version'] ? (int) $progress['failed'] : 0;
 
@@ -324,6 +329,70 @@ add_action( 'boi_glossary_continue', 'boi_glossary_sync' );
  */
 function boi_glossary_fingerprint( $post ) {
 	return boi_content_fingerprint( $post->post_content . "\n" . $post->post_excerpt );
+}
+
+/**
+ * Entry slugs that have changed, old => current. A slug ending in -2 is the
+ * suffix WordPress adds on a collision and never belongs in an address;
+ * entries that carried one were merged into the entry they duplicated or
+ * given their own name. Verse numbers are kept out of addresses too.
+ *
+ * @return array
+ */
+function boi_glossary_retired_slugs() {
+	return (array) apply_filters(
+		'boi_glossary_retired_slugs',
+		array(
+			'abd-2'                            => 'abd',
+			'ahmad-2'                          => 'ahmad',
+			'bismi-allah-al-rahman-al-rahim-2' => 'bismi-allah-al-rahman-al-rahim',
+			'hafiz-al-2'                       => 'hafeez-al',
+			'mubarak-2'                        => 'mabruk',
+			'domestic-discipline-quran-4-34'   => 'domestic-discipline',
+		)
+	);
+}
+
+/**
+ * Brings pages written under a retired slug up to date: a renamed entry's
+ * page keeps its identity and takes the new slug and title; a merged
+ * duplicate is trashed once the entry it duplicated has its own page. The
+ * old addresses are redirected by inc/legacy-permalinks.php.
+ *
+ * @param array $hashes Fingerprints by slug, updated in place.
+ * @return void
+ */
+function boi_glossary_migrate_slugs( &$hashes ) {
+	foreach ( boi_glossary_retired_slugs() as $old => $new ) {
+		$page = get_page_by_path( 'glossary/' . $old, OBJECT, 'page' );
+
+		if ( ! $page || 'trash' === $page->post_status ) {
+			continue;
+		}
+
+		$current = get_page_by_path( 'glossary/' . $new, OBJECT, 'page' );
+
+		if ( $current && 'trash' !== $current->post_status ) {
+			wp_trash_post( $page->ID );
+			unset( $hashes[ $old ] );
+			continue;
+		}
+
+		$term = boi_glossary_term_by_slug( $new );
+
+		boi_update_post(
+			array(
+				'ID'         => $page->ID,
+				'post_name'  => $new,
+				'post_title' => $term ? $term['title'] : $page->post_title,
+			)
+		);
+
+		if ( isset( $hashes[ $old ] ) ) {
+			$hashes[ $new ] = boi_glossary_fingerprint( get_post( $page->ID ) );
+			unset( $hashes[ $old ] );
+		}
+	}
 }
 
 /**

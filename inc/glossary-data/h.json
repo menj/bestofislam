@@ -1357,7 +1357,7 @@
   "sources": [],
   "terms": [
    "quran",
-   "hafiz-al-2",
+   "hafeez-al",
    "divine-attributes",
    "qiraat"
   ],
@@ -1374,8 +1374,8 @@
   }
  },
  {
-  "slug": "hafiz-al-2",
-  "title": "Hafiz, al-",
+  "slug": "hafeez-al",
+  "title": "Hafeez, al-",
   "ar": "الحفيظ",
   "tr": "al-Ḥafīẓ",
   "def": "A divine name meaning He Who keeps, constantly and for ever.",
@@ -1393,7 +1393,8 @@
   "articles": [],
   "type": "topic",
   "aliases": [
-   "Al-Hafiz",
+   "Al-Hafeez",
+   "Al-Hafiz (al-Ḥafīẓ)",
    "Hafeez"
   ],
   "faruqi": {

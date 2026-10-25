@@ -42,3 +42,36 @@ function boi_redirect_legacy_permalink() {
 	exit;
 }
 add_action( 'template_redirect', 'boi_redirect_legacy_permalink' );
+
+/**
+ * Sends a retired address to its current one: a Glossary entry whose slug
+ * changed (WordPress's own old-slug redirect does not cover child pages),
+ * or a seeded article renamed before the site has run the rename.
+ *
+ * @return void
+ */
+function boi_redirect_retired_slug() {
+	if ( is_admin() || ! is_404() ) {
+		return;
+	}
+
+	// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+	$path = isset( $_SERVER['REQUEST_URI'] ) ? (string) strtok( $_SERVER['REQUEST_URI'], '?' ) : '';
+	$post = null;
+
+	if ( function_exists( 'boi_glossary_retired_slugs' ) && preg_match( '#^/glossary/([^/]+)/?$#', $path, $m ) ) {
+		$map  = boi_glossary_retired_slugs();
+		$post = isset( $map[ $m[1] ] ) ? get_page_by_path( 'glossary/' . $map[ $m[1] ], OBJECT, 'page' ) : null;
+	} elseif ( function_exists( 'boi_seed_renames' ) && preg_match( '#^/([^/]+)/?$#', $path, $m ) ) {
+		$map  = boi_seed_renames();
+		$post = isset( $map[ $m[1] ] ) ? get_page_by_path( $map[ $m[1] ], OBJECT, 'post' ) : null;
+	}
+
+	if ( ! $post || 'publish' !== $post->post_status ) {
+		return;
+	}
+
+	wp_safe_redirect( get_permalink( $post ), 301 );
+	exit;
+}
+add_action( 'template_redirect', 'boi_redirect_retired_slug' );

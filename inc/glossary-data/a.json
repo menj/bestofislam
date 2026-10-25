@@ -114,7 +114,7 @@
    "abdul-muttalib"
   ],
   "articles": [
-   "quran-4-34",
+   "does-the-quran-allow-wife-beating",
    "scholars-who-shaped-islamic-study",
    "hajj-rites-explained"
   ],
@@ -151,23 +151,33 @@
   "title": "Abd",
   "type": "term",
   "ar": "عبد",
-  "tr": "ʿAbd",
+  "tr": "ʿAbd, ʿĀbid",
   "def": "Servant or slave of God: the name for a human being in relation to his Creator.",
   "what": [
-   "Many names begin with it: Abdullah is “servant of God”, Abd al-Rahman “servant of the Merciful”. In the Quran the highest title is to be God’s servant. Muhammad (17:1, 25:1), Jesus (19:30, 4:172), Job (38:41) and Noah (17:3) are all called His servants."
+   "Many names begin with it: Abdullah is “servant of God”, Abd al-Rahman “servant of the Merciful”. In the Quran the highest title is to be God’s servant. Muhammad (17:1, 25:1), Jesus (19:30, 4:172), Job (38:41) and Noah (17:3) are all called His servants.",
+   "<em>ʿAbd</em> and <em>ʿābid</em> name the person who performs <em>ʿabada</em>, the service and worship of God. The Quran calls the Prophet God’s <em>ʿabd</em> in the verse of the Night Journey, “Glory to Him who took His servant by night” (17:1), and the witness of faith declares that Muhammad (peace be upon him) is His servant and messenger. God addresses believers in the plural: “O My servants who have transgressed against themselves, do not despair of the mercy of God” (39:53). The Quran also describes the servants of the Most Merciful as those who walk on the earth in humility (25:63). Many Muslim names, such as ʿAbd Allāh, combine <em>ʿabd</em> with one of the names of God."
   ],
-  "misread": "That Islam’s “slave of God” is degrading, in contrast to Jesus calling his disciples “friends” (John 15:15).",
+  "misread": "That Islam’s “slave of God” is degrading, in contrast to Jesus calling his disciples “friends” (John 15:15). The ʿabd of the Quran is a free person who chooses to serve God; the English “slave” suggests a bondage the word does not carry.",
   "sources": [
    "The Quran has both ideas. It calls Abraham God’s friend (<em>khalīl</em>, 4:125), and says that the friends of God (<em>awliyā’</em>) “have no fear, nor do they grieve” (10:62). Being His servant means freedom from serving anything else, and the word carries honour as well as obedience."
   ],
   "terms": [
    "tawhid",
-   "taqwa"
+   "taqwa",
+   "abada",
+   "ibadah"
   ],
   "articles": [],
   "aliases": [
-   "'Abd"
-  ]
+   "'Abd",
+   "ʿAbid",
+   "Abid",
+   "Ibad"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "ʿABD, ʿĀBID"
+  }
  },
  {
   "slug": "abdul-muttalib",
@@ -1056,7 +1066,8 @@
   "tr": "Aḥmad",
   "def": "A name of the Prophet, “the most praised”, which the Quran gives in 61:6.",
   "what": [
-   "Jesus tells the Children of Israel that he is “a messenger of God to you, confirming the Torah before me and bringing good news of a messenger to come after me whose name is Aḥmad” (61:6). Muslims take Aḥmad to be Muhammad: both come from the root <em>ḥ-m-d</em>, “to praise”. The Prophet is reported to have said, “I am Muhammad and Ahmad” (Sahih al-Bukhari)."
+   "Jesus tells the Children of Israel that he is “a messenger of God to you, confirming the Torah before me and bringing good news of a messenger to come after me whose name is Aḥmad” (61:6). Muslims take Aḥmad to be Muhammad: both come from the root <em>ḥ-m-d</em>, “to praise”. The Prophet is reported to have said, “I am Muhammad and Ahmad” (Sahih al-Bukhari).",
+   "<em>Maḥmūd</em>, “the praised”, comes from the same root and is also counted among his names; the Quran promises him a “praised station”, <em>maqām maḥmūd</em> (17:79). The report in Sahih al-Bukhari in which he lists his names gives Muhammad and Aḥmad among them. Aḥmad is sometimes taken for a different person from Muhammad; it is one of his own names."
   ],
   "misread": "That Muslims invented a prophecy by changing “Paraclete” to “Periclyte”.",
   "sources": [
@@ -1065,7 +1076,9 @@
   "terms": [
    "isa",
    "injil",
-   "tahrif"
+   "tahrif",
+   "muhammad",
+   "honorifics"
   ],
   "articles": [
    "where-is-the-injil",
@@ -1075,8 +1088,14 @@
   ],
   "aliases": [
    "Comforter",
-   "Paraclete"
-  ]
+   "Paraclete",
+   "Mahmud",
+   "Ahmed"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AḤMAD, MAḤMŪD"
+  }
  },
  {
   "slug": "ahmadiyya",
@@ -1997,7 +2016,9 @@
    "who-is-allah",
    "crucifixion-quran",
    "second-peter",
-   "why-five-prayers"
+   "why-five-prayers",
+   "paul-claim-to-apostleship",
+   "pauline-letters-authorship"
   ],
   "aliases": [
    "Rasul",
@@ -2722,7 +2743,7 @@
   "sources": [],
   "terms": [
    "ibadah",
-   "abd-2",
+   "abd",
    "tawhid",
    "salah"
   ],
@@ -2734,35 +2755,6 @@
   "faruqi": {
    "page": 38,
    "term": "'ABADA"
-  }
- },
- {
-  "slug": "abd-2",
-  "title": "ʿAbd",
-  "ar": "عبد ، عابد",
-  "tr": "ʿAbd, ʿĀbid",
-  "def": "The person who serves God; the plural of ʿabd is ʿibād and that of ʿābid is ʿābidūn.",
-  "what": [
-   "<em>ʿAbd</em> and <em>ʿābid</em> name the person who performs <em>ʿabada</em>, the service and worship of God. The Quran calls the Prophet God’s <em>ʿabd</em> in the verse of the Night Journey, “Glory to Him who took His servant by night” (17:1), and the witness of faith declares that Muhammad (peace be upon him) is His servant and messenger. God addresses believers in the plural: “O My servants who have transgressed against themselves, do not despair of the mercy of God” (39:53). The Quran also describes the servants of the Most Merciful as those who walk on the earth in humility (25:63). Many Muslim names, such as ʿAbd Allāh, combine <em>ʿabd</em> with one of the names of God."
-  ],
-  "misread": "The usual English rendering is “slave”, which suggests forced bondage to a master; the ʿabd of the Quran is a free person who chooses to serve God.",
-  "sources": [],
-  "terms": [
-   "abada",
-   "ibadah",
-   "tawhid"
-  ],
-  "articles": [],
-  "type": "term",
-  "aliases": [
-   "ʿAbid",
-   "Abd",
-   "Abid",
-   "Ibad"
-  ],
-  "faruqi": {
-   "page": 39,
-   "term": "ʿABD, ʿĀBID"
   }
  },
  {
@@ -2903,34 +2895,6 @@
   "faruqi": {
    "page": 64,
    "term": "AHL AL SUNNAH WAL JAMĀ‘AH"
-  }
- },
- {
-  "slug": "ahmad-2",
-  "title": "Ahmad",
-  "ar": "أحمد ، محمود",
-  "tr": "Aḥmad, Maḥmūd",
-  "def": "Two names of the Prophet Muhammad (peace be upon him), meaning the praiseworthy and the praised, for his virtue and righteousness.",
-  "what": [
-   "<em>Aḥmad</em> and <em>Maḥmūd</em> come from the same root as Muhammad (peace be upon him), <em>ḥ-m-d</em>, which means praise. The Quran reports Jesus giving good news of “a messenger who will come after me, whose name is Aḥmad” (61:6), and Muslims understand this as a reference to Muhammad. The Quran also promises him a “praised station”, <em>maqām maḥmūd</em> (17:79). A report in Sahih al-Bukhari has the Prophet saying that he had several names, among them Muhammad and Aḥmad. The names express the esteem in which his virtue and righteousness are held."
-  ],
-  "misread": "Aḥmad is sometimes treated as a different person from Muhammad, whereas it is one of his own names.",
-  "sources": [],
-  "terms": [
-   "muhammad",
-   "honorifics",
-   "sira",
-   "quran"
-  ],
-  "articles": [],
-  "type": "person",
-  "aliases": [
-   "Mahmud",
-   "Ahmed"
-  ],
-  "faruqi": {
-   "page": 30,
-   "term": "AḤMAD, MAḤMŪD"
   }
  },
  {

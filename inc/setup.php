@@ -233,6 +233,18 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'paul-claim-to-apostleship',
+			'title'   => __( 'Was Paul an apostle? 6 questions about his claim to speak for Jesus', 'bestofislam' ),
+			'excerpt' => __( 'Paul never met Jesus and said so. 6 questions about a vision, three conflicting accounts of it, and the apostles who did not accept him. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'pauline-letters-authorship',
+			'title'   => __( 'Which letters did Paul write? 6 facts about the 13 epistles that carry his name', 'bestofislam' ),
+			'excerpt' => __( 'Thirteen New Testament letters say they are from Paul. Critical scholars accept 7. 6 facts on how the rest were judged, and why it matters. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'ezra-and-mary',
 			'title'   => __( 'Ezra and Mary in the Quran: 5 points on two contested verses', 'bestofislam' ),
 			'excerpt' => __( 'Critics say no Jews called Ezra son of God and no Christians put Mary in the Trinity. 5 points on both verses. Read them.', 'bestofislam' ),
@@ -419,7 +431,7 @@ function boi_seed_listicles() {
 			'topic'   => 'belief-and-practices',
 		),
 		array(
-			'slug'    => 'quran-4-34',
+			'slug'    => 'does-the-quran-allow-wife-beating',
 			'title'   => __( 'Quran 4:34: 5 facts about the verse on striking wives', 'bestofislam' ),
 			'excerpt' => __( 'Does the Quran tell men to beat their wives? 5 facts on Quran 4:34, the Prophet\'s practice and how scholars read it. Read on.', 'bestofislam' ),
 			'topic'   => 'belief-and-practices',
@@ -892,6 +904,54 @@ function boi_create_topics() {
 }
 
 /**
+ * Seeded article slugs that have changed, old => current. Addresses carry
+ * the subject, never a verse number or a collision suffix.
+ *
+ * @return array
+ */
+function boi_seed_renames() {
+	return (array) apply_filters(
+		'boi_seed_renames',
+		array(
+			'quran-4-34' => 'does-the-quran-allow-wife-beating',
+		)
+	);
+}
+
+/**
+ * Renames a published article's slug in place when the seed list has moved
+ * on, so the post keeps its identity, comments and attachments. WordPress
+ * records the old slug and redirects it; the fingerprint that tells an
+ * untouched article from an edited one moves with the post.
+ *
+ * @return void
+ */
+function boi_rename_seeded_posts() {
+	foreach ( boi_seed_renames() as $old => $new ) {
+		$post = get_page_by_path( $old, OBJECT, 'post' );
+
+		if ( ! $post || get_page_by_path( $new, OBJECT, 'post' ) ) {
+			continue;
+		}
+
+		boi_update_post(
+			array(
+				'ID'        => $post->ID,
+				'post_name' => $new,
+			)
+		);
+
+		$hashes = (array) get_option( 'boi_article_hashes', array() );
+
+		if ( isset( $hashes[ $old ] ) ) {
+			$hashes[ $new ] = $hashes[ $old ];
+			unset( $hashes[ $old ] );
+			update_option( 'boi_article_hashes', $hashes, false );
+		}
+	}
+}
+
+/**
  * Creates the seed listicles.
  *
  * @param array $topics Map of topic slug to term identifier.
@@ -899,6 +959,8 @@ function boi_create_topics() {
  */
 function boi_create_listicles( $topics ) {
 	$created = array();
+
+	boi_rename_seeded_posts();
 
 	foreach ( boi_seed_listicles() as $listicle ) {
 		if ( get_page_by_path( $listicle['slug'], OBJECT, 'post' ) ) {

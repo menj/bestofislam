@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.73.0' );
+define( 'BOI_VERSION', '1.74.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -42,6 +42,7 @@ require_once BOI_DIR . '/inc/favicon.php';
 require_once BOI_DIR . '/inc/glossary.php';
 require_once BOI_DIR . '/inc/glossary-links.php';
 require_once BOI_DIR . '/inc/error-pages.php';
+require_once BOI_DIR . '/inc/housekeeping.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.
@@ -153,7 +154,7 @@ function boi_enqueue_assets() {
 		'boi-scripts',
 		BOI_URI . '/assets/css/scripts.css',
 		array(),
-		BOI_VERSION
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/scripts.css' )
 	);
 
 	wp_enqueue_style(

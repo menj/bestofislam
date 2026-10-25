@@ -154,10 +154,13 @@ function boi_gl_filter( $content ) {
 			continue;
 		}
 
-		$found = array();
+		$found     = array();
+		$found_ids = array();
 
 		foreach ( $items as $item ) {
-			if ( isset( $used[ $item['id'] ] ) || ( $budget < 1 && empty( $item['always'] ) ) ) {
+			// One link per page per paragraph: a title and an alias of the same
+			// entry must not both be linked (and carry the epithet) at once.
+			if ( isset( $used[ $item['id'] ] ) || isset( $found_ids[ $item['id'] ] ) || ( $budget < 1 && empty( $item['always'] ) ) ) {
 				continue;
 			}
 
@@ -176,7 +179,8 @@ function boi_gl_filter( $content ) {
 					}
 				}
 
-				$found[] = array( 'start' => $start, 'end' => $end, 'item' => $item );
+				$found[]                    = array( 'start' => $start, 'end' => $end, 'item' => $item );
+				$found_ids[ $item['id'] ] = true;
 
 				if ( count( $found ) >= 3 || ( empty( $item['always'] ) && count( $found ) >= $budget ) ) {
 					break;

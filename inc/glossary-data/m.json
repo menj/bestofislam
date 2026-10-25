@@ -89,7 +89,7 @@
   "articles": [
    "child-marriage-in-islam",
    "questions-about-aisha",
-   "quran-4-34",
+   "does-the-quran-allow-wife-beating",
    "sharia-and-hudud"
   ],
   "aliases": [
@@ -798,7 +798,7 @@
   "misread": "Translating it as “lucky” or “fortunate” misses that the blessing in view comes from God.",
   "sources": [],
   "terms": [
-   "mubarak-2",
+   "mabruk",
    "quran",
    "isa",
    "eid"
@@ -812,10 +812,10 @@
   }
  },
  {
-  "slug": "mubarak-2",
-  "title": "Mubarak",
+  "slug": "mabruk",
+  "title": "Mabruk",
   "ar": "مبارك / مبروك",
-  "tr": "Mubārak, mabrūk",
+  "tr": "Mabrūk, mubārak",
   "def": "“May it be blessed”: said when someone acquires something new or marks a happy event.",
   "what": [
    "<em>Mubārak</em>, or <em>mabrūk</em> in many dialects, is the congratulation said when a person acquires something new, such as a house, a car or a garment, or marks a happy event. It means “may it be blessed”. The speaker prays that God will place blessing in what the person has received. Muslims also say <em>bārak Allāhu laka</em>, “may God bless you”, to a bridegroom, in the manner of a supplication reported from the Prophet Muhammad (peace be upon him) in the hadith collections. The festivals have their own form, <em>ʿīd mubārak</em>. A common reply is <em>Allāhu yubārik fīk</em>, “may God bless you”."
@@ -830,7 +830,10 @@
   ],
   "articles": [],
   "type": "term",
-  "aliases": [],
+  "aliases": [
+   "Mabrook",
+   "Mubarak (greeting)"
+  ],
   "faruqi": {
    "page": 60,
    "term": "MUBĀRAK, OR MUBRŪK."

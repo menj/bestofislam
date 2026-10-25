@@ -236,7 +236,7 @@ function boi_questions() {
 				array(
 					'q'    => __( 'Does the Quran tell men to beat their wives?', 'bestofislam' ),
 					'a'    => __( 'Quran 4:34 gives three steps and the last word is read by classical commentators as a symbolic touch at most, with the Prophet saying those who strike are not the best of men. He never struck a woman or a servant, and many scholars today treat any violence in the home as forbidden.', 'bestofislam' ),
-					'slug' => 'quran-4-34',
+					'slug' => 'does-the-quran-allow-wife-beating',
 					'feat' => true,
 				),
 				array(
