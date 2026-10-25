@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '6';
+const BOI_GLOSSARY_VERSION = '7';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -88,7 +88,11 @@ function boi_glossary_content( $t ) {
 
 	$out  = "<!-- wp:group {\"className\":\"boi-term\"} -->\n<div class=\"wp-block-group boi-term\">";
 	if ( ! empty( $t['ar'] ) ) {
-		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
+		// A handful of entries quote actual Quranic text (verified against
+		// the Uthmani text, not just claimed) rather than a name, term or
+		// non-Quranic formula; those alone get the Uthmanic Quran face.
+		$script_class = ! empty( $t['quran_ref'] ) ? 'boi-term__script boi-script-quran' : 'boi-term__script';
+		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
 	}
 	if ( ! empty( $t['tr'] ) ) {
 		$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
@@ -584,14 +588,21 @@ function boi_glossary_image( $key ) {
 }
 
 /**
- * The photograph for an entry: one of several for its kind, chosen from its
- * address so that an entry always shows the same one and neighbours differ.
+ * The photograph for an entry: its own portrait when the entry carries one,
+ * otherwise one of several stock photos for its kind, chosen from its address
+ * so that an entry always shows the same one and neighbours differ.
  *
  * @param string $kind Kind of entry.
  * @param string $slug Entry slug.
  * @return array|null
  */
 function boi_glossary_entry_image( $kind, $slug ) {
+	$portrait = boi_glossary_entry_portrait( $slug );
+
+	if ( $portrait ) {
+		return boi_glossary_image_url( $portrait );
+	}
+
 	$all  = boi_glossary_images();
 	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : ( isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array() );
 
@@ -600,6 +611,34 @@ function boi_glossary_entry_image( $kind, $slug ) {
 	}
 
 	return boi_glossary_image_url( $pool[ (int) sprintf( '%u', crc32( $slug ) ) % count( $pool ) ] );
+}
+
+/**
+ * An entry's own portrait, when its record in inc/glossary-data/ carries a
+ * "portrait" field, rather than a photo drawn from the shared stock pool for
+ * its kind. Used for named individuals whose own likeness is on file, with a
+ * verified source and licence, rather than a generic photograph.
+ *
+ * @param string $slug Entry slug.
+ * @return array|null Record shaped like a boi_glossary_images() pool entry
+ *                     (file, alt, artist, licence, source, width, height), or
+ *                     null when the entry has none.
+ */
+function boi_glossary_entry_portrait( $slug ) {
+	static $by_slug = null;
+
+	if ( null === $by_slug ) {
+		$by_slug = array();
+		foreach ( boi_glossary_terms() as $term ) {
+			if ( ! empty( $term['slug'] ) ) {
+				$by_slug[ $term['slug'] ] = $term;
+			}
+		}
+	}
+
+	$term = isset( $by_slug[ $slug ] ) ? $by_slug[ $slug ] : null;
+
+	return ( $term && ! empty( $term['portrait'] ) && ! empty( $term['portrait']['file'] ) ) ? $term['portrait'] : null;
 }
 
 /**

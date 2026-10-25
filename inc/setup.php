@@ -125,6 +125,12 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'muhammad-false-prophet-claim',
+			'title'   => __( 'Did Muhammad fail as a prophet? 5 answers on miracles, signs and the Al-Rum prophecy', 'bestofislam' ),
+			'excerpt' => __( 'Critics say Muhammad showed no miracles, made a failed prophecy and might have been epileptic. 5 answers from the record. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'al-zutt-allegation',
 			'title'   => __( '5 things wrong with the al-Zutt allegation', 'bestofislam' ),
 			'excerpt' => __( 'A recent polemic reads a hadith about al-Zutt as sexual assault. 5 reasons the reading collapses. Read the philology.', 'bestofislam' ),
@@ -579,6 +585,18 @@ function boi_seed_listicles() {
 			'title'   => __( 'Islamophobia: 5 facts about the word and the harm', 'bestofislam' ),
 			'excerpt' => __( 'What does Islamophobia mean, how is it different from criticism, and what harm does it do? 5 facts, and what the Quran asks of Muslims in return.', 'bestofislam' ),
 			'topic'   => 'islamophobia',
+		),
+		array(
+			'slug'    => 'islamisation-of-the-west',
+			'title'   => __( '6 facts behind the "Islamisation of the West" claim', 'bestofislam' ),
+			'excerpt' => __( 'Sharia in Dearborn, the Ground Zero mosque, CAIR as a front group, the demographic numbers, and a school prayer room: 6 claims checked against the record, and the theory tying them together.', 'bestofislam' ),
+			'topic'   => 'islamophobia',
+		),
+		array(
+			'slug'    => 'muslim-societies-backwardness-claim',
+			'title'   => __( '5 facts behind the claim that Muslim-majority countries are "backward"', 'bestofislam' ),
+			'excerpt' => __( 'Low scores on development, freedom and women\'s rights get pinned on Islam itself. 5 facts about what actually predicts them, from oil rents to colonial timing, and what does not.', 'bestofislam' ),
+			'topic'   => 'the-muslim-world',
 		),
 		array(
 			'slug'    => 'black-stone-and-kissing',

@@ -1830,6 +1830,13 @@
     "artist": "JillWellington",
     "licence": "Pixabay licence",
     "source": "https://pixabay.com/photos/lights-lamps-lanterns-incandescent-1088141/"
+   },
+   {
+    "file": "terrorism-and-muslims-the-data-3.avif",
+    "alt": "The Royal Courts of Justice in London, the civil courts building on the Strand.",
+    "artist": "David Castor",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Royal_Courts_of_Justice_2019.jpg"
    }
   ]
  },
@@ -2562,6 +2569,31 @@
     "artist": "Best of Islam",
     "licence": "Original artwork",
     "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "islamisation-of-the-west": {
+  "featured": {
+   "file": "islamisation-of-the-west.avif",
+   "alt": "Historic photograph of the pedestal built for Bartholdi's Statue of Liberty on Bedloe's Island in New York Harbor.",
+   "artist": "Library of Congress, Prints and Photographs Division",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Pedestal_for_Bartholdi%27s_Statue_of_Liberty_on_Bedloe%27s_Island,_New_York_Harbor_(and_insert_of_head_and_shoulder_portrait_of_Bartholdi)_LCCN99614265.jpg"
+  },
+  "inline": [
+   {
+    "file": "islamisation-of-the-west-1.avif",
+    "alt": "Historic photograph of the pedestal built for Bartholdi's Statue of Liberty on Bedloe's Island in New York Harbor.",
+    "artist": "Library of Congress, Prints and Photographs Division",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pedestal_for_Bartholdi%27s_Statue_of_Liberty_on_Bedloe%27s_Island,_New_York_Harbor_(and_insert_of_head_and_shoulder_portrait_of_Bartholdi)_LCCN99614265.jpg"
+   },
+   {
+    "file": "islamisation-of-the-west-2.avif",
+    "alt": "The flag of Europe, a circle of twelve gold stars on a blue field.",
+    "artist": "Council of Europe; SVG by Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Europe.svg"
    }
   ]
  }

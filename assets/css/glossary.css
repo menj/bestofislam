@@ -470,6 +470,13 @@
 	text-align: left;
 }
 
+/* A verified Quranic quotation, not a name or a general formula: swap to
+ * the Uthmanic face. Size, colour and layout stay the same as any other
+ * entry's script display. */
+.boi-article .boi-term__script.boi-script-quran {
+	font-family: "BOI Quran", "BOI Arabic", serif;
+}
+
 .boi-article .boi-term__translit {
 	margin: 0;
 	font-size: 1.05rem;

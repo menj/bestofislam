@@ -849,7 +849,8 @@
    "ahl-al-kitab"
   ],
   "articles": [
-   "islamophobia-5-facts"
+   "islamophobia-5-facts",
+   "islamisation-of-the-west"
   ],
   "aliases": [
    "Islamisation",
@@ -1352,7 +1353,8 @@
   "faruqi": {
    "page": 55,
    "term": "INNA ALLAH WA MALĀ’IKATAHU YUṢALLŪNA ‘ALĀ AL NABIYY. YĀ AYYUHA ALLADHĪNA ĀMANŪ ṢALLŪ ‘ALAYHI WA SALLIMŪ TASLĪMAN."
-  }
+  },
+  "quran_ref": "33:56"
  },
  {
   "slug": "inna-lillahi-wa-inna-ilayhi-rajiun",
@@ -1770,6 +1772,15 @@
    "Ismail R. al Faruqi",
    "al Faruqi",
    "Faruqi"
-  ]
+  ],
+  "portrait": {
+   "file": "ismail-raji-al-faruqi.avif",
+   "alt": "Isma'il Raji al Faruqi",
+   "artist": "Kenosha News",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Ismail_al-Faruqi_in_Kenosha_News_May_28_1986_p._3.jpg",
+   "width": 800,
+   "height": 995
+  }
  }
 ]
