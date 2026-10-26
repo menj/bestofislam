@@ -65,10 +65,12 @@ function boi_cl_host( $url ) {
 	return preg_replace( '/^www\./', '', $host );
 }
 
-/** Lowercase, entity-free, straight-apostrophe form of a phrase or matched text. */
+/** Lowercase, entity-free, straight-apostrophe, single-space form of a phrase or matched text. */
 function boi_cl_key( $text ) {
 	$text = html_entity_decode( (string) $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
 	$text = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98", "\xCA\xBC" ), "'", $text );
+	// A non-breaking space (the editor writes one for a doubled space) reads as a space.
+	$text = preg_replace( '/\s+/', ' ', str_replace( "\xC2\xA0", ' ', $text ) );
 	return function_exists( 'mb_strtolower' ) ? mb_strtolower( $text, 'UTF-8' ) : strtolower( $text );
 }
 
@@ -285,7 +287,8 @@ function boi_cl_filter( $content ) {
 		$phrase = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98", "\xCA\xBC" ), "'", $terms[ $key ]['phrase'] );
 		$needle = preg_quote( htmlspecialchars( $phrase, ENT_NOQUOTES, 'UTF-8' ), '/' );
 		$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
-		$alts[] = str_replace( "'", "(?:'|&#8217;|&#8216;|&#0?39;|&rsquo;|&lsquo;|&apos;|\xE2\x80\x99|\xE2\x80\x98|\xCA\xBC)", $needle );
+		$needle = str_replace( "'", "(?:'|&#8217;|&#8216;|&#0?39;|&rsquo;|&lsquo;|&apos;|\xE2\x80\x99|\xE2\x80\x98|\xCA\xBC)", $needle );
+		$alts[] = str_replace( ' ', "(?:\\s|&nbsp;|&#160;|\xC2\xA0)+", $needle );
 	}
 	$pattern = '/(?<![\p{L}\p{N}])(?:' . implode( '|', $alts ) . ')(?![\p{L}\p{N}])/iu';
 	// A pattern past PCRE's size limit (admin phrases can grow it) would fail
@@ -301,7 +304,9 @@ function boi_cl_filter( $content ) {
 	$notes_head = '/^(?:notes?|sources?|references?|bibliography|further reading|endnotes)$/i';
 	$rel        = ' rel="noopener"' . ( ! empty( $opts['new_tab'] ) ? ' target="_blank"' : '' );
 
-	$tokens   = preg_split( '/(<[^>]*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+	// A tag ends at the first ">" outside a quoted attribute value, so an alt
+	// text such as "a > b" never reads as running text.
+	$tokens   = preg_split( '/(<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
 	$open     = array(); // Every open element: array( tag, forbids links ).
 	$skipping = 0;       // Open elements that forbid links.
 	$blocks   = array(); // Indexes in $open of the open p and li elements.

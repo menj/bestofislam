@@ -20,6 +20,8 @@ versioning.
 - **No contextual links inside the Glossary index.** The index renders in the page content, so its alias lines and definitions took up to seven links; `boi-glossary__list` is now a region where no link is made.
 - **Every apostrophe form matches,** including `&#8216;`, `&#39;`, `&rsquo;`, `&lsquo;`, `&apos;` and the modifier letter ʼ, as well as the forms matched before.
 - **A phrase pattern too large for PCRE leaves the text as it is.** Enough site-wide phrases could push the combined pattern past PCRE's size limit; the pattern is now checked once, and the content is returned unlinked rather than warned on paragraph after paragraph. The Glossary unwrap also returns the content unchanged if its pattern fails.
+- **A ">" inside an attribute value no longer exposes the attribute as text.** The contextual pass split the content at the first ">", so an inline image with `alt="a > the Dome of the Rock"` had the rest of its alt text read as running text and a link written into the attribute, breaking the markup. A tag now ends at the first ">" outside a quoted value.
+- **A phrase written with a non-breaking space links.** The editor writes `&nbsp;` for a doubled space; "Dome&nbsp;of the Rock" matched neither the pre-filter nor the pattern. A space in a phrase now matches any run of spaces, `&nbsp;`, `&#160;` or U+00A0, and the lookup reads them as one space.
 
 ## [1.76.0] - 2026-10-26
 
