@@ -6,16 +6,16 @@
  * Arabic citation therefore costs nothing.
  *
  * Noto Naskh Arabic (SIL Open Font Licence) is bundled, as one variable file
- * covering weights 400 to 700. KFGQPC HAFS Uthmanic Script is bundled as the
- * original TTF: its licence forbids modification, so it is not converted to
- * woff2. The other faces are not bundled; see assets/fonts/scripts/README.md
+ * covering weights 400 to 700. KFGQPC HAFS Uthmanic Script is bundled as a
+ * woff2 conversion of the original TTF, by the owner's decision of 2026-10-26,
+ * although its licence forbids modification (docs/SSOT.md, D11). The other faces are not bundled; see assets/fonts/scripts/README.md
  * for their filenames and where to obtain them. Until a file is present its
  * declaration is inert and the browser falls back to the system stack.
  */
 
 @font-face {
 	font-family: "KFGQPC HAFS Uthmanic Script";
-	src: url("../fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf") format("truetype");
+	src: url("../fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;

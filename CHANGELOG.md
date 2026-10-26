@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.76.1] - 2026-10-26
+
+### Changed
+
+- **The Quranic face is served as a woff2** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`, 107 KB) in place of the original TTF (298 KB, removed). The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped. Recorded in SSOT D11.
+
 ## [1.76.0] - 2026-10-26
 
 ### Changed

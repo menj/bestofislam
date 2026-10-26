@@ -5,13 +5,16 @@
 - `noto-naskh-arabic.woff2`, a variable file for weights 400 to 700, under the
   SIL Open Font Licence 1.1 (`OFL-NotoNaskhArabic.txt`); it sets the Arabic of
   the Glossary and every other Arabic passage that is not Quranic.
-- `kfgqpc-hafs-uthmanic-script.ttf`, KFGQPC HAFS Uthmanic Script (version 2.2)
+- `kfgqpc-hafs-uthmanic-script.woff2`, KFGQPC HAFS Uthmanic Script (version 2.2)
   by the King Fahd Glorious Quran Printing Complex, under the free no-cost
   end-user licence embedded in the font and reproduced in
   `kfgqpc-hafs-uthmanic-script-LICENSE.txt` (use, copy and distribute are
   permitted; the font may not be sold, modified, altered or reproduced in
-  another form). The file is the original TTF, byte for byte: it is not
-  converted to woff2 or subset, since either would modify it. It sets only
+  another form). The file is a woff2 conversion of the original TTF, not
+  subset: the owner chose on 2026-10-26 to serve it so (107 KB, from 298 KB),
+  accepting that the licence forbids modifying the font. The conversion is
+  lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG)
+  is dropped. It sets only
   Quranic verses: text in the `.boi-script-quran` class
   (`.boi-term__script.boi-script-quran` on a Glossary entry) and
   `.boi-glossary__ar--quran` in the Glossary index, both reserved for entries
@@ -25,7 +28,7 @@ exact filename below and the declaration activates with no code change.
 
 | Filename | Face | Scripts covered |
 | --- | --- | --- |
-| `kfgqpc-hafs-uthmanic-script.ttf` (bundled) | KFGQPC HAFS Uthmanic Script | Quranic verses only |
+| `kfgqpc-hafs-uthmanic-script.woff2` (bundled) | KFGQPC HAFS Uthmanic Script | Quranic verses only |
 | `noto-naskh-arabic.woff2` (bundled) | Noto Naskh Arabic | General Arabic |
 | `sbl-hebrew.woff2` | SBL Hebrew | Hebrew, Hebrew Presentation Forms |
 | `sbl-greek.woff2` | SBL Greek | Greek, Greek Extended |
@@ -35,7 +38,7 @@ exact filename below and the declaration activates with no code change.
 ## Conversion
 
 The four unbundled faces, where their licences allow it, may be converted to
-woff2. Never convert the KFGQPC file.
+woff2. The KFGQPC file is already a woff2; do not subset it.
 
 ```
 pip install fonttools brotli

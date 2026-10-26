@@ -34,7 +34,7 @@ on the Sources and standards page, and the credits are recorded in
   https://openfontlicense.org/. It sets the Arabic in the Glossary and in
   running text. The file is the variable font converted to WOFF2, with the licence text in `assets/fonts/scripts/OFL-NotoNaskhArabic.txt`.
 
-- **KFGQPC HAFS Uthmanic Script** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf`), King Fahd Glorious Quran Printing Complex, distributed unmodified under its licence, http://fonts.qurancomplex.gov.sa/. It sets Quranic verses only. The licence text is in `assets/fonts/scripts/kfgqpc-hafs-uthmanic-script-LICENSE.txt`.
+- **KFGQPC HAFS Uthmanic Script** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`), King Fahd Glorious Quran Printing Complex, served as a WOFF2 conversion of the original TTF by the owner's decision of 2026-10-26, although its licence forbids modification, http://fonts.qurancomplex.gov.sa/. It sets Quranic verses only. The licence text is in `assets/fonts/scripts/kfgqpc-hafs-uthmanic-script-LICENSE.txt`.
 
 ## Glossary photographs
 
