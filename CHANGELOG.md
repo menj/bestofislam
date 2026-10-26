@@ -6,6 +6,19 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.0] - 2026-10-26
+
+### Added
+
+- **laʿnat Allāh after the name of Paul of Tarsus.** لعنة الله, "the curse of God", is set after Paul's name as a calligraphic mark, the shortcode `[boi_lanah]` (`inc/util.php`). The span `.boi-lanah` (`assets/css/scripts.css`) draws `assets/images/lanat-allah.svg` (copied from injil.help) as a mask in `--boi-rubric`, the red ink of the rubric epithets, so it follows the appearance toggle; in forced-colours mode it is drawn in `CanvasText`. The words "laʿnat Allāh, the curse of God" stay inside, visually hidden, for screen readers, search and a copy and paste, and show as written where the browser cannot draw a mask. The contextual-link engine skips `.boi-lanah`, and the glossary linker skips its text.
+- It is placed by hand and kept rare, three times in two articles, at the sentences that give the article's verdict:
+  - **Was Paul an apostle?** (paul-claim-to-apostleship): "That is a test of companionship. Paul met no part of it", and the summing up, "Strip the question to what the sources support. Paul never met Jesus."
+  - **Paul and the Law** (paul-and-the-law): "Paul did. That is the tension Muslims point to".
+- It never appears in titles, headings, excerpts, descriptions, menus, alt text, structured data or quotations; excerpts and descriptions strip shortcodes. The Pauline letters and Second Peter articles, which weigh authorship, carry none.
+- Font licence: the calligraphy is drawn from the outlines of Dubidam Arabic (NamelaType), whose metadata names a free personal-use licence. A web licence is the site owner's to hold.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.76.2] - 2026-10-26
 
 ### Changed
