@@ -52,9 +52,12 @@ def collision_suffix(slug, known):
     muslims-by-the-numbers-2020 passes while an abd-10 beside abd does not.
     """
     m = re.search(r'-(\d+)$', slug)
-    if not m or m.group(1)[0] in '01':
+    if not m:
         return False
-    return len(m.group(1)) == 1 or slug[: m.start()] in known
+    digits = m.group(1)
+    if len(digits) == 1:
+        return digits in '23456789'
+    return slug[: m.start()] in known
 
 
 for slug in terms:
