@@ -62,8 +62,8 @@ function boi_get_options() {
  */
 function boi_add_settings_page() {
 	add_theme_page(
-		__( 'Listicle Settings', 'bestofislam' ),
-		__( 'Listicles', 'bestofislam' ),
+		__( 'Theme Options', 'bestofislam' ),
+		__( 'Theme Options', 'bestofislam' ),
 		'manage_options',
 		'boi-settings',
 		'boi_render_settings_page'
@@ -232,7 +232,7 @@ function boi_render_settings_page() {
 	$opts   = boi_get_options();
 
 	echo '<div class="wrap boi-settings">';
-	echo '<h1>' . esc_html__( 'Listicle Settings', 'bestofislam' ) . '</h1>';
+	echo '<h1>' . esc_html__( 'Theme Options', 'bestofislam' ) . '</h1>';
 
 	echo '<nav class="nav-tab-wrapper boi-settings__tabs">';
 	foreach ( $tabs as $slug => $label ) {

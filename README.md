@@ -51,7 +51,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ## Settings
 
-Under Appearance, Listicles, in six tabs:
+Under Appearance, Theme Options, in six tabs:
 
 - **Display:** the hero background, editor's picks and follow channels.
 - **Schema:** the default list markup.
@@ -78,7 +78,7 @@ Under Appearance, Contextual Links, in three tabs:
 2. Upload `bestofislam-1.70.0.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 36 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
-4. Configure under Appearance, Listicles.
+4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
 
