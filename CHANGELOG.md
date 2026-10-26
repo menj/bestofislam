@@ -6,6 +6,16 @@ versioning.
 
 ## [Unreleased]
 
+## [1.76.2] - 2026-10-26
+
+### Fixed
+
+- **Zenith** (arabic-words-science): removed the sentence claiming the m/ni slip came from the Arabic script; the misreading happened in Latin letters, and the sentence had no source.
+- **Ninety-nine names** (relationship-with-god): Sahih al-Bukhari 2736 is in the Book of Conditions (Kitab al-Shurut), not the Book of Tawhid; body and note 8 now say so (Fath al-Bari vol. 5, p. 354, checked on Shamela).
+- **Pauline letters** (pauline-letters-authorship): the closing no longer claims scholarly agreement on the seven letters or that forgers knew "because their own church told them so"; it states the majority critical view, notes the dissent, and attributes the lying verdict to Ehrman (note 17).
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change; no glossary data changed, so `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.76.1] - 2026-10-26
 
 ### Removed
