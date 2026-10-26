@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '11';
+const BOI_GLOSSARY_VERSION = '12';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -1067,12 +1067,20 @@ function boi_render_term_related( $attributes ) {
 	}
 
 	$articles = '';
+	// The list is a pointer to further reading, not an index: the first few
+	// in the entry's own order (most relevant first) are shown.
+	$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+	$shown = 0;
 
 	foreach ( (array) $attributes['articles'] as $slug ) {
+		if ( $shown >= $max ) {
+			break;
+		}
 		$post = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
 
 		if ( $post && 'publish' === $post->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $post ) ) ) {
 			$articles .= sprintf( '<li><a href="%1$s">%2$s</a></li>', esc_url( get_permalink( $post ) ), esc_html( get_the_title( $post ) ) );
+			++$shown;
 		}
 	}
 
@@ -1181,11 +1189,18 @@ function boi_glossary_schema() {
 				}
 			}
 
+			// The same articles the entry shows under Read more, no more.
+			$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+			$shown = 0;
 			foreach ( (array) ( isset( $attrs['articles'] ) ? $attrs['articles'] : array() ) as $slug ) {
+				if ( $shown >= $max ) {
+					break;
+				}
 				$rel = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
 
 				if ( $rel && 'publish' === $rel->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $rel ) ) ) {
 					$related[] = get_permalink( $rel );
+					++$shown;
 				}
 			}
 		}

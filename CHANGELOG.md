@@ -15,6 +15,7 @@ versioning.
 ### Changed
 
 - **The Quranic face is served as a woff2** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`, 107 KB) in place of the original TTF (298 KB, removed). The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped. Recorded in SSOT D11.
+- **A Glossary entry's Read more list shows at most six articles** (filter `boi_glossary_read_more_max`), in the entry's own order, and its structured data lists the same six. Al Faruqi's entry listed all thirty articles that cite him; its list now runs from the articles that cite him most (Islamic art, jizya, the five pillars, Hajj, Schacht on isnads, war) to the fewest. Glossary data version 12, so unedited entry pages are rewritten on the next sync; an entry an editor changed keeps its content and still shows at most six.
 
 ### Fixed
 
