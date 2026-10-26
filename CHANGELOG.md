@@ -8,6 +8,10 @@ versioning.
 
 ## [1.76.1] - 2026-10-26
 
+### Removed
+
+- **Every redirect, merged from `main`** (released there as 1.75.0): `inc/legacy-permalinks.php` (the date-based permalink and retired-slug redirects) and the /?s= to /search/ redirect are gone; renaming a seeded post or Glossary page also removes WordPress's old-slug note, so a retired address returns 404. This branch's own 1.75.0 entry below (contextual links) and `main`'s 1.75.0 were numbered independently; this release supersedes both.
+
 ### Changed
 
 - **The Quranic face is served as a woff2** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`, 107 KB) in place of the original TTF (298 KB, removed). The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped. Recorded in SSOT D11.
