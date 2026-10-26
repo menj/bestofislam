@@ -72,6 +72,36 @@ function boi_cl_key( $text ) {
 	return function_exists( 'mb_strtolower' ) ? mb_strtolower( $text, 'UTF-8' ) : strtolower( $text );
 }
 
+/**
+ * Whether lowered plain text contains a phrase key. Without mbstring only
+ * ASCII is lowered, so a non-ASCII key is looked for case-insensitively.
+ */
+function boi_cl_contains( $plain, $key ) {
+	if ( function_exists( 'mb_strtolower' ) || ! preg_match( '/[^\x00-\x7F]/', $key ) ) {
+		return false !== strpos( $plain, $key );
+	}
+	return 1 === preg_match( '/' . preg_quote( $key, '/' ) . '/iu', $plain );
+}
+
+/**
+ * The entry in a key-indexed map for a key, or null. Without mbstring a
+ * non-ASCII key keeps its capitals, so it is compared case-insensitively.
+ */
+function boi_cl_lookup( array $map, $key ) {
+	if ( isset( $map[ $key ] ) ) {
+		return $key;
+	}
+	if ( function_exists( 'mb_strtolower' ) || ! preg_match( '/[^\x00-\x7F]/', $key ) ) {
+		return null;
+	}
+	foreach ( array_keys( $map ) as $candidate ) {
+		if ( 1 === preg_match( '/^' . preg_quote( (string) $candidate, '/' ) . '$/iu', $key ) ) {
+			return $candidate;
+		}
+	}
+	return null;
+}
+
 /** URL without query, fragment or trailing slash, for comparing pages. */
 function boi_cl_norm_url( $url ) {
 	$url = preg_replace( '/[?#].*$/', '', (string) $url );
@@ -223,7 +253,7 @@ function boi_cl_filter( $content ) {
 	$items = array();
 	foreach ( $all as $item ) {
 		$key = boi_cl_key( $item['phrase'] );
-		if ( isset( $items[ $key ] ) || '' === $key || ! $caps[ $item['own'] ? 'own' : 'sister' ] || boi_cl_norm_url( $item['url'] ) === $here || false === strpos( $plain, $key ) ) {
+		if ( isset( $items[ $key ] ) || '' === $key || ! $caps[ $item['own'] ? 'own' : 'sister' ] || boi_cl_norm_url( $item['url'] ) === $here || ! boi_cl_contains( $plain, $key ) ) {
 			continue;
 		}
 		$items[ $key ] = $item;
@@ -234,7 +264,7 @@ function boi_cl_filter( $content ) {
 	$guards = array();
 	foreach ( boi_cl_guards() as $guard ) {
 		$key = boi_cl_key( $guard );
-		if ( '' !== $key && ! isset( $items[ $key ] ) && false !== strpos( $plain, $key ) ) {
+		if ( '' !== $key && ! isset( $items[ $key ] ) && boi_cl_contains( $plain, $key ) ) {
 			$guards[ $key ] = array( 'phrase' => $guard );
 		}
 	}
@@ -251,7 +281,9 @@ function boi_cl_filter( $content ) {
 	);
 	$alts = array();
 	foreach ( $keys as $key ) {
-		$needle = preg_quote( htmlspecialchars( $terms[ $key ]['phrase'], ENT_NOQUOTES, 'UTF-8' ), '/' );
+		// Curly apostrophes become straight, so every form of the apostrophe matches.
+		$phrase = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98" ), "'", $terms[ $key ]['phrase'] );
+		$needle = preg_quote( htmlspecialchars( $phrase, ENT_NOQUOTES, 'UTF-8' ), '/' );
 		$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
 		$alts[] = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
 	}
@@ -336,8 +368,8 @@ function boi_cl_filter( $content ) {
 			continue;
 		}
 		foreach ( $found[0] as $hit ) {
-			$key  = boi_cl_key( $hit[0] );
-			$item = isset( $items[ $key ] ) ? $items[ $key ] : null;
+			$key  = boi_cl_lookup( $items, boi_cl_key( $hit[0] ) );
+			$item = null !== $key ? $items[ $key ] : null;
 			if ( ! $item ) {
 				continue;
 			}
@@ -375,7 +407,7 @@ function boi_cl_unwrap_glossary( $content ) {
 	return preg_replace_callback(
 		'#<a href="[^"]*" class="boi-gl-link">(.*?)</a>#s',
 		static function ( $m ) use ( $keys ) {
-			return isset( $keys[ boi_cl_key( wp_strip_all_tags( $m[1] ) ) ] ) ? $m[1] : $m[0];
+			return null !== boi_cl_lookup( $keys, boi_cl_key( wp_strip_all_tags( $m[1] ) ) ) ? $m[1] : $m[0];
 		},
 		$content
 	);

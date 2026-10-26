@@ -12,6 +12,11 @@ versioning.
 
 - **The Quranic face is served as a woff2** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`, 107 KB) in place of the original TTF (298 KB, removed). The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped. Recorded in SSOT D11.
 
+### Fixed
+
+- **A phrase written with a curly apostrophe now matches every apostrophe form.** "Mark’s gospel" (the map's first entry for injil.help's Mark page) matched only a curly apostrophe, so neither "Mark's gospel" nor the texturized "Mark&#8217;s gospel" that WordPress renders was linked. The phrase's apostrophes are made straight before the pattern expands them to every form.
+- **Contextual links work without mbstring for non-ASCII phrases.** Without mbstring only ASCII is lowered, so lower-case "ṣābiʾūn" never matched the phrase "Ṣābiʾūn" in the pre-filter or in the lookup of the matched text. Both now compare a non-ASCII key case-insensitively (`boi_cl_contains()`, `boi_cl_lookup()`); with mbstring nothing changes.
+
 ## [1.76.0] - 2026-10-26
 
 ### Changed
