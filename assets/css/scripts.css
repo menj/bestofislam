@@ -6,17 +6,25 @@
  * Arabic citation therefore costs nothing.
  *
  * Noto Naskh Arabic (SIL Open Font Licence) is bundled, as one variable file
- * covering weights 400 to 700. The other faces are not; see
- * assets/fonts/scripts/README.md for their filenames and where to obtain them.
- * Until a file is present its declaration is inert and the browser falls back
- * to the system stack named below.
+ * covering weights 400 to 700. KFGQPC HAFS Uthmanic Script is bundled as the
+ * original TTF: its licence forbids modification, so it is not converted to
+ * woff2. The other faces are not bundled; see assets/fonts/scripts/README.md
+ * for their filenames and where to obtain them. Until a file is present its
+ * declaration is inert and the browser falls back to the system stack.
  */
 
 @font-face {
-	font-family: "BOI Quran";
-	src: url("../fonts/scripts/uthmanic-hafs.woff2") format("woff2");
+	font-family: "KFGQPC HAFS Uthmanic Script";
+	src: url("../fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
 	font-display: swap;
 	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+/* The Uthmanic face sets Quranic verses only, never other Arabic. */
+:root {
+	--boi-font-quran: "KFGQPC HAFS Uthmanic Script", "BOI Arabic", "Noto Naskh Arabic", serif;
 }
 
 @font-face {
@@ -60,18 +68,15 @@
  * range-scoped, Latin text never touches them and the Latin faces declared in
  * theme.json continue to resolve first.
  *
- * "BOI Arabic" (Naskh) comes before "BOI Quran" here on purpose. Both cover
- * the same Arabic blocks, and KFGQPC HAFS Uthmanic includes ordinary Arabic
- * letters as well as Quranic ones, so if "BOI Quran" led the stack it would
- * win for every Arabic passage, not only Quranic citations. The Uthmanic
- * face is reserved for text explicitly marked .boi-script-quran, whose own
- * font-family declaration below overrides this stack for that text.
+ * The Uthmanic face is not in this stack: it covers ordinary Arabic letters as
+ * well as Quranic ones, so any place in the stack would let it set Arabic
+ * that is not a verse. It is reserved for text marked .boi-script-quran,
+ * through --boi-font-quran.
  */
 body {
 	font-family:
 		var(--wp--preset--font-family--eb-garamond, serif),
 		"BOI Arabic",
-		"BOI Quran",
 		"BOI Hebrew",
 		"BOI Greek",
 		"BOI Syriac",
@@ -88,7 +93,7 @@ body {
 }
 
 .boi-script-quran {
-	font-family: "BOI Quran", serif;
+	font-family: var(--boi-font-quran);
 	direction: rtl;
 	unicode-bidi: isolate;
 	font-size: 1.35em;

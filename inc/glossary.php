@@ -852,6 +852,8 @@ function boi_render_glossary_index() {
 			$counts[ $type ] = isset( $counts[ $type ] ) ? $counts[ $type ] + 1 : 1;
 
 			$ar      = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+			$data    = boi_glossary_term_by_slug( $entry->post_name );
+			$ar_cls  = ! empty( $data['quran_ref'] ) ? 'boi-glossary__ar boi-glossary__ar--quran' : 'boi-glossary__ar';
 			$kind    = 'term' !== $type ? '<span class="boi-glossary__type">' . esc_html( $types[ $type ] ) . '</span>' : '';
 			$aliases = array_slice( boi_glossary_aliases( $entry ), 0, 3 );
 			$aka     = $aliases ? '<span class="boi-glossary__aka">' . esc_html( sprintf( /* translators: %s: other names. */ __( 'Also: %s', 'bestofislam' ), implode( ', ', $aliases ) ) ) . '</span>' : '';
@@ -866,7 +868,7 @@ function boi_render_glossary_index() {
 				$kind,
 				esc_url( get_permalink( $entry ) ),
 				esc_html( get_the_title( $entry ) ),
-				'' !== $ar ? '<span class="boi-glossary__ar" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
+				'' !== $ar ? '<span class="' . $ar_cls . '" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
 				$aka,
 				wp_kses( $entry->post_excerpt, array( 'em' => array() ) )
 			);

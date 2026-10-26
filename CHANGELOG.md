@@ -6,6 +6,19 @@ versioning.
 
 ## [Unreleased]
 
+## [1.76.0] - 2026-10-26
+
+### Changed
+
+- **Quranic verses set in KFGQPC HAFS Uthmanic Script, shipped as the original TTF** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf`, version 2.2), with its licence in `kfgqpc-hafs-uthmanic-script-LICENSE.txt`. The face is applied through a new `--boi-font-quran` token to `.boi-script-quran` and to Glossary entries with a `quran_ref`, and to nothing else: hadith, epithets, names and other Arabic keep Noto Naskh Arabic. The same font now sets Quranic verses in all seven themes of the network.
+- **The Glossary index sets a Quranic entry's Arabic in the Uthmanic face** (`.boi-glossary__ar--quran`), as its own page already did. The index reads `quran_ref` from the entry's data, so no stored page needs updating.
+- **A Quranic Glossary entry's script line is taller** (line height 2) and drops the faux medium weight, so the small high marks and the end-of-verse sign have room.
+
+### Removed
+
+- **`uthmanic-hafs.woff2`**, a woff2 conversion of the same font. The KFGQPC licence forbids modifying the font, and a conversion is a modification. `KFGQPC-LICENSE.txt` gives way to `kfgqpc-hafs-uthmanic-script-LICENSE.txt`.
+- **The Uthmanic face from the `body` font stack.** It sat after Noto Naskh Arabic as a fallback, so it could still set an unmarked Arabic glyph that the Naskh file lacked. It now applies only where text is marked as a verse.
+
 ## [1.75.0] - 2026-10-26
 
 ### Added

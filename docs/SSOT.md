@@ -101,8 +101,13 @@ before the response, so the claim-then-answer rhythm is visible on the page.
 Six faces covering Arabic, Hebrew, Greek, Syriac, and Akkadian are declared in
 `assets/css/scripts.css` under `unicode-range`, so a page without those glyphs
 downloads nothing. Noto Naskh Arabic ships with the theme (SIL Open Font Licence
-allows it) and sets the Glossary's Arabic; the other files are not shipped, as
-licence terms put that on the site owner. `assets/fonts/scripts/README.md` names each expected file.
+allows it) and sets the Glossary's Arabic. KFGQPC HAFS Uthmanic Script ships
+as the original TTF, unconverted and unsubset because its licence forbids
+modification, and sets Quranic verses only (`.boi-script-quran`,
+`.boi-glossary__ar--quran`, through `--boi-font-quran`); every theme of the
+network uses it for Quranic verses and for nothing else. The other files are
+not shipped, as licence terms put that on the site owner.
+`assets/fonts/scripts/README.md` names each expected file.
 
 ### D12. Population is idempotent and reversible by hand
 
