@@ -490,7 +490,9 @@ function boi_credit_html( $lead, $source ) {
 	$url = boi_image_source_url( $source );
 
 	if ( '' === $url ) {
-		return esc_html( rtrim( $lead, " ,\u{060C}" ) . '.' );
+		// A pattern, not rtrim(): rtrim() strips single bytes, and would cut a
+		// multibyte letter whose last byte matches one of the Arabic comma's.
+		return esc_html( preg_replace( '/[\s,\x{060C}]+$/u', '', $lead ) . '.' );
 	}
 
 	return esc_html( $lead ) . ' <a href="' . esc_url( $url ) . '" rel="noopener">' . esc_html( boi_image_source_name( $url ) ) . '</a>';

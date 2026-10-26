@@ -53,16 +53,25 @@ function boi_security_headers( $opts, $ssl ) {
 }
 
 /**
- * Sends the headers.
+ * Sends the headers. A post's embed view (/embed/), which WordPress offers
+ * other sites through oEmbed, exists to be framed, so it keeps no framing
+ * headers.
  *
+ * @param WP|null $wp Current request.
  * @return void
  */
-function boi_send_security_headers() {
+function boi_send_security_headers( $wp = null ) {
 	if ( is_admin() || headers_sent() ) {
 		return;
 	}
 
-	foreach ( boi_security_headers( boi_get_options(), is_ssl() ) as $name => $value ) {
+	$headers = boi_security_headers( boi_get_options(), is_ssl() );
+
+	if ( $wp instanceof WP && isset( $wp->query_vars['embed'] ) ) {
+		unset( $headers['Content-Security-Policy'], $headers['X-Frame-Options'] );
+	}
+
+	foreach ( $headers as $name => $value ) {
 		header( $name . ': ' . $value );
 	}
 }

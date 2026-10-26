@@ -41,7 +41,6 @@
 					"name": "Platypi",
 					"slug": "platypi",
 					"fontFamily": "Platypi, serif",
-					"fontDisplay": "swap",
 					"fontFace": [
 						{
 							"fontFamily": "Platypi",
@@ -144,7 +143,6 @@
 					"name": "Vollkorn",
 					"slug": "vollkorn",
 					"fontFamily": "Vollkorn, serif",
-					"fontDisplay": "swap",
 					"fontFace": [
 						{
 							"fontFamily": "Vollkorn",
@@ -234,7 +232,6 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--eb-garamond)",
-			"fontDisplay": "swap",
 			"fontSize": "1.1875rem",
 			"lineHeight": "1.5"
 		},
@@ -242,7 +239,6 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--platypi)",
-					"fontDisplay": "swap",
 					"fontWeight": "600",
 					"lineHeight": "1.15",
 					"letterSpacing": "-0.015em"
