@@ -253,6 +253,18 @@
 	padding: 1.5rem;
 }
 
+/* The network block on articles shared across the sister sites. */
+.boi-article .boi-network {
+	margin-block: 2.5rem;
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--lg, 16px);
+	padding: 1.5rem;
+}
+
+.boi-article .boi-network > h2 {
+	margin-block-start: 0;
+}
+
 .boi-article .boi-related {
 	margin-block-start: 3.5rem;
 }

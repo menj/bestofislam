@@ -8,6 +8,10 @@ versioning.
 
 ## [1.76.2] - 2026-10-26
 
+### Changed
+
+- **Islamic dilemma** (islamic-dilemma): the article is expanded for the network brief, keeping the same slug and URL. It now has a fair statement of the argument (5:47, 5:68, 10:94, 3:3, 5:48), and the five entries draw on Shamela-checked sources: Ibn Kathir on 3:3, 5:47, 5:48, 5:68 and 10:94; al-Tabari on 4:46; Ibn Taymiyya, al-Jawab al-Sahih 2/407 and 3/425; and Ibn Hazm, al-Fisal 2/2. Note 5 is corrected. The "no one can remove a word" gloss sits in a chapter heading of Kitab al-Tawhid, and Ibn Hajar (Fath 13/523) found no sound chain for it to Ibn Abbas. Bukhari 7363, where Ibn Abbas says the People of the Book altered the book, is now cited for what it says. A rounded "The Islamic dilemma across the network" box (`.boi-network`, in article.css) links the six sister pieces. The excerpt and the first image's alt text now name the focus keyword. Existing sites receive the new body through `boi_migrate_seed` on the 1.76.2 update, but only where the article is still as the theme wrote it.
+
 ### Fixed
 
 - **Zenith** (arabic-words-science): removed the sentence claiming the m/ni slip came from the Arabic script; the misreading happened in Latin letters, and the sentence had no source.
