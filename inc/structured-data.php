@@ -178,7 +178,8 @@ function boi_image_credit_fields( $credit ) {
 			'@type' => 'Person',
 			'name'  => $credit['artist'],
 		);
-		$fields['creditText'] = $credit['artist'] . ', via ' . boi_image_source_name( isset( $credit['source'] ) ? $credit['source'] : '' );
+		$url                  = boi_image_source_url( isset( $credit['source'] ) ? $credit['source'] : '' );
+		$fields['creditText'] = '' === $url ? $credit['artist'] : $credit['artist'] . ', via ' . boi_image_source_name( $url );
 	}
 
 	if ( ! empty( $credit['licence'] ) ) {
@@ -189,7 +190,7 @@ function boi_image_credit_fields( $credit ) {
 		}
 	}
 
-	if ( ! empty( $credit['source'] ) ) {
+	if ( '' !== boi_image_source_url( isset( $credit['source'] ) ? $credit['source'] : '' ) ) {
 		$fields['acquireLicensePage'] = $credit['source'];
 	}
 
@@ -382,6 +383,14 @@ function boi_author_same_as( $author ) {
 	}
 
 	$links[] = (string) $author->user_url;
+
+	// A profile saved as http://this-site is given as the site really is.
+	$home = wp_parse_url( home_url( '/' ) );
+	foreach ( $links as $i => $link ) {
+		if ( isset( $home['scheme'], $home['host'] ) && 'https' === $home['scheme'] && strtolower( (string) wp_parse_url( $link, PHP_URL_HOST ) ) === strtolower( $home['host'] ) ) {
+			$links[ $i ] = set_url_scheme( $link, 'https' );
+		}
+	}
 
 	$links = array_values( array_unique( array_filter( array_map( 'esc_url_raw', $links ) ) ) );
 

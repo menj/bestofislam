@@ -42,7 +42,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Design
 
 - **Identity.** The mark is three descending bars, gold, azure and white, describing the countdown format. The wordmark is set lowercase in Vollkorn. The palette is navy, azure and gold over white.
-- **Typography.** Platypi for headings and numerals, EB Garamond for running text, Ysabeau Office for labels and interface text, Vollkorn for the wordmark, all bundled (Platypi, Ysabeau Office and Vollkorn as variable fonts, EB Garamond as five static WOFF2 files). Running text is justified with hyphenation at 1.5 line spacing; short text is left-aligned. Arabic, Hebrew, Greek, Syriac and Akkadian faces are scoped by `unicode-range`; see `assets/fonts/scripts/README.md`.
+- **Typography.** Platypi for headings and numerals, EB Garamond for running text, Ysabeau Office for labels and interface text, Vollkorn for the wordmark, all bundled (Platypi, Ysabeau Office and Vollkorn as variable fonts, EB Garamond as five static WOFF2 files). Running text is justified with hyphenation at 1.5 line spacing; short text is left-aligned. Arabic, Hebrew, Greek, Syriac and Akkadian faces are scoped by `unicode-range`; Quranic verses alone set in KFGQPC HAFS Uthmanic Script, served as a woff2 conversion by the owner's decision (SSOT D11). See `assets/fonts/scripts/README.md`.
 - **Light and dark.** A toggle in the header switches the whole site; colour tokens live in `theme.json`.
 - **Header.** One row above 1300px; two rows below, with the section links scrolling sideways between 600 and 781px; a menu button below 600px. The search field and toggle share one height and style.
 - **Footer.** The mark's bars run full width, then the wordmark and the site's promise, then four columns (the reading order, sections, a start column and follow links), then a bar of standing pages.
@@ -51,7 +51,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ## Settings
 
-Under Appearance, Listicles, in six tabs:
+Under Appearance, Theme Options, in six tabs:
 
 - **Display:** the hero background, editor's picks and follow channels.
 - **Schema:** the default list markup.
@@ -59,6 +59,12 @@ Under Appearance, Listicles, in six tabs:
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
 - **Search engines:** meta descriptions, and readable search addresses with their base word.
 - **Access:** the custom login address, and the list of unlisted items.
+
+Under Appearance, Contextual Links, in three tabs:
+
+- **Domains:** the sister sites (always approved) and any other domain links may lead to.
+- **Phrases:** site-wide `phrase | /path/` or `phrase | https://…` lines, which win over the shared map in `inc/data/network-links.json`. Each article also has its own list in the Contextual links box.
+- **Rules:** switches and caps for links to this site (four a page) and to the sister sites (three a page), a new-tab choice for links to other sites, and the pages that never receive links.
 
 ## Requirements
 
@@ -72,7 +78,7 @@ Under Appearance, Listicles, in six tabs:
 2. Upload `bestofislam-1.70.0.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 36 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
-4. Configure under Appearance, Listicles.
+4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
 
@@ -91,11 +97,14 @@ bestofislam/
 ├── theme.json           Palette, typography, spacing and listicle tokens
 ├── screenshot.png       1200 by 900 theme screenshot
 ├── inc/                 One file per concern:
-│                        appearance, blocks, contact, features, front, icons,
+│                        appearance, blocks, contact, contextual-links,
+│                        features, front, glossary-links, icons,
 │                        images, login, login-screen, questions, reading,
 │                        reflections, schema, search, search-permalinks,
 │                        sections, seo, settings, setup, structured-data,
 │                        taxonomy, unlist, voting
+├── inc/data/            network-links.json, the shared map of phrases to
+│                        inner pages, identical in all seven themes
 ├── blocks/              Block definitions and editor scripts
 ├── templates/           404, archive, front-page, home, page, search,
 │                        single, single-listicle, tag, taxonomy-listicle-topic

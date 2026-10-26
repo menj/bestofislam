@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '11';
+const BOI_GLOSSARY_VERSION = '12';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -862,6 +862,8 @@ function boi_render_glossary_index() {
 			$counts[ $type ] = isset( $counts[ $type ] ) ? $counts[ $type ] + 1 : 1;
 
 			$ar      = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+			$data    = boi_glossary_term_by_slug( $entry->post_name );
+			$ar_cls  = ! empty( $data['quran_ref'] ) ? 'boi-glossary__ar boi-glossary__ar--quran' : 'boi-glossary__ar';
 			$kind    = 'term' !== $type ? '<span class="boi-glossary__type">' . esc_html( $types[ $type ] ) . '</span>' : '';
 			$aliases = array_slice( boi_glossary_aliases( $entry ), 0, 3 );
 			$aka     = $aliases ? '<span class="boi-glossary__aka">' . esc_html( sprintf( /* translators: %s: other names. */ __( 'Also: %s', 'bestofislam' ), implode( ', ', $aliases ) ) ) . '</span>' : '';
@@ -876,7 +878,7 @@ function boi_render_glossary_index() {
 				$kind,
 				esc_url( get_permalink( $entry ) ),
 				esc_html( get_the_title( $entry ) ),
-				'' !== $ar ? '<span class="boi-glossary__ar" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
+				'' !== $ar ? '<span class="' . $ar_cls . '" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
 				$aka,
 				wp_kses( $entry->post_excerpt, array( 'em' => array() ) )
 			);
@@ -1007,7 +1009,11 @@ function boi_render_term_hero() {
 		return '';
 	}
 
-	return '<figure class="boi-term-hero alignwide"><img src="' . esc_url( $image['url'] ) . '" alt="" width="' . (int) $image['width'] . '" height="' . (int) $image['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $image ) . '</figcaption></figure>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	// A person's own portrait keeps its proportions; only the stock photos are
+	// cut to a banner, which would crop a face to its chin.
+	$class = boi_glossary_entry_portrait( $post->post_name ) ? 'boi-term-hero alignwide boi-term-hero--portrait' : 'boi-term-hero alignwide';
+
+	return '<figure class="' . esc_attr( $class ) . '"><img src="' . esc_url( $image['url'] ) . '" alt="" width="' . (int) $image['width'] . '" height="' . (int) $image['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $image ) . '</figcaption></figure>'; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /**
@@ -1065,12 +1071,20 @@ function boi_render_term_related( $attributes ) {
 	}
 
 	$articles = '';
+	// The list is a pointer to further reading, not an index: the first few
+	// in the entry's own order (most relevant first) are shown.
+	$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+	$shown = 0;
 
 	foreach ( (array) $attributes['articles'] as $slug ) {
+		if ( $shown >= $max ) {
+			break;
+		}
 		$post = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
 
 		if ( $post && 'publish' === $post->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $post ) ) ) {
 			$articles .= sprintf( '<li><a href="%1$s">%2$s</a></li>', esc_url( get_permalink( $post ) ), esc_html( get_the_title( $post ) ) );
+			++$shown;
 		}
 	}
 
@@ -1179,11 +1193,18 @@ function boi_glossary_schema() {
 				}
 			}
 
+			// The same articles the entry shows under Read more, no more.
+			$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+			$shown = 0;
 			foreach ( (array) ( isset( $attrs['articles'] ) ? $attrs['articles'] : array() ) as $slug ) {
+				if ( $shown >= $max ) {
+					break;
+				}
 				$rel = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
 
 				if ( $rel && 'publish' === $rel->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $rel ) ) ) {
 					$related[] = get_permalink( $rel );
+					++$shown;
 				}
 			}
 		}

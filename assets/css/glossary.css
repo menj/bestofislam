@@ -9,7 +9,7 @@
 .boi-gbar {
 	--boi-ink: var(--wp--preset--color--contrast, #0D2B4E);
 	--boi-mute: var(--wp--preset--color--accent-5, #4A5A6E);
-	--boi-blue: var(--wp--preset--color--accent-1, #1F6FCC);
+	--boi-blue: var(--wp--preset--color--accent-1, #1D6AC3);
 	--boi-gold: var(--wp--preset--color--accent-2, #E8B33C);
 	--boi-tint: var(--wp--preset--color--accent-3, #EAF2FB);
 	--boi-rule: var(--wp--preset--color--accent-6, #D9E3EF);
@@ -396,6 +396,12 @@
 	color: var(--boi-mute);
 }
 
+/* An entry that quotes a Quranic verse takes the Uthmanic face in the index too. */
+.boi-glossary__ar--quran {
+	font-family: var(--boi-font-quran);
+	line-height: 2;
+}
+
 .boi-article .boi-glossary__def {
 	grid-column: 1 / -1;
 	display: -webkit-box;
@@ -466,7 +472,7 @@
 	font-weight: 500;
 	font-size: clamp(2.6rem, 2rem + 3vw, 3.8rem);
 	line-height: 1.3;
-	color: var(--wp--preset--color--accent-1, #1F6FCC);
+	color: var(--wp--preset--color--accent-1, #1D6AC3);
 	text-align: left;
 }
 
@@ -474,7 +480,10 @@
  * the Uthmanic face. Size, colour and layout stay the same as any other
  * entry's script display. */
 .boi-article .boi-term__script.boi-script-quran {
-	font-family: "BOI Quran", "BOI Arabic", serif;
+	font-family: var(--boi-font-quran);
+	font-weight: 400;
+	line-height: 2;
+	letter-spacing: normal;
 }
 
 .boi-article .boi-term__translit {
@@ -771,6 +780,20 @@
 
 .boi-article .boi-term-hero img {
 	aspect-ratio: 3 / 1;
+}
+
+/* A person's own portrait: its own proportions, centred, never a banner. */
+.boi-article .boi-term-hero--portrait img {
+	aspect-ratio: auto;
+	inline-size: auto;
+	max-inline-size: min(100%, 20rem);
+	max-block-size: 26rem;
+	margin-inline: auto;
+	object-position: 50% 20%;
+}
+
+.boi-article .boi-term-hero.boi-term-hero--portrait figcaption {
+	text-align: center;
 }
 
 .boi-glossary__hero figcaption,

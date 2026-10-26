@@ -133,7 +133,9 @@ function boi_gl_filter( $content ) {
 	$depth  = array_fill_keys( $skip, 0 );
 	$used   = array();
 	$in_p   = false;
-	$tokens = preg_split( '/(<[^>]*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+	// A tag ends at the first ">" outside a quoted attribute value, so an alt
+	// text such as "a > b" never reads as running text.
+	$tokens = preg_split( '/(<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
 
 	foreach ( $tokens as $i => $tok ) {
 		if ( '' !== $tok && '<' === $tok[0] ) {

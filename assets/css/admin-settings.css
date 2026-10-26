@@ -10,7 +10,7 @@
 	 * value after the comma is only the fallback for when that custom
 	 * property is not defined in this admin context.
 	 */
-	--boi-accent: var( --wp--preset--color--accent-1, #1f6fcc );
+	--boi-accent: var( --wp--preset--color--accent-1, #1D6AC3 );
 	--boi-accent-contrast: var( --wp--preset--color--base, #ffffff );
 	--boi-ink: var( --wp--preset--color--contrast, #0d2b4e );
 	--boi-muted: var( --wp--preset--color--accent-5, #4a5a6e );
