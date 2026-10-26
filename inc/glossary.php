@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '9';
+const BOI_GLOSSARY_VERSION = '10';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -354,41 +354,35 @@ function boi_glossary_retired_slugs() {
 }
 
 /**
- * Brings pages written under a retired slug up to date: a renamed entry's
- * page keeps its identity and takes the new slug and title; a merged
- * duplicate is trashed once the entry it duplicated has its own page, or
- * unpublished if the owner had edited it. The old addresses are redirected
- * by inc/legacy-permalinks.php.
+ * Retires the old slugs for good: a renamed entry's page keeps its identity
+ * and takes the new slug and title; a merged duplicate is deleted outright
+ * once the entry it duplicated has its own page, whatever its status, along
+ * with any copy already in the trash. No page is left under a suffixed
+ * address. The old addresses themselves are redirected to the current
+ * entry by inc/legacy-permalinks.php.
  *
  * @param array $hashes Fingerprints by slug, updated in place.
  * @return void
  */
 function boi_glossary_migrate_slugs( &$hashes ) {
 	foreach ( boi_glossary_retired_slugs() as $old => $new ) {
-		$page = get_page_by_path( 'glossary/' . $old, OBJECT, 'page' );
+		$page    = get_page_by_path( 'glossary/' . $old, OBJECT, 'page' );
+		$current = get_page_by_path( 'glossary/' . $new, OBJECT, 'page' );
 
-		if ( ! $page || 'trash' === $page->post_status ) {
+		// Trashing a page renames its slug to <slug>__trashed, so a duplicate
+		// trashed by an earlier release is found under that name.
+		$trashed = get_page_by_path( 'glossary/' . $old . '__trashed', OBJECT, 'page' );
+
+		if ( $trashed ) {
+			wp_delete_post( $trashed->ID, true );
+		}
+
+		if ( ! $page ) {
 			continue;
 		}
 
-		$current = get_page_by_path( 'glossary/' . $new, OBJECT, 'page' );
-
-		if ( $current && 'trash' !== $current->post_status ) {
-			// A duplicate still as the theme wrote it goes to the trash. One the
-			// owner has edited is unpublished instead, so the address is retired
-			// but nothing they wrote is lost: it waits in Drafts to be merged by
-			// hand into the entry that replaced it.
-			if ( isset( $hashes[ $old ] ) && $hashes[ $old ] === boi_glossary_fingerprint( $page ) ) {
-				wp_trash_post( $page->ID );
-			} elseif ( 'draft' !== $page->post_status ) {
-				boi_update_post(
-					array(
-						'ID'          => $page->ID,
-						'post_status' => 'draft',
-					)
-				);
-			}
-
+		if ( 'trash' === $page->post_status || ( $current && 'trash' !== $current->post_status ) ) {
+			wp_delete_post( $page->ID, true );
 			unset( $hashes[ $old ] );
 			continue;
 		}
