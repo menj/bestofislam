@@ -35,7 +35,6 @@ require_once BOI_DIR . '/inc/structured-data.php';
 require_once BOI_DIR . '/inc/rank-math.php';
 require_once BOI_DIR . '/inc/unlist.php';
 require_once BOI_DIR . '/inc/search-permalinks.php';
-require_once BOI_DIR . '/inc/legacy-permalinks.php';
 require_once BOI_DIR . '/inc/login.php';
 require_once BOI_DIR . '/inc/login-screen.php';
 require_once BOI_DIR . '/inc/favicon.php';

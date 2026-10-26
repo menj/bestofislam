@@ -358,8 +358,8 @@ function boi_glossary_retired_slugs() {
  * and takes the new slug and title; a merged duplicate is deleted outright
  * once the entry it duplicated has its own page, whatever its status, along
  * with any copy already in the trash. No page is left under a suffixed
- * address. The old addresses themselves are redirected to the current
- * entry by inc/legacy-permalinks.php.
+ * address, and the theme does not redirect the old addresses: they return
+ * 404 like any other address that does not exist.
  *
  * @param array $hashes Fingerprints by slug, updated in place.
  * @return void
@@ -396,6 +396,10 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 				'post_title' => $term ? $term['title'] : $page->post_title,
 			)
 		);
+
+		// WordPress notes the old slug on a rename so it can redirect it later;
+		// the theme does not redirect, so the note goes.
+		delete_post_meta( $page->ID, '_wp_old_slug' );
 
 		if ( isset( $hashes[ $old ] ) ) {
 			$hashes[ $new ] = boi_glossary_fingerprint( get_post( $page->ID ) );
