@@ -929,9 +929,16 @@ function boi_seed_renames() {
  */
 function boi_rename_seeded_posts() {
 	foreach ( boi_seed_renames() as $old => $new ) {
-		$post = get_page_by_path( $old, OBJECT, 'post' );
+		$post    = get_page_by_path( $old, OBJECT, 'post' );
+		$renamed = get_page_by_path( $new, OBJECT, 'post' );
 
-		if ( ! $post || get_page_by_path( $new, OBJECT, 'post' ) ) {
+		// A post renamed by an earlier release still carries the old-slug note
+		// WordPress keeps for its own redirect; the theme does not redirect.
+		if ( $renamed ) {
+			delete_post_meta( $renamed->ID, '_wp_old_slug', $old );
+		}
+
+		if ( ! $post || $renamed ) {
 			continue;
 		}
 

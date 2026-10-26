@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '10';
+const BOI_GLOSSARY_VERSION = '11';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -375,6 +375,12 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 
 		if ( $trashed ) {
 			wp_delete_post( $trashed->ID, true );
+		}
+
+		// A page renamed by an earlier release still carries the old-slug note
+		// WordPress keeps for its own redirect; the theme does not redirect.
+		if ( $current ) {
+			delete_post_meta( $current->ID, '_wp_old_slug', $old );
 		}
 
 		if ( ! $page ) {
