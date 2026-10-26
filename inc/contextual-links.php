@@ -375,18 +375,25 @@ function boi_cl_filter( $content ) {
 		if ( $skipping || $in_notes || ! $blocks || isset( $linked[ end( $blocks ) ] ) || '' === trim( $tok ) ) {
 			continue;
 		}
-		if ( ! preg_match_all( $pattern, $tok, $found, PREG_OFFSET_CAPTURE ) ) {
-			continue;
-		}
-		foreach ( $found[0] as $hit ) {
+		// Scan forward one match at a time. A match passed over (a guard, a page
+		// already linked, a full cap) resumes the scan one character on, so a
+		// phrase running past its end ("Paul of Tarsus" after "Peter and Paul")
+		// can still link; one wholly inside it ("Barnabas" in "Gospel of
+		// Barnabas") stays part of that name.
+		$pos    = 0;
+		$shadow = 0;
+		$len    = strlen( $tok );
+		while ( $pos < $len && preg_match( $pattern, $tok, $found, PREG_OFFSET_CAPTURE, $pos ) ) {
+			$hit  = $found[0];
+			$end  = $hit[1] + strlen( $hit[0] );
 			$key  = boi_cl_lookup( $items, boi_cl_key( $hit[0] ) );
 			$item = null !== $key ? $items[ $key ] : null;
-			if ( ! $item ) {
-				continue;
-			}
-			$kind = $item['own'] ? 'own' : 'sister';
-			$norm = boi_cl_norm_url( $item['url'] );
-			if ( isset( $done[ $norm ] ) || $made[ $kind ] >= $caps[ $kind ] ) {
+			$kind = $item && $item['own'] ? 'own' : 'sister';
+			$norm = $item ? boi_cl_norm_url( $item['url'] ) : '';
+			if ( $end <= $shadow || ! $item || isset( $done[ $norm ] ) || $made[ $kind ] >= $caps[ $kind ] ) {
+				$shadow = max( $shadow, $end );
+				$byte   = ord( $tok[ $hit[1] ] );
+				$pos    = $hit[1] + ( $byte >= 0xF0 ? 4 : ( $byte >= 0xE0 ? 3 : ( $byte >= 0xC0 ? 2 : 1 ) ) );
 				continue;
 			}
 			$class = 'boi-ctx-link' . ( $item['own'] ? '' : ' boi-ctx-link--sister' );
