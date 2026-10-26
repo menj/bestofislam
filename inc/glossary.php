@@ -356,8 +356,9 @@ function boi_glossary_retired_slugs() {
 /**
  * Brings pages written under a retired slug up to date: a renamed entry's
  * page keeps its identity and takes the new slug and title; a merged
- * duplicate is trashed once the entry it duplicated has its own page. The
- * old addresses are redirected by inc/legacy-permalinks.php.
+ * duplicate is trashed once the entry it duplicated has its own page, or
+ * unpublished if the owner had edited it. The old addresses are redirected
+ * by inc/legacy-permalinks.php.
  *
  * @param array $hashes Fingerprints by slug, updated in place.
  * @return void
@@ -373,7 +374,21 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 		$current = get_page_by_path( 'glossary/' . $new, OBJECT, 'page' );
 
 		if ( $current && 'trash' !== $current->post_status ) {
-			wp_trash_post( $page->ID );
+			// A duplicate still as the theme wrote it goes to the trash. One the
+			// owner has edited is unpublished instead, so the address is retired
+			// but nothing they wrote is lost: it waits in Drafts to be merged by
+			// hand into the entry that replaced it.
+			if ( isset( $hashes[ $old ] ) && $hashes[ $old ] === boi_glossary_fingerprint( $page ) ) {
+				wp_trash_post( $page->ID );
+			} elseif ( 'draft' !== $page->post_status ) {
+				boi_update_post(
+					array(
+						'ID'          => $page->ID,
+						'post_status' => 'draft',
+					)
+				);
+			}
+
 			unset( $hashes[ $old ] );
 			continue;
 		}

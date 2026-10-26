@@ -33,8 +33,6 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
         if slug in terms:
             errors.append('glossary: duplicate slug "%s" (%s and %s)' % (slug, terms[slug], os.path.basename(path)))
         terms[slug] = os.path.basename(path)
-        if re.search(r'-[2-9]$', slug):
-            errors.append('glossary: slug "%s" carries a collision suffix; give the entry its own name' % slug)
 
 # Seeded articles.
 setup = open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read()
@@ -42,10 +40,30 @@ start = max(setup.find('function boi_seed_listicles'), 0)
 end = setup.find('function boi_seed_pages', start)
 seeds = re.findall(r"'slug'\s+=> '([^']+)'", setup[start:end if end != -1 else len(setup)])
 for slug in seeds:
-    if re.search(r'-[2-9]$', slug):
-        errors.append('seed: slug "%s" carries a collision suffix' % slug)
     if not os.path.exists(os.path.join(ROOT, 'content', slug + '.json')):
         errors.append('seed: "%s" has no content/%s.json' % (slug, slug))
+
+
+def collision_suffix(slug, known):
+    """True for the -2, -3, ... -10, -11 suffixes WordPress adds on a collision.
+
+    A single digit is always refused. A longer run of digits is refused only
+    when the slug without it is itself a known slug, so a year such as
+    muslims-by-the-numbers-2020 passes while an abd-10 beside abd does not.
+    """
+    m = re.search(r'-(\d+)$', slug)
+    if not m or m.group(1)[0] in '01':
+        return False
+    return len(m.group(1)) == 1 or slug[: m.start()] in known
+
+
+for slug in terms:
+    if collision_suffix(slug, terms):
+        errors.append('glossary: slug "%s" carries a collision suffix; give the entry its own name' % slug)
+
+for slug in seeds:
+    if collision_suffix(slug, set(seeds)):
+        errors.append('seed: slug "%s" carries a collision suffix' % slug)
 
 for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'))):
     try:
