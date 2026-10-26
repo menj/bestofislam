@@ -478,6 +478,27 @@ through WordPress's own block parser and serialiser. Where the theme cannot
 tell whether the owner edited an article, it leaves the article alone and
 asks; an update never overwrites what it cannot prove it wrote.
 
+### D46. Contextual links come from one map shared by the network
+
+The first mention of a known phrase in the running text links to the inner
+page that treats it, here or on one of the six sister sites, and nothing
+else: no "related" section, no list of links. The phrases live in
+`inc/data/network-links.json`, which is the same file, byte for byte, in all
+seven themes; it is changed in all seven together, never in one. Each phrase
+belongs to the one site whose subject it is, so no phrase leads to two
+places across the network. Own-site addresses go through `home_url()`, so a
+staging copy links to itself.
+
+The pass (`inc/contextual-links.php`) runs at 22, before the Glossary links
+at 24, and adds at most one link a paragraph or list item, four to this site
+and three to the sister sites a page. The Glossary pass keeps its own rules
+and never links inside an existing link; a Glossary link on words this pass
+already linked is unwrapped at 26. Headings, quotations, captions, footnote
+marks, script blocks marked with `lang` or `dir="rtl"`, and the Notes list
+are never linked. A post's own lines win over the site-wide lines, which win
+over the map; a name that contains a mapped phrase but means something else
+(`boi_cl_guards`) is matched and left alone.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,

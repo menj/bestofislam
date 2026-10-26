@@ -5,3 +5,5 @@
 .cl-admin__row{display:flex;align-items:center;gap:1rem;margin:.6rem 0}
 .cl-admin__row>label:first-child{min-width:14rem}
 .cl-admin input[type=color]{width:2.5rem;height:2rem;padding:0;border:1px solid #8c8f94;border-radius:4px}
+.cl-admin__row--stack{flex-direction:column;align-items:stretch;gap:.4rem}
+.cl-admin__hosts{font-family:monospace;color:#50575e}

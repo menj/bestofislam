@@ -60,6 +60,12 @@ Under Appearance, Listicles, in six tabs:
 - **Search engines:** meta descriptions, and readable search addresses with their base word.
 - **Access:** the custom login address, and the list of unlisted items.
 
+Under Appearance, Contextual Links, in three tabs:
+
+- **Domains:** the sister sites (always approved) and any other domain links may lead to.
+- **Phrases:** site-wide `phrase | /path/` or `phrase | https://…` lines, which win over the shared map in `inc/data/network-links.json`. Each article also has its own list in the Contextual links box.
+- **Rules:** switches and caps for links to this site (four a page) and to the sister sites (three a page), a new-tab choice for links to other sites, and the pages that never receive links.
+
 ## Requirements
 
 - WordPress 6.7 or later (tested on 7.1.1)
@@ -91,11 +97,14 @@ bestofislam/
 ├── theme.json           Palette, typography, spacing and listicle tokens
 ├── screenshot.png       1200 by 900 theme screenshot
 ├── inc/                 One file per concern:
-│                        appearance, blocks, contact, features, front, icons,
+│                        appearance, blocks, contact, contextual-links,
+│                        features, front, glossary-links, icons,
 │                        images, login, login-screen, questions, reading,
 │                        reflections, schema, search, search-permalinks,
 │                        sections, seo, settings, setup, structured-data,
 │                        taxonomy, unlist, voting
+├── inc/data/            network-links.json, the shared map of phrases to
+│                        inner pages, identical in all seven themes
 ├── blocks/              Block definitions and editor scripts
 ├── templates/           404, archive, front-page, home, page, search,
 │                        single, single-listicle, tag, taxonomy-listicle-topic

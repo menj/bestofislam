@@ -6,7 +6,17 @@ versioning.
 
 ## [Unreleased]
 
+## [1.75.0] - 2026-10-26
+
+### Added
+
+- **Contextual links to articles here and to inner pages on the sister sites.** In the running text of an article or page, the first mention of a known phrase links to the article on this site, or the inner page on abrahamic-religions.com, injil.help, apostleofdoom.org, compelling-evidence.com, murtadd.org or lailatulqadar.guide, that treats it. The phrases come from `inc/data/network-links.json`, a shared map kept identical in all seven themes (90 entries for this site, 314 for the sister sites). At most four links to this site and three to the sister sites on a page, one a paragraph, never in a heading, quotation, caption, note, footnote mark or existing link, and never to the page itself. The Notes list under an article is left alone.
+- **Contextual Links settings:** the Rules tab gains separate switches and caps for links to this site and to the sister sites, and a list of pages that never receive links; the Phrases tab now accepts `phrase | /path/` for this site; the six sister sites are always approved on the Domains tab. Settings saved by an earlier version carry over: the old switch and cap apply to the sister sites.
+- **Protected names:** a phrase that is part of a longer name meaning something else is not linked; "Ismail al Faruqi" no longer links "Ismail" to the page on the prophet. Filter `boi_cl_guards`.
+
 ### Changed
+
+- **Contextual links run before the Glossary links** (22, Glossary at 24), so an article link takes the words first. A later Glossary link on the same words is taken back to plain text, so one phrase never leads to two places in one article. Pages now receive contextual links as well as articles (filter `boi_cl_post_types`).
 
 - **Ten articles cite al Faruqi's *Essential Writings* (2021) directly:** jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. Four further articles cite his *Christian Ethics* (1967), checked against the page images because the PDF's text layer is poor OCR: morality-without-god (pp. 22 to 23), quranic-ethics (pp. 252 to 253), shared-prophets (pp. 193 to 194) and paul-and-the-law (p. 81, given as a dissenting reading). In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
 
