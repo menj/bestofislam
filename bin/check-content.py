@@ -38,9 +38,9 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
 
 # Seeded articles.
 setup = open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read()
-start = setup.find('function boi_seed_listicles')
+start = max(setup.find('function boi_seed_listicles'), 0)
 end = setup.find('function boi_seed_pages', start)
-seeds = re.findall(r"'slug'\s+=> '([^']+)'", setup[start:end])
+seeds = re.findall(r"'slug'\s+=> '([^']+)'", setup[start:end if end != -1 else len(setup)])
 for slug in seeds:
     if re.search(r'-[2-9]$', slug):
         errors.append('seed: slug "%s" carries a collision suffix' % slug)
