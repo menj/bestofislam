@@ -68,7 +68,7 @@ function boi_cl_host( $url ) {
 /** Lowercase, entity-free, straight-apostrophe form of a phrase or matched text. */
 function boi_cl_key( $text ) {
 	$text = html_entity_decode( (string) $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
-	$text = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98" ), "'", $text );
+	$text = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98", "\xCA\xBC" ), "'", $text );
 	return function_exists( 'mb_strtolower' ) ? mb_strtolower( $text, 'UTF-8' ) : strtolower( $text );
 }
 
@@ -282,15 +282,21 @@ function boi_cl_filter( $content ) {
 	$alts = array();
 	foreach ( $keys as $key ) {
 		// Curly apostrophes become straight, so every form of the apostrophe matches.
-		$phrase = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98" ), "'", $terms[ $key ]['phrase'] );
+		$phrase = str_replace( array( "\xE2\x80\x99", "\xE2\x80\x98", "\xCA\xBC" ), "'", $terms[ $key ]['phrase'] );
 		$needle = preg_quote( htmlspecialchars( $phrase, ENT_NOQUOTES, 'UTF-8' ), '/' );
 		$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
-		$alts[] = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
+		$alts[] = str_replace( "'", "(?:'|&#8217;|&#8216;|&#0?39;|&rsquo;|&lsquo;|&apos;|\xE2\x80\x99|\xE2\x80\x98|\xCA\xBC)", $needle );
 	}
 	$pattern = '/(?<![\p{L}\p{N}])(?:' . implode( '|', $alts ) . ')(?![\p{L}\p{N}])/iu';
+	// A pattern past PCRE's size limit (admin phrases can grow it) would fail
+	// on every paragraph; the text is then left unlinked rather than warned on.
+	if ( false === @preg_match( $pattern, '' ) ) { // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		return $content;
+	}
+	$epithets = boi_cl_epithet_index();
 
 	$skip_tags  = array( 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'q', 'figure', 'figcaption', 'cite', 'code', 'pre', 'sup', 'sub', 'nav', 'table', 'button', 'label', 'select', 'textarea', 'summary', 'script', 'style' );
-	$skip_attr  = '/\b(?:lang="(?:ar|he|el|syr)[^"]*"|dir="rtl"|class="[^"]*\b(?:boi-jump|boi-entry__claim|boi-entry__cta|boi-entry__rank|screen-reader-text|wp-block-footnotes|footnotes|arabic|quran|hadith|verse|toc)\b[^"]*")/i';
+	$skip_attr  = '/\b(?:lang="(?:ar|he|el|syr)[^"]*"|dir="rtl"|class="[^"]*\b(?:boi-jump|boi-entry__claim|boi-entry__cta|boi-entry__rank|screen-reader-text|wp-block-footnotes|footnotes|arabic|quran|hadith|verse|toc|boi-glossary__list)\b[^"]*")/i';
 	$void       = array( 'br', 'img', 'hr', 'wbr', 'input', 'source', 'meta', 'link', 'col', 'area', 'embed', 'track' );
 	$notes_head = '/^(?:notes?|sources?|references?|bibliography|further reading|endnotes)$/i';
 	$rel        = ' rel="noopener"' . ( ! empty( $opts['new_tab'] ) ? ' target="_blank"' : '' );
@@ -380,6 +386,15 @@ function boi_cl_filter( $content ) {
 			}
 			$class = 'boi-ctx-link' . ( $item['own'] ? '' : ' boi-ctx-link--sister' );
 			$link  = '<a class="' . $class . '" href="' . esc_url( $item['url'] ) . '"' . ( $item['own'] ? '' : $rel ) . '>' . $hit[0] . '</a>';
+			// The Glossary gives a name its epithet at its first mention, with
+			// its own link; this link now takes that mention, so it carries the
+			// epithet, and the Glossary link that would follow is unwrapped
+			// with its epithet (boi_cl_unwrap_glossary()).
+			$gl = null !== boi_cl_lookup( $epithets, $key ) ? $epithets[ boi_cl_lookup( $epithets, $key ) ] : null;
+			if ( $gl ) {
+				$link .= $gl['epithet'];
+				boi_cl_epithet_urls( $gl['url'] );
+			}
 			$tokens[ $i ]  = substr_replace( $tok, $link, $hit[1], strlen( $hit[0] ) );
 			$done[ $norm ] = true;
 			++$made[ $kind ];
@@ -396,21 +411,64 @@ function boi_cl_filter( $content ) {
 add_filter( 'the_content', 'boi_cl_filter', 22 );
 
 /**
+ * Glossary names that carry an epithet, by phrase key, where the Glossary
+ * pass runs (single articles): array( key => array( epithet, url ) ).
+ *
+ * @return array<string,array{epithet:string,url:string}>
+ */
+function boi_cl_epithet_index() {
+	if ( ! function_exists( 'boi_gl_map' ) || ! function_exists( 'boi_glossary_parent' ) || ! is_singular( 'post' ) || ! in_the_loop() ) {
+		return array();
+	}
+	$index = array();
+	foreach ( (array) boi_gl_map() as $item ) {
+		$key = boi_cl_key( isset( $item['phrase'] ) ? $item['phrase'] : '' );
+		if ( '' !== $key && ! empty( $item['epithet'] ) && ! isset( $index[ $key ] ) ) {
+			$index[ $key ] = array( 'epithet' => $item['epithet'], 'url' => $item['url'] );
+		}
+	}
+	return $index;
+}
+
+/**
+ * Glossary pages whose epithet a contextual link already carries on this
+ * request. With an address, records it.
+ *
+ * @param string|null $url Glossary page address.
+ * @return array<string,bool>
+ */
+function boi_cl_epithet_urls( $url = null ) {
+	static $urls = array();
+	if ( null !== $url ) {
+		$urls[ esc_url( $url ) ] = true;
+	}
+	return $urls;
+}
+
+/**
  * Words this pass linked keep that one link: a later Glossary link on the
- * same words is taken back to plain text (the epithet stays).
+ * same words is taken back to plain text (the epithet stays). A Glossary link
+ * to an entry whose epithet a contextual link already carries is taken back
+ * to plain text with its epithet, so the epithet appears once.
  */
 function boi_cl_unwrap_glossary( $content ) {
 	$keys = boi_cl_linked();
-	if ( ! $keys || false === strpos( $content, 'boi-gl-link' ) || ! boi_cl_applies() ) {
+	$urls = boi_cl_epithet_urls();
+	if ( ( ! $keys && ! $urls ) || false === strpos( $content, 'boi-gl-link' ) || ! boi_cl_applies() ) {
 		return $content;
 	}
-	return preg_replace_callback(
-		'#<a href="[^"]*" class="boi-gl-link">(.*?)</a>#s',
-		static function ( $m ) use ( $keys ) {
-			return null !== boi_cl_lookup( $keys, boi_cl_key( wp_strip_all_tags( $m[1] ) ) ) ? $m[1] : $m[0];
+	$out = preg_replace_callback(
+		'#<a href="([^"]*)" class="boi-gl-link">(.*?)</a>((?:&nbsp;|\s)*<span class="boi-epithet[^"]*"[^>]*>.*?</span>)?#s',
+		static function ( $m ) use ( $keys, $urls ) {
+			$epithet = isset( $m[3] ) ? $m[3] : '';
+			if ( isset( $urls[ $m[1] ] ) ) {
+				return $m[2];
+			}
+			return null !== boi_cl_lookup( $keys, boi_cl_key( wp_strip_all_tags( $m[2] ) ) ) ? $m[2] . $epithet : $m[0];
 		},
 		$content
 	);
+	return null === $out ? $content : $out;
 }
 add_filter( 'the_content', 'boi_cl_unwrap_glossary', 26 );
 

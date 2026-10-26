@@ -501,9 +501,13 @@ The pass (`inc/contextual-links.php`) runs at 22, before the Glossary links
 at 24, and adds at most one link a paragraph or list item, four to this site
 and three to the sister sites a page. The Glossary pass keeps its own rules
 and never links inside an existing link; a Glossary link on words this pass
-already linked is unwrapped at 26. Headings, quotations, captions, footnote
-marks, script blocks marked with `lang` or `dir="rtl"`, and the Notes list
-are never linked. A post's own lines win over the site-wide lines, which win
+already linked is unwrapped at 26. When this pass takes the first mention of
+a name the Glossary gives an epithet (Aisha, Khadija, Gabriel and the
+like), the epithet follows this link, and the Glossary link to that entry
+later in the text is unwrapped with its epithet, so the epithet appears
+once, at the first mention, as before. Headings, quotations, captions,
+footnote marks, script blocks marked with `lang` or `dir="rtl"`, the Notes
+list and the Glossary index (`boi-glossary__list`) are never linked. A post's own lines win over the site-wide lines, which win
 over the map; a name that contains a mapped phrase but means something else
 (`boi_cl_guards`) is matched and left alone.
 

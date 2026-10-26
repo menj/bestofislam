@@ -16,6 +16,10 @@ versioning.
 
 - **A phrase written with a curly apostrophe now matches every apostrophe form.** "Mark’s gospel" (the map's first entry for injil.help's Mark page) matched only a curly apostrophe, so neither "Mark's gospel" nor the texturized "Mark&#8217;s gospel" that WordPress renders was linked. The phrase's apostrophes are made straight before the pattern expands them to every form.
 - **Contextual links work without mbstring for non-ASCII phrases.** Without mbstring only ASCII is lowered, so lower-case "ṣābiʾūn" never matched the phrase "Ṣābiʾūn" in the pre-filter or in the lookup of the matched text. Both now compare a non-ASCII key case-insensitively (`boi_cl_contains()`, `boi_cl_lookup()`); with mbstring nothing changes.
+- **A name's epithet stays at its first mention.** The Glossary adds an epithet (رضي الله عنها, عليه السلام) only with its own link, at a name's first mention; the contextual pass now takes that mention, so the epithet moved to the second mention or vanished. A contextual link on such a name now carries the epithet itself (`boi_cl_epithet_index()`), and the Glossary link to the same entry further on is unwrapped together with its epithet (`boi_cl_epithet_urls()`, `boi_cl_unwrap_glossary()`). Ten names were affected, among them Aisha, Khadija, Gabriel/Jibril, Abraham and Ishmael.
+- **No contextual links inside the Glossary index.** The index renders in the page content, so its alias lines and definitions took up to seven links; `boi-glossary__list` is now a region where no link is made.
+- **Every apostrophe form matches,** including `&#8216;`, `&#39;`, `&rsquo;`, `&lsquo;`, `&apos;` and the modifier letter ʼ, as well as the forms matched before.
+- **A phrase pattern too large for PCRE leaves the text as it is.** Enough site-wide phrases could push the combined pattern past PCRE's size limit; the pattern is now checked once, and the content is returned unlinked rather than warned on paragraph after paragraph. The Glossary unwrap also returns the content unchanged if its pattern fails.
 
 ## [1.76.0] - 2026-10-26
 
