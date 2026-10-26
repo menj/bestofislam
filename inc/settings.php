@@ -42,6 +42,8 @@ function boi_get_options() {
 		'picks'               => '',
 		'hero_image'          => '',
 		'login_enabled'       => 0,
+		'security_headers'    => 1,
+		'security_hsts'       => 0,
 		'search_pretty'       => 1,
 		'search_base'         => 'search',
 		'errors_pages'        => 1,
@@ -158,7 +160,9 @@ function boi_sanitize_options( $input ) {
 			$enable  = ! empty( $input['login_enabled'] );
 			$problem = $enable ? boi_login_slug_problem( $slug ) : '';
 
-			$current['login_slug'] = $slug;
+			$current['login_slug']       = $slug;
+			$current['security_headers'] = empty( $input['security_headers'] ) ? 0 : 1;
+			$current['security_hsts']    = empty( $input['security_hsts'] ) ? 0 : 1;
 
 			if ( '' !== $problem ) {
 				// Never enable an address that could not work: report and stay off.
@@ -649,6 +653,24 @@ function boi_render_access_tab( $opts ) {
 					<p><strong><?php esc_html_e( 'In force:', 'bestofislam' ); ?></strong> <a href="<?php echo esc_url( boi_login_url_base() ); ?>"><?php echo esc_html( boi_login_url_base() ); ?></a></p>
 				<?php endif; ?>
 				<p class="description"><?php echo wp_kses( __( 'Locked out? Add <code>define( \'BOI_HIDE_LOGIN\', false );</code> to wp-config.php and log in at wp-login.php as usual.', 'bestofislam' ), array( 'code' => array() ) ); ?></p>
+			</td>
+		</tr>
+	</table>
+
+	<h2><?php esc_html_e( 'Security headers', 'bestofislam' ); ?></h2>
+	<table class="form-table" role="presentation">
+		<tr>
+			<th scope="row"><?php esc_html_e( 'Framing, file types, referrers', 'bestofislam' ); ?></th>
+			<td>
+				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[security_headers]" value="1" <?php checked( ! empty( $opts['security_headers'] ) ); ?> /> <?php esc_html_e( 'Send X-Frame-Options, a frame-ancestors policy, Cross-Origin-Opener-Policy, X-Content-Type-Options and Referrer-Policy', 'bestofislam' ); ?></label>
+				<p class="description"><?php esc_html_e( 'Other sites can no longer show these pages in a frame. Scripts, styles and embeds are not restricted.', 'bestofislam' ); ?></p>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row"><?php esc_html_e( 'HTTPS only (HSTS)', 'bestofislam' ); ?></th>
+			<td>
+				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[security_hsts]" value="1" <?php checked( ! empty( $opts['security_hsts'] ) ); ?> /> <?php esc_html_e( 'Send Strict-Transport-Security for one year', 'bestofislam' ); ?></label>
+				<p class="description"><strong><?php esc_html_e( 'Switch this on only when every address on the site works over HTTPS.', 'bestofislam' ); ?></strong> <?php esc_html_e( 'Browsers that have seen it refuse plain HTTP for a year, even after it is switched off here.', 'bestofislam' ); ?></p>
 			</td>
 		</tr>
 	</table>

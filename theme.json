@@ -41,9 +41,11 @@
 					"name": "Platypi",
 					"slug": "platypi",
 					"fontFamily": "Platypi, serif",
+					"fontDisplay": "swap",
 					"fontFace": [
 						{
 							"fontFamily": "Platypi",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "300 800",
 							"src": [
@@ -52,6 +54,7 @@
 						},
 						{
 							"fontFamily": "Platypi",
+							"fontDisplay": "swap",
 							"fontStyle": "italic",
 							"fontWeight": "300 800",
 							"src": [
@@ -67,6 +70,7 @@
 					"fontFace": [
 						{
 							"fontFamily": "\"EB Garamond\"",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "400",
 							"src": [
@@ -75,6 +79,7 @@
 						},
 						{
 							"fontFamily": "\"EB Garamond\"",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "500",
 							"src": [
@@ -83,6 +88,7 @@
 						},
 						{
 							"fontFamily": "\"EB Garamond\"",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "700",
 							"src": [
@@ -91,6 +97,7 @@
 						},
 						{
 							"fontFamily": "\"EB Garamond\"",
+							"fontDisplay": "swap",
 							"fontStyle": "italic",
 							"fontWeight": "400",
 							"src": [
@@ -99,6 +106,7 @@
 						},
 						{
 							"fontFamily": "\"EB Garamond\"",
+							"fontDisplay": "swap",
 							"fontStyle": "italic",
 							"fontWeight": "700",
 							"src": [
@@ -114,6 +122,7 @@
 					"fontFace": [
 						{
 							"fontFamily": "\"Ysabeau Office\"",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
 							"src": [
@@ -122,6 +131,7 @@
 						},
 						{
 							"fontFamily": "\"Ysabeau Office\"",
+							"fontDisplay": "swap",
 							"fontStyle": "italic",
 							"fontWeight": "100 900",
 							"src": [
@@ -134,9 +144,11 @@
 					"name": "Vollkorn",
 					"slug": "vollkorn",
 					"fontFamily": "Vollkorn, serif",
+					"fontDisplay": "swap",
 					"fontFace": [
 						{
 							"fontFamily": "Vollkorn",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "400 900",
 							"src": [
@@ -145,6 +157,7 @@
 						},
 						{
 							"fontFamily": "Vollkorn",
+							"fontDisplay": "swap",
 							"fontStyle": "italic",
 							"fontWeight": "400 900",
 							"src": [
@@ -169,7 +182,7 @@
 				},
 				{
 					"slug": "accent-1",
-					"color": "#1F6FCC",
+					"color": "#1D6AC3",
 					"name": "Azure"
 				},
 				{
@@ -221,6 +234,7 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--eb-garamond)",
+			"fontDisplay": "swap",
 			"fontSize": "1.1875rem",
 			"lineHeight": "1.5"
 		},
@@ -228,6 +242,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--platypi)",
+					"fontDisplay": "swap",
 					"fontWeight": "600",
 					"lineHeight": "1.15",
 					"letterSpacing": "-0.015em"

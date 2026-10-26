@@ -121,7 +121,7 @@ h2.has-hicon:not(.boi-term__label):not(.boi-footer__label):not(.boi-eyebrow) .bo
 	padding: 0.28em;
 	margin-inline-end: 0.45em;
 	vertical-align: -0.12em;
-	color: var(--wp--preset--color--accent-1, #1F6FCC);
+	color: var(--wp--preset--color--accent-1, #1D6AC3);
 	background: var(--wp--preset--color--accent-3, #EAF2FB);
 	border-radius: 0.35em;
 }

@@ -384,6 +384,14 @@ function boi_author_same_as( $author ) {
 
 	$links[] = (string) $author->user_url;
 
+	// A profile saved as http://this-site is given as the site really is.
+	$home = wp_parse_url( home_url( '/' ) );
+	foreach ( $links as $i => $link ) {
+		if ( isset( $home['scheme'], $home['host'] ) && 'https' === $home['scheme'] && strtolower( (string) wp_parse_url( $link, PHP_URL_HOST ) ) === strtolower( $home['host'] ) ) {
+			$links[ $i ] = set_url_scheme( $link, 'https' );
+		}
+	}
+
 	$links = array_values( array_unique( array_filter( array_map( 'esc_url_raw', $links ) ) ) );
 
 	return (array) apply_filters( 'boi_author_same_as', $links, $author );
