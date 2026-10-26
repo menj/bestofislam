@@ -178,7 +178,8 @@ function boi_image_credit_fields( $credit ) {
 			'@type' => 'Person',
 			'name'  => $credit['artist'],
 		);
-		$fields['creditText'] = $credit['artist'] . ', via ' . boi_image_source_name( isset( $credit['source'] ) ? $credit['source'] : '' );
+		$url                  = boi_image_source_url( isset( $credit['source'] ) ? $credit['source'] : '' );
+		$fields['creditText'] = '' === $url ? $credit['artist'] : $credit['artist'] . ', via ' . boi_image_source_name( $url );
 	}
 
 	if ( ! empty( $credit['licence'] ) ) {
@@ -189,7 +190,7 @@ function boi_image_credit_fields( $credit ) {
 		}
 	}
 
-	if ( ! empty( $credit['source'] ) ) {
+	if ( '' !== boi_image_source_url( isset( $credit['source'] ) ? $credit['source'] : '' ) ) {
 		$fields['acquireLicensePage'] = $credit['source'];
 	}
 

@@ -1009,7 +1009,11 @@ function boi_render_term_hero() {
 		return '';
 	}
 
-	return '<figure class="boi-term-hero alignwide"><img src="' . esc_url( $image['url'] ) . '" alt="" width="' . (int) $image['width'] . '" height="' . (int) $image['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $image ) . '</figcaption></figure>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	// A person's own portrait keeps its proportions; only the stock photos are
+	// cut to a banner, which would crop a face to its chin.
+	$class = boi_glossary_entry_portrait( $post->post_name ) ? 'boi-term-hero alignwide boi-term-hero--portrait' : 'boi-term-hero alignwide';
+
+	return '<figure class="' . esc_attr( $class ) . '"><img src="' . esc_url( $image['url'] ) . '" alt="" width="' . (int) $image['width'] . '" height="' . (int) $image['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $image ) . '</figcaption></figure>'; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /**

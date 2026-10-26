@@ -440,6 +440,11 @@ add_action( 'init', 'boi_continue_featured_images', 30 );
  * @return string
  */
 function boi_credit_text( $image ) {
+	if ( '' === boi_image_source_url( isset( $image['source'] ) ? $image['source'] : '' ) ) {
+		/* translators: 1: artist, 2: licence. */
+		return sprintf( __( 'Image: %1$s. %2$s.', 'bestofislam' ), $image['artist'], $image['licence'] );
+	}
+
 	return sprintf(
 		/* translators: 1: artist, 2: licence, 3: source site. */
 		__( 'Image: %1$s. %2$s, via %3$s.', 'bestofislam' ),
@@ -459,6 +464,37 @@ function boi_register_image_blocks() {
 	register_block_type( 'bestofislam/image-credits', array( 'render_callback' => 'boi_render_image_credits' ) );
 }
 add_action( 'init', 'boi_register_image_blocks' );
+
+/**
+ * An image's source when it is a web address, else ''. The theme's own
+ * artwork records the script that drew it ("bin/make-original-graphics.py"),
+ * which is no page to link to and no site to credit.
+ *
+ * @param string $source Source recorded in the manifest.
+ * @return string
+ */
+function boi_image_source_url( $source ) {
+	$source = trim( (string) $source );
+	return preg_match( '#^https?://#i', $source ) ? $source : '';
+}
+
+/**
+ * A credit line: the lead ("Image: Artist. Licence,") and a link to the
+ * source site, or the lead closed with a full stop when there is none.
+ *
+ * @param string $lead   Translated lead, ending in a comma.
+ * @param string $source Source recorded in the manifest.
+ * @return string Escaped HTML.
+ */
+function boi_credit_html( $lead, $source ) {
+	$url = boi_image_source_url( $source );
+
+	if ( '' === $url ) {
+		return esc_html( rtrim( $lead, " ,\u{060C}" ) . '.' );
+	}
+
+	return esc_html( $lead ) . ' <a href="' . esc_url( $url ) . '" rel="noopener">' . esc_html( boi_image_source_name( $url ) ) . '</a>';
+}
 
 /**
  * The name of the site an image comes from, for its credit line.
@@ -495,12 +531,7 @@ function boi_render_image_credit() {
 			return '';
 		}
 
-		return sprintf(
-			'<p class="boi-credit">%1$s <a href="%2$s" rel="noopener">%3$s</a></p>',
-			esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $bundled['artist'], $bundled['licence'] ) ),
-			esc_url( $bundled['source'] ),
-			esc_html( boi_image_source_name( $bundled['source'] ) )
-		);
+		return '<p class="boi-credit">' . boi_credit_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $bundled['artist'], $bundled['licence'] ), $bundled['source'] ) . '</p>';
 	}
 
 	$credit = get_post_meta( $id, '_boi_credit', true );
@@ -510,12 +541,18 @@ function boi_render_image_credit() {
 		return '' !== (string) $caption ? '<p class="boi-credit">' . esc_html( $caption ) . '</p>' : '';
 	}
 
-	return sprintf(
-		'<p class="boi-credit">%1$s <a href="%2$s" rel="noopener">%3$s</a></p>',
-		esc_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $credit['artist'], $credit['licence'] ) ),
-		esc_url( $credit['source'] ),
-		esc_html( boi_image_source_name( $credit['source'] ) )
-	);
+	return '<p class="boi-credit">' . boi_credit_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $credit['artist'], $credit['licence'] ), $credit['source'] ) . '</p>';
+}
+
+/**
+ * " Source" link for the credits list, or nothing for the theme's own artwork.
+ *
+ * @param array $image Manifest entry.
+ * @return string Escaped HTML.
+ */
+function boi_credit_source_link( $image ) {
+	$url = boi_image_source_url( isset( $image['source'] ) ? $image['source'] : '' );
+	return '' === $url ? '' : ' <a href="' . esc_url( $url ) . '" rel="noopener">' . esc_html__( 'Source', 'bestofislam' ) . '</a>';
 }
 
 /**
@@ -530,12 +567,11 @@ function boi_render_image_credits() {
 		$post = get_page_by_path( $slug, OBJECT, 'post' );
 
 		$items .= sprintf(
-			'<li><strong>%1$s</strong>: %2$s. %3$s. <a href="%4$s" rel="noopener">%5$s</a></li>',
+			'<li><strong>%1$s</strong>: %2$s. %3$s.%4$s</li>',
 			esc_html( $post ? get_the_title( $post ) : $slug ),
 			esc_html( $image['artist'] ),
 			esc_html( $image['licence'] ),
-			esc_url( $image['source'] ),
-			esc_html__( 'Source', 'bestofislam' )
+			boi_credit_source_link( $image )
 		);
 	}
 
@@ -544,12 +580,11 @@ function boi_render_image_credits() {
 
 		foreach ( (array) $entry['inline'] as $image ) {
 			$items .= sprintf(
-				'<li><strong>%1$s</strong>: %2$s. %3$s. <a href="%4$s" rel="noopener">%5$s</a></li>',
+				'<li><strong>%1$s</strong>: %2$s. %3$s.%4$s</li>',
 				esc_html( $post ? get_the_title( $post ) : $slug ),
 				esc_html( $image['artist'] ),
 				esc_html( $image['licence'] ),
-				esc_url( $image['source'] ),
-				esc_html__( 'Source', 'bestofislam' )
+				boi_credit_source_link( $image )
 			);
 		}
 	}
@@ -569,12 +604,11 @@ function boi_render_image_credits() {
 		foreach ( $group as $label => $images ) {
 			foreach ( $images as $image ) {
 				$items .= sprintf(
-					'<li><strong>%1$s</strong>: %2$s. %3$s. <a href="%4$s" rel="noopener">%5$s</a></li>',
+					'<li><strong>%1$s</strong>: %2$s. %3$s.%4$s</li>',
 					esc_html( $label ),
 					esc_html( $image['artist'] ),
 					esc_html( $image['licence'] ),
-					esc_url( $image['source'] ),
-					esc_html__( 'Source', 'bestofislam' )
+					boi_credit_source_link( $image )
 				);
 			}
 		}

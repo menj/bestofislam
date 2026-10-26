@@ -782,6 +782,20 @@
 	aspect-ratio: 3 / 1;
 }
 
+/* A person's own portrait: its own proportions, centred, never a banner. */
+.boi-article .boi-term-hero--portrait img {
+	aspect-ratio: auto;
+	inline-size: auto;
+	max-inline-size: min(100%, 20rem);
+	max-block-size: 26rem;
+	margin-inline: auto;
+	object-position: 50% 20%;
+}
+
+.boi-article .boi-term-hero.boi-term-hero--portrait figcaption {
+	text-align: center;
+}
+
 .boi-glossary__hero figcaption,
 .boi-article .boi-term-hero figcaption {
 	margin-block-start: 0.4rem;
