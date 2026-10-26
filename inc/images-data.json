@@ -933,31 +933,6 @@
    }
   ]
  },
- "quran-4-34": {
-  "featured": {
-   "file": "quran-4-34.avif",
-   "alt": "An open Quran on a wooden stand atop a prayer rug, emphasizing Islamic faith.",
-   "artist": "GR  Stocks",
-   "licence": "Pexels licence",
-   "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522572/"
-  },
-  "inline": [
-   {
-    "file": "quran-4-34-1.avif",
-    "alt": "A Quran set on a wooden lectern with soft lighting creating a serene ambiance.",
-    "artist": "Yaşar Başkurt",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/"
-   },
-   {
-    "file": "quran-4-34-2.avif",
-    "alt": "An open Quran placed on a wooden stand with visible Arabic calligraphy, symbolizing faith and tradition.",
-    "artist": "GR  Stocks",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
-   }
-  ]
- },
  "slavery-in-islam": {
   "featured": {
    "file": "slavery-in-islam.avif",
@@ -2594,6 +2569,81 @@
     "artist": "Council of Europe; SVG by Wikimedia Commons contributors",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Europe.svg"
+   }
+  ]
+ },
+ "does-the-quran-allow-wife-beating": {
+  "featured": {
+   "file": "does-the-quran-allow-wife-beating.avif",
+   "alt": "An open Quran on a wooden stand atop a prayer rug, emphasizing Islamic faith.",
+   "artist": "GR  Stocks",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522572/"
+  },
+  "inline": [
+   {
+    "file": "does-the-quran-allow-wife-beating-1.avif",
+    "alt": "A Quran set on a wooden lectern with soft lighting creating a serene ambiance.",
+    "artist": "Yaşar Başkurt",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/"
+   },
+   {
+    "file": "does-the-quran-allow-wife-beating-2.avif",
+    "alt": "An open Quran placed on a wooden stand with visible Arabic calligraphy, symbolizing faith and tradition.",
+    "artist": "GR  Stocks",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
+   }
+  ]
+ },
+ "paul-claim-to-apostleship": {
+  "featured": {
+   "file": "paul-claim-to-apostleship.avif",
+   "alt": "Caravaggio, Conversion on the Way to Damascus (1601): Paul lies on his back beneath his horse, arms raised, blinded by light.",
+   "artist": "Caravaggio",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1).jpg"
+  },
+  "inline": [
+   {
+    "file": "paul-claim-to-apostleship-1.avif",
+    "alt": "Rembrandt, Saint Paul (about 1657): the apostle at a desk, pen in hand, looking up from his writing.",
+    "artist": "Rembrandt van Rijn and workshop; National Gallery of Art, Washington",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Paul,_Rembrandt_van_Rijn_(and_Workshop%3F),_c._1657.jpg"
+   },
+   {
+    "file": "paul-claim-to-apostleship-2.avif",
+    "alt": "Peter and Paul seated in a landscape, disputing, in a 1527 engraving after Lucas van Leyden.",
+    "artist": "Lucas van Leyden; Rijksmuseum, Amsterdam",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Petrus_en_Paulus_zittend_in_een_landschap,_RP-P-OB-1686.jpg"
+   }
+  ]
+ },
+ "pauline-letters-authorship": {
+  "featured": {
+   "file": "pauline-letters-authorship.avif",
+   "alt": "A leaf of Papyrus 46, the oldest surviving collection of Paul's letters, around AD 200, showing 2 Corinthians 11:33 to 12:9.",
+   "artist": "University of Michigan Library, Papyrology Collection",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Ann_Arbor,_University_of_Michigan_P.Mich.inv._6238_(Papyrus_46)_fol._142r_-_2_Corinthians_11,33-12,9.jpg"
+  },
+  "inline": [
+   {
+    "file": "pauline-letters-authorship-1.avif",
+    "alt": "A bifolio of Papyrus 46 in the Chester Beatty, Dublin: the end of Romans on one leaf, the end of Philippians and the start of Colossians on the other.",
+    "artist": "Chester Beatty, Dublin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dublin,_Chester_Beatty_Ms_BP_II_fol._15%2690_Bifolio_from_Paul%27s_Letter_to_the_Romans,_the_end_of_Paul%27s_Letter_to_the_Philippians_and_the_beginning_of_Paul%27s_Letter_to_the_Colossians.jpg"
+   },
+   {
+    "file": "pauline-letters-authorship-2.avif",
+    "alt": "Valentin de Boulogne, Saint Paul Writing His Epistles (about 1618 to 1620): Paul at a table with pen, ink and open books.",
+    "artist": "Valentin de Boulogne; Museum of Fine Arts, Houston",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:PaulT.jpg"
    }
   ]
  }

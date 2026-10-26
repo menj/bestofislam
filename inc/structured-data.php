@@ -328,6 +328,12 @@ function boi_article_entities( $post ) {
 			'name'  => $author->display_name,
 			'url'   => get_author_posts_url( $author->ID ),
 		);
+
+		$same_as = boi_author_same_as( $author );
+
+		if ( $same_as ) {
+			$article['author']['sameAs'] = $same_as;
+		}
 	}
 
 	if ( '' !== $section ) {
@@ -355,6 +361,34 @@ function boi_article_entities( $post ) {
 }
 
 /**
+ * The site owner's profiles elsewhere, for the author's sameAs: the Author
+ * URI from style.css, the owner's own addresses, and the website the user
+ * profile records. Other authors get only their profile website.
+ *
+ * @param WP_User $author Author.
+ * @return string[] Absolute URLs, in a stable order.
+ */
+function boi_author_same_as( $author ) {
+	$links = array();
+
+	if ( function_exists( 'boi_seed_author' ) && (int) $author->ID === (int) boi_seed_author() ) {
+		$theme = wp_get_theme();
+		$links = array(
+			(string) $theme->get( 'AuthorURI' ),
+			'https://ms.wikipedia.org/wiki/Mohd_Elfie_Nieshaem_Juferi',
+			'https://my.linkedin.com/in/mohd-elfie-nieshaem-bin-juferi',
+			'https://menj.blog/',
+		);
+	}
+
+	$links[] = (string) $author->user_url;
+
+	$links = array_values( array_unique( array_filter( array_map( 'esc_url_raw', $links ) ) ) );
+
+	return (array) apply_filters( 'boi_author_same_as', $links, $author );
+}
+
+/**
  * ProfilePage for an author archive: a page about one person tied to the site.
  *
  * @param WP_User|null $author Author.
@@ -377,6 +411,12 @@ function boi_profile_entities( $author ) {
 
 	if ( '' !== $bio ) {
 		$person['description'] = $bio;
+	}
+
+	$same_as = boi_author_same_as( $author );
+
+	if ( $same_as ) {
+		$person['sameAs'] = $same_as;
 	}
 
 	$profile = array(

@@ -59,9 +59,9 @@ weight = {t: math.log(len(text) / n) for t, n in df.items()}
 PINS = {
     'islamophobia-5-facts': ['taqiyya-5-myths', 'war-and-killing-in-islam', 'islam-religion-of-peace', 'crusades-5-facts'],
     'taqiyya-5-myths': ['kharijites-and-takfir', 'war-and-killing-in-islam', 'islamophobia-5-facts', 'islam-religion-of-peace'],
-    'quran-4-34': ['hijab-and-modesty', 'child-marriage-in-islam', 'questions-about-aisha', 'quranic-ethics'],
-    'hijab-and-modesty': ['quran-4-34', 'questions-about-aisha', 'women-in-the-prophets-life', 'islamophobia-5-facts'],
-    'women-in-the-prophets-life': ['questions-about-aisha', 'companions-who-started-with-nothing', 'quran-4-34', 'hijab-and-modesty'],
+    'does-the-quran-allow-wife-beating': ['hijab-and-modesty', 'child-marriage-in-islam', 'questions-about-aisha', 'quranic-ethics'],
+    'hijab-and-modesty': ['does-the-quran-allow-wife-beating', 'questions-about-aisha', 'women-in-the-prophets-life', 'islamophobia-5-facts'],
+    'women-in-the-prophets-life': ['questions-about-aisha', 'companions-who-started-with-nothing', 'does-the-quran-allow-wife-beating', 'hijab-and-modesty'],
     'kharijites-and-takfir': ['taqiyya-5-myths', 'war-and-killing-in-islam', 'islam-religion-of-peace', 'apostasy-in-islam'],
     'war-and-killing-in-islam': ['islam-religion-of-peace', 'kharijites-and-takfir', 'crusades-5-facts', 'jizya'],
     'mosques-adapt-to-place': ['islamic-art-and-the-one-god', 'islam-in-china', 'dome-inscriptions', 'before-your-first-friday-prayer'],

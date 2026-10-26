@@ -51,6 +51,7 @@
   "type": "person",
   "ar": "مارية القبطية",
   "tr": "Māriya al-Qibṭiyya",
+  "epithet": "رضي الله عنها",
   "def": "An Egyptian Christian woman sent as a gift by the ruler of Egypt, and the mother of the Prophet’s son Ibrahim.",
   "what": [
    "Mariya was sent to the Prophet by the Muqawqis, governor of Egypt, in about 628 with her sister Sirin. She accepted Islam and bore him a son, Ibrahim, who died as an infant. She is counted among his household and was honoured after his death."
@@ -88,7 +89,7 @@
   "articles": [
    "child-marriage-in-islam",
    "questions-about-aisha",
-   "quran-4-34",
+   "does-the-quran-allow-wife-beating",
    "sharia-and-hudud"
   ],
   "aliases": [
@@ -225,6 +226,7 @@
   "type": "prophet",
   "ar": "موسى",
   "tr": "Mūsā",
+  "epithet": "عليه السلام",
   "def": "The prophet most often named in the Quran, to whom God spoke and gave the Torah.",
   "what": [
    "Moses is named about 136 times. The Quran tells of his birth and rescue from the river, his flight to Midian, God’s call at the burning bush (20:9–14), his confrontation with Pharaoh, the crossing of the sea and the giving of the Torah (7:142–145). “God spoke to Moses directly” (4:164)."
@@ -310,6 +312,7 @@
   "type": "prophet",
   "ar": "محمد",
   "tr": "Muḥammad",
+  "epithet": "ﷺ",
   "def": "The final prophet of Islam (570–632), to whom the Quran was revealed.",
   "what": [
    "Born in Mecca, orphaned young and known as al-Amin, “the trustworthy”, he received the first revelation in the cave of Hira at about forty. After thirteen years of preaching and persecution he migrated to Medina in 622, and returned to Mecca in 630, forgiving his enemies. He died in 632. The Quran calls him “a mercy to the worlds” (21:107) and “an excellent example” (33:21)."
@@ -795,7 +798,7 @@
   "misread": "Translating it as “lucky” or “fortunate” misses that the blessing in view comes from God.",
   "sources": [],
   "terms": [
-   "mubarak-2",
+   "mabruk",
    "quran",
    "isa",
    "eid"
@@ -809,10 +812,10 @@
   }
  },
  {
-  "slug": "mubarak-2",
-  "title": "Mubarak",
+  "slug": "mabruk",
+  "title": "Mabruk",
   "ar": "مبارك / مبروك",
-  "tr": "Mubārak, mabrūk",
+  "tr": "Mabrūk, mubārak",
   "def": "“May it be blessed”: said when someone acquires something new or marks a happy event.",
   "what": [
    "<em>Mubārak</em>, or <em>mabrūk</em> in many dialects, is the congratulation said when a person acquires something new, such as a house, a car or a garment, or marks a happy event. It means “may it be blessed”. The speaker prays that God will place blessing in what the person has received. Muslims also say <em>bārak Allāhu laka</em>, “may God bless you”, to a bridegroom, in the manner of a supplication reported from the Prophet Muhammad (peace be upon him) in the hadith collections. The festivals have their own form, <em>ʿīd mubārak</em>. A common reply is <em>Allāhu yubārik fīk</em>, “may God bless you”."
@@ -827,7 +830,10 @@
   ],
   "articles": [],
   "type": "term",
-  "aliases": [],
+  "aliases": [
+   "Mabrook",
+   "Mubarak (greeting)"
+  ],
   "faruqi": {
    "page": 60,
    "term": "MUBĀRAK, OR MUBRŪK."

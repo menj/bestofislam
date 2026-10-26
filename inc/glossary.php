@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '7';
+const BOI_GLOSSARY_VERSION = '9';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -92,7 +92,9 @@ function boi_glossary_content( $t ) {
 		// the Uthmani text, not just claimed) rather than a name, term or
 		// non-Quranic formula; those alone get the Uthmanic Quran face.
 		$script_class = ! empty( $t['quran_ref'] ) ? 'boi-term__script boi-script-quran' : 'boi-term__script';
-		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
+		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . boi_glossary_epithet_html( $t ) . '</p>';
+	} elseif ( '' !== boi_glossary_epithet_html( $t, false ) ) {
+		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . boi_glossary_epithet_html( $t, false ) . '</p>';
 	}
 	if ( ! empty( $t['tr'] ) ) {
 		$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
@@ -264,7 +266,12 @@ function boi_glossary_sync() {
 			}
 
 			$hashes = (array) get_option( 'boi_glossary_hashes', array() );
-			$batch  = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
+
+			if ( 0 === $cursor ) {
+				boi_glossary_migrate_slugs( $hashes );
+			}
+
+			$batch = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
 
 			$failed = isset( $progress['failed'] ) && BOI_GLOSSARY_VERSION === $progress['version'] ? (int) $progress['failed'] : 0;
 
@@ -322,6 +329,85 @@ add_action( 'boi_glossary_continue', 'boi_glossary_sync' );
  */
 function boi_glossary_fingerprint( $post ) {
 	return boi_content_fingerprint( $post->post_content . "\n" . $post->post_excerpt );
+}
+
+/**
+ * Entry slugs that have changed, old => current. A slug ending in -2 is the
+ * suffix WordPress adds on a collision and never belongs in an address;
+ * entries that carried one were merged into the entry they duplicated or
+ * given their own name. Verse numbers are kept out of addresses too.
+ *
+ * @return array
+ */
+function boi_glossary_retired_slugs() {
+	return (array) apply_filters(
+		'boi_glossary_retired_slugs',
+		array(
+			'abd-2'                            => 'abd',
+			'ahmad-2'                          => 'ahmad',
+			'bismi-allah-al-rahman-al-rahim-2' => 'bismi-allah-al-rahman-al-rahim',
+			'hafiz-al-2'                       => 'hafeez-al',
+			'mubarak-2'                        => 'mabruk',
+			'domestic-discipline-quran-4-34'   => 'domestic-discipline',
+		)
+	);
+}
+
+/**
+ * Brings pages written under a retired slug up to date: a renamed entry's
+ * page keeps its identity and takes the new slug and title; a merged
+ * duplicate is trashed once the entry it duplicated has its own page, or
+ * unpublished if the owner had edited it. The old addresses are redirected
+ * by inc/legacy-permalinks.php.
+ *
+ * @param array $hashes Fingerprints by slug, updated in place.
+ * @return void
+ */
+function boi_glossary_migrate_slugs( &$hashes ) {
+	foreach ( boi_glossary_retired_slugs() as $old => $new ) {
+		$page = get_page_by_path( 'glossary/' . $old, OBJECT, 'page' );
+
+		if ( ! $page || 'trash' === $page->post_status ) {
+			continue;
+		}
+
+		$current = get_page_by_path( 'glossary/' . $new, OBJECT, 'page' );
+
+		if ( $current && 'trash' !== $current->post_status ) {
+			// A duplicate still as the theme wrote it goes to the trash. One the
+			// owner has edited is unpublished instead, so the address is retired
+			// but nothing they wrote is lost: it waits in Drafts to be merged by
+			// hand into the entry that replaced it.
+			if ( isset( $hashes[ $old ] ) && $hashes[ $old ] === boi_glossary_fingerprint( $page ) ) {
+				wp_trash_post( $page->ID );
+			} elseif ( 'draft' !== $page->post_status ) {
+				boi_update_post(
+					array(
+						'ID'          => $page->ID,
+						'post_status' => 'draft',
+					)
+				);
+			}
+
+			unset( $hashes[ $old ] );
+			continue;
+		}
+
+		$term = boi_glossary_term_by_slug( $new );
+
+		boi_update_post(
+			array(
+				'ID'         => $page->ID,
+				'post_name'  => $new,
+				'post_title' => $term ? $term['title'] : $page->post_title,
+			)
+		);
+
+		if ( isset( $hashes[ $old ] ) ) {
+			$hashes[ $new ] = boi_glossary_fingerprint( get_post( $page->ID ) );
+			unset( $hashes[ $old ] );
+		}
+	}
 }
 
 /**
@@ -625,6 +711,18 @@ function boi_glossary_entry_image( $kind, $slug ) {
  *                     null when the entry has none.
  */
 function boi_glossary_entry_portrait( $slug ) {
+	$term = boi_glossary_term_by_slug( $slug );
+
+	return ( $term && ! empty( $term['portrait'] ) && ! empty( $term['portrait']['file'] ) ) ? $term['portrait'] : null;
+}
+
+/**
+ * An entry's raw data record, by slug.
+ *
+ * @param string $slug Entry slug.
+ * @return array|null
+ */
+function boi_glossary_term_by_slug( $slug ) {
 	static $by_slug = null;
 
 	if ( null === $by_slug ) {
@@ -636,9 +734,28 @@ function boi_glossary_entry_portrait( $slug ) {
 		}
 	}
 
-	$term = isset( $by_slug[ $slug ] ) ? $by_slug[ $slug ] : null;
+	return isset( $by_slug[ $slug ] ) ? $by_slug[ $slug ] : null;
+}
 
-	return ( $term && ! empty( $term['portrait'] ) && ! empty( $term['portrait']['file'] ) ) ? $term['portrait'] : null;
+/**
+ * The Arabic epithet that follows a name: the blessing on the Prophet, the
+ * peace on the other prophets, the "may God be pleased with" on the
+ * Companions. An entry carries it in its "epithet" field; "epithet_rubric"
+ * sets it in red ink, after the manuscript convention.
+ *
+ * @param array|null $t    Entry.
+ * @param bool       $lead Whether to lead with a non-breaking space, so the
+ *                         epithet stays on the same line as the name.
+ * @return string Markup, or '' when the entry has no epithet.
+ */
+function boi_glossary_epithet_html( $t, $lead = true ) {
+	if ( ! is_array( $t ) || empty( $t['epithet'] ) || ! is_string( $t['epithet'] ) ) {
+		return '';
+	}
+
+	$class = 'boi-epithet' . ( ! empty( $t['epithet_rubric'] ) ? ' boi-epithet--rubric' : '' );
+
+	return ( $lead ? '&nbsp;' : '' ) . '<span class="' . esc_attr( $class ) . '" lang="ar" dir="rtl">' . esc_html( $t['epithet'] ) . '</span>';
 }
 
 /**

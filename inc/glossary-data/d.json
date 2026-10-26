@@ -112,6 +112,7 @@
   "type": "prophet",
   "ar": "داود",
   "tr": "Dāwūd",
+  "epithet": "عليه السلام",
   "def": "King David, honoured in the Quran as a prophet and king to whom God gave the Psalms.",
   "what": [
    "The Quran says God gave David the Zabur (4:163, 17:55), made him a ruler on earth (38:26), taught him to make coats of mail (21:80) and made mountains and birds echo his praises (21:79, 38:18–19). He killed Goliath (2:251). The Prophet said that David’s was the best fast, on alternate days, and the best prayer, at one half of the night (Sahih al-Bukhari)."
@@ -454,6 +455,7 @@
   "type": "prophet",
   "ar": "ذو الكفل",
   "tr": "Dhū al-Kifl",
+  "epithet": "عليه السلام",
   "def": "A prophet named in the Quran among the steadfast (21:85, 38:48), whose identity is not given.",
   "what": [
    "He is mentioned after Ishmael and Idris as among “the patient” (21:85–86) and “the best” (38:48). Commentators have identified him with Ezekiel, Elijah, Joshua or others, and some say he was a righteous man and not a prophet."
@@ -703,8 +705,8 @@
   "aliases": []
  },
  {
-  "slug": "domestic-discipline-quran-4-34",
-  "title": "Domestic discipline (Quran 4:34)",
+  "slug": "domestic-discipline",
+  "title": "Domestic discipline",
   "type": "topic",
   "ar": "",
   "tr": "",
@@ -724,7 +726,9 @@
   "articles": [],
   "aliases": [
    "Beating Of Women",
-   "Wife-Beating"
+   "Wife-Beating",
+   "Quran 4:34",
+   "Domestic Discipline (Quran 4:34)"
   ]
  },
  {

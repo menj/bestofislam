@@ -1,0 +1,32 @@
+name: Content checks
+
+# Refuses a change that would ship a Glossary slug with a collision suffix,
+# a dangling link between entries, an article whose footnotes do not match
+# its Notes, or JSON that does not parse. See bin/check-content.py.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check Glossary data and article content
+        run: python bin/check-content.py
+
+      - name: PHP syntax
+        run: |
+          for f in functions.php inc/*.php; do php -l "$f" > /dev/null || exit 1; done
+          echo "PHP syntax OK"
