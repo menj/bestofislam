@@ -31,7 +31,7 @@ jobs:
         run: |
           version=$(sed -n 's/^Version: *//p' style.css | head -1)
           mkdir -p dist/bestofislam
-          rsync -a --exclude='.git' --exclude='.github' --exclude='.githooks' --exclude='bin' --exclude='dist' ./ dist/bestofislam/
+          rsync -a --exclude='.git' --exclude='.github' --exclude='.githooks' --exclude='bin' --exclude='tests' --exclude='dist' ./ dist/bestofislam/
           (cd dist && zip -qr "bestofislam-${version}.zip" bestofislam)
           ls -la dist
 

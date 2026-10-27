@@ -59,6 +59,7 @@ Under Appearance, Theme Options, in six tabs:
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
 - **Search engines:** meta descriptions, and readable search addresses with their base word.
 - **Access:** the custom login address, and the list of unlisted items.
+- **Security:** XML-RPC, application passwords and REST writes from outside the browser switched off, the gambling spam gate, 410 Gone for removed spam, the spam scan and clean-up tools, buttons that revoke every application password and end every session, and the attack reports and security log. Add `define( 'BOI_SECURITY_LOCK', false );` to `wp-config.php` to lift the three locks in an emergency.
 
 Under Appearance, Contextual Links, in three tabs:
 
@@ -101,7 +102,8 @@ bestofislam/
 │                        features, front, glossary-links, icons,
 │                        images, login, login-screen, questions, reading,
 │                        reflections, schema, search, search-permalinks,
-│                        sections, seo, settings, setup, structured-data,
+│                        sections, security, security-detector, seo,
+│                        settings, setup, structured-data,
 │                        taxonomy, unlist, voting
 ├── inc/data/            network-links.json, the shared map of phrases to
 │                        inner pages, identical in all seven themes

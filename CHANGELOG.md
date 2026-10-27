@@ -6,6 +6,27 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.0] - 2026-10-27
+
+### Added
+
+- A Security tab under Appearance, Theme Options (`inc/security.php`, `inc/security-detector.php`, `assets/js/security.js`, `assets/css/security.css`), ported from the sister theme after the October 2026 attack on abrahamic-religions.com: XML-RPC password guessing from 701 rotating addresses under forged "Jetpack by WordPress.com" user agents, a correct password found, then a casino spam post every 18 to 20 minutes through wp.newPost under the owner's own account. All switches are on by default.
+  - XML-RPC off: xmlrpc.php answers 403, and requests are counted per day (and those posing as Jetpack), never logged one by one.
+  - Application passwords off.
+  - REST writes made while logged in must come from a browser session with a valid `wp_rest` nonce. Anonymous requests are unchanged, so the contact form (admin-post.php), voting (`bestofislam/v1/vote`, sent with its nonce), the block editor and Rank Math work as before.
+  - A correct password sent through XML-RPC is refused even when XML-RPC is switched back on, with an admin notice telling the owner to change it.
+  - Failed logins counted by account name over a rolling day, with an admin notice for a real account guessed ten times or more.
+  - The spam gate: a post or page that reads as gambling spam, or anything published from outside the editor, is saved as Pending and logged.
+  - A batch scan of posts and pages with a move to the trash, never a permanent delete; 410 Gone on the addresses of spam trashed there; deletion of empty spam categories on request only.
+  - Buttons to revoke every application password and to log out every session, a table of administrator accounts, daily attack counts, accounts being guessed, posts per day, burst publishing, seeded content carrying gambling links, and the security log.
+  - `define( 'BOI_SECURITY_LOCK', false );` in wp-config.php lifts the XML-RPC, application password and REST locks without touching the options.
+- Seeded content is exempt from the gate and the scan: the 117 articles of `content/` by slug (and their earlier slugs), the seeded pages, the Glossary page and every Glossary entry (by slug and by its `_boi_term_type` meta). The theme registers no post types of its own, so only posts and pages are examined.
+- `tests/security-detector-test.php`: scores every seeded article, excerpt, page, section and all 797 Glossary entries and expects zero on each, and expects all 51 attack titles and slugs and a gambling link to be flagged. Weak words (odds, wager, slots, bet) count only in a title or slug, since the articles use "odds", "Pascal's wager" and "slots" in their text. Run `php tests/security-detector-test.php`.
+
+### Changed
+
+- The unconditional XML-RPC block in `inc/login.php` now follows the Security tab's XML-RPC switch, which is on by default, so nothing changes unless the owner switches it off. Pingback methods and the discovery links stay removed either way.
+
 ## [1.77.1] - 2026-10-27
 
 ### Changed

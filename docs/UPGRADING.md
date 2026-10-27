@@ -52,6 +52,28 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading from 1.77.1 to 1.78.0
+
+Replace the theme files. The Security tab (Appearance, Theme Options, Security) is on by default: XML-RPC, application passwords and REST writes from outside the browser stop at once. XML-RPC was already off in this theme, so only the last two are new.
+
+After the October 2026 attack on the sister site, the owner checklist:
+
+1. Change the password of every administrator to a long random one used nowhere else, then Log Out Everywhere Else (Users, Profile), or press "Log out all sessions" on the Security tab.
+2. Create a new administrator whose name is not the site name, log in as it, and delete the old account, attributing its content to the new one.
+3. Press "Revoke all application passwords".
+4. Check Plugins for anything not installed by you (auto-posting, AI writers, remote management) and remove it. Check Users for unknown accounts.
+5. Run the spam scan, select the results, move them to the trash, then delete the empty spam categories.
+6. Purge any page cache, then resubmit the sitemap in Google Search Console.
+7. Optional, at the server: deny xmlrpc.php in .htaccess as well, so the requests never reach PHP. Jetpack needs XML-RPC; if Jetpack is used, switch "Turn off XML-RPC" off instead (password logins through XML-RPC stay refused).
+
+If a lock breaks a tool you rely on, add this line to `wp-config.php`. It turns the three locks off without changing the options:
+
+```php
+define( 'BOI_SECURITY_LOCK', false );
+```
+
+The spam gate holds anything published through XML-RPC or a REST application password as Pending, whatever it says. Seeded articles, pages and Glossary entries are exempt from the gate and the scan.
+
 ## If you are locked out
 
 The custom login address can be switched off without logging in. Add this line

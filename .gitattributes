@@ -6,3 +6,4 @@
 .gitignore      export-ignore
 .editorconfig   export-ignore
 bin             export-ignore
+tests           export-ignore
