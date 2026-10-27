@@ -50,6 +50,11 @@ function boi_get_options() {
 		'errors_alerts'       => 1,
 		'errors_email'        => '',
 		'errors_cooldown'     => 30,
+		'sec_xmlrpc_off'        => 1,
+		'sec_app_passwords_off' => 1,
+		'sec_rest_lock'         => 1,
+		'sec_spam_gate'         => 1,
+		'sec_gone'              => 1,
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
@@ -180,6 +185,12 @@ function boi_sanitize_options( $input ) {
 			$current['errors_cooldown'] = max( 5, min( 1440, (int) ( isset( $input['errors_cooldown'] ) ? $input['errors_cooldown'] : 30 ) ) );
 			break;
 
+		case 'security':
+			foreach ( array( 'sec_xmlrpc_off', 'sec_app_passwords_off', 'sec_rest_lock', 'sec_spam_gate', 'sec_gone' ) as $field ) {
+				$current[ $field ] = empty( $input[ $field ] ) ? 0 : 1;
+			}
+			break;
+
 		case 'voting':
 			$current['voting_enabled'] = empty( $input['voting_enabled'] ) ? 0 : 1;
 			// The two dependent fields are disabled, and so not submitted, while
@@ -226,8 +237,9 @@ function boi_render_settings_page() {
 		'voting'  => __( 'Voting', 'bestofislam' ),
 		'content' => __( 'Content', 'bestofislam' ),
 		'seo'     => __( 'Search engines', 'bestofislam' ),
-		'access'  => __( 'Access', 'bestofislam' ),
-		'errors'  => __( 'Errors', 'bestofislam' ),
+		'access'   => __( 'Access', 'bestofislam' ),
+		'security' => __( 'Security', 'bestofislam' ),
+		'errors'   => __( 'Errors', 'bestofislam' ),
 	);
 
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
@@ -275,6 +287,15 @@ function boi_render_settings_page() {
 		case 'access':
 			boi_render_access_tab( $opts );
 			break;
+		case 'security':
+			// The settings save with the form; the tools and reports below it
+			// post to admin-post.php and admin-ajax.php, so they sit outside it.
+			boi_sec_render_settings( $opts );
+			submit_button();
+			echo '</form>';
+			boi_sec_render_tools();
+			echo '</div>';
+			return;
 		case 'errors':
 			boi_render_errors_tab( $opts );
 			break;
