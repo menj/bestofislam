@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.1] - 2026-10-27
+
+### Changed
+
+- Four articles now name their own subject in the introduction, where a term-coverage check (TF*IDF over all 117 articles) found the title's subject missing from the text: Fate and free will in Islam (fate-and-free-will), the end of time (end-of-time), the natural world verses (natural-world-verses) and why the first Muslims kept the faith (first-muslims-kept-the-faith). One clause each; no fact, figure or source changed.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.77.0] - 2026-10-26
 
 ### Added
