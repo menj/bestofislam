@@ -10,12 +10,16 @@ versioning.
 
 ### Added
 
-- **laʿnat Allāh after the name of Paul of Tarsus.** لعنة الله, "the curse of God", is set after Paul's name as a calligraphic mark, the shortcode `[boi_lanah]` (`inc/util.php`). The span `.boi-lanah` (`assets/css/scripts.css`) draws `assets/images/lanat-allah.svg` (copied from injil.help) as a mask in `--boi-rubric`, the red ink of the rubric epithets, so it follows the appearance toggle; in forced-colours mode it is drawn in `CanvasText`. The words "laʿnat Allāh, the curse of God" stay inside, visually hidden, for screen readers, search and a copy and paste, and show as written where the browser cannot draw a mask. The contextual-link engine skips `.boi-lanah`, and the glossary linker skips its text.
+- laʿnat Allāh now follows the name of Paul of Tarsus. لعنة الله, "the curse of God", is set after Paul's name as a calligraphic mark, the shortcode `[boi_lanah]` (`inc/util.php`). The span `.boi-lanah` (`assets/css/scripts.css`) draws `assets/images/lanat-allah.svg` (copied from injil.help) as a mask in `--boi-rubric`, the red ink of the rubric epithets, so it follows the appearance toggle; in forced-colours mode it is drawn in `CanvasText`. The words "laʿnat Allāh, the curse of God" stay inside, visually hidden, for screen readers, search and a copy and paste, and show as written where the browser cannot draw a mask. The contextual-link engine skips `.boi-lanah`, and the glossary linker skips its text.
 - It is placed by hand and kept rare, three times in two articles, at the sentences that give the article's verdict:
-  - **Was Paul an apostle?** (paul-claim-to-apostleship): "That is a test of companionship. Paul met no part of it", and the summing up, "Strip the question to what the sources support. Paul never met Jesus."
-  - **Paul and the Law** (paul-and-the-law): "Paul did. That is the tension Muslims point to".
+  - Twice in Was Paul an apostle? (paul-claim-to-apostleship), at "That is a test of companionship. Paul met no part of it", and the summing up, "Strip the question to what the sources support. Paul never met Jesus."
+  - Once in Paul and the Law (paul-and-the-law), at "Paul did. That is the tension Muslims point to".
 - It never appears in titles, headings, excerpts, descriptions, menus, alt text, structured data or quotations; excerpts and descriptions strip shortcodes. The Pauline letters and Second Peter articles, which weigh authorship, carry none.
-- Font licence: the calligraphy is drawn from the outlines of Dubidam Arabic (NamelaType), whose metadata names a free personal-use licence. A web licence is the site owner's to hold.
+- The calligraphy is drawn from the outlines of Dubidam Arabic (NamelaType), whose metadata names a free personal-use licence. A web licence is the site owner's to hold.
+
+### Changed
+
+- Prose revised to the house style.
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
 
@@ -23,13 +27,13 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Changed
 
-- **Islamic dilemma** (islamic-dilemma): the article is expanded for the network brief, keeping the same slug and URL. It now has a fair statement of the argument (5:47, 5:68, 10:94, 3:3, 5:48), and the five entries draw on Shamela-checked sources: Ibn Kathir on 3:3, 5:47, 5:48, 5:68 and 10:94; al-Tabari on 4:46; Ibn Taymiyya, al-Jawab al-Sahih 2/407 and 3/425; and Ibn Hazm, al-Fisal 2/2. Note 5 is corrected. The "no one can remove a word" gloss sits in a chapter heading of Kitab al-Tawhid, and Ibn Hajar (Fath 13/523) found no sound chain for it to Ibn Abbas. Bukhari 7363, where Ibn Abbas says the People of the Book altered the book, is now cited for what it says. A rounded "The Islamic dilemma across the network" box (`.boi-network`, in article.css) links the six sister pieces. The excerpt and the first image's alt text now name the focus keyword. Existing sites receive the new body through `boi_migrate_seed` on the 1.76.2 update, but only where the article is still as the theme wrote it.
+- The Islamic dilemma article (islamic-dilemma) is expanded for the network brief, keeping the same slug and URL. It now has a fair statement of the argument (5:47, 5:68, 10:94, 3:3, 5:48), and the five entries draw on Shamela-checked sources: Ibn Kathir on 3:3, 5:47, 5:48, 5:68 and 10:94; al-Tabari on 4:46; Ibn Taymiyya, al-Jawab al-Sahih 2/407 and 3/425; and Ibn Hazm, al-Fisal 2/2. Note 5 is corrected. The "no one can remove a word" gloss sits in a chapter heading of Kitab al-Tawhid, and Ibn Hajar (Fath 13/523) found no sound chain for it to Ibn Abbas. Bukhari 7363, where Ibn Abbas says the People of the Book altered the book, is now cited for what it says. A rounded "The Islamic dilemma across the network" box (`.boi-network`, in article.css) links the six sister pieces. The excerpt and the first image's alt text now name the focus keyword. Existing sites receive the new body through `boi_migrate_seed` on the 1.76.2 update, but only where the article is still as the theme wrote it.
 
 ### Fixed
 
-- **Zenith** (arabic-words-science): removed the sentence claiming the m/ni slip came from the Arabic script; the misreading happened in Latin letters, and the sentence had no source.
-- **Ninety-nine names** (relationship-with-god): Sahih al-Bukhari 2736 is in the Book of Conditions (Kitab al-Shurut), not the Book of Tawhid; body and note 8 now say so (Fath al-Bari vol. 5, p. 354, checked on Shamela).
-- **Pauline letters** (pauline-letters-authorship): the closing no longer claims scholarly agreement on the seven letters or that forgers knew "because their own church told them so"; it states the majority critical view, notes the dissent, and attributes the lying verdict to Ehrman (note 17).
+- The Zenith article (arabic-words-science) loses the sentence claiming the m/ni slip came from the Arabic script. The misreading happened in Latin letters, and the sentence had no source.
+- The ninety-nine names article (relationship-with-god) had placed Sahih al-Bukhari 2736 in the Book of Tawhid. Body and note 8 now give the Book of Conditions (Kitab al-Shurut) (Fath al-Bari vol. 5, p. 354, checked on Shamela).
+- The closing of the Pauline letters article (pauline-letters-authorship) states the majority critical view, notes the dissent and attributes the lying verdict to Ehrman (note 17). It had claimed scholarly agreement on the seven letters, and that forgers knew "because their own church told them so".
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change; no glossary data changed, so `BOI_GLOSSARY_VERSION` stays at 12.
 
