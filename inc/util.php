@@ -49,3 +49,20 @@ function boi_with_lock( $name, $callback, $strict = false ) {
 function boi_json_ld( $data ) {
 	return (string) wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT );
 }
+
+/**
+ * [boi_lanah] The curse "laʿnat Allāh" (the curse of God) after the name of
+ * Paul of Tarsus, as calligraphy (assets/images/lanat-allah.svg, drawn as a
+ * mask in the rubric red, so it follows the appearance toggle). The words
+ * stay inside, visually hidden, for screen readers, search and a copy and
+ * paste, and show as written where the mask cannot draw. It appears only
+ * where an article places the shortcode, by hand and rarely; excerpts and
+ * descriptions strip shortcodes, so it never reaches them.
+ *
+ * @return string
+ */
+function boi_sc_lanah() {
+	$words = 'laʿnat Allāh, the curse of God';
+	return '<span class="boi-lanah" lang="ar-Latn" title="' . esc_attr( $words ) . '"><span class="boi-lanah__text">' . esc_html( $words ) . '</span></span>';
+}
+add_shortcode( 'boi_lanah', 'boi_sc_lanah' );

@@ -139,7 +139,7 @@ function boi_seed_listicles() {
 		array(
 			'slug'    => 'islamic-dilemma',
 			'title'   => __( 'The Islamic Dilemma: 5 assumptions the argument needs', 'bestofislam' ),
-			'excerpt' => __( 'The Islamic Dilemma claims the Quran traps Muslims on scripture. 5 assumptions it needs, and why each fails. Read on.', 'bestofislam' ),
+			'excerpt' => __( 'The Islamic dilemma says the Quran traps Muslims on the Torah and Gospel. 5 assumptions it needs, and why each fails, from the classical tafsir.', 'bestofislam' ),
 			'topic'   => 'comparative-religion',
 		),
 		array(

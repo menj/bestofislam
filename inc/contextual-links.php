@@ -299,7 +299,7 @@ function boi_cl_filter( $content ) {
 	$epithets = boi_cl_epithet_index();
 
 	$skip_tags  = array( 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'q', 'figure', 'figcaption', 'cite', 'code', 'pre', 'sup', 'sub', 'nav', 'table', 'button', 'label', 'select', 'textarea', 'summary', 'script', 'style' );
-	$skip_attr  = '/\b(?:lang="(?:ar|he|el|syr)[^"]*"|dir="rtl"|class="[^"]*\b(?:boi-jump|boi-entry__claim|boi-entry__cta|boi-entry__rank|screen-reader-text|wp-block-footnotes|footnotes|arabic|quran|hadith|verse|toc|boi-glossary__list)\b[^"]*")/i';
+	$skip_attr  = '/\b(?:lang="(?:ar|he|el|syr)[^"]*"|dir="rtl"|class="[^"]*\b(?:boi-jump|boi-entry__claim|boi-entry__cta|boi-entry__rank|screen-reader-text|wp-block-footnotes|footnotes|arabic|quran|hadith|verse|toc|boi-glossary__list|boi-lanah)\b[^"]*")/i';
 	$void       = array( 'br', 'img', 'hr', 'wbr', 'input', 'source', 'meta', 'link', 'col', 'area', 'embed', 'track' );
 	$notes_head = '/^(?:notes?|sources?|references?|bibliography|further reading|endnotes)$/i';
 	$rel        = ' rel="noopener"' . ( ! empty( $opts['new_tab'] ) ? ' target="_blank"' : '' );

@@ -133,6 +133,7 @@ function boi_gl_filter( $content ) {
 	$depth  = array_fill_keys( $skip, 0 );
 	$used   = array();
 	$in_p   = false;
+	$lanah  = 0; // Open spans inside the laʿnat Allāh mark, which takes no link.
 	// A tag ends at the first ">" outside a quoted attribute value, so an alt
 	// text such as "a > b" never reads as running text.
 	$tokens = preg_split( '/(<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
@@ -143,6 +144,10 @@ function boi_gl_filter( $content ) {
 				$tag = strtolower( $m[2] );
 				$end = '/' === $m[1];
 
+				if ( 'span' === $tag && ( $lanah || ( ! $end && preg_match( '/\\bclass="[^"]*\\bboi-lanah\\b/', $tok ) ) ) ) {
+					$lanah = max( 0, $lanah + ( $end ? -1 : 1 ) );
+				}
+
 				if ( 'p' === $tag || 'li' === $tag ) {
 					$in_p = ! $end;
 				} elseif ( isset( $depth[ $tag ] ) ) {
@@ -152,7 +157,7 @@ function boi_gl_filter( $content ) {
 			continue;
 		}
 
-		if ( ! $in_p || array_sum( $depth ) || '' === trim( $tok ) ) {
+		if ( ! $in_p || $lanah || array_sum( $depth ) || '' === trim( $tok ) ) {
 			continue;
 		}
 
