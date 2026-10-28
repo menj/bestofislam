@@ -6,6 +6,18 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.1] - 2026-10-28
+
+### Changed
+
+- The Islamic dilemma article (islamic-dilemma) answers three arguments from islamicdilemma.com (POLEMICS.md, Source 4), and stays within 2,500 words of body text:
+  - **18:27, "none can change His words".** A new passage in the third entry shows that the phrase covers God's promise (6:34, 10:64) and the Quran itself (6:115, 18:27), with Ibn Kathir on 18:27 (vol. 5, p. 151) and al-Tabari on 6:115 (Shakir ed., vol. 12, pp. 62–63), both checked on Shamela, and the Quran's own use of *baddala* for people changing words (2:59, 48:15). Notes 13 and 14 are new; former notes 13 to 16 are now 15 to 18.
+  - **7:157 and 9:111.** The first entry notes that the Quran says what its Injil contains, in its own terms, and that saying it was wrong about the Gospels assumes the point at issue.
+  - **5:14.** The second entry adds that some of those who call themselves Christians forgot a portion of what they were reminded of.
+- To make room, five sentences of repetition are cut, including Ibn Kathir's remark that 5:47 concerns the Christians.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.77.0] - 2026-10-26
 
 ### Added
