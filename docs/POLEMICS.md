@@ -111,3 +111,34 @@ Five spreadsheets (a single-source-of-truth workbook, two article-proposal sheet
 | A43 | 5 facts about Abu Bakr, the Ridda wars and the Fadak dispute | `ridda-wars-abu-bakr-fadak` |
 
 The concordance of hadith citations (A46) and the lower-priority proposals are not written.
+
+## Source 4: islamicdilemma.com
+
+A saved copy of islamicdilemma.com, a Christian site built on the Islamic dilemma, reviewed 28 October 2026. Its pages are the home page ("What is the Islamic Dilemma?"), "The Qur'an affirms the Gospel", "How to Present the Islamic Dilemma", "What is the Injil?", "Why Jesus?", "What is your identity in Christ" and "Understanding Spiritual Blindness". The home page promotes a book by a Speakers' Corner debater and links to TheDawahScript. Devotional material with no claim about Islam is left out, as are the WordPress files.
+
+### Claims
+
+| # | Claim, in summary | Answered in | Status |
+|---|---|---|---|
+| D1 | The dilemma itself: if the Gospel is reliable Islam contradicts it; if it is corrupt the Quran wrongly affirmed it | `islamic-dilemma` | Covered: all five assumptions |
+| D2 | 3:3–4, 5:47, 5:48, 5:68 and 10:94 show the Quran affirms the Bible Christians held | `islamic-dilemma` (entries on muhaymin, the occasion of 5:43–47, Ibn Kathir on 5:47, 5:68 and 10:94) | Covered |
+| D3 | The Injil cannot be a separate book: where is it, and who quoted it? | `where-is-the-injil`, `islamic-dilemma` (first entry, Ibn Hazm's "four histories") | Covered |
+| D4 | **18:27, "none can change His words": so the Bible cannot have been corrupted** | None | **Gap.** The phrase *lā mubaddila li-kalimātihi* recurs at 6:34, 6:115 and 10:64, and each context is God's decree or promise (victory to the messengers in 6:34, glad tidings in 10:64), not the copies of a book. The Quran itself says people changed words: 2:59 and 7:162 (*fa-baddala alladhīna ẓalamū qawlan*), 48:15 (*yurīdūna an yubaddilū kalāma Allāh*), with 2:75, 4:46 and 5:13. The tafsir glosses on 6:115 and 18:27 (al-Tabari, Ibn Kathir) still need checking on Shamela before an article cites them. A new entry in `islamic-dilemma` or a short article |
+| D5 | "Allah, Gabriel and Muhammad never said the Gospel was corrupt"; every mention of the Injil praises it | `islamic-dilemma` (the mixed-text entry), `where-is-the-injil` | Partly covered. Add 5:14: of those who said "we are Christians", the Quran says they "forgot a portion of that of which they were reminded". The taḥrīf verses do not use the word Injil, but they are about the people holding it |
+| D6 | The site's own list of Injil verses (3:3, 3:48, 3:65, 5:46–47, 5:66, 5:68, 5:110, 7:157, 9:111, 48:29, 57:27) | `islamic-dilemma`, `deuteronomy-18-and-the-paraclete` (7:157) | Covered in part. **Usable against the site:** 9:111 says the Injil holds God's promise of Paradise to those who fight and are killed, and 7:157 that the Prophet is written in it. If the Injil is the four Gospels, the site must find both there. If it is not, the first horn falls. Either way the list supports the first assumption the article knocks out |
+| D7 | Three "contradictions": 1 Timothy 2:5 vs 4:171 (mediator), 1 Corinthians 8:6 vs the Quran (Trinity), John 3:16 vs 3:185 (eternal life) | `pauline-letters-authorship`, `paul-claim-to-apostleship`, `jesus-not-god`, `relationship-with-god` | Covered in substance. **Point to make:** two of the three are from Paul, not from any Gospel, and 1 Timothy is one of the Pastorals most critical scholars do not attribute to Paul, so the site's own examples do not come from the Injil. The page's citations are also confused: the Arabic under the 4:171 heading is 2:255, and the Trinity item quotes 3:185 in English over 4:171 in Arabic. Note this; it is not an argument |
+| D8 | 29:46 commands Muslims to say "we believe in what was revealed to you", yet Muslims call the Bible corrupt and the Christian God false | `quran-on-christians`, `same-god`, `who-is-allah` | Covered. The verse speaks of what was revealed, not of what is now bound in a Bible; see D2 |
+| D9 | "If Allah revealed the Torah and Gospel as guidance, how could they become corrupted?" | `where-is-the-injil` (entry on preservation: earlier scriptures entrusted to their communities, 5:44; the promise of 15:9 attached to the Quran) | Covered |
+| D10 | "When was it corrupted, by whom, and where is the uncorrupted version?" The burden of proof is on the Muslim | `where-is-the-injil`, `manuscript-transmission` (the ending of Mark, the adulteress passage) | Covered in substance; the burden-of-proof framing is not answered directly. The answer: the site has to prove the Quran's Injil is the four Gospels first (D3), and later additions to the Gospel manuscripts are accepted by Christian textual critics |
+| D11 | The Quran was "in the hands of Christians in 700" | None needed | Factual error: the Prophet died in 632 and the Quran describes the Christians of his lifetime |
+| D12 | "Islam says you can get your own sins forgiven. That is a lie"; no forgiveness without the cross | `crucifixion-quran` (Leviticus 5:11–13, Ezekiel 18:20–22, Hosea 6:6), `relationship-with-god` (forgiveness without a mediator, 39:53, 6:164) | Covered |
+| D13 | One lie equals murder before God; the Quran's teaching that good deeds remove bad ones (11:114) is "a lie" | `crucifixion-quran`, `relationship-with-god` | Partly covered: no article answers the claim that every sin weighs the same. The Gospels themselves grade sin and punishment: "the one who handed me over to you has the greater sin" (John 19:11), and the servant beaten with many or few blows (Luke 12:47–48) |
+| D14 | Islam is a religion of works with no assurance; its God is distant; "religions of submission only" | `relationship-with-god`, `fate-and-free-will` | Covered in part. Add the hadith that no one enters Paradise by his deeds, not even the Prophet, unless God covers him with mercy (Sahih al-Bukhari 6463, Sahih Muslim 2816), if it is not already cited where it is needed |
+| D15 | Muslims cannot see the truth because Satan blinds them (2 Corinthians 4:4, John 12:40) | None needed | Not an argument: it explains disagreement without testing it, and the Quran makes the same claim the other way (2:7). Not worth an article |
+| D16 | A "renunciation" line: "I reject Islam and Muhammad and break the chains of association to that religion" | None needed | Not a claim |
+
+### Still open
+
+- **D4 (18:27 and "none can change His words")** is the one argument on the site with no answer anywhere here, and it is common. It is the first thing to write.
+- **D6** gives `islamic-dilemma` a short, effective addition: the site's own verse list, read through 9:111, undoes its first horn.
+- **D5, D10, D13 and D14** are small additions to existing articles.
