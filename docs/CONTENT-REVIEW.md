@@ -180,3 +180,15 @@ All remaining points are now accounted for:
 
 ## Second tier: closing pass (23 October 2026)
 hanif-poets-and-musaylima (Zayd's death before the mission and the saving of girls, Ibn Hajar vol. 7 p. 143; Musaylima's sayings and Abu Bakr's reaction, Tabari vol. 3 pp. 284 and 300), was-muhammad-illiterate-ummi (the Encyclopaedia of the Quran citation corrected to Günther, "Ummī", EQ 5, pp. 399–402), ridda-wars-abu-bakr-fadak (Tabari vol. 3 locations), jihad-meaning-quran-hadith-jurists (Tirmidhi 2616, 2174, 1621, Abu Dawud 4344, Ibn Majah 4011 verified; Ibn Hajar on the greater-jihad saying via al-Ajluni), schacht-isnads-dating-hadith (Muslim 3004, Abu Dawud 3646, Umar ibn Abd al-Aziz's letter) and talmud-midrash-apocrypha-borrowing (all dates and passage references reread against standard references; no change needed) were checked. Still open: the wording of Ibn Taymiyya's remark on the greater-jihad saying (Majmu al-Fatawa); the Zad al-Maad stages of jihad.
+
+## Expansion to 1,600 words (1.77.2 onwards)
+
+Written from memory or from secondary summaries, and to be checked against the sources:
+
+- **quran-grammar-errors-claim**: al-Qurtubi on 4:162 (Aban ibn Uthman report, al-Qushayri's verdict) and on 5:69 (Sibawayh and al-Khalil, the two verses of poetry), checked only through the quran.ksu.edu.sa text; Ibn Mujahid on the readings of 20:63 (Abu Amr *inna hadhayni*; Hafs and Ibn Kathir *in*).
+- **quran-contradictions-claims**: the chapter of al-Bukhari's Commentary (Fussilat) holding the Ibn Abbas report, and its exact list of questions; al-Shinqiti's title.
+- **deuteronomy-18-and-the-paraclete**: Sahih al-Bukhari 2125 and 4838 (Abdullah ibn Amr on the Torah description); Mingana's edition of Timothy's Apology (Woodbrooke Studies 2, 1928) and its treatment of Deuteronomy 18 and the Paraclete; the sections of Ibn Taymiyya's al-Jawab al-Sahih.
+- **blasphemy-and-insults-to-the-prophet**: Sahih al-Bukhari 4905, 3610 and 4037; the Federal Shariat Court citation (PLD 1991 FSC 10, judgment of 30 October 1990); the Asia Bibi appeal number; the years of sections 298-A (1980) and 295-B (1982).
+- **fly-hadith-and-adult-suckling**: Shah Wali Allah's chapter title; Ibn Khaldun on medicine; Abu Dawud 3844, al-Nasa'i 4262, Ibn Majah 3504; Abu Rayya (1958) and al-Siba'i's reply; al-Nawawi quoting Qadi Iyad; the Muwatta chapter on A'isha's practice; al-Layth and Ibn Hazm, and Ibn Taymiyya via Zad al-Ma'ad.
+- **do-muslims-worship-muhammad**: Ibn Majah 1853; the Musnad Ahmad report "what God alone wills" (no number given); Bukhari 1040, 1044, 4454, 2411, 7510; Abu Dawud 2042; al-Tirmidhi 3148; the Muwatta chapter for "do not make my grave an idol".
+- **muslims-by-the-numbers-2020**: all new figures are from the two Pew pages already cited, read on 29 October 2026.

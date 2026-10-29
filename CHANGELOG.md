@@ -6,6 +6,15 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.2] - 2026-10-29
+
+### Changed
+
+- Seven articles are expanded to at least 1,600 words of body text (Notes and the network box are not counted), the first batch of a pass that brings every article into the range of 1,600 to 2,500 words: quran-grammar-errors-claim (536 to 1,665), quran-contradictions-claims (547 to 1,844), deuteronomy-18-and-the-paraclete (601 to 1,905), blasphemy-and-insults-to-the-prophet (614 to 1,663), muslims-by-the-numbers-2020 (688 to 1,809), fly-hadith-and-adult-suckling (740 to 1,712) and do-muslims-worship-muhammad (753 to 1,896). Each keeps its entries and title; the new text adds the strongest form of the objection to each entry, the classical answers, and a closing "bottom line" where the article had none. New notes are numbered in order, and the details that still need a check against the sources are listed in `docs/CONTENT-REVIEW.md`.
+- The fly hadith article now says that most of the Prophet's household, rather than all of it, rejected the general application of the Sahla ruling, since A'isha applied it (Malik, al-Muwatta).
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.77.1] - 2026-10-28
 
 ### Changed
