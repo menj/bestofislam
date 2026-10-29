@@ -352,6 +352,12 @@ function boi_maybe_install() {
 				return;
 			}
 
+			// Without the seed list the migrations below would be skipped for
+			// good once the version is recorded, so wait for a later request.
+			if ( function_exists( 'boi_seed_ready' ) && ! boi_seed_ready() ) {
+				return;
+			}
+
 			boi_install_votes_table();
 
 			// Population is idempotent and migrates its own earlier records, so an

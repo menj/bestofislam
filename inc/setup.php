@@ -82,6 +82,18 @@ function boi_seed_data( $part ) {
 }
 
 /**
+ * Whether the seed list could be read: topics, listicles and pages all
+ * present. While it cannot (an update still unpacking, a damaged file),
+ * population does nothing and the version is not recorded, so the next
+ * request tries again.
+ *
+ * @return bool
+ */
+function boi_seed_ready() {
+	return boi_seed_data( 'topics' ) && boi_seed_data( 'listicles' ) && boi_seed_data( 'pages' );
+}
+
+/**
  * Returns the topic terms created on activation, from `topics` in
  * inc/data/seed.json.
  *
@@ -513,6 +525,14 @@ function boi_remove_sample_content() {
  * @return array Summary counts.
  */
 function boi_populate_content() {
+	if ( ! boi_seed_ready() ) {
+		return array(
+			'topics'    => 0,
+			'listicles' => 0,
+			'pages'     => 0,
+		);
+	}
+
 	$topics    = boi_create_topics();
 	$pages     = boi_create_pages();
 	$listicles = boi_create_listicles( $topics );

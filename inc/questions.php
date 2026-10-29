@@ -18,13 +18,39 @@ defined( 'ABSPATH' ) || exit;
 /**
  * The questions, grouped by theme.
  *
- * Each item: question, answer, answering article slug, and whether it is
- * featured on the front page.
+ * Each item: question (q), answer (a), answering article slug, and whether
+ * it is featured on the front page (feat). The list is read from
+ * inc/data/questions.json; a group without a label and a list of items, or
+ * an item without a question, answer and slug, is left out, so a damaged
+ * entry can never reach the renderers.
  *
  * @return array
  */
 function boi_questions() {
-	return boi_read_data( 'questions' );
+	static $groups = null;
+	if ( null !== $groups ) {
+		return $groups;
+	}
+	$out = array();
+	foreach ( boi_read_data( 'questions' ) as $key => $group ) {
+		if ( ! is_array( $group ) || ! is_string( $group['label'] ?? null ) || ! is_array( $group['items'] ?? null ) ) {
+			continue;
+		}
+		$items = array();
+		foreach ( $group['items'] as $item ) {
+			if ( is_array( $item ) && is_string( $item['q'] ?? null ) && is_string( $item['a'] ?? null ) && is_string( $item['slug'] ?? null ) ) {
+				$items[] = $item;
+			}
+		}
+		if ( $items ) {
+			$group['items'] = $items;
+			$out[ $key ]    = $group;
+		}
+	}
+	if ( $out ) {
+		$groups = $out; // A failed read is not cached.
+	}
+	return $out;
 }
 
 /**
