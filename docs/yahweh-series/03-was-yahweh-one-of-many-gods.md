@@ -1,0 +1,119 @@
+---
+title: "Was Yahweh Originally One of Many Gods? 7 Clues from Ancient Israelite Religion"
+slug: "was-yahweh-one-of-many-gods"
+meta_description: "Ancient Israelite polytheism in seven clues: El and Yahweh, Ugarit, Deuteronomy 32, Psalm 82 and the rise of monotheism."
+primary_keyword: "ancient Israelite polytheism"
+secondary_keywords:
+  - "Yahweh and El"
+  - "El Elyon and Yahweh"
+  - "divine council in the Bible"
+  - "Deuteronomy 32 sons of God"
+  - "origins of biblical monotheism"
+category: "Comparative Religion"
+tags: []
+excerpt: "Divine names, a variant in the Dead Sea Scrolls, a psalm about the council of El and the storm god Baal: seven clues to how Israel's worship of one God took shape."
+suggested_featured_image: "A clay tablet from Ugarit (Ras Shamra) inscribed in alphabetic cuneiform, such as a tablet of the Baal Cycle. Source a photograph from Wikimedia Commons and confirm the file name and licence; Commons could not be queried while this was written."
+image_alt_text: "A clay tablet from ancient Ugarit covered in rows of alphabetic cuneiform signs"
+series: "The Yahweh Question"
+series_part: 3
+bible_translation: "World English Bible (public domain), unless marked KJV"
+quran_translation: "Saheeh International"
+---
+
+# Was Yahweh originally one of many gods? 7 clues from ancient Israelite religion
+
+The Hebrew Bible, in its final form, is the founding text of monotheism. "I am Yahweh, and there is no one else. Besides me, there is no God," says the Book of Isaiah.<sup>[1]</sup> Yet the same Bible contains phrases that seem to come from a different world: a council of gods, sons of God who are allotted the nations, and a God who is praised as greater than all other gods. Were the people of ancient Israel always monotheists, or did their worship of one God emerge from something older?
+
+This article sets out seven clues that scholars use to answer that question, with the competing explanations for each. The material evidence, from inscriptions and shrines, is discussed in [part 2 of this series](https://bestofislam.org/who-was-yahweh-archaeological-origins/). Here the evidence is mainly textual: divine names, ancient manuscripts and the literature of Israel's neighbours.
+
+## 1. El and Yahweh: two names and their history
+
+The God of the patriarchs in Genesis is often called El, the common Semitic word for god, in compound titles: El Shaddai, usually translated "God Almighty"; El Elyon, "God Most High"; and El Olam, "the Everlasting God".<sup>[2]</sup> The name Israel itself contains El, and none of the patriarchs' names contains Yahweh. In Exodus, God says to Moses: "I am Yahweh; and I appeared to Abraham, to Isaac, and to Jacob, as God Almighty; but by my name Yahweh I was not known to them."<sup>[3]</sup>
+
+Many historians read these facts as traces of a convergence. On this view, El was the high god of the wider Canaanite world, Yahweh came from the south as the god of particular groups, and over time Israel identified the two, so that the titles of El became titles of Yahweh. Frank Moore Cross and Mark Smith developed versions of this thesis, differing on whether Yahweh began as a form of El or as a separate god who absorbed him.<sup>[4]</sup> The story of Melchizedek, "priest of God Most High", in which Abraham swears by "Yahweh, God Most High", is often read as the moment the identification is written into the narrative.<sup>[5]</sup>
+
+The traditional reading is different, and it has a textual basis. Genesis uses the name Yahweh from early on, saying that people "began to call on Yahweh's name" in the days of Enosh.<sup>[6]</sup> The medieval commentator Rashi explained Exodus 6:3 as meaning that the patriarchs had not known God in the aspect the name expresses, his faithfulness in fulfilling promises, which Israel would now see in the Exodus.<sup>[7]</sup> Critical scholars explain the same tension by the use of different sources in Genesis. The verse is a clue on either reading. What it proves depends on how the Pentateuch came together.
+
+## 2. Ugarit: the council of El and the rise of Baal
+
+In 1928 a farmer near Ras Shamra on the Syrian coast struck a tomb, and excavations from 1929 uncovered the city of Ugarit, destroyed around 1185 BCE. Its archives included religious texts of the fourteenth and thirteenth centuries BCE, written in an alphabetic cuneiform script in a language closely related to Hebrew.<sup>[8]</sup> They gave historians their first direct view of the gods of Canaan in their own words.
+
+In these texts, El is the aged king and father of the gods, the "creator of creatures", who presides over an assembly of divine beings. His consort is Athirat, the Ugaritic form of Asherah, and the gods are called her seventy sons. Baal, the storm god, fights Yam, the sea, and Mot, death, and wins a palace and kingship among the gods.<sup>[9]</sup> The vocabulary of the assembly is familiar to readers of the Bible, where "God's sons" gather before Yahweh in Job, "the sons of God" shout for joy at creation, and Yahweh is feared "in the council of the holy ones".<sup>[10]</sup>
+
+Ugarit was not Israel, and its texts are centuries older than most of the Bible. The parallels show a shared language of divine kingship and council in the region. They leave open how Israel used that language. Some scholars see the remains of an Israelite pantheon; others see a vocabulary borrowed and transformed, in which the beings of the council are servants of the one God.<sup>[11]</sup>
+
+## 3. Deuteronomy 32:8–9: one verse, three manuscript traditions
+
+The Song of Moses in Deuteronomy contains a verse whose wording differs between ancient witnesses. In the Masoretic Text, the standard Hebrew text of the Jewish Bible, it reads: "When the Most High gave to the nations their inheritance, when he separated the children of men, he set the bounds of the peoples according to the number of the children of Israel. For Yahweh's portion is his people."<sup>[12]</sup>
+
+A manuscript from Qumran, 4QDeut<sup>j</sup>, reads "according to the number of the sons of God" in place of "the children of Israel", and most manuscripts of the Septuagint, the ancient Greek translation, read "according to the number of the angels of God".<sup>[13]</sup> Many textual critics, Emanuel Tov among them, judge "sons of God" to be the older reading and "children of Israel" to be a later change, perhaps made to avoid the implication of other divine beings.<sup>[14]</sup> The same Qumran collection preserves a longer form of verse 43, in which the heavenly beings are called to worship God.
+
+With "sons of God", the verse describes the Most High dividing the nations among the members of his council, with Israel as Yahweh's share. Scholars then divide again. Some read Elyon and Yahweh as two figures, with Yahweh one of the sons receiving Israel; others read Elyon as a title of Yahweh himself, who assigns the other nations to lesser beings and keeps Israel for himself.<sup>[15]</sup> Deuteronomy 4:19–20, which speaks of the host of heaven allotted to the peoples while Yahweh took Israel, supports the second reading. The variant shows that the plurality of the heavenly world was older in the text than the Masoretic wording suggests. It does not settle the relationship of Elyon to Yahweh.
+
+## 4. Psalm 82: the judgement of the gods
+
+Psalm 82 opens with a scene in the divine assembly: "God presides in the great assembly. He judges among the gods."<sup>[16]</sup> The Hebrew for the assembly is *adat el*, the council of El. God accuses the gods of judging unjustly and failing the weak and the poor, and pronounces sentence: "I said, 'You are gods, all of you are sons of the Most High. Nevertheless you shall die like men.'"<sup>[17]</sup> The psalm ends by calling on God to judge the earth, "for you inherit all of the nations".
+
+Three main readings have been defended. Many modern scholars read the gods as divine beings, the patrons of the nations known from Deuteronomy 32, condemned for their injustice so that the God of Israel takes over the nations himself; on this reading the psalm dramatises the end of the old pantheon.<sup>[18]</sup> Much of the Jewish tradition read the "gods" as human judges, who hold God's authority to judge and are rebuked for abusing it. A third reading takes them as angels. The Gospel of John has Jesus quote the psalm in an argument about the title "son of God", a passage discussed in [7 verses Christians and Muslims read differently](https://bestofislam.org/verses-read-differently/).<sup>[19]</sup> On every reading, the psalm places one God above the beings it calls gods.
+
+## 5. Baal and Yahweh: shared storm, kingship and warrior imagery
+
+The Bible describes Yahweh in language that Ugarit applied to Baal. Baal is "the rider of the clouds"; a psalm calls on Israel to "extol him who rides on the clouds", and other psalms have Yahweh thunder in the sky and send out lightning as his arrows.<sup>[20]</sup> Psalm 29 is so close to Canaanite storm poetry that H. L. Ginsberg proposed in the 1930s that it adapts a hymn to Baal, a view many have followed.<sup>[21]</sup> Yahweh also defeats the sea and its monster: "You broke the heads of Leviathan in pieces", a creature that appears at Ugarit as Lotan.<sup>[22]</sup>
+
+The shared imagery sits beside open rivalry. Elijah challenges the people on Mount Carmel: "If Yahweh is God, follow him; but if Baal, then follow him."<sup>[23]</sup> Hosea looks forward to a day when Israel will call Yahweh "my husband" and no longer "my master", the Hebrew *ba'al*, refusing even the word.<sup>[24]</sup> Historians read this as a process in which Yahweh took on the attributes of the storm god while his worshippers rejected the storm god himself.
+
+For the question of this series, the point is that imagery is not identity. A poet can borrow the language of a rival's hymn to say that the rival's powers belong to his own God. The prophets who fought hardest against Baal used that language most freely.
+
+## 6. Monolatry, exclusive worship and explicit monotheism
+
+Scholars distinguish three positions that the Bible's texts seem to express at different points. Monolatry is the worship of one god without denying that others exist. Exclusive worship is the demand that Israel serve Yahweh alone. Explicit monotheism is the claim that no other god exists at all.
+
+The first two appear in some of the oldest poetry and law. The Song of the Sea asks, "Who is like you, Yahweh, among the gods?", and the Ten Commandments say, "You shall have no other gods before me."<sup>[25]</sup> The Shema can be translated "Yahweh is our God. Yahweh is one", or "Yahweh is our God, Yahweh alone", and the choice matters for this question.<sup>[26]</sup> Explicit denial of other gods appears in Deuteronomy 4, "Yahweh is God. There is no one else besides him", and most fully in the second part of Isaiah: "Before me there was no God formed, neither will there be after me"; "I am the first, and I am the last; and besides me there is no God."<sup>[27]</sup>
+
+Most scholars date those passages of Isaiah to the sixth century BCE, the period of exile in Babylon, and many see explicit monotheism as a response to the destruction of the temple and the encounter with imperial religion.<sup>[28]</sup> Others argue that the language of comparison, "who is like you among the gods?", is a way of praising God's incomparability and does not imply that the poets believed in other gods. Both readings are serious, and both admit that the Bible's vocabulary became more exclusive over time.
+
+## 7. Redaction and the reinterpretation of older traditions
+
+The Hebrew Bible was edited over centuries, and its editors had theological concerns. The reform of King Josiah, described in the Books of Kings, removed the vessels of Baal, Asherah and the host of heaven from the temple.<sup>[29]</sup> Many historians hold that the Deuteronomistic writers who told that story also shaped the earlier books in its light, so that older practices appear as apostasy. The textual history of Deuteronomy 32:8, where a reading with "sons of God" was later replaced, may be another case of editorial correction.
+
+Three broad explanations compete. The evolutionary view, developed by Mark Smith and Thomas Römer, holds that Israel's religion began within the Canaanite world and moved by stages to monotheism.<sup>[30]</sup> Yehezkel Kaufmann argued instead that Israelite religion was monotheistic from its foundation, and that the polytheism the prophets condemned was a popular deviation.<sup>[31]</sup> A third view, held in different forms by Jewish, Christian and Muslim believers, treats the worship of one God as original and the plurality as the corruption the prophets opposed. The Quran presents this pattern throughout, with messengers calling peoples back to the worship of God alone, a perspective discussed in [part 5](https://bestofislam.org/is-yahweh-the-same-as-allah/).
+
+The texts give evidence of plurality in Israel's heavens and of change in how it was spoken of. The explanation of that change, whether as development, as lapse and recovery, or as revelation working through history, goes beyond what the textual evidence alone can decide.
+
+## The bottom line
+
+The clues are real. The Bible preserves names of El beside the name of Yahweh, a divine council described in the vocabulary of Ugarit, a verse in which the nations are divided among the sons of God, and a psalm in which the gods are judged. Its language about God moves from incomparability among the gods to the denial that any other god exists. What the evidence does not establish is how that movement should be understood, and nothing in it suggests that the God of the council was the adversary, a separate question taken up in [part 1](https://bestofislam.org/is-yahweh-satan/). Early Christian thinkers who later divided the creator from the highest God are the subject of [part 4](https://bestofislam.org/early-christians-yahweh-evil-gnosticism-marcion/).
+
+## Notes
+
+1. Isaiah 45:5, World English Bible.
+2. Genesis 17:1; 14:18–22; 21:33.
+3. Exodus 6:2–3, World English Bible.
+4. Frank Moore Cross, *Canaanite Myth and Hebrew Epic: Essays in the History of the Religion of Israel* (Cambridge, MA: Harvard University Press, 1973); Mark S. Smith, *The Origins of Biblical Monotheism: Israel's Polytheistic Background and the Ugaritic Texts* (New York: Oxford University Press, 2001).
+5. Genesis 14:18–22, World English Bible.
+6. Genesis 4:26, World English Bible.
+7. Rashi, commentary on Exodus 6:3.
+8. Wilfred G. E. Watson and Nicolas Wyatt, eds., *Handbook of Ugaritic Studies* (Leiden: Brill, 1999).
+9. The Baal Cycle, KTU 1.1–1.6; Mark S. Smith, *The Ugaritic Baal Cycle*, vol. 1 (Leiden: Brill, 1994).
+10. Job 1:6; Job 38:7; Psalm 89:6–7, World English Bible.
+11. John Day, *Yahweh and the Gods and Goddesses of Canaan* (Sheffield: Sheffield Academic Press, 2000).
+12. Deuteronomy 32:8–9, World English Bible.
+13. Eugene Ulrich, Frank Moore Cross et al., *Qumran Cave 4.IX: Deuteronomy, Joshua, Judges, Kings*, Discoveries in the Judaean Desert 14 (Oxford: Clarendon Press, 1995); Septuagint, Deuteronomy 32:8.
+14. Emanuel Tov, *Textual Criticism of the Hebrew Bible*, 3rd ed. (Minneapolis: Fortress, 2012).
+15. Michael S. Heiser, "Deuteronomy 32:8 and the Sons of God", *Bibliotheca Sacra* 158 (2001): 52–74; Jeffrey H. Tigay, *Deuteronomy*, JPS Torah Commentary (Philadelphia: Jewish Publication Society, 1996), on 32:8.
+16. Psalm 82:1, World English Bible.
+17. Psalm 82:6–7, World English Bible.
+18. Smith, *The Origins of Biblical Monotheism*, on Psalm 82.
+19. John 10:34–36.
+20. Psalm 68:4; Psalm 18:13–14, World English Bible.
+21. H. L. Ginsberg, "A Phoenician Hymn in the Psalter", in *Atti del XIX Congresso Internazionale degli Orientalisti* (Rome, 1938); Cross, *Canaanite Myth and Hebrew Epic*.
+22. Psalm 74:13–14, World English Bible.
+23. 1 Kings 18:21, World English Bible.
+24. Hosea 2:16, World English Bible.
+25. Exodus 15:11 and 20:3, World English Bible.
+26. Deuteronomy 6:4, World English Bible; compare the New Jewish Publication Society translation, "The LORD is our God, the LORD alone".
+27. Deuteronomy 4:35; Isaiah 43:10 and 44:6, World English Bible.
+28. Thomas Römer, *The Invention of God*, trans. Raymond Geuss (Cambridge, MA: Harvard University Press, 2015).
+29. 2 Kings 23:4–7.
+30. Mark S. Smith, *The Early History of God: Yahweh and the Other Deities in Ancient Israel*, 2nd ed. (Grand Rapids: Eerdmans, 2002); Römer, *The Invention of God*.
+31. Yehezkel Kaufmann, *The Religion of Israel: From Its Beginnings to the Babylonian Exile*, trans. and abridged by Moshe Greenberg (Chicago: University of Chicago Press, 1960).
