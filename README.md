@@ -104,7 +104,10 @@ bestofislam/
 │                        sections, seo, settings, setup, structured-data,
 │                        taxonomy, unlist, voting
 ├── inc/data/            network-links.json, the shared map of phrases to
-│                        inner pages, identical in all seven themes
+│                        inner pages, identical in all seven themes;
+│                        seed.json (topics, articles and standing pages),
+│                        questions.json and image-credits.json. Seed data
+│                        is JSON, read and never executed
 ├── blocks/              Block definitions and editor scripts
 ├── templates/           404, archive, front-page, home, page, search,
 │                        single, single-listicle, tag, taxonomy-listicle-topic

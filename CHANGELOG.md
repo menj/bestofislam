@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.2] - 2026-10-29
+
+### Changed
+
+- Seed data is JSON throughout. The topics, the article list and the standing pages move out of `boi_seed_topics()`, `boi_seed_listicles()` and `boi_seed_pages()` into `inc/data/seed.json`. The questions list moves out of `boi_questions()` into `inc/data/questions.json`, and the hand-listed image credits move out of `boi_image_manifest_base()` into `inc/data/image-credits.json`. Each is read with `json_decode()` by `boi_read_data()`, never executed; a missing or malformed file reads as empty, so the seeder creates nothing instead of failing.
+- A standing page is a list of blocks: `["p", text]` and `["h", text]` are escaped into a paragraph or a heading as before, and `["html", markup]` is block markup used as it stands. The pages render byte for byte as they did, so no fingerprint changes and nothing on a live site is rewritten.
+
 ## [1.77.1] - 2026-10-29
 
 ### Changed
