@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.77.1' );
+define( 'BOI_VERSION', '1.77.2' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -349,6 +349,12 @@ function boi_maybe_install() {
 		function () {
 			// Another request may have finished while this one waited.
 			if ( get_option( 'boi_db_version' ) === BOI_VERSION ) {
+				return;
+			}
+
+			// Without the seed list the migrations below would be skipped for
+			// good once the version is recorded, so wait for a later request.
+			if ( function_exists( 'boi_seed_ready' ) && ! boi_seed_ready() ) {
 				return;
 			}
 

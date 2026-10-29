@@ -5,7 +5,8 @@
  * One list of the questions put to Muslims, each with a short answer and the
  * article that argues it in full. The list feeds two places: the questions
  * band on the front page, and a panel at the head of each article naming
- * the questions it answers. Editing a question here changes it everywhere.
+ * the questions it answers. The list is data, in inc/data/questions.json;
+ * editing a question there changes it everywhere.
  *
  * Questions are phrased the way they are asked, attributed to no one.
  *
@@ -17,314 +18,39 @@ defined( 'ABSPATH' ) || exit;
 /**
  * The questions, grouped by theme.
  *
- * Each item: question, answer, answering article slug, and whether it is
- * featured on the front page.
+ * Each item: question (q), answer (a), answering article slug, and whether
+ * it is featured on the front page (feat). The list is read from
+ * inc/data/questions.json; a group without a label and a list of items, or
+ * an item without a question, answer and slug, is left out, so a damaged
+ * entry can never reach the renderers.
  *
  * @return array
  */
 function boi_questions() {
-	return array(
-		'text'      => array(
-			'label' => __( 'The Quran\'s text', 'bestofislam' ),
-			'items' => array(
-				array(
-					'q'    => __( 'Where are Uthman\'s copies of the Quran?', 'bestofislam' ),
-					'a'    => __( 'The Samarkand codex, now in Tashkent, is the copy tradition has attributed to Uthman for centuries, and its dating is argued. The Birmingham leaves are settled: radiocarbon dated to 568 to 645, in the Prophet\'s own generation. Both carry the text Muslims recite today.', 'bestofislam' ),
-					'slug' => 'uthman-copies',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Why did Uthman burn copies of the Quran?', 'bestofislam' ),
-					'a'    => __( 'Bukhari records the order and its reason in the same report: soldiers from Syria and Iraq were quarrelling over recitation, and Uthman acted to stop the community splitting over its Book. Burning a superseded copy is how Islamic law retires one respectfully.', 'bestofislam' ),
-					'slug' => 'uthman-copies',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Is there a complete Quran from the seventh century?', 'bestofislam' ),
-					'a'    => __( 'The Codex Parisino-Petropolitanus, from the first Islamic century, preserves close to half the text in one manuscript, and early leaves cover much of the rest. The complete text was carried from the start by recitation, memorised in full and recited daily, with writing as its check.', 'bestofislam' ),
-					'slug' => 'uthman-copies',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Do the Bible\'s manuscripts match today\'s text exactly?', 'bestofislam' ),
-					'a'    => __( 'Textual critics, Christian ones included, estimate around 400,000 variants among New Testament manuscripts. Most are trivial. Some are whole passages that modern Bibles bracket, such as the longer ending of Mark.', 'bestofislam' ),
-					'slug' => 'manuscript-transmission',
-					'feat' => false,
-				),
-			),
-		),
-		'scripture' => array(
-			'label' => __( 'Earlier scripture', 'bestofislam' ),
-			'items' => array(
-				array(
-					'q'    => __( 'Why trust hadith written down after the Prophet, when Muslims question the gospels?', 'bestofislam' ),
-					'a'    => __( 'A hadith carries a named chain of transmitters, which Muslim scholars graded, rejecting many reports. The Catholic bishops\' own Bible says 2 Peter was probably written in Peter\'s name by a later author, perhaps a century on. The standard is the chain, applied evenly.', 'bestofislam' ),
-					'slug' => 'second-peter',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Where is the Injil?', 'bestofislam' ),
-					'a'    => __( 'The Quran describes a gospel given to Jesus and preached by him, and says nothing of a book in his hand. Mark agrees in its first chapter, where Jesus comes proclaiming the gospel of God.', 'bestofislam' ),
-					'slug' => 'where-is-the-injil',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Why did God not preserve the Injil?', 'bestofislam' ),
-					'a'    => __( 'The Quran attaches its promise of preservation to the Quran. Each earlier message was entrusted to its community, and the last was guarded directly. Jesus wrote nothing that survives, and Christians do not conclude from that that his teaching was lost.', 'bestofislam' ),
-					'slug' => 'where-is-the-injil',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Does the Quran affirm a Bible it says is corrupt?', 'bestofislam' ),
-					'a'    => __( 'The dilemma needs five assumptions, among them that the Injil is the four gospels and that corruption must be total. Each is contestable from the Quran\'s own text.', 'bestofislam' ),
-					'slug' => 'islamic-dilemma',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'How could Jews and Christians everywhere corrupt scripture in the same way?', 'bestofislam' ),
-					'a'    => __( 'The Quran describes concealment and distortion of meaning within particular communities. Many classical scholars held that the distortion lay mainly in interpretation, with the words left standing. Neither requires a worldwide conspiracy.', 'bestofislam' ),
-					'slug' => 'islamic-dilemma',
-					'feat' => false,
-				),
-			),
-		),
-		'jesus'     => array(
-			'label' => __( 'Jesus, Paul and Christian doctrine', 'bestofislam' ),
-			'items' => array(
-				array(
-					'q'    => __( 'Did Paul keep the Law, or abolish it?', 'bestofislam' ),
-					'a'    => __( 'Paul told his churches they were released from the Law and that the Sabbath no longer bound them. Set that beside Matthew 5:19, where relaxing the least commandment makes a man least in the kingdom.', 'bestofislam' ),
-					'slug' => 'paul-and-the-law',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Did Jesus claim to be God?', 'bestofislam' ),
-					'a'    => __( 'He prayed to God, said the Father was greater, did not know the hour, and never said "I am God" in any gospel. The verses cited for the claim all need a later doctrine to read that way.', 'bestofislam' ),
-					'slug' => 'jesus-not-god',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Does the Quran say Mary is part of the Trinity?', 'bestofislam' ),
-					'a'    => __( 'The verse asks whether Jesus told people to take him and his mother as gods. It says nothing about the Trinity, which the Quran addresses in a different verse.', 'bestofislam' ),
-					'slug' => 'ezra-and-mary',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Which Jews called Ezra the son of God?', 'bestofislam' ),
-					'a'    => __( 'No surviving Jewish text says so, and that should be admitted. The tradition names Jews of Medina, and the Quran is very nearly the only record of what Arabian Jews believed. Jewish memory raised Ezra close to Moses, and one early text has him taken up to heaven.', 'bestofislam' ),
-					'slug' => 'ezra-and-mary',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Is Allah a different god from the God of the Bible?', 'bestofislam' ),
-					'a'    => __( 'Allah is the Arabic word for God, used by Arab Christians before Islam existed and in Arabic Bibles today. The Quran tells Muslims to say to Jews and Christians that their God is one.', 'bestofislam' ),
-					'slug' => 'same-god',
-					'feat' => true,
-				),
-			),
-		),
-		'prophecy'  => array(
-			'label' => __( 'Revelation and prophethood', 'bestofislam' ),
-			'items' => array(
-				array(
-					'q'    => __( 'Who saw Gabriel in the cave?', 'bestofislam' ),
-					'a'    => __( 'No one, as no one saw the burning bush or the light on the Damascus road. Every prophetic call is private. Islam rests its case on the message, which anyone can read and test.', 'bestofislam' ),
-					'slug' => 'who-saw-gabriel',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Did Muhammad die of poison, and does that make him a false prophet?', 'bestofislam' ),
-					'a'    => __( 'He lived four more years after Khaybar, while the man who ate beside him died within days. The immunity test being applied comes from the longer ending of Mark, which the oldest manuscripts lack.', 'bestofislam' ),
-					'slug' => 'prophet-died-poisoning',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Did the Quran borrow Haman from the Book of Esther?', 'bestofislam' ),
-					'a'    => __( 'A shared name proves nothing by itself. An Egyptian title for the overseer of quarry workers, attested in the reign of Ramesses II, matches the office the Quran gives Haman.', 'bestofislam' ),
-					'slug' => 'haman-anachronism',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Is there evidence a prophet before Muhammad prayed at the Kaaba?', 'bestofislam' ),
-					'a'    => __( 'The account of Abraham and Ishmael raising its foundations comes from the Quran, and Muslims accept it on that basis. There is no archaeological record of Abraham anywhere, Hebron included, so the demand applies to Genesis as much as to the Quran.', 'bestofislam' ),
-					'slug' => 'qibla-change',
-					'feat' => false,
-				),
-			),
-		),
-		'practice'  => array(
-			'label' => __( 'Practice and history', 'bestofislam' ),
-			'items' => array(
-				array(
-					'q'    => __( 'Why did the first Muslims pray towards Jerusalem?', 'bestofislam' ),
-					'a'    => __( 'The Quran records the first direction itself, gives its reason as a test of obedience, and records the change to Mecca. The objection is quoted and answered in the text it is aimed at.', 'bestofislam' ),
-					'slug' => 'qibla-change',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Where does the Quran say to pray five times a day?', 'bestofislam' ),
-					'a'    => __( 'The Quran gives the prayer times and tells believers to follow the Messenger for the rest. The five daily prayers have been performed publicly by every Muslim community since the first generation.', 'bestofislam' ),
-					'slug' => 'why-five-prayers',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Is Islam really the fastest-growing religion?', 'bestofislam' ),
-					'a'    => __( 'Yes. Pew measured 347 million more Muslims between 2010 and 2020, more than every other religion combined. The drivers are births, youth and retention: 99 percent of people raised Muslim stay Muslim. Growth describes the world. It proves nothing about truth.', 'bestofislam' ),
-					'slug' => 'fastest-growing-religion',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Is Islam a Middle Eastern religion?', 'bestofislam' ),
-					'a'    => __( 'The country with the most Muslims is Indonesia, with about 239 million, and it is not an Islamic state: its constitution names one God and recognises six religions. Its national mosque stands across the street from Jakarta Cathedral.', 'bestofislam' ),
-					'slug' => 'indonesia',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Why do ex-Muslim stories persuade so many readers online?', 'bestofislam' ),
-					'a'    => __( 'A Malaysian study of one ex-Muslim blog found that storytelling and sympathy carried much of the persuasion, and that accounts of the insults she received drew readers to her. The replies researchers thought could reach her answered her reasons with respect.', 'bestofislam' ),
-					'slug' => 'ex-muslim-blog-study',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Did any ancient writer mention the Kaaba before Islam?', 'bestofislam' ),
-					'a'    => __( 'Possibly. Diodorus of Sicily described a temple revered by all Arabians, and Ptolemy listed a town called Macoraba, but scholars dispute both identifications. The Quran makes the claim on its own authority.', 'bestofislam' ),
-					'slug' => 'kaaba-witnesses',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'What do the Dome of the Rock inscriptions show about the Quran?', 'bestofislam' ),
-					'a'    => __( 'Dated 72 AH, about sixty years after the Prophet, they quote passages of the Quran that match the text recited today, and they allude to it in ways that assume their readers already knew it.', 'bestofislam' ),
-					'slug' => 'dome-inscriptions',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Did Muslims burn the Library of Alexandria?', 'bestofislam' ),
-					'a'    => __( 'No. The story of the caliph Umar ordering it burned first appears nearly six centuries after the conquest, and the library had largely vanished centuries before the Arabs arrived. Historians, Muslim and Western, regard the story as a legend.', 'bestofislam' ),
-					'slug' => 'library-of-alexandria',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'What was the jizya?', 'bestofislam' ),
-					'a'    => __( 'A graduated annual tax on adult non-Muslim men under Muslim rule, with exemptions for women, children, monks and those unable to work. It was tied to protection and military service, and it also marked a difference of religion.', 'bestofislam' ),
-					'slug' => 'jizya',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Was the Quran perfectly preserved?', 'bestofislam' ),
-					'a'    => __( 'Academic scholarship finds a standard text fixed under Uthman within two decades of the Prophet, followed by every later manuscript but one, with modest variation in matters the Islamic tradition itself recorded, such as surah order and verse numbering.', 'bestofislam' ),
-					'slug' => 'quran-preservation-reddit',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Does Islam punish leaving it with death?', 'bestofislam' ),
-					'a'    => __( 'Mainstream Islamic law prescribes it, on the strength of the hadith, while the Quran condemns apostasy without naming a worldly penalty. Some senior scholars confine the penalty to treason; the question is debated among Muslims today.', 'bestofislam' ),
-					'slug' => 'apostasy-in-islam',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Does the Quran deny the crucifixion?', 'bestofislam' ),
-					'a'    => __( 'It denies that Jesus was killed or crucified by his enemies, and says God raised him to Himself. Historians treat the crucifixion as well attested; Muslims hold to the Quran on the authority of revelation, and reject atonement by proxy on the Hebrew prophets\' own principle that each soul bears its own sin.', 'bestofislam' ),
-					'slug' => 'crucifixion-quran',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Did Islam spread by the sword?', 'bestofislam' ),
-					'a'    => __( 'The Quran forbids compulsion in belief and bounds fighting with a prohibition on transgression. Current data put jihadist violence far below the impression the coverage gives.', 'bestofislam' ),
-					'slug' => 'islam-religion-of-peace',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Does the Quran tell men to beat their wives?', 'bestofislam' ),
-					'a'    => __( 'Quran 4:34 gives three steps and the last word is read by classical commentators as a symbolic touch at most, with the Prophet saying those who strike are not the best of men. He never struck a woman or a servant, and many scholars today treat any violence in the home as forbidden.', 'bestofislam' ),
-					'slug' => 'does-the-quran-allow-wife-beating',
-					'feat' => true,
-				),
-				array(
-					'q'    => __( 'Does Islam allow child marriage?', 'bestofislam' ),
-					'a'    => __( 'The Quran sets no age but requires maturity and consent, and the Prophet gave a woman the right to refuse a marriage she disliked. Egypt, Tunisia and Turkey set the minimum at 18.', 'bestofislam' ),
-					'slug' => 'child-marriage-in-islam',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Did Islam ban slavery?', 'bestofislam' ),
-					'a'    => __( 'It did not abolish it in one step. It made freeing slaves the best of deeds, closed the sources of enslavement to a narrow channel, gave slaves rights, and scholars today hold slavery forbidden.', 'bestofislam' ),
-					'slug' => 'slavery-in-islam',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Do Muslims believe in 72 virgins?', 'bestofislam' ),
-					'a'    => __( 'The Quran says houris, wide-eyed companions, with no number, and promises spouses to every believer. The figure seventy-two comes from one report in al-Tirmidhi that many scholars weaken, and nothing in the sources promises it as a reward for violence.', 'bestofislam' ),
-					'slug' => 'houris-and-paradise',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Does taqiyya let Muslims lie to unbelievers?', 'bestofislam' ),
-					'a'    => __( 'The Quran allows a person under threat of death or torture to hide his faith, as Ammar ibn Yasir did. It is a concession for compulsion and not a method, and the Quran and the Prophet demand truthfulness and keeping covenants.', 'bestofislam' ),
-					'slug' => 'taqiyya-5-myths',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Is sharia a list of punishments?', 'bestofislam' ),
-					'a'    => __( 'Sharia means the path. The hudud punishments are a handful of offences, fenced by very strict proof, and most Islamic law concerns worship, trade, family and character.', 'bestofislam' ),
-					'slug' => 'sharia-and-hudud',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Is Islam a religion of war?', 'bestofislam' ),
-					'a'    => __( 'The Quran says killing one person unjustly is like killing all of mankind, and the early rules of war protect women, children, the old and the monks. Scholars of every school have condemned beheadings and attacks on civilians.', 'bestofislam' ),
-					'slug' => 'war-and-killing-in-islam',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Why does Islam forbid interest?', 'bestofislam' ),
-					'a'    => __( 'The Quran threatens it with war from God, treats a loan as an act of kindness, and holds that profit should come with risk. Islamic finance uses partnership and sale instead.', 'bestofislam' ),
-					'slug' => 'why-no-interest',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'How old was Aisha when she married the Prophet?', 'bestofislam' ),
-					'a'    => __( 'The report in Bukhari says six at the contract and nine at the consummation, and some scholars argue from other reports that she was older. The question is open among scholars, and the rest of her record, as teacher and narrator, is rarely told.', 'bestofislam' ),
-					'slug' => 'questions-about-aisha',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Does Islam require women to wear the hijab?', 'bestofislam' ),
-					'a'    => __( 'Scholars of every school hold that the Quran asks women to cover, and they differ on how much. The Quran also says there is no compulsion in religion, and many scholars criticise enforcing it by law.', 'bestofislam' ),
-					'slug' => 'hijab-and-modesty',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Why are there no pictures in a mosque?', 'bestofislam' ),
-					'a'    => __( 'No image can stand for a God to whom nothing is like. Muslim artists answered with stylised pattern, geometry and calligraphy, and the arabesque is built to lead the eye past its own edge.', 'bestofislam' ),
-					'slug' => 'islamic-art-and-the-one-god',
-					'feat' => false,
-				),
-			),
-		),
-		'reason'    => array(
-			'label' => __( 'God and reason', 'bestofislam' ),
-			'items' => array(
-				array(
-					'q'    => __( 'Is chance enough to explain the universe?', 'bestofislam' ),
-					'a'    => __( 'Chance produces noise. The universe has a beginning, finely balanced constants and law, and a multiverse moves the question back a step without answering it.', 'bestofislam' ),
-					'slug' => 'universe-demands-creator',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'Can there be morality without God?', 'bestofislam' ),
-					'a'    => __( 'Atheists can plainly be good. The question is what grounds the duty, and flourishing, consensus and evolution each explain a feeling without making it binding.', 'bestofislam' ),
-					'slug' => 'morality-without-god',
-					'feat' => false,
-				),
-				array(
-					'q'    => __( 'If God knows everything, do we have free will?', 'bestofislam' ),
-					'a'    => __( 'Knowing is not forcing. The Quran says whoever wishes may believe or disbelieve and holds each soul to account, and the schools differ only on how God\'s decree and human choice fit together.', 'bestofislam' ),
-					'slug' => 'fate-and-free-will',
-					'feat' => false,
-				),
-			),
-		),
-	);
+	static $groups = null;
+	if ( null !== $groups ) {
+		return $groups;
+	}
+	$out = array();
+	foreach ( boi_read_data( 'questions' ) as $key => $group ) {
+		if ( ! is_array( $group ) || ! is_string( $group['label'] ?? null ) || ! is_array( $group['items'] ?? null ) ) {
+			continue;
+		}
+		$items = array();
+		foreach ( $group['items'] as $item ) {
+			if ( is_array( $item ) && is_string( $item['q'] ?? null ) && is_string( $item['a'] ?? null ) && is_string( $item['slug'] ?? null ) ) {
+				$items[] = $item;
+			}
+		}
+		if ( $items ) {
+			$group['items'] = $items;
+			$out[ $key ]    = $group;
+		}
+	}
+	if ( $out ) {
+		$groups = $out; // A failed read is not cached.
+	}
+	return $out;
 }
 
 /**
