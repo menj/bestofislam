@@ -814,6 +814,84 @@ function boi_seed_listicles() {
 			'excerpt' => __( 'Zakah, rival prophets and tribal secession all fed the Ridda wars, and Sunni and Shia sources tell the Fadak story differently.', 'bestofislam' ),
 			'topic'   => 'history',
 		),
+		array(
+			'slug'    => 'nabi-and-rasul',
+			'title'   => __( 'Nabi or rasul? 6 answers on the Quran\'s two words for prophet', 'bestofislam' ),
+			'excerpt' => __( 'Does the Quran confuse prophet and messenger? 6 answers on 22:52, the scrolls of Abraham, the 315 report and the word nabi.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'messenger-to-every-nation',
+			'title'   => __( 'A messenger to every nation? 6 answers on the Quran\'s claim', 'bestofislam' ),
+			'excerpt' => __( 'Why does the Quran name no prophet for the Germans? 6 answers on 16:36, 40:78, Jonah at Nineveh and the last messenger.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'muhammad-and-the-hebrew-prophets',
+			'title'   => __( 'Did Muhammad know the Hebrew prophets? 6 answers from the Quran', 'bestofislam' ),
+			'excerpt' => __( 'The Quran quotes Psalm 37, the Torah\'s law of retribution and Ezekiel\'s teaching, and names Jonah\'s father. 6 answers. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'ishmael-in-the-quran-and-genesis',
+			'title'   => __( 'Ishmael in the Quran and Genesis: 6 facts', 'bestofislam' ),
+			'excerpt' => __( 'Was Ishmael a prophet or only a tribal chief? 6 facts from Quran 19:54, Genesis 16 to 21, the hadith and Josephus. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'no-compulsion-in-religion',
+			'title'   => __( 'No compulsion in religion: 6 facts about Quran 2:256', 'bestofislam' ),
+			'excerpt' => __( 'Was 2:256 abrogated, and did it exclude idolaters? 6 facts from al-Tabari, al-Qurtubi, Ibn Qudama and the conquest of Sind.', 'bestofislam' ),
+			'topic'   => 'belief-and-practices',
+		),
+		array(
+			'slug'    => 'holy-war-in-the-bible',
+			'title'   => __( 'Holy war in the Bible: 7 facts critics of jihad pass over', 'bestofislam' ),
+			'excerpt' => __( 'Deuteronomy 20, Saul and Amalek, Joshua, the warrior Psalms, Revelation 19 and the Crusades: 7 facts on holy war. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'septuagint',
+			'title'   => __( 'The Septuagint: 7 facts about the Greek Old Testament', 'bestofislam' ),
+			'excerpt' => __( 'Does the Septuagint match the Hebrew Bible? 7 facts on its extra books, its shorter Jeremiah and the New Testament\'s use of it.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'oldest-bible-codices',
+			'title'   => __( 'Sinaiticus, Vaticanus, Alexandrinus: 8 facts about the oldest Bibles', 'bestofislam' ),
+			'excerpt' => __( 'Are the oldest Bibles complete and unchanged? 8 facts on the gaps, the extra books and the 23,000 corrections. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'comma-johanneum',
+			'title'   => __( '1 John 5:7: 8 facts about the verse that left the Bible', 'bestofislam' ),
+			'excerpt' => __( 'Where did the three heavenly witnesses come from, and why did they go? 8 facts from Priscillian to Erasmus and 1897. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'old-testament-variant-readings',
+			'title'   => __( 'Does the Old Testament have variant readings? 8 examples', 'bestofislam' ),
+			'excerpt' => __( 'The Hebrew Bible\'s own margins, the eighteen scribal corrections, the Samaritans and the Dead Sea Scrolls: 8 examples. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'kings-and-chronicles-numbers',
+			'title'   => __( 'Kings and Chronicles: 8 points on the numbers that disagree', 'bestofislam' ),
+			'excerpt' => __( '40,000 stalls or 4,000, Ahaziah older than his father, and who killed Goliath: 8 points on Kings and Chronicles. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'genealogies-of-jesus',
+			'title'   => __( 'The two genealogies of Jesus: 8 points from the sources', 'bestofislam' ),
+			'excerpt' => __( 'Why do Matthew and Luke give Joseph different fathers? 8 points on Africanus, Mary\'s line, Jeconiah and the Quran. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'bible-alteration-claim-before-islam',
+			'title'   => __( 'Is Islam the only religion that says the Bible was altered? 8 answers', 'bestofislam' ),
+			'excerpt' => __( 'Samaritans, Justin Martyr, Celsus, Marcion and the Manichaeans all said scripture was altered before Islam. 8 answers. Read on.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
 	);
 }
 

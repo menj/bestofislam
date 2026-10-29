@@ -2646,5 +2646,330 @@
     "source": "https://commons.wikimedia.org/wiki/File:PaulT.jpg"
    }
   ]
+ },
+ "nabi-and-rasul": {
+  "featured": {
+   "file": "nabi-and-rasul.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "nabi-and-rasul-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "nabi-and-rasul-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "messenger-to-every-nation": {
+  "featured": {
+   "file": "messenger-to-every-nation.avif",
+   "alt": "Concentric star outlines in the site palette on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "messenger-to-every-nation-1.avif",
+    "alt": "Gold, blue and white star rings on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "messenger-to-every-nation-2.avif",
+    "alt": "A many-pointed star in gold and blue lines on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "muhammad-and-the-hebrew-prophets": {
+  "featured": {
+   "file": "muhammad-and-the-hebrew-prophets.avif",
+   "alt": "Nested star outlines in gold and blue on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "muhammad-and-the-hebrew-prophets-1.avif",
+    "alt": "Concentric star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "muhammad-and-the-hebrew-prophets-2.avif",
+    "alt": "Star rings in white, blue and gold on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "ishmael-in-the-quran-and-genesis": {
+  "featured": {
+   "file": "ishmael-in-the-quran-and-genesis.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "ishmael-in-the-quran-and-genesis-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "ishmael-in-the-quran-and-genesis-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "no-compulsion-in-religion": {
+  "featured": {
+   "file": "no-compulsion-in-religion.avif",
+   "alt": "Concentric star outlines in the site palette on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "no-compulsion-in-religion-1.avif",
+    "alt": "Gold, blue and white star rings on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "no-compulsion-in-religion-2.avif",
+    "alt": "A many-pointed star in gold and blue lines on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "holy-war-in-the-bible": {
+  "featured": {
+   "file": "holy-war-in-the-bible.avif",
+   "alt": "Nested star outlines in gold and blue on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "holy-war-in-the-bible-1.avif",
+    "alt": "Concentric star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "holy-war-in-the-bible-2.avif",
+    "alt": "Star rings in white, blue and gold on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "septuagint": {
+  "featured": {
+   "file": "septuagint.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "septuagint-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "septuagint-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "oldest-bible-codices": {
+  "featured": {
+   "file": "oldest-bible-codices.avif",
+   "alt": "Concentric star outlines in the site palette on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "oldest-bible-codices-1.avif",
+    "alt": "Gold, blue and white star rings on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "oldest-bible-codices-2.avif",
+    "alt": "A many-pointed star in gold and blue lines on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "comma-johanneum": {
+  "featured": {
+   "file": "comma-johanneum.avif",
+   "alt": "Nested star outlines in gold and blue on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "comma-johanneum-1.avif",
+    "alt": "Concentric star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "comma-johanneum-2.avif",
+    "alt": "Star rings in white, blue and gold on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "old-testament-variant-readings": {
+  "featured": {
+   "file": "old-testament-variant-readings.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "old-testament-variant-readings-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "old-testament-variant-readings-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "kings-and-chronicles-numbers": {
+  "featured": {
+   "file": "kings-and-chronicles-numbers.avif",
+   "alt": "Concentric star outlines in the site palette on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "kings-and-chronicles-numbers-1.avif",
+    "alt": "Gold, blue and white star rings on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "kings-and-chronicles-numbers-2.avif",
+    "alt": "A many-pointed star in gold and blue lines on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "genealogies-of-jesus": {
+  "featured": {
+   "file": "genealogies-of-jesus.avif",
+   "alt": "Nested star outlines in gold and blue on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "genealogies-of-jesus-1.avif",
+    "alt": "Concentric star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "genealogies-of-jesus-2.avif",
+    "alt": "Star rings in white, blue and gold on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
+ },
+ "bible-alteration-claim-before-islam": {
+  "featured": {
+   "file": "bible-alteration-claim-before-islam.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "bible-alteration-claim-before-islam-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "bible-alteration-claim-before-islam-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
  }
 }

@@ -6,6 +6,39 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.0] - 2026-10-29
+
+### Added
+
+Thirteen new articles, written from the claims made in three recorded missionary lectures on prophethood, holy war and the integrity of the Bible (catalogued in `docs/POLEMICS.md`, Source 4). Each answers the claims from the Quran, the hadith, the classical commentators and the biblical and text-critical scholarship, and runs to more than 2,000 words of body text. Each has original artwork from `bin/make-original-graphics.py` (one featured image and two in the text).
+
+- **Nabi or rasul? 6 answers on the Quran's two words for prophet** (nabi-and-rasul), Belief & Practices.
+- **A messenger to every nation? 6 answers on the Quran's claim** (messenger-to-every-nation), Comparative Religion.
+- **Did Muhammad know the Hebrew prophets? 6 answers from the Quran** (muhammad-and-the-hebrew-prophets), Comparative Religion.
+- **Ishmael in the Quran and Genesis: 6 facts** (ishmael-in-the-quran-and-genesis), Comparative Religion.
+- **No compulsion in religion: 6 facts about Quran 2:256** (no-compulsion-in-religion), Belief & Practices.
+- **Holy war in the Bible: 7 facts critics of jihad pass over** (holy-war-in-the-bible), Comparative Religion.
+- **The Septuagint: 7 facts about the Greek Old Testament** (septuagint), Comparative Religion.
+- **Sinaiticus, Vaticanus, Alexandrinus: 8 facts about the oldest Bibles** (oldest-bible-codices), Comparative Religion.
+- **1 John 5:7: 8 facts about the verse that left the Bible** (comma-johanneum), Comparative Religion.
+- **Does the Old Testament have variant readings? 8 examples** (old-testament-variant-readings), Comparative Religion.
+- **Kings and Chronicles: 8 points on the numbers that disagree** (kings-and-chronicles-numbers), Comparative Religion.
+- **The two genealogies of Jesus: 8 points from the sources** (genealogies-of-jesus), Comparative Religion.
+- **Is Islam the only religion that says the Bible was altered? 8 answers** (bible-alteration-claim-before-islam), Comparative Religion.
+
+All thirteen are placed in the reading order (`inc/reading.php`): the four on prophethood after shared-prophets, the genealogies and holy war after verses-read-differently, the six on the biblical text after manuscript-transmission, and 2:256 after fighting-verses-in-context. `inc/related-articles.json` is rebuilt.
+
+### Changed
+
+- **muhammad-false-prophet-claim** gains two paragraphs on the other forward-looking verses: 48:27 and the Umra of fulfilment (Bukhari 4252), 24:55, and the "prevail over all religion" verses (9:33, 48:28, 61:9) with Ibn Kathir's two readings.
+- **jihad-meaning-quran-hadith-jurists** gains two paragraphs conceding the word *qital*, the Hanafi definition of jihad in Ibn Abidin, and his summary of the stages of the command to fight, with the limits the same manuals set and Abu Zahra's modern reading.
+- **jesus-not-god** gains a paragraph on *monogenes* in John 3:16, Hebrews 11:17 and Quran 112:3.
+- **ezra-and-mary** gains a paragraph on "sister of Aaron" (19:28), answered from Sahih Muslim 2135 (checked on sunnah.com) and Luke 1:5.
+- **manuscript-transmission** and **where-is-the-injil** gain a paragraph each pointing to the new articles on the codices, 1 John 5:7, Old Testament variants and the alteration claim before Islam.
+- Notes in those six articles are renumbered in order of first appearance.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited. `inc/data/network-links.json` is unchanged, since it must change in all seven themes together; phrases for the new articles can be added there in a later network release. `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.77.1] - 2026-10-29
 
 ### Changed

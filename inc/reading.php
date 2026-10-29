@@ -33,11 +33,11 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'deuteronomy-18-and-the-paraclete', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing' ),
+			'slugs' => array( 'same-god', 'deuteronomy-18-and-the-paraclete', 'shared-prophets', 'nabi-and-rasul', 'messenger-to-every-nation', 'muhammad-and-the-hebrew-prophets', 'ishmael-in-the-quran-and-genesis', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'genealogies-of-jesus', 'holy-war-in-the-bible', 'paul-and-the-law', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
-			'slugs' => array( 'manuscript-transmission', 'second-peter', 'uthman-copies', 'seven-ahruf-cairo-edition-stoning-verse', 'aisha-sheep-report-stoning-and-suckling-verses', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'preservation-and-truth', 'quran-contradictions-claims', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
+			'slugs' => array( 'manuscript-transmission', 'septuagint', 'old-testament-variant-readings', 'kings-and-chronicles-numbers', 'oldest-bible-codices', 'comma-johanneum', 'bible-alteration-claim-before-islam', 'second-peter', 'uthman-copies', 'seven-ahruf-cairo-edition-stoning-verse', 'aisha-sheep-report-stoning-and-suckling-verses', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'preservation-and-truth', 'quran-contradictions-claims', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
 		),
 		array(
 			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),
@@ -49,7 +49,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'muslims-by-the-numbers-2020', 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
+			'slugs' => array( 'muslims-by-the-numbers-2020', 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'islam-in-china', 'islamophobia-5-facts', 'taqiyya-5-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'no-compulsion-in-religion', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
 		),
 	);
 }
