@@ -180,3 +180,22 @@ All remaining points are now accounted for:
 
 ## Second tier: closing pass (23 October 2026)
 hanif-poets-and-musaylima (Zayd's death before the mission and the saving of girls, Ibn Hajar vol. 7 p. 143; Musaylima's sayings and Abu Bakr's reaction, Tabari vol. 3 pp. 284 and 300), was-muhammad-illiterate-ummi (the Encyclopaedia of the Quran citation corrected to Günther, "Ummī", EQ 5, pp. 399–402), ridda-wars-abu-bakr-fadak (Tabari vol. 3 locations), jihad-meaning-quran-hadith-jurists (Tirmidhi 2616, 2174, 1621, Abu Dawud 4344, Ibn Majah 4011 verified; Ibn Hajar on the greater-jihad saying via al-Ajluni), schacht-isnads-dating-hadith (Muslim 3004, Abu Dawud 3646, Umar ibn Abd al-Aziz's letter) and talmud-midrash-apocrypha-borrowing (all dates and passage references reread against standard references; no change needed) were checked. Still open: the wording of Ibn Taymiyya's remark on the greater-jihad saying (Majmu al-Fatawa); the Zad al-Maad stages of jihad.
+
+## Lecture articles (29 October 2026)
+
+The thirteen articles of 1.78.0 and the additions to six others were written with the sources named in their notes, several of them from memory. The details below need a check before they are relied on.
+
+- **nabi-and-rasul**: the word counts (236, 86, 54, 21, 5) were made on the Tanzil text with a pattern match and should be checked against Abd al-Baqi's concordance; Ibn Taymiyya's definition and its page in al-Nubuwwat; the grading of the 124,000 and 315 reports and the narrator named in note 10; the Koehler-Baumgartner entry for *navi*.
+- **messenger-to-every-nation**: Sargon II's Tamudi (Luckenbill, §17); the Ruwafa inscription in Bowersock; Ptolemy's Modiana.
+- **muhammad-and-the-hebrew-prophets**: Mishnah Sanhedrin 4:5 wording; Ibn Qutayba's quotations of the Torah and Psalms (Adang, chapter 6); Ibn Rabban's citations.
+- **ishmael-in-the-quran-and-genesis**: al-Tabari's preference for Isaac on 37:107; Josephus, Antiquities 1.214 and 1.220–221 numbering; Sozomen 6.38; Wenham and Westermann on Genesis 16:12.
+- **no-compulsion-in-religion**: the report of al-Husayn of the Ansar in al-Tabari; the wording of al-Hajjaj's ruling in al-Baladhuri; that Ibn Qudama cites 2:256 for the compelled dhimmi; the narration from Ahmad agreeing with Malik; Akbar 1564 and Aurangzeb 1679; Satish Chandra 1969 page range; the Najran covenant in Abu Yusuf.
+- **holy-war-in-the-bible**: Clermont canon 2 wording in Riley-Smith, p. 37; Bernard's "malicide" (chapter 3); Maimonides, Kings 6:1; Mishnah Yadayim 4:4 and Berakhot 28a.
+- **septuagint**: the Greek Esther's count of mentions of God; Methuselah surviving the flood in some manuscripts; 4QExod-b at Exodus 1:5; Augustine Letter 71 and Jerome Letter 112 numbering; Cowley 1974.
+- **oldest-bible-codices**: the 23,000 corrections figure from the Codex Sinaiticus Project; Hoskier's 3,000 differences; Vaticanus page 1512 note; Fee 1965 on P66 corrections; Martini 1966; the contents of P72.
+- **comma-johanneum**: the manuscript list in Metzger (61, 88, 221, 429, 629, 636, 918, 2318, 2473); Priscillian, Liber Apologeticus 1.4; Denzinger numbers 3681–3682; Conybeare 1901; the Sinaiticus correction at 1 Timothy 3:16.
+- **old-testament-variant-readings**: the *ketiv-qere* count range; the eighteen *tiqqune soferim* and Genesis Rabbah 49:7; Tov's page numbers; the Deuteronomy 27:4 fragment; 5/6HevPs at Psalm 22:17; Kiddushin 30a.
+- **kings-and-chronicles-numbers**: that Archer adopts the division-of-the-kingdom reckoning for 2 Chronicles 16:1; the Septuagint and Syriac readings for 2 Chronicles 22:2 and 36:9; McCarter on 2 Samuel 21:19.
+- **genealogies-of-jesus**: Julian's remark as preserved in Cyril; Annius of Viterbo as the source of the Mary theory (Brown, p. 89); the Bezae text of Luke 3; Africanus quoted in Eusebius 1.7.15.
+- **bible-alteration-claim-before-islam**: Sotah 33b and y. Sotah 7:3 wording; Origen, Against Celsus 2.27; Eusebius 4.23.12 and 5.28; Augustine, Reply to Faustus 32.2 and 33.3; the Pseudo-Clementine "false pericopes" (Homilies 2.38, 3.47–50); Crone 1980.
+- **Additions to existing articles**: Bukhari 4252 for the Umra of fulfilment; the Hanafi definition and the stages in Radd al-Muhtar; Abu Zahra's book; Bauer-Danker on *monogenes*.
