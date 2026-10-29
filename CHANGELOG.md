@@ -6,6 +6,20 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.1] - 2026-10-29
+
+### Changed
+
+- The Islamic dilemma article (islamic-dilemma) calls the two parts of the argument its two claims, the term the sister sites use: "each claim is meant to be fatal on its own", "Two claims, no exit" and "no first claim".
+- The fate and free will article (fate-and-free-will) puts the Euthyphro question as a choice between two answers: the Muʿtazila took the second answer, al-Ashʿarī the first, and al-Māturīdī picked neither.
+- The glossary entry on the adhān gives the Jewish proposal in al-Bukhārī's report as a trumpet.
+
+### Added
+
+- `FARUQI.md`: the Faruqian core, al-tawḥīd as al-Fārūqī set it out in *Al Tawhid: Its Implications for Thought and Life*, which every site in the network rests on. `CLAUDE.md` points contributors to it first. Both stay out of the release archive.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` rises to 13 for the adhān entry.
+
 ## [1.77.0] - 2026-10-26
 
 ### Added
