@@ -6,6 +6,22 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.0] - 2026-10-30
+
+### Added
+
+- **The Yahweh Question**, a five-part series in Comparative Religion, seeded from the Markdown drafts in `docs/yahweh-series/`:
+  - Is Yahweh Satan? 7 troubling biblical parallels that raise serious questions (`is-yahweh-satan`), the hub.
+  - Who was Yahweh? 7 archaeological discoveries that challenge traditional beliefs (`who-was-yahweh-archaeological-origins`).
+  - Was Yahweh originally one of many gods? 7 clues from ancient Israelite religion (`was-yahweh-one-of-many-gods`).
+  - Did early Christians believe Yahweh was evil? 7 revelations from Gnosticism and Marcion (`early-christians-yahweh-evil-gnosticism-marcion`).
+  - Is Yahweh the same as Allah? 7 questions from the Quran, the Bible and history (`is-yahweh-the-same-as-allah`).
+- Titles follow the site's sentence case; the excerpts, which double as meta descriptions, stay within 130 characters. The five join "The Bible and the Quran" in the reading order after the Talmud and midrash article, and `inc/related-articles.json` is rebuilt (122 articles).
+- Each article has a featured image and two in the text from Wikimedia Commons, every one in the public domain or under CC0 according to its own Commons metadata, credited in `inc/images-data.json`; none depicts a prophet.
+- The fact-check list for the series is section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
+
+New articles are created on existing sites by the population pass that runs on this version change; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.77.2] - 2026-10-29
 
 ### Changed

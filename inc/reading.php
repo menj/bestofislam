@@ -33,7 +33,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'deuteronomy-18-and-the-paraclete', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing' ),
+			'slugs' => array( 'same-god', 'deuteronomy-18-and-the-paraclete', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing', 'is-yahweh-satan', 'who-was-yahweh-archaeological-origins', 'was-yahweh-one-of-many-gods', 'early-christians-yahweh-evil-gnosticism-marcion', 'is-yahweh-the-same-as-allah' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),

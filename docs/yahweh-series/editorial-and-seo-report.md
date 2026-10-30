@@ -28,7 +28,7 @@ This report goes with the five articles in this folder. It covers the site audit
 
 **Sections and tags.** The live site has eight sections (taxonomy `listicle-topic`): Arts & Culture, Belief & Practices, Comparative Religion, Faith & Reason, History, Islamophobia, Science and The Muslim World. **Comparative Religion** (24 articles) fits all five and is set in each front matter. The site uses no tags: the tags endpoint returns an empty list. The `tags` field is therefore left empty rather than inventing any.
 
-**Title case.** The brief's titles are in title case. They are kept exactly as given in each `title` field. Each article's H1 uses the site's sentence case: for example, "Is Yahweh Satan? 7 troubling biblical parallels that raise serious questions". Decide which form to publish. Sentence case matches every existing title on the site.
+**Title case.** The brief's titles are in title case. They are kept exactly as given in each `title` field. Each article's H1 uses the site's sentence case: for example, "Is Yahweh Satan? 7 troubling biblical parallels that raise serious questions". The seeded articles (version 1.78.0) use sentence case, which matches every existing title on the site.
 
 ## 2. Overlap with existing articles and tensions
 
@@ -164,13 +164,15 @@ Each item below was written from reference works or from memory of standard scho
 3. Article 5 (Islamic perspective), together with or just before article 1, so the hub never stands alone without the Islamic answer.
 4. Article 1, the hub, last, when every series link resolves.
 
-If the articles are seeded through the theme, each needs:
+The series was seeded into the theme in version 1.78.0. Each article has:
 
 - a content JSON in `content/`
 - an entry in `inc/setup.php` with its section (Comparative Religion)
 - a place in the reading order (`inc/reading.php`)
-- a credited image
-- conversion of the Markdown footnotes to the site's Notes list
+- a featured image and two in-text images from Wikimedia Commons, each public domain or CC0, credited in `inc/images-data.json`
+- its Markdown footnotes converted to the site's Notes list
+
+Seeding creates all five posts in one population pass, so the series links resolve together and the order above applies only if the posts are released by hand.
 
 ## 9. Publication-readiness checklist
 
@@ -185,7 +187,7 @@ If the articles are seeded through the theme, each needs:
 - [x] No contractions in the authors' prose; British spelling; ﷺ at first mention of the Prophet (article 5).
 - [x] Internal links to existing articles checked live.
 - [ ] Confirm the fact-check items in section 7.
-- [ ] Source and licence the featured images.
-- [ ] Decide on title case or sentence case.
+- [x] Images sourced from Wikimedia Commons, public domain or CC0 only.
+- [x] Sentence case adopted for the seeded titles.
 - [ ] Verify keyword volumes.
 - [ ] Publish in the order in section 8 so that the series links resolve.

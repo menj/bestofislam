@@ -791,6 +791,36 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'is-yahweh-satan',
+			'title'   => __( 'Is Yahweh Satan? 7 troubling biblical parallels that raise serious questions', 'bestofislam' ),
+			'excerpt' => __( 'Is Yahweh Satan? 7 biblical parallels, from David\'s census to the lying spirit, weighed against the text. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'who-was-yahweh-archaeological-origins',
+			'title'   => __( 'Who was Yahweh? 7 archaeological discoveries that challenge traditional beliefs', 'bestofislam' ),
+			'excerpt' => __( 'The origin of Yahweh in 7 finds, from the Shasu of Yhw to Kuntillet Ajrud and the Mesha Stele, and their limits. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'was-yahweh-one-of-many-gods',
+			'title'   => __( 'Was Yahweh originally one of many gods? 7 clues from ancient Israelite religion', 'bestofislam' ),
+			'excerpt' => __( 'Ancient Israelite polytheism in 7 clues: El, Ugarit, Deuteronomy 32, Psalm 82 and the rise of monotheism. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'early-christians-yahweh-evil-gnosticism-marcion',
+			'title'   => __( 'Did early Christians believe Yahweh was evil? 7 revelations from Gnosticism and Marcion', 'bestofislam' ),
+			'excerpt' => __( 'Gnosticism and Yahweh: Marcion, Yaldabaoth and the Demiurge, and who, if anyone, made the creator Satan. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
+			'slug'    => 'is-yahweh-the-same-as-allah',
+			'title'   => __( 'Is Yahweh the same as Allah? 7 questions from the Quran, the Bible and history', 'bestofislam' ),
+			'excerpt' => __( 'Yahweh vs Allah: 7 questions on the name, tawhid, mercy, Iblis and Jesus, and why a new portrait is not a new God. Read them.', 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'hanif-poets-and-musaylima',
 			'title'   => __( '5 facts about the Hanif poets, Musaylima and the Quran', 'bestofislam' ),
 			'excerpt' => __( 'Zayd ibn Amr, Waraqa and Musaylima are said to have supplied the Quran\'s early content; the dates and surviving texts show otherwise.', 'bestofislam' ),

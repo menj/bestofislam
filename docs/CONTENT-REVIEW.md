@@ -192,3 +192,7 @@ Written from memory or from secondary summaries, and to be checked against the s
 - **fly-hadith-and-adult-suckling**: Shah Wali Allah's chapter title; Ibn Khaldun on medicine; Abu Dawud 3844, al-Nasa'i 4262, Ibn Majah 3504; Abu Rayya (1958) and al-Siba'i's reply; al-Nawawi quoting Qadi Iyad; the Muwatta chapter on A'isha's practice; al-Layth and Ibn Hazm, and Ibn Taymiyya via Zad al-Ma'ad.
 - **do-muslims-worship-muhammad**: Ibn Majah 1853; the Musnad Ahmad report "what God alone wills" (no number given); Bukhari 1040, 1044, 4454, 2411, 7510; Abu Dawud 2042; al-Tirmidhi 3148; the Muwatta chapter for "do not make my grave an idol".
 - **muslims-by-the-numbers-2020**: all new figures are from the two Pew pages already cited, read on 29 October 2026.
+
+## The Yahweh Question (1.78.0)
+
+The five series articles carry their own fact-check list: section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
