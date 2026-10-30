@@ -107,7 +107,7 @@ Each primary keyword appears in the title, the meta description and the opening 
 - **Primary texts.** Every Bible quotation was taken from the World English Bible, a public-domain translation, through bible-api.com, or from the King James Version where marked. Every Quran quotation was taken from Saheeh International through the quran.com API. The World English Bible renders the Tetragrammaton as "Yahweh", which suits the series. Quotations that would have brought contractions into the text (the WEB has "can't", "don't") were taken from the KJV instead, to respect SSOT D34.
 - **Epigraphy and archaeology.** The inscriptions and finds were checked against published scholarship and reference summaries; the excavation reports themselves were not read. Readings that are disputed are presented as disputed: *yhw* at Soleb; "his asherah"; the Khirbet el-Qom text. Dates of objects are kept separate from dates of discovery.
 - **Nag Hammadi texts.** The usual online text of the Apocryphon of John and the Testimony of Truth could not be reached, so those texts are paraphrased, not quoted. The one short phrase given, the gloss "fool" for Saklas, is standard. Note 11 of article 4 says so.
-- **Wikimedia Commons** could not be queried (rate-limited). Only the Aleppo Codex files were confirmed to exist. The other four featured-image suggestions name an object and must be sourced and licence-checked before use. None depicts a prophet.
+- **Images.** Wikimedia Commons returned HTTP 429 to this environment for both its API and its image server, so the seeded articles use 15 Pexels photographs, credited with photographer and source page (version 1.78.0). Two public-domain Commons files were identified for a later swap: `File:Aleppo Codex (Deut).jpg` and `File:Mesha stele (Louvre, AO 5066).jpg`. The `suggested_featured_image` fields in the Markdown front matter still describe the original Commons ideas. No image depicts a person or a prophet.
 - **Search data.** None was available; see section 4.
 
 ## 7. Fact-check notes: details to confirm against the sources before publication
@@ -169,7 +169,7 @@ The series was seeded into the theme in version 1.78.0. Each article has:
 - a content JSON in `content/`
 - an entry in `inc/setup.php` with its section (Comparative Religion)
 - a place in the reading order (`inc/reading.php`)
-- a featured image and two in-text images from Wikimedia Commons, each public domain or CC0, credited in `inc/images-data.json`
+- a featured image and two in-text images from Pexels, credited in `inc/images-data.json`
 - its Markdown footnotes converted to the site's Notes list
 
 Seeding creates all five posts in one population pass, so the series links resolve together and the order above applies only if the posts are released by hand.
@@ -187,7 +187,7 @@ Seeding creates all five posts in one population pass, so the series links resol
 - [x] No contractions in the authors' prose; British spelling; ﷺ at first mention of the Prophet (article 5).
 - [x] Internal links to existing articles checked live.
 - [ ] Confirm the fact-check items in section 7.
-- [x] Images sourced from Wikimedia Commons, public domain or CC0 only.
+- [x] Images sourced (Pexels; Commons was unreachable) and credited.
 - [x] Sentence case adopted for the seeded titles.
 - [ ] Verify keyword volumes.
 - [ ] Publish in the order in section 8 so that the series links resolve.

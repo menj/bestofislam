@@ -17,7 +17,7 @@ versioning.
   - Did early Christians believe Yahweh was evil? 7 revelations from Gnosticism and Marcion (`early-christians-yahweh-evil-gnosticism-marcion`).
   - Is Yahweh the same as Allah? 7 questions from the Quran, the Bible and history (`is-yahweh-the-same-as-allah`).
 - Titles follow the site's sentence case; the excerpts, which double as meta descriptions, stay within 130 characters. The five join "The Bible and the Quran" in the reading order after the Talmud and midrash article, and `inc/related-articles.json` is rebuilt (122 articles).
-- Each article has a featured image and two in the text from Wikimedia Commons, every one in the public domain or under CC0 according to its own Commons metadata, credited in `inc/images-data.json`; none depicts a prophet.
+- Each article has a featured image and two in the text from Pexels, used under the Pexels licence and credited in `inc/images-data.json` with the photographer and photo page; none depicts a person or a prophet. Wikimedia Commons was the first choice, but its API and image server returned HTTP 429 to the build environment throughout, so a later release may swap in Commons files (the Mesha Stele and the Aleppo Codex, both public domain, were identified).
 - The fact-check list for the series is section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
 
 New articles are created on existing sites by the population pass that runs on this version change; `BOI_GLOSSARY_VERSION` stays at 12.
