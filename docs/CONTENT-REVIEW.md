@@ -196,3 +196,12 @@ Written from memory or from secondary summaries, and to be checked against the s
 ## The Yahweh Question (1.78.0)
 
 The five series articles carry their own fact-check list: section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
+
+## Expansion, second batch (1.78.1)
+
+- **aisha-sheep-report-stoning-and-suckling-verses**: al-Suyuti, al-Itqan, chapter 47 (three categories of abrogation); al-Nawawi on Muslim 1452; Ibn al-Salah on *shadhdh* and *ziyada*; Ibn Ishaq's known *tadlis* (here attributed to the Tahdhib entry); Burton 1977.
+- **ezra-and-mary**: Tirmidhi 3095 (Adi ibn Hatim); Ibn Hazm attributing the saying to a sect in Yemen; 3 Enoch 12:5 ("lesser YHWH"); Hagigah 15a; Newby 1988 on Ezra traditions in Arabia.
+- **fastest-growing-religion**: Pew 2015 projections for 2050 (2.76 billion Muslims, 29.7 percent; 2.92 billion Christians, 31.4 percent); other figures from the 2025 Pew pages already cited.
+- **second-peter**: Bauckham 1983 (testament genre); Ehrman 2013; Tertullian, On Baptism 17; Serapion in Eusebius 6.12; the Muratorian fragment's omission of the Petrine letters and the Peshitta's omissions.
+- **why-five-prayers**: Bukhari 2931 and Muslim 627 (middle prayer as asr); Bukhari 631; Daniel W. Brown 1996 on the Ahl al-Quran and Parwez; the claim that Quranist groups differ on the number of prayers; Didache 8.3; Berakhot 26b.
+- **temporary-marriage-mutah**: Ibn Qudama, al-Mughni, for the Sunni argument from 23:5-7; al-Tabarsi on 4:24; Ibn al-Qayyim, Zad al-Ma'ad, on the Khaybar report; the "two mutahs" report attributed to Umar (al-Bayhaqi reference to confirm); Haeri 2014 on misyar.

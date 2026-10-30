@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.1] - 2026-10-30
+
+### Changed
+
+- Six more articles are expanded to at least 1,600 words of body text, the second batch of the pass begun in 1.77.2: aisha-sheep-report-stoning-and-suckling-verses (844 to 1,893), ezra-and-mary (927 to 1,623), fastest-growing-religion (939 to 1,617), second-peter (957 to 1,614), why-five-prayers (975 to 1,697) and temporary-marriage-mutah (992 to 1,713). Entries and titles are unchanged; new notes are numbered in order, and details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.0] - 2026-10-30
 
 ### Added
