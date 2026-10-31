@@ -316,3 +316,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **kharijites-and-takfir**: al-Shahrastani on the Azariqa and Nafi ibn al-Azraq (680s); Bukhari 3610 (Dhu al-Khuwaysira); Takfir wal-Hijra and the killing of al-Dhahabi in 1977 (Kepel 1985, chapter to confirm).
 - **hajj-rites-explained**: Bukhari 1755 (farewell circuit); Malcolm X's letter (Autobiography, chapter 17); GASTAT figures "between one and a half and two million"; Quran 2:203.
 - **quranic-stories-and-history**: the Ruwwafa inscription (166-169 CE; Bowersock 1983 pp. 96-97, pages to confirm); Procopius, Wars 1.20 on Abramus; Matthew 12:41 and Luke 11:32.
+
+## Expansion, eighteenth batch (1.78.19)
+
+- **jesus-not-god**: Hebrews 5:7-8; Mark 10:17-18 and Luke 18:18-19; Mark 12:28-29 with Deuteronomy 6:4; Acts 2:22.
+- **slavery-in-islam**: Abu Dawud 5156 and Ibn Majah 1625 (last words); Bukhari 2552 ("my young man"); Musnad Ahmad 2216 on the Badr ransom (numbering to confirm); Tunisia 1846 and the Zaytuna scholars (Montana 2013); the Ottoman ban of 1857 (Toledano 1982).
+- **paul-and-the-law**: Galatians 2:11-14; Acts 21:18-24; James 2:10 and 2:24; Luther's "epistle of straw" (1522 preface).
+- **crucifixion-quran**: Quran 3:54-55, 43:61 and 4:159 with al-Tabari; the Gospel of Barnabas manuscripts (Ragg 1907; Leirvik 2002, pages to confirm).
