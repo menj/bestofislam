@@ -288,3 +288,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **indonesia**: Marco Polo on Perlak (1292), the Malik al-Salih gravestone (1297) and the Malik Ibrahim tombstone (1419), all cited to Ricklefs; hajj quota "more than two hundred thousand"; Pesantren Law 18/2019; Islamic parties' minority share of the vote (Fealy and White 2008, KPU); Aisyiyah founded 1917; KUPI at Cirebon (2017) and Jepara (2022).
 - **natural-world-verses**: Bukhari 1043 (eclipse); Quran 27:88 in context; Quran 24:35; Tirmidhi 2429 and its gradings; al-Tabari on 55:22; Bucaille 1976; al-Shatibi's argument in al-Muwafaqat.
 - **quran-mysteries-in-the-stories**: the rebuke of Moses in Bukhari 122; Ezekiel 38-39 and Revelation 20:8; Abul Kalam Azad on Cyrus; Jacob of Serugh's homily and Gregory of Tours (chapter number to confirm); the solar and lunar years remark; Solomon in later lore; al-Tabari on 85:4 and Najran.
+
+## Expansion, fourteenth batch (1.78.15)
+
+- **apes-and-pigs-and-the-jews**: Quran 7:175-176, 25:44, 62:5; Matthew 23:33 and Philippians 3:2; Ibn Kathir on 7:163-166 and his grading of the Ibn Batta report; Mukhayriq (Guillaume pp. 241 and 384, pages to confirm) and Bukhari 3329 and 3812 on Abd Allah ibn Salam; Cohen 1994 and Goitein on Jews under Muslim rule; Granada 1066 and the Almohads.
+- **before-your-first-friday-prayer**: Abu Dawud 499 and Bukhari 604 (origin of the adhan); tayammum under Quran 5:6; Muslim 869 (short sermon); al-Hakim on al-Kahf and Abu Dawud 1047; Bukhari 935 (the hour on Friday); Muslim 875 (Sulayk).
+- **prophet-died-poisoning**: Bukhari 3667-3668 (Abu Bakr's address); Bukhari 3169 (the Jews of Khaybar questioned); Bukhari 4428 as a suspended report; Musnad Ahmad 3617 (Ibn Masud on martyrdom; numbering to confirm); Hensley's death in 1955 and Hood and Williamson 2008.
+- **magic-jinn-and-satan-hadiths**: the link between the spell and Surahs 113-114 (Ibn Hajar, Ibn Kathir); Bukhari 5017 and 6223; Quran 7:200; Ibn Taymiyya, Majmu al-Fatawa vol. 19 p. 10; the Mutazila on jinn; Muslim 2200 and 2230.

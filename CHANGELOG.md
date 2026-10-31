@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.15] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: apes-and-pigs-and-the-jews (1,248 to 1,647), before-your-first-friday-prayer (1,262 to 1,649), prophet-died-poisoning (1,271 to 1,666) and magic-jinn-and-satan-hadiths (1,281 to 1,613). before-your-first-friday-prayer also uses a neutral pronoun for the generic visitor. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.14] - 2026-10-31
 
 ### Changed
