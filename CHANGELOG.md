@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.13] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: buraq-and-miracle-stories (1,210 to 1,766), quran-preservation-reddit (1,214 to 1,641), first-muslims-kept-the-faith (1,216 to 1,607) and universe-demands-creator (1,234 to 1,693). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.12] - 2026-10-31
 
 ### Changed

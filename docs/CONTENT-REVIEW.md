@@ -274,3 +274,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **dome-inscriptions**: Süleyman's exterior tiles (Grabar 2006); Abd al-Malik's coin reform and Grierson 1960; Donner 1998.
 - **hanif-poets-and-musaylima**: Ibn Ishaq's four hanifs; Bukhari on Zayd at the Kaaba (attributed here to note 4) and Waraqa's wish (Bukhari 3); the EI2 article on Umayya ibn Abi al-Salt; the Musaylima letters (Guillaume pp. 649-650) and Quran 7:128; the Rabi'a and Mudar saying in al-Tabari.
 - **why-no-interest**: Muslim 1587 (six commodities); Bukhari 2305 (repaying with a better camel); Third Lateran canon 25 and Aquinas II-II q. 78; the Federal Shariat Court judgment of 28 April 2022.
+
+## Expansion, twelfth batch (1.78.13)
+
+- **buraq-and-miracle-stories**: Bukhari 3886 and Muslim 170 (Jabir on describing Jerusalem); Abu Bakr's reply (Guillaume p. 183, page to confirm); Ibn Hajar's count of opinions on the date of the Isra; the ring where the prophets tied their mounts (in Muslim 162a); 2 Corinthians 12:2-4; Quran 17:90-93; Hume, Enquiry, section 10.
+- **quran-preservation-reddit**: Sadeghi and Bergmann, Arabica 57 (2010), pages 343-436; van Putten's "grace of God" spelling argument as summarised here; the Tübingen fragment Ma VI 165 (press release of November 2014, 649-675); Bukhari 5003 (Anas on the four collectors); Sinai 2017, chapter 3 and the "closed by the 650s" summary.
+- **first-muslims-kept-the-faith**: the sun-and-moon saying (Guillaume p. 119); Bukhari 6459 and 2916; Hamza and Umar (Guillaume page ranges to confirm) and Bukhari 3684; Umm Habiba, Ubayd Allah ibn Jahsh and Ruqayya (Guillaume page numbers to confirm).
+- **universe-demands-creator**: Hoyle's 1949 "big bang" broadcast and Kragh 1996; Penzias and Wilson 1965; Quran 52:35-36; Hoyle, Engineering and Science (November 1981); Einstein, "Physics and Reality" (1936), wording of the comprehensibility remark; Ellis and Silk, Nature 516 (2014).
