@@ -83,7 +83,13 @@ function boi_gl_map() {
 				}
 
 				$seen[ $low ] = true;
-				$map[]        = array( 'phrase' => $name, 'url' => get_permalink( $page ), 'id' => $page->ID, 'always' => in_array( $page->post_name, boi_gl_always(), true ) );
+				$map[]        = array(
+					'phrase'  => $name,
+					'url'     => get_permalink( $page ),
+					'id'      => $page->ID,
+					'always'  => in_array( $page->post_name, boi_gl_always(), true ),
+					'epithet' => function_exists( 'boi_glossary_epithet_html' ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
+				);
 			}
 		}
 
@@ -127,13 +133,20 @@ function boi_gl_filter( $content ) {
 	$depth  = array_fill_keys( $skip, 0 );
 	$used   = array();
 	$in_p   = false;
-	$tokens = preg_split( '/(<[^>]*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+	$lanah  = 0; // Open spans inside the laʿnat Allāh mark, which takes no link.
+	// A tag ends at the first ">" outside a quoted attribute value, so an alt
+	// text such as "a > b" never reads as running text.
+	$tokens = preg_split( '/(<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
 
 	foreach ( $tokens as $i => $tok ) {
 		if ( '' !== $tok && '<' === $tok[0] ) {
 			if ( preg_match( '#^<(/?)([a-z0-9]+)#i', $tok, $m ) ) {
 				$tag = strtolower( $m[2] );
 				$end = '/' === $m[1];
+
+				if ( 'span' === $tag && ( $lanah || ( ! $end && preg_match( '/\\bclass="[^"]*\\bboi-lanah\\b/', $tok ) ) ) ) {
+					$lanah = max( 0, $lanah + ( $end ? -1 : 1 ) );
+				}
 
 				if ( 'p' === $tag || 'li' === $tag ) {
 					$in_p = ! $end;
@@ -144,14 +157,17 @@ function boi_gl_filter( $content ) {
 			continue;
 		}
 
-		if ( ! $in_p || array_sum( $depth ) || '' === trim( $tok ) ) {
+		if ( ! $in_p || $lanah || array_sum( $depth ) || '' === trim( $tok ) ) {
 			continue;
 		}
 
-		$found = array();
+		$found     = array();
+		$found_ids = array();
 
 		foreach ( $items as $item ) {
-			if ( isset( $used[ $item['id'] ] ) || ( $budget < 1 && empty( $item['always'] ) ) ) {
+			// One link per page per paragraph: a title and an alias of the same
+			// entry must not both be linked (and carry the epithet) at once.
+			if ( isset( $used[ $item['id'] ] ) || isset( $found_ids[ $item['id'] ] ) || ( $budget < 1 && empty( $item['always'] ) ) ) {
 				continue;
 			}
 
@@ -170,7 +186,8 @@ function boi_gl_filter( $content ) {
 					}
 				}
 
-				$found[] = array( 'start' => $start, 'end' => $end, 'item' => $item );
+				$found[]                    = array( 'start' => $start, 'end' => $end, 'item' => $item );
+				$found_ids[ $item['id'] ] = true;
 
 				if ( count( $found ) >= 3 || ( empty( $item['always'] ) && count( $found ) >= $budget ) ) {
 					break;
@@ -187,7 +204,8 @@ function boi_gl_filter( $content ) {
 		} );
 
 		foreach ( $found as $f ) {
-			$link = '<a href="' . esc_url( $f['item']['url'] ) . '" class="boi-gl-link">' . substr( $tok, $f['start'], $f['end'] - $f['start'] ) . '</a>';
+			// The epithet rides on the first mention only, with the link.
+			$link = '<a href="' . esc_url( $f['item']['url'] ) . '" class="boi-gl-link">' . substr( $tok, $f['start'], $f['end'] - $f['start'] ) . '</a>' . ( isset( $f['item']['epithet'] ) ? $f['item']['epithet'] : '' );
 			$tok  = substr_replace( $tok, $link, $f['start'], $f['end'] - $f['start'] );
 			$used[ $f['item']['id'] ] = true;
 

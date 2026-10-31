@@ -6,9 +6,120 @@ versioning.
 
 ## [Unreleased]
 
-## [1.74.0] - 2026-10-23
+## [1.77.2] - 2026-10-29
 
 ### Changed
+
+- Seed data is JSON throughout. The topics, the article list and the standing pages move out of `boi_seed_topics()`, `boi_seed_listicles()` and `boi_seed_pages()` into `inc/data/seed.json`. The questions list moves out of `boi_questions()` into `inc/data/questions.json`, and the hand-listed image credits move out of `boi_image_manifest_base()` into `inc/data/image-credits.json`. Each is read with `json_decode()` by `boi_read_data()`, never executed; a missing or malformed file reads as empty, so the seeder creates nothing instead of failing.
+- A standing page is a list of blocks: `["p", text]` and `["h", text]` are escaped into a paragraph or a heading as before, and `["html", markup]` is block markup used as it stands. The pages render byte for byte as they did, so no fingerprint changes and nothing on a live site is rewritten.
+- While the seed list cannot be read (an update still unpacking, a damaged file), population does nothing and `boi_maybe_install()` does not record the new version, so the migrations run on a later request instead of being skipped for good (`boi_seed_ready()`).
+- `boi_questions()` leaves out a group without a label and a list of items, and an item without a question, answer and slug, so a damaged entry never reaches the front page.
+
+## [1.77.1] - 2026-10-29
+
+### Changed
+
+- The Islamic dilemma article (islamic-dilemma) calls the two parts of the argument its two claims, the term the sister sites use: "each claim is meant to be fatal on its own", "Two claims, no exit" and "no first claim".
+- The fate and free will article (fate-and-free-will) puts the Euthyphro question as a choice between two answers: the Muʿtazila took the second answer, al-Ashʿarī the first, and al-Māturīdī picked neither.
+- The glossary entry on the adhān gives the Jewish proposal in al-Bukhārī's report as a trumpet.
+
+### Added
+
+- `FARUQI.md`: the Faruqian core, al-tawḥīd as al-Fārūqī set it out in *Al Tawhid: Its Implications for Thought and Life*, which every site in the network rests on. `CLAUDE.md` points contributors to it first. Both stay out of the release archive.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` rises to 13 for the adhān entry.
+
+## [1.77.0] - 2026-10-26
+
+### Added
+
+- laʿnat Allāh now follows the name of Paul of Tarsus. لعنة الله, "the curse of God", is set after Paul's name as a calligraphic mark, the shortcode `[boi_lanah]` (`inc/util.php`). The span `.boi-lanah` (`assets/css/scripts.css`) draws `assets/images/lanat-allah.svg` (copied from injil.help) as a mask in `--boi-rubric`, the red ink of the rubric epithets, so it follows the appearance toggle; in forced-colours mode it is drawn in `CanvasText`. The words "laʿnat Allāh, the curse of God" stay inside, visually hidden, for screen readers, search and a copy and paste, and show as written where the browser cannot draw a mask. The contextual-link engine skips `.boi-lanah`, and the glossary linker skips its text.
+- It is placed by hand and kept rare, three times in two articles, at the sentences that give the article's verdict:
+  - Twice in Was Paul an apostle? (paul-claim-to-apostleship), at "That is a test of companionship. Paul met no part of it", and the summing up, "Strip the question to what the sources support. Paul never met Jesus."
+  - Once in Paul and the Law (paul-and-the-law), at "Paul did. That is the tension Muslims point to".
+- It never appears in titles, headings, excerpts, descriptions, menus, alt text, structured data or quotations; excerpts and descriptions strip shortcodes. The Pauline letters and Second Peter articles, which weigh authorship, carry none.
+- The calligraphy is drawn from the outlines of Dubidam Arabic (NamelaType), whose metadata names a free personal-use licence. A web licence is the site owner's to hold.
+
+### Changed
+
+- Prose revised to the house style.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.76.2] - 2026-10-26
+
+### Changed
+
+- The Islamic dilemma article (islamic-dilemma) is expanded for the network brief, keeping the same slug and URL. It now has a fair statement of the argument (5:47, 5:68, 10:94, 3:3, 5:48), and the five entries draw on Shamela-checked sources: Ibn Kathir on 3:3, 5:47, 5:48, 5:68 and 10:94; al-Tabari on 4:46; Ibn Taymiyya, al-Jawab al-Sahih 2/407 and 3/425; and Ibn Hazm, al-Fisal 2/2. Note 5 is corrected. The "no one can remove a word" gloss sits in a chapter heading of Kitab al-Tawhid, and Ibn Hajar (Fath 13/523) found no sound chain for it to Ibn Abbas. Bukhari 7363, where Ibn Abbas says the People of the Book altered the book, is now cited for what it says. A rounded "The Islamic dilemma across the network" box (`.boi-network`, in article.css) links the six sister pieces. The excerpt and the first image's alt text now name the focus keyword. Existing sites receive the new body through `boi_migrate_seed` on the 1.76.2 update, but only where the article is still as the theme wrote it.
+
+### Fixed
+
+- The Zenith article (arabic-words-science) loses the sentence claiming the m/ni slip came from the Arabic script. The misreading happened in Latin letters, and the sentence had no source.
+- The ninety-nine names article (relationship-with-god) had placed Sahih al-Bukhari 2736 in the Book of Tawhid. Body and note 8 now give the Book of Conditions (Kitab al-Shurut) (Fath al-Bari vol. 5, p. 354, checked on Shamela).
+- The closing of the Pauline letters article (pauline-letters-authorship) states the majority critical view, notes the dissent and attributes the lying verdict to Ehrman (note 17). It had claimed scholarly agreement on the seven letters, and that forgers knew "because their own church told them so".
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change; no glossary data changed, so `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.76.1] - 2026-10-26
+
+### Removed
+
+- **Every redirect, merged from `main`** (released there as 1.75.0): `inc/legacy-permalinks.php` (the date-based permalink and retired-slug redirects) and the /?s= to /search/ redirect are gone; renaming a seeded post or Glossary page also removes WordPress's old-slug note, so a retired address returns 404. This branch's own 1.75.0 entry below (contextual links) and `main`'s 1.75.0 were numbered independently; this release supersedes both.
+
+### Changed
+
+- **The settings screen is called Theme Options** (Appearance, Theme Options), as in the other themes of the network; its address (`themes.php?page=boi-settings`) and its tabs are unchanged. Contextual Links keeps its own screen.
+- **The Quranic face is served as a woff2** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`, 107 KB) in place of the original TTF (298 KB, removed). The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped. Recorded in SSOT D11.
+- **A Glossary entry's Read more list shows at most six articles** (filter `boi_glossary_read_more_max`), in the entry's own order, and its structured data lists the same six. Al Faruqi's entry listed all thirty articles that cite him; its list now runs from the articles that cite him most (Islamic art, jizya, the five pillars, Hajj, Schacht on isnads, war) to the fewest. Glossary data version 12, so unedited entry pages are rewritten on the next sync; an entry an editor changed keeps its content and still shows at most six.
+
+### Fixed
+
+- **The theme's own artwork is no longer credited to Wikimedia Commons, nor linked to a script.** Its 24 images record the script that drew them (`bin/make-original-graphics.py`) as their source; the credit under each, the Sources and standards list and the image structured data turned that into a link to `http://bin/make-original-graphics.py` and the words "via Wikimedia Commons". A credit now links its source only when the source is a web address (`boi_image_source_url()`, `boi_credit_html()`); the artwork reads "Image: Best of Islam. Original artwork.", and its structured data drops `acquireLicensePage` and the "via" in `creditText`.
+- **A person's own portrait on a Glossary entry is no longer cut to a banner.** Al Faruqi's portrait (800 by 995) was shown in the 3:1 frame of the stock photos, which showed his chin and lost his eyes. A portrait now keeps its proportions, centred, at most 20rem wide (`.boi-term-hero--portrait`); stock photos keep the banner.
+- **The web fonts show at once in a fallback face** (`fontDisplay: swap` on all eleven faces in `theme.json`); WordPress printed `font-display: fallback`, which hid text for up to 100 ms and kept the fallback if a face took longer than three seconds. The Quranic face is unchanged.
+- **Kickers, band labels and objection labels reach 4.5:1.** The accent blue on the pale band measured 4.42:1 and the gold objection label on white 3.39:1. The accent is now #1D6AC3 (4.76:1 on the band) and the objection label #8F6A24 (4.94:1), with the gold accent in dark mode (8.57:1).
+- **The front page lead image is fetched at its shown size and never lazily.** It asked for the 1024-pixel file on every screen; it now carries a `sizes` attribute for its column, a new 640-pixel size (`boi-lead`) and `fetchpriority="high"`, and the fallback image loses `loading="lazy"`. Images uploaded before this release gain the 640-pixel size once thumbnails are regenerated.
+- **The front page hero image is preloaded.** It is a CSS background, so the browser found it only after the stylesheets: under mobile throttling it started at 2.7 s and finished at 9.6 s, and was the page's largest paint. A `<link rel="preload" fetchpriority="high">` for each of its two sizes, split by the same media query, now starts it with the document (`boi_preload_hero_background()`).
+- **Fewer stylesheets block the first paint.** The footer and back-to-top styles load after it (`boi_deferred_style_handles()`, `assets/js/deferred-styles.js`, with a `<noscript>` copy); the theme toggle, navigation, header search and typography styles, all small, are written into the page; and `article.css`, none of whose 47 rules applies to the front page, loads only on single entries. Blocking stylesheets on the front page: 10 before, 4 after.
+- **Security headers** (Theme Options, Access): `X-Frame-Options: SAMEORIGIN`, `Content-Security-Policy: frame-ancestors 'self'`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` and `Cross-Origin-Opener-Policy: same-origin-allow-popups`, on by default (`inc/security-headers.php`, filter `boi_security_headers`). HSTS is a separate option, off by default, with a warning that it binds browsers to HTTPS for a year.
+- **The author's `sameAs` links to the site use HTTPS.** A profile address stored as `http://bestofislam.org` was published as such in the structured data; a link to the site's own host now takes the scheme of the home address.
+- **A post's embed view can still be shown on other sites.** The new framing headers also went out on `/embed/`, the view WordPress offers other sites through oEmbed, so an embedded post showed as a refused frame; that view now goes without `X-Frame-Options` and `frame-ancestors` (the other headers stay).
+- **A credit with no source link no longer cuts the last letter of a non-Latin licence.** The trailing comma was trimmed with `rtrim()`, which strips single bytes, so a licence ending in a letter that shares a byte with the Arabic comma lost half of it; the comma is now trimmed as a character (`boi_credit_html()`).
+- **A match passed over no longer hides a phrase that overlaps it.** The text was scanned for every match at once, so when one was passed over (a guard, a page already linked, a full limit) a phrase running past its end was never tried: "Peter and Paul of Tarsus" after "Peter and Paul" had been linked never linked "Paul of Tarsus". The scan now moves forward one match at a time and resumes one character after a match it passes over; a phrase wholly inside it ("Barnabas" in "Gospel of Barnabas") still stays unlinked. Output on the 117 seeded articles is unchanged.
+- **A phrase written with a curly apostrophe now matches every apostrophe form.** "Mark’s gospel" (the map's first entry for injil.help's Mark page) matched only a curly apostrophe, so neither "Mark's gospel" nor the texturized "Mark&#8217;s gospel" that WordPress renders was linked. The phrase's apostrophes are made straight before the pattern expands them to every form.
+- **Contextual links work without mbstring for non-ASCII phrases.** Without mbstring only ASCII is lowered, so lower-case "ṣābiʾūn" never matched the phrase "Ṣābiʾūn" in the pre-filter or in the lookup of the matched text. Both now compare a non-ASCII key case-insensitively (`boi_cl_contains()`, `boi_cl_lookup()`); with mbstring nothing changes.
+- **A name's epithet stays at its first mention.** The Glossary adds an epithet (رضي الله عنها, عليه السلام) only with its own link, at a name's first mention; the contextual pass now takes that mention, so the epithet moved to the second mention or vanished. A contextual link on such a name now carries the epithet itself (`boi_cl_epithet_index()`), and the Glossary link to the same entry further on is unwrapped together with its epithet (`boi_cl_epithet_urls()`, `boi_cl_unwrap_glossary()`). Ten names were affected, among them Aisha, Khadija, Gabriel/Jibril, Abraham and Ishmael.
+- **No contextual links inside the Glossary index.** The index renders in the page content, so its alias lines and definitions took up to seven links; `boi-glossary__list` is now a region where no link is made.
+- **Every apostrophe form matches,** including `&#8216;`, `&#39;`, `&rsquo;`, `&lsquo;`, `&apos;` and the modifier letter ʼ, as well as the forms matched before.
+- **A phrase pattern too large for PCRE leaves the text as it is.** Enough site-wide phrases could push the combined pattern past PCRE's size limit; the pattern is now checked once, and the content is returned unlinked rather than warned on paragraph after paragraph. The Glossary unwrap also returns the content unchanged if its pattern fails.
+- **A ">" inside an attribute value no longer exposes the attribute as text.** The contextual pass split the content at the first ">", so an inline image with `alt="a > the Dome of the Rock"` had the rest of its alt text read as running text and a link written into the attribute, breaking the markup. A tag now ends at the first ">" outside a quoted value.
+- **The Glossary links had the same fault**, from before this release: `boi_gl_filter()` split the content at the first ">", so a Glossary link could be written into an alt text holding ">". It uses the same quote-aware split now.
+- **A phrase written with a non-breaking space links.** The editor writes `&nbsp;` for a doubled space; "Dome&nbsp;of the Rock" matched neither the pre-filter nor the pattern. A space in a phrase now matches any run of spaces, `&nbsp;`, `&#160;` or U+00A0, and the lookup reads them as one space.
+
+## [1.76.0] - 2026-10-26
+
+### Changed
+
+- **Quranic verses set in KFGQPC HAFS Uthmanic Script, shipped as the original TTF** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf`, version 2.2), with its licence in `kfgqpc-hafs-uthmanic-script-LICENSE.txt`. The face is applied through a new `--boi-font-quran` token to `.boi-script-quran` and to Glossary entries with a `quran_ref`, and to nothing else: hadith, epithets, names and other Arabic keep Noto Naskh Arabic. The same font now sets Quranic verses in all seven themes of the network.
+- **The Glossary index sets a Quranic entry's Arabic in the Uthmanic face** (`.boi-glossary__ar--quran`), as its own page already did. The index reads `quran_ref` from the entry's data, so no stored page needs updating.
+- **A Quranic Glossary entry's script line is taller** (line height 2) and drops the faux medium weight, so the small high marks and the end-of-verse sign have room.
+
+### Removed
+
+- **`uthmanic-hafs.woff2`**, a woff2 conversion of the same font. The KFGQPC licence forbids modifying the font, and a conversion is a modification. `KFGQPC-LICENSE.txt` gives way to `kfgqpc-hafs-uthmanic-script-LICENSE.txt`.
+- **The Uthmanic face from the `body` font stack.** It sat after Noto Naskh Arabic as a fallback, so it could still set an unmarked Arabic glyph that the Naskh file lacked. It now applies only where text is marked as a verse.
+
+## [1.75.0] - 2026-10-26
+
+### Added
+
+- **Contextual links to articles here and to inner pages on the sister sites.** In the running text of an article or page, the first mention of a known phrase links to the article on this site, or the inner page on abrahamic-religions.com, injil.help, apostleofdoom.org, compelling-evidence.com, murtadd.org or lailatulqadar.guide, that treats it. The phrases come from `inc/data/network-links.json`, a shared map kept identical in all seven themes (90 entries for this site, 314 for the sister sites). At most four links to this site and three to the sister sites on a page, one a paragraph, never in a heading, quotation, caption, note, footnote mark or existing link, and never to the page itself. The Notes list under an article is left alone.
+- **Contextual Links settings:** the Rules tab gains separate switches and caps for links to this site and to the sister sites, and a list of pages that never receive links; the Phrases tab now accepts `phrase | /path/` for this site; the six sister sites are always approved on the Domains tab. Settings saved by an earlier version carry over: the old switch and cap apply to the sister sites.
+- **Protected names:** a phrase that is part of a longer name meaning something else is not linked; "Ismail al Faruqi" no longer links "Ismail" to the page on the prophet. Filter `boi_cl_guards`.
+
+### Changed
+
+- **Contextual links run before the Glossary links** (22, Glossary at 24), so an article link takes the words first. A later Glossary link on the same words is taken back to plain text, so one phrase never leads to two places in one article. Pages now receive contextual links as well as articles (filter `boi_cl_post_types`).
 
 - **Ten articles cite al Faruqi's *Essential Writings* (2021) directly:** jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. Four further articles cite his *Christian Ethics* (1967), checked against the page images because the PDF's text layer is poor OCR: morality-without-god (pp. 22 to 23), quranic-ethics (pp. 252 to 253), shared-prophets (pp. 193 to 194) and paul-and-the-law (p. 81, given as a dissenting reading). In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
 

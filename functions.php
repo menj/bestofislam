@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.74.0' );
+define( 'BOI_VERSION', '1.77.2' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -41,6 +41,8 @@ require_once BOI_DIR . '/inc/favicon.php';
 require_once BOI_DIR . '/inc/glossary.php';
 require_once BOI_DIR . '/inc/glossary-links.php';
 require_once BOI_DIR . '/inc/error-pages.php';
+require_once BOI_DIR . '/inc/housekeeping.php';
+require_once BOI_DIR . '/inc/security-headers.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.
@@ -152,7 +154,7 @@ function boi_enqueue_assets() {
 		'boi-scripts',
 		BOI_URI . '/assets/css/scripts.css',
 		array(),
-		BOI_VERSION
+		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/scripts.css' )
 	);
 
 	wp_enqueue_style(
@@ -162,7 +164,8 @@ function boi_enqueue_assets() {
 		BOI_VERSION
 	);
 
-	if ( is_singular() ) {
+	// The front page is a page, but none of the article rules apply to it.
+	if ( is_singular() && ! is_front_page() ) {
 		wp_enqueue_style(
 			'boi-article',
 			BOI_URI . '/assets/css/article.css',
@@ -233,6 +236,62 @@ function boi_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'boi_enqueue_assets' );
 
 /**
+ * Stylesheets for what is never on screen when a page first paints: the
+ * Back to top button (hidden until the reader scrolls) and, on the long
+ * views, the footer. They load without blocking the first paint and are
+ * switched on by assets/js/deferred-styles.js, with a noscript fallback.
+ *
+ * @return string[] Style handles.
+ */
+function boi_deferred_style_handles() {
+	$handles = array( 'boi-back-to-top' );
+
+	if ( is_front_page() || is_singular( 'post' ) ) {
+		$handles[] = 'boi-footer';
+	}
+
+	return (array) apply_filters( 'boi_deferred_style_handles', $handles );
+}
+
+/**
+ * Loads a deferred stylesheet as media="print", marked for the switch.
+ *
+ * @param string $tag    Link tag.
+ * @param string $handle Style handle.
+ * @return string
+ */
+function boi_defer_style_tag( $tag, $handle ) {
+	if ( is_admin() || ! in_array( $handle, boi_deferred_style_handles(), true ) ) {
+		return $tag;
+	}
+
+	$deferred = preg_replace( "/\\smedia=(['\"])all\\1/", ' media="print" data-boi-defer', $tag, 1 );
+
+	if ( null === $deferred || $deferred === $tag ) {
+		return $tag;
+	}
+
+	return $deferred . '<noscript>' . trim( $tag ) . '</noscript>' . "\n";
+}
+add_filter( 'style_loader_tag', 'boi_defer_style_tag', 10, 2 );
+
+/**
+ * The switch for the deferred stylesheets.
+ *
+ * @return void
+ */
+function boi_enqueue_deferred_styles_script() {
+	wp_enqueue_script(
+		'boi-deferred-styles',
+		BOI_URI . '/assets/js/deferred-styles.js',
+		array(),
+		BOI_VERSION,
+		array( 'in_footer' => false, 'strategy' => 'defer' )
+	);
+}
+add_action( 'wp_enqueue_scripts', 'boi_enqueue_deferred_styles_script' );
+
+/**
  * Adds the listicle editor stylesheet.
  *
  * @return void
@@ -241,6 +300,18 @@ function boi_editor_style() {
 	add_editor_style( array( 'assets/css/scripts.css', 'assets/css/theme-toggle.css', 'assets/css/navigation.css', 'assets/css/editor-listicle.css', 'assets/css/editor-typography.css' ) );
 }
 add_action( 'after_setup_theme', 'boi_editor_style' );
+
+/**
+ * A 640-wide rendition for the front page's lead card, which shows its image
+ * at about 560 to 610 pixels; without it the browser has only 768 or 1024.
+ * Applies to images added or regenerated after this release.
+ *
+ * @return void
+ */
+function boi_image_sizes() {
+	add_image_size( 'boi-lead', 640, 0 );
+}
+add_action( 'after_setup_theme', 'boi_image_sizes' );
 
 /**
  * Registers the block pattern category used by the listicle starter pattern.
@@ -281,6 +352,12 @@ function boi_maybe_install() {
 				return;
 			}
 
+			// Without the seed list the migrations below would be skipped for
+			// good once the version is recorded, so wait for a later request.
+			if ( function_exists( 'boi_seed_ready' ) && ! boi_seed_ready() ) {
+				return;
+			}
+
 			boi_install_votes_table();
 
 			// Population is idempotent and migrates its own earlier records, so an
@@ -313,6 +390,24 @@ function boi_enqueue_typography() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'boi_enqueue_typography', 100 );
+
+/**
+ * Small stylesheets every view needs at first paint, printed inline by
+ * WordPress (wp_maybe_inline_styles(), within its styles_inline_size_limit)
+ * rather than fetched as separate render-blocking files. The files in
+ * assets/css stay the source; none of them carries a url(), so nothing has
+ * to be rewritten when inlined.
+ *
+ * @return void
+ */
+function boi_inline_small_styles() {
+	foreach ( array( 'theme-toggle', 'navigation', 'header-search', 'typography' ) as $name ) {
+		if ( wp_style_is( 'boi-' . $name, 'enqueued' ) ) {
+			wp_style_add_data( 'boi-' . $name, 'path', BOI_DIR . '/assets/css/' . $name . '.css' );
+		}
+	}
+}
+add_action( 'wp_enqueue_scripts', 'boi_inline_small_styles', 101 );
 
 /* Contextual in-content links. */
 require_once get_stylesheet_directory() . '/inc/contextual-links.php';

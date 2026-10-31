@@ -1,0 +1,10 @@
+# Keep development files out of "Download ZIP" and release archives.
+# Sites that install from a clone are cleaned by inc/housekeeping.php.
+.github         export-ignore
+.githooks       export-ignore
+.gitattributes  export-ignore
+.gitignore      export-ignore
+.editorconfig   export-ignore
+bin             export-ignore
+FARUQI.md       export-ignore
+CLAUDE.md       export-ignore

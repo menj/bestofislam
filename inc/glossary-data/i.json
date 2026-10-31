@@ -67,6 +67,7 @@
   "type": "person",
   "ar": "ابن عباس",
   "tr": "Ibn ʿAbbās",
+  "epithet": "رضي الله عنه",
   "def": "A cousin of the Prophet (d. around 687) who became one of the great early scholars of Quranic interpretation.",
   "what": [
    "Abdullah ibn Abbas was born in Mecca about three years before the Hijra and was a boy when the Prophet died. He asked the older Companions about the Quran and its background, and was called “the interpreter of the Quran”. It is reported that the Prophet prayed: “O God, give him understanding of the religion” (Sahih al-Bukhari). He died in Taif."
@@ -82,7 +83,7 @@
   ],
   "articles": [
    "scholars-who-shaped-islamic-study",
-   "quran-4-34",
+   "does-the-quran-allow-wife-beating",
    "hajj-rites-explained"
   ],
   "aliases": [
@@ -126,6 +127,7 @@
   "type": "person",
   "ar": "ابن أم مكتوم",
   "tr": "Ibn Umm Maktūm",
+  "epithet": "رضي الله عنه",
   "def": "A blind Companion of the Prophet who served as a muezzin and as his deputy in Medina.",
   "what": [
    "Abdullah ibn Umm Maktum, a relative of Khadija, was early to accept Islam. He gave the call to prayer in Medina alongside Bilal, and it is reported that the Prophet left him in charge of Medina when he went on expeditions. Surah 80, ‘Abasa, is traditionally linked to him: it begins with a rebuke that the Prophet turned from the blind man who came to him while he was speaking to the leaders of Quraysh."
@@ -196,6 +198,7 @@
   "type": "prophet",
   "ar": "إدريس",
   "tr": "Idrīs",
+  "epithet": "عليه السلام",
   "def": "A prophet the Quran describes as truthful and raised to a high station.",
   "what": [
    "“Mention in the Book Idris; he was a man of truth, a prophet, and We raised him to a high place” (19:56–57). He is also named among the patient (21:85). The Quran does not give his story or say where he lived; many commentators identified him with Enoch, whom the Bible says “God took”, and others differed."
@@ -557,7 +560,9 @@
   "articles": [
    "where-is-the-injil",
    "who-wrote-the-quran",
-   "preservation-and-truth"
+   "preservation-and-truth",
+   "pauline-letters-authorship",
+   "paul-claim-to-apostleship"
   ],
   "type": "term",
   "aliases": [
@@ -711,6 +716,7 @@
   "type": "prophet",
   "ar": "إسحاق",
   "tr": "Isḥāq",
+  "epithet": "عليه السلام",
   "def": "Son of Abraham and Sarah and father of Jacob, named as a prophet in the Quran.",
   "what": [
    "Angels gave Abraham and his wife the good news of Isaac, and of Jacob after him, when she was old (11:71–73; 37:112). “We gave him Isaac and Jacob, each of whom We guided” (6:84). Isaac is among those whom God made leaders who guide by His command (21:72–73)."
@@ -741,6 +747,7 @@
   "type": "prophet",
   "ar": "إسماعيل",
   "tr": "Ismāʿīl",
+  "epithet": "عليه السلام",
   "def": "Son of Abraham and Hagar, a prophet and messenger who helped his father raise the Kaaba.",
   "what": [
    "“Mention in the Book Ishmael; he was true to his promise, and was a messenger and a prophet” (19:54). Abraham and Ishmael raised the foundations of the House, praying: “Our Lord, accept it from us” (2:127). According to a report in Sahih al-Bukhari, Hagar ran between Safa and Marwa seeking water for her infant son, and Zamzam sprang up; the rite of sa‘i at Hajj recalls her."
@@ -849,7 +856,8 @@
    "ahl-al-kitab"
   ],
   "articles": [
-   "islamophobia-5-facts"
+   "islamophobia-5-facts",
+   "islamisation-of-the-west"
   ],
   "aliases": [
    "Islamisation",
@@ -1352,7 +1360,8 @@
   "faruqi": {
    "page": 55,
    "term": "INNA ALLAH WA MALĀ’IKATAHU YUṢALLŪNA ‘ALĀ AL NABIYY. YĀ AYYUHA ALLADHĪNA ĀMANŪ ṢALLŪ ‘ALAYHI WA SALLIMŪ TASLĪMAN."
-  }
+  },
+  "quran_ref": "33:56"
  },
  {
   "slug": "inna-lillahi-wa-inna-ilayhi-rajiun",
@@ -1732,36 +1741,36 @@
    "sunnah"
   ],
   "articles": [
-   "apostasy-in-islam",
+   "islamic-art-and-the-one-god",
+   "jizya",
+   "five-pillars-explained",
+   "hajj-rites-explained",
+   "schacht-isnads-dating-hadith",
+   "war-and-killing-in-islam",
+   "quran-on-christians",
+   "why-no-interest",
    "before-your-first-friday-prayer",
+   "six-articles-of-faith",
+   "medina-jewish-tribes-and-qurayza",
+   "apostasy-in-islam",
    "child-marriage-in-islam",
    "fate-and-free-will",
-   "five-pillars-explained",
    "funeral-dhikr-dua",
-   "hajj-rites-explained",
    "hijab-and-modesty",
    "houris-and-paradise",
    "islam-in-china",
-   "islamic-art-and-the-one-god",
-   "jizya",
-   "medina-jewish-tribes-and-qurayza",
    "natural-world-verses",
    "prophets-marriages-zaynab-and-others",
    "prophets-you-may-not-know",
-   "quran-4-34",
-   "quran-on-christians",
+   "does-the-quran-allow-wife-beating",
    "quran-science-claims-graded",
    "race-in-quran-and-hadith",
    "ramadan-last-ten-nights",
-   "schacht-isnads-dating-hadith",
    "scholars-who-shaped-islamic-study",
    "sharia-and-hudud",
-   "six-articles-of-faith",
    "uthman-copies",
-   "war-and-killing-in-islam",
    "western-scholars-of-islam",
-   "why-five-prayers",
-   "why-no-interest"
+   "why-five-prayers"
   ],
   "aliases": [
    "Ismail Raji al Faruqi",
@@ -1770,6 +1779,15 @@
    "Ismail R. al Faruqi",
    "al Faruqi",
    "Faruqi"
-  ]
+  ],
+  "portrait": {
+   "file": "ismail-raji-al-faruqi.avif",
+   "alt": "Isma'il Raji al Faruqi",
+   "artist": "Kenosha News",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Ismail_al-Faruqi_in_Kenosha_News_May_28_1986_p._3.jpg",
+   "width": 800,
+   "height": 995
+  }
  }
 ]

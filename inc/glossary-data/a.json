@@ -29,6 +29,7 @@
   "type": "prophet",
   "ar": "هارون",
   "tr": "Hārūn",
+  "epithet": "عليه السلام",
   "def": "Moses’ brother and a prophet in the Quran, who stood by him before Pharaoh.",
   "what": [
    "In the Quran Moses asks God to make his brother Aaron his helper and a partner in his mission, and God grants it (20:29–36, 19:53). Aaron is named among the prophets and honoured with Moses, as in “peace upon Moses and Aaron” (37:114–120)."
@@ -100,6 +101,7 @@
   "type": "person",
   "ar": "العباس",
   "tr": "al-ʿAbbās",
+  "epithet": "رضي الله عنه",
   "def": "An uncle of the Prophet and a Companion, ancestor of the Abbasid caliphs.",
   "what": [
    "Abbas (d. about 653) was the Prophet’s uncle and close in age to him. His son Abdullah ibn Abbas became one of the great early authorities on the interpretation of the Quran. The Abbasid dynasty took its name from him."
@@ -112,7 +114,7 @@
    "abdul-muttalib"
   ],
   "articles": [
-   "quran-4-34",
+   "does-the-quran-allow-wife-beating",
    "scholars-who-shaped-islamic-study",
    "hajj-rites-explained"
   ],
@@ -149,23 +151,33 @@
   "title": "Abd",
   "type": "term",
   "ar": "عبد",
-  "tr": "ʿAbd",
+  "tr": "ʿAbd, ʿĀbid",
   "def": "Servant or slave of God: the name for a human being in relation to his Creator.",
   "what": [
-   "Many names begin with it: Abdullah is “servant of God”, Abd al-Rahman “servant of the Merciful”. In the Quran the highest title is to be God’s servant. Muhammad (17:1, 25:1), Jesus (19:30, 4:172), Job (38:41) and Noah (17:3) are all called His servants."
+   "Many names begin with it: Abdullah is “servant of God”, Abd al-Rahman “servant of the Merciful”. In the Quran the highest title is to be God’s servant. Muhammad (17:1, 25:1), Jesus (19:30, 4:172), Job (38:41) and Noah (17:3) are all called His servants.",
+   "<em>ʿAbd</em> and <em>ʿābid</em> name the person who performs <em>ʿabada</em>, the service and worship of God. The Quran calls the Prophet God’s <em>ʿabd</em> in the verse of the Night Journey, “Glory to Him who took His servant by night” (17:1), and the witness of faith declares that Muhammad (peace be upon him) is His servant and messenger. God addresses believers in the plural: “O My servants who have transgressed against themselves, do not despair of the mercy of God” (39:53). The Quran also describes the servants of the Most Merciful as those who walk on the earth in humility (25:63). Many Muslim names, such as ʿAbd Allāh, combine <em>ʿabd</em> with one of the names of God."
   ],
-  "misread": "That Islam’s “slave of God” is degrading, in contrast to Jesus calling his disciples “friends” (John 15:15).",
+  "misread": "That Islam’s “slave of God” is degrading, in contrast to Jesus calling his disciples “friends” (John 15:15). The ʿabd of the Quran is a free person who chooses to serve God; the English “slave” suggests a bondage the word does not carry.",
   "sources": [
    "The Quran has both ideas. It calls Abraham God’s friend (<em>khalīl</em>, 4:125), and says that the friends of God (<em>awliyā’</em>) “have no fear, nor do they grieve” (10:62). Being His servant means freedom from serving anything else, and the word carries honour as well as obedience."
   ],
   "terms": [
    "tawhid",
-   "taqwa"
+   "taqwa",
+   "abada",
+   "ibadah"
   ],
   "articles": [],
   "aliases": [
-   "'Abd"
-  ]
+   "'Abd",
+   "ʿAbid",
+   "Abid",
+   "Ibad"
+  ],
+  "faruqi": {
+   "page": 39,
+   "term": "ʿABD, ʿĀBID"
+  }
  },
  {
   "slug": "abdul-muttalib",
@@ -213,6 +225,7 @@
   "type": "person",
   "ar": "عبد الرحمن بن عوف",
   "tr": "ʿAbd al-Raḥmān ibn ʿAwf",
+  "epithet": "رضي الله عنه",
   "def": "A wealthy early Companion, one of the ten promised Paradise, known for honest trade and generosity.",
   "what": [
    "He accepted Islam early, emigrated to Abyssinia and then to Medina, and fought at Badr and Uhud, where he was badly wounded. He was a merchant. A report in Sahih al-Bukhari says that when an Ansari offered him half his wealth he declined and asked only to be shown the market."
@@ -264,6 +277,7 @@
   "type": "person",
   "ar": "عبد الله بن عمرو بن العاص",
   "tr": "ʿAbd Allāh ibn ʿAmr",
+  "epithet": "رضي الله عنه",
   "def": "A Companion who wrote down the Prophet’s sayings in his lifetime.",
   "what": [
    "Abu Hurayra said that no one had more hadith than Abdullah ibn Amr, “because he wrote and I did not” (Sahih al-Bukhari). He kept a record he called <em>al-Ṣādiqa</em>, “the truthful one”, with the Prophet’s permission."
@@ -287,6 +301,7 @@
   "type": "person",
   "ar": "عبد الله بن سعد",
   "tr": "ʿAbd Allāh ibn Saʿd",
+  "epithet": "رضي الله عنه",
   "def": "A scribe of revelation who later left Islam and returned, and became governor of Egypt.",
   "what": [
    "Abdullah ibn Sa’d ibn Abi Sarh served for a time as one of the Prophet’s scribes, then left Medina for Mecca and abandoned Islam. At the conquest of Mecca he was among a few people named for execution, but Uthman, his foster-brother, brought him to the Prophet, who after a delay accepted his allegiance. He became governor of Egypt under Uthman and led campaigns in North Africa."
@@ -399,6 +414,7 @@
   "type": "prophet",
   "ar": "إبراهيم",
   "tr": "Ibrāhīm",
+  "epithet": "عليه السلام",
   "def": "The friend of God and father of prophets, honoured by Muslims, Jews and Christians.",
   "what": [
    "The Quran calls him “a nation in himself” (16:120) and God’s friend (4:125). It tells how he broke his people’s idols (21:51–70), was cast into a fire that God made “cool and safe” (21:69), and with his son Ishmael raised the foundations of the Kaaba (2:127). He is named in the daily prayer, which asks blessings on Muhammad as God blessed Abraham."
@@ -448,6 +464,7 @@
   "type": "person",
   "ar": "أبو بكر",
   "tr": "Abū Bakr",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s closest friend and the first caliph (632–634).",
   "what": [
    "Abu Bakr was among the first to accept Islam and spent his wealth freeing slaves who were tortured for their belief, including Bilal. The Quran refers to him as the Prophet’s companion in the cave during the hijra, “the second of two when they were in the cave” (9:40). The Prophet named him to lead the prayer in his last illness. As caliph he put down the revolts of the tribes and had the Quran’s leaves gathered at Umar’s urging, with Zayd ibn Thabit as scribe (Sahih al-Bukhari)."
@@ -507,6 +524,7 @@
   "type": "person",
   "ar": "أبو ذر",
   "tr": "Abū Dharr",
+  "epithet": "رضي الله عنه",
   "def": "A Companion from the tribe of Ghifar, known for his asceticism and for his stand against hoarding of wealth.",
   "what": [
    "Abu Dharr accepted Islam early and returned to his tribe before joining the Prophet in Medina. The Prophet said of him that “the earth does not carry, nor the sky shade, one more truthful in speech than Abu Dharr” (al-Tirmidhi). He taught that those who store up gold and silver (9:34) must spend it, a view that brought him into conflict with Muawiya in Syria. He died in exile at al-Rabadha in 652."
@@ -559,6 +577,7 @@
   "type": "person",
   "ar": "أبو هريرة",
   "tr": "Abū Hurayra",
+  "epithet": "رضي الله عنه",
   "def": "A Companion who narrated more hadith than any other, and was a close companion of the Prophet for his last years.",
   "what": [
    "Abu Hurayra of the tribe of Daws came to Medina in the year of Khaybar (628–29) and stayed with the Prophet, with little else to do than learn from him. He is credited with about 5,300 hadith. He explained why he narrated more than the others: the Muhajirun were busy in the markets and the Ansar with their land, while he stayed to keep his stomach full and to hear (Sahih al-Bukhari). His name means “father of the kitten”."
@@ -633,6 +652,7 @@
   "type": "person",
   "ar": "أبو سفيان",
   "tr": "Abū Sufyān",
+  "epithet": "رضي الله عنه",
   "def": "A leader of Quraysh who fought the Muslims for years, then accepted Islam at the conquest of Mecca.",
   "what": [
    "Abu Sufyan ibn Harb led the Meccan forces at Uhud and the Trench. When the Muslim army came to Mecca in 630 the Prophet announced that whoever enters the house of Abu Sufyan is safe. His son Muawiya later founded the Umayyad dynasty."
@@ -699,6 +719,7 @@
   "type": "prophet",
   "ar": "آدم",
   "tr": "Ādam",
+  "epithet": "عليه السلام",
   "def": "The first human being and, in Islam, the first prophet.",
   "what": [
    "The Quran says God created Adam from clay (38:71, 15:26), taught him the names of things (2:31), and told the angels to prostrate to him. Iblis refused (2:34). Adam and his wife were told not to approach a tree, were led astray, and repented, and God accepted their repentance (2:37)."
@@ -735,7 +756,7 @@
   ],
   "misread": "",
   "sources": [
-   "Reports in Abu Dawud and al-Tirmidhi say the wording was seen in a dream by the Companion Abdullah ibn Zayd, and the Prophet approved it and told Bilal, who had a fine voice, to give it. Sahih al-Bukhari relates that Muslims at first gathered without a call, and some suggested a bell like the Christians or a horn like the Jews; instead, a man was appointed to call."
+   "Reports in Abu Dawud and al-Tirmidhi say the wording was seen in a dream by the Companion Abdullah ibn Zayd, and the Prophet approved it and told Bilal, who had a fine voice, to give it. Sahih al-Bukhari relates that Muslims at first gathered without a call, and some suggested a bell like the Christians or a trumpet like the Jews; instead, a man was appointed to call."
   ],
   "terms": [
    "salah",
@@ -1045,7 +1066,8 @@
   "tr": "Aḥmad",
   "def": "A name of the Prophet, “the most praised”, which the Quran gives in 61:6.",
   "what": [
-   "Jesus tells the Children of Israel that he is “a messenger of God to you, confirming the Torah before me and bringing good news of a messenger to come after me whose name is Aḥmad” (61:6). Muslims take Aḥmad to be Muhammad: both come from the root <em>ḥ-m-d</em>, “to praise”. The Prophet is reported to have said, “I am Muhammad and Ahmad” (Sahih al-Bukhari)."
+   "Jesus tells the Children of Israel that he is “a messenger of God to you, confirming the Torah before me and bringing good news of a messenger to come after me whose name is Aḥmad” (61:6). Muslims take Aḥmad to be Muhammad: both come from the root <em>ḥ-m-d</em>, “to praise”. The Prophet is reported to have said, “I am Muhammad and Ahmad” (Sahih al-Bukhari).",
+   "<em>Maḥmūd</em>, “the praised”, comes from the same root and is also counted among his names; the Quran promises him a “praised station”, <em>maqām maḥmūd</em> (17:79). The report in Sahih al-Bukhari in which he lists his names gives Muhammad and Aḥmad among them. Aḥmad is sometimes taken for a different person from Muhammad; it is one of his own names."
   ],
   "misread": "That Muslims invented a prophecy by changing “Paraclete” to “Periclyte”.",
   "sources": [
@@ -1054,7 +1076,9 @@
   "terms": [
    "isa",
    "injil",
-   "tahrif"
+   "tahrif",
+   "muhammad",
+   "honorifics"
   ],
   "articles": [
    "where-is-the-injil",
@@ -1064,8 +1088,14 @@
   ],
   "aliases": [
    "Comforter",
-   "Paraclete"
-  ]
+   "Paraclete",
+   "Mahmud",
+   "Ahmed"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AḤMAD, MAḤMŪD"
+  }
  },
  {
   "slug": "ahmadiyya",
@@ -1100,6 +1130,7 @@
   "type": "person",
   "ar": "عائشة",
   "tr": "ʿĀʾisha",
+  "epithet": "رضي الله عنها",
   "def": "The Prophet’s wife and a scholar of the first generation, one of the major narrators of hadith.",
   "what": [
    "Aisha, daughter of Abu Bakr, was the Prophet’s wife for nine years. Companions, including senior ones, came to her for rulings, and she is credited with over two thousand hadith. She corrected other Companions where she thought they had misremembered, and later led a force against Ali at the Battle of the Camel, which she regretted."
@@ -1372,6 +1403,7 @@
   "type": "person",
   "ar": "علي بن أبي طالب",
   "tr": "ʿAlī ibn Abī Ṭālib",
+  "epithet": "رضي الله عنه",
   "def": "The Prophet’s cousin and son-in-law, and the fourth of the rightly guided caliphs.",
   "what": [
    "Ali was raised in the Prophet’s household, married his daughter Fatima, and was among the first to accept Islam. He was a leading warrior and a respected judge, and became caliph in 656 after Uthman’s murder. His reign was troubled by civil war and he was killed by a Kharijite in 661."
@@ -1984,7 +2016,9 @@
    "who-is-allah",
    "crucifixion-quran",
    "second-peter",
-   "why-five-prayers"
+   "why-five-prayers",
+   "paul-claim-to-apostleship",
+   "pauline-letters-authorship"
   ],
   "aliases": [
    "Rasul",
@@ -2709,7 +2743,7 @@
   "sources": [],
   "terms": [
    "ibadah",
-   "abd-2",
+   "abd",
    "tawhid",
    "salah"
   ],
@@ -2721,35 +2755,6 @@
   "faruqi": {
    "page": 38,
    "term": "'ABADA"
-  }
- },
- {
-  "slug": "abd-2",
-  "title": "ʿAbd",
-  "ar": "عبد ، عابد",
-  "tr": "ʿAbd, ʿĀbid",
-  "def": "The person who serves God; the plural of ʿabd is ʿibād and that of ʿābid is ʿābidūn.",
-  "what": [
-   "<em>ʿAbd</em> and <em>ʿābid</em> name the person who performs <em>ʿabada</em>, the service and worship of God. The Quran calls the Prophet God’s <em>ʿabd</em> in the verse of the Night Journey, “Glory to Him who took His servant by night” (17:1), and the witness of faith declares that Muhammad (peace be upon him) is His servant and messenger. God addresses believers in the plural: “O My servants who have transgressed against themselves, do not despair of the mercy of God” (39:53). The Quran also describes the servants of the Most Merciful as those who walk on the earth in humility (25:63). Many Muslim names, such as ʿAbd Allāh, combine <em>ʿabd</em> with one of the names of God."
-  ],
-  "misread": "The usual English rendering is “slave”, which suggests forced bondage to a master; the ʿabd of the Quran is a free person who chooses to serve God.",
-  "sources": [],
-  "terms": [
-   "abada",
-   "ibadah",
-   "tawhid"
-  ],
-  "articles": [],
-  "type": "term",
-  "aliases": [
-   "ʿAbid",
-   "Abd",
-   "Abid",
-   "Ibad"
-  ],
-  "faruqi": {
-   "page": 39,
-   "term": "ʿABD, ʿĀBID"
   }
  },
  {
@@ -2890,34 +2895,6 @@
   "faruqi": {
    "page": 64,
    "term": "AHL AL SUNNAH WAL JAMĀ‘AH"
-  }
- },
- {
-  "slug": "ahmad-2",
-  "title": "Ahmad",
-  "ar": "أحمد ، محمود",
-  "tr": "Aḥmad, Maḥmūd",
-  "def": "Two names of the Prophet Muhammad (peace be upon him), meaning the praiseworthy and the praised, for his virtue and righteousness.",
-  "what": [
-   "<em>Aḥmad</em> and <em>Maḥmūd</em> come from the same root as Muhammad (peace be upon him), <em>ḥ-m-d</em>, which means praise. The Quran reports Jesus giving good news of “a messenger who will come after me, whose name is Aḥmad” (61:6), and Muslims understand this as a reference to Muhammad. The Quran also promises him a “praised station”, <em>maqām maḥmūd</em> (17:79). A report in Sahih al-Bukhari has the Prophet saying that he had several names, among them Muhammad and Aḥmad. The names express the esteem in which his virtue and righteousness are held."
-  ],
-  "misread": "Aḥmad is sometimes treated as a different person from Muhammad, whereas it is one of his own names.",
-  "sources": [],
-  "terms": [
-   "muhammad",
-   "honorifics",
-   "sira",
-   "quran"
-  ],
-  "articles": [],
-  "type": "person",
-  "aliases": [
-   "Mahmud",
-   "Ahmed"
-  ],
-  "faruqi": {
-   "page": 30,
-   "term": "AḤMAD, MAḤMŪD"
   }
  },
  {

@@ -226,10 +226,26 @@ function boi_render_featured_lead() {
 	$post  = $posts[0];
 	$terms = get_the_terms( $post->ID, 'listicle-topic' );
 	$term  = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
-	$thumb = get_the_post_thumbnail( $post, 'large' );
+	// The card shows the image in its left column (about 46 per cent of the
+	// wide width) and full width below 782 pixels; the sizes say so, so the
+	// browser fetches the rendition that fits rather than the 1024 one.
+	$thumb = get_the_post_thumbnail(
+		$post,
+		'large',
+		array( 'sizes' => '(max-width: 781px) calc(100vw - 4rem), (max-width: 1280px) calc(50vw - 3rem), 610px' )
+	);
 
 	if ( '' === $thumb ) {
 		$thumb = boi_featured_image_fallback( '', $post->ID );
+	}
+
+	// The lead image is the largest thing above the fold, whether it is an
+	// attachment or the bundled fallback: never lazy, fetched first.
+	if ( false !== strpos( $thumb, ' loading="lazy"' ) ) {
+		$thumb = str_replace( ' loading="lazy"', '', $thumb );
+	}
+	if ( false === strpos( $thumb, 'fetchpriority=' ) ) {
+		$thumb = preg_replace( '/<img\b/', '<img fetchpriority="high"', $thumb, 1 );
 	}
 
 	return sprintf(

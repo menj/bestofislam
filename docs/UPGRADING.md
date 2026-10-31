@@ -18,7 +18,7 @@
    refreshes seeded pages and articles that have not been edited since the
    theme wrote them, repairs seeded content without an author, and repairs
    articles whose entry titles were lost to the saving fault fixed in 1.52.0.
-3. Open the Content tab under Appearance, Listicles. If it lists seeded
+3. Open the Content tab under Appearance, Theme Options. If it lists seeded
    articles that differ from this version, the update could not tell whether
    you edited them and has left them alone. Tick the ones you have not edited
    and choose Update the ticked articles; anything ticked is replaced with this
@@ -46,7 +46,7 @@ Login. While any of these plugins is active, the theme's version of that
 feature stands aside, so nothing runs twice.
 
 1. Deactivate the plugin.
-2. Open Appearance, Listicles. The theme imports the plugin's saved settings:
+2. Open Appearance, Theme Options. The theme imports the plugin's saved settings:
    the list of unlisted items, the search base word, or the login address.
 3. For the login address, confirm the address on the Access tab and switch it
    on. It is off until switched on, even when an address was imported.

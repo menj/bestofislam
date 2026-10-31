@@ -537,6 +537,37 @@ function boi_print_hero_background() {
 add_action( 'wp_head', 'boi_print_hero_background', 20 );
 
 /**
+ * Preloads the hero background, the front page's largest paint. As a CSS
+ * custom property it is found only once the stylesheets have loaded; the
+ * preload, with the same media split as boi_print_hero_background(), lets the
+ * browser fetch it at once.
+ *
+ * @return void
+ */
+function boi_preload_hero_background() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	$hero = boi_hero_image();
+
+	if ( ! $hero ) {
+		return;
+	}
+
+	$small = $hero['small'] ? $hero['small'] : $hero['large'];
+
+	if ( $small === $hero['large'] ) {
+		printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" fetchpriority=\"high\">\n", esc_url( $hero['large'] ) );
+		return;
+	}
+
+	printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" media=\"(min-width: 782px)\" fetchpriority=\"high\">\n", esc_url( $hero['large'] ) );
+	printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" media=\"(max-width: 781px)\" fetchpriority=\"high\">\n", esc_url( $small ) );
+}
+add_action( 'wp_head', 'boi_preload_hero_background', 1 );
+
+/**
  * Flags the front page when the hero has an image.
  *
  * @param array $classes Body classes.

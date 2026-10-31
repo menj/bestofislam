@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '6';
+const BOI_GLOSSARY_VERSION = '13';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -88,7 +88,13 @@ function boi_glossary_content( $t ) {
 
 	$out  = "<!-- wp:group {\"className\":\"boi-term\"} -->\n<div class=\"wp-block-group boi-term\">";
 	if ( ! empty( $t['ar'] ) ) {
-		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . $t['ar'] . '</p>';
+		// A handful of entries quote actual Quranic text (verified against
+		// the Uthmani text, not just claimed) rather than a name, term or
+		// non-Quranic formula; those alone get the Uthmanic Quran face.
+		$script_class = ! empty( $t['quran_ref'] ) ? 'boi-term__script boi-script-quran' : 'boi-term__script';
+		$out         .= '<p class="' . $script_class . '" lang="ar" dir="rtl">' . $t['ar'] . boi_glossary_epithet_html( $t ) . '</p>';
+	} elseif ( '' !== boi_glossary_epithet_html( $t, false ) ) {
+		$out .= '<p class="boi-term__script" lang="ar" dir="rtl">' . boi_glossary_epithet_html( $t, false ) . '</p>';
 	}
 	if ( ! empty( $t['tr'] ) ) {
 		$out .= '<p class="boi-term__translit">' . $t['tr'] . '</p>';
@@ -260,7 +266,12 @@ function boi_glossary_sync() {
 			}
 
 			$hashes = (array) get_option( 'boi_glossary_hashes', array() );
-			$batch  = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
+
+			if ( 0 === $cursor ) {
+				boi_glossary_migrate_slugs( $hashes );
+			}
+
+			$batch = array_slice( $terms, $cursor, BOI_GLOSSARY_BATCH );
 
 			$failed = isset( $progress['failed'] ) && BOI_GLOSSARY_VERSION === $progress['version'] ? (int) $progress['failed'] : 0;
 
@@ -318,6 +329,89 @@ add_action( 'boi_glossary_continue', 'boi_glossary_sync' );
  */
 function boi_glossary_fingerprint( $post ) {
 	return boi_content_fingerprint( $post->post_content . "\n" . $post->post_excerpt );
+}
+
+/**
+ * Entry slugs that have changed, old => current. A slug ending in -2 is the
+ * suffix WordPress adds on a collision and never belongs in an address;
+ * entries that carried one were merged into the entry they duplicated or
+ * given their own name. Verse numbers are kept out of addresses too.
+ *
+ * @return array
+ */
+function boi_glossary_retired_slugs() {
+	return (array) apply_filters(
+		'boi_glossary_retired_slugs',
+		array(
+			'abd-2'                            => 'abd',
+			'ahmad-2'                          => 'ahmad',
+			'bismi-allah-al-rahman-al-rahim-2' => 'bismi-allah-al-rahman-al-rahim',
+			'hafiz-al-2'                       => 'hafeez-al',
+			'mubarak-2'                        => 'mabruk',
+			'domestic-discipline-quran-4-34'   => 'domestic-discipline',
+		)
+	);
+}
+
+/**
+ * Retires the old slugs for good: a renamed entry's page keeps its identity
+ * and takes the new slug and title; a merged duplicate is deleted outright
+ * once the entry it duplicated has its own page, whatever its status, along
+ * with any copy already in the trash. No page is left under a suffixed
+ * address, and the theme does not redirect the old addresses: they return
+ * 404 like any other address that does not exist.
+ *
+ * @param array $hashes Fingerprints by slug, updated in place.
+ * @return void
+ */
+function boi_glossary_migrate_slugs( &$hashes ) {
+	foreach ( boi_glossary_retired_slugs() as $old => $new ) {
+		$page    = get_page_by_path( 'glossary/' . $old, OBJECT, 'page' );
+		$current = get_page_by_path( 'glossary/' . $new, OBJECT, 'page' );
+
+		// Trashing a page renames its slug to <slug>__trashed, so a duplicate
+		// trashed by an earlier release is found under that name.
+		$trashed = get_page_by_path( 'glossary/' . $old . '__trashed', OBJECT, 'page' );
+
+		if ( $trashed ) {
+			wp_delete_post( $trashed->ID, true );
+		}
+
+		// A page renamed by an earlier release still carries the old-slug note
+		// WordPress keeps for its own redirect; the theme does not redirect.
+		if ( $current ) {
+			delete_post_meta( $current->ID, '_wp_old_slug', $old );
+		}
+
+		if ( ! $page ) {
+			continue;
+		}
+
+		if ( 'trash' === $page->post_status || ( $current && 'trash' !== $current->post_status ) ) {
+			wp_delete_post( $page->ID, true );
+			unset( $hashes[ $old ] );
+			continue;
+		}
+
+		$term = boi_glossary_term_by_slug( $new );
+
+		boi_update_post(
+			array(
+				'ID'         => $page->ID,
+				'post_name'  => $new,
+				'post_title' => $term ? $term['title'] : $page->post_title,
+			)
+		);
+
+		// WordPress notes the old slug on a rename so it can redirect it later;
+		// the theme does not redirect, so the note goes.
+		delete_post_meta( $page->ID, '_wp_old_slug' );
+
+		if ( isset( $hashes[ $old ] ) ) {
+			$hashes[ $new ] = boi_glossary_fingerprint( get_post( $page->ID ) );
+			unset( $hashes[ $old ] );
+		}
+	}
 }
 
 /**
@@ -584,14 +678,21 @@ function boi_glossary_image( $key ) {
 }
 
 /**
- * The photograph for an entry: one of several for its kind, chosen from its
- * address so that an entry always shows the same one and neighbours differ.
+ * The photograph for an entry: its own portrait when the entry carries one,
+ * otherwise one of several stock photos for its kind, chosen from its address
+ * so that an entry always shows the same one and neighbours differ.
  *
  * @param string $kind Kind of entry.
  * @param string $slug Entry slug.
  * @return array|null
  */
 function boi_glossary_entry_image( $kind, $slug ) {
+	$portrait = boi_glossary_entry_portrait( $slug );
+
+	if ( $portrait ) {
+		return boi_glossary_image_url( $portrait );
+	}
+
 	$all  = boi_glossary_images();
 	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : ( isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array() );
 
@@ -600,6 +701,65 @@ function boi_glossary_entry_image( $kind, $slug ) {
 	}
 
 	return boi_glossary_image_url( $pool[ (int) sprintf( '%u', crc32( $slug ) ) % count( $pool ) ] );
+}
+
+/**
+ * An entry's own portrait, when its record in inc/glossary-data/ carries a
+ * "portrait" field, rather than a photo drawn from the shared stock pool for
+ * its kind. Used for named individuals whose own likeness is on file, with a
+ * verified source and licence, rather than a generic photograph.
+ *
+ * @param string $slug Entry slug.
+ * @return array|null Record shaped like a boi_glossary_images() pool entry
+ *                     (file, alt, artist, licence, source, width, height), or
+ *                     null when the entry has none.
+ */
+function boi_glossary_entry_portrait( $slug ) {
+	$term = boi_glossary_term_by_slug( $slug );
+
+	return ( $term && ! empty( $term['portrait'] ) && ! empty( $term['portrait']['file'] ) ) ? $term['portrait'] : null;
+}
+
+/**
+ * An entry's raw data record, by slug.
+ *
+ * @param string $slug Entry slug.
+ * @return array|null
+ */
+function boi_glossary_term_by_slug( $slug ) {
+	static $by_slug = null;
+
+	if ( null === $by_slug ) {
+		$by_slug = array();
+		foreach ( boi_glossary_terms() as $term ) {
+			if ( ! empty( $term['slug'] ) ) {
+				$by_slug[ $term['slug'] ] = $term;
+			}
+		}
+	}
+
+	return isset( $by_slug[ $slug ] ) ? $by_slug[ $slug ] : null;
+}
+
+/**
+ * The Arabic epithet that follows a name: the blessing on the Prophet, the
+ * peace on the other prophets, the "may God be pleased with" on the
+ * Companions. An entry carries it in its "epithet" field; "epithet_rubric"
+ * sets it in red ink, after the manuscript convention.
+ *
+ * @param array|null $t    Entry.
+ * @param bool       $lead Whether to lead with a non-breaking space, so the
+ *                         epithet stays on the same line as the name.
+ * @return string Markup, or '' when the entry has no epithet.
+ */
+function boi_glossary_epithet_html( $t, $lead = true ) {
+	if ( ! is_array( $t ) || empty( $t['epithet'] ) || ! is_string( $t['epithet'] ) ) {
+		return '';
+	}
+
+	$class = 'boi-epithet' . ( ! empty( $t['epithet_rubric'] ) ? ' boi-epithet--rubric' : '' );
+
+	return ( $lead ? '&nbsp;' : '' ) . '<span class="' . esc_attr( $class ) . '" lang="ar" dir="rtl">' . esc_html( $t['epithet'] ) . '</span>';
 }
 
 /**
@@ -702,6 +862,8 @@ function boi_render_glossary_index() {
 			$counts[ $type ] = isset( $counts[ $type ] ) ? $counts[ $type ] + 1 : 1;
 
 			$ar      = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+			$data    = boi_glossary_term_by_slug( $entry->post_name );
+			$ar_cls  = ! empty( $data['quran_ref'] ) ? 'boi-glossary__ar boi-glossary__ar--quran' : 'boi-glossary__ar';
 			$kind    = 'term' !== $type ? '<span class="boi-glossary__type">' . esc_html( $types[ $type ] ) . '</span>' : '';
 			$aliases = array_slice( boi_glossary_aliases( $entry ), 0, 3 );
 			$aka     = $aliases ? '<span class="boi-glossary__aka">' . esc_html( sprintf( /* translators: %s: other names. */ __( 'Also: %s', 'bestofislam' ), implode( ', ', $aliases ) ) ) . '</span>' : '';
@@ -716,7 +878,7 @@ function boi_render_glossary_index() {
 				$kind,
 				esc_url( get_permalink( $entry ) ),
 				esc_html( get_the_title( $entry ) ),
-				'' !== $ar ? '<span class="boi-glossary__ar" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
+				'' !== $ar ? '<span class="' . $ar_cls . '" lang="ar" dir="rtl">' . esc_html( $ar ) . '</span>' : '',
 				$aka,
 				wp_kses( $entry->post_excerpt, array( 'em' => array() ) )
 			);
@@ -847,7 +1009,11 @@ function boi_render_term_hero() {
 		return '';
 	}
 
-	return '<figure class="boi-term-hero alignwide"><img src="' . esc_url( $image['url'] ) . '" alt="" width="' . (int) $image['width'] . '" height="' . (int) $image['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $image ) . '</figcaption></figure>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	// A person's own portrait keeps its proportions; only the stock photos are
+	// cut to a banner, which would crop a face to its chin.
+	$class = boi_glossary_entry_portrait( $post->post_name ) ? 'boi-term-hero alignwide boi-term-hero--portrait' : 'boi-term-hero alignwide';
+
+	return '<figure class="' . esc_attr( $class ) . '"><img src="' . esc_url( $image['url'] ) . '" alt="" width="' . (int) $image['width'] . '" height="' . (int) $image['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $image ) . '</figcaption></figure>'; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /**
@@ -905,12 +1071,20 @@ function boi_render_term_related( $attributes ) {
 	}
 
 	$articles = '';
+	// The list is a pointer to further reading, not an index: the first few
+	// in the entry's own order (most relevant first) are shown.
+	$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+	$shown = 0;
 
 	foreach ( (array) $attributes['articles'] as $slug ) {
+		if ( $shown >= $max ) {
+			break;
+		}
 		$post = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
 
 		if ( $post && 'publish' === $post->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $post ) ) ) {
 			$articles .= sprintf( '<li><a href="%1$s">%2$s</a></li>', esc_url( get_permalink( $post ) ), esc_html( get_the_title( $post ) ) );
+			++$shown;
 		}
 	}
 
@@ -1019,11 +1193,18 @@ function boi_glossary_schema() {
 				}
 			}
 
+			// The same articles the entry shows under Read more, no more.
+			$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+			$shown = 0;
 			foreach ( (array) ( isset( $attrs['articles'] ) ? $attrs['articles'] : array() ) as $slug ) {
+				if ( $shown >= $max ) {
+					break;
+				}
 				$rel = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
 
 				if ( $rel && 'publish' === $rel->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $rel ) ) ) {
 					$related[] = get_permalink( $rel );
+					++$shown;
 				}
 			}
 		}

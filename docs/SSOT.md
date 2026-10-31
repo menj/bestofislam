@@ -101,8 +101,16 @@ before the response, so the claim-then-answer rhythm is visible on the page.
 Six faces covering Arabic, Hebrew, Greek, Syriac, and Akkadian are declared in
 `assets/css/scripts.css` under `unicode-range`, so a page without those glyphs
 downloads nothing. Noto Naskh Arabic ships with the theme (SIL Open Font Licence
-allows it) and sets the Glossary's Arabic; the other files are not shipped, as
-licence terms put that on the site owner. `assets/fonts/scripts/README.md` names each expected file.
+allows it) and sets the Glossary's Arabic. KFGQPC HAFS Uthmanic Script ships
+as a woff2 conversion of the original TTF, not subset, and sets Quranic verses only (`.boi-script-quran`,
+`.boi-glossary__ar--quran`, through `--boi-font-quran`); every theme of the
+network uses it for Quranic verses and for nothing else. The other files are
+not shipped, as licence terms put that on the site owner.
+`assets/fonts/scripts/README.md` names each expected file.
+
+The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped.
+Until 1.76.0 the theme shipped the TTF unconverted for that reason; from 1.76.1
+it ships the WOFF2.
 
 ### D12. Population is idempotent and reversible by hand
 
@@ -150,12 +158,13 @@ archives, which was the weakness of the earlier scheme.
 
 ### D15. Articles ship as files, not as PHP arrays
 
-Finished prose lives in `/content/<slug>.html` as block markup and is read at
-seed time. Embedding articles in PHP string literals makes both the code and
-the prose harder to revise, and it puts editorial work behind a deployment. The
-loader resolves the slug through `sanitize_file_name()` and returns an empty
-string when the file is absent, in which case that post is skipped rather than
-created empty.
+Finished prose lives in `/content/<slug>.json` as block markup under a
+`content` key, and is read at seed time. Embedding articles in PHP string
+literals makes both the code and the prose harder to revise, and it puts
+editorial work behind a deployment. Files are stored as JSON rather than raw
+`.html` for safer handling on disk. The loader resolves the slug through
+`sanitize_file_name()` and returns an empty string when the file is absent or
+malformed, in which case that post is skipped rather than created empty.
 
 Seeded articles publish rather than draft, because they carry finished content.
 Each declares its own slug so the URL is fixed by the theme.
@@ -476,6 +485,31 @@ first, and every fingerprint is taken from the saved copy after passing
 through WordPress's own block parser and serialiser. Where the theme cannot
 tell whether the owner edited an article, it leaves the article alone and
 asks; an update never overwrites what it cannot prove it wrote.
+
+### D46. Contextual links come from one map shared by the network
+
+The first mention of a known phrase in the running text links to the inner
+page that treats it, here or on one of the six sister sites, and nothing
+else: no "related" section, no list of links. The phrases live in
+`inc/data/network-links.json`, which is the same file, byte for byte, in all
+seven themes; it is changed in all seven together, never in one. Each phrase
+belongs to the one site whose subject it is, so no phrase leads to two
+places across the network. Own-site addresses go through `home_url()`, so a
+staging copy links to itself.
+
+The pass (`inc/contextual-links.php`) runs at 22, before the Glossary links
+at 24, and adds at most one link a paragraph or list item, four to this site
+and three to the sister sites a page. The Glossary pass keeps its own rules
+and never links inside an existing link; a Glossary link on words this pass
+already linked is unwrapped at 26. When this pass takes the first mention of
+a name the Glossary gives an epithet (Aisha, Khadija, Gabriel and the
+like), the epithet follows this link, and the Glossary link to that entry
+later in the text is unwrapped with its epithet, so the epithet appears
+once, at the first mention, as before. Headings, quotations, captions,
+footnote marks, script blocks marked with `lang` or `dir="rtl"`, the Notes
+list and the Glossary index (`boi-glossary__list`) are never linked. A post's own lines win over the site-wide lines, which win
+over the map; a name that contains a mapped phrase but means something else
+(`boi_cl_guards`) is matched and left alone.
 
 ## Asset conventions
 

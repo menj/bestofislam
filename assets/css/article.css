@@ -10,7 +10,7 @@
 .boi-article {
 	--boi-ink: var(--wp--preset--color--contrast, #0D2B4E);
 	--boi-mute: var(--wp--preset--color--accent-5, #4A5A6E);
-	--boi-blue: var(--wp--preset--color--accent-1, #1F6FCC);
+	--boi-blue: var(--wp--preset--color--accent-1, #1D6AC3);
 	--boi-gold: var(--wp--preset--color--accent-2, #E8B33C);
 	--boi-tint: var(--wp--preset--color--accent-3, #EAF2FB);
 	--boi-rule: var(--wp--preset--color--accent-6, #D9E3EF);
@@ -251,6 +251,18 @@
 	border: 1px solid var(--boi-rule);
 	border-radius: var(--wp--custom--radius--lg, 16px);
 	padding: 1.5rem;
+}
+
+/* The network block on articles shared across the sister sites. */
+.boi-article .boi-network {
+	margin-block: 2.5rem;
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--lg, 16px);
+	padding: 1.5rem;
+}
+
+.boi-article .boi-network > h2 {
+	margin-block-start: 0;
 }
 
 .boi-article .boi-related {

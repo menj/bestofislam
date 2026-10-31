@@ -6,17 +6,25 @@
  * Arabic citation therefore costs nothing.
  *
  * Noto Naskh Arabic (SIL Open Font Licence) is bundled, as one variable file
- * covering weights 400 to 700. The other faces are not; see
- * assets/fonts/scripts/README.md for their filenames and where to obtain them.
- * Until a file is present its declaration is inert and the browser falls back
- * to the system stack named below.
+ * covering weights 400 to 700. KFGQPC HAFS Uthmanic Script is bundled as a
+ * woff2 conversion of the original TTF, by the owner's decision of 2026-10-26,
+ * although its licence forbids modification (docs/SSOT.md, D11). The other faces are not bundled; see assets/fonts/scripts/README.md
+ * for their filenames and where to obtain them. Until a file is present its
+ * declaration is inert and the browser falls back to the system stack.
  */
 
 @font-face {
-	font-family: "BOI Quran";
-	src: url("../fonts/scripts/uthmanic-hafs.woff2") format("woff2");
+	font-family: "KFGQPC HAFS Uthmanic Script";
+	src: url("../fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
 	font-display: swap;
 	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+/* The Uthmanic face sets Quranic verses only, never other Arabic. */
+:root {
+	--boi-font-quran: "KFGQPC HAFS Uthmanic Script", "BOI Arabic", "Noto Naskh Arabic", serif;
 }
 
 @font-face {
@@ -59,11 +67,15 @@
  * The stack is applied globally to body text. Because every face above is
  * range-scoped, Latin text never touches them and the Latin faces declared in
  * theme.json continue to resolve first.
+ *
+ * The Uthmanic face is not in this stack: it covers ordinary Arabic letters as
+ * well as Quranic ones, so any place in the stack would let it set Arabic
+ * that is not a verse. It is reserved for text marked .boi-script-quran,
+ * through --boi-font-quran.
  */
 body {
 	font-family:
 		var(--wp--preset--font-family--eb-garamond, serif),
-		"BOI Quran",
 		"BOI Arabic",
 		"BOI Hebrew",
 		"BOI Greek",
@@ -81,7 +93,7 @@ body {
 }
 
 .boi-script-quran {
-	font-family: "BOI Quran", serif;
+	font-family: var(--boi-font-quran);
 	direction: rtl;
 	unicode-bidi: isolate;
 	font-size: 1.35em;
@@ -90,4 +102,95 @@ body {
 
 .boi-script-greek {
 	font-family: "BOI Greek", serif;
+}
+
+/*
+ * Epithets: the Arabic formula that follows a name (the blessing on the
+ * Prophet, the peace on the prophets, "may God be pleased with" on the
+ * Companions). It rides on the first linked mention in an article and on the
+ * entry's own page. The rubric variant sets it in red ink, after the
+ * manuscript convention of rubrication.
+ */
+:root {
+	--boi-rubric: #B3261E;
+}
+
+:root[data-theme="dark"] {
+	--boi-rubric: #E5736A;
+}
+
+.boi-epithet {
+	font-family: "BOI Arabic", "Noto Naskh Arabic", serif;
+	font-size: 0.95em;
+	margin-inline-start: 0.15em;
+	white-space: nowrap;
+	unicode-bidi: isolate;
+}
+
+.boi-epithet--rubric {
+	color: var(--boi-rubric);
+}
+
+/*
+ * laʿnat Allāh after the name of Paul of Tarsus ([boi_lanah]): calligraphy
+ * drawn as a mask in the rubric red, which the dark appearance lightens. The
+ * words stay inside for screen readers and copying, and show as written
+ * where the browser cannot draw a mask.
+ */
+.boi-lanah__text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+@supports ((mask-image: url("x.svg")) or (-webkit-mask-image: url("x.svg"))) {
+	.boi-lanah {
+		display: inline-block;
+		position: relative;
+		height: 1.05em;
+		aspect-ratio: 3672 / 1075;
+		margin-inline: 0.1em 0.05em;
+		vertical-align: -0.16em;
+		background-color: var(--boi-rubric);
+		-webkit-mask: url("../images/lanat-allah.svg") center / contain no-repeat;
+		mask: url("../images/lanat-allah.svg") center / contain no-repeat;
+	}
+}
+
+@supports not ((mask-image: url("x.svg")) or (-webkit-mask-image: url("x.svg"))) {
+	.boi-lanah {
+		color: var(--boi-rubric);
+	}
+
+	.boi-lanah__text {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+		clip-path: none;
+		white-space: normal;
+	}
+}
+
+@media (forced-colors: active) {
+	.boi-lanah {
+		forced-color-adjust: none;
+		background-color: CanvasText;
+	}
+}
+
+@media print {
+	.boi-lanah {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
 }

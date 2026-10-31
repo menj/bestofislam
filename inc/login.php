@@ -278,3 +278,62 @@ function boi_login_email_content( $content ) {
 	return str_replace( array( $original, set_url_scheme( $original, 'https' ), set_url_scheme( $original, 'http' ) ), boi_login_url_base(), $content );
 }
 add_filter( 'user_request_action_email_content', 'boi_login_email_content', 999 );
+
+/**
+ * Turns off the XML-RPC API.
+ *
+ * The site's own logs show sustained brute-force traffic against
+ * xmlrpc.php, spread across many IP addresses each posting hundreds of
+ * requests (system.multicall-style credential stuffing). The theme has no
+ * feature that needs the API: Jetpack and the legacy mobile apps are the
+ * usual reason to keep it, and neither is in use here. The filter is the
+ * standard WordPress mechanism, checked by xmlrpc.php itself before any
+ * method dispatches, so a disabled request never reaches user code.
+ *
+ * @return bool
+ */
+function boi_disable_xmlrpc() {
+	return false;
+}
+add_filter( 'xmlrpc_enabled', 'boi_disable_xmlrpc' );
+
+/**
+ * Pingback is the other half of the same surface: it lets a request make
+ * the site fetch an arbitrary URL and report back, usable for scanning
+ * internal network addresses or for pingback-flood attacks on a third
+ * party. Removed from the exposed methods regardless of the filter above,
+ * in case a plugin re-enables XML-RPC.
+ *
+ * @param array $methods Exposed XML-RPC methods.
+ * @return array
+ */
+function boi_disable_pingback_methods( $methods ) {
+	unset( $methods['pingback.ping'], $methods['pingback.extensions.getPingbacks'] );
+	return $methods;
+}
+add_filter( 'xmlrpc_methods', 'boi_disable_pingback_methods' );
+
+/**
+ * Removes the RSD and WLW manifest links and the X-Pingback header, the
+ * discovery trail that points at XML-RPC in the first place.
+ *
+ * @return void
+ */
+function boi_remove_xmlrpc_discovery() {
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+}
+add_action( 'init', 'boi_remove_xmlrpc_discovery' );
+
+/**
+ * Drops the X-Pingback response header, set by WordPress core directly
+ * rather than through an action a plugin could unhook.
+ *
+ * @param array $headers Response headers.
+ * @return array
+ */
+function boi_remove_xmlrpc_header( $headers ) {
+	unset( $headers['X-Pingback'] );
+	return $headers;
+}
+add_filter( 'wp_headers', 'boi_remove_xmlrpc_header' );

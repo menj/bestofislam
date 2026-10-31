@@ -98,6 +98,7 @@
   "type": "person",
   "ar": "سلمان الفارسي",
   "tr": "Salmān al-Fārisī",
+  "epithet": "رضي الله عنه",
   "def": "A Persian Companion who is said to have advised digging the trench around Medina.",
   "what": [
    "Salman is reported to have come from Persia in search of the truth, passed through Christian teachers, and found the Prophet in Medina. Though once a slave, he was freed and honoured; the Prophet said, “Salman is of us, the people of the house” (al-Hakim). He proposed the trench at the battle of 627."
@@ -213,7 +214,8 @@
   "articles": [
    "apostasy-in-islam",
    "sharia-and-hudud",
-   "child-marriage-in-islam"
+   "child-marriage-in-islam",
+   "islamisation-of-the-west"
   ],
   "type": "term",
   "aliases": []
@@ -408,6 +410,7 @@
   "type": "prophet",
   "ar": "سليمان",
   "tr": "Sulaymān",
+  "epithet": "عليه السلام",
   "def": "Solomon, son of David, honoured in the Quran as a prophet-king with power over the winds, the jinn and the birds.",
   "what": [
    "God gave Solomon knowledge and the “speech of the birds” (27:16), the wind subdued to him (21:81), and jinn who worked for him, “every builder and diver” (38:37). He answered the Queen of Sheba’s kingdom with a letter beginning “in the name of God, the Merciful, the Compassionate” (27:30), and the Queen believed (27:44). When he died, only the creeping of a worm on his staff showed the jinn that he was gone (34:14)."
@@ -1375,7 +1378,8 @@
   "faruqi": {
    "page": 62,
    "term": "SUBḤĀNA ALLADHĪ SAKHKHARA LANĀ HĀDHA WA MĀ KUNNA LAHU MUQRINĪN."
-  }
+  },
+  "quran_ref": "43:13"
  },
  {
   "slug": "subhana-allah",

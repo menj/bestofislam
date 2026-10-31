@@ -72,14 +72,12 @@ function boi_render_figure( $attributes ) {
 	$size = function_exists( 'wp_getimagesize' ) ? wp_getimagesize( $file ) : getimagesize( $file );
 
 	return sprintf(
-		'<figure class="boi-figure"><img src="%1$s" alt="%2$s" width="%3$d" height="%4$d" loading="lazy" decoding="async" /><figcaption class="boi-credit">%5$s <a href="%6$s" rel="noopener">%7$s</a></figcaption></figure>',
+		'<figure class="boi-figure"><img src="%1$s" alt="%2$s" width="%3$d" height="%4$d" loading="lazy" decoding="async" /><figcaption class="boi-credit">%5$s</figcaption></figure>',
 		esc_url( BOI_URI . '/assets/images/inline/' . $image['file'] ),
 		esc_attr( $image['alt'] ),
 		$size ? (int) $size[0] : 1200,
 		$size ? (int) $size[1] : 800,
-		esc_html( sprintf( /* translators: 1: photographer, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $image['artist'], $image['licence'] ) ),
-		esc_url( $image['source'] ),
-		esc_html( boi_image_source_name( $image['source'] ) )
+		boi_credit_html( sprintf( /* translators: 1: photographer, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $image['artist'], $image['licence'] ), $image['source'] )
 	);
 }
 

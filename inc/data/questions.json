@@ -1,0 +1,302 @@
+{
+	"text": {
+		"label": "The Quran's text",
+		"items": [
+			{
+				"q": "Where are Uthman's copies of the Quran?",
+				"a": "The Samarkand codex, now in Tashkent, is the copy tradition has attributed to Uthman for centuries, and its dating is argued. The Birmingham leaves are settled: radiocarbon dated to 568 to 645, in the Prophet's own generation. Both carry the text Muslims recite today.",
+				"slug": "uthman-copies",
+				"feat": true
+			},
+			{
+				"q": "Why did Uthman burn copies of the Quran?",
+				"a": "Bukhari records the order and its reason in the same report: soldiers from Syria and Iraq were quarrelling over recitation, and Uthman acted to stop the community splitting over its Book. Burning a superseded copy is how Islamic law retires one respectfully.",
+				"slug": "uthman-copies",
+				"feat": false
+			},
+			{
+				"q": "Is there a complete Quran from the seventh century?",
+				"a": "The Codex Parisino-Petropolitanus, from the first Islamic century, preserves close to half the text in one manuscript, and early leaves cover much of the rest. The complete text was carried from the start by recitation, memorised in full and recited daily, with writing as its check.",
+				"slug": "uthman-copies",
+				"feat": false
+			},
+			{
+				"q": "Do the Bible's manuscripts match today's text exactly?",
+				"a": "Textual critics, Christian ones included, estimate around 400,000 variants among New Testament manuscripts. Most are trivial. Some are whole passages that modern Bibles bracket, such as the longer ending of Mark.",
+				"slug": "manuscript-transmission",
+				"feat": false
+			}
+		]
+	},
+	"scripture": {
+		"label": "Earlier scripture",
+		"items": [
+			{
+				"q": "Why trust hadith written down after the Prophet, when Muslims question the gospels?",
+				"a": "A hadith carries a named chain of transmitters, which Muslim scholars graded, rejecting many reports. The Catholic bishops' own Bible says 2 Peter was probably written in Peter's name by a later author, perhaps a century on. The standard is the chain, applied evenly.",
+				"slug": "second-peter",
+				"feat": true
+			},
+			{
+				"q": "Where is the Injil?",
+				"a": "The Quran describes a gospel given to Jesus and preached by him, and says nothing of a book in his hand. Mark agrees in its first chapter, where Jesus comes proclaiming the gospel of God.",
+				"slug": "where-is-the-injil",
+				"feat": true
+			},
+			{
+				"q": "Why did God not preserve the Injil?",
+				"a": "The Quran attaches its promise of preservation to the Quran. Each earlier message was entrusted to its community, and the last was guarded directly. Jesus wrote nothing that survives, and Christians do not conclude from that that his teaching was lost.",
+				"slug": "where-is-the-injil",
+				"feat": false
+			},
+			{
+				"q": "Does the Quran affirm a Bible it says is corrupt?",
+				"a": "The dilemma needs five assumptions, among them that the Injil is the four gospels and that corruption must be total. Each is contestable from the Quran's own text.",
+				"slug": "islamic-dilemma",
+				"feat": true
+			},
+			{
+				"q": "How could Jews and Christians everywhere corrupt scripture in the same way?",
+				"a": "The Quran describes concealment and distortion of meaning within particular communities. Many classical scholars held that the distortion lay mainly in interpretation, with the words left standing. Neither requires a worldwide conspiracy.",
+				"slug": "islamic-dilemma",
+				"feat": false
+			}
+		]
+	},
+	"jesus": {
+		"label": "Jesus, Paul and Christian doctrine",
+		"items": [
+			{
+				"q": "Did Paul keep the Law, or abolish it?",
+				"a": "Paul told his churches they were released from the Law and that the Sabbath no longer bound them. Set that beside Matthew 5:19, where relaxing the least commandment makes a man least in the kingdom.",
+				"slug": "paul-and-the-law",
+				"feat": true
+			},
+			{
+				"q": "Did Jesus claim to be God?",
+				"a": "He prayed to God, said the Father was greater, did not know the hour, and never said \"I am God\" in any gospel. The verses cited for the claim all need a later doctrine to read that way.",
+				"slug": "jesus-not-god",
+				"feat": true
+			},
+			{
+				"q": "Does the Quran say Mary is part of the Trinity?",
+				"a": "The verse asks whether Jesus told people to take him and his mother as gods. It says nothing about the Trinity, which the Quran addresses in a different verse.",
+				"slug": "ezra-and-mary",
+				"feat": false
+			},
+			{
+				"q": "Which Jews called Ezra the son of God?",
+				"a": "No surviving Jewish text says so, and that should be admitted. The tradition names Jews of Medina, and the Quran is very nearly the only record of what Arabian Jews believed. Jewish memory raised Ezra close to Moses, and one early text has him taken up to heaven.",
+				"slug": "ezra-and-mary",
+				"feat": false
+			},
+			{
+				"q": "Is Allah a different god from the God of the Bible?",
+				"a": "Allah is the Arabic word for God, used by Arab Christians before Islam existed and in Arabic Bibles today. The Quran tells Muslims to say to Jews and Christians that their God is one.",
+				"slug": "same-god",
+				"feat": true
+			}
+		]
+	},
+	"prophecy": {
+		"label": "Revelation and prophethood",
+		"items": [
+			{
+				"q": "Who saw Gabriel in the cave?",
+				"a": "No one, as no one saw the burning bush or the light on the Damascus road. Every prophetic call is private. Islam rests its case on the message, which anyone can read and test.",
+				"slug": "who-saw-gabriel",
+				"feat": false
+			},
+			{
+				"q": "Did Muhammad die of poison, and does that make him a false prophet?",
+				"a": "He lived four more years after Khaybar, while the man who ate beside him died within days. The immunity test being applied comes from the longer ending of Mark, which the oldest manuscripts lack.",
+				"slug": "prophet-died-poisoning",
+				"feat": true
+			},
+			{
+				"q": "Did the Quran borrow Haman from the Book of Esther?",
+				"a": "A shared name proves nothing by itself. An Egyptian title for the overseer of quarry workers, attested in the reign of Ramesses II, matches the office the Quran gives Haman.",
+				"slug": "haman-anachronism",
+				"feat": true
+			},
+			{
+				"q": "Is there evidence a prophet before Muhammad prayed at the Kaaba?",
+				"a": "The account of Abraham and Ishmael raising its foundations comes from the Quran, and Muslims accept it on that basis. There is no archaeological record of Abraham anywhere, Hebron included, so the demand applies to Genesis as much as to the Quran.",
+				"slug": "qibla-change",
+				"feat": false
+			}
+		]
+	},
+	"practice": {
+		"label": "Practice and history",
+		"items": [
+			{
+				"q": "Why did the first Muslims pray towards Jerusalem?",
+				"a": "The Quran records the first direction itself, gives its reason as a test of obedience, and records the change to Mecca. The objection is quoted and answered in the text it is aimed at.",
+				"slug": "qibla-change",
+				"feat": true
+			},
+			{
+				"q": "Where does the Quran say to pray five times a day?",
+				"a": "The Quran gives the prayer times and tells believers to follow the Messenger for the rest. The five daily prayers have been performed publicly by every Muslim community since the first generation.",
+				"slug": "why-five-prayers",
+				"feat": true
+			},
+			{
+				"q": "Is Islam really the fastest-growing religion?",
+				"a": "Yes. Pew measured 347 million more Muslims between 2010 and 2020, more than every other religion combined. The drivers are births, youth and retention: 99 percent of people raised Muslim stay Muslim. Growth describes the world. It proves nothing about truth.",
+				"slug": "fastest-growing-religion",
+				"feat": true
+			},
+			{
+				"q": "Is Islam a Middle Eastern religion?",
+				"a": "The country with the most Muslims is Indonesia, with about 239 million, and it is not an Islamic state: its constitution names one God and recognises six religions. Its national mosque stands across the street from Jakarta Cathedral.",
+				"slug": "indonesia",
+				"feat": false
+			},
+			{
+				"q": "Why do ex-Muslim stories persuade so many readers online?",
+				"a": "A Malaysian study of one ex-Muslim blog found that storytelling and sympathy carried much of the persuasion, and that accounts of the insults she received drew readers to her. The replies researchers thought could reach her answered her reasons with respect.",
+				"slug": "ex-muslim-blog-study",
+				"feat": false
+			},
+			{
+				"q": "Did any ancient writer mention the Kaaba before Islam?",
+				"a": "Possibly. Diodorus of Sicily described a temple revered by all Arabians, and Ptolemy listed a town called Macoraba, but scholars dispute both identifications. The Quran makes the claim on its own authority.",
+				"slug": "kaaba-witnesses",
+				"feat": false
+			},
+			{
+				"q": "What do the Dome of the Rock inscriptions show about the Quran?",
+				"a": "Dated 72 AH, about sixty years after the Prophet, they quote passages of the Quran that match the text recited today, and they allude to it in ways that assume their readers already knew it.",
+				"slug": "dome-inscriptions",
+				"feat": false
+			},
+			{
+				"q": "Did Muslims burn the Library of Alexandria?",
+				"a": "No. The story of the caliph Umar ordering it burned first appears nearly six centuries after the conquest, and the library had largely vanished centuries before the Arabs arrived. Historians, Muslim and Western, regard the story as a legend.",
+				"slug": "library-of-alexandria",
+				"feat": false
+			},
+			{
+				"q": "What was the jizya?",
+				"a": "A graduated annual tax on adult non-Muslim men under Muslim rule, with exemptions for women, children, monks and those unable to work. It was tied to protection and military service, and it also marked a difference of religion.",
+				"slug": "jizya",
+				"feat": false
+			},
+			{
+				"q": "Was the Quran perfectly preserved?",
+				"a": "Academic scholarship finds a standard text fixed under Uthman within two decades of the Prophet, followed by every later manuscript but one, with modest variation in matters the Islamic tradition itself recorded, such as surah order and verse numbering.",
+				"slug": "quran-preservation-reddit",
+				"feat": false
+			},
+			{
+				"q": "Does Islam punish leaving it with death?",
+				"a": "Mainstream Islamic law prescribes it, on the strength of the hadith, while the Quran condemns apostasy without naming a worldly penalty. Some senior scholars confine the penalty to treason; the question is debated among Muslims today.",
+				"slug": "apostasy-in-islam",
+				"feat": false
+			},
+			{
+				"q": "Does the Quran deny the crucifixion?",
+				"a": "It denies that Jesus was killed or crucified by his enemies, and says God raised him to Himself. Historians treat the crucifixion as well attested; Muslims hold to the Quran on the authority of revelation, and reject atonement by proxy on the Hebrew prophets' own principle that each soul bears its own sin.",
+				"slug": "crucifixion-quran",
+				"feat": false
+			},
+			{
+				"q": "Did Islam spread by the sword?",
+				"a": "The Quran forbids compulsion in belief and bounds fighting with a prohibition on transgression. Current data put jihadist violence far below the impression the coverage gives.",
+				"slug": "islam-religion-of-peace",
+				"feat": true
+			},
+			{
+				"q": "Does the Quran tell men to beat their wives?",
+				"a": "Quran 4:34 gives three steps and the last word is read by classical commentators as a symbolic touch at most, with the Prophet saying those who strike are not the best of men. He never struck a woman or a servant, and many scholars today treat any violence in the home as forbidden.",
+				"slug": "does-the-quran-allow-wife-beating",
+				"feat": true
+			},
+			{
+				"q": "Does Islam allow child marriage?",
+				"a": "The Quran sets no age but requires maturity and consent, and the Prophet gave a woman the right to refuse a marriage she disliked. Egypt, Tunisia and Turkey set the minimum at 18.",
+				"slug": "child-marriage-in-islam",
+				"feat": false
+			},
+			{
+				"q": "Did Islam ban slavery?",
+				"a": "It did not abolish it in one step. It made freeing slaves the best of deeds, closed the sources of enslavement to a narrow channel, gave slaves rights, and scholars today hold slavery forbidden.",
+				"slug": "slavery-in-islam",
+				"feat": false
+			},
+			{
+				"q": "Do Muslims believe in 72 virgins?",
+				"a": "The Quran says houris, wide-eyed companions, with no number, and promises spouses to every believer. The figure seventy-two comes from one report in al-Tirmidhi that many scholars weaken, and nothing in the sources promises it as a reward for violence.",
+				"slug": "houris-and-paradise",
+				"feat": false
+			},
+			{
+				"q": "Does taqiyya let Muslims lie to unbelievers?",
+				"a": "The Quran allows a person under threat of death or torture to hide his faith, as Ammar ibn Yasir did. It is a concession for compulsion and not a method, and the Quran and the Prophet demand truthfulness and keeping covenants.",
+				"slug": "taqiyya-5-myths",
+				"feat": false
+			},
+			{
+				"q": "Is sharia a list of punishments?",
+				"a": "Sharia means the path. The hudud punishments are a handful of offences, fenced by very strict proof, and most Islamic law concerns worship, trade, family and character.",
+				"slug": "sharia-and-hudud",
+				"feat": false
+			},
+			{
+				"q": "Is Islam a religion of war?",
+				"a": "The Quran says killing one person unjustly is like killing all of mankind, and the early rules of war protect women, children, the old and the monks. Scholars of every school have condemned beheadings and attacks on civilians.",
+				"slug": "war-and-killing-in-islam",
+				"feat": false
+			},
+			{
+				"q": "Why does Islam forbid interest?",
+				"a": "The Quran threatens it with war from God, treats a loan as an act of kindness, and holds that profit should come with risk. Islamic finance uses partnership and sale instead.",
+				"slug": "why-no-interest",
+				"feat": false
+			},
+			{
+				"q": "How old was Aisha when she married the Prophet?",
+				"a": "The report in Bukhari says six at the contract and nine at the consummation, and some scholars argue from other reports that she was older. The question is open among scholars, and the rest of her record, as teacher and narrator, is rarely told.",
+				"slug": "questions-about-aisha",
+				"feat": false
+			},
+			{
+				"q": "Does Islam require women to wear the hijab?",
+				"a": "Scholars of every school hold that the Quran asks women to cover, and they differ on how much. The Quran also says there is no compulsion in religion, and many scholars criticise enforcing it by law.",
+				"slug": "hijab-and-modesty",
+				"feat": false
+			},
+			{
+				"q": "Why are there no pictures in a mosque?",
+				"a": "No image can stand for a God to whom nothing is like. Muslim artists answered with stylised pattern, geometry and calligraphy, and the arabesque is built to lead the eye past its own edge.",
+				"slug": "islamic-art-and-the-one-god",
+				"feat": false
+			}
+		]
+	},
+	"reason": {
+		"label": "God and reason",
+		"items": [
+			{
+				"q": "Is chance enough to explain the universe?",
+				"a": "Chance produces noise. The universe has a beginning, finely balanced constants and law, and a multiverse moves the question back a step without answering it.",
+				"slug": "universe-demands-creator",
+				"feat": false
+			},
+			{
+				"q": "Can there be morality without God?",
+				"a": "Atheists can plainly be good. The question is what grounds the duty, and flourishing, consensus and evolution each explain a feeling without making it binding.",
+				"slug": "morality-without-god",
+				"feat": false
+			},
+			{
+				"q": "If God knows everything, do we have free will?",
+				"a": "Knowing is not forcing. The Quran says whoever wishes may believe or disbelieve and holds each soul to account, and the schools differ only on how God's decree and human choice fit together.",
+				"slug": "fate-and-free-will",
+				"feat": false
+			}
+		]
+	}
+}

@@ -265,7 +265,8 @@
    "isa"
   ],
   "articles": [
-   "where-is-the-injil"
+   "where-is-the-injil",
+   "paul-claim-to-apostleship"
   ],
   "aliases": [
    "Gospel Of Barnabas"
@@ -444,7 +445,8 @@
    "where-is-the-injil",
    "second-peter",
    "manuscript-transmission",
-   "shared-prophets"
+   "shared-prophets",
+   "pauline-letters-authorship"
   ],
   "aliases": [
    "Biblos"
@@ -479,6 +481,7 @@
   "type": "person",
   "ar": "بلال",
   "tr": "Bilāl",
+  "epithet": "رضي الله عنه",
   "def": "A former slave from Abyssinia who became the first muezzin of Islam.",
   "what": [
    "Bilal ibn Rabah accepted Islam early and was tortured by his master Umayya ibn Khalaf, who laid a rock on his chest in the sun, until Abu Bakr bought and freed him. The Prophet appointed him to call the prayer, and he climbed on the Kaaba to call after the conquest of Mecca. His story is told as proof that the faith overrides race and rank."
@@ -1290,7 +1293,8 @@
   "def": "“In the name of Allah, the Beneficent, the Merciful”: said at the start of any activity.",
   "what": [
    "This phrase is called the <em>basmala</em>. It means “In the name of Allah, the Beneficent, the Merciful.” Faruqi says it is said at the beginning of any activity. A Muslim starts a task, a meal, a journey or a piece of writing with it, so that the action begins under God’s name and with a reminder of His mercy. It is among the most frequently spoken phrases in Muslim life.",
-   "It opens every chapter of the Quran except the ninth, and it also appears within chapter 27, in the letter of Solomon to the queen of Sheba (27:30). The two names it ends with, <em>al-Raḥmān</em> and <em>al-Raḥīm</em>, both come from the root of mercy. The phrase therefore opens each undertaking by recalling God’s mercy, which is the first quality named in the Quran."
+   "It opens every chapter of the Quran except the ninth, and it also appears within chapter 27, in the letter of Solomon to the queen of Sheba (27:30). The two names it ends with, <em>al-Raḥmān</em> and <em>al-Raḥīm</em>, both come from the root of mercy. The phrase therefore opens each undertaking by recalling God’s mercy, which is the first quality named in the Quran.",
+   "Faruqi lists the phrase a second time, among the expressions of daily life, as the prelude to eating and drinking: the speaker acknowledges that the food, the drink and the capacity to enjoy them come from God. Many Muslims teach children to say it before they begin a meal, so that mindfulness of God is part of ordinary life from an early age."
   ],
   "misread": "That it is a ritual formula without meaning, when it places an act under God’s name and mercy.",
   "sources": [
@@ -1300,30 +1304,7 @@
    "fatiha",
    "allah",
    "dua",
-   "quran"
-  ],
-  "articles": [],
-  "type": "topic",
-  "aliases": [],
-  "faruqi": {
-   "page": 56,
-   "term": "BISMI ALLAH AL RAḤMĀN AL RAḤĪM."
-  }
- },
- {
-  "slug": "bismi-allah-al-rahman-al-rahim-2",
-  "title": "Bismi Allah al-Rahman al-Rahim",
-  "ar": "بسم الله الرحمن الرحيم",
-  "tr": "Bismi Allāh al-Raḥmān al-Raḥīm",
-  "def": "“In the name of Allah, the Beneficent, the Merciful”: said before eating, drinking or any other activity.",
-  "what": [
-   "Faruqi lists this phrase a second time, in the section on daily expressions, as a prelude to eating, drinking and other activities. It means “In the name of Allah, the Beneficent, the Merciful.” The speaker begins his act under God’s name and acknowledges that the food, the drink and the capacity to enjoy them come from Him. The same words open the chapters of the Quran and the letter of Solomon (27:30). At meals they give the household a moment of gratitude before eating. Many Muslims teach children to say them before they begin, so that mindfulness of God is part of ordinary life from an early age."
-  ],
-  "misread": "That a blessing is said only in the mosque, when this phrase attends ordinary meals and daily tasks.",
-  "sources": [],
-  "terms": [
-   "bismi-allah-al-rahman-al-rahim",
-   "dua",
+   "quran",
    "common-phrases",
    "dhikr"
   ],
@@ -1331,9 +1312,10 @@
   "type": "topic",
   "aliases": [],
   "faruqi": {
-   "page": 61,
+   "page": 56,
    "term": "BISMI ALLAH AL RAḤMĀN AL RAḤĪM."
-  }
+  },
+  "quran_ref": "1:1"
  },
  {
   "slug": "bismi-allah-alladhi-la-ilaha-illa-huwa",

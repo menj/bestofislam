@@ -401,11 +401,27 @@ function boi_error_alert( $key, $subject, $detail ) {
 }
 
 /**
- * Reports, at the end of a request, the two conditions the logs show.
+ * The PHP error levels that end the request: a fatal of one kind or
+ * another, the only ones error_get_last() can still report by the time
+ * shutdown runs.
+ *
+ * @return int[]
+ */
+function boi_fatal_error_levels() {
+	return array( E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR );
+}
+
+/**
+ * Reports, at the end of a request, the conditions the logs show.
  *
  * - A core table that does not exist (18 September: Table '...options'
  *   doesn't exist).
  * - A request that is answered with HTTP 500 (13 to 17 September).
+ * - An uncaught fatal error, checked directly with error_get_last() rather
+ *   than relying on the response status alone: an xmlrpc.php fatal on
+ *   20 October (Class "WPS_Guard" not found) reached this same shutdown
+ *   hook but the server had already sent a 200 status for the request, so
+ *   the HTTP-500 check above would have missed it.
  *
  * @return void
  */
@@ -418,6 +434,14 @@ function boi_error_watch() {
 
 	if ( ! empty( $wpdb->last_error ) && preg_match( "/Table '[^']+' doesn't exist/", $wpdb->last_error ) ) {
 		boi_error_alert( 'missing-table', 'A database table is missing', substr( $wpdb->last_error, 0, 500 ) );
+		return;
+	}
+
+	$last = error_get_last();
+
+	if ( is_array( $last ) && in_array( $last['type'], boi_fatal_error_levels(), true ) ) {
+		$detail = ( isset( $last['message'] ) ? $last['message'] : '' ) . "\n" . ( isset( $last['file'] ) ? $last['file'] : '' ) . ':' . ( isset( $last['line'] ) ? $last['line'] : '' );
+		boi_error_alert( 'fatal-error', 'A PHP fatal error occurred', $detail );
 		return;
 	}
 
