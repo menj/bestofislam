@@ -309,3 +309,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **revisionist-case-weighed**: Crone's 2008 openDemocracy piece (wording paraphrased; check the exact sentences); Cook's later position; Donner 1998; van Putten 2019; Thomas the Presbyter (Hoyland pp. 118-120, pages to confirm); King 2018 and Gibson 2017 on Petra.
 - **war-and-killing-in-islam**: Bukhari 3166 and 5778; Quran 4:29 and 8:61; Bukhari 2731-2732 and Quran 48:1; the growth of the community after Hudaybiyya (al-Zuhri's remark as reported by Ibn Ishaq); Muslim 96 (Usama).
 - **where-is-the-injil**: Eusebius, Ecclesiastical History 3.39.16 (Papias); Kloppenborg 2000 on Q; Quran 5:68 and 7:157; Bukhari 4485 and Quran 2:136.
+
+## Expansion, seventeenth batch (1.78.18)
+
+- **manuscript-transmission**: the Ramadan night-prayer recitation paragraph (no note); Metzger's and Ehrman's positions (Ehrman 2005); P52 and Nongbri 2005; the Comma Johanneum and Erasmus's third edition (1522).
+- **kharijites-and-takfir**: al-Shahrastani on the Azariqa and Nafi ibn al-Azraq (680s); Bukhari 3610 (Dhu al-Khuwaysira); Takfir wal-Hijra and the killing of al-Dhahabi in 1977 (Kepel 1985, chapter to confirm).
+- **hajj-rites-explained**: Bukhari 1755 (farewell circuit); Malcolm X's letter (Autobiography, chapter 17); GASTAT figures "between one and a half and two million"; Quran 2:203.
+- **quranic-stories-and-history**: the Ruwwafa inscription (166-169 CE; Bowersock 1983 pp. 96-97, pages to confirm); Procopius, Wars 1.20 on Abramus; Matthew 12:41 and Luke 11:32.

@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.18] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: manuscript-transmission (1,346 to 1,652), kharijites-and-takfir (1,350 to 1,605), hajj-rites-explained (1,367 to 1,610) and quranic-stories-and-history (1,374 to 1,612). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.17] - 2026-10-31
 
 ### Changed
