@@ -35,10 +35,8 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
         terms[slug] = os.path.basename(path)
 
 # Seeded articles.
-setup = open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read()
-start = max(setup.find('function boi_seed_listicles'), 0)
-end = setup.find('function boi_seed_pages', start)
-seeds = re.findall(r"'slug'\s+=> '([^']+)'", setup[start:end if end != -1 else len(setup)])
+seed_data = json.load(open(os.path.join(ROOT, 'inc', 'data', 'seed.json'), encoding='utf-8'))
+seeds = [listicle['slug'] for listicle in seed_data['listicles']]
 for slug in seeds:
     if not os.path.exists(os.path.join(ROOT, 'content', slug + '.json')):
         errors.append('seed: "%s" has no content/%s.json' % (slug, slug))

@@ -2366,7 +2366,13 @@
   ]
  },
  "deuteronomy-18-and-the-paraclete": {
-  "featured": null,
+  "featured": {
+   "file": "deuteronomy-18-and-the-paraclete.avif",
+   "alt": "The view west from Mount Nebo in Jordan, over the hills of Moab towards the Jordan Valley.",
+   "artist": "falco",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/jordan-nebo-mountain-cunt-moses-4158428/"
+  },
   "inline": [
    {
     "file": "deuteronomy-18-and-the-paraclete-1.avif",
@@ -2410,7 +2416,13 @@
   ]
  },
  "seven-ahruf-cairo-edition-stoning-verse": {
-  "featured": null,
+  "featured": {
+   "file": "seven-ahruf-cairo-edition-stoning-verse.avif",
+   "alt": "The minarets and dome of al-Azhar Mosque in Cairo.",
+   "artist": "AXP Photography",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/al-azhar-mosque-in-cairo-18991579/"
+  },
   "inline": [
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-1.avif",
@@ -2429,7 +2441,13 @@
   ]
  },
  "aisha-sheep-report-stoning-and-suckling-verses": {
-  "featured": null,
+  "featured": {
+   "file": "aisha-sheep-report-stoning-and-suckling-verses.avif",
+   "alt": "An old manuscript in Arabic script, open on a stand against a dark background.",
+   "artist": "burcubyzt_85",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/"
+  },
   "inline": [
    {
     "file": "aisha-sheep-report-stoning-and-suckling-verses-1.avif",
@@ -2644,6 +2662,56 @@
     "artist": "Valentin de Boulogne; Museum of Fine Arts, Houston",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:PaulT.jpg"
+   }
+  ]
+ },
+ "muhammad-false-prophet-claim": {
+  "featured": {
+   "file": "muhammad-false-prophet-claim.avif",
+   "alt": "Two pigeons on a ledge above Makkah, with the city and its mountains behind them.",
+   "artist": "ruveyda yigiter",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/pigeons-overlooking-makkah-cityscape-36774128/"
+  },
+  "inline": [
+   {
+    "file": "muhammad-false-prophet-claim-1.avif",
+    "alt": "Stars over sand dunes at dusk in Morocco's Zagora Province.",
+    "artist": "Sergey Pesterev",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stars-over-desert-8357639/"
+   },
+   {
+    "file": "muhammad-false-prophet-claim-2.avif",
+    "alt": "Columns and arches of the Byzantine-era city of Apamea in Syria.",
+    "artist": "Iyad",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/aphamia-byzantine-syria-1078487/"
+   }
+  ]
+ },
+ "muslim-societies-backwardness-claim": {
+  "featured": {
+   "file": "muslim-societies-backwardness-claim.avif",
+   "alt": "The Kuala Lumpur skyline, with the KL Tower and the Petronas Towers among the high-rises.",
+   "artist": "Redo_72",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/buildings-metropolis-city-urban-7109918/"
+  },
+  "inline": [
+   {
+    "file": "muslim-societies-backwardness-claim-1.avif",
+    "alt": "An oil pump jack in a dry landscape near Baku, Azerbaijan.",
+    "artist": "Miguel Cuenca",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/crane-bird-on-a-meadow-20014443/"
+   },
+   {
+    "file": "muslim-societies-backwardness-claim-2.avif",
+    "alt": "The Sultan Abdul Samad Building in Kuala Lumpur, built in 1897 for the British colonial administration.",
+    "artist": "Afiqah Ct",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/colonial-architecture-in-kuala-lumpur-malaysia-37025572/"
    }
   ]
  }

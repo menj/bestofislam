@@ -6,6 +6,18 @@ versioning.
 
 ## [Unreleased]
 
+## [1.77.3] - 2026-10-31
+
+### Added
+
+- Featured images for the two articles that had none: "Did Muhammad fail as a prophet?" (Makkah and its mountains, ruveyda yigiter, Pexels) and the "backward" claim (the Kuala Lumpur skyline, Redo_72, Pixabay).
+- Two in-text images for each of those articles, placed with the figure block: stars over the dunes of Zagora (Sergey Pesterev, Pexels) beside the Qur'an's answer to the demand for signs; the Byzantine-era city of Apamea (Iyad, Pixabay) beside the Al-Rum prophecy; an oil pump jack near Baku (Miguel Cuenca, Pexels) beside oil rents; and the Sultan Abdul Samad Building in Kuala Lumpur (Afiqah Ct, Pexels) beside the colonial record.
+
+### Fixed
+
+- Three articles shipped a featured image file with no credit entry, so the image was never attached and its source was unknown. Each now has a credited photograph in its place: Deuteronomy 18 (the view from Mount Nebo, falco, Pixabay), the sheep report (an open Arabic manuscript, burcubyzt_85, Pexels) and the seven ahruf (al-Azhar in Cairo, AXP Photography, Pexels). Every article now has one featured image and two in its text.
+- `bin/check-content.py` reads the article list from `inc/data/seed.json`. Since 1.77.2 it looked for the list in `inc/setup.php`, found none, and reported every Glossary link as broken while skipping the article checks.
+
 ## [1.77.2] - 2026-10-29
 
 ### Changed
