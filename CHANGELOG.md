@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.79.0] - 2026-10-31
+
+### Changed
+
+- **Images, batch 1 of 6: ten articles gain photographs and captions.** seven-ahruf-cairo-edition-stoning-verse (+3), before-your-first-friday-prayer, fate-and-free-will, jizya, quran-on-christians, quran-science-claims-graded, quranic-ethics, same-god, schacht-isnads-dating-hadith and scholars-who-shaped-islamic-study (+2 each). The number of in-text images follows the length of the article, about one for every two entries, with a minimum of two. Every in-text image, old and new, now has a caption and descriptive alt text, and the figures are spaced evenly through the entries. Sources: Pexels and Pixabay.
+- **bin/fetch-stock-images.py** accepts `{"keep": true, "caption": "..."}` to caption an image already on record.
+
 ## [1.78.0] - 2026-10-31
 
 ### Added
