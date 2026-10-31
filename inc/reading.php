@@ -33,7 +33,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'deuteronomy-18-and-the-paraclete', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing' ),
+			'slugs' => array( 'same-god', 'deuteronomy-18-and-the-paraclete', 'shared-prophets', 'jesus-not-god', 'crucifixion-quran', 'verses-read-differently', 'paul-and-the-law', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'does-islam-teach-the-bible-was-corrupted', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'quran-on-christians', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),

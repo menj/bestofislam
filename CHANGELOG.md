@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.0] - 2026-10-31
+
+### Added
+
+- **New article: Did Islam teach that the Bible was corrupted? 7 points, graded.** The Quranic charge (2:79, 3:78, 4:46, 5:13), the Muʿādh report and its two versions, Ibn ʿAbbās in al-Bukhārī 7363, the reports that the Torah held what the Bible lacks, Ibn Ḥazm, Ibn Taymiyya and Ibn al-Qayyim's three views, and the strongest objections (6:115 and the stoning report). Each entry carries a strength label; the thin points are conceded. The article is linked from islamic-dilemma.
+
 ## [1.77.2] - 2026-10-29
 
 ### Changed

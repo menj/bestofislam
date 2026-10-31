@@ -2646,5 +2646,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:PaulT.jpg"
    }
   ]
+ },
+ "does-islam-teach-the-bible-was-corrupted": {
+  "featured": {
+   "file": "does-islam-teach-the-bible-was-corrupted.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   },
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-2.avif",
+    "alt": "Gold and blue star outlines around a gold dot on navy.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py"
+   }
+  ]
  }
 }
