@@ -34,11 +34,13 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
             errors.append('glossary: duplicate slug "%s" (%s and %s)' % (slug, terms[slug], os.path.basename(path)))
         terms[slug] = os.path.basename(path)
 
-# Seeded articles.
-setup = open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read()
-start = max(setup.find('function boi_seed_listicles'), 0)
-end = setup.find('function boi_seed_pages', start)
-seeds = re.findall(r"'slug'\s+=> '([^']+)'", setup[start:end if end != -1 else len(setup)])
+# Seeded articles: the seed list lives in inc/data/seed.json.
+seed_path = os.path.join(ROOT, 'inc', 'data', 'seed.json')
+try:
+    seeds = [x['slug'] for x in json.load(open(seed_path, encoding='utf-8')).get('listicles', [])]
+except (OSError, json.JSONDecodeError, KeyError, TypeError) as e:
+    errors.append('inc/data/seed.json: cannot read the seed list (%s)' % e)
+    seeds = []
 for slug in seeds:
     if not os.path.exists(os.path.join(ROOT, 'content', slug + '.json')):
         errors.append('seed: "%s" has no content/%s.json' % (slug, slug))
@@ -104,6 +106,22 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):
             items = len(re.findall(r'<li>', c[notes:]))
             if sups != list(range(1, items + 1)):
                 errors.append('%s: footnotes run to %d but the Notes list has %d items' % (rel, sups[-1], items))
+
+# Article images: AVIF or WebP only, and every credited file must exist.
+for folder in ('featured', 'inline'):
+    for name in sorted(os.listdir(os.path.join(ROOT, 'assets', 'images', folder))):
+        if not name.lower().endswith(('.avif', '.webp')):
+            errors.append('images: assets/images/%s/%s is not AVIF or WebP' % (folder, name))
+try:
+    credits = json.load(open(os.path.join(ROOT, 'inc', 'images-data.json'), encoding='utf-8'))
+except (OSError, json.JSONDecodeError) as e:
+    credits = {}
+    errors.append('inc/images-data.json: cannot read (%s)' % e)
+for slug, entry in credits.items():
+    shots = ([('featured', entry['featured'])] if entry.get('featured') else []) + [('inline', i) for i in entry.get('inline') or [] if i]
+    for folder, shot in shots:
+        if not os.path.exists(os.path.join(ROOT, 'assets', 'images', folder, shot['file'])):
+            errors.append('images: %s lists %s/%s, which does not exist' % (slug, folder, shot['file']))
 
 if errors:
     print('\n'.join(errors))

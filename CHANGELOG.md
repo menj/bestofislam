@@ -6,6 +6,24 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.0] - 2026-10-31
+
+### Added
+
+- **New article: Did Islam teach that the Bible was corrupted? 7 points, graded.** The Quranic charge (2:79, 3:78, 4:46, 5:13), the Muʿādh report and its two versions, Ibn ʿAbbās in al-Bukhārī 7363, the reports that the Torah held what the Bible lacks, Ibn Ḥazm, Ibn Taymiyya and Ibn al-Qayyim's three views, and the strongest objections (6:115 and the stoning report). Each entry carries a strength label; the thin points are conceded. The article is linked from islamic-dilemma.
+
+### Changed
+
+- **Photographs replace the generated graphics in seven articles:** does-islam-teach-the-bible-was-corrupted, gods-attributes-and-anthropomorphism, temporary-marriage-mutah, do-muslims-worship-muhammad, muslims-by-the-numbers-2020, muhammad-false-prophet-claim and muslim-societies-backwardness-claim (the last two had no images). Each now has one featured image and three in-text images, spaced through the entries, from Pexels, Pixabay and Wikimedia Commons, all as 3:2 AVIF.
+- **Image captions.** Each credit entry in `inc/images-data.json` may carry a `caption`, printed above the credit line under the featured image and under each figure, with descriptive alt text. The figure block takes up to three images.
+- **bin/fetch-stock-images.py** downloads the photographs named in `bin/stock-images.json` (keys for Pexels and Pixabay come from the environment) and rewrites a credit whenever the source changes.
+
+### Fixed
+
+- **bin/build-related.py** reads each article's topic from `inc/data/seed.json` (it read `inc/setup.php`, so every topic lookup came back empty and the same-section bonus was lost).
+- **bin/check-content.py** also fails on any article image that is not AVIF or WebP, and on any credited file that does not exist.
+- **bin/check-content.py** reads the seed list from `inc/data/seed.json` (it read `inc/setup.php`, so every glossary link was reported as unknown). It now reports no problems.
+
 ## [1.77.2] - 2026-10-29
 
 ### Changed
