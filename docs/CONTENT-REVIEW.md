@@ -260,3 +260,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **camel-urine-hadith**: Bukhari 216 (the two graves); Bukhari 5678 (every disease has a cure).
 - **funeral-dhikr-dua**: Bukhari 7563 as the last hadith of the collection; Muslim 2732; Bukhari 6369; Bukhari 1343 on the martyrs of Uhud; Muslim 963 (Awf ibn Malik's prayer); Muslim 977 and 974-975.
 - **al-zutt-allegation**: Quran 29:65 and 43:12-13; the EI2 article "Zutt" on the Jats of Sind; the details of Muslim 450 (the search, Hira, the traces of fires).
+
+## Expansion, tenth batch (1.78.11)
+
+- **preservation-and-truth**: Quran 30:2-5, 21:33, 36:38-40; the Great Isaiah Scroll's date and agreement with the Masoretic text (cited to Tov).
+- **ridda-wars-abu-bakr-fadak**: Abu Bakr's first address (Guillaume p. 687); the Khalid and Malik ibn Nuwayra episode (al-Tabari); Ibn Kathir on 5:54; Ibn Sa'd on Abu Bakr's allowance; al-Baladhuri on Umar II and al-Ma'mun and Fadak; Bukhari 4986.
+- **crusades-5-facts**: Chazan 1987; Ibn al-Qalanisi on the synagogue (Gibb 1932); Goitein 1952 on the Geniza letters; Ibn Shaddad on Acre 1191 and the 1192 truce (Richards 2001).
+- **instruments-islamic-world**: al-Ijliyya in the Fihrist; al-Razi's Kitab al-Asrar and Ruska 1937; al-Farisi and Rashed's DSB article; al-Jazari (Hill 1974) and the crankshaft claim; Taqi al-Din's 1577 observatory and Sayılı 1960; Jai Singh's use of Ulugh Beg.

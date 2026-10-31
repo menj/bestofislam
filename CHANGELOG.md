@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.11] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: preservation-and-truth (1,162 to 1,606), ridda-wars-abu-bakr-fadak (1,162 to 1,637), crusades-5-facts (1,163 to 1,643) and instruments-islamic-world (1,171 to 1,606). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.10] - 2026-10-31
 
 ### Changed
