@@ -8,6 +8,8 @@ the caption to print. The script downloads the file, crops it to 3:2, resizes it
 (1400px wide for the featured image, 960px for the others), stores it as AVIF
 and writes the credit entry (artist, licence, source, alt, caption).
 
+An inline item of the form {"keep": true, "caption": "..."} keeps the image already on record and only sets its caption.
+
 Pexels and Pixabay need a key. Pass them in the environment and never commit
 them:
 
@@ -149,6 +151,15 @@ def main():
         inline = list(entry.get('inline') or [])
         for i, item in enumerate(spec.get('inline', [])):
             if not item:
+                continue
+            if item.get('keep'):
+                # Keep the image on record and only set its caption (and alt text).
+                if i < len(inline) and inline[i]:
+                    inline[i]['caption'] = item['caption']
+                    if item.get('alt'):
+                        inline[i]['alt'] = item['alt']
+                else:
+                    failed.append('%s inline %d (nothing to keep)' % (slug, i + 1))
                 continue
             got = store(item, 'inline', '%s-%d.avif' % (slug, i + 1), 960, inline[i] if i < len(inline) else None)
             if not got:
