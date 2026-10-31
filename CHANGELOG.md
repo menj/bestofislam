@@ -6,6 +6,23 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.2] - 2026-10-31
+
+### Changed
+
+- **Every title tag reads "<page> | Best of Islam" and stays under 60 characters** (SSOT D47). `boi_title_parts()` in `inc/seo.php` builds the two parts:
+  - The front page now leads with its focus: "Objections to Islam, answered | Best of Islam". It used to put the site name first.
+  - 106 of the 122 seeded articles have headlines too long for the 43 characters left, so their seed entries carry a short `seo_title`, written keyword first. For example, "Is Allah the same God as in the Bible? | Best of Islam" (54 characters) replaces the 88-character title of the same-God article. The short title is used while the article keeps its seeded headline; an article the owner renames gets a title fitted from the new headline.
+  - Eight Glossary entries with long transliterated names carry a `seo_title` in their data.
+  - A paged view folds its page number into the first part.
+  - Anything still too long, such as a long search, is cut at a word boundary with Unicode-safe trimming.
+  - The headline shown on the page is unchanged.
+- `bin/check-content.py` now refuses a seeded article or Glossary entry whose title tag would pass 59 characters.
+- Four more articles reach at least 1,600 words of body text: ramadan-last-ten-nights (994 to 1,683), arabic-words-science (996 to 1,627), women-in-islamic-law-testimony-inheritance (1,000 to 1,939) and houris-and-paradise (1,001 to 1,603).
+- The featured image of is-yahweh-satan is now a public-domain Wikimedia Commons file, a page of the Aleppo Codex, in place of the Pexels photograph.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12, since the new `seo_title` field changes no entry page.
+
 ## [1.78.1] - 2026-10-30
 
 ### Changed

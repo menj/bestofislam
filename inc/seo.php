@@ -50,23 +50,117 @@ function boi_title_separator() {
 add_filter( 'document_title_separator', 'boi_title_separator' );
 
 /**
- * Removes the site tagline from the front page title so the title is the
- * site name alone, and keeps it unique against every other page.
+ * The longest title tag the site allows, in characters, separator and site
+ * name included. Every title reads "<page> | <site name>" and stays under 60.
+ *
+ * @return int
+ */
+function boi_title_max_length() {
+	return (int) apply_filters( 'boi_title_max_length', 59 );
+}
+
+/**
+ * The short title tag the seed gives an article, while the article still
+ * carries the seeded headline. An owner who renames an article gets a title
+ * tag fitted from the new headline instead.
+ *
+ * @param WP_Post $post The article.
+ * @return string Short title, or '' when there is none.
+ */
+function boi_seed_seo_title( $post ) {
+	static $map = null;
+
+	if ( null === $map ) {
+		$map = array();
+
+		if ( function_exists( 'boi_seed_listicles' ) ) {
+			foreach ( boi_seed_listicles() as $listicle ) {
+				if ( ! empty( $listicle['seo_title'] ) ) {
+					$map[ $listicle['slug'] ] = array( $listicle['title'], $listicle['seo_title'] );
+				}
+			}
+		}
+	}
+
+	if ( ! isset( $map[ $post->post_name ] ) || $post->post_title !== $map[ $post->post_name ][0] ) {
+		return '';
+	}
+
+	return $map[ $post->post_name ][1];
+}
+
+/**
+ * Shortens text to a number of characters at a word boundary, dropping any
+ * punctuation the cut leaves dangling.
+ *
+ * @param string $text Plain text.
+ * @param int    $max  Maximum length in characters.
+ * @return string
+ */
+function boi_fit_title( $text, $max ) {
+	$text = trim( html_entity_decode( wp_strip_all_tags( $text ), ENT_QUOTES, 'UTF-8' ) );
+
+	if ( $max < 1 || mb_strlen( $text ) <= $max ) {
+		return $text;
+	}
+
+	// mb_substr is polyfilled by WordPress; the space is a single byte, so the
+	// cut at its byte offset cannot split a character.
+	$cut   = mb_substr( $text, 0, $max + 1 );
+	$space = strrpos( $cut, ' ' );
+	$cut   = false !== $space && $space > 0 ? substr( $cut, 0, $space ) : mb_substr( $text, 0, $max );
+
+	return preg_replace( '/[\s,;:.(\x{2013}\x{2014}-]+$/u', '', $cut );
+}
+
+/**
+ * Builds every title tag as "<page> | <site name>", under 60 characters.
+ *
+ * The front page leads with its focus ("Objections to Islam, answered"), an
+ * article with the short title its seed gives it, a section archive with
+ * the section name, and a paged view folds its page number into the first
+ * part. Whatever is still too long is cut at a word boundary.
  *
  * @param array $parts Title parts.
  * @return array
  */
 function boi_title_parts( $parts ) {
+	$site = wp_strip_all_tags( get_bloginfo( 'name', 'display' ) );
+
 	if ( is_front_page() ) {
 		// The guide: a home page title can carry the name and the main focus.
-		$parts['tagline'] = apply_filters( 'boi_front_title_focus', __( 'Objections to Islam, answered', 'bestofislam' ) );
-	}
-
-	if ( is_tax( 'listicle-topic' ) ) {
+		$parts['title'] = apply_filters( 'boi_front_title_focus', __( 'Objections to Islam, answered', 'bestofislam' ) );
+	} elseif ( is_tax( 'listicle-topic' ) ) {
 		$parts['title'] = single_term_title( '', false );
+	} elseif ( is_singular( 'post' ) ) {
+		$short = boi_seed_seo_title( get_queried_object() );
+
+		if ( '' !== $short ) {
+			$parts['title'] = $short;
+		}
+	} elseif ( function_exists( 'boi_is_glossary_page' ) && boi_is_glossary_page() ) {
+		// A Glossary entry whose name is too long for a title tag carries a
+		// short form in its "seo_title" field.
+		$term = boi_glossary_term_by_slug( get_queried_object()->post_name );
+
+		if ( $term && ! empty( $term['seo_title'] ) ) {
+			$parts['title'] = $term['seo_title'];
+		}
 	}
 
-	return $parts;
+	$title = isset( $parts['title'] ) ? (string) $parts['title'] : '';
+
+	if ( ! empty( $parts['page'] ) ) {
+		/* translators: 1: page title, 2: "Page 2" or similar. */
+		$title = sprintf( __( '%1$s, %2$s', 'bestofislam' ), $title, ( function_exists( 'mb_strtolower' ) ? mb_strtolower( wp_strip_all_tags( $parts['page'] ) ) : strtolower( wp_strip_all_tags( $parts['page'] ) ) ) );
+	}
+
+	$budget = boi_title_max_length() - mb_strlen( ' | ' . $site );
+
+	return array(
+		'title' => boi_fit_title( '' !== $title ? $title : $site, $budget ),
+		'site'  => $site,
+	);
 }
 add_filter( 'document_title_parts', 'boi_title_parts' );
 

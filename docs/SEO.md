@@ -9,7 +9,7 @@ ranking, and the guide itself says to write for readers first.
 
 | Guide topic | What the theme does | Where |
 |---|---|---|
-| Unique, accurate page titles | Core title tag with a ` | ` separator; section archives use the section name; the front page carries the name and its focus ("Objections to Islam, answered"). Glossary entries, articles and sections each have their own. | `inc/seo.php` |
+| Unique, accurate page titles | Every title tag reads `<page> | Best of Islam` and stays under 60 characters (D47). Articles use a short `seo_title` from the seed where the headline is too long; Glossary entries with long names carry one in their data; section archives use the section name; the front page leads with its focus ("Objections to Islam, answered | Best of Islam"). Anything still too long is cut at a word boundary, and `bin/check-content.py` refuses a seed or Glossary title that would overflow. | `inc/seo.php` |
 | Description meta tag | One per page: the excerpt on articles and glossary entries (one line, under 160 characters), the section description on archives, a written promise on the front page. None on search results. | `inc/seo.php` |
 | URLs with words | Slugs are words (`/who-is-allah/`, `/glossary/hijab/`, `/topic/history/`). Set Settings, Permalinks to Post name so an article has one address; old dated addresses redirect by slug. | WordPress |
 | One version of a URL | Canonical link on every indexable view; `redirect_canonical` for the rest. | `inc/seo.php` |

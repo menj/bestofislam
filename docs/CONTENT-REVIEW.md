@@ -205,3 +205,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **second-peter**: Bauckham 1983 (testament genre); Ehrman 2013; Tertullian, On Baptism 17; Serapion in Eusebius 6.12; the Muratorian fragment's omission of the Petrine letters and the Peshitta's omissions.
 - **why-five-prayers**: Bukhari 2931 and Muslim 627 (middle prayer as asr); Bukhari 631; Daniel W. Brown 1996 on the Ahl al-Quran and Parwez; the claim that Quranist groups differ on the number of prayers; Didache 8.3; Berakhot 26b.
 - **temporary-marriage-mutah**: Ibn Qudama, al-Mughni, for the Sunni argument from 23:5-7; al-Tabarsi on 4:24; Ibn al-Qayyim, Zad al-Ma'ad, on the Khaybar report; the "two mutahs" report attributed to Umar (al-Bayhaqi reference to confirm); Haeri 2014 on misyar.
+
+## Expansion, third batch (1.78.2)
+
+- **ramadan-last-ten-nights**: Bukhari 1901, 6, 1503, 2029, 2035.
+- **arabic-words-science**: Burnett 2001 (Gerard of Cremona's seventy-odd translations); Robert of Chester's 1145 translation and its title; Fibonacci in Bijaya; King 1993; al-Biruni's Tahdid and the Ghazna qibla; Chaucer's Treatise on the Astrolabe; the Greek *ambix* behind *al-anbiq*; the star-name etymologies; the claim that much of al-Khwarizmi's algebra treats inheritance.
+- **women-in-islamic-law-testimony-inheritance**: Ibn al-Qayyim, al-Turuq al-Hukmiyya, on testimony; al-Dhahabi on women narrators; Bukhari 2742, 5136, 5138; Tirmidhi 1128 (Ghaylan); the Hanbali stipulation against a second wife (al-Mughni).
+- **houris-and-paradise**: the Shama'il report of the elderly woman; Bukhari 554, 2898; al-Ghazali's Book of Love; de Blois's review (Journal of Qur'anic Studies 5, 2003).

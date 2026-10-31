@@ -60,6 +60,25 @@ def collision_suffix(slug, known):
     return slug[: m.start()] in known
 
 
+# Title tags read "<page> | Best of Islam" and stay under 60 characters, so the
+# page part of each seeded article and Glossary entry may run to 43. A longer
+# title needs a short "seo_title" (see boi_title_parts() in inc/seo.php).
+TITLE_BUDGET = 59 - len(' | Best of Islam')
+seed_block = setup[start:end if end != -1 else len(setup)]
+for m in re.finditer(r"'slug'\s+=> '([^']+)',\s*'title'\s+=> __\( '((?:[^'\\]|\\.)*)', 'bestofislam' \),\s*(?:'seo_title' => __\( '((?:[^'\\]|\\.)*)', 'bestofislam' \),)?", seed_block):
+    shown = (m.group(3) or m.group(2)).replace("\\'", "'")
+    if len(shown) > TITLE_BUDGET:
+        errors.append('seed: "%s" title tag would run %d characters before " | Best of Islam" (limit %d); add a shorter seo_title' % (m.group(1), len(shown), TITLE_BUDGET))
+for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'))):
+    try:
+        data = json.load(open(path, encoding='utf-8'))
+    except json.JSONDecodeError:
+        continue
+    for t in data:
+        shown = t.get('seo_title') or t.get('title', '')
+        if len(shown) > TITLE_BUDGET:
+            errors.append('glossary: "%s" title tag would run %d characters (limit %d); add a shorter seo_title' % (t.get('slug'), len(shown), TITLE_BUDGET))
+
 for slug in terms:
     if collision_suffix(slug, terms):
         errors.append('glossary: slug "%s" carries a collision suffix; give the entry its own name' % slug)
