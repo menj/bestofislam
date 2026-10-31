@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.17] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: quran-science-claims-graded (1,306 to 1,612), revisionist-case-weighed (1,308 to 1,607), war-and-killing-in-islam (1,317 to 1606) and where-is-the-injil (1,340 to 1,619). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.16] - 2026-10-31
 
 ### Changed

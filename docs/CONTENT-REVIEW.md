@@ -302,3 +302,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **uthman-copies**: the Mingana collection dates; Fedeli on the link between the Birmingham leaves and BnF Arabe 328(c); Altıkulaç's IRCICA editions (Topkapı 2007, Cairo later) and his dating; ijaza chains through Ibn al-Jazari; Ibn Abi Dawud on Ali and Musab ibn Sad, and Fath al-Bari vol. 9 p. 18.
 - **does-the-quran-allow-wife-beating**: the occasion reports in al-Tabari and al-Wahidi; Ata ibn Abi Rabah as quoted by Ibn al-Arabi; al-Shafii in al-Umm; Quran 30:21; Malaysia's Act 521 (1994), Indonesia's Law 23/2004 and the Moroccan Mudawwana (2004); Brown 2014, chapter number to confirm.
 - **companions-who-started-with-nothing**: Bukhari 3754, 1149, 447 and 119; Ibn Sad on Salman at al-Madain; Zayd ibn Haritha (Quran 33:37) and Bukhari 4250 on Usama's command.
+
+## Expansion, sixteenth batch (1.78.17)
+
+- **quran-science-claims-graded**: Bukhari 3208 and Muslim 2645 on the timings; Ibn Hazm on the sphericity of the earth (al-Fisal, citing 39:5); al-Mamun's measurement of the earth; al-Tabari on 51:47.
+- **revisionist-case-weighed**: Crone's 2008 openDemocracy piece (wording paraphrased; check the exact sentences); Cook's later position; Donner 1998; van Putten 2019; Thomas the Presbyter (Hoyland pp. 118-120, pages to confirm); King 2018 and Gibson 2017 on Petra.
+- **war-and-killing-in-islam**: Bukhari 3166 and 5778; Quran 4:29 and 8:61; Bukhari 2731-2732 and Quran 48:1; the growth of the community after Hudaybiyya (al-Zuhri's remark as reported by Ibn Ishaq); Muslim 96 (Usama).
+- **where-is-the-injil**: Eusebius, Ecclesiastical History 3.39.16 (Papias); Kloppenborg 2000 on Q; Quran 5:68 and 7:157; Bukhari 4485 and Quran 2:136.
