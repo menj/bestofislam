@@ -20,6 +20,7 @@ versioning.
 
 ### Fixed
 
+- **bin/build-related.py** reads each article's topic from `inc/data/seed.json` (it read `inc/setup.php`, so every topic lookup came back empty and the same-section bonus was lost).
 - **bin/check-content.py** also fails on any article image that is not AVIF or WebP, and on any credited file that does not exist.
 - **bin/check-content.py** reads the seed list from `inc/data/seed.json` (it read `inc/setup.php`, so every glossary link was reported as unknown). It now reports no problems.
 

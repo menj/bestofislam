@@ -158,7 +158,7 @@ Findings that shaped the article:
 
 Images (1.78.0): seven articles now have one featured and three in-text photographs, chosen from contact sheets of Pexels, Pixabay and Commons candidates. Captions describe the picture and tie it to the article; alt text describes what is shown. No picture shows a person in a devotional role or any figure of a prophet. Left for a later pass: a third in-text image for the other 111 articles, which each have a featured image and two in-text images.
 
-Also in this release: `bin/check-content.py` now reads the seed list from `inc/data/seed.json`. It had been reading `inc/setup.php`, which no longer holds the list, and reported 669 false problems; it now passes. `inc/related-articles.json` was not rebuilt with `bin/build-related.py` for this release, because a full rebuild re-ranks most articles; the new article's four related links are set by hand.
+Also in this release: `bin/check-content.py` now reads the seed list from `inc/data/seed.json`. It had been reading `inc/setup.php`, which no longer holds the list, and reported 669 false problems; it now passes. `bin/build-related.py` also read each article's topic from `inc/setup.php`; it now reads `inc/data/seed.json`, and `inc/related-articles.json` is rebuilt with it (13 entries change: the new article and the 12 whose neighbours shifted).
 
 ## Material from Shafaat (1.66.0)
 
