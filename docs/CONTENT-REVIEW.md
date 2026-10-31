@@ -156,6 +156,8 @@ Findings that shaped the article:
 - Still not checked: the Ahmad Musnad reference Zawadi gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
 - The Tanwir al-Miqbas tafsir, which Zawadi cites as Ibn Abbas, is not used.
 
+Images, batch 2 (1.80.0): the next ten articles by the same rule. Captions follow what each entry says (for example, Khadija's caravans, Aminah's death on the road from Medina, Baybars's capture of Krak des Chevaliers in 1271); each figure is placed beside the entry it illustrates, and CodeAnt's batch 1 nitpicks about mismatched placement were the model for that.
+
 Images, batch 1 (1.79.0): ten articles, chosen as those most short of images under the rule of about one in-text image per two entries (minimum two). Each new image was picked from a contact sheet. Old images were kept and given captions. Featured images that come from the theme's older manifest (for example jizya and same-god) keep their credit line only, because a manifest entry cannot carry a caption without a change to inc/images.php. No picture shows a prophet or a person in a devotional role.
 
 Images (1.78.0): seven articles now have one featured and three in-text photographs, chosen from contact sheets of Pexels, Pixabay and Commons candidates. Captions describe the picture and tie it to the article; alt text describes what is shown. No picture shows a person in a devotional role or any figure of a prophet. Left for a later pass: a third in-text image for the other 111 articles, which each have a featured image and two in-text images.
