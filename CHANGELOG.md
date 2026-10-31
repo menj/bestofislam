@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.12] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: hijab-and-modesty (1,179 to 1,600), dome-inscriptions (1,180 to 1,600), hanif-poets-and-musaylima (1,195 to 1,652) and why-no-interest (1,196 to 1,616). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.11] - 2026-10-31
 
 ### Changed

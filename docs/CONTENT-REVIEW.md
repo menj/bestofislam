@@ -267,3 +267,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **ridda-wars-abu-bakr-fadak**: Abu Bakr's first address (Guillaume p. 687); the Khalid and Malik ibn Nuwayra episode (al-Tabari); Ibn Kathir on 5:54; Ibn Sa'd on Abu Bakr's allowance; al-Baladhuri on Umar II and al-Ma'mun and Fadak; Bukhari 4986.
 - **crusades-5-facts**: Chazan 1987; Ibn al-Qalanisi on the synagogue (Gibb 1932); Goitein 1952 on the Geniza letters; Ibn Shaddad on Acre 1191 and the 1192 truce (Richards 2001).
 - **instruments-islamic-world**: al-Ijliyya in the Fihrist; al-Razi's Kitab al-Asrar and Ruska 1937; al-Farisi and Rashed's DSB article; al-Jazari (Hill 1974) and the crankshaft claim; Taqi al-Din's 1577 observatory and Sayılı 1960; Jai Singh's use of Ulugh Beg.
+
+## Expansion, eleventh batch (1.78.12)
+
+- **hijab-and-modesty**: 1 Corinthians 11:5-6; Quran 24:60; the UN fact-finding mission report (March 2024) on Mahsa Amini; France's Law 2004-228; Quebec's Bill 21.
+- **dome-inscriptions**: Süleyman's exterior tiles (Grabar 2006); Abd al-Malik's coin reform and Grierson 1960; Donner 1998.
+- **hanif-poets-and-musaylima**: Ibn Ishaq's four hanifs; Bukhari on Zayd at the Kaaba (attributed here to note 4) and Waraqa's wish (Bukhari 3); the EI2 article on Umayya ibn Abi al-Salt; the Musaylima letters (Guillaume pp. 649-650) and Quran 7:128; the Rabi'a and Mudar saying in al-Tabari.
+- **why-no-interest**: Muslim 1587 (six commodities); Bukhari 2305 (repaying with a better camel); Third Lateran canon 25 and Aquinas II-II q. 78; the Federal Shariat Court judgment of 28 April 2022.
