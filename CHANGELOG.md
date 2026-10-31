@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.14] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: sira-ibn-ishaq-hisham-tabari (1,239 to 1,630), indonesia (1,241 to 1,601), natural-world-verses (1,245 to 1,761) and quran-mysteries-in-the-stories (1,247 to 1,692). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.13] - 2026-10-31
 
 ### Changed
