@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.8] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: abrogation-and-the-sword-verse (1,134 to 1,601), islam-in-china (1,138 to 1,608), haman-anachronism (1,142 to 1,617) and gods-attributes-and-anthropomorphism (1,144 to 1,619). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.7] - 2026-10-31
 
 ### Changed

@@ -239,3 +239,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **who-is-allah**: Lane's Lexicon on the derivation of Allah; the Zabad inscription (512) and Littmann's article; Morey 1994; Bukhari 5999; al-Ghazali's al-Maqsad al-Asna in Burrell and Daher's translation.
 - **western-scholars-of-islam**: Said 1978; Azami 1968 and 1985; the Bergsträsser-Pretzl archive and Corpus Coranicum; Schimmel 1975; Watt 1961.
 - **moon-craters**: Grimaldi as Riccioli's collaborator; the 1009-1010 Bodleian copy of al-Sufi; the 2015 International Year of Light; Sachau's translation of al-Biruni's India; the crater names Thebit, Geber, Alpetragius, Abulfeda and Nasireddin; Saliba 2007.
+
+## Expansion, seventh batch (1.78.8)
+
+- **abrogation-and-the-sword-verse**: Bukhari 4655 and 369 on the proclamation of 9 AH; the biblical examples (Genesis 29 with Leviticus 18:18, Hebrews 8:13, Mark 7:19); Fatoohi 2013.
+- **islam-in-china**: the Old Book of Tang on the 651 embassy; Chen Dasheng 1984 on the Quanzhou inscriptions; Jaschok and Shui 2000; the 1417 Zheng He incense stele; the Dungan migration after the 1862-1877 revolt; Ma Jian's 1981 translation.
+- **haman-anachronism**: Bucaille 1994 and Ranke 1935 (vol. 1 entry); the remark on fired brick in Egypt.
+- **gods-attributes-and-anthropomorphism**: al-Aqida al-Wasitiyya's four refusals; al-Razi's Asas al-Taqdis and Ibn Taymiyya's Bayan Talbis al-Jahmiyya; Maimonides, Guide, part 1 (Pines translation).
