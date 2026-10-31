@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.16] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: scholars-who-shaped-islamic-study (1,287 to 1,692), uthman-copies (1,290 to 1,614), does-the-quran-allow-wife-beating (1,299 to 1,647) and companions-who-started-with-nothing (1,303 to 1,665). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.15] - 2026-10-31
 
 ### Changed

@@ -295,3 +295,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **before-your-first-friday-prayer**: Abu Dawud 499 and Bukhari 604 (origin of the adhan); tayammum under Quran 5:6; Muslim 869 (short sermon); al-Hakim on al-Kahf and Abu Dawud 1047; Bukhari 935 (the hour on Friday); Muslim 875 (Sulayk).
 - **prophet-died-poisoning**: Bukhari 3667-3668 (Abu Bakr's address); Bukhari 3169 (the Jews of Khaybar questioned); Bukhari 4428 as a suspended report; Musnad Ahmad 3617 (Ibn Masud on martyrdom; numbering to confirm); Hensley's death in 1955 and Hood and Williamson 2008.
 - **magic-jinn-and-satan-hadiths**: the link between the spell and Surahs 113-114 (Ibn Hajar, Ibn Kathir); Bukhari 5017 and 6223; Quran 7:200; Ibn Taymiyya, Majmu al-Fatawa vol. 19 p. 10; the Mutazila on jinn; Muslim 2200 and 2230.
+
+## Expansion, fifteenth batch (1.78.16)
+
+- **scholars-who-shaped-islamic-study**: Bukhari 4970 (Ibn Abbas and Surah 110); Ibn Ishaq's Jewish and Christian informants and move to Baghdad (cited to Guillaume, note 2); Ibn Abi Dawud's Kitab al-Masahif (Jeffery 1937); Ibn Abi Usaybia's story of Hunayn and al-Mutawakkil; al-Kindi's cryptanalysis treatise and Al-Kadi 1992; the Latin Maqasid and "Algazel".
+- **uthman-copies**: the Mingana collection dates; Fedeli on the link between the Birmingham leaves and BnF Arabe 328(c); Altıkulaç's IRCICA editions (Topkapı 2007, Cairo later) and his dating; ijaza chains through Ibn al-Jazari; Ibn Abi Dawud on Ali and Musab ibn Sad, and Fath al-Bari vol. 9 p. 18.
+- **does-the-quran-allow-wife-beating**: the occasion reports in al-Tabari and al-Wahidi; Ata ibn Abi Rabah as quoted by Ibn al-Arabi; al-Shafii in al-Umm; Quran 30:21; Malaysia's Act 521 (1994), Indonesia's Law 23/2004 and the Moroccan Mudawwana (2004); Brown 2014, chapter number to confirm.
+- **companions-who-started-with-nothing**: Bukhari 3754, 1149, 447 and 119; Ibn Sad on Salman at al-Madain; Zayd ibn Haritha (Quran 33:37) and Bukhari 4250 on Usama's command.
