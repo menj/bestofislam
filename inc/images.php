@@ -108,7 +108,7 @@ function boi_attach_featured_images( $limit = 3 ) {
 		}
 
 		update_post_meta( $id, '_wp_attachment_image_alt', $image['alt'] );
-		update_post_meta( $id, '_boi_credit', array( 'artist' => $image['artist'], 'licence' => $image['licence'], 'source' => $image['source'] ) );
+		update_post_meta( $id, '_boi_credit', array( 'artist' => $image['artist'], 'licence' => $image['licence'], 'source' => $image['source'], 'caption' => isset( $image['caption'] ) ? $image['caption'] : '' ) );
 		wp_update_post(
 			array(
 				'ID'           => $id,
@@ -281,7 +281,9 @@ function boi_render_image_credit() {
 			return '';
 		}
 
-		return '<p class="boi-credit">' . boi_credit_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $bundled['artist'], $bundled['licence'] ), $bundled['source'] ) . '</p>';
+		$caption = ! empty( $bundled['caption'] ) ? '<span class="boi-caption">' . esc_html( $bundled['caption'] ) . '</span> ' : '';
+
+		return '<p class="boi-credit">' . $caption . boi_credit_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $bundled['artist'], $bundled['licence'] ), $bundled['source'] ) . '</p>';
 	}
 
 	$credit = get_post_meta( $id, '_boi_credit', true );
@@ -291,7 +293,9 @@ function boi_render_image_credit() {
 		return '' !== (string) $caption ? '<p class="boi-credit">' . esc_html( $caption ) . '</p>' : '';
 	}
 
-	return '<p class="boi-credit">' . boi_credit_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $credit['artist'], $credit['licence'] ), $credit['source'] ) . '</p>';
+	$caption = ! empty( $credit['caption'] ) ? '<span class="boi-caption">' . esc_html( $credit['caption'] ) . '</span> ' : '';
+
+	return '<p class="boi-credit">' . $caption . boi_credit_html( sprintf( /* translators: 1: artist, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $credit['artist'], $credit['licence'] ), $credit['source'] ) . '</p>';
 }
 
 /**

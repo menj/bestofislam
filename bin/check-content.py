@@ -107,6 +107,22 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):
             if sups != list(range(1, items + 1)):
                 errors.append('%s: footnotes run to %d but the Notes list has %d items' % (rel, sups[-1], items))
 
+# Article images: AVIF or WebP only, and every credited file must exist.
+for folder in ('featured', 'inline'):
+    for name in sorted(os.listdir(os.path.join(ROOT, 'assets', 'images', folder))):
+        if not name.lower().endswith(('.avif', '.webp')):
+            errors.append('images: assets/images/%s/%s is not AVIF or WebP' % (folder, name))
+try:
+    credits = json.load(open(os.path.join(ROOT, 'inc', 'images-data.json'), encoding='utf-8'))
+except (OSError, json.JSONDecodeError) as e:
+    credits = {}
+    errors.append('inc/images-data.json: cannot read (%s)' % e)
+for slug, entry in credits.items():
+    shots = ([('featured', entry['featured'])] if entry.get('featured') else []) + [('inline', i) for i in entry.get('inline') or [] if i]
+    for folder, shot in shots:
+        if not os.path.exists(os.path.join(ROOT, 'assets', 'images', folder, shot['file'])):
+            errors.append('images: %s lists %s/%s, which does not exist' % (slug, folder, shot['file']))
+
 if errors:
     print('\n'.join(errors))
     print('\n%d problem(s).' % len(errors))
