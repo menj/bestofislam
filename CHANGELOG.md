@@ -6,6 +6,15 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.5] - 2026-10-31
+
+### Changed
+
+- Two more articles reach at least 1,600 words of body text: morality-without-god (1,057 to 1,613) and taqiyya-5-myths (1,067 to 1,617).
+- The Mesha Stele comes from Wikimedia Commons (public domain, photographs by Tangopaso). It is now the featured image of who-was-yahweh-archaeological-origins in place of the Pexels photograph, and its detail naming YHWH replaces the second in-text image, which moves from the Arad entry to the Mesha Stele entry.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.4] - 2026-10-31
 
 ### Changed

@@ -223,3 +223,5 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **who-saw-gabriel**: Bukhari 2, 4592, 4980; the chain of Muslim's hadith of Gabriel through Yahya ibn Ya'mar and Ibn Umar; Quran 20:9-12 and 19:16-19 as private calls.
 - **jihad-meaning-quran-hadith-jurists**: Ibn Kathir on 9:73 quoting Ibn Abbas; Ibn al-Qayyim's four kinds of jihad in Zad al-Ma'ad; Shaltut 1948 and Peters 1996.
 - **qibla-change**: Muslim 700 on 2:115; the Banu Salima mosque reports (Ibn Sa'd, Fath al-Bari); King's "The Petra Fallacy" (2018).
+- **morality-without-god**: Moore, Principia Ethica, ch. 1, sect. 13; Darwin, Descent of Man, ch. 3 and 5; Euthyphro 10a; Hourani 1985 on *husn* and *qubh*.
+- **taqiyya-5-myths**: the al-Kafi chapter and Kohlberg 1975; Cyprian, On the Lapsed; Muslim 1787 (Hudhayfa's promise); Quran 33:70, 9:119, 4:135.
