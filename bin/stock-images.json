@@ -244,5 +244,198 @@
     "caption": "An open Quran. Ibn Abbas, Abu Dawud, al-Ashʿarī and al-Ghazālī each shaped how the Quran, hadith and theology were studied."
    }
   ]
+ },
+ "seven-libraries": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A grand arched library hall. The Islamic world built great libraries in Baghdad, Cordoba, Cairo, Fez and Timbuktu."
+   },
+   {
+    "keep": true,
+    "caption": "A medieval illustration of scholars reading among shelves of books. These libraries held the works of earlier peoples and new work in Arabic."
+   },
+   {
+    "src": "commons",
+    "id": "File:Loc timbuktu manuscripts amm0001vs.jpg",
+    "alt": "A page of an old Arabic manuscript from Timbuktu.",
+    "caption": "A page from the Timbuktu manuscripts, held in the Library of Congress. West African libraries kept thousands of Arabic manuscripts."
+   },
+   {
+    "src": "pexels",
+    "id": 15187548,
+    "alt": "The Süleymaniye Mosque and its minaret in Istanbul.",
+    "caption": "The Süleymaniye Mosque in Istanbul. Its complex houses the Süleymaniye Library, a large collection of Islamic manuscripts."
+   }
+  ]
+ },
+ "verses-read-differently": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An antique Bible on a stand. Christians and Muslims read the same sayings of Jesus in the Gospel of John in different ways."
+   },
+   {
+    "keep": true,
+    "caption": "An open Bible at the Acts of the Apostles, in Spanish and English. How a verse is read depends on the passage around it."
+   },
+   {
+    "src": "pixabay",
+    "id": 2110439,
+    "alt": "A Holy Bible on a stand in a church.",
+    "caption": "A Bible on a church stand. Christians read John 1:1 as a statement that Jesus is God; Muslims point to the Quran's phrase \"a word from Him\" (3:45)."
+   },
+   {
+    "src": "pexels",
+    "id": 31024871,
+    "alt": "An open Quran with wooden prayer beads.",
+    "caption": "An open Quran with prayer beads. Muslims read these verses against the Quran's own account of Jesus as a prophet and servant of God."
+   }
+  ]
+ },
+ "women-in-the-prophets-life": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A caravan of camels crossing the desert. Khadija was a merchant who sent caravans out with her goods."
+   },
+   {
+    "keep": true,
+    "caption": "A camel caravan at sunset. Aminah, the Prophet's mother, died on the road back from Medina when he was a small child."
+   },
+   {
+    "src": "pexels",
+    "id": 30544112,
+    "alt": "Date palm trees under a clear blue sky.",
+    "caption": "Date palms. Mariya, the mother of Ibrahim, came from Egypt to the oasis city of Medina."
+   },
+   {
+    "src": "pexels",
+    "id": 6387,
+    "alt": "A woman holding an old book.",
+    "caption": "A woman with an old book. Aisha was among the most important transmitters of knowledge in her generation."
+   }
+  ]
+ },
+ "apes-and-pigs-and-the-jews": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An old city gate lit at night. The Prophet made treaties with Jewish tribes in an oasis town of mixed tribes."
+   },
+   {
+    "keep": true,
+    "caption": "The ruined arches of an old building. The classical commentators read these verses against the history of earlier peoples."
+   },
+   {
+    "src": "pexels",
+    "id": 5986454,
+    "alt": "The interior of a historic synagogue with carved wooden pews.",
+    "caption": "The interior of a synagogue. The Quran faults particular conduct and honours the upright among the People of the Book (3:113)."
+   }
+  ]
+ },
+ "apostasy-in-islam": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An old stone room with arched doorways. Classical jurists argued over the penalty for leaving the faith."
+   },
+   {
+    "keep": true,
+    "caption": "A half-open blue door in red light. The Quran says there is no compulsion in religion (2:256)."
+   },
+   {
+    "src": "pexels",
+    "id": 147634,
+    "alt": "A dark room with a door slightly ajar and a line of light.",
+    "caption": "A door left ajar. Some modern scholars, including a Grand Mufti of Egypt, hold that leaving belief alone carries no worldly penalty."
+   }
+  ]
+ },
+ "arabic-words-science": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Handwriting in elegant calligraphy. Algebra, algorithm and many other English words come from Arabic."
+   },
+   {
+    "keep": true,
+    "caption": "Arabic calligraphy in a religious text. Arabic gave English words through science as well as religion."
+   },
+   {
+    "src": "pexels",
+    "id": 28792576,
+    "alt": "Copper distillery apparatus with shiny copper bowls.",
+    "caption": "Copper distillation apparatus. The alembic and the word alcohol (al-kuhl) entered European languages through Arabic chemistry."
+   }
+  ]
+ },
+ "companions-who-started-with-nothing": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The mud-brick ruins of Kharanaq in Iran. Salman came to Arabia from Persia."
+   },
+   {
+    "keep": true,
+    "caption": "Old mud-brick architecture in Iran, the land Salman al-Farisi left in search of the truth."
+   },
+   {
+    "src": "pixabay",
+    "id": 4463297,
+    "alt": "A town in the desert beneath mountains.",
+    "caption": "A town in the desert beneath mountains. Many of the first Muslims started with no wealth or standing."
+   }
+  ]
+ },
+ "crucifixion-quran": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Three crosses on a hill. The Quran answers the claim of those who said they killed the Messiah (4:157)."
+   },
+   {
+    "keep": true,
+    "caption": "The Stone of Unction in the Church of the Holy Sepulchre, a lithograph. Historians treat the crucifixion as well attested."
+   },
+   {
+    "src": "pixabay",
+    "id": 2070814,
+    "alt": "The Basilica of the Holy Sepulchre in Jerusalem.",
+    "caption": "The Church of the Holy Sepulchre in Jerusalem, built over the traditional site of the crucifixion and burial of Jesus."
+   }
+  ]
+ },
+ "crusades-5-facts": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Tourbillon Castle in Sion, Switzerland, a medieval hilltop fortress. The word crusade is used far more widely than the history supports."
+   },
+   {
+    "keep": true,
+    "caption": "A medieval illustration of the Crusaders' conquest of Jerusalem in 1099."
+   },
+   {
+    "src": "pexels",
+    "id": 36756273,
+    "alt": "Krak des Chevaliers, a crusader castle in the Homs region of Syria.",
+    "caption": "Krak des Chevaliers in Syria, a crusader castle taken by the Mamluk sultan Baybars in 1271."
+   }
+  ]
+ },
+ "do-muslims-worship-muhammad": {
+  "inline": [
+   null,
+   null,
+   null,
+   {
+    "src": "pexels",
+    "id": 34987529,
+    "alt": "Al-Masjid an-Nabawi in Medina in daylight.",
+    "caption": "Al-Masjid an-Nabawi in Medina, where the Prophet is buried. He warned against turning graves into places of worship."
+   }
+  ]
  }
 }
