@@ -34,11 +34,13 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
             errors.append('glossary: duplicate slug "%s" (%s and %s)' % (slug, terms[slug], os.path.basename(path)))
         terms[slug] = os.path.basename(path)
 
-# Seeded articles.
-setup = open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read()
-start = max(setup.find('function boi_seed_listicles'), 0)
-end = setup.find('function boi_seed_pages', start)
-seeds = re.findall(r"'slug'\s+=> '([^']+)'", setup[start:end if end != -1 else len(setup)])
+# Seeded articles: the seed list lives in inc/data/seed.json.
+seed_path = os.path.join(ROOT, 'inc', 'data', 'seed.json')
+try:
+    seeds = [x['slug'] for x in json.load(open(seed_path, encoding='utf-8')).get('listicles', [])]
+except (OSError, json.JSONDecodeError, KeyError, TypeError) as e:
+    errors.append('inc/data/seed.json: cannot read the seed list (%s)' % e)
+    seeds = []
 for slug in seeds:
     if not os.path.exists(os.path.join(ROOT, 'content', slug + '.json')):
         errors.append('seed: "%s" has no content/%s.json' % (slug, slug))

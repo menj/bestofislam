@@ -156,7 +156,7 @@ Findings that shaped the article:
 - Still not checked: the Ahmad Musnad reference Zawadi gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
 - The Tanwir al-Miqbas tafsir, which Zawadi cites as Ibn Abbas, is not used.
 
-Also in this release: the old `bin/check-content.py` reads the seed list from `inc/setup.php`, which no longer holds it, so it reports every glossary link as pointing to an unknown article (669 problems, the same with and without this change). It needs to read `inc/data/seed.json`.
+Also in this release: `bin/check-content.py` now reads the seed list from `inc/data/seed.json`. It had been reading `inc/setup.php`, which no longer holds the list, and reported 669 false problems; it now passes. `inc/related-articles.json` was not rebuilt with `bin/build-related.py` for this release, because a full rebuild re-ranks most articles; the new article's four related links are set by hand.
 
 ## Material from Shafaat (1.66.0)
 
