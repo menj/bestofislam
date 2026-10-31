@@ -253,3 +253,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **seven-libraries**: Ibn Abi Usaybi'a on Hunayn's payment in gold; al-Hakam's marginal notes and the women copyists of Cordoba (later reports); the Nizamiyya network; Fatima al-Fihri (Rawd al-Qirtas) and Aziza Chaouni's restoration; Abdel Kader Haidara's evacuation; the Süleymaniye's completion in 1557 and Necipoğlu 2005.
 - **was-muhammad-illiterate-ummi**: the Hebrew *ummot ha-olam* parallel (attributed to unnamed scholars via note 2); Bukhari 65 and 5872 on the seal; al-Baji and the Hudaybiyya controversy.
 - **who-wrote-the-quran**: Ibn Ishaq on Bahira (Guillaume pp. 79-81) and Roggema 2009; the Birmingham radiocarbon announcement (22 July 2015); al-Baqillani's I'jaz al-Quran (Saqr edition) on style.
+
+## Expansion, ninth batch (1.78.10)
+
+- **race-in-quran-and-hadith**: Quran 35:27-28; Malcolm X's letter from Mecca (Autobiography, ch. 17, paraphrased); Umm Ayman (Ibn Sa'd; Muslim 1771); Ahmad Baba's Mi'raj al-Su'ud and the Hunwick-Harrak edition.
+- **camel-urine-hadith**: Bukhari 216 (the two graves); Bukhari 5678 (every disease has a cure).
+- **funeral-dhikr-dua**: Bukhari 7563 as the last hadith of the collection; Muslim 2732; Bukhari 6369; Bukhari 1343 on the martyrs of Uhud; Muslim 963 (Awf ibn Malik's prayer); Muslim 977 and 974-975.
+- **al-zutt-allegation**: Quran 29:65 and 43:12-13; the EI2 article "Zutt" on the Jats of Sind; the details of Muslim 450 (the search, Hira, the traces of fires).

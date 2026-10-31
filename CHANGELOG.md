@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.10] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: race-in-quran-and-hadith (1,153 to 1,613), camel-urine-hadith (1,158 to 1,612), funeral-dhikr-dua (1,159 to 1,613) and al-zutt-allegation (1,162 to 1,610). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.9] - 2026-10-31
 
 ### Changed
