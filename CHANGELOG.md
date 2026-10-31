@@ -10,7 +10,7 @@ versioning.
 
 ### Changed
 
-- **Images, batch 2 of 6: ten more articles gain photographs and captions.** seven-libraries, verses-read-differently and women-in-the-prophets-life (+2 each); apes-and-pigs-and-the-jews, apostasy-in-islam, arabic-words-science, companions-who-started-with-nothing, crucifixion-quran, crusades-5-facts and do-muslims-worship-muhammad (+1 each). Every in-text image has a caption and descriptive alt text, and each figure sits beside the entry it illustrates. One image in seven-libraries is a page of the Timbuktu manuscripts from the Library of Congress (public domain, via Wikimedia Commons).
+- **Images, batch 2 of 6: ten more articles gain photographs and captions.** seven-libraries, verses-read-differently and women-in-the-prophets-life (+2 each); apes-and-pigs-and-the-jews, apostasy-in-islam, arabic-words-science, companions-who-started-with-nothing, crucifixion-quran, crusades-5-facts and do-muslims-worship-muhammad (+1 each). Every in-text image has a caption and descriptive alt text, and each figure sits beside the entry it illustrates. Review fixes: figures moved beside the entries they illustrate (the city gate in apes-and-pigs-and-the-jews, the Persian ruins in companions-who-started-with-nothing), the crusades article no longer shows the same castle twice, and `bin/fetch-stock-images.py` no longer prints a Commons artist name twice (fixed in five existing entries). One image in seven-libraries is a page of the Timbuktu manuscripts from the Library of Congress (public domain, via Wikimedia Commons).
 
 ## [1.79.0] - 2026-10-31
 

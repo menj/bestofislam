@@ -193,7 +193,7 @@
     "file": "seven-libraries-3.avif",
     "alt": "A page of an old Arabic manuscript from Timbuktu.",
     "caption": "A page from the Timbuktu manuscripts, held in the Library of Congress. West African libraries kept thousands of Arabic manuscripts.",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Loc_timbuktu_manuscripts_amm0001vs.jpg"
    },
@@ -427,7 +427,7 @@
    {
     "file": "uthman-copies-2.avif",
     "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
-    "artist": "Unknown artistUnknown artist",
+    "artist": "Unknown artist",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg"
    }
@@ -627,7 +627,7 @@
    {
     "file": "kaaba-witnesses-2.avif",
     "alt": "A photograph of the Sacred Mosque and the Kaaba at Mecca in 1889",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Mekke-1889.jpg"
    }
@@ -1394,11 +1394,11 @@
    },
    {
     "file": "crusades-5-facts-3.avif",
-    "alt": "Krak des Chevaliers, a crusader castle in the Homs region of Syria.",
-    "caption": "Krak des Chevaliers in Syria, a crusader castle taken by the Mamluk sultan Baybars in 1271.",
-    "artist": "mori dad",
-    "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/krak-des-chevaliers-castle-in-homs-syria-36756273/"
+    "alt": "The Sea Castle at Sidon on the coast of Lebanon.",
+    "caption": "The Sea Castle at Sidon (Saida) in Lebanon, a fortress that the Crusaders built on the coast in the thirteenth century.",
+    "artist": "mesuttoker",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/saida-lebanon-beirut-castle-2389745/"
    }
   ]
  },
@@ -1615,7 +1615,7 @@
    {
     "file": "scholars-who-shaped-islamic-study-2.avif",
     "alt": "A page of a manuscript of Ibn Sina's Canon of Medicine",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Pharmacy,_canon_of_avicenna_manuscript.jpg",
     "caption": "A page of a manuscript of Ibn Sina's Canon of Medicine. Scholars of the Islamic world wrote in medicine and philosophy as well as law and theology."
@@ -2699,7 +2699,7 @@
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-2.avif",
     "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
-    "artist": "Unknown artistUnknown artist",
+    "artist": "Unknown artist",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg",
     "caption": "A folio of an early Quran in Hijazi script (Bibliothèque nationale de France, Arabe 334c): early copies lack the dots and vowel marks that later helped fix the readings."

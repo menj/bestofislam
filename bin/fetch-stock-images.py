@@ -16,7 +16,7 @@ them:
     PEXELS_KEY=... PIXABAY_KEY=... python3 bin/fetch-stock-images.py
 
 Commons needs no key; only public domain, CC0, CC BY and CC BY-SA files are
-accepted. A file already in place is not downloaded again, so a rerun without
+accepted. ONLY=slug,slug limits a run to those articles. A file already in place is not downloaded again, so a rerun without
 keys only rewrites the credit entries. Needs Pillow 11.3 or later with AVIF.
 """
 import html
@@ -97,6 +97,7 @@ def commons(title):
         print('SKIPPED, licence is', licence or 'unknown', '-', title)
         return None
     artist = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', html.unescape(meta.get('Artist', {}).get('value', 'Unknown')))).strip()[:110] or 'Unknown'
+    artist = re.sub(r'^(.{3,}?)\1$', r'\1', artist)  # Commons markup can repeat the name
     short = 'Public domain' if re.match(r'^(public domain|pd)', licence, re.I) else ('CC0' if re.match(r'^cc0|^cc 0', licence, re.I) else licence)
     return {'url': info.get('thumburl') or info['url'], 'artist': artist, 'licence': short,
             'source': 'https://commons.wikimedia.org/wiki/' + page['title'].replace(' ', '_')}
@@ -140,7 +141,10 @@ def main():
     plan = json.load(open(PLAN, encoding='utf-8'))
     data = json.load(open(DATA, encoding='utf-8'))
     failed = []
+    only = set(filter(None, os.environ.get('ONLY', '').split(',')))
     for slug, spec in plan.items():
+        if only and slug not in only:
+            continue
         entry = data.setdefault(slug, {'featured': None, 'inline': []})
         if spec.get('featured'):
             got = store(spec['featured'], 'featured', slug + '.avif', 1400, entry.get('featured'))
