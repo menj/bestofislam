@@ -323,3 +323,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **slavery-in-islam**: Abu Dawud 5156 and Ibn Majah 1625 (last words); Bukhari 2552 ("my young man"); Musnad Ahmad 2216 on the Badr ransom (numbering to confirm); Tunisia 1846 and the Zaytuna scholars (Montana 2013); the Ottoman ban of 1857 (Toledano 1982).
 - **paul-and-the-law**: Galatians 2:11-14; Acts 21:18-24; James 2:10 and 2:24; Luther's "epistle of straw" (1522 preface).
 - **crucifixion-quran**: Quran 3:54-55, 43:61 and 4:159 with al-Tabari; the Gospel of Barnabas manuscripts (Ragg 1907; Leirvik 2002, pages to confirm).
+
+## Expansion, nineteenth batch (1.78.20)
+
+- **shared-prophets**: Genesis 9:29 and Quran 29:14; Exodus 2:5-10 and Quran 28:7-9 and 66:11 (Asiya); Quran 4:164, 40:78 and 35:24.
+- **black-stone-and-kissing**: Bukhari 1608 (Muawiya and Ibn Abbas) and 1609 (Ibn Umar); the paragraph on the Qarmatian years (cited to Ibn al-Athir, note 3), including disruption of the pilgrimage in some years.
+- **five-pillars-explained**: Bukhari 645; Tirmidhi 413; state zakah collection in Saudi Arabia, Malaysia and Pakistan (no note); Quran 97 and Bukhari 2026; Bukhari 1503 (zakat al-fitr).
+- **islam-religion-of-peace**: Quran 25:63 and 41:34; Pew 2013, The World's Muslims, views of violence (figures to confirm by country).
