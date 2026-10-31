@@ -178,14 +178,32 @@
     "alt": "Explore this stunning library with grand arches and elegant lighting for an atmospheric ambiance.",
     "artist": "Yaşar Başkurt",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/stunning-library-interior-with-grand-arches-36631590/"
+    "source": "https://www.pexels.com/photo/stunning-library-interior-with-grand-arches-36631590/",
+    "caption": "A grand arched library hall. The Islamic world built great libraries in Baghdad, Cordoba, Cairo, Fez and Timbuktu."
    },
    {
     "file": "seven-libraries-2.avif",
     "alt": "A medieval Islamic library, with scholars reading and shelves of books",
     "artist": "Yahya ibn Mahmud al-Wasiti",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:A_Library_in_Golden_Islamic_Age.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:A_Library_in_Golden_Islamic_Age.jpg",
+    "caption": "A medieval illustration of scholars reading among shelves of books. These libraries held the works of earlier peoples and new work in Arabic."
+   },
+   {
+    "file": "seven-libraries-3.avif",
+    "alt": "A page of an old Arabic manuscript from Timbuktu.",
+    "caption": "A page from the Timbuktu manuscripts, held in the Library of Congress. West African libraries kept thousands of Arabic manuscripts.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Loc_timbuktu_manuscripts_amm0001vs.jpg"
+   },
+   {
+    "file": "seven-libraries-4.avif",
+    "alt": "The Süleymaniye Mosque and its minaret in Istanbul.",
+    "caption": "The Süleymaniye Mosque in Istanbul. Its complex houses the Süleymaniye Library, a large collection of Islamic manuscripts.",
+    "artist": "Burak  Başgöze",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/suleymaniye-mosque-in-istanbul-15187548/"
    }
   ]
  },
@@ -291,14 +309,32 @@
     "alt": "Antique Bible displayed on a wooden stand over a decorated cloth in a rustic church setting.",
     "artist": "Susanne Jutzeler, suju-foto",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/antique-bible-on-ornate-stand-in-church-38390475/"
+    "source": "https://www.pexels.com/photo/antique-bible-on-ornate-stand-in-church-38390475/",
+    "caption": "An antique Bible on a stand. Christians and Muslims read the same sayings of Jesus in the Gospel of John in different ways."
    },
    {
     "file": "verses-read-differently-2.avif",
     "alt": "An open Bible displaying chapters of Acts in Spanish and English, photographed from above.",
     "artist": "Jesus Vidal",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/open-pages-of-a-book-7899911/"
+    "source": "https://www.pexels.com/photo/open-pages-of-a-book-7899911/",
+    "caption": "An open Bible at the Acts of the Apostles, in Spanish and English. How a verse is read depends on the passage around it."
+   },
+   {
+    "file": "verses-read-differently-3.avif",
+    "alt": "A Holy Bible on a stand in a church.",
+    "caption": "A Bible on a church stand. Christians read John 1:1 as a statement that Jesus is God; Muslims point to the Quran's phrase \"a word from Him\" (3:45).",
+    "artist": "stempow",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/bible-church-wedding-christian-2110439/"
+   },
+   {
+    "file": "verses-read-differently-4.avif",
+    "alt": "An open Quran with wooden prayer beads.",
+    "caption": "An open Quran with prayer beads. Muslims read these verses against the Quran's own account of Jesus as a prophet and servant of God.",
+    "artist": "UMA media",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/quran-with-prayer-beads-on-green-surface-31024871/"
    }
   ]
  },
@@ -391,7 +427,7 @@
    {
     "file": "uthman-copies-2.avif",
     "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
-    "artist": "Unknown artistUnknown artist",
+    "artist": "Unknown artist",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg"
    }
@@ -481,14 +517,24 @@
     "alt": "Close-up of elegant calligraphy handwriting using a fountain pen on paper, showcasing artistic lettering.",
     "artist": "Miguel Á. Padriñán",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/black-fountain-pen-on-printing-paper-114107/"
+    "source": "https://www.pexels.com/photo/black-fountain-pen-on-printing-paper-114107/",
+    "caption": "Handwriting in elegant calligraphy. Algebra, algorithm and many other English words come from Arabic."
    },
    {
     "file": "arabic-words-science-2.avif",
     "alt": "Detailed view of Arabic calligraphy in a religious text, highlighting intricate script and craftsmanship.",
     "artist": "Disillusion AD",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-in-religious-text-35205765/"
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-in-religious-text-35205765/",
+    "caption": "Arabic calligraphy in a religious text. Arabic gave English words through science as well as religion."
+   },
+   {
+    "file": "arabic-words-science-3.avif",
+    "alt": "Copper distillery apparatus with shiny copper bowls.",
+    "caption": "Copper distillation apparatus. The alembic and the word alcohol (al-kuhl) entered European languages through Arabic chemistry.",
+    "artist": "Tiago Antonio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/copper-distillery-equipment-with-copper-bowls-28792576/"
    }
   ]
  },
@@ -581,7 +627,7 @@
    {
     "file": "kaaba-witnesses-2.avif",
     "alt": "A photograph of the Sacred Mosque and the Kaaba at Mecca in 1889",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Mekke-1889.jpg"
    }
@@ -689,14 +735,24 @@
     "alt": "An ancient stone room with arched doorways and windows, casting dramatic shadows.",
     "artist": "Sami  Aksu",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/interior-carved-in-rock-formation-13211967/"
+    "source": "https://www.pexels.com/photo/interior-carved-in-rock-formation-13211967/",
+    "caption": "An old stone room with arched doorways. Classical jurists argued over the penalty for leaving the faith."
    },
    {
     "file": "apostasy-in-islam-2.avif",
     "alt": "A half-open blue door illuminated by a dramatic red light reveals a unique interior atmosphere.",
     "artist": "Roman Ska",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/red-room-seen-behind-a-half-opened-blue-door-14326109/"
+    "source": "https://www.pexels.com/photo/red-room-seen-behind-a-half-opened-blue-door-14326109/",
+    "caption": "A half-open blue door in red light. The Quran says there is no compulsion in religion (2:256)."
+   },
+   {
+    "file": "apostasy-in-islam-3.avif",
+    "alt": "A dark room with a door slightly ajar and a line of light.",
+    "caption": "A door left ajar. Some modern scholars, including a Grand Mufti of Egypt, hold that leaving belief alone carries no worldly penalty.",
+    "artist": "lalesh aldarwish",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/steel-door-handle-on-door-147634/"
    }
   ]
  },
@@ -708,14 +764,24 @@
     "alt": "Peaceful landscape featuring three wooden crosses against a clear sky.",
     "artist": "Piotr Arnoldes",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/cross-on-grass-in-tilt-shift-lens-7156023/"
+    "source": "https://www.pexels.com/photo/cross-on-grass-in-tilt-shift-lens-7156023/",
+    "caption": "Three crosses on a hill. The Quran answers the claim of those who said they killed the Messiah (4:157)."
    },
    {
     "file": "crucifixion-quran-2.avif",
     "alt": "The Stone of Unction in the Church of the Holy Sepulchre, lithograph by David Roberts",
     "artist": "David Roberts",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Stone_of_Unction,_Holy_Sepulchre_-_1927.87_-_Cleveland_Museum_of_Art.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Stone_of_Unction,_Holy_Sepulchre_-_1927.87_-_Cleveland_Museum_of_Art.tif",
+    "caption": "The Stone of Unction in the Church of the Holy Sepulchre, a lithograph. Historians treat the crucifixion as well attested."
+   },
+   {
+    "file": "crucifixion-quran-3.avif",
+    "alt": "The Basilica of the Holy Sepulchre in Jerusalem.",
+    "caption": "The Church of the Holy Sepulchre in Jerusalem, built over the traditional site of the crucifixion and burial of Jesus.",
+    "artist": "pompi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/basilica-of-the-holy-sepulchre-2070814/"
    }
   ]
  },
@@ -919,14 +985,32 @@
     "alt": "A beautiful desert scene featuring a caravan of camels traveling across sand dunes under a vast sky.",
     "artist": "Chez Merzouga Desert",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/people-riding-camels-at-the-desert-8227510/"
+    "source": "https://www.pexels.com/photo/people-riding-camels-at-the-desert-8227510/",
+    "caption": "A caravan of camels crossing the desert. Khadija was a merchant who sent caravans out with her goods."
    },
    {
     "file": "women-in-the-prophets-life-2.avif",
     "alt": "Camel caravan silhouetted against a stunning sunset on the sandy dunes.",
     "artist": "mohamed aouni",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/desert-camel-caravan-silhouetted-at-sunset-33566027/"
+    "source": "https://www.pexels.com/photo/desert-camel-caravan-silhouetted-at-sunset-33566027/",
+    "caption": "A camel caravan at sunset. Aminah, the Prophet's mother, died on the road back from Medina when he was a small child."
+   },
+   {
+    "file": "women-in-the-prophets-life-3.avif",
+    "alt": "Date palm trees under a clear blue sky.",
+    "caption": "Date palms. Mariya, the mother of Ibrahim, came from Egypt to the oasis city of Medina.",
+    "artist": "Mohamed Khettouch",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/lush-oasis-of-date-palm-trees-in-morocco-30544112/"
+   },
+   {
+    "file": "women-in-the-prophets-life-4.avif",
+    "alt": "A woman holding an old book.",
+    "caption": "A woman with an old book. Aisha was among the most important transmitters of knowledge in her generation.",
+    "artist": "Karolina Grabowska www.kaboompics.com",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/girl-holding-an-old-closed-book-6387/"
    }
   ]
  },
@@ -944,14 +1028,24 @@
     "alt": "Captivating image of the historic abandoned mud-brick structures in Kharanaq, Yazd Province, Iran.",
     "artist": "Navid Mehraban",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/an-old-ruined-building-16496710/"
+    "source": "https://www.pexels.com/photo/an-old-ruined-building-16496710/",
+    "caption": "The mud-brick ruins of Kharanaq in Iran. Salman came to Arabia from Persia."
    },
    {
     "file": "companions-who-started-with-nothing-2.avif",
     "alt": "Explore the historic mud-brick architecture of Kharanaq in Yazd Province, Iran.",
     "artist": "Navid Mehraban",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/old-buildings-in-a-desert-16496711/"
+    "source": "https://www.pexels.com/photo/old-buildings-in-a-desert-16496711/",
+    "caption": "Old mud-brick architecture in Iran, the land Salman al-Farisi left in search of the truth."
+   },
+   {
+    "file": "companions-who-started-with-nothing-3.avif",
+    "alt": "A town in the desert beneath mountains.",
+    "caption": "A town in the desert beneath mountains. Many of the first Muslims started with no wealth or standing.",
+    "artist": "naturfreund_pics",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/desert-city-africa-nature-landscape-4463297/"
    }
   ]
  },
@@ -1287,14 +1381,24 @@
     "alt": "Historic Tourbillon Castle atop a rocky hill in Sion, Switzerland.",
     "artist": "Jean-Paul Wettstein",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/de-tourbillon-castle-on-rocks-on-hill-in-sion-in-switzerland-20732487/"
+    "source": "https://www.pexels.com/photo/de-tourbillon-castle-on-rocks-on-hill-in-sion-in-switzerland-20732487/",
+    "caption": "Tourbillon Castle in Sion, Switzerland, a medieval hilltop fortress. The word crusade is used far more widely than the history supports."
    },
    {
     "file": "crusades-5-facts-2.avif",
     "alt": "A medieval illustration of the Crusaders' conquest of Jerusalem",
     "artist": "Anonymus",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Die_Eroberung_Jerusalems.jpeg"
+    "source": "https://commons.wikimedia.org/wiki/File:Die_Eroberung_Jerusalems.jpeg",
+    "caption": "A medieval illustration of the Crusaders' conquest of Jerusalem in 1099."
+   },
+   {
+    "file": "crusades-5-facts-3.avif",
+    "alt": "The Sea Castle at Sidon on the coast of Lebanon.",
+    "caption": "The Sea Castle at Sidon (Saida) in Lebanon, a fortress that the Crusaders built on the coast in the thirteenth century.",
+    "artist": "mesuttoker",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/saida-lebanon-beirut-castle-2389745/"
    }
   ]
  },
@@ -1511,7 +1615,7 @@
    {
     "file": "scholars-who-shaped-islamic-study-2.avif",
     "alt": "A page of a manuscript of Ibn Sina's Canon of Medicine",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Pharmacy,_canon_of_avicenna_manuscript.jpg",
     "caption": "A page of a manuscript of Ibn Sina's Canon of Medicine. Scholars of the Islamic world wrote in medicine and philosophy as well as law and theology."
@@ -2030,14 +2134,24 @@
     "alt": "An old city gate lit at night",
     "artist": "analogicus",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/ruins-castle-building-andernach-6911495/"
+    "source": "https://pixabay.com/photos/ruins-castle-building-andernach-6911495/",
+    "caption": "An old city gate lit at night. The Prophet made treaties with Jewish tribes in an oasis town of mixed tribes."
    },
    {
     "file": "apes-and-pigs-and-the-jews-2.avif",
     "alt": "The ruined stone arches of an old building",
     "artist": "dimitrisvetsikas1969",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/cyprus-ayios-sozomenos-church-3010571/"
+    "source": "https://pixabay.com/photos/cyprus-ayios-sozomenos-church-3010571/",
+    "caption": "The ruined arches of an old building. The classical commentators read these verses against the history of earlier peoples."
+   },
+   {
+    "file": "apes-and-pigs-and-the-jews-3.avif",
+    "alt": "The interior of a historic synagogue with carved wooden pews.",
+    "caption": "The interior of a synagogue. The Quran faults particular conduct and honours the upright among the People of the Book (3:113).",
+    "artist": "cottonbro studio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/the-interior-of-a-synagogue-5986454/"
    }
   ]
  },
@@ -2585,7 +2699,7 @@
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-2.avif",
     "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
-    "artist": "Unknown artistUnknown artist",
+    "artist": "Unknown artist",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg",
     "caption": "A folio of an early Quran in Hijazi script (Bibliothèque nationale de France, Arabe 334c): early copies lack the dots and vowel marks that later helped fix the readings."
@@ -2740,6 +2854,14 @@
     "artist": "Alimurat Üral",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/mosque-seen-from-courtyard-15981700/"
+   },
+   {
+    "file": "do-muslims-worship-muhammad-4.avif",
+    "alt": "Al-Masjid an-Nabawi in Medina in daylight.",
+    "caption": "Al-Masjid an-Nabawi in Medina, where the Prophet is buried. He warned against turning graves into places of worship.",
+    "artist": "Fahad Puthawala",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stunning-view-of-al-masjid-an-nabawi-mosque-34987529/"
    }
   ]
  },
