@@ -216,3 +216,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **kaaba-witnesses**: the "Kaaba of Najran"; Zuhayr's oath in his Mu'allaqa and Arberry's translation; Robin 2012 (title and volume) on the Murayghan inscription; Hoyland 2001.
 - **prophets-you-may-not-know**: the Abu Dharr report on 124,000 prophets and its grading; van Bladel 2009 on Idris and Hermes; the Ubar expedition; the al-Kifl shrine and the EI2 article; the Dhul-Kifl and Buddha proposal; the Elijah and Khidr folklore.
 - **child-marriage-in-islam**: the ages of maturity by school (al-Mughni); al-Sarakhsi on Ibn Shubruma and Abu Bakr al-Asamm; al-Nawawi on Muslim 1422; Indonesia Law 16/2019; Sindh 2013; the UNICEF 2023 report.
+
+## Expansion, fourth batch (1.78.4)
+
+- **ex-muslim-blog-study**: the Lina Joy judgment date (30 May 2007); Watt's translation of al-Munqidh; Muslim 132; Aristotle, Rhetoric 1.2; the Pew switching figures.
+- **who-saw-gabriel**: Bukhari 2, 4592, 4980; the chain of Muslim's hadith of Gabriel through Yahya ibn Ya'mar and Ibn Umar; Quran 20:9-12 and 19:16-19 as private calls.
+- **jihad-meaning-quran-hadith-jurists**: Ibn Kathir on 9:73 quoting Ibn Abbas; Ibn al-Qayyim's four kinds of jihad in Zad al-Ma'ad; Shaltut 1948 and Peters 1996.
+- **qibla-change**: Muslim 700 on 2:115; the Banu Salima mosque reports (Ibn Sa'd, Fath al-Bari); King's "The Petra Fallacy" (2018).
