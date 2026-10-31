@@ -2486,75 +2486,108 @@
  "temporary-marriage-mutah": {
   "featured": {
    "file": "temporary-marriage-mutah.avif",
-   "alt": "Gold, blue and white star outlines around a gold centre on a navy ground.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Masjid al-Nabawi in Medina at night with lit minarets.",
+   "caption": "Medina at night: the city where the early community debated the ruling on mutah, temporary marriage.",
+   "artist": "Konevi",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/mosque-masjid-al-nabawi-medina-3725372/"
   },
   "inline": [
    {
     "file": "temporary-marriage-mutah-1.avif",
-    "alt": "Star outlines in gold, blue and white on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Illustrated Arabic manuscript page with calligraphy and floral ornament.",
+    "caption": "An illustrated Arabic manuscript page. The rulings on mutah were recorded and argued over in books of hadith and law.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/intricately-illustrated-arabic-manuscript-29342496/"
    },
    {
     "file": "temporary-marriage-mutah-2.avif",
-    "alt": "Concentric star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Camel riders crossing red desert dunes under a cloudy sky.",
+    "caption": "Travellers crossing the desert. The short permission for mutah came on campaigns and journeys, far from home.",
+    "artist": "Pixabay",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/human-riding-camel-on-dessert-under-white-sky-during-daytime-53537/"
+   },
+   {
+    "file": "temporary-marriage-mutah-3.avif",
+    "alt": "Minarets at sunset in Konya, Türkiye.",
+    "caption": "Minarets at sunset in Konya. Sunni and Shia scholars still differ on whether mutah remains lawful.",
+    "artist": "Necati Ömer Karpuzoğlu",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/scenic-sunset-view-of-konya-minarets-40100992/"
    }
   ]
  },
  "do-muslims-worship-muhammad": {
   "featured": {
    "file": "do-muslims-worship-muhammad.avif",
-   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Al-Masjid an-Nabawi in Medina on a clear day.",
+   "caption": "Al-Masjid an-Nabawi in Medina, the mosque of the Prophet Muhammad ﷺ, where Muslims send blessings upon him and worship God alone.",
+   "artist": "Jati Sampurno",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/al-masjid-an-nabawi-mosque-in-medina-saudi-arabia-6476996/"
   },
   "inline": [
    {
     "file": "do-muslims-worship-muhammad-1.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Worshippers praying in rows at a mosque in Jakarta, Indonesia.",
+    "caption": "Muslims pray in straight rows, and the prayer is addressed to God alone.",
+    "artist": "Suryo Patriandito",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/congregational-prayer-inside-jakarta-mosque-36326554/"
    },
    {
     "file": "do-muslims-worship-muhammad-2.avif",
-    "alt": "Gold and blue star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Arabic calligraphy in gold on a stone wall.",
+    "caption": "Gold calligraphy of the kind that carries the testimony of faith: Muhammad is the servant and messenger of God.",
+    "artist": "Eyüp Çelik",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/elegant-arabic-calligraphy-on-stone-wall-33867343/"
+   },
+   {
+    "file": "do-muslims-worship-muhammad-3.avif",
+    "alt": "Mosque courtyard with tall minarets and a blue sky.",
+    "caption": "A mosque courtyard. The call to prayer from its minarets names God first and then the Prophet's mission.",
+    "artist": "Alimurat Üral",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/mosque-seen-from-courtyard-15981700/"
    }
   ]
  },
  "muslims-by-the-numbers-2020": {
   "featured": {
    "file": "muslims-by-the-numbers-2020.avif",
-   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Dome of Istiqlal Mosque in Jakarta, Indonesia.",
+   "caption": "Istiqlal Mosque in Jakarta, in Indonesia, a country with one of the largest Muslim populations in the world.",
+   "artist": "Irsyad Rifqi",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/istiqlal-mosque-dome-in-jakarta-indonesia-37221142/"
   },
   "inline": [
    {
     "file": "muslims-by-the-numbers-2020-1.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Thousands of pilgrims around the Kaaba in Mecca.",
+    "caption": "Pilgrims at the Kaaba in Mecca. Muslims are one of the most widely spread faith communities.",
+    "artist": "Mustafa Fathy",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/a-crowd-on-a-square-in-mecca-5620451/"
    },
    {
     "file": "muslims-by-the-numbers-2020-2.avif",
-    "alt": "Gold and blue star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "World map showing the continents.",
+    "caption": "A world map. Pew Research Center's count of Muslims by country covers the decade from 2010 to 2020.",
+    "artist": "WikiImages",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/earth-map-atlas-cartology-world-11048/"
+   },
+   {
+    "file": "muslims-by-the-numbers-2020-3.avif",
+    "alt": "Busy market in Amman, Jordan, with traditional goods.",
+    "caption": "A market in Amman, Jordan: a Muslim-majority country in the Middle East and North Africa region.",
+    "artist": "Sameh Swaiss",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/merchandise-display-in-market-19454239/"
    }
   ]
  },
@@ -2683,6 +2716,86 @@
     "artist": "Brett Jordan",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/an-open-bible-on-a-wooden-surface-5311784/"
+   },
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-3.avif",
+    "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
+    "caption": "A Quran folio in Kufic script, 8th to 9th century: the book that Muslims hold as the criterion over the earlier scriptures.",
+    "artist": "Unknown in Abbasid dynasty",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Koran_(8th-9th_century).jpg"
+   }
+  ]
+ },
+ "muhammad-false-prophet-claim": {
+  "featured": {
+   "file": "muhammad-false-prophet-claim.avif",
+   "alt": "Hira Cave on Jabal al-Nour near Mecca under a blue sky.",
+   "caption": "Jabal al-Nour near Mecca, with the cave of Hira where the first revelation came to Muhammad ﷺ.",
+   "artist": "Musaddek Sayek",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/hira-cave-on-jabal-al-nour-in-makkah-38336046/"
+  },
+  "inline": [
+   {
+    "file": "muhammad-false-prophet-claim-1.avif",
+    "alt": "Open Quran with a green cover lit by sunlight.",
+    "caption": "An open Quran. Its challenge to produce a chapter like it (2:23) is part of how Muslims answer the charge.",
+    "artist": "Gizem Gökce",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-with-decorative-cover-in-sunlight-36521597/"
+   },
+   {
+    "file": "muhammad-false-prophet-claim-2.avif",
+    "alt": "The Kaaba at dusk in Mecca with a clear sky.",
+    "caption": "The Kaaba at dusk in Mecca, the city where Muhammad ﷺ was born and first called people to God.",
+    "artist": "Neo Evenger",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/kaaba-28209449/"
+   },
+   {
+    "file": "muhammad-false-prophet-claim-3.avif",
+    "alt": "Visitors climbing the rocky slope of Jabal al-Nour near Mecca.",
+    "caption": "Visitors climbing Jabal al-Nour, the mountain above the cave of Hira, near Mecca.",
+    "artist": "Musaddek Sayek",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/pilgrims-at-jabal-al-nour-in-makkah-saudi-arabia-38385715/"
+   }
+  ]
+ },
+ "muslim-societies-backwardness-claim": {
+  "featured": {
+   "file": "muslim-societies-backwardness-claim.avif",
+   "alt": "Al-Azhar Mosque in Cairo with domes and minarets.",
+   "caption": "Al-Azhar in Cairo, founded in 970 and among the oldest universities still teaching.",
+   "artist": "AXP Photography",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/al-azhar-mosque-in-cairo-18991579/"
+  },
+  "inline": [
+   {
+    "file": "muslim-societies-backwardness-claim-1.avif",
+    "alt": "Collection of old manuscripts in Arabic script.",
+    "caption": "Arabic manuscripts. Scholars of the Islamic world preserved, translated and added to the sciences of earlier peoples.",
+    "artist": "caffeine",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscripts-with-arabic-script-historical-archives-34652787/"
+   },
+   {
+    "file": "muslim-societies-backwardness-claim-2.avif",
+    "alt": "Close-up of an antique globe showing constellations.",
+    "caption": "An antique celestial globe. Astronomers in the Islamic world refined the star tables and instruments of antiquity.",
+    "artist": "Vinícius Vieira ft",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-celestial-globe-with-constellation-mapping-29847626/"
+   },
+   {
+    "file": "muslim-societies-backwardness-claim-3.avif",
+    "alt": "Turquoise dome and tiles of a madrasa in Samarkand, Uzbekistan.",
+    "caption": "A madrasa in Samarkand, where Ulugh Beg founded a madrasa and an observatory in the 15th century.",
+    "artist": "LoggaWiggler",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/samarkand-medrese-uzbekistan-mosaic-196923/"
    }
   ]
  }
