@@ -154,7 +154,7 @@ def main():
                 continue
             if item.get('keep'):
                 # Keep the image on record and only set its caption (and alt text).
-                if i < len(inline) and inline[i]:
+                if i < len(inline) and inline[i] and os.path.exists(os.path.join(ROOT, 'assets', 'images', 'inline', inline[i]['file'])):
                     inline[i]['caption'] = item['caption']
                     if item.get('alt'):
                         inline[i]['alt'] = item['alt']
