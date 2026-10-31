@@ -232,3 +232,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **mosques-adapt-to-place**: Bukhari 3583-3584 (the crying trunk); the Niujie and Huaisheng traditions and Steinhardt 2015; al-Sahili and Aradeon 1989; Mehmed Agha as Sinan's pupil.
 - **end-of-time**: Bukhari 3688, 2222, 3346; Momen 1985; the seedling hadith (Ahmad; al-Adab al-Mufrad 479).
 - **end-of-the-world-1110-claim**: Muslim 2901 cited for the ten signs (narrator Hudhayfa ibn Asid); Moin 2012 on the Tarikh-i Alfi; Numbers and Butler 1987 on the Millerites.
+
+## Expansion, sixth batch (1.78.7)
+
+- **homosexuality-in-islam**: the schools on *sihaq* (al-Mughni); Bukhari 6824 and Muslim 1695 on Ma'iz; Navtej Johar (6 September 2018); Singapore's 2022 repeal of 377A.
+- **who-is-allah**: Lane's Lexicon on the derivation of Allah; the Zabad inscription (512) and Littmann's article; Morey 1994; Bukhari 5999; al-Ghazali's al-Maqsad al-Asna in Burrell and Daher's translation.
+- **western-scholars-of-islam**: Said 1978; Azami 1968 and 1985; the Bergsträsser-Pretzl archive and Corpus Coranicum; Schimmel 1975; Watt 1961.
+- **moon-craters**: Grimaldi as Riccioli's collaborator; the 1009-1010 Bodleian copy of al-Sufi; the 2015 International Year of Light; Sachau's translation of al-Biruni's India; the crater names Thebit, Geber, Alpetragius, Abulfeda and Nasireddin; Saliba 2007.

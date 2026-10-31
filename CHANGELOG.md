@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.7] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: homosexuality-in-islam (1,102 to 1,601), who-is-allah (1,120 to 1,602), western-scholars-of-islam (1,121 to 1,632) and moon-craters (1,126 to 1,602). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.6] - 2026-10-31
 
 ### Changed
