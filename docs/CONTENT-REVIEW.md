@@ -225,3 +225,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **qibla-change**: Muslim 700 on 2:115; the Banu Salima mosque reports (Ibn Sa'd, Fath al-Bari); King's "The Petra Fallacy" (2018).
 - **morality-without-god**: Moore, Principia Ethica, ch. 1, sect. 13; Darwin, Descent of Man, ch. 3 and 5; Euthyphro 10a; Hourani 1985 on *husn* and *qubh*.
 - **taqiyya-5-myths**: the al-Kafi chapter and Kohlberg 1975; Cyprian, On the Lapsed; Muslim 1787 (Hudhayfa's promise); Quran 33:70, 9:119, 4:135.
+
+## Expansion, fifth batch (1.78.6)
+
+- **satanic-verses-report**: Muir as the coiner of "Satanic Verses"; Ibn Hisham's omission and Guillaume pp. 165-167; al-Razi quoting Ibn Khuzayma on 22:52; Ahmed 2017.
+- **mosques-adapt-to-place**: Bukhari 3583-3584 (the crying trunk); the Niujie and Huaisheng traditions and Steinhardt 2015; al-Sahili and Aradeon 1989; Mehmed Agha as Sinan's pupil.
+- **end-of-time**: Bukhari 3688, 2222, 3346; Momen 1985; the seedling hadith (Ahmad; al-Adab al-Mufrad 479).
+- **end-of-the-world-1110-claim**: Muslim 2901 cited for the ten signs (narrator Hudhayfa ibn Asid); Moin 2012 on the Tarikh-i Alfi; Numbers and Butler 1987 on the Millerites.

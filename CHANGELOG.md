@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.6] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: satanic-verses-report (1,073 to 1,611), mosques-adapt-to-place (1,077 to 1,606), end-of-time (1,087 to 1,623) and end-of-the-world-1110-claim (1,101 to 1,608). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.5] - 2026-10-31
 
 ### Changed
