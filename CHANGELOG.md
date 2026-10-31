@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.3] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text, completing the third batch: library-of-alexandria (1,001 to 1,619), kaaba-witnesses (1,007 to 1,644), prophets-you-may-not-know (1,013 to 1,629) and child-marriage-in-islam (1,014 to 1,633). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.2] - 2026-10-31
 
 ### Changed
