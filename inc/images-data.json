@@ -2450,25 +2450,36 @@
  "gods-attributes-and-anthropomorphism": {
   "featured": {
    "file": "gods-attributes-and-anthropomorphism.avif",
-   "alt": "Concentric gold, blue and white star outlines on a navy ground.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Interior of an ornate mosque dome with complex geometric patterns.",
+   "caption": "A mosque dome of geometric pattern, an art that points to God without picturing Him.",
+   "artist": "Astrel Fisher",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/intricate-islamic-dome-architecture-in-germany-40053902/"
   },
   "inline": [
    {
     "file": "gods-attributes-and-anthropomorphism-1.avif",
-    "alt": "Nested star outlines around a gold centre on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Ayat al-Kursi, the Throne Verse, in Arabic calligraphy on aged paper.",
+    "caption": "Ayat al-Kursi (2:255) in calligraphy: the verse that speaks of God's knowledge and throne.",
+    "artist": "sonofara",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/ayat-al-kursi-islam-muslims-1207509/"
    },
    {
     "file": "gods-attributes-and-anthropomorphism-2.avif",
-    "alt": "Layered star outlines in gold, blue and white on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Milky Way over a desert mountain at night.",
+    "caption": "The night sky over a desert: the Quran points to creation as a sign of the Creator, who is not like it (42:11).",
+    "artist": "Venrike",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/sky-stars-galaxy-milky-way-night-6811874/"
+   },
+   {
+    "file": "gods-attributes-and-anthropomorphism-3.avif",
+    "alt": "Persian mosque dome ceiling with turquoise geometric pattern.",
+    "caption": "A tiled dome with a pattern that repeats without a centre, an image of the infinite and not of God.",
+    "artist": "hoomarg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/persian-art-tradiotional-islamic-809945/"
    }
   ]
  },
@@ -2650,25 +2661,28 @@
  "does-islam-teach-the-bible-was-corrupted": {
   "featured": {
    "file": "does-islam-teach-the-bible-was-corrupted.avif",
-   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Open vintage manuscript with Arabic script on a dark background.",
+   "caption": "An open manuscript in Arabic script: the written record, and not only the message, is what taḥrīf concerns.",
+   "artist": "burcubyzt_85",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/"
   },
   "inline": [
    {
     "file": "does-islam-teach-the-bible-was-corrupted-1.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll, one of the oldest surviving manuscripts of a biblical book, found near the Dead Sea.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
    },
    {
     "file": "does-islam-teach-the-bible-was-corrupted-2.avif",
-    "alt": "Gold and blue star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Close-up of an open Bible showing printed Old Testament text.",
+    "caption": "A printed Bible: Muslim scholars asked which of its words come from revelation and which from later hands.",
+    "artist": "Brett Jordan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/an-open-bible-on-a-wooden-surface-5311784/"
    }
   ]
  }

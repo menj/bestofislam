@@ -103,13 +103,18 @@ def commons(title):
 PROVIDERS = {'pexels': pexels, 'pixabay': pixabay, 'commons': commons}
 
 
-def store(spec, folder, name, width):
-    """Download one image as 3:2 AVIF. Returns its credit fields, or None."""
+def store(spec, folder, name, width, current=None):
+    """Download one image as 3:2 AVIF. Returns its credit fields, or None.
+
+    The file is downloaded when it is missing or when the credit now on record
+    names a different source, so a picture is never left under another
+    photographer's credit."""
     path = os.path.join(ROOT, 'assets', 'images', folder, name)
     found = PROVIDERS[spec['src']](spec['id'])
     if found is None:
         return None
-    if not os.path.exists(path):
+    same = bool(current) and current.get('source') == found['source'] and os.path.exists(path) and not os.environ.get('FORCE')
+    if not same:
         blob = get(found['url'])
         if blob is None:
             return None
@@ -136,7 +141,7 @@ def main():
     for slug, spec in plan.items():
         entry = data.setdefault(slug, {'featured': None, 'inline': []})
         if spec.get('featured'):
-            got = store(spec['featured'], 'featured', slug + '.avif', 1400)
+            got = store(spec['featured'], 'featured', slug + '.avif', 1400, entry.get('featured'))
             if got:
                 entry['featured'] = got
             else:
@@ -145,7 +150,7 @@ def main():
         for i, item in enumerate(spec.get('inline', [])):
             if not item:
                 continue
-            got = store(item, 'inline', '%s-%d.avif' % (slug, i + 1), 960)
+            got = store(item, 'inline', '%s-%d.avif' % (slug, i + 1), 960, inline[i] if i < len(inline) else None)
             if not got:
                 failed.append('%s inline %d' % (slug, i + 1))
                 continue
