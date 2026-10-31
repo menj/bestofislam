@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.81.0] - 2026-10-31
+
+### Changed
+
+- **Images, batch 3 of 6: ten more articles gain a photograph and captions.** does-islam-teach-the-bible-was-corrupted, fighting-verses-in-context, first-revelation-demonic-claim, islamic-rites-before-islam, islamisation-of-the-west, medina-jewish-tribes-and-qurayza, paul-claim-to-apostleship, pauline-letters-authorship, quran-anachronism-claims and relationship-with-god (+1 each; +2 in islamisation-of-the-west). Existing images in these articles gain captions, and every figure sits beside the entry it illustrates. The Codex Sinaiticus photograph is CC0 and the Marid Castle photograph (Richard Mortel, CC BY 2.0) are from Wikimedia Commons.
+- **islamisation-of-the-west** showed the same photograph twice, as its featured image and as its first in-text image; the in-text copy is replaced with the Manhattan skyline.
+
 ## [1.80.0] - 2026-10-31
 
 ### Changed
