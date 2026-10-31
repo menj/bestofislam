@@ -246,3 +246,10 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **islam-in-china**: the Old Book of Tang on the 651 embassy; Chen Dasheng 1984 on the Quanzhou inscriptions; Jaschok and Shui 2000; the 1417 Zheng He incense stele; the Dungan migration after the 1862-1877 revolt; Ma Jian's 1981 translation.
 - **haman-anachronism**: Bucaille 1994 and Ranke 1935 (vol. 1 entry); the remark on fired brick in Egypt.
 - **gods-attributes-and-anthropomorphism**: al-Aqida al-Wasitiyya's four refusals; al-Razi's Asas al-Taqdis and Ibn Taymiyya's Bayan Talbis al-Jahmiyya; Maimonides, Guide, part 1 (Pines translation).
+
+## Expansion, eighth batch (1.78.9)
+
+- **islamophobia-5-facts**: Runnymede 2017; Allen 2010; the Najran deputation praying in the mosque; dates of the Quebec City, Finsbury Park and London, Ontario attacks; Canada's 2023 special representative; the UK's 2025 working group on a definition of anti-Muslim hatred.
+- **seven-libraries**: Ibn Abi Usaybi'a on Hunayn's payment in gold; al-Hakam's marginal notes and the women copyists of Cordoba (later reports); the Nizamiyya network; Fatima al-Fihri (Rawd al-Qirtas) and Aziza Chaouni's restoration; Abdel Kader Haidara's evacuation; the Süleymaniye's completion in 1557 and Necipoğlu 2005.
+- **was-muhammad-illiterate-ummi**: the Hebrew *ummot ha-olam* parallel (attributed to unnamed scholars via note 2); Bukhari 65 and 5872 on the seal; al-Baji and the Hudaybiyya controversy.
+- **who-wrote-the-quran**: Ibn Ishaq on Bahira (Guillaume pp. 79-81) and Roggema 2009; the Birmingham radiocarbon announcement (22 July 2015); al-Baqillani's I'jaz al-Quran (Saqr edition) on style.

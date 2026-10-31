@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.9] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: islamophobia-5-facts (1,151 to 1,604), seven-libraries (1,151 to 1,646), was-muhammad-illiterate-ummi (1,152 to 1,601) and who-wrote-the-quran (1,152 to 1,602). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.8] - 2026-10-31
 
 ### Changed
