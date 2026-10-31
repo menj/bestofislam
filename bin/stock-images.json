@@ -1,197 +1,247 @@
 {
- "does-islam-teach-the-bible-was-corrupted": {
-  "featured": {
-   "src": "pexels",
-   "id": 36306963,
-   "alt": "Open vintage manuscript with Arabic script on a dark background.",
-   "caption": "An open manuscript in Arabic script: the written record, and not only the message, is what taḥrīf concerns."
-  },
+ "seven-ahruf-cairo-edition-stoning-verse": {
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
-    "caption": "The Great Isaiah Scroll, one of the oldest surviving manuscripts of a biblical book, found near the Dead Sea."
+    "keep": true,
+    "caption": "Arabic calligraphy on a page of a religious book. The Quran was recited in more than one accepted way from the Prophet's lifetime."
+   },
+   {
+    "keep": true,
+    "caption": "A folio of an early Quran in Hijazi script (Bibliothèque nationale de France, Arabe 334c): early copies lack the dots and vowel marks that later helped fix the readings."
    },
    {
     "src": "pexels",
-    "id": 5311784,
-    "alt": "Close-up of an open Bible showing printed Old Testament text.",
-    "caption": "A printed Bible: Muslim scholars asked which of its words come from revelation and which from later hands."
+    "id": 10346836,
+    "alt": "An open Quran displayed on a wooden stand.",
+    "caption": "An open Quran on a stand. The accepted readings are the ones that reached the community by mass transmission."
    },
    {
-    "src": "commons",
-    "id": "File:Folio from a Koran (8th-9th century).jpg",
-    "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
-    "caption": "A Quran folio in Kufic script, 8th to 9th century: the book that Muslims hold as the criterion over the earlier scriptures."
-   }
-  ]
- },
- "gods-attributes-and-anthropomorphism": {
-  "featured": {
-   "src": "pexels",
-   "id": 40053902,
-   "alt": "Interior of an ornate mosque dome with complex geometric patterns.",
-   "caption": "A mosque dome of geometric pattern, an art that points to God without picturing Him."
-  },
-  "inline": [
-   {
-    "src": "pixabay",
-    "id": 1207509,
-    "alt": "Ayat al-Kursi, the Throne Verse, in Arabic calligraphy on aged paper.",
-    "caption": "Ayat al-Kursi (2:255) in calligraphy: the verse that speaks of God's knowledge and throne."
+    "src": "pexels",
+    "id": 35205765,
+    "alt": "Close view of Arabic calligraphy in a religious text.",
+    "caption": "Close view of Arabic script. A reading is accepted only if it fits the text of the copies, Arabic grammar and a sound chain."
    },
    {
     "src": "pixabay",
-    "id": 6811874,
-    "alt": "Milky Way over a desert mountain at night.",
-    "caption": "The night sky over a desert: the Quran points to creation as a sign of the Creator, who is not like it (42:11)."
+    "id": 3665281,
+    "alt": "Letterpress type and a pressure plate in a printing house.",
+    "caption": "Letterpress type. The Cairo edition of 1924 was a printing decision to follow one reading, and not a new text."
+   }
+  ]
+ },
+ "before-your-first-friday-prayer": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An elderly man washes for prayer at a fountain in an old courtyard in Kayseri, Türkiye. Washing comes before the Friday prayer."
+   },
+   {
+    "keep": true,
+    "caption": "An elderly man performs ablution at a mosque fountain, the step that comes before entering the prayer hall."
+   },
+   {
+    "src": "pexels",
+    "id": 29960370,
+    "alt": "Aerial view of a large congregation praying inside an ornate mosque.",
+    "caption": "Worshippers pray in rows inside a large mosque. At the Friday prayer people stand shoulder to shoulder, in lines and not in pews."
+   },
+   {
+    "src": "pexels",
+    "id": 19352122,
+    "alt": "A minaret of a mosque against a clear blue sky.",
+    "caption": "A minaret, from which the call to prayer is made before the Friday sermon."
+   }
+  ]
+ },
+ "fate-and-free-will": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A dirt road winding through a foggy forest. Muslims believe God knows the end of every path, and each person still walks it by choice."
+   },
+   {
+    "keep": true,
+    "caption": "An autumn forest in fog. Belief in qadar, God's decree, is one of the six articles of faith."
    },
    {
     "src": "pixabay",
-    "id": 809945,
-    "alt": "Persian mosque dome ceiling with turquoise geometric pattern.",
-    "caption": "A tiled dome with a pattern that repeats without a centre, an image of the infinite and not of God."
-   }
-  ]
- },
- "temporary-marriage-mutah": {
-  "featured": {
-   "src": "pixabay",
-   "id": 3725372,
-   "alt": "Masjid al-Nabawi in Medina at night with lit minarets.",
-   "caption": "Medina at night: the city where the early community debated the ruling on mutah, temporary marriage."
-  },
-  "inline": [
-   {
-    "src": "pexels",
-    "id": 29342496,
-    "alt": "Illustrated Arabic manuscript page with calligraphy and floral ornament.",
-    "caption": "An illustrated Arabic manuscript page. The rulings on mutah were recorded and argued over in books of hadith and law."
-   },
-   {
-    "src": "pexels",
-    "id": 53537,
-    "alt": "Camel riders crossing red desert dunes under a cloudy sky.",
-    "caption": "Travellers crossing the desert. The short permission for mutah came on campaigns and journeys, far from home."
-   },
-   {
-    "src": "pexels",
-    "id": 40100992,
-    "alt": "Minarets at sunset in Konya, Türkiye.",
-    "caption": "Minarets at sunset in Konya. Sunni and Shia scholars still differ on whether mutah remains lawful."
-   }
-  ]
- },
- "do-muslims-worship-muhammad": {
-  "featured": {
-   "src": "pexels",
-   "id": 6476996,
-   "alt": "Al-Masjid an-Nabawi in Medina on a clear day.",
-   "caption": "Al-Masjid an-Nabawi in Medina, the mosque of the Prophet Muhammad ﷺ, where Muslims send blessings upon him and worship God alone."
-  },
-  "inline": [
-   {
-    "src": "pexels",
-    "id": 36326554,
-    "alt": "Worshippers praying in rows at a mosque in Jakarta, Indonesia.",
-    "caption": "Muslims pray in straight rows, and the prayer is addressed to God alone."
-   },
-   {
-    "src": "pexels",
-    "id": 33867343,
-    "alt": "Arabic calligraphy in gold on a stone wall.",
-    "caption": "Gold calligraphy of the kind that carries the testimony of faith: Muhammad is the servant and messenger of God."
-   },
-   {
-    "src": "pexels",
-    "id": 15981700,
-    "alt": "Mosque courtyard with tall minarets and a blue sky.",
-    "caption": "A mosque courtyard. The call to prayer from its minarets names God first and then the Prophet's mission."
-   }
-  ]
- },
- "muslims-by-the-numbers-2020": {
-  "featured": {
-   "src": "pexels",
-   "id": 37221142,
-   "alt": "Dome of Istiqlal Mosque in Jakarta, Indonesia.",
-   "caption": "Istiqlal Mosque in Jakarta, in Indonesia, a country with one of the largest Muslim populations in the world."
-  },
-  "inline": [
-   {
-    "src": "pexels",
-    "id": 5620451,
-    "alt": "Thousands of pilgrims around the Kaaba in Mecca.",
-    "caption": "Pilgrims at the Kaaba in Mecca. Muslims are one of the most widely spread faith communities."
+    "id": 5291766,
+    "alt": "A path forking into two glowing roads in a forest, with a signpost.",
+    "caption": "A fork in the road. The Quran treats each person as responsible for the choice he makes."
    },
    {
     "src": "pixabay",
-    "id": 11048,
-    "alt": "World map showing the continents.",
-    "caption": "A world map. Pew Research Center's count of Muslims by country covers the decade from 2010 to 2020."
-   },
-   {
-    "src": "pexels",
-    "id": 19454239,
-    "alt": "Busy market in Amman, Jordan, with traditional goods.",
-    "caption": "A market in Amman, Jordan: a Muslim-majority country in the Middle East and North Africa region."
+    "id": 1867202,
+    "alt": "The Milky Way over silhouetted trees at night.",
+    "caption": "The night sky. The Quran points to the order of creation as a sign that nothing is left to chance."
    }
   ]
  },
- "muhammad-false-prophet-claim": {
-  "featured": {
-   "src": "pexels",
-   "id": 38336046,
-   "alt": "Hira Cave on Jabal al-Nour near Mecca under a blue sky.",
-   "caption": "Jabal al-Nour near Mecca, with the cave of Hira where the first revelation came to Muhammad ﷺ."
-  },
+ "jizya": {
   "inline": [
    {
-    "src": "pexels",
-    "id": 36521597,
-    "alt": "Open Quran with a green cover lit by sunlight.",
-    "caption": "An open Quran. Its challenge to produce a chapter like it (2:23) is part of how Muslims answer the charge."
+    "keep": true,
+    "caption": "Antique coins on a wooden surface. The jizya was assessed in coin, in rates set by ability to pay."
+   },
+   {
+    "keep": true,
+    "caption": "A gold dinar of the caliph Abd al-Malik, minted in 697–98. The state's revenues and payments were reckoned in coin."
    },
    {
     "src": "pexels",
-    "id": 28209449,
-    "alt": "The Kaaba at dusk in Mecca with a clear sky.",
-    "caption": "The Kaaba at dusk in Mecca, the city where Muhammad ﷺ was born and first called people to God."
-   },
-   {
-    "src": "pexels",
-    "id": 38385715,
-    "alt": "Visitors climbing the rocky slope of Jabal al-Nour near Mecca.",
-    "caption": "Visitors climbing Jabal al-Nour, the mountain above the cave of Hira, near Mecca."
-   }
-  ]
- },
- "muslim-societies-backwardness-claim": {
-  "featured": {
-   "src": "pexels",
-   "id": 18991579,
-   "alt": "Al-Azhar Mosque in Cairo with domes and minarets.",
-   "caption": "Al-Azhar in Cairo, founded in 970 and among the oldest universities still teaching."
-  },
-  "inline": [
-   {
-    "src": "pexels",
-    "id": 34652787,
-    "alt": "Collection of old manuscripts in Arabic script.",
-    "caption": "Arabic manuscripts. Scholars of the Islamic world preserved, translated and added to the sciences of earlier peoples."
-   },
-   {
-    "src": "pexels",
-    "id": 29847626,
-    "alt": "Close-up of an antique globe showing constellations.",
-    "caption": "An antique celestial globe. Astronomers in the Islamic world refined the star tables and instruments of antiquity."
+    "id": 6851494,
+    "alt": "The Dome of the Rock and surrounding buildings in Jerusalem.",
+    "caption": "Jerusalem, called Aelia in the charter of ʿUmar, which set the terms of the jizya for its Christians in 15 AH."
    },
    {
     "src": "pixabay",
-    "id": 196923,
-    "alt": "Turquoise dome and tiles of a madrasa in Samarkand, Uzbekistan.",
-    "caption": "A madrasa in Samarkand, where Ulugh Beg founded a madrasa and an observatory in the 15th century."
+    "id": 3146450,
+    "alt": "The Damascus Gate and city wall of the Old City of Jerusalem.",
+    "caption": "The wall of Jerusalem's Old City. Muslim rulers owed protection to those who paid the jizya, and returned it when they could not give it."
+   }
+  ]
+ },
+ "quran-on-christians": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The ceiling and windows of an old stone church. The Quran lists churches among the places where God's name is much remembered (22:40)."
+   },
+   {
+    "keep": true,
+    "caption": "Candles burning in a church. The Quran says that among Christians are priests and monks who are not arrogant (5:82)."
+   },
+   {
+    "src": "pixabay",
+    "id": 174446,
+    "alt": "Saint Catherine's Monastery below the mountains of Sinai, Egypt.",
+    "caption": "Saint Catherine's Monastery in Sinai, one of the oldest Christian monasteries still in use, long under Muslim rule."
+   },
+   {
+    "src": "pexels",
+    "id": 17963262,
+    "alt": "The Hanging Church, a Coptic Christian landmark in Cairo.",
+    "caption": "The Hanging Church in Cairo. Coptic Christians have worshipped in Egypt under Muslim rule since the seventh century."
+   }
+  ]
+ },
+ "quran-science-claims-graded": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Close-up of a laboratory microscope. The article grades each claim by what the evidence supports."
+   },
+   {
+    "keep": true,
+    "caption": "Microscopes on a laboratory table. A claim counts only as far as it can be tested."
+   },
+   {
+    "src": "pexels",
+    "id": 9604806,
+    "alt": "Raindrops hitting a wet pavement and making ripples.",
+    "caption": "Raindrops. The Quran describes rain and the cycle of water, an accurate description, though not a unique one."
+   },
+   {
+    "src": "pexels",
+    "id": 12491775,
+    "alt": "Depiction of the solar system with the sun and planets in a row.",
+    "caption": "The sun and planets. The Quran's verse on each body moving in its own orbit (21:33) is read as fair, and no more."
+   }
+  ]
+ },
+ "quranic-ethics": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Volunteers hand out water and supplies outdoors. Islam joins worship to care for those in need."
+   },
+   {
+    "keep": true,
+    "caption": "Volunteers give food and aid to a man in a wheelchair. The Quran presses the duty to protect the weak."
+   },
+   {
+    "src": "pexels",
+    "id": 30483132,
+    "alt": "A statue of Lady Justice holding scales.",
+    "caption": "Lady Justice with scales. The Quran asks for justice even against yourself, your parents and your relatives (4:135)."
+   },
+   {
+    "src": "pexels",
+    "id": 18574051,
+    "alt": "Close-up of an old hand and a young hand together.",
+    "caption": "Old and young hands. The Quran puts honour for parents next to the worship of God (17:23)."
+   }
+  ]
+ },
+ "same-god": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Three vintage hardbound books on a white surface. The Quran claims the same chain of prophets as the earlier scriptures."
+   },
+   {
+    "keep": true,
+    "caption": "A stack of old books on a table. Muslims and Christians share the names of many of the same prophets."
+   },
+   {
+    "src": "pixabay",
+    "id": 4572094,
+    "alt": "The interior of the Mosque-Cathedral of Córdoba, Spain.",
+    "caption": "The Mosque-Cathedral of Córdoba, a building shared by two faiths. Arabic-speaking Christians call God Allah."
+   },
+   {
+    "src": "pixabay",
+    "id": 7681748,
+    "alt": "Rays of light through clouds at sunrise.",
+    "caption": "Light through clouds. Islam holds that God is one and unlike creation, and the same God sent every prophet."
+   }
+  ]
+ },
+ "schacht-isnads-dating-hadith": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Aged vintage paper. Hadith were written down from the lifetime of the Prophet, not only handed on by memory."
+   },
+   {
+    "keep": true,
+    "caption": "An old parchment document. Muslim scholars checked written records against the memory of the narrators."
+   },
+   {
+    "src": "pixabay",
+    "id": 1869579,
+    "alt": "A quill, ink and paper on a desk.",
+    "caption": "A quill and ink on a desk. Writing began early, and scholars such as Ibn Sirin asked for the source of every report."
+   },
+   {
+    "src": "pexels",
+    "id": 35930741,
+    "alt": "Black and white close-up of interlocking steel chains.",
+    "caption": "Interlocking chain links. An isnad is a chain of narrators, and each link was tested."
+   }
+  ]
+ },
+ "scholars-who-shaped-islamic-study": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A vintage book, quill and ink holder on a wooden table. These seven scholars shaped how Islam's texts are written, read and studied."
+   },
+   {
+    "keep": true,
+    "caption": "A page of a manuscript of Ibn Sina's Canon of Medicine. Scholars of the Islamic world wrote in medicine and philosophy as well as law and theology."
+   },
+   {
+    "src": "pexels",
+    "id": 40101573,
+    "alt": "A man in a library holding books.",
+    "caption": "A reader in a library. Hunayn ibn Ishaq and others translated the works of earlier peoples into Arabic."
+   },
+   {
+    "src": "pixabay",
+    "id": 8519135,
+    "alt": "An open decorated Quran page.",
+    "caption": "An open Quran. Ibn Abbas, Abu Dawud, al-Ashʿarī and al-Ghazālī each shaped how the Quran, hadith and theology were studied."
    }
   ]
  }

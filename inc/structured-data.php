@@ -227,8 +227,12 @@ function boi_inline_image_objects( $post ) {
 			'@id'        => get_permalink( $post ) . '#inline-image-' . ( $i + 1 ),
 			'url'        => $url,
 			'contentUrl' => $url,
-			'caption'    => boi_plain( $credit['alt'] ),
+			'caption'    => boi_plain( ! empty( $credit['caption'] ) ? $credit['caption'] : $credit['alt'] ),
 		);
+
+		if ( ! empty( $credit['caption'] ) ) {
+			$node['description'] = boi_plain( $credit['alt'] );
+		}
 
 		if ( $size ) {
 			$node['width']  = (int) $size[0];
