@@ -6,11 +6,20 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.21] - 2026-10-31
+
+### Changed
+
+- Two more articles reach at least 1,600 words of body text: raids-badr-and-the-conquest-of-mecca (1,443 to 1,694) and prophets-marriages-zaynab-and-others (1,445 to 1,621). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+- The 1.78.20 entry now gives the correct count for islam-religion-of-peace (1,600).
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
 ## [1.78.20] - 2026-10-31
 
 ### Changed
 
-- Four more articles reach at least 1,600 words of body text: shared-prophets (1,416 to 1,637), black-stone-and-kissing (1,433 to 1,631), five-pillars-explained (1,437 to 1,653) and islam-religion-of-peace (1,439 to 1,601). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+- Four more articles reach at least 1,600 words of body text: shared-prophets (1,416 to 1,637), black-stone-and-kissing (1,433 to 1,631), five-pillars-explained (1,437 to 1,653) and islam-religion-of-peace (1,439 to 1,600). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
 - The 1.78.19 entry now gives the correct count for paul-and-the-law (1,607).
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.

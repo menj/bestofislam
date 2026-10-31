@@ -330,3 +330,8 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **black-stone-and-kissing**: Bukhari 1608 (Muawiya and Ibn Abbas) and 1609 (Ibn Umar); the paragraph on the Qarmatian years (cited to Ibn al-Athir, note 3), including disruption of the pilgrimage in some years.
 - **five-pillars-explained**: Bukhari 645; Tirmidhi 413; state zakah collection in Saudi Arabia, Malaysia and Pakistan (no note); Quran 97 and Bukhari 2026; Bukhari 1503 (zakat al-fitr).
 - **islam-religion-of-peace**: Quran 25:63 and 41:34; Pew 2013, The World's Muslims, views of violence (figures to confirm by country).
+
+## Expansion, twentieth batch (1.78.21)
+
+- **raids-badr-and-the-conquest-of-mecca**: Abu Aziz ibn Umayr on the captives' bread (Guillaume p. 309); Bukhari 4280 (Sad ibn Ubada and the standard); the Ayla, Jarba and Adhruh treaties (Guillaume pp. 607-608).
+- **prophets-marriages-zaynab-and-others**: Bukhari 5212 (Sawda's night); Ibn Sad on Sawda, Zaynab bint Khuzayma and Umm Salama; Nasai 3254 on Umm Salama's reply; Quran 33:52 read with 33:50.
