@@ -7,3 +7,5 @@
 .editorconfig   export-ignore
 bin             export-ignore
 tests           export-ignore
+FARUQI.md       export-ignore
+CLAUDE.md       export-ignore

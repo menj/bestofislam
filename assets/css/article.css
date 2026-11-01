@@ -339,3 +339,8 @@
 	line-height: 1.5;
 	color: var(--wp--preset--color--accent-5, #5B6B80);
 }
+
+/* Visible caption that describes the picture, ahead of the credit line. */
+.boi-caption {
+	color: var(--wp--preset--color--contrast, inherit);
+}

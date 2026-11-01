@@ -141,6 +141,33 @@ Not yet used: p. 69 (Hindus and Buddhists), already covered through the *Cultura
 
 Checked against the page images of Ismail R. al Faruqi, *Christian Ethics: A Historical and Systematic Analysis of Its Dominant Ideas* (McGill University Press and Djambatan, 1967); the PDF's text layer is poor OCR, so every quotation was read from the image. Printed page equals PDF page less 13. Used: pp. 22 to 23 (fact and value; morality-without-god, with the note that his argument establishes a standard, not God); pp. 252 to 253 (the Islamic ethic adds action in the world; quranic-ethics, with the hadith on intentions as a counterweight); pp. 193 to 194 (peccatism, from Newbigin; shared-prophets); p. 81 (no law in Jesus's ethic; paul-and-the-law, flagged as contrary to Matthew 5:17 to 19 and the Quran). Not used: his Part One on Hebrew racialism and his chapters on Paul and the Reformation, which are polemic and mostly OCR-damaged. No passage fitted fate-and-free-will, second-peter or jesus-not-god beyond what *Essential Writings* already supplied, so those are unchanged.
 
+## New article: does-islam-teach-the-bible-was-corrupted (1.78.0)
+
+Built from Bassam Zawadi's compilation of evidence for taḥrīf, with every reference rechecked where a source could be read, and graded by strength in the article. Checked: al-Ṭabarī on 4:46, Ibn Taymiyya (al-Jawab al-Sahih 2/407), Ibn Ḥazm (al-Fisal 2/2-3), Bukhari 7363 and 6841 with Fath al-Bari (all via the Shamela references already used in islamic-dilemma); Ibn Kathir on 12:100 and 6:115, al-Qurtubi on 5:13 and 15:9 (quran.ksu.edu.sa, text only); Majma al-Zawaid 4/312 and Ahmad 19403 / Ibn Majah 1853 (surahquran.com); Ibn al-Qayyim, Ighathat al-Lahfan ch. 13 (Wikisource, no page numbers).
+
+Findings that shaped the article:
+
+- The sentence "they lied about their prophets just as they distorted their book" is in Muʿādh's version only (Majmaʿ al-Zawāʾid 4/312, graded by al-Haythamī). The Ibn Abī Awfā version (Ahmad 19403, Ibn Majah 1853) has the same scene without it. Zawadi names the grader "Ibn Hajar al-Haytami"; Majmaʿ al-Zawāʾid is by Nūr al-Dīn al-Haythamī.
+- Al-Qurṭubī on 5:13 gives the meaning reading as his own gloss and the letter-changing reading as "it is said"; Zawadi's use of the passage as a plain statement of textual change overstates it.
+- Ibn al-Qayyim's three views show that the interpretation-only view is a recognised Muslim position, and that he himself sits nearest the middle view. The article concedes this.
+- Zawadi's use of 4:157 and of Hudhayfa's remark (Bukhari 4987) as evidence of textual change is dropped as weak. The stoning report is used for concealment and the mixed state, not for textual loss.
+- Reports from Kaʿb, ʿAbdullāh ibn Salām and Ibn Masʿūd on what the Torah contained are not cited one by one; Bukhari 2125 stands for the group, with the Isaiah 42 parallel. Zawadi's "Banu Israel wrote a book" hadiths (al-Albani, Silsila 2694 and 3860) were not cited because the gradings could not be read from a primary page.
+- Checked later: Bukhari 4987 (hadithunlocked.com; Fath al-Bari 9/17-18 comments on Hudhayfa's alarm but not on the Jews-and-Christians clause) and 2125 (Fath al-Bari 4/342-343, where Ibn Hajar says Ata may have taken the report from Ibn Amr and Ibn Salam); the names in Ibn al-Qayyim's second view (al-Bukhari, and al-Razi in his tafsir) on the Wikisource text; al-Hakim 7325, which carries the Muʿādh sentence and is graded to the standard of the two Sahihs by al-Hakim and al-Dhahabi. The entry's strength label moves from "moderate at most" to "moderate".
+- Still not checked: the Ahmad Musnad reference Zawadi gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
+- The Tanwir al-Miqbas tafsir, which Zawadi cites as Ibn Abbas, is not used.
+
+Images, batch 4 (1.82.0): the four remaining articles below the rule that `claude/modest-ride-rgvjvk` does not edit. No close-up of a worshipper's face and no prophet in any picture added; the candle photograph for the terrorism article is a plain row of tea lights, not a memorial of a particular attack.
+
+Images, batch 3 (1.81.0): ten articles that each needed one more image, chosen as those the long `claude/modest-ride-rgvjvk` branch does not edit. A picture of Khaba Fort first chosen for the Medina article turned out to be in Rajasthan, India, not Arabia (the Pexels description gives no country); it was replaced with Marid Castle at Dumat al-Jandal, Saudi Arabia, from Commons. Lesson kept: a caption names a place only when the source names it.
+
+Images, batch 2 (1.80.0): the next ten articles by the same rule. Captions follow what each entry says (for example, Khadija's caravans, Aminah's death on the road from Medina, Baybars's capture of Krak des Chevaliers in 1271); each figure is placed beside the entry it illustrates, and CodeAnt's batch 1 nitpicks about mismatched placement were the model for that.
+
+Images, batch 1 (1.79.0): ten articles, chosen as those most short of images under the rule of about one in-text image per two entries (minimum two). Each new image was picked from a contact sheet. Old images were kept and given captions. Featured images that come from the theme's older manifest (for example jizya and same-god) keep their credit line only, because a manifest entry cannot carry a caption without a change to inc/images.php. None of the photographs added shows a prophet or a close-up of a worshipper's face.
+
+Images (1.78.0): seven articles now have one featured and three in-text photographs, chosen from contact sheets of Pexels, Pixabay and Commons candidates. Captions describe the picture and tie it to the article; alt text describes what is shown. No picture shows a person in a devotional role or any figure of a prophet. Left for a later pass: a third in-text image for the other 111 articles, which each have a featured image and two in-text images.
+
+Also in this release: `bin/check-content.py` now reads the seed list from `inc/data/seed.json`. It had been reading `inc/setup.php`, which no longer holds the list, and reported 669 false problems; it now passes. `bin/build-related.py` also read each article's topic from `inc/setup.php`; it now reads `inc/data/seed.json`, and `inc/related-articles.json` is rebuilt with it (13 entries change: the new article and the 12 whose neighbours shifted).
+
 ## Material from Shafaat (1.66.0)
 
 Checked against Ahmad Shafaat, *The Gospel According to Islam* (New York: Vantage Press, 1979); printed page numbers equal the PDF page less 18, and the year comes from the UiTM library record, since the scanned copyright page is unreadable. Only his notes are cited, never his narrative, which is his own composition. His claim that the oldest manuscripts known to Origen read "Jesus Barabbas" was not used as he states it: the article gives the witnesses as Tyndale House, Cambridge lists them, and the comment attributed to Origen is of uncertain authorship.
@@ -180,3 +207,190 @@ All remaining points are now accounted for:
 
 ## Second tier: closing pass (23 October 2026)
 hanif-poets-and-musaylima (Zayd's death before the mission and the saving of girls, Ibn Hajar vol. 7 p. 143; Musaylima's sayings and Abu Bakr's reaction, Tabari vol. 3 pp. 284 and 300), was-muhammad-illiterate-ummi (the Encyclopaedia of the Quran citation corrected to Günther, "Ummī", EQ 5, pp. 399–402), ridda-wars-abu-bakr-fadak (Tabari vol. 3 locations), jihad-meaning-quran-hadith-jurists (Tirmidhi 2616, 2174, 1621, Abu Dawud 4344, Ibn Majah 4011 verified; Ibn Hajar on the greater-jihad saying via al-Ajluni), schacht-isnads-dating-hadith (Muslim 3004, Abu Dawud 3646, Umar ibn Abd al-Aziz's letter) and talmud-midrash-apocrypha-borrowing (all dates and passage references reread against standard references; no change needed) were checked. Still open: the wording of Ibn Taymiyya's remark on the greater-jihad saying (Majmu al-Fatawa); the Zad al-Maad stages of jihad.
+
+## Expansion to 1,600 words (1.77.2 onwards)
+
+Written from memory or from secondary summaries, and to be checked against the sources:
+
+- **quran-grammar-errors-claim**: al-Qurtubi on 4:162 (Aban ibn Uthman report, al-Qushayri's verdict) and on 5:69 (Sibawayh and al-Khalil, the two verses of poetry), checked only through the quran.ksu.edu.sa text; Ibn Mujahid on the readings of 20:63 (Abu Amr *inna hadhayni*; Hafs and Ibn Kathir *in*).
+- **quran-contradictions-claims**: the chapter of al-Bukhari's Commentary (Fussilat) holding the Ibn Abbas report, and its exact list of questions; al-Shinqiti's title.
+- **deuteronomy-18-and-the-paraclete**: Sahih al-Bukhari 2125 and 4838 (Abdullah ibn Amr on the Torah description); Mingana's edition of Timothy's Apology (Woodbrooke Studies 2, 1928) and its treatment of Deuteronomy 18 and the Paraclete; the sections of Ibn Taymiyya's al-Jawab al-Sahih.
+- **blasphemy-and-insults-to-the-prophet**: Sahih al-Bukhari 4905, 3610 and 4037; the Federal Shariat Court citation (PLD 1991 FSC 10, judgment of 30 October 1990); the Asia Bibi appeal number; the years of sections 298-A (1980) and 295-B (1982).
+- **fly-hadith-and-adult-suckling**: Shah Wali Allah's chapter title; Ibn Khaldun on medicine; Abu Dawud 3844, al-Nasa'i 4262, Ibn Majah 3504; Abu Rayya (1958) and al-Siba'i's reply; al-Nawawi quoting Qadi Iyad; the Muwatta chapter on A'isha's practice; al-Layth and Ibn Hazm, and Ibn Taymiyya via Zad al-Ma'ad.
+- **do-muslims-worship-muhammad**: Ibn Majah 1853; the Musnad Ahmad report "what God alone wills" (no number given); Bukhari 1040, 1044, 4454, 2411, 7510; Abu Dawud 2042; al-Tirmidhi 3148; the Muwatta chapter for "do not make my grave an idol".
+- **muslims-by-the-numbers-2020**: all new figures are from the two Pew pages already cited, read on 29 October 2026.
+
+## The Yahweh Question (1.78.0)
+
+The five series articles carry their own fact-check list: section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
+
+## Expansion, second batch (1.78.1)
+
+- **aisha-sheep-report-stoning-and-suckling-verses**: al-Suyuti, al-Itqan, chapter 47 (three categories of abrogation); al-Nawawi on Muslim 1452; Ibn al-Salah on *shadhdh* and *ziyada*; Ibn Ishaq's known *tadlis* (here attributed to the Tahdhib entry); Burton 1977.
+- **ezra-and-mary**: Tirmidhi 3095 (Adi ibn Hatim); Ibn Hazm attributing the saying to a sect in Yemen; 3 Enoch 12:5 ("lesser YHWH"); Hagigah 15a; Newby 1988 on Ezra traditions in Arabia.
+- **fastest-growing-religion**: Pew 2015 projections for 2050 (2.76 billion Muslims, 29.7 percent; 2.92 billion Christians, 31.4 percent); other figures from the 2025 Pew pages already cited.
+- **second-peter**: Bauckham 1983 (testament genre); Ehrman 2013; Tertullian, On Baptism 17; Serapion in Eusebius 6.12; the Muratorian fragment's omission of the Petrine letters and the Peshitta's omissions.
+- **why-five-prayers**: Bukhari 2931 and Muslim 627 (middle prayer as asr); Bukhari 631; Daniel W. Brown 1996 on the Ahl al-Quran and Parwez; the claim that Quranist groups differ on the number of prayers; Didache 8.3; Berakhot 26b.
+- **temporary-marriage-mutah**: Ibn Qudama, al-Mughni, for the Sunni argument from 23:5-7; al-Tabarsi on 4:24; Ibn al-Qayyim, Zad al-Ma'ad, on the Khaybar report; the "two mutahs" report attributed to Umar (al-Bayhaqi reference to confirm); Haeri 2014 on misyar.
+
+## Expansion, third batch (1.78.2)
+
+- **ramadan-last-ten-nights**: Bukhari 1901, 6, 1503, 2029, 2035.
+- **arabic-words-science**: Burnett 2001 (Gerard of Cremona's seventy-odd translations); Robert of Chester's 1145 translation and its title; Fibonacci in Bijaya; King 1993; al-Biruni's Tahdid and the Ghazna qibla; Chaucer's Treatise on the Astrolabe; the Greek *ambix* behind *al-anbiq*; the star-name etymologies; the claim that much of al-Khwarizmi's algebra treats inheritance.
+- **women-in-islamic-law-testimony-inheritance**: Ibn al-Qayyim, al-Turuq al-Hukmiyya, on testimony; al-Dhahabi on women narrators; Bukhari 2742, 5136, 5138; Tirmidhi 1128 (Ghaylan); the Hanbali stipulation against a second wife (al-Mughni).
+- **houris-and-paradise**: the Shama'il report of the elderly woman; Bukhari 554, 2898; al-Ghazali's Book of Love; de Blois's review (Journal of Qur'anic Studies 5, 2003).
+- **library-of-alexandria**: Lewis on the Fatimid library sale as context; Ibn Khaldun's story of the Persian books; the silence of Ibn Abd al-Hakam, al-Baladhuri and Eutychius; Seneca, Tranquillity 9.5, and Ammianus 22.16.13; Rufinus and Eunapius on the Serapeum; Gibbon ch. 51; Butler 1902.
+- **kaaba-witnesses**: the "Kaaba of Najran"; Zuhayr's oath in his Mu'allaqa and Arberry's translation; Robin 2012 (title and volume) on the Murayghan inscription; Hoyland 2001.
+- **prophets-you-may-not-know**: the Abu Dharr report on 124,000 prophets and its grading; van Bladel 2009 on Idris and Hermes; the Ubar expedition; the al-Kifl shrine and the EI2 article; the Dhul-Kifl and Buddha proposal; the Elijah and Khidr folklore.
+- **child-marriage-in-islam**: the ages of maturity by school (al-Mughni); al-Sarakhsi on Ibn Shubruma and Abu Bakr al-Asamm; al-Nawawi on Muslim 1422; Indonesia Law 16/2019; Sindh 2013; the UNICEF 2023 report.
+
+## Expansion, fourth batch (1.78.4)
+
+- **ex-muslim-blog-study**: the Lina Joy judgment date (30 May 2007); Watt's translation of al-Munqidh; Muslim 132; Aristotle, Rhetoric 1.2; the Pew switching figures.
+- **who-saw-gabriel**: Bukhari 2, 4592, 4980; the chain of Muslim's hadith of Gabriel through Yahya ibn Ya'mar and Ibn Umar; Quran 20:9-12 and 19:16-19 as private calls.
+- **jihad-meaning-quran-hadith-jurists**: Ibn Kathir on 9:73 quoting Ibn Abbas; Ibn al-Qayyim's four kinds of jihad in Zad al-Ma'ad; Shaltut 1948 and Peters 1996.
+- **qibla-change**: Muslim 700 on 2:115; the Banu Salima mosque reports (Ibn Sa'd, Fath al-Bari); King's "The Petra Fallacy" (2018).
+- **morality-without-god**: Moore, Principia Ethica, ch. 1, sect. 13; Darwin, Descent of Man, ch. 3 and 5; Euthyphro 10a; Hourani 1985 on *husn* and *qubh*.
+- **taqiyya-5-myths**: the al-Kafi chapter and Kohlberg 1975; Cyprian, On the Lapsed; Muslim 1787 (Hudhayfa's promise); Quran 33:70, 9:119, 4:135.
+
+## Expansion, fifth batch (1.78.6)
+
+- **satanic-verses-report**: Muir as the coiner of "Satanic Verses"; Ibn Hisham's omission and Guillaume pp. 165-167; al-Razi quoting Ibn Khuzayma on 22:52; Ahmed 2017.
+- **mosques-adapt-to-place**: Bukhari 3583-3584 (the crying trunk); the Niujie and Huaisheng traditions and Steinhardt 2015; al-Sahili and Aradeon 1989; Mehmed Agha as Sinan's pupil.
+- **end-of-time**: Bukhari 3688, 2222, 3346; Momen 1985; the seedling hadith (Ahmad; al-Adab al-Mufrad 479).
+- **end-of-the-world-1110-claim**: Muslim 2901 cited for the ten signs (narrator Hudhayfa ibn Asid); Moin 2012 on the Tarikh-i Alfi; Numbers and Butler 1987 on the Millerites.
+
+## Expansion, sixth batch (1.78.7)
+
+- **homosexuality-in-islam**: the schools on *sihaq* (al-Mughni); Bukhari 6824 and Muslim 1695 on Ma'iz; Navtej Johar (6 September 2018); Singapore's 2022 repeal of 377A.
+- **who-is-allah**: Lane's Lexicon on the derivation of Allah; the Zabad inscription (512) and Littmann's article; Morey 1994; Bukhari 5999; al-Ghazali's al-Maqsad al-Asna in Burrell and Daher's translation.
+- **western-scholars-of-islam**: Said 1978; Azami 1968 and 1985; the Bergsträsser-Pretzl archive and Corpus Coranicum; Schimmel 1975; Watt 1961.
+- **moon-craters**: Grimaldi as Riccioli's collaborator; the 1009-1010 Bodleian copy of al-Sufi; the 2015 International Year of Light; Sachau's translation of al-Biruni's India; the crater names Thebit, Geber, Alpetragius, Abulfeda and Nasireddin; Saliba 2007.
+
+## Expansion, seventh batch (1.78.8)
+
+- **abrogation-and-the-sword-verse**: Bukhari 4655 and 369 on the proclamation of 9 AH; the biblical examples (Genesis 29 with Leviticus 18:18, Hebrews 8:13, Mark 7:19); Fatoohi 2013.
+- **islam-in-china**: the Old Book of Tang on the 651 embassy; Chen Dasheng 1984 on the Quanzhou inscriptions; Jaschok and Shui 2000; the 1417 Zheng He incense stele; the Dungan migration after the 1862-1877 revolt; Ma Jian's 1981 translation.
+- **haman-anachronism**: Bucaille 1994 and Ranke 1935 (vol. 1 entry); the remark on fired brick in Egypt.
+- **gods-attributes-and-anthropomorphism**: al-Aqida al-Wasitiyya's four refusals; al-Razi's Asas al-Taqdis and Ibn Taymiyya's Bayan Talbis al-Jahmiyya; Maimonides, Guide, part 1 (Pines translation).
+
+## Expansion, eighth batch (1.78.9)
+
+- **islamophobia-5-facts**: Runnymede 2017; Allen 2010; the Najran deputation praying in the mosque; dates of the Quebec City, Finsbury Park and London, Ontario attacks; Canada's 2023 special representative; the UK's 2025 working group on a definition of anti-Muslim hatred.
+- **seven-libraries**: Ibn Abi Usaybi'a on Hunayn's payment in gold; al-Hakam's marginal notes and the women copyists of Cordoba (later reports); the Nizamiyya network; Fatima al-Fihri (Rawd al-Qirtas) and Aziza Chaouni's restoration; Abdel Kader Haidara's evacuation; the Süleymaniye's completion in 1557 and Necipoğlu 2005.
+- **was-muhammad-illiterate-ummi**: the Hebrew *ummot ha-olam* parallel (attributed to unnamed scholars via note 2); Bukhari 65 and 5872 on the seal; al-Baji and the Hudaybiyya controversy.
+- **who-wrote-the-quran**: Ibn Ishaq on Bahira (Guillaume pp. 79-81) and Roggema 2009; the Birmingham radiocarbon announcement (22 July 2015); al-Baqillani's I'jaz al-Quran (Saqr edition) on style.
+
+## Expansion, ninth batch (1.78.10)
+
+- **race-in-quran-and-hadith**: Quran 35:27-28; Malcolm X's letter from Mecca (Autobiography, ch. 17, paraphrased); Umm Ayman (Ibn Sa'd; Muslim 1771); Ahmad Baba's Mi'raj al-Su'ud and the Hunwick-Harrak edition.
+- **camel-urine-hadith**: Bukhari 216 (the two graves); Bukhari 5678 (every disease has a cure).
+- **funeral-dhikr-dua**: Bukhari 7563 as the last hadith of the collection; Muslim 2732; Bukhari 6369; Bukhari 1343 on the martyrs of Uhud; Muslim 963 (Awf ibn Malik's prayer); Muslim 977 and 974-975.
+- **al-zutt-allegation**: Quran 29:65 and 43:12-13; the EI2 article "Zutt" on the Jats of Sind; the details of Muslim 450 (the search, Hira, the traces of fires).
+
+## Expansion, tenth batch (1.78.11)
+
+- **preservation-and-truth**: Quran 30:2-5, 21:33, 36:38-40; the Great Isaiah Scroll's date and agreement with the Masoretic text (cited to Tov).
+- **ridda-wars-abu-bakr-fadak**: Abu Bakr's first address (Guillaume p. 687); the Khalid and Malik ibn Nuwayra episode (al-Tabari); Ibn Kathir on 5:54; Ibn Sa'd on Abu Bakr's allowance; al-Baladhuri on Umar II and al-Ma'mun and Fadak; Bukhari 4986.
+- **crusades-5-facts**: Chazan 1987; Ibn al-Qalanisi on the synagogue (Gibb 1932); Goitein 1952 on the Geniza letters; Ibn Shaddad on Acre 1191 and the 1192 truce (Richards 2001).
+- **instruments-islamic-world**: al-Ijliyya in the Fihrist; al-Razi's Kitab al-Asrar and Ruska 1937; al-Farisi and Rashed's DSB article; al-Jazari (Hill 1974) and the crankshaft claim; Taqi al-Din's 1577 observatory and Sayılı 1960; Jai Singh's use of Ulugh Beg.
+
+## Expansion, eleventh batch (1.78.12)
+
+- **hijab-and-modesty**: 1 Corinthians 11:5-6; Quran 24:60; the UN fact-finding mission report (March 2024) on Mahsa Amini; France's Law 2004-228; Quebec's Bill 21.
+- **dome-inscriptions**: Süleyman's exterior tiles (Grabar 2006); Abd al-Malik's coin reform and Grierson 1960; Donner 1998.
+- **hanif-poets-and-musaylima**: Ibn Ishaq's four hanifs; Bukhari on Zayd at the Kaaba (attributed here to note 4) and Waraqa's wish (Bukhari 3); the EI2 article on Umayya ibn Abi al-Salt; the Musaylima letters (Guillaume pp. 649-650) and Quran 7:128; the Rabi'a and Mudar saying in al-Tabari.
+- **why-no-interest**: Muslim 1587 (six commodities); Bukhari 2305 (repaying with a better camel); Third Lateran canon 25 and Aquinas II-II q. 78; the Federal Shariat Court judgment of 28 April 2022.
+
+## Expansion, twelfth batch (1.78.13)
+
+- **buraq-and-miracle-stories**: Bukhari 3886 and Muslim 170 (Jabir on describing Jerusalem); Abu Bakr's reply (Guillaume p. 183, page to confirm); Ibn Hajar's count of opinions on the date of the Isra; the ring where the prophets tied their mounts (in Muslim 162a); 2 Corinthians 12:2-4; Quran 17:90-93; Hume, Enquiry, section 10.
+- **quran-preservation-reddit**: Sadeghi and Bergmann, Arabica 57 (2010), pages 343-436; van Putten's "grace of God" spelling argument as summarised here; the Tübingen fragment Ma VI 165 (press release of November 2014, 649-675); Bukhari 5003 (Anas on the four collectors); Sinai 2017, chapter 3 and the "closed by the 650s" summary.
+- **first-muslims-kept-the-faith**: the sun-and-moon saying (Guillaume p. 119); Bukhari 6459 and 2916; Hamza and Umar (Guillaume page ranges to confirm) and Bukhari 3684; Umm Habiba, Ubayd Allah ibn Jahsh and Ruqayya (Guillaume page numbers to confirm).
+- **universe-demands-creator**: Hoyle's 1949 "big bang" broadcast and Kragh 1996; Penzias and Wilson 1965; Quran 52:35-36; Hoyle, Engineering and Science (November 1981); Einstein, "Physics and Reality" (1936), wording of the comprehensibility remark; Ellis and Silk, Nature 516 (2014).
+
+## Expansion, thirteenth batch (1.78.14)
+
+- **sira-ibn-ishaq-hisham-tabari**: Guillaume's restored passages (cited to note 1, his introduction); al-Tabari's warning to readers in his introduction; the gharaniq reports in al-Tabari, Qadi Iyad and Ibn Kathir on 22:52; Schoeler 2011 and Görke and Schoeler 2008 on Urwa, and the "about sixty years" summary; Bukhari 4990 and 2699; the Constitution of Medina (Guillaume pp. 231-233).
+- **indonesia**: Marco Polo on Perlak (1292), the Malik al-Salih gravestone (1297) and the Malik Ibrahim tombstone (1419), all cited to Ricklefs; hajj quota "more than two hundred thousand"; Pesantren Law 18/2019; Islamic parties' minority share of the vote (Fealy and White 2008, KPU); Aisyiyah founded 1917; KUPI at Cirebon (2017) and Jepara (2022).
+- **natural-world-verses**: Bukhari 1043 (eclipse); Quran 27:88 in context; Quran 24:35; Tirmidhi 2429 and its gradings; al-Tabari on 55:22; Bucaille 1976; al-Shatibi's argument in al-Muwafaqat.
+- **quran-mysteries-in-the-stories**: the rebuke of Moses in Bukhari 122; Ezekiel 38-39 and Revelation 20:8; Abul Kalam Azad on Cyrus; Jacob of Serugh's homily and Gregory of Tours (chapter number to confirm); the solar and lunar years remark; Solomon in later lore; al-Tabari on 85:4 and Najran.
+
+## Expansion, fourteenth batch (1.78.15)
+
+- **apes-and-pigs-and-the-jews**: Quran 7:175-176, 25:44, 62:5; Matthew 23:33 and Philippians 3:2; Ibn Kathir on 7:163-166 and his grading of the Ibn Batta report; Mukhayriq (Guillaume pp. 241 and 384, pages to confirm) and Bukhari 3329 and 3812 on Abd Allah ibn Salam; Cohen 1994 and Goitein on Jews under Muslim rule; Granada 1066 and the Almohads.
+- **before-your-first-friday-prayer**: Abu Dawud 499 and Bukhari 604 (origin of the adhan); tayammum under Quran 5:6; Muslim 869 (short sermon); al-Hakim on al-Kahf and Abu Dawud 1047; Bukhari 935 (the hour on Friday); Muslim 875 (Sulayk).
+- **prophet-died-poisoning**: Bukhari 3667-3668 (Abu Bakr's address); Bukhari 3169 (the Jews of Khaybar questioned); Bukhari 4428 as a suspended report; Musnad Ahmad 3617 (Ibn Masud on martyrdom; numbering to confirm); Hensley's death in 1955 and Hood and Williamson 2008.
+- **magic-jinn-and-satan-hadiths**: the link between the spell and Surahs 113-114 (Ibn Hajar, Ibn Kathir); Bukhari 5017 and 6223; Quran 7:200; Ibn Taymiyya, Majmu al-Fatawa vol. 19 p. 10; the Mutazila on jinn; Muslim 2200 and 2230.
+
+## Expansion, fifteenth batch (1.78.16)
+
+- **scholars-who-shaped-islamic-study**: Bukhari 4970 (Ibn Abbas and Surah 110); Ibn Ishaq's Jewish and Christian informants and move to Baghdad (cited to Guillaume, note 2); Ibn Abi Dawud's Kitab al-Masahif (Jeffery 1937); Ibn Abi Usaybia's story of Hunayn and al-Mutawakkil; al-Kindi's cryptanalysis treatise and Al-Kadi 1992; the Latin Maqasid and "Algazel".
+- **uthman-copies**: the Mingana collection dates; Fedeli on the link between the Birmingham leaves and BnF Arabe 328(c); Altıkulaç's IRCICA editions (Topkapı 2007, Cairo later) and his dating; ijaza chains through Ibn al-Jazari; Ibn Abi Dawud on Ali and Musab ibn Sad, and Fath al-Bari vol. 9 p. 18.
+- **does-the-quran-allow-wife-beating**: the occasion reports in al-Tabari and al-Wahidi; Ata ibn Abi Rabah as quoted by Ibn al-Arabi; al-Shafii in al-Umm; Quran 30:21; Malaysia's Act 521 (1994), Indonesia's Law 23/2004 and the Moroccan Mudawwana (2004); Brown 2014, chapter number to confirm.
+- **companions-who-started-with-nothing**: Bukhari 3754, 1149, 447 and 119; Ibn Sad on Salman at al-Madain; Zayd ibn Haritha (Quran 33:37) and Bukhari 4250 on Usama's command.
+
+## Expansion, sixteenth batch (1.78.17)
+
+- **quran-science-claims-graded**: Bukhari 3208 and Muslim 2645 on the timings; Ibn Hazm on the sphericity of the earth (al-Fisal, citing 39:5); al-Mamun's measurement of the earth; al-Tabari on 51:47.
+- **revisionist-case-weighed**: Crone's 2008 openDemocracy piece (wording paraphrased; check the exact sentences); Cook's later position; Donner 1998; van Putten 2019; Thomas the Presbyter (Hoyland pp. 118-120, pages to confirm); King 2018 and Gibson 2017 on Petra.
+- **war-and-killing-in-islam**: Bukhari 3166 and 5778; Quran 4:29 and 8:61; Bukhari 2731-2732 and Quran 48:1; the growth of the community after Hudaybiyya (al-Zuhri's remark as reported by Ibn Ishaq); Muslim 96 (Usama).
+- **where-is-the-injil**: Eusebius, Ecclesiastical History 3.39.16 (Papias); Kloppenborg 2000 on Q; Quran 5:68 and 7:157; Bukhari 4485 and Quran 2:136.
+
+## Expansion, seventeenth batch (1.78.18)
+
+- **manuscript-transmission**: the Ramadan night-prayer recitation paragraph (no note); Metzger's and Ehrman's positions (Ehrman 2005); P52 and Nongbri 2005; the Comma Johanneum and Erasmus's third edition (1522).
+- **kharijites-and-takfir**: al-Shahrastani on the Azariqa and Nafi ibn al-Azraq (680s); Bukhari 3610 (Dhu al-Khuwaysira); Takfir wal-Hijra and the killing of al-Dhahabi in 1977 (Kepel 1985, chapter to confirm).
+- **hajj-rites-explained**: Bukhari 1755 (farewell circuit); Malcolm X's letter (Autobiography, chapter 17); GASTAT figures "between one and a half and two million"; Quran 2:203.
+- **quranic-stories-and-history**: the Ruwwafa inscription (166-169 CE; Bowersock 1983 pp. 96-97, pages to confirm); Procopius, Wars 1.20 on Abramus; Matthew 12:41 and Luke 11:32.
+
+## Expansion, eighteenth batch (1.78.19)
+
+- **jesus-not-god**: Hebrews 5:7-8; Mark 10:17-18 and Luke 18:18-19; Mark 12:28-29 with Deuteronomy 6:4; Acts 2:22.
+- **slavery-in-islam**: Abu Dawud 5156 and Ibn Majah 1625 (last words); Bukhari 2552 ("my young man"); Musnad Ahmad 2216 on the Badr ransom (numbering to confirm); Tunisia 1846 and the Zaytuna scholars (Montana 2013); the Ottoman ban of 1857 (Toledano 1982).
+- **paul-and-the-law**: Galatians 2:11-14; Acts 21:18-24; James 2:10 and 2:24; Luther's "epistle of straw" (1522 preface).
+- **crucifixion-quran**: Quran 3:54-55, 43:61 and 4:159 with al-Tabari; the Gospel of Barnabas manuscripts (Ragg 1907; Leirvik 2002, pages to confirm).
+
+## Expansion, nineteenth batch (1.78.20)
+
+- **shared-prophets**: Genesis 9:29 and Quran 29:14; Exodus 2:5-10 and Quran 28:7-9 and 66:11 (Asiya); Quran 4:164, 40:78 and 35:24.
+- **black-stone-and-kissing**: Bukhari 1608 (Muawiya and Ibn Abbas) and 1609 (Ibn Umar); the paragraph on the Qarmatian years (cited to Ibn al-Athir, note 3), including disruption of the pilgrimage in some years.
+- **five-pillars-explained**: Bukhari 645; Tirmidhi 413; state zakah collection in Saudi Arabia, Malaysia and Pakistan (no note); Quran 97 and Bukhari 2026; Bukhari 1503 (zakat al-fitr).
+- **islam-religion-of-peace**: Quran 25:63 and 41:34; Pew 2013, The World's Muslims, views of violence (figures to confirm by country).
+
+## Expansion, twentieth batch (1.78.21)
+
+- **raids-badr-and-the-conquest-of-mecca**: Abu Aziz ibn Umayr on the captives' bread (Guillaume p. 309); Bukhari 4280 (Sad ibn Ubada and the standard); the Ayla, Jarba and Adhruh treaties (Guillaume pp. 607-608).
+- **prophets-marriages-zaynab-and-others**: Bukhari 5212 (Sawda's night); Ibn Sad on Sawda, Zaynab bint Khuzayma and Umm Salama; Nasai 3254 on Umm Salama's reply; Quran 33:52 read with 33:50.
+
+## New articles: six graded articles from two transcripts (1.85.0)
+
+Derived from two spoken transcripts (a debate and a short video reply). The transcripts are auto-captioned speech, so nothing is quoted from them and no speaker, channel or event is named. Every claim they made was rechecked against a written source or dropped.
+
+Checked: Quran 3:3, 3:4, 3:50, 3:85, 5:43 to 5:48, 7:157, 9:111, 11:69, 15:9, 20:22, 27:12, 28:32, 51:24 and 61:6 (Saheeh International text, Quran.com API); Bible verses (World English Bible, bible-api.com): Matthew 1:23, 2:15, 2:23, 5:11 to 5:18, 10:39, 16:25, 23:2 to 3; Mark 7:19, 8:35; Luke 16:17; Acts 15:28 to 29; Galatians 3:10 to 13 and 3:24; Hebrews 8:13; Exodus 4:6 to 7 and 31:16 to 17; Genesis 18:1 to 3, 18:22 and 19:1; Deuteronomy 4:2, 21:23 and 27:26; Hosea 11:1; Isaiah 7:14 and 11:1; Jeremiah 25:11 to 12 and 29:10; Daniel 9:2 and 9:21 to 24. Irenaeus, Against Heresies 1.27.1 to 2 and 3.3.4 (Polycarp and Marcion), and the Pseudo-Clementine Homilies 2.38 to 39 and 3.47 to 50 (newadvent.org, Ante-Nicene Fathers). Babylonian Talmud, Bava Metzia 86b, on the three visitors as Michael, Gabriel and Raphael (Sefaria, Steinsaltz translation). Ibn Kathir on 5:47 to 48 (Shamela, vol. 3 pp. 127 to 128): the glosses of muhaymin as trustee, witness and judge, and "what agrees with it is true, what differs is false".
+
+Findings that shaped the articles:
+
+- The transcripts say the Quran confirms (musaddiq) only the Torah and not the Gospel. The verses show 5:46 describing the Gospel as confirming the Torah and 5:48 describing the Quran as confirming "what preceded it of the Scripture", so the claim is not used.
+- The transcript reply says the reading of 5:47 and the argument from 3:85 settle the matter. The article gives Ibn Kathir's two readings and says that 5:43 is the strongest verse for the other side.
+- The remark that the classical scholars never differed is overstated; the article says the outline holds and the detail does not.
+- The Pseudo-Clementine date and Jewish-Christian setting, the "shoot" suggestion for Matthew 2:23, and the Hebrew and Greek words in Isaiah 7:14 are stated from general knowledge and flagged in the notes.
+
+Not checked: the 1QpHab wording against a printed edition (paraphrase follows two online translations); Griffith, The Bible in Arabic, pp. 41 to 42, and Kashouh on the earliest Arabic Gospel manuscript (both read second-hand); a named scholar's wording on "confirming" and muhaymin was not used because no printed page was read.
+
+Images: eight in-text images and two featured images, all from Wikimedia Commons; no picture of a prophet. A first pick of a painting of the Sermon on the Mount and an etching of Abraham with the three visitors was dropped for that reason.
+
+Added with the other four (early-christians-charged-others-with-corrupting-scripture, quran-word-kitab-meanings, trinity-in-the-hebrew-bible-tested, matthew-fulfilment-quotations-checked):
+
+- Checked: Justin, Dialogue 71 to 73 (the Ezra, Jeremiah and Psalm 96 charges; newadvent.org); Origen, Against Celsus 2.27; Tertullian, Against Marcion 1.19 and 4.2; Irenaeus 1.26.2 (Ebionites); Quran 2:2, 2:85, 2:183, 2:282, 3:48, 3:93, 4:171, 5:110, 6:7, 6:91, 7:156, 13:39, 15:9, 19:30, 29:48, 43:4, 46:12, 56:77 to 78, 68:1, 85:21 to 22 and 112:1; Bukhari 3 on Waraqa (Hebrew letters; hadithunlocked.com); Sanhedrin 38b (Metatron; Sefaria); the Bible passages named in each entry (World English Bible).
+- Not checked on a primary page: the Arabic version of the Waraqa report (Bukhari 6982 is named by Seekers Guidance and Islamweb only); the Psalm 96 "from the wood" textual history, the Mark 16 and John 7:53 manuscript facts, the Hebrew and Greek words in Isaiah 7:14 and Isaiah 9:6, and the Greek form of Isaiah 42 in Matthew, all stated from general knowledge and flagged in the notes; the Babylonian Talmud Bava Batra 14b order of the prophets.
+- The debate was long and heated; the weak and mocking exchanges (insults, riddles, challenges for yes-or-no answers) were not used. The arguments kept are those that rest on a text that can be looked up.
+
+## New article (1.85.0)
+
+- **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The images are from Pexels because Commons refused requests; under D48 they stay as they are.
+
+## Images, batch 5 (1.86.0)
+
+Ten articles that were below the rule (about one in-text image per two entries, minimum two). Candidates were searched on Wikimedia Commons first (SSOT D48); where Commons was slow or had nothing fitting, a Pexels photograph was used. New Commons pictures: Penn Museum figurines from Beth Shemesh and the Tel Dan Stele (who-was-yahweh-archaeological-origins), the Judean pillar figurines in the Israel Museum (was-yahweh-one-of-many-gods). Pictures dropped on checking: Chinese and Mexican figurines offered by the Pexels search (wrong region for a Judean article); a Louvre Baal stele (tall crop cut the figure) replaced by a storm-cloud photograph with a caption about the shared storm imagery. Captions name a place only where the source does; the Sinai photograph near Nuweiba is captioned as not showing Kuntillet Ajrud.
+
