@@ -511,6 +511,32 @@ list and the Glossary index (`boi-glossary__list`) are never linked. A post's ow
 over the map; a name that contains a mapped phrase but means something else
 (`boi_cl_guards`) is matched and left alone.
 
+### D47. Title tags read "<page> | Best of Islam" and stay under 60 characters
+
+The owner's rule fixes the form of every title tag: the page title, a keyword
+or a short description first, then a spaced pipe and the site name, under 60
+characters in all. Most article headlines are longer than the 43 characters
+that leaves, so each seed entry with a long headline carries a `seo_title`,
+written keyword first; it is used while the article keeps its seeded
+headline, and an owner who renames an article gets a title fitted from the
+new headline. Glossary entries with long transliterated names carry the same
+field in their data. The front page leads with its focus and ends with the
+name. Any other view, such as search results, is cut at a word boundary. The
+headline on the page itself is unchanged. With Rank Math active the plugin
+owns titles (see `docs/SEO.md`), and its title template should follow the
+same form.
+
+### D48. New images come from Wikimedia Commons first
+
+The owner's rule for every image added from now on: Wikimedia Commons is
+searched first, and a public-domain or CC0 file is used whenever one suits
+the subject. Pexels is used only when Commons has nothing suitable, and
+Pixabay after that. When the Commons API refuses requests, its HTML file
+pages still carry the licence and author, and they are read there instead.
+The rule applies to new images only: images already bundled, whether from
+Commons, Pexels or Pixabay, stay as they are and are not swapped. Every image
+still follows D30, which means it is credited and never depicts a prophet.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,

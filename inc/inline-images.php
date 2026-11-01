@@ -2,7 +2,7 @@
 /**
  * Images from Pexels and Pixabay.
  *
- * Every article carries one featured image and two more in its text. The
+ * Every article carries one featured image and up to three more in its text. The
  * credits for all of them live in inc/images-data.json, keyed by article slug:
  * a "featured" entry for articles whose featured image comes from here, and an
  * "inline" list of two. Articles place the inline ones with the
@@ -71,13 +71,18 @@ function boi_render_figure( $attributes ) {
 
 	$size = function_exists( 'wp_getimagesize' ) ? wp_getimagesize( $file ) : getimagesize( $file );
 
+	// A visible caption describes the picture for readers and search engines;
+	// the credit line follows it. Images without a caption keep the credit only.
+	$caption = ! empty( $image['caption'] ) ? '<span class="boi-caption">' . esc_html( $image['caption'] ) . '</span> ' : '';
+
 	return sprintf(
-		'<figure class="boi-figure"><img src="%1$s" alt="%2$s" width="%3$d" height="%4$d" loading="lazy" decoding="async" /><figcaption class="boi-credit">%5$s</figcaption></figure>',
+		'<figure class="boi-figure"><img src="%1$s" alt="%2$s" width="%3$d" height="%4$d" loading="lazy" decoding="async" /><figcaption class="boi-credit">%6$s%5$s</figcaption></figure>',
 		esc_url( BOI_URI . '/assets/images/inline/' . $image['file'] ),
 		esc_attr( $image['alt'] ),
 		$size ? (int) $size[0] : 1200,
 		$size ? (int) $size[1] : 800,
-		boi_credit_html( sprintf( /* translators: 1: photographer, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $image['artist'], $image['licence'] ), $image['source'] )
+		boi_credit_html( sprintf( /* translators: 1: photographer, 2: licence. */ __( 'Image: %1$s. %2$s,', 'bestofislam' ), $image['artist'], $image['licence'] ), $image['source'] ),
+		$caption
 	);
 }
 

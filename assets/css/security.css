@@ -1,0 +1,110 @@
+/**
+ * Security tab of Theme Options. Uses the custom properties that
+ * admin-settings.css defines on .boi-settings, so it follows the palette.
+ */
+
+.boi-sec {
+	margin-block-start: 1.5rem;
+	background: var( --boi-surface );
+	border: 1px solid var( --boi-border );
+	border-radius: var( --boi-radius );
+	padding: 1.75rem 2rem;
+}
+
+.boi-sec > h2:first-of-type {
+	margin-block-start: 0;
+}
+
+.boi-sec h3 {
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: var( --boi-muted );
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-block: 1.5rem 0.5rem;
+}
+
+.boi-sec .description {
+	color: var( --boi-muted );
+}
+
+.boi-sec-bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	margin-block: 0.75rem;
+}
+
+.boi-sec-form {
+	margin: 0;
+}
+
+.boi-sec-status {
+	color: var( --boi-muted );
+	font-size: 0.8125rem;
+}
+
+.boi-sec-scroll {
+	max-block-size: 26rem;
+	overflow: auto;
+	border: 1px solid var( --boi-border );
+	border-radius: var( --boi-radius );
+}
+
+.boi-sec-scroll--tall {
+	max-block-size: 35rem;
+}
+
+.boi-sec-table {
+	border: 0;
+}
+
+.boi-sec-table td,
+.boi-sec-table th {
+	vertical-align: top;
+}
+
+.boi-sec-links {
+	display: flex;
+	gap: 0.625rem;
+	margin-block-start: 0.25rem;
+	font-size: 0.75rem;
+}
+
+.boi-sec-reason {
+	display: inline-block;
+	margin: 0 0.25rem 0.25rem 0;
+	padding: 0 0.5rem;
+	border-radius: 999px;
+	background: var( --boi-surface-muted );
+	color: var( --boi-ink );
+	font-size: 0.6875rem;
+	line-height: 1.125rem;
+}
+
+.boi-sec-list {
+	margin: 0.5rem 0 0.75rem 1.125rem;
+	list-style: disc;
+}
+
+.boi-sec-list li {
+	margin-block: 0.125rem;
+}
+
+.boi-sec .button-link-delete,
+.boi-sec .button.delete {
+	color: #b32d2e;
+	border-color: #b32d2e;
+}
+
+@media ( max-width: 782px ) {
+	.boi-sec {
+		padding: 1.25rem;
+	}
+
+	.boi-sec-bar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}

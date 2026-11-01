@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.78.0' );
+define( 'BOI_VERSION', '1.88.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -43,6 +43,7 @@ require_once BOI_DIR . '/inc/glossary-links.php';
 require_once BOI_DIR . '/inc/error-pages.php';
 require_once BOI_DIR . '/inc/housekeeping.php';
 require_once BOI_DIR . '/inc/security-headers.php';
+require_once BOI_DIR . '/inc/security.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.
@@ -349,6 +350,12 @@ function boi_maybe_install() {
 		function () {
 			// Another request may have finished while this one waited.
 			if ( get_option( 'boi_db_version' ) === BOI_VERSION ) {
+				return;
+			}
+
+			// Without the seed list the migrations below would be skipped for
+			// good once the version is recorded, so wait for a later request.
+			if ( function_exists( 'boi_seed_ready' ) && ! boi_seed_ready() ) {
 				return;
 			}
 

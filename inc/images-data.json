@@ -26,14 +26,24 @@
     "alt": "View of Nizwa Fort and the surrounding oasis against Hajar Mountains under a clear blue sky.",
     "artist": "HASHTAG SINGH",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/nizwa-fort-and-oasis-with-hajar-mountains-in-oman-35332037/"
+    "source": "https://www.pexels.com/photo/nizwa-fort-and-oasis-with-hajar-mountains-in-oman-35332037/",
+    "caption": "Nizwa Fort and its oasis in Oman. Khaybar was an oasis of forts and date palms in northern Arabia; the photograph is of Oman, not Khaybar."
    },
    {
     "file": "prophet-died-poisoning-2.avif",
     "alt": "Close-up view of a vibrant palm tree with ripe dates, capturing the essence of a sunny summer day.",
     "artist": "Book Space",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/lush-palm-tree-with-ripening-dates-in-summer-sun-37985192/"
+    "source": "https://www.pexels.com/photo/lush-palm-tree-with-ripening-dates-in-summer-sun-37985192/",
+    "caption": "Ripe dates on a palm. Khaybar was a date-growing oasis."
+   },
+   {
+    "file": "prophet-died-poisoning-3.avif",
+    "alt": "Roasted lamb served on a wooden platter with lime slices.",
+    "caption": "Roasted lamb on a wooden platter. In the reports the poison was put in a roasted sheep.",
+    "artist": "Jonathan Borba",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/meat-served-with-limes-19863261/"
    }
   ]
  },
@@ -159,14 +169,24 @@
     "alt": "An artistic sundial stands in focus with vibrant autumn leaves in the background, capturing a serene seasonal moment.",
     "artist": "Jan van der Wolf",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/elegant-sundial-against-autumn-foliage-33162484/"
+    "source": "https://www.pexels.com/photo/elegant-sundial-against-autumn-foliage-33162484/",
+    "caption": "A sundial among autumn leaves. Instruments for measuring time and the sky were central to the work this article describes."
    },
    {
     "file": "instruments-islamic-world-2.avif",
     "alt": "An Islamic astrolabe in a museum",
     "artist": "Gary Todd from Xinzheng, China",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Islamic_Astrolabe_(28417763470).jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Islamic_Astrolabe_(28417763470).jpg",
+    "caption": "An Islamic astrolabe in a museum. Muslim astronomers refined the astrolabe into a portable instrument for finding time, direction and the stars."
+   },
+   {
+    "file": "instruments-islamic-world-3.avif",
+    "alt": "A close-up of an antique celestial globe showing constellations.",
+    "caption": "An antique globe of the constellations. Observatories in the Islamic world scaled up the instruments used to chart the sky.",
+    "artist": "Vinícius Vieira ft",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-celestial-globe-with-constellation-mapping-29847626/"
    }
   ]
  },
@@ -178,14 +198,32 @@
     "alt": "Explore this stunning library with grand arches and elegant lighting for an atmospheric ambiance.",
     "artist": "Yaşar Başkurt",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/stunning-library-interior-with-grand-arches-36631590/"
+    "source": "https://www.pexels.com/photo/stunning-library-interior-with-grand-arches-36631590/",
+    "caption": "A grand arched library hall. The Islamic world built great libraries in Baghdad, Cordoba, Cairo, Fez and Timbuktu."
    },
    {
     "file": "seven-libraries-2.avif",
     "alt": "A medieval Islamic library, with scholars reading and shelves of books",
     "artist": "Yahya ibn Mahmud al-Wasiti",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:A_Library_in_Golden_Islamic_Age.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:A_Library_in_Golden_Islamic_Age.jpg",
+    "caption": "A medieval illustration of scholars reading among shelves of books. These libraries held the works of earlier peoples and new work in Arabic."
+   },
+   {
+    "file": "seven-libraries-3.avif",
+    "alt": "A page of an old Arabic manuscript from Timbuktu.",
+    "caption": "A page from the Timbuktu manuscripts, held in the Library of Congress. West African libraries kept thousands of Arabic manuscripts.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Loc_timbuktu_manuscripts_amm0001vs.jpg"
+   },
+   {
+    "file": "seven-libraries-4.avif",
+    "alt": "The Süleymaniye Mosque and its minaret in Istanbul.",
+    "caption": "The Süleymaniye Mosque in Istanbul. Its complex houses the Süleymaniye Library, a large collection of Islamic manuscripts.",
+    "artist": "Burak  Başgöze",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/suleymaniye-mosque-in-istanbul-15187548/"
    }
   ]
  },
@@ -197,14 +235,32 @@
     "alt": "A close-up of three vintage hardbound books stacked on a white surface, showcasing their aged textures.",
     "artist": "Ylanite Koppens",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/brown-hardbound-books-on-white-surface-7682364/"
+    "source": "https://www.pexels.com/photo/brown-hardbound-books-on-white-surface-7682364/",
+    "caption": "Three vintage hardbound books on a white surface. The Quran claims the same chain of prophets as the earlier scriptures."
    },
    {
     "file": "same-god-2.avif",
     "alt": "A stack of vintage books on a wooden table, capturing classic literary charm.",
     "artist": "Arturo A",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-shot-of-books-13745530/"
+    "source": "https://www.pexels.com/photo/close-up-shot-of-books-13745530/",
+    "caption": "A stack of old books on a table. Muslims and Christians share the names of many of the same prophets."
+   },
+   {
+    "file": "same-god-3.avif",
+    "alt": "The interior of the Mosque-Cathedral of Córdoba, Spain.",
+    "caption": "The Mosque-Cathedral of Córdoba, a building shared by two faiths. Arabic-speaking Christians call God Allah.",
+    "artist": "laurentgraphiste",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/mezquita-cordoba-andalusia-spain-4572094/"
+   },
+   {
+    "file": "same-god-4.avif",
+    "alt": "Rays of light through clouds at sunrise.",
+    "caption": "Light through clouds. Islam holds that God is one and unlike creation, and the same God sent every prophet.",
+    "artist": "Dodlostig",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/clouds-light-sky-a-ray-of-light-7681748/"
    }
   ]
  },
@@ -254,14 +310,24 @@
     "alt": "Lush olive groves beneath dramatic clouds in rural Morocco landscape.",
     "artist": "Tony Zohari",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/olive-groves-under-moody-moroccan-skies-36005582/"
+    "source": "https://www.pexels.com/photo/olive-groves-under-moody-moroccan-skies-36005582/",
+    "caption": "Olive trees under heavy clouds. The Gospels place Jesus on the Mount of Olives, and the Quran swears by the olive (95:1)."
    },
    {
     "file": "shared-prophets-2.avif",
     "alt": "The ascent to the summit of Mount Sinai, lithograph by David Roberts",
     "artist": "David Roberts",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Ascent_to_the_Summit_of_Sinai_-_1927.119_-_Cleveland_Museum_of_Art.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Ascent_to_the_Summit_of_Sinai_-_1927.119_-_Cleveland_Museum_of_Art.tif",
+    "caption": "The ascent to the summit of Mount Sinai, a lithograph by David Roberts. Moses is the prophet the Quran names most often."
+   },
+   {
+    "file": "shared-prophets-3.avif",
+    "alt": "Snow-covered Mount Ararat under a clear sky.",
+    "caption": "Mount Ararat. Genesis places the ark in the mountains of Ararat, and the Quran says it came to rest on al-Judi (11:44).",
+    "artist": "Muhammed Sami Atalay",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stunning-snow-capped-mount-ararat-in-clear-blue-sky-40107333/"
    }
   ]
  },
@@ -273,14 +339,32 @@
     "alt": "Antique Bible displayed on a wooden stand over a decorated cloth in a rustic church setting.",
     "artist": "Susanne Jutzeler, suju-foto",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/antique-bible-on-ornate-stand-in-church-38390475/"
+    "source": "https://www.pexels.com/photo/antique-bible-on-ornate-stand-in-church-38390475/",
+    "caption": "An antique Bible on a stand. Christians and Muslims read the same sayings of Jesus in the Gospel of John in different ways."
    },
    {
     "file": "verses-read-differently-2.avif",
     "alt": "An open Bible displaying chapters of Acts in Spanish and English, photographed from above.",
     "artist": "Jesus Vidal",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/open-pages-of-a-book-7899911/"
+    "source": "https://www.pexels.com/photo/open-pages-of-a-book-7899911/",
+    "caption": "An open Bible at the Acts of the Apostles, in Spanish and English. How a verse is read depends on the passage around it."
+   },
+   {
+    "file": "verses-read-differently-3.avif",
+    "alt": "A Holy Bible on a stand in a church.",
+    "caption": "A Bible on a church stand. Christians read John 1:1 as a statement that Jesus is God; Muslims point to the Quran's phrase \"a word from Him\" (3:45).",
+    "artist": "stempow",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/bible-church-wedding-christian-2110439/"
+   },
+   {
+    "file": "verses-read-differently-4.avif",
+    "alt": "An open Quran with wooden prayer beads.",
+    "caption": "An open Quran with prayer beads. Muslims read these verses against the Quran's own account of Jesus as a prophet and servant of God.",
+    "artist": "UMA media",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/quran-with-prayer-beads-on-green-surface-31024871/"
    }
   ]
  },
@@ -330,14 +414,24 @@
     "alt": "Explore the ancient Roman arch in Side, Turkey, showcasing historical ruins under a sunny sky.",
     "artist": "Max Renard",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ancient-arch-over-road-19045470/"
+    "source": "https://www.pexels.com/photo/ancient-arch-over-road-19045470/",
+    "caption": "A Roman arch at Side on the south coast of Turkey, in the region Paul travelled through."
    },
    {
     "file": "paul-and-the-law-2.avif",
     "alt": "Explore the ancient ruins of Perge, featuring historic columns and architecture in Antalya, Turkey.",
     "artist": "Engin Akyurt",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/the-ancient-city-of-perge-ruins-in-antalya-turkey-5503431/"
+    "source": "https://www.pexels.com/photo/the-ancient-city-of-perge-ruins-in-antalya-turkey-5503431/",
+    "caption": "The ruins of Perge in Turkey. Paul and Barnabas passed through Perge on their first journey (Acts 13:13, 14:25)."
+   },
+   {
+    "file": "paul-and-the-law-3.avif",
+    "alt": "Close-up of a Bible page showing scripture text and verses.",
+    "caption": "An open Bible; the page shown is from Genesis. In Matthew 5:17 to 18 Jesus says that not one stroke of the Law will pass away until all is accomplished.",
+    "artist": "Brett Jordan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-view-of-writings-on-a-page-of-a-holy-book-4747529/"
    }
   ]
  },
@@ -373,7 +467,7 @@
    {
     "file": "uthman-copies-2.avif",
     "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
-    "artist": "Unknown artistUnknown artist",
+    "artist": "Unknown artist",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg"
    }
@@ -444,14 +538,24 @@
     "alt": "Vibrant close-up of a globe displaying the Eurasian continent, featuring countries like China and Russia.",
     "artist": "Atlantic Ambience",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-globe-on-blur-background-12955818/"
+    "source": "https://www.pexels.com/photo/close-up-of-globe-on-blur-background-12955818/",
+    "caption": "A globe turned to the Eurasian continent. Most Muslims live in Asia and not in the Arab world."
    },
    {
     "file": "fastest-growing-religion-2.avif",
     "alt": "A vintage globe showcases Australia with a sepia world map in the background, offering a classic exploration theme.",
     "artist": "Mirko Fabian",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/a-globe-showing-australia-12167976/"
+    "source": "https://www.pexels.com/photo/a-globe-showing-australia-12167976/",
+    "caption": "A vintage globe with a sepia world map behind it. The projections point to Muslims and Christians reaching parity in the next decades."
+   },
+   {
+    "file": "fastest-growing-religion-3.avif",
+    "alt": "Rows of worshippers inside Baitul Mukarram Mosque in Dhaka, viewed from above.",
+    "caption": "Worshippers in rows inside Baitul Mukarram Mosque in Dhaka, Bangladesh. The world's Muslim population grew by 347 million in a single decade.",
+    "artist": "Ikhlas Al Fahim",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/prayer-gathering-at-baitul-mukarram-mosque-35266860/"
    }
   ]
  },
@@ -463,14 +567,24 @@
     "alt": "Close-up of elegant calligraphy handwriting using a fountain pen on paper, showcasing artistic lettering.",
     "artist": "Miguel Á. Padriñán",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/black-fountain-pen-on-printing-paper-114107/"
+    "source": "https://www.pexels.com/photo/black-fountain-pen-on-printing-paper-114107/",
+    "caption": "Handwriting in elegant calligraphy. Algebra, algorithm and many other English words come from Arabic."
    },
    {
     "file": "arabic-words-science-2.avif",
     "alt": "Detailed view of Arabic calligraphy in a religious text, highlighting intricate script and craftsmanship.",
     "artist": "Disillusion AD",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-in-religious-text-35205765/"
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-in-religious-text-35205765/",
+    "caption": "Arabic calligraphy in a religious text. Arabic gave English words through science as well as religion."
+   },
+   {
+    "file": "arabic-words-science-3.avif",
+    "alt": "Copper distillery apparatus with shiny copper bowls.",
+    "caption": "Copper distillation apparatus. The alembic and the word alcohol (al-kuhl) entered European languages through Arabic chemistry.",
+    "artist": "Tiago Antonio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/copper-distillery-equipment-with-copper-bowls-28792576/"
    }
   ]
  },
@@ -501,14 +615,24 @@
     "alt": "High-contrast black and white photo of a half moon in the night sky.",
     "artist": "Arian Fernandez",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/half-moon-in-dark-sky-astronomy-photo-37779047/"
+    "source": "https://www.pexels.com/photo/half-moon-in-dark-sky-astronomy-photo-37779047/",
+    "caption": "A half moon in the night sky. Many craters on the near side carry the Latinised names of Muslim astronomers."
    },
    {
     "file": "moon-craters-2.avif",
     "alt": "Detailed close-up of a full moon with visible craters and surface texture against a black background.",
     "artist": "Sarowar Hussain",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/full-moon-in-close-up-view-13331099/"
+    "source": "https://www.pexels.com/photo/full-moon-in-close-up-view-13331099/",
+    "caption": "A full moon with its craters visible. Albategnius is named for al-Battani and Alhazen for Ibn al-Haytham."
+   },
+   {
+    "file": "moon-craters-3.avif",
+    "alt": "High-resolution view of the Moon's craters and surface textures.",
+    "caption": "The Moon's cratered surface. Craters named for Muslim astronomers lie across the near side and, in al-Biruni's case, on the far side.",
+    "artist": "Antonio  Moura",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/craters-on-moon-surface-7615732/"
    }
   ]
  },
@@ -520,14 +644,24 @@
     "alt": "The Baiturrahman Grand Mosque in Banda Aceh, Indonesia",
     "artist": "ZULMAHDI",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/mesjid-raya-baiturrahman-aceh-2537403/"
+    "source": "https://pixabay.com/photos/mesjid-raya-baiturrahman-aceh-2537403/",
+    "caption": "The Baiturrahman Grand Mosque in Banda Aceh, Indonesia. More Muslims live in Indonesia than in any other country."
    },
    {
     "file": "indonesia-2.avif",
     "alt": "A mosque in Indonesia with a domed roof and two minarets",
     "artist": "jufriderwotubun",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/mosque-religion-architecture-2465367/"
+    "source": "https://pixabay.com/photos/mosque-religion-architecture-2465367/",
+    "caption": "A mosque in Indonesia with a domed roof and two minarets. Indonesian Muslims pray in Arabic and speak Indonesian."
+   },
+   {
+    "file": "indonesia-3.avif",
+    "alt": "The grand dome and architecture of Istiqlal Mosque in Jakarta.",
+    "caption": "Istiqlal Mosque in Jakarta. Its name means independence, and it is Indonesia's national mosque.",
+    "artist": "Irsyad Rifqi",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/istiqlal-mosque-dome-in-jakarta-indonesia-37221142/"
    }
   ]
  },
@@ -563,7 +697,7 @@
    {
     "file": "kaaba-witnesses-2.avif",
     "alt": "A photograph of the Sacred Mosque and the Kaaba at Mecca in 1889",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Mekke-1889.jpg"
    }
@@ -577,14 +711,24 @@
     "alt": "View of the iconic Dome of the Rock through ancient arches in Jerusalem under a clear blue sky.",
     "artist": "Jan Venter",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/low-angle-view-of-arches-and-gold-cupola-against-blue-sky-6477399/"
+    "source": "https://www.pexels.com/photo/low-angle-view-of-arches-and-gold-cupola-against-blue-sky-6477399/",
+    "caption": "The Dome of the Rock seen through ancient arches in Jerusalem. The inscriptions inside it are dated to 72 AH."
    },
    {
     "file": "dome-inscriptions-2.avif",
     "alt": "Jerusalem seen from the Mount of Olives with the Dome of the Rock, lithograph by David Roberts",
     "artist": "David Roberts",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Jerusalem_from_the_Mount_of_Olives_-_1927.118_-_Cleveland_Museum_of_Art.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Jerusalem_from_the_Mount_of_Olives_-_1927.118_-_Cleveland_Museum_of_Art.tif",
+    "caption": "Jerusalem seen from the Mount of Olives, with the Dome of the Rock lit by the sun. The inscriptions address Christians in the city of the Christian holy places."
+   },
+   {
+    "file": "dome-inscriptions-3.avif",
+    "alt": "Close-up of intricate mosaic details on the Dome of the Rock.",
+    "caption": "Blue tilework on the outside of the Dome of the Rock, added in later centuries. The inscriptions discussed here are inside the building.",
+    "artist": "Thắng-Nhật Trần",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-the-facade-of-the-dome-of-the-rock-in-the-old-city-of-jerusalem-17646472/"
    }
   ]
  },
@@ -615,14 +759,32 @@
     "alt": "A detailed close-up image showing various vintage coins scattered on a wooden surface, capturing their unique textures and engravings.",
     "artist": "Tolga deniz Aran",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-assorted-vintage-coins-on-wooden-surface-35431751/"
+    "source": "https://www.pexels.com/photo/close-up-of-assorted-vintage-coins-on-wooden-surface-35431751/",
+    "caption": "Antique coins on a wooden surface. The jizya was assessed in coin, in rates set by ability to pay."
    },
    {
     "file": "jizya-2.avif",
     "alt": "A gold dinar of the caliph Abd al-Malik, minted in 697–98",
     "artist": "Not credited",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Gold_dinar_of_Abd_al-Malik_697-98.png"
+    "source": "https://commons.wikimedia.org/wiki/File:Gold_dinar_of_Abd_al-Malik_697-98.png",
+    "caption": "A gold dinar of the caliph Abd al-Malik, minted in 697–98. The state's revenues and payments were reckoned in coin."
+   },
+   {
+    "file": "jizya-3.avif",
+    "alt": "The Dome of the Rock and surrounding buildings in Jerusalem.",
+    "caption": "Jerusalem, called Aelia in the charter of ʿUmar, which set the terms of the jizya for its Christians in 15 AH.",
+    "artist": "Leon Natan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/photo-of-historic-architecture-6851494/"
+   },
+   {
+    "file": "jizya-4.avif",
+    "alt": "The Damascus Gate and city wall of the Old City of Jerusalem.",
+    "caption": "The wall of Jerusalem's Old City. Muslim rulers owed protection to those who paid the jizya, and returned it when they could not give it.",
+    "artist": "2427999",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/israel-jerusalem-old-city-3146450/"
    }
   ]
  },
@@ -653,14 +815,24 @@
     "alt": "An ancient stone room with arched doorways and windows, casting dramatic shadows.",
     "artist": "Sami  Aksu",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/interior-carved-in-rock-formation-13211967/"
+    "source": "https://www.pexels.com/photo/interior-carved-in-rock-formation-13211967/",
+    "caption": "An old stone room with arched doorways. Classical jurists argued over the penalty for leaving the faith."
    },
    {
     "file": "apostasy-in-islam-2.avif",
     "alt": "A half-open blue door illuminated by a dramatic red light reveals a unique interior atmosphere.",
     "artist": "Roman Ska",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/red-room-seen-behind-a-half-opened-blue-door-14326109/"
+    "source": "https://www.pexels.com/photo/red-room-seen-behind-a-half-opened-blue-door-14326109/",
+    "caption": "A half-open blue door in red light. The Quran says there is no compulsion in religion (2:256)."
+   },
+   {
+    "file": "apostasy-in-islam-3.avif",
+    "alt": "A dark room with a door slightly ajar and a line of light.",
+    "caption": "A door left ajar. Some modern scholars, including a Grand Mufti of Egypt, hold that leaving belief alone carries no worldly penalty.",
+    "artist": "lalesh aldarwish",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/steel-door-handle-on-door-147634/"
    }
   ]
  },
@@ -672,14 +844,24 @@
     "alt": "Peaceful landscape featuring three wooden crosses against a clear sky.",
     "artist": "Piotr Arnoldes",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/cross-on-grass-in-tilt-shift-lens-7156023/"
+    "source": "https://www.pexels.com/photo/cross-on-grass-in-tilt-shift-lens-7156023/",
+    "caption": "Three crosses on a hill. The Quran answers the claim of those who said they killed the Messiah (4:157)."
    },
    {
     "file": "crucifixion-quran-2.avif",
     "alt": "The Stone of Unction in the Church of the Holy Sepulchre, lithograph by David Roberts",
     "artist": "David Roberts",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Stone_of_Unction,_Holy_Sepulchre_-_1927.87_-_Cleveland_Museum_of_Art.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Stone_of_Unction,_Holy_Sepulchre_-_1927.87_-_Cleveland_Museum_of_Art.tif",
+    "caption": "The Stone of Unction in the Church of the Holy Sepulchre, a lithograph. Historians treat the crucifixion as well attested."
+   },
+   {
+    "file": "crucifixion-quran-3.avif",
+    "alt": "The Basilica of the Holy Sepulchre in Jerusalem.",
+    "caption": "The Church of the Holy Sepulchre in Jerusalem, built over the traditional site of the crucifixion and burial of Jesus.",
+    "artist": "pompi",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/basilica-of-the-holy-sepulchre-2070814/"
    }
   ]
  },
@@ -697,14 +879,24 @@
     "alt": "Intricate dome design in an Isparta mosque showcasing Islamic art and architecture.",
     "artist": "Konevi",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ornate-mosque-dome-interior-in-isparta-36315018/"
+    "source": "https://www.pexels.com/photo/ornate-mosque-dome-interior-in-isparta-36315018/",
+    "caption": "A mosque dome in Isparta, Türkiye, with geometric ornament. Islamic art points to the one God without picturing Him."
    },
    {
     "file": "six-articles-of-faith-2.avif",
     "alt": "Beautifully intricate dome ceiling in a mosque with detailed Islamic art and architecture.",
     "artist": "Ahmet Polat",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ceiling-in-mosque-17081914/"
+    "source": "https://www.pexels.com/photo/ceiling-in-mosque-17081914/",
+    "caption": "A mosque ceiling with detailed ornament. The pattern repeats without a centre and without a figure."
+   },
+   {
+    "file": "six-articles-of-faith-3.avif",
+    "alt": "Old leather-bound books on a shelf.",
+    "caption": "Old books on a shelf. The third article of faith is belief in the books God revealed, the Torah, the Psalms, the Gospel and the Quran.",
+    "artist": "garten-gg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/christmas-background-book-read-old-1659717/"
    }
   ]
  },
@@ -722,14 +914,32 @@
     "alt": "A mysterious foggy winter scene with a dirt road winding through a forest.",
     "artist": "Anton Atanasov",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/fog-in-forest-in-winter-18634896/"
+    "source": "https://www.pexels.com/photo/fog-in-forest-in-winter-18634896/",
+    "caption": "A dirt road winding through a foggy forest. Muslims believe God knows the end of every path, and each person still walks it by choice."
    },
    {
     "file": "fate-and-free-will-2.avif",
     "alt": "Explore a serene autumn forest blanketed in fog, creating a mysterious and tranquil atmosphere.",
     "artist": "Karel Drozda",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/misty-autumn-forest-path-with-dense-fog-29295922/"
+    "source": "https://www.pexels.com/photo/misty-autumn-forest-path-with-dense-fog-29295922/",
+    "caption": "An autumn forest in fog. Belief in qadar, God's decree, is one of the six articles of faith."
+   },
+   {
+    "file": "fate-and-free-will-3.avif",
+    "alt": "A path forking into two glowing roads in a forest, with a signpost.",
+    "caption": "A fork in the road. The Quran treats each person as responsible for the choice he makes.",
+    "artist": "PixxlTeufel",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/new-year-decision-path-signpost-5291766/"
+   },
+   {
+    "file": "fate-and-free-will-4.avif",
+    "alt": "The Milky Way over silhouetted trees at night.",
+    "caption": "The night sky. The Quran points to the order of creation as a sign that nothing is left to chance.",
+    "artist": "Pexels",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/dark-milky-way-night-silhouette-1867202/"
    }
   ]
  },
@@ -772,14 +982,24 @@
     "alt": "A black and white view of the historic courthouse facade in Hampton, Virginia, showcasing classic architecture.",
     "artist": "Phil Evenden",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/historic-courthouse-facade-in-hampton-virginia-36595111/"
+    "source": "https://www.pexels.com/photo/historic-courthouse-facade-in-hampton-virginia-36595111/",
+    "caption": "A courthouse façade in Hampton, Virginia. Every legal tradition has courts and codes, and sharia is a body of legal reasoning more than a single code."
    },
    {
     "file": "sharia-and-hudud-2.avif",
     "alt": "Front view of the iconic US Supreme Court building showcasing its grand columns and classic architecture.",
     "artist": "Guohua Song",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/majestic-view-of-the-us-supreme-court-building-39241857/"
+    "source": "https://www.pexels.com/photo/majestic-view-of-the-us-supreme-court-building-39241857/",
+    "caption": "The US Supreme Court building. Sharia states differ in how they treat free speech and minorities, as legal systems everywhere do."
+   },
+   {
+    "file": "sharia-and-hudud-3.avif",
+    "alt": "A gavel and law books on a wooden table.",
+    "caption": "A gavel and law books. Islamic jurists set strict proof for the hudud and dropped the penalty where doubt remained.",
+    "artist": "succo",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/hammer-books-law-dish-lawyer-620011/"
    }
   ]
  },
@@ -797,14 +1017,32 @@
     "alt": "Volunteers distribute water and supplies to people outdoors, promoting community support and kindness.",
     "artist": "RDNE Stock project",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/volunteers-giving-donations-6646924/"
+    "source": "https://www.pexels.com/photo/volunteers-giving-donations-6646924/",
+    "caption": "Volunteers hand out water and supplies outdoors. Islam joins worship to care for those in need."
    },
    {
     "file": "quranic-ethics-2.avif",
     "alt": "Group of volunteers providing food and aid to a person in wheelchair outdoors.",
     "artist": "RDNE Stock project",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/volunteers-happily-assisting-an-old-man-on-a-wheelchair-for-charity-6646916/"
+    "source": "https://www.pexels.com/photo/volunteers-happily-assisting-an-old-man-on-a-wheelchair-for-charity-6646916/",
+    "caption": "Volunteers give food and aid to a man in a wheelchair. The Quran presses the duty to protect the weak."
+   },
+   {
+    "file": "quranic-ethics-3.avif",
+    "alt": "A statue of Lady Justice holding scales.",
+    "caption": "Lady Justice with scales. The Quran asks for justice even against yourself, your parents and your relatives (4:135).",
+    "artist": "dp singh Bhullar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-lady-justice-statue-with-scales-30483132/"
+   },
+   {
+    "file": "quranic-ethics-4.avif",
+    "alt": "Close-up of an old hand and a young hand together.",
+    "caption": "Old and young hands. The Quran puts honour for parents next to the worship of God (17:23).",
+    "artist": "KİRİK SÜLEYMAN",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/hands-against-soil-18574051/"
    }
   ]
  },
@@ -847,14 +1085,32 @@
     "alt": "A beautiful desert scene featuring a caravan of camels traveling across sand dunes under a vast sky.",
     "artist": "Chez Merzouga Desert",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/people-riding-camels-at-the-desert-8227510/"
+    "source": "https://www.pexels.com/photo/people-riding-camels-at-the-desert-8227510/",
+    "caption": "A caravan of camels crossing the desert. Khadija was a merchant who sent caravans out with her goods."
    },
    {
     "file": "women-in-the-prophets-life-2.avif",
     "alt": "Camel caravan silhouetted against a stunning sunset on the sandy dunes.",
     "artist": "mohamed aouni",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/desert-camel-caravan-silhouetted-at-sunset-33566027/"
+    "source": "https://www.pexels.com/photo/desert-camel-caravan-silhouetted-at-sunset-33566027/",
+    "caption": "A camel caravan at sunset. Aminah, the Prophet's mother, died on the road back from Medina when he was a small child."
+   },
+   {
+    "file": "women-in-the-prophets-life-3.avif",
+    "alt": "Date palm trees under a clear blue sky.",
+    "caption": "Date palms. Mariya, the mother of Ibrahim, came from Egypt to the oasis city of Medina.",
+    "artist": "Mohamed Khettouch",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/lush-oasis-of-date-palm-trees-in-morocco-30544112/"
+   },
+   {
+    "file": "women-in-the-prophets-life-4.avif",
+    "alt": "A woman holding an old book.",
+    "caption": "A woman with an old book. Aisha was among the most important transmitters of knowledge in her generation.",
+    "artist": "Karolina Grabowska www.kaboompics.com",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/girl-holding-an-old-closed-book-6387/"
    }
   ]
  },
@@ -872,14 +1128,24 @@
     "alt": "Captivating image of the historic abandoned mud-brick structures in Kharanaq, Yazd Province, Iran.",
     "artist": "Navid Mehraban",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/an-old-ruined-building-16496710/"
+    "source": "https://www.pexels.com/photo/an-old-ruined-building-16496710/",
+    "caption": "The mud-brick ruins of Kharanaq in Iran. Salman came to Arabia from Persia."
    },
    {
     "file": "companions-who-started-with-nothing-2.avif",
     "alt": "Explore the historic mud-brick architecture of Kharanaq in Yazd Province, Iran.",
     "artist": "Navid Mehraban",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/old-buildings-in-a-desert-16496711/"
+    "source": "https://www.pexels.com/photo/old-buildings-in-a-desert-16496711/",
+    "caption": "Old mud-brick architecture in Iran, the land Salman al-Farisi left in search of the truth."
+   },
+   {
+    "file": "companions-who-started-with-nothing-3.avif",
+    "alt": "A town in the desert beneath mountains.",
+    "caption": "A town in the desert beneath mountains. Many of the first Muslims started with no wealth or standing.",
+    "artist": "naturfreund_pics",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/desert-city-africa-nature-landscape-4463297/"
    }
   ]
  },
@@ -947,14 +1213,24 @@
     "alt": "Ancient stone ruins with columns in Turkey, captured in black and white for a timeless feel.",
     "artist": "Ayşegül  Aytören",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/grayscale-photo-of-ruins-13507834/"
+    "source": "https://www.pexels.com/photo/grayscale-photo-of-ruins-13507834/",
+    "caption": "Grayscale ruins of an ancient city in Turkey. Slavery was a feature of the ancient world in which Islam arose."
    },
    {
     "file": "slavery-in-islam-2.avif",
     "alt": "Explore the ancient ruins of Patara in Turkey, showcasing historic stonework and columns.",
     "artist": "Sami TÜRK",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ruins-of-the-ancient-city-of-patara-turkey-14816156/"
+    "source": "https://www.pexels.com/photo/ruins-of-the-ancient-city-of-patara-turkey-14816156/",
+    "caption": "The ruins of Patara in Turkey, a city of the Roman world, where slavery was common."
+   },
+   {
+    "file": "slavery-in-islam-3.avif",
+    "alt": "A rusty metal chain wrapped around a weathered post.",
+    "caption": "A rusty chain wrapped around a post. Muslim scholars today hold slavery to be forbidden.",
+    "artist": "Engin Akyurt",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-metal-chain-9756168/"
    }
   ]
  },
@@ -1072,14 +1348,32 @@
     "alt": "Close-up view of a laboratory microscope with selective focus, ideal for scientific use.",
     "artist": "Vladimir Srajber",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-a-microscope-13949979/"
+    "source": "https://www.pexels.com/photo/close-up-of-a-microscope-13949979/",
+    "caption": "Close-up of a laboratory microscope. The article grades each claim by what the evidence supports."
    },
    {
     "file": "quran-science-claims-graded-2.avif",
     "alt": "A series of microscopes on a lab table, ideal for scientific research and education.",
     "artist": "Vladimir Srajber",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/microscopes-on-the-floor-15290006/"
+    "source": "https://www.pexels.com/photo/microscopes-on-the-floor-15290006/",
+    "caption": "Microscopes on a laboratory table. A claim counts only as far as it can be tested."
+   },
+   {
+    "file": "quran-science-claims-graded-3.avif",
+    "alt": "Raindrops hitting a wet pavement and making ripples.",
+    "caption": "Raindrops. The Quran describes rain and the cycle of water, an accurate description, though not a unique one.",
+    "artist": "brazil topno",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/water-splash-on-ground-9604806/"
+   },
+   {
+    "file": "quran-science-claims-graded-4.avif",
+    "alt": "Depiction of the solar system with the sun and planets in a row.",
+    "caption": "The sun and planets. The Quran's verse on each body moving in its own orbit (21:33) is read as fair, and no more.",
+    "artist": "Zelch Csaba",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/sun-and-planets-12491775/"
    }
   ]
  },
@@ -1122,14 +1416,24 @@
     "alt": "A striking ancient rock-cut tomb set within a rugged desert landscape.",
     "artist": "Lachcim Kejarko",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/brown-rock-formation-under-blue-sky-5819247/"
+    "source": "https://www.pexels.com/photo/brown-rock-formation-under-blue-sky-5819247/",
+    "caption": "A rock-cut tomb in a rugged desert landscape. Rock-cut tombs of this kind are the setting scholars link with Thamud."
    },
    {
     "file": "quranic-stories-and-history-2.avif",
     "alt": "Capture of the Obelisk Tomb in Petra, Jordan with stunning evening sky.",
     "artist": "Francesco Ungaro",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/obelisk-tomb-in-petra-15997880/"
+    "source": "https://www.pexels.com/photo/obelisk-tomb-in-petra-15997880/",
+    "caption": "The Obelisk Tomb at Petra, Jordan. Ad and Iram have not been securely placed on any map, and the sites travellers photograph, like this one, belong to later peoples."
+   },
+   {
+    "file": "quranic-stories-and-history-3.avif",
+    "alt": "Aerial view of Masjid al-Haram and the Kaaba in Mecca with pilgrims gathered for prayer.",
+    "caption": "Masjid al-Haram and the Kaaba from the air. The Quran's chapter of the Elephant recalls an army that marched on Mecca.",
+    "artist": "Earth Photart",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/aerial-view-of-masjid-al-haram-in-mecca-saudi-arabia-35332385/"
    }
   ]
  },
@@ -1197,14 +1501,24 @@
     "alt": "Historic Tourbillon Castle atop a rocky hill in Sion, Switzerland.",
     "artist": "Jean-Paul Wettstein",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/de-tourbillon-castle-on-rocks-on-hill-in-sion-in-switzerland-20732487/"
+    "source": "https://www.pexels.com/photo/de-tourbillon-castle-on-rocks-on-hill-in-sion-in-switzerland-20732487/",
+    "caption": "Tourbillon Castle in Sion, Switzerland, a medieval hilltop fortress. The word crusade is used far more widely than the history supports."
    },
    {
     "file": "crusades-5-facts-2.avif",
     "alt": "A medieval illustration of the Crusaders' conquest of Jerusalem",
     "artist": "Anonymus",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Die_Eroberung_Jerusalems.jpeg"
+    "source": "https://commons.wikimedia.org/wiki/File:Die_Eroberung_Jerusalems.jpeg",
+    "caption": "A medieval illustration of the Crusaders' conquest of Jerusalem in 1099."
+   },
+   {
+    "file": "crusades-5-facts-3.avif",
+    "alt": "The Sea Castle at Sidon on the coast of Lebanon.",
+    "caption": "The Sea Castle at Sidon (Saida) in Lebanon, a fortress that the Crusaders built on the coast in the thirteenth century.",
+    "artist": "mesuttoker",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/saida-lebanon-beirut-castle-2389745/"
    }
   ]
  },
@@ -1297,14 +1611,32 @@
     "alt": "An elderly man participates in wudu at an ancient Şadırvan in Kayseri, Türkiye. Serenity in traditional rituals.",
     "artist": "mehmet aramaz",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/elderly-man-performing-wudu-at-fountain-in-kayseri-39692129/"
+    "source": "https://www.pexels.com/photo/elderly-man-performing-wudu-at-fountain-in-kayseri-39692129/",
+    "caption": "An elderly man washes for prayer at a fountain in an old courtyard in Kayseri, Türkiye. Washing comes before the Friday prayer."
    },
    {
     "file": "before-your-first-friday-prayer-2.avif",
     "alt": "An elderly man performs ablution at a mosque fountain, showcasing cultural traditions.",
     "artist": "Alinson Torres",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/elderly-man-performing-ablution-at-mosque-fountain-34891808/"
+    "source": "https://www.pexels.com/photo/elderly-man-performing-ablution-at-mosque-fountain-34891808/",
+    "caption": "An elderly man performs ablution at a mosque fountain, the step that comes before entering the prayer hall."
+   },
+   {
+    "file": "before-your-first-friday-prayer-3.avif",
+    "alt": "Aerial view of a large congregation praying inside an ornate mosque.",
+    "caption": "Worshippers pray in rows inside a large mosque. At the Friday prayer people stand shoulder to shoulder, in lines and not in pews.",
+    "artist": "Mehmet Ayberk Erol",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/large-congregation-during-prayer-inside-ornate-mosque-29960370/"
+   },
+   {
+    "file": "before-your-first-friday-prayer-4.avif",
+    "alt": "A minaret of a mosque against a clear blue sky.",
+    "caption": "A minaret, from which the call to prayer is made before the Friday sermon.",
+    "artist": "nis_ vagabond",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/minaret-with-speakers-19352122/"
    }
   ]
  },
@@ -1322,14 +1654,24 @@
     "alt": "Aerial view of the Kaaba in Mecca, Saudi Arabia, with thousands of pilgrims during Hajj season.",
     "artist": "Yasir Gürbüz",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/pilgrims-around-al-kaaba-12721555/"
+    "source": "https://www.pexels.com/photo/pilgrims-around-al-kaaba-12721555/",
+    "caption": "An aerial view of the Kaaba in Mecca, with thousands of pilgrims circling it in tawaf."
    },
    {
     "file": "hajj-rites-explained-2.avif",
     "alt": "A camel caravan travelling to Mecca in 1910",
     "artist": "American Colony (Jerusalem). Photo Dept., photographer",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Camel_Caravan_to_Mecca,_1910.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:Camel_Caravan_to_Mecca,_1910.tif",
+    "caption": "A camel caravan travelling to Mecca in 1910. Pilgrims once made the journey this way."
+   },
+   {
+    "file": "hajj-rites-explained-3.avif",
+    "alt": "Thousands of pilgrims at Mount Arafat during Hajj.",
+    "caption": "Pilgrims at Mount Arafat. Standing there from noon until sunset is the central rite of Hajj.",
+    "artist": "Yasir Gürbüz",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/people-walking-beside-the-rocky-mountain-12765598/"
    }
   ]
  },
@@ -1397,14 +1739,32 @@
     "alt": "An overhead shot of a vintage book, ornate quill pen, and ink holder on a rustic wooden surface.",
     "artist": "Atlantic Ambience",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/silver-ink-pen-on-brown-wooden-surface-beside-an-antique-book-12932839/"
+    "source": "https://www.pexels.com/photo/silver-ink-pen-on-brown-wooden-surface-beside-an-antique-book-12932839/",
+    "caption": "A vintage book, quill and ink holder on a wooden table. These seven scholars shaped how Islam's texts are written, read and studied."
    },
    {
     "file": "scholars-who-shaped-islamic-study-2.avif",
     "alt": "A page of a manuscript of Ibn Sina's Canon of Medicine",
-    "artist": "Unknown authorUnknown author",
+    "artist": "Unknown author",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Pharmacy,_canon_of_avicenna_manuscript.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Pharmacy,_canon_of_avicenna_manuscript.jpg",
+    "caption": "A page of a manuscript of Ibn Sina's Canon of Medicine. Scholars of the Islamic world wrote in medicine and philosophy as well as law and theology."
+   },
+   {
+    "file": "scholars-who-shaped-islamic-study-3.avif",
+    "alt": "A man in a library holding books.",
+    "caption": "A reader in a library. Hunayn ibn Ishaq and others translated the works of earlier peoples into Arabic.",
+    "artist": "Defrino Maasy",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/man-holding-books-in-an-indonesian-library-40101573/"
+   },
+   {
+    "file": "scholars-who-shaped-islamic-study-4.avif",
+    "alt": "An open decorated Quran page.",
+    "caption": "An open Quran. Ibn Abbas, Abu Dawud, al-Ashʿarī and al-Ghazālī each shaped how the Quran, hadith and theology were studied.",
+    "artist": "MdjihadHossen",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/holy-quran-islamic-quran-holy-8519135/"
    }
   ]
  },
@@ -1619,17 +1979,27 @@
   "inline": [
    {
     "file": "relationship-with-god-1.avif",
-    "alt": "A man at prayer with raised hands",
-    "artist": "aamiraimer",
+    "alt": "A swan and cygnets on still water in golden morning mist.",
+    "caption": "Mist over still water at first light. The Quran says that God is near and answers the one who calls (2:186).",
+    "artist": "aszak",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/man-praying-allah-religion-pray-2612549/"
+    "source": "https://pixabay.com/photos/swans-mist-water-surface-silhouette-10279296/"
    },
    {
     "file": "relationship-with-god-2.avif",
     "alt": "The folded hands of an older person",
     "artist": "congerdesign",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/hands-human-old-human-age-seniors-4051469/"
+    "source": "https://pixabay.com/photos/hands-human-old-human-age-seniors-4051469/",
+    "caption": "Folded hands. In Islam a person asks forgiveness of God directly, with no mediator."
+   },
+   {
+    "file": "relationship-with-god-3.avif",
+    "alt": "A calm sunrise over the ocean with rippled reflections.",
+    "caption": "A calm sunrise over the sea. Many people describe an experience of God in quiet moments, and the article asks what that can show.",
+    "artist": "Oleksiy",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/serene-ocean-sunrise-with-rippled-reflections-36270903/"
    }
   ]
  },
@@ -1672,14 +2042,24 @@
     "alt": "Golden light on desert hills",
     "artist": "chidung2212",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/mountain-pass-mountains-sunrise-6332476/"
+    "source": "https://pixabay.com/photos/mountain-pass-mountains-sunrise-6332476/",
+    "caption": "Golden light on desert hills. Badr lay on a caravan route in the Arabian desert; the photograph does not show Badr."
    },
    {
     "file": "raids-badr-and-the-conquest-of-mecca-2.avif",
     "alt": "The arched ruins of an old stone building",
     "artist": "DavidPogue",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/castle-ruins-fortress-fort-195105/"
+    "source": "https://pixabay.com/photos/castle-ruins-fortress-fort-195105/",
+    "caption": "The arched ruins of an old stone building. The photograph is not of a site named in this article."
+   },
+   {
+    "file": "raids-badr-and-the-conquest-of-mecca-3.avif",
+    "alt": "Aerial view of the Grand Mosque in Mecca in daylight.",
+    "caption": "The Grand Mosque in Mecca from the air. The Prophet ﷺ entered the city in 8 AH and granted an amnesty to most of its people.",
+    "artist": "Rushdi Fatani",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/aerial-view-of-the-grand-mosque-in-mecca-38546870/"
    }
   ]
  },
@@ -1697,14 +2077,24 @@
     "alt": "A pile of weathered old coins",
     "artist": "papazachariasa",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/coins-ancient-roman-money-old-4786028/"
+    "source": "https://pixabay.com/photos/coins-ancient-roman-money-old-4786028/",
+    "caption": "Weathered old coins. When the name Muhammad first appears on coins is one of the points weighed in this entry."
    },
    {
     "file": "revisionist-case-weighed-2.avif",
     "alt": "A papyrus sheet covered in ancient writing",
     "artist": "flutie8211",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/papyrus-scroll-ancient-writing-7002373/"
+    "source": "https://pixabay.com/photos/papyrus-scroll-ancient-writing-7002373/",
+    "caption": "A papyrus sheet covered in ancient writing. Two papyri carry a hijra date of 22 AH, which is 643 CE."
+   },
+   {
+    "file": "revisionist-case-weighed-3.avif",
+    "alt": "A vintage manuscript with Arabic script open on aged pages.",
+    "caption": "An old Arabic manuscript. Radiocarbon dating puts the Birmingham leaves and the lower text of the Sana'a palimpsest between the late sixth and the seventh century.",
+    "artist": "burcubyzt_85",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/"
    }
   ]
  },
@@ -1722,14 +2112,24 @@
     "alt": "An oasis with date palm groves seen from above",
     "artist": "12019",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/hillah-iraq-landscape-desert-80384/"
+    "source": "https://pixabay.com/photos/hillah-iraq-landscape-desert-80384/",
+    "caption": "An oasis with date palm groves seen from above. Medina was an oasis town of farms and clan fortresses."
    },
    {
     "file": "medina-jewish-tribes-and-qurayza-2.avif",
     "alt": "A grove of palm trees in black and white",
     "artist": "12019",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/coachella-valley-california-1940s-80669/"
+    "source": "https://pixabay.com/photos/coachella-valley-california-1940s-80669/",
+    "caption": "A palm grove in black and white. The tribes of Medina lived among date groves and fields."
+   },
+   {
+    "file": "medina-jewish-tribes-and-qurayza-3.avif",
+    "alt": "Marid Castle at Dumat al-Jandal in northern Saudi Arabia.",
+    "caption": "Marid Castle at Dumat al-Jandal in northern Saudi Arabia, a stone fortress of the first century CE. The Jewish clans of Medina also held fortified strongholds, as the sources describe.",
+    "artist": "Richard Mortel",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marid_Castle,_Dumat_al-Jandal,_Saudi_Arabia,_ca._1st_cent._CE_(4).jpg"
    }
   ]
  },
@@ -1747,14 +2147,24 @@
     "alt": "The Milky Way above a dark horizon",
     "artist": "Pexels",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/stars-sky-milky-way-galaxy-1869447/"
+    "source": "https://pixabay.com/photos/stars-sky-milky-way-galaxy-1869447/",
+    "caption": "The Milky Way over a dark horizon. The first revelation came at night, in the month of Ramadan (97:1; 2:185)."
    },
    {
     "file": "first-revelation-demonic-claim-2.avif",
     "alt": "Clouds drifting over a night sky",
     "artist": "Pexels",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/dark-sky-stars-night-outdoors-1850638/"
+    "source": "https://pixabay.com/photos/dark-sky-stars-night-outdoors-1850638/",
+    "caption": "Clouds drifting over a night sky. The Quran says the Prophet saw Gabriel on the clear horizon (81:23; 53:7)."
+   },
+   {
+    "file": "first-revelation-demonic-claim-3.avif",
+    "alt": "A cave entrance with light and a small silhouette.",
+    "caption": "A cave opening full of light. Muhammad ﷺ used to retreat to the cave of Hira before the first revelation.",
+    "artist": "Pexels",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/cave-light-person-rocky-silhouette-1835825/"
    }
   ]
  },
@@ -1772,14 +2182,24 @@
     "alt": "Ancient temple ruins on a rocky height",
     "artist": "manfredrichter",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/acropolis-lindos-greece-ruins-6738888/"
+    "source": "https://pixabay.com/photos/acropolis-lindos-greece-ruins-6738888/",
+    "caption": "Ancient temple ruins on a rocky height. Arabia had many shrines before Islam."
    },
    {
     "file": "islamic-rites-before-islam-2.avif",
     "alt": "The phases of the moon",
     "artist": "Sergio-sq",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/moon-moon-phases-sky-8006703/"
+    "source": "https://pixabay.com/photos/moon-moon-phases-sky-8006703/",
+    "caption": "The phases of the moon. The Islamic months follow the moon, and the Quran ended the old practice of shifting months (9:37)."
+   },
+   {
+    "file": "islamic-rites-before-islam-3.avif",
+    "alt": "The Kaaba in Mecca at night with pilgrims circling it.",
+    "caption": "The Kaaba at night. Muslim sources say Muhammad ﷺ helped the Quraysh rebuild it before his call.",
+    "artist": "Ramiar Dilshad",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/al-kaba-mosque-in-mecca-26436662/"
    }
   ]
  },
@@ -1797,21 +2217,32 @@
     "alt": "Charts on a trading screen",
     "artist": "3844328",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/stock-trading-monitor-business-1863880/"
+    "source": "https://pixabay.com/photos/stock-trading-monitor-business-1863880/",
+    "caption": "Charts on a screen. Figures quoted without a named source cannot be checked."
    },
    {
     "file": "terrorism-and-muslims-the-data-2.avif",
     "alt": "Lanterns glowing at night",
     "artist": "JillWellington",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/lights-lamps-lanterns-incandescent-1088141/"
+    "source": "https://pixabay.com/photos/lights-lamps-lanterns-incandescent-1088141/",
+    "caption": "Lanterns glowing at night. The article asks what the counts show, apart from what coverage chooses to show."
    },
    {
     "file": "terrorism-and-muslims-the-data-3.avif",
     "alt": "The Royal Courts of Justice in London, the civil courts building on the Strand.",
     "artist": "David Castor",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Royal_Courts_of_Justice_2019.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Royal_Courts_of_Justice_2019.jpg",
+    "caption": "The Royal Courts of Justice in London. Findings in court and in public inquiries are the evidence the article relies on."
+   },
+   {
+    "file": "terrorism-and-muslims-the-data-4.avif",
+    "alt": "A row of lit tea candles in the dark.",
+    "caption": "A row of lit candles. Muslim scholars and bodies condemned the attacks in public statements.",
+    "artist": "pixel2013",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/christmas-background-tea-lights-2223898/"
    }
   ]
  },
@@ -1904,14 +2335,24 @@
     "alt": "An old city gate lit at night",
     "artist": "analogicus",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/ruins-castle-building-andernach-6911495/"
+    "source": "https://pixabay.com/photos/ruins-castle-building-andernach-6911495/",
+    "caption": "An old city gate lit at night. The Prophet made treaties with Jewish tribes in an oasis town of mixed tribes."
    },
    {
     "file": "apes-and-pigs-and-the-jews-2.avif",
     "alt": "The ruined stone arches of an old building",
     "artist": "dimitrisvetsikas1969",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/cyprus-ayios-sozomenos-church-3010571/"
+    "source": "https://pixabay.com/photos/cyprus-ayios-sozomenos-church-3010571/",
+    "caption": "The ruined arches of an old building. The classical commentators read these verses against the history of earlier peoples."
+   },
+   {
+    "file": "apes-and-pigs-and-the-jews-3.avif",
+    "alt": "The interior of a historic synagogue with carved wooden pews.",
+    "caption": "The interior of a synagogue. The Quran faults particular conduct and honours the upright among the People of the Book (3:113).",
+    "artist": "cottonbro studio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/the-interior-of-a-synagogue-5986454/"
    }
   ]
  },
@@ -2029,14 +2470,32 @@
     "alt": "The ceiling and windows of an old stone church",
     "artist": "analogicus",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/interior-ceiling-window-old-church-4934930/"
+    "source": "https://pixabay.com/photos/interior-ceiling-window-old-church-4934930/",
+    "caption": "The ceiling and windows of an old stone church. The Quran lists churches among the places where God's name is much remembered (22:40)."
    },
    {
     "file": "quran-on-christians-2.avif",
     "alt": "Candles burning in a church",
     "artist": "hansbenn",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/candlesticks-candle-candlelight-1342415/"
+    "source": "https://pixabay.com/photos/candlesticks-candle-candlelight-1342415/",
+    "caption": "Candles burning in a church. The Quran says that among Christians are priests and monks who are not arrogant (5:82)."
+   },
+   {
+    "file": "quran-on-christians-3.avif",
+    "alt": "Saint Catherine's Monastery below the mountains of Sinai, Egypt.",
+    "caption": "Saint Catherine's Monastery in Sinai, one of the oldest Christian monasteries still in use, long under Muslim rule.",
+    "artist": "stux",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/st-catherines-monastery-sinai-174446/"
+   },
+   {
+    "file": "quran-on-christians-4.avif",
+    "alt": "The Hanging Church, a Coptic Christian landmark in Cairo.",
+    "caption": "The Hanging Church in Cairo. Coptic Christians have worshipped in Egypt under Muslim rule since the seventh century.",
+    "artist": "Amy Law",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/white-bell-towers-of-the-hanging-church-cairo-egypt-17963262/"
    }
   ]
  },
@@ -2054,14 +2513,24 @@
     "alt": "A weathered stone archway in a ruined castle",
     "artist": "Marisa04",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/castle-middle-ages-ruin-archway-3063661/"
+    "source": "https://pixabay.com/photos/castle-middle-ages-ruin-archway-3063661/",
+    "caption": "A weathered stone archway in a ruined castle. The battle verses belong to wars fought in particular places and years."
    },
    {
     "file": "fighting-verses-in-context-2.avif",
     "alt": "An open copy of the Quran",
     "artist": "Afshad",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/holy-quran-ramadan-holy-month-1528446/"
+    "source": "https://pixabay.com/photos/holy-quran-ramadan-holy-month-1528446/",
+    "caption": "An open Quran. Each verse is read with the verses around it."
+   },
+   {
+    "file": "fighting-verses-in-context-3.avif",
+    "alt": "A sprig of olive branch on a wooden surface.",
+    "caption": "An olive branch, a sign of peace. The Quran says that killing one person unjustly is like killing all mankind (5:32).",
+    "artist": "tatlin",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/olivo-branch-branch-of-olives-97460/"
    }
   ]
  },
@@ -2104,14 +2573,24 @@
     "alt": "The pyramids at Giza",
     "artist": "TheDigitalArtist",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/pyramids-egypt-egyptian-ancient-2371501/"
+    "source": "https://pixabay.com/photos/pyramids-egypt-egyptian-ancient-2371501/",
+    "caption": "The pyramids at Giza. The Quran's account of Pharaoh is read against what is known of Egypt."
    },
    {
     "file": "quran-anachronism-claims-2.avif",
     "alt": "A Latin inscription on a stone wall",
     "artist": "jillmackie",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/latin-rome-vatican-inscription-293907/"
+    "source": "https://pixabay.com/photos/latin-rome-vatican-inscription-293907/",
+    "caption": "A Latin inscription on a stone wall. Inscriptions are one way historians date what ancient texts say."
+   },
+   {
+    "file": "quran-anachronism-claims-3.avif",
+    "alt": "A lion in glazed brick from the Ishtar Gate of Babylon.",
+    "caption": "A lion from the Ishtar Gate of Babylon, in the Pergamon Museum in Berlin. The Quran's king who argued with Abraham is never named.",
+    "artist": "pcdazero",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/lion-mosaic-art-museum-berlin-510159/"
    }
   ]
  },
@@ -2154,14 +2633,24 @@
     "alt": "A stack of old books",
     "artist": "svecaleksandr249",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/books-old-stack-library-reading-7051311/"
+    "source": "https://pixabay.com/photos/books-old-stack-library-reading-7051311/",
+    "caption": "A stack of old books. A parallel between two texts is the start of an argument."
    },
    {
     "file": "talmud-midrash-apocrypha-borrowing-2.avif",
     "alt": "An old manuscript on aged paper",
     "artist": "moshehar",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/woman-vintage-manuscript-old-paper-6930526/"
+    "source": "https://pixabay.com/photos/woman-vintage-manuscript-old-paper-6930526/",
+    "caption": "An old manuscript on aged paper. Midrash retells scripture in stories, and some resemble accounts in the Quran."
+   },
+   {
+    "file": "talmud-midrash-apocrypha-borrowing-3.avif",
+    "alt": "A page of Hebrew text in an old printed book.",
+    "caption": "Hebrew script in an old book. The Quran's story of Cain and the raven has a parallel in a Hebrew midrash, Pirke de-Rabbi Eliezer.",
+    "artist": "Robert_C",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/alphabet-bible-book-old-book-1679750/"
    }
   ]
  },
@@ -2204,14 +2693,32 @@
     "alt": "Aged vintage paper",
     "artist": "FreeCreativeStuff",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/vintage-paper-retro-antique-2721100/"
+    "source": "https://pixabay.com/photos/vintage-paper-retro-antique-2721100/",
+    "caption": "Aged vintage paper. Hadith were written down from the lifetime of the Prophet, not only handed on by memory."
    },
    {
     "file": "schacht-isnads-dating-hadith-2.avif",
     "alt": "An old parchment document",
     "artist": "garten-gg",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/certificate-contract-document-proof-3177940/"
+    "source": "https://pixabay.com/photos/certificate-contract-document-proof-3177940/",
+    "caption": "An old parchment document. Muslim scholars checked written records against the memory of the narrators."
+   },
+   {
+    "file": "schacht-isnads-dating-hadith-3.avif",
+    "alt": "A quill, ink and paper on a desk.",
+    "caption": "A quill and ink on a desk. Writing began early, and scholars such as Ibn Sirin asked for the source of every report.",
+    "artist": "Pexels",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/desk-ink-feather-quill-pen-1869579/"
+   },
+   {
+    "file": "schacht-isnads-dating-hadith-4.avif",
+    "alt": "Black and white close-up of interlocking steel chains.",
+    "caption": "Interlocking chain links. An isnad is a chain of narrators, and each link was tested.",
+    "artist": "wal_ 172619",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/industrial-steel-chains-in-black-and-white-35930741/"
    }
   ]
  },
@@ -2279,14 +2786,24 @@
     "alt": "A Quran set on a wooden lectern with soft lighting creating a serene ambiance.",
     "artist": "Yaşar Başkurt",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/"
+    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/",
+    "caption": "An open Quran on a lectern. The Quran sets the inheritance shares in its fourth chapter."
    },
    {
     "file": "women-in-islamic-law-testimony-inheritance-2.avif",
     "alt": "An open Quran placed on a wooden stand with visible Arabic calligraphy, symbolizing faith and tradition.",
     "artist": "GR  Stocks",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/",
+    "caption": "An open Quran on a stand. The report on honour killing comes from the sayings of the Prophet, which Muslims read beside the Quran."
+   },
+   {
+    "file": "women-in-islamic-law-testimony-inheritance-3.avif",
+    "alt": "Close-up of Arabic calligraphy on an ancient manuscript.",
+    "caption": "Pages of an old Arabic manuscript. Quran 2:282, the verse on recording a debt, asks for two witnesses.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-on-ancient-manuscript-29342502/"
    }
   ]
  },
@@ -2366,7 +2883,13 @@
   ]
  },
  "deuteronomy-18-and-the-paraclete": {
-  "featured": null,
+  "featured": {
+   "file": "deuteronomy-18-and-the-paraclete.avif",
+   "alt": "Floral illumination opening the Gospel of John in an Arabic Gospel book, 1684",
+   "artist": "Ilyas Basim Khuri Bazzi Rahib",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Ilyas_Basim_Khuri_Bazzi_Rahib_-_Full-page_Floral_Composition_Marking_the_Beginning_of_the_Gospel_of_John_(Yuhanna)_-_Walters_W592210A_-_Full_Page.jpg"
+  },
   "inline": [
    {
     "file": "deuteronomy-18-and-the-paraclete-1.avif",
@@ -2410,26 +2933,64 @@
   ]
  },
  "seven-ahruf-cairo-edition-stoning-verse": {
-  "featured": null,
+  "featured": {
+   "file": "seven-ahruf-cairo-edition-stoning-verse.avif",
+   "alt": "The first leaf of the Codex Parisino-Petropolitanus, first Islamic century",
+   "artist": "Bibliothèque nationale de France, Arabe 328",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Codex_Parisino-petropolitanus,_first_leaf_recto.jpg"
+  },
   "inline": [
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-1.avif",
     "alt": "Intricate Arabic calligraphy on an open page of a religious book, showcasing artistic detail.",
     "artist": "Jahra Tasfia Reza",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-arabic-calligraphy-on-sacred-text-36188888/"
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-calligraphy-on-sacred-text-36188888/",
+    "caption": "Arabic calligraphy on a page of a religious book. The Quran was recited in more than one accepted way from the Prophet's lifetime."
    },
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-2.avif",
     "alt": "A folio of an early Quran in Hijazi script, Bibliothèque nationale de France, Arabe 334",
-    "artist": "Unknown artistUnknown artist",
+    "artist": "Unknown artist",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Qur'an_folio_in_Hijazi_script_(BnF,_Arabe_334,_f._32r).jpg",
+    "caption": "A folio of an early Quran in Hijazi script (Bibliothèque nationale de France, Arabe 334c): early copies lack the dots and vowel marks that later helped fix the readings."
+   },
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-3.avif",
+    "alt": "An open Quran displayed on a wooden stand.",
+    "caption": "An open Quran on a stand. The accepted readings are the ones that reached the community by mass transmission.",
+    "artist": "MATAQ Darul Ulum",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/"
+   },
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-4.avif",
+    "alt": "Close view of Arabic calligraphy in a religious text.",
+    "caption": "Close view of Arabic script. A reading is accepted only if it fits the text of the copies, Arabic grammar and a sound chain.",
+    "artist": "Disillusion AD",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-in-religious-text-35205765/"
+   },
+   {
+    "file": "seven-ahruf-cairo-edition-stoning-verse-5.avif",
+    "alt": "Letterpress type and a pressure plate in a printing house.",
+    "caption": "Letterpress type. The Cairo edition of 1924 was a printing decision to follow one reading, and not a new text.",
+    "artist": "Bru-nO",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/letters-pressure-plate-pressure-3665281/"
    }
   ]
  },
  "aisha-sheep-report-stoning-and-suckling-verses": {
-  "featured": null,
+  "featured": {
+   "file": "aisha-sheep-report-stoning-and-suckling-verses.avif",
+   "alt": "Two leaves of the Birmingham Quran manuscript in early Hijazi script, dated to the first century of Islam",
+   "artist": "Cadbury Research Library, University of Birmingham",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg"
+  },
   "inline": [
    {
     "file": "aisha-sheep-report-stoning-and-suckling-verses-1.avif",
@@ -2450,100 +3011,152 @@
  "gods-attributes-and-anthropomorphism": {
   "featured": {
    "file": "gods-attributes-and-anthropomorphism.avif",
-   "alt": "Concentric gold, blue and white star outlines on a navy ground.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Interior of an ornate mosque dome with complex geometric patterns.",
+   "caption": "A mosque dome of geometric pattern, an art that points to God without picturing Him.",
+   "artist": "Astrel Fisher",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/intricate-islamic-dome-architecture-in-germany-40053902/"
   },
   "inline": [
    {
     "file": "gods-attributes-and-anthropomorphism-1.avif",
-    "alt": "Nested star outlines around a gold centre on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Ayat al-Kursi, the Throne Verse, in Arabic calligraphy on aged paper.",
+    "caption": "Ayat al-Kursi (2:255) in calligraphy: the verse that speaks of God's knowledge and throne.",
+    "artist": "sonofara",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/ayat-al-kursi-islam-muslims-1207509/"
    },
    {
     "file": "gods-attributes-and-anthropomorphism-2.avif",
-    "alt": "Layered star outlines in gold, blue and white on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Milky Way over a desert mountain at night.",
+    "caption": "The night sky over a desert: the Quran points to creation as a sign of the Creator, who is not like it (42:11).",
+    "artist": "Venrike",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/sky-stars-galaxy-milky-way-night-6811874/"
+   },
+   {
+    "file": "gods-attributes-and-anthropomorphism-3.avif",
+    "alt": "Persian mosque dome ceiling with turquoise geometric pattern.",
+    "caption": "A tiled dome with a pattern that repeats without a centre, an image of the infinite and not of God.",
+    "artist": "hoomarg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/persian-art-tradiotional-islamic-809945/"
    }
   ]
  },
  "temporary-marriage-mutah": {
   "featured": {
    "file": "temporary-marriage-mutah.avif",
-   "alt": "Gold, blue and white star outlines around a gold centre on a navy ground.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Masjid al-Nabawi in Medina at night with lit minarets.",
+   "caption": "Medina at night: the city where the early community debated the ruling on mutah, temporary marriage.",
+   "artist": "Konevi",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/mosque-masjid-al-nabawi-medina-3725372/"
   },
   "inline": [
    {
     "file": "temporary-marriage-mutah-1.avif",
-    "alt": "Star outlines in gold, blue and white on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Illustrated Arabic manuscript page with calligraphy and floral ornament.",
+    "caption": "An illustrated Arabic manuscript page. The rulings on mutah were recorded and argued over in books of hadith and law.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/intricately-illustrated-arabic-manuscript-29342496/"
    },
    {
     "file": "temporary-marriage-mutah-2.avif",
-    "alt": "Concentric star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Camel riders crossing red desert dunes under a cloudy sky.",
+    "caption": "Travellers crossing the desert. The short permission for mutah came on campaigns and journeys, far from home.",
+    "artist": "Pixabay",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/human-riding-camel-on-dessert-under-white-sky-during-daytime-53537/"
+   },
+   {
+    "file": "temporary-marriage-mutah-3.avif",
+    "alt": "Minarets at sunset in Konya, Türkiye.",
+    "caption": "Minarets at sunset in Konya. Sunni and Shia scholars still differ on whether mutah remains lawful.",
+    "artist": "Necati Ömer Karpuzoğlu",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/scenic-sunset-view-of-konya-minarets-40100992/"
    }
   ]
  },
  "do-muslims-worship-muhammad": {
   "featured": {
    "file": "do-muslims-worship-muhammad.avif",
-   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Al-Masjid an-Nabawi in Medina on a clear day.",
+   "caption": "Al-Masjid an-Nabawi in Medina, the mosque of the Prophet Muhammad ﷺ, where Muslims send blessings upon him and worship God alone.",
+   "artist": "Jati Sampurno",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/al-masjid-an-nabawi-mosque-in-medina-saudi-arabia-6476996/"
   },
   "inline": [
    {
     "file": "do-muslims-worship-muhammad-1.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Worshippers praying in rows at a mosque in Jakarta, Indonesia.",
+    "caption": "Muslims pray in straight rows, and the prayer is addressed to God alone.",
+    "artist": "Suryo Patriandito",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/congregational-prayer-inside-jakarta-mosque-36326554/"
    },
    {
     "file": "do-muslims-worship-muhammad-2.avif",
-    "alt": "Gold and blue star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Arabic calligraphy in gold on a stone wall.",
+    "caption": "Gold calligraphy of the kind that carries the testimony of faith: Muhammad is the servant and messenger of God.",
+    "artist": "Eyüp Çelik",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/elegant-arabic-calligraphy-on-stone-wall-33867343/"
+   },
+   {
+    "file": "do-muslims-worship-muhammad-3.avif",
+    "alt": "Mosque courtyard with tall minarets and a blue sky.",
+    "caption": "A mosque courtyard. The call to prayer from its minarets names God first and then the Prophet's mission.",
+    "artist": "Alimurat Üral",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/mosque-seen-from-courtyard-15981700/"
+   },
+   {
+    "file": "do-muslims-worship-muhammad-4.avif",
+    "alt": "Al-Masjid an-Nabawi in Medina in daylight.",
+    "caption": "Al-Masjid an-Nabawi in Medina, where the Prophet is buried. He warned against turning graves into places of worship.",
+    "artist": "Fahad Puthawala",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stunning-view-of-al-masjid-an-nabawi-mosque-34987529/"
    }
   ]
  },
  "muslims-by-the-numbers-2020": {
   "featured": {
    "file": "muslims-by-the-numbers-2020.avif",
-   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "Dome of Istiqlal Mosque in Jakarta, Indonesia.",
+   "caption": "Istiqlal Mosque in Jakarta, in Indonesia, a country with one of the largest Muslim populations in the world.",
+   "artist": "Irsyad Rifqi",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/istiqlal-mosque-dome-in-jakarta-indonesia-37221142/"
   },
   "inline": [
    {
     "file": "muslims-by-the-numbers-2020-1.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "Thousands of pilgrims around the Kaaba in Mecca.",
+    "caption": "Pilgrims at the Kaaba in Mecca. Muslims are one of the most widely spread faith communities.",
+    "artist": "Mustafa Fathy",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/a-crowd-on-a-square-in-mecca-5620451/"
    },
    {
     "file": "muslims-by-the-numbers-2020-2.avif",
-    "alt": "Gold and blue star outlines around a gold dot on navy.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "alt": "World map showing the continents.",
+    "caption": "A world map. Pew Research Center's count of Muslims by country covers the decade from 2010 to 2020.",
+    "artist": "WikiImages",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/earth-map-atlas-cartology-world-11048/"
+   },
+   {
+    "file": "muslims-by-the-numbers-2020-3.avif",
+    "alt": "Busy market in Amman, Jordan, with traditional goods.",
+    "caption": "A market in Amman, Jordan: a Muslim-majority country in the Middle East and North Africa region.",
+    "artist": "Sameh Swaiss",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/merchandise-display-in-market-19454239/"
    }
   ]
  },
@@ -2558,17 +3171,27 @@
   "inline": [
    {
     "file": "islamisation-of-the-west-1.avif",
-    "alt": "Historic photograph of the pedestal built for Bartholdi's Statue of Liberty on Bedloe's Island in New York Harbor.",
-    "artist": "Library of Congress, Prints and Photographs Division",
-    "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Pedestal_for_Bartholdi%27s_Statue_of_Liberty_on_Bedloe%27s_Island,_New_York_Harbor_(and_insert_of_head_and_shoulder_portrait_of_Bartholdi)_LCCN99614265.jpg"
+    "alt": "The New York City skyline with One World Trade Center.",
+    "caption": "The Manhattan skyline with One World Trade Center. The \"Ground Zero mosque\" dispute concerned a building two blocks from the site.",
+    "artist": "Line Knipst",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/skyline-of-lower-manhattan-new-york-city-new-york-usa-19156378/"
    },
    {
     "file": "islamisation-of-the-west-2.avif",
     "alt": "The flag of Europe, a circle of twelve gold stars on a blue field.",
     "artist": "Council of Europe; SVG by Wikimedia Commons contributors",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Europe.svg"
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Europe.svg",
+    "caption": "The flag of Europe. The article checks the demographic claims about Europe against the counts."
+   },
+   {
+    "file": "islamisation-of-the-west-3.avif",
+    "alt": "A street in the old town of Plovdiv, Bulgaria, with a minaret above the roofs.",
+    "caption": "The old town of Plovdiv, Bulgaria, where a minaret and church towers share the skyline. Muslims have lived in parts of Europe for centuries.",
+    "artist": "rassputyn",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/plovdiv-old-town-bulgaria-bazaar-4623950/"
    }
   ]
  },
@@ -2611,14 +3234,24 @@
     "alt": "Rembrandt, Saint Paul (about 1657): the apostle at a desk, pen in hand, looking up from his writing.",
     "artist": "Rembrandt van Rijn and workshop; National Gallery of Art, Washington",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Saint_Paul,_Rembrandt_van_Rijn_(and_Workshop%3F),_c._1657.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Paul,_Rembrandt_van_Rijn_(and_Workshop%3F),_c._1657.jpg",
+    "caption": "Rembrandt, Saint Paul (about 1657): the apostle at a desk, pen in hand."
    },
    {
     "file": "paul-claim-to-apostleship-2.avif",
     "alt": "Peter and Paul seated in a landscape, disputing, in a 1527 engraving after Lucas van Leyden.",
     "artist": "Lucas van Leyden; Rijksmuseum, Amsterdam",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Petrus_en_Paulus_zittend_in_een_landschap,_RP-P-OB-1686.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Petrus_en_Paulus_zittend_in_een_landschap,_RP-P-OB-1686.jpg",
+    "caption": "Peter and Paul seated in a landscape, disputing, in a 1527 engraving."
+   },
+   {
+    "file": "paul-claim-to-apostleship-3.avif",
+    "alt": "A sunlit alley in the Old City of Damascus.",
+    "caption": "An alley in the Old City of Damascus. Paul says he went to Arabia and returned to Damascus after his call.",
+    "artist": "mori dad",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/historic-street-scene-in-old-damascus-36773501/"
    }
   ]
  },
@@ -2636,14 +3269,623 @@
     "alt": "A bifolio of Papyrus 46 in the Chester Beatty, Dublin: the end of Romans on one leaf, the end of Philippians and the start of Colossians on the other.",
     "artist": "Chester Beatty, Dublin",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Dublin,_Chester_Beatty_Ms_BP_II_fol._15%2690_Bifolio_from_Paul%27s_Letter_to_the_Romans,_the_end_of_Paul%27s_Letter_to_the_Philippians_and_the_beginning_of_Paul%27s_Letter_to_the_Colossians.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Dublin,_Chester_Beatty_Ms_BP_II_fol._15%2690_Bifolio_from_Paul%27s_Letter_to_the_Romans,_the_end_of_Paul%27s_Letter_to_the_Philippians_and_the_beginning_of_Paul%27s_Letter_to_the_Colossians.jpg",
+    "caption": "A bifolio of Papyrus 46 in the Chester Beatty Library, Dublin, the oldest surviving collection of Paul's letters."
    },
    {
     "file": "pauline-letters-authorship-2.avif",
     "alt": "Valentin de Boulogne, Saint Paul Writing His Epistles (about 1618 to 1620): Paul at a table with pen, ink and open books.",
     "artist": "Valentin de Boulogne; Museum of Fine Arts, Houston",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:PaulT.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:PaulT.jpg",
+    "caption": "Valentin de Boulogne, Saint Paul Writing His Epistles (about 1618 to 1620)."
+   },
+   {
+    "file": "pauline-letters-authorship-3.avif",
+    "alt": "A hand writing on papyrus with a reed pen.",
+    "caption": "A hand writing with a reed pen. Letters in Paul's name were copied by scribes, and the church knew that some letters were written by others.",
+    "artist": "Ezeguna_graphy Sulaiman muhammad",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-handwriting-on-papyrus-with-traditional-pen-34326626/"
+   }
+  ]
+ },
+ "does-islam-teach-the-bible-was-corrupted": {
+  "featured": {
+   "file": "does-islam-teach-the-bible-was-corrupted.avif",
+   "alt": "Open vintage manuscript with Arabic script on a dark background.",
+   "caption": "An open manuscript in Arabic script: the written record, and not only the message, is what taḥrīf concerns.",
+   "artist": "burcubyzt_85",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/"
+  },
+  "inline": [
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-1.avif",
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll, one of the oldest surviving manuscripts of a biblical book, found near the Dead Sea.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   },
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-2.avif",
+    "alt": "Close-up of an open Bible showing printed Old Testament text.",
+    "caption": "A printed Bible: Muslim scholars asked which of its words come from revelation and which from later hands.",
+    "artist": "Brett Jordan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/an-open-bible-on-a-wooden-surface-5311784/"
+   },
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-3.avif",
+    "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
+    "caption": "A Quran folio in Kufic script, 8th to 9th century: the book that Muslims hold as the criterion over the earlier scriptures.",
+    "artist": "Unknown in Abbasid dynasty",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Koran_(8th-9th_century).jpg"
+   },
+   {
+    "file": "does-islam-teach-the-bible-was-corrupted-4.avif",
+    "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+    "caption": "The Codex Sinaiticus, a fourth-century Greek Bible. Ibn Ḥazm argued that the Gospels are histories written by men and were not sent down to Jesus.",
+    "artist": "PotatoCow25",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+   }
+  ]
+ },
+ "muhammad-false-prophet-claim": {
+  "featured": {
+   "file": "muhammad-false-prophet-claim.avif",
+   "alt": "Hira Cave on Jabal al-Nour near Mecca under a blue sky.",
+   "caption": "Jabal al-Nour near Mecca, with the cave of Hira where the first revelation came to Muhammad ﷺ.",
+   "artist": "Musaddek Sayek",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/hira-cave-on-jabal-al-nour-in-makkah-38336046/"
+  },
+  "inline": [
+   {
+    "file": "muhammad-false-prophet-claim-1.avif",
+    "alt": "Open Quran with a green cover lit by sunlight.",
+    "caption": "An open Quran. Its challenge to produce a chapter like it (2:23) is part of how Muslims answer the charge.",
+    "artist": "Gizem Gökce",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-with-decorative-cover-in-sunlight-36521597/"
+   },
+   {
+    "file": "muhammad-false-prophet-claim-2.avif",
+    "alt": "The Kaaba at dusk in Mecca with a clear sky.",
+    "caption": "The Kaaba at dusk in Mecca, the city where Muhammad ﷺ was born and first called people to God.",
+    "artist": "Neo Evenger",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/kaaba-28209449/"
+   },
+   {
+    "file": "muhammad-false-prophet-claim-3.avif",
+    "alt": "Visitors climbing the rocky slope of Jabal al-Nour near Mecca.",
+    "caption": "Visitors climbing Jabal al-Nour, the mountain above the cave of Hira, near Mecca.",
+    "artist": "Musaddek Sayek",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/pilgrims-at-jabal-al-nour-in-makkah-saudi-arabia-38385715/"
+   }
+  ]
+ },
+ "muslim-societies-backwardness-claim": {
+  "featured": {
+   "file": "muslim-societies-backwardness-claim.avif",
+   "alt": "Al-Azhar Mosque in Cairo with domes and minarets.",
+   "caption": "Al-Azhar in Cairo, founded in 970 and among the oldest universities still teaching.",
+   "artist": "AXP Photography",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/al-azhar-mosque-in-cairo-18991579/"
+  },
+  "inline": [
+   {
+    "file": "muslim-societies-backwardness-claim-1.avif",
+    "alt": "Collection of old manuscripts in Arabic script.",
+    "caption": "Arabic manuscripts. Scholars of the Islamic world preserved, translated and added to the sciences of earlier peoples.",
+    "artist": "caffeine",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscripts-with-arabic-script-historical-archives-34652787/"
+   },
+   {
+    "file": "muslim-societies-backwardness-claim-2.avif",
+    "alt": "Close-up of an antique globe showing constellations.",
+    "caption": "An antique celestial globe. Astronomers in the Islamic world refined the star tables and instruments of antiquity.",
+    "artist": "Vinícius Vieira ft",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-celestial-globe-with-constellation-mapping-29847626/"
+   },
+   {
+    "file": "muslim-societies-backwardness-claim-3.avif",
+    "alt": "Turquoise dome and tiles of a madrasa in Samarkand, Uzbekistan.",
+    "caption": "A madrasa in Samarkand, where Ulugh Beg founded a madrasa and an observatory in the 15th century.",
+    "artist": "LoggaWiggler",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/samarkand-medrese-uzbekistan-mosaic-196923/"
+   }
+  ]
+ },
+ "is-yahweh-satan": {
+  "featured": {
+   "file": "is-yahweh-satan.avif",
+   "alt": "A page of the Aleppo Codex, the tenth-century Masoretic manuscript of the Hebrew Bible, written in three columns",
+   "artist": "Shlomo ben Buya'a (scribe)",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Aleppo_Codex_(Deut).jpg"
+  },
+  "inline": [
+   {
+    "file": "is-yahweh-satan-1.avif",
+    "alt": "A silver pointer resting on the Hebrew text of an open Torah scroll",
+    "artist": "cottonbro studio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/",
+    "caption": "A silver pointer on the Hebrew text of a Torah scroll. The passages in this article come from Samuel, Kings, Ezekiel, Job and Deuteronomy."
+   },
+   {
+    "file": "is-yahweh-satan-2.avif",
+    "alt": "Storm clouds massing over a barren desert",
+    "artist": "mohsen miri",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/dramatic-storm-clouds-over-desert-landscape-39095159/",
+    "caption": "Storm clouds over a barren desert. The conquest passages in Deuteronomy 20 and 1 Samuel 15 are among those readers find hardest."
+   },
+   {
+    "file": "is-yahweh-satan-3.avif",
+    "alt": "An open Bible at a passage.",
+    "caption": "An open Bible. The Hebrew word satan means an adversary, and it is used of human opponents as well as of a heavenly figure.",
+    "artist": "Brett Jordan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-biblical-text-in-a-book-38408789/"
+   },
+   {
+    "file": "is-yahweh-satan-4.avif",
+    "alt": "An open Psalms book with Hebrew and English text.",
+    "caption": "A book of Psalms in Hebrew and English. Readers weigh these passages as identity, as parallels of function, or as a developing theology.",
+    "artist": "Joachim Schnürle",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-psalms-book-in-hebrew-and-english-39222072/"
+   }
+  ]
+ },
+ "who-was-yahweh-archaeological-origins": {
+  "featured": {
+   "file": "who-was-yahweh-archaeological-origins.avif",
+   "alt": "The Mesha Stele, a basalt slab inscribed in Moabite around 840 BCE, in the Louvre",
+   "artist": "Tangopaso",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066).jpg"
+  },
+  "inline": [
+   {
+    "file": "who-was-yahweh-archaeological-origins-1.avif",
+    "alt": "The rugged rocky landscape of South Sinai near Nuweiba",
+    "artist": "Ahmed Shahwan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/brown-rocky-mountain-under-blue-sky-7863006/",
+    "caption": "Rocky country near Nuweiba in Sinai. Kuntillet Ajrud, a hilltop site in north-eastern Sinai, yielded inscriptions naming \"Yahweh of Samaria\" and \"Yahweh of Teman\". The photograph does not show the site."
+   },
+   {
+    "file": "who-was-yahweh-archaeological-origins-2.avif",
+    "alt": "Detail of the Mesha Stele showing the line that names YHWH, the earliest generally accepted mention of the name outside the Bible",
+    "artist": "Tangopaso",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066)_-_details_with_the_word_JHWH.jpg",
+    "caption": "Detail of the Mesha Stele, about 840 BCE, showing the line that names YHWH, the earliest generally accepted mention of the name outside the Bible."
+   },
+   {
+    "file": "who-was-yahweh-archaeological-origins-3.avif",
+    "alt": "Clay figurines from Beth Shemesh in the Penn Museum.",
+    "caption": "Clay figurines from Beth Shemesh in Judah, held by the Penn Museum. Figurines of this kind are among the finds from ordinary homes that show how people worshipped.",
+    "artist": "Utopian100",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Penn_Musuem_Beit_Shemesh_Cylindrical_Figurines.jpg"
+   },
+   {
+    "file": "who-was-yahweh-archaeological-origins-4.avif",
+    "alt": "The Tel Dan Stele, a ninth-century BCE Aramaic inscription, in the Israel Museum.",
+    "caption": "The Tel Dan Stele, an Aramaic inscription of the ninth century BCE. Texts like this fix the names of kings and kingdoms, which is the kind of fact archaeology can establish.",
+    "artist": "Oren Rozen",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:JRSLM_300116_Tel_Dan_Stele_02.jpg"
+   }
+  ]
+ },
+ "was-yahweh-one-of-many-gods": {
+  "featured": {
+   "file": "was-yahweh-one-of-many-gods.avif",
+   "alt": "A lightning bolt striking from dark storm clouds over the open sea",
+   "artist": "Maczkó Gábor",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/lightning-strike-on-sea-during-night-time-13686832/"
+  },
+  "inline": [
+   {
+    "file": "was-yahweh-one-of-many-gods-1.avif",
+    "alt": "Cuneiform script carved into an ancient stone surface",
+    "artist": "Ersan Yılmaz",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/a-close-up-of-a-stone-with-writing-on-it-27992278/",
+    "caption": "Cuneiform signs on stone. The Ugarit archives, written in an alphabetic cuneiform script, describe a council of the gods under El."
+   },
+   {
+    "file": "was-yahweh-one-of-many-gods-2.avif",
+    "alt": "A desert landscape under a sky full of stars",
+    "artist": "Mo Eid",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stars-on-night-sky-17877136/",
+    "caption": "A desert under the stars. Psalm 82 sets God in the divine assembly, judging the gods."
+   },
+   {
+    "file": "was-yahweh-one-of-many-gods-3.avif",
+    "alt": "Sunbeams breaking through storm clouds over a vast desert.",
+    "caption": "Storm clouds over a desert. At Ugarit Baal is the rider of the clouds, and the Bible uses the same storm imagery of Yahweh.",
+    "artist": "Roberto Lee Cortes",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/storm-cloud-and-sunbeams-over-beach-on-sea-coast-20783376/"
+   },
+   {
+    "file": "was-yahweh-one-of-many-gods-4.avif",
+    "alt": "Judean pillar figurines in the Israel Museum, Jerusalem.",
+    "caption": "Judean pillar figurines in the Israel Museum. They are found across Judah in ordinary homes, and what they depict is still debated.",
+    "artist": "Chamberi",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Judaean_female_figurines_-_Israel_Museum,_Jerusalem.jpg"
+   }
+  ]
+ },
+ "early-christians-yahweh-evil-gnosticism-marcion": {
+  "featured": {
+   "file": "early-christians-yahweh-evil-gnosticism-marcion.avif",
+   "alt": "An ancient papyrus scroll displayed in a dim museum case",
+   "artist": "Ayşenaz  Bilgin",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/close-up-of-historic-antique-papyrus-in-museum-15850552/"
+  },
+  "inline": [
+   {
+    "file": "early-christians-yahweh-evil-gnosticism-marcion-1.avif",
+    "alt": "An old book open on a stand under warm light",
+    "artist": "stelios ΒΚ",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-script-book-on-display-stand-40291882/",
+    "caption": "An old book open under warm light. Second-century teachers disagreed about which books to read and what the Demiurge was."
+   },
+   {
+    "file": "early-christians-yahweh-evil-gnosticism-marcion-2.avif",
+    "alt": "A snake coiled along a tree branch",
+    "artist": "Regan Dsouza",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-a-coiled-snake-on-branch-32239050/",
+    "caption": "A snake coiled on a branch. Some Gnostic texts read the serpent of Eden as a giver of knowledge."
+   },
+   {
+    "file": "early-christians-yahweh-evil-gnosticism-marcion-3.avif",
+    "alt": "An antique leather-bound manuscript.",
+    "caption": "An antique leather-bound manuscript. Marcion produced his own shortened Gospel of Luke and a set of Paul's letters.",
+    "artist": "Burkard Meyendriesch",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-book-with-a-leather-case-10714137/"
+   },
+   {
+    "file": "early-christians-yahweh-evil-gnosticism-marcion-4.avif",
+    "alt": "A leather-bound antique book on a table with scrolls behind it.",
+    "caption": "An antique book with scrolls behind it. Church writers answered Marcion and the Gnostics with books of their own.",
+    "artist": "Max Mishin",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/brown-book-on-wooden-table-11882036/"
+   }
+  ]
+ },
+ "is-yahweh-the-same-as-allah": {
+  "featured": {
+   "file": "is-yahweh-the-same-as-allah.avif",
+   "alt": "The rugged peaks of Mount Sinai in South Sinai at sunset",
+   "artist": "Ahmed zaki",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/sunset-over-mount-sinai-in-egypt-28322810/"
+  },
+  "inline": [
+   {
+    "file": "is-yahweh-the-same-as-allah-1.avif",
+    "alt": "An open Quran in Arabic script on a stand, against a dark background",
+    "artist": "Optical Chemist",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-islamic-text-in-focused-view-36232553/",
+    "caption": "An open Quran in Arabic script. Its short chapter of sincerity says: \"He is Allah, One.\""
+   },
+   {
+    "file": "is-yahweh-the-same-as-allah-2.avif",
+    "alt": "An open Quran resting on a wooden stand",
+    "artist": "MATAQ Darul Ulum",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/",
+    "caption": "An open Quran on a stand. The Quran tells the story of Iblis several times and names him as the adversary."
+   },
+   {
+    "file": "is-yahweh-the-same-as-allah-3.avif",
+    "alt": "A hand pointing to text on an ancient Torah scroll.",
+    "caption": "Hebrew text on a Torah scroll. The divine name YHWH appears throughout it.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/"
+   },
+   {
+    "file": "is-yahweh-the-same-as-allah-4.avif",
+    "alt": "Intricate Arabic calligraphy on a stone wall in golden light.",
+    "caption": "Arabic calligraphy on a stone wall. Arabic-speaking Christians and Jews use the same word, Allah, for God.",
+    "artist": "Eyüp Çelik",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/elegant-arabic-calligraphy-on-stone-wall-33867343/"
+   }
+  ]
+ },
+ "where-did-jesus-say-he-is-god": {
+  "featured": {
+   "file": "where-did-jesus-say-he-is-god.avif",
+   "alt": "An open Bible showing the Psalms on a dark surface",
+   "caption": "An open Bible. Christians read its texts as a whole to argue for the divinity of Jesus.",
+   "artist": "Luis Quintero",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/open-bible-2294878/"
+  },
+  "inline": [
+   {
+    "file": "where-did-jesus-say-he-is-god-1.avif",
+    "alt": "An open Quran with a green decorative cover in sunlight, showing Arabic script",
+    "caption": "An open Quran. Its Jesus calls himself the servant of God and tells his hearers to worship God, his Lord and theirs (19:30, 5:72).",
+    "artist": "Gizem Gökce",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-with-decorative-cover-in-sunlight-36521597/"
+   },
+   {
+    "file": "where-did-jesus-say-he-is-god-2.avif",
+    "alt": "A worshipper standing in prayer in a sunlit mosque interior",
+    "caption": "A worshipper standing in prayer. The number and form of the daily prayers come from the Prophet's example, which Muslims say openly.",
+    "artist": "Tomris🇹🇷",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/solitary-figure-in-sunlit-mosque-interior-31595516/"
+   },
+   {
+    "file": "where-did-jesus-say-he-is-god-3.avif",
+    "alt": "Several Bibles open side by side in different languages.",
+    "caption": "Several Bibles open side by side in different languages. Readers weigh \"I and the Father are one\" and \"before Abraham was\" in translation as well as in Greek.",
+    "artist": "Chris Liu",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/top-view-of-religion-books-22710978/"
+   }
+  ]
+ },
+ "christian-twin-of-the-islamic-dilemma": {
+  "featured": {
+   "file": "christian-twin-of-the-islamic-dilemma.avif",
+   "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+   "caption": "A Torah scroll: the New Testament affirms the Hebrew Bible and departs from it in places, and the same test can be held up to both books.",
+   "artist": "Bejinhan",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hebrew_Sefer_Torah_Scroll_side_view.JPG"
+  },
+  "inline": [
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-1.avif",
+    "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+    "caption": "The Codex Sinaiticus, a fourth-century Greek Bible. The New Testament affirms the law and the prophets, and it also sets aside parts of the law.",
+    "artist": "PotatoCow25",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+   },
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-2.avif",
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll. Matthew reads Isaiah 7:14 and 11:1 in ways its first Hebrew readers might not have expected.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   },
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-3.avif",
+    "alt": "The Commentary on Habakkuk scroll from Qumran, written in Hebrew.",
+    "caption": "The Habakkuk commentary from Qumran, which says God made known to the Teacher of Righteousness the meaning of the prophets' words.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Commentary_on_Habakkuk_Scroll_(1QpHab)_Written_in_Hebrew_-_Google_Art_Project.jpg"
+   },
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-4.avif",
+    "alt": "A folio of the Blue Quran in gold Kufic script on blue-dyed parchment.",
+    "caption": "A folio of the Blue Quran, ninth to tenth century. The Quran calls itself a confirmation of the earlier books and a criterion over them.",
+    "artist": "Unknown author",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_Blue_Quran_Met_2004.88.jpg"
+   }
+  ]
+ },
+ "quran-verses-on-torah-and-gospel": {
+  "featured": {
+   "file": "quran-verses-on-torah-and-gospel.avif",
+   "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
+   "caption": "A Quran folio in Kufic script, 8th to 9th century. The verses on the Torah and the Gospel say less than either side in the argument wants, and a few say more.",
+   "artist": "Unknown in Abbasid dynasty",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Koran_(8th-9th_century).jpg"
+  },
+  "inline": [
+   {
+    "file": "quran-verses-on-torah-and-gospel-1.avif",
+    "alt": "An open Torah case with the scroll inside.",
+    "caption": "A Torah scroll in its case. Quran 5:43 speaks of a Torah in the hands of the Jews of Medina, in which is the judgement of God.",
+    "artist": "Qualiesin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Open_Torah_Case_with_Scroll.jpg"
+   },
+   {
+    "file": "quran-verses-on-torah-and-gospel-2.avif",
+    "alt": "A folio from a Quran manuscript.",
+    "caption": "A Quran folio. Quran 7:157 speaks of the unlettered prophet whom they find described in what they have of the Torah and the Gospel.",
+    "artist": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Qur'an_Manuscript_(IA_mma_folio_from_a_quran_manuscript_447367).jpg"
+   },
+   {
+    "file": "quran-verses-on-torah-and-gospel-3.avif",
+    "alt": "A nineteenth-century photograph of Abraham's Oak near Hebron.",
+    "caption": "Abraham's Oak near Hebron, photographed in the nineteenth century. Genesis 18 and the Quran both tell of Abraham's visitors, and they open the scene differently.",
+    "artist": "Bonfils, Félix, 1831-1885, photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Abraham's_Oak)_-_Bonfils_LCCN92500736.jpg"
+   },
+   {
+    "file": "quran-verses-on-torah-and-gospel-4.avif",
+    "alt": "Two pages of the Rabbula Gospels, a Syriac Gospel book of 586, showing the four evangelists.",
+    "caption": "The Rabbula Gospels, a Syriac Gospel book copied in 586. Christians near Arabia read scriptures in languages such as Syriac, Greek and Ge'ez, and no Arabic Bible from before Islam has been found.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rabbula_Gospels_(9v_&_10r;_Four_Evangelists).jpg"
+   }
+  ]
+ },
+ "early-christians-charged-others-with-corrupting-scripture": {
+  "featured": {
+   "file": "early-christians-charged-others-with-corrupting-scripture.avif",
+   "alt": "A page of the Codex Vaticanus, a fourth-century Greek Bible manuscript.",
+   "caption": "A page of the Codex Vaticanus, a fourth-century Greek Bible. Early Christians charged Jews, heretics and each other with changing scripture.",
+   "artist": "Unknown author",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg"
+  },
+  "inline": [
+   {
+    "file": "early-christians-charged-others-with-corrupting-scripture-1.avif",
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll. Justin said the Jews had cut passages out of their scriptures, and the manuscripts known today do not bear him out.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   },
+   {
+    "file": "early-christians-charged-others-with-corrupting-scripture-2.avif",
+    "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+    "caption": "The Codex Sinaiticus. It ends the Gospel of Mark at 16:8, one of the places where Christian scribes left a record of their own textual history.",
+    "artist": "PotatoCow25",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+   },
+   {
+    "file": "early-christians-charged-others-with-corrupting-scripture-3.avif",
+    "alt": "Two pages of the Rabbula Gospels, a Syriac Gospel book of 586, showing the four evangelists.",
+    "caption": "The Rabbula Gospels, a Syriac Gospel book copied in 586. In the early centuries the charge of altering scripture was an ordinary move in argument.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rabbula_Gospels_(9v_&_10r;_Four_Evangelists).jpg"
+   }
+  ]
+ },
+ "quran-word-kitab-meanings": {
+  "featured": {
+   "file": "quran-word-kitab-meanings.avif",
+   "alt": "A folio of the Blue Quran in gold Kufic script on blue-dyed parchment.",
+   "caption": "A folio of the Blue Quran, ninth to tenth century. The Quran uses the word kitāb for a decree, a heavenly Book, a revelation and a written page.",
+   "artist": "Unknown author",
+   "licence": "CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Folio_Blue_Quran_Met_2004.88.jpg"
+  },
+  "inline": [
+   {
+    "file": "quran-word-kitab-meanings-1.avif",
+    "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
+    "caption": "A Quran folio in Kufic script. The Quran speaks of a Mother of the Book in heaven behind every revelation.",
+    "artist": "Unknown in Abbasid dynasty",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Koran_(8th-9th_century).jpg"
+   },
+   {
+    "file": "quran-word-kitab-meanings-2.avif",
+    "alt": "A folio of the Rabbula Gospels, a Syriac Gospel book of 586.",
+    "caption": "A page of the Rabbula Gospels, a Syriac Gospel book of 586. The Quran says God gave Jesus the Gospel, which the written Gospels may carry in part.",
+    "artist": "Gennadii Saus i Segura",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vangeli_di_Rabbula,_Biblioteca_Medicea_Laurenziana,_Cod._Plut._I,_56,_fol._13r.jpg"
+   },
+   {
+    "file": "quran-word-kitab-meanings-3.avif",
+    "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+    "caption": "A Torah scroll. Waraqa is reported to have written from the Gospel in Hebrew letters, as much as God wished him to write.",
+    "artist": "Bejinhan",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hebrew_Sefer_Torah_Scroll_side_view.JPG"
+   }
+  ]
+ },
+ "trinity-in-the-hebrew-bible-tested": {
+  "featured": {
+   "file": "trinity-in-the-hebrew-bible-tested.avif",
+   "alt": "An open Torah case with the scroll inside.",
+   "caption": "An open Torah case. The Hebrew Bible says that God is one, and the Christian doctrine of three persons is read into it from later texts.",
+   "artist": "Qualiesin",
+   "licence": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Open_Torah_Case_with_Scroll.jpg"
+  },
+  "inline": [
+   {
+    "file": "trinity-in-the-hebrew-bible-tested-1.avif",
+    "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+    "caption": "A Torah scroll. Genesis 1:26 says \"Let us make man\", a plural that Jews, Christians and Muslims read differently.",
+    "artist": "Bejinhan",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hebrew_Sefer_Torah_Scroll_side_view.JPG"
+   },
+   {
+    "file": "trinity-in-the-hebrew-bible-tested-2.avif",
+    "alt": "A nineteenth-century photograph of Abraham's Oak near Hebron.",
+    "caption": "Abraham's Oak near Hebron, photographed in the nineteenth century. In several stories of the Hebrew Bible a messenger speaks in the voice of God.",
+    "artist": "Bonfils, Félix, 1831-1885, photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Abraham's_Oak)_-_Bonfils_LCCN92500736.jpg"
+   },
+   {
+    "file": "trinity-in-the-hebrew-bible-tested-3.avif",
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll, copied before the time of Jesus. No text from before the New Testament states a Trinity.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   }
+  ]
+ },
+ "matthew-fulfilment-quotations-checked": {
+  "featured": {
+   "file": "matthew-fulfilment-quotations-checked.avif",
+   "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+   "caption": "The Codex Sinaiticus, a fourth-century Greek Bible containing the Gospel of Matthew. Matthew's quotations of the Hebrew Bible differ from the originals in several places.",
+   "artist": "PotatoCow25",
+   "licence": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+  },
+  "inline": [
+   {
+    "file": "matthew-fulfilment-quotations-checked-1.avif",
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll. Matthew reads Isaiah 7:14 and Isaiah 42 in ways that move them beyond their first setting.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   },
+   {
+    "file": "matthew-fulfilment-quotations-checked-2.avif",
+    "alt": "The Commentary on Habakkuk scroll from Qumran, written in Hebrew.",
+    "caption": "The Habakkuk commentary from Qumran, which reads a prophet's words as pointing to the community's own time, a method close to Matthew's.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Commentary_on_Habakkuk_Scroll_(1QpHab)_Written_in_Hebrew_-_Google_Art_Project.jpg"
+   },
+   {
+    "file": "matthew-fulfilment-quotations-checked-3.avif",
+    "alt": "A page of the Codex Vaticanus, a fourth-century Greek Bible manuscript.",
+    "caption": "A page of the Codex Vaticanus. Matthew's quotations often follow the Greek form of the Hebrew Bible.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg"
    }
   ]
  },

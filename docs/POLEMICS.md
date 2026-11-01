@@ -112,7 +112,36 @@ Five spreadsheets (a single-source-of-truth workbook, two article-proposal sheet
 
 The concordance of hadith citations (A46) and the lower-priority proposals are not written.
 
-## Source 4: three recorded missionary lectures on Islam
+## Source 4: islamicdilemma.com
+
+A saved copy of islamicdilemma.com, a Christian site built on the Islamic dilemma, reviewed 28 October 2026. Its pages are the home page ("What is the Islamic Dilemma?"), "The Qur'an affirms the Gospel", "How to Present the Islamic Dilemma", "What is the Injil?", "Why Jesus?", "What is your identity in Christ" and "Understanding Spiritual Blindness". The home page promotes a book by a Speakers' Corner debater and links to TheDawahScript. Devotional material with no claim about Islam is left out, as are the WordPress files.
+
+### Claims
+
+| # | Claim, in summary | Answered in | Status |
+|---|---|---|---|
+| D1 | The dilemma itself: if the Gospel is reliable Islam contradicts it; if it is corrupt the Quran wrongly affirmed it | `islamic-dilemma` | Covered: all five assumptions |
+| D2 | 3:3–4, 5:47, 5:48, 5:68 and 10:94 show the Quran affirms the Bible Christians held | `islamic-dilemma` (entries on muhaymin, the occasion of 5:43–47, Ibn Kathir on 5:47, 5:68 and 10:94) | Covered |
+| D3 | The Injil cannot be a separate book: where is it, and who quoted it? | `where-is-the-injil`, `islamic-dilemma` (first entry, Ibn Hazm's "four histories") | Covered |
+| D4 | **18:27, "none can change His words": so the Bible cannot have been corrupted** | `islamic-dilemma` (third entry, 1.77.1) | Covered. The phrase covers God's promise (6:34, 10:64) and the Quran itself (6:115, 18:27); Ibn Kathir on 18:27 and al-Tabari on 6:115, checked on Shamela; the Quran's own use of *baddala* for people changing words (2:59, 48:15) |
+| D5 | "Allah, Gabriel and Muhammad never said the Gospel was corrupt"; every mention of the Injil praises it | `islamic-dilemma` (the mixed-text entry), `where-is-the-injil` | Covered: 5:14 added to the second entry of `islamic-dilemma` (1.77.1) |
+| D6 | The site's own list of Injil verses (3:3, 3:48, 3:65, 5:46–47, 5:66, 5:68, 5:110, 7:157, 9:111, 48:29, 57:27) | `islamic-dilemma`, `deuteronomy-18-and-the-paraclete` (7:157) | Covered: the first entry of `islamic-dilemma` (1.77.1) notes that 7:157 and 9:111 say what the Injil contains in the Quran's own terms, and that calling this an error about the Gospels assumes the Quran was describing them. A Christian may point to Matthew 19:29 for 9:111; the article does not lean on the absence |
+| D7 | Three "contradictions": 1 Timothy 2:5 vs 4:171 (mediator), 1 Corinthians 8:6 vs the Quran (Trinity), John 3:16 vs 3:185 (eternal life) | `pauline-letters-authorship`, `paul-claim-to-apostleship`, `jesus-not-god`, `relationship-with-god` | Covered in substance. **Point to make:** two of the three are from Paul, not from any Gospel, and 1 Timothy is one of the Pastorals most critical scholars do not attribute to Paul, so the site's own examples do not come from the Injil. The page's citations are also confused: the Arabic under the 4:171 heading is 2:255, and the Trinity item quotes 3:185 in English over 4:171 in Arabic. Note this; it is not an argument |
+| D8 | 29:46 commands Muslims to say "we believe in what was revealed to you", yet Muslims call the Bible corrupt and the Christian God false | `quran-on-christians`, `same-god`, `who-is-allah` | Covered. The verse speaks of what was revealed, not of what is now bound in a Bible; see D2 |
+| D9 | "If Allah revealed the Torah and Gospel as guidance, how could they become corrupted?" | `where-is-the-injil` (entry on preservation: earlier scriptures entrusted to their communities, 5:44; the promise of 15:9 attached to the Quran) | Covered |
+| D10 | "When was it corrupted, by whom, and where is the uncorrupted version?" The burden of proof is on the Muslim | `where-is-the-injil`, `manuscript-transmission` (the ending of Mark, the adulteress passage) | Covered in substance; the burden-of-proof framing is not answered directly. The answer: the site has to prove the Quran's Injil is the four Gospels first (D3), and later additions to the Gospel manuscripts are accepted by Christian textual critics |
+| D11 | The Quran was "in the hands of Christians in 700" | None needed | Factual error: the Prophet died in 632 and the Quran describes the Christians of his lifetime |
+| D12 | "Islam says you can get your own sins forgiven. That is a lie"; no forgiveness without the cross | `crucifixion-quran` (Leviticus 5:11–13, Ezekiel 18:20–22, Hosea 6:6), `relationship-with-god` (forgiveness without a mediator, 39:53, 6:164) | Covered |
+| D13 | One lie equals murder before God; the Quran's teaching that good deeds remove bad ones (11:114) is "a lie" | `crucifixion-quran`, `relationship-with-god` | Partly covered: no article answers the claim that every sin weighs the same. The Gospels themselves grade sin and punishment: "the one who handed me over to you has the greater sin" (John 19:11), and the servant beaten with many or few blows (Luke 12:47–48) |
+| D14 | Islam is a religion of works with no assurance; its God is distant; "religions of submission only" | `relationship-with-god`, `fate-and-free-will` | Covered in part. Add the hadith that no one enters Paradise by his deeds, not even the Prophet, unless God covers him with mercy (Sahih al-Bukhari 6463, Sahih Muslim 2816), if it is not already cited where it is needed |
+| D15 | Muslims cannot see the truth because Satan blinds them (2 Corinthians 4:4, John 12:40) | None needed | Not an argument: it explains disagreement without testing it, and the Quran makes the same claim the other way (2:7). Not worth an article |
+| D16 | A "renunciation" line: "I reject Islam and Muhammad and break the chains of association to that religion" | None needed | Not a claim |
+
+### Still open
+
+- **D10, D13 and D14** are small additions to `where-is-the-injil`, `crucifixion-quran` and `relationship-with-god`, to be made as those articles are expanded.
+
+## Source 5: three recorded missionary lectures on Islam
 
 Three transcripts of lectures given in English with German interpretation, probably at a missionary training seminar in the late 1980s, saved 29 October 2026. Each transcript stops at thirty minutes. The articles do not name the speakers or the seminar. Claims that rest on a particular polemicist's booklet are answered on the evidence and the booklet is not defended.
 
@@ -167,4 +196,4 @@ Three transcripts of lectures given in English with German interpretation, proba
 ### Still open
 
 - The second half of each lecture was not transcribed. The hadith section of lecture 1, the blackboard list of verses in lecture 2 and the remaining objections of lecture 3 are not catalogued.
-- The details in the new articles that need checking against sources are listed in `docs/CONTENT-REVIEW.md` under "Lecture articles (29 October 2026)".
+- The details in the new articles that need checking against sources are listed in `docs/CONTENT-REVIEW.md` under "Lecture articles (29 October 2026, released in 1.88.0)".

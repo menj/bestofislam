@@ -17,9 +17,9 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Topic of each article, from the seed list.
-setup = open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read()
-topic = {m[0]: m[1] for m in re.findall(r"'slug'\s+=> '([^']+)',.*?'topic'\s+=> '([^']+)'", setup, re.S)}
+# Topic of each article, from the seed list in inc/data/seed.json.
+seed = json.load(open(os.path.join(ROOT, 'inc', 'data', 'seed.json'), encoding='utf-8'))
+topic = {x['slug']: x['topic'] for x in seed.get('listicles', [])}
 
 # Part of the reading order.
 reading = open(os.path.join(ROOT, 'inc', 'reading.php'), encoding='utf-8').read()
