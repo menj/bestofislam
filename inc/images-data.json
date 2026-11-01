@@ -3305,14 +3305,32 @@
     "alt": "The rugged rocky landscape of South Sinai near Nuweiba",
     "artist": "Ahmed Shahwan",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/brown-rocky-mountain-under-blue-sky-7863006/"
+    "source": "https://www.pexels.com/photo/brown-rocky-mountain-under-blue-sky-7863006/",
+    "caption": "Rocky country near Nuweiba in Sinai. Kuntillet Ajrud, a hilltop site in north-eastern Sinai, yielded inscriptions naming \"Yahweh of Samaria\" and \"Yahweh of Teman\". The photograph does not show the site."
    },
    {
     "file": "who-was-yahweh-archaeological-origins-2.avif",
     "alt": "Detail of the Mesha Stele showing the line that names YHWH, the earliest generally accepted mention of the name outside the Bible",
     "artist": "Tangopaso",
     "licence": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066)_-_details_with_the_word_JHWH.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066)_-_details_with_the_word_JHWH.jpg",
+    "caption": "Detail of the Mesha Stele, about 840 BCE, showing the line that names YHWH, the earliest generally accepted mention of the name outside the Bible."
+   },
+   {
+    "file": "who-was-yahweh-archaeological-origins-3.avif",
+    "alt": "Clay figurines from Beth Shemesh in the Penn Museum.",
+    "caption": "Clay figurines from Beth Shemesh in Judah, held by the Penn Museum. Figurines of this kind are among the finds from ordinary homes that show how people worshipped.",
+    "artist": "Utopian100",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Penn_Musuem_Beit_Shemesh_Cylindrical_Figurines.jpg"
+   },
+   {
+    "file": "who-was-yahweh-archaeological-origins-4.avif",
+    "alt": "The Tel Dan Stele, a ninth-century BCE Aramaic inscription, in the Israel Museum.",
+    "caption": "The Tel Dan Stele, an Aramaic inscription of the ninth century BCE. Texts like this fix the names of kings and kingdoms, which is the kind of fact archaeology can establish.",
+    "artist": "Oren Rozen",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:JRSLM_300116_Tel_Dan_Stele_02.jpg"
    }
   ]
  },
