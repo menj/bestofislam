@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.86.2] - 2026-11-01
+
+### Fixed
+
+- Opening a question in the front-page questions band no longer leaves an empty space beside it. The featured questions sat in a two-column grid of rows, so an opened answer made its whole row taller and the closed question next to it kept its short height with a gap underneath. They now sit in two columns that each stack on their own, so an answer pushes down only the questions below it. The questions alternate between the columns so they still read across, and on phones the columns merge back into one list in the original order.
+
 ## [1.86.1] - 2026-11-01
 
 ### Changed
