@@ -3372,5 +3372,79 @@
     "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/"
    }
   ]
+ },
+ "christian-twin-of-the-islamic-dilemma": {
+  "featured": {
+   "file": "christian-twin-of-the-islamic-dilemma.avif",
+   "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+   "caption": "A Torah scroll: the New Testament affirms the Hebrew Bible and departs from it in places, and the same test can be held up to both books.",
+   "artist": "Bejinhan",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hebrew_Sefer_Torah_Scroll_side_view.JPG"
+  },
+  "inline": [
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-1.avif",
+    "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+    "caption": "The Codex Sinaiticus, a fourth-century Greek Bible. The New Testament affirms the law and the prophets, and it also sets aside parts of the law.",
+    "artist": "PotatoCow25",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+   },
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-2.avif",
+    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "caption": "The Great Isaiah Scroll. Matthew reads Isaiah 7:14 and 11:1 in ways its first Hebrew readers might not have expected.",
+    "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   },
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-3.avif",
+    "alt": "The Commentary on Habakkuk scroll from Qumran, written in Hebrew.",
+    "caption": "The Habakkuk commentary from Qumran, which says God made known to the Teacher of Righteousness the meaning of the prophets' words.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Commentary_on_Habakkuk_Scroll_(1QpHab)_Written_in_Hebrew_-_Google_Art_Project.jpg"
+   },
+   {
+    "file": "christian-twin-of-the-islamic-dilemma-4.avif",
+    "alt": "A folio of the Blue Quran in gold Kufic script on blue-dyed parchment.",
+    "caption": "A folio of the Blue Quran, ninth to tenth century. The Quran calls itself a confirmation of the earlier books and a criterion over them.",
+    "artist": "Unknown author",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_Blue_Quran_Met_2004.88.jpg"
+   }
+  ]
+ },
+ "quran-verses-on-torah-and-gospel": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "quran-verses-on-torah-and-gospel-1.avif",
+    "alt": "An open Torah case with the scroll inside.",
+    "caption": "A Torah scroll in its case. Quran 5:43 speaks of a Torah in the hands of the Jews of Medina, in which is the judgement of God.",
+    "artist": "Qualiesin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Open_Torah_Case_with_Scroll.jpg"
+   },
+   null,
+   {
+    "file": "quran-verses-on-torah-and-gospel-3.avif",
+    "alt": "A nineteenth-century photograph of Abraham's Oak near Hebron.",
+    "caption": "Abraham's Oak near Hebron, photographed in the nineteenth century. Genesis 18 and the Quran both tell of Abraham's visitors, and they open the scene differently.",
+    "artist": "Bonfils, Félix, 1831-1885, photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Abraham's_Oak)_-_Bonfils_LCCN92500736.jpg"
+   },
+   {
+    "file": "quran-verses-on-torah-and-gospel-4.avif",
+    "alt": "Two pages of the Rabbula Gospels, a Syriac Gospel book of 586, showing the four evangelists.",
+    "caption": "The Rabbula Gospels, a Syriac Gospel book copied in 586. Christians near Arabia read their scriptures in Syriac, Greek or Ge'ez, and no Arabic Bible from before Islam has been found.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rabbula_Gospels_(9v_&_10r;_Four_Evangelists).jpg"
+   }
+  ]
  }
 }

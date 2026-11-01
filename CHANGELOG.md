@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.84.0] - 2026-11-01
+
+### Added
+
+- **Two new articles, graded point by point in the style of the taḥrīf article.** `christian-twin-of-the-islamic-dilemma` ("A Christian twin of the Islamic dilemma?") holds the same two-horned test up to the New Testament and asks what follows, and where the parallel stops. `quran-verses-on-torah-and-gospel` ("The Quran on the Torah and Gospel") goes through the verses and stories most often used in the argument (5:43 to 5:47, 7:157, 9:111, Moses' hand, Abraham's visitors, the absence of a pre-Islamic Arabic Bible) and says how far each one reaches. Both are in the reading order after the taḥrīf article. Neither names the people who make the arguments they answer.
+- Each article has a featured photograph and four in-text images with captions, all from Wikimedia Commons (public domain or CC licences); none shows a prophet.
+
 ## [1.83.0] - 2026-11-01
 
 ### Changed

@@ -362,3 +362,21 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 
 - **raids-badr-and-the-conquest-of-mecca**: Abu Aziz ibn Umayr on the captives' bread (Guillaume p. 309); Bukhari 4280 (Sad ibn Ubada and the standard); the Ayla, Jarba and Adhruh treaties (Guillaume pp. 607-608).
 - **prophets-marriages-zaynab-and-others**: Bukhari 5212 (Sawda's night); Ibn Sad on Sawda, Zaynab bint Khuzayma and Umm Salama; Nasai 3254 on Umm Salama's reply; Quran 33:52 read with 33:50.
+
+## New articles: christian-twin-of-the-islamic-dilemma and quran-verses-on-torah-and-gospel (1.84.0)
+
+Derived from two spoken transcripts (a debate and a short video reply). The transcripts are auto-captioned speech, so nothing is quoted from them and no speaker, channel or event is named. Every claim they made was rechecked against a written source or dropped.
+
+Checked: Quran 3:3, 3:4, 3:50, 3:85, 5:43 to 5:48, 7:157, 9:111, 11:69, 15:9, 20:22, 27:12, 28:32, 51:24 and 61:6 (Saheeh International text, Quran.com API); Bible verses (World English Bible, bible-api.com): Matthew 1:23, 2:15, 2:23, 5:11 to 5:18, 10:39, 16:25, 23:2 to 3; Mark 7:19, 8:35; Luke 16:17; Acts 15:28 to 29; Galatians 3:10 to 13 and 3:24; Hebrews 8:13; Exodus 4:6 to 7 and 31:16 to 17; Genesis 18:1 to 3, 18:22 and 19:1; Deuteronomy 4:2, 21:23 and 27:26; Hosea 11:1; Isaiah 7:14 and 11:1; Jeremiah 25:11 to 12 and 29:10; Daniel 9:2 and 9:21 to 24. Irenaeus, Against Heresies 1.27.1 to 2 and 3.3.4 (Polycarp and Marcion), and the Pseudo-Clementine Homilies 2.38 to 39 and 3.47 to 50 (newadvent.org, Ante-Nicene Fathers). Babylonian Talmud, Bava Metzia 86b, on the three visitors as Michael, Gabriel and Raphael (Sefaria, Steinsaltz translation). Ibn Kathir on 5:47 to 48 (Shamela, vol. 3 pp. 127 to 128): the glosses of muhaymin as trustee, witness and judge, and "what agrees with it is true, what differs is false".
+
+Findings that shaped the articles:
+
+- The transcripts say the Quran confirms (musaddiq) only the Torah and not the Gospel. The verses show 5:46 describing the Gospel as confirming the Torah and 5:48 describing the Quran as confirming "what preceded it of the Scripture", so the claim is not used.
+- The transcript reply says the reading of 5:47 and the argument from 3:85 settle the matter. The article gives Ibn Kathir's two readings and says that 5:43 is the strongest verse for the other side.
+- The remark that the classical scholars never differed is overstated; the article says the outline holds and the detail does not.
+- The Pseudo-Clementine date and Jewish-Christian setting, the "shoot" suggestion for Matthew 2:23, and the Hebrew and Greek words in Isaiah 7:14 are stated from general knowledge and flagged in the notes.
+
+Not checked: the 1QpHab wording against a printed edition (paraphrase follows two online translations); Griffith, The Bible in Arabic, pp. 41 to 42, and Kashouh on the earliest Arabic Gospel manuscript (both read second-hand); a named scholar's wording on "confirming" and muhaymin was not used because no printed page was read.
+
+Images: eight in-text images and two featured images, all from Wikimedia Commons; no picture of a prophet. A first pick of a painting of the Sermon on the Mount and an etching of Abraham with the three visitors was dropped for that reason.
+
