@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.87.2] - 2026-11-01
+
+### Changed
+
+- **Images, batch 6.** Ten articles gain a third in-text image: prophet-died-poisoning, instruments-islamic-world, moon-craters, indonesia, dome-inscriptions, hajj-rites-explained, raids-badr-and-the-conquest-of-mecca, paul-and-the-law, quranic-stories-and-history and fastest-growing-religion. Every in-text image of these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates. All new pictures are Pexels photographs, because Wikimedia Commons was refusing requests; the captions name a place only where the source does, and say so where the photograph is of somewhere else (Nizwa Fort in Oman for the Khaybar article, the drum tiles of the Dome of the Rock, a Genesis page for the Paul article). No picture shows a prophet.
+
 ## [1.87.1] - 2026-11-01
 
 ### Fixed
