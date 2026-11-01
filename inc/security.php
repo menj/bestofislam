@@ -280,21 +280,58 @@ define( 'BOI_SEC_COUNTS', 'boi_security_counts' );
 define( 'BOI_SEC_FAILED', 'boi_security_failed' );
 
 /**
- * Add one to today's counter for an event. Thirty days are kept.
+ * Add one to today's counter for an event. One small row per key and day,
+ * incremented in a single query, so a flood of blocked requests never
+ * rewrites the whole counts option. boi_sec_counts() folds past rows.
  *
  * @param string $key Event key.
  */
 function boi_sec_count( $key ) {
+	global $wpdb;
+	$name = 'boi_security_tally_' . sanitize_key( $key ) . '_' . gmdate( 'Ymd' );
+	$wpdb->query( $wpdb->prepare( "INSERT INTO {$wpdb->options} (option_name, option_value, autoload) VALUES (%s, '1', 'off') ON DUPLICATE KEY UPDATE option_value = option_value + 1", $name ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+}
+
+/**
+ * Counts for display: BOI_SEC_COUNTS plus the tally rows. Rows from past days
+ * are added to BOI_SEC_COUNTS and deleted; today's row stays in place.
+ *
+ * @return array date => array key => count, newest first.
+ */
+function boi_sec_counts() {
+	global $wpdb;
 	$counts = get_option( BOI_SEC_COUNTS, array() );
 	$counts = is_array( $counts ) ? $counts : array();
-	$day    = gmdate( 'Y-m-d' );
-	if ( ! isset( $counts[ $day ] ) ) {
-		$counts[ $day ] = array();
-		krsort( $counts );
-		$counts = array_slice( $counts, 0, 30, true );
+	$rows   = $wpdb->get_results( "SELECT option_name, option_value FROM {$wpdb->options} WHERE option_name LIKE 'boi\\_security\\_tally\\_%'" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$today  = gmdate( 'Ymd' );
+	$live   = array();
+	$done   = array();
+	foreach ( (array) $rows as $row ) {
+		if ( ! preg_match( '/^boi_security_tally_([a-z0-9_-]+)_(\d{8})$/', $row->option_name, $m ) ) {
+			continue;
+		}
+		if ( $m[2] === $today ) {
+			$live[ $m[1] ] = (int) $row->option_value;
+			continue;
+		}
+		$day                     = substr( $m[2], 0, 4 ) . '-' . substr( $m[2], 4, 2 ) . '-' . substr( $m[2], 6, 2 );
+		$counts[ $day ][ $m[1] ] = ( isset( $counts[ $day ][ $m[1] ] ) ? (int) $counts[ $day ][ $m[1] ] : 0 ) + (int) $row->option_value;
+		$done[]                  = $row->option_name;
 	}
-	$counts[ $day ][ $key ] = ( isset( $counts[ $day ][ $key ] ) ? (int) $counts[ $day ][ $key ] : 0 ) + 1;
-	update_option( BOI_SEC_COUNTS, $counts, false );
+	krsort( $counts );
+	$counts = array_slice( $counts, 0, 30, true );
+	if ( $done ) {
+		update_option( BOI_SEC_COUNTS, $counts, false );
+		foreach ( $done as $name ) {
+			delete_option( $name );
+		}
+	}
+	$day = gmdate( 'Y-m-d' );
+	foreach ( $live as $key => $n ) {
+		$counts[ $day ][ $key ] = ( isset( $counts[ $day ][ $key ] ) ? (int) $counts[ $day ][ $key ] : 0 ) + $n;
+	}
+	krsort( $counts );
+	return $counts;
 }
 
 /**
@@ -405,7 +442,7 @@ function boi_sec_attack_notice() {
 			$hit[] = sprintf( '%s (%d, %d)', $name, (int) $row['n'], count( (array) $row['ips'] ) );
 		}
 	}
-	$counts = get_option( BOI_SEC_COUNTS, array() );
+	$counts = boi_sec_counts();
 	$today  = isset( $counts[ gmdate( 'Y-m-d' ) ]['remote-password'] ) ? (int) $counts[ gmdate( 'Y-m-d' ) ]['remote-password'] : 0;
 	if ( ! $hit && ! $today ) {
 		return;
@@ -1265,7 +1302,7 @@ function boi_sec_render_tools() {
 
 		<h2><?php esc_html_e( 'Attacks seen', 'bestofislam' ); ?></h2>
 		<?php
-		$counts = get_option( BOI_SEC_COUNTS, array() );
+		$counts = boi_sec_counts();
 		$counts = is_array( $counts ) ? $counts : array();
 		krsort( $counts );
 		$labels = array(

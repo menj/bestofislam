@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.2] - 2026-11-01
+
+### Fixed
+
+- Security counters now add one small tally row per event and day with a single query, folded daily, instead of rewriting the whole counts option on every blocked XML-RPC request.
+
 ## [1.78.1] - 2026-11-01
 
 ### Added
