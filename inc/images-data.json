@@ -290,14 +290,24 @@
     "alt": "Lush olive groves beneath dramatic clouds in rural Morocco landscape.",
     "artist": "Tony Zohari",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/olive-groves-under-moody-moroccan-skies-36005582/"
+    "source": "https://www.pexels.com/photo/olive-groves-under-moody-moroccan-skies-36005582/",
+    "caption": "Olive trees under heavy clouds. The Gospels place Jesus on the Mount of Olives, and the Quran swears by the olive (95:1)."
    },
    {
     "file": "shared-prophets-2.avif",
     "alt": "The ascent to the summit of Mount Sinai, lithograph by David Roberts",
     "artist": "David Roberts",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Ascent_to_the_Summit_of_Sinai_-_1927.119_-_Cleveland_Museum_of_Art.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Ascent_to_the_Summit_of_Sinai_-_1927.119_-_Cleveland_Museum_of_Art.tif",
+    "caption": "The ascent to the summit of Mount Sinai, a lithograph by David Roberts. Moses is the prophet the Quran names most often."
+   },
+   {
+    "file": "shared-prophets-3.avif",
+    "alt": "Snow-covered Mount Ararat under a clear sky.",
+    "caption": "Mount Ararat. Genesis places the ark in the mountains of Ararat, and the Quran says it came to rest on al-Judi (11:44).",
+    "artist": "Muhammed Sami Atalay",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stunning-snow-capped-mount-ararat-in-clear-blue-sky-40107333/"
    }
   ]
  },
@@ -1133,14 +1143,24 @@
     "alt": "Ancient stone ruins with columns in Turkey, captured in black and white for a timeless feel.",
     "artist": "Ayşegül  Aytören",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/grayscale-photo-of-ruins-13507834/"
+    "source": "https://www.pexels.com/photo/grayscale-photo-of-ruins-13507834/",
+    "caption": "Grayscale ruins of an ancient city in Turkey. Slavery was a feature of the ancient world in which Islam arose."
    },
    {
     "file": "slavery-in-islam-2.avif",
     "alt": "Explore the ancient ruins of Patara in Turkey, showcasing historic stonework and columns.",
     "artist": "Sami TÜRK",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ruins-of-the-ancient-city-of-patara-turkey-14816156/"
+    "source": "https://www.pexels.com/photo/ruins-of-the-ancient-city-of-patara-turkey-14816156/",
+    "caption": "The ruins of Patara in Turkey, a city of the Roman world, where slavery was common."
+   },
+   {
+    "file": "slavery-in-islam-3.avif",
+    "alt": "A rusty metal chain wrapped around a weathered post.",
+    "caption": "A rusty chain wrapped around a post. Muslim scholars today hold slavery to be forbidden.",
+    "artist": "Engin Akyurt",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-metal-chain-9756168/"
    }
   ]
  },
@@ -1957,14 +1977,24 @@
     "alt": "A pile of weathered old coins",
     "artist": "papazachariasa",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/coins-ancient-roman-money-old-4786028/"
+    "source": "https://pixabay.com/photos/coins-ancient-roman-money-old-4786028/",
+    "caption": "Weathered old coins. When the name Muhammad first appears on coins is one of the points weighed in this entry."
    },
    {
     "file": "revisionist-case-weighed-2.avif",
     "alt": "A papyrus sheet covered in ancient writing",
     "artist": "flutie8211",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/papyrus-scroll-ancient-writing-7002373/"
+    "source": "https://pixabay.com/photos/papyrus-scroll-ancient-writing-7002373/",
+    "caption": "A papyrus sheet covered in ancient writing. Two papyri carry a hijra date of 22 AH, which is 643 CE."
+   },
+   {
+    "file": "revisionist-case-weighed-3.avif",
+    "alt": "A vintage manuscript with Arabic script open on aged pages.",
+    "caption": "An old Arabic manuscript. Radiocarbon dating puts the Birmingham leaves and the lower text of the Sana'a palimpsest between the late sixth and the seventh century.",
+    "artist": "burcubyzt_85",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/"
    }
   ]
  },
@@ -2656,14 +2686,24 @@
     "alt": "A Quran set on a wooden lectern with soft lighting creating a serene ambiance.",
     "artist": "Yaşar Başkurt",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/"
+    "source": "https://www.pexels.com/photo/open-quran-on-wooden-lectern-with-soft-lighting-32550008/",
+    "caption": "An open Quran on a lectern. The Quran sets the inheritance shares in its fourth chapter."
    },
    {
     "file": "women-in-islamic-law-testimony-inheritance-2.avif",
     "alt": "An open Quran placed on a wooden stand with visible Arabic calligraphy, symbolizing faith and tradition.",
     "artist": "GR  Stocks",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/"
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-book-8522578/",
+    "caption": "An open Quran on a stand. The report on honour killing comes from the sayings of the Prophet, which Muslims read beside the Quran."
+   },
+   {
+    "file": "women-in-islamic-law-testimony-inheritance-3.avif",
+    "alt": "Close-up of Arabic calligraphy on an ancient manuscript.",
+    "caption": "Pages of an old Arabic manuscript. Quran 2:282, the verse on recording a debt, asks for two witnesses.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-arabic-script-on-ancient-manuscript-29342502/"
    }
   ]
  },
@@ -3280,14 +3320,32 @@
     "alt": "A silver pointer resting on the Hebrew text of an open Torah scroll",
     "artist": "cottonbro studio",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/"
+    "source": "https://www.pexels.com/photo/silver-and-gold-pen-on-white-paper-5986498/",
+    "caption": "A silver pointer on the Hebrew text of a Torah scroll. The passages in this article come from Samuel, Kings, Ezekiel, Job and Deuteronomy."
    },
    {
     "file": "is-yahweh-satan-2.avif",
     "alt": "Storm clouds massing over a barren desert",
     "artist": "mohsen miri",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/dramatic-storm-clouds-over-desert-landscape-39095159/"
+    "source": "https://www.pexels.com/photo/dramatic-storm-clouds-over-desert-landscape-39095159/",
+    "caption": "Storm clouds over a barren desert. The conquest passages in Deuteronomy 20 and 1 Samuel 15 are among those readers find hardest."
+   },
+   {
+    "file": "is-yahweh-satan-3.avif",
+    "alt": "An open Bible at a passage.",
+    "caption": "An open Bible. The Hebrew word satan means an adversary, and it is used of human opponents as well as of a heavenly figure.",
+    "artist": "Brett Jordan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-biblical-text-in-a-book-38408789/"
+   },
+   {
+    "file": "is-yahweh-satan-4.avif",
+    "alt": "An open Psalms book with Hebrew and English text.",
+    "caption": "A book of Psalms in Hebrew and English. Readers weigh these passages as identity, as parallels of function, or as a developing theology.",
+    "artist": "Joachim Schnürle",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-psalms-book-in-hebrew-and-english-39222072/"
    }
   ]
  },
@@ -3348,14 +3406,32 @@
     "alt": "Cuneiform script carved into an ancient stone surface",
     "artist": "Ersan Yılmaz",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/a-close-up-of-a-stone-with-writing-on-it-27992278/"
+    "source": "https://www.pexels.com/photo/a-close-up-of-a-stone-with-writing-on-it-27992278/",
+    "caption": "Cuneiform signs on stone. The Ugarit archives, written in an alphabetic cuneiform script, describe a council of the gods under El."
    },
    {
     "file": "was-yahweh-one-of-many-gods-2.avif",
     "alt": "A desert landscape under a sky full of stars",
     "artist": "Mo Eid",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/stars-on-night-sky-17877136/"
+    "source": "https://www.pexels.com/photo/stars-on-night-sky-17877136/",
+    "caption": "A desert under the stars. Psalm 82 sets God in the divine assembly, judging the gods."
+   },
+   {
+    "file": "was-yahweh-one-of-many-gods-3.avif",
+    "alt": "Sunbeams breaking through storm clouds over a vast desert.",
+    "caption": "Storm clouds over a desert. At Ugarit Baal is the rider of the clouds, and the Bible uses the same storm imagery of Yahweh.",
+    "artist": "Roberto Lee Cortes",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/storm-cloud-and-sunbeams-over-beach-on-sea-coast-20783376/"
+   },
+   {
+    "file": "was-yahweh-one-of-many-gods-4.avif",
+    "alt": "Judean pillar figurines in the Israel Museum, Jerusalem.",
+    "caption": "Judean pillar figurines in the Israel Museum. They are found across Judah in ordinary homes, and what they depict is still debated.",
+    "artist": "Chamberi",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Judaean_female_figurines_-_Israel_Museum,_Jerusalem.jpg"
    }
   ]
  },
@@ -3373,14 +3449,32 @@
     "alt": "An old book open on a stand under warm light",
     "artist": "stelios ΒΚ",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ancient-script-book-on-display-stand-40291882/"
+    "source": "https://www.pexels.com/photo/ancient-script-book-on-display-stand-40291882/",
+    "caption": "An old book open under warm light. Second-century teachers disagreed about which books to read and what the Demiurge was."
    },
    {
     "file": "early-christians-yahweh-evil-gnosticism-marcion-2.avif",
     "alt": "A snake coiled along a tree branch",
     "artist": "Regan Dsouza",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-a-coiled-snake-on-branch-32239050/"
+    "source": "https://www.pexels.com/photo/close-up-of-a-coiled-snake-on-branch-32239050/",
+    "caption": "A snake coiled on a branch. Some Gnostic texts read the serpent of Eden as a giver of knowledge."
+   },
+   {
+    "file": "early-christians-yahweh-evil-gnosticism-marcion-3.avif",
+    "alt": "An antique leather-bound manuscript.",
+    "caption": "An antique leather-bound manuscript. Marcion produced his own shortened Gospel of Luke and a set of Paul's letters.",
+    "artist": "Burkard Meyendriesch",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-book-with-a-leather-case-10714137/"
+   },
+   {
+    "file": "early-christians-yahweh-evil-gnosticism-marcion-4.avif",
+    "alt": "A leather-bound antique book on a table with scrolls behind it.",
+    "caption": "An antique book with scrolls behind it. Church writers answered Marcion and the Gnostics with books of their own.",
+    "artist": "Max Mishin",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/brown-book-on-wooden-table-11882036/"
    }
   ]
  },
@@ -3398,14 +3492,32 @@
     "alt": "An open Quran in Arabic script on a stand, against a dark background",
     "artist": "Optical Chemist",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ancient-islamic-text-in-focused-view-36232553/"
+    "source": "https://www.pexels.com/photo/ancient-islamic-text-in-focused-view-36232553/",
+    "caption": "An open Quran in Arabic script. Its short chapter of sincerity says: \"He is Allah, One.\""
    },
    {
     "file": "is-yahweh-the-same-as-allah-2.avif",
     "alt": "An open Quran resting on a wooden stand",
     "artist": "MATAQ Darul Ulum",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/"
+    "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/",
+    "caption": "An open Quran on a stand. The Quran tells the story of Iblis several times and names him as the adversary."
+   },
+   {
+    "file": "is-yahweh-the-same-as-allah-3.avif",
+    "alt": "A hand pointing to text on an ancient Torah scroll.",
+    "caption": "Hebrew text on a Torah scroll. The divine name YHWH appears throughout it.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/"
+   },
+   {
+    "file": "is-yahweh-the-same-as-allah-4.avif",
+    "alt": "Intricate Arabic calligraphy on a stone wall in golden light.",
+    "caption": "Arabic calligraphy on a stone wall. Arabic-speaking Christians and Jews use the same word, Allah, for God.",
+    "artist": "Eyüp Çelik",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/elegant-arabic-calligraphy-on-stone-wall-33867343/"
    }
   ]
  },
@@ -3434,6 +3546,14 @@
     "artist": "Tomris🇹🇷",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/solitary-figure-in-sunlit-mosque-interior-31595516/"
+   },
+   {
+    "file": "where-did-jesus-say-he-is-god-3.avif",
+    "alt": "Several Bibles open side by side in different languages.",
+    "caption": "Several Bibles open side by side in different languages. Readers weigh \"I and the Father are one\" and \"before Abraham was\" in translation as well as in Greek.",
+    "artist": "Chris Liu",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/top-view-of-religion-books-22710978/"
    }
   ]
  },

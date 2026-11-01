@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.86.0] - 2026-11-01
+
+### Changed
+
+- **Images, batch 5.** Ten articles gain the in-text images the rule asks for (about one per two entries): the five Yahweh articles (each from two to four), women-in-islamic-law-testimony-inheritance, where-did-jesus-say-he-is-god, slavery-in-islam, shared-prophets and revisionist-case-weighed (each from two to three). Every in-text image of these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates (the Sinai lithograph moves to the Moses entry in shared-prophets, and the coins to the coins entry in revisionist-case-weighed). No picture shows a prophet.
+- `bin/fetch-stock-images.py` accepts an optional `top` value in an image spec to set the vertical crop of a tall picture.
+
 ## [1.85.0] - 2026-11-01
 
 ### Added
