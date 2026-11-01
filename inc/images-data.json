@@ -2743,7 +2743,13 @@
   ]
  },
  "deuteronomy-18-and-the-paraclete": {
-  "featured": null,
+  "featured": {
+   "file": "deuteronomy-18-and-the-paraclete.avif",
+   "alt": "Floral illumination opening the Gospel of John in an Arabic Gospel book, 1684",
+   "artist": "Ilyas Basim Khuri Bazzi Rahib",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Ilyas_Basim_Khuri_Bazzi_Rahib_-_Full-page_Floral_Composition_Marking_the_Beginning_of_the_Gospel_of_John_(Yuhanna)_-_Walters_W592210A_-_Full_Page.jpg"
+  },
   "inline": [
    {
     "file": "deuteronomy-18-and-the-paraclete-1.avif",
@@ -2787,7 +2793,13 @@
   ]
  },
  "seven-ahruf-cairo-edition-stoning-verse": {
-  "featured": null,
+  "featured": {
+   "file": "seven-ahruf-cairo-edition-stoning-verse.avif",
+   "alt": "The first leaf of the Codex Parisino-Petropolitanus, first Islamic century",
+   "artist": "Bibliothèque nationale de France, Arabe 328",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Codex_Parisino-petropolitanus,_first_leaf_recto.jpg"
+  },
   "inline": [
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-1.avif",
@@ -2832,7 +2844,13 @@
   ]
  },
  "aisha-sheep-report-stoning-and-suckling-verses": {
-  "featured": null,
+  "featured": {
+   "file": "aisha-sheep-report-stoning-and-suckling-verses.avif",
+   "alt": "Two leaves of the Birmingham Quran manuscript in early Hijazi script, dated to the first century of Islam",
+   "artist": "Cadbury Research Library, University of Birmingham",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript.jpg"
+  },
   "inline": [
    {
     "file": "aisha-sheep-report-stoning-and-suckling-verses-1.avif",
@@ -3370,6 +3388,34 @@
     "artist": "MATAQ Darul Ulum",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/"
+   }
+  ]
+ },
+ "where-did-jesus-say-he-is-god": {
+  "featured": {
+   "file": "where-did-jesus-say-he-is-god.avif",
+   "alt": "An open Bible showing the Psalms on a dark surface",
+   "caption": "An open Bible. Christians read its texts as a whole to argue for the divinity of Jesus.",
+   "artist": "Luis Quintero",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/open-bible-2294878/"
+  },
+  "inline": [
+   {
+    "file": "where-did-jesus-say-he-is-god-1.avif",
+    "alt": "An open Quran with a green decorative cover in sunlight, showing Arabic script",
+    "caption": "An open Quran. Its Jesus calls himself the servant of God and tells his hearers to worship God, his Lord and theirs (19:30, 5:72).",
+    "artist": "Gizem Gökce",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-with-decorative-cover-in-sunlight-36521597/"
+   },
+   {
+    "file": "where-did-jesus-say-he-is-god-2.avif",
+    "alt": "A worshipper standing in prayer in a sunlit mosque interior",
+    "caption": "A worshipper standing in prayer. The number and form of the daily prayers come from the Prophet's example, which Muslims say openly.",
+    "artist": "Tomris🇹🇷",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/solitary-figure-in-sunlit-mosque-interior-31595516/"
    }
   ]
  }
