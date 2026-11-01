@@ -26,14 +26,24 @@
     "alt": "View of Nizwa Fort and the surrounding oasis against Hajar Mountains under a clear blue sky.",
     "artist": "HASHTAG SINGH",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/nizwa-fort-and-oasis-with-hajar-mountains-in-oman-35332037/"
+    "source": "https://www.pexels.com/photo/nizwa-fort-and-oasis-with-hajar-mountains-in-oman-35332037/",
+    "caption": "Nizwa Fort and its oasis in Oman. Khaybar was an oasis of forts and date palms in northern Arabia; the photograph is of Oman, not Khaybar."
    },
    {
     "file": "prophet-died-poisoning-2.avif",
     "alt": "Close-up view of a vibrant palm tree with ripe dates, capturing the essence of a sunny summer day.",
     "artist": "Book Space",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/lush-palm-tree-with-ripening-dates-in-summer-sun-37985192/"
+    "source": "https://www.pexels.com/photo/lush-palm-tree-with-ripening-dates-in-summer-sun-37985192/",
+    "caption": "Ripe dates on a palm. Khaybar was a date-growing oasis."
+   },
+   {
+    "file": "prophet-died-poisoning-3.avif",
+    "alt": "Roasted lamb served on a wooden platter with lime slices.",
+    "caption": "Roasted lamb on a wooden platter. In the reports the poison was put in a roasted sheep.",
+    "artist": "Jonathan Borba",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/meat-served-with-limes-19863261/"
    }
   ]
  },
@@ -159,14 +169,24 @@
     "alt": "An artistic sundial stands in focus with vibrant autumn leaves in the background, capturing a serene seasonal moment.",
     "artist": "Jan van der Wolf",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/elegant-sundial-against-autumn-foliage-33162484/"
+    "source": "https://www.pexels.com/photo/elegant-sundial-against-autumn-foliage-33162484/",
+    "caption": "A sundial among autumn leaves. Instruments for measuring time and the sky were central to the work this article describes."
    },
    {
     "file": "instruments-islamic-world-2.avif",
     "alt": "An Islamic astrolabe in a museum",
     "artist": "Gary Todd from Xinzheng, China",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Islamic_Astrolabe_(28417763470).jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Islamic_Astrolabe_(28417763470).jpg",
+    "caption": "An Islamic astrolabe in a museum. Muslim astronomers refined the astrolabe into a portable instrument for finding time, direction and the stars."
+   },
+   {
+    "file": "instruments-islamic-world-3.avif",
+    "alt": "A close-up of an antique celestial globe showing constellations.",
+    "caption": "An antique globe of the constellations. Observatories in the Islamic world scaled up the instruments used to chart the sky.",
+    "artist": "Vinícius Vieira ft",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-celestial-globe-with-constellation-mapping-29847626/"
    }
   ]
  },
@@ -575,14 +595,24 @@
     "alt": "High-contrast black and white photo of a half moon in the night sky.",
     "artist": "Arian Fernandez",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/half-moon-in-dark-sky-astronomy-photo-37779047/"
+    "source": "https://www.pexels.com/photo/half-moon-in-dark-sky-astronomy-photo-37779047/",
+    "caption": "A half moon in the night sky. Many craters on the near side carry the Latinised names of Muslim astronomers."
    },
    {
     "file": "moon-craters-2.avif",
     "alt": "Detailed close-up of a full moon with visible craters and surface texture against a black background.",
     "artist": "Sarowar Hussain",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/full-moon-in-close-up-view-13331099/"
+    "source": "https://www.pexels.com/photo/full-moon-in-close-up-view-13331099/",
+    "caption": "A full moon with its craters visible. Albategnius is named for al-Battani and Alhazen for Ibn al-Haytham."
+   },
+   {
+    "file": "moon-craters-3.avif",
+    "alt": "High-resolution view of the Moon's craters and surface textures.",
+    "caption": "The Moon's cratered surface. Craters named for Muslim astronomers lie across the near side and, in al-Biruni's case, on the far side.",
+    "artist": "Antonio  Moura",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/craters-on-moon-surface-7615732/"
    }
   ]
  },
@@ -594,14 +624,24 @@
     "alt": "The Baiturrahman Grand Mosque in Banda Aceh, Indonesia",
     "artist": "ZULMAHDI",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/mesjid-raya-baiturrahman-aceh-2537403/"
+    "source": "https://pixabay.com/photos/mesjid-raya-baiturrahman-aceh-2537403/",
+    "caption": "The Baiturrahman Grand Mosque in Banda Aceh, Indonesia. More Muslims live in Indonesia than in any other country."
    },
    {
     "file": "indonesia-2.avif",
     "alt": "A mosque in Indonesia with a domed roof and two minarets",
     "artist": "jufriderwotubun",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/mosque-religion-architecture-2465367/"
+    "source": "https://pixabay.com/photos/mosque-religion-architecture-2465367/",
+    "caption": "A mosque in Indonesia with a domed roof and two minarets. Indonesian Muslims pray in Arabic and speak Indonesian."
+   },
+   {
+    "file": "indonesia-3.avif",
+    "alt": "The grand dome and architecture of Istiqlal Mosque in Jakarta.",
+    "caption": "Istiqlal Mosque in Jakarta. Its name means independence, and it is Indonesia's national mosque.",
+    "artist": "Irsyad Rifqi",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/istiqlal-mosque-dome-in-jakarta-indonesia-37221142/"
    }
   ]
  },
@@ -651,14 +691,24 @@
     "alt": "View of the iconic Dome of the Rock through ancient arches in Jerusalem under a clear blue sky.",
     "artist": "Jan Venter",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/low-angle-view-of-arches-and-gold-cupola-against-blue-sky-6477399/"
+    "source": "https://www.pexels.com/photo/low-angle-view-of-arches-and-gold-cupola-against-blue-sky-6477399/",
+    "caption": "The Dome of the Rock seen through ancient arches in Jerusalem. The inscriptions inside it are dated to 72 AH."
    },
    {
     "file": "dome-inscriptions-2.avif",
     "alt": "Jerusalem seen from the Mount of Olives with the Dome of the Rock, lithograph by David Roberts",
     "artist": "David Roberts",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Jerusalem_from_the_Mount_of_Olives_-_1927.118_-_Cleveland_Museum_of_Art.tif"
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Jerusalem_from_the_Mount_of_Olives_-_1927.118_-_Cleveland_Museum_of_Art.tif",
+    "caption": "Jerusalem seen from the Mount of Olives, with the Dome of the Rock lit by the sun. The inscriptions address Christians in the city of the Christian holy places."
+   },
+   {
+    "file": "dome-inscriptions-3.avif",
+    "alt": "Close-up of intricate mosaic details on the Dome of the Rock.",
+    "caption": "Mosaic details on the Dome of the Rock. The inscriptions run in bands round the inside of the building.",
+    "artist": "Thắng-Nhật Trần",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-the-facade-of-the-dome-of-the-rock-in-the-old-city-of-jerusalem-17646472/"
    }
   ]
  },
