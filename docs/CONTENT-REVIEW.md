@@ -365,4 +365,4 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 
 ## New article (1.84.0)
 
-- **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The Commons images should replace the Pexels ones when the API answers (a Greek New Testament manuscript would suit the featured slot).
+- **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The images are from Pexels because Commons refused requests; under D48 they stay as they are.
