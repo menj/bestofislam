@@ -222,7 +222,7 @@ Written from memory or from secondary summaries, and to be checked against the s
 
 ## The Yahweh Question (1.78.0)
 
-The five series articles carry their own fact-check list: section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
+The five series articles carried their own fact-check list (section 7 of `docs/yahweh-series/editorial-and-seo-report.md`). That report and the Markdown drafts were removed in 1.86.1, because the articles now live in `content/`; they remain in the git history.
 
 ## Expansion, second batch (1.78.1)
 

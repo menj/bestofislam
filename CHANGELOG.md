@@ -41,6 +41,12 @@ versioning.
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 13.
 
+## [1.86.1] - 2026-11-01
+
+### Removed
+
+- Leftover files that the theme does not use and that had gone stale: `docs/LISTICLE-GAPS.md` (it described 31 articles and 466 Glossary entries; the theme now has 130 and 797) and the five Markdown drafts in `docs/yahweh-series/`, whose articles now live in `content/`. They remain in the git history. A check of every bundled file found no other unused ones: each image, icon, font, stylesheet, script, template, pattern and style variation is referenced by the theme or by WordPress itself, and the image data, related-article list and image plan hold no entries for missing articles.
+
 ## [1.86.0] - 2026-11-01
 
 ### Changed
