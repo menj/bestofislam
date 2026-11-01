@@ -5,7 +5,7 @@ worth reading after it.
 Score: each glossary term both articles use counts for more the rarer it is
 across the site (so "Quran" counts for little and "Kharijites" for a lot),
 plus three for the same section and one for the same part of the reading
-order. The four best are kept.
+order. The six best are kept, so the Keep reading grid fills two rows of three.
 Run it after adding or changing articles:  python3 bin/build-related.py
 """
 import glob
@@ -16,6 +16,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+KEEP = 6  # cards in the Keep reading grid: two rows of three (inc/features.php)
 
 # Topic of each article, from the seed list in inc/data/seed.json.
 seed = json.load(open(os.path.join(ROOT, 'inc', 'data', 'seed.json'), encoding='utf-8'))
@@ -81,11 +82,11 @@ for a in sorted(text):
         scored.append((-score, b))
     picks = [x for x in PINS.get(a, []) if x in text and x != a]
     for _, b in sorted(scored):
-        if len(picks) >= 4:
+        if len(picks) >= KEEP:
             break
         if b not in picks:
             picks.append(b)
-    related[a] = picks[:4]
+    related[a] = picks[:KEEP]
 
 json.dump(related, open(os.path.join(ROOT, 'inc', 'related-articles.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(len(related), 'articles')

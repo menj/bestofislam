@@ -70,8 +70,10 @@ function boi_related_map() {
 }
 
 /**
- * Renders the Keep reading list: up to four related articles, each linked by
- * its title.
+ * Renders the Keep reading list: up to six related articles, each linked by
+ * its title. The grid sets three to a row, so the list is cut to a multiple
+ * of three; a list shortened by an unlisted article never leaves a row with a
+ * gap in it.
  *
  * @return string
  */
@@ -104,7 +106,7 @@ function boi_render_related() {
 		$related = get_posts(
 			array(
 				'post_type'      => 'post',
-				'posts_per_page' => 3,
+				'posts_per_page' => 6,
 				'post__not_in'   => array( $post_id ),
 				'tax_query'      => array(
 					array(
@@ -119,6 +121,12 @@ function boi_render_related() {
 
 	if ( empty( $related ) ) {
 		return '';
+	}
+
+	$related = array_slice( $related, 0, 6 );
+
+	if ( count( $related ) > 3 ) {
+		$related = array_slice( $related, 0, count( $related ) - count( $related ) % 3 );
 	}
 
 	$items = '';

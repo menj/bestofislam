@@ -716,9 +716,10 @@
 	margin: 0 0 1rem;
 }
 
+/* Three to a row: the list holds six, or a multiple of three (inc/features.php). */
 .boi-related__list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1rem;
 	margin: 0;
 	padding: 0;
@@ -1173,6 +1174,22 @@ video {
 
 	.boi-related__list {
 		grid-template-columns: 1fr;
+	}
+
+	/* On a narrow screen six full-width cards make a long column, so each card
+	   sets a small picture beside its title. */
+	.boi-related__item {
+		flex-direction: row;
+		align-items: center;
+		gap: 0.9rem;
+		padding: 0.75rem;
+	}
+
+	.boi-related__item img,
+	.boi-related__item .boi-placeholder {
+		flex: 0 0 6.5rem;
+		inline-size: 6.5rem;
+		aspect-ratio: 4 / 3;
 	}
 
 	.boi-contact__field input,

@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.86.1] - 2026-11-01
+
+### Changed
+
+- The Keep reading list at the end of each article shows six related articles in two rows of three. It showed four in a grid that fitted three to a row, which left the fourth card alone on a second row. `bin/build-related.py` now keeps the six best matches and `inc/related-articles.json` is rebuilt. The renderer cuts the list to a multiple of three, so an unlisted article never leaves a gap, and the fallback by section also asks for six.
+- On phones each related card sets a small picture beside its title, so six cards make a short column.
+
 ## [1.86.0] - 2026-11-01
 
 ### Changed
