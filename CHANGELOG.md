@@ -6,12 +6,27 @@ versioning.
 
 ## [Unreleased]
 
-## [1.84.0] - 2026-11-01
+## [1.85.0] - 2026-11-01
 
 ### Added
 
 - **Six new articles, graded point by point in the style of the taḥrīf article**, all derived from two spoken transcripts (a debate and a short video reply) and none naming anyone. `christian-twin-of-the-islamic-dilemma` ("A Christian twin of the Islamic dilemma?") holds the same two-horned test up to the New Testament and says where the parallel stops. `quran-verses-on-torah-and-gospel` goes through the verses and stories most used in the argument (5:43 to 5:47, 7:157, 9:111, Moses' hand, Abraham's visitors, the absence of a pre-Islamic Arabic Bible). `early-christians-charged-others-with-corrupting-scripture` sets out who charged whom in the first centuries (Justin on the Jews, Celsus on the Christians, the charges against Marcion, the Pseudo-Clementines, the Ebionites). `quran-word-kitab-meanings` sorts the Quran's uses of kitāb (decree, heavenly Book, revelation, written page) and what each decides. `trinity-in-the-hebrew-bible-tested` tests the usual Christian readings (Genesis 1:26, Isaiah 9:6, the Angel of the Lord, the Spirit, Zechariah 12:10) and the rabbinic "second power" tradition. `matthew-fulfilment-quotations-checked` sets seven of Matthew's citations beside the passages they quote. All six are in the reading order after the taḥrīf article.
 - Each article has a featured photograph and two to four in-text images with captions, all from Wikimedia Commons (public domain or CC licences); none shows a prophet.
+
+## [1.84.0] - 2026-11-01
+
+### Added
+
+- New article, "Where did Jesus say he is God? 6 answers to the turnaround" (`where-did-jesus-say-he-is-god`, 2,004 words of body text), answering a widely shared Christian reply that turns the "I am God, worship me" question back on Muslims. It sets out Jesus's first-person statements in the Quran (19:30, 5:116 to 117 and others), Muhammad's own words on following him and on the seal of prophethood, which Muslim practices come from the Quran and which from the Sunnah, and the five gospel passages the reply cites, read in context. Seeded under Comparative Religion after jesus-not-god in the reading order, with a captioned featured image and two captioned inline images from Pexels (Wikimedia Commons was refusing requests). Title tag: "Where did Jesus say he is God? 6 answers | Best of Islam".
+- SSOT D48: new images come from Wikimedia Commons first, Pexels only when Commons has nothing suitable, and images already bundled are not swapped.
+
+### Fixed
+
+- deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse had featured image files on disk that no manifest listed, so no featured image showed. The files are copies of the Commons images credited for same-god (the Walters Arabic Gospel illumination, 1684), manuscript-transmission (the Birmingham Quran manuscript) and uthman-copies (the Codex Parisino-petropolitanus); they are now listed in `inc/images-data.json` with those credits.
+- Four articles were missing from the reading order (SSOT D33): where-did-jesus-say-he-is-god and muhammad-false-prophet-claim, and islamisation-of-the-west and muslim-societies-backwardness-claim in "The Muslim world today".
+- Three excerpts were over the 160-character meta description limit in `docs/SEO.md` (167, 178 and 190 characters); they are rewritten to 124 to 129.
+
+Existing sites receive the new article, the images and the excerpts through `boi_migrate_seed()` and the image attachment pass on this version change.
 
 ## [1.83.0] - 2026-11-01
 

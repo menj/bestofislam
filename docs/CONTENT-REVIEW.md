@@ -363,7 +363,7 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **raids-badr-and-the-conquest-of-mecca**: Abu Aziz ibn Umayr on the captives' bread (Guillaume p. 309); Bukhari 4280 (Sad ibn Ubada and the standard); the Ayla, Jarba and Adhruh treaties (Guillaume pp. 607-608).
 - **prophets-marriages-zaynab-and-others**: Bukhari 5212 (Sawda's night); Ibn Sad on Sawda, Zaynab bint Khuzayma and Umm Salama; Nasai 3254 on Umm Salama's reply; Quran 33:52 read with 33:50.
 
-## New articles: six graded articles from two transcripts (1.84.0)
+## New articles: six graded articles from two transcripts (1.85.0)
 
 Derived from two spoken transcripts (a debate and a short video reply). The transcripts are auto-captioned speech, so nothing is quoted from them and no speaker, channel or event is named. Every claim they made was rechecked against a written source or dropped.
 
@@ -385,3 +385,7 @@ Added with the other four (early-christians-charged-others-with-corrupting-scrip
 - Checked: Justin, Dialogue 71 to 73 (the Ezra, Jeremiah and Psalm 96 charges; newadvent.org); Origen, Against Celsus 2.27; Tertullian, Against Marcion 1.19 and 4.2; Irenaeus 1.26.2 (Ebionites); Quran 2:2, 2:85, 2:183, 2:282, 3:48, 3:93, 4:171, 5:110, 6:7, 6:91, 7:156, 13:39, 15:9, 19:30, 29:48, 43:4, 46:12, 56:77 to 78, 68:1, 85:21 to 22 and 112:1; Bukhari 3 on Waraqa (Hebrew letters; hadithunlocked.com); Sanhedrin 38b (Metatron; Sefaria); the Bible passages named in each entry (World English Bible).
 - Not checked on a primary page: the Arabic version of the Waraqa report (Bukhari 6982 is named by Seekers Guidance and Islamweb only); the Psalm 96 "from the wood" textual history, the Mark 16 and John 7:53 manuscript facts, the Hebrew and Greek words in Isaiah 7:14 and Isaiah 9:6, and the Greek form of Isaiah 42 in Matthew, all stated from general knowledge and flagged in the notes; the Babylonian Talmud Bava Batra 14b order of the prophets.
 - The debate was long and heated; the weak and mocking exchanges (insults, riddles, challenges for yes-or-no answers) were not used. The arguments kept are those that rest on a text that can be looked up.
+
+## New article (1.85.0)
+
+- **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The images are from Pexels because Commons refused requests; under D48 they stay as they are.
