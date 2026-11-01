@@ -155,12 +155,13 @@ function boi_sec_sync_htaccess( $force = false ) {
 	}
 	$want    = boi_sec_on( 'sec_xmlrpc_off' );
 	$current = function_exists( 'extract_from_markers' ) ? extract_from_markers( $file, 'Block xmlrpc.php' ) : array();
+	$ok = true;
 	if ( $want && $current !== boi_sec_htaccess_lines() ) {
-		insert_with_markers( $file, 'Block xmlrpc.php', boi_sec_htaccess_lines() );
+		$ok = true === insert_with_markers( $file, 'Block xmlrpc.php', boi_sec_htaccess_lines() );
 	} elseif ( ! $want && $current ) {
-		insert_with_markers( $file, 'Block xmlrpc.php', array() );
+		$ok = true === insert_with_markers( $file, 'Block xmlrpc.php', array() );
 	}
-	update_option( 'boi_security_htaccess', $want ? 'written' : 'off', false );
+	update_option( 'boi_security_htaccess', $ok ? ( $want ? 'written' : 'off' ) : 'unavailable', false );
 }
 add_action( 'admin_init', 'boi_sec_sync_htaccess' );
 add_action( 'after_switch_theme', function () { boi_sec_sync_htaccess( true ); } );
@@ -316,14 +317,19 @@ function boi_sec_counts() {
 		}
 		$day                     = substr( $m[2], 0, 4 ) . '-' . substr( $m[2], 4, 2 ) . '-' . substr( $m[2], 6, 2 );
 		$counts[ $day ][ $m[1] ] = ( isset( $counts[ $day ][ $m[1] ] ) ? (int) $counts[ $day ][ $m[1] ] : 0 ) + (int) $row->option_value;
-		$done[]                  = $row->option_name;
+		$done[ $row->option_name ] = (int) $row->option_value;
 	}
 	krsort( $counts );
-	$counts = array_slice( $counts, 0, 30, true );
+	// 29 past days are stored; with today that makes 30.
+	$counts = array_slice( $counts, 0, 29, true );
 	if ( $done ) {
 		update_option( BOI_SEC_COUNTS, $counts, false );
-		foreach ( $done as $name ) {
-			delete_option( $name );
+		// Subtract what was read rather than delete the row, so an increment
+		// that lands between the read and here is kept for the next fold.
+		foreach ( $done as $name => $value ) {
+			$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->options} SET option_value = option_value - %d WHERE option_name = %s", $value, $name ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->options} WHERE option_name = %s AND option_value <= 0", $name ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			wp_cache_delete( $name, 'options' );
 		}
 	}
 	$day = gmdate( 'Y-m-d' );
@@ -331,7 +337,7 @@ function boi_sec_counts() {
 		$counts[ $day ][ $key ] = ( isset( $counts[ $day ][ $key ] ) ? (int) $counts[ $day ][ $key ] : 0 ) + $n;
 	}
 	krsort( $counts );
-	return $counts;
+	return array_slice( $counts, 0, 30, true );
 }
 
 /**
@@ -415,7 +421,7 @@ function boi_sec_failed_login( $login ) {
 	if ( ! isset( $failed[ $login ] ) && count( $failed ) >= 50 ) {
 		return;
 	}
-	$row = isset( $failed[ $login ] ) ? $failed[ $login ] : array( 'n' => 0, 'first' => $now, 'last' => $now, 'ips' => array() );
+	$row = isset( $failed[ $login ] ) && $now - (int) $failed[ $login ]['first'] <= DAY_IN_SECONDS ? $failed[ $login ] : array( 'n' => 0, 'first' => $now, 'last' => $now, 'ips' => array() );
 	$row['n']++;
 	$row['last'] = $now;
 	$ip          = boi_sec_ip();
@@ -428,6 +434,25 @@ function boi_sec_failed_login( $login ) {
 add_action( 'wp_login_failed', 'boi_sec_failed_login' );
 
 /**
+ * Failed-login rows from the last 24 hours, for the notice and the report.
+ * A row whose count started more than a day ago is left out too, since its
+ * count covers more than the window.
+ *
+ * @return array
+ */
+function boi_sec_failed_recent() {
+	$failed = get_option( BOI_SEC_FAILED, array() );
+	$now    = time();
+	$out    = array();
+	foreach ( is_array( $failed ) ? $failed : array() as $name => $row ) {
+		if ( is_array( $row ) && isset( $row['last'], $row['first'] ) && $now - (int) $row['last'] <= DAY_IN_SECONDS && $now - (int) $row['first'] <= DAY_IN_SECONDS ) {
+			$out[ $name ] = $row;
+		}
+	}
+	return $out;
+}
+
+/**
  * Admin notice when an existing account is being guessed at: ten or more
  * failures in a day, or a correct password refused on the remote route.
  */
@@ -435,9 +460,9 @@ function boi_sec_attack_notice() {
 	if ( ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
-	$failed = get_option( BOI_SEC_FAILED, array() );
+	$failed = boi_sec_failed_recent();
 	$hit    = array();
-	foreach ( (array) $failed as $name => $row ) {
+	foreach ( $failed as $name => $row ) {
 		if ( (int) $row['n'] >= 10 && ( username_exists( $name ) || email_exists( $name ) ) ) {
 			$hit[] = sprintf( '%s (%d, %d)', $name, (int) $row['n'], count( (array) $row['ips'] ) );
 		}
@@ -561,9 +586,10 @@ function boi_sec_seed_slugs() {
 
 /**
  * Whether a post is content the theme seeded: a Glossary entry (it carries
- * the _boi_term_type meta the Glossary sync writes) or a post or page whose
- * slug is one the seed defines. A new post can never take a seeded slug,
- * since WordPress adds a suffix to a slug already in use.
+ * the _boi_term_type meta the Glossary sync writes) or a post or page  carrying
+ * the _boi_seeded marker that boi_insert_post() and boi_update_post() write,
+ * or any post while the theme's own seeding run is saving. A title or slug
+ * alone never counts: a deleted seeded slug is free for anyone to take.
  *
  * @param int    $post_id Post ID, 0 for a new post.
  * @param string $title   Title (unused, kept for the reference signature).
@@ -571,12 +597,49 @@ function boi_sec_seed_slugs() {
  * @return bool
  */
 function boi_sec_is_seeded( $post_id, $title = '', $slug = '' ) {
-	if ( $post_id && '' !== (string) get_post_meta( $post_id, '_boi_term_type', true ) ) {
+	if ( ! empty( $GLOBALS['boi_seeding'] ) ) {
 		return true;
 	}
-	$slug = strtolower( rawurldecode( (string) $slug ) );
-	return '' !== $slug && array_key_exists( $slug, boi_sec_seed_slugs() );
+	if ( ! $post_id ) {
+		return false;
+	}
+	return '' !== (string) get_post_meta( $post_id, '_boi_seeded', true ) || '' !== (string) get_post_meta( $post_id, '_boi_term_type', true );
 }
+
+/**
+ * Once, for sites seeded before 1.87.1: give the _boi_seeded marker to the
+ * existing posts and pages on a seeded slug that do not read as spam and were
+ * never held by the gate. From then on only the seeding helpers add it.
+ */
+function boi_sec_backfill_seed_marker() {
+	if ( get_option( 'boi_security_seed_marked' ) || ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+	$slugs = array_map( 'strval', array_keys( boi_sec_seed_slugs() ) );
+	if ( count( $slugs ) < 2 ) {
+		return; // Seed list not readable yet; try again later.
+	}
+	$posts = get_posts(
+		array(
+			'post_type'        => boi_sec_types(),
+			'post_status'      => array( 'publish', 'pending', 'draft', 'future', 'private' ),
+			'post_name__in'    => $slugs,
+			'posts_per_page'   => -1,
+			'suppress_filters' => true,
+		)
+	);
+	foreach ( $posts as $post ) {
+		if ( get_post_meta( $post->ID, '_boi_spam_held', true ) ) {
+			continue;
+		}
+		$verdict = boi_spam_score( $post->post_title, $post->post_name, $post->post_content );
+		if ( ! $verdict['spam'] ) {
+			update_post_meta( $post->ID, '_boi_seeded', 1 );
+		}
+	}
+	update_option( 'boi_security_seed_marked', 1, false );
+}
+add_action( 'admin_init', 'boi_sec_backfill_seed_marker' );
 
 /**
  * Post types the gate and the scan look at. The theme registers no post types
@@ -602,7 +665,8 @@ function boi_sec_gate( $data, $postarr ) {
 	if ( ! boi_sec_on( 'sec_spam_gate' ) || ! in_array( $data['post_type'], boi_sec_types(), true ) ) {
 		return $data;
 	}
-	$public = in_array( $data['post_status'], array( 'publish', 'future', 'private' ), true );
+	// Private posts are visible to no visitor, so they are flagged, not held.
+	$public = in_array( $data['post_status'], array( 'publish', 'future' ), true );
 	$id     = isset( $postarr['ID'] ) ? (int) $postarr['ID'] : 0;
 	$title  = wp_unslash( $data['post_title'] );
 	$slug   = $data['post_name'];
@@ -610,7 +674,7 @@ function boi_sec_gate( $data, $postarr ) {
 		return $data;
 	}
 	$verdict = boi_spam_score( $title, $slug, wp_unslash( $data['post_content'] ) );
-	if ( ! $verdict['spam'] && $public && boi_sec_is_remote() ) {
+	if ( ! $verdict['spam'] && $public && ( boi_sec_is_remote() || ( defined( 'WP_CLI' ) && WP_CLI ) ) ) {
 		// The spam arrived through wp.newPost: anything published from
 		// outside the editor waits for review, whatever it says.
 		$verdict = array( 'spam' => true, 'reasons' => array( __( 'published from outside the editor', 'bestofislam' ) . ' (' . boi_sec_request_type() . ')' ) );
@@ -622,7 +686,7 @@ function boi_sec_gate( $data, $postarr ) {
 		$data['post_status'] = 'pending';
 	}
 	$GLOBALS['boi_sec_held'] = array(
-		'event'   => $public ? 'held' : 'flagged-draft',
+		'event'   => $public ? 'held' : ( 'private' === $data['post_status'] ? 'flagged-private' : 'flagged-draft' ),
 		'title'   => $title,
 		'reasons' => $verdict['reasons'],
 	);
@@ -682,6 +746,7 @@ function boi_sec_remember_gone( $post ) {
 			$gone[ $path ] = (int) $post->ID;
 		}
 	}
+	$gone[ 'p=' . (int) $post->ID ] = (int) $post->ID;
 	if ( $post->post_name ) {
 		$gone[ strtolower( rawurldecode( $post->post_name ) ) ] = (int) $post->ID;
 	}
@@ -704,7 +769,8 @@ function boi_sec_send_gone() {
 	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
 	$path = boi_sec_path( $uri );
 	$last = basename( $path );
-	if ( isset( $gone[ $path ] ) || ( '' !== $last && isset( $gone[ $last ] ) && false === strpos( $path, '/' ) ) ) {
+	$qp   = isset( $_GET['p'] ) ? absint( $_GET['p'] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	if ( ( $qp && '' === $path && isset( $gone[ 'p=' . $qp ] ) ) || isset( $gone[ $path ] ) || ( '' !== $last && isset( $gone[ $last ] ) && false === strpos( $path, '/' ) ) ) {
 		status_header( 410 );
 		nocache_headers();
 		header( 'X-Robots-Tag: noindex', true );
@@ -1330,8 +1396,7 @@ function boi_sec_render_tools() {
 		<h3><?php esc_html_e( 'Accounts being guessed, last 24 hours', 'bestofislam' ); ?></h3>
 		<p class="description"><?php esc_html_e( 'Attackers change address on every try, so failures are counted by account name. An account of yours in this list should get a new, long password, and ideally a new name that is not the site name.', 'bestofislam' ); ?></p>
 		<?php
-		$failed = get_option( BOI_SEC_FAILED, array() );
-		$failed = is_array( $failed ) ? $failed : array();
+		$failed = boi_sec_failed_recent();
 		uasort(
 			$failed,
 			function ( $x, $y ) {

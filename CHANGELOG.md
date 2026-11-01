@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.87.1] - 2026-11-01
+
+### Fixed
+
+- Security tab review fixes. The trash button stays off while a scan runs. The gambling patterns carry the i flag, so upper-case Cyrillic matches without mbstring. Past-day tallies are folded by subtracting the value read, so a late increment survives, and the report holds 30 days with today. Failed logins older than 24 hours drop out of the notice and the report, and a count restarts after a day. The .htaccess state reads "written" only when the write succeeded. The spam gate exempts only posts with the theme's `_boi_seeded` marker (written by `boi_insert_post()` and `boi_update_post()`, backfilled once for clean posts on seeded slugs) or the seeding run itself; a matching slug no longer counts. Private posts are flagged and left private. Posts published through WP-CLI are held like XML-RPC ones, the theme's own seeding excepted. Trashed spam reached as `/?p=ID` answers 410. The detector self-test fails on a missing or invalid seed or content file.
+
 ## [1.87.0] - 2026-11-01
 
 ### Added

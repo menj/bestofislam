@@ -39,6 +39,19 @@ require BOI_DIR . '/inc/glossary-data.php';
 $fail = 0;
 $n    = 0;
 
+// A seed file that is missing or not valid JSON reads as empty in the theme,
+// which would make this test pass on nothing.
+foreach ( array_merge( array( BOI_DIR . '/inc/data/seed.json' ), glob( BOI_DIR . '/content/*.json' ) ) as $file ) {
+	if ( ! is_readable( $file ) || ! is_array( json_decode( (string) file_get_contents( $file ), true ) ) ) {
+		++$fail;
+		echo 'BAD JSON or missing: ' . $file . "\n";
+	}
+}
+if ( ! boi_seed_ready() ) {
+	++$fail;
+	echo "Seed list incomplete: topics, listicles or pages missing\n";
+}
+
 /**
  * Score one seeded item and report any score above zero.
  *
@@ -59,11 +72,17 @@ function boi_test_clean( $key, $title, $slug, $content ) {
 
 foreach ( boi_seed_listicles() as $item ) {
 	$file = BOI_DIR . '/content/' . $item['slug'] . '.json';
-	$body = is_file( $file ) ? json_decode( file_get_contents( $file ), true ) : array();
+	$body = is_file( $file ) ? json_decode( file_get_contents( $file ), true ) : null;
+	if ( ! is_array( $body ) ) {
+		++$fail;
+		echo 'MISSING or invalid article file: ' . $file . "\n";
+		$body = array();
+	}
 	boi_test_clean( 'article ' . $item['slug'], $item['title'], $item['slug'], ( isset( $body['content'] ) ? $body['content'] : '' ) . ' ' . $item['excerpt'] );
 }
 foreach ( glob( BOI_DIR . '/content/*.json' ) as $file ) {
 	$body = json_decode( file_get_contents( $file ), true );
+	$body = is_array( $body ) ? $body : array();
 	boi_test_clean( 'content file ' . basename( $file ), '', basename( $file, '.json' ), isset( $body['content'] ) ? $body['content'] : '' );
 }
 foreach ( boi_seed_pages() as $key => $page ) {
@@ -164,6 +183,7 @@ $spam = array(
 	array( 'Vegas Stars', '' ),
 	array( 'Surge Casino', '' ),
 	array( '1win', '' ),
+	array( 'ОНЛАЙН КАЗИНО ВАВАДА', '' ),
 );
 foreach ( $spam as $s ) {
 	$r = boi_spam_score( $s[0], $s[1], '' );

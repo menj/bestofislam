@@ -24,7 +24,27 @@ defined( 'ABSPATH' ) || exit;
  * @return int|WP_Error
  */
 function boi_insert_post( $postarr, $wp_error = false ) {
-	return wp_insert_post( wp_slash( $postarr ), $wp_error );
+	return boi_seed_write( 'wp_insert_post', $postarr, $wp_error );
+}
+
+/**
+ * Runs one of the theme's own seed writes. The flag lets the spam gate in
+ * inc/security.php tell the seeding run from any other request, WP-CLI
+ * included, and the _boi_seeded meta marks the post as seeded for later
+ * edits. Only these two helpers write it.
+ *
+ * @param callable $writer   wp_insert_post or wp_update_post.
+ * @param array    $postarr  Post data.
+ * @param bool     $wp_error Whether to return a WP_Error on failure.
+ * @return int|WP_Error
+ */
+function boi_seed_write( $writer, $postarr, $wp_error = false ) {
+	$previous               = ! empty( $GLOBALS['boi_seeding'] );
+	$GLOBALS['boi_seeding'] = true;
+	$postarr['meta_input']  = array_merge( isset( $postarr['meta_input'] ) ? (array) $postarr['meta_input'] : array(), array( '_boi_seeded' => 1 ) );
+	$result                 = call_user_func( $writer, wp_slash( $postarr ), $wp_error );
+	$GLOBALS['boi_seeding'] = $previous;
+	return $result;
 }
 
 /**
@@ -34,7 +54,7 @@ function boi_insert_post( $postarr, $wp_error = false ) {
  * @return int|WP_Error
  */
 function boi_update_post( $postarr ) {
-	return wp_update_post( wp_slash( $postarr ) );
+	return boi_seed_write( 'wp_update_post', $postarr );
 }
 
 /**
