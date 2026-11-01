@@ -6,6 +6,13 @@ versioning.
 
 ## [Unreleased]
 
+## [1.83.0] - 2026-11-01
+
+### Changed
+
+- **Merged `claude/modest-ride-rgvjvk`**, a branch worked in parallel with this one (released there as 1.77.x to 1.78.21). It brings: about ninety-five articles expanded to at least 1,600 words of body text; five new articles, the Yahweh series (is-yahweh-satan, who-was-yahweh-archaeological-origins, was-yahweh-one-of-many-gods, early-christians-yahweh-evil-gnosticism-marcion and is-yahweh-the-same-as-allah) with their images, glossary terms and reading-order slots; and a shorter `seo_title` for each article (`inc/seo.php`). The branch kept the seed list in `inc/setup.php`, which had since moved to `inc/data/seed.json`; its titles and new articles are carried into the JSON file, with a `seo_title` field. The image captions and figure positions from the image batches are kept where the two branches edited the same article.
+- The full release notes of that branch follow at the end of this file, under "Carried over from claude/modest-ride-rgvjvk".
+
 ## [1.82.0] - 2026-11-01
 
 ### Changed
@@ -1282,3 +1289,220 @@ A pass over the site as a reader meets it.
 - Tabbed settings screen under Appearance, Listicles, covering Display, Schema, and Voting, with a recent-vote moderation log.
 - Listicle design tokens in `theme.json` under `settings.custom.listicle`, plus a bundled style variation.
 - Listicle starter block pattern.
+
+## Carried over from claude/modest-ride-rgvjvk
+
+These entries were written on that branch under its own version numbers (1.77.1 to 1.78.21), which are lower than the releases above.
+
+## [1.78.21] - 2026-10-31
+
+### Changed
+
+- Two more articles reach at least 1,600 words of body text: raids-badr-and-the-conquest-of-mecca (1,443 to 1,694) and prophets-marriages-zaynab-and-others (1,445 to 1,621). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+- The 1.78.20 entry now gives the correct count for islam-religion-of-peace (1,600).
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.20] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: shared-prophets (1,416 to 1,637), black-stone-and-kissing (1,433 to 1,631), five-pillars-explained (1,437 to 1,653) and islam-religion-of-peace (1,439 to 1,600). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+- The 1.78.19 entry now gives the correct count for paul-and-the-law (1,607).
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.19] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: jesus-not-god (1,378 to 1,605), slavery-in-islam (1,390 to 1,609), paul-and-the-law (1,401 to 1,607) and crucifixion-quran (1,410 to 1,628). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.18] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: manuscript-transmission (1,346 to 1,652), kharijites-and-takfir (1,350 to 1,605), hajj-rites-explained (1,367 to 1,610) and quranic-stories-and-history (1,374 to 1,612). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.17] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: quran-science-claims-graded (1,306 to 1,612), revisionist-case-weighed (1,308 to 1,607), war-and-killing-in-islam (1,317 to 1606) and where-is-the-injil (1,340 to 1,619). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.16] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: scholars-who-shaped-islamic-study (1,287 to 1,692), uthman-copies (1,290 to 1,614), does-the-quran-allow-wife-beating (1,299 to 1,647) and companions-who-started-with-nothing (1,303 to 1,665). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.15] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: apes-and-pigs-and-the-jews (1,248 to 1,647), before-your-first-friday-prayer (1,262 to 1,649), prophet-died-poisoning (1,271 to 1,666) and magic-jinn-and-satan-hadiths (1,281 to 1,613). before-your-first-friday-prayer also uses a neutral pronoun for the generic visitor. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.14] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: sira-ibn-ishaq-hisham-tabari (1,239 to 1,630), indonesia (1,241 to 1,601), natural-world-verses (1,245 to 1,761) and quran-mysteries-in-the-stories (1,247 to 1,692). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.13] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: buraq-and-miracle-stories (1,210 to 1,766), quran-preservation-reddit (1,214 to 1,641), first-muslims-kept-the-faith (1,216 to 1,607) and universe-demands-creator (1,234 to 1,693). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.12] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: hijab-and-modesty (1,179 to 1,600), dome-inscriptions (1,180 to 1,600), hanif-poets-and-musaylima (1,195 to 1,652) and why-no-interest (1,196 to 1,616). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.11] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: preservation-and-truth (1,162 to 1,606), ridda-wars-abu-bakr-fadak (1,162 to 1,637), crusades-5-facts (1,163 to 1,643) and instruments-islamic-world (1,171 to 1,606). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.10] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: race-in-quran-and-hadith (1,153 to 1,613), camel-urine-hadith (1,158 to 1,612), funeral-dhikr-dua (1,159 to 1,613) and al-zutt-allegation (1,162 to 1,610). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.9] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: islamophobia-5-facts (1,151 to 1,604), seven-libraries (1,151 to 1,646), was-muhammad-illiterate-ummi (1,152 to 1,601) and who-wrote-the-quran (1,152 to 1,602). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.8] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: abrogation-and-the-sword-verse (1,134 to 1,601), islam-in-china (1,138 to 1,608), haman-anachronism (1,142 to 1,617) and gods-attributes-and-anthropomorphism (1,144 to 1,619). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.7] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: homosexuality-in-islam (1,102 to 1,601), who-is-allah (1,120 to 1,602), western-scholars-of-islam (1,121 to 1,632) and moon-craters (1,126 to 1,602). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.6] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: satanic-verses-report (1,073 to 1,611), mosques-adapt-to-place (1,077 to 1,606), end-of-time (1,087 to 1,623) and end-of-the-world-1110-claim (1,101 to 1,608). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.5] - 2026-10-31
+
+### Changed
+
+- Two more articles reach at least 1,600 words of body text: morality-without-god (1,057 to 1,613) and taqiyya-5-myths (1,067 to 1,617).
+- The Mesha Stele comes from Wikimedia Commons (public domain, photographs by Tangopaso). It is now the featured image of who-was-yahweh-archaeological-origins in place of the Pexels photograph, and its detail naming YHWH replaces the second in-text image, which moves from the Arad entry to the Mesha Stele entry.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.4] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text: ex-muslim-blog-study (1,020 to 1,611), who-saw-gabriel (1,030 to 1,609), jihad-meaning-quran-hadith-jurists (1,051 to 1,616) and qibla-change (1,052 to 1,626). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.3] - 2026-10-31
+
+### Changed
+
+- Four more articles reach at least 1,600 words of body text, completing the third batch: library-of-alexandria (1,001 to 1,619), kaaba-witnesses (1,007 to 1,644), prophets-you-may-not-know (1,013 to 1,629) and child-marriage-in-islam (1,014 to 1,633). Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.2] - 2026-10-31
+
+### Changed
+
+- **Every title tag reads "<page> | Best of Islam" and stays under 60 characters** (SSOT D47). `boi_title_parts()` in `inc/seo.php` builds the two parts:
+  - The front page now leads with its focus: "Objections to Islam, answered | Best of Islam". It used to put the site name first.
+  - 106 of the 122 seeded articles have headlines too long for the 43 characters left, so their seed entries carry a short `seo_title`, written keyword first. For example, "Is Allah the same God as in the Bible? | Best of Islam" (54 characters) replaces the 88-character title of the same-God article. The short title is used while the article keeps its seeded headline; an article the owner renames gets a title fitted from the new headline.
+  - Eight Glossary entries with long transliterated names carry a `seo_title` in their data.
+  - A paged view folds its page number into the first part.
+  - Anything still too long, such as a long search, is cut at a word boundary with Unicode-safe trimming.
+  - The headline shown on the page is unchanged.
+- `bin/check-content.py` now refuses a seeded article or Glossary entry whose title tag would pass 59 characters.
+- Four more articles reach at least 1,600 words of body text: ramadan-last-ten-nights (994 to 1,683), arabic-words-science (996 to 1,627), women-in-islamic-law-testimony-inheritance (1,000 to 1,939) and houris-and-paradise (1,001 to 1,603).
+- The featured image of is-yahweh-satan is now a public-domain Wikimedia Commons file, a page of the Aleppo Codex, in place of the Pexels photograph.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12, since the new `seo_title` field changes no entry page.
+
+## [1.78.1] - 2026-10-30
+
+### Changed
+
+- Six more articles are expanded to at least 1,600 words of body text, the second batch of the pass begun in 1.77.2: aisha-sheep-report-stoning-and-suckling-verses (844 to 1,893), ezra-and-mary (927 to 1,623), fastest-growing-religion (939 to 1,617), second-peter (957 to 1,614), why-five-prayers (975 to 1,697) and temporary-marriage-mutah (992 to 1,713). Entries and titles are unchanged; new notes are numbered in order, and details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.78.0] - 2026-10-30
+
+### Added
+
+- **The Yahweh Question**, a five-part series in Comparative Religion, seeded from the Markdown drafts in `docs/yahweh-series/`:
+  - Is Yahweh Satan? 7 troubling biblical parallels that raise serious questions (`is-yahweh-satan`), the hub.
+  - Who was Yahweh? 7 archaeological discoveries that challenge traditional beliefs (`who-was-yahweh-archaeological-origins`).
+  - Was Yahweh originally one of many gods? 7 clues from ancient Israelite religion (`was-yahweh-one-of-many-gods`).
+  - Did early Christians believe Yahweh was evil? 7 revelations from Gnosticism and Marcion (`early-christians-yahweh-evil-gnosticism-marcion`).
+  - Is Yahweh the same as Allah? 7 questions from the Quran, the Bible and history (`is-yahweh-the-same-as-allah`).
+- Titles follow the site's sentence case; the excerpts, which double as meta descriptions, stay within 130 characters. The five join "The Bible and the Quran" in the reading order after the Talmud and midrash article, and `inc/related-articles.json` is rebuilt (122 articles).
+- Each article has a featured image and two in the text from Pexels, used under the Pexels licence and credited in `inc/images-data.json` with the photographer and photo page; none depicts a person or a prophet. Wikimedia Commons was the first choice, but its API and image server returned HTTP 429 to the build environment throughout, so a later release may swap in Commons files (the Mesha Stele and the Aleppo Codex, both public domain, were identified).
+- The fact-check list for the series is section 7 of `docs/yahweh-series/editorial-and-seo-report.md`.
+
+New articles are created on existing sites by the population pass that runs on this version change; `BOI_GLOSSARY_VERSION` stays at 12.
+
+- Seven articles are expanded to at least 1,600 words of body text (Notes and the network box are not counted), the first batch of a pass that brings every article into the range of 1,600 to 2,500 words: quran-grammar-errors-claim (536 to 1,665), quran-contradictions-claims (547 to 1,844), deuteronomy-18-and-the-paraclete (601 to 1,905), blasphemy-and-insults-to-the-prophet (614 to 1,663), muslims-by-the-numbers-2020 (688 to 1,809), fly-hadith-and-adult-suckling (740 to 1,712) and do-muslims-worship-muhammad (753 to 1,896). Each keeps its entries and title; the new text adds the strongest form of the objection to each entry, the classical answers, and a closing "bottom line" where the article had none. New notes are numbered in order, and the details that still need a check against the sources are listed in `docs/CONTENT-REVIEW.md`.
+- The fly hadith article now says that most of the Prophet's household, rather than all of it, rejected the general application of the Sahla ruling, since A'isha applied it (Malik, al-Muwatta).
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
+
+## [1.77.1] - 2026-10-28
+
+### Changed
+
+- The Islamic dilemma article (islamic-dilemma) answers three arguments from islamicdilemma.com (POLEMICS.md, Source 4), and stays within 2,500 words of body text:
+  - **18:27, "none can change His words".** A new passage in the third entry shows that the phrase covers God's promise (6:34, 10:64) and the Quran itself (6:115, 18:27), with Ibn Kathir on 18:27 (vol. 5, p. 151) and al-Tabari on 6:115 (Shakir ed., vol. 12, pp. 62–63), both checked on Shamela, and the Quran's own use of *baddala* for people changing words (2:59, 48:15). Notes 13 and 14 are new; former notes 13 to 16 are now 15 to 18.
+  - **7:157 and 9:111.** The first entry notes that the Quran says what its Injil contains, in its own terms, and that saying it was wrong about the Gospels assumes the point at issue.
+  - **5:14.** The second entry adds that some of those who call themselves Christians forgot a portion of what they were reminded of.
+- To make room, five sentences of repetition are cut, including Ibn Kathir's remark that 5:47 concerns the Christians.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 12.
