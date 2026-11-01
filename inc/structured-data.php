@@ -87,6 +87,10 @@ function boi_licence_url( $licence ) {
 		return 'https://creativecommons.org/publicdomain/mark/1.0/';
 	}
 
+	if ( preg_match( '/^cc[ -]by(-sa)?[ -]([0-9]\.[0-9])/', $label, $m ) ) {
+		return 'https://creativecommons.org/licenses/by' . ( empty( $m[1] ) ? '' : '-sa' ) . '/' . $m[2] . '/';
+	}
+
 	if ( 0 === strpos( $label, 'pexels' ) ) {
 		return 'https://www.pexels.com/license/';
 	}

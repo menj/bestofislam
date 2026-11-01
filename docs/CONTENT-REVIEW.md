@@ -363,6 +363,29 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 - **raids-badr-and-the-conquest-of-mecca**: Abu Aziz ibn Umayr on the captives' bread (Guillaume p. 309); Bukhari 4280 (Sad ibn Ubada and the standard); the Ayla, Jarba and Adhruh treaties (Guillaume pp. 607-608).
 - **prophets-marriages-zaynab-and-others**: Bukhari 5212 (Sawda's night); Ibn Sad on Sawda, Zaynab bint Khuzayma and Umm Salama; Nasai 3254 on Umm Salama's reply; Quran 33:52 read with 33:50.
 
-## New article (1.84.0)
+## New articles: six graded articles from two transcripts (1.85.0)
+
+Derived from two spoken transcripts (a debate and a short video reply). The transcripts are auto-captioned speech, so nothing is quoted from them and no speaker, channel or event is named. Every claim they made was rechecked against a written source or dropped.
+
+Checked: Quran 3:3, 3:4, 3:50, 3:85, 5:43 to 5:48, 7:157, 9:111, 11:69, 15:9, 20:22, 27:12, 28:32, 51:24 and 61:6 (Saheeh International text, Quran.com API); Bible verses (World English Bible, bible-api.com): Matthew 1:23, 2:15, 2:23, 5:11 to 5:18, 10:39, 16:25, 23:2 to 3; Mark 7:19, 8:35; Luke 16:17; Acts 15:28 to 29; Galatians 3:10 to 13 and 3:24; Hebrews 8:13; Exodus 4:6 to 7 and 31:16 to 17; Genesis 18:1 to 3, 18:22 and 19:1; Deuteronomy 4:2, 21:23 and 27:26; Hosea 11:1; Isaiah 7:14 and 11:1; Jeremiah 25:11 to 12 and 29:10; Daniel 9:2 and 9:21 to 24. Irenaeus, Against Heresies 1.27.1 to 2 and 3.3.4 (Polycarp and Marcion), and the Pseudo-Clementine Homilies 2.38 to 39 and 3.47 to 50 (newadvent.org, Ante-Nicene Fathers). Babylonian Talmud, Bava Metzia 86b, on the three visitors as Michael, Gabriel and Raphael (Sefaria, Steinsaltz translation). Ibn Kathir on 5:47 to 48 (Shamela, vol. 3 pp. 127 to 128): the glosses of muhaymin as trustee, witness and judge, and "what agrees with it is true, what differs is false".
+
+Findings that shaped the articles:
+
+- The transcripts say the Quran confirms (musaddiq) only the Torah and not the Gospel. The verses show 5:46 describing the Gospel as confirming the Torah and 5:48 describing the Quran as confirming "what preceded it of the Scripture", so the claim is not used.
+- The transcript reply says the reading of 5:47 and the argument from 3:85 settle the matter. The article gives Ibn Kathir's two readings and says that 5:43 is the strongest verse for the other side.
+- The remark that the classical scholars never differed is overstated; the article says the outline holds and the detail does not.
+- The Pseudo-Clementine date and Jewish-Christian setting, the "shoot" suggestion for Matthew 2:23, and the Hebrew and Greek words in Isaiah 7:14 are stated from general knowledge and flagged in the notes.
+
+Not checked: the 1QpHab wording against a printed edition (paraphrase follows two online translations); Griffith, The Bible in Arabic, pp. 41 to 42, and Kashouh on the earliest Arabic Gospel manuscript (both read second-hand); a named scholar's wording on "confirming" and muhaymin was not used because no printed page was read.
+
+Images: eight in-text images and two featured images, all from Wikimedia Commons; no picture of a prophet. A first pick of a painting of the Sermon on the Mount and an etching of Abraham with the three visitors was dropped for that reason.
+
+Added with the other four (early-christians-charged-others-with-corrupting-scripture, quran-word-kitab-meanings, trinity-in-the-hebrew-bible-tested, matthew-fulfilment-quotations-checked):
+
+- Checked: Justin, Dialogue 71 to 73 (the Ezra, Jeremiah and Psalm 96 charges; newadvent.org); Origen, Against Celsus 2.27; Tertullian, Against Marcion 1.19 and 4.2; Irenaeus 1.26.2 (Ebionites); Quran 2:2, 2:85, 2:183, 2:282, 3:48, 3:93, 4:171, 5:110, 6:7, 6:91, 7:156, 13:39, 15:9, 19:30, 29:48, 43:4, 46:12, 56:77 to 78, 68:1, 85:21 to 22 and 112:1; Bukhari 3 on Waraqa (Hebrew letters; hadithunlocked.com); Sanhedrin 38b (Metatron; Sefaria); the Bible passages named in each entry (World English Bible).
+- Not checked on a primary page: the Arabic version of the Waraqa report (Bukhari 6982 is named by Seekers Guidance and Islamweb only); the Psalm 96 "from the wood" textual history, the Mark 16 and John 7:53 manuscript facts, the Hebrew and Greek words in Isaiah 7:14 and Isaiah 9:6, and the Greek form of Isaiah 42 in Matthew, all stated from general knowledge and flagged in the notes; the Babylonian Talmud Bava Batra 14b order of the prophets.
+- The debate was long and heated; the weak and mocking exchanges (insults, riddles, challenges for yes-or-no answers) were not used. The arguments kept are those that rest on a text that can be looked up.
+
+## New article (1.85.0)
 
 - **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The images are from Pexels because Commons refused requests; under D48 they stay as they are.
