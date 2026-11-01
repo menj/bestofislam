@@ -52,6 +52,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading from 1.78.0 to 1.78.1
+
+Replace the theme files. On Apache, with "Turn off XML-RPC" on (the default), the theme adds a "Block xmlrpc.php" section to .htaccess on the next admin page load, so the manual step 7 below is no longer needed. Switching it off removes the section. If the Security tab says .htaccess could not be written, ask the host to deny xmlrpc.php at the server.
+
 ## Upgrading from 1.77.1 to 1.78.0
 
 Replace the theme files. The Security tab (Appearance, Theme Options, Security) is on by default: XML-RPC, application passwords and REST writes from outside the browser stop at once. XML-RPC was already off in this theme, so only the last two are new.

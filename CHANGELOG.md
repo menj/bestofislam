@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.78.1] - 2026-11-01
+
+### Added
+
+- On Apache the "Turn off XML-RPC" switch also denies xmlrpc.php in the site's .htaccess, in a "Block xmlrpc.php" marker section (Apache 2.4 and 2.2 rules) shared with the sister themes, so the requests never reach PHP. The section is checked at most hourly in the admin and repaired if missing, rewritten when the options are saved or the theme is activated, and removed when the switch is off or the theme is switched away. The Security tab says when .htaccess cannot be written. There is no separate switch.
+
 ## [1.78.0] - 2026-10-27
 
 ### Added

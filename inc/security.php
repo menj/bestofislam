@@ -89,6 +89,97 @@ function boi_sec_xmlrpc() {
 add_action( 'after_setup_theme', 'boi_sec_xmlrpc', 1 );
 
 /**
+ * Lines that deny xmlrpc.php at the web server, for Apache 2.4 and 2.2. The
+ * marker name is shared by all seven sister themes, so switching between
+ * them never writes the block twice.
+ *
+ * @return string[]
+ */
+function boi_sec_htaccess_lines() {
+	return array(
+		'<Files xmlrpc.php>',
+		'<IfModule mod_authz_core.c>',
+		'Require all denied',
+		'</IfModule>',
+		'<IfModule !mod_authz_core.c>',
+		'Order Deny,Allow',
+		'Deny from all',
+		'</IfModule>',
+		'</Files>',
+	);
+}
+
+/**
+ * Path of the site's .htaccess, or '' when the server is not Apache or the
+ * file cannot be written.
+ *
+ * @return string
+ */
+function boi_sec_htaccess_file() {
+	if ( ! function_exists( 'get_home_path' ) ) {
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+	}
+	if ( ! function_exists( 'insert_with_markers' ) ) {
+		require_once ABSPATH . 'wp-admin/includes/misc.php';
+	}
+	global $is_apache;
+	if ( empty( $is_apache ) ) {
+		return '';
+	}
+	$file = get_home_path() . '.htaccess';
+	if ( file_exists( $file ) ? ! wp_is_writable( $file ) : ! wp_is_writable( dirname( $file ) ) ) {
+		return '';
+	}
+	return $file;
+}
+
+/**
+ * Keep the server-level block in step with the XML-RPC switch: written while
+ * the switch is on, removed when it is off. Runs in the admin, at most once an
+ * hour, so a lost or overwritten .htaccess is repaired without any action.
+ *
+ * @param bool $force Skip the hourly throttle.
+ */
+function boi_sec_sync_htaccess( $force = false ) {
+	if ( ! $force && ( ! current_user_can( 'manage_options' ) || wp_doing_ajax() ) ) {
+		return;
+	}
+	if ( ! $force && get_transient( 'boi_sec_htaccess_checked' ) ) {
+		return;
+	}
+	set_transient( 'boi_sec_htaccess_checked', 1, HOUR_IN_SECONDS );
+	$file = boi_sec_htaccess_file();
+	if ( '' === $file ) {
+		update_option( 'boi_security_htaccess', 'unavailable', false );
+		return;
+	}
+	$want    = boi_sec_on( 'sec_xmlrpc_off' );
+	$current = function_exists( 'extract_from_markers' ) ? extract_from_markers( $file, 'Block xmlrpc.php' ) : array();
+	if ( $want && $current !== boi_sec_htaccess_lines() ) {
+		insert_with_markers( $file, 'Block xmlrpc.php', boi_sec_htaccess_lines() );
+	} elseif ( ! $want && $current ) {
+		insert_with_markers( $file, 'Block xmlrpc.php', array() );
+	}
+	update_option( 'boi_security_htaccess', $want ? 'written' : 'off', false );
+}
+add_action( 'admin_init', 'boi_sec_sync_htaccess' );
+add_action( 'after_switch_theme', function () { boi_sec_sync_htaccess( true ); } );
+add_action( 'update_option_' . BOI_OPTION_KEY, function () { boi_sec_sync_htaccess( true ); } );
+
+/**
+ * Take the block out when the theme is switched to one outside the sister
+ * themes. A sister theme writes the same block back on its first admin load.
+ */
+function boi_sec_remove_htaccess() {
+	$file = boi_sec_htaccess_file();
+	if ( '' !== $file ) {
+		insert_with_markers( $file, 'Block xmlrpc.php', array() );
+	}
+	delete_transient( 'boi_sec_htaccess_checked' );
+}
+add_action( 'switch_theme', 'boi_sec_remove_htaccess' );
+
+/**
  * Application passwords off.
  *
  * @param bool $available Core value.
@@ -922,7 +1013,13 @@ function boi_sec_render_settings( $opts ) {
 	<p class="description"><?php esc_html_e( 'Spam tools publish from outside the site with a stored password. These switches close the doors they use. Writing in the editor, the contact form and voting are not affected.', 'bestofislam' ); ?></p>
 	<table class="form-table" role="presentation">
 		<?php
-		boi_sec_field( $opts, 'sec_xmlrpc_off', __( 'XML-RPC', 'bestofislam' ), __( 'Turn off XML-RPC', 'bestofislam' ), __( 'xmlrpc.php answers 403 and the pingback header goes. The Jetpack plugin and old mobile apps need XML-RPC. Password logins through XML-RPC stay refused even with this off.', 'bestofislam' ) );
+		boi_sec_field( $opts, 'sec_xmlrpc_off', __( 'XML-RPC', 'bestofislam' ), __( 'Turn off XML-RPC', 'bestofislam' ), __( 'xmlrpc.php answers 403 and the pingback header goes. On Apache the theme also blocks it in .htaccess, and removes that block when this is switched off. The Jetpack plugin and old mobile apps need XML-RPC. Password logins through XML-RPC stay refused even with this off.', 'bestofislam' ) );
+		$state = get_option( 'boi_security_htaccess', '' );
+		if ( 'written' === $state ) {
+			echo '<tr><th scope="row"></th><td><p class="description">' . esc_html__( 'The web server also refuses xmlrpc.php: the theme keeps a "Block xmlrpc.php" section in .htaccess and repairs it if it goes missing.', 'bestofislam' ) . '</p></td></tr>';
+		} elseif ( 'unavailable' === $state ) {
+			echo '<tr><th scope="row"></th><td><p class="description">' . esc_html__( 'The theme could not write .htaccess (the server is not Apache, or the file is read-only). WordPress still refuses xmlrpc.php; ask the host to deny it at the server as well.', 'bestofislam' ) . '</p></td></tr>';
+		}
 		boi_sec_field( $opts, 'sec_app_passwords_off', __( 'Application passwords', 'bestofislam' ), __( 'Turn off application passwords', 'bestofislam' ), __( 'Stored application passwords stop working at once. Revoke them as well, below, so they cannot return if this is switched off.', 'bestofislam' ) );
 		boi_sec_field( $opts, 'sec_rest_lock', __( 'REST API changes', 'bestofislam' ), __( 'Allow REST API changes only from a logged-in browser', 'bestofislam' ), __( 'Any request that creates, changes or deletes content while logged in must come from a browser session on this site. Basic authentication and passwords sent in a header are refused. Reading through the API, and anything a visitor does without logging in, is unchanged.', 'bestofislam' ) );
 		?>
