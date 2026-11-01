@@ -132,6 +132,19 @@ function boi_title_parts( $parts ) {
 		$parts['title'] = apply_filters( 'boi_front_title_focus', __( 'Objections to Islam, answered', 'bestofislam' ) );
 	} elseif ( is_tax( 'listicle-topic' ) ) {
 		$parts['title'] = single_term_title( '', false );
+	} elseif ( is_author() ) {
+		// The author's name alone would repeat the site name when the author
+		// account is named after the site ("Best of Islam | Best of Islam").
+		$author = get_queried_object();
+		$name   = $author instanceof WP_User ? wp_strip_all_tags( $author->display_name ) : '';
+
+		if ( '' === $name || 0 === strcasecmp( $name, $site ) ) {
+			/* translators: %s: site name. */
+			$parts['title'] = sprintf( __( 'Who writes %s', 'bestofislam' ), $site );
+		} else {
+			/* translators: %s: author name. */
+			$parts['title'] = sprintf( __( 'Articles by %s', 'bestofislam' ), $name );
+		}
 	} elseif ( is_singular( 'post' ) ) {
 		$short = boi_seed_seo_title( get_queried_object() );
 
@@ -217,7 +230,17 @@ function boi_meta_description() {
 			return wp_trim_words( wp_strip_all_tags( $bio ), 22, '' );
 		}
 
-		return $author ? sprintf( /* translators: %s: author name. */ __( 'Articles by %s on Best of Islam: objections to Islam answered from the sources.', 'bestofislam' ), $author->display_name ) : '';
+		if ( ! $author ) {
+			return '';
+		}
+
+		// An author account named after the site would read "Articles by Best
+		// of Islam on Best of Islam".
+		if ( 0 === strcasecmp( wp_strip_all_tags( $author->display_name ), wp_strip_all_tags( get_bloginfo( 'name', 'display' ) ) ) ) {
+			return __( 'Every article on Best of Islam: objections to Islam stated in their own terms and answered from the sources.', 'bestofislam' );
+		}
+
+		return sprintf( /* translators: %s: author name. */ __( 'Articles by %s on Best of Islam: objections to Islam answered from the sources.', 'bestofislam' ), $author->display_name );
 	}
 
 	if ( is_singular() ) {

@@ -9,7 +9,7 @@ ranking, and the guide itself says to write for readers first.
 
 | Guide topic | What the theme does | Where |
 |---|---|---|
-| Unique, accurate page titles | Every title tag reads `<page> | Best of Islam` and stays under 60 characters (D47). Articles use a short `seo_title` from the seed where the headline is too long; Glossary entries with long names carry one in their data; section archives use the section name; the front page leads with its focus ("Objections to Islam, answered | Best of Islam"). Anything still too long is cut at a word boundary, and `bin/check-content.py` refuses a seed or Glossary title that would overflow. | `inc/seo.php` |
+| Unique, accurate page titles | Every title tag reads `<page> | Best of Islam` and stays under 60 characters (D47). Articles use a short `seo_title` from the seed where the headline is too long; Glossary entries with long names carry one in their data; section archives use the section name; the front page leads with its focus ("Objections to Islam, answered | Best of Islam"); an author archive reads "Articles by <name>", or "Who writes Best of Islam" when the author account carries the site's own name, so the tag never repeats it. Anything still too long is cut at a word boundary, and `bin/check-content.py` refuses a seed or Glossary title that would overflow. | `inc/seo.php` |
 | Description meta tag | One per page: the excerpt on articles and glossary entries (one line, under 160 characters), the section description on archives, a written promise on the front page. None on search results. | `inc/seo.php` |
 | URLs with words | Slugs are words (`/who-is-allah/`, `/glossary/hijab/`, `/topic/history/`). Set Settings, Permalinks to Post name so an article has one address; old dated addresses redirect by slug. | WordPress |
 | One version of a URL | Canonical link on every indexable view; `redirect_canonical` for the rest. | `inc/seo.php` |
@@ -23,7 +23,7 @@ ranking, and the guide itself says to write for readers first.
 | robots.txt | Search results disallowed; nothing sensitive is hidden with it. Search results and paged archives also carry noindex. | `inc/seo.php` |
 | nofollow | Core adds `rel="nofollow ugc"` to comment links; links the owner configures under Contextual Links go only to approved domains. | core, `inc/contextual-links.php` |
 | Mobile | Responsive layout, one URL for every device, no separate mobile site. | `assets/css/` |
-| Promotion | RSS feed with autodiscovery, follow links, shareable articles. | core, `inc/features.php` |
+| Promotion | RSS feed with autodiscovery, follow links, shareable articles. A shared link previews with its title, description and picture: Open Graph and Twitter Card tags on every indexable view, using the same title, description and canonical address as the search tags. The picture is a JPEG copy of the featured image (link previews do not show AVIF), made once in `uploads/boi-share/` and made again when the image changes. | core, `inc/features.php`, `inc/social-meta.php` |
 | Free webmaster tools | Fields for the Search Console and Bing verification codes (Appearance, Best of Islam, Search engines); submit `/wp-sitemap.xml`. | `inc/settings.php`, `inc/seo.php` |
 
 ## Structured data Google Search supports
@@ -65,6 +65,7 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 | Images in the text | ImageObjects in the theme's graph | Added to Rank Math's graph |
 | Breadcrumb markup | Theme | Rank Math when its breadcrumbs are on, otherwise the theme |
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
+| Open Graph and Twitter Card tags | Theme | Rank Math |
 | ItemList, FAQPage | Theme | Theme (Rank Math does not produce them) |
 
 Rank Math's Image SEO module may rewrite alt text and titles; turn it off for

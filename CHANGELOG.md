@@ -6,6 +6,16 @@ versioning.
 
 ## [Unreleased]
 
+## [1.86.3] - 2026-11-01
+
+### Added
+
+- Link previews. Every indexable view now carries Open Graph and Twitter Card tags (`inc/social-meta.php`), so an article shared on WhatsApp, Facebook, X, LinkedIn or Telegram shows its title, description and picture instead of a bare address. The tags reuse the title, description and canonical address the theme gives search engines. Link previews do not show AVIF, so the picture is a JPEG copy of the featured image, no wider than 1,200 pixels, made once in `uploads/boi-share/` and made again only when the image changes. With an SEO plugin active the theme prints none, as the plugin prints its own.
+
+### Fixed
+
+- The author archive's title tag read "Best of Islam | Best of Islam", because the author account carries the site's name. It now reads "Who writes Best of Islam | Best of Islam", or "Articles by <name>" for any other author, and its description no longer reads "Articles by Best of Islam on Best of Islam".
+
 ## [1.86.2] - 2026-11-01
 
 ### Fixed
