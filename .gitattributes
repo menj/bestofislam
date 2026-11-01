@@ -6,3 +6,5 @@
 .gitignore      export-ignore
 .editorconfig   export-ignore
 bin             export-ignore
+FARUQI.md       export-ignore
+CLAUDE.md       export-ignore

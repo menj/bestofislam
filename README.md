@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 123 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 124 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
 - **Questions answered.** 45 questions with short answers, 14 of them on the front page, each linked to its article: in an accordion on the front page, in a panel on every article, and as FAQ markup.
@@ -104,7 +104,10 @@ bestofislam/
 │                        sections, seo, settings, setup, structured-data,
 │                        taxonomy, unlist, voting
 ├── inc/data/            network-links.json, the shared map of phrases to
-│                        inner pages, identical in all seven themes
+│                        inner pages, identical in all seven themes;
+│                        seed.json (topics, articles and standing pages),
+│                        questions.json and image-credits.json. Seed data
+│                        is JSON, read and never executed
 ├── blocks/              Block definitions and editor scripts
 ├── templates/           404, archive, front-page, home, page, search,
 │                        single, single-listicle, tag, taxonomy-listicle-topic
