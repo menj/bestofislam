@@ -389,3 +389,8 @@ Added with the other four (early-christians-charged-others-with-corrupting-scrip
 ## New article (1.85.0)
 
 - **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The images are from Pexels because Commons refused requests; under D48 they stay as they are.
+
+## Images, batch 5 (1.86.0)
+
+Ten articles that were below the rule (about one in-text image per two entries, minimum two). Candidates were searched on Wikimedia Commons first (SSOT D48); where Commons was slow or had nothing fitting, a Pexels photograph was used. New Commons pictures: Penn Museum figurines from Beth Shemesh and the Tel Dan Stele (who-was-yahweh-archaeological-origins), the Judean pillar figurines in the Israel Museum (was-yahweh-one-of-many-gods). Pictures dropped on checking: Chinese and Mexican figurines offered by the Pexels search (wrong region for a Judean article); a Louvre Baal stele (tall crop cut the figure) replaced by a storm-cloud photograph with a caption about the shared storm imagery. Captions name a place only where the source does; the Sinai photograph near Nuweiba is captioned as not showing Kuntillet Ajrud.
+

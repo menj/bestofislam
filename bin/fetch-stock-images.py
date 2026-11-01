@@ -129,7 +129,7 @@ def store(spec, folder, name, width, current=None):
             image = image.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
         else:
             nh = round(w / target)
-            top = max(0, round((h - nh) * 0.35))
+            top = max(0, round((h - nh) * min(1.0, max(0.0, spec.get('top', 0.35)))))
             image = image.crop((0, top, w, top + nh))
         image = image.resize((width, round(width / target)), Image.LANCZOS)
         image.save(path, 'AVIF', quality=QUALITY, speed=4)
