@@ -335,3 +335,7 @@ The five series articles carry their own fact-check list: section 7 of `docs/yah
 
 - **raids-badr-and-the-conquest-of-mecca**: Abu Aziz ibn Umayr on the captives' bread (Guillaume p. 309); Bukhari 4280 (Sad ibn Ubada and the standard); the Ayla, Jarba and Adhruh treaties (Guillaume pp. 607-608).
 - **prophets-marriages-zaynab-and-others**: Bukhari 5212 (Sawda's night); Ibn Sad on Sawda, Zaynab bint Khuzayma and Umm Salama; Nasai 3254 on Umm Salama's reply; Quran 33:52 read with 33:50.
+
+## New article (1.79.0)
+
+- **where-did-jesus-say-he-is-god**: Bukhari 3535, 4416 and 631; Muslim 2404 and 523; Bible quotations adapted from the ESV (consider switching to the World English Bible used by the Yahweh series); the Septuagint wording of Genesis 23:7, 1 Chronicles 29:20 and Exodus 3:14 (*ego eimi ho on*); Matthew 18:26 in the KJV. The Commons images should replace the Pexels ones when the API answers (a Greek New Testament manuscript would suit the featured slot).

@@ -2771,5 +2771,30 @@
     "source": "https://www.pexels.com/photo/koran-on-wooden-table-10346836/"
    }
   ]
+ },
+ "where-did-jesus-say-he-is-god": {
+  "featured": {
+   "file": "where-did-jesus-say-he-is-god.avif",
+   "alt": "An open Bible showing the Psalms on a dark surface",
+   "artist": "Luis Quintero",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/open-bible-2294878/"
+  },
+  "inline": [
+   {
+    "file": "where-did-jesus-say-he-is-god-1.avif",
+    "alt": "An open Quran with a green decorative cover in sunlight, showing Arabic script",
+    "artist": "Gizem Gökce",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-quran-with-decorative-cover-in-sunlight-36521597/"
+   },
+   {
+    "file": "where-did-jesus-say-he-is-god-2.avif",
+    "alt": "A worshipper standing in prayer in a sunlit mosque interior",
+    "artist": "Tomris🇹🇷",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/solitary-figure-in-sunlit-mosque-interior-31595516/"
+   }
+  ]
  }
 }

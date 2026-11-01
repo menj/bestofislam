@@ -6,6 +6,14 @@ versioning.
 
 ## [Unreleased]
 
+## [1.79.0] - 2026-11-01
+
+### Added
+
+- New article, "Where did Jesus say he is God? 6 answers to the turnaround" (`where-did-jesus-say-he-is-god`, 2,004 words of body text), answering a widely shared Christian reply that turns the "I am God, worship me" question back on Muslims. It sets out Jesus's first-person statements in the Quran (19:30, 5:116 to 117 and others), Muhammad's own words on following him and on the seal of prophethood, which Muslim practices come from the Quran and which from the Sunnah, and the five gospel passages the reply cites, read in context. Seeded under Comparative Religion, placed after jesus-not-god in the reading order, with a featured image and two inline images from Pexels (Commons was rate-limiting requests). Title tag: "Where did Jesus say he is God? 6 answers | Best of Islam".
+
+Existing sites receive the article through `boi_migrate_seed()` on this version change.
+
 ## [1.78.21] - 2026-10-31
 
 ### Changed

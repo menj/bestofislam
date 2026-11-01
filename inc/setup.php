@@ -209,6 +209,13 @@ function boi_seed_listicles() {
 			'topic'   => 'comparative-religion',
 		),
 		array(
+			'slug'    => 'where-did-jesus-say-he-is-god',
+			'title'   => __( 'Where did Jesus say he is God? 6 answers to the turnaround', 'bestofislam' ),
+			'seo_title' => __( 'Where did Jesus say he is God? 6 answers', 'bestofislam' ),
+			'excerpt' => __( "A Christian reply turns the 'I am God' challenge back on Muslims. 6 answers from the Quran and the gospels. Read them.", 'bestofislam' ),
+			'topic'   => 'comparative-religion',
+		),
+		array(
 			'slug'    => 'manuscript-transmission',
 			'title'   => __( 'Manuscript transmission: 5 differences between the Quran and the New Testament', 'bestofislam' ),
 			'seo_title' => __( 'Quran vs New Testament manuscripts', 'bestofislam' ),
