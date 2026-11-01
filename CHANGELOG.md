@@ -6,6 +6,17 @@ versioning.
 
 ## [Unreleased]
 
+## [1.79.1] - 2026-11-01
+
+### Fixed
+
+- Five articles had no featured image, because neither `inc/images.php` nor `inc/images-data.json` listed one: muhammad-false-prophet-claim, muslim-societies-backwardness-claim, deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse. The last three had image files on disk with no credit or source recorded anywhere, so those files are replaced. All five now have credited Pexels images (Wikimedia Commons was refusing requests).
+- muhammad-false-prophet-claim and muslim-societies-backwardness-claim also had no in-text images; each now has two, with figure blocks in entries 2 and 4.
+- Three articles were missing from the reading order (SSOT D33): muhammad-false-prophet-claim is placed in "The Prophet and the hard questions", and islamisation-of-the-west and muslim-societies-backwardness-claim in "The Muslim world today".
+- Three excerpts were over the 160-character meta description limit in `docs/SEO.md` (167, 178 and 190 characters); they are rewritten to 124 to 129.
+
+Existing sites pick up the images and excerpts through `boi_migrate_seed()` and the image attachment pass on this version change.
+
 ## [1.79.0] - 2026-11-01
 
 ### Added

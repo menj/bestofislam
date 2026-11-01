@@ -2366,7 +2366,13 @@
   ]
  },
  "deuteronomy-18-and-the-paraclete": {
-  "featured": null,
+  "featured": {
+   "file": "deuteronomy-18-and-the-paraclete.avif",
+   "alt": "A hiker crossing the rugged mountains of South Sinai",
+   "artist": "Khaled Hegazy",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/hiker-exploring-rugged-sinai-mountains-35749881/"
+  },
   "inline": [
    {
     "file": "deuteronomy-18-and-the-paraclete-1.avif",
@@ -2410,7 +2416,13 @@
   ]
  },
  "seven-ahruf-cairo-edition-stoning-verse": {
-  "featured": null,
+  "featured": {
+   "file": "seven-ahruf-cairo-edition-stoning-verse.avif",
+   "alt": "Close-up of Quranic verses on a decorated page",
+   "artist": "belal obeid",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/close-up-shot-of-a-religious-book-13549651/"
+  },
   "inline": [
    {
     "file": "seven-ahruf-cairo-edition-stoning-verse-1.avif",
@@ -2429,7 +2441,13 @@
   ]
  },
  "aisha-sheep-report-stoning-and-suckling-verses": {
-  "featured": null,
+  "featured": {
+   "file": "aisha-sheep-report-stoning-and-suckling-verses.avif",
+   "alt": "An old manuscript in Arabic script open on display",
+   "artist": "burcubyzt_85",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/ancient-manuscript-with-arabic-script-displayed-open-36306963/"
+  },
   "inline": [
    {
     "file": "aisha-sheep-report-stoning-and-suckling-verses-1.avif",
@@ -2794,6 +2812,56 @@
     "artist": "Tomris🇹🇷",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/solitary-figure-in-sunlit-mosque-interior-31595516/"
+   }
+  ]
+ },
+ "muhammad-false-prophet-claim": {
+  "featured": {
+   "file": "muhammad-false-prophet-claim.avif",
+   "alt": "Hagia Sophia in Istanbul, built as the great church of the Byzantine Empire",
+   "artist": "Mert aslan",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/hagia-sophia-exterior-view-in-istanbul-30752506/"
+  },
+  "inline": [
+   {
+    "file": "muhammad-false-prophet-claim-1.avif",
+    "alt": "A starry night sky above the desert hills near Esna in Egypt",
+    "artist": "Bakr Magrabi",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/starry-sky-above-the-desert-land-9181823/"
+   },
+   {
+    "file": "muhammad-false-prophet-claim-2.avif",
+    "alt": "An illuminated Arabic manuscript page with decorative designs",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-illuminated-manuscript-text-29342494/"
+   }
+  ]
+ },
+ "muslim-societies-backwardness-claim": {
+  "featured": {
+   "file": "muslim-societies-backwardness-claim.avif",
+   "alt": "Students studying with books and laptops in a university library",
+   "artist": "Yan Krukau",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/people-studying-in-library-8199762/"
+  },
+  "inline": [
+   {
+    "file": "muslim-societies-backwardness-claim-1.avif",
+    "alt": "An oil refinery in a desert setting",
+    "artist": "Marek Piwnicki",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/a-large-industrial-plant-with-a-large-chimney-27852910/"
+   },
+   {
+    "file": "muslim-societies-backwardness-claim-2.avif",
+    "alt": "The Kuala Lumpur skyline with the Petronas Towers",
+    "artist": "Joerg Hartmann",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/skyscrapers-in-city-in-malaysia-26108669/"
    }
   ]
  }

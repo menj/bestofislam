@@ -289,7 +289,7 @@ function boi_seed_listicles() {
 			'slug'    => 'seven-ahruf-cairo-edition-stoning-verse',
 			'title'   => __( 'The seven ahruf, the 1924 Cairo edition and the stoning verse: 10 points', 'bestofislam' ),
 			'seo_title' => __( 'Seven ahruf, Cairo 1924, the stoning verse', 'bestofislam' ),
-			'excerpt' => __( 'Seven modes versus seven readings, the ten readings, the personal codices, the conditions for an accepted reading, the Cairo printing and the stoning verse. 10 points.', 'bestofislam' ),
+			'excerpt' => __( 'Seven modes and ten readings, the codices of the Companions, the 1924 Cairo printing and the stoning verse: 10 points. Read them.', 'bestofislam' ),
 			'topic'   => 'faith-and-reason',
 		),
 		array(
@@ -674,14 +674,14 @@ function boi_seed_listicles() {
 			'slug'    => 'islamisation-of-the-west',
 			'title'   => __( '6 facts behind the "Islamisation of the West" claim', 'bestofislam' ),
 			'seo_title' => __( 'The "Islamisation of the West" claim', 'bestofislam' ),
-			'excerpt' => __( 'Sharia in Dearborn, the Ground Zero mosque, CAIR as a front group, the demographic numbers, and a school prayer room: 6 claims checked against the record, and the theory tying them together.', 'bestofislam' ),
+			'excerpt' => __( 'Sharia in Dearborn, the Ground Zero mosque, CAIR and the birth-rate numbers: 6 claims checked against the record. Read them.', 'bestofislam' ),
 			'topic'   => 'islamophobia',
 		),
 		array(
 			'slug'    => 'muslim-societies-backwardness-claim',
 			'title'   => __( '5 facts behind the claim that Muslim-majority countries are "backward"', 'bestofislam' ),
 			'seo_title' => __( 'Are Muslim countries "backward"? 5 facts', 'bestofislam' ),
-			'excerpt' => __( 'Low scores on development, freedom and women\'s rights get pinned on Islam itself. 5 facts about what actually predicts them, from oil rents to colonial timing, and what does not.', 'bestofislam' ),
+			'excerpt' => __( 'Low development scores get blamed on Islam itself. 5 facts on what predicts them, from oil rents to colonial timing. Read them.', 'bestofislam' ),
 			'topic'   => 'the-muslim-world',
 		),
 		array(
