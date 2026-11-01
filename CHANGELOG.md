@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.79.2] - 2026-11-01
+
+### Fixed
+
+- The featured images of deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse are the Wikimedia Commons manuscripts again. 1.79.1 replaced them with Pexels photographs because no credit was recorded for them; they turn out to be copies of the Commons images already credited for same-god (the Walters Arabic Gospel illumination, 1684), manuscript-transmission (the Birmingham Quran manuscript) and uthman-copies (the Codex Parisino-petropolitanus), and they now carry those credits.
+
 ## [1.79.1] - 2026-11-01
 
 ### Fixed
