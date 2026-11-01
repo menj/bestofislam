@@ -6,11 +6,46 @@ versioning.
 
 ## [Unreleased]
 
-## [1.86.2] - 2026-11-01
+## [1.87.2] - 2026-11-01
 
 ### Changed
 
 - **Images, batch 6.** Ten articles gain a third in-text image: prophet-died-poisoning, instruments-islamic-world, moon-craters, indonesia, dome-inscriptions, hajj-rites-explained, raids-badr-and-the-conquest-of-mecca, paul-and-the-law, quranic-stories-and-history and fastest-growing-religion. Every in-text image of these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates. All new pictures are Pexels photographs, because Wikimedia Commons was refusing requests; the captions name a place only where the source does, and say so where the photograph is of somewhere else (Nizwa Fort in Oman for the Khaybar article, the drum tiles of the Dome of the Rock, a Genesis page for the Paul article). No picture shows a prophet.
+
+## [1.87.1] - 2026-11-01
+
+### Fixed
+
+- Security tab review fixes. The trash button stays off while a scan runs. The gambling patterns carry the i flag, so upper-case Cyrillic matches without mbstring. Past-day tallies are folded by subtracting the value read, so a late increment survives, and the report holds 30 days with today. Failed logins older than 24 hours drop out of the notice and the report, and a count restarts after a day. The .htaccess state reads "written" only when the write succeeded. The spam gate exempts only posts with the theme's `_boi_seeded` marker (written by `boi_insert_post()` and `boi_update_post()`, backfilled once for clean posts on seeded slugs) or the seeding run itself; a matching slug no longer counts. Private posts are flagged and left private. Posts published through WP-CLI are held like XML-RPC ones, the theme's own seeding excepted. Trashed spam reached as `/?p=ID` answers 410. The detector self-test fails on a missing or invalid seed or content file.
+
+## [1.87.0] - 2026-11-01
+
+### Added
+
+- On Apache the "Turn off XML-RPC" switch also denies xmlrpc.php in the site's .htaccess, in a "Block xmlrpc.php" marker section (Apache 2.4 and 2.2 rules) shared with the sister themes, so the requests never reach PHP. The section is checked at most hourly in the admin and repaired if missing, rewritten when the options are saved or the theme is activated, and removed when the switch is off or the theme is switched away. The Security tab says when .htaccess cannot be written. There is no separate switch.
+- A Security tab under Appearance, Theme Options (`inc/security.php`, `inc/security-detector.php`, `assets/js/security.js`, `assets/css/security.css`), ported from the sister theme after the October 2026 attack on abrahamic-religions.com: XML-RPC password guessing from 701 rotating addresses under forged "Jetpack by WordPress.com" user agents, a correct password found, then a casino spam post every 18 to 20 minutes through wp.newPost under the owner's own account. All switches are on by default.
+  - XML-RPC off: xmlrpc.php answers 403, and requests are counted per day (and those posing as Jetpack), never logged one by one.
+  - Application passwords off.
+  - REST writes made while logged in must come from a browser session with a valid `wp_rest` nonce. Anonymous requests are unchanged, so the contact form (admin-post.php), voting (`bestofislam/v1/vote`, sent with its nonce), the block editor and Rank Math work as before.
+  - A correct password sent through XML-RPC is refused even when XML-RPC is switched back on, with an admin notice telling the owner to change it.
+  - Failed logins counted by account name over a rolling day, with an admin notice for a real account guessed ten times or more.
+  - The spam gate: a post or page that reads as gambling spam, or anything published from outside the editor, is saved as Pending and logged.
+  - A batch scan of posts and pages with a move to the trash, never a permanent delete; 410 Gone on the addresses of spam trashed there; deletion of empty spam categories on request only.
+  - Buttons to revoke every application password and to log out every session, a table of administrator accounts, daily attack counts, accounts being guessed, posts per day, burst publishing, seeded content carrying gambling links, and the security log.
+  - `define( 'BOI_SECURITY_LOCK', false );` in wp-config.php lifts the XML-RPC, application password and REST locks without touching the options.
+- Seeded content is exempt from the gate and the scan: the 117 articles of `content/` by slug (and their earlier slugs), the seeded pages, the Glossary page and every Glossary entry (by slug and by its `_boi_term_type` meta). The theme registers no post types of its own, so only posts and pages are examined.
+- `tests/security-detector-test.php`: scores every seeded article, excerpt, page, section and all 797 Glossary entries and expects zero on each, and expects all 51 attack titles and slugs and a gambling link to be flagged. Weak words (odds, wager, slots, bet) count only in a title or slug, since the articles use "odds", "Pascal's wager" and "slots" in their text. Run `php tests/security-detector-test.php`.
+
+### Changed
+
+- The unconditional XML-RPC block in `inc/login.php` now follows the Security tab's XML-RPC switch, which is on by default, so nothing changes unless the owner switches it off. Pingback methods and the discovery links stay removed either way.
+- Four articles now name their own subject in the introduction, where a term-coverage check (TF*IDF over all 117 articles) found the title's subject missing from the text: Fate and free will in Islam (fate-and-free-will), the end of time (end-of-time), the natural world verses (natural-world-verses) and why the first Muslims kept the faith (first-muslims-kept-the-faith). One clause each; no fact, figure or source changed.
+
+### Fixed
+
+- Security counters now add one small tally row per event and day with a single query, folded daily, instead of rewriting the whole counts option on every blocked XML-RPC request.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 13.
 
 ## [1.86.1] - 2026-11-01
 
