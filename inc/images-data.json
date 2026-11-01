@@ -799,14 +799,24 @@
     "alt": "Intricate dome design in an Isparta mosque showcasing Islamic art and architecture.",
     "artist": "Konevi",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ornate-mosque-dome-interior-in-isparta-36315018/"
+    "source": "https://www.pexels.com/photo/ornate-mosque-dome-interior-in-isparta-36315018/",
+    "caption": "A mosque dome in Isparta, Türkiye, with geometric ornament. Islamic art points to the one God without picturing Him."
    },
    {
     "file": "six-articles-of-faith-2.avif",
     "alt": "Beautifully intricate dome ceiling in a mosque with detailed Islamic art and architecture.",
     "artist": "Ahmet Polat",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/ceiling-in-mosque-17081914/"
+    "source": "https://www.pexels.com/photo/ceiling-in-mosque-17081914/",
+    "caption": "A mosque ceiling with detailed ornament. The pattern repeats without a centre and without a figure."
+   },
+   {
+    "file": "six-articles-of-faith-3.avif",
+    "alt": "Old leather-bound books on a shelf.",
+    "caption": "Old books on a shelf. The third article of faith is belief in the books God revealed, the Torah, the Psalms, the Gospel and the Quran.",
+    "artist": "garten-gg",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/christmas-background-book-read-old-1659717/"
    }
   ]
  },
@@ -892,14 +902,24 @@
     "alt": "A black and white view of the historic courthouse facade in Hampton, Virginia, showcasing classic architecture.",
     "artist": "Phil Evenden",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/historic-courthouse-facade-in-hampton-virginia-36595111/"
+    "source": "https://www.pexels.com/photo/historic-courthouse-facade-in-hampton-virginia-36595111/",
+    "caption": "A courthouse façade in Hampton, Virginia. Every legal tradition has courts and codes, and sharia is a body of legal reasoning more than a single code."
    },
    {
     "file": "sharia-and-hudud-2.avif",
     "alt": "Front view of the iconic US Supreme Court building showcasing its grand columns and classic architecture.",
     "artist": "Guohua Song",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/majestic-view-of-the-us-supreme-court-building-39241857/"
+    "source": "https://www.pexels.com/photo/majestic-view-of-the-us-supreme-court-building-39241857/",
+    "caption": "The US Supreme Court building. Sharia states differ in how they treat free speech and minorities, as legal systems everywhere do."
+   },
+   {
+    "file": "sharia-and-hudud-3.avif",
+    "alt": "A gavel and law books on a wooden table.",
+    "caption": "A gavel and law books. Islamic jurists set strict proof for the hudud and dropped the penalty where doubt remained.",
+    "artist": "succo",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/hammer-books-law-dish-lawyer-620011/"
    }
   ]
  },
@@ -2067,21 +2087,32 @@
     "alt": "Charts on a trading screen",
     "artist": "3844328",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/stock-trading-monitor-business-1863880/"
+    "source": "https://pixabay.com/photos/stock-trading-monitor-business-1863880/",
+    "caption": "Charts on a screen. Figures quoted without a named source cannot be checked."
    },
    {
     "file": "terrorism-and-muslims-the-data-2.avif",
     "alt": "Lanterns glowing at night",
     "artist": "JillWellington",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/lights-lamps-lanterns-incandescent-1088141/"
+    "source": "https://pixabay.com/photos/lights-lamps-lanterns-incandescent-1088141/",
+    "caption": "Lanterns glowing at night. The article asks what the counts show, apart from what coverage chooses to show."
    },
    {
     "file": "terrorism-and-muslims-the-data-3.avif",
     "alt": "The Royal Courts of Justice in London, the civil courts building on the Strand.",
     "artist": "David Castor",
     "licence": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Royal_Courts_of_Justice_2019.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Royal_Courts_of_Justice_2019.jpg",
+    "caption": "The Royal Courts of Justice in London. Findings in court and in public inquiries are the evidence the article relies on."
+   },
+   {
+    "file": "terrorism-and-muslims-the-data-4.avif",
+    "alt": "A row of lit tea candles in the dark.",
+    "caption": "A row of lit candles. Muslim scholars and bodies condemned the attacks in public statements.",
+    "artist": "pixel2013",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/christmas-background-tea-lights-2223898/"
    }
   ]
  },
@@ -2472,14 +2503,24 @@
     "alt": "A stack of old books",
     "artist": "svecaleksandr249",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/books-old-stack-library-reading-7051311/"
+    "source": "https://pixabay.com/photos/books-old-stack-library-reading-7051311/",
+    "caption": "A stack of old books. A parallel between two texts is the start of an argument."
    },
    {
     "file": "talmud-midrash-apocrypha-borrowing-2.avif",
     "alt": "An old manuscript on aged paper",
     "artist": "moshehar",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/woman-vintage-manuscript-old-paper-6930526/"
+    "source": "https://pixabay.com/photos/woman-vintage-manuscript-old-paper-6930526/",
+    "caption": "An old manuscript on aged paper. Midrash retells scripture in stories, and some resemble accounts in the Quran."
+   },
+   {
+    "file": "talmud-midrash-apocrypha-borrowing-3.avif",
+    "alt": "A page of Hebrew text in an old printed book.",
+    "caption": "Hebrew script in an old book. The Quran's story of Cain and the raven has a parallel in a Hebrew midrash, Pirke de-Rabbi Eliezer.",
+    "artist": "Robert_C",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/alphabet-bible-book-old-book-1679750/"
    }
   ]
  },

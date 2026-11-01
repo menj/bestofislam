@@ -616,5 +616,81 @@
     "caption": "A calm sunrise over the sea. Many people describe an experience of God in quiet moments, and the article asks what that can show."
    }
   ]
+ },
+ "six-articles-of-faith": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A mosque dome in Isparta, Türkiye, with geometric ornament. Islamic art points to the one God without picturing Him."
+   },
+   {
+    "keep": true,
+    "caption": "A mosque ceiling with detailed ornament. The pattern repeats without a centre and without a figure."
+   },
+   {
+    "src": "pixabay",
+    "id": 1659717,
+    "alt": "Old leather-bound books on a shelf.",
+    "caption": "Old books on a shelf. The third article of faith is belief in the books God revealed, the Torah, the Psalms, the Gospel and the Quran."
+   }
+  ]
+ },
+ "sharia-and-hudud": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A courthouse façade in Hampton, Virginia. Every legal tradition has courts and codes, and sharia is a body of legal reasoning more than a single code."
+   },
+   {
+    "keep": true,
+    "caption": "The US Supreme Court building. Sharia states differ in how they treat free speech and minorities, as legal systems everywhere do."
+   },
+   {
+    "src": "pixabay",
+    "id": 620011,
+    "alt": "A gavel and law books on a wooden table.",
+    "caption": "A gavel and law books. Islamic jurists set strict proof for the hudud and dropped the penalty where doubt remained."
+   }
+  ]
+ },
+ "terrorism-and-muslims-the-data": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Charts on a screen. Figures quoted without a named source cannot be checked."
+   },
+   {
+    "keep": true,
+    "caption": "Lanterns glowing at night. The article asks what the counts show, apart from what coverage chooses to show."
+   },
+   {
+    "keep": true,
+    "caption": "The Royal Courts of Justice in London. Findings in court and in public inquiries are the evidence the article relies on."
+   },
+   {
+    "src": "pixabay",
+    "id": 2223898,
+    "alt": "A row of lit tea candles in the dark.",
+    "caption": "A row of lit candles. Muslim scholars and bodies condemned the attacks in public statements."
+   }
+  ]
+ },
+ "talmud-midrash-apocrypha-borrowing": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A stack of old books. A parallel between two texts is the start of an argument."
+   },
+   {
+    "keep": true,
+    "caption": "An old manuscript on aged paper. Midrash retells scripture in stories, and some resemble accounts in the Quran."
+   },
+   {
+    "src": "pixabay",
+    "id": 1679750,
+    "alt": "A page of Hebrew text in an old printed book.",
+    "caption": "Hebrew script in an old book. The Quran's story of Cain and the raven has a parallel in a Hebrew midrash, Pirke de-Rabbi Eliezer."
+   }
+  ]
  }
 }

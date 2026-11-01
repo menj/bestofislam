@@ -6,6 +6,12 @@ versioning.
 
 ## [Unreleased]
 
+## [1.82.0] - 2026-11-01
+
+### Changed
+
+- **Images, batch 4: four more articles gain a photograph and captions.** six-articles-of-faith, sharia-and-hudud, terrorism-and-muslims-the-data and talmud-midrash-apocrypha-borrowing (+1 each). These are the articles still below the image rule that the long `claude/modest-ride-rgvjvk` branch does not edit; the other 21 wait until that branch is merged or retired. Existing images in these articles gain captions, and every figure sits beside the entry it illustrates.
+
 ## [1.81.0] - 2026-10-31
 
 ### Changed
