@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.86.1' );
+define( 'BOI_VERSION', '1.87.1' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -43,6 +43,7 @@ require_once BOI_DIR . '/inc/glossary-links.php';
 require_once BOI_DIR . '/inc/error-pages.php';
 require_once BOI_DIR . '/inc/housekeeping.php';
 require_once BOI_DIR . '/inc/security-headers.php';
+require_once BOI_DIR . '/inc/security.php';
 
 /**
  * Enqueues front-end assets, conditionally where possible.

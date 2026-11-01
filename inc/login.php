@@ -290,9 +290,15 @@ add_filter( 'user_request_action_email_content', 'boi_login_email_content', 999 
  * standard WordPress mechanism, checked by xmlrpc.php itself before any
  * method dispatches, so a disabled request never reaches user code.
  *
+ * @param bool $enabled Core value.
  * @return bool
  */
-function boi_disable_xmlrpc() {
+function boi_disable_xmlrpc( $enabled = true ) {
+	// Since 1.78.0 the Security tab owns this switch (on by default, so the
+	// behaviour is unchanged); BOI_SECURITY_LOCK false also lifts it.
+	if ( function_exists( 'boi_sec_on' ) && ! boi_sec_on( 'sec_xmlrpc_off' ) ) {
+		return $enabled;
+	}
 	return false;
 }
 add_filter( 'xmlrpc_enabled', 'boi_disable_xmlrpc' );
