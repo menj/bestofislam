@@ -333,8 +333,12 @@ function boi_create_listicles( $topics ) {
 
 /**
  * The WordPress categories the theme seeds, from `categories` in
- * inc/data/seed.json. Each mirrors one section (a listicle-topic term), named
- * by its "topic" key; the section archive is the canonical page of the two.
+ * inc/data/seed.json. A top-level category mirrors one section (a
+ * listicle-topic term), named by its "topic" key; the section archive is the
+ * canonical page of the two. A subcategory names its "parent" instead and
+ * has no section of its own: its archive is the canonical page of its
+ * narrower set, and articles are filed in it rather than in the parent.
+ * Parents come before their children.
  *
  * @return array Slug => name, topic and description.
  */
@@ -361,7 +365,7 @@ function boi_seed_tags() {
  */
 function boi_category_for_topic( $topic ) {
 	foreach ( boi_seed_categories() as $slug => $cat ) {
-		if ( isset( $cat['topic'] ) && $cat['topic'] === $topic ) {
+		if ( empty( $cat['parent'] ) && isset( $cat['topic'] ) && $cat['topic'] === $topic ) {
 			return $slug;
 		}
 	}
@@ -377,7 +381,8 @@ function boi_category_for_topic( $topic ) {
 function boi_topic_for_category( $term ) {
 	$cats = boi_seed_categories();
 
-	if ( ! $term || empty( $cats[ $term->slug ]['topic'] ) ) {
+	// Only a top-level category mirrors a section; a subcategory does not.
+	if ( ! $term || empty( $cats[ $term->slug ]['topic'] ) || ! empty( $cats[ $term->slug ]['parent'] ) ) {
 		return null;
 	}
 
@@ -393,7 +398,10 @@ function boi_topic_for_category( $term ) {
  * the seeding flag, so the spam gate in inc/security.php treats it as the
  * theme's own write.
  *
- * @return array{categories: array, tags: array} Slug => term identifier, and tag name => term identifier.
+ * A subcategory is created under its parent. One that exists already keeps
+ * whatever parent the owner gave it.
+ *
+ * @return array{categories: array, tags: array, failed: int} Slug => term identifier, tag name => term identifier, and the number of terms that could not be created.
  */
 function boi_ensure_seed_terms() {
 	static $maps = null;
@@ -407,21 +415,33 @@ function boi_ensure_seed_terms() {
 	$maps                   = array(
 		'categories' => array(),
 		'tags'       => array(),
+		'failed'     => 0,
 	);
 
 	$wanted = array( 'category' => array(), 'post_tag' => array() );
 
 	foreach ( boi_seed_categories() as $slug => $cat ) {
-		$wanted['category'][ $slug ] = array( $cat['name'], isset( $cat['description'] ) ? $cat['description'] : '', $slug );
+		$wanted['category'][ $slug ] = array( $cat['name'], isset( $cat['description'] ) ? $cat['description'] : '', $slug, isset( $cat['parent'] ) ? (string) $cat['parent'] : '' );
 	}
 
 	foreach ( boi_seed_tags() as $name => $description ) {
-		$wanted['post_tag'][ $name ] = array( $name, (string) $description, sanitize_title( $name ) );
+		$wanted['post_tag'][ $name ] = array( $name, (string) $description, sanitize_title( $name ), '' );
 	}
 
 	foreach ( $wanted as $taxonomy => $terms ) {
 		foreach ( $terms as $key => $term ) {
-			list( $name, $description, $slug ) = $term;
+			list( $name, $description, $slug, $parent_slug ) = $term;
+
+			// A subcategory waits for its parent; without it, it is a failure.
+			$parent_id = 0;
+			if ( '' !== $parent_slug ) {
+				if ( empty( $maps['categories'][ $parent_slug ] ) ) {
+					++$maps['failed'];
+					continue;
+				}
+				$parent_id = (int) $maps['categories'][ $parent_slug ];
+			}
+
 			$existing                          = get_term_by( 'slug', $slug, $taxonomy );
 
 			if ( $existing && ! is_wp_error( $existing ) ) {
@@ -436,6 +456,7 @@ function boi_ensure_seed_terms() {
 					array(
 						'slug'        => $slug,
 						'description' => $description,
+						'parent'      => $parent_id,
 					)
 				);
 				$id   = is_wp_error( $made ) ? 0 : (int) $made['term_id'];
@@ -443,6 +464,8 @@ function boi_ensure_seed_terms() {
 
 			if ( $id ) {
 				$maps[ 'category' === $taxonomy ? 'categories' : 'tags' ][ $key ] = $id;
+			} else {
+				++$maps['failed'];
 			}
 		}
 	}
@@ -453,29 +476,74 @@ function boi_ensure_seed_terms() {
 }
 
 /**
- * Gives a seeded post its category and tags, respecting the owner's edits:
- * the category is set only while the post sits in the default category
- * (Uncategorized) alone, and tags only while it has none.
+ * The categories the theme gave a post before it recorded them, for sites
+ * seeded by 1.89.0: the top-level category of the article's leaf, or the
+ * one named by "category_v1" in the seed where the article has since moved
+ * to another branch.
+ *
+ * @param array $listicle Seed entry.
+ * @param array $maps     From boi_ensure_seed_terms().
+ * @return int[]
+ */
+function boi_seed_terms_v1_categories( $listicle, $maps ) {
+	$cats = boi_seed_categories();
+	$slug = ! empty( $listicle['category_v1'] ) ? $listicle['category_v1'] : ( isset( $listicle['category'] ) ? $listicle['category'] : '' );
+
+	while ( '' !== $slug && ! empty( $cats[ $slug ]['parent'] ) ) {
+		$slug = $cats[ $slug ]['parent'];
+	}
+
+	return isset( $maps['categories'][ $slug ] ) ? array( (int) $maps['categories'][ $slug ] ) : array();
+}
+
+/**
+ * Gives a seeded post its category and tags, respecting the owner's edits.
+ * The category is set while the post sits in the default category
+ * (Uncategorized) alone, or while its categories are still exactly the set
+ * the theme last gave it (post meta _boi_seed_categories; for a post seeded
+ * by 1.89.0, which kept no record, the flat category of that release). A
+ * post the owner has filed anywhere else keeps the owner's choice. Tags are
+ * set only while the post has none.
  *
  * @param int   $post_id  Post identifier.
  * @param array $listicle Seed entry.
- * @return void
+ * @return bool False when a term the post should get could not be found or
+ *              an assignment failed, so the migration tries again.
  */
 function boi_assign_seed_terms( $post_id, $listicle ) {
 	$maps     = boi_ensure_seed_terms();
 	$category = ! empty( $listicle['category'] ) ? $listicle['category'] : boi_category_for_topic( isset( $listicle['topic'] ) ? $listicle['topic'] : '' );
 	$previous = ! empty( $GLOBALS['boi_seeding'] );
+	$ok       = true;
 
 	$GLOBALS['boi_seeding'] = true;
 
+	if ( '' !== $category && ! isset( $maps['categories'][ $category ] ) ) {
+		$ok = false;
+	}
+
 	if ( isset( $maps['categories'][ $category ] ) ) {
+		$target   = array( (int) $maps['categories'][ $category ] );
 		$current  = array_map( 'intval', wp_get_post_categories( $post_id ) );
 		$default  = (int) get_option( 'default_category' );
 		$plain    = get_term_by( 'slug', 'uncategorized', 'category' );
 		$fallback = array_filter( array( $default, $plain ? (int) $plain->term_id : 0 ) );
+		$recorded = get_post_meta( $post_id, '_boi_seed_categories', true );
+		$seeded   = is_array( $recorded ) ? array_map( 'intval', $recorded ) : boi_seed_terms_v1_categories( $listicle, $maps );
 
-		if ( ! $current || ! array_diff( $current, $fallback ) ) {
-			wp_set_post_categories( $post_id, array( $maps['categories'][ $category ] ), false );
+		sort( $current );
+		sort( $seeded );
+
+		if ( $current === $target ) {
+			update_post_meta( $post_id, '_boi_seed_categories', $target );
+		} elseif ( ! $current || ! array_diff( $current, $fallback ) || ( $seeded && $current === $seeded ) ) {
+			$set = wp_set_post_categories( $post_id, $target, false );
+
+			if ( is_array( $set ) ) {
+				update_post_meta( $post_id, '_boi_seed_categories', $target );
+			} else {
+				$ok = false;
+			}
 		}
 	}
 
@@ -484,27 +552,39 @@ function boi_assign_seed_terms( $post_id, $listicle ) {
 	foreach ( isset( $listicle['tags'] ) ? (array) $listicle['tags'] : array() as $name ) {
 		if ( isset( $maps['tags'][ $name ] ) ) {
 			$tags[] = $maps['tags'][ $name ];
+		} else {
+			$ok = false;
 		}
 	}
 
 	if ( $tags && ! wp_get_post_tags( $post_id, array( 'fields' => 'ids' ) ) ) {
-		wp_set_object_terms( $post_id, $tags, 'post_tag', false );
+		$set = wp_set_object_terms( $post_id, $tags, 'post_tag', false );
+
+		if ( is_wp_error( $set ) ) {
+			$ok = false;
+		}
 	}
 
 	$GLOBALS['boi_seeding'] = $previous;
+
+	return $ok;
 }
 
 /**
  * Version of the category and tag map. Raise it when the seed's categories
- * or tags change, and the migration below runs once more.
+ * or tags change, and the migration below runs once more. 2: the
+ * subcategories of 1.90.0.
  */
-const BOI_TERMS_VERSION = 1;
+const BOI_TERMS_VERSION = 2;
 
 /**
  * Once per term-map version: gives every seeded post that a site already
  * holds its category and tags, under the same rules as a new post, so a post
  * the owner has filed or tagged keeps what the owner chose. Uncategorized is
  * left in place even when it ends up empty: it is the WordPress default.
+ *
+ * The version is recorded only when every term exists and every assignment
+ * succeeded; otherwise the next admin request tries again.
  *
  * @return void
  */
@@ -513,17 +593,20 @@ function boi_migrate_seed_terms() {
 		return;
 	}
 
-	boi_ensure_seed_terms();
+	$maps = boi_ensure_seed_terms();
+	$ok   = empty( $maps['failed'] );
 
 	foreach ( boi_seed_listicles() as $listicle ) {
 		$post = get_page_by_path( $listicle['slug'], OBJECT, 'post' );
 
-		if ( $post ) {
-			boi_assign_seed_terms( $post->ID, $listicle );
+		if ( $post && ! boi_assign_seed_terms( $post->ID, $listicle ) ) {
+			$ok = false;
 		}
 	}
 
-	update_option( 'boi_terms_version', BOI_TERMS_VERSION, false );
+	if ( $ok ) {
+		update_option( 'boi_terms_version', BOI_TERMS_VERSION, false );
+	}
 }
 add_action( 'admin_init', 'boi_migrate_seed_terms', 20 );
 

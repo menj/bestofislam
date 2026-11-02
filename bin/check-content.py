@@ -7,7 +7,8 @@ never reach a URL: give the entry its own name instead); an entry's "terms"
 or "articles" point at nothing; a seeded article has no content file; an
 article's footnote numbers are not 1..N matching its Notes list; an
 article's entry or paragraph blocks are unbalanced; a seeded article
-lacks a category or has fewer than 3 or more than 6 tags; a tag slug holds
+lacks a category, sits in a category that has subcategories, or in a
+category outside its section, or has fewer than 3 or more than 6 tags; a tag slug holds
 digits; two tags are near-duplicates; a shared tag has no description; a
 Glossary entry has no valid kind. --kinds prints the count for each kind.
 
@@ -172,12 +173,47 @@ except (OSError, json.JSONDecodeError):
 categories = seed_all.get('categories', {}) or {}
 vocabulary = seed_all.get('tags', {}) or {}
 topics = seed_all.get('topics', {}) or {}
+# A top-level category mirrors a section ("topic"); a subcategory names a
+# top-level "parent" instead. Articles are filed in a leaf (a category with
+# no subcategories), except the few in DIRECT, which fit none of their
+# parent's subcategories. The top-level category above an article's own must
+# mirror the article's section, so the canonical section archive holds it.
+# Every leaf holds at least 5 articles, except those in SMALL.
+DIRECT = {
+    'faith-and-reason': ('universe-demands-creator', 'morality-without-god'),
+    'history': ('quran-preservation-reddit', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories'),
+}
+SMALL = {
+    # The Library of Alexandria article went back to History (its section) in
+    # 1.90.0, which leaves 4 here; the owner accepted 4 for this section.
+    'arts-and-culture': 4,
+}
+children = {}
+for slug, cat in categories.items():
+    if cat.get('parent'):
+        children.setdefault(cat['parent'], []).append(slug)
+
+
+def top_of(slug):
+    seen_slugs = set()
+    while slug in categories and categories[slug].get('parent') and slug not in seen_slugs:
+        seen_slugs.add(slug)
+        slug = categories[slug]['parent']
+    return slug
+
+
 for slug, cat in categories.items():
     if re.search(r'\d', slug):
         errors.append('categories: slug "%s" contains a digit' % slug)
     if not (cat.get('description') or '').strip():
         errors.append('categories: "%s" has no description' % slug)
-    if cat.get('topic') not in topics:
+    if cat.get('parent'):
+        parent = categories.get(cat['parent'])
+        if parent is None or parent.get('parent'):
+            errors.append('categories: "%s" has parent "%s", which is not a top-level category' % (slug, cat['parent']))
+        if cat.get('topic'):
+            errors.append('categories: subcategory "%s" names a section; only its parent mirrors one' % slug)
+    elif cat.get('topic') not in topics:
         errors.append('categories: "%s" mirrors no section ("%s")' % (slug, cat.get('topic')))
 tag_use = {}
 cat_use = {}
@@ -188,6 +224,13 @@ for item in seed_items:
         errors.append('seed: "%s" has no category from the seed list' % slug)
     else:
         cat_use[cat] = cat_use.get(cat, 0) + 1
+        if cat in children and slug not in DIRECT.get(cat, ()):
+            errors.append('seed: "%s" is filed in "%s", which has subcategories; file it in one' % (slug, cat))
+        top = categories.get(top_of(cat), {})
+        if top.get('topic') != item.get('topic'):
+            errors.append('seed: "%s" is in section "%s" but category "%s" (under section "%s")' % (slug, item.get('topic'), cat, top.get('topic')))
+    if item.get('category_v1') and item['category_v1'] not in categories:
+        errors.append('seed: "%s" has an unknown category_v1 "%s"' % (slug, item['category_v1']))
     tags = item.get('tags') or []
     if not 3 <= len(tags) <= 6:
         errors.append('seed: "%s" has %d tags (3 to 6 needed)' % (slug, len(tags)))
@@ -211,8 +254,10 @@ for name, description in vocabulary.items():
     elif tag_use[name] >= 2 and not (description or '').strip():
         errors.append('tags: "%s" is used by %d articles and has no description' % (name, tag_use[name]))
 for cat in categories:
-    if cat_use.get(cat, 0) < 5:
-        errors.append('categories: "%s" holds %d articles (at least 5)' % (cat, cat_use.get(cat, 0)))
+    held = cat_use.get(cat, 0) + sum(cat_use.get(c, 0) for c in children.get(cat, []))
+    least = SMALL.get(cat, 5)
+    if held < least:
+        errors.append('categories: "%s" holds %d articles (at least %d)' % (cat, held, least))
 
 if '--summary' in sys.argv or '--kinds' in sys.argv:
     print('Glossary kind -> entries (%d in all)' % sum(kind_use.values()))
@@ -221,8 +266,15 @@ if '--summary' in sys.argv or '--kinds' in sys.argv:
 
 if '--summary' in sys.argv:
     print('Category -> articles')
-    for cat, n in sorted(cat_use.items(), key=lambda x: -x[1]):
-        print('  %-22s %d' % (cat, n))
+    for cat in categories:
+        if categories[cat].get('parent'):
+            continue
+        sub = children.get(cat, [])
+        print('  %-26s %d' % (cat, cat_use.get(cat, 0) + sum(cat_use.get(c, 0) for c in sub)))
+        for c in sub:
+            print('    %-24s %d' % (c, cat_use.get(c, 0)))
+        if sub and cat_use.get(cat, 0):
+            print('    %-24s %d' % ('(directly)', cat_use.get(cat, 0)))
     print('Tags: %d (%d used once)' % (len(tag_use), sum(1 for v in tag_use.values() if v == 1)))
     for name, n in sorted(tag_use.items(), key=lambda x: (-x[1], x[0]))[:30]:
         print('  %-28s %d' % (name, n))
