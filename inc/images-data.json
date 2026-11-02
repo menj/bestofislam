@@ -4213,5 +4213,245 @@
     "source": "bin/make-original-graphics.py"
    }
   ]
+ },
+ "covenant-of-the-prophets": {
+  "featured": {
+   "file": "covenant-of-the-prophets.avif",
+   "alt": "A single folio of an early Quran manuscript in the Khalili Collection.",
+   "caption": "A folio of an early Quran. Quran 3:81 speaks of a covenant God took from the prophets.",
+   "artist": "Khalili Collections",
+   "licence": "CC BY-SA 3.0 igo",
+   "source": "https://commons.wikimedia.org/wiki/File:Khalili_Collection_Islamic_Art_kfq_0093.a.jpg"
+  },
+  "inline": [
+   {
+    "file": "covenant-of-the-prophets-1.avif",
+    "alt": "A page of an early Quran manuscript in the Khalili Collection.",
+    "caption": "An early Quran leaf. The commentators read the messenger of 3:81 as the one who confirms what the prophets held.",
+    "artist": "Khalili Collections",
+    "licence": "CC BY-SA 3.0 igo",
+    "source": "https://commons.wikimedia.org/wiki/File:Khalili_Collection_Islamic_Art_kfq_0050.1.jpg"
+   },
+   {
+    "file": "covenant-of-the-prophets-2.avif",
+    "alt": "A 1910 photograph of the Aleppo Codex at a page of Deuteronomy.",
+    "caption": "The Aleppo Codex, photographed in 1910. Deuteronomy 18:18 promises a prophet like Moses.",
+    "artist": "Joseph Segall",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Aleppo_Deut_1910_Photo.jpg"
+   }
+  ]
+ },
+ "ask-those-who-read-the-scripture": {
+  "featured": {
+   "file": "ask-those-who-read-the-scripture.avif",
+   "alt": "A decorated Quran manuscript copied by Ahmad Neyrizi in the eighteenth century.",
+   "caption": "A Quran copied by Ahmad Neyrizi. Quran 10:94 tells the Prophet to ask those who read the scripture before him.",
+   "artist": "Ahmad Neyrizi",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Aryamehr_Quran_258.jpg"
+  },
+  "inline": [
+   {
+    "file": "ask-those-who-read-the-scripture-1.avif",
+    "alt": "The Gulf of Suez and the Mediterranean photographed from the International Space Station.",
+    "caption": "The Gulf of Suez seen from orbit. The verse comes at the end of the story of Moses, Pharaoh and the sea.",
+    "artist": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ISS-65_Mediterranean_Sea_and_Gulf_of_Suez_moonglint.jpg"
+   },
+   {
+    "file": "ask-those-who-read-the-scripture-2.avif",
+    "alt": "A page of a Persian translation of al-Tabari's commentary on the Quran, about 1210 to 1225.",
+    "caption": "A Persian version of al-Tabari's commentary, early thirteenth century. Al-Tabari's reports name Abdullah ibn Salam among those who could be asked.",
+    "artist": "Francesco Bini",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iran,_tafis_(commentario_al_corano)_di_tabari_(in_persiano),_1210-25_ca._(bnf).jpg"
+   }
+  ]
+ },
+ "muhammad-never-wrote-it-down": {
+  "featured": {
+   "file": "muhammad-never-wrote-it-down.avif",
+   "alt": "The leaves of the Birmingham Quran manuscript in early Hijazi script.",
+   "caption": "The Birmingham Quran leaves, radiocarbon dated to the first decades of Islam. The Prophet dictated the Quran to scribes.",
+   "artist": "Unknown author",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_full.jpg"
+  },
+  "inline": [
+   {
+    "file": "muhammad-never-wrote-it-down-1.avif",
+    "alt": "A single leaf of the Birmingham Quran manuscript.",
+    "caption": "A leaf of the Birmingham manuscript. Early copies fit the account of written pieces gathered after the Prophet.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_folio_1_recto.jpg"
+   },
+   {
+    "file": "muhammad-never-wrote-it-down-2.avif",
+    "alt": "A page of Papyrus 75 with Luke 14.",
+    "caption": "Papyrus 75, about 200, at Luke 14. The Gospels carry no chain of named narrators back to Jesus.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vatican,_Apostolic_Library_Ms_Hanna_Papyrus_1_-_Papyrus_Bodmer_XIV–XV_(Papyrus_75)_fol_1B9r_Luke_14,_3-14.jpg"
+   }
+  ]
+ },
+ "ransom-bible-quran": {
+  "featured": {
+   "file": "ransom-bible-quran.avif",
+   "alt": "A Tyrian half-shekel coin of the Second Temple period.",
+   "caption": "A Tyrian half shekel. Exodus 30 calls the half-shekel census payment a ransom for each life.",
+   "artist": "Hanay",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Tyrian_Half-Shekel_Heb.JPG"
+  },
+  "inline": [
+   {
+    "file": "ransom-bible-quran-1.avif",
+    "alt": "A page of the Latin text of Codex Bezae at Matthew 21:46 to 22:11, from the 1899 facsimile.",
+    "caption": "Codex Bezae, a Gospel book of about 400. Mark 10:45 speaks of a ransom for many.",
+    "artist": "Cambridge University Press, facsimile of 1899",
+    "licence": "Public domain",
+    "source": "https://archive.org/details/codexbezaecantab01univ/page/n150"
+   },
+   {
+    "file": "ransom-bible-quran-2.avif",
+    "alt": "A Mughal painting of about 1585 of a ram with a gold chain.",
+    "caption": "A ram, painted in Mughal India. The sacrifice at the Hajj recalls the ram that ransomed Abraham's son (37:107).",
+    "artist": "Unknown Mughal artist, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/2013.298"
+   }
+  ]
+ },
+ "revelatory-exegesis": {
+  "featured": {
+   "file": "revelatory-exegesis.avif",
+   "alt": "A page of the 1868 printed edition of Codex Vaticanus, with Matthew 1:22 to 2:18 in Greek capitals.",
+   "caption": "Codex Vaticanus at Matthew 2, in its 1868 edition. Matthew reads the older prophets as fulfilled in Jesus.",
+   "artist": "Vatican Library, edition of 1868",
+   "licence": "Public domain",
+   "source": "https://archive.org/details/CodexVaticanusbFacSimile/page/n2"
+  },
+  "inline": [
+   {
+    "file": "revelatory-exegesis-1.avif",
+    "alt": "A page of the Aleppo Codex, a Hebrew Bible in three columns.",
+    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. Daniel turns Jeremiah's seventy years into seventy weeks of years.",
+    "artist": "Shlomo ben Buya'a",
+    "licence": "Public domain",
+    "source": "https://archive.org/details/Aleppo_Codex/page/n300"
+   },
+   {
+    "file": "revelatory-exegesis-2.avif",
+    "alt": "A Hebrew scroll of Esther on vellum, about 1850, in the Cleveland Museum of Art.",
+    "caption": "A Hebrew scroll. The Habakkuk commentary from Qumran, also a scroll, says the prophet did not know when the end would come.",
+    "artist": "Unknown scribe, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1917.894"
+   },
+   {
+    "file": "revelatory-exegesis-3.avif",
+    "alt": "A page of Codex Washingtonianus at Mark 14:29 to 40, from the 1912 facsimile.",
+    "caption": "Codex Washingtonianus at Mark 14. Matthew and Luke took over most of Mark and rewrote it.",
+    "artist": "Freer Gallery of Art, facsimile of 1912",
+    "licence": "Public domain",
+    "source": "https://archive.org/details/facsimileofwashi02sand/page/n389"
+   }
+  ]
+ },
+ "who-changed-the-bible": {
+  "featured": {
+   "file": "who-changed-the-bible.avif",
+   "alt": "A page of Codex Washingtonianus, a Greek Gospel book of about 400, from the 1912 facsimile.",
+   "caption": "Codex Washingtonianus, about 400, a copy of the four Gospels. The four Gospels name no author in their own text.",
+   "artist": "Freer Gallery of Art, facsimile of 1912",
+   "licence": "Public domain",
+   "source": "https://archive.org/details/facsimileofwashi02sand/page/n100"
+  },
+  "inline": [
+   {
+    "file": "who-changed-the-bible-1.avif",
+    "alt": "A page of the Latin text of Codex Bezae at John 7:8 to 22, from the 1899 facsimile.",
+    "caption": "Codex Bezae carries many readings found in no other manuscript.",
+    "artist": "Cambridge University Press, facsimile of 1899",
+    "licence": "Public domain",
+    "source": "https://archive.org/details/codexbezaecantab01univ/page/n250"
+   },
+   {
+    "file": "who-changed-the-bible-2.avif",
+    "alt": "A page of Codex Washingtonianus at Mark 16:12 to 17, from the 1912 facsimile.",
+    "caption": "Codex Washingtonianus at Mark 16. It adds a passage after 16:14 that no other Greek manuscript has.",
+    "artist": "Freer Gallery of Art, facsimile of 1912",
+    "licence": "Public domain",
+    "source": "https://archive.org/details/facsimileofwashi02sand/page/n396"
+   }
+  ]
+ },
+ "torah-on-the-cushion-hadith": {
+  "featured": {
+   "file": "torah-on-the-cushion-hadith.avif",
+   "alt": "The decorated opening page of a Hebrew Pentateuch printed in 1505.",
+   "caption": "A Hebrew Torah, printed in 1505. In Abu Dawud 4449 the Prophet set the Torah on a cushion and said he believed in it.",
+   "artist": "Unknown printer, Wellcome Collection",
+   "licence": "CC BY 4.0",
+   "source": "https://wellcomecollection.org/works/jtnk99u8"
+  },
+  "inline": [
+   {
+    "file": "torah-on-the-cushion-hadith-1.avif",
+    "alt": "A page of the Aleppo Codex, a Hebrew Bible in three columns.",
+    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. The parallel accounts tell of a hand placed over the verse of stoning.",
+    "artist": "Shlomo ben Buya'a",
+    "licence": "Public domain",
+    "source": "https://archive.org/details/Aleppo_Codex/page/n0"
+   },
+   {
+    "file": "torah-on-the-cushion-hadith-2.avif",
+    "alt": "A painting of a crowded synagogue interior by Alessandro Magnasco, about 1730.",
+    "caption": "A synagogue, painted by Magnasco. The report shows a Torah in Jewish hands in Medina. It cannot show that the whole text was intact.",
+    "artist": "Alessandro Magnasco, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1930.22"
+   }
+  ]
+ },
+ "seal-of-the-prophets": {
+  "featured": {
+   "file": "seal-of-the-prophets.avif",
+   "alt": "A Quran folio of the 800s written in gold Kufic script on parchment.",
+   "caption": "A Quran folio of the 800s. Quran 33:40 calls Muhammad the seal of the prophets.",
+   "artist": "Unknown scribe, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1993.39.2.a"
+  },
+  "inline": [
+   {
+    "file": "seal-of-the-prophets-1.avif",
+    "alt": "A lithograph of about 1820 showing the Kaaba and the Sacred Mosque with Mecca behind.",
+    "caption": "Mecca in a lithograph of about 1820. Quran 5:3 was revealed at Arafat, outside Mecca, during the Farewell Pilgrimage.",
+    "artist": "Unknown artist, Wellcome Collection",
+    "licence": "Public domain",
+    "source": "https://wellcomecollection.org/works/s3a2wk69"
+   },
+   {
+    "file": "seal-of-the-prophets-2.avif",
+    "alt": "A Quran folio of the 800s in Kufic script, probably from Egypt.",
+    "caption": "A Quran page in Kufic script. The Quran calls itself the guardian over the books before it.",
+    "artist": "Unknown scribe, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1933.493.a"
+   },
+   {
+    "file": "seal-of-the-prophets-3.avif",
+    "alt": "A woodcut by Jost Amman of a brickmaker shaping bricks.",
+    "caption": "A brickmaker at work. The Prophet compared himself to the last brick that completes a house.",
+    "artist": "Jost Amman, Wellcome Collection",
+    "licence": "Public domain",
+    "source": "https://wellcomecollection.org/works/qbr54wvz"
+   }
+  ]
  }
 }
