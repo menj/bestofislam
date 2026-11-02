@@ -3,7 +3,7 @@
  * Guard against a half-uploaded theme.
  *
  * The owner uploads the theme by FTP one file at a time, and an upload can
- * take twenty minutes. Until 1.89.1 functions.php required inc/util.php and
+ * take twenty minutes. Until 1.90.0 functions.php required inc/util.php and
  * the rest directly, so every request in that window died with "Failed
  * opening required" (27 and 29 October, 1 and 2 November 2026). Now
  * functions.php hands this guard the list of files it loads first. When one

@@ -6,9 +6,30 @@ versioning.
 
 ## [Unreleased]
 
-## [1.89.1] - 2026-11-02
+## [1.90.0] - 2026-11-02
+
+### Added
+
+- The Glossary has 5 new kinds: Worship (87 entries), Belief (125), Law (84), Scripture (64) and Ethics & Society (72). I read the 603 entries filed as Term or Topic and moved 432 of them by meaning; each record now names its kind, and nothing is guessed at runtime. Term keeps 111 and Topic 60, the general ones. All still reads 797.
+- Each new tile has its own photograph from Wikimedia Commons, credited in `inc/glossary-images.json`: Muslims praying at Fatih Mosque (Mors et Vita, CC BY 4.0), a Tahdhib al-Ahkam manuscript (Library, Museum and Document Center of the Iranian Parliament, public domain), the Sheikh Lotfollah dome (Phillip Maiwald, CC BY-SA 3.0), an early Kufic Quran folio (Morgan Library MS M.712, public domain) and the Grand Bazaar of Istanbul (Mickey Mystique, CC BY-SA 4.0). None is used by any of the sister sites.
+- 15 subcategories. Comparative Religion: The Bible and Its Text, The Islamic Dilemma and Tahrif, Jesus and the Trinity, Yahweh and the Same God, Prophets in Both Scriptures, Answering Polemics. Belief & Practices: Creed and Theology, Worship and Rituals, Law and Ethics, Women and Marriage. History: The Prophet's Life, Companions and Early Muslims, Islam and Other Peoples. Faith & Reason: The Quran's Text and Revelation, Hadith and Sira Under Scrutiny. Every article sits in a leaf, except 2 in Faith & Reason (the existence of God) and 3 in History (the Quran's stories), which fit none.
+- `bin/check-content.py` checks that every Glossary entry has a valid kind (`--kinds` prints the counts), that articles sit in a leaf, that an article's category sits under its own section, and that every leaf holds 5 articles.
+
+### Changed
+
+- The 14 kind tiles fill 7 columns on a desktop and 2 on a phone. On a tablet they run 4 to a row and the short last row is centred.
+- The Glossary index no longer opens with the photograph of the Prophet's Mosque and its caption. The photograph stays on the All tile.
+- The G Preferred plugin's "Add as a preferred source on Google" button is gone from the Glossary index and its entries. The theme takes the plugin's `the_content` callbacks off on those pages, strips the slot if it still turns up, and hides it in `glossary.css` as a last resort. Every other page keeps it.
+- The four hadith-criticism articles (the fly and adult suckling, camel urine, magic and jinn, and the 1110 prediction) move from Belief & Practices to Faith & Reason, section and category both.
+- Subcategory archives are indexed, are their own canonical page and appear in both sitemaps; the breadcrumb runs Home, section, subcategory. A top-level seeded category still points to its section and stays out.
+- `BOI_GLOSSARY_VERSION` is 14, so existing sites pick up the new kinds; `BOI_TERMS_VERSION` is 2, so they get the subcategories.
 
 ### Fixed
+
+- The Library of Alexandria article is back in History, its section, so its canonical archive holds it again. Arts & Culture holds 4 articles, a documented exception to the 5-article rule.
+- `boi_migrate_seed_terms()` marked itself done even when a term could not be created or a post could not be filed. It now records `boi_terms_version` only when every term exists and every assignment worked, so a failure is retried on the next admin page.
+- The migration moves a post only while its categories are still exactly what the theme gave it, now recorded in `_boi_seed_categories` (for 1.89.0 sites, the flat category of that release). A post the owner refiled stays where it is.
+- The core sitemap dropped every category. It now leaves out only the seeded categories that mirror a section.
 
 - A half-uploaded theme no longer takes the site down. An FTP upload sends the files one at a time, and on 1 November it took more than 20 minutes; until now every request in that window died with "Failed opening required inc/util.php" (27 and 29 October, 1 and 2 November). `functions.php` now lists every file it loads and hands the list to `inc/maintenance.php` first. If one is missing, nothing else loads. Visitors get a short 503 page ("Updating, back in a minute") with `Retry-After: 120` and noindex, and the admin screens stay up with a notice naming the missing files. The guard needs no other theme file.
 - Asset versions come from `boi_asset_version()`, which falls back to `BOI_VERSION` when a file is missing. That ends the `filemtime(): stat failed` warnings for front.css, header-search, back-to-top, scripts.css, article.css and the glossary files.
