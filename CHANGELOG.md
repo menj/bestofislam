@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.92.0] - 2026-11-02
+
+### Changed
+
+A style pass over the article prose in `content/*.json`, to the writing rules the site uses. It makes 33 edits in 28 articles and leaves the meaning of each sentence as it was.
+
+- "In order to" becomes "to" in 10 places, and "in other words" gives way to "so" or "then" in 3.
+- Four words from the banned list go: "enduring", "robust", "empowers" and "emphasise". "Serves as" and "stands as" become plain verbs.
+- Ten sentences that denied one framing and then asserted another now state the claim directly. Three "not only" phrases are reworded.
+
+Quotations, scripture, hadith text, the paraphrased instructions of Abu Bakr and the titles of cited works keep their wording. Literal uses stay too: the Night Journey, the "foster" kinship terms of fiqh, a ruler's "realm", the "divine realm" of the Gnostic texts, the testament genre in the notes on 2 Peter and the UNDP report on women's empowerment.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
 ## [1.91.0] - 2026-11-02
 
 ### Added
