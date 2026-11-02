@@ -21,7 +21,7 @@
   "articles": [
    "verses-read-differently"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Abrogation"
   ]
@@ -57,7 +57,7 @@
  {
   "slug": "no-compulsion-in-religion",
   "title": "No compulsion in religion",
-  "type": "topic",
+  "type": "law",
   "ar": "",
   "tr": "",
   "def": "“There is no compulsion in religion” (2:256): faith cannot be forced.",
@@ -134,7 +134,7 @@
    "wahy"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Nabi",
    "Anbiya",
@@ -192,7 +192,7 @@
    "tafsir"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Al-Nasikh",
    "Nasikh"
@@ -220,7 +220,7 @@
    "mustalah-al-hadith"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Nasikh al-Hadith",
    "Nasikh wa Mansukh al-Hadith"
@@ -247,7 +247,7 @@
    "asbab-al-nuzul"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Nazzal",
    "Nazala"

@@ -23,7 +23,7 @@
    "who-wrote-the-quran",
    "muhammad-false-prophet-claim"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Ilham",
    "Inspiration",
@@ -175,7 +175,7 @@
    "khawf"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Al-Wa'd",
    "Wad"
@@ -203,7 +203,7 @@
    "gabriel"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Wahy",
    "Wahy"
@@ -231,7 +231,7 @@
    "atonement-and-repentance"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Al-Wa'id",
    "Waeed"
@@ -287,7 +287,7 @@
    "usul-al-fiqh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Wajib",
    "Wajib",
@@ -344,7 +344,7 @@
    "taslim"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Qiyam"
   ],

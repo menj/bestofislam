@@ -2,7 +2,7 @@
  {
   "slug": "qadar",
   "title": "Qadar",
-  "type": "term",
+  "type": "belief",
   "ar": "قدر",
   "tr": "qadar",
   "def": "God’s knowledge and decree of all things, held together with human responsibility for choices.",
@@ -86,13 +86,13 @@
    "manuscript-transmission",
    "preservation-and-truth"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": []
  },
  {
   "slug": "qisas",
   "title": "Qisas",
-  "type": "term",
+  "type": "law",
   "ar": "قصاص",
   "tr": "qiṣāṣ",
   "def": "The law of equal retribution for killing and injury, with the strong encouragement to forgive or accept compensation.",
@@ -113,7 +113,7 @@
  {
   "slug": "qiyas",
   "title": "Qiyas",
-  "type": "term",
+  "type": "law",
   "ar": "قياس",
   "tr": "qiyās",
   "def": "Analogical reasoning, by which a ruling in the sources is applied to a new case sharing the same cause.",
@@ -159,7 +159,7 @@
    "who-wrote-the-quran",
    "preservation-and-truth"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": []
  },
  {
@@ -227,7 +227,7 @@
    "allah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Qaddar"
   ],
@@ -307,7 +307,7 @@
    "mosque"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Qibla",
    "Kibla"
@@ -337,7 +337,7 @@
    "justice"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "law",
   "aliases": [
    "Al-Qisas",
    "Qisas"
@@ -364,7 +364,7 @@
    "quran"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Qist"
   ],
@@ -391,7 +391,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "law",
   "aliases": [
    "Al-Qiyas",
    "Qiyas"
@@ -448,7 +448,7 @@
    "dhikr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Quud",
    "Qu’ud"

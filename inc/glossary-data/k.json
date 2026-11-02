@@ -56,7 +56,7 @@
    "war-and-killing-in-islam",
    "taqiyya-5-myths"
   ],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Disbelievers",
    "Unbelievers"
@@ -71,7 +71,7 @@
  {
   "slug": "kafur",
   "title": "Kafur",
-  "type": "term",
+  "type": "belief",
   "ar": "كافور",
   "tr": "kāfūr",
   "def": "A fragrant, cooling spring in Paradise, named in the Quran (76:5).",
@@ -170,7 +170,7 @@
  {
   "slug": "khawf",
   "title": "Khawf",
-  "type": "term",
+  "type": "worship",
   "ar": "خوف",
   "tr": "Khawf",
   "def": "Fear of God in Islam is joined with hope and love, and the Prophet taught that God’s mercy outstrips His wrath.",
@@ -247,7 +247,7 @@
  {
   "slug": "killing",
   "title": "Killing",
-  "type": "topic",
+  "type": "law",
   "ar": "قتل",
   "tr": "qatl",
   "def": "The Quran forbids killing and says that taking one life unjustly is as if one had killed all of humanity.",
@@ -273,7 +273,7 @@
  {
   "slug": "kindness",
   "title": "Kindness",
-  "type": "term",
+  "type": "ethics",
   "ar": "إحسان",
   "tr": "iḥsān",
   "def": "Kindness to parents, kin, neighbours, orphans and the poor, a duty throughout the Quran.",
@@ -297,7 +297,7 @@
  {
   "slug": "kitab",
   "title": "Kitab",
-  "type": "term",
+  "type": "scripture",
   "ar": "كتاب",
   "tr": "kitāb",
   "def": "The word for “book” in Arabic, used for the Quran, for earlier scripture and for God’s record of all things.",
@@ -374,7 +374,7 @@
  {
   "slug": "kufr",
   "title": "Kufr",
-  "type": "term",
+  "type": "belief",
   "ar": "كفر",
   "tr": "kufr",
   "def": "Disbelief, or ingratitude: literally “covering” the truth, in the heart or in deed.",
@@ -422,7 +422,7 @@
   "articles": [
    "shared-prophets"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": []
  },
  {
@@ -443,7 +443,7 @@
    "eid"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Takbir",
    "Takbeer"
@@ -471,7 +471,7 @@
    "iman"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Kufr"
   ],
@@ -498,7 +498,7 @@
    "ilm-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Khabir",
    "Khabir"
@@ -609,7 +609,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Khaliq"
   ],
@@ -691,7 +691,7 @@
    "ummah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [],
   "faruqi": {
    "page": 31,
@@ -716,7 +716,7 @@
    "furqan"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Kitab"
   ],

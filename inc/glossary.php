@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '13';
+const BOI_GLOSSARY_VERSION = '14';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -645,7 +645,7 @@ function boi_glossary_aliases( $entry ) {
  * The photographs used on the Glossary: one for the index and one for each
  * kind of entry. Credits live in inc/glossary-images.json.
  *
- * @return array Key (hero, person, prophet, place, event, group, book, topic, term) => image.
+ * @return array Key (hero, or a kind from boi_glossary_types()) => image.
  */
 function boi_glossary_images() {
 	static $data = null;
@@ -694,7 +694,14 @@ function boi_glossary_entry_image( $kind, $slug ) {
 	}
 
 	$all  = boi_glossary_images();
-	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : ( isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array() );
+	$term = isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array();
+	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : $term;
+
+	// The kinds added in 1.90.0 have one photograph each, for their tile; their
+	// entries draw on it and on the Term photographs, so neighbours still differ.
+	if ( count( $pool ) < 2 && 'term' !== $kind ) {
+		$pool = array_merge( $pool, $term );
+	}
 
 	if ( empty( $pool ) ) {
 		return null;
@@ -916,14 +923,10 @@ function boi_render_glossary_index() {
 		}
 	}
 
-	$hero  = boi_glossary_image( 'hero' );
-	$intro = '';
-
-	if ( $hero ) {
-		$intro .= '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>';
-	}
-
-	$intro .= '<p class="boi-glossary__basis">' . sprintf(
+	// The index opens with its text and the tiles; the photograph that once
+	// headed it (and its caption) is gone. The "hero" record stays as the
+	// photograph of the All tile.
+	$intro = '<p class="boi-glossary__basis">' . sprintf(
 		/* translators: %s: the scholar's name, linked to his entry. */
 		esc_html__( 'The terms and their Arabic forms follow the lists in %s\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ),
 		boi_glossary_faruqi_name() // phpcs:ignore WordPress.Security.EscapeOutput
@@ -1293,3 +1296,59 @@ function boi_glossary_template_hierarchy( $templates ) {
 	return $templates;
 }
 add_filter( 'page_template_hierarchy', 'boi_glossary_template_hierarchy' );
+
+/**
+ * The "Add as a preferred source on Google" button belongs to the G Preferred
+ * plugin (wp-content/plugins/g-preferred), which puts it before the content
+ * of every page in a the_content filter. It has no place on the Glossary, so
+ * on the index and its entries the plugin's the_content callbacks are taken
+ * off. The plugin's hook has no stable name the theme can rely on, so each
+ * callback is recognised by its class or function name (GPR_*, gpr_*).
+ * Everywhere else the button stays.
+ *
+ * @return void
+ */
+function boi_glossary_drop_preferred_source() {
+	global $wp_filter;
+
+	if ( ! boi_is_glossary_page() || empty( $wp_filter['the_content'] ) || ! is_object( $wp_filter['the_content'] ) ) {
+		return;
+	}
+
+	foreach ( $wp_filter['the_content']->callbacks as $priority => $callbacks ) {
+		foreach ( $callbacks as $cb ) {
+			$fn   = $cb['function'];
+			$name = '';
+
+			if ( is_string( $fn ) ) {
+				$name = $fn;
+			} elseif ( is_array( $fn ) && isset( $fn[0] ) ) {
+				$name = is_object( $fn[0] ) ? get_class( $fn[0] ) : (string) $fn[0];
+			}
+
+			if ( '' !== $name && 0 === stripos( $name, 'gpr' ) ) {
+				remove_filter( 'the_content', $fn, $priority );
+			}
+		}
+	}
+}
+add_action( 'wp', 'boi_glossary_drop_preferred_source', 99 );
+
+/**
+ * Second line of defence, should the plugin change how it hooks in: its slot
+ * is taken out of the Glossary's content by its class. assets/css/glossary.css
+ * hides it as a last resort.
+ *
+ * @param string $content Content.
+ * @return string
+ */
+function boi_glossary_strip_preferred_source( $content ) {
+	if ( false === strpos( $content, 'gpr-slot' ) || ! boi_is_glossary_page() ) {
+		return $content;
+	}
+
+	$stripped = preg_replace( '#<div class="gpr-slot(?:\s[^"]*)?">.*?</div>#s', '', $content );
+
+	return null === $stripped ? $content : $stripped;
+}
+add_filter( 'the_content', 'boi_glossary_strip_preferred_source', PHP_INT_MAX );

@@ -25,7 +25,7 @@
  {
   "slug": "dajjal",
   "title": "Dajjal",
-  "type": "topic",
+  "type": "belief",
   "ar": "الدجال",
   "tr": "al-Dajjāl",
   "def": "The False Messiah of the end of time, described in hadith but not named in the Quran.",
@@ -53,7 +53,7 @@
  {
   "slug": "dar-al-islam-and-dar-al-harb",
   "title": "Dar al-Islam and Dar al-Harb",
-  "type": "topic",
+  "type": "law",
   "ar": "دار الإسلام",
   "tr": "Dār al-Islām",
   "def": "Classical legal terms dividing the world into the “house of Islam” and the “house of war”, which are not in the Quran or hadith.",
@@ -185,7 +185,7 @@
  {
   "slug": "death",
   "title": "Death",
-  "type": "topic",
+  "type": "belief",
   "ar": "موت",
   "tr": "Mawt",
   "def": "The Quran says every soul will taste death (3:185), and that God created death as well as life as a test.",
@@ -280,7 +280,7 @@
  {
   "slug": "deeds",
   "title": "Deeds",
-  "type": "topic",
+  "type": "belief",
   "ar": "أعمال",
   "tr": "Aʿmāl",
   "def": "The Quran says deeds are weighed (21:47) and that faith without good works is incomplete; the Prophet said the best are those done regularly even if small.",
@@ -315,7 +315,7 @@
  {
   "slug": "deification",
   "title": "Deification",
-  "type": "topic",
+  "type": "belief",
   "ar": "",
   "tr": "",
   "def": "The Quran’s charge that some of the People of the Book made a god of Jesus (5:72–73), and the Christian reply that this is not what the Church teaches.",
@@ -364,7 +364,7 @@
  {
   "slug": "dhikr",
   "title": "Dhikr",
-  "type": "term",
+  "type": "worship",
   "ar": "ذكر",
   "tr": "Dhikr",
   "def": "Remembrance of God: reciting His names and praises, in prayer and at other times.",
@@ -438,7 +438,7 @@
   "articles": [
    "jizya"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Dhimmitude"
   ],
@@ -526,7 +526,7 @@
  {
   "slug": "disability",
   "title": "Disability",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The Quran lifts the burden of duties that a person cannot bear, and urges care for the blind, the sick and the weak.",
@@ -551,7 +551,7 @@
  {
   "slug": "divination-and-the-unseen",
   "title": "Divination and the unseen",
-  "type": "topic",
+  "type": "belief",
   "ar": "غيب",
   "tr": "Ghayb",
   "def": "Knowledge of the unseen belongs to God alone (72:26), and divination is forbidden.",
@@ -584,7 +584,7 @@
  {
   "slug": "divine-attributes",
   "title": "Divine attributes",
-  "type": "topic",
+  "type": "belief",
   "ar": "صفات",
   "tr": "Ṣifāt",
   "def": "How Muslims understand verses that speak of God’s hand, face or throne, without making Him like His creatures.",
@@ -613,7 +613,7 @@
  {
   "slug": "divorce",
   "title": "Divorce",
-  "type": "term",
+  "type": "law",
   "ar": "طلاق",
   "tr": "Ṭalāq",
   "def": "The Quran allows divorce, with a waiting period, reconciliation, witnesses, and provision for the wife.",
@@ -638,7 +638,7 @@
  {
   "slug": "diya",
   "title": "Diya",
-  "type": "term",
+  "type": "law",
   "ar": "دية",
   "tr": "Diya",
   "def": "Blood money: compensation paid to the family of a person killed unintentionally, and sometimes accepted in place of retaliation.",
@@ -662,7 +662,7 @@
  {
   "slug": "dogs",
   "title": "Dogs",
-  "type": "topic",
+  "type": "law",
   "ar": "كلب",
   "tr": "Kalb",
   "def": "The Quran allows hunting with trained dogs; hadith differ on the dog’s ritual purity, and the Prophet taught kindness to them.",
@@ -707,7 +707,7 @@
  {
   "slug": "domestic-discipline",
   "title": "Domestic discipline",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The verse on men’s responsibility in the family which includes the word “strike”; its meaning has been debated and restricted by many scholars.",
@@ -756,7 +756,7 @@
  {
   "slug": "dowry",
   "title": "Dowry",
-  "type": "term",
+  "type": "law",
   "ar": "مهر",
   "tr": "Mahr",
   "def": "The gift a husband gives his wife on marriage, which is hers alone.",
@@ -780,7 +780,7 @@
  {
   "slug": "dreams",
   "title": "Dreams",
-  "type": "topic",
+  "type": "belief",
   "ar": "رؤيا",
   "tr": "Ruʾyā",
   "def": "In Islam a true dream can be a good tiding, and the Quran tells the dreams of Joseph and the king of Egypt.",
@@ -821,7 +821,7 @@
  {
   "slug": "dua",
   "title": "Du'a",
-  "type": "term",
+  "type": "worship",
   "ar": "دعاء",
   "tr": "Duʿāʾ",
   "def": "Prayer of supplication: asking God directly for what one needs.",
@@ -873,7 +873,7 @@
    "kufr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 36,
@@ -901,7 +901,7 @@
    "kufr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 36,
@@ -926,7 +926,7 @@
    "atonement-and-repentance"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 36,
@@ -981,7 +981,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [],
   "faruqi": {
    "page": 49,
@@ -1005,7 +1005,7 @@
    "afternoon-prayer"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Al-Duha",
    "Duha",
@@ -1033,7 +1033,7 @@
    "deeds"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Al-Dunya",
    "Dunya",

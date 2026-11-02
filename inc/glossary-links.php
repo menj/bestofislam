@@ -112,6 +112,65 @@ add_action( 'trashed_post', 'boi_gl_flush' );
 add_action( 'boi_glossary_continue', 'boi_gl_flush' );
 
 /**
+ * The map with each phrase's pattern compiled once, and a plain-text key for
+ * a cheap first test. Held for the request, keyed by the map's own hash.
+ *
+ * The key is the longest run of the phrase that the pattern matches only
+ * literally (ASCII, with no &, apostrophe or angle bracket). Under the /iu
+ * flags an ASCII letter matches only its two ASCII cases, except k and s,
+ * which also match the Kelvin sign and the long s; boi_gl_apply() tests every
+ * phrase on text that holds either of those. A token without the key cannot
+ * hold the phrase, so the full pattern is skipped. The items are also indexed
+ * by the first three letters of their key, so a token is only walked against
+ * the items whose three letters it contains, in the map's own order.
+ *
+ * @param array $items Map from boi_gl_map().
+ * @return array Items with 'rx' and 'key' added.
+ */
+function boi_gl_compiled( $items ) {
+	static $cache = array();
+
+	$hash = md5( serialize( $items ) );
+
+	if ( isset( $cache[ $hash ] ) ) {
+		return $cache[ $hash ];
+	}
+
+	foreach ( $items as $n => $item ) {
+		// The text is already escaped and texturized: match & as &amp;, and an apostrophe in any form.
+		$needle = preg_quote( htmlspecialchars( $item['phrase'], ENT_NOQUOTES, 'UTF-8' ), '/' );
+		$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
+		$needle = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
+
+		$key = '';
+		if ( preg_match_all( '/[\x20-\x25\x28-\x3B\x3D\x3F-\x7E]+/', (string) $item['phrase'], $runs ) ) {
+			foreach ( $runs[0] as $run ) {
+				if ( strlen( $run ) > strlen( $key ) ) {
+					$key = $run;
+				}
+			}
+		}
+
+		$items[ $n ]['rx']  = '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu';
+		$items[ $n ]['key'] = strtolower( $key );
+	}
+
+	$grams = array();
+	$open  = array();
+	foreach ( $items as $n => $item ) {
+		if ( strlen( $item['key'] ) < 3 ) {
+			$open[] = $n;
+		} else {
+			$grams[ substr( $item['key'], 0, 3 ) ][] = $n;
+		}
+	}
+
+	$cache[ $hash ] = array( 'hash' => $hash, 'items' => $items, 'grams' => $grams, 'open' => $open );
+
+	return $cache[ $hash ];
+}
+
+/**
  * Link first mentions inside paragraphs of single articles.
  *
  * @param string $content Post content.
@@ -122,13 +181,49 @@ function boi_gl_filter( $content ) {
 		return $content;
 	}
 
+	// Embeds, feeds and REST requests never take the links.
+	if ( is_embed() || is_feed() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+		return $content;
+	}
+
 	$items = boi_gl_map();
 
 	if ( ! $items ) {
 		return $content;
 	}
 
-	$budget = boi_gl_max();
+	$compiled = boi_gl_compiled( $items );
+	$budget   = boi_gl_max();
+	$post_id  = (int) get_the_ID();
+	// The same input, map and budget always give the same output, so the
+	// result is kept on the post and repeat views do no work.
+	$key    = md5( $compiled['hash'] . '|' . $budget . '|' . $content );
+	$cached = $post_id ? get_post_meta( $post_id, '_boi_gl_cache', true ) : '';
+
+	if ( is_array( $cached ) && isset( $cached['key'], $cached['html'] ) && $cached['key'] === $key ) {
+		return $cached['html'];
+	}
+
+	$html = boi_gl_apply( $content, $compiled, $budget );
+
+	if ( $post_id ) {
+		update_post_meta( $post_id, '_boi_gl_cache', array( 'key' => $key, 'html' => $html ) );
+	}
+
+	return $html;
+}
+add_filter( 'the_content', 'boi_gl_filter', 24 );
+
+/**
+ * Adds the links to one body of content.
+ *
+ * @param string $content Post content.
+ * @param array  $compiled From boi_gl_compiled().
+ * @param int    $budget  Most links, less the always-linked entries.
+ * @return string
+ */
+function boi_gl_apply( $content, $compiled, $budget ) {
+	$all    = $compiled['items'];
 	$skip   = array( 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code', 'pre', 'script', 'style', 'button', 'figcaption', 'blockquote', 'cite' );
 	$depth  = array_fill_keys( $skip, 0 );
 	$used   = array();
@@ -163,6 +258,31 @@ function boi_gl_filter( $content ) {
 
 		$found     = array();
 		$found_ids = array();
+		// The Kelvin sign and the long s fold to k and s, so the plain-text key
+		// cannot be trusted on text that holds them.
+		$prefilter = false === strpos( $tok, "\xE2\x84\xAA" ) && false === strpos( $tok, "\xC5\xBF" );
+		$lower     = strtolower( $tok );
+		$items     = $all;
+
+		if ( $prefilter ) {
+			$pick = $compiled['open'];
+			$seen = array();
+			$len  = strlen( $lower ) - 2;
+			for ( $j = 0; $j < $len; $j++ ) {
+				$gram = substr( $lower, $j, 3 );
+				if ( ! isset( $seen[ $gram ] ) ) {
+					$seen[ $gram ] = true;
+					if ( isset( $compiled['grams'][ $gram ] ) ) {
+						array_push( $pick, ...$compiled['grams'][ $gram ] );
+					}
+				}
+			}
+			sort( $pick );
+			$items = array();
+			foreach ( $pick as $n ) {
+				$items[] = $all[ $n ];
+			}
+		}
 
 		foreach ( $items as $item ) {
 			// One link per page per paragraph: a title and an alias of the same
@@ -171,12 +291,11 @@ function boi_gl_filter( $content ) {
 				continue;
 			}
 
-			// The text is already escaped and texturized: match & as &amp;, and an apostrophe in any form.
-			$needle = preg_quote( htmlspecialchars( $item['phrase'], ENT_NOQUOTES, 'UTF-8' ), '/' );
-			$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
-			$needle = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
+			if ( $prefilter && '' !== $item['key'] && false === strpos( $lower, $item['key'] ) ) {
+				continue;
+			}
 
-			if ( preg_match( '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu', $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
+			if ( preg_match( $item['rx'], $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
 				$start = $mm[1][1];
 				$end   = $start + strlen( $mm[1][0] );
 
@@ -186,7 +305,7 @@ function boi_gl_filter( $content ) {
 					}
 				}
 
-				$found[]                    = array( 'start' => $start, 'end' => $end, 'item' => $item );
+				$found[]                  = array( 'start' => $start, 'end' => $end, 'item' => $item );
 				$found_ids[ $item['id'] ] = true;
 
 				if ( count( $found ) >= 3 || ( empty( $item['always'] ) && count( $found ) >= $budget ) ) {
@@ -219,4 +338,3 @@ function boi_gl_filter( $content ) {
 
 	return implode( '', $tokens );
 }
-add_filter( 'the_content', 'boi_gl_filter', 24 );

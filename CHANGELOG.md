@@ -6,6 +6,57 @@ versioning.
 
 ## [Unreleased]
 
+## [1.90.0] - 2026-11-02
+
+### Fixed
+
+- The category and tag migration waits until `inc/data/seed.json` carries the term map it migrates to (`terms_version`, matching `BOI_TERMS_VERSION`). During a file-by-file upload an older seed could otherwise be read, the migration marked done, and the new map never applied. `bin/check-content.py` fails when the two numbers differ.
+
+### Added
+
+- The Glossary has 5 new kinds: Worship (87 entries), Belief (125), Law (84), Scripture (64) and Ethics & Society (72). I read the 603 entries filed as Term or Topic and moved 432 of them by meaning; each record now names its kind, and nothing is guessed at runtime. Term keeps 111 and Topic 60, the general ones. All still reads 797.
+- Each new tile has its own photograph from Wikimedia Commons, credited in `inc/glossary-images.json`: Muslims praying at Fatih Mosque (Mors et Vita, CC BY 4.0), a Tahdhib al-Ahkam manuscript (Library, Museum and Document Center of the Iranian Parliament, public domain), the Sheikh Lotfollah dome (Phillip Maiwald, CC BY-SA 3.0), an early Kufic Quran folio (Morgan Library MS M.712, public domain) and the Grand Bazaar of Istanbul (Mickey Mystique, CC BY-SA 4.0). None is used by any of the sister sites.
+- 15 subcategories. Comparative Religion: The Bible and Its Text, The Islamic Dilemma and Tahrif, Jesus and the Trinity, Yahweh and the Same God, Prophets in Both Scriptures, Answering Polemics. Belief & Practices: Creed and Theology, Worship and Rituals, Law and Ethics, Women and Marriage. History: The Prophet's Life, Companions and Early Muslims, Islam and Other Peoples. Faith & Reason: The Quran's Text and Revelation, Hadith and Sira Under Scrutiny. Every article sits in a leaf, except 2 in Faith & Reason (the existence of God) and 3 in History (the Quran's stories), which fit none.
+- `bin/check-content.py` checks that every Glossary entry has a valid kind (`--kinds` prints the counts), that articles sit in a leaf, that an article's category sits under its own section, and that every leaf holds 5 articles.
+
+### Changed
+
+- The 14 kind tiles fill 7 columns on a desktop and 2 on a phone. On a tablet they run 4 to a row and the short last row is centred.
+- The Glossary index no longer opens with the photograph of the Prophet's Mosque and its caption. The photograph stays on the All tile.
+- The G Preferred plugin's "Add as a preferred source on Google" button is gone from the Glossary index and its entries. The theme takes the plugin's `the_content` callbacks off on those pages, strips the slot if it still turns up, and hides it in `glossary.css` as a last resort. Every other page keeps it.
+- The four hadith-criticism articles (the fly and adult suckling, camel urine, magic and jinn, and the 1110 prediction) move from Belief & Practices to Faith & Reason, section and category both.
+- Subcategory archives are indexed, are their own canonical page and appear in both sitemaps; the breadcrumb runs Home, section, subcategory. A top-level seeded category still points to its section and stays out.
+- `BOI_GLOSSARY_VERSION` is 14, so existing sites pick up the new kinds; `BOI_TERMS_VERSION` is 2, so they get the subcategories.
+
+### Fixed
+
+- The Library of Alexandria article is back in History, its section, so its canonical archive holds it again. Arts & Culture holds 4 articles, a documented exception to the 5-article rule.
+- `boi_migrate_seed_terms()` marked itself done even when a term could not be created or a post could not be filed. It now records `boi_terms_version` only when every term exists and every assignment worked, so a failure is retried on the next admin page.
+- The migration moves a post only while its categories are still exactly what the theme gave it, now recorded in `_boi_seed_categories` (for 1.89.0 sites, the flat category of that release). A post the owner refiled stays where it is.
+- The core sitemap dropped every category. It now leaves out only the seeded categories that mirror a section.
+
+- A half-uploaded theme no longer takes the site down. An FTP upload sends the files one at a time, and on 1 November it took more than 20 minutes; until now every request in that window died with "Failed opening required inc/util.php" (27 and 29 October, 1 and 2 November). `functions.php` now lists every file it loads and hands the list to `inc/maintenance.php` first. If one is missing, nothing else loads. Visitors get a short 503 page ("Updating, back in a minute") with `Retry-After: 120` and noindex, and the admin screens stay up with a notice naming the missing files. The guard needs no other theme file.
+- Asset versions come from `boi_asset_version()`, which falls back to `BOI_VERSION` when a file is missing. That ends the `filemtime(): stat failed` warnings for front.css, header-search, back-to-top, scripts.css, article.css and the glossary files.
+- Glossary auto-linking was timing out: 30-second fatals in `inc/glossary-links.php` on 1 November, and 230 504s during a Facebook crawler burst on 27 October. The filter built and ran a regex for each of the 2,067 glossary phrases on every paragraph. Each phrase is now compiled once per request, and a paragraph is only tested against the phrases whose plain letters it contains. On the 143 seeded articles that cuts the work from 78 ms to 5 ms an article, with the same links in the same places (`tests/glossary-links-test.php` checks every article, as written and texturized, at 3 link budgets).
+- The linked output is kept on the post (`_boi_gl_cache`), keyed by the content, the glossary map and the link budget, so a repeat view or a crawler does no linking at all. Embeds, feeds and REST requests now skip the filter outright.
+
+## [1.89.0] - 2026-11-02
+
+### Added
+
+Every seeded article now has a real WordPress category and its own tags. Until now all 143 sat in Uncategorized with no tags, and only the sections (`listicle-topic`) carried any structure.
+
+- 8 categories, one for each section: Belief & Practices, Faith & Reason, Comparative Religion, Science, History, Arts & Culture, The Muslim World and Islamophobia. Each has a short description. The Library of Alexandria article is filed under Arts & Culture, beside the other article on libraries, so every category holds at least 5 articles.
+- 160 tags, 3 to 6 per article, chosen by reading each article: its people, places, scriptures and concepts. Scripture is named in words, so no tag slug carries a verse number. 133 tags are shared by 2 or more articles, and each of those has a description.
+- The lists live in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article).
+
+### Changed
+
+- Seeding gives a new article its category and tags beside its section. Existing sites get them once, from `boi_migrate_seed_terms()` (flag `boi_terms_version`). An article the owner has filed elsewhere keeps its category, and an article that already has tags keeps them. Missing terms are created with their descriptions; no term is deleted, Uncategorized included.
+- The section archive stays the canonical one. A category archive that mirrors a section is noindexed, points its canonical link and its breadcrumb at the section, and is left out of both sitemaps (core and Rank Math). Tag archives join the sitemap, less any tag with only 1 article, which is noindexed.
+- The seeded categories are protected from the spam category clean-up (`boi_sec_seeded_terms()`), and term writes run under the seeding flag.
+- `bin/check-content.py` fails when a seeded article has no category or fewer than 3 tags, when a tag slug holds digits, when two tags differ only by case or a plural, or when a shared tag has no description. `--summary` prints the counts.
+
 ## [1.88.0] - 2026-11-01
 
 ### Added
