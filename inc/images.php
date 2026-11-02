@@ -253,26 +253,20 @@ function boi_credit_html( $lead, $source ) {
  * @return string
  */
 function boi_image_source_name( $url ) {
-	$host = (string) wp_parse_url( (string) $url, PHP_URL_HOST );
+	$host  = strtolower( (string) wp_parse_url( (string) $url, PHP_URL_HOST ) );
+	$names = array(
+		'pexels.com'             => 'Pexels',
+		'pixabay.com'            => 'Pixabay',
+		'archive.org'            => 'Internet Archive',
+		'wellcomecollection.org' => 'Wellcome Collection',
+		'clevelandart.org'       => 'Cleveland Museum of Art',
+	);
 
-	if ( false !== strpos( $host, 'pexels.com' ) ) {
-		return 'Pexels';
-	}
-
-	if ( false !== strpos( $host, 'pixabay.com' ) ) {
-		return 'Pixabay';
-	}
-
-	if ( false !== strpos( $host, 'archive.org' ) ) {
-		return 'Internet Archive';
-	}
-
-	if ( false !== strpos( $host, 'wellcomecollection.org' ) ) {
-		return 'Wellcome Collection';
-	}
-
-	if ( false !== strpos( $host, 'clevelandart.org' ) ) {
-		return 'Cleveland Museum of Art';
+	foreach ( $names as $domain => $name ) {
+		// The host itself or a subdomain of it, never a look-alike suffix.
+		if ( $host === $domain || substr( $host, -strlen( '.' . $domain ) ) === '.' . $domain ) {
+			return $name;
+		}
 	}
 
 	return 'Wikimedia Commons';
