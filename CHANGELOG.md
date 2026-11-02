@@ -19,7 +19,7 @@ Eight new articles, written from the claims made in a public debate on the Islam
 - **Muhammad never wrote it down: 7 answers on the Quran and hadith** (muhammad-never-wrote-it-down), Faith & Reason, The Quran's Text and Revelation.
 - **Ransom in the Bible and the Quran: 8 points, graded** (ransom-bible-quran), Comparative Religion, Jesus and the Trinity.
 
-All eight are in the seed list, `inc/data/seed.json`, with a `seo_title` inside the 43-character budget, and in the reading order (`inc/reading.php`): the revelatory exegesis and seal articles after christian-twin-of-the-islamic-dilemma, the 3:81, 10:94 and Abu Dawud 4449 articles after quran-verses-on-torah-and-gospel, ransom after crucifixion-quran, who-changed-the-bible after bible-alteration-claim-before-islam, and muhammad-never-wrote-it-down after uthman-copies. `bin/build-related.py` pins the eight to each other where they answer the same argument, so the revelatory exegesis article leads to the seal article and back. `inc/related-articles.json` is rebuilt. The credits for the ten new images are in `inc/images-data.json`, with their Commons file names in `bin/stock-images.json`.
+All eight are in the seed list, `inc/data/seed.json`, with a `seo_title` inside the 43-character budget, and in the reading order (`inc/reading.php`): the revelatory exegesis and seal articles after christian-twin-of-the-islamic-dilemma, the 3:81, 10:94 and Abu Dawud 4449 articles after quran-verses-on-torah-and-gospel, ransom after crucifixion-quran, who-changed-the-bible after bible-alteration-claim-before-islam, and muhammad-never-wrote-it-down after uthman-copies. `bin/build-related.py` pins the eight to each other where they answer the same argument, so the revelatory exegesis article leads to the seal article and back. `inc/related-articles.json` is rebuilt. The credits for the twenty-six new images are in `inc/images-data.json`, with their source ids in `bin/stock-images.json`.
 
 ### Changed
 
@@ -100,7 +100,7 @@ Thirteen new articles, written from the claims made in three recorded missionary
 - **The two genealogies of Jesus: 8 points from the sources** (genealogies-of-jesus), Comparative Religion.
 - **Is Islam the only religion that says the Bible was altered? 8 answers** (bible-alteration-claim-before-islam), Comparative Religion.
 
-All thirteen are placed in the reading order (`inc/reading.php`): the four on prophethood after shared-prophets, the genealogies and holy war after verses-read-differently, the six on the biblical text after manuscript-transmission, and 2:256 after fighting-verses-in-context. They are registered in the seed list, `inc/data/seed.json`, each with a short `seo_title` where its title would push the title tag past 59 characters. `inc/related-articles.json` is rebuilt. The credits for the ten new images are in `inc/images-data.json`, with their Commons file names in `bin/stock-images.json`.
+All thirteen are placed in the reading order (`inc/reading.php`): the four on prophethood after shared-prophets, the genealogies and holy war after verses-read-differently, the six on the biblical text after manuscript-transmission, and 2:256 after fighting-verses-in-context. They are registered in the seed list, `inc/data/seed.json`, each with a short `seo_title` where its title would push the title tag past 59 characters. `inc/related-articles.json` is rebuilt. The credits for the twenty-six new images are in `inc/images-data.json`, with their source ids in `bin/stock-images.json`.
 
 ### Changed
 
