@@ -6,6 +6,15 @@ versioning.
 
 ## [Unreleased]
 
+## [1.89.1] - 2026-11-02
+
+### Fixed
+
+- A half-uploaded theme no longer takes the site down. An FTP upload sends the files one at a time, and on 1 November it took more than 20 minutes; until now every request in that window died with "Failed opening required inc/util.php" (27 and 29 October, 1 and 2 November). `functions.php` now lists every file it loads and hands the list to `inc/maintenance.php` first. If one is missing, nothing else loads. Visitors get a short 503 page ("Updating, back in a minute") with `Retry-After: 120` and noindex, and the admin screens stay up with a notice naming the missing files. The guard needs no other theme file.
+- Asset versions come from `boi_asset_version()`, which falls back to `BOI_VERSION` when a file is missing. That ends the `filemtime(): stat failed` warnings for front.css, header-search, back-to-top, scripts.css, article.css and the glossary files.
+- Glossary auto-linking was timing out: 30-second fatals in `inc/glossary-links.php` on 1 November, and 230 504s during a Facebook crawler burst on 27 October. The filter built and ran a regex for each of the 2,067 glossary phrases on every paragraph. Each phrase is now compiled once per request, and a paragraph is only tested against the phrases whose plain letters it contains. On the 143 seeded articles that cuts the work from 78 ms to 5 ms an article, with the same links in the same places (`tests/glossary-links-test.php` checks every article, as written and texturized, at 3 link budgets).
+- The linked output is kept on the post (`_boi_gl_cache`), keyed by the content, the glossary map and the link budget, so a repeat view or a crawler does no linking at all. Embeds, feeds and REST requests now skip the filter outright.
+
 ## [1.89.0] - 2026-11-02
 
 ### Added

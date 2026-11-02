@@ -7,43 +7,120 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.89.0' );
+define( 'BOI_VERSION', '1.89.1' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
-require_once BOI_DIR . '/inc/util.php';
-require_once BOI_DIR . '/inc/taxonomy.php';
-require_once BOI_DIR . '/inc/blocks.php';
-require_once BOI_DIR . '/inc/schema.php';
-require_once BOI_DIR . '/inc/voting.php';
-require_once BOI_DIR . '/inc/settings.php';
-require_once BOI_DIR . '/inc/setup.php';
-require_once BOI_DIR . '/inc/appearance.php';
-require_once BOI_DIR . '/inc/reflections.php';
-require_once BOI_DIR . '/inc/search.php';
-require_once BOI_DIR . '/inc/sections.php';
-require_once BOI_DIR . '/inc/seo.php';
-require_once BOI_DIR . '/inc/icons.php';
-require_once BOI_DIR . '/inc/features.php';
-require_once BOI_DIR . '/inc/contact.php';
-require_once BOI_DIR . '/inc/front.php';
-require_once BOI_DIR . '/inc/inline-images.php';
-require_once BOI_DIR . '/inc/images.php';
-require_once BOI_DIR . '/inc/questions.php';
-require_once BOI_DIR . '/inc/reading.php';
-require_once BOI_DIR . '/inc/structured-data.php';
-require_once BOI_DIR . '/inc/rank-math.php';
-require_once BOI_DIR . '/inc/unlist.php';
-require_once BOI_DIR . '/inc/search-permalinks.php';
-require_once BOI_DIR . '/inc/login.php';
-require_once BOI_DIR . '/inc/login-screen.php';
-require_once BOI_DIR . '/inc/favicon.php';
-require_once BOI_DIR . '/inc/glossary.php';
-require_once BOI_DIR . '/inc/glossary-links.php';
-require_once BOI_DIR . '/inc/error-pages.php';
-require_once BOI_DIR . '/inc/housekeeping.php';
-require_once BOI_DIR . '/inc/security-headers.php';
-require_once BOI_DIR . '/inc/security.php';
+// Every file the theme loads. An FTP upload sends them one at a time, so for
+// a while some are missing; the guard then shows visitors a 503 "updating"
+// page instead of a fatal error, and nothing below loads.
+$boi_load = array(
+	BOI_DIR . '/inc/util.php',
+	BOI_DIR . '/inc/taxonomy.php',
+	BOI_DIR . '/inc/blocks.php',
+	BOI_DIR . '/inc/schema.php',
+	BOI_DIR . '/inc/voting.php',
+	BOI_DIR . '/inc/settings.php',
+	BOI_DIR . '/inc/setup.php',
+	BOI_DIR . '/inc/appearance.php',
+	BOI_DIR . '/inc/reflections.php',
+	BOI_DIR . '/inc/search.php',
+	BOI_DIR . '/inc/sections.php',
+	BOI_DIR . '/inc/seo.php',
+	BOI_DIR . '/inc/icons.php',
+	BOI_DIR . '/inc/features.php',
+	BOI_DIR . '/inc/contact.php',
+	BOI_DIR . '/inc/front.php',
+	BOI_DIR . '/inc/inline-images.php',
+	BOI_DIR . '/inc/images.php',
+	BOI_DIR . '/inc/questions.php',
+	BOI_DIR . '/inc/reading.php',
+	BOI_DIR . '/inc/structured-data.php',
+	BOI_DIR . '/inc/rank-math.php',
+	BOI_DIR . '/inc/unlist.php',
+	BOI_DIR . '/inc/search-permalinks.php',
+	BOI_DIR . '/inc/login.php',
+	BOI_DIR . '/inc/login-screen.php',
+	BOI_DIR . '/inc/favicon.php',
+	BOI_DIR . '/inc/glossary.php',
+	BOI_DIR . '/inc/glossary-links.php',
+	BOI_DIR . '/inc/error-pages.php',
+	BOI_DIR . '/inc/housekeeping.php',
+	BOI_DIR . '/inc/security-headers.php',
+	BOI_DIR . '/inc/security.php',
+);
+$boi_need = array_merge(
+	$boi_load,
+	array(
+		BOI_DIR . '/inc/glossary-data.php',
+		BOI_DIR . '/inc/security-detector.php',
+		BOI_DIR . '/inc/contextual-links.php',
+		BOI_DIR . '/inc/data/image-credits.json',
+		BOI_DIR . '/inc/data/network-links.json',
+		BOI_DIR . '/inc/data/questions.json',
+		BOI_DIR . '/inc/data/seed.json',
+		BOI_DIR . '/inc/glossary-data/a.json',
+		BOI_DIR . '/inc/glossary-data/b.json',
+		BOI_DIR . '/inc/glossary-data/c.json',
+		BOI_DIR . '/inc/glossary-data/d.json',
+		BOI_DIR . '/inc/glossary-data/e.json',
+		BOI_DIR . '/inc/glossary-data/f.json',
+		BOI_DIR . '/inc/glossary-data/g.json',
+		BOI_DIR . '/inc/glossary-data/h.json',
+		BOI_DIR . '/inc/glossary-data/i.json',
+		BOI_DIR . '/inc/glossary-data/j.json',
+		BOI_DIR . '/inc/glossary-data/k.json',
+		BOI_DIR . '/inc/glossary-data/l.json',
+		BOI_DIR . '/inc/glossary-data/m.json',
+		BOI_DIR . '/inc/glossary-data/n.json',
+		BOI_DIR . '/inc/glossary-data/o.json',
+		BOI_DIR . '/inc/glossary-data/p.json',
+		BOI_DIR . '/inc/glossary-data/q.json',
+		BOI_DIR . '/inc/glossary-data/r.json',
+		BOI_DIR . '/inc/glossary-data/s.json',
+		BOI_DIR . '/inc/glossary-data/t.json',
+		BOI_DIR . '/inc/glossary-data/u.json',
+		BOI_DIR . '/inc/glossary-data/w.json',
+		BOI_DIR . '/inc/glossary-data/y.json',
+		BOI_DIR . '/inc/glossary-data/z.json',
+	)
+);
+
+if ( is_readable( BOI_DIR . '/inc/maintenance.php' ) ) {
+	require_once BOI_DIR . '/inc/maintenance.php';
+	if ( ! boi_maintenance_guard( $boi_need, BOI_DIR ) ) {
+		unset( $boi_load, $boi_need );
+		return;
+	}
+} else {
+	// The guard itself has not arrived yet: load nothing rather than fail.
+	foreach ( $boi_need as $boi_file ) {
+		if ( ! is_readable( $boi_file ) ) {
+			unset( $boi_load, $boi_need, $boi_file );
+			return;
+		}
+	}
+}
+
+foreach ( $boi_load as $boi_file ) {
+	require_once $boi_file;
+}
+unset( $boi_load, $boi_need, $boi_file );
+
+/**
+ * Version string for an asset: BOI_VERSION plus the file's modification
+ * time, so a changed file is fetched afresh. A file that is missing (an
+ * upload in progress) gives BOI_VERSION alone, with no warning.
+ *
+ * @param string $relative Path under the theme directory, with a leading slash.
+ * @return string
+ */
+function boi_asset_version( $relative ) {
+	$file  = BOI_DIR . $relative;
+	$mtime = is_file( $file ) ? @filemtime( $file ) : false; // phpcs:ignore WordPress.PHP.NoSilencedErrors
+
+	return false === $mtime ? BOI_VERSION : BOI_VERSION . '.' . (int) $mtime;
+}
 
 /**
  * Enqueues front-end assets, conditionally where possible.
@@ -72,7 +149,7 @@ function boi_enqueue_assets() {
 		'boi-front',
 		BOI_URI . '/assets/css/front.css',
 		array( 'boi-navigation' ),
-		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/front.css' )
+		boi_asset_version( '/assets/css/front.css' )
 	);
 
 	if ( is_front_page() ) {
@@ -104,14 +181,14 @@ function boi_enqueue_assets() {
 		'boi-header-search',
 		BOI_URI . '/assets/css/header-search.css',
 		array( 'boi-scripts' ),
-		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/header-search.css' )
+		boi_asset_version( '/assets/css/header-search.css' )
 	);
 
 	wp_enqueue_script(
 		'boi-header-search',
 		BOI_URI . '/assets/js/header-search.js',
 		array(),
-		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/js/header-search.js' ),
+		boi_asset_version( '/assets/js/header-search.js' ),
 		true
 	);
 
@@ -119,14 +196,14 @@ function boi_enqueue_assets() {
 		'boi-back-to-top',
 		BOI_URI . '/assets/css/back-to-top.css',
 		array( 'boi-scripts' ),
-		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/back-to-top.css' )
+		boi_asset_version( '/assets/css/back-to-top.css' )
 	);
 
 	wp_enqueue_script(
 		'boi-back-to-top',
 		BOI_URI . '/assets/js/back-to-top.js',
 		array(),
-		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/js/back-to-top.js' ),
+		boi_asset_version( '/assets/js/back-to-top.js' ),
 		true
 	);
 
@@ -155,7 +232,7 @@ function boi_enqueue_assets() {
 		'boi-scripts',
 		BOI_URI . '/assets/css/scripts.css',
 		array(),
-		BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/scripts.css' )
+		boi_asset_version( '/assets/css/scripts.css' )
 	);
 
 	wp_enqueue_style(
@@ -171,7 +248,7 @@ function boi_enqueue_assets() {
 			'boi-article',
 			BOI_URI . '/assets/css/article.css',
 			array( 'boi-listicle' ),
-			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/article.css' )
+			boi_asset_version( '/assets/css/article.css' )
 		);
 	}
 
@@ -180,14 +257,14 @@ function boi_enqueue_assets() {
 			'boi-glossary',
 			BOI_URI . '/assets/css/glossary.css',
 			array( 'boi-article' ),
-			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/css/glossary.css' )
+			boi_asset_version( '/assets/css/glossary.css' )
 		);
 
 		wp_enqueue_script(
 			'boi-glossary',
 			BOI_URI . '/assets/js/glossary.js',
 			array(),
-			BOI_VERSION . '.' . (int) filemtime( BOI_DIR . '/assets/js/glossary.js' ),
+			boi_asset_version( '/assets/js/glossary.js' ),
 			true
 		);
 	}
@@ -411,4 +488,4 @@ function boi_inline_small_styles() {
 add_action( 'wp_enqueue_scripts', 'boi_inline_small_styles', 101 );
 
 /* Contextual in-content links. */
-require_once get_stylesheet_directory() . '/inc/contextual-links.php';
+require_once BOI_DIR . '/inc/contextual-links.php';
