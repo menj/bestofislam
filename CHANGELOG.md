@@ -6,6 +6,11 @@ versioning.
 
 ## [Unreleased]
 
+### Added
+
+- **The 16 missing images of the 1.91.0 articles.** revelatory-exegesis, who-changed-the-bible, torah-on-the-cushion-hadith and seal-of-the-prophets now have their featured image and every image in the text, and ransom-bible-quran its two in the text. Wikimedia Commons refused this server, so they come from the Internet Archive (public domain facsimiles of Codex Vaticanus, Codex Bezae, Codex Washingtonianus and the Aleppo Codex), the Wellcome Collection (public domain and CC BY 4.0) and the Cleveland Museum of Art (CC0). Each caption was checked against the new picture.
+- **bin/fetch-stock-images.py** takes `archive`, `wellcome` and `cleveland` as sources, and the credit line names those three sites.
+
 ## [1.91.0] - 2026-11-02
 
 ### Added

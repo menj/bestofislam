@@ -263,6 +263,18 @@ function boi_image_source_name( $url ) {
 		return 'Pixabay';
 	}
 
+	if ( false !== strpos( $host, 'archive.org' ) ) {
+		return 'Internet Archive';
+	}
+
+	if ( false !== strpos( $host, 'wellcomecollection.org' ) ) {
+		return 'Wellcome Collection';
+	}
+
+	if ( false !== strpos( $host, 'clevelandart.org' ) ) {
+		return 'Cleveland Museum of Art';
+	}
+
 	return 'Wikimedia Commons';
 }
 
