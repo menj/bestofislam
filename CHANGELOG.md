@@ -4,18 +4,11 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [Unreleased]
-
-### Added
-
-- **The 16 missing images of the 1.91.0 articles.** revelatory-exegesis, who-changed-the-bible, torah-on-the-cushion-hadith and seal-of-the-prophets now have their featured image and every image in the text, and ransom-bible-quran its two in the text. Wikimedia Commons refused this server, so they come from the Internet Archive (public domain facsimiles of Codex Vaticanus, Codex Bezae, Codex Washingtonianus and the Aleppo Codex), the Wellcome Collection (public domain and CC BY 4.0) and the Cleveland Museum of Art (CC0). Each caption was checked against the new picture.
-- **bin/fetch-stock-images.py** takes `archive`, `wellcome` and `cleveland` as sources, and the credit line names those three sites.
-
 ## [1.91.0] - 2026-11-02
 
 ### Added
 
-Eight new articles, written from the claims made in a public debate on the Islamic Dilemma. Each answers them from the Quran, the hadith, the classical commentators and the biblical scholarship, and grades its own entries. The site names neither speaker. Four of them (ask-those-who-read-the-scripture, covenant-of-the-prophets, muhammad-never-wrote-it-down and ransom-bible-quran) have their featured image from Wikimedia Commons, and the first three also their two images in the text, credited in `inc/images-data.json`; none is used by any of the sister sites. The other images follow in the next release, and until then their figure blocks render nothing.
+Eight new articles, written from the claims made in a public debate on the Islamic Dilemma. Each answers them from the Quran, the hadith, the classical commentators and the biblical scholarship, and grades its own entries. The site names neither speaker. Every article has its featured image and every image in the text, credited in `inc/images-data.json`; none is used by any of the sister sites. Ten come from Wikimedia Commons. Commons then refused this server, so the other sixteen come from the Internet Archive (public domain facsimiles of Codex Vaticanus, Codex Bezae, Codex Washingtonianus and the Aleppo Codex), the Wellcome Collection (public domain and CC BY 4.0) and the Cleveland Museum of Art (CC0).
 
 - **How does scripture reread scripture? 8 points, from Daniel to the Quran** (revelatory-exegesis), Comparative Religion, The Islamic Dilemma and Tahrif.
 - **Can a later prophet reinterpret the Quran? 8 answers** (seal-of-the-prophets), Comparative Religion, The Islamic Dilemma and Tahrif.
@@ -29,6 +22,8 @@ Eight new articles, written from the claims made in a public debate on the Islam
 All eight are in the seed list, `inc/data/seed.json`, with a `seo_title` inside the 43-character budget, and in the reading order (`inc/reading.php`): the revelatory exegesis and seal articles after christian-twin-of-the-islamic-dilemma, the 3:81, 10:94 and Abu Dawud 4449 articles after quran-verses-on-torah-and-gospel, ransom after crucifixion-quran, who-changed-the-bible after bible-alteration-claim-before-islam, and muhammad-never-wrote-it-down after uthman-copies. `bin/build-related.py` pins the eight to each other where they answer the same argument, so the revelatory exegesis article leads to the seal article and back. `inc/related-articles.json` is rebuilt. The credits for the ten new images are in `inc/images-data.json`, with their Commons file names in `bin/stock-images.json`.
 
 ### Changed
+
+- **bin/fetch-stock-images.py** takes `archive`, `wellcome` and `cleveland` as sources, and the credit line names those three sites.
 
 - **who-is-allah**: the entry "That Allah is a moon god" gains four paragraphs. It names where the modern claim comes from (Robert Morey's *The Islamic Invasion*, 1992, and his 1994 booklet), the Hazor shrine he relied on and why a Canaanite find of the Late Bronze Age says nothing about Mecca, the moon gods South Arabia did have (Almaqah of Saba, Wadd of Maʿin, ʿAmm of Qataban, Sayin of Hadramawt) and Wadd in Quran 71:23, and Hubal at the Kaaba as Ibn al-Kalbi describes him in *Kitab al-Asnam*, checked against the Shamela text of the Zaki edition (book 6513). The notes after the seventh are renumbered, 7 to 23 in order.
 
