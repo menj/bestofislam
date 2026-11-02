@@ -814,12 +814,43 @@
 	all: unset;
 }
 
-/* Kinds of entry, as photograph tiles that filter the list. */
+/* Kinds of entry, as photograph tiles that filter the list. There are 14
+   (All and 13 kinds): 7 to a row on desktop, 2 rows; 4 to a row on a tablet
+   and 2 on a phone. A short last row is centred rather than left half
+   empty. */
 .boi-glossary__types {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
-	gap: 0.75rem;
+	--boi-kind-cols: 2;
+	--boi-kind-gap: 0.75rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--boi-kind-gap);
 	inline-size: 100%;
+}
+
+.boi-glossary__types > .boi-chip.boi-kind {
+	flex: 0 0 calc((100% - (var(--boi-kind-cols) - 1) * var(--boi-kind-gap)) / var(--boi-kind-cols));
+	min-inline-size: 0;
+}
+
+@media (min-width: 600px) {
+	.boi-glossary__types {
+		--boi-kind-cols: 4;
+	}
+}
+
+@media (min-width: 1000px) {
+	.boi-glossary__types {
+		--boi-kind-cols: 7;
+	}
+}
+
+/* The G Preferred plugin's button is kept off the Glossary
+   (inc/glossary.php); this rule catches it if the plugin changes. */
+.boi-glossary-page .gpr-slot,
+.boi-glossary-index .gpr-slot,
+.boi-glossary-entry .gpr-slot {
+	display: none !important;
 }
 
 .boi-glossary__tools {

@@ -21,7 +21,7 @@
   "articles": [
    "verses-read-differently"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": []
  },
  {
@@ -72,7 +72,7 @@
    "preservation-and-truth",
    "pauline-letters-authorship"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Corruption Of The Bible"
   ]
@@ -80,7 +80,7 @@
  {
   "slug": "takfir",
   "title": "Takfir",
-  "type": "term",
+  "type": "law",
   "ar": "تكفير",
   "tr": "takfīr",
   "def": "Declaring another Muslim to be an unbeliever, which classical scholars treated with extreme caution.",
@@ -125,7 +125,7 @@
   "articles": [
    "taqiyya-5-myths"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": []
  },
  {
@@ -146,7 +146,7 @@
    "ummah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [],
   "faruqi": [
    {
@@ -178,7 +178,7 @@
    "jesus-not-god",
    "relationship-with-god"
   ],
-  "type": "term",
+  "type": "belief",
   "aliases": []
  },
  {
@@ -245,7 +245,7 @@
  {
   "slug": "trade-and-business",
   "title": "Trade and business",
-  "type": "topic",
+  "type": "ethics",
   "ar": "تجارة",
   "tr": "Tijāra",
   "def": "The Quran requires honest weights, written contracts and fair dealing in trade.",
@@ -542,7 +542,7 @@
    "tabi-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Tafsir bi-l-Mathur",
    "Tafsir Bil Mathur",
@@ -573,7 +573,7 @@
    "asbab-al-nuzul"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Tafsir bil-Ra'y",
    "Tafsir bi’l-Ray",
@@ -678,7 +678,7 @@
    "sharia"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 38,
@@ -703,7 +703,7 @@
    "tanzil"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Tilawah"
   ],
@@ -730,7 +730,7 @@
    "injil"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [],
   "faruqi": {
    "page": 46,
@@ -755,7 +755,7 @@
    "gabriel"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Tanzil"
   ],
@@ -782,7 +782,7 @@
    "music-and-singing"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Tajwid",
    "Tartil",
@@ -838,7 +838,7 @@
    "dua"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Tasleem"
   ],
@@ -867,7 +867,7 @@
    "hajar-al-aswad"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Tawwaf"
   ],
@@ -894,7 +894,7 @@
    "dua"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Tawakul"
   ],
@@ -921,7 +921,7 @@
    "divine-attributes"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Tawwab",
    "Tawwab"
@@ -949,7 +949,7 @@
    "diya"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Ta'zir",
    "Tazir",
@@ -980,7 +980,7 @@
    "paradise"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Sawab"
   ],

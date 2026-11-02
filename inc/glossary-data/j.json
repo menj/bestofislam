@@ -237,7 +237,7 @@
    "islam-religion-of-peace",
    "war-and-killing-in-islam"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Qital"
   ],
@@ -251,7 +251,7 @@
  {
   "slug": "jinn",
   "title": "Jinn",
-  "type": "term",
+  "type": "belief",
   "ar": "جن",
   "tr": "jinn",
   "def": "Unseen beings made from smokeless fire, who like humans have free will and can believe or disbelieve.",
@@ -306,7 +306,7 @@
   "articles": [
    "jizya"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": []
  },
  {
@@ -485,7 +485,7 @@
  {
   "slug": "justice",
   "title": "Justice",
-  "type": "term",
+  "type": "ethics",
   "ar": "عدل",
   "tr": "ʿadl",
   "def": "Fair dealing: the Quran commands justice even toward those one dislikes.",
@@ -525,7 +525,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Jabbar",
    "Jabbar"
@@ -582,7 +582,7 @@
    "quran"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Al-Janabah",
    "Janaba",
@@ -614,7 +614,7 @@
    "ilal-al-hadith"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Al-Jarh wal-Ta'dil",
    "Jarh Wa Tadil",
@@ -643,7 +643,7 @@
    "hell"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 27,
@@ -697,7 +697,7 @@
    "ahl-al-kitab"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [],
   "faruqi": {
    "page": 27,
@@ -750,7 +750,7 @@
    "imam"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Al-Jumu'ah",
    "Jumua",

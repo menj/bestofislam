@@ -2,7 +2,7 @@
  {
   "slug": "mahdi",
   "title": "Mahdi",
-  "type": "term",
+  "type": "belief",
   "ar": "مهدي",
   "tr": "mahdī",
   "def": "The “guided one” whom many Muslims expect near the end of time to restore justice.",
@@ -72,7 +72,7 @@
  {
   "slug": "marriage",
   "title": "Marriage",
-  "type": "topic",
+  "type": "law",
   "ar": "نكاح",
   "tr": "nikāḥ",
   "def": "Marriage is a solemn covenant in Islam, based on mutual consent, a dowry, and mercy between the spouses.",
@@ -102,7 +102,7 @@
  {
   "slug": "martyrdom-and-the-dead",
   "title": "Martyrdom and the dead",
-  "type": "topic",
+  "type": "belief",
   "ar": "شهيد",
   "tr": "Shahīd",
   "def": "The Quran says that those killed in God’s way are alive with their Lord (3:169).",
@@ -192,7 +192,7 @@
  {
   "slug": "modesty-and-dress",
   "title": "Modesty and dress",
-  "type": "topic",
+  "type": "ethics",
   "ar": "حياء",
   "tr": "Ḥayāʾ",
   "def": "The Quran asks both men and women to guard their gaze and chastity and to dress modestly.",
@@ -287,7 +287,7 @@
  {
   "slug": "mothers-and-childbirth",
   "title": "Mothers and childbirth",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The Quran honours mothers for the hardship of carrying and bearing children.",
@@ -361,7 +361,7 @@
    "uthman-copies",
    "preservation-and-truth"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [],
   "faruqi": [
    {
@@ -373,7 +373,7 @@
  {
   "slug": "music-and-singing",
   "title": "Music and singing",
-  "type": "topic",
+  "type": "law",
   "ar": "غناء",
   "tr": "Ghināʾ",
   "def": "Muslim scholars have differed about music: some forbid instruments, many allow singing and the frame drum, and Muslim civilisations have produced much music.",
@@ -472,7 +472,7 @@
    "sharia"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Madhahib al-Khamsah"
   ],
@@ -501,7 +501,7 @@
    "quran"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Makki",
    "Al-Madani"
@@ -529,7 +529,7 @@
    "halal-and-haram-food"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Makruh"
   ],
@@ -556,7 +556,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Mandub"
   ],
@@ -585,7 +585,7 @@
    "makki-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Mansukh"
   ],
@@ -612,7 +612,7 @@
    "al-ghazali"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [],
   "faruqi": {
    "page": 54,
@@ -639,7 +639,7 @@
    "good"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Al-Maʿruf"
   ],
@@ -667,7 +667,7 @@
    "ijtihad"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Masalih al-Mursalah"
   ],
@@ -696,7 +696,7 @@
    "kitab-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Mathani"
   ],
@@ -723,7 +723,7 @@
    "imam"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 54,
@@ -777,7 +777,7 @@
    "halal-and-haram-food"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Mubah"
   ],
@@ -961,7 +961,7 @@
    "mansukh-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Muhkam",
    "Al-Mutashabah"
@@ -1039,7 +1039,7 @@
    "arabic-dictionaries"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Mu'jam"
   ],
@@ -1066,7 +1066,7 @@
    "mustaan-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Mujib"
   ],
@@ -1118,7 +1118,7 @@
    "naskh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [],
   "faruqi": {
    "page": 50,
@@ -1143,7 +1143,7 @@
    "kafir"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 23,
@@ -1168,7 +1168,7 @@
    "family"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 24,
@@ -1193,7 +1193,7 @@
    "evil"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Al-Munkar"
   ],
@@ -1220,7 +1220,7 @@
    "sahih"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Musnad"
   ],
@@ -1247,7 +1247,7 @@
    "mujib-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Mustaʿan"
   ],
@@ -1307,7 +1307,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Mustalah al-Hadith",
    "Ulum al-Hadith"
@@ -1334,7 +1334,7 @@
    "paradise"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Muttaqun",
    "Muttaqin",

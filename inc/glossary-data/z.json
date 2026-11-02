@@ -45,7 +45,7 @@
    "five-pillars-explained",
    "jizya"
   ],
-  "type": "term",
+  "type": "worship",
   "aliases": [],
   "faruqi": [
    {
@@ -72,7 +72,7 @@
    "creation"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Zahir",
    "Zahir"
@@ -100,7 +100,7 @@
    "shirk"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Zalimun",
    "Dhalim"
@@ -183,7 +183,7 @@
    "shirk"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Dhulm",
    "Zulm"

@@ -125,7 +125,7 @@
  {
   "slug": "education",
   "title": "Education",
-  "type": "topic",
+  "type": "ethics",
   "ar": "تعليم",
   "tr": "taʿlīm",
   "def": "Islam makes seeking knowledge a duty, and Muslim societies built schools, libraries and universities.",
@@ -204,7 +204,7 @@
  {
   "slug": "eid",
   "title": "Eid",
-  "type": "term",
+  "type": "worship",
   "ar": "عيد",
   "tr": "ʿĪd",
   "def": "The two Muslim festivals: Eid al-Fitr, at the end of Ramadan, and Eid al-Adha, at the Hajj.",
@@ -306,7 +306,7 @@
  {
   "slug": "enemies",
   "title": "Enemies",
-  "type": "topic",
+  "type": "ethics",
   "ar": "عدو",
   "tr": "ʿAdūw",
   "def": "The Quran tells believers to repel evil with good, to be just to enemies, and perhaps to turn enmity into friendship.",
@@ -330,7 +330,7 @@
  {
   "slug": "environment",
   "title": "Environment",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The Quran calls humans stewards (<em>khalīfa</em>) of the earth, forbids waste and corruption, and sets a balance (<em>mīzān</em>).",
@@ -353,7 +353,7 @@
  {
   "slug": "envy",
   "title": "Envy",
-  "type": "term",
+  "type": "ethics",
   "ar": "حسد",
   "tr": "Ḥasad",
   "def": "Envy, the wish that another lose what God has given him, is forbidden and condemned in the Quran (4:32, 113:5).",
@@ -372,7 +372,7 @@
  {
   "slug": "equality",
   "title": "Equality",
-  "type": "topic",
+  "type": "ethics",
   "ar": "مساواة",
   "tr": "Musāwāt",
   "def": "The Quran teaches the equality of all people before God (49:13) and commands justice (4:135); the rules of classical law, however, did draw distinctions of status.",
@@ -414,7 +414,7 @@
  {
   "slug": "ethics-and-conduct",
   "title": "Ethics and conduct",
-  "type": "topic",
+  "type": "ethics",
   "ar": "أخلاق",
   "tr": "Akhlāq",
   "def": "The Quran’s teaching on character, justice, honesty and kindness in everyday life.",
@@ -480,7 +480,7 @@
  {
   "slug": "evil",
   "title": "Evil",
-  "type": "topic",
+  "type": "belief",
   "ar": "شر",
   "tr": "Sharr",
   "def": "The Quran teaches that good and evil befall people as trials by God’s permission, and that a person is responsible for his own wrong.",
@@ -503,7 +503,7 @@
  {
   "slug": "evil-eye",
   "title": "Evil eye",
-  "type": "topic",
+  "type": "belief",
   "ar": "عين",
   "tr": "ʿAyn",
   "def": "Islamic tradition holds that envy can harm, and teaches protective prayers.",
@@ -552,7 +552,7 @@
  {
   "slug": "extremism",
   "title": "Extremism",
-  "type": "topic",
+  "type": "ethics",
   "ar": "غلو",
   "tr": "Ghuluww",
   "def": "The Quran calls Muslims a “middle community” and forbids excess in religion; Muslim scholars have condemned terrorism.",

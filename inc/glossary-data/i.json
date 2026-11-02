@@ -2,7 +2,7 @@
  {
   "slug": "ibadah",
   "title": "Ibadah",
-  "type": "term",
+  "type": "worship",
   "ar": "عبادة",
   "tr": "ʿibāda",
   "def": "Worship and devotion to God, in ritual and in the whole of a life lived for Him.",
@@ -32,7 +32,7 @@
  {
   "slug": "iblis",
   "title": "Iblis",
-  "type": "topic",
+  "type": "belief",
   "ar": "إبليس",
   "tr": "Iblīs",
   "def": "The devil, who refused to prostrate to Adam and now tempts humanity; in the Quran he is one of the jinn, not an angel.",
@@ -171,7 +171,7 @@
  {
   "slug": "idda",
   "title": "Idda",
-  "type": "term",
+  "type": "law",
   "ar": "عدة",
   "tr": "ʿidda",
   "def": "The waiting period a woman observes after divorce or the death of her husband.",
@@ -219,7 +219,7 @@
  {
   "slug": "ihram",
   "title": "Ihram",
-  "type": "term",
+  "type": "worship",
   "ar": "إحرام",
   "tr": "iḥrām",
   "def": "The state of consecration entered for the pilgrimage, with its simple dress and restrictions.",
@@ -260,7 +260,7 @@
   "articles": [
    "five-pillars-explained"
   ],
-  "type": "term",
+  "type": "ethics",
   "aliases": [],
   "faruqi": [
    {
@@ -272,7 +272,7 @@
  {
   "slug": "ijma",
   "title": "Ijma",
-  "type": "term",
+  "type": "law",
   "ar": "إجماع",
   "tr": "Ijmāʿ",
   "def": "Consensus of the scholars of a period on a ruling; one of the sources of Islamic law.",
@@ -300,7 +300,7 @@
  {
   "slug": "ijtihad",
   "title": "Ijtihad",
-  "type": "term",
+  "type": "law",
   "ar": "اجتهاد",
   "tr": "ijtihād",
   "def": "Scholarly effort to reach a ruling from the sources, when the text does not state it plainly.",
@@ -327,7 +327,7 @@
  {
   "slug": "illiyin",
   "title": "Illiyin",
-  "type": "term",
+  "type": "belief",
   "ar": "عليون",
   "tr": "ʿIlliyyūn",
   "def": "The high register in which the deeds of the righteous are recorded.",
@@ -375,7 +375,7 @@
  {
   "slug": "imam",
   "title": "Imam",
-  "type": "term",
+  "type": "worship",
   "ar": "إمام",
   "tr": "imām",
   "def": "A leader: the one who leads prayer, and a title of respected scholars.",
@@ -403,7 +403,7 @@
  {
   "slug": "iman",
   "title": "Iman",
-  "type": "term",
+  "type": "belief",
   "ar": "إيمان",
   "tr": "Īmān",
   "def": "Faith: belief in God, His angels, scriptures and messengers, the Last Day and the decree, which the Quran joins with righteous deeds.",
@@ -437,7 +437,7 @@
  {
   "slug": "immaculate-conception",
   "title": "Immaculate conception",
-  "type": "topic",
+  "type": "belief",
   "ar": "حمل مريم",
   "tr": "ḥaml Maryam",
   "def": "The Quran says that Mary was protected from Satan at her birth, and that Jesus was born miraculously without a father.",
@@ -515,7 +515,7 @@
  {
   "slug": "inheritance",
   "title": "Inheritance",
-  "type": "topic",
+  "type": "law",
   "ar": "ميراث",
   "tr": "Mīrāth",
   "def": "The Quran sets fixed shares for family heirs and allows a bequest of up to a third.",
@@ -564,7 +564,7 @@
    "pauline-letters-authorship",
    "paul-claim-to-apostleship"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Gospel",
    "Gospels"
@@ -573,7 +573,7 @@
  {
   "slug": "intercession",
   "title": "Intercession",
-  "type": "term",
+  "type": "belief",
   "ar": "شفاعة",
   "tr": "shafāʿa",
   "def": "Pleading on someone’s behalf before God, which is possible only by God’s permission.",
@@ -600,7 +600,7 @@
  {
   "slug": "intoxicants",
   "title": "Intoxicants",
-  "type": "topic",
+  "type": "law",
   "ar": "خمر",
   "tr": "Khamr",
   "def": "The Quran prohibits intoxicants in stages, and calls them “an abomination of Satan’s handiwork” (5:90).",
@@ -811,7 +811,7 @@
  {
   "slug": "islamic-finance",
   "title": "Islamic finance",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "Banking and investment that avoid interest (<em>ribā</em>) and speculation, using profit-sharing, sale and leasing instead.",
@@ -867,7 +867,7 @@
  {
   "slug": "ismah",
   "title": "Ismah",
-  "type": "term",
+  "type": "belief",
   "ar": "عصمة",
   "tr": "ʿiṣma",
   "def": "The belief that God protected the prophets from major sin and from error in conveying His message.",
@@ -913,7 +913,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": []
  },
  {
@@ -978,7 +978,7 @@
  {
   "slug": "istighfar",
   "title": "Istighfar",
-  "type": "term",
+  "type": "worship",
   "ar": "استغفار",
   "tr": "Istighfār",
   "def": "Asking God’s forgiveness, which the Quran urges and links with blessing and relief.",
@@ -998,7 +998,7 @@
  {
   "slug": "itikaf",
   "title": "Itikaf",
-  "type": "term",
+  "type": "worship",
   "ar": "اعتكاف",
   "tr": "iʿtikāf",
   "def": "Spending days in the mosque in devotion, especially in the last ten days of Ramadan.",
@@ -1064,7 +1064,7 @@
    "tafsir"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "I‘jaz Al-Quran",
    "Ijaz",
@@ -1095,7 +1095,7 @@
    "sharia"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Ijma'",
    "Ijma"
@@ -1123,7 +1123,7 @@
    "sharia"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Ijma' al-Sarih",
    "Explicit Consensus"
@@ -1151,7 +1151,7 @@
    "fiqh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Ijma' al-Sukuti",
    "Silent Consensus",
@@ -1182,7 +1182,7 @@
    "fiqh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Ijtihad",
    "Ijtihad"
@@ -1210,7 +1210,7 @@
    "ibadah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 31,
@@ -1235,7 +1235,7 @@
    "jarh-wal-tadil-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Ilal",
    "Ilal Al-Hadith"
@@ -1323,7 +1323,7 @@
    "taqwa"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [
    "Insha Allah",
    "Inshallah",
@@ -1356,7 +1356,7 @@
    "friday"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 55,
@@ -1382,7 +1382,7 @@
    "akhira"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [
    "Inna Lillahi",
    "Innalillahi"
@@ -1410,7 +1410,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 56,
@@ -1435,7 +1435,7 @@
    "imam"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Iqama",
    "Iqamat"
@@ -1495,7 +1495,7 @@
    "moses"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [],
   "faruqi": {
    "page": 36,
@@ -1520,7 +1520,7 @@
    "dua"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 41,
@@ -1547,7 +1547,7 @@
    "kufr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [],
   "faruqi": {
    "page": 45,
@@ -1572,7 +1572,7 @@
    "friday"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 55,
@@ -1597,7 +1597,7 @@
    "sharia"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Istihsan",
    "Istihsan"
@@ -1627,7 +1627,7 @@
    "iblis"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [],
   "faruqi": {
    "page": 45,
@@ -1681,7 +1681,7 @@
    "ijtihad"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Istishab",
    "Istishab"

@@ -8,7 +8,8 @@ or "articles" point at nothing; a seeded article has no content file; an
 article's footnote numbers are not 1..N matching its Notes list; an
 article's entry or paragraph blocks are unbalanced; a seeded article
 lacks a category or has fewer than 3 or more than 6 tags; a tag slug holds
-digits; two tags are near-duplicates; a shared tag has no description.
+digits; two tags are near-duplicates; a shared tag has no description; a
+Glossary entry has no valid kind. --kinds prints the count for each kind.
 
 Run it by hand:  python3 bin/check-content.py
 The workflow in .github/workflows/checks.yml runs it on every pull request.
@@ -22,7 +23,10 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 errors = []
 
-# Glossary data.
+# Glossary data. Every entry names one kind from boi_glossary_types()
+# (inc/glossary-data.php), written in its record, never guessed at runtime.
+KINDS = ('term', 'worship', 'belief', 'law', 'scripture', 'ethics', 'person', 'prophet', 'place', 'event', 'group', 'book', 'topic')
+kind_use = {}
 terms = {}
 for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'))):
     try:
@@ -35,6 +39,10 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
         if slug in terms:
             errors.append('glossary: duplicate slug "%s" (%s and %s)' % (slug, terms[slug], os.path.basename(path)))
         terms[slug] = os.path.basename(path)
+        kind = t.get('type')
+        if kind not in KINDS:
+            errors.append('glossary: "%s" has kind "%s"; use one of %s' % (slug, kind, ', '.join(KINDS)))
+        kind_use[kind] = kind_use.get(kind, 0) + 1
 
 # Seeded articles: the seed list lives in inc/data/seed.json.
 seed_path = os.path.join(ROOT, 'inc', 'data', 'seed.json')
@@ -205,6 +213,11 @@ for name, description in vocabulary.items():
 for cat in categories:
     if cat_use.get(cat, 0) < 5:
         errors.append('categories: "%s" holds %d articles (at least 5)' % (cat, cat_use.get(cat, 0)))
+
+if '--summary' in sys.argv or '--kinds' in sys.argv:
+    print('Glossary kind -> entries (%d in all)' % sum(kind_use.values()))
+    for kind in KINDS:
+        print('  %-22s %d' % (kind, kind_use.get(kind, 0)))
 
 if '--summary' in sys.argv:
     print('Category -> articles')

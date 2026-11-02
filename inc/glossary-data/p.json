@@ -54,7 +54,7 @@
  {
   "slug": "paradise",
   "title": "Paradise",
-  "type": "topic",
+  "type": "belief",
   "ar": "جنة",
   "tr": "Janna",
   "def": "The garden of the righteous, described in the Quran with gardens, rivers, companions and, above all, God’s good pleasure.",
@@ -241,7 +241,7 @@
  {
   "slug": "prisoners-of-war",
   "title": "Prisoners of war",
-  "type": "topic",
+  "type": "law",
   "ar": "أسرى",
   "tr": "Asrā",
   "def": "The Quran’s rule for prisoners taken in battle: release them with grace or for ransom (47:4).",
@@ -269,7 +269,7 @@
  {
   "slug": "prophets",
   "title": "Prophets",
-  "type": "topic",
+  "type": "belief",
   "ar": "أنبياء",
   "tr": "anbiyāʾ",
   "def": "Humans chosen by God to deliver His guidance; the Quran names twenty-five and says there were many more.",

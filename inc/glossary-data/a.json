@@ -55,7 +55,7 @@
  {
   "slug": "abad",
   "title": "Abad",
-  "type": "term",
+  "type": "belief",
   "ar": "أبد",
   "tr": "Abad",
   "def": "Everlastingness, being without end; the counterpart of azal, being without beginning.",
@@ -76,7 +76,7 @@
  {
   "slug": "abasa",
   "title": "Abasa",
-  "type": "term",
+  "type": "scripture",
   "ar": "عبس",
   "tr": "ʿAbasa",
   "def": "Chapter 80 of the Quran, “He frowned”, in which God rebukes the Prophet for turning away from a blind man.",
@@ -149,7 +149,7 @@
  {
   "slug": "abd",
   "title": "Abd",
-  "type": "term",
+  "type": "belief",
   "ar": "عبد",
   "tr": "ʿAbd, ʿĀbid",
   "def": "Servant or slave of God: the name for a human being in relation to his Creator.",
@@ -373,7 +373,7 @@
  {
   "slug": "ablutions",
   "title": "Ablutions",
-  "type": "term",
+  "type": "worship",
   "ar": "وضوء",
   "tr": "Wuḍūʾ",
   "def": "Washing before prayer: the minor wudu, the full bath (ghusl), and dry ablution (tayammum) where there is no water.",
@@ -696,7 +696,7 @@
  {
   "slug": "acacia-flowers",
   "title": "Acacia flowers",
-  "type": "topic",
+  "type": "belief",
   "ar": "طلح",
   "tr": "Ṭalḥ",
   "def": "A tree of Paradise named in the Quran (56:29).",
@@ -747,7 +747,7 @@
  {
   "slug": "adhan",
   "title": "Adhan",
-  "type": "term",
+  "type": "worship",
   "ar": "أذان",
   "tr": "Adhān",
   "def": "The call to prayer, proclaimed from the mosque five times a day.",
@@ -776,7 +776,7 @@
  {
   "slug": "adoption",
   "title": "Adoption",
-  "type": "term",
+  "type": "law",
   "ar": "تبني",
   "tr": "Tabannī",
   "def": "Islam forbids treating an adopted child as one’s own by blood, and urges caring for orphans.",
@@ -817,7 +817,7 @@
  {
   "slug": "adoration",
   "title": "Adoration",
-  "type": "topic",
+  "type": "worship",
   "ar": "",
   "tr": "",
   "def": "Prostration and worship belong to God alone, not to sun, moon or any creature (41:37).",
@@ -836,7 +836,7 @@
  {
   "slug": "adult-breastfeeding",
   "title": "Adult breastfeeding",
-  "type": "topic",
+  "type": "scripture",
   "ar": "رضاع الكبير",
   "tr": "Raḍāʿ al-kabīr",
   "def": "A single report about adult breastfeeding, understood by most scholars as a special case.",
@@ -860,7 +860,7 @@
  {
   "slug": "adultery",
   "title": "Adultery",
-  "type": "term",
+  "type": "law",
   "ar": "زنا",
   "tr": "Zināʾ",
   "def": "Sexual intercourse outside marriage, which the Quran forbids and surrounds with strict conditions of proof.",
@@ -896,7 +896,7 @@
  {
   "slug": "adversity",
   "title": "Adversity",
-  "type": "topic",
+  "type": "ethics",
   "ar": "صبر",
   "tr": "Ṣabr",
   "def": "Patience in hardship: steadfastness, which the Quran promises God will reward without measure.",
@@ -927,7 +927,7 @@
  {
   "slug": "afternoon-prayer",
   "title": "Afternoon prayer",
-  "type": "term",
+  "type": "worship",
   "ar": "عصر",
   "tr": "ʿAṣr",
   "def": "The third of the five daily prayers, between mid-afternoon and sunset.",
@@ -951,7 +951,7 @@
  {
   "slug": "age-of-responsibility",
   "title": "Age of responsibility",
-  "type": "topic",
+  "type": "law",
   "ar": "بلوغ",
   "tr": "Bulūgh",
   "def": "The point at which a Muslim becomes accountable for religious duties, at puberty.",
@@ -976,7 +976,7 @@
  {
   "slug": "aggression",
   "title": "Aggression",
-  "type": "topic",
+  "type": "law",
   "ar": "عدوان",
   "tr": "ʿUdwān",
   "def": "The Quran forbids transgression, allows only proportionate defence, and urges forgiveness and the better response.",
@@ -1159,7 +1159,7 @@
  {
   "slug": "akhira",
   "title": "Akhira",
-  "type": "term",
+  "type": "belief",
   "ar": "آخرة",
   "tr": "Ākhira",
   "def": "The Hereafter: the life after death, judgement, and the abode of reward or punishment.",
@@ -1225,7 +1225,7 @@
  {
   "slug": "al-aziz",
   "title": "Al-Aziz",
-  "type": "term",
+  "type": "belief",
   "ar": "العزيز",
   "tr": "al-ʿAzīz",
   "def": "One of God’s names, “the Mighty”, and the Egyptian title of an official in the story of Joseph.",
@@ -1472,7 +1472,7 @@
    "crucifixion-quran",
    "relationship-with-god"
   ],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Alah",
    "God"
@@ -1487,7 +1487,7 @@
  {
   "slug": "allahu-akbar",
   "title": "Allahu Akbar",
-  "type": "term",
+  "type": "worship",
   "ar": "الله أكبر",
   "tr": "Allāhu akbar",
   "def": "“God is greater”: the phrase that opens the prayer and the call to prayer, and is said in many other moments of life.",
@@ -1517,7 +1517,7 @@
  {
   "slug": "alliances",
   "title": "Alliances",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The Quran’s verses on alliance and friendship with Jews, Christians and others, which must be read with its call to justice and kindness.",
@@ -1542,7 +1542,7 @@
  {
   "slug": "almsgiving",
   "title": "Almsgiving",
-  "type": "term",
+  "type": "worship",
   "ar": "",
   "tr": "",
   "def": "Zakat is the obligatory share; sadaqa is voluntary giving beyond it.",
@@ -1595,7 +1595,7 @@
  {
   "slug": "amana",
   "title": "Amana",
-  "type": "term",
+  "type": "ethics",
   "ar": "أمانة",
   "tr": "amāna",
   "def": "Trust: a responsibility entrusted by God, and honesty in keeping what is entrusted.",
@@ -1621,7 +1621,7 @@
  {
   "slug": "amanah",
   "title": "Amanah",
-  "type": "term",
+  "type": "ethics",
   "ar": "أمانة",
   "tr": "Amāna",
   "def": "A trust: what has been entrusted to a person, whether property, a secret or a duty.",
@@ -1640,7 +1640,7 @@
  {
   "slug": "amen",
   "title": "Amen",
-  "type": "term",
+  "type": "worship",
   "ar": "آمين",
   "tr": "Āmīn",
   "def": "The word said at the end of a prayer; in Islam it is said after the opening chapter.",
@@ -1734,7 +1734,7 @@
  {
   "slug": "angels",
   "title": "Angels",
-  "type": "term",
+  "type": "belief",
   "ar": "ملائكة",
   "tr": "Malāʾika",
   "def": "Beings created from light to serve God, whom Muslims are required to believe in.",
@@ -1763,7 +1763,7 @@
  {
   "slug": "anger",
   "title": "Anger",
-  "type": "topic",
+  "type": "ethics",
   "ar": "غضب",
   "tr": "Ghaḍab",
   "def": "The Quran praises those who restrain anger and forgive.",
@@ -1898,7 +1898,7 @@
  {
   "slug": "antisemitism",
   "title": "Antisemitism",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "Hatred of Jews, which Islam’s sources do not teach; the Quran distinguishes particular acts from a whole people.",
@@ -1963,7 +1963,7 @@
  {
   "slug": "apostasy",
   "title": "Apostasy",
-  "type": "term",
+  "type": "law",
   "ar": "ردة",
   "tr": "Riddah",
   "def": "Leaving Islam. The Quran gives no worldly penalty for it; the classical law did, and Muslim scholars still differ.",
@@ -1998,7 +1998,7 @@
  {
   "slug": "apostle",
   "title": "Apostle",
-  "type": "term",
+  "type": "belief",
   "ar": "رسول",
   "tr": "Rasūl",
   "def": "A messenger: a prophet sent with a message and, usually, a scripture to a people.",
@@ -2028,7 +2028,7 @@
  {
   "slug": "aqeeda",
   "title": "Aqeeda",
-  "type": "term",
+  "type": "belief",
   "ar": "عقيدة",
   "tr": "ʿAqīda",
   "def": "Creed: the beliefs a Muslim holds about God, the prophets, the scriptures and the Last Day.",
@@ -2205,7 +2205,7 @@
  {
   "slug": "arbitration",
   "title": "Arbitration",
-  "type": "term",
+  "type": "law",
   "ar": "تحكيم",
   "tr": "Taḥkīm",
   "def": "Settling a dispute through a neutral third party, which the Quran commends.",
@@ -2389,7 +2389,7 @@
    "verses-read-differently",
    "islam-religion-of-peace"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [],
   "faruqi": [
    {
@@ -2555,7 +2555,7 @@
  {
   "slug": "atonement-and-repentance",
   "title": "Atonement and repentance",
-  "type": "topic",
+  "type": "belief",
   "ar": "توبة",
   "tr": "Tawba",
   "def": "In Islam sins are forgiven by God on repentance, without a blood sacrifice or the suffering of another.",
@@ -2584,7 +2584,7 @@
  {
   "slug": "authority",
   "title": "Authority",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "Those in authority: the Quran tells Muslims to obey God, the Messenger and those in authority, and to refer disputes to God and the Messenger.",
@@ -2610,7 +2610,7 @@
  {
   "slug": "aya",
   "title": "Aya",
-  "type": "term",
+  "type": "scripture",
   "ar": "آية",
   "tr": "Āya",
   "def": "A sign, and the word for a verse of the Quran.",
@@ -2659,7 +2659,7 @@
  {
   "slug": "azl",
   "title": "Azl",
-  "type": "term",
+  "type": "law",
   "ar": "عزل",
   "tr": "ʿAzl",
   "def": "Withdrawal before ejaculation, a method of birth control that the Prophet’s Companions practised and that most jurists permit.",
@@ -2720,7 +2720,7 @@
    "amala"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Aazza",
    "Azza"
@@ -2748,7 +2748,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Abada"
   ],
@@ -2775,7 +2775,7 @@
    "forgiveness"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Adhab",
    "Azab"
@@ -2830,7 +2830,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Al-ʿAhd",
    "Ahd",
@@ -2859,7 +2859,7 @@
    "sharia"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "law",
   "aliases": [
    "Ahkam Al-Quran",
    "Verses Of Rulings"
@@ -2915,7 +2915,7 @@
    "hudud"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Ihsan Of Chastity",
    "Muhsan",
@@ -2944,7 +2944,7 @@
    "akhira"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Appointed Term"
   ],
@@ -2997,7 +2997,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Takbir"
   ],
@@ -3023,7 +3023,7 @@
    "ansar"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Ikhwah",
    "Ikhwan",
@@ -3052,7 +3052,7 @@
    "judgement"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Akhirah",
    "Al-Akhira",
@@ -3083,7 +3083,7 @@
    "kindness"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "ethics",
   "aliases": [
    "Hisba",
    "Enjoining Good And Forbidding Evil",
@@ -3170,7 +3170,7 @@
    "hukm"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "law",
   "aliases": [
    "Dhawq Shari",
    "Legal Taste"
@@ -3198,7 +3198,7 @@
    "common-phrases"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Alhamdulillah",
    "Alhamdu Lillah",
@@ -3227,7 +3227,7 @@
    "dhikr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Dua After Eating"
   ],
@@ -3254,7 +3254,7 @@
    "hijab"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Dua For Clothing",
    "Dua For Dressing"
@@ -3283,7 +3283,7 @@
    "common-phrases"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Sneezing",
    "Yarhamuk Allah"
@@ -3313,7 +3313,7 @@
    "dhikr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Alhamdulillah Rabb Al-Alamin"
   ],
@@ -3367,7 +3367,7 @@
    "al-qawaid-al-usuliyyah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "law",
   "aliases": [
    "Legal Maxims",
    "Qawaid Fiqhiyya"
@@ -3395,7 +3395,7 @@
    "ijma"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "law",
   "aliases": [
    "Usul Rules",
    "Qawaid Usuliyya"
@@ -3453,7 +3453,7 @@
    "ahl-al-bayt"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Salawat",
    "Salat Ala Al-Nabi"
@@ -3481,7 +3481,7 @@
    "no-compulsion-in-religion"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Firmest Handhold",
    "Urwa Wuthqa"
@@ -3509,7 +3509,7 @@
    "hadith"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "ethics",
   "aliases": [
    "Uswa Hasana",
    "Good Example"
@@ -3537,7 +3537,7 @@
    "al-hamdu-lillahi"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-ʿAlamin",
    "Al-Alamin",
@@ -3595,7 +3595,7 @@
    "alim"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-ʿAlim",
    "Al-Alim",
@@ -3624,7 +3624,7 @@
    "alim-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-ʿAliyy",
    "Al-Aliyy",
@@ -3653,7 +3653,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Allahumma",
    "Allahuma"
@@ -3681,7 +3681,7 @@
    "sawm"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Moon Sighting Dua",
    "Dua For New Moon"
@@ -3709,7 +3709,7 @@
    "riba"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Dua For Halal Income",
    "Dua For Rizq"
@@ -3737,7 +3737,7 @@
    "allah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Dua Before Starting"
   ],
@@ -3765,7 +3765,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Dua For Anxiety",
    "Dua Hamm Hazan"
@@ -3795,7 +3795,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Dua After Adhan",
    "Dua After Azan"
@@ -3823,7 +3823,7 @@
    "ethics-and-conduct"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Amal",
    "Deeds"
@@ -3981,7 +3981,7 @@
    "diya"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [],
   "faruqi": {
    "page": 44,
@@ -4008,7 +4008,7 @@
    "dua"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 64,
@@ -4035,7 +4035,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 58,
@@ -4060,7 +4060,7 @@
    "imam"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 56,
@@ -4085,7 +4085,7 @@
    "ihsan"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 62,
@@ -4112,7 +4112,7 @@
    "fatiha"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 57,
@@ -4139,7 +4139,7 @@
    "forgiveness"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Awwabun"
   ],
@@ -4168,7 +4168,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Awwal",
    "al-Awwal"
@@ -4224,7 +4224,7 @@
    "awwab"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 62,
@@ -4249,7 +4249,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-ʿAzim",
    "al-Azim"

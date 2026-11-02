@@ -63,7 +63,7 @@
  {
   "slug": "caliph",
   "title": "Caliph",
-  "type": "term",
+  "type": "ethics",
   "ar": "خليفة",
   "tr": "Khalīfa",
   "def": "A successor to the Prophet as leader of the Muslim community; the four rightly guided caliphs were Abu Bakr, Umar, Uthman and Ali.",
@@ -162,7 +162,7 @@
  {
   "slug": "chess",
   "title": "Chess",
-  "type": "topic",
+  "type": "law",
   "ar": "شطرنج",
   "tr": "Shaṭranj",
   "def": "A hadith compares playing chess to dyeing one’s hand in the blood and flesh of swine, but scholars have differed on it.",
@@ -181,7 +181,7 @@
  {
   "slug": "child-marriage",
   "title": "Child marriage",
-  "type": "topic",
+  "type": "law",
   "ar": "",
   "tr": "",
   "def": "The Quran sets no minimum age of marriage but requires maturity (4:6); modern Muslim-majority countries have set minimum ages in law.",
@@ -207,7 +207,7 @@
  {
   "slug": "children",
   "title": "Children",
-  "type": "topic",
+  "type": "ethics",
   "ar": "أولاد",
   "tr": "Awlād",
   "def": "The Quran forbids infanticide, honours daughters, and asks that children be nursed and provided for.",
@@ -337,7 +337,7 @@
  {
   "slug": "circumcision",
   "title": "Circumcision",
-  "type": "term",
+  "type": "law",
   "ar": "ختان",
   "tr": "Khitān",
   "def": "Male circumcision is a practice that most Muslim jurists treat as required or strongly recommended; the Quran does not mention it, and female cutting is not required.",
@@ -363,7 +363,7 @@
  {
   "slug": "commandments",
   "title": "Commandments",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "Quran 6:151–153 and 17:22–39 give moral commandments close to the Ten Commandments.",
@@ -521,7 +521,7 @@
  {
   "slug": "corruption",
   "title": "Corruption",
-  "type": "topic",
+  "type": "ethics",
   "ar": "فساد",
   "tr": "Fasād",
   "def": "The Quran uses <em>fasād</em> for corruption of the earth and of society, and warns that wrongdoing brings its own harm (30:41).",
@@ -545,7 +545,7 @@
  {
   "slug": "covenant",
   "title": "Covenant",
-  "type": "topic",
+  "type": "ethics",
   "ar": "عهد",
   "tr": "ʿAhd",
   "def": "The Quran commands keeping covenants and treaties, and tells of the covenant God took from the prophets and the Children of Israel.",
@@ -573,7 +573,7 @@
  {
   "slug": "cow-the-yellow",
   "title": "Cow, the Yellow",
-  "type": "topic",
+  "type": "scripture",
   "ar": "البقرة",
   "tr": "al-Baqara",
   "def": "Chapter 2, the longest, named for the story of the yellow cow (2:67–73).",
@@ -600,7 +600,7 @@
  {
   "slug": "creation",
   "title": "Creation",
-  "type": "topic",
+  "type": "belief",
   "ar": "خلق",
   "tr": "Khalq",
   "def": "The Quran says God created the heavens and the earth in six “days”, and gives “day” a wider sense than twenty-four hours.",
@@ -658,7 +658,7 @@
  {
   "slug": "crucifixion",
   "title": "Crucifixion",
-  "type": "topic",
+  "type": "belief",
   "ar": "صلب",
   "tr": "Ṣalb",
   "def": "The Quran says Jesus was not killed or crucified, “but it was made to appear so to them” (4:157).",
@@ -706,7 +706,7 @@
  {
   "slug": "curses-and-cursing",
   "title": "Curses and cursing",
-  "type": "topic",
+  "type": "ethics",
   "ar": "لعن",
   "tr": "Laʿn",
   "def": "The Prophet forbade cursing people, saying he was sent as a mercy and not a curser.",
@@ -727,7 +727,7 @@
  {
   "slug": "custom",
   "title": "Custom",
-  "type": "topic",
+  "type": "law",
   "ar": "عرف",
   "tr": "ʿUrf",
   "def": "Local custom is respected where it agrees with the faith, but the Quran condemns following forefathers blindly.",

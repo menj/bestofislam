@@ -113,7 +113,7 @@
  {
   "slug": "backbiting",
   "title": "Backbiting",
-  "type": "term",
+  "type": "ethics",
   "ar": "غيبة",
   "tr": "Ghība",
   "def": "Speaking ill of someone in his absence, which the Quran compares to eating the flesh of one’s dead brother.",
@@ -334,7 +334,7 @@
  {
   "slug": "begging",
   "title": "Begging",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "Islam discourages begging when it can be avoided, and urges generosity to those who do beg.",
@@ -353,7 +353,7 @@
  {
   "slug": "begotten",
   "title": "Begotten",
-  "type": "topic",
+  "type": "belief",
   "ar": "",
   "tr": "",
   "def": "The Quran’s statement that God neither begets nor is begotten (112:3), directed at the belief that God has a son in a literal sense.",
@@ -380,7 +380,7 @@
  {
   "slug": "beheading",
   "title": "Beheading",
-  "type": "topic",
+  "type": "law",
   "ar": "",
   "tr": "",
   "def": "The Quran’s battlefield command “strike the necks” (47:4) is about combat; the Prophet forbade mutilation, and Muslim scholars have condemned beheadings by extremists.",
@@ -455,7 +455,7 @@
  {
   "slug": "bidah",
   "title": "Bid'ah",
-  "type": "term",
+  "type": "belief",
   "ar": "بدعة",
   "tr": "Bidʿa",
   "def": "Innovation in religion: adding to the faith what the Prophet did not teach.",
@@ -573,7 +573,7 @@
  {
   "slug": "birth-rate",
   "title": "Birth rate",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The Prophet encouraged marrying and having children, but this is not a strategy of takeover, and fertility in Muslim countries has fallen sharply.",
@@ -616,7 +616,7 @@
  {
   "slug": "blasphemy",
   "title": "Blasphemy",
-  "type": "topic",
+  "type": "law",
   "ar": "",
   "tr": "",
   "def": "The Quran forbids mocking religion and reviling others’ gods, but sets no worldly punishment; Muslim law has differed.",
@@ -640,7 +640,7 @@
  {
   "slug": "borders",
   "title": "Borders",
-  "type": "topic",
+  "type": "law",
   "ar": "",
   "tr": "",
   "def": "Verse 8:72 distinguishes between believers who migrated and those who did not, and puts treaty obligations first.",
@@ -679,7 +679,7 @@
  {
   "slug": "bribery",
   "title": "Bribery",
-  "type": "topic",
+  "type": "law",
   "ar": "",
   "tr": "",
   "def": "The Quran forbids using money to gain a ruling over another’s property (2:188), and the Prophet cursed both who gives and who takes a bribe.",
@@ -698,7 +698,7 @@
  {
   "slug": "brotherhood",
   "title": "Brotherhood",
-  "type": "topic",
+  "type": "ethics",
   "ar": "أخوة",
   "tr": "Ukhuwwa",
   "def": "The Quran calls the believers brothers, and tells them to hold fast together and not to divide (3:103).",
@@ -833,7 +833,7 @@
    "bath-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Badi'",
    "al-Badi'",
@@ -865,7 +865,7 @@
    "aggression"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Al-Baghy"
   ],
@@ -894,7 +894,7 @@
    "bayan-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Balagh"
   ],
@@ -921,7 +921,7 @@
    "asma-allah-al-husna"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Baqi"
   ],
@@ -998,7 +998,7 @@
    "asma-allah-al-husna"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Bari'",
    "al-Bāriʾ"
@@ -1054,7 +1054,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Basir"
   ],
@@ -1081,7 +1081,7 @@
    "paradise"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Al-Ba'th",
    "Baʿth"
@@ -1111,7 +1111,7 @@
    "evil"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [],
   "faruqi": {
    "page": 25,
@@ -1136,7 +1136,7 @@
    "asma-allah-al-husna"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Batin"
   ],
@@ -1166,7 +1166,7 @@
    "hudaybiyya"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Bay'ah"
   ],
@@ -1193,7 +1193,7 @@
    "furqan"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Bayan"
   ],
@@ -1247,7 +1247,7 @@
    "furqan"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Bayyinah",
    "Bayyinat"
@@ -1276,7 +1276,7 @@
    "ethics-and-conduct"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Al-Birr"
   ],
@@ -1309,7 +1309,7 @@
    "dhikr"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 56,
@@ -1335,7 +1335,7 @@
    "bismi-allah-al-rahman-al-rahim"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 61,
@@ -1360,7 +1360,7 @@
    "common-phrases"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "worship",
   "aliases": [],
   "faruqi": {
    "page": 62,
