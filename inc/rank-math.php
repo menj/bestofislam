@@ -145,12 +145,32 @@ function boi_rank_math_description( $description ) {
 function boi_rank_math_robots( $robots ) {
 	$unlisted = is_singular() && function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( get_queried_object_id() );
 
-	if ( $unlisted || is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
+	$duplicate = function_exists( 'boi_is_duplicate_archive' ) && boi_is_duplicate_archive();
+
+	if ( $unlisted || $duplicate || is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
 		$robots['index']  = 'noindex';
 		$robots['follow'] = 'follow';
 	}
 
 	return $robots;
+}
+
+/**
+ * Points a seeded category's canonical link at the section it mirrors.
+ *
+ * @param string $canonical Rank Math's canonical URL.
+ * @return string
+ */
+function boi_rank_math_canonical( $canonical ) {
+	$topic = function_exists( 'boi_category_canonical_topic' ) ? boi_category_canonical_topic() : null;
+
+	if ( ! $topic ) {
+		return $canonical;
+	}
+
+	$link = get_term_link( $topic );
+
+	return is_wp_error( $link ) ? $canonical : $link;
 }
 
 /**
@@ -166,6 +186,17 @@ function boi_rank_math_sitemap_entry( $url, $type = '', $object = null ) {
 		return false;
 	}
 
+	// A seeded category repeats its section, and a one-article tag is thin.
+	if ( 'term' === $type && $object instanceof WP_Term ) {
+		if ( 'category' === $object->taxonomy && function_exists( 'boi_topic_for_category' ) && boi_topic_for_category( $object ) ) {
+			return false;
+		}
+
+		if ( 'post_tag' === $object->taxonomy && (int) $object->count < 2 ) {
+			return false;
+		}
+	}
+
 	return $url;
 }
 
@@ -174,4 +205,5 @@ if ( boi_rank_math_active() ) {
 	add_filter( 'rank_math/frontend/description', 'boi_rank_math_description' );
 	add_filter( 'rank_math/frontend/robots', 'boi_rank_math_robots' );
 	add_filter( 'rank_math/sitemap/entry', 'boi_rank_math_sitemap_entry', 10, 3 );
+	add_filter( 'rank_math/frontend/canonical', 'boi_rank_math_canonical' );
 }

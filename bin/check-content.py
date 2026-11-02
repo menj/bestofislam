@@ -6,7 +6,9 @@ slug ends in -2 to -9 (the suffix WordPress adds on a collision, which must
 never reach a URL: give the entry its own name instead); an entry's "terms"
 or "articles" point at nothing; a seeded article has no content file; an
 article's footnote numbers are not 1..N matching its Notes list; an
-article's entry or paragraph blocks are unbalanced.
+article's entry or paragraph blocks are unbalanced; a seeded article
+lacks a category or has fewer than 3 or more than 6 tags; a tag slug holds
+digits; two tags are near-duplicates; a shared tag has no description.
 
 Run it by hand:  python3 bin/check-content.py
 The workflow in .github/workflows/checks.yml runs it on every pull request.
@@ -144,6 +146,74 @@ for slug, entry in credits.items():
     for folder, shot in shots:
         if not os.path.exists(os.path.join(ROOT, 'assets', 'images', folder, shot['file'])):
             errors.append('images: %s lists %s/%s, which does not exist' % (slug, folder, shot['file']))
+
+
+# Categories and tags. Every seeded article names one category from
+# `categories` and 3 to 6 tags from `tags` in inc/data/seed.json. A tag slug
+# carries no digits (a verse number belongs in the text, never in an
+# address), two tags may not differ only by case or a plural "s", and a tag
+# used by two or more articles has a description.
+def tag_slug(name):
+    return re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', name.lower())).strip('-')
+
+
+try:
+    seed_all = json.load(open(seed_path, encoding='utf-8'))
+except (OSError, json.JSONDecodeError):
+    seed_all = {}
+categories = seed_all.get('categories', {}) or {}
+vocabulary = seed_all.get('tags', {}) or {}
+topics = seed_all.get('topics', {}) or {}
+for slug, cat in categories.items():
+    if re.search(r'\d', slug):
+        errors.append('categories: slug "%s" contains a digit' % slug)
+    if not (cat.get('description') or '').strip():
+        errors.append('categories: "%s" has no description' % slug)
+    if cat.get('topic') not in topics:
+        errors.append('categories: "%s" mirrors no section ("%s")' % (slug, cat.get('topic')))
+tag_use = {}
+cat_use = {}
+for item in seed_items:
+    slug = item.get('slug')
+    cat = item.get('category')
+    if not cat or cat not in categories:
+        errors.append('seed: "%s" has no category from the seed list' % slug)
+    else:
+        cat_use[cat] = cat_use.get(cat, 0) + 1
+    tags = item.get('tags') or []
+    if not 3 <= len(tags) <= 6:
+        errors.append('seed: "%s" has %d tags (3 to 6 needed)' % (slug, len(tags)))
+    if len(set(tags)) != len(tags):
+        errors.append('seed: "%s" lists a tag twice' % slug)
+    for name in tags:
+        if name not in vocabulary:
+            errors.append('seed: "%s" uses tag "%s", which is not in the tag list' % (slug, name))
+        tag_use[name] = tag_use.get(name, 0) + 1
+seen = {}
+for name, description in vocabulary.items():
+    tslug = tag_slug(name)
+    if re.search(r'\d', tslug):
+        errors.append('tags: "%s" has digits in its slug (%s); name scripture in words' % (name, tslug))
+    key = tslug[:-1] if tslug.endswith('s') else tslug
+    if key in seen:
+        errors.append('tags: "%s" and "%s" are near-duplicates' % (seen[key], name))
+    seen[key] = name
+    if name not in tag_use:
+        errors.append('tags: "%s" is used by no article' % name)
+    elif tag_use[name] >= 2 and not (description or '').strip():
+        errors.append('tags: "%s" is used by %d articles and has no description' % (name, tag_use[name]))
+for cat in categories:
+    if cat_use.get(cat, 0) < 5:
+        errors.append('categories: "%s" holds %d articles (at least 5)' % (cat, cat_use.get(cat, 0)))
+
+if '--summary' in sys.argv:
+    print('Category -> articles')
+    for cat, n in sorted(cat_use.items(), key=lambda x: -x[1]):
+        print('  %-22s %d' % (cat, n))
+    print('Tags: %d (%d used once)' % (len(tag_use), sum(1 for v in tag_use.values() if v == 1)))
+    for name, n in sorted(tag_use.items(), key=lambda x: (-x[1], x[0]))[:30]:
+        print('  %-28s %d' % (name, n))
+
 
 if errors:
     print('\n'.join(errors))

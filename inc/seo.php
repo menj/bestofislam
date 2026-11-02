@@ -272,6 +272,41 @@ function boi_print_meta_description() {
 add_action( 'wp_head', 'boi_print_meta_description', 1 );
 
 /**
+ * The canonical archive of a seeded category: the section (listicle-topic)
+ * it mirrors. The section archive carries the menus, the section pages and
+ * the breadcrumbs, so it is the one search engines index.
+ *
+ * @return WP_Term|null
+ */
+function boi_category_canonical_topic() {
+	if ( ! is_category() || ! function_exists( 'boi_topic_for_category' ) ) {
+		return null;
+	}
+
+	return boi_topic_for_category( get_queried_object() );
+}
+
+/**
+ * Whether this archive would be a thin or duplicate page in the index: a
+ * seeded category, which repeats its section, or a tag only one article
+ * carries. Such pages stay crawlable (follow) and out of the index.
+ *
+ * @return bool
+ */
+function boi_is_duplicate_archive() {
+	if ( boi_category_canonical_topic() ) {
+		return true;
+	}
+
+	if ( is_tag() ) {
+		$term = get_queried_object();
+		return $term && (int) $term->count < 2;
+	}
+
+	return false;
+}
+
+/**
  * Keeps search results and paginated archives out of the index.
  *
  * The guide is explicit that search result pages should not be crawled. Paged
@@ -286,7 +321,7 @@ function boi_robots( $robots ) {
 		return $robots;
 	}
 
-	if ( is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
+	if ( is_search() || ( is_paged() && ( is_home() || is_archive() ) ) || boi_is_duplicate_archive() ) {
 		$robots['noindex'] = true;
 		$robots['follow']  = true;
 		unset( $robots['index'] );
@@ -400,6 +435,14 @@ function boi_breadcrumb_trail() {
 		return $trail;
 	}
 
+	// A seeded category leads to its section, the canonical archive.
+	$topic = boi_category_canonical_topic();
+
+	if ( $topic ) {
+		$trail[] = array( 'label' => $topic->name, 'url' => get_term_link( $topic ) );
+		return $trail;
+	}
+
 	if ( is_tag() ) {
 		$trail[] = array( 'label' => __( 'Tags', 'bestofislam' ), 'url' => '' );
 		$trail[] = array( 'label' => single_tag_title( '', false ), 'url' => '' );
@@ -499,8 +542,9 @@ function boi_canonical_link() {
 	$url = '';
 
 	if ( is_tax() || is_category() || is_tag() ) {
-		$term = get_queried_object();
-		$link = $term ? get_term_link( $term ) : '';
+		$topic = boi_category_canonical_topic();
+		$term  = $topic ? $topic : get_queried_object();
+		$link  = $term ? get_term_link( $term ) : '';
 		$url  = is_wp_error( $link ) ? '' : $link;
 	} elseif ( is_home() ) {
 		$page = (int) get_option( 'page_for_posts' );
@@ -525,16 +569,45 @@ function boi_canonical_link() {
 add_action( 'wp_head', 'boi_canonical_link', 2 );
 
 /**
- * Keeps WordPress's default category and tag archives out of the XML sitemap.
- * The site organises its articles by section, so those archives hold nothing
- * a reader would want to land on.
+ * Keeps category archives out of the XML sitemap: each seeded category
+ * repeats a section, and the section archive is the canonical one. Tag
+ * archives stay in, less the thin ones (see boi_sitemap_tag_args()).
  *
  * @param array $taxonomies Taxonomy objects keyed by name.
  * @return array
  */
 function boi_sitemap_taxonomies( $taxonomies ) {
-	unset( $taxonomies['category'], $taxonomies['post_tag'] );
+	unset( $taxonomies['category'] );
 
 	return $taxonomies;
 }
 add_filter( 'wp_sitemaps_taxonomies', 'boi_sitemap_taxonomies' );
+
+/**
+ * Tag archives with fewer than two articles are not indexed, so they are
+ * left out of the sitemap too.
+ *
+ * @param array  $args     Term query arguments.
+ * @param string $taxonomy Taxonomy name.
+ * @return array
+ */
+function boi_sitemap_tag_args( $args, $taxonomy ) {
+	if ( 'post_tag' !== $taxonomy ) {
+		return $args;
+	}
+
+	$skip = array();
+
+	foreach ( get_terms( array( 'taxonomy' => 'post_tag', 'hide_empty' => false ) ) as $term ) {
+		if ( (int) $term->count < 2 ) {
+			$skip[] = (int) $term->term_id;
+		}
+	}
+
+	if ( $skip ) {
+		$args['exclude'] = $skip;
+	}
+
+	return $args;
+}
+add_filter( 'wp_sitemaps_taxonomies_query_args', 'boi_sitemap_tag_args', 10, 2 );

@@ -6,6 +6,23 @@ versioning.
 
 ## [Unreleased]
 
+## [1.89.0] - 2026-11-02
+
+### Added
+
+Every seeded article now has a real WordPress category and its own tags. Until now all 143 sat in Uncategorized with no tags, and only the sections (`listicle-topic`) carried any structure.
+
+- 8 categories, one for each section: Belief & Practices, Faith & Reason, Comparative Religion, Science, History, Arts & Culture, The Muslim World and Islamophobia. Each has a short description. The Library of Alexandria article is filed under Arts & Culture, beside the other article on libraries, so every category holds at least 5 articles.
+- 160 tags, 3 to 6 per article, chosen by reading each article: its people, places, scriptures and concepts. Scripture is named in words, so no tag slug carries a verse number. 133 tags are shared by 2 or more articles, and each of those has a description.
+- The lists live in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article).
+
+### Changed
+
+- Seeding gives a new article its category and tags beside its section. Existing sites get them once, from `boi_migrate_seed_terms()` (flag `boi_terms_version`). An article the owner has filed elsewhere keeps its category, and an article that already has tags keeps them. Missing terms are created with their descriptions; no term is deleted, Uncategorized included.
+- The section archive stays the canonical one. A category archive that mirrors a section is noindexed, points its canonical link and its breadcrumb at the section, and is left out of both sitemaps (core and Rank Math). Tag archives join the sitemap, less any tag with only 1 article, which is noindexed.
+- The seeded categories are protected from the spam category clean-up (`boi_sec_seeded_terms()`), and term writes run under the seeding flag.
+- `bin/check-content.py` fails when a seeded article has no category or fewer than 3 tags, when a tag slug holds digits, when two tags differ only by case or a plural, or when a shared tag has no description. `--summary` prints the counts.
+
 ## [1.88.0] - 2026-11-01
 
 ### Added

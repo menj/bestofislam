@@ -322,11 +322,210 @@ function boi_create_listicles( $topics ) {
 			wp_set_object_terms( $post_id, array( $topics[ $listicle['topic'] ] ), 'listicle-topic' );
 		}
 
+		// A new post holds only the default category, so it takes its own.
+		boi_assign_seed_terms( $post_id, $listicle );
+
 		$created[] = $post_id;
 	}
 
 	return $created;
 }
+
+/**
+ * The WordPress categories the theme seeds, from `categories` in
+ * inc/data/seed.json. Each mirrors one section (a listicle-topic term), named
+ * by its "topic" key; the section archive is the canonical page of the two.
+ *
+ * @return array Slug => name, topic and description.
+ */
+function boi_seed_categories() {
+	return boi_seed_data( 'categories' );
+}
+
+/**
+ * The tag vocabulary, from `tags` in inc/data/seed.json: name => description.
+ * Every seeded article lists its tags by name; the slug is the name run
+ * through sanitize_title().
+ *
+ * @return array
+ */
+function boi_seed_tags() {
+	return boi_seed_data( 'tags' );
+}
+
+/**
+ * The category slug that mirrors a section, or '' when none does.
+ *
+ * @param string $topic Listicle-topic slug.
+ * @return string
+ */
+function boi_category_for_topic( $topic ) {
+	foreach ( boi_seed_categories() as $slug => $cat ) {
+		if ( isset( $cat['topic'] ) && $cat['topic'] === $topic ) {
+			return $slug;
+		}
+	}
+	return '';
+}
+
+/**
+ * The section a category mirrors, or null.
+ *
+ * @param WP_Term $term Category term.
+ * @return WP_Term|null
+ */
+function boi_topic_for_category( $term ) {
+	$cats = boi_seed_categories();
+
+	if ( ! $term || empty( $cats[ $term->slug ]['topic'] ) ) {
+		return null;
+	}
+
+	$topic = get_term_by( 'slug', $cats[ $term->slug ]['topic'], 'listicle-topic' );
+
+	return $topic && ! is_wp_error( $topic ) ? $topic : null;
+}
+
+/**
+ * Creates the seeded categories and tags that are missing, with their
+ * descriptions, and fills in a description only where the term has none, so
+ * a description the owner wrote stays. Nothing is ever deleted. Runs under
+ * the seeding flag, so the spam gate in inc/security.php treats it as the
+ * theme's own write.
+ *
+ * @return array{categories: array, tags: array} Slug => term identifier, and tag name => term identifier.
+ */
+function boi_ensure_seed_terms() {
+	static $maps = null;
+
+	if ( null !== $maps ) {
+		return $maps;
+	}
+
+	$previous               = ! empty( $GLOBALS['boi_seeding'] );
+	$GLOBALS['boi_seeding'] = true;
+	$maps                   = array(
+		'categories' => array(),
+		'tags'       => array(),
+	);
+
+	$wanted = array( 'category' => array(), 'post_tag' => array() );
+
+	foreach ( boi_seed_categories() as $slug => $cat ) {
+		$wanted['category'][ $slug ] = array( $cat['name'], isset( $cat['description'] ) ? $cat['description'] : '', $slug );
+	}
+
+	foreach ( boi_seed_tags() as $name => $description ) {
+		$wanted['post_tag'][ $name ] = array( $name, (string) $description, sanitize_title( $name ) );
+	}
+
+	foreach ( $wanted as $taxonomy => $terms ) {
+		foreach ( $terms as $key => $term ) {
+			list( $name, $description, $slug ) = $term;
+			$existing                          = get_term_by( 'slug', $slug, $taxonomy );
+
+			if ( $existing && ! is_wp_error( $existing ) ) {
+				if ( '' === trim( $existing->description ) && '' !== $description ) {
+					wp_update_term( $existing->term_id, $taxonomy, array( 'description' => $description ) );
+				}
+				$id = (int) $existing->term_id;
+			} else {
+				$made = wp_insert_term(
+					$name,
+					$taxonomy,
+					array(
+						'slug'        => $slug,
+						'description' => $description,
+					)
+				);
+				$id   = is_wp_error( $made ) ? 0 : (int) $made['term_id'];
+			}
+
+			if ( $id ) {
+				$maps[ 'category' === $taxonomy ? 'categories' : 'tags' ][ $key ] = $id;
+			}
+		}
+	}
+
+	$GLOBALS['boi_seeding'] = $previous;
+
+	return $maps;
+}
+
+/**
+ * Gives a seeded post its category and tags, respecting the owner's edits:
+ * the category is set only while the post sits in the default category
+ * (Uncategorized) alone, and tags only while it has none.
+ *
+ * @param int   $post_id  Post identifier.
+ * @param array $listicle Seed entry.
+ * @return void
+ */
+function boi_assign_seed_terms( $post_id, $listicle ) {
+	$maps     = boi_ensure_seed_terms();
+	$category = ! empty( $listicle['category'] ) ? $listicle['category'] : boi_category_for_topic( isset( $listicle['topic'] ) ? $listicle['topic'] : '' );
+	$previous = ! empty( $GLOBALS['boi_seeding'] );
+
+	$GLOBALS['boi_seeding'] = true;
+
+	if ( isset( $maps['categories'][ $category ] ) ) {
+		$current  = array_map( 'intval', wp_get_post_categories( $post_id ) );
+		$default  = (int) get_option( 'default_category' );
+		$plain    = get_term_by( 'slug', 'uncategorized', 'category' );
+		$fallback = array_filter( array( $default, $plain ? (int) $plain->term_id : 0 ) );
+
+		if ( ! $current || ! array_diff( $current, $fallback ) ) {
+			wp_set_post_categories( $post_id, array( $maps['categories'][ $category ] ), false );
+		}
+	}
+
+	$tags = array();
+
+	foreach ( isset( $listicle['tags'] ) ? (array) $listicle['tags'] : array() as $name ) {
+		if ( isset( $maps['tags'][ $name ] ) ) {
+			$tags[] = $maps['tags'][ $name ];
+		}
+	}
+
+	if ( $tags && ! wp_get_post_tags( $post_id, array( 'fields' => 'ids' ) ) ) {
+		wp_set_object_terms( $post_id, $tags, 'post_tag', false );
+	}
+
+	$GLOBALS['boi_seeding'] = $previous;
+}
+
+/**
+ * Version of the category and tag map. Raise it when the seed's categories
+ * or tags change, and the migration below runs once more.
+ */
+const BOI_TERMS_VERSION = 1;
+
+/**
+ * Once per term-map version: gives every seeded post that a site already
+ * holds its category and tags, under the same rules as a new post, so a post
+ * the owner has filed or tagged keeps what the owner chose. Uncategorized is
+ * left in place even when it ends up empty: it is the WordPress default.
+ *
+ * @return void
+ */
+function boi_migrate_seed_terms() {
+	if ( (int) get_option( 'boi_terms_version' ) >= BOI_TERMS_VERSION || ! boi_seed_ready() ) {
+		return;
+	}
+
+	boi_ensure_seed_terms();
+
+	foreach ( boi_seed_listicles() as $listicle ) {
+		$post = get_page_by_path( $listicle['slug'], OBJECT, 'post' );
+
+		if ( $post ) {
+			boi_assign_seed_terms( $post->ID, $listicle );
+		}
+	}
+
+	update_option( 'boi_terms_version', BOI_TERMS_VERSION, false );
+}
+add_action( 'admin_init', 'boi_migrate_seed_terms', 20 );
 
 /**
  * Standing page definitions: title and content, keyed by role.
@@ -584,6 +783,7 @@ function boi_populate_content() {
 
 	boi_backfill_listicle_flags();
 	boi_migrate_seed( $topics );
+	boi_migrate_seed_terms();
 
 	// The same atomic lock the front-end image import uses, so the two cannot
 	// sideload an image at once.

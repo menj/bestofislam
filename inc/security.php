@@ -855,13 +855,14 @@ function boi_sec_handle_logout() {
 add_action( 'admin_post_boi_sec_logout', 'boi_sec_handle_logout' );
 
 /**
- * Category slugs the theme seeds. Its sections are listicle-topic terms, not
- * categories, so none: the default category is protected separately.
+ * Category slugs the theme seeds, from `categories` in inc/data/seed.json,
+ * so the spam clean-up never offers them. The default category is protected
+ * separately.
  *
  * @return string[]
  */
 function boi_sec_seeded_terms() {
-	return array();
+	return function_exists( 'boi_seed_categories' ) ? array_map( 'strval', array_keys( boi_seed_categories() ) ) : array();
 }
 
 /**
