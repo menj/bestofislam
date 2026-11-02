@@ -6,6 +6,29 @@ versioning.
 
 ## [Unreleased]
 
+## [1.91.0] - 2026-11-02
+
+### Added
+
+Eight new articles, written from the claims made in a public debate on the Islamic Dilemma. Each answers them from the Quran, the hadith, the classical commentators and the biblical scholarship, and grades its own entries. The site names neither speaker. Four of them (ask-those-who-read-the-scripture, covenant-of-the-prophets, muhammad-never-wrote-it-down and ransom-bible-quran) have their featured image from Wikimedia Commons, and the first three also their two images in the text, credited in `inc/images-data.json`; none is used by any of the sister sites. The other images follow in the next release, and until then their figure blocks render nothing.
+
+- **How does scripture reread scripture? 8 points, from Daniel to the Quran** (revelatory-exegesis), Comparative Religion, The Islamic Dilemma and Tahrif.
+- **Can a later prophet reinterpret the Quran? 8 answers** (seal-of-the-prophets), Comparative Religion, The Islamic Dilemma and Tahrif.
+- **The covenant of the prophets: what Quran 3:81 says** (covenant-of-the-prophets), Comparative Religion, The Islamic Dilemma and Tahrif.
+- **Ask those who read the scripture: 6 points on Quran 10:94** (ask-those-who-read-the-scripture), Comparative Religion, The Islamic Dilemma and Tahrif.
+- **The Torah on the cushion: 7 points on Abu Dawud 4449, graded** (torah-on-the-cushion-hadith), Comparative Religion, The Islamic Dilemma and Tahrif.
+- **Who changed the Bible, when and how? 8 answers to the "every copy" objection** (who-changed-the-bible), Comparative Religion, The Bible and Its Text.
+- **Muhammad never wrote it down: 7 answers on the Quran and hadith** (muhammad-never-wrote-it-down), Faith & Reason, The Quran's Text and Revelation.
+- **Ransom in the Bible and the Quran: 8 points, graded** (ransom-bible-quran), Comparative Religion, Jesus and the Trinity.
+
+All eight are in the seed list, `inc/data/seed.json`, with a `seo_title` inside the 43-character budget, and in the reading order (`inc/reading.php`): the revelatory exegesis and seal articles after christian-twin-of-the-islamic-dilemma, the 3:81, 10:94 and Abu Dawud 4449 articles after quran-verses-on-torah-and-gospel, ransom after crucifixion-quran, who-changed-the-bible after bible-alteration-claim-before-islam, and muhammad-never-wrote-it-down after uthman-copies. `bin/build-related.py` pins the eight to each other where they answer the same argument, so the revelatory exegesis article leads to the seal article and back. `inc/related-articles.json` is rebuilt. The credits for the ten new images are in `inc/images-data.json`, with their Commons file names in `bin/stock-images.json`.
+
+### Changed
+
+- **who-is-allah**: the entry "That Allah is a moon god" gains four paragraphs. It names where the modern claim comes from (Robert Morey's *The Islamic Invasion*, 1992, and his 1994 booklet), the Hazor shrine he relied on and why a Canaanite find of the Late Bronze Age says nothing about Mecca, the moon gods South Arabia did have (Almaqah of Saba, Wadd of Maʿin, ʿAmm of Qataban, Sayin of Hadramawt) and Wadd in Quran 71:23, and Hubal at the Kaaba as Ibn al-Kalbi describes him in *Kitab al-Asnam*, checked against the Shamela text of the Zaki edition (book 6513). The notes after the seventh are renumbered, 7 to 23 in order.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; the new articles are created by the same seeding run. `inc/data/network-links.json` is unchanged.
+
 ## [1.90.0] - 2026-11-02
 
 ### Fixed
@@ -77,7 +100,7 @@ Thirteen new articles, written from the claims made in three recorded missionary
 - **The two genealogies of Jesus: 8 points from the sources** (genealogies-of-jesus), Comparative Religion.
 - **Is Islam the only religion that says the Bible was altered? 8 answers** (bible-alteration-claim-before-islam), Comparative Religion.
 
-All thirteen are placed in the reading order (`inc/reading.php`): the four on prophethood after shared-prophets, the genealogies and holy war after verses-read-differently, the six on the biblical text after manuscript-transmission, and 2:256 after fighting-verses-in-context. They are registered in the seed list, `inc/data/seed.json`, each with a short `seo_title` where its title would push the title tag past 59 characters. `inc/related-articles.json` is rebuilt.
+All thirteen are placed in the reading order (`inc/reading.php`): the four on prophethood after shared-prophets, the genealogies and holy war after verses-read-differently, the six on the biblical text after manuscript-transmission, and 2:256 after fighting-verses-in-context. They are registered in the seed list, `inc/data/seed.json`, each with a short `seo_title` where its title would push the title tag past 59 characters. `inc/related-articles.json` is rebuilt. The credits for the ten new images are in `inc/images-data.json`, with their Commons file names in `bin/stock-images.json`.
 
 ### Changed
 

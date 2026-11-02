@@ -4213,5 +4213,100 @@
     "source": "bin/make-original-graphics.py"
    }
   ]
+ },
+ "covenant-of-the-prophets": {
+  "featured": {
+   "file": "covenant-of-the-prophets.avif",
+   "alt": "A single folio of an early Quran manuscript in the Khalili Collection.",
+   "caption": "A folio of an early Quran. Quran 3:81 speaks of a covenant God took from the prophets.",
+   "artist": "Khalili Collections",
+   "licence": "CC BY-SA 3.0 igo",
+   "source": "https://commons.wikimedia.org/wiki/File:Khalili_Collection_Islamic_Art_kfq_0093.a.jpg"
+  },
+  "inline": [
+   {
+    "file": "covenant-of-the-prophets-1.avif",
+    "alt": "A page of an early Quran manuscript in the Khalili Collection.",
+    "caption": "An early Quran leaf. The commentators read the messenger of 3:81 as the one who confirms what the prophets held.",
+    "artist": "Khalili Collections",
+    "licence": "CC BY-SA 3.0 igo",
+    "source": "https://commons.wikimedia.org/wiki/File:Khalili_Collection_Islamic_Art_kfq_0050.1.jpg"
+   },
+   {
+    "file": "covenant-of-the-prophets-2.avif",
+    "alt": "A 1910 photograph of the Aleppo Codex at a page of Deuteronomy.",
+    "caption": "The Aleppo Codex, photographed in 1910. Deuteronomy 18:18 promises a prophet like Moses.",
+    "artist": "Joseph Segall",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Aleppo_Deut_1910_Photo.jpg"
+   }
+  ]
+ },
+ "ask-those-who-read-the-scripture": {
+  "featured": {
+   "file": "ask-those-who-read-the-scripture.avif",
+   "alt": "A decorated Quran manuscript copied by Ahmad Neyrizi in the eighteenth century.",
+   "caption": "A Quran copied by Ahmad Neyrizi. Quran 10:94 tells the Prophet to ask those who read the scripture before him.",
+   "artist": "Ahmad Neyrizi",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Aryamehr_Quran_258.jpg"
+  },
+  "inline": [
+   {
+    "file": "ask-those-who-read-the-scripture-1.avif",
+    "alt": "The Gulf of Suez and the Mediterranean photographed from the International Space Station.",
+    "caption": "The Gulf of Suez seen from orbit. The verse comes at the end of the story of Moses, Pharaoh and the sea.",
+    "artist": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ISS-65_Mediterranean_Sea_and_Gulf_of_Suez_moonglint.jpg"
+   },
+   {
+    "file": "ask-those-who-read-the-scripture-2.avif",
+    "alt": "A page of a Persian translation of al-Tabari's commentary on the Quran, about 1210 to 1225.",
+    "caption": "A Persian version of al-Tabari's commentary, early thirteenth century. Al-Tabari's reports name Abdullah ibn Salam among those who could be asked.",
+    "artist": "Francesco Bini",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iran,_tafis_(commentario_al_corano)_di_tabari_(in_persiano),_1210-25_ca._(bnf).jpg"
+   }
+  ]
+ },
+ "muhammad-never-wrote-it-down": {
+  "featured": {
+   "file": "muhammad-never-wrote-it-down.avif",
+   "alt": "The leaves of the Birmingham Quran manuscript in early Hijazi script.",
+   "caption": "The Birmingham Quran leaves, radiocarbon dated to the first decades of Islam. The Prophet dictated the Quran to scribes.",
+   "artist": "Unknown author",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_full.jpg"
+  },
+  "inline": [
+   {
+    "file": "muhammad-never-wrote-it-down-1.avif",
+    "alt": "A single leaf of the Birmingham Quran manuscript.",
+    "caption": "A leaf of the Birmingham manuscript. Early copies fit the account of written pieces gathered after the Prophet.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_folio_1_recto.jpg"
+   },
+   {
+    "file": "muhammad-never-wrote-it-down-2.avif",
+    "alt": "A page of Papyrus 75 with Luke 14.",
+    "caption": "Papyrus 75, about 200, at Luke 14. The Gospels carry no chain of named narrators back to Jesus.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vatican,_Apostolic_Library_Ms_Hanna_Papyrus_1_-_Papyrus_Bodmer_XIV–XV_(Papyrus_75)_fol_1B9r_Luke_14,_3-14.jpg"
+   }
+  ]
+ },
+ "ransom-bible-quran": {
+  "featured": {
+   "file": "ransom-bible-quran.avif",
+   "alt": "A Tyrian half-shekel coin of the Second Temple period.",
+   "caption": "A Tyrian half shekel. Exodus 30 calls the half-shekel census payment a ransom for each life.",
+   "artist": "Hanay",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Tyrian_Half-Shekel_Heb.JPG"
+  },
+  "inline": []
  }
 }

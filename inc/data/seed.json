@@ -2126,6 +2126,126 @@
 				"Textual criticism",
 				"Bible"
 			]
+		},
+		{
+			"slug": "revelatory-exegesis",
+			"title": "How does scripture reread scripture? 8 points, from Daniel to the Quran",
+			"excerpt": "Daniel rereads Jeremiah, Matthew rewrites Mark, the Quran judges both. 8 points on revelatory exegesis and where it stops. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Revelatory exegesis, Daniel to the Quran",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Islamic Dilemma",
+				"Revelation",
+				"Old Testament",
+				"Gospels",
+				"Quran commentary"
+			]
+		},
+		{
+			"slug": "seal-of-the-prophets",
+			"title": "Can a later prophet reinterpret the Quran? 8 answers",
+			"excerpt": "If the Quran rereads the Bible, may a later prophet reread the Quran? 8 answers from 33:40, al-Tabari, Ibn Kathir and Bukhari.",
+			"topic": "comparative-religion",
+			"seo_title": "Can a later prophet reinterpret the Quran?",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Islamic Dilemma",
+				"Prophethood",
+				"Prophet Muhammad",
+				"Quran commentary",
+				"Revelation"
+			]
+		},
+		{
+			"slug": "covenant-of-the-prophets",
+			"title": "The covenant of the prophets: what Quran 3:81 says",
+			"excerpt": "Quran 3:81 binds the prophets to a messenger who confirms what they hold. 7 points on what the verse says, graded, from al-Tabari and Ibn Kathir.",
+			"topic": "comparative-religion",
+			"seo_title": "The covenant of the prophets in the Quran",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Islamic Dilemma",
+				"Prophethood",
+				"Quran commentary",
+				"Tabari",
+				"People of the Book"
+			]
+		},
+		{
+			"slug": "ask-those-who-read-the-scripture",
+			"title": "Ask those who read the scripture: 6 points on Quran 10:94",
+			"excerpt": "Quran 10:94 tells the Prophet to ask readers of the earlier scripture. 6 points on who, about what, and what it does not mean.",
+			"topic": "comparative-religion",
+			"seo_title": "Ask those who read the scripture",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Islamic Dilemma",
+				"People of the Book",
+				"Bible",
+				"Moses",
+				"Quran commentary"
+			]
+		},
+		{
+			"slug": "torah-on-the-cushion-hadith",
+			"title": "The Torah on the cushion: 7 points on Abu Dawud 4449, graded",
+			"excerpt": "The Prophet set the Torah on a cushion and said he believed in it. 7 points on what the report shows, and what it cannot show.",
+			"topic": "comparative-religion",
+			"seo_title": "The Torah on the cushion hadith",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Torah",
+				"Tahrif",
+				"Hadith",
+				"Jews",
+				"Islamic Dilemma"
+			]
+		},
+		{
+			"slug": "who-changed-the-bible",
+			"title": "Who changed the Bible, when and how? 8 answers to the \"every copy\" objection",
+			"excerpt": "If nobody controlled every copy, who changed the Bible and how? 8 answers on authorship, added passages, scribes and the canon. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Who changed the Bible, and when?",
+			"category": "bible-text",
+			"tags": [
+				"Textual criticism",
+				"New Testament",
+				"Gospels",
+				"Tahrif",
+				"Manuscripts"
+			]
+		},
+		{
+			"slug": "muhammad-never-wrote-it-down",
+			"title": "Muhammad never wrote it down: 7 answers on the Quran and hadith",
+			"excerpt": "Muhammad wrote nothing himself, so why trust the Quran and hadith? Named scribes, graded chains and a fair test for the Gospels too.",
+			"topic": "faith-and-reason",
+			"seo_title": "Muhammad never wrote it down: 7 answers",
+			"category": "quran-text-revelation",
+			"tags": [
+				"Quran preservation",
+				"Isnad",
+				"Hadith criticism",
+				"Gospels",
+				"Companions of the Prophet"
+			]
+		},
+		{
+			"slug": "ransom-bible-quran",
+			"title": "Ransom in the Bible and the Quran: 8 points, graded",
+			"excerpt": "Mark 10:45 calls Jesus a ransom for many. The Quran says no ransom is taken. 8 points on both, graded. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Ransom in the Bible and the Quran",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Crucifixion",
+				"Gospels",
+				"Old Testament",
+				"Quran commentary",
+				"Abraham"
+			]
 		}
 	],
 	"pages": {

@@ -69,6 +69,14 @@ PINS = {
     'sharia-and-hudud': ['apostasy-in-islam', 'why-no-interest', 'war-and-killing-in-islam', 'jizya'],
     'why-no-interest': ['sharia-and-hudud', 'quranic-ethics', 'jizya', 'instruments-islamic-world'],
     'six-articles-of-faith': ['who-is-allah', 'five-pillars-explained', 'fate-and-free-will', 'end-of-time'],
+    'revelatory-exegesis': ['seal-of-the-prophets', 'christian-twin-of-the-islamic-dilemma', 'matthew-fulfilment-quotations-checked', 'islamic-dilemma'],
+    'seal-of-the-prophets': ['revelatory-exegesis', 'covenant-of-the-prophets', 'nabi-and-rasul', 'islamic-dilemma'],
+    'covenant-of-the-prophets': ['seal-of-the-prophets', 'ask-those-who-read-the-scripture', 'quran-verses-on-torah-and-gospel', 'deuteronomy-18-and-the-paraclete'],
+    'ask-those-who-read-the-scripture': ['torah-on-the-cushion-hadith', 'covenant-of-the-prophets', 'islamic-dilemma', 'quran-verses-on-torah-and-gospel'],
+    'torah-on-the-cushion-hadith': ['ask-those-who-read-the-scripture', 'does-islam-teach-the-bible-was-corrupted', 'who-changed-the-bible', 'quran-verses-on-torah-and-gospel'],
+    'who-changed-the-bible': ['does-islam-teach-the-bible-was-corrupted', 'bible-alteration-claim-before-islam', 'muhammad-never-wrote-it-down', 'manuscript-transmission'],
+    'muhammad-never-wrote-it-down': ['who-changed-the-bible', 'uthman-copies', 'was-muhammad-illiterate-ummi', 'schacht-isnads-dating-hadith'],
+    'ransom-bible-quran': ['crucifixion-quran', 'ishmael-in-the-quran-and-genesis', 'relationship-with-god'],
 }
 
 related = {}
