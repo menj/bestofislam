@@ -8,6 +8,10 @@ versioning.
 
 ## [1.90.0] - 2026-11-02
 
+### Fixed
+
+- The category and tag migration waits until `inc/data/seed.json` carries the term map it migrates to (`terms_version`, matching `BOI_TERMS_VERSION`). During a file-by-file upload an older seed could otherwise be read, the migration marked done, and the new map never applied. `bin/check-content.py` fails when the two numbers differ.
+
 ### Added
 
 - The Glossary has 5 new kinds: Worship (87 entries), Belief (125), Law (84), Scripture (64) and Ethics & Society (72). I read the 603 entries filed as Term or Topic and moved 432 of them by meaning; each record now names its kind, and nothing is guessed at runtime. Term keeps 111 and Topic 60, the general ones. All still reads 797.

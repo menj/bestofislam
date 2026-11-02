@@ -52,6 +52,14 @@ try:
 except (OSError, json.JSONDecodeError, KeyError, TypeError) as e:
     errors.append('inc/data/seed.json: cannot read the seed list (%s)' % e)
     seeds = []
+# The term map in seed.json must carry the version the code migrates to.
+try:
+    _seed_tv = json.load(open(seed_path, encoding='utf-8')).get('terms_version')
+    _m = re.search(r"const BOI_TERMS_VERSION = (\d+);", open(os.path.join(ROOT, 'inc', 'setup.php'), encoding='utf-8').read())
+    if not _m or _seed_tv != int(_m.group(1)):
+        errors.append('inc/data/seed.json: terms_version %r does not match BOI_TERMS_VERSION in inc/setup.php' % (_seed_tv,))
+except (OSError, json.JSONDecodeError) as e:
+    errors.append('terms_version check failed (%s)' % e)
 for slug in seeds:
     if not os.path.exists(os.path.join(ROOT, 'content', slug + '.json')):
         errors.append('seed: "%s" has no content/%s.json' % (slug, slug))

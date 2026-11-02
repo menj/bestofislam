@@ -593,6 +593,14 @@ function boi_migrate_seed_terms() {
 		return;
 	}
 
+	// The seed must carry this term map. During a file-by-file upload an older
+	// seed.json can still be in place; migrating against it would record the
+	// version and the right map would never be applied.
+	$seed = boi_read_data( 'seed' );
+	if ( ! isset( $seed['terms_version'] ) || (int) $seed['terms_version'] !== BOI_TERMS_VERSION ) {
+		return;
+	}
+
 	$maps = boi_ensure_seed_terms();
 	$ok   = empty( $maps['failed'] );
 
