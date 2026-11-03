@@ -232,18 +232,16 @@ function boi_create_topics() {
 function boi_seed_renames() {
 	return (array) apply_filters(
 		'boi_seed_renames',
-		array(
-			'quran-4-34' => 'does-the-quran-allow-wife-beating',
-		)
+		boi_post_slug_renames()
 	);
 }
 
 /**
  * Renames a published article's slug in place when the seed list has moved
- * on, so the post keeps its identity, comments and attachments. The theme
- * does not redirect the old address, so the note WordPress keeps of the old
- * slug for its own redirect is removed; the fingerprint that tells an
- * untouched article from an edited one moves with the post.
+ * on, so the post keeps its identity, comments and attachments. The old
+ * address answers with a 301 from the map in inc/renamed-slugs.php, so the
+ * note WordPress keeps of the old slug is removed; the fingerprint that
+ * tells an untouched article from an edited one moves with the post.
  *
  * @return void
  */
@@ -253,7 +251,7 @@ function boi_rename_seeded_posts() {
 		$renamed = get_page_by_path( $new, OBJECT, 'post' );
 
 		// A post renamed by an earlier release still carries the old-slug note
-		// WordPress keeps for its own redirect; the theme does not redirect.
+		// WordPress keeps for its own redirect; inc/renamed-slugs.php redirects.
 		if ( $renamed ) {
 			delete_post_meta( $renamed->ID, '_wp_old_slug', $old );
 		}

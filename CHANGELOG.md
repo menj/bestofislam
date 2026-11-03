@@ -4,6 +4,33 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.94.0] - 2026-11-03
+
+- A renamed address that arrives percent-encoded or in capitals still gets its 301.
+- A featured image attached before its article was renamed is found under the old slug in `boi_image_attachments`, moved to the new slug and reused. Before, the importer missed it and sideloaded a second copy.
+- SSOT D49 now says what the code does: an old address redirects only when the request would end in a 404.
+
+### Changed
+
+Six article addresses lose their verse numbers, counts and years. The number stays in each title, heading and description.
+
+- `/deuteronomy-18-and-the-paraclete/` is now `/deuteronomy-prophecy-and-the-paraclete/`.
+- `/crusades-5-facts/` is now `/crusades-facts/`.
+- `/muslims-by-the-numbers-2020/` is now `/muslims-by-the-numbers/`.
+- `/taqiyya-5-myths/` is now `/taqiyya-myths/`.
+- `/islamophobia-5-facts/` is now `/islamophobia-facts/`.
+- `/end-of-the-world-1110-claim/` is now `/end-of-the-world-prediction/`.
+
+On the update, `boi_seed_renames()` renames each post in place, so it keeps its ID, comments, featured image and edits. The seed list, the content files, the related lists, the reading order, the Glossary links, the practice questions and the in-text links all use the new slugs. The image files keep their names.
+
+`inc/data/network-links.json` takes the current addresses on every sister site: `/journal/prophet-like-moses/` on Abrahamic Religions, `/articles/sword-verse-jizya/` on Compelling Evidence, `/rebuttals/quran-wife-beating-verse-in-context/` on murtadd.org, the injil.help paths renamed in its 3.11.0, and the six above. The file is the same in all seven themes.
+
+### Added
+
+- Old addresses redirect again, with a 301. `inc/renamed-slugs.php` holds the map: the six articles above, `/quran-4-34/` (renamed in an earlier release, and a 404 since 1.75.0) and the Glossary entries that `boi_glossary_retired_slugs()` renamed or merged. The rename routines still remove WordPress's old-slug note; the map does not depend on it, so the redirects hold through later updates. It answers only a 404, so a page that later takes an old address keeps it. SSOT D49 records the rule.
+- `bin/check-content.py` refuses a seeded article or Glossary slug with a digit in it, a rename whose target is not seeded and an old slug that is seeded again.
+- `tests/renamed-slugs-test.php` checks that every old path resolves to its new one.
+
 ## [1.93.0] - 2026-11-03
 
 ### Changed

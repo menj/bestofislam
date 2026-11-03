@@ -61,7 +61,7 @@
  ],
  "blasphemy-and-insults-to-the-prophet": [
   "jihad-meaning-quran-hadith-jurists",
-  "taqiyya-5-myths",
+  "taqiyya-myths",
   "jizya",
   "raids-badr-and-the-conquest-of-mecca"
  ],
@@ -105,7 +105,7 @@
   "seal-of-the-prophets",
   "ask-those-who-read-the-scripture",
   "quran-verses-on-torah-and-gospel",
-  "deuteronomy-18-and-the-paraclete"
+  "deuteronomy-prophecy-and-the-paraclete"
  ],
  "crucifixion-quran": [
   "muhammad-and-the-hebrew-prophets",
@@ -113,13 +113,13 @@
   "nabi-and-rasul",
   "apes-and-pigs-and-the-jews"
  ],
- "crusades-5-facts": [
+ "crusades-facts": [
   "holy-war-in-the-bible",
   "jizya",
   "raids-badr-and-the-conquest-of-mecca",
   "quran-on-christians"
  ],
- "deuteronomy-18-and-the-paraclete": [
+ "deuteronomy-prophecy-and-the-paraclete": [
   "ishmael-in-the-quran-and-genesis",
   "muhammad-and-the-hebrew-prophets",
   "messenger-to-every-nation",
@@ -161,7 +161,7 @@
   "is-yahweh-the-same-as-allah",
   "verses-read-differently"
  ],
- "end-of-the-world-1110-claim": [
+ "end-of-the-world-prediction": [
   "no-compulsion-in-religion",
   "who-wrote-the-quran",
   "abrogation-and-the-sword-verse",
@@ -186,7 +186,7 @@
   "christian-twin-of-the-islamic-dilemma"
  ],
  "fastest-growing-religion": [
-  "muslims-by-the-numbers-2020",
+  "muslims-by-the-numbers",
   "no-compulsion-in-religion",
   "ex-muslim-blog-study",
   "first-muslims-kept-the-faith"
@@ -267,10 +267,10 @@
   "does-the-quran-allow-wife-beating",
   "questions-about-aisha",
   "women-in-the-prophets-life",
-  "islamophobia-5-facts"
+  "islamophobia-facts"
  ],
  "holy-war-in-the-bible": [
-  "crusades-5-facts",
+  "crusades-facts",
   "apes-and-pigs-and-the-jews",
   "is-yahweh-satan",
   "septuagint"
@@ -284,7 +284,7 @@
  "houris-and-paradise": [
   "quran-on-christians",
   "jihad-meaning-quran-hadith-jurists",
-  "taqiyya-5-myths",
+  "taqiyya-myths",
   "who-is-allah"
  ],
  "indonesia": [
@@ -348,16 +348,16 @@
   "black-stone-and-kissing"
  ],
  "islamisation-of-the-west": [
-  "islamophobia-5-facts",
+  "islamophobia-facts",
   "indonesia",
   "terrorism-and-muslims-the-data",
   "no-compulsion-in-religion"
  ],
- "islamophobia-5-facts": [
-  "taqiyya-5-myths",
+ "islamophobia-facts": [
+  "taqiyya-myths",
   "war-and-killing-in-islam",
   "islam-religion-of-peace",
-  "crusades-5-facts"
+  "crusades-facts"
  ],
  "jesus-not-god": [
   "quran-on-christians",
@@ -384,7 +384,7 @@
   "revisionist-case-weighed"
  ],
  "kharijites-and-takfir": [
-  "taqiyya-5-myths",
+  "taqiyya-myths",
   "war-and-killing-in-islam",
   "islam-religion-of-peace",
   "apostasy-in-islam"
@@ -435,7 +435,7 @@
   "arabic-words-science",
   "quran-science-claims-graded",
   "instruments-islamic-world",
-  "crusades-5-facts"
+  "crusades-facts"
  ],
  "morality-without-god": [
   "six-articles-of-faith",
@@ -473,7 +473,7 @@
   "no-compulsion-in-religion",
   "islam-religion-of-peace"
  ],
- "muslims-by-the-numbers-2020": [
+ "muslims-by-the-numbers": [
   "indonesia",
   "fastest-growing-religion",
   "islam-in-china",
@@ -591,7 +591,7 @@
   "buraq-and-miracle-stories",
   "no-compulsion-in-religion",
   "shared-prophets",
-  "taqiyya-5-myths"
+  "taqiyya-myths"
  ],
  "quran-preservation-reddit": [
   "companions-who-started-with-nothing",
@@ -767,10 +767,10 @@
   "muhammad-and-the-hebrew-prophets",
   "kings-and-chronicles-numbers"
  ],
- "taqiyya-5-myths": [
+ "taqiyya-myths": [
   "kharijites-and-takfir",
   "war-and-killing-in-islam",
-  "islamophobia-5-facts",
+  "islamophobia-facts",
   "islam-religion-of-peace"
  ],
  "temporary-marriage-mutah": [
@@ -818,7 +818,7 @@
  "war-and-killing-in-islam": [
   "islam-religion-of-peace",
   "kharijites-and-takfir",
-  "crusades-5-facts",
+  "crusades-facts",
   "jizya"
  ],
  "was-muhammad-illiterate-ummi": [

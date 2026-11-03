@@ -87,7 +87,7 @@ Five spreadsheets (a single-source-of-truth workbook, two article-proposal sheet
 | A18 | Which rites existed before Islam? 6 answers from the sources | `islamic-rites-before-islam` |
 | A20 | Apes and pigs and the Jews in the Quran and hadith: 6 facts | `apes-and-pigs-and-the-jews` |
 | A22 | Terrorism and Muslims: 5 facts about the data and the texts | `terrorism-and-muslims-the-data` |
-| A39 | Did Muhammad predict the end in 1110? 5 facts on the reports | `end-of-the-world-1110-claim` |
+| A39 | Did Muhammad predict the end in 1110? 5 facts on the reports | `end-of-the-world-prediction` |
 | A40 | Five answers on race in the Quran and the hadith reports critics cite | `race-in-quran-and-hadith` |
 | A41 | What the Quran says about Christians and Christianity: 6 answers | `quran-on-christians` |
 
@@ -125,7 +125,7 @@ A saved copy of islamicdilemma.com, a Christian site built on the Islamic dilemm
 | D3 | The Injil cannot be a separate book: where is it, and who quoted it? | `where-is-the-injil`, `islamic-dilemma` (first entry, Ibn Hazm's "four histories") | Covered |
 | D4 | **18:27, "none can change His words": so the Bible cannot have been corrupted** | `islamic-dilemma` (third entry, 1.77.1) | Covered. The phrase covers God's promise (6:34, 10:64) and the Quran itself (6:115, 18:27); Ibn Kathir on 18:27 and al-Tabari on 6:115, checked on Shamela; the Quran's own use of *baddala* for people changing words (2:59, 48:15) |
 | D5 | "Allah, Gabriel and Muhammad never said the Gospel was corrupt"; every mention of the Injil praises it | `islamic-dilemma` (the mixed-text entry), `where-is-the-injil` | Covered: 5:14 added to the second entry of `islamic-dilemma` (1.77.1) |
-| D6 | The site's own list of Injil verses (3:3, 3:48, 3:65, 5:46–47, 5:66, 5:68, 5:110, 7:157, 9:111, 48:29, 57:27) | `islamic-dilemma`, `deuteronomy-18-and-the-paraclete` (7:157) | Covered: the first entry of `islamic-dilemma` (1.77.1) notes that 7:157 and 9:111 say what the Injil contains in the Quran's own terms, and that calling this an error about the Gospels assumes the Quran was describing them. A Christian may point to Matthew 19:29 for 9:111; the article does not lean on the absence |
+| D6 | The site's own list of Injil verses (3:3, 3:48, 3:65, 5:46–47, 5:66, 5:68, 5:110, 7:157, 9:111, 48:29, 57:27) | `islamic-dilemma`, `deuteronomy-prophecy-and-the-paraclete` (7:157) | Covered: the first entry of `islamic-dilemma` (1.77.1) notes that 7:157 and 9:111 say what the Injil contains in the Quran's own terms, and that calling this an error about the Gospels assumes the Quran was describing them. A Christian may point to Matthew 19:29 for 9:111; the article does not lean on the absence |
 | D7 | Three "contradictions": 1 Timothy 2:5 vs 4:171 (mediator), 1 Corinthians 8:6 vs the Quran (Trinity), John 3:16 vs 3:185 (eternal life) | `pauline-letters-authorship`, `paul-claim-to-apostleship`, `jesus-not-god`, `relationship-with-god` | Covered in substance. **Point to make:** two of the three are from Paul, not from any Gospel, and 1 Timothy is one of the Pastorals most critical scholars do not attribute to Paul, so the site's own examples do not come from the Injil. The page's citations are also confused: the Arabic under the 4:171 heading is 2:255, and the Trinity item quotes 3:185 in English over 4:171 in Arabic. Note this; it is not an argument |
 | D8 | 29:46 commands Muslims to say "we believe in what was revealed to you", yet Muslims call the Bible corrupt and the Christian God false | `quran-on-christians`, `same-god`, `who-is-allah` | Covered. The verse speaks of what was revealed, not of what is now bound in a Bible; see D2 |
 | D9 | "If Allah revealed the Torah and Gospel as guidance, how could they become corrupted?" | `where-is-the-injil` (entry on preservation: earlier scriptures entrusted to their communities, 5:44; the promise of 15:9 attached to the Quran) | Covered |
@@ -173,7 +173,7 @@ Three transcripts of lectures given in English with German interpretation, proba
 | J4 | 2:256 is abrogated by 9:5 | `no-compulsion-in-religion` (**new**), `abrogation-and-the-sword-verse` | Covered |
 | J5 | Ibn Abidin's stages from preaching to fighting absolutely | `jihad-meaning-quran-hadith-jurists` (paragraph added) | Conceded and set in context |
 | J6 | A holy war is a contradiction in terms; Christ reversed the Old Testament | `holy-war-in-the-bible` (**new**) | Covered |
-| J7 | Muslims cite the Crusades and never their own holy wars | `holy-war-in-the-bible` (**new**), `crusades-5-facts` | Covered |
+| J7 | Muslims cite the Crusades and never their own holy wars | `holy-war-in-the-bible` (**new**), `crusades-facts` | Covered |
 | J8 | Jihad is a sixth pillar | `five-pillars-explained`, `jihad-meaning-quran-hadith-jurists` | Partly covered; no article traces the "sixth pillar" phrase |
 | J9 | An aside on Jewish money-lenders | None | Not an argument; not repeated |
 

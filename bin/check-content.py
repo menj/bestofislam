@@ -69,8 +69,8 @@ def collision_suffix(slug, known):
     """True for the -2, -3, ... -10, -11 suffixes WordPress adds on a collision.
 
     A single digit is always refused. A longer run of digits is refused only
-    when the slug without it is itself a known slug, so a year such as
-    muslims-by-the-numbers-2020 passes while an abd-10 beside abd does not.
+    when the slug without it is itself a known slug, so an abd-10 beside abd
+    is refused. Since 1.94.0 the digit check below refuses every digit anyway.
     """
     m = re.search(r'-(\d+)$', slug)
     if not m:
@@ -110,6 +110,27 @@ for slug in terms:
 for slug in seeds:
     if collision_suffix(slug, set(seeds)):
         errors.append('seed: slug "%s" carries a collision suffix' % slug)
+
+# Addresses carry no digits: no verse number, count or year (SSOT D49).
+for slug in seeds:
+    if re.search(r'\d', slug):
+        errors.append('seed: slug "%s" carries a digit; name the subject and keep the number in the title' % slug)
+for slug in terms:
+    if re.search(r'\d', slug):
+        errors.append('glossary: slug "%s" carries a digit; name the subject and keep the number in the title' % slug)
+
+# Every renamed article redirects to a seeded one, and no old slug is seeded
+# again (inc/renamed-slugs.php).
+try:
+    _src = open(os.path.join(ROOT, 'inc', 'renamed-slugs.php'), encoding='utf-8').read()
+    _body = re.search(r'function boi_post_slug_renames\(\) \{.*?\n\}', _src, re.S).group(0)
+    for _old, _new in re.findall(r"'([a-z0-9-]+)'\s*=>\s*'([a-z0-9-]+)'", _body):
+        if _new not in seeds:
+            errors.append('inc/renamed-slugs.php: "%s" redirects to "%s", which is not a seeded article' % (_old, _new))
+        if _old in seeds:
+            errors.append('inc/renamed-slugs.php: "%s" is renamed but still seeded' % _old)
+except (OSError, AttributeError) as e:
+    errors.append('inc/renamed-slugs.php: cannot read the rename map (%s)' % e)
 
 for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'))):
     try:
