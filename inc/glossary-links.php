@@ -207,7 +207,19 @@ function boi_gl_filter( $content ) {
 	$html = boi_gl_apply( $content, $compiled, $budget );
 
 	if ( $post_id ) {
-		update_post_meta( $post_id, '_boi_gl_cache', array( 'key' => $key, 'html' => $html ) );
+		$source = get_post( $post_id );
+
+		update_post_meta(
+			$post_id,
+			'_boi_gl_cache',
+			array(
+				'key'    => $key,
+				'html'   => $html,
+				'map'    => $compiled['hash'],
+				'budget' => $budget,
+				'src'    => md5( $source ? (string) $source->post_content : '' ),
+			)
+		);
 	}
 
 	return $html;

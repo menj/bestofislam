@@ -27,6 +27,13 @@ Each page now has one JSON-LD graph. Before, five places printed their own block
 - Image credits gain `encodingFormat`, and `copyrightHolder` with `copyrightNotice` under CC BY and CC BY-SA. The hero image is `representativeOfPage`. Glossary photographs carry their credits as ImageObjects.
 - `tests/schema-graph-test.php` renders 12 sample pages with and without a stand-in Rank Math graph. It checks for one graph per page, JSON that decodes, every `@id` defined once, every reference resolved and the required properties of each node.
 
+### Fixed
+
+- Page 2 and later of a category, tag or taxonomy archive now give the graph the address of that page. Before, every page claimed the first page's URL.
+- An article's glossary mentions use the saved `_boi_gl_cache` only when its map, budget and source text match the post as it stands, the same test `boi_gl_filter()` applies. A stale cache could name terms the page no longer links. The filter now saves those three values with the HTML.
+- ItemList positions step by the query's `posts_per_page`. A short last page used its own post count, so its positions started too low.
+- A lede over 300 characters with no space in it is cut at 300. Before, it came out as a bare "…".
+
 ## [1.94.0] - 2026-11-03
 
 - A renamed address that arrives percent-encoded or in capitals still gets its 301.

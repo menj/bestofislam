@@ -47,7 +47,10 @@ function boi_schema_page_url() {
 		$link = get_term_link( get_queried_object() );
 
 		if ( ! is_wp_error( $link ) ) {
-			return $link;
+			// Page 2 onwards lists other posts, so it gets its own address.
+			$paged = (int) get_query_var( 'paged' );
+
+			return $paged > 1 ? (string) get_pagenum_link( $paged ) : $link;
 		}
 	}
 
@@ -365,11 +368,20 @@ function boi_schema_glossary_mentions( $post ) {
 		return array();
 	}
 
+	// The cache counts only if it was built from this post's current text,
+	// map and budget, the checks boi_gl_filter() makes before it reuses it.
+	$items  = boi_gl_map();
 	$cached = get_post_meta( $post->ID, '_boi_gl_cache', true );
-	$html   = ( is_array( $cached ) && isset( $cached['html'] ) ) ? (string) $cached['html'] : '';
+	$html   = '';
+
+	if ( $items && is_array( $cached ) && isset( $cached['html'], $cached['map'], $cached['budget'], $cached['src'] )
+		&& boi_gl_compiled( $items )['hash'] === $cached['map']
+		&& boi_gl_max() === (int) $cached['budget']
+		&& md5( (string) $post->post_content ) === $cached['src'] ) {
+		$html = (string) $cached['html'];
+	}
 
 	if ( '' === $html ) {
-		$items = boi_gl_map();
 		$html  = $items ? boi_gl_apply( $post->post_content, boi_gl_compiled( $items ), boi_gl_max() ) : '';
 	}
 
@@ -610,7 +622,11 @@ function boi_schema_query_list( $url ) {
 		return null;
 	}
 
-	$start = ( max( 1, (int) get_query_var( 'paged' ) ) - 1 ) * max( 1, count( $posts ) );
+	// Positions run on from earlier pages, so the step is the query's page
+	// size; a short last page would give a wrong count.
+	$per   = ( $wp_query && isset( $wp_query->query_vars['posts_per_page'] ) ) ? (int) $wp_query->query_vars['posts_per_page'] : 0;
+	$per   = $per > 0 ? $per : max( 1, (int) get_option( 'posts_per_page' ) );
+	$start = ( max( 1, (int) get_query_var( 'paged' ) ) - 1 ) * $per;
 	$items = array();
 
 	foreach ( array_values( $posts ) as $i => $post ) {

@@ -191,7 +191,9 @@ function boi_entry_lede( $entry ) {
 
 		if ( mb_strlen( $text ) > 300 ) {
 			$cut  = mb_substr( $text, 0, 300 );
-			$text = rtrim( mb_substr( $cut, 0, (int) mb_strrpos( $cut, ' ' ) ), ' ,;:' ) . '…';
+			$space = mb_strrpos( $cut, ' ' );
+			// With no space to break at, cut at 300 rather than return "…".
+			$text  = rtrim( false === $space ? $cut : mb_substr( $cut, 0, $space ), ' ,;:' ) . '…';
 		}
 
 		return $text;
