@@ -537,6 +537,15 @@ The rule applies to new images only: images already bundled, whether from
 Commons, Pexels or Pixabay, stay as they are and are not swapped. Every image
 still follows D30, which means it is credited and never depicts a prophet.
 
+### D49. Addresses carry no digits, and a renamed one redirects
+
+The owner's rule of 3 November 2026: an address names its subject, never a
+verse number, a count, a year or a `-2` suffix. The number stays in the title,
+the heading and the description. A renamed article or Glossary entry keeps
+its post, and its old address answers with a 301 to the new one. The map is
+`inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
+`boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,

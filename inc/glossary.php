@@ -358,8 +358,8 @@ function boi_glossary_retired_slugs() {
  * and takes the new slug and title; a merged duplicate is deleted outright
  * once the entry it duplicated has its own page, whatever its status, along
  * with any copy already in the trash. No page is left under a suffixed
- * address, and the theme does not redirect the old addresses: they return
- * 404 like any other address that does not exist.
+ * address. The old addresses answer with a 301 to the entry that replaced
+ * them (inc/renamed-slugs.php).
  *
  * @param array $hashes Fingerprints by slug, updated in place.
  * @return void
@@ -378,7 +378,7 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 		}
 
 		// A page renamed by an earlier release still carries the old-slug note
-		// WordPress keeps for its own redirect; the theme does not redirect.
+		// WordPress keeps for its own redirect; inc/renamed-slugs.php redirects.
 		if ( $current ) {
 			delete_post_meta( $current->ID, '_wp_old_slug', $old );
 		}
@@ -404,7 +404,7 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 		);
 
 		// WordPress notes the old slug on a rename so it can redirect it later;
-		// the theme does not redirect, so the note goes.
+		// inc/renamed-slugs.php redirects instead, so the note goes.
 		delete_post_meta( $page->ID, '_wp_old_slug' );
 
 		if ( isset( $hashes[ $old ] ) ) {
