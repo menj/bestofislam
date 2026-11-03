@@ -4,6 +4,12 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.96.0] - 2026-11-03
+
+### Changed
+
+- The Read next card at the foot of each article ends in the owner's pixel arrow (`assets/images/arrow-next.webp`) in place of the text arrow (`assets/css/listicle.css`). Each is animated WebP drawn at its own pixel size, for decoration only; the link text is unchanged. Readers who ask for reduced motion see a still first frame.
+
 ## [1.95.0] - 2026-11-03
 
 ### Changed

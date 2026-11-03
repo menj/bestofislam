@@ -1390,9 +1390,22 @@ video {
 	text-decoration: underline;
 }
 
+/* The owner's retro arrow (assets/images/arrow-next.webp), decoration only. Still under reduced motion. */
 .boi-next__title::after {
-	content: " \2192";
-	color: var(--wp--preset--color--accent-2, #E8B33C);
+	content: "";
+	display: inline-block;
+	width: 35px;
+	height: 21px;
+	margin-inline-start: 0.5rem;
+	vertical-align: middle;
+	background: url(../images/arrow-next.webp) center / contain no-repeat;
+	image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-next__title::after {
+		background-image: url(../images/arrow-next-static.webp);
+	}
 }
 
 .boi-next__part {
