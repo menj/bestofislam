@@ -7,6 +7,8 @@ versioning.
 ## [1.94.0] - 2026-11-03
 
 - A renamed address that arrives percent-encoded or in capitals still gets its 301.
+- A featured image attached before its article was renamed is found under the old slug in `boi_image_attachments`, moved to the new slug and reused. Before, the importer missed it and sideloaded a second copy.
+- SSOT D49 now says what the code does: an old address redirects only when the request would end in a 404.
 
 ### Changed
 

@@ -68,6 +68,20 @@ function boi_attach_featured_images( $limit = 3 ) {
 			break;
 		}
 
+		// An attachment made before the article was renamed is stored under
+		// its old slug. Move it to the current one so it is reused, never
+		// sideloaded a second time.
+		if ( empty( $map[ $slug ] ) && function_exists( 'boi_post_slug_renames' ) ) {
+			foreach ( array_keys( boi_post_slug_renames(), $slug, true ) as $old ) {
+				if ( ! empty( $map[ $old ] ) && get_post( (int) $map[ $old ] ) ) {
+					$map[ $slug ] = (int) $map[ $old ];
+					unset( $map[ $old ] );
+					update_option( 'boi_image_attachments', $map, false );
+					break;
+				}
+			}
+		}
+
 		// Reuse an attachment created on an earlier run.
 		if ( ! empty( $map[ $slug ] ) && get_post( (int) $map[ $slug ] ) ) {
 			set_post_thumbnail( $post, (int) $map[ $slug ] );

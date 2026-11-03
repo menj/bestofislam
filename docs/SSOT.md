@@ -542,7 +542,9 @@ still follows D30, which means it is credited and never depicts a prophet.
 The owner's rule of 3 November 2026: an address names its subject, never a
 verse number, a count, a year or a `-2` suffix. The number stays in the title,
 the heading and the description. A renamed article or Glossary entry keeps
-its post, and its old address answers with a 301 to the new one. The map is
+its post. A request for its old address that would otherwise end in a 404
+gets a 301 to the new one; if a live post or page holds that address, it is
+served and nothing redirects. The map is
 `inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
 `boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
 
