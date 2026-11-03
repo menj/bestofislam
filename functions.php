@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.94.0' );
+define( 'BOI_VERSION', '1.95.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -36,6 +36,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/questions.php',
 	BOI_DIR . '/inc/reading.php',
 	BOI_DIR . '/inc/structured-data.php',
+	BOI_DIR . '/inc/schema-graph.php',
 	BOI_DIR . '/inc/rank-math.php',
 	BOI_DIR . '/inc/unlist.php',
 	BOI_DIR . '/inc/search-permalinks.php',
@@ -59,6 +60,7 @@ $boi_need = array_merge(
 		BOI_DIR . '/inc/data/image-credits.json',
 		BOI_DIR . '/inc/data/network-links.json',
 		BOI_DIR . '/inc/data/questions.json',
+		BOI_DIR . '/inc/data/schema-entities.json',
 		BOI_DIR . '/inc/data/seed.json',
 		BOI_DIR . '/inc/glossary-data/a.json',
 		BOI_DIR . '/inc/glossary-data/b.json',

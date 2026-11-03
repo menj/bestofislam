@@ -35,15 +35,19 @@ Google's list, as of June 2026, and where each feature applies to this site.
 | Article | Yes | Every article: headline, description, dates, author, publisher, section and images. |
 | Breadcrumb | Yes | Every page with a trail. |
 | Image metadata | Yes | Licence, creator, credit and acquire-licence page on the featured image and on the two images in the text. |
-| Organization | Yes | Front page: name, logo, `sameAs` links. WebSite beside it, for the site name. |
+| Organization | Yes | Every page: name, logo, `sameAs` links. WebSite beside it, for the site name and the search. |
 | Profile page | Yes | Author archives: ProfilePage with the author as a Person. |
 | Carousel, Course, Dataset, Event, Job posting, Local business, Math solver, Movie, Product, Recipe, Review snippet, Software app, Vacation rental, Employer rating | No | The site has none of these things. |
 | Discussion forum, Q&A, Education Q&A | No | The site has no user-generated discussion, and its questions are the site's own answers rather than a quiz. |
 | Video | No | There is no video. Add VideoObject if videos are embedded later. |
-| Speakable, Subscription and paywalled content | No | Speakable is for news publishers; nothing is paywalled. |
+| Speakable | Marked | Google reads it only for news publishers. The page node names the title and, on a Reflection, the summary. |
+| Subscription and paywalled content | No | Nothing is paywalled. |
 
-The theme also prints ItemList for each listicle, FAQPage for the front-page
-questions and a DefinedTermSet for the Glossary. They describe their pages
+Every page has one graph, built in `inc/schema-graph.php` (SSOT D50). Beside
+the features above it holds ItemList for each listicle, FAQPage for the
+front-page questions, a DefinedTermSet for the Glossary, the header, footer
+and menus, the page type, and the Qur'an quotations and notes an article
+cites. They describe their pages
 accurately. Google restricts FAQ rich results to a narrow class of sites, so
 none is promised. The owner keeps all three for AI answer engines (GEO, AEO).
 
@@ -61,12 +65,12 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 | Canonical link | Theme | Rank Math |
 | Robots directives | Theme (`wp_robots`) | Rank Math, told to noindex search results and paged archives |
 | XML sitemap | Core, filtered | Rank Math, told to leave out unlisted articles |
-| Article, Organization, WebSite, ProfilePage | Theme graph | Rank Math graph |
+| Article, Organization, WebSite, ProfilePage | Theme graph | Rank Math graph, with the theme's properties added where Rank Math has none |
 | Image licence and credit | In the theme's Article | Added to Rank Math's primary image |
 | Images in the text | ImageObjects in the theme's graph | Added to Rank Math's graph |
 | Breadcrumb markup | Theme | Rank Math when its breadcrumbs are on, otherwise the theme |
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
-| ItemList, FAQPage | Theme | Theme (Rank Math does not produce them) |
+| ItemList, FAQPage, DefinedTermSet, quotations, citations, header, footer and menus | Theme graph | Merged into Rank Math's graph by `@id`; the theme prints no second block |
 | Image sitemap | Theme, at `/sitemap-images.xml`, named in robots.txt | Rank Math's sitemap, which lists each post's images |
 
 Rank Math's Image SEO module may rewrite alt text and titles; turn it off for

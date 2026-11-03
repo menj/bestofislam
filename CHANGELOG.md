@@ -4,6 +4,29 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.95.0] - 2026-11-03
+
+### Changed
+
+Each page now has one JSON-LD graph. Before, five places printed their own block: `inc/structured-data.php`, `inc/schema.php`, `inc/questions.php`, `inc/glossary.php` and the breadcrumb block in `inc/seo.php`. A listicle could carry three blocks, a Glossary entry two.
+
+- `inc/schema-graph.php` collects the nodes from each module, merges any two that share an `@id` and prints the graph once, in the head. The modules return nodes now and print nothing.
+- With Rank Math's schema on, the theme prints no JSON-LD. `boi_rank_math_json_ld()` merges the theme's nodes into Rank Math's graph by `@id`. A node Rank Math already has gains only the properties and types it lacks, and the theme's page, article and breadcrumb fold into Rank Math's own.
+- Every type marked before stays, FAQPage and the DefinedTermSet included.
+
+### Added
+
+- The header and the footer as WPHeader and WPFooter, with a SiteNavigationElement for each of the 4 menus in them.
+- A SearchAction on the WebSite, for the search in the header.
+- A page type for each template: AboutPage, ContactPage, CollectionPage for sections, the Glossary and archives (with an ItemList of the posts listed), SearchResultsPage, ItemPage for a Glossary entry, and FAQPage beside WebPage on the front page. The page node has `speakable`, `breadcrumb` and `primaryImageOfPage`.
+- Qur'an quotations as Quotation nodes, each part of its surah, a Chapter of the Qur'an. A quotation counts only in the form the articles use: a quoted text followed at once by "(Quran 2:256)". A bare "(2:256)" counts only in a paragraph that names the Qur'an and no book of the Bible, since Bible verses are cited the same way.
+- The notes under each "Notes" heading as citations. A hadith whose note gives its grading is a Quotation of its collection, with the hadith number and the grading as PropertyValues under `identifier`. schema.org allows `additionalProperty` only on products, places and offers, so `identifier` carries it. A note with no grading gets none.
+- `inc/data/schema-entities.json` lists the people, books and hadith collections an article can name, with a Wikidata `sameAs` only where the identity is certain, and the 114 surah names. An article is `about` Islam (and Christianity too in Comparative Religion), and `mentions` each entity it names and each Glossary entry it links.
+- Article details: `wordCount`, `timeRequired` (the reading time shown under the title), `keywords` from the tags, `abstract` on a Reflection, `isAccessibleForFree`, `copyrightHolder`, the access modes and accessibility features, and `hasPart` for its lists. A Reflection is a BlogPosting as well as an Article.
+- Each listicle entry is a CreativeWork at its anchor, with its opening paragraph as the description and the objection it answers as a Claim.
+- Image credits gain `encodingFormat`, and `copyrightHolder` with `copyrightNotice` under CC BY and CC BY-SA. The hero image is `representativeOfPage`. Glossary photographs carry their credits as ImageObjects.
+- `tests/schema-graph-test.php` renders 12 sample pages with and without a stand-in Rank Math graph. It checks for one graph per page, JSON that decodes, every `@id` defined once, every reference resolved and the required properties of each node.
+
 ## [1.94.0] - 2026-11-03
 
 - A renamed address that arrives percent-encoded or in capitals still gets its 301.
