@@ -15,9 +15,11 @@
  *  - the exclusion of unlisted articles from its sitemap;
  *  - the title rule: "<page> | <site name>", under 60 characters.
  *
- * The theme's own ItemList and question markup are separate JSON-LD blocks
- * that Rank Math does not produce, so they stay. Every hook below is
- * registered only when Rank Math is present and touches nothing otherwise.
+ * The rest of the theme's page graph (inc/schema-graph.php: the lists, the
+ * questions, the Glossary, the citations, the header and footer) goes into
+ * Rank Math's graph through the same filter, merged by @id, and the theme
+ * prints no JSON-LD of its own. Every hook below is registered only when
+ * Rank Math is present and touches nothing otherwise.
  *
  * @package BestOfIslam
  */
@@ -64,27 +66,28 @@ function boi_rank_math_breadcrumb_schema() {
 }
 
 /**
- * Adds the image licence data to Rank Math's graph on an article.
+ * Adds the image licence data to Rank Math's graph on an article, then the
+ * theme's page graph on every page.
  *
  * @param array $data   Rank Math's entities, keyed by name.
  * @param mixed $jsonld The plugin's JSON-LD object.
  * @return array
  */
 function boi_rank_math_json_ld( $data, $jsonld = null ) {
-	if ( ! is_array( $data ) || ! is_singular( 'post' ) ) {
+	if ( ! is_array( $data ) ) {
 		return $data;
 	}
 
-	$post = get_post();
+	$post = is_singular( 'post' ) ? get_post() : null;
 
 	if ( ! $post ) {
-		return $data;
+		return boi_schema_merge_into_rank_math( $data, boi_schema_graph_nodes( true ) );
 	}
 
 	$image = boi_article_image_object( $post );
 
 	if ( $image ) {
-		$fields = array_diff_key( $image, array_flip( array( '@type', 'url', 'contentUrl', 'width', 'height' ) ) );
+		$fields = array_diff_key( $image, array_flip( array( '@type', '@id', 'url', 'contentUrl', 'width', 'height' ) ) );
 
 		foreach ( $data as $key => $node ) {
 			// Plugins spell the id #primaryImage or #primaryimage; match either.
@@ -118,7 +121,9 @@ function boi_rank_math_json_ld( $data, $jsonld = null ) {
 		}
 	}
 
-	return $data;
+	// Then every other node of the theme's page graph, merged by @id, so the
+	// page still has one graph.
+	return boi_schema_merge_into_rank_math( $data, boi_schema_graph_nodes( true ) );
 }
 
 /**

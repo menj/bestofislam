@@ -1,6 +1,6 @@
 <?php
 /**
- * Structured data output for listicles.
+ * Structured data for listicles: the ItemList nodes the page graph takes.
  *
  * Schema is derived from the parsed block tree so that it cannot diverge from
  * the content a visitor actually sees.
@@ -11,42 +11,32 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Prints ItemList JSON-LD in the document head for singular listicle views.
+ * The ItemList nodes of every listicle in a post, for the page graph that
+ * inc/schema-graph.php prints. Each list has its own @id, so the article can
+ * point to it with hasPart.
  *
- * @return void
+ * @param WP_Post $post Host post.
+ * @return array Graph nodes.
  */
-function boi_print_schema() {
-	if ( ! is_singular() ) {
-		return;
-	}
-
-	$post = get_post();
-
+function boi_listicle_schema_nodes( $post ) {
 	if ( ! $post || ! has_block( 'bestofislam/listicle', $post ) ) {
-		return;
+		return array();
 	}
 
-	$graphs = array();
+	$nodes = array();
 
-	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $listicle ) {
-		$graph = boi_build_item_list( $listicle, $post );
+	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $n => $listicle ) {
+		$node = boi_build_item_list( $listicle, $post );
 
-		if ( $graph ) {
-			$graphs[] = $graph;
+		if ( $node ) {
+			unset( $node['@context'] );
+			$node['@id'] = get_permalink( $post ) . '#itemlist' . ( $n ? '-' . ( $n + 1 ) : '' );
+			$nodes[]     = $node;
 		}
 	}
 
-	if ( empty( $graphs ) ) {
-		return;
-	}
-
-	$payload = 1 === count( $graphs ) ? $graphs[0] : $graphs;
-
-	echo "\n<script type=\"application/ld+json\">" .
-		boi_json_ld( $payload ) .
-		"</script>\n";
+	return $nodes;
 }
-add_action( 'wp_head', 'boi_print_schema', 20 );
 
 /**
  * Recursively collects listicle blocks from a parsed block tree.
@@ -90,10 +80,12 @@ function boi_build_item_list( $listicle, $post ) {
 	}
 
 	$entries = array();
+	$bodies  = array();
 
 	foreach ( $listicle['innerBlocks'] as $inner ) {
 		if ( 'bestofislam/entry' === $inner['blockName'] ) {
 			$entries[] = isset( $inner['attrs'] ) ? $inner['attrs'] : array();
+			$bodies[]  = $inner;
 		}
 	}
 
@@ -124,6 +116,30 @@ function boi_build_item_list( $listicle, $post ) {
 			$item['url'] = esc_url_raw( $entry['linkUrl'] );
 		}
 
+		// The entry itself, at its anchor on the page, with its opening
+		// paragraph as the description a reader sees first.
+		$thing = array(
+			'@type' => 'CreativeWork',
+			'@id'   => get_permalink( $post ) . '#' . boi_entry_anchor( $entry ),
+			'name'  => $name,
+			'url'   => get_permalink( $post ) . '#' . boi_entry_anchor( $entry ),
+		);
+		$lede  = boi_entry_lede( $bodies[ $offset ] );
+
+		if ( '' !== $lede ) {
+			$item['description']  = $lede;
+			$thing['description'] = $lede;
+		}
+
+		if ( ! empty( $entry['claim'] ) ) {
+			$thing['about'] = array(
+				'@type' => 'Claim',
+				'text'  => boi_plain( $entry['claim'] ),
+			);
+		}
+
+		$item['item'] = $thing;
+
 		if ( ! empty( $entry['imageId'] ) ) {
 			$src = wp_get_attachment_image_url( (int) $entry['imageId'], 'large' );
 
@@ -152,4 +168,36 @@ function boi_build_item_list( $listicle, $post ) {
 			: 'https://schema.org/ItemListOrderDescending',
 		'itemListElement' => $elements,
 	);
+}
+
+/**
+ * The opening paragraph of a listicle entry as plain text, cut at a word
+ * near 300 characters.
+ *
+ * @param array $entry Parsed entry block.
+ * @return string
+ */
+function boi_entry_lede( $entry ) {
+	foreach ( isset( $entry['innerBlocks'] ) ? $entry['innerBlocks'] : array() as $inner ) {
+		if ( 'core/paragraph' !== $inner['blockName'] ) {
+			continue;
+		}
+
+		$text = boi_plain( preg_replace( '#<sup>.*?</sup>#s', '', (string) $inner['innerHTML'] ) );
+
+		if ( '' === $text ) {
+			continue;
+		}
+
+		if ( mb_strlen( $text ) > 300 ) {
+			$cut  = mb_substr( $text, 0, 300 );
+			$space = mb_strrpos( $cut, ' ' );
+			// With no space to break at, cut at 300 rather than return "…".
+			$text  = rtrim( false === $space ? $cut : mb_substr( $cut, 0, $space ), ' ,;:' ) . '…';
+		}
+
+		return $text;
+	}
+
+	return '';
 }

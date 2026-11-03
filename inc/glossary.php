@@ -1112,24 +1112,23 @@ function boi_render_term_related( $attributes ) {
 
 /**
  * Structured data for the Glossary. The Glossary is a DefinedTermSet and each
- * entry a DefinedTerm with its other names, its Arabic script and the terms
- * and articles it points to. Under the theme's own graph the pages also get a
- * CollectionPage (the index) or a WebPage (an entry); with Rank Math's schema
- * active that page node is Rank Math's, and these nodes refer to it by id. The
- * breadcrumb trail comes from the breadcrumbs block.
+ * entry a DefinedTerm with its other names, its Arabic script, its photograph
+ * and the terms and articles it points to. The pages are a CollectionPage (the
+ * index) and a WebPage (an entry). These are nodes of the one page graph that
+ * inc/schema-graph.php prints, or merges into Rank Math's by @id.
  *
- * @return void
+ * @return array Graph nodes, empty off the Glossary.
  */
-function boi_glossary_schema() {
+function boi_glossary_schema_nodes() {
 	if ( ! boi_is_glossary_page() ) {
-		return;
+		return array();
 	}
 
 	$post   = get_queried_object();
 	$parent = boi_glossary_parent();
 
-	if ( ! $parent ) {
-		return;
+	if ( ! $parent || ! $post instanceof WP_Post ) {
+		return array();
 	}
 
 	$set_url = get_permalink( $parent );
@@ -1147,13 +1146,22 @@ function boi_glossary_schema() {
 		$terms = array();
 
 		foreach ( boi_glossary_entries() as $entry ) {
-			$terms[] = array(
-				'@type'       => 'DefinedTerm',
-				'@id'         => get_permalink( $entry ) . '#term',
-				'name'        => wp_strip_all_tags( get_the_title( $entry ) ),
-				'description' => wp_strip_all_tags( $entry->post_excerpt ),
-				'url'         => get_permalink( $entry ),
+			$node    = array(
+				'@type'            => 'DefinedTerm',
+				'@id'              => get_permalink( $entry ) . '#term',
+				'name'             => wp_strip_all_tags( get_the_title( $entry ) ),
+				'description'      => wp_strip_all_tags( $entry->post_excerpt ),
+				'url'              => get_permalink( $entry ),
+				'termCode'         => $entry->post_name,
+				'inDefinedTermSet' => array( '@id' => $set_id ),
 			);
+			$aliases = boi_glossary_schema_aliases( $entry );
+
+			if ( $aliases ) {
+				$node['alternateName'] = $aliases;
+			}
+
+			$terms[] = $node;
 		}
 
 		$graph[] = $set_ref + array(
@@ -1163,25 +1171,24 @@ function boi_glossary_schema() {
 			'mainEntityOfPage' => array( '@id' => $page_id ),
 		);
 
-		if ( ! boi_glossary_rank_math() ) {
-			$graph[] = array(
-				'@type'      => 'CollectionPage',
-				'@id'        => $page_id,
-				'url'        => $set_url,
-				'name'       => wp_strip_all_tags( get_the_title( $parent ) ),
-				'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
-				'inLanguage' => get_bloginfo( 'language' ),
-				'mainEntity' => array( '@id' => $set_id ),
-			);
+		$hero = boi_glossary_image( 'hero' );
+
+		if ( $hero ) {
+			$graph[ count( $graph ) - 1 ]['image'] = boi_glossary_image_node( $hero, $set_url . '#hero-image' );
 		}
+
+		$graph[] = array(
+			'@type'      => 'CollectionPage',
+			'@id'        => $page_id,
+			'url'        => $set_url,
+			'name'       => wp_strip_all_tags( get_the_title( $parent ) ),
+			'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+			'inLanguage' => get_bloginfo( 'language' ),
+			'mainEntity' => array( '@id' => $set_id ),
+		);
 	} else {
 		$url     = get_permalink( $post );
-		$aliases = array_values( array_filter( array_map( 'strval', (array) get_post_meta( $post->ID, '_boi_term_aliases', true ) ) ) );
-		$ar      = (string) get_post_meta( $post->ID, '_boi_term_ar', true );
-
-		if ( '' !== $ar ) {
-			$aliases[] = $ar;
-		}
+		$aliases = boi_glossary_schema_aliases( $post );
 
 		$related = array();
 
@@ -1227,44 +1234,79 @@ function boi_glossary_schema() {
 			$term['alternateName'] = $aliases;
 		}
 
+		$type  = (string) get_post_meta( $post->ID, '_boi_term_type', true );
+		$photo = boi_glossary_entry_image( isset( boi_glossary_types()[ $type ] ) ? $type : 'term', $post->post_name );
+
+		if ( $photo ) {
+			$term['image'] = boi_glossary_image_node( $photo, $url . '#term-image' );
+		}
+
 		$graph[] = $term;
 		$graph[] = $set_ref;
 
-		if ( ! boi_glossary_rank_math() ) {
-			$page = array(
-				'@type'      => 'WebPage',
-				'@id'        => $page_id,
-				'url'        => $url,
-				'name'       => wp_strip_all_tags( get_the_title( $post ) ),
-				'isPartOf'   => array( '@id' => $set_id ),
-				'inLanguage' => get_bloginfo( 'language' ),
-				'mainEntity' => array( '@id' => $url . '#term' ),
-			);
+		$page = array(
+			'@type'      => 'WebPage',
+			'@id'        => $page_id,
+			'url'        => $url,
+			'name'       => wp_strip_all_tags( get_the_title( $post ) ),
+			'isPartOf'   => array( '@id' => $set_id ),
+			'inLanguage' => get_bloginfo( 'language' ),
+			'mainEntity' => array( '@id' => $url . '#term' ),
+		);
 
-			if ( $related ) {
-				$page['relatedLink'] = $related;
-			}
-
-			$graph[] = $page;
+		if ( $related ) {
+			$page['relatedLink'] = $related;
 		}
+
+		if ( $photo ) {
+			$page['primaryImageOfPage'] = array( '@id' => $url . '#term-image' );
+		}
+
+		$graph[] = $page;
+
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
-		array(
-			'@context' => 'https://schema.org',
-			'@graph'   => $graph,
-		)
-	) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+	return $graph;
 }
-add_action( 'wp_head', 'boi_glossary_schema', 22 );
 
 /**
- * Whether Rank Math's schema is active, so it supplies the page node.
+ * An entry's other names and its Arabic script, as shown on its page.
  *
- * @return bool
+ * @param WP_Post $entry Glossary entry.
+ * @return string[]
  */
-function boi_glossary_rank_math() {
-	return function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active();
+function boi_glossary_schema_aliases( $entry ) {
+	$aliases = array_values( array_filter( array_map( 'strval', (array) get_post_meta( $entry->ID, '_boi_term_aliases', true ) ) ) );
+	$ar      = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+
+	if ( '' !== $ar ) {
+		$aliases[] = $ar;
+	}
+
+	return $aliases;
+}
+
+/**
+ * A Glossary photograph as an ImageObject with the credit printed under it.
+ *
+ * @param array  $image Image from boi_glossary_image() or boi_glossary_entry_image().
+ * @param string $id    Its @id.
+ * @return array
+ */
+function boi_glossary_image_node( $image, $id ) {
+	$node = array(
+		'@type'      => 'ImageObject',
+		'@id'        => $id,
+		'url'        => $image['url'],
+		'contentUrl' => $image['url'],
+	);
+
+	if ( ! empty( $image['width'] ) && ! empty( $image['height'] ) ) {
+		$node['width']  = (int) $image['width'];
+		$node['height'] = (int) $image['height'];
+	}
+
+	return array_merge( $node, boi_image_credit_fields( $image, $image['url'] ) );
 }
 
 /**

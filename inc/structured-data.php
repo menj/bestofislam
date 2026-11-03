@@ -4,8 +4,8 @@
  *
  * Google's list of supported structured data (June 2026) names the features
  * that apply to this site: Article, Breadcrumb, Image metadata and
- * Organization. Breadcrumbs are emitted by seo.php and the reading lists by
- * schema.php. This file adds the rest:
+ * Organization. Breadcrumbs come from seo.php and the reading lists from
+ * schema.php. This file builds the rest:
  *
  *  - Organization and WebSite on the front page, with the logo and the
  *    follow links as sameAs.
@@ -16,7 +16,8 @@
  *    Commons credit the theme records for every seeded image.
  *
  * Everything is one @graph per page, joined by @id, so the entities refer to
- * each other rather than repeating themselves.
+ * each other rather than repeating themselves. inc/schema-graph.php collects
+ * the nodes from here and from the other modules and prints that graph once.
  *
  * @package BestOfIslam
  */
@@ -155,9 +156,11 @@ function boi_article_image_object( $post ) {
 	}
 
 	$image = array(
-		'@type'      => 'ImageObject',
-		'url'        => $url,
-		'contentUrl' => $url,
+		'@type'               => 'ImageObject',
+		'@id'                 => get_permalink( $post ) . '#primaryimage',
+		'url'                 => $url,
+		'contentUrl'          => $url,
+		'representativeOfPage' => true,
 	);
 
 	if ( $width && $height ) {
@@ -165,17 +168,27 @@ function boi_article_image_object( $post ) {
 		$image['height'] = (int) $height;
 	}
 
-	return array_merge( $image, boi_image_credit_fields( $credit ) );
+	return array_merge( $image, boi_image_credit_fields( $credit, $url ) );
 }
 
 /**
  * The licence and credit properties of an ImageObject, from an image credit.
  *
- * @param array $credit Credit: artist, licence, source.
- * @return array creator, creditText, license and acquireLicensePage, as known.
+ * The creator is the copyright holder only under a licence that keeps the
+ * copyright (CC BY and CC BY-SA); a public-domain image has no holder.
+ *
+ * @param array  $credit Credit: artist, licence, source.
+ * @param string $url    The image address, for its encodingFormat.
+ * @return array creator, creditText, copyrightHolder, copyrightNotice,
+ *               license, acquireLicensePage and encodingFormat, as known.
  */
-function boi_image_credit_fields( $credit ) {
+function boi_image_credit_fields( $credit, $url = '' ) {
 	$fields = array();
+	$format = boi_image_encoding_format( '' !== $url ? $url : ( isset( $credit['file'] ) ? $credit['file'] : '' ) );
+
+	if ( '' !== $format ) {
+		$fields['encodingFormat'] = $format;
+	}
 
 	if ( ! empty( $credit['artist'] ) ) {
 		$fields['creator']    = array(
@@ -192,6 +205,11 @@ function boi_image_credit_fields( $credit ) {
 		if ( '' !== $licence ) {
 			$fields['license'] = $licence;
 		}
+
+		if ( ! empty( $credit['artist'] ) && false !== strpos( $licence, '/licenses/by' ) ) {
+			$fields['copyrightHolder'] = $fields['creator'];
+			$fields['copyrightNotice'] = $credit['artist'] . ', ' . $credit['licence'];
+		}
 	}
 
 	if ( '' !== boi_image_source_url( isset( $credit['source'] ) ? $credit['source'] : '' ) ) {
@@ -199,6 +217,27 @@ function boi_image_credit_fields( $credit ) {
 	}
 
 	return $fields;
+}
+
+/**
+ * The media type of an image, from its file extension.
+ *
+ * @param string $file Address or file name.
+ * @return string Empty when the extension is not one the theme uses.
+ */
+function boi_image_encoding_format( $file ) {
+	$ext   = strtolower( pathinfo( (string) wp_parse_url( (string) $file, PHP_URL_PATH ), PATHINFO_EXTENSION ) );
+	$types = array(
+		'avif' => 'image/avif',
+		'webp' => 'image/webp',
+		'jpg'  => 'image/jpeg',
+		'jpeg' => 'image/jpeg',
+		'png'  => 'image/png',
+		'gif'  => 'image/gif',
+		'svg'  => 'image/svg+xml',
+	);
+
+	return isset( $types[ $ext ] ) ? $types[ $ext ] : '';
 }
 
 /**
@@ -243,14 +282,15 @@ function boi_inline_image_objects( $post ) {
 			$node['height'] = (int) $size[1];
 		}
 
-		$objects[] = array_merge( $node, boi_image_credit_fields( $credit ) );
+		$objects[] = array_merge( $node, boi_image_credit_fields( $credit, $url ) );
 	}
 
 	return $objects;
 }
 
 /**
- * Organization and WebSite, for the front page.
+ * Organization and WebSite, on every page: the publisher and the site that
+ * every other node refers to.
  *
  * @return array Graph nodes.
  */
@@ -290,6 +330,15 @@ function boi_site_entities() {
 		'url'        => home_url( '/' ),
 		'inLanguage' => get_bloginfo( 'language' ),
 		'publisher'  => array( '@id' => boi_entity_id( 'organization' ) ),
+		// The search in the header, which every page carries.
+		'potentialAction' => array(
+			'@type'       => 'SearchAction',
+			'target'      => array(
+				'@type'       => 'EntryPoint',
+				'urlTemplate' => home_url( '/?s={search_term_string}' ),
+			),
+			'query-input' => 'required name=search_term_string',
+		),
 	);
 
 	return array( $organization, $website );
@@ -448,41 +497,3 @@ function boi_profile_entities( $author ) {
 
 	return array( $profile, $person );
 }
-
-/**
- * Prints the graph for the current page.
- *
- * @return void
- */
-function boi_print_structured_data() {
-	// Rank Math prints its own graph; boi_rank_math_json_ld() adds to it.
-	if ( function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active() ) {
-		return;
-	}
-
-	$nodes = array();
-
-	if ( is_front_page() ) {
-		$nodes = boi_site_entities();
-	} elseif ( is_singular( 'post' ) ) {
-		$post = get_post();
-
-		if ( $post ) {
-			$nodes = boi_article_entities( $post );
-		}
-	} elseif ( is_author() ) {
-		$nodes = boi_profile_entities( get_queried_object() );
-	}
-
-	if ( empty( $nodes ) ) {
-		return;
-	}
-
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
-		array(
-			'@context' => 'https://schema.org',
-			'@graph'   => $nodes,
-		)
-	) . "</script>\n";
-}
-add_action( 'wp_head', 'boi_print_structured_data', 19 );

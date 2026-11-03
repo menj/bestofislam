@@ -32,7 +32,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 - **Following Google's SEO Starter Guide.** Unique titles; meta descriptions of up to 130 characters, including the front and author pages; canonical links on every indexable view; breadcrumbs; a clean heading outline; search results kept out of the index; and an XML sitemap limited to useful pages.
 - **Structured data for search and AI answers.** Article on every article, with its image's licence metadata drawn from the Commons credits; Organization and WebSite on the front page, with a 512px logo; BreadcrumbList throughout; ProfilePage on author archives; ItemList on every list; FAQ markup for the questions; a DefinedTermSet for the Glossary. Markup off Google's list stays, because AI answer engines read it. All names are plain text. An image sitemap at `/sitemap-images.xml` lists every article's images.
-- **Steps aside for SEO plugins.** Descriptions and canonical links yield to Yoast SEO, Rank Math, All in One SEO and SEOPress. With Rank Math the theme also yields robots, sitemap and structured data, holds Rank Math's titles to the site's title rule, and adds its image credits to Rank Math's graph through the plugin's own hooks. See `docs/SEO.md`.
+- **Steps aside for SEO plugins.** Descriptions and canonical links yield to Yoast SEO, Rank Math, All in One SEO and SEOPress. With Rank Math the theme also yields robots, sitemap and structured data, holds Rank Math's titles to the site's title rule, and adds its image credits and the rest of its page graph to Rank Math's graph through the plugin's own hooks, so a page never has two. See `docs/SEO.md`.
 
 ### Access
 
@@ -102,7 +102,8 @@ bestofislam/
 │                        appearance, blocks, contact, contextual-links,
 │                        features, front, glossary-links, icons,
 │                        images, login, login-screen, questions, reading,
-│                        reflections, schema, search, search-permalinks,
+│                        reflections, schema, schema-graph, search,
+│                        search-permalinks,
 │                        sections, security, security-detector, seo,
 │                        settings, setup, structured-data,
 │                        taxonomy, unlist, voting

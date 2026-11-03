@@ -488,7 +488,7 @@ function boi_breadcrumb_trail() {
 }
 
 /**
- * Renders the breadcrumb trail with its BreadcrumbList graph.
+ * Renders the breadcrumb trail.
  *
  * @return string
  */
@@ -504,47 +504,62 @@ function boi_render_breadcrumbs() {
 	}
 
 	$items = '';
-	$graph = array();
 	$last  = count( $trail ) - 1;
 
 	foreach ( $trail as $i => $crumb ) {
-		$is_last = $i === $last;
-
-		$items .= $is_last
+		$items .= $i === $last
 			? sprintf( '<li aria-current="page">%s</li>', esc_html( $crumb['label'] ) )
 			: sprintf( '<li><a href="%1$s">%2$s</a></li>', esc_url( $crumb['url'] ), esc_html( $crumb['label'] ) );
+	}
 
+	// The BreadcrumbList is a node of the page graph (boi_breadcrumb_node()).
+	return sprintf(
+		'<nav class="boi-breadcrumbs" aria-label="%1$s"><ol>%2$s</ol></nav>',
+		esc_attr__( 'Breadcrumb', 'bestofislam' ),
+		$items
+	);
+}
+
+/**
+ * The BreadcrumbList for the trail boi_render_breadcrumbs() shows, as a node
+ * of the page graph. None on the front page, which shows no trail.
+ *
+ * @param string $page_url Address of the current page.
+ * @return array|null
+ */
+function boi_breadcrumb_node( $page_url ) {
+	if ( is_front_page() ) {
+		return null;
+	}
+
+	$trail = boi_breadcrumb_trail();
+
+	if ( count( $trail ) < 2 ) {
+		return null;
+	}
+
+	$list = array();
+	$last = count( $trail ) - 1;
+
+	foreach ( $trail as $i => $crumb ) {
 		$node = array(
 			'@type'    => 'ListItem',
 			'position' => $i + 1,
 			'name'     => boi_plain( $crumb['label'] ),
 		);
 
-		if ( ! $is_last && '' !== $crumb['url'] ) {
+		if ( $i !== $last && '' !== $crumb['url'] ) {
 			$node['item'] = esc_url_raw( $crumb['url'] );
 		}
 
-		$graph[] = $node;
+		$list[] = $node;
 	}
 
-	$nav = sprintf(
-		'<nav class="boi-breadcrumbs" aria-label="%1$s"><ol>%2$s</ol></nav>',
-		esc_attr__( 'Breadcrumb', 'bestofislam' ),
-		$items
+	return array(
+		'@type'           => 'BreadcrumbList',
+		'@id'             => $page_url . '#breadcrumb',
+		'itemListElement' => $list,
 	);
-
-	// Rank Math adds a BreadcrumbList to its own graph; two would be a duplicate.
-	if ( function_exists( 'boi_rank_math_breadcrumb_schema' ) && boi_rank_math_breadcrumb_schema() ) {
-		return $nav;
-	}
-
-	return $nav . '<script type="application/ld+json">' . boi_json_ld(
-		array(
-			'@context'        => 'https://schema.org',
-			'@type'           => 'BreadcrumbList',
-			'itemListElement' => $graph,
-		)
-	) . '</script>';
 }
 
 /**

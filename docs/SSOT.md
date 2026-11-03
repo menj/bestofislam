@@ -548,6 +548,18 @@ served and nothing redirects. The map is
 `inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
 `boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
 
+### D50. The owner keeps all schema.org markup, in one graph per page
+
+The owner's rule of 3 November 2026: every schema.org type and property the
+site marks stays, including the ones Google Search does not use, since AI
+answer engines read them. A type is never removed. A new one goes on a page
+only when it describes something that page shows, or a plain fact about it.
+
+Each page has one JSON-LD graph, built in `inc/schema-graph.php` and joined by
+`@id`. With Rank Math's schema on, the theme adds its nodes to Rank Math's
+graph through `rank_math/json_ld` and prints nothing of its own.
+`tests/schema-graph-test.php` checks both cases.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,
