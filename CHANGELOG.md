@@ -4,6 +4,24 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.93.0] - 2026-11-03
+
+### Changed
+
+An SEO pass against Google's SEO Starter Guide. All structured data stays, including the types Google does not list, since AI answer engines read them.
+
+- With Rank Math active, every title tag still reads `<page> | Best of Islam` and stays under 60 characters. A new `rank_math/frontend/title` filter runs the theme's title builder, and a title the owner sets in Rank Math for one post keeps its wording as the page part.
+- An entry image given by URL now carries its width and height when the file is in the media library or the theme, so the page does not jump as it loads. A resized copy of a library image is measured at its own size.
+- With Rank Math active, date archives get a page part of their own (the year, month or day), so the site name no longer appears twice in their titles.
+- A custom Rank Math title on a seeded article now wins over the theme's short seed title.
+- The image sitemap now lists every article, read 200 at a time with their meta and featured images loaded in bulk. It stopped at the newest 1,000 before.
+
+### Added
+
+- An image sitemap at `/sitemap-images.xml`, named in robots.txt. It lists each published article with its featured image and the images in its text, and leaves out unlisted articles. With Rank Math active the theme serves none, since Rank Math's sitemap carries the images.
+
+No seeded content changed in this release.
+
 ## [1.92.0] - 2026-11-02
 
 ### Changed

@@ -14,7 +14,7 @@ ranking, and the guide itself says to write for readers first.
 | URLs with words | Slugs are words (`/who-is-allah/`, `/glossary/hijab/`, `/topic/history/`). Set Settings, Permalinks to Post name so an article has one address; old dated addresses redirect by slug. | WordPress |
 | One version of a URL | Canonical link on every indexable view; `redirect_canonical` for the rest. | `inc/seo.php` |
 | Navigation and breadcrumbs | Eight sections in the header and footer, breadcrumb trail with BreadcrumbList markup, a "Read next" card and a Keep reading list of four related articles on every article, the first mention of each glossary term linked in the text, related terms and articles on glossary entries, and a text link for every article (no drop-downs or image maps). | `parts/`, `inc/seo.php`, `inc/reading.php`, `inc/glossary.php` |
-| Sitemap for users and for search engines | An HTML Sitemap page and the core XML sitemap (articles, pages, glossary, sections; users, categories and tags left out; unlisted articles excluded). | `inc/setup.php`, `inc/seo.php` |
+| Sitemap for users and for search engines | An HTML Sitemap page, the core XML sitemap (articles, pages, glossary, sections; users, categories and tags left out; unlisted articles excluded) and an image sitemap at `/sitemap-images.xml` with the featured image and the images in the text of each article. | `inc/setup.php`, `inc/seo.php` |
 | Useful 404 page | Real HTTP 404, the site's own design, a way home, the sections and the latest articles. | `templates/404.html` |
 | Quality content | Each article is a numbered argument with sources in Notes; each glossary entry defines the term, says what it means, and cites. | `content/`, `inc/glossary-data/` |
 | Anchor text | Links in running text are the name of what they point to; the glossary linker links the term itself; the lead card's button carries the article title. | `inc/glossary-links.php`, `inc/features.php` |
@@ -42,9 +42,10 @@ Google's list, as of June 2026, and where each feature applies to this site.
 | Video | No | There is no video. Add VideoObject if videos are embedded later. |
 | Speakable, Subscription and paywalled content | No | Speakable is for news publishers; nothing is paywalled. |
 
-The theme also prints ItemList for each listicle and FAQPage for the front-page
-questions. They describe their pages accurately. Google restricts FAQ rich
-results to a narrow class of sites, so none is promised.
+The theme also prints ItemList for each listicle, FAQPage for the front-page
+questions and a DefinedTermSet for the Glossary. They describe their pages
+accurately. Google restricts FAQ rich results to a narrow class of sites, so
+none is promised. The owner keeps all three for AI answer engines (GEO, AEO).
 
 Validate with the Rich Results Test after any change.
 
@@ -55,7 +56,7 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 
 | Concern | Without Rank Math | With Rank Math |
 |---|---|---|
-| Titles | Theme | Rank Math |
+| Titles | Theme | Rank Math, held to `<page> \| Best of Islam` under 60 characters by the theme's `rank_math/frontend/title` filter |
 | Description | Theme | Rank Math; the theme's text fills in where Rank Math has none |
 | Canonical link | Theme | Rank Math |
 | Robots directives | Theme (`wp_robots`) | Rank Math, told to noindex search results and paged archives |
@@ -66,6 +67,7 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 | Breadcrumb markup | Theme | Rank Math when its breadcrumbs are on, otherwise the theme |
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
 | ItemList, FAQPage | Theme | Theme (Rank Math does not produce them) |
+| Image sitemap | Theme, at `/sitemap-images.xml`, named in robots.txt | Rank Math's sitemap, which lists each post's images |
 
 Rank Math's Image SEO module may rewrite alt text and titles; turn it off for
 this site, since every image already carries its own.

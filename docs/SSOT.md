@@ -363,7 +363,7 @@ corrected there is corrected everywhere, including the Markdown export used
 for replies elsewhere.
 
 FAQPage markup is emitted on the front page because the answers are there. Google limits FAQ rich results to a narrow class of sites,
-so the markup should not be expected to produce them.
+so the markup should not be expected to produce them. It stays for AI answer engines.
 
 ### D33. The site has a reading order
 
