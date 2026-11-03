@@ -1110,8 +1110,162 @@ function boi_render_term_related( $attributes ) {
 	return $html . '<p class="boi-term__back"><a href="' . esc_url( home_url( '/glossary/' ) ) . '">' . esc_html__( 'All terms', 'bestofislam' ) . '</a><a href="#top">' . esc_html__( 'Back to top', 'bestofislam' ) . '</a></p></aside>' . $pager;
 }
 
-// The Glossary printed DefinedTermSet markup until 1.93.0. Google Search has
-// no feature for that type, so the theme prints none for these pages.
+/**
+ * Structured data for the Glossary. The Glossary is a DefinedTermSet and each
+ * entry a DefinedTerm with its other names, its Arabic script and the terms
+ * and articles it points to. Under the theme's own graph the pages also get a
+ * CollectionPage (the index) or a WebPage (an entry); with Rank Math's schema
+ * active that page node is Rank Math's, and these nodes refer to it by id. The
+ * breadcrumb trail comes from the breadcrumbs block.
+ *
+ * @return void
+ */
+function boi_glossary_schema() {
+	if ( ! boi_is_glossary_page() ) {
+		return;
+	}
+
+	$post   = get_queried_object();
+	$parent = boi_glossary_parent();
+
+	if ( ! $parent ) {
+		return;
+	}
+
+	$set_url = get_permalink( $parent );
+	$set_id  = $set_url . '#glossary';
+	$set_ref = array(
+		'@type' => 'DefinedTermSet',
+		'@id'   => $set_id,
+		'name'  => wp_strip_all_tags( get_the_title( $parent ) ),
+		'url'   => $set_url,
+	);
+	$page_id = get_permalink( $post ) . '#webpage';
+	$graph   = array();
+
+	if ( $post->ID === $parent->ID ) {
+		$terms = array();
+
+		foreach ( boi_glossary_entries() as $entry ) {
+			$terms[] = array(
+				'@type'       => 'DefinedTerm',
+				'@id'         => get_permalink( $entry ) . '#term',
+				'name'        => wp_strip_all_tags( get_the_title( $entry ) ),
+				'description' => wp_strip_all_tags( $entry->post_excerpt ),
+				'url'         => get_permalink( $entry ),
+			);
+		}
+
+		$graph[] = $set_ref + array(
+			'description'    => wp_strip_all_tags( $parent->post_excerpt ),
+			'inLanguage'     => get_bloginfo( 'language' ),
+			'hasDefinedTerm' => $terms,
+			'mainEntityOfPage' => array( '@id' => $page_id ),
+		);
+
+		if ( ! boi_glossary_rank_math() ) {
+			$graph[] = array(
+				'@type'      => 'CollectionPage',
+				'@id'        => $page_id,
+				'url'        => $set_url,
+				'name'       => wp_strip_all_tags( get_the_title( $parent ) ),
+				'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+				'inLanguage' => get_bloginfo( 'language' ),
+				'mainEntity' => array( '@id' => $set_id ),
+			);
+		}
+	} else {
+		$url     = get_permalink( $post );
+		$aliases = array_values( array_filter( array_map( 'strval', (array) get_post_meta( $post->ID, '_boi_term_aliases', true ) ) ) );
+		$ar      = (string) get_post_meta( $post->ID, '_boi_term_ar', true );
+
+		if ( '' !== $ar ) {
+			$aliases[] = $ar;
+		}
+
+		$related = array();
+
+		if ( preg_match( '/<!-- wp:bestofislam\/term-related (\{.*?\}) \/-->/s', $post->post_content, $m ) ) {
+			$attrs = json_decode( $m[1], true );
+
+			foreach ( (array) ( isset( $attrs['terms'] ) ? $attrs['terms'] : array() ) as $slug ) {
+				$rel = get_page_by_path( 'glossary/' . sanitize_title( $slug ), OBJECT, 'page' );
+
+				if ( $rel && 'publish' === $rel->post_status ) {
+					$related[] = get_permalink( $rel );
+				}
+			}
+
+			// The same articles the entry shows under Read more, no more.
+			$max   = max( 1, (int) apply_filters( 'boi_glossary_read_more_max', 6 ) );
+			$shown = 0;
+			foreach ( (array) ( isset( $attrs['articles'] ) ? $attrs['articles'] : array() ) as $slug ) {
+				if ( $shown >= $max ) {
+					break;
+				}
+				$rel = get_page_by_path( sanitize_title( $slug ), OBJECT, 'post' );
+
+				if ( $rel && 'publish' === $rel->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $rel ) ) ) {
+					$related[] = get_permalink( $rel );
+					++$shown;
+				}
+			}
+		}
+
+		$term = array(
+			'@type'            => 'DefinedTerm',
+			'@id'              => $url . '#term',
+			'name'             => wp_strip_all_tags( get_the_title( $post ) ),
+			'description'      => wp_strip_all_tags( $post->post_excerpt ),
+			'url'              => $url,
+			'termCode'         => $post->post_name,
+			'inDefinedTermSet' => array( '@id' => $set_id ),
+			'mainEntityOfPage' => array( '@id' => $page_id ),
+		);
+
+		if ( $aliases ) {
+			$term['alternateName'] = $aliases;
+		}
+
+		$graph[] = $term;
+		$graph[] = $set_ref;
+
+		if ( ! boi_glossary_rank_math() ) {
+			$page = array(
+				'@type'      => 'WebPage',
+				'@id'        => $page_id,
+				'url'        => $url,
+				'name'       => wp_strip_all_tags( get_the_title( $post ) ),
+				'isPartOf'   => array( '@id' => $set_id ),
+				'inLanguage' => get_bloginfo( 'language' ),
+				'mainEntity' => array( '@id' => $url . '#term' ),
+			);
+
+			if ( $related ) {
+				$page['relatedLink'] = $related;
+			}
+
+			$graph[] = $page;
+		}
+	}
+
+	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
+		array(
+			'@context' => 'https://schema.org',
+			'@graph'   => $graph,
+		)
+	) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+add_action( 'wp_head', 'boi_glossary_schema', 22 );
+
+/**
+ * Whether Rank Math's schema is active, so it supplies the page node.
+ *
+ * @return bool
+ */
+function boi_glossary_rank_math() {
+	return function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active();
+}
 
 /**
  * Marks the body on the Glossary page (the wide index) and on its entries.

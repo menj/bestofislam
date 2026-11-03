@@ -298,6 +298,52 @@ function boi_entry_anchor( $attributes ) {
 }
 
 /**
+ * Width and height of a media library image given by URL. A resized copy
+ * ("photo-300x200.jpg") is found through its original and measured as that
+ * size, never as the original.
+ *
+ * @param string $url Image URL.
+ * @return int[]|null Width and height, or null when the URL is not in the library.
+ */
+function boi_attachment_image_size( $url ) {
+	$id = attachment_url_to_postid( $url );
+
+	if ( ! $id ) {
+		$original = preg_replace( '/-\d+x\d+(\.[a-z0-9]+)(\?.*)?$/i', '$1', (string) $url );
+
+		if ( $original !== $url ) {
+			$id = attachment_url_to_postid( $original );
+		}
+	}
+
+	if ( ! $id ) {
+		return null;
+	}
+
+	$meta = wp_get_attachment_metadata( $id );
+
+	if ( ! is_array( $meta ) ) {
+		return null;
+	}
+
+	$file = wp_basename( (string) wp_parse_url( $url, PHP_URL_PATH ) );
+
+	if ( ! empty( $meta['sizes'] ) && is_array( $meta['sizes'] ) ) {
+		foreach ( $meta['sizes'] as $variant ) {
+			if ( ! empty( $variant['file'] ) && $variant['file'] === $file && ! empty( $variant['width'] ) && ! empty( $variant['height'] ) ) {
+				return array( (int) $variant['width'], (int) $variant['height'] );
+			}
+		}
+	}
+
+	if ( ! empty( $meta['width'] ) && ! empty( $meta['height'] ) && ( empty( $meta['file'] ) || wp_basename( $meta['file'] ) === $file ) ) {
+		return array( (int) $meta['width'], (int) $meta['height'] );
+	}
+
+	return null;
+}
+
+/**
  * Width and height of an entry image given by URL, so the browser can hold
  * its space before it loads. A media library file or a file bundled with the
  * theme is measured; any other address gives nothing.
@@ -306,14 +352,10 @@ function boi_entry_anchor( $attributes ) {
  * @return int[]|null Width and height, or null when unknown.
  */
 function boi_entry_image_size( $url ) {
-	$id = attachment_url_to_postid( $url );
+	$size = boi_attachment_image_size( $url );
 
-	if ( $id ) {
-		$meta = wp_get_attachment_metadata( $id );
-
-		if ( ! empty( $meta['width'] ) && ! empty( $meta['height'] ) ) {
-			return array( (int) $meta['width'], (int) $meta['height'] );
-		}
+	if ( $size ) {
+		return $size;
 	}
 
 	$path  = (string) wp_parse_url( $url, PHP_URL_PATH );

@@ -15,8 +15,9 @@
  *  - the exclusion of unlisted articles from its sitemap;
  *  - the title rule: "<page> | <site name>", under 60 characters.
  *
- * Every hook below is registered only when Rank Math is present and touches
- * nothing otherwise.
+ * The theme's own ItemList and question markup are separate JSON-LD blocks
+ * that Rank Math does not produce, so they stay. Every hook below is
+ * registered only when Rank Math is present and touches nothing otherwise.
  *
  * @package BestOfIslam
  */
@@ -225,7 +226,8 @@ function boi_rank_math_title( $title ) {
 				$page = substr( $page, 0, -strlen( $tail ) );
 			}
 
-			$parts['title'] = $page;
+			$parts['title']      = $page;
+			$parts['boi_custom'] = true;
 		} else {
 			$parts['title'] = single_post_title( '', false );
 		}
@@ -233,6 +235,12 @@ function boi_rank_math_title( $title ) {
 		$parts['title'] = single_term_title( '', false );
 	} elseif ( is_post_type_archive() ) {
 		$parts['title'] = post_type_archive_title( '', false );
+	} elseif ( is_day() ) {
+		$parts['title'] = get_the_date();
+	} elseif ( is_month() ) {
+		$parts['title'] = get_the_date( 'F Y' );
+	} elseif ( is_year() ) {
+		$parts['title'] = get_the_date( 'Y' );
 	} elseif ( is_author() && get_queried_object() instanceof WP_User ) {
 		$parts['title'] = get_queried_object()->display_name;
 	} elseif ( is_search() ) {

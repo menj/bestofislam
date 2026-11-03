@@ -38,6 +38,17 @@
 								props.setAttributes( { order: value } );
 							}
 						} ),
+						el( components.SelectControl, {
+							label: __( 'Schema type', 'bestofislam' ),
+							value: props.attributes.schemaType,
+							options: [
+								{ label: 'ItemList', value: 'ItemList' },
+								{ label: __( 'None', 'bestofislam' ), value: 'none' }
+							],
+							onChange: function ( value ) {
+								props.setAttributes( { schemaType: value } );
+							}
+						} ),
 						el( components.ToggleControl, {
 							label: __( 'Show jump list', 'bestofislam' ),
 							checked: props.attributes.showJumpList,

@@ -42,9 +42,10 @@ Google's list, as of June 2026, and where each feature applies to this site.
 | Video | No | There is no video. Add VideoObject if videos are embedded later. |
 | Speakable, Subscription and paywalled content | No | Speakable is for news publishers; nothing is paywalled. |
 
-Since 1.93.0 the theme prints nothing outside that list. The ItemList on each
-listicle, the FAQPage on the front-page questions and the DefinedTermSet on the
-Glossary are gone; the lists, questions and terms stay on the page as text.
+The theme also prints ItemList for each listicle, FAQPage for the front-page
+questions and a DefinedTermSet for the Glossary. They describe their pages
+accurately. Google restricts FAQ rich results to a narrow class of sites, so
+none is promised. The owner keeps all three for AI answer engines (GEO, AEO).
 
 Validate with the Rich Results Test after any change.
 
@@ -65,6 +66,7 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 | Images in the text | ImageObjects in the theme's graph | Added to Rank Math's graph |
 | Breadcrumb markup | Theme | Rank Math when its breadcrumbs are on, otherwise the theme |
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
+| ItemList, FAQPage | Theme | Theme (Rank Math does not produce them) |
 | Image sitemap | Theme, at `/sitemap-images.xml`, named in robots.txt | Rank Math's sitemap, which lists each post's images |
 
 Rank Math's Image SEO module may rewrite alt text and titles; turn it off for
