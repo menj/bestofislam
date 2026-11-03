@@ -1396,7 +1396,7 @@ video {
 	display: inline-block;
 	width: 35px;
 	height: 21px;
-	margin-left: 0.5rem;
+	margin-inline-start: 0.5rem;
 	vertical-align: middle;
 	background: url(../images/arrow-next.webp) center / contain no-repeat;
 	image-rendering: pixelated;
