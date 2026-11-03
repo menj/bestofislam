@@ -85,6 +85,9 @@ function boi_redirect_renamed_slugs() {
 		$path = substr( $path, strlen( $home ) );
 	}
 
+	// Decode %-escapes and fold case so an encoded or capitalised old address still matches.
+	$path = strtolower( rawurldecode( $path ) );
+
 	$new = boi_renamed_path_for( $path );
 
 	if ( '' === $new ) {

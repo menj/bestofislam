@@ -6,6 +6,8 @@ versioning.
 
 ## [1.94.0] - 2026-11-03
 
+- A renamed address that arrives percent-encoded or in capitals still gets its 301.
+
 ### Changed
 
 Six article addresses lose their verse numbers, counts and years. The number stays in each title, heading and description.
