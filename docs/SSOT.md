@@ -362,8 +362,8 @@ an anchor on every question; a separate page would only repeat them. An answer
 corrected there is corrected everywhere, including the Markdown export used
 for replies elsewhere.
 
-FAQPage markup is emitted on the front page because the answers are there. Google limits FAQ rich results to a narrow class of sites,
-so the markup should not be expected to produce them.
+The front page carries no FAQPage markup. FAQ is missing from Google's list
+of supported structured data, so the theme dropped it in 1.93.0.
 
 ### D33. The site has a reading order
 

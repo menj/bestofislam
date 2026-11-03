@@ -4,6 +4,29 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.93.0] - 2026-11-03
+
+### Changed
+
+An SEO pass against Google's SEO Starter Guide and its list of supported structured data.
+
+- With Rank Math active, every title tag still reads `<page> | Best of Islam` and stays under 60 characters. A new `rank_math/frontend/title` filter runs the theme's title builder, and a title the owner sets in Rank Math for one post keeps its wording as the page part.
+- An entry image given by URL now carries its width and height when the file is in the media library or the theme, so the page does not jump as it loads.
+
+### Added
+
+- An image sitemap at `/sitemap-images.xml`, named in robots.txt. It lists each published article with its featured image and the images in its text, and leaves out unlisted articles. With Rank Math active the theme serves none, since Rank Math's sitemap carries the images.
+
+### Removed
+
+Three kinds of markup that are missing from Google's list, or used outside their feature. The lists, questions and terms stay on the page as they were.
+
+- The ItemList block on every listicle. Google shows ItemList only as a carousel of recipes, courses, restaurants or movies. The Schema settings tab and the block's "Schema type" control go with it.
+- The FAQPage block on the front page.
+- The DefinedTermSet and DefinedTerm graph on the Glossary.
+
+No seeded content changed in this release.
+
 ## [1.92.0] - 2026-11-02
 
 ### Changed

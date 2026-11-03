@@ -212,47 +212,6 @@ function boi_render_article_questions() {
 	);
 }
 
-/**
- * FAQPage structured data on the front page, where the answers are.
- *
- * @return void
- */
-function boi_print_questions_schema() {
-	if ( ! is_front_page() ) {
-		return;
-	}
-
-	$entities = array();
-
-	foreach ( boi_questions() as $group ) {
-		foreach ( $group['items'] as $item ) {
-			$post = boi_question_post( $item );
-
-			if ( ! $post ) {
-				continue;
-			}
-
-			$entities[] = array(
-				'@type'          => 'Question',
-				'name'           => $item['q'],
-				'acceptedAnswer' => array(
-					'@type' => 'Answer',
-					'text'  => $item['a'] . ' ' . get_permalink( $post ),
-				),
-			);
-		}
-	}
-
-	if ( empty( $entities ) ) {
-		return;
-	}
-
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
-		array(
-			'@context'   => 'https://schema.org',
-			'@type'      => 'FAQPage',
-			'mainEntity' => $entities,
-		)
-	) . "</script>\n";
-}
-add_action( 'wp_head', 'boi_print_questions_schema', 21 );
+// The front-page questions carried FAQPage markup until 1.93.0. FAQ is not on
+// Google's list of supported features, so the questions stay visible and the
+// markup is gone.

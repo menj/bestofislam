@@ -653,3 +653,113 @@ function boi_sitemap_tag_args( $args, $taxonomy ) {
 	return $args;
 }
 add_filter( 'wp_sitemaps_taxonomies_query_args', 'boi_sitemap_tag_args', 10, 2 );
+
+/**
+ * Address of the theme's image sitemap.
+ *
+ * @return string
+ */
+function boi_image_sitemap_url() {
+	return home_url( '/sitemap-images.xml' );
+}
+
+/**
+ * Whether the theme serves its own image sitemap. Rank Math lists the images
+ * of each post in its own sitemap, so the theme leaves the job to it.
+ *
+ * @return bool
+ */
+function boi_image_sitemap_enabled() {
+	return ! defined( 'RANK_MATH_VERSION' ) && (bool) get_option( 'blog_public' ) && (bool) apply_filters( 'boi_image_sitemap', true );
+}
+
+/**
+ * Serves /sitemap-images.xml: every published, listed article with its
+ * featured image and the images set in its text, in the image sitemap format
+ * the guide recommends.
+ *
+ * @param WP $wp Request.
+ * @return void
+ */
+function boi_serve_image_sitemap( $wp ) {
+	if ( 'sitemap-images.xml' !== $wp->request || ! boi_image_sitemap_enabled() ) {
+		return;
+	}
+
+	$ids = get_posts(
+		array(
+			'post_type'        => 'post',
+			'post_status'      => 'publish',
+			'posts_per_page'   => 1000,
+			'fields'           => 'ids',
+			'has_password'     => false,
+			'orderby'          => 'modified',
+			'order'            => 'DESC',
+			'suppress_filters' => false,
+		)
+	);
+
+	status_header( 200 );
+	header( 'Content-Type: application/xml; charset=UTF-8' );
+	header( 'X-Robots-Tag: noindex, follow' );
+
+	echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+	echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' . "\n";
+
+	foreach ( $ids as $id ) {
+		$post = get_post( $id );
+
+		if ( ! $post || ( function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( $post ) ) ) {
+			continue;
+		}
+
+		$images = array();
+		$main   = function_exists( 'boi_article_image_object' ) ? boi_article_image_object( $post ) : null;
+
+		if ( $main && ! empty( $main['url'] ) ) {
+			$images[] = $main['url'];
+		}
+
+		if ( function_exists( 'boi_inline_image_objects' ) ) {
+			foreach ( boi_inline_image_objects( $post ) as $node ) {
+				if ( ! empty( $node['url'] ) ) {
+					$images[] = $node['url'];
+				}
+			}
+		}
+
+		$images = array_unique( $images );
+
+		if ( ! $images ) {
+			continue;
+		}
+
+		echo "\t<url>\n\t\t<loc>" . esc_url( get_permalink( $post ) ) . "</loc>\n";
+
+		foreach ( $images as $image ) {
+			echo "\t\t<image:image><image:loc>" . esc_url( $image ) . "</image:loc></image:image>\n";
+		}
+
+		echo "\t</url>\n";
+	}
+
+	echo "</urlset>\n";
+	exit;
+}
+add_action( 'parse_request', 'boi_serve_image_sitemap', 1 );
+
+/**
+ * Names the image sitemap in robots.txt, next to the core sitemap.
+ *
+ * @param string $output Existing robots.txt content.
+ * @param bool   $public Whether the site is public.
+ * @return string
+ */
+function boi_robots_txt_image_sitemap( $output, $public ) {
+	if ( $public && boi_image_sitemap_enabled() ) {
+		$output .= "\nSitemap: " . esc_url_raw( boi_image_sitemap_url() ) . "\n";
+	}
+
+	return $output;
+}
+add_filter( 'robots_txt', 'boi_robots_txt_image_sitemap', 20, 2 );

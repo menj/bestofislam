@@ -21,7 +21,6 @@ function boi_get_options() {
 	$defaults = array(
 		'show_rank'           => 1,
 		'image_size'          => 'large',
-		'default_schema'      => 'ItemList',
 		'voting_enabled'      => 0,
 		'voting_login_only'   => 0,
 		'voting_rate_limit'   => 10,
@@ -123,12 +122,6 @@ function boi_sanitize_options( $input ) {
 
 			$current['picks'] = isset( $input['picks'] ) ? implode( ',', array_filter( array_map( 'sanitize_title', explode( ',', (string) $input['picks'] ) ) ) ) : '';
 
-			break;
-
-		case 'schema':
-			$allowed                  = array( 'ItemList', 'none' );
-			$value                    = isset( $input['default_schema'] ) ? $input['default_schema'] : 'ItemList';
-			$current['default_schema'] = in_array( $value, $allowed, true ) ? $value : 'ItemList';
 			break;
 
 		case 'seo':
@@ -233,7 +226,6 @@ function boi_render_settings_page() {
 
 	$tabs = array(
 		'display' => __( 'Display', 'bestofislam' ),
-		'schema'  => __( 'Schema', 'bestofislam' ),
 		'voting'  => __( 'Voting', 'bestofislam' ),
 		'content' => __( 'Content', 'bestofislam' ),
 		'seo'     => __( 'Search engines', 'bestofislam' ),
@@ -270,9 +262,6 @@ function boi_render_settings_page() {
 	);
 
 	switch ( $active ) {
-		case 'schema':
-			boi_render_schema_tab( $opts );
-			break;
 		case 'voting':
 			boi_render_voting_tab( $opts );
 			break;
@@ -379,30 +368,6 @@ function boi_render_display_tab( $opts ) {
 			<td>
 				<input type="text" class="regular-text" id="boi-picks" name="<?php echo esc_attr( $key ); ?>[picks]" value="<?php echo esc_attr( $opts['picks'] ); ?>" placeholder="same-god, islamic-dilemma, haman-anachronism" />
 				<p class="description"><?php esc_html_e( 'Up to three post slugs, comma-separated. Leave empty to show the three longest lists.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
-	<?php
-}
-
-/**
- * Schema tab fields.
- *
- * @param array $opts Current options.
- * @return void
- */
-function boi_render_schema_tab( $opts ) {
-	$key = BOI_OPTION_KEY;
-	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><label for="boi-default-schema"><?php esc_html_e( 'Default schema type', 'bestofislam' ); ?></label></th>
-			<td>
-				<select id="boi-default-schema" name="<?php echo esc_attr( $key ); ?>[default_schema]">
-					<option value="ItemList" <?php selected( $opts['default_schema'], 'ItemList' ); ?>>ItemList</option>
-					<option value="none" <?php selected( $opts['default_schema'], 'none' ); ?>><?php esc_html_e( 'None', 'bestofislam' ); ?></option>
-				</select>
-				<p class="description"><?php esc_html_e( 'Individual listicles may override this in the block sidebar.', 'bestofislam' ); ?></p>
 			</td>
 		</tr>
 	</table>
