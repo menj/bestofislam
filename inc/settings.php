@@ -206,7 +206,7 @@ function boi_sanitize_options( $input ) {
 }
 
 /**
- * Enqueues settings screen assets.
+ * Enqueues settings screen assets, on the Theme Options screen only.
  *
  * @param string $hook Current admin page.
  * @return void
@@ -216,13 +216,276 @@ function boi_settings_assets( $hook ) {
 		return;
 	}
 
-	wp_enqueue_style( 'boi-admin-settings', BOI_URI . '/assets/css/admin-settings.css', array(), BOI_VERSION );
+	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_style( 'boi-admin-settings', BOI_URI . '/assets/css/admin-settings.css', array( 'dashicons' ), BOI_VERSION );
 	wp_enqueue_script( 'boi-admin-settings', BOI_URI . '/assets/js/admin-settings.js', array(), BOI_VERSION, true );
 }
 add_action( 'admin_enqueue_scripts', 'boi_settings_assets' );
 
 /**
- * Renders the tabbed settings page.
+ * The tabs of the Theme Options screen, in order.
+ *
+ * Each has a label, a Dashicons icon and the usage text shown at the top of
+ * its panel.
+ *
+ * @return array<string, array{label: string, icon: string, usage: string}>
+ */
+function boi_settings_tabs() {
+	return array(
+		'display'  => array(
+			'label' => __( 'Display', 'bestofislam' ),
+			'icon'  => 'dashicons-admin-appearance',
+			'usage' => __( 'How entries and the front page look. Choose the image size for list entries, the picture behind the front-page headline and up to 3 editor\'s picks. The follow links you fill in appear on the front page and in the footer. Colours live in the Site Editor, under Styles.', 'bestofislam' ),
+		),
+		'schema'   => array(
+			'label' => __( 'Schema', 'bestofislam' ),
+			'icon'  => 'dashicons-editor-code',
+			'usage' => __( 'The list markup search engines read. ItemList describes each numbered list as a ranked list of its entries. A single listicle can choose differently in its block sidebar.', 'bestofislam' ),
+		),
+		'voting'   => array(
+			'label' => __( 'Voting', 'bestofislam' ),
+			'icon'  => 'dashicons-thumbs-up',
+			'usage' => __( 'Voting is off until you switch it on. Once it is on, you can limit it to logged-in users and set how many votes one visitor may cast in 10 minutes. The 20 latest votes are listed below the settings.', 'bestofislam' ),
+		),
+		'content'  => array(
+			'label' => __( 'Content', 'bestofislam' ),
+			'icon'  => 'dashicons-admin-page',
+			'usage' => __( 'Population builds the sections, the pages, the menu and the 151 seeded articles. It adds what is missing and leaves alone what is there. If a seeded article differs from this release, it is listed here, and you choose whether to replace it.', 'bestofislam' ),
+		),
+		'seo'      => array(
+			'label' => __( 'Search engines', 'bestofislam' ),
+			'icon'  => 'dashicons-search',
+			'usage' => __( 'Meta descriptions, the verification codes for Google and Bing, and readable search addresses. With Rank Math or another SEO plugin active, the theme hands those jobs to the plugin and says so here.', 'bestofislam' ),
+		),
+		'access'   => array(
+			'label' => __( 'Access', 'bestofislam' ),
+			'icon'  => 'dashicons-lock',
+			'usage' => __( 'Move the login page to a private address, send the browser security headers and see which items are unlisted. Bookmark a new login address before you save it.', 'bestofislam' ),
+		),
+		'security' => array(
+			'label' => __( 'Security', 'bestofislam' ),
+			'icon'  => 'dashicons-shield',
+			'usage' => __( 'The switches at the top close the routes spam tools use to publish from outside the site. Below them are the spam scan, the clean-up buttons, the attack reports and the security log. Each button asks before it changes anything.', 'bestofislam' ),
+		),
+		'errors'   => array(
+			'label' => __( 'Errors', 'bestofislam' ),
+			'icon'  => 'dashicons-warning',
+			'usage' => __( 'Branded pages for maintenance, database failures and PHP errors, and the email alert when one happens. The slider sets the quiet time between 2 alerts of the same kind.', 'bestofislam' ),
+		),
+	);
+}
+
+/**
+ * Tabs whose panels run costly queries (the article fingerprints, the
+ * security reports). They render only when they are the open tab; from
+ * another tab they are reached with a full load of ?tab=.
+ *
+ * @return string[]
+ */
+function boi_settings_heavy_tabs() {
+	return array( 'content', 'security' );
+}
+
+/**
+ * The hidden fields options.php needs, for one form among several on the
+ * screen. settings_fields() prints them with fixed IDs, which would repeat
+ * once per tab, so they are printed here without IDs. The referer brings
+ * the browser back to the same tab after saving.
+ *
+ * @param string $tab Tab slug.
+ * @return void
+ */
+function boi_settings_hidden_fields( $tab ) {
+	printf(
+		'<input type="hidden" name="option_page" value="boi_settings_group" /><input type="hidden" name="action" value="update" /><input type="hidden" name="_wpnonce" value="%1$s" /><input type="hidden" name="_wp_http_referer" value="%2$s" /><input type="hidden" name="%3$s[_tab]" value="%4$s" />',
+		esc_attr( wp_create_nonce( 'boi_settings_group-options' ) ),
+		esc_attr( wp_make_link_relative( admin_url( 'themes.php?page=boi-settings&tab=' . $tab ) ) ),
+		esc_attr( BOI_OPTION_KEY ),
+		esc_attr( $tab )
+	);
+}
+
+/**
+ * Opens a settings card.
+ *
+ * @param string $title Card heading.
+ * @param string $intro Optional line under the heading.
+ * @return void
+ */
+function boi_opt_card_open( $title, $intro = '' ) {
+	echo '<div class="boi-card">';
+	echo '<h2 class="boi-card__title">' . esc_html( $title ) . '</h2>';
+
+	if ( '' !== $intro ) {
+		echo '<p class="boi-card__intro">' . esc_html( $intro ) . '</p>';
+	}
+}
+
+/**
+ * Closes a settings card.
+ *
+ * @return void
+ */
+function boi_opt_card_close() {
+	echo '</div>';
+}
+
+/**
+ * One switch row for a boolean setting.
+ *
+ * @param array  $args {
+ *     @type string $key     Option key inside boi_settings.
+ *     @type string $label   Row label.
+ *     @type string $text    What switching it on does.
+ *     @type string $help    Optional further help.
+ *     @type bool   $checked Whether it is on.
+ *     @type string $depends Optional ID of a switch this row depends on.
+ * }
+ * @return void
+ */
+function boi_opt_toggle( $args ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'key'     => '',
+			'label'   => '',
+			'text'    => '',
+			'help'    => '',
+			'checked' => false,
+			'depends' => '',
+		)
+	);
+	$id   = 'boi-' . str_replace( '_', '-', $args['key'] );
+	$desc = '' !== $args['help'] ? $id . '-help' : '';
+	?>
+	<div class="boi-field boi-field--toggle"<?php echo '' !== $args['depends'] ? ' data-boi-depends="' . esc_attr( $args['depends'] ) . '"' : ''; ?>>
+		<div class="boi-field__label"><label for="<?php echo esc_attr( $id ); ?>"><?php echo esc_html( $args['label'] ); ?></label></div>
+		<div class="boi-field__control">
+			<label class="boi-toggle">
+				<input type="checkbox" role="switch" id="<?php echo esc_attr( $id ); ?>" name="<?php echo esc_attr( BOI_OPTION_KEY . '[' . $args['key'] . ']' ); ?>" value="1" <?php checked( (bool) $args['checked'] ); ?><?php echo '' !== $desc ? ' aria-describedby="' . esc_attr( $desc ) . '"' : ''; ?> />
+				<?php if ( '' !== $args['text'] ) : ?>
+					<span class="boi-toggle__text"><?php echo esc_html( $args['text'] ); ?></span>
+				<?php endif; ?>
+			</label>
+			<?php if ( '' !== $args['help'] ) : ?>
+				<p class="description" id="<?php echo esc_attr( $id ); ?>-help"><?php echo esc_html( $args['help'] ); ?></p>
+			<?php endif; ?>
+		</div>
+	</div>
+	<?php
+}
+
+/**
+ * One slider row for a bounded number, with its value shown as it moves.
+ *
+ * @param array $args {
+ *     @type string $key     Option key.
+ *     @type string $label   Row label.
+ *     @type int    $value   Current value.
+ *     @type int    $min     Lowest value.
+ *     @type int    $max     Highest value.
+ *     @type string $unit    Unit after the number, already translated.
+ *     @type string $help    Help text.
+ *     @type string $depends Optional ID of a switch this row depends on.
+ * }
+ * @return void
+ */
+function boi_opt_range( $args ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'key'     => '',
+			'label'   => '',
+			'value'   => 0,
+			'min'     => 0,
+			'max'     => 100,
+			'unit'    => '',
+			'help'    => '',
+			'depends' => '',
+		)
+	);
+	$id   = 'boi-' . str_replace( '_', '-', $args['key'] );
+	?>
+	<div class="boi-field boi-field--range"<?php echo '' !== $args['depends'] ? ' data-boi-depends="' . esc_attr( $args['depends'] ) . '"' : ''; ?>>
+		<div class="boi-field__label"><label for="<?php echo esc_attr( $id ); ?>"><?php echo esc_html( $args['label'] ); ?></label></div>
+		<div class="boi-field__control">
+			<div class="boi-range">
+				<input type="range" id="<?php echo esc_attr( $id ); ?>" name="<?php echo esc_attr( BOI_OPTION_KEY . '[' . $args['key'] . ']' ); ?>" min="<?php echo esc_attr( (string) $args['min'] ); ?>" max="<?php echo esc_attr( (string) $args['max'] ); ?>" step="1" value="<?php echo esc_attr( (string) (int) $args['value'] ); ?>" data-boi-unit="<?php echo esc_attr( $args['unit'] ); ?>" aria-describedby="<?php echo esc_attr( $id ); ?>-help" />
+				<output class="boi-range__value" for="<?php echo esc_attr( $id ); ?>" id="<?php echo esc_attr( $id ); ?>-value"><?php echo esc_html( trim( (int) $args['value'] . ' ' . $args['unit'] ) ); ?></output>
+			</div>
+			<p class="description" id="<?php echo esc_attr( $id ); ?>-help"><?php echo esc_html( $args['help'] ); ?></p>
+		</div>
+	</div>
+	<?php
+}
+
+/**
+ * One row of visual selector cards: a radio group drawn as cards.
+ *
+ * @param array $args {
+ *     @type string $key     Option key.
+ *     @type string $label   Group label (the legend).
+ *     @type string $value   Current value.
+ *     @type array  $choices value => array( title, description ).
+ *     @type string $help    Help text.
+ * }
+ * @return void
+ */
+function boi_opt_choices( $args ) {
+	$id = 'boi-' . str_replace( '_', '-', $args['key'] );
+	?>
+	<fieldset class="boi-field boi-field--choices" aria-describedby="<?php echo esc_attr( $id ); ?>-help">
+		<legend class="boi-field__label"><?php echo esc_html( $args['label'] ); ?></legend>
+		<div class="boi-field__control">
+			<div class="boi-choices">
+				<?php foreach ( $args['choices'] as $value => $choice ) : ?>
+					<label class="boi-choice">
+						<input type="radio" name="<?php echo esc_attr( BOI_OPTION_KEY . '[' . $args['key'] . ']' ); ?>" value="<?php echo esc_attr( (string) $value ); ?>" <?php checked( (string) $args['value'], (string) $value ); ?> />
+						<span class="boi-choice__title"><?php echo esc_html( $choice[0] ); ?></span>
+						<span class="boi-choice__desc"><?php echo esc_html( $choice[1] ); ?></span>
+					</label>
+				<?php endforeach; ?>
+			</div>
+			<p class="description" id="<?php echo esc_attr( $id ); ?>-help"><?php echo esc_html( $args['help'] ); ?></p>
+		</div>
+	</fieldset>
+	<?php
+}
+
+/**
+ * Opens a plain row: label on the left, control on the right.
+ *
+ * @param string $label Row label.
+ * @param string $for   ID of the control the label names, or '' for none.
+ * @return void
+ */
+function boi_opt_row_open( $label, $for = '' ) {
+	echo '<div class="boi-field"><div class="boi-field__label">';
+
+	if ( '' !== $for ) {
+		echo '<label for="' . esc_attr( $for ) . '">' . esc_html( $label ) . '</label>';
+	} else {
+		echo '<span class="boi-field__heading">' . esc_html( $label ) . '</span>';
+	}
+
+	echo '</div><div class="boi-field__control">';
+}
+
+/**
+ * Closes a plain row.
+ *
+ * @return void
+ */
+function boi_opt_row_close() {
+	echo '</div></div>';
+}
+
+/**
+ * Renders the Theme Options screen: a header, the tab list, one panel per
+ * tab and a footer. Every panel is in the page, so the tabs switch without
+ * a reload; each panel that saves settings has its own form, which saves
+ * only that tab's fields, as before. Without JavaScript the tabs are
+ * ordinary links and the server opens the chosen one.
  *
  * @return void
  */
@@ -231,56 +494,111 @@ function boi_render_settings_page() {
 		return;
 	}
 
-	$tabs = array(
-		'display' => __( 'Display', 'bestofislam' ),
-		'schema'  => __( 'Schema', 'bestofislam' ),
-		'voting'  => __( 'Voting', 'bestofislam' ),
-		'content' => __( 'Content', 'bestofislam' ),
-		'seo'     => __( 'Search engines', 'bestofislam' ),
-		'access'   => __( 'Access', 'bestofislam' ),
-		'security' => __( 'Security', 'bestofislam' ),
-		'errors'   => __( 'Errors', 'bestofislam' ),
-	);
+	$tabs = boi_settings_tabs();
 
-	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- screen choice only.
 	$active = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'display';
 	$active = isset( $tabs[ $active ] ) ? $active : 'display';
 	$opts   = boi_get_options();
+	?>
+	<div class="wrap boi-settings">
+		<header class="boi-opt__header">
+			<span class="boi-opt__icon dashicons dashicons-admin-appearance" aria-hidden="true"></span>
+			<div class="boi-opt__heading">
+				<h1><?php esc_html_e( 'Theme Options', 'bestofislam' ); ?></h1>
+				<p class="boi-opt__lede"><?php esc_html_e( 'Settings for the Best of Islam theme. Each tab saves on its own.', 'bestofislam' ); ?></p>
+			</div>
+			<span class="boi-opt__badge">
+				<?php
+				/* translators: %s: theme version number. */
+				echo esc_html( sprintf( __( 'Version %s', 'bestofislam' ), BOI_VERSION ) );
+				?>
+			</span>
+		</header>
 
-	echo '<div class="wrap boi-settings">';
-	echo '<h1>' . esc_html__( 'Theme Options', 'bestofislam' ) . '</h1>';
+		<?php settings_errors(); ?>
+		<hr class="wp-header-end" />
 
-	echo '<nav class="nav-tab-wrapper boi-settings__tabs">';
-	foreach ( $tabs as $slug => $label ) {
-		printf(
-			'<a href="%1$s" class="nav-tab%2$s">%3$s</a>',
-			esc_url( admin_url( 'themes.php?page=boi-settings&tab=' . $slug ) ),
-			$slug === $active ? ' nav-tab-active' : '',
-			esc_html( $label )
-		);
+		<nav class="boi-opt__tabs" aria-label="<?php esc_attr_e( 'Theme Options sections', 'bestofislam' ); ?>">
+			<div class="boi-opt__tablist" role="tablist" aria-label="<?php esc_attr_e( 'Theme Options sections', 'bestofislam' ); ?>">
+				<?php foreach ( $tabs as $slug => $tab ) : ?>
+					<a
+						class="boi-opt__tab<?php echo $slug === $active ? ' is-active' : ''; ?>"
+						id="boi-tab-<?php echo esc_attr( $slug ); ?>"
+						href="<?php echo esc_url( admin_url( 'themes.php?page=boi-settings&tab=' . $slug ) ); ?>"
+						role="tab"
+						aria-controls="boi-panel-<?php echo esc_attr( $slug ); ?>"
+						aria-selected="<?php echo $slug === $active ? 'true' : 'false'; ?>"
+						tabindex="<?php echo $slug === $active ? '0' : '-1'; ?>"
+						data-boi-tab="<?php echo esc_attr( $slug ); ?>"
+						<?php echo ( $slug !== $active && in_array( $slug, boi_settings_heavy_tabs(), true ) ) ? 'data-boi-reload="1"' : ''; ?>
+					><span class="dashicons <?php echo esc_attr( $tab['icon'] ); ?>" aria-hidden="true"></span><span class="boi-opt__tab-label"><?php echo esc_html( $tab['label'] ); ?></span></a>
+				<?php endforeach; ?>
+			</div>
+		</nav>
+
+		<?php foreach ( $tabs as $slug => $tab ) : ?>
+			<section
+				class="boi-opt__panel"
+				id="boi-panel-<?php echo esc_attr( $slug ); ?>"
+				role="tabpanel"
+				aria-labelledby="boi-tab-<?php echo esc_attr( $slug ); ?>"
+				tabindex="0"
+				<?php echo $slug === $active ? '' : 'hidden'; ?>
+			>
+				<div class="boi-card boi-card--usage">
+					<h2 class="boi-card__title"><?php esc_html_e( 'How this tab works', 'bestofislam' ); ?></h2>
+					<p><?php echo esc_html( $tab['usage'] ); ?></p>
+				</div>
+				<?php
+				if ( $slug === $active || ! in_array( $slug, boi_settings_heavy_tabs(), true ) ) {
+					boi_render_settings_panel( $slug, $opts );
+				} else {
+					// Heavy panels run their queries only when opened.
+					printf(
+						'<p><a class="button" href="%1$s">%2$s</a></p>',
+						esc_url( admin_url( 'themes.php?page=boi-settings&tab=' . $slug ) ),
+						/* translators: %s: tab name. */
+						esc_html( sprintf( __( 'Open the %s tab', 'bestofislam' ), $tab['label'] ) )
+					);
+				}
+				?>
+			</section>
+		<?php endforeach; ?>
+
+		<footer class="boi-opt__footer">
+			<a href="<?php echo esc_url( BOI_URI . '/readme.txt' ); ?>"><?php esc_html_e( 'Theme readme', 'bestofislam' ); ?></a>
+			<a href="<?php echo esc_url( BOI_URI . '/CHANGELOG.md' ); ?>"><?php esc_html_e( 'Changelog', 'bestofislam' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'site-health.php' ) ); ?>"><?php esc_html_e( 'Site Health', 'bestofislam' ); ?></a>
+		</footer>
+	</div>
+	<?php
+}
+
+/**
+ * The body of one tab panel.
+ *
+ * @param string $slug Tab slug.
+ * @param array  $opts Current options.
+ * @return void
+ */
+function boi_render_settings_panel( $slug, $opts ) {
+	if ( 'content' === $slug ) {
+		// Population and the article refresh post to admin-post.php.
+		boi_render_content_tab();
+		return;
 	}
-	echo '</nav>';
 
-	echo '<form action="options.php" method="post" class="boi-settings__form">';
-	settings_fields( 'boi_settings_group' );
-	printf(
-		'<input type="hidden" name="%1$s[_tab]" value="%2$s" />',
-		esc_attr( BOI_OPTION_KEY ),
-		esc_attr( $active )
-	);
+	echo '<form action="' . esc_url( admin_url( 'options.php' ) ) . '" method="post" class="boi-settings__form">';
+	boi_settings_hidden_fields( $slug );
 
-	switch ( $active ) {
+	switch ( $slug ) {
 		case 'schema':
 			boi_render_schema_tab( $opts );
 			break;
 		case 'voting':
 			boi_render_voting_tab( $opts );
 			break;
-		case 'content':
-			echo '</form>';
-			boi_render_content_tab();
-			echo '</div>';
-			return;
 		case 'seo':
 			boi_render_seo_tab( $opts );
 			break;
@@ -288,14 +606,8 @@ function boi_render_settings_page() {
 			boi_render_access_tab( $opts );
 			break;
 		case 'security':
-			// The settings save with the form; the tools and reports below it
-			// post to admin-post.php and admin-ajax.php, so they sit outside it.
 			boi_sec_render_settings( $opts );
-			submit_button();
-			echo '</form>';
-			boi_sec_render_tools();
-			echo '</div>';
-			return;
+			break;
 		case 'errors':
 			boi_render_errors_tab( $opts );
 			break;
@@ -303,9 +615,17 @@ function boi_render_settings_page() {
 			boi_render_display_tab( $opts );
 	}
 
-	submit_button();
-	echo '</form>';
-	echo '</div>';
+	echo '<div class="boi-opt__actions">';
+	submit_button( __( 'Save changes', 'bestofislam' ), 'primary', 'submit', false, array( 'id' => 'boi-save-' . $slug ) );
+	echo '</div></form>';
+
+	if ( 'voting' === $slug ) {
+		boi_render_vote_log();
+	} elseif ( 'security' === $slug ) {
+		// The tools and reports post to admin-post.php and admin-ajax.php,
+		// so they sit outside the settings form.
+		boi_sec_render_tools();
+	}
 }
 
 /**
@@ -315,74 +635,80 @@ function boi_render_settings_page() {
  * @return void
  */
 function boi_render_display_tab( $opts ) {
-	$key = BOI_OPTION_KEY;
+	$key   = BOI_OPTION_KEY;
+	$sizes = array();
+
+	foreach ( array( 'medium', 'medium_large', 'large', 'full' ) as $size ) {
+		$width = (int) get_option( $size . '_size_w' );
+		/* translators: %d: image width in pixels. */
+		$sizes[ $size ] = array( $size, 'full' === $size ? __( 'The original upload', 'bestofislam' ) : sprintf( __( 'Up to %d pixels wide', 'bestofislam' ), $width ? $width : 768 ) );
+	}
+
+	boi_opt_card_open( __( 'Entries', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'show_rank',
+			'label'   => __( 'Rank badges', 'bestofislam' ),
+			'text'    => __( 'Show the numbered rank badge on each entry', 'bestofislam' ),
+			'checked' => ! empty( $opts['show_rank'] ),
+		)
+	);
+	boi_opt_choices(
+		array(
+			'key'     => 'image_size',
+			'label'   => __( 'Entry image size', 'bestofislam' ),
+			'value'   => $opts['image_size'],
+			'choices' => $sizes,
+			'help'    => __( 'Colour schemes are configured in the Site Editor under Styles.', 'bestofislam' ),
+		)
+	);
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Front page', 'bestofislam' ) );
+	boi_opt_row_open( __( 'Hero background', 'bestofislam' ), 'boi-hero-image' );
 	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Rank badges', 'bestofislam' ); ?></th>
-			<td>
-				<label>
-					<input type="checkbox" name="<?php echo esc_attr( $key ); ?>[show_rank]" value="1" <?php checked( $opts['show_rank'], 1 ); ?> />
-					<?php esc_html_e( 'Show the numbered rank badge on each entry', 'bestofislam' ); ?>
-				</label>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-image-size"><?php esc_html_e( 'Entry image size', 'bestofislam' ); ?></label></th>
-			<td>
-				<select id="boi-image-size" name="<?php echo esc_attr( $key ); ?>[image_size]">
-					<?php foreach ( array( 'medium', 'medium_large', 'large', 'full' ) as $size ) : ?>
-						<option value="<?php echo esc_attr( $size ); ?>" <?php selected( $opts['image_size'], $size ); ?>>
-							<?php echo esc_html( $size ); ?>
-						</option>
-					<?php endforeach; ?>
-				</select>
-				<p class="description"><?php esc_html_e( 'Colour schemes are configured in the Site Editor under Styles.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<?php foreach ( boi_follow_networks() as $network => $label ) : ?>
-		<tr>
-			<th scope="row"><label for="boi-follow-<?php echo esc_attr( $network ); ?>"><?php echo esc_html( $label ); ?></label></th>
-			<td>
-				<input type="url" class="regular-text" id="boi-follow-<?php echo esc_attr( $network ); ?>" name="<?php echo esc_attr( $key ); ?>[follow_<?php echo esc_attr( $network ); ?>]" value="<?php echo esc_attr( $opts[ 'follow_' . $network ] ); ?>" placeholder="https://" />
-			</td>
-		</tr>
-		<?php endforeach; ?>
-	</table>
-	<p class="description"><?php esc_html_e( 'Channels with a link appear in the Follow links on the front page and as icons in the footer. RSS always appears.', 'bestofislam' ); ?></p>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><label for="boi-contact-email"><?php esc_html_e( 'Contact form recipient', 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="email" class="regular-text" id="boi-contact-email" name="<?php echo esc_attr( $key ); ?>[contact_email]" value="<?php echo esc_attr( $opts['contact_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" />
-				<p class="description"><?php esc_html_e( 'Leave empty to use the site administrator address.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-hero-image"><?php esc_html_e( 'Hero background', 'bestofislam' ); ?></label></th>
-			<td>
-				<select id="boi-hero-image" name="<?php echo esc_attr( $key ); ?>[hero_image]">
-					<option value="" <?php selected( $opts['hero_image'], '' ); ?>><?php esc_html_e( 'Birmingham Quran leaves (default)', 'bestofislam' ); ?></option>
-					<option value="newest" <?php selected( $opts['hero_image'], 'newest' ); ?>><?php esc_html_e( 'The newest article\'s image', 'bestofislam' ); ?></option>
-					<option value="none" <?php selected( $opts['hero_image'], 'none' ); ?>><?php esc_html_e( 'No image', 'bestofislam' ); ?></option>
-					<optgroup label="<?php esc_attr_e( 'A particular article\'s image', 'bestofislam' ); ?>">
-						<?php foreach ( get_posts( array( 'post_type' => 'post', 'posts_per_page' => 100, 'orderby' => 'title', 'order' => 'ASC', 'meta_key' => '_thumbnail_id' ) ) as $p ) : // phpcs:ignore WordPress.DB.SlowDBQuery.slow_query_meta_key ?>
-							<option value="<?php echo esc_attr( $p->post_name ); ?>" <?php selected( $opts['hero_image'], $p->post_name ); ?>><?php echo esc_html( get_the_title( $p ) ); ?></option>
-						<?php endforeach; ?>
-					</optgroup>
-				</select>
-				<p class="description"><?php esc_html_e( 'The image behind the front-page headline. A dark overlay keeps the text legible, and the image is credited in the band\'s corner.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-picks"><?php esc_html_e( "Editor's picks", 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="text" class="regular-text" id="boi-picks" name="<?php echo esc_attr( $key ); ?>[picks]" value="<?php echo esc_attr( $opts['picks'] ); ?>" placeholder="same-god, islamic-dilemma, haman-anachronism" />
-				<p class="description"><?php esc_html_e( 'Up to three post slugs, comma-separated. Leave empty to show the three longest lists.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
+	<select id="boi-hero-image" name="<?php echo esc_attr( $key ); ?>[hero_image]" aria-describedby="boi-hero-image-help">
+		<option value="" <?php selected( $opts['hero_image'], '' ); ?>><?php esc_html_e( 'Birmingham Quran leaves (default)', 'bestofislam' ); ?></option>
+		<option value="newest" <?php selected( $opts['hero_image'], 'newest' ); ?>><?php esc_html_e( 'The newest article\'s image', 'bestofislam' ); ?></option>
+		<option value="none" <?php selected( $opts['hero_image'], 'none' ); ?>><?php esc_html_e( 'No image', 'bestofislam' ); ?></option>
+		<optgroup label="<?php esc_attr_e( 'A particular article\'s image', 'bestofislam' ); ?>">
+			<?php foreach ( get_posts( array( 'post_type' => 'post', 'posts_per_page' => 100, 'orderby' => 'title', 'order' => 'ASC', 'meta_key' => '_thumbnail_id' ) ) as $p ) : // phpcs:ignore WordPress.DB.SlowDBQuery.slow_query_meta_key ?>
+				<option value="<?php echo esc_attr( $p->post_name ); ?>" <?php selected( $opts['hero_image'], $p->post_name ); ?>><?php echo esc_html( get_the_title( $p ) ); ?></option>
+			<?php endforeach; ?>
+		</optgroup>
+	</select>
+	<p class="description" id="boi-hero-image-help"><?php esc_html_e( 'The image behind the front-page headline. A dark overlay keeps the text legible, and the image is credited in the band\'s corner.', 'bestofislam' ); ?></p>
 	<?php
+	boi_opt_row_close();
+	boi_opt_row_open( __( "Editor's picks", 'bestofislam' ), 'boi-picks' );
+	?>
+	<input type="text" class="regular-text" id="boi-picks" name="<?php echo esc_attr( $key ); ?>[picks]" value="<?php echo esc_attr( $opts['picks'] ); ?>" placeholder="same-god, islamic-dilemma, haman-anachronism" aria-describedby="boi-picks-help" />
+	<p class="description" id="boi-picks-help"><?php esc_html_e( 'Up to three post slugs, comma-separated. Leave empty to show the three longest lists.', 'bestofislam' ); ?></p>
+	<?php
+	boi_opt_row_close();
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Follow links', 'bestofislam' ), __( 'Channels with a link appear in the Follow links on the front page and as icons in the footer. RSS always appears.', 'bestofislam' ) );
+	echo '<div class="boi-grid">';
+	foreach ( boi_follow_networks() as $network => $label ) {
+		?>
+		<p class="boi-grid__item">
+			<label for="boi-follow-<?php echo esc_attr( $network ); ?>"><?php echo esc_html( $label ); ?></label>
+			<input type="url" class="regular-text" id="boi-follow-<?php echo esc_attr( $network ); ?>" name="<?php echo esc_attr( $key ); ?>[follow_<?php echo esc_attr( $network ); ?>]" value="<?php echo esc_attr( $opts[ 'follow_' . $network ] ); ?>" placeholder="https://" />
+		</p>
+		<?php
+	}
+	echo '</div>';
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Contact form', 'bestofislam' ) );
+	boi_opt_row_open( __( 'Contact form recipient', 'bestofislam' ), 'boi-contact-email' );
+	?>
+	<input type="email" class="regular-text" id="boi-contact-email" name="<?php echo esc_attr( $key ); ?>[contact_email]" value="<?php echo esc_attr( $opts['contact_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" aria-describedby="boi-contact-email-help" />
+	<p class="description" id="boi-contact-email-help"><?php esc_html_e( 'Leave empty to use the site administrator address.', 'bestofislam' ); ?></p>
+	<?php
+	boi_opt_row_close();
+	boi_opt_card_close();
 }
 
 /**
@@ -392,21 +718,20 @@ function boi_render_display_tab( $opts ) {
  * @return void
  */
 function boi_render_schema_tab( $opts ) {
-	$key = BOI_OPTION_KEY;
-	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><label for="boi-default-schema"><?php esc_html_e( 'Default schema type', 'bestofislam' ); ?></label></th>
-			<td>
-				<select id="boi-default-schema" name="<?php echo esc_attr( $key ); ?>[default_schema]">
-					<option value="ItemList" <?php selected( $opts['default_schema'], 'ItemList' ); ?>>ItemList</option>
-					<option value="none" <?php selected( $opts['default_schema'], 'none' ); ?>><?php esc_html_e( 'None', 'bestofislam' ); ?></option>
-				</select>
-				<p class="description"><?php esc_html_e( 'Individual listicles may override this in the block sidebar.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
-	<?php
+	boi_opt_card_open( __( 'List markup', 'bestofislam' ) );
+	boi_opt_choices(
+		array(
+			'key'     => 'default_schema',
+			'label'   => __( 'Default schema type', 'bestofislam' ),
+			'value'   => $opts['default_schema'],
+			'choices' => array(
+				'ItemList' => array( 'ItemList', __( 'Each list is marked up as a ranked list of its entries.', 'bestofislam' ) ),
+				'none'     => array( __( 'None', 'bestofislam' ), __( 'Lists carry no list markup of their own.', 'bestofislam' ) ),
+			),
+			'help'    => __( 'Individual listicles may override this in the block sidebar.', 'bestofislam' ),
+		)
+	);
+	boi_opt_card_close();
 }
 
 /**
@@ -416,39 +741,39 @@ function boi_render_schema_tab( $opts ) {
  * @return void
  */
 function boi_render_voting_tab( $opts ) {
-	$key = BOI_OPTION_KEY;
-	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Voting', 'bestofislam' ); ?></th>
-			<td>
-				<label>
-					<input type="checkbox" name="<?php echo esc_attr( $key ); ?>[voting_enabled]" value="1" <?php checked( $opts['voting_enabled'], 1 ); ?> />
-					<?php esc_html_e( 'Allow visitors to vote on entries', 'bestofislam' ); ?>
-				</label>
-				<p class="description"><?php esc_html_e( 'Disabled by default. Argumentative content attracts coordinated voting, and a tally reads as a verdict on the argument.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Restriction', 'bestofislam' ); ?></th>
-			<td>
-				<label>
-					<input type="checkbox" name="<?php echo esc_attr( $key ); ?>[voting_login_only]" value="1" <?php checked( $opts['voting_login_only'], 1 ); ?> />
-					<?php esc_html_e( 'Restrict voting to logged-in users', 'bestofislam' ); ?>
-				</label>
-				<p class="description"><?php esc_html_e( 'Enable this if coordinated voting becomes a problem.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-rate-limit"><?php esc_html_e( 'Rate limit', 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="number" id="boi-rate-limit" min="1" max="100" name="<?php echo esc_attr( $key ); ?>[voting_rate_limit]" value="<?php echo esc_attr( $opts['voting_rate_limit'] ); ?>" />
-				<p class="description"><?php esc_html_e( 'Maximum votes permitted per visitor in any ten-minute window.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
-	<?php
-	boi_render_vote_log();
+	boi_opt_card_open( __( 'Visitor voting', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'voting_enabled',
+			'label'   => __( 'Voting', 'bestofislam' ),
+			'text'    => __( 'Allow visitors to vote on entries', 'bestofislam' ),
+			'help'    => __( 'Disabled by default. Argumentative content attracts coordinated voting, and a tally reads as a verdict on the argument.', 'bestofislam' ),
+			'checked' => ! empty( $opts['voting_enabled'] ),
+		)
+	);
+	boi_opt_toggle(
+		array(
+			'key'     => 'voting_login_only',
+			'label'   => __( 'Restriction', 'bestofislam' ),
+			'text'    => __( 'Restrict voting to logged-in users', 'bestofislam' ),
+			'help'    => __( 'Enable this if coordinated voting becomes a problem.', 'bestofislam' ),
+			'checked' => ! empty( $opts['voting_login_only'] ),
+			'depends' => 'boi-voting-enabled',
+		)
+	);
+	boi_opt_range(
+		array(
+			'key'     => 'voting_rate_limit',
+			'label'   => __( 'Rate limit', 'bestofislam' ),
+			'value'   => (int) $opts['voting_rate_limit'],
+			'min'     => 1,
+			'max'     => 100,
+			'unit'    => __( 'votes', 'bestofislam' ),
+			'help'    => __( 'Maximum votes permitted per visitor in any ten-minute window.', 'bestofislam' ),
+			'depends' => 'boi-voting-enabled',
+		)
+	);
+	boi_opt_card_close();
 }
 
 /**
@@ -464,17 +789,17 @@ function boi_render_vote_log() {
 	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
 	$rows = $wpdb->get_results( "SELECT post_id, entry_id, created_at FROM {$table} ORDER BY id DESC LIMIT 20" );
 
-	echo '<h2>' . esc_html__( 'Recent votes', 'bestofislam' ) . '</h2>';
+	echo '<div class="boi-card"><h2 class="boi-card__title">' . esc_html__( 'Recent votes', 'bestofislam' ) . '</h2>';
 
 	if ( empty( $rows ) ) {
-		echo '<p>' . esc_html__( 'No votes recorded yet.', 'bestofislam' ) . '</p>';
+		echo '<p>' . esc_html__( 'No votes recorded yet.', 'bestofislam' ) . '</p></div>';
 		return;
 	}
 
-	echo '<table class="widefat striped boi-settings__log"><thead><tr>';
-	echo '<th>' . esc_html__( 'Post', 'bestofislam' ) . '</th>';
-	echo '<th>' . esc_html__( 'Entry', 'bestofislam' ) . '</th>';
-	echo '<th>' . esc_html__( 'Recorded', 'bestofislam' ) . '</th>';
+	echo '<div class="boi-scroll" tabindex="0"><table class="widefat striped boi-settings__log"><thead><tr>';
+	echo '<th scope="col">' . esc_html__( 'Post', 'bestofislam' ) . '</th>';
+	echo '<th scope="col">' . esc_html__( 'Entry', 'bestofislam' ) . '</th>';
+	echo '<th scope="col">' . esc_html__( 'Recorded', 'bestofislam' ) . '</th>';
 	echo '</tr></thead><tbody>';
 
 	foreach ( $rows as $row ) {
@@ -487,7 +812,7 @@ function boi_render_vote_log() {
 		);
 	}
 
-	echo '</tbody></table>';
+	echo '</tbody></table></div></div>';
 }
 
 /**
@@ -499,13 +824,14 @@ function boi_render_content_tab() {
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	if ( isset( $_GET['boi_populated'] ) ) {
 		printf(
-			'<div class="notice notice-success"><p>%s</p></div>',
+			'<div class="notice notice-success is-dismissible inline"><p>%s</p></div>',
 			esc_html__( 'Content population complete.', 'bestofislam' )
 		);
 	}
 
 	$stamp = get_option( 'boi_content_populated' );
 
+	boi_opt_card_open( __( 'Population', 'bestofislam' ) );
 	echo '<p>' . esc_html__( 'Population creates the section taxonomy, a front page, a Reflections index, an about page, the primary menu, and the seeded articles. Running it again adds only what is missing; nothing already present is duplicated or overwritten.', 'bestofislam' ) . '</p>';
 
 	if ( $stamp ) {
@@ -516,34 +842,45 @@ function boi_render_content_tab() {
 		);
 	}
 
+	printf(
+		'<form action="%1$s" method="post"><input type="hidden" name="_wpnonce" value="%2$s" />%4$s<input type="hidden" name="action" value="boi_populate" />%3$s</form>',
+		esc_url( admin_url( 'admin-post.php' ) ),
+		esc_attr( wp_create_nonce( 'boi_populate' ) ),
+		get_submit_button( __( 'Populate content', 'bestofislam' ), 'secondary', 'submit', false, array( 'id' => 'boi-populate' ) ),
+		wp_referer_field( false ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- core markup.
+	);
+	boi_opt_card_close();
+
 	if ( function_exists( 'boi_image_status' ) ) {
 		list( $attached, $total ) = boi_image_status();
 
+		boi_opt_card_open( __( 'Featured images', 'bestofislam' ) );
 		printf(
-			'<p><strong>%1$s</strong> %2$s</p><p class="description">%3$s</p>',
-			esc_html__( 'Featured images:', 'bestofislam' ),
+			'<p><strong>%1$s</strong></p><p class="description">%2$s</p>',
 			esc_html( sprintf( /* translators: 1: attached count, 2: total. */ __( '%1$d of %2$d copied into the media library.', 'bestofislam' ), $attached, $total ) ),
 			esc_html__( 'Articles whose image is not yet in the media library show the copy bundled with the theme, so every article is illustrated either way. Copies are made three at a time as pages load. If the count does not rise, the server may be refusing uploads: check that wp-content/uploads is writable.', 'bestofislam' )
 		);
+		boi_opt_card_close();
 	}
 
 	if ( function_exists( 'boi_differing_articles' ) ) {
+		boi_opt_card_open( __( 'Seeded articles', 'bestofislam' ) );
+
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['boi_refreshed'] ) ) {
-			printf( '<div class="notice notice-success inline"><p>%s</p></div>', esc_html( sprintf( /* translators: %d: number of articles. */ _n( '%d article brought up to date.', '%d articles brought up to date.', absint( $_GET['boi_refreshed'] ), 'bestofislam' ), absint( $_GET['boi_refreshed'] ) ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			printf( '<div class="notice notice-success is-dismissible inline"><p>%s</p></div>', esc_html( sprintf( /* translators: %d: number of articles. */ _n( '%d article brought up to date.', '%d articles brought up to date.', absint( $_GET['boi_refreshed'] ), 'bestofislam' ), absint( $_GET['boi_refreshed'] ) ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
 
 		$differing = boi_differing_articles();
-
-		echo '<h2>' . esc_html__( 'Seeded articles', 'bestofislam' ) . '</h2>';
 
 		if ( empty( $differing ) ) {
 			echo '<p>' . esc_html__( 'Every seeded article matches this version of the theme.', 'bestofislam' ) . '</p>';
 		} else {
 			echo '<p>' . esc_html__( 'These articles differ from this version of the theme. Updates refresh a seeded article automatically only when they can tell it has not been edited; for these they cannot, so they are left alone. Tick any you have not edited yourself to bring them up to date. Ticked articles are replaced with this version\'s text, and any edits in them are lost.', 'bestofislam' ) . '</p>';
 			printf( '<form action="%1$s" method="post">', esc_url( admin_url( 'admin-post.php' ) ) );
-			wp_nonce_field( 'boi_refresh_articles' );
-			echo '<input type="hidden" name="action" value="boi_refresh_articles" /><ul>';
+			echo '<input type="hidden" name="_wpnonce" value="' . esc_attr( wp_create_nonce( 'boi_refresh_articles' ) ) . '" />';
+			wp_referer_field();
+			echo '<input type="hidden" name="action" value="boi_refresh_articles" /><ul class="boi-checklist">';
 
 			foreach ( $differing as $slug => $post ) {
 				printf(
@@ -556,17 +893,12 @@ function boi_render_content_tab() {
 			}
 
 			echo '</ul>';
-			submit_button( __( 'Update the ticked articles', 'bestofislam' ), 'secondary', 'submit', false );
+			submit_button( __( 'Update the ticked articles', 'bestofislam' ), 'secondary', 'submit', false, array( 'id' => 'boi-refresh-articles' ) );
 			echo '</form>';
 		}
-	}
 
-	printf(
-		'<form action="%1$s" method="post">%2$s<input type="hidden" name="action" value="boi_populate" />%3$s</form>',
-		esc_url( admin_url( 'admin-post.php' ) ),
-		wp_nonce_field( 'boi_populate', '_wpnonce', true, false ),
-		get_submit_button( __( 'Populate content', 'bestofislam' ), 'secondary', 'submit', false )
-	);
+		boi_opt_card_close();
+	}
 }
 
 /**
@@ -577,67 +909,67 @@ function boi_render_content_tab() {
  */
 function boi_render_seo_tab( $opts ) {
 	$key = BOI_OPTION_KEY;
-	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Meta description', 'bestofislam' ); ?></th>
-			<td>
-				<label>
-					<input type="checkbox" name="<?php echo esc_attr( $key ); ?>[seo_description]" value="1" <?php checked( $opts['seo_description'], 1 ); ?> />
-					<?php esc_html_e( 'Emit a description meta tag on every page', 'bestofislam' ); ?>
-				</label>
-				<p class="description"><?php esc_html_e( 'Uses the post excerpt, or the section description on archives. Steps back automatically if an SEO plugin is active.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Webmaster tools', 'bestofislam' ); ?></th>
-			<td>
-				<?php if ( function_exists( 'boi_seo_plugin_active' ) && boi_seo_plugin_active() ) : ?>
-					<p class="description"><?php esc_html_e( 'An SEO plugin is active, so verification codes are entered there.', 'bestofislam' ); ?></p>
-				<?php else : ?>
-					<p>
-						<label for="boi-verify-google"><?php esc_html_e( 'Google Search Console', 'bestofislam' ); ?></label><br />
-						<input type="text" id="boi-verify-google" class="regular-text" name="<?php echo esc_attr( $key ); ?>[verify_google]" value="<?php echo esc_attr( $opts['verify_google'] ); ?>" />
-					</p>
-					<p>
-						<label for="boi-verify-bing"><?php esc_html_e( 'Bing Webmaster Tools', 'bestofislam' ); ?></label><br />
-						<input type="text" id="boi-verify-bing" class="regular-text" name="<?php echo esc_attr( $key ); ?>[verify_bing]" value="<?php echo esc_attr( $opts['verify_bing'] ); ?>" />
-					</p>
-					<p class="description"><?php esc_html_e( 'Paste the verification code, or the whole meta tag, from the console. The sitemap to submit is at /wp-sitemap.xml.', 'bestofislam' ); ?></p>
-				<?php endif; ?>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Rank Math', 'bestofislam' ); ?></th>
-			<td>
-				<?php if ( function_exists( 'boi_rank_math_active' ) && boi_rank_math_active() ) : ?>
-					<p><?php esc_html_e( 'Rank Math is active. It owns titles, descriptions, canonical links, robots directives, the XML sitemap and the site-wide structured data. The theme adds only what Rank Math cannot know: each image\'s licence and credit, the images in the text of an article, search results and paged archives kept out of the index, unlisted articles kept out of the sitemap, and its list and question markup.', 'bestofislam' ); ?></p>
-				<?php else : ?>
-					<p class="description"><?php esc_html_e( 'If you install Rank Math, the theme steps back from everything it would repeat and adds its image credits to Rank Math\'s structured data.', 'bestofislam' ); ?></p>
-				<?php endif; ?>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Readable search addresses', 'bestofislam' ); ?></th>
-			<td>
-				<?php if ( function_exists( 'wpseosearch_base' ) ) : ?>
-					<p class="description"><?php esc_html_e( 'The Pretty Search Permalinks plugin is active, so the theme leaves search addresses to it. Deactivate the plugin to manage them here; its base is carried over.', 'bestofislam' ); ?></p>
-				<?php else : ?>
-					<label>
-						<input type="checkbox" name="<?php echo esc_attr( $key ); ?>[search_pretty]" value="1" <?php checked( ! empty( $opts['search_pretty'] ) ); ?> />
-						<?php esc_html_e( 'Send searches to a readable address, such as /search/Paul/, keeping any filters', 'bestofislam' ); ?>
-					</label>
-					<p>
-						<label for="boi-search-base"><?php esc_html_e( 'Base word', 'bestofislam' ); ?></label>
-						<code><?php echo esc_html( trailingslashit( home_url() ) ); ?></code><input type="text" id="boi-search-base" class="regular-text" name="<?php echo esc_attr( $key ); ?>[search_base]" value="<?php echo esc_attr( boi_search_base() ); ?>" /><code>/Paul/</code>
-					</p>
-					<p class="description"><?php esc_html_e( 'The chosen base is also kept out of search engines through robots.txt.', 'bestofislam' ); ?></p>
-				<?php endif; ?>
-			</td>
-		</tr>
-	</table>
-	<p><?php esc_html_e( 'Also handled by the theme: unique titles per page; canonical links on every indexable view; breadcrumbs; Article markup on every article, with licence metadata on its featured image and the images in its text; Organization and WebSite markup on the front page; ProfilePage on author pages; list and FAQ markup; search results kept out of the index and out of robots.txt; and an XML sitemap limited to articles, pages and sections.', 'bestofislam' ); ?></p>
-	<?php
+
+	boi_opt_card_open( __( 'Descriptions and verification', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'seo_description',
+			'label'   => __( 'Meta description', 'bestofislam' ),
+			'text'    => __( 'Emit a description meta tag on every page', 'bestofislam' ),
+			'help'    => __( 'Uses the post excerpt, or the section description on archives. Steps back automatically if an SEO plugin is active.', 'bestofislam' ),
+			'checked' => ! empty( $opts['seo_description'] ),
+		)
+	);
+
+	if ( function_exists( 'boi_seo_plugin_active' ) && boi_seo_plugin_active() ) {
+		boi_opt_row_open( __( 'Webmaster tools', 'bestofislam' ) );
+		echo '<p class="description">' . esc_html__( 'An SEO plugin is active, so verification codes are entered there.', 'bestofislam' ) . '</p>';
+		boi_opt_row_close();
+	} else {
+		boi_opt_row_open( __( 'Google Search Console', 'bestofislam' ), 'boi-verify-google' );
+		?>
+		<input type="text" id="boi-verify-google" class="regular-text" name="<?php echo esc_attr( $key ); ?>[verify_google]" value="<?php echo esc_attr( $opts['verify_google'] ); ?>" aria-describedby="boi-verify-help" />
+		<?php
+		boi_opt_row_close();
+		boi_opt_row_open( __( 'Bing Webmaster Tools', 'bestofislam' ), 'boi-verify-bing' );
+		?>
+		<input type="text" id="boi-verify-bing" class="regular-text" name="<?php echo esc_attr( $key ); ?>[verify_bing]" value="<?php echo esc_attr( $opts['verify_bing'] ); ?>" aria-describedby="boi-verify-help" />
+		<p class="description" id="boi-verify-help"><?php esc_html_e( 'Paste the verification code, or the whole meta tag, from the console. The sitemap to submit is at /wp-sitemap.xml.', 'bestofislam' ); ?></p>
+		<?php
+		boi_opt_row_close();
+	}
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Rank Math', 'bestofislam' ) );
+	if ( function_exists( 'boi_rank_math_active' ) && boi_rank_math_active() ) {
+		echo '<p>' . esc_html__( 'Rank Math is active. It owns titles, descriptions, canonical links, robots directives, the XML sitemap and the site-wide structured data. The theme adds only what Rank Math cannot know: each image\'s licence and credit, the images in the text of an article, search results and paged archives kept out of the index, unlisted articles kept out of the sitemap, and its list and question markup.', 'bestofislam' ) . '</p>';
+	} else {
+		echo '<p class="description">' . esc_html__( 'If you install Rank Math, the theme steps back from everything it would repeat and adds its image credits to Rank Math\'s structured data.', 'bestofislam' ) . '</p>';
+	}
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Readable search addresses', 'bestofislam' ) );
+	if ( function_exists( 'wpseosearch_base' ) ) {
+		echo '<p class="description">' . esc_html__( 'The Pretty Search Permalinks plugin is active, so the theme leaves search addresses to it. Deactivate the plugin to manage them here; its base is carried over.', 'bestofislam' ) . '</p>';
+	} else {
+		boi_opt_toggle(
+			array(
+				'key'     => 'search_pretty',
+				'label'   => __( 'Readable addresses', 'bestofislam' ),
+				'text'    => __( 'Send searches to a readable address, such as /search/Paul/, keeping any filters', 'bestofislam' ),
+				'checked' => ! empty( $opts['search_pretty'] ),
+			)
+		);
+		boi_opt_row_open( __( 'Base word', 'bestofislam' ), 'boi-search-base' );
+		?>
+		<span class="boi-affix"><code><?php echo esc_html( trailingslashit( home_url() ) ); ?></code><input type="text" id="boi-search-base" class="regular-text" name="<?php echo esc_attr( $key ); ?>[search_base]" value="<?php echo esc_attr( boi_search_base() ); ?>" aria-describedby="boi-search-base-help" /><code>/Paul/</code></span>
+		<p class="description" id="boi-search-base-help"><?php esc_html_e( 'The chosen base is also kept out of search engines through robots.txt.', 'bestofislam' ); ?></p>
+		<?php
+		boi_opt_row_close();
+	}
+	boi_opt_card_close();
+
+	echo '<p class="boi-opt__note">' . esc_html__( 'Also handled by the theme: unique titles per page; canonical links on every indexable view; breadcrumbs; Article markup on every article, with licence metadata on its featured image and the images in its text; Organization and WebSite markup on the front page; ProfilePage on author pages; list and FAQ markup; search results kept out of the index and out of robots.txt; and an XML sitemap limited to articles, pages and sections.', 'bestofislam' ) . '</p>';
 }
 
 /**
@@ -651,57 +983,60 @@ function boi_render_access_tab( $opts ) {
 	$slug     = boi_login_slug();
 	$active   = boi_login_enabled();
 	$override = defined( 'BOI_HIDE_LOGIN' ) && ! BOI_HIDE_LOGIN;
+
+	boi_opt_card_open( __( 'Login address', 'bestofislam' ) );
+	if ( defined( 'WPS_HIDE_LOGIN_VERSION' ) ) {
+		echo '<div class="notice notice-info inline"><p>' . esc_html__( 'The WPS Hide Login plugin is active, so the theme leaves the login address to it. Deactivate the plugin to manage the address here; its address is carried over.', 'bestofislam' ) . '</p></div>';
+	} elseif ( $override ) {
+		echo '<div class="notice notice-warning inline"><p>' . esc_html__( 'The custom login address is switched off in wp-config.php (BOI_HIDE_LOGIN is false). The standard wp-login.php is in use.', 'bestofislam' ) . '</p></div>';
+	}
+	boi_opt_toggle(
+		array(
+			'key'     => 'login_enabled',
+			'label'   => __( 'Custom login address', 'bestofislam' ),
+			'text'    => __( 'Serve the login page from a private address, and answer wp-login.php and wp-admin with the 404 page for anyone not logged in', 'bestofislam' ),
+			'checked' => ! empty( $opts['login_enabled'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Address', 'bestofislam' ), 'boi-login-slug' );
 	?>
-	<h2><?php esc_html_e( 'Login address', 'bestofislam' ); ?></h2>
-	<?php if ( defined( 'WPS_HIDE_LOGIN_VERSION' ) ) : ?>
-		<div class="notice notice-info inline"><p><?php esc_html_e( 'The WPS Hide Login plugin is active, so the theme leaves the login address to it. Deactivate the plugin to manage the address here; its address is carried over.', 'bestofislam' ); ?></p></div>
-	<?php elseif ( $override ) : ?>
-		<div class="notice notice-warning inline"><p><?php esc_html_e( 'The custom login address is switched off in wp-config.php (BOI_HIDE_LOGIN is false). The standard wp-login.php is in use.', 'bestofislam' ); ?></p></div>
+	<span class="boi-affix"><code><?php echo esc_html( trailingslashit( home_url() ) ); ?></code><input type="text" class="regular-text" id="boi-login-slug" name="<?php echo esc_attr( $key ); ?>[login_slug]" value="<?php echo esc_attr( $slug ); ?>" placeholder="<?php esc_attr_e( 'for example, enter-archive', 'bestofislam' ); ?>" aria-describedby="boi-login-slug-help" /></span>
+	<p class="description" id="boi-login-slug-help"><?php esc_html_e( 'At least six characters, and not an address any page, post or section uses. Bookmark the new address before saving.', 'bestofislam' ); ?></p>
+	<?php if ( $active ) : ?>
+		<p><strong><?php esc_html_e( 'In force:', 'bestofislam' ); ?></strong> <a href="<?php echo esc_url( boi_login_url_base() ); ?>"><?php echo esc_html( boi_login_url_base() ); ?></a></p>
 	<?php endif; ?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Custom login address', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[login_enabled]" value="1" <?php checked( ! empty( $opts['login_enabled'] ) ); ?> /> <?php esc_html_e( 'Serve the login page from a private address, and answer wp-login.php and wp-admin with the 404 page for anyone not logged in', 'bestofislam' ); ?></label>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-login-slug"><?php esc_html_e( 'Address', 'bestofislam' ); ?></label></th>
-			<td>
-				<code><?php echo esc_html( trailingslashit( home_url() ) ); ?></code><input type="text" class="regular-text" id="boi-login-slug" name="<?php echo esc_attr( $key ); ?>[login_slug]" value="<?php echo esc_attr( $slug ); ?>" placeholder="<?php esc_attr_e( 'for example, enter-archive', 'bestofislam' ); ?>" />
-				<p class="description"><?php esc_html_e( 'At least six characters, and not an address any page, post or section uses. Bookmark the new address before saving.', 'bestofislam' ); ?></p>
-				<?php if ( $active ) : ?>
-					<p><strong><?php esc_html_e( 'In force:', 'bestofislam' ); ?></strong> <a href="<?php echo esc_url( boi_login_url_base() ); ?>"><?php echo esc_html( boi_login_url_base() ); ?></a></p>
-				<?php endif; ?>
-				<p class="description"><?php echo wp_kses( __( 'Locked out? Add <code>define( \'BOI_HIDE_LOGIN\', false );</code> to wp-config.php and log in at wp-login.php as usual.', 'bestofislam' ), array( 'code' => array() ) ); ?></p>
-			</td>
-		</tr>
-	</table>
+	<p class="description"><?php echo wp_kses( __( 'Locked out? Add <code>define( \'BOI_HIDE_LOGIN\', false );</code> to wp-config.php and log in at wp-login.php as usual.', 'bestofislam' ), array( 'code' => array() ) ); ?></p>
+	<?php
+	boi_opt_row_close();
+	boi_opt_card_close();
 
-	<h2><?php esc_html_e( 'Security headers', 'bestofislam' ); ?></h2>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Framing, file types, referrers', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[security_headers]" value="1" <?php checked( ! empty( $opts['security_headers'] ) ); ?> /> <?php esc_html_e( 'Send X-Frame-Options, a frame-ancestors policy, Cross-Origin-Opener-Policy, X-Content-Type-Options and Referrer-Policy', 'bestofislam' ); ?></label>
-				<p class="description"><?php esc_html_e( 'Other sites can no longer show these pages in a frame. Scripts, styles and embeds are not restricted.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'HTTPS only (HSTS)', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[security_hsts]" value="1" <?php checked( ! empty( $opts['security_hsts'] ) ); ?> /> <?php esc_html_e( 'Send Strict-Transport-Security for one year', 'bestofislam' ); ?></label>
-				<p class="description"><strong><?php esc_html_e( 'Switch this on only when every address on the site works over HTTPS.', 'bestofislam' ); ?></strong> <?php esc_html_e( 'Browsers that have seen it refuse plain HTTP for a year, even after it is switched off here.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
+	boi_opt_card_open( __( 'Security headers', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'security_headers',
+			'label'   => __( 'Framing, file types, referrers', 'bestofislam' ),
+			'text'    => __( 'Send X-Frame-Options, a frame-ancestors policy, Cross-Origin-Opener-Policy, X-Content-Type-Options and Referrer-Policy', 'bestofislam' ),
+			'help'    => __( 'Other sites can no longer show these pages in a frame. Scripts, styles and embeds are not restricted.', 'bestofislam' ),
+			'checked' => ! empty( $opts['security_headers'] ),
+		)
+	);
+	boi_opt_toggle(
+		array(
+			'key'     => 'security_hsts',
+			'label'   => __( 'HTTPS only (HSTS)', 'bestofislam' ),
+			'text'    => __( 'Send Strict-Transport-Security for one year', 'bestofislam' ),
+			'help'    => __( 'Switch this on only when every address on the site works over HTTPS. Browsers that have seen it refuse plain HTTP for a year, even after it is switched off here.', 'bestofislam' ),
+			'checked' => ! empty( $opts['security_hsts'] ),
+		)
+	);
+	boi_opt_card_close();
 
-	<h2><?php esc_html_e( 'Unlisted posts and pages', 'bestofislam' ); ?></h2>
-	<?php if ( class_exists( 'Unlist_Posts' ) ) : ?>
-		<div class="notice notice-info inline"><p><?php esc_html_e( 'The Unlist Posts & Pages plugin is active, so the theme leaves unlisting to it. Deactivate the plugin to manage unlisting here; its list is carried over.', 'bestofislam' ); ?></p></div>
-	<?php else : ?>
-		<p class="description"><?php esc_html_e( 'Unlist an item from the Visibility in listings box in its editor sidebar. An unlisted item opens from its own link but appears in no listing, search, feed or sitemap, and asks search engines not to index it.', 'bestofislam' ); ?></p>
-		<?php
+	boi_opt_card_open( __( 'Unlisted posts and pages', 'bestofislam' ) );
+	if ( class_exists( 'Unlist_Posts' ) ) {
+		echo '<div class="notice notice-info inline"><p>' . esc_html__( 'The Unlist Posts & Pages plugin is active, so the theme leaves unlisting to it. Deactivate the plugin to manage unlisting here; its list is carried over.', 'bestofislam' ) . '</p></div>';
+	} else {
+		echo '<p class="description">' . esc_html__( 'Unlist an item from the Visibility in listings box in its editor sidebar. An unlisted item opens from its own link but appears in no listing, search, feed or sitemap, and asks search engines not to index it.', 'bestofislam' ) . '</p>';
+
 		$ids = boi_unlisted_ids();
 
 		if ( empty( $ids ) ) {
@@ -713,15 +1048,14 @@ function boi_render_access_tab( $opts ) {
 				$post = get_post( $id );
 
 				if ( $post ) {
-					printf( '<li><a href="%1$s">%2$s</a> <span class="description">(%3$s)</span></li>', esc_url( get_edit_post_link( $id ) ), esc_html( get_the_title( $post ) ), esc_html( get_post_type_object( $post->post_type )->labels->singular_name ) );
+					printf( '<li><a href="%1$s">%2$s</a> <span class="description">(%3$s)</span></li>', esc_url( (string) get_edit_post_link( $id ) ), esc_html( get_the_title( $post ) ), esc_html( get_post_type_object( $post->post_type )->labels->singular_name ) );
 				}
 			}
 
 			echo '</ul>';
 		}
-		?>
-	<?php endif; ?>
-	<?php
+	}
+	boi_opt_card_close();
 }
 
 /**

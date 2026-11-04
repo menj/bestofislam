@@ -473,7 +473,7 @@ function boi_sec_attack_notice() {
 		return;
 	}
 	$url = boi_sec_url();
-	echo '<div class="notice notice-error"><p><strong>' . esc_html__( 'Security:', 'bestofislam' ) . '</strong> ';
+	echo '<div class="notice notice-error is-dismissible"><p><strong>' . esc_html__( 'Security:', 'bestofislam' ) . '</strong> ';
 	if ( $today ) {
 		esc_html_e( 'Someone sent a correct password through XML-RPC today. The login was refused, but the password is known: change it now.', 'bestofislam' );
 		echo ' ';
@@ -1083,24 +1083,24 @@ function boi_sec_notice() {
 }
 
 /**
- * One checkbox row in the theme's form-table pattern.
+ * One switch row in the Theme Options card pattern.
  *
  * @param array  $opts  Current options.
  * @param string $key   Option key.
  * @param string $label Row label.
- * @param string $text  Checkbox text.
+ * @param string $text  Switch text.
  * @param string $help  Description.
  */
 function boi_sec_field( $opts, $key, $label, $text, $help ) {
-	?>
-	<tr>
-		<th scope="row"><?php echo esc_html( $label ); ?></th>
-		<td>
-			<label><input type="checkbox" name="<?php echo esc_attr( BOI_OPTION_KEY . '[' . $key . ']' ); ?>" value="1" <?php checked( ! empty( $opts[ $key ] ) ); ?> /> <?php echo esc_html( $text ); ?></label>
-			<p class="description"><?php echo esc_html( $help ); ?></p>
-		</td>
-	</tr>
-	<?php
+	boi_opt_toggle(
+		array(
+			'key'     => $key,
+			'label'   => $label,
+			'text'    => $text,
+			'help'    => $help,
+			'checked' => ! empty( $opts[ $key ] ),
+		)
+	);
 }
 
 /**
@@ -1112,30 +1112,23 @@ function boi_sec_render_settings( $opts ) {
 	if ( defined( 'BOI_SECURITY_LOCK' ) && ! BOI_SECURITY_LOCK ) {
 		echo '<div class="notice notice-warning inline"><p>' . esc_html__( 'BOI_SECURITY_LOCK is false in wp-config.php, so the three remote-publishing switches are off whatever they show.', 'bestofislam' ) . '</p></div>';
 	}
-	?>
-	<h2><?php esc_html_e( 'Remote publishing', 'bestofislam' ); ?></h2>
-	<p class="description"><?php esc_html_e( 'Spam tools publish from outside the site with a stored password. These switches close the doors they use. Writing in the editor, the contact form and voting are not affected.', 'bestofislam' ); ?></p>
-	<table class="form-table" role="presentation">
-		<?php
-		boi_sec_field( $opts, 'sec_xmlrpc_off', __( 'XML-RPC', 'bestofislam' ), __( 'Turn off XML-RPC', 'bestofislam' ), __( 'xmlrpc.php answers 403 and the pingback header goes. On Apache the theme also blocks it in .htaccess, and removes that block when this is switched off. The Jetpack plugin and old mobile apps need XML-RPC. Password logins through XML-RPC stay refused even with this off.', 'bestofislam' ) );
-		$state = get_option( 'boi_security_htaccess', '' );
-		if ( 'written' === $state ) {
-			echo '<tr><th scope="row"></th><td><p class="description">' . esc_html__( 'The web server also refuses xmlrpc.php: the theme keeps a "Block xmlrpc.php" section in .htaccess and repairs it if it goes missing.', 'bestofislam' ) . '</p></td></tr>';
-		} elseif ( 'unavailable' === $state ) {
-			echo '<tr><th scope="row"></th><td><p class="description">' . esc_html__( 'The theme could not write .htaccess (the server is not Apache, or the file is read-only). WordPress still refuses xmlrpc.php; ask the host to deny it at the server as well.', 'bestofislam' ) . '</p></td></tr>';
-		}
-		boi_sec_field( $opts, 'sec_app_passwords_off', __( 'Application passwords', 'bestofislam' ), __( 'Turn off application passwords', 'bestofislam' ), __( 'Stored application passwords stop working at once. Revoke them as well, below, so they cannot return if this is switched off.', 'bestofislam' ) );
-		boi_sec_field( $opts, 'sec_rest_lock', __( 'REST API changes', 'bestofislam' ), __( 'Allow REST API changes only from a logged-in browser', 'bestofislam' ), __( 'Any request that creates, changes or deletes content while logged in must come from a browser session on this site. Basic authentication and passwords sent in a header are refused. Reading through the API, and anything a visitor does without logging in, is unchanged.', 'bestofislam' ) );
-		?>
-	</table>
-	<h2><?php esc_html_e( 'New content', 'bestofislam' ); ?></h2>
-	<table class="form-table" role="presentation">
-		<?php
-		boi_sec_field( $opts, 'sec_spam_gate', __( 'Spam gate', 'bestofislam' ), __( 'Hold suspected gambling spam as Pending', 'bestofislam' ), __( 'A post or page whose title, address or text reads as casino or betting spam, or anything published from outside the editor, is saved as Pending, never published, and logged below. Seeded articles, pages and Glossary entries are exempt.', 'bestofislam' ) );
-		boi_sec_field( $opts, 'sec_gone', __( 'Removed spam', 'bestofislam' ), __( 'Answer 410 Gone on the address of removed spam', 'bestofislam' ), __( 'Search engines drop a 410 address faster than a 404 one. Only addresses of spam moved to the trash from this tab are affected.', 'bestofislam' ) );
-		?>
-	</table>
-	<?php
+
+	boi_opt_card_open( __( 'Remote publishing', 'bestofislam' ), __( 'Spam tools publish from outside the site with a stored password. These switches close the doors they use. Writing in the editor, the contact form and voting are not affected.', 'bestofislam' ) );
+	boi_sec_field( $opts, 'sec_xmlrpc_off', __( 'XML-RPC', 'bestofislam' ), __( 'Turn off XML-RPC', 'bestofislam' ), __( 'xmlrpc.php answers 403 and the pingback header goes. On Apache the theme also blocks it in .htaccess, and removes that block when this is switched off. The Jetpack plugin and old mobile apps need XML-RPC. Password logins through XML-RPC stay refused even with this off.', 'bestofislam' ) );
+	$state = get_option( 'boi_security_htaccess', '' );
+	if ( 'written' === $state ) {
+		echo '<p class="description boi-card__note">' . esc_html__( 'The web server also refuses xmlrpc.php: the theme keeps a "Block xmlrpc.php" section in .htaccess and repairs it if it goes missing.', 'bestofislam' ) . '</p>';
+	} elseif ( 'unavailable' === $state ) {
+		echo '<p class="description boi-card__note">' . esc_html__( 'The theme could not write .htaccess (the server is not Apache, or the file is read-only). WordPress still refuses xmlrpc.php; ask the host to deny it at the server as well.', 'bestofislam' ) . '</p>';
+	}
+	boi_sec_field( $opts, 'sec_app_passwords_off', __( 'Application passwords', 'bestofislam' ), __( 'Turn off application passwords', 'bestofislam' ), __( 'Stored application passwords stop working at once. Revoke them as well, below, so they cannot return if this is switched off.', 'bestofislam' ) );
+	boi_sec_field( $opts, 'sec_rest_lock', __( 'REST API changes', 'bestofislam' ), __( 'Allow REST API changes only from a logged-in browser', 'bestofislam' ), __( 'Any request that creates, changes or deletes content while logged in must come from a browser session on this site. Basic authentication and passwords sent in a header are refused. Reading through the API, and anything a visitor does without logging in, is unchanged.', 'bestofislam' ) );
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'New content', 'bestofislam' ) );
+	boi_sec_field( $opts, 'sec_spam_gate', __( 'Spam gate', 'bestofislam' ), __( 'Hold suspected gambling spam as Pending', 'bestofislam' ), __( 'A post or page whose title, address or text reads as casino or betting spam, or anything published from outside the editor, is saved as Pending, never published, and logged below. Seeded articles, pages and Glossary entries are exempt.', 'bestofislam' ) );
+	boi_sec_field( $opts, 'sec_gone', __( 'Removed spam', 'bestofislam' ), __( 'Answer 410 Gone on the address of removed spam', 'bestofislam' ), __( 'Search engines drop a 410 address faster than a 404 one. Only addresses of spam moved to the trash from this tab are affected.', 'bestofislam' ) );
+	boi_opt_card_close();
 }
 
 /**
@@ -1150,8 +1143,9 @@ function boi_sec_button( $action, $label, $confirm, $class = 'secondary' ) {
 	?>
 	<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="boi-sec-form" data-boi-confirm="<?php echo esc_attr( $confirm ); ?>">
 		<input type="hidden" name="action" value="<?php echo esc_attr( $action ); ?>">
-		<?php wp_nonce_field( $action ); ?>
-		<?php submit_button( $label, $class, 'submit', false ); ?>
+		<input type="hidden" name="_wpnonce" value="<?php echo esc_attr( wp_create_nonce( $action ) ); ?>">
+		<?php wp_referer_field(); ?>
+		<?php submit_button( $label, $class, 'submit', false, array( 'id' => 'boi-' . str_replace( '_', '-', $action ) ) ); ?>
 	</form>
 	<?php
 }
@@ -1285,7 +1279,7 @@ function boi_sec_render_tools() {
 			<span class="boi-sec-status" id="boi-sec-status" role="status" aria-live="polite"></span>
 		</div>
 		<div class="boi-sec-progress" hidden><span id="boi-sec-progress"></span></div>
-		<div class="boi-sec-scroll">
+		<div class="boi-sec-scroll" tabindex="0">
 			<table class="widefat striped boi-sec-table" id="boi-sec-results" hidden>
 				<thead>
 					<tr>
@@ -1344,7 +1338,7 @@ function boi_sec_render_tools() {
 		</div>
 
 		<h3><?php esc_html_e( 'Administrator accounts', 'bestofislam' ); ?></h3>
-		<div class="boi-sec-scroll">
+		<div class="boi-sec-scroll" tabindex="0">
 			<table class="widefat striped boi-sec-table">
 				<thead><tr><th scope="col"><?php esc_html_e( 'Account', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Last login', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Sessions', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Application passwords', 'bestofislam' ); ?></th></tr></thead>
 				<tbody>
@@ -1381,7 +1375,7 @@ function boi_sec_render_tools() {
 		?>
 		<p class="description"><?php esc_html_e( 'Counted per day, in UTC, for the last 30 days. A correct password refused on XML-RPC means the password is known to someone else: change it.', 'bestofislam' ); ?></p>
 		<?php if ( $counts ) : ?>
-			<div class="boi-sec-scroll">
+			<div class="boi-sec-scroll" tabindex="0">
 				<table class="widefat striped boi-sec-table">
 					<thead><tr><th scope="col"><?php esc_html_e( 'Day', 'bestofislam' ); ?></th><?php foreach ( $labels as $label ) : ?><th scope="col"><?php echo esc_html( $label ); ?></th><?php endforeach; ?></tr></thead>
 					<tbody>
@@ -1425,7 +1419,7 @@ function boi_sec_render_tools() {
 		<?php $activity = boi_sec_activity(); ?>
 		<h3><?php esc_html_e( 'Posts per day, last 30 days', 'bestofislam' ); ?></h3>
 		<?php if ( $activity['days'] ) : ?>
-			<div class="boi-sec-scroll">
+			<div class="boi-sec-scroll" tabindex="0">
 				<table class="widefat striped boi-sec-table boi-sec-days">
 					<thead><tr><th scope="col"><?php esc_html_e( 'Day', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Account and count', 'bestofislam' ); ?></th></tr></thead>
 					<tbody>
@@ -1480,7 +1474,7 @@ function boi_sec_render_tools() {
 		$log = is_array( $log ) ? array_reverse( $log ) : array();
 		?>
 		<?php if ( $log ) : ?>
-			<div class="boi-sec-scroll boi-sec-scroll--tall">
+			<div class="boi-sec-scroll boi-sec-scroll--tall" tabindex="0">
 				<table class="widefat striped boi-sec-table">
 					<thead><tr><th scope="col"><?php esc_html_e( 'Time', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Event', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Detail', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Account', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'Route', 'bestofislam' ); ?></th><th scope="col"><?php esc_html_e( 'IP', 'bestofislam' ); ?></th></tr></thead>
 					<tbody>

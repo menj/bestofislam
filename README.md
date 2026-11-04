@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 124 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 151 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -52,15 +52,16 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ## Settings
 
-Under Appearance, Theme Options, in six tabs:
+Under Appearance, Theme Options, in eight tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. Without JavaScript the tabs are links and still work.
 
-- **Display:** the hero background, editor's picks and follow channels.
+- **Display:** rank badges, the entry image size, the hero background, editor's picks, follow channels and the contact form recipient.
 - **Schema:** the default list markup.
-- **Voting:** voting, and whether it is limited to logged-in users.
+- **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
-- **Search engines:** meta descriptions, and readable search addresses with their base word.
-- **Access:** the custom login address, and the list of unlisted items.
+- **Search engines:** meta descriptions, verification codes, and readable search addresses with their base word.
+- **Access:** the custom login address, the security headers, and the list of unlisted items.
 - **Security:** XML-RPC, application passwords and REST writes from outside the browser switched off, the gambling spam gate, 410 Gone for removed spam, the spam scan and clean-up tools, buttons that revoke every application password and end every session, and the attack reports and security log. Add `define( 'BOI_SECURITY_LOCK', false );` to `wp-config.php` to lift the three locks in an emergency.
+- **Errors:** the branded maintenance, database and PHP error pages, email alerts and the minutes between them.
 
 Under Appearance, Contextual Links, in three tabs:
 
@@ -77,9 +78,9 @@ Under Appearance, Contextual Links, in three tabs:
 ## Installation
 
 1. Install Twenty Twenty-Five and keep it in the themes directory.
-2. Upload `bestofislam-1.70.0.zip` under Appearance, Themes, Add New, and activate it.
+2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
-3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 36 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
+3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 151 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
 4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
