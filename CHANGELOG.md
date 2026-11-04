@@ -4,6 +4,32 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.98.0] - 2026-11-04
+
+This release applies the owner's upgrade rules of 2026-11-04. I audited the theme against each rule, in the brief's order: security first, then stability, compatibility, performance, accessibility and maintainability. With WP_DEBUG on, a local WordPress 7.1 install logged no notice on the front end or on any Theme Options tab, before or after the changes. No option key, shortcode, block, taxonomy or handle changed, and the glossary seeding and the 151 articles are untouched.
+
+### Changed
+
+- Theme Options is rebuilt to the brief's design system (`inc/settings.php`, `assets/css/admin-settings.css`, `assets/js/admin-settings.js`). A header with the theme version sits over a tab list with icons. All 8 panels are in the page, so the tabs switch without a reload. They follow the WAI-ARIA tabs pattern: arrow keys, Home and End move between them, and the open tab is kept in the address. Settings sit in cards, label on the left and control on the right. Every boolean is a switch, the entry image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value as they move. Below 782px the rows stack, the controls go full width and the tab list scrolls sideways. Without JavaScript the tabs are links, as before.
+- Each tab opens with a note on how to use it.
+- Each panel has its own form and saves only its own fields, through the same `_tab` switch in `boi_sanitize_options()`. The Errors and Security fields moved to the same cards (`inc/error-pages.php`, `inc/security.php`).
+- The Security tab's script and styles load with the Theme Options screen, since that panel is now in the page. They still load on no other screen.
+- The admin-post buttons on the Content and Security tabs print their nonce without an ID, so 8 panels in one page no longer repeat `id="_wpnonce"` and `id="submit"`.
+- The Security notice about guessed passwords can be dismissed.
+
+### Fixed
+
+- "Settings saved" never appeared after a save, and neither did the error for a login address that cannot work, because the screen sits under Appearance and WordPress prints those notices only under Settings. The screen now prints them.
+- The front page follows Settings, Reading. Population runs again on every update, and it set a static front page whenever the site was on "Your latest posts", so that choice could not survive an update. Now only the first run sets the front page; later runs repair a static front page whose page is gone and leave "Your latest posts" alone. While a site is on "Your latest posts", `templates/front-page.html` gives way to the posts index (`inc/setup.php`).
+- Links in comment text are underlined, as links in article text are (`assets/css/article.css`).
+
+### Added
+
+- The theme declares `title-tag` and `automatic-feed-links` and loads the `bestofislam` text domain from its `languages` folder (`functions.php`).
+- Licence files for the 3 bundled fonts that had none: Platypi, Ysabeau Office and Vollkorn, all SIL Open Font Licence 1.1 (`assets/fonts/*/OFL.txt`).
+- `docs/CREDITS.md` is the one resources file: the theme's copyright and licence, the 3 fonts above and the theme's own graphics.
+- `readme.txt`, with the description, features, usage, installation, FAQ, privacy, copyright, changelog and upgrade notice.
+
 ## [1.97.0] - 2026-11-04
 
 This release answers 2 of the owner's briefs from today: the mobile-first audit and the WCAG 2.2 AA policy. I loaded 8 page types on a local WordPress and measured them at 9 widths, 320px to 1280px, with Playwright and axe-core. No page scrolled sideways at any width. The fixes below are small, and the layout at 1024px and 1280px is the same as before, checked element by element.

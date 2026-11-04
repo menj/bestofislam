@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.97.0' );
+define( 'BOI_VERSION', '1.98.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -371,6 +371,23 @@ function boi_enqueue_deferred_styles_script() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'boi_enqueue_deferred_styles_script' );
+
+/**
+ * Theme supports and translations.
+ *
+ * The parent theme and core add these for block themes already; declaring
+ * them here keeps the child theme correct on its own. Translations load
+ * from the theme's languages folder when one is shipped, and from
+ * wp-content/languages/themes otherwise.
+ *
+ * @return void
+ */
+function boi_theme_setup() {
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'automatic-feed-links' );
+	load_child_theme_textdomain( 'bestofislam', BOI_DIR . '/languages' );
+}
+add_action( 'after_setup_theme', 'boi_theme_setup' );
 
 /**
  * Adds the listicle editor stylesheet.

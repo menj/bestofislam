@@ -858,8 +858,17 @@ function boi_populate_content() {
 	};
 
 	$front = (int) get_option( 'page_on_front' );
+	$first = ! get_option( 'boi_content_populated' );
 
-	if ( isset( $pages['home'] ) && ( 'page' !== get_option( 'show_on_front' ) || ! $usable( $front ) ) ) {
+	// The first run turns the site's default "latest posts" into the seeded
+	// front page. Later runs respect Settings, Reading: a site that has since
+	// chosen "Your latest posts" keeps it, and only a static front page that
+	// points at a missing page is repaired.
+	$set_front = $first
+		? ( 'page' !== get_option( 'show_on_front' ) || ! $usable( $front ) )
+		: ( 'page' === get_option( 'show_on_front' ) && ! $usable( $front ) );
+
+	if ( isset( $pages['home'] ) && $set_front ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $pages['home'] );
 	}
@@ -1242,6 +1251,20 @@ function boi_differing_articles() {
 
 	return $out;
 }
+
+/**
+ * Lets Settings, Reading decide the front page. A block theme's
+ * front-page.html wins over the Reading choice, so a site set to "Your
+ * latest posts" would still get the designed front page; in that case the
+ * template is dropped and the posts index (home.html) is used.
+ *
+ * @param string[] $templates Candidate templates.
+ * @return string[]
+ */
+function boi_front_page_follows_reading( $templates ) {
+	return 'page' === get_option( 'show_on_front' ) ? $templates : array();
+}
+add_filter( 'frontpage_template_hierarchy', 'boi_front_page_follows_reading' );
 
 /**
  * Brings the articles the owner selects on the Content tab up to this

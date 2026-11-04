@@ -16,6 +16,13 @@
 	--boi-rule: var(--wp--preset--color--accent-6, #D9E3EF);
 }
 
+/* Links in comment text are running text too. */
+.wp-block-comment-content a {
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.22em;
+}
+
 /* Links in running text. */
 /* Not the site's own lists and navigation, whose links sit in list items but
    are not running text: the jump list, the glossary index and related terms,

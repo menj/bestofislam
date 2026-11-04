@@ -191,6 +191,11 @@ through `page_for_posts` and rendered by `templates/home.html`. Keeping the two
 apart means the site always has one URL listing every article, whatever the
 front page later becomes.
 
+The first population sets the static front page. After that, Settings,
+Reading decides: later runs repair a static front page whose page has gone,
+and leave "Your latest posts" alone, and `templates/front-page.html` is used
+only while a static front page is set (1.98.0).
+
 ### D18. Content type is derived, not declared
 
 The site publishes two kinds of post. Listicles take the ranked format and are

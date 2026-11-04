@@ -465,41 +465,52 @@ function boi_render_errors_tab( $opts ) {
 		'foreign' => __( 'Another file is present and has been left untouched', 'bestofislam' ),
 		'absent'  => __( 'Not installed', 'bestofislam' ),
 	);
+
+	boi_opt_card_open( __( 'Error pages', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'errors_pages',
+			'label'   => __( 'Error pages', 'bestofislam' ),
+			'text'    => __( 'Show branded maintenance, database and PHP error pages', 'bestofislam' ),
+			'help'    => __( 'Written to wp-content. If a folder upload removes them, they are restored on the next admin page load.', 'bestofislam' ),
+			'checked' => ! empty( $opts['errors_pages'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Files', 'bestofislam' ) );
+	echo '<ul class="boi-checklist">';
+	foreach ( boi_error_kinds() as $kind => $def ) {
+		echo '<li><code>' . esc_html( $def['file'] ) . '</code>: ' . esc_html( $label[ $state[ $kind ] ] ) . '</li>';
+	}
+	echo '</ul>';
+	boi_opt_row_close();
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Alerts', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'errors_alerts',
+			'label'   => __( 'Alerts', 'bestofislam' ),
+			'text'    => __( 'Email when the database fails, a PHP fatal occurs, a core table is missing or a page answers with HTTP 500', 'bestofislam' ),
+			'help'    => __( 'Database and PHP failures are reported by their error pages, which stay installed while alerts are on.', 'bestofislam' ),
+			'checked' => ! empty( $opts['errors_alerts'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Send alerts to', 'bestofislam' ), 'boi-errors-email' );
 	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Error pages', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[errors_pages]" value="1" <?php checked( $opts['errors_pages'], 1 ); ?> /> <?php esc_html_e( 'Show branded maintenance, database and PHP error pages', 'bestofislam' ); ?></label>
-				<ul>
-					<?php foreach ( boi_error_kinds() as $kind => $def ) : ?>
-						<li><code><?php echo esc_html( $def['file'] ); ?></code>: <?php echo esc_html( $label[ $state[ $kind ] ] ); ?></li>
-					<?php endforeach; ?>
-				</ul>
-				<p class="description"><?php esc_html_e( 'Written to wp-content. If a folder upload removes them, they are restored on the next admin page load.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Alerts', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[errors_alerts]" value="1" <?php checked( $opts['errors_alerts'], 1 ); ?> /> <?php esc_html_e( 'Email when the database fails, a PHP fatal occurs, a core table is missing or a page answers with HTTP 500', 'bestofislam' ); ?></label>
-				<p class="description"><?php esc_html_e( 'Database and PHP failures are reported by their error pages, which stay installed while alerts are on.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-errors-email"><?php esc_html_e( 'Send alerts to', 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="email" id="boi-errors-email" class="regular-text" name="<?php echo esc_attr( $key ); ?>[errors_email]" value="<?php echo esc_attr( $opts['errors_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" />
-				<p class="description"><?php esc_html_e( 'Leave empty to use the site admin email.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-errors-cooldown"><?php esc_html_e( 'Minutes between alerts', 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="number" id="boi-errors-cooldown" min="5" max="1440" name="<?php echo esc_attr( $key ); ?>[errors_cooldown]" value="<?php echo esc_attr( $opts['errors_cooldown'] ); ?>" />
-				<p class="description"><?php esc_html_e( 'One alert per kind of failure in this window, so a long outage sends one email, not hundreds.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
+	<input type="email" id="boi-errors-email" class="regular-text" name="<?php echo esc_attr( $key ); ?>[errors_email]" value="<?php echo esc_attr( $opts['errors_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" aria-describedby="boi-errors-email-help" />
+	<p class="description" id="boi-errors-email-help"><?php esc_html_e( 'Leave empty to use the site admin email.', 'bestofislam' ); ?></p>
 	<?php
+	boi_opt_row_close();
+	boi_opt_range(
+		array(
+			'key'   => 'errors_cooldown',
+			'label' => __( 'Minutes between alerts', 'bestofislam' ),
+			'value' => (int) $opts['errors_cooldown'],
+			'min'   => 5,
+			'max'   => 1440,
+			'unit'  => __( 'minutes', 'bestofislam' ),
+			'help'  => __( 'One alert per kind of failure in this window, so a long outage sends one email, not hundreds.', 'bestofislam' ),
+		)
+	);
+	boi_opt_card_close();
 }
