@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.96.1] - 2026-11-04
+
+### Fixed
+
+- With Rank Math on, a page could carry 2 WebSite nodes. Rank Math's own WebSite kept its `@id`, and the theme added a second one at `boi_entity_id( 'website' )`. Every reference still resolved, but the graph described the site twice. The theme's WebSite now folds into Rank Math's, as the page, article and breadcrumb already did, and the theme's `isPartOf` references follow it (`inc/schema-graph.php`).
+
+### Tests
+
+- `tests/schema-graph-test.php` checks that each page holds exactly 1 WebSite node, at `boi_entity_id( 'website' )` without Rank Math and at Rank Math's `@id` with it. Every page is now merged into 3 stand-in Rank Math graphs: one that spells the WebSite `#website`, one that spells it `#rm-website`, and one with no WebSite at all. A reference to a node outside the graph fails the run in each.
+
 ## [1.96.0] - 2026-11-03
 
 ### Changed

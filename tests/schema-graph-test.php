@@ -557,9 +557,10 @@ function boi_t_walk( $value, $fn ) {
 }
 
 /**
- * Checks one graph; returns the types it holds.
+ * Checks one graph; returns the types it holds. $website_id is the @id the
+ * graph's one WebSite node must carry.
  */
-function boi_t_check( $label, $nodes, $known, $page_types ) {
+function boi_t_check( $label, $nodes, $known, $page_types, $website_id ) {
 	$defined = array();
 	$refs    = array();
 	$types   = array();
@@ -594,6 +595,18 @@ function boi_t_check( $label, $nodes, $known, $page_types ) {
 			}
 		}
 	);
+
+	$sites = array_keys(
+		array_filter(
+			$byid,
+			function ( $n ) {
+				return in_array( 'WebSite', (array) $n['@type'], true );
+			}
+		)
+	);
+	if ( array( $website_id ) !== $sites ) {
+		boi_t_fail( "$label: expected one WebSite node $website_id, got " . ( $sites ? implode( ', ', $sites ) : 'none' ) );
+	}
 
 	foreach ( array_unique( $refs ) as $ref ) {
 		if ( ! isset( $defined[ $ref ] ) ) {
@@ -686,7 +699,7 @@ foreach ( $views as $label => $view ) {
 		continue;
 	}
 
-	$seen += boi_t_check( $label, $json['@graph'], $known, $page_types );
+	$seen += boi_t_check( $label, $json['@graph'], $known, $page_types, boi_entity_id( 'website' ) );
 
 	// The breadcrumb block prints only the trail now.
 	if ( 'front' !== $kind && false !== strpos( (string) boi_render_breadcrumbs(), 'ld+json' ) ) {
@@ -701,41 +714,49 @@ foreach ( $views as $label => $view ) {
 		boi_t_fail( "$label: the theme printed JSON-LD beside Rank Math" );
 	}
 
-	$url  = boi_schema_page_url();
-	$rm   = array(
-		'WebSite'        => array( '@type' => 'WebSite', '@id' => home_url( '/#website' ), 'name' => 'Best of Islam', 'url' => home_url( '/' ), 'potentialAction' => array( '@type' => 'SearchAction', 'target' => home_url( '/?s={s}' ) ) ),
-		'publisher'      => array( '@type' => 'Organization', '@id' => home_url( '/#organization' ), 'name' => 'Best of Islam', 'url' => home_url( '/' ), 'logo' => array( '@type' => 'ImageObject', '@id' => home_url( '/#rmlogo' ), 'contentUrl' => 'https://bestofislam.test/logo.png' ) ),
-		'WebPage'        => array( '@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => 'RM', 'inLanguage' => 'en-GB', 'isPartOf' => array( '@id' => home_url( '/#website' ) ) ),
-		'BreadcrumbList' => array( '@type' => 'BreadcrumbList', '@id' => $url . '#breadcrumb', 'itemListElement' => array( array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home' ) ) ),
-	);
-	if ( 'post' === $kind ) {
-		$rm['richSnippet'] = array( '@type' => 'Article', '@id' => $url . '#richSnippet', 'headline' => 'RM', 'datePublished' => 'x', 'dateModified' => 'x', 'author' => array( '@type' => 'Person', 'name' => 'A' ), 'publisher' => array( '@id' => home_url( '/#organization' ) ), 'mainEntityOfPage' => array( '@id' => $url . '#webpage' ) );
-	}
+	$url = boi_schema_page_url();
 
-	$merged = boi_rank_math_json_ld( $rm );
-	$enc    = json_encode( array( '@context' => 'https://schema.org', '@graph' => array_values( $merged ) ) );
-
-	if ( ! $enc || ! json_decode( $enc, true ) ) {
-		boi_t_fail( "$label (Rank Math): the merged graph does not encode" );
-		continue;
-	}
-
-	if ( 'RM' !== $merged['WebPage']['name'] ) {
-		boi_t_fail( "$label (Rank Math): Rank Math's own value was overwritten" );
-	}
-
-	$articles = 0;
-	foreach ( $merged as $node ) {
-		if ( isset( $node['@type'] ) && array_intersect( (array) $node['@type'], array( 'Article' ) ) && isset( $node['@id'] ) && 0 === strpos( $node['@id'], $url ) ) {
-			++$articles;
+	// Rank Math as it ships (#website, as the theme spells it), with its own
+	// spelling of the WebSite @id, and with no WebSite node of its own.
+	foreach ( array( 'Rank Math' => home_url( '/#website' ), 'Rank Math, own #website' => home_url( '/#rm-website' ), 'Rank Math, no WebSite' => null ) as $rm_label => $site_id ) {
+		$rm = array(
+			'WebSite'        => array( '@type' => 'WebSite', '@id' => $site_id, 'name' => 'Best of Islam', 'url' => home_url( '/' ), 'potentialAction' => array( '@type' => 'SearchAction', 'target' => home_url( '/?s={s}' ) ) ),
+			'publisher'      => array( '@type' => 'Organization', '@id' => home_url( '/#organization' ), 'name' => 'Best of Islam', 'url' => home_url( '/' ), 'logo' => array( '@type' => 'ImageObject', '@id' => home_url( '/#rmlogo' ), 'contentUrl' => 'https://bestofislam.test/logo.png' ) ),
+			'WebPage'        => array( '@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => 'RM', 'inLanguage' => 'en-GB', 'isPartOf' => array( '@id' => null === $site_id ? boi_entity_id( 'website' ) : $site_id ) ),
+			'BreadcrumbList' => array( '@type' => 'BreadcrumbList', '@id' => $url . '#breadcrumb', 'itemListElement' => array( array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home' ) ) ),
+		);
+		if ( null === $site_id ) {
+			unset( $rm['WebSite'] );
 		}
-	}
-	if ( 'post' === $kind && 1 !== $articles ) {
-		boi_t_fail( "$label (Rank Math): $articles Article nodes for the page" );
-	}
+		if ( 'post' === $kind ) {
+			$rm['richSnippet'] = array( '@type' => 'Article', '@id' => $url . '#richSnippet', 'headline' => 'RM', 'datePublished' => 'x', 'dateModified' => 'x', 'author' => array( '@type' => 'Person', 'name' => 'A' ), 'publisher' => array( '@id' => home_url( '/#organization' ) ), 'mainEntityOfPage' => array( '@id' => $url . '#webpage' ) );
+		}
 
-	$rm_page_types = 'author' === $kind ? array( 'ProfilePage' ) : $page_types;
-	$seen         += boi_t_check( "$label (Rank Math)", array_values( $merged ), $known, $rm_page_types );
+		$merged = boi_rank_math_json_ld( $rm );
+		$enc    = json_encode( array( '@context' => 'https://schema.org', '@graph' => array_values( $merged ) ) );
+
+		if ( ! $enc || ! json_decode( $enc, true ) ) {
+			boi_t_fail( "$label ($rm_label): the merged graph does not encode" );
+			continue;
+		}
+
+		if ( 'RM' !== $merged['WebPage']['name'] ) {
+			boi_t_fail( "$label ($rm_label): Rank Math's own value was overwritten" );
+		}
+
+		$articles = 0;
+		foreach ( $merged as $node ) {
+			if ( isset( $node['@type'] ) && array_intersect( (array) $node['@type'], array( 'Article' ) ) && isset( $node['@id'] ) && 0 === strpos( $node['@id'], $url ) ) {
+				++$articles;
+			}
+		}
+		if ( 'post' === $kind && 1 !== $articles ) {
+			boi_t_fail( "$label ($rm_label): $articles Article nodes for the page" );
+		}
+
+		$rm_page_types = 'author' === $kind ? array( 'ProfilePage' ) : $page_types;
+		$seen         += boi_t_check( "$label ($rm_label)", array_values( $merged ), $known, $rm_page_types, null === $site_id ? boi_entity_id( 'website' ) : $site_id );
+	}
 }
 
 // Specific content.
