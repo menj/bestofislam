@@ -4,6 +4,34 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.0] - 2026-11-04
+
+Error pages, checked against the brief for all eight themes. The three
+drop-ins, each built from its own copy, the alerts and maintenance mode
+were already here. No option key, function or handle was renamed or
+removed.
+
+### Added
+- **Install error pages** on the Errors tab, a nonce link to
+  `admin_post_boi_install_error_pages` (`manage_options`), since the tab
+  sits inside the settings form. It runs `boi_error_sync()` at once.
+- `boi_error_state()` reads `outdated` for one of the theme's own files
+  that differs from what it would write now, and the tab shows it.
+- `errors/403.html`, `500.html`, `502.html` and `503.html` for the web
+  server's `ErrorDocument` lines, built from `assets/error-pages/` by
+  `bin/build-error-pages.php`. The Errors tab prints the `.htaccess` lines
+  (`boi_error_htaccess_snippet()`).
+- `tests/error-pages-test.php`.
+
+### Changed
+- `db-error.php` is titled "We cannot reach our database", like its heading (it read "Temporarily unavailable"). The status lines carry their reason phrase.
+- The drop-ins send `X-Robots-Tag: noindex`. `Retry-After` goes with the
+  503 pages only; `php-error.php` answers 500 without it.
+- The 404 page is `noindex, follow`, with and without Rank Math.
+- In dark mode the error pages' button text is the night blue on the azure (`--on-azure`), 7.2:1; white on it was 2.6:1.
+- The three block patterns open with an `ABSPATH` check, like every other
+  PHP file of the theme.
+
 ## [1.99.0] - 2026-11-04
 
 The owner asked for the features of 4 plugins to be built into the theme. Three of them were already here: unlisting (from Unlist Posts & Pages), readable search addresses (from Pretty Search Permalinks) and the social icons (from the Minimalist Social & Platform Icons Pack). I kept those versions and filled the gaps against each plugin. The reading progress bar is new. No option key, function name, block or handle was renamed or removed.

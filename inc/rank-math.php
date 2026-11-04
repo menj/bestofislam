@@ -153,7 +153,7 @@ function boi_rank_math_robots( $robots ) {
 
 	$duplicate = function_exists( 'boi_is_duplicate_archive' ) && boi_is_duplicate_archive();
 
-	if ( $unlisted || $duplicate || is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
+	if ( $unlisted || $duplicate || is_search() || is_404() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
 		$robots['index']  = 'noindex';
 		$robots['follow'] = 'follow';
 	}

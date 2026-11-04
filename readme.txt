@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.99.0
+Stable tag: 1.100.0
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,12 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.0 =
+* The Errors tab has an Install error pages button and tells a current error page from an outdated one.
+* Static 403, 500, 502 and 503 pages in the errors folder for the web server, with the .htaccess lines on the Errors tab.
+* The error pages tell search engines not to index them, and the PHP error page no longer asks browsers to retry.
+* The 404 page tells search engines not to index it.
 
 = 1.99.0 =
 * A reading progress bar on single posts and pages. Switch it on or off, pick the top or bottom edge, a height from 2 to 12 pixels, a palette colour or your own, and the post types, on the Display tab.

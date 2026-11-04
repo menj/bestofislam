@@ -10,6 +10,8 @@
  * @package BestOfIslam
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:shortcode -->
 [boi_social_icons]
