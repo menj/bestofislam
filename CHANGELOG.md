@@ -4,6 +4,34 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.2] - 2026-11-04
+
+### Changed
+- *The Islamic dilemma* (`content/islamic-dilemma.json`): the box at the
+  end is headed "Further reading on the Islamic dilemma", in place of "The
+  Islamic dilemma across the network". The box and its five links stay.
+  An unedited article takes the new text on the next update; an edited one
+  is left alone and listed on the Content tab (D45).
+- The `assets/css/article.css` comment above `.boi-network` no longer
+  speaks of sister sites.
+- The structured data names one author: a Person, `#author` at the site
+  root, named "Mohd Elfie Nieshaem Juferi", with `url` `https://menj.bio`
+  and the owner's addresses from `boi_author_same_as()`, then
+  `https://menj.bio`, in `sameAs` (`boi_schema_author_node()` in
+  `inc/structured-data.php`). Every Article and page node points to it by
+  `@id`; the owner's author archive is a ProfilePage about it.
+  `boi_schema_one_author()` runs on the theme's graph and, through
+  `rank_math/json_ld`, on Rank Math's: it repoints every `author`, drops
+  the Person Rank Math made for the WordPress user (keeping its `sameAs`),
+  and adds the author Person where it is missing. The publisher stays the
+  site. Nothing visible names the author.
+- The Organization's `sameAs`, where it has one, ends with
+  `https://menj.bio`. Existing entries keep their order; stored values are
+  untouched.
+- `tests/schema-graph-test.php` checks every page, with and without Rank
+  Math: one author Person with that name, url and sameAs, every `author`
+  pointing to it, and an author on every article and page node.
+
 ## [1.100.1] - 2026-11-04
 
 ### Fixed

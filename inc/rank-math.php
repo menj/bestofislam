@@ -81,7 +81,7 @@ function boi_rank_math_json_ld( $data, $jsonld = null ) {
 	$post = is_singular( 'post' ) ? get_post() : null;
 
 	if ( ! $post ) {
-		return boi_schema_merge_into_rank_math( $data, boi_schema_graph_nodes( true ) );
+		return boi_schema_one_author( boi_schema_merge_into_rank_math( $data, boi_schema_graph_nodes( true ) ) );
 	}
 
 	$image = boi_article_image_object( $post );
@@ -122,8 +122,8 @@ function boi_rank_math_json_ld( $data, $jsonld = null ) {
 	}
 
 	// Then every other node of the theme's page graph, merged by @id, so the
-	// page still has one graph.
-	return boi_schema_merge_into_rank_math( $data, boi_schema_graph_nodes( true ) );
+	// page still has one graph, and one author.
+	return boi_schema_one_author( boi_schema_merge_into_rank_math( $data, boi_schema_graph_nodes( true ) ) );
 }
 
 /**

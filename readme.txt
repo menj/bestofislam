@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.1
+Stable tag: 1.100.2
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.2 =
+* The Islamic dilemma article no longer calls other websites related to this one. Its links stay.
+* The structured data names the author as Mohd Elfie Nieshaem Juferi, at https://menj.bio. Nothing visible changes.
 
 = 1.100.1 =
 * Install error pages now says so when it could not write a file, and names the file, in place of the success notice.
