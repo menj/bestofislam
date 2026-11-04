@@ -62,7 +62,7 @@ function boi_error_copy( $kind ) {
 			'status'  => 503,
 		),
 		'db-error'    => array(
-			'title'   => __( 'Temporarily unavailable', 'bestofislam' ),
+			'title'   => __( 'We cannot reach our database', 'bestofislam' ),
 			'heading' => __( 'We cannot reach our database', 'bestofislam' ),
 			'line1'   => __( 'This is temporary, and nothing you did caused it.', 'bestofislam' ),
 			'line2'   => __( 'Please try again in a few minutes.', 'bestofislam' ),
@@ -117,7 +117,8 @@ function boi_error_dropin_source( $kind ) {
 	// trigger the alert mail.
 	$src .= "if ( ! defined( 'ABSPATH' ) ) {\n\theader( 'HTTP/1.1 403 Forbidden', true, 403 );\n\texit;\n}\n";
 	$src .= "if ( ! headers_sent() ) {\n";
-	$src .= "\theader( 'HTTP/1.1 {$copy['status']}', true, {$copy['status']} );\n";
+	$reason = 503 === (int) $copy['status'] ? 'Service Unavailable' : 'Internal Server Error';
+	$src   .= "\theader( 'HTTP/1.1 {$copy['status']} {$reason}', true, {$copy['status']} );\n";
 	$src .= "\theader( 'Content-Type: text/html; charset=utf-8' );\n";
 	if ( 503 === (int) $copy['status'] ) {
 		$src .= "\theader( 'Retry-After: 300' );\n";

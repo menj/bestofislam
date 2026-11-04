@@ -56,9 +56,10 @@ foreach ( boi_error_kinds() as $boi_kind => $boi_def ) {
 	boi_check( false !== strpos( $boi_out, '<!DOCTYPE html>' ) && ! preg_match( '/(Warning|Notice|Fatal error|Deprecated):/', $boi_out ), "$boi_kind runs without WordPress" );
 	unlink( $boi_file );
 }
-boi_check( false !== strpos( $boi_src['maintenance'], "header( 'HTTP/1.1 503', true, 503 )" ) && false !== strpos( $boi_src['maintenance'], 'Retry-After' ), 'maintenance sends 503 and Retry-After' );
-boi_check( false !== strpos( $boi_src['db-error'], "header( 'HTTP/1.1 503', true, 503 )" ) && false !== strpos( $boi_src['db-error'], 'We cannot reach our database' ), 'db-error sends 503 and names the database' );
-boi_check( false !== strpos( $boi_src['php-error'], "header( 'HTTP/1.1 500', true, 500 )" ) && false === strpos( $boi_src['php-error'], 'Retry-After' ) && false !== strpos( $boi_src['php-error'], 'Something went wrong' ), 'php-error sends 500 without Retry-After' );
+boi_check( false !== strpos( $boi_src['maintenance'], "header( 'HTTP/1.1 503 Service Unavailable', true, 503 )" ) && false !== strpos( $boi_src['maintenance'], 'Retry-After' ), 'maintenance sends 503 and Retry-After' );
+boi_check( false !== strpos( $boi_src['db-error'], "header( 'HTTP/1.1 503 Service Unavailable', true, 503 )" ) && false !== strpos( $boi_src['db-error'], 'We cannot reach our database' ), 'db-error sends 503 and names the database' );
+boi_check( false !== strpos( $boi_src['db-error'], '<title>We cannot reach our database | Best of Islam</title>' ), 'db-error is titled after the database' );
+boi_check( false !== strpos( $boi_src['php-error'], "header( 'HTTP/1.1 500 Internal Server Error', true, 500 )" ) && false === strpos( $boi_src['php-error'], 'Retry-After' ) && false !== strpos( $boi_src['php-error'], 'Something went wrong' ), 'php-error sends 500 without Retry-After' );
 
 boi_check( array( 'maintenance' => 'absent', 'db-error' => 'absent', 'php-error' => 'absent' ) === boi_error_state(), 'nothing installed reads as absent' );
 file_put_contents( "$boi_tmp/db-error.php", "<?php // someone else's\n" );

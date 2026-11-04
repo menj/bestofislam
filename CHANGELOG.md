@@ -24,6 +24,7 @@ removed.
 - `tests/error-pages-test.php`.
 
 ### Changed
+- `db-error.php` is titled "We cannot reach our database", like its heading (it read "Temporarily unavailable"). The status lines carry their reason phrase.
 - The drop-ins send `X-Robots-Tag: noindex`. `Retry-After` goes with the
   503 pages only; `php-error.php` answers 500 without it.
 - The 404 page is `noindex, follow`, with and without Rank Math.
