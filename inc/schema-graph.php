@@ -1037,7 +1037,7 @@ function boi_schema_merge_node( $a, $b ) {
 /**
  * Adds the theme's nodes to Rank Math's graph. A node Rank Math already has,
  * by @id, gains only the properties and types it lacks. Rank Math names its
- * page, article and breadcrumb nodes in its own way, so the theme's nodes of
+ * page, article, breadcrumb and WebSite nodes in its own way, so the theme's nodes of
  * those kinds are folded into Rank Math's, and references follow them.
  *
  * @param array $data  Rank Math's entities, keyed by name.
@@ -1057,6 +1057,9 @@ function boi_schema_merge_into_rank_math( $data, $nodes ) {
 		'page'    => array( 'WebPage', 'CollectionPage', 'ProfilePage', 'SearchResultsPage', 'AboutPage', 'ContactPage', 'ItemPage', 'FAQPage', 'QAPage' ),
 		'article' => array( 'Article', 'BlogPosting', 'NewsArticle' ),
 		'crumbs'  => array( 'BreadcrumbList' ),
+		// Rank Math's WebSite may carry its own @id; the theme's folds into it
+		// so the graph holds one WebSite and every isPartOf points at it.
+		'website' => array( 'WebSite' ),
 	);
 	$theirs   = array();
 
