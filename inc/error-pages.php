@@ -220,11 +220,14 @@ function boi_error_saved_config() {
  */
 function boi_error_write( $path, $contents ) {
 	$tmp = $path . '.' . wp_generate_password( 8, false ) . '.tmp';
-	if ( false !== file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
-		if ( ! rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
-			wp_delete_file( $tmp );
-		}
+	if ( false === @file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+		return false;
 	}
+	if ( ! @rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+		wp_delete_file( $tmp );
+		return false;
+	}
+	return true;
 }
 
 /**
@@ -298,8 +301,12 @@ function boi_error_handle_install() {
 		wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors' ) );
 		exit;
 	}
-	boi_error_sync();
-	wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_installed=1' ) );
+	if ( boi_error_sync() ) {
+		wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_installed=1' ) );
+		exit;
+	}
+	$failed = implode( ',', boi_error_sync_failures() );
+	wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_failed=' . rawurlencode( $failed ) ) );
 	exit;
 }
 add_action( 'admin_post_boi_install_error_pages', 'boi_error_handle_install' );
@@ -320,13 +327,28 @@ function boi_error_htaccess_snippet() {
 }
 
 /**
+ * The file names the last boi_error_sync() could not write.
+ *
+ * @param string[]|null $set Replaces the list when given.
+ * @return string[]
+ */
+function boi_error_sync_failures( $set = null ) {
+	static $failed = array();
+	if ( null !== $set ) {
+		$failed = $set;
+	}
+	return $failed;
+}
+
+/**
  * Writes or removes the drop-ins to match the settings. Files that are not
  * ours are never touched.
  *
- * @return void
+ * @return bool True when every file it meant to write was written.
  */
 function boi_error_sync() {
-	$opts = boi_get_options();
+	$opts   = boi_get_options();
+	$failed = array();
 
 	foreach ( boi_error_kinds() as $kind => $def ) {
 		$path = WP_CONTENT_DIR . '/' . $def['file'];
@@ -341,26 +363,24 @@ function boi_error_sync() {
 		}
 
 		if ( $enabled ) {
-			if ( is_writable( WP_CONTENT_DIR ) || is_writable( $path ) ) {
-				boi_error_write( $path, boi_error_dropin_source( $kind ) );
+			if ( ! ( is_writable( WP_CONTENT_DIR ) || is_writable( $path ) ) || ! boi_error_write( $path, boi_error_dropin_source( $kind ) ) ) {
+				$failed[] = $def['file'];
 			}
 		} elseif ( file_exists( $path ) ) {
 			wp_delete_file( $path );
 		}
 	}
 
-	if ( is_writable( WP_CONTENT_DIR ) ) {
-		boi_error_write(
-			boi_error_config_path(),
-			"<?php\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\nreturn " . var_export(
-				array(
-					'to'       => boi_error_recipient(),
-					'alerts'   => (int) $opts['errors_alerts'],
-					'cooldown' => (int) $opts['errors_cooldown'],
-				),
-				true
-			) . ";\n"
-		);
+	$config = "<?php\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\nreturn " . var_export(
+		array(
+			'to'       => boi_error_recipient(),
+			'alerts'   => (int) $opts['errors_alerts'],
+			'cooldown' => (int) $opts['errors_cooldown'],
+		),
+		true
+	) . ";\n";
+	if ( ! is_writable( WP_CONTENT_DIR ) || ! boi_error_write( boi_error_config_path(), $config ) ) {
+		$failed[] = basename( boi_error_config_path() );
 	}
 
 	// An earlier version kept these settings in a readable JSON file.
@@ -369,6 +389,8 @@ function boi_error_sync() {
 	}
 
 	update_option( 'boi_error_dropins_fingerprint', boi_error_fingerprint(), false );
+	boi_error_sync_failures( $failed );
+	return array() === $failed;
 }
 
 /**
@@ -531,6 +553,19 @@ function boi_render_errors_tab( $opts ) {
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
 	if ( isset( $_GET['boi_errors_installed'] ) ) {
 		echo '<p class="notice notice-success inline">' . esc_html__( 'The error pages were written where the theme may write them.', 'bestofislam' ) . '</p>';
+	}
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
+	if ( isset( $_GET['boi_errors_failed'] ) ) {
+		$known = array_merge( wp_list_pluck( boi_error_kinds(), 'file' ), array( basename( boi_error_config_path() ) ) );
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only, and only known names are shown.
+		$names = array_values( array_intersect( $known, explode( ',', sanitize_text_field( wp_unslash( $_GET['boi_errors_failed'] ) ) ) ) );
+		echo '<p class="notice notice-error inline">' . esc_html(
+			sprintf(
+				/* translators: %s: comma-separated file names */
+				__( 'These files could not be written to wp-content: %s. Check that the web server may write there.', 'bestofislam' ),
+				$names ? implode( ', ', $names ) : __( 'unknown', 'bestofislam' )
+			)
+		) . '</p>';
 	}
 	if ( is_multisite() && ! is_main_site() ) {
 		echo '<p class="description">' . esc_html__( 'The whole network shares wp-content, so the error pages are installed from the main site.', 'bestofislam' ) . '</p>';

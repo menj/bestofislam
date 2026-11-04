@@ -4,6 +4,17 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.1] - 2026-11-04
+
+### Fixed
+- **Install error pages** showed the success notice even when nothing was
+  written. `boi_error_write()` and `boi_error_sync()` now return whether
+  the write worked, and a sync counts a file it could not write because
+  wp-content was not writable as a failure. The handler adds
+  `boi_errors_installed=1` only when every file was written; otherwise it
+  adds `boi_errors_failed` and the tab shows an error notice that names
+  the files. `boi_error_sync_failures()` holds the names.
+
 ## [1.100.0] - 2026-11-04
 
 Error pages, checked against the brief for all eight themes. The three
