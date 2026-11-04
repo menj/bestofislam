@@ -28,6 +28,7 @@ removed.
 - The drop-ins send `X-Robots-Tag: noindex`. `Retry-After` goes with the
   503 pages only; `php-error.php` answers 500 without it.
 - The 404 page is `noindex, follow`, with and without Rank Math.
+- In dark mode the error pages' button text is the night blue on the azure (`--on-azure`), 7.2:1; white on it was 2.6:1.
 - The three block patterns open with an `ABSPATH` check, like every other
   PHP file of the theme.
 
