@@ -31,6 +31,8 @@ function add_filter() {}
 function get_option( $k, $d = false ) { return array_key_exists( $k, $GLOBALS['t_options'] ) ? $GLOBALS['t_options'][ $k ] : $d; }
 function boi_get_options() { $s = get_option( BOI_OPTION_KEY, array() ); return array_merge( array( 'search_pretty' => 1, 'search_base' => 'search' ), $s ); }
 function sanitize_title( $s ) { return strtolower( preg_replace( '/[^A-Za-z0-9\-]+/', '-', trim( (string) $s ) ) ); }
+function sanitize_key( $s ) { return preg_replace( '/[^a-z0-9_\-]/', '', strtolower( (string) $s ) ); }
+function __( $s ) { return $s; }
 function is_search() { return true; }
 function is_admin() { return false; }
 function get_query_var( $k ) { return isset( $GLOBALS['t_vars'][ $k ] ) ? $GLOBALS['t_vars'][ $k ] : ''; }
@@ -82,12 +84,39 @@ check( $r && 'https://example.org/search/Paul/page/2/' === $r[0], 'page 2 keeps 
 $r = run_redirect( array( 's' => 'two words', 'kind' => 'glossary' ), array( 's' => 'two words' ) );
 check( $r && 'https://example.org/search/two%20words/?kind=glossary' === $r[0], 'filters and encoding kept' );
 
+$r = run_redirect( array( 's' => 'Paul', 'post_type' => array( 'post', 'page' ), 'bad' => array( array() ) ), array( 's' => 'Paul' ) );
+check( $r && 'https://example.org/search/Paul/?post_type%5B0%5D=post&post_type%5B1%5D=page' === $r[0], 'array arguments kept intact' );
+
+// Bases the site already routes are refused; the cleaner is sanitize_key.
+check( '' !== boi_search_base_problem( 'topic' ) && '' !== boi_search_base_problem( 'glossary' ), 'reserved bases refused' );
+check( '' === boi_search_base_problem( 'zoek' ), 'free base accepted' );
+$GLOBALS['t_options'][ BOI_OPTION_KEY ] = array( 'search_base' => 'Zoek Hier!' );
+check( 'zoekhier' === boi_search_base(), 'base cleaned with sanitize_key' );
+$GLOBALS['t_options'] = array();
+
 check( null === run_redirect( array( 's' => '' ), array( 's' => '' ) ), 'empty search not redirected' );
 check( null === run_redirect( array( 's' => '   ' ), array( 's' => '   ' ) ), 'blank search not redirected' );
 check( null === run_redirect( array(), array( 's' => 'Paul' ) ), 'already readable address not redirected' );
 
 $GLOBALS['t_options'][ BOI_OPTION_KEY ] = array( 'search_pretty' => 0 );
 check( null === run_redirect( array( 's' => 'Paul' ), array( 's' => 'Paul' ) ), 'switched off: no redirect' );
+$GLOBALS['t_options'] = array();
+
+// The flush marker clears only once the rules hold the search rule.
+$src = (string) file_get_contents( BOI_DIR . '/inc/settings.php' );
+preg_match( '/^function boi_maybe_flush_rewrites\(.*?^}$/ms', $src, $m1 );
+preg_match( '/^function boi_search_rules_ready\(.*?^}$/ms', $src, $m2 );
+eval( $m1[0] . $m2[0] ); // phpcs:ignore
+function flush_rewrite_rules() { $GLOBALS['t_flushes'] = ( $GLOBALS['t_flushes'] ?? 0 ) + 1; }
+function delete_option( $k ) { unset( $GLOBALS['t_options'][ $k ] ); }
+$GLOBALS['t_options'] = array( 'boi_flush_rewrites' => 1, 'rewrite_rules' => array( 'topic/(.+)/?$' => 'x' ) );
+boi_maybe_flush_rewrites();
+check( 1 === $GLOBALS['t_flushes'] && ! empty( $GLOBALS['t_options']['boi_flush_rewrites'] ), 'marker kept while the search rule is missing' );
+$GLOBALS['t_options']['rewrite_rules']['search/(.+)/?$'] = 'index.php?s=$matches[1]';
+boi_maybe_flush_rewrites();
+check( empty( $GLOBALS['t_options']['boi_flush_rewrites'] ), 'marker cleared once the rule is there' );
+boi_maybe_flush_rewrites();
+check( 2 === $GLOBALS['t_flushes'], 'no flush without the marker' );
 $GLOBALS['t_options'] = array();
 
 eval( "function wpseosearch_base() {}" ); // phpcs:ignore -- declared late on purpose: a top-level declaration is hoisted.

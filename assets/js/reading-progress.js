@@ -1,7 +1,8 @@
 /**
  * Reading progress bar: fills the bar printed by inc/reading-progress.php as
  * the reader scrolls. One passive scroll listener schedules at most one
- * update per animation frame; the page height is measured again on resize.
+ * update per animation frame; the page height is measured again on resize
+ * and whenever the body changes size.
  */
 ( function () {
 	'use strict';
@@ -32,5 +33,11 @@
 	window.addEventListener( 'scroll', schedule, { passive: true } );
 	window.addEventListener( 'resize', schedule, { passive: true } );
 	window.addEventListener( 'load', schedule );
+
+	// Images, embeds and late styles change the page height without a
+	// scroll or a resize; measure again whenever it does.
+	if ( 'ResizeObserver' in window ) {
+		new window.ResizeObserver( schedule ).observe( document.body );
+	}
 	update();
 }() );

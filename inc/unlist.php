@@ -45,22 +45,131 @@ function boi_unlist_post_types() {
 	return array_values( get_post_types( array( 'public' => true ), 'names' ) );
 }
 
+const BOI_UNLISTED_META = '_boi_unlisted';
+
 /**
- * Identifiers of unlisted items. On first use, imports the list saved by the
- * Unlist Posts & Pages plugin, so switching from the plugin loses nothing.
+ * Identifiers of unlisted items.
+ *
+ * Each item carries its own flag in post meta (_boi_unlisted), so two saves
+ * on different posts cannot erase each other. The boi_unlisted option is a
+ * cache of those flags, rebuilt from them after every change, and it is kept
+ * equal to the plugin's unlist_posts list so the plugin finds the same items
+ * if it is switched back on.
+ *
+ * The plugin's list is read on the first call of any request, front end
+ * included, and again whenever it differs from the copy last synced: an
+ * item unlisted with the plugin active is never shown once the theme takes
+ * over.
  *
  * @return int[]
  */
 function boi_unlisted_ids() {
-	$ids = get_option( BOI_UNLISTED_OPTION, null );
+	boi_unlist_sync_from_plugin();
 
-	if ( null === $ids ) {
-		$imported = get_option( 'unlist_posts', array() );
-		$ids      = is_array( $imported ) ? $imported : array();
-		update_option( BOI_UNLISTED_OPTION, array_values( array_unique( array_map( 'intval', $ids ) ) ), true );
+	$ids = get_option( BOI_UNLISTED_OPTION, array() );
+
+	return array_values( array_filter( array_map( 'intval', (array) $ids ), static function ( $id ) {
+		return $id > 0;
+	} ) );
+}
+
+/**
+ * The plugin's saved list, cleaned.
+ *
+ * @return int[]
+ */
+function boi_unlist_plugin_ids() {
+	$ids = get_option( 'unlist_posts', array() );
+	$ids = is_array( $ids ) ? $ids : array();
+	$ids = array_values( array_unique( array_filter( array_map( 'intval', $ids ), static function ( $id ) {
+		return $id > 0;
+	} ) ) );
+	sort( $ids );
+
+	return $ids;
+}
+
+/**
+ * Imports the plugin's list when it is new or has changed since the last
+ * sync. Items in the old option without a meta flag (saved before 1.99.0)
+ * get one too. Runs once a request.
+ *
+ * @param bool $again Run even if this request already ran it (tests).
+ * @return void
+ */
+function boi_unlist_sync_from_plugin( $again = false ) {
+	static $done = false;
+
+	if ( $done && ! $again ) {
+		return;
 	}
 
-	return array_values( array_filter( array_map( 'intval', (array) $ids ) ) );
+	$done = true;
+
+	// No database yet (very early, or a test harness): read the option as is.
+	if ( empty( $GLOBALS['wpdb'] ) || ! is_object( $GLOBALS['wpdb'] ) ) {
+		return;
+	}
+
+	$plugin = boi_unlist_plugin_ids();
+	$hash   = md5( implode( ',', $plugin ) );
+	$synced = get_option( 'boi_unlisted_synced', null );
+
+	if ( $hash === $synced ) {
+		return;
+	}
+
+	$ids = $plugin;
+
+	// The first sync also carries over the theme's own list from before
+	// the flags existed.
+	if ( null === $synced ) {
+		$ids = array_merge( $ids, array_map( 'intval', (array) get_option( BOI_UNLISTED_OPTION, array() ) ) );
+	} else {
+		// The plugin's list changed while it was in charge: it wins.
+		foreach ( boi_unlist_flagged_ids() as $id ) {
+			if ( ! in_array( $id, $plugin, true ) ) {
+				delete_post_meta( $id, BOI_UNLISTED_META );
+			}
+		}
+	}
+
+	foreach ( array_unique( array_filter( $ids ) ) as $id ) {
+		update_post_meta( (int) $id, BOI_UNLISTED_META, 1 );
+	}
+
+	boi_unlist_rebuild();
+}
+
+/**
+ * The IDs whose meta flag is set, read straight from the table so no query
+ * filter (this module's own included) can hide one.
+ *
+ * @return int[]
+ */
+function boi_unlist_flagged_ids() {
+	global $wpdb;
+
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$ids = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT post_id FROM {$wpdb->postmeta} WHERE meta_key = %s", BOI_UNLISTED_META ) );
+	$ids = array_values( array_unique( array_filter( array_map( 'intval', (array) $ids ) ) ) );
+	sort( $ids );
+
+	return $ids;
+}
+
+/**
+ * Rebuilds the option and the plugin's list from the meta flags, and
+ * records the plugin list as synced.
+ *
+ * @return void
+ */
+function boi_unlist_rebuild() {
+	$ids = boi_unlist_flagged_ids();
+
+	update_option( BOI_UNLISTED_OPTION, $ids, true );
+	update_option( 'unlist_posts', $ids );
+	update_option( 'boi_unlisted_synced', md5( implode( ',', $ids ) ), true );
 }
 
 /**
@@ -77,6 +186,24 @@ function boi_is_unlisted( $post ) {
 	$id = $post instanceof WP_Post ? $post->ID : (int) $post;
 
 	return $id > 0 && in_array( $id, boi_unlisted_ids(), true );
+}
+
+/**
+ * Whether an item is unlisted by the theme or, while it is active, by the
+ * plugin. For the exclusions the theme keeps either way (Rank Math's sitemap
+ * and the image sitemap), which the plugin does not cover.
+ *
+ * @param int|WP_Post $post Post or identifier.
+ * @return bool
+ */
+function boi_is_unlisted_anywhere( $post ) {
+	$id = $post instanceof WP_Post ? $post->ID : (int) $post;
+
+	if ( boi_unlist_enabled() ) {
+		return boi_is_unlisted( $id );
+	}
+
+	return $id > 0 && in_array( $id, boi_unlist_plugin_ids(), true );
 }
 
 /**
@@ -278,20 +405,22 @@ add_action( 'save_post', 'boi_unlist_save' );
  * @return void
  */
 function boi_set_unlisted( $post_id, $unlisted ) {
-	boi_with_lock(
-		'unlisted',
-		function () use ( $post_id, $unlisted ) {
-			// Read inside the lock, so two saves cannot overwrite each other.
-			// The option autoloads, so it also sits in the combined "alloptions"
-			// cache; clear both or the read below can return a stale list.
-			wp_cache_delete( BOI_UNLISTED_OPTION, 'options' );
-			wp_cache_delete( 'alloptions', 'options' );
-			$ids = boi_unlisted_ids();
-			$ids = $unlisted ? array_unique( array_merge( $ids, array( (int) $post_id ) ) ) : array_diff( $ids, array( (int) $post_id ) );
+	$post_id = (int) $post_id;
 
-			update_option( BOI_UNLISTED_OPTION, array_values( array_map( 'intval', $ids ) ), true );
-		}
-	);
+	if ( $post_id <= 0 ) {
+		return;
+	}
+
+	// One flag per post: a save on one post never rewrites another's.
+	if ( $unlisted ) {
+		update_post_meta( $post_id, BOI_UNLISTED_META, 1 );
+	} else {
+		delete_post_meta( $post_id, BOI_UNLISTED_META );
+	}
+
+	// The cached list is rebuilt from every flag, under the lock, so the last
+	// rebuild always sees both saves.
+	boi_with_lock( 'unlisted', 'boi_unlist_rebuild' );
 
 	if ( function_exists( 'boi_flush_site_counts' ) ) {
 		boi_flush_site_counts();

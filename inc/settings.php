@@ -153,7 +153,7 @@ function boi_sanitize_options( $input ) {
 				$current['progress_color'] = $color;
 
 				$public                    = get_post_types( array( 'public' => true ) );
-				$types                     = isset( $input['progress_types'] ) ? array_map( 'sanitize_key', (array) $input['progress_types'] ) : array();
+				$types                     = isset( $input['progress_types'] ) && is_array( $input['progress_types'] ) ? array_map( 'sanitize_key', array_filter( $input['progress_types'], 'is_string' ) ) : array();
 				$current['progress_types'] = array_values( array_intersect( $types, $public ) );
 			}
 
@@ -187,8 +187,15 @@ function boi_sanitize_options( $input ) {
 			// values mean "not offered", not "switched off": keep what is saved.
 			if ( ! function_exists( 'wpseosearch_base' ) ) {
 				$current['search_pretty'] = empty( $input['search_pretty'] ) ? 0 : 1;
-				$base                     = isset( $input['search_base'] ) ? sanitize_title( $input['search_base'] ) : 'search';
-				$current['search_base']   = '' !== $base ? $base : 'search';
+				$base                     = isset( $input['search_base'] ) ? sanitize_key( $input['search_base'] ) : 'search';
+				$base                     = '' !== $base ? $base : 'search';
+				$problem                  = function_exists( 'boi_search_base_problem' ) ? boi_search_base_problem( $base ) : '';
+
+				if ( '' !== $problem ) {
+					add_settings_error( BOI_OPTION_KEY, 'boi-search-base', $problem );
+				} else {
+					$current['search_base'] = $base;
+				}
 				// The base changes the rewrite rules; rebuild them on the next load.
 				update_option( 'boi_flush_rewrites', 1, false );
 			}
@@ -196,7 +203,8 @@ function boi_sanitize_options( $input ) {
 
 		case 'permalink':
 			// The Search base field on Settings, Permalinks.
-			$base                   = isset( $input['search_base'] ) ? sanitize_title( $input['search_base'] ) : '';
+			// Checked against the reserved words before it gets here.
+			$base                   = isset( $input['search_base'] ) ? sanitize_key( $input['search_base'] ) : '';
 			$current['search_base'] = '' !== $base ? $base : 'search';
 			break;
 
@@ -1007,7 +1015,7 @@ function boi_render_seo_tab( $opts ) {
 		boi_opt_row_open( __( 'Base word', 'bestofislam' ), 'boi-search-base' );
 		?>
 		<span class="boi-affix"><code><?php echo esc_html( trailingslashit( home_url() ) ); ?></code><input type="text" id="boi-search-base" class="regular-text" name="<?php echo esc_attr( $key ); ?>[search_base]" value="<?php echo esc_attr( boi_search_base() ); ?>" aria-describedby="boi-search-base-help" /><code>/Paul/</code></span>
-		<p class="description" id="boi-search-base-help"><?php esc_html_e( 'The chosen base is also kept out of search engines through robots.txt.', 'bestofislam' ); ?></p>
+		<p class="description" id="boi-search-base-help"><?php esc_html_e( 'Lowercase letters, numbers, hyphens and underscores; anything else is removed. It cannot be an address the site already uses, such as topic or glossary. The chosen base is also kept out of search engines through robots.txt.', 'bestofislam' ); ?></p>
 		<?php
 		boi_opt_row_close();
 	}
@@ -1108,9 +1116,44 @@ function boi_render_access_tab( $opts ) {
  * @return void
  */
 function boi_maybe_flush_rewrites() {
-	if ( get_option( 'boi_flush_rewrites' ) ) {
-		delete_option( 'boi_flush_rewrites' );
-		flush_rewrite_rules( false );
+	if ( ! get_option( 'boi_flush_rewrites' ) ) {
+		return;
 	}
+
+	flush_rewrite_rules( false );
+
+	// Clear the request only once the rules hold the search rule, so a flush
+	// that failed or ran before the base was applied is tried again.
+	if ( boi_search_rules_ready() ) {
+		delete_option( 'boi_flush_rewrites' );
+	}
+}
+
+/**
+ * Whether the stored rewrite rules contain the search rule for the current
+ * base. With readable addresses off there is nothing to look for.
+ *
+ * @return bool
+ */
+function boi_search_rules_ready() {
+	if ( ! function_exists( 'boi_pretty_search_enabled' ) || ! boi_pretty_search_enabled() ) {
+		return true;
+	}
+
+	$rules = get_option( 'rewrite_rules' );
+
+	if ( ! is_array( $rules ) ) {
+		return false;
+	}
+
+	$prefix = boi_search_base() . '/(.+)';
+
+	foreach ( array_keys( $rules ) as $regex ) {
+		if ( 0 === strpos( (string) $regex, $prefix ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 add_action( 'init', 'boi_maybe_flush_rewrites', 99 );

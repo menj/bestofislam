@@ -25,6 +25,17 @@ The owner asked for the features of 4 plugins to be built into the theme. Three 
 - The follow icons take their colours from CSS variables (`--boi-social-*`) and show a gold focus ring. The footer looks as before.
 - Rewrite rules are rebuilt once after each theme update, through the existing `boi_flush_rewrites` flag, and never on an ordinary load.
 
+### Fixed in review
+
+- Unlisting stored the whole list in one option, read and rewritten on every save, so two saves on different posts could erase each other. Each item now carries its own flag in post meta (`_boi_unlisted`). The `boi_unlisted` option is rebuilt from the flags after every change, under the lock, and the plugin's `unlist_posts` is kept equal to it.
+- The plugin's list is imported on the first read of any request, front end included, and again whenever it has changed since the last sync (`boi_unlisted_synced`). Items unlisted before this release get their flags on that first read.
+- Rank Math's sitemap and the image sitemap read the plugin's list while the plugin is active (`boi_is_unlisted_anywhere()`). The plugin does not filter either.
+- The rewrite flag is cleared only after the flush, and only once the stored rules hold the search rule for the current base (`boi_search_rules_ready()`).
+- The search redirect keeps array arguments such as `post_type[]` intact.
+- The search base is cleaned with `sanitize_key`, and a base the site already routes (topic, glossary, a post type or taxonomy base, and WordPress's own) is refused with a notice. The help text says so.
+- The progress bar measures again when the page height changes, through a ResizeObserver on the body.
+- The progress bar's post types accept only strings.
+
 ## [1.98.1] - 2026-11-04
 
 The Schema Markup Validator run of 4 November rejected two `hasPart` links. schema.org gives `hasPart` a CreativeWork, and an `ItemList` is not one. Both lists stay in the graph with their @ids. No option key, function name or handle changed.

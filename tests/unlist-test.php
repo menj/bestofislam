@@ -42,6 +42,18 @@ function is_singular() { return $GLOBALS['t_single']; }
 function get_queried_object_id() { return $GLOBALS['t_queried']; }
 function get_post_types() { return array( 'post' => 'post', 'page' => 'page' ); }
 
+// Post meta and the one query the module runs against it.
+$GLOBALS['t_meta'] = array();
+function update_post_meta( $id, $key, $value ) { $GLOBALS['t_meta'][ $key ][ (int) $id ] = $value; return true; }
+function delete_post_meta( $id, $key ) { unset( $GLOBALS['t_meta'][ $key ][ (int) $id ] ); return true; }
+function boi_with_lock( $name, $callback ) { return call_user_func( $callback ); }
+class T_WPDB {
+	public $postmeta = 'wp_postmeta';
+	public function prepare( $sql, ...$args ) { return array( $sql, $args ); }
+	public function get_col( $query ) { return array_keys( $GLOBALS['t_meta'][ $query[1][0] ] ?? array() ); }
+}
+$GLOBALS['wpdb'] = new T_WPDB();
+
 require BOI_DIR . '/inc/unlist.php';
 
 $fail = 0;
@@ -53,9 +65,21 @@ function check( $ok, $msg ) {
 	}
 }
 
-// Import from the plugin's option on first use.
-$GLOBALS['t_options']['unlist_posts'] = array( '7', 9 );
+// Import from the plugin's option on first use: flags written, both lists in step.
+$GLOBALS['t_options']['unlist_posts'] = array( '9', 7 );
 check( array( 7, 9 ) === boi_unlisted_ids(), 'imports the plugin list' );
+check( array( 7 => 1, 9 => 1 ) === $GLOBALS['t_meta']['_boi_unlisted'], 'one meta flag per imported post' );
+check( array( 7, 9 ) === $GLOBALS['t_options']['unlist_posts'], 'plugin list kept in step' );
+
+// Two saves on different posts: the second never erases the first, because
+// each writes only its own flag and the list is rebuilt from all flags.
+boi_set_unlisted( 11, true );
+$GLOBALS['t_options']['boi_unlisted'] = array( 7, 9 ); // A stale copy read by a concurrent save.
+boi_set_unlisted( 12, true );
+check( array( 7, 9, 11, 12 ) === $GLOBALS['t_options']['boi_unlisted'], 'concurrent saves both survive' );
+boi_set_unlisted( 11, false );
+boi_set_unlisted( 12, false );
+check( array( 7, 9 ) === $GLOBALS['t_options']['boi_unlisted'] && array( 7, 9 ) === $GLOBALS['t_options']['unlist_posts'], 'listing again rebuilds both lists' );
 check( boi_is_unlisted( 7 ) && boi_is_unlisted( new WP_Post( 9 ) ) && ! boi_is_unlisted( 8 ), 'boi_is_unlisted' );
 
 // A listing query (home, archive, feed, search, sitemap, REST list) loses them.
@@ -98,10 +122,20 @@ $GLOBALS['t_queried'] = 8;
 $r = boi_unlist_robots( array( 'index' => true ) );
 check( empty( $r['noindex'] ), 'listed item stays indexable' );
 
+// A list the plugin changed since the last sync wins on the next request.
+check( get_option( 'boi_unlisted_synced' ) === md5( '7,9' ), 'sync hash recorded' );
+$GLOBALS['t_options']['unlist_posts'] = array( 9, 20 );
+boi_unlist_sync_from_plugin( true );
+check( array( 9, 20 ) === boi_unlisted_ids(), 're-syncs a changed plugin list' );
+check( array( 9 => 1, 20 => 1 ) === $GLOBALS['t_meta']['_boi_unlisted'], 'flags follow the plugin list' );
+$GLOBALS['t_options']['unlist_posts'] = array( 7, 9 );
+boi_unlist_sync_from_plugin( true );
+
 // The plugin standing in turns the theme's version off.
 eval( 'class Unlist_Posts {}' ); // phpcs:ignore
 check( ! boi_unlist_enabled() && ! boi_is_unlisted( 7 ), 'stands aside for the plugin' );
 check( '' === boi_unlist_adjacent( '' ), 'no adjacent filter while the plugin is active' );
+check( boi_is_unlisted_anywhere( 7 ) && ! boi_is_unlisted_anywhere( 8 ), 'sitemap exclusions read the plugin list while it is active' );
 
 echo $fail ? "$fail failure(s)\n" : "unlist: all checks passed\n";
 exit( $fail ? 1 : 0 );

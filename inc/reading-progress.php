@@ -59,7 +59,7 @@ function boi_progress_enabled() {
  */
 function boi_progress_post_types() {
 	$options = boi_get_options();
-	$types   = is_array( $options['progress_types'] ) ? $options['progress_types'] : explode( ',', (string) $options['progress_types'] );
+	$types   = is_array( $options['progress_types'] ) ? array_filter( $options['progress_types'], 'is_string' ) : explode( ',', is_string( $options['progress_types'] ) ? $options['progress_types'] : '' );
 
 	return array_values( array_filter( array_map( 'sanitize_key', $types ) ) );
 }
