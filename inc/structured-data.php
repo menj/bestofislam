@@ -320,7 +320,7 @@ function boi_site_entities() {
 	}
 
 	if ( $same_as ) {
-		$organization['sameAs'] = $same_as;
+		$organization['sameAs'] = boi_schema_with_menj( $same_as );
 	}
 
 	$website = array(
@@ -380,19 +380,10 @@ function boi_article_entities( $post ) {
 		$article['description'] = boi_plain( get_the_excerpt( $post ) );
 	}
 
-	if ( $author ) {
-		$article['author'] = array(
-			'@type' => 'Person',
-			'name'  => $author->display_name,
-			'url'   => get_author_posts_url( $author->ID ),
-		);
-
-		$same_as = boi_author_same_as( $author );
-
-		if ( $same_as ) {
-			$article['author']['sameAs'] = $same_as;
-		}
-	}
+	// One author on every article: the owner, named in the structured data
+	// only (owner rule, 4 November 2026). boi_schema_one_author() adds the
+	// Person node this points to.
+	$article['author'] = array( '@id' => boi_schema_author_id() );
 
 	if ( '' !== $section ) {
 		$article['articleSection'] = $section;
@@ -465,7 +456,23 @@ function boi_profile_entities( $author ) {
 		return array();
 	}
 
-	$url    = get_author_posts_url( $author->ID );
+	$url = get_author_posts_url( $author->ID );
+
+	// The owner's archive is about the one author Person.
+	if ( function_exists( 'boi_seed_author' ) && (int) $author->ID === (int) boi_seed_author() ) {
+		return array(
+			array(
+				'@type'      => 'ProfilePage',
+				'@id'        => $url . '#profilepage',
+				'url'        => $url,
+				'name'       => $author->display_name,
+				'inLanguage' => get_bloginfo( 'language' ),
+				'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+				'mainEntity' => array( '@id' => boi_schema_author_id() ),
+			),
+		);
+	}
+
 	$person = array(
 		'@type' => 'Person',
 		'@id'   => $url . '#person',
@@ -496,4 +503,138 @@ function boi_profile_entities( $author ) {
 	);
 
 	return array( $profile, $person );
+}
+
+/**
+ * The @id of the author Person.
+ *
+ * @return string
+ */
+function boi_schema_author_id() {
+	return home_url( '/#author' );
+}
+
+/**
+ * A sameAs list with https://menj.bio appended when it is missing. Existing
+ * entries keep their order.
+ *
+ * @param string[] $same_as Existing entries.
+ * @return string[]
+ */
+function boi_schema_with_menj( $same_as ) {
+	$same_as = array_values( array_filter( (array) $same_as, 'is_string' ) );
+	if ( ! in_array( 'https://menj.bio', $same_as, true ) ) {
+		$same_as[] = 'https://menj.bio';
+	}
+	return $same_as;
+}
+
+/**
+ * The author Person: Mohd Elfie Nieshaem Juferi, at https://menj.bio. The
+ * owner ruled on 4 November 2026 that the structured data names him as the
+ * author of every article; nothing visible changes. The owner's other
+ * addresses (boi_author_same_as() for the seeded author) stay in sameAs,
+ * ahead of https://menj.bio.
+ *
+ * @return array
+ */
+function boi_schema_author_node() {
+	$same = array();
+	$id   = function_exists( 'boi_seed_author' ) ? (int) boi_seed_author() : 0;
+	$user = $id ? get_userdata( $id ) : false;
+	if ( $user instanceof WP_User ) {
+		$same = boi_author_same_as( $user );
+	}
+	return array(
+		'@type'  => 'Person',
+		'@id'    => boi_schema_author_id(),
+		'name'   => 'Mohd Elfie Nieshaem Juferi',
+		'url'    => 'https://menj.bio',
+		'sameAs' => boi_schema_with_menj( $same ),
+	);
+}
+
+/**
+ * Types that carry the author: articles and the pages of the site.
+ *
+ * @return string[]
+ */
+function boi_schema_authored_types() {
+	return array( 'Article', 'BlogPosting', 'NewsArticle', 'ScholarlyArticle', 'WebPage', 'AboutPage', 'ProfilePage', 'FAQPage', 'CollectionPage', 'ContactPage', 'ItemPage', 'SearchResultsPage', 'QAPage' );
+}
+
+/**
+ * One author across a graph, the theme's own or Rank Math's after the merge.
+ *
+ * Every author value, at any depth, points to boi_schema_author_id(); every
+ * top-level article or page node without an author gets that reference; a
+ * Person that Rank Math made for the WordPress user, which nothing points to
+ * once the authors are repointed, is dropped and its sameAs entries join the
+ * author's; and the author Person is added where the graph lacks it. The
+ * publisher is left as it is.
+ *
+ * @param array $nodes Top-level nodes (a list, or Rank Math's keyed array).
+ * @return array
+ */
+function boi_schema_one_author( $nodes ) {
+	if ( ! is_array( $nodes ) || ! $nodes ) {
+		return $nodes;
+	}
+	$id   = boi_schema_author_id();
+	$list = array_values( $nodes ) === $nodes;
+	$old  = array();
+	$walk = function ( $node ) use ( &$walk, &$old, $id ) {
+		if ( ! is_array( $node ) ) {
+			return $node;
+		}
+		foreach ( $node as $k => $v ) {
+			if ( 'author' === $k && is_array( $v ) ) {
+				if ( ! empty( $v['@id'] ) && $id !== $v['@id'] ) {
+					$old[ (string) $v['@id'] ] = true;
+				}
+				$node[ $k ] = array( '@id' => $id );
+			} elseif ( is_array( $v ) ) {
+				$node[ $k ] = $walk( $v );
+			}
+		}
+		return $node;
+	};
+	$nodes = $walk( $nodes );
+	$extra = array();
+	$out   = array();
+	$have  = null;
+	foreach ( $nodes as $key => $node ) {
+		if ( ! is_array( $node ) ) {
+			$out[ $key ] = $node;
+			continue;
+		}
+		$types = (array) ( isset( $node['@type'] ) ? $node['@type'] : array() );
+		if ( ! empty( $node['@id'] ) && isset( $old[ (string) $node['@id'] ] ) && in_array( 'Person', $types, true ) ) {
+			$extra = array_merge( $extra, array_filter( (array) ( isset( $node['sameAs'] ) ? $node['sameAs'] : array() ), 'is_string' ) );
+			continue;
+		}
+		if ( array_intersect( $types, boi_schema_authored_types() ) && empty( $node['author'] ) ) {
+			$node['author'] = array( '@id' => $id );
+		}
+		if ( isset( $node['@id'] ) && $id === $node['@id'] ) {
+			$have = $key;
+		}
+		$out[ $key ] = $node;
+	}
+	$person = boi_schema_author_node();
+	if ( null === $have ) {
+		if ( $list ) {
+			$out[] = $person;
+			$have  = count( $out ) - 1;
+		} else {
+			$have         = 'boi_author';
+			$out[ $have ] = $person;
+		}
+	} else {
+		$out[ $have ] = array_merge( $out[ $have ], $person );
+	}
+	$same = array_merge( $person['sameAs'], $extra );
+	$same = array_values( array_unique( array_diff( $same, array( 'https://menj.bio' ) ) ) );
+	$out[ $have ]['sameAs'] = boi_schema_with_menj( $same );
+	return $list ? array_values( $out ) : $out;
 }

@@ -693,6 +693,54 @@ function boi_t_check( $label, $nodes, $known, $page_types, $website_id ) {
 		}
 	}
 
+	// The author (owner rule, 4 November 2026): one Person, #author, named
+	// Mohd Elfie Nieshaem Juferi at https://menj.bio with sameAs including
+	// it; every author value points to it, and every article and page node
+	// has one.
+	$author_id = home_url( '/#author' );
+	$owner     = isset( $byid[ $author_id ] ) ? $byid[ $author_id ] : null;
+	if ( ! $owner ) {
+		boi_t_fail( "$label: no author Person" );
+	} else {
+		if ( 'Mohd Elfie Nieshaem Juferi' !== ( isset( $owner['name'] ) ? $owner['name'] : '' ) || 'https://menj.bio' !== ( isset( $owner['url'] ) ? $owner['url'] : '' ) ) {
+			boi_t_fail( "$label: author Person has the wrong name or url" );
+		}
+		if ( ! in_array( 'https://menj.bio', (array) ( isset( $owner['sameAs'] ) ? $owner['sameAs'] : array() ), true ) ) {
+			boi_t_fail( "$label: author sameAs lacks https://menj.bio" );
+		}
+	}
+	$people = 0;
+	foreach ( $byid as $id => $node ) {
+		if ( in_array( 'Person', (array) $node['@type'], true ) && isset( $node['name'] ) && 'Mohd Elfie Nieshaem Juferi' === $node['name'] ) {
+			$people++;
+		}
+	}
+	if ( $people > 1 ) {
+		boi_t_fail( "$label: $people author Person nodes" );
+	}
+	$bad  = array();
+	$scan = function ( $n ) use ( &$scan, &$bad, $author_id ) {
+		if ( ! is_array( $n ) ) {
+			return;
+		}
+		foreach ( $n as $k => $v ) {
+			if ( 'author' === $k && ( ! is_array( $v ) || ! isset( $v['@id'] ) || $author_id !== $v['@id'] || count( $v ) > 1 ) ) {
+				$bad[] = json_encode( $v );
+			} elseif ( is_array( $v ) ) {
+				$scan( $v );
+			}
+		}
+	};
+	$scan( $nodes );
+	if ( $bad ) {
+		boi_t_fail( "$label: an author does not point to $author_id: " . $bad[0] );
+	}
+	foreach ( $nodes as $node ) {
+		if ( array_intersect( (array) $node['@type'], array( 'Article', 'BlogPosting', 'WebPage', 'ProfilePage', 'CollectionPage', 'AboutPage', 'FAQPage' ) ) && empty( $node['author'] ) ) {
+			boi_t_fail( "$label: " . ( isset( $node['@id'] ) ? $node['@id'] : '' ) . ' has no author' );
+		}
+	}
+
 	return $types;
 }
 

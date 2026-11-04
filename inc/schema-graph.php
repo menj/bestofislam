@@ -981,7 +981,7 @@ function boi_schema_graph_nodes( $rank_math = false ) {
 	$nodes[] = $page;
 	$nodes   = array_merge( $nodes, $frame );
 
-	return boi_schema_merge_nodes( (array) apply_filters( 'boi_schema_nodes', $nodes ) );
+	return boi_schema_one_author( boi_schema_merge_nodes( (array) apply_filters( 'boi_schema_nodes', $nodes ) ) );
 }
 
 /**

@@ -260,7 +260,7 @@
 	padding: 1.5rem;
 }
 
-/* The network block on articles shared across the sister sites. */
+/* The further-reading box at the end of some articles. */
 .boi-article .boi-network {
 	margin-block: 2.5rem;
 	border: 1px solid var(--boi-rule);
