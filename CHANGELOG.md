@@ -4,6 +4,27 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.99.0] - 2026-11-04
+
+The owner asked for the features of 4 plugins to be built into the theme. Three of them were already here: unlisting (from Unlist Posts & Pages), readable search addresses (from Pretty Search Permalinks) and the social icons (from the Minimalist Social & Platform Icons Pack). I kept those versions and filled the gaps against each plugin. The reading progress bar is new. No option key, function name, block or handle was renamed or removed.
+
+### Added
+
+- A reading progress bar on single posts and pages (`inc/reading-progress.php`, `assets/css/reading-progress.css`, `assets/js/reading-progress.js`). A card on the Display tab sets it on or off, the top or bottom edge, a height of 2 to 12 pixels, a palette colour or a custom one, and the post types. The default is on, at the top, 4 pixels, in gold, for posts and pages. The files load only on the views that show the bar.
+- The bar updates once per animation frame from a passive scroll listener and measures the page again on resize. Under `prefers-reduced-motion` it moves without a transition. From 601px it starts below the admin bar; on a phone, where the admin bar scrolls away, it sits under it. It is `aria-hidden`: it repeats what the scrollbar shows, it cannot be operated, and a `progressbar` role would have a screen reader announce every scroll. It stands aside while the Reading Progress Bar plugin is active.
+- Unlisting from Quick Edit and Bulk Edit, an Unlisted column and an Unlisted view on every public post type's list (`inc/unlist.php`, `assets/js/unlist-admin.js`, loaded on post lists only). The plugin had all of these.
+- Settings, Permalinks has a Search base field, as the plugin did. It saves to the same setting as the Search engines tab (`boi_search_base_permalink_screen()`).
+- The `[boi_social_icons]` shortcode and a Follow icons pattern (`patterns/social-icons.php`) place the footer's follow icons anywhere. In content they take the text colour.
+- `tests/unlist-test.php` and `tests/search-permalinks-test.php`.
+
+### Changed
+
+- The Visibility in listings box appears on every public post type, as the plugin's did. It used to appear on posts and pages only.
+- An unlisted item empties Yoast SEO's robots array, as the plugin did, so the page carries one robots tag.
+- The plugin's `unlist_posts_enabled` filter is honoured, under `boi_unlist_enabled`.
+- The follow icons take their colours from CSS variables (`--boi-social-*`) and show a gold focus ring. The footer looks as before.
+- Rewrite rules are rebuilt once after each theme update, through the existing `boi_flush_rewrites` flag, and never on an ordinary load.
+
 ## [1.98.1] - 2026-11-04
 
 The Schema Markup Validator run of 4 November rejected two `hasPart` links. schema.org gives `hasPart` a CreativeWork, and an `ItemList` is not one. Both lists stay in the graph with their @ids. No option key, function name or handle changed.

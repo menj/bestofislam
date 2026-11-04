@@ -126,3 +126,59 @@ function boi_search_base_robots( $output ) {
 	return $output;
 }
 add_filter( 'robots_txt', 'boi_search_base_robots', 20 );
+
+/**
+ * Saves the base word from Settings, Permalinks, as the plugin did. The
+ * value is the same one the Search engines tab edits. WordPress flushes the
+ * rewrite rules itself when that screen saves, so the base is applied first.
+ *
+ * @return void
+ */
+function boi_search_base_permalink_screen() {
+	if ( function_exists( 'wpseosearch_base' ) || ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	if ( isset( $_POST['boi_search_base'] ) ) {
+		check_admin_referer( 'update-permalink' );
+
+		$base = sanitize_title( wp_unslash( $_POST['boi_search_base'] ) );
+		$base = '' !== $base ? $base : 'search';
+
+		// boi_sanitize_options() merges this into the saved settings and
+		// changes nothing else.
+		$value = array(
+			'_tab'        => 'permalink',
+			'search_base' => $base,
+		);
+
+		if ( ! has_filter( 'sanitize_option_' . BOI_OPTION_KEY ) ) {
+			$stored = get_option( BOI_OPTION_KEY, array() );
+			$value  = array_merge( is_array( $stored ) ? $stored : array(), array( 'search_base' => $base ) );
+		}
+
+		update_option( BOI_OPTION_KEY, $value );
+
+		global $wp_rewrite;
+
+		if ( boi_pretty_search_enabled() && $wp_rewrite instanceof WP_Rewrite ) {
+			$wp_rewrite->search_base = $base;
+		}
+	}
+
+	add_settings_field( 'boi_search_base', __( 'Search base', 'bestofislam' ), 'boi_search_base_permalink_field', 'permalink', 'optional', array( 'label_for' => 'boi_search_base' ) );
+}
+add_action( 'load-options-permalink.php', 'boi_search_base_permalink_screen' );
+
+/**
+ * The Search base field on Settings, Permalinks.
+ *
+ * @return void
+ */
+function boi_search_base_permalink_field() {
+	printf(
+		'<input type="text" name="boi_search_base" id="boi_search_base" class="regular-text code" value="%1$s" /><p class="description">%2$s</p>',
+		esc_attr( boi_search_base() ),
+		esc_html__( 'Searches open at this address, such as /search/Paul/. The switch for readable search addresses is in Theme Options, Search engines.', 'bestofislam' )
+	);
+}

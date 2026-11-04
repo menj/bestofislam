@@ -3,7 +3,8 @@
  * Tabbed settings screen.
  *
  * Colour configuration is handled through theme.json custom properties and
- * style variations in the Site Editor, so it is deliberately absent here.
+ * style variations in the Site Editor, so it is absent here, apart from the
+ * reading progress bar's colour on the Display tab.
  *
  * @package BestOfIslam
  */
@@ -46,6 +47,11 @@ function boi_get_options() {
 		'security_hsts'       => 0,
 		'search_pretty'       => 1,
 		'search_base'         => 'search',
+		'progress_enabled'    => 1,
+		'progress_color'      => 'accent-2',
+		'progress_height'     => 4,
+		'progress_position'   => 'top',
+		'progress_types'      => array( 'post', 'page' ),
 		'errors_pages'        => 1,
 		'errors_alerts'       => 1,
 		'errors_email'        => '',
@@ -123,6 +129,34 @@ function boi_sanitize_options( $input ) {
 
 			$current['picks'] = isset( $input['picks'] ) ? implode( ',', array_filter( array_map( 'sanitize_title', explode( ',', (string) $input['picks'] ) ) ) ) : '';
 
+			// The reading progress bar. Its fields are absent while the plugin
+			// is active; keep what is saved then.
+			if ( isset( $input['progress_position'] ) ) {
+				$current['progress_enabled']  = empty( $input['progress_enabled'] ) ? 0 : 1;
+				$current['progress_position'] = 'bottom' === $input['progress_position'] ? 'bottom' : 'top';
+
+				// Height and colour are disabled, so not sent, while the bar is
+				// off: keep their saved values then.
+				if ( isset( $input['progress_height'] ) ) {
+					$current['progress_height'] = max( 2, min( 12, (int) $input['progress_height'] ) );
+				}
+
+				$color = isset( $input['progress_color'] ) ? sanitize_key( $input['progress_color'] ) : (string) $current['progress_color'];
+
+				if ( 'custom' === $color ) {
+					$hex   = isset( $input['progress_color_custom'] ) ? sanitize_hex_color( $input['progress_color_custom'] ) : '';
+					$color = $hex ? $hex : 'accent-2';
+				} elseif ( ! sanitize_hex_color( $color ) && ( ! function_exists( 'boi_progress_palette' ) || ! isset( boi_progress_palette()[ $color ] ) ) ) {
+					$color = 'accent-2';
+				}
+
+				$current['progress_color'] = $color;
+
+				$public                    = get_post_types( array( 'public' => true ) );
+				$types                     = isset( $input['progress_types'] ) ? array_map( 'sanitize_key', (array) $input['progress_types'] ) : array();
+				$current['progress_types'] = array_values( array_intersect( $types, $public ) );
+			}
+
 			break;
 
 		case 'schema':
@@ -158,6 +192,12 @@ function boi_sanitize_options( $input ) {
 				// The base changes the rewrite rules; rebuild them on the next load.
 				update_option( 'boi_flush_rewrites', 1, false );
 			}
+			break;
+
+		case 'permalink':
+			// The Search base field on Settings, Permalinks.
+			$base                   = isset( $input['search_base'] ) ? sanitize_title( $input['search_base'] ) : '';
+			$current['search_base'] = '' !== $base ? $base : 'search';
 			break;
 
 		case 'access':
@@ -700,6 +740,10 @@ function boi_render_display_tab( $opts ) {
 	}
 	echo '</div>';
 	boi_opt_card_close();
+
+	if ( function_exists( 'boi_render_progress_card' ) ) {
+		boi_render_progress_card( $opts );
+	}
 
 	boi_opt_card_open( __( 'Contact form', 'bestofislam' ) );
 	boi_opt_row_open( __( 'Contact form recipient', 'bestofislam' ), 'boi-contact-email' );
