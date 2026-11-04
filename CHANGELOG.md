@@ -4,6 +4,23 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.97.0] - 2026-11-04
+
+This release answers 2 of the owner's briefs from today: the mobile-first audit and the WCAG 2.2 AA policy. I loaded 8 page types on a local WordPress and measured them at 9 widths, 320px to 1280px, with Playwright and axe-core. No page scrolled sideways at any width. The fixes below are small, and the layout at 1024px and 1280px is the same as before, checked element by element.
+
+### Fixed
+
+- The Glossary search box (`#boi-gq`) set `aria-expanded` without a role that allows it, so axe failed it on every Glossary page. On an entry it is now a combobox with `aria-autocomplete="list"`, over the list of matches it opens. On the index it opens no list (it filters the entries in place), so there it is a plain search box with `aria-controls` on the entry list, `#boi-glossary-list`, and the count line already announces the result (`inc/glossary.php`).
+- `aria-activedescendant` could point at an option that no longer existed. It is now cleared each time the list of matches is rebuilt or closed (`assets/js/glossary.js`).
+- On a phone, the Glossary bar put the brand and the search box on 1 row in the fallback font and 2 rows in the web font. When the font loaded, the page jumped. Below 380px the box now takes its own row from the start. An entry at 375px went from a layout shift of 0.104 to 0.001 (`assets/css/glossary.css`).
+- The Glossary search box was 15.2px, so iOS zoomed the page when you tapped it. It is 16px below 1024px.
+- The Glossary bar is sticky, and a link reached with Tab could sit under it (WCAG 2.4.11). The page now keeps 9.5rem clear at the top on a phone, 7rem from 380px and 8rem from 1024px. The jump to a letter lands where it did before on desktop.
+- The "Questions this piece answers" box was a second unnamed `aside` on a listicle. It now carries its heading as its name (`inc/questions.php`).
+
+### Changed
+
+- Tap targets. The footer column links and the bottom bar links are 44px tall below 1024px (they were 36px and 21px). The "Back to top" links in the Glossary index were 13px tall and are 27px, and "See every question answered" grew from 18px to 31px. Those last 2 use padding with no change to the line box, so nothing around them moves (`assets/css/footer.css`, `assets/css/glossary.css`, `assets/css/listicle.css`).
+
 ## [1.96.1] - 2026-11-04
 
 ### Fixed

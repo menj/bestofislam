@@ -473,3 +473,24 @@ main.boi-front + footer .boi-footer,
 	margin: 0 !important;
 	border-block-end: 1px solid rgb(255 255 255 / 0.04);
 }
+
+/* Touch targets (mobile-first audit, 2026-11-04). Below 1024px the column
+   links and the bottom bar links grow to a 44px row; from 1024px up the
+   rules above apply unchanged. */
+.boi-footer .boi-footer__nav .wp-block-navigation-item__content {
+	padding-block: 0.8rem !important;
+}
+
+.boi-footer .boi-footer__bar .wp-block-navigation-item__content {
+	padding-block: 0.875rem !important;
+}
+
+@media (min-width: 1024px) {
+	.boi-footer .boi-footer__nav .wp-block-navigation-item__content {
+		padding-block: 0.55rem !important;
+	}
+
+	.boi-footer .boi-footer__bar .wp-block-navigation-item__content {
+		padding-block: 0.15rem !important;
+	}
+}
