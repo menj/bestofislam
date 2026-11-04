@@ -4453,5 +4453,32 @@
     "source": "https://wellcomecollection.org/works/qbr54wvz"
    }
   ]
+ },
+ "kaab-ibn-al-ashraf-and-the-poets": {
+  "featured": {
+   "file": "kaab-ibn-al-ashraf-and-the-poets.avif",
+   "alt": "Barren desert hills in soft light",
+   "artist": "GidonPico",
+   "licence": "Pixabay licence",
+   "source": "https://pixabay.com/photos/dead-sea-caravan-camel-red-brown-1930735/"
+  },
+  "inline": [
+   {
+    "file": "kaab-ibn-al-ashraf-and-the-poets-1.avif",
+    "alt": "An oasis with date palm groves seen from above",
+    "artist": "12019",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/hillah-iraq-landscape-desert-80384/",
+    "caption": "An oasis with date palm groves seen from above. Medina was an oasis town, and Ka'b ibn al-Ashraf lived in a fortress near it; the photograph does not show Medina."
+   },
+   {
+    "file": "kaab-ibn-al-ashraf-and-the-poets-2.avif",
+    "alt": "The arched ruins of an old stone building",
+    "artist": "DavidPogue",
+    "licence": "Pixabay licence",
+    "source": "https://pixabay.com/photos/castle-ruins-fortress-fort-195105/",
+    "caption": "The arched ruins of an old stone building. Abu Rafi' was killed in his fortress in the Hijaz; the photograph does not show it."
+   }
+  ]
  }
 }

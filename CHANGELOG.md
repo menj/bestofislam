@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.3] - 2026-11-04
+
+### Added
+- New article, "Did the Prophet have his critics killed? 4 answers" (`kaab-ibn-al-ashraf-and-the-poets`, History, Islam and other peoples). Ka'b ibn al-Ashraf (Bukhari 4037, Muslim 1801) and Abu Rafi' ibn Abi al-Huqayq (Bukhari 4039) are conceded and read in the war with Quraysh and the confederates, with Ibn Taymiyya's use of the Ka'b case in *al-Sarim al-maslul* stated plainly. The story of Asma bint Marwan is shown to have no sound chain: Muhammad ibn al-Hajjaj, named by Ibn Adi as its forger (Ibn al-Jawzi, *al-Mawdu'at* 3/18; *Mizan* 3/509), and al-Waqidi; al-Albani graded it fabricated (*al-Silsila al-da'ifa* 6013). The story of Abu Afak is given as not established: Ibn Ishaq tells it with no chain, and every other chain runs through al-Waqidi. Every note names a source checked for this article (the hadith collections, Ibn Hisham, Ibn Sa'd, Ibn Taymiyya and the works of hadith criticism); any citation that could not be checked, the Lecker article among them, is left out. The article sits in the reading order after the Medina article, under History and civilisation. Its images are bundled files already credited to other articles, copied under the new slug, because the Commons API refused requests while the article was written; their credits are unchanged.
+- *Was the first revelation demonic?* now gives 7 answers. The new entry, "The angel gave no name and no 'fear not'", sets the claim against Judges 13:17-18, Genesis 32:29 and Numbers 22:31-35; the fear of the prophets in Daniel 8:17-18 and 10:8-11, Isaiah 6:5 and Luke 1:12-13, 1:29-30 and 2:9-10; the naming of the angel in Bukhari 4, Muslim 161, Bukhari 3 and Quran 2:97, 26:192-195 and 81:19-25; and the test of a spirit by its message, Deuteronomy 18:20-22 beside Quran 96:1-5, with 1 John 4:1-3 named as a test about Jesus.
+- *6 reasons why Islam is the religion of peace* (was 5). The new entry, "Peaceful Muslims are reading the whole text", reads 9:5 with 9:4, 9:6 and 9:13; gives the rule on non-combatants from Bukhari 3015 and Muslim 1744; cites the 2014 open letter to al-Baghdadi and the Amman Message; and sets the argument beside 1 Samuel 15:3.
+- `inc/related-articles.json` is rebuilt by `bin/build-related.py`. Unedited articles take the new text on the next update (D45).
+
 ## [1.100.2] - 2026-11-04
 
 ### Changed

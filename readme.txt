@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.2
+Stable tag: 1.100.3
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.3 =
+* A new article on Ka'b ibn al-Ashraf, Abu Rafi' and the poets Asma bint Marwan and Abu Afak.
+* The article on the first revelation answers the claim that the angel gave no name and no "fear not", and the article on Islam and peace answers the claim that peaceful Muslims are not following real Islam.
 
 = 1.100.2 =
 * The Islamic dilemma article no longer calls other websites related to this one. Its links stay.

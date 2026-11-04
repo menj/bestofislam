@@ -162,10 +162,10 @@
 	"listicles": [
 		{
 			"slug": "islam-religion-of-peace",
-			"title": "5 reasons why Islam is the religion of peace",
-			"excerpt": "5 reasons Islam is called the religion of peace, plus an honest look at the violence done in its name. Read the case.",
+			"title": "6 reasons why Islam is the religion of peace",
+			"excerpt": "6 reasons Islam is called the religion of peace, plus an honest look at the violence done in its name. Read the case.",
 			"topic": "the-muslim-world",
-			"seo_title": "Is Islam the religion of peace? 5 reasons",
+			"seo_title": "Is Islam the religion of peace? 6 reasons",
 			"category": "muslim-world",
 			"tags": [
 				"Jihad",
@@ -1569,6 +1569,21 @@
 			]
 		},
 		{
+			"slug": "kaab-ibn-al-ashraf-and-the-poets",
+			"title": "Did the Prophet have his critics killed? 4 answers",
+			"excerpt": "Ka'b ibn al-Ashraf, Abu Rafi', Asma bint Marwan and Abu Afak: what the sound reports say, and which stories have no chain. 4 answers.",
+			"topic": "history",
+			"seo_title": "Ka'b ibn al-Ashraf and the poets",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Prophet Muhammad",
+				"Medina",
+				"Ethics of war",
+				"Sira",
+				"Polemics"
+			]
+		},
+		{
 			"slug": "medina-jewish-tribes-and-qurayza",
 			"title": "6 facts about Medina's Jewish tribes and Banu Qurayza",
 			"excerpt": "The Constitution of Medina, the exile of two tribes and the fate of Banu Qurayza: 6 facts from the earliest reports.",
@@ -1584,8 +1599,8 @@
 		},
 		{
 			"slug": "first-revelation-demonic-claim",
-			"title": "Was the first revelation demonic? 6 answers from the sources",
-			"excerpt": "The cave of Hira, Khadija and Waraqa, and the report of fear: 6 answers on the claims of demonic origin and epilepsy.",
+			"title": "Was the first revelation demonic? 7 answers from the sources",
+			"excerpt": "The cave of Hira, Khadija and Waraqa, and the report of fear: 7 answers on the claims of demonic origin and epilepsy.",
 			"topic": "faith-and-reason",
 			"seo_title": "Was the first revelation demonic?",
 			"category": "quran-text-revelation",
