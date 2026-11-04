@@ -182,6 +182,7 @@
 
 		box.innerHTML = '';
 		current = -1;
+		input.removeAttribute( 'aria-activedescendant' );
 
 		if ( ! hits.length ) {
 			close();

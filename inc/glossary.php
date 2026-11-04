@@ -933,7 +933,7 @@ function boi_render_glossary_index() {
 	) . '</p>';
 
 	return sprintf(
-		'%1$s<div class="boi-glossary" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
+		'%1$s<div class="boi-glossary" id="boi-glossary-list" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
 		$intro, // phpcs:ignore WordPress.Security.EscapeOutput
 		(int) $total,
 		esc_attr__( 'Filter by kind', 'bestofislam' ),
@@ -982,14 +982,24 @@ function boi_render_glossary_bar() {
 		}
 	}
 
+	// On the index the box filters the list in place and never opens the
+	// suggestions, so it is a plain search box that controls the list (the
+	// count is announced by the index's own status line). Elsewhere it is a
+	// combobox over the suggestions list.
+	$is_index   = boi_is_glossary_page() && ! get_queried_object()->post_parent;
+	$input_aria = $is_index
+		? 'aria-controls="boi-glossary-list"'
+		: 'role="combobox" aria-autocomplete="list" aria-controls="boi-gresults" aria-expanded="false"';
+
 	return sprintf(
-		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" role="combobox" aria-autocomplete="list" placeholder="%3$s" autocomplete="off" spellcheck="false" aria-controls="boi-gresults" aria-expanded="false"><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
+		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" %7$s><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
 		esc_url( $base ),
 		esc_html__( 'Glossary', 'bestofislam' ),
 		esc_attr__( 'Find a term', 'bestofislam' ),
 		esc_attr__( 'Jump to a letter', 'bestofislam' ),
 		$az,
-		wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES )
+		wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
+		$input_aria
 	);
 }
 

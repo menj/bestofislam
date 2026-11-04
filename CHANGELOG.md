@@ -10,7 +10,8 @@ This release answers 2 of the owner's briefs from today: the mobile-first audit 
 
 ### Fixed
 
-- The Glossary search box (`#boi-gq`) set `aria-expanded` without a role that allows it, so axe failed it on every Glossary page. It is now a combobox with `aria-autocomplete="list"` (`inc/glossary.php`). Closing the list also clears `aria-activedescendant`, which pointed at an option that no longer existed (`assets/js/glossary.js`).
+- The Glossary search box (`#boi-gq`) set `aria-expanded` without a role that allows it, so axe failed it on every Glossary page. On an entry it is now a combobox with `aria-autocomplete="list"`, over the list of matches it opens. On the index it opens no list (it filters the entries in place), so there it is a plain search box with `aria-controls` on the entry list, `#boi-glossary-list`, and the count line already announces the result (`inc/glossary.php`).
+- `aria-activedescendant` could point at an option that no longer existed. It is now cleared each time the list of matches is rebuilt or closed (`assets/js/glossary.js`).
 - On a phone, the Glossary bar put the brand and the search box on 1 row in the fallback font and 2 rows in the web font. When the font loaded, the page jumped. Below 380px the box now takes its own row from the start. An entry at 375px went from a layout shift of 0.104 to 0.001 (`assets/css/glossary.css`).
 - The Glossary search box was 15.2px, so iOS zoomed the page when you tapped it. It is 16px below 1024px.
 - The Glossary bar is sticky, and a link reached with Tab could sit under it (WCAG 2.4.11). The page now keeps 9.5rem clear at the top on a phone, 7rem from 380px and 8rem from 1024px. The jump to a letter lands where it did before on desktop.
