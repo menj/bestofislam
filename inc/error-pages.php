@@ -119,7 +119,10 @@ function boi_error_dropin_source( $kind ) {
 	$src .= "if ( ! headers_sent() ) {\n";
 	$src .= "\theader( 'HTTP/1.1 {$copy['status']}', true, {$copy['status']} );\n";
 	$src .= "\theader( 'Content-Type: text/html; charset=utf-8' );\n";
-	$src .= "\theader( 'Retry-After: 300' );\n";
+	if ( 503 === (int) $copy['status'] ) {
+		$src .= "\theader( 'Retry-After: 300' );\n";
+	}
+	$src .= "\theader( 'X-Robots-Tag: noindex' );\n";
 	$src .= "\theader( 'Cache-Control: no-store, max-age=0' );\n}\n";
 
 	$to = ! empty( $opts['errors_alerts'] ) ? boi_error_recipient() : '';
@@ -263,15 +266,54 @@ function boi_error_is_ours( $path ) {
 /**
  * Status of each drop-in for the settings screen.
  *
- * @return array kind => string state: ours, foreign, absent.
+ * @return array kind => string state: ours (current), outdated (ours, from
+ *               another version or other settings), foreign, absent.
  */
 function boi_error_state() {
 	$out = array();
 	foreach ( boi_error_kinds() as $kind => $def ) {
-		$path        = WP_CONTENT_DIR . '/' . $def['file'];
-		$out[ $kind ] = ! file_exists( $path ) ? 'absent' : ( boi_error_is_ours( $path ) ? 'ours' : 'foreign' );
+		$path = WP_CONTENT_DIR . '/' . $def['file'];
+		if ( ! file_exists( $path ) ) {
+			$out[ $kind ] = 'absent';
+		} elseif ( ! boi_error_is_ours( $path ) ) {
+			$out[ $kind ] = 'foreign';
+		} else {
+			$out[ $kind ] = (string) file_get_contents( $path ) === boi_error_dropin_source( $kind ) ? 'ours' : 'outdated'; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		}
 	}
 	return $out;
+}
+
+/**
+ * "Install error pages" on the Error pages tab: a nonce link, since the tab
+ * sits inside the settings form. Writes the pages at once.
+ */
+function boi_error_handle_install() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( esc_html__( 'You are not allowed to do that.', 'bestofislam' ), 403 );
+	}
+	check_admin_referer( 'boi_install_error_pages' );
+	if ( ! is_multisite() || is_main_site() ) {
+		boi_error_sync();
+	}
+	wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_installed=1' ) );
+	exit;
+}
+add_action( 'admin_post_boi_install_error_pages', 'boi_error_handle_install' );
+
+/**
+ * The lines for .htaccess that point the web server at the static pages in
+ * errors/ (built by bin/build-error-pages.php).
+ *
+ * @return string
+ */
+function boi_error_htaccess_snippet() {
+	$base  = untrailingslashit( (string) wp_parse_url( get_stylesheet_directory_uri(), PHP_URL_PATH ) ) . '/errors/';
+	$lines = array( '# Best of Islam: pages for the errors the web server answers before WordPress runs' );
+	foreach ( array( 403, 500, 502, 503 ) as $code ) {
+		$lines[] = 'ErrorDocument ' . $code . ' ' . $base . $code . '.html';
+	}
+	return implode( "\n", $lines );
 }
 
 /**
@@ -461,7 +503,8 @@ function boi_render_errors_tab( $opts ) {
 	$key   = BOI_OPTION_KEY;
 	$state = boi_error_state();
 	$label = array(
-		'ours'    => __( 'Installed', 'bestofislam' ),
+		'ours'     => __( 'Installed, current', 'bestofislam' ),
+		'outdated' => __( 'Installed by the theme, outdated', 'bestofislam' ),
 		'foreign' => __( 'Another file is present and has been left untouched', 'bestofislam' ),
 		'absent'  => __( 'Not installed', 'bestofislam' ),
 	);
@@ -482,6 +525,19 @@ function boi_render_errors_tab( $opts ) {
 		echo '<li><code>' . esc_html( $def['file'] ) . '</code>: ' . esc_html( $label[ $state[ $kind ] ] ) . '</li>';
 	}
 	echo '</ul>';
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
+	if ( isset( $_GET['boi_errors_installed'] ) ) {
+		echo '<p class="notice notice-success inline">' . esc_html__( 'The error pages were written where the theme may write them.', 'bestofislam' ) . '</p>';
+	}
+	printf(
+		'<p><a class="button" href="%s">%s</a></p>',
+		esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=boi_install_error_pages' ), 'boi_install_error_pages' ) ),
+		esc_html__( 'Install error pages', 'bestofislam' )
+	);
+	boi_opt_row_close();
+	boi_opt_row_open( __( 'Server errors', 'bestofislam' ), 'boi-errors-htaccess' );
+	echo '<p class="description">' . esc_html__( 'For the errors the web server answers before WordPress starts, static pages are in the errors folder of the theme. Add these lines to .htaccess to use them:', 'bestofislam' ) . '</p>';
+	echo '<textarea id="boi-errors-htaccess" readonly rows="5" class="large-text code">' . esc_textarea( boi_error_htaccess_snippet() ) . '</textarea>';
 	boi_opt_row_close();
 	boi_opt_card_close();
 

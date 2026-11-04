@@ -8,6 +8,8 @@
  * @package BestOfIslam
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:bestofislam/listicle {"order":"descending","schemaType":"ItemList"} -->
 <!-- wp:bestofislam/entry -->

@@ -323,7 +323,7 @@ function boi_robots( $robots ) {
 		return $robots;
 	}
 
-	if ( is_search() || ( is_paged() && ( is_home() || is_archive() ) ) || boi_is_duplicate_archive() ) {
+	if ( is_search() || is_404() || ( is_paged() && ( is_home() || is_archive() ) ) || boi_is_duplicate_archive() ) {
 		$robots['noindex'] = true;
 		$robots['follow']  = true;
 		unset( $robots['index'] );
