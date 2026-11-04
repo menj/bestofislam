@@ -1116,3 +1116,56 @@
 .boi-glossary__item.has-long-ar .boi-glossary__term {
 	grid-column: 1 / -1;
 }
+
+/* Mobile-first audit and WCAG 2.2 pass (2026-11-04). */
+
+/* Below 380px the search box takes its own row. Before, the brand and the
+   box shared a row in the fallback font and split onto 2 rows once the web
+   font arrived, which moved the whole page (CLS 0.1 on every entry). */
+.boi-gbar__search {
+	flex-basis: 100%;
+	max-inline-size: none;
+}
+
+/* 16px in the box, so iOS does not zoom the page on focus. */
+.boi-gbar__search input {
+	font-size: 1rem;
+}
+
+/* The bar is sticky: keep a focused link or a jumped-to letter clear of it
+   (2.4.11). The scroll padding takes over from the scroll margins. */
+html:has(.boi-gbar) {
+	scroll-padding-block-start: 9.5rem;
+}
+
+html:has(.boi-gbar) .boi-glossary__part,
+html:has(.boi-gbar) .boi-glossary__group {
+	scroll-margin-block-start: 0;
+}
+
+/* Back to top: a 24px-plus hit area without moving the heading. */
+.boi-glossary__top {
+	padding-block: 0.45rem;
+	margin-block: -0.45rem;
+}
+
+@media (min-width: 380px) {
+	.boi-gbar__search {
+		flex: 1 1 14rem;
+		max-inline-size: 22rem;
+	}
+
+	html:has(.boi-gbar) {
+		scroll-padding-block-start: 7rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.boi-gbar__search input {
+		font-size: 0.95rem;
+	}
+
+	html:has(.boi-gbar) {
+		scroll-padding-block-start: 8rem;
+	}
+}

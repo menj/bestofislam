@@ -204,7 +204,7 @@ function boi_render_article_questions() {
 	}
 
 	return sprintf(
-		'<aside class="boi-answers"><p class="boi-answers__label">%1$s</p><ul>%2$s</ul><a class="boi-answers__more" href="%3$s">%4$s</a></aside>',
+		'<aside class="boi-answers" aria-label="%1$s"><p class="boi-answers__label">%1$s</p><ul>%2$s</ul><a class="boi-answers__more" href="%3$s">%4$s</a></aside>',
 		esc_html__( 'Questions this piece answers', 'bestofislam' ),
 		$links,
 		esc_url( boi_questions_url() ),

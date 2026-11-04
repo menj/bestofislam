@@ -983,7 +983,7 @@ function boi_render_glossary_bar() {
 	}
 
 	return sprintf(
-		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" aria-controls="boi-gresults" aria-expanded="false"><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
+		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" role="combobox" aria-autocomplete="list" placeholder="%3$s" autocomplete="off" spellcheck="false" aria-controls="boi-gresults" aria-expanded="false"><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
 		esc_url( $base ),
 		esc_html__( 'Glossary', 'bestofislam' ),
 		esc_attr__( 'Find a term', 'bestofislam' ),

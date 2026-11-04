@@ -1651,3 +1651,9 @@ ul.boi-social > li::marker {
 	margin-inline-end: 0.5rem;
 	vertical-align: middle;
 }
+
+/* A taller hit area for the link under the answered questions (2.5.8),
+   without changing the line box. Mobile-first audit, 2026-11-04. */
+.boi-answers__more {
+	padding-block: 0.4rem;
+}
