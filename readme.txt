@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.98.0
+Stable tag: 1.98.1
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide Login, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.98.1 =
+* Structured data: listicle lists and the front page Reflections strip are linked in ways schema.org accepts. The Schema Markup Validator rejected both.
 
 = 1.98.0 =
 * Theme Options rebuilt as cards under a tab list. The tabs switch without a reload and follow the arrow keys, Home and End. Booleans are switches, the image size and default schema are picked from cards, and the 2 number settings are sliders that show their value. The screen stacks below 782px.

@@ -507,8 +507,14 @@ function boi_schema_article_details( $post, $page_id ) {
 	if ( $is_listicle ) {
 		$lists = boi_listicle_schema_nodes( $post );
 
+		// An ItemList is not a CreativeWork, so it cannot be a hasPart. The
+		// list is what a listicle is made of: its main entity.
 		foreach ( $lists as $list ) {
-			$details['hasPart'][] = array( '@id' => $list['@id'] );
+			$details['mainEntity'][] = array( '@id' => $list['@id'] );
+		}
+
+		if ( isset( $details['mainEntity'] ) && 1 === count( $details['mainEntity'] ) ) {
+			$details['mainEntity'] = $details['mainEntity'][0];
 		}
 
 		foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $listicle ) {
@@ -915,9 +921,11 @@ function boi_schema_graph_nodes( $rank_math = false ) {
 
 		$reflections = boi_schema_reflections_list();
 
+		// The front page names its latest Reflections; hasPart would need a
+		// CreativeWork, and the strip is an ItemList.
 		if ( $reflections ) {
-			$page['hasPart'][] = array( '@id' => $reflections['@id'] );
-			$nodes[]           = $reflections;
+			$page['mentions'][] = array( '@id' => $reflections['@id'] );
+			$nodes[]            = $reflections;
 		}
 	} elseif ( is_singular( 'post' ) ) {
 		$post = get_queried_object();

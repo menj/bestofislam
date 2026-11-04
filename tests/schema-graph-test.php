@@ -649,6 +649,26 @@ function boi_t_check( $label, $nodes, $known, $page_types, $website_id ) {
 		}
 	}
 
+	// hasPart takes a CreativeWork; an ItemList is not one.
+	foreach ( $byid as $id => $node ) {
+		foreach ( isset( $node['hasPart'] ) ? ( isset( $node['hasPart']['@id'] ) ? array( $node['hasPart'] ) : (array) $node['hasPart'] ) : array() as $part ) {
+			$ref = isset( $part['@id'] ) && isset( $byid[ $part['@id'] ] ) ? $byid[ $part['@id'] ] : $part;
+			if ( isset( $ref['@type'] ) && in_array( 'ItemList', (array) $ref['@type'], true ) ) {
+				boi_t_fail( "$label: $id has the ItemList " . ( isset( $ref['@id'] ) ? $ref['@id'] : '' ) . ' as hasPart' );
+			}
+		}
+	}
+
+	// Every list the theme adds is still linked from another node.
+	foreach ( $byid as $id => $node ) {
+		if ( ! in_array( 'ItemList', (array) $node['@type'], true ) || ( false === strpos( $id, '#itemlist' ) && false === strpos( $id, '#reflections' ) ) ) {
+			continue;
+		}
+		if ( false === strpos( (string) json_encode( array_diff_key( $byid, array( $id => 1 ) ) ), json_encode( array( '@id' => $id ) ) ) ) {
+			boi_t_fail( "$label: nothing refers to the list $id" );
+		}
+	}
+
 	$page = null;
 	foreach ( $byid as $node ) {
 		if ( array_intersect( (array) $node['@type'], $page_types ) && isset( $node['url'] ) ) {
@@ -772,6 +792,11 @@ $graded               = array_filter(
 );
 if ( ! $graded ) {
 	boi_t_fail( 'listicle: no graded hadith Quotation from the notes' );
+}
+foreach ( $graph as $n ) {
+	if ( isset( $n['headline'] ) && false !== strpos( (string) $n['@id'], '#article' ) && ( ! isset( $n['mainEntity'] ) || false === strpos( (string) json_encode( $n['mainEntity'] ), '#itemlist' ) ) ) {
+		boi_t_fail( 'listicle: the Article does not name its list as mainEntity' );
+	}
 }
 foreach ( $graded as $q ) {
 	$g = end( $q['identifier'] );
