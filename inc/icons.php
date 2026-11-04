@@ -123,6 +123,18 @@ function boi_render_social_icons() {
 }
 
 /**
+ * [boi_social_icons]: the same row of follow icons anywhere in content. In
+ * content the icons take the colour of the text around them; in the footer
+ * they keep the footer's colours.
+ *
+ * @return string
+ */
+function boi_social_icons_shortcode() {
+	return str_replace( '<ul class="boi-social">', '<ul class="boi-social boi-social--inline">', boi_render_social_icons() );
+}
+add_shortcode( 'boi_social_icons', 'boi_social_icons_shortcode' );
+
+/**
  * Interface icons from Lucide (ISC licence, assets/icons/ui/LICENSE.txt),
  * stroked in currentColor. Used beside headings and labels.
  *

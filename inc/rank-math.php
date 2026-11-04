@@ -188,7 +188,7 @@ function boi_rank_math_canonical( $canonical ) {
  * @return array|false
  */
 function boi_rank_math_sitemap_entry( $url, $type = '', $object = null ) {
-	if ( 'post' === $type && $object instanceof WP_Post && function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( $object ) ) {
+	if ( 'post' === $type && $object instanceof WP_Post && function_exists( 'boi_is_unlisted_anywhere' ) && boi_is_unlisted_anywhere( $object ) ) {
 		return false;
 	}
 

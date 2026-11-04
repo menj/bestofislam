@@ -759,7 +759,7 @@ add_action( 'parse_request', 'boi_serve_image_sitemap', 1 );
  */
 function boi_print_image_sitemap_urls( $posts ) {
 	foreach ( $posts as $post ) {
-		if ( ! $post instanceof WP_Post || ( function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( $post ) ) ) {
+		if ( ! $post instanceof WP_Post || ( function_exists( 'boi_is_unlisted_anywhere' ) && boi_is_unlisted_anywhere( $post ) ) ) {
 			continue;
 		}
 

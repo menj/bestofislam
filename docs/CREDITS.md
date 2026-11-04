@@ -15,7 +15,7 @@ in `assets/`.
 
 ## Features adapted from plugins
 
-Three features of this theme are adapted from plugins released under the GNU
+Four features of this theme are adapted from plugins released under the GNU
 General Public License, version 2 or later, as the theme is. Their authors
 are credited here with thanks.
 
@@ -25,6 +25,8 @@ are credited here with thanks.
   Pretty Search Permalinks 1.3 by Angel Costa, https://netmundo.com.br/
 - **Custom login address** (`inc/login.php`), adapted from WPS Hide Login
   1.9.18 by WPServeur, NicolasKulka and wpformation, https://wpserveur.net
+- **Reading progress bar** (`inc/reading-progress.php`), adapted from Reading
+  Progress Bar 1.3.1 by Jean-Baptiste Audras, https://jeanbaptisteaudras.com/
 
 ## Icons
 

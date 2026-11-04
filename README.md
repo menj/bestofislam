@@ -25,7 +25,8 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 - **Front page.** Nine full-width bands: the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; the newest article; a three-step start; the sections; the questions; the latest articles; editor's picks; and the mission.
 - **Articles.** Reading time, a jump list for lists of three or more, share buttons, an author card, related pieces, questions answered, and "Read next".
-- **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`.
+- **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
+- **Reading progress.** A bar on single posts and pages fills as you scroll. It is drawn in the palette, updates once per animation frame from a passive listener, drops its animation under `prefers-reduced-motion` and sits below the admin bar. It is `aria-hidden`: it repeats what the scrollbar shows, and a live progressbar would be read out on every scroll.
 - **Images.** Every image is credited beneath it and on the Sources and standards page. Where the media library copy of a seeded image is missing, the copy bundled with the theme is shown.
 
 ### Search engines
@@ -36,7 +37,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ### Access
 
-- **Unlisted posts and pages.** A box in the editor sidebar hides an item from every listing, search, feed and sitemap while it stays reachable by its own link, marked noindex.
+- **Unlisted posts and pages.** A box in the editor sidebar, a Quick Edit box and a Bulk Edit choice hide an item of any public post type from every listing, search, feed and sitemap while it stays reachable by its own link, marked noindex. Post lists have an Unlisted column and an Unlisted view.
 - **Custom login address.** Serves the login page from a private address and answers `wp-login.php` and `wp-admin` with the 404 page for anyone not logged in. Off by default. Add `define( 'BOI_HIDE_LOGIN', false );` to `wp-config.php` to switch it off in an emergency.
 - **Login page.** A permanent design: the manuscript background across the whole screen, the bars and wordmark, the line "Editorial access only.", and the form in a navy card with a gold top edge.
 
@@ -47,14 +48,14 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 - **Light and dark.** A toggle in the header switches the whole site; colour tokens live in `theme.json`.
 - **Header.** One row above 1300px; two rows below, with the section links scrolling sideways between 600 and 781px; a menu button below 600px. The search field and toggle share one height and style.
 - **Footer.** The mark's bars run full width, then the wordmark and the site's promise, then four columns (the reading order, sections, a start column and follow links), then a bar of standing pages.
-- **Icons.** 45 single-colour icons from the Minimalist Social & Platform Icons Pack, inlined in the text colour, for share buttons and follow links.
+- **Icons.** 45 single-colour icons from the Minimalist Social & Platform Icons Pack, inlined in the text colour, for share buttons and follow links. The follow row sits in the footer and goes anywhere else through the `[boi_social_icons]` shortcode or the Follow icons pattern; its colours are CSS variables.
 - **Responsive.** Tested on a working install at twelve widths from 320 to 1920px: nothing scrolls sideways or overshoots the screen, no text is under 12px, and every tap target on a phone is at least 24px.
 
 ## Settings
 
 Under Appearance, Theme Options, in eight tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. Without JavaScript the tabs are links and still work.
 
-- **Display:** rank badges, the entry image size, the hero background, editor's picks, follow channels and the contact form recipient.
+- **Display:** rank badges, the entry image size, the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
@@ -85,7 +86,7 @@ Under Appearance, Contextual Links, in three tabs:
 
 ### Moving from the plugins the theme replaces
 
-Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide Login are rebuilt inside the theme. While any of them is active, the theme's version of that feature stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
+Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar are rebuilt inside the theme. While any of them is active, the theme's version of that feature stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
 
 ## Authoring a listicle
 
@@ -104,7 +105,7 @@ bestofislam/
 │                        features, front, glossary-links, icons,
 │                        images, login, login-screen, questions, reading,
 │                        reflections, schema, schema-graph, search,
-│                        search-permalinks,
+│                        reading-progress, search-permalinks,
 │                        sections, security, security-detector, seo,
 │                        settings, setup, structured-data,
 │                        taxonomy, unlist, voting
@@ -117,13 +118,15 @@ bestofislam/
 ├── templates/           404, archive, front-page, home, page, search,
 │                        single, single-listicle, tag, taxonomy-listicle-topic
 ├── parts/               header, footer
-├── patterns/            Listicle starter
+├── patterns/            Listicle starter, Brand lockup, Follow icons
 ├── styles/              Style variations
 ├── content/             The 36 seeded articles as block markup
 ├── assets/css/          admin-settings, editor-listicle, editor-typography,
 │                        footer, front, listicle, login, navigation, print,
-│                        scripts, search, theme-toggle, typography, voting
-├── assets/js/           admin-settings, questions, theme-toggle, voting
+│                        reading-progress, scripts, search, theme-toggle,
+│                        typography, voting
+├── assets/js/           admin-settings, questions, reading-progress,
+│                        theme-toggle, unlist-admin, voting
 ├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office, EB Garamond; script fonts guide
 ├── assets/icons/        45 SVG icons and their licence
 ├── assets/images/       mark.svg, mark-solid.svg, logo-512.png, and

@@ -427,9 +427,10 @@ same credits shown beneath each image, so the licence a reader sees
 and the licence Google reads are one record. Markup Google no longer rewards,
 FAQ and list carousels, stays only because it describes its page accurately.
 
-### D40. Three plugins, rebuilt inside the theme
+### D40. Plugins rebuilt inside the theme
 
-Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide Login are
+Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading
+Progress Bar are
 rebuilt natively, in keeping with D1, and credited in docs/CREDITS.md. Each
 was rebuilt to suit the theme's own structure, never copied in whole:
 
@@ -437,6 +438,8 @@ was rebuilt to suit the theme's own structure, never copied in whole:
   is skipped by get_posts(), which builds most of the theme's modules.
 - Search redirects keep every query argument, since the theme's search
   filters travel as arguments and the plugin dropped them.
+- The progress bar is plain JavaScript and aria-hidden. It repeats the
+  scrollbar, and a progressbar role would be announced on every scroll.
 - The login address intercepts at wp_loaded, since a theme loads after the
   plugins_loaded hook the plugin used.
 

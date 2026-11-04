@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.98.1' );
+define( 'BOI_VERSION', '1.99.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -40,6 +40,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/rank-math.php',
 	BOI_DIR . '/inc/unlist.php',
 	BOI_DIR . '/inc/search-permalinks.php',
+	BOI_DIR . '/inc/reading-progress.php',
 	BOI_DIR . '/inc/login.php',
 	BOI_DIR . '/inc/login-screen.php',
 	BOI_DIR . '/inc/favicon.php',
@@ -463,6 +464,10 @@ function boi_maybe_install() {
 			if ( get_option( 'boi_content_populated' ) && function_exists( 'boi_populate_content' ) ) {
 				boi_populate_content();
 			}
+
+			// Rewrite rules (the search base among them) are rebuilt once per
+			// version, on the next load, never on every request.
+			update_option( 'boi_flush_rewrites', 1, false );
 
 			update_option( 'boi_db_version', BOI_VERSION );
 		},

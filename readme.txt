@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.98.1
+Stable tag: 1.99.0
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -31,6 +31,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
 * Search with readable addresses such as /search/Paul/, filters for kind and section, and links straight to the matching entry.
 * Titles, meta descriptions, canonical links, breadcrumbs and one JSON-LD graph per page: Article, ItemList, FAQPage, BreadcrumbList, ProfilePage, Organization, WebSite and a DefinedTermSet for the Glossary. With Rank Math, Yoast SEO, All in One SEO or SEOPress active, the theme hands over what the plugin does and adds only what it cannot know, such as each image's licence and credit.
+* A reading progress bar on single posts and pages, in the palette, with its edge, height, colour and post types set on the Display tab.
 * Unlisted posts and pages, a private login address, security headers, a spam gate for gambling spam and a Security tab with a spam scan, clean-up tools and attack reports.
 * Branded maintenance, database and PHP error pages, with email alerts.
 * Bundled fonts: EB Garamond, Platypi, Ysabeau Office, Vollkorn, Noto Naskh Arabic and KFGQPC HAFS Uthmanic Script for Quranic verses. The script faces are scoped by unicode-range, so a page downloads them only when it has text in that script. 4 more script faces activate when the site owner drops in the licensed files (assets/fonts/scripts/README.md).
@@ -48,7 +49,7 @@ On an update, replace the theme folder and open any admin page. The theme brings
 
 Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
-* Display: rank badges, the entry image size, the front-page hero image, editor's picks, follow links and the contact form recipient.
+* Display: rank badges, the entry image size, the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
 * Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace.
@@ -115,9 +116,15 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * KFGQPC HAFS Uthmanic Script: King Fahd Glorious Quran Printing Complex, under its own licence (assets/fonts/scripts/kfgqpc-hafs-uthmanic-script-LICENSE.txt).
 * Minimalist Social & Platform Icons Pack 2.8: GNU General Public License (assets/icons/LICENSE.txt).
 * Photographs: public domain or CC0 from Wikimedia Commons, the Pexels licence and the Pixabay Content Licence, credited under each image and on the Sources and standards page.
-* Code adapted from Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide Login, all GPLv2 or later.
+* Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.99.0 =
+* A reading progress bar on single posts and pages. Switch it on or off, pick the top or bottom edge, a height from 2 to 12 pixels, a palette colour or your own, and the post types, on the Display tab.
+* Unlisting works on every public post type, from Quick Edit and Bulk Edit as well as the editor sidebar. Post lists gain an Unlisted column and an Unlisted view.
+* The search base can be set in Settings, Permalinks too, as the plugin allowed. Rewrite rules are rebuilt once after each update.
+* The [boi_social_icons] shortcode and the Follow icons pattern put the follow icons anywhere. The icons take their colours from CSS variables and show a focus ring.
 
 = 1.98.1 =
 * Structured data: listicle lists and the front page Reflections strip are linked in ways schema.org accepts. The Schema Markup Validator rejected both.

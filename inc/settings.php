@@ -3,7 +3,8 @@
  * Tabbed settings screen.
  *
  * Colour configuration is handled through theme.json custom properties and
- * style variations in the Site Editor, so it is deliberately absent here.
+ * style variations in the Site Editor, so it is absent here, apart from the
+ * reading progress bar's colour on the Display tab.
  *
  * @package BestOfIslam
  */
@@ -46,6 +47,11 @@ function boi_get_options() {
 		'security_hsts'       => 0,
 		'search_pretty'       => 1,
 		'search_base'         => 'search',
+		'progress_enabled'    => 1,
+		'progress_color'      => 'accent-2',
+		'progress_height'     => 4,
+		'progress_position'   => 'top',
+		'progress_types'      => array( 'post', 'page' ),
 		'errors_pages'        => 1,
 		'errors_alerts'       => 1,
 		'errors_email'        => '',
@@ -58,8 +64,15 @@ function boi_get_options() {
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
+	$stored = is_array( $stored ) ? $stored : array();
 
-	return wp_parse_args( is_array( $stored ) ? $stored : array(), $defaults );
+	// Until the bar is saved here, the Reading Progress Bar plugin's options
+	// carry over.
+	if ( ! array_key_exists( 'progress_enabled', $stored ) && function_exists( 'boi_progress_from_plugin' ) ) {
+		$stored = array_merge( boi_progress_from_plugin(), $stored );
+	}
+
+	return wp_parse_args( $stored, $defaults );
 }
 
 /**
@@ -123,6 +136,34 @@ function boi_sanitize_options( $input ) {
 
 			$current['picks'] = isset( $input['picks'] ) ? implode( ',', array_filter( array_map( 'sanitize_title', explode( ',', (string) $input['picks'] ) ) ) ) : '';
 
+			// The reading progress bar. Its fields are absent while the plugin
+			// is active; keep what is saved then.
+			if ( isset( $input['progress_position'] ) ) {
+				$current['progress_enabled']  = empty( $input['progress_enabled'] ) ? 0 : 1;
+				$current['progress_position'] = 'bottom' === $input['progress_position'] ? 'bottom' : 'top';
+
+				// Height and colour are disabled, so not sent, while the bar is
+				// off: keep their saved values then.
+				if ( isset( $input['progress_height'] ) ) {
+					$current['progress_height'] = max( 2, min( 12, (int) $input['progress_height'] ) );
+				}
+
+				$color = isset( $input['progress_color'] ) ? sanitize_key( $input['progress_color'] ) : (string) $current['progress_color'];
+
+				if ( 'custom' === $color ) {
+					$hex   = isset( $input['progress_color_custom'] ) ? sanitize_hex_color( $input['progress_color_custom'] ) : '';
+					$color = $hex ? $hex : 'accent-2';
+				} elseif ( ! sanitize_hex_color( $color ) && ( ! function_exists( 'boi_progress_palette' ) || ! isset( boi_progress_palette()[ $color ] ) ) ) {
+					$color = 'accent-2';
+				}
+
+				$current['progress_color'] = $color;
+
+				$public                    = get_post_types( array( 'public' => true ) );
+				$types                     = isset( $input['progress_types'] ) && is_array( $input['progress_types'] ) ? array_map( 'sanitize_key', array_filter( $input['progress_types'], 'is_string' ) ) : array();
+				$current['progress_types'] = array_values( array_intersect( $types, $public ) );
+			}
+
 			break;
 
 		case 'schema':
@@ -153,11 +194,25 @@ function boi_sanitize_options( $input ) {
 			// values mean "not offered", not "switched off": keep what is saved.
 			if ( ! function_exists( 'wpseosearch_base' ) ) {
 				$current['search_pretty'] = empty( $input['search_pretty'] ) ? 0 : 1;
-				$base                     = isset( $input['search_base'] ) ? sanitize_title( $input['search_base'] ) : 'search';
-				$current['search_base']   = '' !== $base ? $base : 'search';
+				$base                     = isset( $input['search_base'] ) ? sanitize_key( $input['search_base'] ) : 'search';
+				$base                     = '' !== $base ? $base : 'search';
+				$problem                  = function_exists( 'boi_search_base_problem' ) ? boi_search_base_problem( $base ) : '';
+
+				if ( '' !== $problem ) {
+					add_settings_error( BOI_OPTION_KEY, 'boi-search-base', $problem );
+				} else {
+					$current['search_base'] = $base;
+				}
 				// The base changes the rewrite rules; rebuild them on the next load.
 				update_option( 'boi_flush_rewrites', 1, false );
 			}
+			break;
+
+		case 'permalink':
+			// The Search base field on Settings, Permalinks.
+			// Checked against the reserved words before it gets here.
+			$base                   = isset( $input['search_base'] ) ? sanitize_key( $input['search_base'] ) : '';
+			$current['search_base'] = '' !== $base ? $base : 'search';
 			break;
 
 		case 'access':
@@ -701,6 +756,10 @@ function boi_render_display_tab( $opts ) {
 	echo '</div>';
 	boi_opt_card_close();
 
+	if ( function_exists( 'boi_render_progress_card' ) ) {
+		boi_render_progress_card( $opts );
+	}
+
 	boi_opt_card_open( __( 'Contact form', 'bestofislam' ) );
 	boi_opt_row_open( __( 'Contact form recipient', 'bestofislam' ), 'boi-contact-email' );
 	?>
@@ -963,7 +1022,7 @@ function boi_render_seo_tab( $opts ) {
 		boi_opt_row_open( __( 'Base word', 'bestofislam' ), 'boi-search-base' );
 		?>
 		<span class="boi-affix"><code><?php echo esc_html( trailingslashit( home_url() ) ); ?></code><input type="text" id="boi-search-base" class="regular-text" name="<?php echo esc_attr( $key ); ?>[search_base]" value="<?php echo esc_attr( boi_search_base() ); ?>" aria-describedby="boi-search-base-help" /><code>/Paul/</code></span>
-		<p class="description" id="boi-search-base-help"><?php esc_html_e( 'The chosen base is also kept out of search engines through robots.txt.', 'bestofislam' ); ?></p>
+		<p class="description" id="boi-search-base-help"><?php esc_html_e( 'Lowercase letters, numbers, hyphens and underscores; anything else is removed. It cannot be an address the site already uses, such as topic or glossary. The chosen base is also kept out of search engines through robots.txt.', 'bestofislam' ); ?></p>
 		<?php
 		boi_opt_row_close();
 	}
@@ -1064,9 +1123,44 @@ function boi_render_access_tab( $opts ) {
  * @return void
  */
 function boi_maybe_flush_rewrites() {
-	if ( get_option( 'boi_flush_rewrites' ) ) {
-		delete_option( 'boi_flush_rewrites' );
-		flush_rewrite_rules( false );
+	if ( ! get_option( 'boi_flush_rewrites' ) ) {
+		return;
 	}
+
+	flush_rewrite_rules( false );
+
+	// Clear the request only once the rules hold the search rule, so a flush
+	// that failed or ran before the base was applied is tried again.
+	if ( boi_search_rules_ready() ) {
+		delete_option( 'boi_flush_rewrites' );
+	}
+}
+
+/**
+ * Whether the stored rewrite rules contain the search rule for the current
+ * base. With readable addresses off there is nothing to look for.
+ *
+ * @return bool
+ */
+function boi_search_rules_ready() {
+	if ( ! function_exists( 'boi_pretty_search_enabled' ) || ! boi_pretty_search_enabled() ) {
+		return true;
+	}
+
+	$rules = get_option( 'rewrite_rules' );
+
+	if ( ! is_array( $rules ) ) {
+		return false;
+	}
+
+	$prefix = boi_search_base() . '/(.+)';
+
+	foreach ( array_keys( $rules ) as $regex ) {
+		if ( 0 === strpos( (string) $regex, $prefix ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 add_action( 'init', 'boi_maybe_flush_rewrites', 99 );

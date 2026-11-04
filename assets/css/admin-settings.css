@@ -630,3 +630,31 @@ legend.boi-field__label {
 		padding: 0.75rem 0.85rem;
 	}
 }
+
+/* Reading progress colour cards (inc/reading-progress.php). The swatches
+   show the light palette from theme.json. */
+.boi-settings {
+	--boi-admin-accent-2: #E8B33C;
+	--boi-admin-accent-1: #1D6AC3;
+	--boi-admin-accent-4: #3FA9F5;
+	--boi-admin-contrast: #0D2B4E;
+}
+
+.boi-swatch {
+	display: inline-block;
+	inline-size: 1em;
+	block-size: 1em;
+	margin-inline-end: 0.4em;
+	vertical-align: -0.125em;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.boi-settings input.boi-color {
+	inline-size: 3rem;
+	block-size: 2rem;
+	padding: 0;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	cursor: pointer;
+}
