@@ -4,6 +4,19 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.98.1] - 2026-11-04
+
+The Schema Markup Validator run of 4 November rejected two `hasPart` links. schema.org gives `hasPart` a CreativeWork, and an `ItemList` is not one. Both lists stay in the graph with their @ids. No option key, function name or handle changed.
+
+### Fixed
+
+- A listicle Article named its `#itemlist` lists under `hasPart` (`boi_schema_article_details()`, `inc/schema-graph.php`). It names them as `mainEntity` now: one list as a single reference, more as a list of references. The page keeps the Article as its own `mainEntity`.
+- The front page put the Reflections strip (`#reflections`) under its `hasPart`. It is under `mentions` now. The page's `mainEntity` stays the question list.
+
+### Tests
+
+- `tests/schema-graph-test.php` fails any node whose `hasPart` holds an `ItemList`, fails a `#itemlist` or `#reflections` list that no other node refers to, and checks that the listicle Article names its list as `mainEntity`. Both checks fail on 1.98.0.
+
 ## [1.98.0] - 2026-11-04
 
 This release applies the owner's upgrade rules of 2026-11-04. I audited the theme against each rule, in the brief's order: security first, then stability, compatibility, performance, accessibility and maintainability. With WP_DEBUG on, a local WordPress 7.1 install logged no notice on the front end or on any Theme Options tab, before or after the changes. No option key, shortcode, block, taxonomy or handle changed, and the glossary seeding and the 151 articles are untouched.
