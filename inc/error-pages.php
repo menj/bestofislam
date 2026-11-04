@@ -220,7 +220,9 @@ function boi_error_saved_config() {
  */
 function boi_error_write( $path, $contents ) {
 	$tmp = $path . '.' . wp_generate_password( 8, false ) . '.tmp';
-	if ( false === @file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+	// A short write (a full disk) must not be moved into place as a whole page.
+	if ( strlen( $contents ) !== @file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+		wp_delete_file( $tmp );
 		return false;
 	}
 	if ( ! @rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
