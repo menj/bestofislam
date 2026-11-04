@@ -75,6 +75,15 @@ file_put_contents( "$boi_tmp/php-error.php", $boi_src['maintenance'] );
 boi_check( 'outdated' === boi_error_state()['php-error'], 'the maintenance page in php-error.php reads as outdated' );
 boi_error_sync();
 boi_check( file_get_contents( "$boi_tmp/php-error.php" ) === $boi_src['php-error'], 'sync puts the right page back' );
+boi_check( true === boi_error_sync() && array() === boi_error_sync_failures(), 'a sync that writes everything reports success' );
+boi_check( false === boi_error_write( "$boi_tmp/no-such-dir/x.php", 'x' ), 'a write that cannot happen reports failure' );
+if ( function_exists( 'posix_geteuid' ) && 0 !== posix_geteuid() ) {
+	unlink( "$boi_tmp/php-error.php" );
+	chmod( $boi_tmp, 0500 );
+	$boi_ok = boi_error_sync();
+	chmod( $boi_tmp, 0700 );
+	boi_check( false === $boi_ok && in_array( 'php-error.php', boi_error_sync_failures(), true ), 'an unwritable wp-content fails the sync and names the file' );
+}
 
 exec( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( dirname( __DIR__ ) . '/bin/build-error-pages.php' ) . ' --check 2>&1', $boi_o, $boi_code );
 boi_check( 0 === $boi_code, 'errors/*.html match the builder' );
