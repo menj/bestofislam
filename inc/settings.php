@@ -276,6 +276,17 @@ function boi_settings_tabs() {
 }
 
 /**
+ * Tabs whose panels run costly queries (the article fingerprints, the
+ * security reports). They render only when they are the open tab; from
+ * another tab they are reached with a full load of ?tab=.
+ *
+ * @return string[]
+ */
+function boi_settings_heavy_tabs() {
+	return array( 'content', 'security' );
+}
+
+/**
  * The hidden fields options.php needs, for one form among several on the
  * screen. settings_fields() prints them with fixed IDs, which would repeat
  * once per tab, so they are printed here without IDs. The referer brings
@@ -520,6 +531,7 @@ function boi_render_settings_page() {
 						aria-selected="<?php echo $slug === $active ? 'true' : 'false'; ?>"
 						tabindex="<?php echo $slug === $active ? '0' : '-1'; ?>"
 						data-boi-tab="<?php echo esc_attr( $slug ); ?>"
+						<?php echo ( $slug !== $active && in_array( $slug, boi_settings_heavy_tabs(), true ) ) ? 'data-boi-reload="1"' : ''; ?>
 					><span class="dashicons <?php echo esc_attr( $tab['icon'] ); ?>" aria-hidden="true"></span><span class="boi-opt__tab-label"><?php echo esc_html( $tab['label'] ); ?></span></a>
 				<?php endforeach; ?>
 			</div>
@@ -538,7 +550,19 @@ function boi_render_settings_page() {
 					<h2 class="boi-card__title"><?php esc_html_e( 'How this tab works', 'bestofislam' ); ?></h2>
 					<p><?php echo esc_html( $tab['usage'] ); ?></p>
 				</div>
-				<?php boi_render_settings_panel( $slug, $opts ); ?>
+				<?php
+				if ( $slug === $active || ! in_array( $slug, boi_settings_heavy_tabs(), true ) ) {
+					boi_render_settings_panel( $slug, $opts );
+				} else {
+					// Heavy panels run their queries only when opened.
+					printf(
+						'<p><a class="button" href="%1$s">%2$s</a></p>',
+						esc_url( admin_url( 'themes.php?page=boi-settings&tab=' . $slug ) ),
+						/* translators: %s: tab name. */
+						esc_html( sprintf( __( 'Open the %s tab', 'bestofislam' ), $tab['label'] ) )
+					);
+				}
+				?>
 			</section>
 		<?php endforeach; ?>
 

@@ -1,7 +1,8 @@
 /**
  * Theme Options screen behaviour.
  *
- * - Tabs: switch panels without a reload, with the WAI-ARIA tabs pattern
+ * - Tabs: switch panels without a reload (the heavy Content and Security
+ *   panels load their page when opened), with the WAI-ARIA tabs pattern
  *   (arrow keys, Home and End move between tabs; the chosen tab is kept in
  *   the address so a reload or a save returns to it). Without this script
  *   the tabs are plain links and the server opens the chosen panel.
@@ -70,6 +71,10 @@
 				if ( event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || 0 !== event.button ) {
 					return;
 				}
+				// A heavy panel is rendered only when opened: follow the link.
+				if ( tab.hasAttribute( 'data-boi-reload' ) ) {
+					return;
+				}
 				event.preventDefault();
 				select( tab, false );
 			} );
@@ -95,6 +100,10 @@
 					case ' ':
 					case 'Enter':
 						event.preventDefault();
+						if ( tab.hasAttribute( 'data-boi-reload' ) ) {
+							window.location.href = tab.href;
+							return;
+						}
 						select( tab, true );
 						return;
 				}

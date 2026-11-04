@@ -52,7 +52,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ## Settings
 
-Under Appearance, Theme Options, in eight tabs. The screen is a set of cards under a tab list: the tabs switch without a reload and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. Without JavaScript the tabs are links and still work.
+Under Appearance, Theme Options, in eight tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. Without JavaScript the tabs are links and still work.
 
 - **Display:** rank badges, the entry image size, the hero background, editor's picks, follow channels and the contact form recipient.
 - **Schema:** the default list markup.

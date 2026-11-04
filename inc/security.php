@@ -1032,9 +1032,9 @@ add_action( 'wp_ajax_boi_sec_trash', 'boi_sec_ajax_trash' );
  * @param string $hook Screen hook.
  */
 function boi_sec_assets( $hook ) {
-	// Every tab is in the page and switches without a reload, so the Security
-	// tab's assets load with the screen, on this screen only.
-	if ( 'appearance_page_boi-settings' !== $hook || ! current_user_can( 'manage_options' ) ) {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- screen choice only.
+	$tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
+	if ( 'appearance_page_boi-settings' !== $hook || 'security' !== $tab || ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
 	wp_enqueue_style( 'boi-security', BOI_URI . '/assets/css/security.css', array( 'boi-admin-settings' ), BOI_VERSION );
