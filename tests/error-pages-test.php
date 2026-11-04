@@ -14,8 +14,12 @@ define( 'ABSPATH', __DIR__ . '/' );
 define( 'BOI_DIR', dirname( __DIR__ ) );
 define( 'BOI_VERSION', '9.9.9' );
 define( 'BOI_OPTION_KEY', 'boi_options' );
-$boi_tmp = sys_get_temp_dir() . '/boi-err-' . getmypid();
-@mkdir( $boi_tmp );
+// A fresh directory of its own, so the cleanup at the end removes only what this test wrote.
+$boi_tmp = sys_get_temp_dir() . '/boi-err-' . getmypid() . '-' . bin2hex( random_bytes( 6 ) );
+if ( ! mkdir( $boi_tmp, 0700 ) ) {
+	fwrite( STDERR, "cannot create $boi_tmp\n" );
+	exit( 1 );
+}
 define( 'WP_CONTENT_DIR', $boi_tmp );
 $GLOBALS['boi_o'] = array();
 function add_action() {}

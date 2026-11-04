@@ -294,9 +294,11 @@ function boi_error_handle_install() {
 		wp_die( esc_html__( 'You are not allowed to do that.', 'bestofislam' ), 403 );
 	}
 	check_admin_referer( 'boi_install_error_pages' );
-	if ( ! is_multisite() || is_main_site() ) {
-		boi_error_sync();
+	if ( is_multisite() && ! is_main_site() ) {
+		wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors' ) );
+		exit;
 	}
+	boi_error_sync();
 	wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_installed=1' ) );
 	exit;
 }
@@ -530,11 +532,15 @@ function boi_render_errors_tab( $opts ) {
 	if ( isset( $_GET['boi_errors_installed'] ) ) {
 		echo '<p class="notice notice-success inline">' . esc_html__( 'The error pages were written where the theme may write them.', 'bestofislam' ) . '</p>';
 	}
-	printf(
-		'<p><a class="button" href="%s">%s</a></p>',
-		esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=boi_install_error_pages' ), 'boi_install_error_pages' ) ),
-		esc_html__( 'Install error pages', 'bestofislam' )
-	);
+	if ( is_multisite() && ! is_main_site() ) {
+		echo '<p class="description">' . esc_html__( 'The whole network shares wp-content, so the error pages are installed from the main site.', 'bestofislam' ) . '</p>';
+	} else {
+		printf(
+			'<p><a class="button" href="%s">%s</a></p>',
+			esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=boi_install_error_pages' ), 'boi_install_error_pages' ) ),
+			esc_html__( 'Install error pages', 'bestofislam' )
+		);
+	}
 	boi_opt_row_close();
 	boi_opt_row_open( __( 'Server errors', 'bestofislam' ), 'boi-errors-htaccess' );
 	echo '<p class="description">' . esc_html__( 'For the errors the web server answers before WordPress starts, static pages are in the errors folder of the theme. Add these lines to .htaccess to use them:', 'bestofislam' ) . '</p>';

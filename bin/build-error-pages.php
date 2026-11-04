@@ -46,7 +46,10 @@ foreach ( $boi_pages as $boi_code => $boi_p ) {
 		}
 		continue;
 	}
-	file_put_contents( $boi_path, $boi_html );
+	if ( false === file_put_contents( $boi_path, $boi_html ) ) {
+		fwrite( STDERR, "cannot write errors/$boi_code.html\n" );
+		exit( 1 );
+	}
 	echo "wrote errors/$boi_code.html\n";
 }
 exit( $boi_stale ? 1 : 0 );
