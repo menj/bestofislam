@@ -37,6 +37,41 @@ function boi_progress_palette() {
 }
 
 /**
+ * The Reading Progress Bar plugin's saved options (rp_settings), mapped to
+ * the theme's keys. Its "custom" position becomes the top edge; its
+ * templates other than single entries have no counterpart here.
+ *
+ * @return array
+ */
+function boi_progress_from_plugin() {
+	$rp = get_option( 'rp_settings', array() );
+
+	if ( ! is_array( $rp ) || ! $rp ) {
+		return array();
+	}
+
+	$out = array( 'progress_enabled' => ! empty( $rp['rp_field_templates']['single'] ) ? 1 : 0 );
+
+	if ( isset( $rp['rp_field_height'] ) && is_scalar( $rp['rp_field_height'] ) && '' !== (string) $rp['rp_field_height'] ) {
+		$out['progress_height'] = max( 2, min( 12, (int) $rp['rp_field_height'] ) );
+	}
+
+	if ( isset( $rp['rp_field_fg_color'] ) && is_string( $rp['rp_field_fg_color'] ) && sanitize_hex_color( $rp['rp_field_fg_color'] ) ) {
+		$out['progress_color'] = sanitize_hex_color( $rp['rp_field_fg_color'] );
+	}
+
+	if ( isset( $rp['rp_field_position'] ) && is_string( $rp['rp_field_position'] ) ) {
+		$out['progress_position'] = 'bottom' === $rp['rp_field_position'] ? 'bottom' : 'top';
+	}
+
+	if ( isset( $rp['rp_field_posttypes'] ) && is_array( $rp['rp_field_posttypes'] ) ) {
+		$out['progress_types'] = array_values( array_map( 'strval', array_keys( array_filter( $rp['rp_field_posttypes'] ) ) ) );
+	}
+
+	return $out;
+}
+
+/**
  * Whether the theme's bar runs. It stands aside while the original plugin
  * is active, so a page never shows two bars.
  *
@@ -66,12 +101,13 @@ function boi_progress_post_types() {
 
 /**
  * Whether the current view gets the bar: a single post or page of a chosen
- * type, never the front page.
+ * type. A static front page counts as a page.
  *
  * @return bool
  */
 function boi_progress_applies() {
-	if ( ! boi_progress_enabled() || is_admin() || is_front_page() || ! is_singular() ) {
+	// A static front page is a page and follows the page setting.
+	if ( ! boi_progress_enabled() || is_admin() || ! is_singular() ) {
 		return false;
 	}
 

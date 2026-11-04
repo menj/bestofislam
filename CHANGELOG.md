@@ -35,6 +35,9 @@ The owner asked for the features of 4 plugins to be built into the theme. Three 
 - The search base is cleaned with `sanitize_key`, and a base the site already routes (topic, glossary, a post type or taxonomy base, and WordPress's own) is refused with a notice. The help text says so.
 - The progress bar measures again when the page height changes, through a ResizeObserver on the body.
 - The progress bar's post types accept only strings.
+- The bar takes the Reading Progress Bar plugin's saved height, colour, edge, post types and single-entry switch (`rp_settings`) until it is saved on the Display tab (`boi_progress_from_plugin()`).
+- A static front page is a page, and gets the bar when pages do.
+- `tests/reading-progress-test.php` covers the import, the string-only types, the front page and the ResizeObserver. `tests/unlist-test.php` and `tests/search-permalinks-test.php` cover the review fixes above.
 
 ## [1.98.1] - 2026-11-04
 

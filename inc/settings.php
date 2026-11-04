@@ -64,8 +64,15 @@ function boi_get_options() {
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
+	$stored = is_array( $stored ) ? $stored : array();
 
-	return wp_parse_args( is_array( $stored ) ? $stored : array(), $defaults );
+	// Until the bar is saved here, the Reading Progress Bar plugin's options
+	// carry over.
+	if ( ! array_key_exists( 'progress_enabled', $stored ) && function_exists( 'boi_progress_from_plugin' ) ) {
+		$stored = array_merge( boi_progress_from_plugin(), $stored );
+	}
+
+	return wp_parse_args( $stored, $defaults );
 }
 
 /**
