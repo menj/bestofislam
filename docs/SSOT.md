@@ -622,7 +622,10 @@ login page, the REST API and the editor's assets alone.
 The theme folder also ships its own `.htaccess` (mod_alias `RedirectMatch
 403` for every dot entry but `.well-known`, the dev folders and theme PHP;
 mod_rewrite for the dev folders by the path below the theme), and `tests/`,
-`bin/` and `docs/` each carry one that refuses everything in them. Apache
+`bin/` and `docs/` each carry one that refuses everything in them. A
+`FilesMatch` there also refuses every Markdown file by name (`README.md`, the
+font notes), on any module set; `CHANGELOG.md` stays open, since the Theme
+Options footer links to it. Apache
 applies them before WordPress runs, so the files are refused even on the
 first request after an upload. The cleanup and the sync share one lock,
 `inc/lock.php`.

@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.11] - 2026-11-05
+
+No band or feature removed and no public identifier renamed.
+
+### Security
+- The theme folder's `.htaccess` refuses Markdown files by name with a `FilesMatch` (`(?i)^(?!changelog\.md$).*\.md$`), which needs no module beyond the core. A live Apache 2.4 check (mod_php, the site at the domain root and in `/blog/`, with and without mod_alias) found `README.md` and `assets/fonts/scripts/README.md` answering 200. `CHANGELOG.md` stays open, since the Theme Options footer links to it. The same check found every other rule in the theme folder's `.htaccess`, the deny files and the two synced `.htaccess` sections doing what they say: 80 request paths per setup, all as expected. `tests/htaccess-files-test.php` checks the new pattern.
+
 ## [1.100.10] - 2026-11-05
 
 No band or feature removed and no public identifier renamed.
