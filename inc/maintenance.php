@@ -110,7 +110,10 @@ function boi_maintenance_exempt() {
 
 	$uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) $_SERVER['REQUEST_URI'] : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
 
-	return false !== strpos( $uri, 'wp-login' ) || false !== strpos( (string) ( isset( $GLOBALS['pagenow'] ) ? $GLOBALS['pagenow'] : '' ), 'wp-login' );
+	// The login screen by its path, not a query that happens to hold the word.
+	$path = (string) parse_url( $uri, PHP_URL_PATH ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+
+	return 'wp-login.php' === basename( $path ) || 'wp-login.php' === ( isset( $GLOBALS['pagenow'] ) ? $GLOBALS['pagenow'] : '' );
 }
 
 /**

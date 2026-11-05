@@ -152,5 +152,9 @@ foreach ( array( 'tests', 'bin', 'docs' ) as $boi_d ) {
 	boi_check( false !== strpos( $boi_ht, 'Require all denied' ) && false !== strpos( $boi_ht, 'Deny from all' ), "$boi_d/.htaccess refuses everything, on Apache 2.4 and 2.2" );
 }
 
+// Without mod_alias and mod_rewrite: the <If> on the request path refuses dot folders.
+$boi_if = preg_match( '/<If "%\\{REQUEST_URI\\} =~ m#(.+)#">/', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_mm ) ? $boi_mm[1] : '';
+boi_check( '' !== $boi_if && 1 === preg_match( '#' . $boi_if . '#', '/wp-content/themes/x/.git/config' ) && 0 === preg_match( '#' . $boi_if . '#', '/wp-content/themes/x/.well-known/a' ) && 0 === preg_match( '#' . $boi_if . '#', '/wp-content/themes/x/assets/css/a.min.css' ), 'without mod_alias and mod_rewrite, the <If> refuses .git/config and leaves .well-known and assets open' );
+
 echo $boi_fail ? "$boi_fail failed\n" : "all passed\n";
 exit( $boi_fail ? 1 : 0 );
