@@ -214,10 +214,11 @@ function boi_render_author_card() {
  * @return string
  */
 function boi_lead_image( $post, $sizes, $attr = array() ) {
-	$thumb = get_the_post_thumbnail( $post, 'large', array_merge( $attr, array( 'sizes' => $sizes ) ) );
+	$attr  = array_merge( $attr, array( 'sizes' => $sizes ) );
+	$thumb = get_the_post_thumbnail( $post, 'large', $attr );
 
 	if ( '' === $thumb ) {
-		$thumb = boi_featured_image_fallback( '', $post->ID );
+		$thumb = boi_featured_image_fallback( '', $post->ID, 0, 'large', $attr );
 	}
 
 	if ( false !== strpos( $thumb, ' loading="lazy"' ) ) {
