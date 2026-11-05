@@ -611,7 +611,7 @@ cannot, the web server refuses them. On Apache the theme keeps a second
 "Block xmlrpc.php". It answers 403 for PHP files in `wp-includes` (except
 `js/tinymce/wp-tinymce.php` and `ms-files.php`), in `wp-admin/includes` and
 in the themes folder,
-for `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`,
+for `wp-config.php`, `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`,
 `readme.html` and `license.txt`, for any path segment that starts with `.git`
 or `.claude`, and for the theme's `tests`, `bin`, `docs` and `dist` folders and
 editor files. The
