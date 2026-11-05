@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.16
+Stable tag: 1.100.17
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -132,6 +132,10 @@ They ask browsers not to show the site inside another site's frame, not to guess
 
 Yes. The text domain is bestofislam. Put bestofislam-<locale>.mo in the theme's languages folder or in wp-content/languages/themes.
 
+= My site is in a subfolder. Where does the browser icon go? =
+
+Browsers ask for /favicon.ico at the top of the domain, such as example.com/favicon.ico, even when the site lives in example.com/blog/. WordPress never sees that request, so put a copy of the theme's favicon.ico in the domain root folder. The icon tags in each page cover the pages either way.
+
 == Privacy ==
 
 The theme sends nothing to another server. It loads no fonts, scripts, styles or images from a third party, and it has no analytics, tracking or advertising.
@@ -159,6 +163,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.17 =
+* The settings and the notes speak of the other sites in plain words. Links to them stay.
+* The readme says where the browser icon goes on a site in a subfolder: a copy of favicon.ico in the domain root.
 
 = 1.100.16 =
 * Reflections, each section and each archive open with the newest piece large, with its image credit, and the next five in a list beside it. The grid carries on below. With fewer than five pieces, or a newest piece without an image, the page looks as before. The front page is unchanged.
@@ -257,6 +265,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.100.17 =
+Replace the theme files. On a site in a subfolder, also put a copy of assets/images/favicon.ico in the domain root folder; otherwise nothing to do.
 
 = 1.100.16 =
 Replace the theme files. Nothing else to do.

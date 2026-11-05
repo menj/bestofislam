@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.17] - 2026-11-05
+
+The theme now speaks of "the other sites" in its settings and notes, and the docs name the subfolder favicon step. No feature removed and no public identifier renamed.
+
+### Changed
+- The Contextual Links admin page, its help text and the code comments in `inc/contextual-links.php` and `inc/security.php` say "the other sites". The `sister` option keys and the `boi-ctx-link--sister` class keep their names.
+- `readme.txt` and `README.md` say that a site in a subfolder needs a copy of `favicon.ico` at the domain root, because browsers ask for it there and WordPress never sees the request.
+
 ## [1.100.16] - 2026-11-05
 
 Reflections, the sections and the archives open with a lead and list. No feature removed and the front page is unchanged.

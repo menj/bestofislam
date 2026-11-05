@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.100.17
+
+Replace the theme files. Nothing else changes. On a site in a subfolder, put a copy of `assets/images/favicon.ico` in the domain root, since browsers ask for `/favicon.ico` there.
+
 ## Upgrading to 1.100.16
 
 Replace the theme files. The new files are `inc/lead-list.php`, `assets/css/lead-list.css` and `tests/lead-list-test.php`. If you edited the Reflections, section or archive template in the Site Editor, your copy wins and shows no lead and list; reset it, or add the Lead and list block above the query. Nothing else to do.
