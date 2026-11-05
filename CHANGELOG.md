@@ -13,7 +13,7 @@ Documentation release. No band, setting or address changed.
 - `README.md` gains the boot sequence, a complete file map, every hook, filter and `wp-config.php` constant, the `.htaccess` rules with their Nginx equivalents, the error pages, the build, test and release commands, and multisite behaviour.
 - `docs/SSOT.md` gains a section of fixed facts: identity, versions, option names, data files, markers, constants and the contributor rules.
 - `docs/UPGRADING.md` gains general update steps by FTP and a roadmap in three groups, each item tied to the evidence for it.
-- The changelog gains the entries for 1.74.0, 1.79.1, 1.79.2, 1.86.2 and 1.89.1, which were lost in merges, and no longer describes the site's links to other sites as a network.
+- The changelog gains the 1.74.0 entry, whose text had drifted under 1.75.0, and short entries for 1.79.1, 1.79.2, 1.86.2 and 1.89.1, which were tagged on branches and reached sites in 1.84.0, 1.87.2 and 1.90.0. It no longer describes the site's links to other sites as a network.
 
 ### Fixed
 - The Content tab said population builds 151 seeded articles. Since 1.100.3 there are 152, and the tab, `readme.txt` and `README.md` now say so.
@@ -431,11 +431,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ## [1.89.1] - 2026-11-02
 
-### Fixed
-- A half-uploaded theme no longer takes the site down. An FTP upload sends the files one at a time, and on 1 November it took more than 20 minutes; until then every request in that window died with "Failed opening required inc/util.php" (27 and 29 October, 1 and 2 November). `functions.php` lists every file it loads and hands the list to `inc/maintenance.php` first. If one is missing, nothing else loads. Visitors get a short 503 page ("Updating, back in a minute") with `Retry-After: 120` and noindex, and the admin screens stay up with a notice naming the missing files. The guard needs no other theme file.
-- Asset versions come from `boi_asset_version()`, which falls back to `BOI_VERSION` when a file is missing. That ends the `filemtime(): stat failed` warnings for front.css, header-search, back-to-top, scripts.css, article.css and the glossary files.
-- Glossary auto-linking was timing out: 30-second fatals in `inc/glossary-links.php` on 1 November, and 230 504s during a Facebook crawler burst on 27 October. The filter built and ran a regex for each of the 2,067 glossary phrases on every paragraph. Each phrase is now compiled once per request, and a paragraph is tested only against the phrases whose plain letters it contains. On the 143 seeded articles of the time that cut the work from 78 ms to 5 ms an article, with the same links in the same places (`tests/glossary-links-test.php` checks every article, as written and texturized, at 3 link budgets).
-- The linked output is kept on the post (`_boi_gl_cache`), keyed by the content, the glossary map and the link budget, so a repeat view or a crawler does no linking at all. Embeds, feeds and REST requests skip the filter outright.
+Tagged on its own branch. Its fixes, the upload guard, the asset version fallback and the faster glossary links, reached sites in 1.90.0 and are listed there.
 
 ## [1.89.0] - 2026-11-02
 
@@ -530,8 +526,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ## [1.86.2] - 2026-11-01
 
-### Changed
-- Images, batch 6. Ten articles gain a third in-text image: prophet-died-poisoning, instruments-islamic-world, moon-craters, indonesia, dome-inscriptions, hajj-rites-explained, raids-badr-and-the-conquest-of-mecca, paul-and-the-law, quranic-stories-and-history and fastest-growing-religion. Every in-text image of these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates. All new pictures are Pexels photographs, because Wikimedia Commons was refusing requests; the captions name a place only where the source does, and say so where the photograph is of somewhere else (Nizwa Fort in Oman for the Khaybar article, the drum tiles of the Dome of the Rock, a Genesis page for the Paul article). No picture shows a prophet.
+Tagged on its own branch. Its images, batch 6, reached sites in 1.87.2 and are listed there.
 
 ## [1.86.1] - 2026-11-01
 
@@ -597,18 +592,11 @@ Existing sites receive the new article, the images and the excerpts through `boi
 
 ## [1.79.2] - 2026-11-01
 
-### Fixed
-- The featured images of deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse are the Wikimedia Commons manuscripts again. 1.79.1 replaced them with Pexels photographs because no credit was recorded for them; they turned out to be copies of the Commons images already credited for same-god (the Walters Arabic Gospel illumination, 1684), manuscript-transmission (the Birmingham Quran manuscript) and uthman-copies (the Codex Parisino-petropolitanus), and they now carry those credits.
+Tagged on its own branch. The featured images it restored reached sites in 1.84.0 and are listed there.
 
 ## [1.79.1] - 2026-11-01
 
-### Fixed
-- Five articles had no featured image, because neither `inc/images.php` nor `inc/images-data.json` listed one: muhammad-false-prophet-claim, muslim-societies-backwardness-claim, deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse. The last three had image files on disk with no credit or source recorded anywhere, so those files were replaced. All five have credited Pexels images (Wikimedia Commons was refusing requests).
-- muhammad-false-prophet-claim and muslim-societies-backwardness-claim also had no in-text images; each now has two, with figure blocks in entries 2 and 4.
-- Three articles were missing from the reading order (D33): muhammad-false-prophet-claim is placed in "The Prophet and the hard questions", and islamisation-of-the-west and muslim-societies-backwardness-claim in "The Muslim world today".
-- Three excerpts were over the 160-character meta description limit in `docs/SEO.md` (167, 178 and 190 characters); they are rewritten to 124 to 129.
-
-Existing sites pick up the images and excerpts through `boi_migrate_seed()` and the image attachment pass on this version change.
+Tagged on its own branch. Its fixes to featured images, the reading order and three long excerpts reached sites in 1.84.0 and are listed there.
 
 ## [1.79.0] - 2026-10-31
 

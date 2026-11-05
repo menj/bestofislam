@@ -182,6 +182,8 @@ The theme's own filters:
 | `boi_gl_always`, `boi_gl_max`, `boi_gl_stoplist`, `boi_glossary_read_more_max` | Glossary: entries linked at first mention whatever the budget, the link budget, words never linked, and the Read more count on an entry (6) |
 | `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
+| `boi_seed_renames` | Seeded article slugs that changed, old to current |
+| `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
 | `boi_schema_nodes` | The nodes of the page graph |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
 | `boi_security_headers` | The front-end security headers |
@@ -280,7 +282,7 @@ error_page 503 /wp-content/bestofislam-errors/503.html;
 error_page 504 /wp-content/bestofislam-errors/504.html;
 ```
 
-Leave out the `xmlrpc.php` line while Jetpack is in use. Prefix the paths when WordPress lives in a subfolder.
+Nginx serves `error_page` for PHP's own 500 and 503 answers only with `fastcgi_intercept_errors on;` in the FastCGI location; without it those answers reach visitors as PHP sent them. Jetpack needs XML-RPC: leave out the `xmlrpc.php` line and also switch "Turn off XML-RPC" off on the Security tab, since the theme refuses XML-RPC in PHP too. Prefix the paths when WordPress lives in a subfolder, and when `wp-config.php` sits in the folder above WordPress, add a rule for it there as well, for example `location = /wp-config.php { deny all; }` above a WordPress in `/wp/`.
 
 ## Error pages
 
@@ -307,6 +309,6 @@ sh bin/install-hooks.sh                              # run the image scripts bef
 git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.12.zip HEAD
 ```
 
-Every script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` (the release zip) on GitHub. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.
+Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` (the release zip) on GitHub. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.
 
 Deploy through the dashboard (Upload Theme, "Replace active with uploaded") or by FTP: show hidden files, upload to a temporary folder, then rename the old folder away and the new one into place, one straight after the other. The upload guard lives in `functions.php`, so it cannot cover a missing or half-written `functions.php`, or the moment between the two renames. Load one admin page afterwards.

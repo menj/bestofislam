@@ -53,10 +53,10 @@ Upload the new zip under Appearance, Themes, Add New, and choose "Replace active
 
 1. Turn on hidden files in your FTP program. The theme carries files whose names begin with a dot, such as .htaccess, which keep its private files closed to visitors. In FileZilla: Server, Force showing hidden files.
 2. Upload the new bestofislam folder next to the old one under a temporary name, such as wp-content/themes/bestofislam-new. Wait until every file has arrived.
-3. Rename the old folder to bestofislam-old and, straight after, rename bestofislam-new to bestofislam. Between the two renames the site has no bestofislam folder, so do them one after the other and keep the admin closed until both are done.
+3. Rename the old folder to bestofislam-old and, straight after, rename bestofislam-new to bestofislam. Between the two renames the site has no bestofislam folder and its pages may fail for that moment, so do them one after the other and keep the admin closed until both are done.
 4. Open any admin page, check the site, then delete bestofislam-old.
 
-If you upload straight over the live folder and the copy stops halfway, visitors see a short "Updating, back in a minute" page with a 503 status instead of an error, and the admin names the files still missing. Upload them and the site returns. That page comes from functions.php, so it cannot help while functions.php itself is missing or half written, or in the moment between the two renames above. The temporary-folder method avoids those cases: an upload that stops there leaves the live theme untouched.
+If you upload straight over the live folder and the copy stops halfway, leaving a file missing or broken, visitors see a short "Updating, back in a minute" page with a 503 status instead of an error, and the admin names the files still missing. Upload them and the site returns. That page comes from functions.php, so it cannot help while functions.php itself is missing or half written, or in the moment between the two renames above. A file cut short at a point where it still reads as valid code also slips past it. The temporary-folder method avoids those cases: an upload that stops there leaves the live theme untouched.
 
 Never upload a fresh copy of WordPress itself over the site without keeping wp-config.php. That file holds the database details; without it WordPress opens its installer to anyone who visits.
 
