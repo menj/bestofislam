@@ -608,7 +608,8 @@ Until the next admin page load deletes them, and on any server where PHP
 cannot, the web server refuses them. On Apache the theme keeps a second
 `.htaccess` section, "Best of Islam: block direct file access", beside
 "Block xmlrpc.php". It answers 403 for PHP files in `wp-includes` (except
-`js/tinymce/wp-tinymce.php` and `ms-files.php`) and in the themes folder,
+`js/tinymce/wp-tinymce.php` and `ms-files.php`), in `wp-admin/includes` and
+in the themes folder,
 for `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`,
 `readme.html` and `license.txt`, for any path segment that starts with `.git`
 or `.claude`, and for the theme's `tests`, `bin` and `docs` folders. The

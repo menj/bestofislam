@@ -146,9 +146,9 @@ function boi_sec_rewrite_quote( $segment ) {
 
 /**
  * mod_rewrite lines that refuse direct requests for files that never serve
- * a page: PHP files in wp-includes and in the themes folder, core files
- * that only reveal the version or run the installer, any path segment that
- * starts with .git or .claude, and this theme's tests, bin and docs
+ * a page: PHP files in wp-includes, wp-admin/includes and the themes
+ * folder, core files that only reveal the version or run the installer, any
+ * path segment that starts with .git or .claude, and this theme's tests, bin and docs
  * folders. Each answers 403.
  *
  * wp-includes/js/tinymce/wp-tinymce.php (the classic editor) and
@@ -174,6 +174,7 @@ function boi_sec_files_htaccess_lines( $home = '' ) {
 	if ( null !== $core ) {
 		$rules[] = 'RewriteCond %{REQUEST_URI} !/wp-includes/(js/tinymce/wp-tinymce|ms-files)\.php$';
 		$rules[] = 'RewriteRule ^' . $core . 'wp-includes/.+\.php$ - [F]';
+		$rules[] = 'RewriteRule ^' . $core . 'wp-admin/includes/.+\.php$ - [F]';
 		$rules[] = 'RewriteRule ^' . $core . '(wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)$ - [F]';
 	}
 	if ( null !== $themes && '' !== $themes ) {
@@ -1219,7 +1220,7 @@ function boi_sec_render_settings( $opts ) {
 	}
 	$files_state = get_option( 'boi_security_htaccess_files', '' );
 	if ( 'written' === $files_state ) {
-		echo '<p class="description boi-card__note">' . esc_html__( 'The web server also refuses direct requests for PHP files in wp-includes and the themes folder, the installer and version files, .git and .claude, and the theme\'s tests, bin and docs folders: the theme keeps a "Best of Islam: block direct file access" section in .htaccess. Define BOI_BLOCK_DIRECT_FILES as false in wp-config.php to leave it out.', 'bestofislam' ) . '</p>';
+		echo '<p class="description boi-card__note">' . esc_html__( 'The web server also refuses direct requests for PHP files in wp-includes, wp-admin/includes and the themes folder, the installer and version files, .git and .claude, and the theme\'s tests, bin and docs folders: the theme keeps a "Best of Islam: block direct file access" section in .htaccess. Define BOI_BLOCK_DIRECT_FILES as false in wp-config.php to leave it out.', 'bestofislam' ) . '</p>';
 	}
 	boi_sec_field( $opts, 'sec_app_passwords_off', __( 'Application passwords', 'bestofislam' ), __( 'Turn off application passwords', 'bestofislam' ), __( 'Stored application passwords stop working at once. Revoke them as well, below, so they cannot return if this is switched off.', 'bestofislam' ) );
 	boi_sec_field( $opts, 'sec_rest_lock', __( 'REST API changes', 'bestofislam' ), __( 'Allow REST API changes only from a logged-in browser', 'bestofislam' ), __( 'Any request that creates, changes or deletes content while logged in must come from a browser session on this site. Basic authentication and passwords sent in a header are refused. Reading through the API, and anything a visitor does without logging in, is unchanged.', 'bestofislam' ) );
