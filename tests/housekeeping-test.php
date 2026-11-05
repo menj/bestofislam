@@ -21,7 +21,7 @@ $boi_case = $argv[1] ?? '';
 
 if ( '' === $boi_case ) {
 	$boi_fail = 0;
-	foreach ( array( 'env', 'keep', 'force', 'keep-git', 'stuck', 'lock' ) as $boi_c ) {
+	foreach ( array( 'env', 'keep', 'force', 'keep-git', 'stuck', 'lock', 'renew-lost' ) as $boi_c ) {
 		passthru( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( __FILE__ ) . ' ' . escapeshellarg( $boi_c ), $boi_code );
 		$boi_fail += $boi_code ? 1 : 0;
 	}
@@ -57,9 +57,12 @@ function update_option( $k, $v ) { $GLOBALS['boi_o'][ $k ] = $v; return true; }
 function wp_get_environment_type() { return $GLOBALS['boi_env']; }
 function set_transient( $k, $v, $t = 0 ) { $GLOBALS['boi_t'][ $k ] = $v; return true; }
 function add_option( $k, $v, $d = '', $a = true ) { if ( isset( $GLOBALS['boi_o'][ $k ] ) ) { return false; } $GLOBALS['boi_o'][ $k ] = $v; return true; }
+define( 'BOI_LOCK_READY', true );
 // inc/lock.php is tested on its own (tests/lock-test.php); here the same
 // rules over the option stub: a fresh lock is refused, a stale one taken over.
 function boi_lock_take( $k, $ttl ) { if ( isset( $GLOBALS['boi_o'][ $k ] ) && time() - (int) $GLOBALS['boi_o'][ $k ] < $ttl ) { return ''; } $GLOBALS['boi_o'][ $k ] = time() . '|t'; return $GLOBALS['boi_o'][ $k ]; }
+function boi_lock_holds( $k, $token ) { return empty( $GLOBALS['boi_lost'] ) && ( $GLOBALS['boi_o'][ $k ] ?? null ) === $token; }
+function boi_lock_renew( $k, $token ) { if ( isset( $GLOBALS['boi_renew_left'] ) && --$GLOBALS['boi_renew_left'] < 0 ) { return false; } return boi_lock_holds( $k, $token ); }
 function boi_lock_release( $k, $token ) { if ( ( $GLOBALS['boi_o'][ $k ] ?? null ) === $token ) { unset( $GLOBALS['boi_o'][ $k ] ); } }
 function delete_option( $k ) { unset( $GLOBALS['boi_o'][ $k ] ); return true; }
 define( 'HOUR_IN_SECONDS', 3600 );
@@ -96,8 +99,31 @@ switch ( $boi_case ) {
 		boi_check( is_dir( "$boi_tmp/tests" ), 'the cleanup runs once per version' );
 		rmdir( "$boi_tmp/tests" );
 		break;
+	case 'renew-lost':
+		// 450 files, so the cleanup renews its lock twice; the second renewal
+		// finds the lock gone, and the cleanup stops there.
+		$GLOBALS['boi_env']        = 'production';
+		$GLOBALS['boi_renew_left'] = 1;
+		for ( $boi_i = 0; $boi_i < 450; $boi_i++ ) {
+			file_put_contents( "$boi_tmp/.git/objects/f$boi_i", 'x' );
+		}
+		boi_remove_dev_files();
+		$boi_rest = count( glob( "$boi_tmp/.git/objects/*" ) );
+		boi_check( $boi_rest > 0 && $boi_rest < 451 && false === get_option( 'boi_dev_files_removed' ) && boi_kept( $boi_tmp ), "a cleanup whose renewal fails stops part-way ($boi_rest of 451 files left) and records nothing" );
+		break;
 	case 'lock':
-		$GLOBALS['boi_env'] = 'production';
+		$GLOBALS['boi_env']  = 'production';
+		$GLOBALS['boi_lost'] = true;
+		boi_remove_dev_files();
+		boi_check( false === get_option( 'boi_dev_files_removed' ), 'a holder that lost its lock part-way records nothing' );
+		$GLOBALS['boi_lost'] = false;
+		unset( $GLOBALS['boi_o']['boi_dev_files_lock'] );
+		foreach ( array( '.claude', '.git/objects', 'tests', 'bin', 'docs' ) as $boi_d ) {
+			@mkdir( "$boi_tmp/$boi_d", 0700, true ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		}
+		foreach ( array( '.claude/CLAUDE.md', '.git/objects/ab', '.git/HEAD', 'tests/a-test.php', 'bin/build.php', 'docs/SSOT.md', '.gitattributes' ) as $boi_f ) {
+			file_put_contents( "$boi_tmp/$boi_f", 'x' );
+		}
 		add_option( 'boi_dev_files_lock', time() );
 		boi_remove_dev_files();
 		boi_check( 6 === count( boi_dev_left( $boi_tmp ) ) && false === get_option( 'boi_dev_files_removed' ), 'a fresh lock held by another request: nothing is deleted' );

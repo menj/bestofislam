@@ -48,6 +48,26 @@ function boi_dev_paths() {
  * @return bool
  */
 function boi_remove_path( $path ) {
+	// The cleanup renews its lock every 200 entries, and at least every 30
+	// seconds, so a long run over a large .git tree on a slow disk is never
+	// taken for a dead one, and a holder that lost its lock stops within
+	// 30 seconds.
+	static $seen = 0, $renewed = 0;
+	if ( ! $renewed ) {
+		$renewed = time();
+	}
+	// A holder that finds its lock gone (another request took it over after
+	// a long pause) stops at once and leaves the rest to that request.
+	if ( ! empty( $GLOBALS['boi_dev_files_lost'] ) ) {
+		return false;
+	}
+	if ( ( 0 === ++$seen % 200 || time() - $renewed >= 30 ) && ! empty( $GLOBALS['boi_dev_files_token'] ) && defined( 'BOI_LOCK_READY' ) ) {
+		$renewed = time();
+		if ( ! boi_lock_renew( 'boi_dev_files_lock', $GLOBALS['boi_dev_files_token'] ) ) {
+			$GLOBALS['boi_dev_files_lost'] = true; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			return false;
+		}
+	}
 	$root = realpath( BOI_DIR );
 	$real = realpath( $path );
 
@@ -67,6 +87,17 @@ function boi_remove_path( $path ) {
 
 	foreach ( array_diff( $items, array( '.', '..' ) ) as $item ) {
 		boi_remove_path( $path . DIRECTORY_SEPARATOR . $item );
+	}
+
+	// Lost the lock below, or while the last entry was going: leave this
+	// folder, and every one above it, as it is. The lease is renewed (and so
+	// checked) before every folder is removed.
+	if ( ! empty( $GLOBALS['boi_dev_files_lost'] ) ) {
+		return false;
+	}
+	if ( ! empty( $GLOBALS['boi_dev_files_token'] ) && defined( 'BOI_LOCK_READY' ) && ! boi_lock_renew( 'boi_dev_files_lock', $GLOBALS['boi_dev_files_token'] ) ) {
+		$GLOBALS['boi_dev_files_lost'] = true; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		return false;
 	}
 
 	return @rmdir( $path ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions
@@ -133,11 +164,13 @@ function boi_remove_dev_files() {
 	}
 
 	// One cleanup at a time, whichever hook started it (inc/lock.php); a lock
-	// older than ten minutes is from a request that died, and is taken over.
-	$token = function_exists( 'boi_lock_take' ) ? boi_lock_take( 'boi_dev_files_lock', 10 * MINUTE_IN_SECONDS ) : '';
+	// not renewed for ten minutes is from a request that died, and is taken over.
+	$token = defined( 'BOI_LOCK_READY' ) ? boi_lock_take( 'boi_dev_files_lock', 10 * MINUTE_IN_SECONDS ) : '';
 	if ( '' === $token ) {
 		return;
 	}
+	$GLOBALS['boi_dev_files_token'] = $token; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+	$GLOBALS['boi_dev_files_lost']  = false; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 
 	$left = array();
 
@@ -156,6 +189,12 @@ function boi_remove_dev_files() {
 	// The version is recorded only once every path is gone. A path PHP could
 	// not delete (file ownership, say) is tried again an hour later from the
 	// front end, and on every admin page load.
+	// Lost the lock part-way: record nothing, and leave the lock alone.
+	if ( ! empty( $GLOBALS['boi_dev_files_lost'] ) || ! boi_lock_holds( 'boi_dev_files_lock', $token ) ) {
+		unset( $GLOBALS['boi_dev_files_token'], $GLOBALS['boi_dev_files_lost'] );
+		return;
+	}
+
 	if ( $left ) {
 		set_transient( 'boi_dev_files_retry', $left, HOUR_IN_SECONDS );
 	} else {
@@ -163,6 +202,7 @@ function boi_remove_dev_files() {
 	}
 
 	boi_lock_release( 'boi_dev_files_lock', $token );
+	unset( $GLOBALS['boi_dev_files_token'] );
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );
