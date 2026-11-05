@@ -4,6 +4,28 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.13] - 2026-11-05
+
+The article anatomy: the pieces a single article was missing. No band, setting or address removed, and no public identifier renamed.
+
+### Added
+- `bestofislam/answer-box`: "In short" at the head of an article. It lists the key points typed in the new Key points and review box (`_boi_takeaways`, one a line), or the block's own `summary` and `points` attributes, and holds the "Questions this piece answers" panel beneath them. Without key points it prints the panel alone, as before. The page's `speakable` names `.boi-answer` when the box shows. `bestofislam/article-questions` stays registered.
+- `bestofislam/article-dates` in the meta row: "Updated" when the article changed a day or more after it was published, and "Reviewed" with the date set in the Key points and review box (`_boi_reviewed`).
+- `bestofislam/contents`: the article's sections, from three level-two headings up, built on the server. A list with its own jump list keeps that instead. Headings without an id get one from their text, and the Notes heading gets `id="notes"`.
+- A next step before the third section, or between the second and third entries of a list: the notes, the next piece in the reading order (`boi_next_in_order()`) and the Contact page. Nothing else, and no sales wording.
+- The FAQ style for the Details block (`is-style-faq`) and the `bestofislam/faq` pattern. An article with FAQ-style Details blocks gains an `FAQPage` node (`#faq`, part of the page), with one Question for each question it shows (through `boi_schema_nodes`). The page keeps the Article as its main entity.
+- The table style: ruled rows, a gold header line, styled captions, and each table a focusable region named by its caption.
+- Two switches on the Display tab, both on: `article_contents` and `article_mid_next`.
+- `inc/anatomy.php`, `assets/css/anatomy.css`, `patterns/faq.php` and `tests/anatomy-test.php`.
+
+### Changed
+- The theme is licensed GNU GPL version 3 or later (`style.css`, `readme.txt`), and the full text ships in a new `LICENSE` file. Bundled fonts, icons and photographs keep their own licences. The four plugins the theme adapts are GPLv2 or later; `docs/CREDITS.md` and `inc/reading-progress.php` now say so for Reading Progress Bar, whose readme says GPLv2 while its main file declares `GPL-2.0+`.
+
+### Already in place
+- The breadcrumbs, the excerpt, the published date, reading time, the jump list on lists, "Read next", share links, the author card and related pieces.
+- The Article's `citation` from the Notes (`boi_schema_note_citations()`).
+- The author card keeps the WordPress display name, as before.
+
 ## [1.100.12] - 2026-11-05
 
 Documentation release. No band, setting or address changed.

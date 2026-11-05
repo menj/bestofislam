@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.100.13
+
+Replace the theme files. The new files are `LICENSE`, `inc/anatomy.php`, `assets/css/anatomy.css`, `patterns/faq.php` and `tests/anatomy-test.php`. Two switches join the Display tab, both on: Contents and Next step. Key points and a review date are typed per article, in the Key points and review box; until then the head of an article looks as before, with the questions panel.
+
 ## Upgrading to 1.100.9, 1.100.10 or 1.100.11
 
 Replace the theme files and load one page. Visitors who are not logged in lose the `/wp/v2/users` routes and `?author=N` (both answer 404). Nothing to set.
@@ -144,6 +148,8 @@ These are plans, not promises. Each item rests on something on record: the code,
 
 ### Ideas
 
+- A sticky contents variant for long articles, as the compelling-evidence theme has (`#ce-toc`). The contents here are inline only.
+- Key points for the 152 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
 - A crawl rule for the heaviest bots. In the November 2026 log QlyzeBot made 1,014 requests and Amazonbot 825, against 378 from Googlebot.
 - Fixed publication dates for seeded articles, as the abrahamic seeder has (`post_date`, published or Scheduled), so new articles can go out on a plan.
 - An image sitemap that stays on beside Rank Math. `boi_image_sitemap_enabled()` turns it off whenever Rank Math is active, and leaves the images to Rank Math's own sitemap; weigh whether the theme's licence data should reach search engines there too.

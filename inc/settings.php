@@ -52,6 +52,8 @@ function boi_get_options() {
 		'progress_height'     => 4,
 		'progress_position'   => 'top',
 		'progress_types'      => array( 'post', 'page' ),
+		'article_contents'    => 1,
+		'article_mid_next'    => 1,
 		'errors_pages'        => 1,
 		'errors_alerts'       => 1,
 		'errors_email'        => '',
@@ -133,6 +135,9 @@ function boi_sanitize_options( $input ) {
 
 			$hero                  = isset( $input['hero_image'] ) ? sanitize_title( $input['hero_image'] ) : '';
 			$current['hero_image'] = ( in_array( $hero, array( '', 'none', 'newest' ), true ) || get_page_by_path( $hero, OBJECT, 'post' ) ) ? $hero : '';
+
+			$current['article_contents'] = empty( $input['article_contents'] ) ? 0 : 1;
+			$current['article_mid_next'] = empty( $input['article_mid_next'] ) ? 0 : 1;
 
 			$current['picks'] = isset( $input['picks'] ) ? implode( ',', array_filter( array_map( 'sanitize_title', explode( ',', (string) $input['picks'] ) ) ) ) : '';
 
@@ -715,6 +720,27 @@ function boi_render_display_tab( $opts ) {
 			'value'   => $opts['image_size'],
 			'choices' => $sizes,
 			'help'    => __( 'Colour schemes are configured in the Site Editor under Styles.', 'bestofislam' ),
+		)
+	);
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Articles', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'article_contents',
+			'label'   => __( 'Contents', 'bestofislam' ),
+			'text'    => __( 'List the sections at the head of an article with three or more', 'bestofislam' ),
+			'help'    => __( 'A list with its own jump list keeps that instead.', 'bestofislam' ),
+			'checked' => ! empty( $opts['article_contents'] ),
+		)
+	);
+	boi_opt_toggle(
+		array(
+			'key'     => 'article_mid_next',
+			'label'   => __( 'Next step', 'bestofislam' ),
+			'text'    => __( 'Show a next step before the third section of an article', 'bestofislam' ),
+			'help'    => __( 'It points to the notes, the next piece in the reading order and the Contact page.', 'bestofislam' ),
+			'checked' => ! empty( $opts['article_mid_next'] ),
 		)
 	);
 	boi_opt_card_close();

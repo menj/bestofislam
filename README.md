@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.100.12. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.100.13. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -24,7 +24,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Reading
 
 - **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission.
-- **Articles.** Reading time, a jump list for lists of three or more, share buttons, an author card, related pieces, questions answered, and "Read next".
+- **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles of three or more sections (a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
 - **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
 - **Reading progress.** A bar on single posts and pages fills as you scroll. It is drawn in the palette, updates once per animation frame from a passive listener, drops its animation under `prefers-reduced-motion` and sits below the admin bar. It is `aria-hidden`: it repeats what the scrollbar shows, and a live progressbar would be read out on every scroll.
 - **Images.** Every image is credited beneath it and on the Sources and standards page. Where the media library copy of a seeded image is missing, the copy bundled with the theme is shown.
@@ -55,7 +55,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 Under Appearance, Theme Options, in eight tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. Without JavaScript the tabs are links and still work.
 
-- **Display:** rank badges, the entry image size, the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
+- **Display:** rank badges, the entry image size, the article contents and the mid-article next step (`article_contents`, `article_mid_next`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
@@ -120,7 +120,7 @@ bestofislam/
 │                        util, taxonomy, blocks, schema, voting, settings,
 │                        setup, appearance, reflections, search, sections,
 │                        seo, icons, features, contact, front, inline-images,
-│                        images, questions, reading, structured-data,
+│                        images, questions, reading, anatomy, structured-data,
 │                        schema-graph, rank-math, unlist, search-permalinks,
 │                        reading-progress, login, login-screen, favicon,
 │                        glossary, glossary-links, renamed-slugs, error-pages,
@@ -139,7 +139,7 @@ bestofislam/
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic
 ├── parts/               header, footer
-├── patterns/            Listicle starter, Brand lockup, Follow icons
+├── patterns/            Listicle starter, Brand lockup, Follow icons, Questions readers ask (FAQ)
 ├── styles/              Best of Islam, Best of Islam Night
 ├── assets/css/          One file per concern (front, listicle, glossary, security ...)
 ├── assets/js/           One file per concern (theme-toggle, voting, questions ...)
@@ -184,7 +184,7 @@ The theme's own filters:
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
 | `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
-| `boi_schema_nodes` | The nodes of the page graph |
+| `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to add an `FAQPage` node for an article with FAQ-style Details blocks and to add `.boi-answer` to `speakable` |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
 | `boi_security_headers` | The front-end security headers |
 | `boi_title_max_length` | The title tag limit |
@@ -308,7 +308,7 @@ php bin/build-error-pages.php                        # rebuild errors/*.html
 python3 bin/build-related.py                         # rebuild inc/related-articles.json
 python3 bin/convert-images.py                        # every image to AVIF
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.12.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.13.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

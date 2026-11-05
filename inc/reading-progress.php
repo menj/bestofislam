@@ -6,8 +6,11 @@
  * fills as the reader scrolls. Colour, height, edge, the post types it runs
  * on and a master switch live in the Display tab of Theme Options.
  *
- * Adapted from the Reading Progress Bar plugin by Jean-Baptiste Audras
- * (GPLv2). The plugin needed jQuery and read the page height once on load;
+ * Adapted from the Reading Progress Bar plugin by Jean-Baptiste Audras. Its
+ * main file, reading-progressbar.php, declares "License: GPL-2.0+", version 2
+ * or later, so the adaptation is carried under the theme's GPL version 3 or
+ * later (its readme.txt says GPLv2; the plugin file's header is the grant).
+ * The plugin needed jQuery and read the page height once on load;
  * this version is plain JavaScript, measures again when the page resizes,
  * updates once per animation frame from a passive scroll listener, and draws
  * the bar in the theme's palette.

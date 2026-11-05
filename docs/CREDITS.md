@@ -6,8 +6,8 @@ licence and source of every bundled font, icon, image and adapted piece of code.
 ## Copyright and licence
 
 Best of Islam, Copyright 2026 Mohd Elfie Nieshaem Juferi. The theme's
-code is licensed under the GNU General Public License, version 2 or later, as
-WordPress is. See http://www.gnu.org/licenses/gpl-2.0.html.
+code is licensed under the GNU General Public License, version 3 or later.
+The full text is in `LICENSE`; see https://www.gnu.org/licenses/gpl-3.0.html.
 
 Bundled resources keep their owners' licences and are not relicensed. The
 theme loads none of them from another server: every font, icon and image ships
@@ -16,8 +16,10 @@ in `assets/`.
 ## Features adapted from plugins
 
 Four features of this theme are adapted from plugins released under the GNU
-General Public License, version 2 or later, as the theme is. Their authors
-are credited here with thanks.
+General Public License, version 2 or later, which allows them to be carried
+under the theme's version 3 or later. Reading Progress Bar's readme says
+GPLv2; its main file, `reading-progressbar.php`, declares `GPL-2.0+`, and that
+header is the grant. Their authors are credited here with thanks.
 
 - **Unlisted posts and pages** (`inc/unlist.php`), adapted from Unlist Posts
   & Pages 1.2.1 by Nikhil Chavan, https://www.nikhilchavan.com/
