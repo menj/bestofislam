@@ -184,6 +184,27 @@ function boi_anatomy_notes_anchor( $html ) {
 }
 
 /**
+ * The id of the Notes heading, whichever id it carries: "notes" when
+ * boi_anatomy_notes_anchor() gave it one, or the author's own.
+ *
+ * @param string $html Rendered text.
+ * @return string The id, or '' when the text has no Notes heading with one.
+ */
+function boi_anatomy_notes_id( $html ) {
+	if ( ! preg_match_all( '#<(h[23])(\s[^>]*)?>((?:(?!</\1>).)*)</\1>#is', (string) $html, $found, PREG_SET_ORDER ) ) {
+		return '';
+	}
+
+	foreach ( $found as $m ) {
+		if ( 'Notes' === boi_anatomy_text( $m[3] ) && preg_match( '/\sid\s*=\s*["\']([^"\']+)["\']/i', (string) ( $m[2] ?? '' ), $idm ) ) {
+			return $idm[1];
+		}
+	}
+
+	return '';
+}
+
+/**
  * Whether an article shows its own contents: a listicle with its jump list
  * already has one.
  *
@@ -333,7 +354,12 @@ function boi_render_answer_box( $attributes = array() ) {
 		return $questions;
 	}
 
-	$out = '<section class="boi-answer" aria-labelledby="boi-answer-title"><h2 id="boi-answer-title" class="boi-answer__title">' . esc_html__( 'In short', 'bestofislam' ) . '</h2>';
+	// Each box on the page gets its own heading id: the template's and one placed in the text can both show.
+	static $count = 0;
+	++$count;
+	$hid = 1 === $count ? 'boi-answer-title' : 'boi-answer-title-' . $count;
+
+	$out = '<section class="boi-answer" aria-labelledby="' . $hid . '"><h2 id="' . $hid . '" class="boi-answer__title">' . esc_html__( 'In short', 'bestofislam' ) . '</h2>';
 
 	if ( '' !== $summary ) {
 		$out .= '<p class="boi-answer__summary">' . esc_html( $summary ) . '</p>';
@@ -440,11 +466,13 @@ function boi_anatomy_contact_url() {
 function boi_anatomy_next_step( $post, $content ) {
 	$items = array();
 
-	if ( false !== strpos( (string) $content, 'id="notes"' ) ) {
+	$notes = boi_anatomy_notes_id( $content );
+
+	if ( '' !== $notes ) {
 		$items[] = sprintf(
 			/* translators: %s: link to the notes. */
 			esc_html__( 'Check each claim against its source: %s are at the end.', 'bestofislam' ),
-			'<a href="#notes">' . esc_html__( 'the notes', 'bestofislam' ) . '</a>'
+			'<a href="#' . esc_attr( $notes ) . '">' . esc_html__( 'the notes', 'bestofislam' ) . '</a>'
 		);
 	}
 

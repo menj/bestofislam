@@ -21,7 +21,7 @@ function add_filter() {}
 function __( $s ) { return $s; }
 function esc_attr( $s ) { return htmlspecialchars( (string) $s, ENT_QUOTES ); }
 function wp_strip_all_tags( $s ) { return strip_tags( (string) $s ); }
-function wp_html_excerpt( $s, $n ) { return mb_substr( (string) $s, 0, $n ); }
+function wp_html_excerpt( $s, $n ) { return function_exists( 'mb_substr' ) ? mb_substr( (string) $s, 0, $n ) : substr( (string) $s, 0, $n ); }
 function sanitize_title( $s ) { return trim( preg_replace( '/[^a-z0-9]+/', '-', strtolower( (string) $s ) ), '-' ); }
 function is_singular() { return true; }
 function get_queried_object() { return $GLOBALS['t_post']; }
@@ -58,6 +58,8 @@ check( false !== strpos( $ids, '<h2></h2>' ), 'an empty heading is left alone' )
 $notes = boi_anatomy_notes_anchor( '<h2>Intro</h2><h3 class="has-hicon"><svg aria-hidden="true"></svg><span>Notes</span></h3><h3>Notes</h3>' );
 check( 1 === substr_count( $notes, 'id="notes"' ) && false !== strpos( $notes, '<h3 id="notes" class="has-hicon">' ), 'the first Notes heading, past other headings, gets the anchor' );
 check( '<h3 id="notes">Notes</h3>' === boi_anatomy_notes_anchor( '<h3 id="notes">Notes</h3>' ), 'an existing anchor is kept' );
+check( 'own-notes' === boi_anatomy_notes_id( '<h2>A</h2><h3 class="x" id="own-notes"><span>Notes</span></h3>' ), 'the Notes heading\'s own id is the link target' );
+check( '' === boi_anatomy_notes_id( '<h3>Notes</h3>' ), 'a Notes heading without an id is no target' );
 
 $mid = boi_anatomy_insert_mid( '<h2>1</h2><h2>2</h2><h2>3</h2>', '<aside>N</aside>' );
 check( '<h2>1</h2><h2>2</h2><aside>N</aside><h2>3</h2>' === $mid, 'before the third section' );
