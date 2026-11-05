@@ -7,7 +7,7 @@ versioning.
 ## [1.100.5] - 2026-11-05
 
 ### Fixed
-- `boi_error_maybe_sync()` also rewrites a drop-in that carries the theme's marker but differs from what the theme would write now (state `outdated`), so an edited or half-restored copy is repaired on the next admin page load even when the fingerprint is current. `tests/error-pages-test.php` checks it.
+- `boi_error_maybe_sync()` also rewrites a drop-in that carries the theme's marker but differs from what the theme would write now (state `outdated`), so an edited or half-restored copy is repaired on the next admin page load even when the fingerprint is current. On a network only the main site does this, so subsites do not overwrite each other's copies of the shared files. `tests/error-pages-test.php` checks it.
 
 ## [1.100.4] - 2026-11-05
 
