@@ -8,9 +8,11 @@
  * is clutter at best. This deletes them on activation and after each
  * version change.
  *
- * The .git directory is left alone unless BOI_REMOVE_GIT_DIR is defined
- * true in wp-config.php: a site deployed by git pull needs it, and deleting
- * it would break that deployment.
+ * A theme folder that is a git working tree (it holds .git, a folder or the
+ * file a worktree uses) is left alone: there these files are the sources
+ * being worked on, .claude among them, and deleting them loses work. The
+ * owner can still clean a git-deployed live server by defining
+ * BOI_REMOVE_GIT_DIR true in wp-config.php, which also removes .git.
  *
  * @package BestOfIslam
  */
@@ -65,12 +67,27 @@ function boi_remove_path( $path ) {
 }
 
 /**
+ * Whether the theme folder is a git working tree.
+ *
+ * @return bool
+ */
+function boi_is_git_checkout() {
+	return file_exists( BOI_DIR . DIRECTORY_SEPARATOR . '.git' );
+}
+
+/**
  * Removes the development files, once per theme version.
  *
  * @return void
  */
 function boi_remove_dev_files() {
 	if ( get_option( 'boi_dev_files_removed' ) === BOI_VERSION ) {
+		return;
+	}
+
+	// A git working tree: nothing is deleted, and the version is not
+	// recorded, so the files go once the folder stops being a checkout.
+	if ( boi_is_git_checkout() && ! ( defined( 'BOI_REMOVE_GIT_DIR' ) && BOI_REMOVE_GIT_DIR ) ) {
 		return;
 	}
 

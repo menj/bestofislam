@@ -2,43 +2,30 @@
 /**
  * Build the static error pages in errors/ for the web server's ErrorDocument
  * lines, from the same template and stylesheet as the drop-ins
- * (assets/error-pages/page.html and page.css, inlined).
+ * (assets/error-pages/page.html and page.css, inlined) through
+ * inc/error-page-static.php. These copies assume a site at the domain root;
+ * the theme writes a copy for the site's own address into
+ * wp-content/bestofislam-errors/.
  * Run: php bin/build-error-pages.php (add --check to fail when a page is stale).
  *
  * @package BestOfIslam
  */
 
-$boi_root  = dirname( __DIR__ );
+$boi_root = dirname( __DIR__ );
+require $boi_root . '/inc/error-page-static.php';
+
 $boi_check = in_array( '--check', $argv, true );
-$boi_pages = array(
-	'403' => array( 'Access denied', 'Access denied', 'This address is closed to visitors.', 'Every page of the site is open from the home page.', 'Go to the home page' ),
-	'500' => array( 'Something went wrong', 'Something went wrong', 'An error stopped this page from loading.', 'Please try again shortly.', 'Try again' ),
-	'502' => array( 'Bad gateway', 'Bad gateway', 'A server between you and the site gave a wrong answer.', 'Please try again shortly.', 'Try again' ),
-	'504' => array( 'Gateway timeout', 'Gateway timeout', 'A server between you and the site took too long to answer.', 'Please try again shortly.', 'Try again' ),
-	'503' => array( 'Temporarily unavailable', 'Back shortly', 'The site is busy or offline for a short while.', 'Please try again in a few minutes.', 'Try again' ),
+$boi_site  = array(
+	'name' => 'Best of Islam',
+	'home' => '/',
+	'lang' => 'en',
 );
-$boi_tpl   = (string) file_get_contents( $boi_root . '/assets/error-pages/page.html' );
-$boi_css   = (string) file_get_contents( $boi_root . '/assets/error-pages/page.css' );
 $boi_stale = 0;
 if ( ! $boi_check && ! is_dir( $boi_root . '/errors' ) ) {
 	mkdir( $boi_root . '/errors' );
 }
-foreach ( $boi_pages as $boi_code => $boi_p ) {
-	$boi_e    = static fn( $s ) => htmlspecialchars( $s, ENT_QUOTES, 'UTF-8' );
-	$boi_html = strtr(
-		$boi_tpl,
-		array(
-			'{{LANG}}'    => 'en',
-			'{{TITLE}}'   => $boi_e( $boi_p[0] ),
-			'{{NAME}}'    => 'Best of Islam',
-			'{{CSS}}'     => str_replace( '</', '<\/', $boi_css ),
-			'{{HEADING}}' => $boi_e( $boi_p[1] ),
-			'{{LINE1}}'   => $boi_e( $boi_p[2] ),
-			'{{LINE2}}'   => $boi_e( $boi_p[3] ),
-			'{{AGAIN}}'   => $boi_e( $boi_p[4] ),
-			'{{HOME}}'    => '/',
-		)
-	);
+foreach ( array_keys( boi_static_error_pages() ) as $boi_code ) {
+	$boi_html = boi_static_error_html( $boi_root, (string) $boi_code, $boi_site );
 	$boi_path = $boi_root . '/errors/' . $boi_code . '.html';
 	if ( $boi_check ) {
 		if ( ! is_readable( $boi_path ) || file_get_contents( $boi_path ) !== $boi_html ) {
