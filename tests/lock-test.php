@@ -55,20 +55,29 @@ $held = function () {
 };
 
 $a = boi_lock_take( 'ce_t', 60 );
-boi_check( '' !== $a && $held() === $a, 'the first taker gets the lock' );
+boi_check( '' !== $a && '|' . $a === substr( $held(), -strlen( '|' . $a ) ), 'the first taker gets the lock' );
 boi_check( '' === boi_lock_take( 'ce_t', 60 ), 'a fresh lock is refused' );
 boi_lock_release( 'ce_t', 'someone-else' );
-boi_check( $held() === $a, 'a release with another token leaves the lock alone' );
+boi_check( boi_lock_holds( 'ce_t', $a ), 'a release with another token leaves the lock alone' );
 
 $GLOBALS['wpdb']->query( "UPDATE wp_options SET option_value = '" . ( time() - 3600 ) . "|old' WHERE option_name = 'ce_t'" );
 $b = boi_lock_take( 'ce_t', 60 );
-boi_check( '' !== $b && $held() === $b, 'a stale lock is taken over' );
+boi_check( '' !== $b && boi_lock_holds( 'ce_t', $b ), 'a stale lock is taken over' );
 boi_check( '' === boi_lock_take( 'ce_t', 60 ), 'and only once' );
 boi_lock_release( 'ce_t', $a );
-boi_check( $held() === $b, 'the old holder cannot release the new holder\'s lock' );
+boi_check( boi_lock_holds( 'ce_t', $b ) && ! boi_lock_renew( 'ce_t', $a ), 'the old holder can neither release nor renew the new holder\'s lock' );
 boi_lock_release( 'ce_t', $b );
 boi_check( '' === $held(), 'the holder releases it' );
 boi_check( '' !== boi_lock_take( 'ce_t', 60 ), 'and it can be taken again' );
+
+// Renewal keeps a long-running holder from looking dead.
+$GLOBALS['wpdb']->query( "DELETE FROM wp_options WHERE option_name = 'ce_r'" );
+$r = boi_lock_take( 'ce_r', 60 );
+$GLOBALS['wpdb']->query( "UPDATE wp_options SET option_value = '" . ( time() - 3600 ) . "|" . $r . "' WHERE option_name = 'ce_r'" );
+boi_check( boi_lock_renew( 'ce_r', $r ) && '' === boi_lock_take( 'ce_r', 60 ), 'a renewed lock is not taken over' );
+
+// Notes.
+boi_check( ! boi_lock_note( 'ce_n' ) && boi_lock_note( 'ce_n', true ) && boi_lock_note( 'ce_n' ) && ! boi_lock_note( 'ce_n', false ) && ! boi_lock_note( 'ce_n' ), 'a note is set, read and cleared' );
 
 // Two requests, two connections: while one holds the lock the other is
 // refused, and it gets the lock once the first lets go.

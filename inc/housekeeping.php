@@ -48,6 +48,12 @@ function boi_dev_paths() {
  * @return bool
  */
 function boi_remove_path( $path ) {
+	// Every 200 entries the cleanup renews its lock, so a long run over a
+	// large .git tree is never taken for a dead one.
+	static $seen = 0;
+	if ( 0 === ++$seen % 200 && ! empty( $GLOBALS['boi_dev_files_token'] ) && function_exists( 'boi_lock_renew' ) ) {
+		boi_lock_renew( 'boi_dev_files_lock', $GLOBALS['boi_dev_files_token'] );
+	}
 	$root = realpath( BOI_DIR );
 	$real = realpath( $path );
 
@@ -133,11 +139,12 @@ function boi_remove_dev_files() {
 	}
 
 	// One cleanup at a time, whichever hook started it (inc/lock.php); a lock
-	// older than ten minutes is from a request that died, and is taken over.
+	// not renewed for ten minutes is from a request that died, and is taken over.
 	$token = function_exists( 'boi_lock_take' ) ? boi_lock_take( 'boi_dev_files_lock', 10 * MINUTE_IN_SECONDS ) : '';
 	if ( '' === $token ) {
 		return;
 	}
+	$GLOBALS['boi_dev_files_token'] = $token; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 
 	$left = array();
 
@@ -163,6 +170,7 @@ function boi_remove_dev_files() {
 	}
 
 	boi_lock_release( 'boi_dev_files_lock', $token );
+	unset( $GLOBALS['boi_dev_files_token'] );
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );
