@@ -309,4 +309,4 @@ git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.12.zip HEAD
 
 Every script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` (the release zip) on GitHub. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.
 
-Deploy through the dashboard (Upload Theme, "Replace active with uploaded") or by FTP: show hidden files, upload to a temporary folder, then rename the old folder away and the new one into place, one straight after the other. Load one admin page afterwards.
+Deploy through the dashboard (Upload Theme, "Replace active with uploaded") or by FTP: show hidden files, upload to a temporary folder, then rename the old folder away and the new one into place, one straight after the other. The upload guard lives in `functions.php`, so it cannot cover a missing or half-written `functions.php`, or the moment between the two renames. Load one admin page afterwards.
