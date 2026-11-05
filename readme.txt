@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.6
+Stable tag: 1.100.7
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.7 =
+* The front page tells one story. The questions come straight after the hero and the counts, then the editor's picks, the newest and latest articles, the first-visit path and the sections, with each band numbered as a step.
 
 = 1.100.6 =
 * The web server error pages work when WordPress sits in a subfolder. The theme writes a copy of each into wp-content/bestofislam-errors with the site's home address, and the .htaccess lines on the Errors tab point there.
