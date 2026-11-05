@@ -37,5 +37,8 @@ RewriteEngine On
 # Keep the site's own rules (WordPress's 404 for a missing file) for
 # requests into this folder.
 RewriteOptions Inherit
+# Dot entries too, for a server without mod_alias (FilesMatch above
+# matches a file's own name, not a dot folder such as .git/ above it).
+RewriteRule (^|/)\.(?!well-known(/|$)) - [F]
 RewriteRule ^(tests|bin|docs|dist)(/|$) - [F]
 </IfModule>

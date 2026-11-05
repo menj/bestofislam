@@ -143,7 +143,9 @@ foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'as
 }
 
 // The rewrite rule, on the path below the theme folder, and the folders' own deny files.
-$boi_rw = preg_match( '/^RewriteRule (\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
+$boi_rw = preg_match( '/^RewriteRule (\^\(tests\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
+$boi_rd = preg_match( '/^RewriteRule (\(\^\|\/\)\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
+boi_check( '' !== $boi_rd && 1 === preg_match( '#' . $boi_rd . '#', '.git/config' ) && 1 === preg_match( '#' . $boi_rd . '#', 'assets/.env' ) && 0 === preg_match( '#' . $boi_rd . '#', '.well-known/x' ) && 0 === preg_match( '#' . $boi_rd . '#', 'assets/css/front.css' ), 'theme .htaccess rewrite: dot entries refused without mod_alias, .well-known and assets open' );
 boi_check( '' !== $boi_rw && 1 === preg_match( '#' . $boi_rw . '#', 'docs/SSOT.md' ) && 1 === preg_match( '#' . $boi_rw . '#', 'tests' ) && 0 === preg_match( '#' . $boi_rw . '#', 'assets/docs/x.css' ), "theme .htaccess rewrite: the folders by the path below the theme, assets open" );
 foreach ( array( 'tests', 'bin', 'docs' ) as $boi_d ) {
 	$boi_ht = (string) @file_get_contents( dirname( __DIR__ ) . "/$boi_d/.htaccess" ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
