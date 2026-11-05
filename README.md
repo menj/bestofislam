@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.100.14. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.100.15. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -48,6 +48,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 - **Light and dark.** A toggle in the header switches the whole site; colour tokens live in `theme.json`.
 - **Header.** One row above 1300px; two rows below, with the section links scrolling sideways between 600 and 781px; a menu button below 600px. The search field and toggle share one height and style.
 - **Footer.** The mark's bars run full width, then the wordmark and the site's promise, then four columns (the reading order, sections, a start column and follow links), then a bar of standing pages.
+- **Browser icons.** Until a Site Icon is set, `inc/favicon.php` prints `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest` and `theme-color` #0D2B4F on `wp_head`, `login_head` and `admin_head`, and answers `/favicon.ico` with `assets/images/favicon.ico` (`Cache-Control: public, max-age=86400`, an ETag and 304; `template_redirect` at priority 0 covers HEAD). The manifest is static, with relative icon paths, so it works in a subfolder. The theme `.htaccess` refuses only dot files, PHP, Markdown and the development folders, so every icon file is served.
 - **Icons.** 45 single-colour icons from the Minimalist Social & Platform Icons Pack, inlined in the text colour, for share buttons and follow links. The follow row sits in the footer and goes anywhere else through the `[boi_social_icons]` shortcode or the Follow icons pattern; its colours are CSS variables.
 - **Responsive.** Tested on a working install at twelve widths from 320 to 1920px: nothing scrolls sideways or overshoots the screen, no text is under 12px, and every tap target on a phone is at least 24px.
 
@@ -289,7 +290,7 @@ Nginx serves `error_page` for PHP's own 500 and 503 answers only with `fastcgi_i
 
 ## Error pages
 
-The Errors and Server errors entries under Settings above describe the drop-ins (`maintenance.php` and `db-error.php` at 503 with `Retry-After: 300`, `php-error.php` at 500), the static pages and the per-site copies in `wp-content/bestofislam-errors/`. Build the copies for a root site with `php bin/build-error-pages.php`.
+The Errors and Server errors entries under Settings above describe the drop-ins (`maintenance.php` and `db-error.php` at 503 with `Retry-After: 300`, `php-error.php` at 500), the static pages and the per-site copies in `wp-content/bestofislam-errors/`. Build the copies for a root site with `php bin/build-error-pages.php`. Every page carries the 32px icon as a `data:` link (`boi_error_page_icon()`), so the tab icon needs no path.
 
 ## Multisite
 
@@ -310,7 +311,7 @@ php bin/build-error-pages.php                        # rebuild errors/*.html
 python3 bin/build-related.py                         # rebuild inc/related-articles.json
 python3 bin/convert-images.py                        # every image to AVIF
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.14.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.15.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

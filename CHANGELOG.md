@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.15] - 2026-11-05
+
+The browser icon set is complete. No feature removed.
+
+### Added
+- `assets/images/favicon.ico` (16, 32 and 48px), `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` and `site.webmanifest`, rendered from `favicon.svg`. The existing `favicon.svg`, `favicon-32.png` and `apple-touch-icon.png` are kept.
+- `boi_fallback_favicon()` adds the manifest link and `theme-color` (#0D2B4F) to the site, the login screen and the admin, still only while no Site Icon is set.
+- `boi_serve_favicon()` answers `/favicon.ico` with the icon: a day's cache and an ETag, with a 304 while it is unchanged, and HEAD requests get the same headers. With a Site Icon, WordPress redirects to it, as before.
+- The drop-ins, the static pages and the per-site copies carry the 32px icon as a data address (`{{ICON}}` in `assets/error-pages/page.html`, filled by `boi_error_page_icon()`), so the tab shows it on any path and in a subfolder install.
+
 ## [1.100.14] - 2026-11-05
 
 Documentation only.
