@@ -4,11 +4,11 @@
  *
  * In the running text of a single article or page, the first mention of a
  * known phrase links to the article on this site, or the inner page on one of
- * the six sister sites, that treats it at length. Phrases come from three
+ * the six other sites, that treats it at length. Phrases come from three
  * places, the first to name a phrase winning: the post's own list (meta box),
  * the site-wide list (Appearance → Contextual Links → Phrases), and the shared
  * map in inc/data/network-links.json, a file kept identical in all seven
- * themes of the network. Nothing is labelled or styled differently from the
+ * themes. Nothing is labelled or styled differently from the
  * theme's normal links.
  *
  * Runs at 22, before the Glossary links (24), so an article link takes the
@@ -147,7 +147,7 @@ function boi_cl_network() {
 
 /**
  * Parse "phrase | address" lines. An address is a path on this site
- * ("/slug/"), a full address on this site, or a full address on a sister site
+ * ("/slug/"), a full address on this site, or a full address on another site
  * or an approved domain; anything else is dropped.
  */
 function boi_cl_parse( $text, $hosts ) {
@@ -184,7 +184,7 @@ function boi_cl_guards() {
 	return (array) apply_filters( 'boi_cl_guards', array( 'Ismail al Faruqi', 'Ismail al-Faruqi', 'Ismail R. al Faruqi', 'Ismail Raji al Faruqi', 'Ismail Raji al-Faruqi' ) );
 }
 
-/** Hosts a link may lead to besides this site: the sister sites and the Domains tab. */
+/** Hosts a link may lead to besides this site: the other sites and the Domains tab. */
 function boi_cl_allowed_hosts( $opts ) {
 	$own   = boi_cl_host( home_url() );
 	$hosts = boi_cl_network()['hosts'];
@@ -492,7 +492,7 @@ add_filter( 'the_content', 'boi_cl_unwrap_glossary', 26 );
 add_action( 'add_meta_boxes', function () {
 	add_meta_box( 'boi_cl', __( 'Contextual links', 'bestofislam' ), function ( $post ) {
 		wp_nonce_field( 'boi_cl_meta', 'boi_cl_nonce' );
-		echo '<p class="description">' . esc_html__( 'One per line: phrase | address. The address is a path on this site (/slug/) or a page on a sister site or an approved domain. These win over the site-wide list and the shared map.', 'bestofislam' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'One per line: phrase | address. The address is a path on this site (/slug/) or a page on another site or an approved domain. These win over the site-wide list and the shared map.', 'bestofislam' ) . '</p>';
 		printf( '<textarea class="widefat" rows="5" name="boi_cl_phrases">%s</textarea>', esc_textarea( (string) get_post_meta( $post->ID, BOI_CL_META, true ) ) );
 	}, boi_cl_post_types(), 'side' );
 } );
@@ -553,7 +553,7 @@ function boi_cl_page() {
 			</nav>
 
 			<section class="cl-admin__panel" data-panel="domains">
-				<p class="description"><?php esc_html_e( 'The six sister sites in the shared map are always approved. Add any other domain links may lead to, one per line.', 'bestofislam' ); ?></p>
+				<p class="description"><?php esc_html_e( 'The six other sites in the shared map are always approved. Add any other domain links may lead to, one per line.', 'bestofislam' ); ?></p>
 				<p class="cl-admin__hosts"><?php echo esc_html( implode( ', ', array_keys( $map['hosts'] ) ) ); ?></p>
 				<textarea class="large-text code" rows="8" name="<?php echo esc_attr( $n ); ?>[domains]"><?php echo esc_textarea( $o['domains'] ); ?></textarea>
 			</section>
@@ -561,8 +561,8 @@ function boi_cl_page() {
 			<section class="cl-admin__panel" data-panel="phrases">
 				<p class="description">
 					<?php
-					/* translators: 1: phrases to this site, 2: phrases to sister sites. */
-					echo esc_html( sprintf( __( 'The shared map (inc/data/network-links.json) links %1$d phrases to articles here and %2$d to inner pages on the sister sites. Lines below come first and win: phrase | /path/ for this site, or phrase | https://… for a sister site or approved domain.', 'bestofislam' ), $own, count( $map['items'] ) - $own ) );
+					/* translators: 1: phrases to this site, 2: phrases to the other sites. */
+					echo esc_html( sprintf( __( 'The shared map (inc/data/network-links.json) links %1$d phrases to articles here and %2$d to inner pages on the other sites. Lines below come first and win: phrase | /path/ for this site, or phrase | https://… for another site or approved domain.', 'bestofislam' ), $own, count( $map['items'] ) - $own ) );
 					?>
 				</p>
 				<textarea class="large-text code" rows="14" name="<?php echo esc_attr( $n ); ?>[phrases]"><?php echo esc_textarea( $o['phrases'] ); ?></textarea>
@@ -571,7 +571,7 @@ function boi_cl_page() {
 			<section class="cl-admin__panel" data-panel="rules">
 				<div class="cl-admin__row"><label><input type="checkbox" name="<?php echo esc_attr( $n ); ?>[own]" value="1" <?php checked( $o['own'] ); ?>> <?php esc_html_e( 'Link to articles on this site', 'bestofislam' ); ?></label></div>
 				<div class="cl-admin__row"><label><?php esc_html_e( 'At most, per page', 'bestofislam' ); ?> <input type="number" min="0" max="15" name="<?php echo esc_attr( $n ); ?>[max_own]" value="<?php echo esc_attr( $o['max_own'] ); ?>"></label></div>
-				<div class="cl-admin__row"><label><input type="checkbox" name="<?php echo esc_attr( $n ); ?>[sister]" value="1" <?php checked( $o['sister'] ); ?>> <?php esc_html_e( 'Link to inner pages on the sister sites', 'bestofislam' ); ?></label></div>
+				<div class="cl-admin__row"><label><input type="checkbox" name="<?php echo esc_attr( $n ); ?>[sister]" value="1" <?php checked( $o['sister'] ); ?>> <?php esc_html_e( 'Link to inner pages on the other sites', 'bestofislam' ); ?></label></div>
 				<div class="cl-admin__row"><label><?php esc_html_e( 'At most, per page', 'bestofislam' ); ?> <input type="number" min="0" max="10" name="<?php echo esc_attr( $n ); ?>[max_sister]" value="<?php echo esc_attr( $o['max_sister'] ); ?>"></label></div>
 				<div class="cl-admin__row"><label><input type="checkbox" name="<?php echo esc_attr( $n ); ?>[new_tab]" value="1" <?php checked( $o['new_tab'] ); ?>> <?php esc_html_e( 'Open links to other sites in a new tab', 'bestofislam' ); ?></label></div>
 				<div class="cl-admin__row cl-admin__row--stack">
