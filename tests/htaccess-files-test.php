@@ -152,6 +152,16 @@ foreach ( array( 'tests', 'bin', 'docs' ) as $boi_d ) {
 	boi_check( false !== strpos( $boi_ht, 'Require all denied' ) && false !== strpos( $boi_ht, 'Deny from all' ), "$boi_d/.htaccess refuses everything, on Apache 2.4 and 2.2" );
 }
 
+// Markdown files by their own name, with no module beyond the core.
+$boi_md = preg_match( '/<FilesMatch "([^"]*md[^"]*)">\s*<IfModule mod_authz_core\.c>\s*Require all denied/', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
+boi_check( '' !== $boi_md, 'the theme .htaccess refuses Markdown files with a FilesMatch' );
+foreach ( array( 'README.md', 'readme.md', 'SSOT.MD', 'notes.Md', 'x-CHANGELOG.md' ) as $boi_p ) {
+	boi_check( '' !== $boi_md && 1 === preg_match( '#' . $boi_md . '#', $boi_p ), "theme .htaccess FilesMatch: 403 for $boi_p" );
+}
+foreach ( array( 'CHANGELOG.md', 'changelog.md', 'style.css', 'readme.txt', 'main.md.css', 'md' ) as $boi_p ) {
+	boi_check( '' === $boi_md || 0 === preg_match( '#' . $boi_md . '#', $boi_p ), "theme .htaccess FilesMatch: open $boi_p" );
+}
+
 // Without mod_alias and mod_rewrite: the <If> on the request path refuses dot folders.
 $boi_if = preg_match( '/<If "%\\{REQUEST_URI\\} =~ m#(.+)#">/', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_mm ) ? $boi_mm[1] : '';
 boi_check( '' !== $boi_if && 1 === preg_match( '#' . $boi_if . '#', '/wp-content/themes/x/.git/config' ) && 0 === preg_match( '#' . $boi_if . '#', '/wp-content/themes/x/.well-known/a' ) && 0 === preg_match( '#' . $boi_if . '#', '/wp-content/themes/x/assets/css/a.min.css' ), 'without mod_alias and mod_rewrite, the <If> refuses .git/config and leaves .well-known and assets open' );

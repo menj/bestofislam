@@ -31,6 +31,19 @@ Deny from all
 </IfModule>
 </FilesMatch>
 
+# Markdown notes by their own name, wherever they sit and with no module
+# beyond the core: README.md, the font notes and the like. CHANGELOG.md
+# stays open, since the Theme Options footer links to it.
+<FilesMatch "(?i)^(?!changelog\.md$).*\.md$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
 # Dot files, also without mod_alias.
 <FilesMatch "^\.">
 <IfModule mod_authz_core.c>
