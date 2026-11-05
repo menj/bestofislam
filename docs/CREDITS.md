@@ -6,8 +6,8 @@ licence and source of every bundled font, icon, image and adapted piece of code.
 ## Copyright and licence
 
 Best of Islam, Copyright 2026 Mohd Elfie Nieshaem Juferi. The theme's
-code is licensed under the GNU General Public License, version 2 or later, as
-WordPress is. See http://www.gnu.org/licenses/gpl-2.0.html.
+code is licensed under the GNU General Public License, version 3 or later.
+The full text is in `LICENSE`; see https://www.gnu.org/licenses/gpl-3.0.html.
 
 Bundled resources keep their owners' licences and are not relicensed. The
 theme loads none of them from another server: every font, icon and image ships

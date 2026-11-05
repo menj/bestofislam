@@ -15,7 +15,8 @@ runs a separate theme.
 | Site | bestofislam.org |
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
-| Version | 1.100.12, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
+| Version | 1.100.13, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -686,6 +687,14 @@ icons in `assets/icons/`, images in `assets/images/`; one file per concern.
 Prefix `boi_` for functions, `boi-` for CSS classes and handles, `bestofislam/`
 for block names, `bestofislam` for the text domain. Package archives follow
 `[theme name]-[version].zip`.
+
+### D53. The article anatomy, with no sales step
+
+The owner approved the article anatomy on 2026-11-05, with every sales prompt removed. A single article carries, in order: the breadcrumbs, the title, the excerpt, the meta row (date, reading time, "Updated", "Reviewed", the author), "In short" with the questions it answers, the contents (three sections up, unless a jump list shows), the text with a next step before its third section, the notes, "Read next" and the related cards. A next step is only ever the notes, the next piece in the reading order or the Contact page. FAQPage markup is emitted only for FAQ-style Details blocks on the page. The author card keeps the WordPress display name; no name was added.
+
+### D54. The theme is licensed GPL version 3 or later
+
+The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code adapted from GPLv2-or-later plugins may be carried under version 3. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
 
 ### D15. The glossary is pages, not a post type
 

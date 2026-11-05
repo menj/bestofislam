@@ -3,10 +3,10 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.12
+Stable tag: 1.100.13
 Template: twentytwentyfive
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered objections to Islam, each answered from the Quran, the hadith and the historical record.
 
@@ -31,6 +31,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
 * Search with readable addresses such as /search/Paul/, filters for kind and section, and links straight to the matching entry.
 * Titles, meta descriptions, canonical links, breadcrumbs and one JSON-LD graph per page: Article, ItemList, FAQPage, BreadcrumbList, ProfilePage, Organization, WebSite and a DefinedTermSet for the Glossary. With Rank Math, Yoast SEO, All in One SEO or SEOPress active, the theme hands over what the plugin does and adds only what it cannot know, such as each image's licence and credit.
+* On each article: the updated and reviewed dates under the title, an "In short" box of key points with the questions the piece answers, a list of its sections, a next step in the middle, a FAQ style for questions and ruled tables.
 * A reading progress bar on single posts and pages, in the palette, with its edge, height, colour and post types set on the Display tab.
 * Unlisted posts and pages, a private login address, security headers, a spam gate for gambling spam and a Security tab with a spam scan, clean-up tools and attack reports.
 * Branded maintenance, database and PHP error pages, with email alerts.
@@ -66,7 +67,7 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
-* Display: rank badges, the entry image size, the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Display: rank badges, the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
 * Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace.
@@ -107,6 +108,10 @@ The Security tab turns off XML-RPC, application passwords and REST writes from o
 
 Colours are theme.json tokens. Change them in the Site Editor under Styles, or pick a style variation, and the whole site follows, the Theme Options screen included.
 
+= How do I add key points or a review date to an article? =
+
+Open the article and find the Key points and review box below the text. Type one key point a line; they show in the "In short" box at the head of the article. Pick the day you last checked the article against its sources; it shows under the title as Reviewed. Leave a field empty to show nothing.
+
 = I chose "Your latest posts" under Settings, Reading. Will an update undo it? =
 
 From 1.98.0 the front page follows Settings, Reading. With "Your latest posts" the site shows the posts index, and later population runs leave that choice alone.
@@ -143,7 +148,7 @@ The seeded Privacy page says the same in plain words. If you switch on voting, c
 
 == Copyright ==
 
-Best of Islam, Copyright 2026 Mohd Elfie Nieshaem Juferi. The theme's code is licensed under the GNU General Public License v2 or later.
+Best of Islam, Copyright 2026 Mohd Elfie Nieshaem Juferi. The theme's code is licensed under the GNU General Public License v3 or later. The full text is in the LICENSE file.
 
 Bundled resources keep their owners' licences. docs/CREDITS.md lists each one with its source.
 
@@ -154,6 +159,15 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.13 =
+* An article with key points opens with an "In short" box, which now also holds the questions the piece answers. Key points and a review date are typed in the new Key points and review box.
+* The line under the title shows when an article was updated and when it was last reviewed.
+* An article with three or more sections lists them under the box. A list with a jump list keeps that.
+* A next step before the third section points to the notes, the next piece in the reading order and the Contact page.
+* A FAQ style for Details blocks, with a Questions readers ask pattern. Its questions are marked up for search engines only while they are on the page.
+* Tables in articles are ruled, carry their captions and scroll on their own on a phone.
+* The theme is now licensed under the GNU GPL, version 3 or later. The full text is in the LICENSE file.
 
 = 1.100.12 =
 * The documentation is up to date with the theme: how to update by FTP, every settings screen, the security switches, the error pages and the files the theme removes from a live server.
@@ -234,6 +248,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.100.13 =
+Two new switches on the Display tab, both on: Contents and Next step. Nothing else to do.
 
 = 1.98.0 =
 A new Theme Options screen with the same settings and the same saved values. If you set Settings, Reading to "Your latest posts", the front page now shows your posts.

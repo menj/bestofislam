@@ -1,0 +1,184 @@
+/**
+ * Article anatomy (inc/anatomy.php): the extra dates in the meta row, the
+ * "In short" box, the contents, the mid-article next step, the FAQ style and
+ * tables. Built on the questions panel and the palette tokens set on
+ * .boi-article, so the Night variation recolours it all.
+ */
+
+/* The meta row: "Updated" and "Reviewed" sit beside the date. */
+.boi-article .boi-dates__item {
+	color: var(--boi-mute);
+}
+
+/* "In short": the questions panel, with the key points above. */
+.boi-answer {
+	margin-block: 0 2rem;
+	padding: 1.1rem 1.25rem;
+	background: var(--boi-tint);
+	border-inline-start: 3px solid var(--boi-gold);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-article .boi-answer__title {
+	margin: 0 0 0.5rem;
+	font-family: inherit;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+}
+
+.boi-answer__summary {
+	margin: 0 0 0.6rem;
+}
+
+.boi-answer__points {
+	margin: 0;
+	padding-inline-start: 1.1rem;
+	display: grid;
+	gap: 0.35rem;
+}
+
+/* Inside the box the questions panel loses its own frame. */
+.boi-answer .boi-answers {
+	margin: 1rem 0 0;
+	padding: 0.9rem 0 0;
+	background: none;
+	border: 0;
+	border-block-start: 1px solid var(--boi-rule);
+	border-radius: 0;
+}
+
+/* Contents. */
+.boi-contents {
+	margin-block: 0 2rem;
+	padding: 1rem 1.25rem;
+	border: 1px solid var(--boi-rule);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-contents__label {
+	margin: 0 0 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+}
+
+.boi-contents__list {
+	margin: 0;
+	padding-inline-start: 1.3rem;
+	display: grid;
+	gap: 0.3rem;
+}
+
+.boi-article .boi-contents__list a {
+	color: var(--boi-ink);
+	text-decoration: underline;
+	text-decoration-color: var(--boi-gold);
+	text-underline-offset: 0.22em;
+}
+
+.boi-article .wp-block-post-content :is(h2, h3)[id] {
+	scroll-margin-block-start: 5rem;
+}
+
+/* Next step, in the middle of the text. */
+.boi-step {
+	margin-block: 2rem;
+	padding: 1rem 1.25rem;
+	background: var(--boi-tint);
+	border-inline-start: 3px solid var(--boi-blue);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.boi-step__label {
+	margin: 0 0 0.4rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+}
+
+.boi-step__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.35rem;
+	text-align: start;
+}
+
+.boi-article .boi-step a {
+	text-decoration: underline;
+	text-underline-offset: 0.22em;
+}
+
+/* FAQ: a Details block with the FAQ style. */
+.wp-block-details.is-style-faq {
+	margin-block: 0 0.75rem;
+	padding: 0.8rem 1.1rem;
+	border: 1px solid var(--boi-rule, #D9E3EF);
+	border-radius: var(--wp--custom--radius--sm, 6px);
+}
+
+.wp-block-details.is-style-faq > summary {
+	font-family: var(--wp--preset--font-family--platypi, serif);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.wp-block-details.is-style-faq[open] > summary {
+	margin-block-end: 0.5rem;
+}
+
+.wp-block-details.is-style-faq > :not(summary) {
+	margin-block: 0.4rem 0;
+}
+
+/* Tables: ruled rows, a header line in gold, and a scrolling region on a phone. */
+.boi-article .wp-block-post-content .wp-block-table {
+	margin-block: 2rem;
+	overflow-x: auto;
+}
+
+.boi-article .wp-block-post-content .wp-block-table:focus-visible {
+	outline: 2px solid var(--boi-blue);
+	outline-offset: 3px;
+}
+
+.boi-article .wp-block-post-content .wp-block-table table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95em;
+}
+
+.boi-article .wp-block-post-content .wp-block-table :is(th, td) {
+	padding: 0.55rem 0.8rem;
+	border: 0;
+	border-block-end: 1px solid var(--boi-rule);
+	text-align: start;
+	vertical-align: top;
+}
+
+.boi-article .wp-block-post-content .wp-block-table th {
+	font-size: 0.8em;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--boi-mute);
+	border-block-end: 2px solid var(--boi-gold);
+}
+
+.boi-article .wp-block-post-content .wp-block-table tbody tr:nth-child(even) {
+	background: var(--boi-tint);
+}
+
+.boi-article .wp-block-post-content .wp-block-table figcaption {
+	margin-block-start: 0.5rem;
+	font-size: 0.85rem;
+	color: var(--boi-mute);
+	text-align: start;
+}
