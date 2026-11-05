@@ -125,7 +125,8 @@ function boi_redirect_renamed_slugs() {
 	$query = (string) wp_parse_url( $uri, PHP_URL_QUERY );
 
 	if ( '' !== $query ) {
-		$url .= '?' . $query;
+		// get_permalink() can already carry a query (?p=123 under plain permalinks).
+		$url .= ( false === strpos( $url, '?' ) ? '?' : '&' ) . $query;
 	}
 
 	wp_safe_redirect( $url, 301 );
