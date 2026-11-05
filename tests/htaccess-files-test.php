@@ -23,6 +23,7 @@ define( 'ABSPATH', '/srv/site/' );
 define( 'BOI_DIR', '/srv/site/wp-content/themes/bestofislam' );
 function wp_normalize_path( $p ) { return str_replace( '\\', '/', (string) $p ); } // phpcs:ignore
 function trailingslashit( $p ) { return rtrim( (string) $p, '/\\' ) . '/'; } // phpcs:ignore
+function untrailingslashit( $p ) { return rtrim( (string) $p, '/\\' ); } // phpcs:ignore
 function get_theme_root() { return $GLOBALS['boi_theme_root']; } // phpcs:ignore
 
 $boi_src = (string) file_get_contents( dirname( __DIR__ ) . '/inc/security.php' );
@@ -115,6 +116,7 @@ boi_check( 1 === preg_match( '#^' . $boi_pfx . 'wp-includes/.+\\.php$#', 'wp.6/w
 $GLOBALS['boi_theme_root'] = '/srv/site/wp-content/themes';
 $boi_split = boi_sec_files_htaccess_lines( '/srv/' );
 boi_check( (bool) preg_grep( '#\^site/wp-includes/#', $boi_split ) && (bool) preg_grep( '#\^site/wp-content/themes/#', $boi_split ), 'core and themes below the .htaccess folder get their prefix' );
+boi_check( boi_forbidden( $boi_split, '/wp-config.php', '/' ) && boi_forbidden( $boi_split, '/site/wp-config.php', '/' ), 'wp-config.php is refused in the core folder and in the folder above it' );
 boi_check( boi_forbidden( $boi_split, '/site/wp-includes/version.php', '/' ) && ! boi_forbidden( $boi_split, '/site/wp-includes/js/tinymce/wp-tinymce.php', '/' ), 'the prefixed rules refuse and allow as at the root' );
 
 echo $boi_fail ? "$boi_fail failed\n" : "all passed\n";

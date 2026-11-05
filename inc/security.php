@@ -177,6 +177,11 @@ function boi_sec_files_htaccess_lines( $home = '' ) {
 		// with either one appended as path info is still refused.
 		$rules[] = 'RewriteRule ^' . $core . 'wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) - [F]';
 		$rules[] = 'RewriteRule ^' . $core . 'wp-admin/includes/.+\.php(/|$) - [F]';
+		// WordPress also reads wp-config.php from the folder above its own.
+		$parent = '' === $core ? null : boi_sec_rewrite_prefix( dirname( untrailingslashit( wp_normalize_path( ABSPATH ) ) ), $home );
+		if ( null !== $parent ) {
+			$rules[] = 'RewriteRule ^' . $parent . 'wp-config\.php(/|$) - [F]';
+		}
 		$rules[] = 'RewriteRule ^' . $core . '(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)(/|$) - [F]';
 	}
 	if ( null !== $themes && '' !== $themes ) {
