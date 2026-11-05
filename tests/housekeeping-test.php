@@ -97,7 +97,7 @@ switch ( $boi_case ) {
 	case 'force':
 		$GLOBALS['boi_env'] = 'local';
 		boi_remove_dev_files();
-		boi_check( array() === boi_dev_left( $boi_tmp ) && boi_kept( $boi_tmp ), 'BOI_REMOVE_GIT_DIR true cleans a local checkout, .git included' );
+		boi_check( array() === boi_dev_left( $boi_tmp ) && boi_kept( $boi_tmp ) && '9.9.9-git' === get_option( 'boi_dev_files_removed' ), 'BOI_REMOVE_GIT_DIR true cleans a local checkout, .git included' );
 		break;
 	case 'stuck':
 		// A link that leads out of the theme is never followed or removed, so it
@@ -117,6 +117,7 @@ switch ( $boi_case ) {
 		$GLOBALS['boi_env'] = 'production';
 		boi_remove_dev_files();
 		boi_check( array( '.git' ) === boi_dev_left( $boi_tmp ) && boi_kept( $boi_tmp ), 'BOI_REMOVE_GIT_DIR false keeps .git and removes the rest' );
+		boi_check( '9.9.9-keep-git' === get_option( 'boi_dev_files_removed' ), 'the record carries the choice, so setting the constant to true later runs the cleanup again' );
 		break;
 }
 

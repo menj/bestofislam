@@ -103,12 +103,26 @@ function boi_keep_dev_files() {
 }
 
 /**
+ * The value recorded when the cleanup is done: the theme version, plus the
+ * BOI_REMOVE_GIT_DIR choice, so changing that constant runs the cleanup
+ * again without a new version.
+ *
+ * @return string
+ */
+function boi_dev_files_key() {
+	if ( ! defined( 'BOI_REMOVE_GIT_DIR' ) ) {
+		return BOI_VERSION;
+	}
+	return BOI_VERSION . ( BOI_REMOVE_GIT_DIR ? '-git' : '-keep-git' );
+}
+
+/**
  * Removes the development files, once per theme version.
  *
  * @return void
  */
 function boi_remove_dev_files() {
-	if ( get_option( 'boi_dev_files_removed' ) === BOI_VERSION ) {
+	if ( get_option( 'boi_dev_files_removed' ) === boi_dev_files_key() ) {
 		return;
 	}
 
@@ -140,7 +154,7 @@ function boi_remove_dev_files() {
 		return;
 	}
 
-	update_option( 'boi_dev_files_removed', BOI_VERSION, false );
+	update_option( 'boi_dev_files_removed', boi_dev_files_key(), false );
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );
@@ -153,7 +167,7 @@ add_action( 'admin_init', 'boi_remove_dev_files' );
  * @return void
  */
 function boi_remove_dev_files_front() {
-	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === BOI_VERSION || boi_keep_dev_files() || get_transient( 'boi_dev_files_lock' ) || get_transient( 'boi_dev_files_retry' ) ) {
+	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === boi_dev_files_key() || boi_keep_dev_files() || get_transient( 'boi_dev_files_lock' ) || get_transient( 'boi_dev_files_retry' ) ) {
 		return;
 	}
 	set_transient( 'boi_dev_files_lock', 1, MINUTE_IN_SECONDS );
