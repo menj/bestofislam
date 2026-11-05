@@ -118,12 +118,26 @@ function boi_remove_dev_files() {
 		return;
 	}
 
+	$left = array();
+
 	foreach ( boi_dev_paths() as $rel ) {
 		$path = BOI_DIR . DIRECTORY_SEPARATOR . ltrim( $rel, '/\\' );
 
 		if ( file_exists( $path ) || is_link( $path ) ) {
 			boi_remove_path( $path );
 		}
+		clearstatcache();
+		if ( file_exists( $path ) || is_link( $path ) ) {
+			$left[] = $rel;
+		}
+	}
+
+	// The version is recorded only once every path is gone. A path PHP could
+	// not delete (file ownership, say) is tried again an hour later from the
+	// front end, and on every admin page load.
+	if ( $left ) {
+		set_transient( 'boi_dev_files_retry', $left, HOUR_IN_SECONDS );
+		return;
 	}
 
 	update_option( 'boi_dev_files_removed', BOI_VERSION, false );
@@ -139,7 +153,7 @@ add_action( 'admin_init', 'boi_remove_dev_files' );
  * @return void
  */
 function boi_remove_dev_files_front() {
-	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === BOI_VERSION || boi_keep_dev_files() || get_transient( 'boi_dev_files_lock' ) ) {
+	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === BOI_VERSION || boi_keep_dev_files() || get_transient( 'boi_dev_files_lock' ) || get_transient( 'boi_dev_files_retry' ) ) {
 		return;
 	}
 	set_transient( 'boi_dev_files_lock', 1, MINUTE_IN_SECONDS );

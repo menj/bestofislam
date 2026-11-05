@@ -21,7 +21,7 @@ $boi_case = $argv[1] ?? '';
 
 if ( '' === $boi_case ) {
 	$boi_fail = 0;
-	foreach ( array( 'env', 'keep', 'force', 'keep-git' ) as $boi_c ) {
+	foreach ( array( 'env', 'keep', 'force', 'keep-git', 'stuck' ) as $boi_c ) {
 		passthru( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( __FILE__ ) . ' ' . escapeshellarg( $boi_c ), $boi_code );
 		$boi_fail += $boi_code ? 1 : 0;
 	}
@@ -55,6 +55,8 @@ function apply_filters( $h, $v ) { return $v; }
 function get_option( $k, $d = false ) { return $GLOBALS['boi_o'][ $k ] ?? $d; }
 function update_option( $k, $v ) { $GLOBALS['boi_o'][ $k ] = $v; return true; }
 function wp_get_environment_type() { return $GLOBALS['boi_env']; }
+function set_transient( $k, $v, $t = 0 ) { $GLOBALS['boi_t'][ $k ] = $v; return true; }
+define( 'HOUR_IN_SECONDS', 3600 );
 require dirname( __DIR__ ) . '/inc/housekeeping.php';
 
 $boi_fail = 0;
@@ -96,6 +98,20 @@ switch ( $boi_case ) {
 		$GLOBALS['boi_env'] = 'local';
 		boi_remove_dev_files();
 		boi_check( array() === boi_dev_left( $boi_tmp ) && boi_kept( $boi_tmp ), 'BOI_REMOVE_GIT_DIR true cleans a local checkout, .git included' );
+		break;
+	case 'stuck':
+		// A link that leads out of the theme is never followed or removed, so it
+		// stands for a path PHP cannot delete.
+		$GLOBALS['boi_env'] = 'production';
+		$boi_out = sys_get_temp_dir() . '/boi-hk-out-' . getmypid();
+		@mkdir( $boi_out );
+		symlink( $boi_out, "$boi_tmp/.idea" );
+		boi_remove_dev_files();
+		boi_check( false === get_option( 'boi_dev_files_removed' ) && array( '.idea' ) === ( $GLOBALS['boi_t']['boi_dev_files_retry'] ?? null ) && is_dir( $boi_out ), 'a path left behind keeps the version unrecorded and is queued for a retry' );
+		unlink( "$boi_tmp/.idea" );
+		rmdir( $boi_out );
+		boi_remove_dev_files();
+		boi_check( '9.9.9' === get_option( 'boi_dev_files_removed' ), 'the retry records the version once every path is gone' );
 		break;
 	case 'keep-git':
 		$GLOBALS['boi_env'] = 'production';
