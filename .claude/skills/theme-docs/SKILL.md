@@ -15,7 +15,7 @@ The reference implementation is the injil.help theme (menj/injil.help), which ke
 |---|---|---|
 | `readme.txt` | Site owners and lay readers | What the theme does and how to use it, in plain words |
 | `README.md` | Web developers, hosts, coders | How the theme works and how to build, test, deploy and extend it |
-| `SSOT.md` | Anyone changing the theme, people or agents | The fixed facts and rules. It wins over every other file on matters of fact |
+| `SSOT.md` | Anyone changing the theme, people or agents | The fixed facts and rules of the site. It wins over the other four documents on matters of fact. Where the repo's own rules rank another file above it, or say to ask the owner on a conflict, follow them |
 | `CHANGELOG.md` | Everyone | What changed in each version, newest first |
 | `UPGRADING.md` | Site owners and developers | How to move from one version to the next, and where the theme is going next |
 
@@ -32,8 +32,9 @@ The reference implementation is the injil.help theme (menj/injil.help), which ke
 - The standard WordPress headers (`=== Name ===`, Contributors, Requires at least, Tested up to, Requires PHP, Stable tag, License), with Stable tag equal to the version in `style.css`.
 - Description: what the theme is for, in two or three short paragraphs.
 - Installation and updating: written for someone installing or updating the theme with the WordPress uploader or by FTP.
-  - The uploader steps: Appearance > Themes > Add New > Upload Theme, and "Replace active with uploaded" for an update.
-  - The FTP steps: show hidden files, so the theme's own `.htaccess` files go up; upload the theme folder under a temporary name, then rename it into place in `wp-content/themes/`.
+  - The uploader steps: Appearance > Themes > Add New > Upload Theme. For an update, WordPress then offers "Replace active with uploaded" (or "Replace installed with uploaded" when the theme is not active).
+  - The FTP steps: show hidden files, so the theme's own `.htaccess` files go up. Upload the theme folder to `wp-content/themes/` under a temporary name.
+  - For an FTP update: rename the old folder aside, rename the new one into place, check the site, then delete the old folder.
 - Settings: each settings tab and what it does.
 - Frequently Asked Questions.
 - Changelog: a short version, with the full one in CHANGELOG.md.
@@ -98,9 +99,9 @@ The reference implementation is the injil.help theme (menj/injil.help), which ke
   - none of the banned words in the repo's own rules, and none of the words on the skill's own banned list;
   - short paragraphs of one or two sentences, three at most.
 - Respect each repo's own rules in `.claude/CLAUDE.md` and `SSOT.md`, such as banned words, names that must not appear, and title limits.
-- Never announce publicly that the sites are related, sister sites or a network. Cross-links are fine.
+- Never announce publicly that the sites are related, sister sites or a network. Cross-links are fine. Where a shipped document already says so, remove that wording in the same change that next edits the document.
 - Facts must match the code as it will stand once the change merges. A change that adds a setting documents it in the same PR. If a document and the code disagree, fix the document or the code in the same change.
-- Packaging: each repo's `.gitattributes` decides which documents ship in the theme zip; keep that choice and describe it accurately. Where `.md` files ship, the theme `.htaccess` refuses `*.md` on the live site, except files the settings pages link to on purpose. `.claude/` is always `export-ignore`.
+- Packaging: the repo's packaging setup decides which documents ship in the theme zip. That is `.gitattributes` for `git archive`, or the release workflow or build script where one builds the zip. Keep that choice and describe it accurately. Where `.md` files ship, the theme `.htaccess` refuses `*.md` on the live site, except files the settings pages link to on purpose. `.claude/` is always `export-ignore`.
 
 ## Licence
 
