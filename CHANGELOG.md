@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.12] - 2026-11-05
+
+Documentation release. No band, setting or address changed.
+
+### Changed
+- `readme.txt` explains updating from the dashboard and by FTP: show hidden files, upload to a temporary folder and rename it into place, and never upload WordPress without `wp-config.php`. It describes the Contextual Links screen and answers three more questions, on the error pages, the development files and the security headers.
+- `README.md` gains the boot sequence, a complete file map, every hook, filter and `wp-config.php` constant, the `.htaccess` rules with their Nginx equivalents, the error pages, the build, test and release commands, and multisite behaviour.
+- `docs/SSOT.md` gains a section of fixed facts: identity, versions, option names, data files, markers, constants and the contributor rules.
+- `docs/UPGRADING.md` gains general update steps by FTP and a roadmap in three groups, each item tied to the evidence for it.
+- The changelog gains the entries for 1.74.0, 1.79.1, 1.79.2, 1.86.2 and 1.89.1, which were lost in merges, and no longer describes the site's links to other sites as a network.
+
+### Fixed
+- The Content tab said population builds 151 seeded articles. Since 1.100.3 there are 152, and the tab, `readme.txt` and `README.md` now say so.
+
 ## [1.100.11] - 2026-11-05
 
 No band or feature removed and no public identifier renamed.
@@ -16,11 +30,11 @@ No band or feature removed and no public identifier renamed.
 No band or feature removed and no public identifier renamed.
 
 ### Fixed
-- The lock in `inc/lock.php` could be taken over from a holder that was still working: its time was never renewed, so a cleanup that ran past ten minutes (a large `.git` tree on a slow disk) looked dead. The holder now renews it (`boi_lock_renew()`), and the dev-file cleanup does so every 200 entries it deletes and at least every 30 seconds. A holder that finds its lock gone stops at once, leaves every folder above the one it was in, and records nothing; `tests/housekeeping-test.php` makes a renewal fail part-way through 451 files. The callers leave the lock alone until `inc/lock.php` has arrived whole (its last line defines `BOI_LOCK_READY`). The theme folder's `.htaccess` also refuses theme PHP by file name, where neither mod_alias nor mod_rewrite is loaded. Only a lock nobody renewed is taken over. The row holds `<time>|<holder>`, and a release or renewal touches only the holder's own row. `tests/lock-test.php` covers renewal, and a holder that lost the lock cannot renew it. This came from the review of the sister theme's identical code.
+- The lock in `inc/lock.php` could be taken over from a holder that was still working: its time was never renewed, so a cleanup that ran past ten minutes (a large `.git` tree on a slow disk) looked dead. The holder now renews it (`boi_lock_renew()`), and the dev-file cleanup does so every 200 entries it deletes and at least every 30 seconds. A holder that finds its lock gone stops at once, leaves every folder above the one it was in, and records nothing; `tests/housekeeping-test.php` makes a renewal fail part-way through 451 files. The callers leave the lock alone until `inc/lock.php` has arrived whole (its last line defines `BOI_LOCK_READY`). The theme folder's `.htaccess` also refuses theme PHP by file name, where neither mod_alias nor mod_rewrite is loaded. Only a lock nobody renewed is taken over. The row holds `<time>|<holder>`, and a release or renewal touches only the holder's own row. `tests/lock-test.php` covers renewal, and a holder that lost the lock cannot renew it.
 
 ## [1.100.9] - 2026-11-05
 
-No band or feature removed and no public identifier renamed. These bring the theme in line with the hardening the sister themes merged, and carry over what the review of the sister theme's identical code found after 1.100.8.
+No band or feature removed and no public identifier renamed. They carry over the hardening that a review of the same code found after 1.100.8.
 
 ### Security
 - Visitors who are not logged in get no `/wp/v2/users` routes (404), and `?author=N` gives them a 404 where WordPress redirected to `/author/<username>/` and so named the account (`boi_sec_hide_user_routes()`, `boi_sec_block_author_query()`). Logged-in editors keep both. XML-RPC was already off.
@@ -34,7 +48,7 @@ No band or feature removed and no public identifier renamed.
 
 ### Security
 - Development files are removed from a production server again (D52). Since 1.100.6 `boi_remove_dev_files()` skipped any theme folder that held `.git`, and the owner uploads `.git` over FTP, so the live site kept its 3,922 repository files and nothing else was cleaned either. The cleanup now stays its hand only in a development environment: `wp_get_environment_type()` is `local` or `development`, or `BOI_KEEP_DEV_FILES` is true. `boi_dev_paths()` now lists `.git`, `tests`, `bin` and `docs` beside `.claude` and the editor files, so `.git` goes by default on production; the repository is the theme's whole source and must not be public. `BOI_REMOVE_GIT_DIR` true still forces the cleanup, even in a development environment, and false now keeps `.git` while the rest goes. The record of a finished cleanup carries that choice, so changing the constant runs the cleanup again without a new version. An FTP update fires no switch hook and may see no admin visit for days, so the cleanup also runs on the first front-end request of a new version, behind a one-minute lock. One cleanup runs at a time, behind an atomic lock (`add_option()`) that every entry point respects. The version is recorded only once every path is gone; a path PHP cannot delete is tried again an hour later from the front end, and on every admin page load. `tests/housekeeping-test.php` covers each case in its own process.
-- A second `.htaccess` section, "Best of Islam: block direct file access", is kept beside "Block xmlrpc.php" by `boi_sec_sync_htaccess()` and removed on a theme switch. Under `<IfModule mod_rewrite.c>` it answers 403 for PHP files in `wp-includes` (except `js/tinymce/wp-tinymce.php` and `ms-files.php`), `wp-admin/includes` and the themes folder, for `wp-config.php` (in the core folder and in the folder above it, where WordPress also looks), `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`, `readme.html` and `license.txt`, for any path segment that starts with `.git` or `.claude`, and for the theme's `tests`, `bin`, `docs` and `dist` folders and the editor files (`.vscode`, `.idea`, `.editorconfig`, `.DS_Store`). The server log for 2 and 3 November showed PHP fatals from direct requests to `wp-settings.php`, `wp-includes/blocks/*.php` and `twentytwentyfive/functions.php`; the sister site's showed `wp-admin/includes/admin.php` too. The rules carry the site's own folder prefixes, so a site in a subfolder or with WordPress in its own folder is covered. `BOI_BLOCK_DIRECT_FILES` false leaves the section out. The section is written on the first request of a new version too (`boi_sec_sync_htaccess_once()`), not only on an admin visit, and again on the next request after `BOI_BLOCK_DIRECT_FILES` changes; a failed write is retried a minute later. Folder names in the prefixes are quoted for the pattern, so `wp.6/` matches only itself. `tests/htaccess-files-test.php` checks the lines' shape and runs them over 42 request paths at the root and in a subfolder.
+- A second `.htaccess` section, "Best of Islam: block direct file access", is kept beside "Block xmlrpc.php" by `boi_sec_sync_htaccess()` and removed on a theme switch. Under `<IfModule mod_rewrite.c>` it answers 403 for PHP files in `wp-includes` (except `js/tinymce/wp-tinymce.php` and `ms-files.php`), `wp-admin/includes` and the themes folder, for `wp-config.php` (in the core folder and in the folder above it, where WordPress also looks), `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`, `readme.html` and `license.txt`, for any path segment that starts with `.git` or `.claude`, and for the theme's `tests`, `bin`, `docs` and `dist` folders and the editor files (`.vscode`, `.idea`, `.editorconfig`, `.DS_Store`). The server log for 2 and 3 November showed PHP fatals from direct requests to `wp-settings.php`, `wp-includes/blocks/*.php` and `twentytwentyfive/functions.php`; another site's logs showed `wp-admin/includes/admin.php` too. The rules carry the site's own folder prefixes, so a site in a subfolder or with WordPress in its own folder is covered. `BOI_BLOCK_DIRECT_FILES` false leaves the section out. The section is written on the first request of a new version too (`boi_sec_sync_htaccess_once()`), not only on an admin visit, and again on the next request after `BOI_BLOCK_DIRECT_FILES` changes; a failed write is retried a minute later. Folder names in the prefixes are quoted for the pattern, so `wp.6/` matches only itself. `tests/htaccess-files-test.php` checks the lines' shape and runs them over 42 request paths at the root and in a subfolder.
 - The theme folder carries its own `.htaccess`, which Apache reads before WordPress starts, so a direct request that arrives before any page has run is refused too. With `mod_alias` it answers 403 for `.git*`, `.claude` and the editor files anywhere in the theme, for the `tests`, `bin`, `docs` and `dist` folders, and for any PHP file in the theme. Styles, scripts, fonts and images are untouched.
 - Every PHP file in `tests/` and `bin/` exits unless it runs from the command line.
 
@@ -98,12 +112,11 @@ No band or feature removed and no public identifier renamed.
 
 ### Changed
 - *The Islamic dilemma* (`content/islamic-dilemma.json`): the box at the
-  end is headed "Further reading on the Islamic dilemma", in place of "The
-  Islamic dilemma across the network". The box and its five links stay.
+  end is headed "Further reading on the Islamic dilemma", in place of the
+  old heading. The box and its five links stay.
   An unedited article takes the new text on the next update; an edited one
   is left alone and listed on the Content tab (D45).
-- The `assets/css/article.css` comment above `.boi-network` no longer
-  speaks of sister sites.
+- The `assets/css/article.css` comment above `.boi-network` is reworded.
 - The structured data names one author: a Person, `#author` at the site
   root, named "Mohd Elfie Nieshaem Juferi", with `url` `https://menj.bio`
   and the owner's addresses from `boi_author_same_as()`, then
@@ -317,7 +330,7 @@ Six article addresses lose their verse numbers, counts and years. The number sta
 
 On the update, `boi_seed_renames()` renames each post in place, so it keeps its ID, comments, featured image and edits. The seed list, the content files, the related lists, the reading order, the Glossary links, the practice questions and the in-text links all use the new slugs. The image files keep their names.
 
-`inc/data/network-links.json` takes the current addresses on every sister site: `/journal/prophet-like-moses/` on Abrahamic Religions, `/articles/sword-verse-jizya/` on Compelling Evidence, `/rebuttals/quran-wife-beating-verse-in-context/` on murtadd.org, the injil.help paths renamed in its 3.11.0, and the six above. The file is the same in all seven themes.
+`inc/data/network-links.json` takes the current addresses on every linked site: `/journal/prophet-like-moses/` on Abrahamic Religions, `/articles/sword-verse-jizya/` on Compelling Evidence, `/rebuttals/quran-wife-beating-verse-in-context/` on murtadd.org, the injil.help paths renamed in its 3.11.0, and the six above.
 
 ### Added
 
@@ -361,7 +374,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Added
 
-Eight new articles, written from the claims made in a public debate on the Islamic Dilemma. Each answers them from the Quran, the hadith, the classical commentators and the biblical scholarship, and grades its own entries. The site names neither speaker. Every article has its featured image and every image in the text, credited in `inc/images-data.json`; none is used by any of the sister sites. Ten come from Wikimedia Commons. Commons then refused this server, so the other sixteen come from the Internet Archive (public domain facsimiles of Codex Vaticanus, Codex Bezae, Codex Washingtonianus and the Aleppo Codex), the Wellcome Collection (public domain and CC BY 4.0) and the Cleveland Museum of Art (CC0).
+Eight new articles, written from the claims made in a public debate on the Islamic Dilemma. Each answers them from the Quran, the hadith, the classical commentators and the biblical scholarship, and grades its own entries. The site names neither speaker. Every article has its featured image and every image in the text, credited in `inc/images-data.json`; none is used on any of the linked sites. Ten come from Wikimedia Commons. Commons then refused this server, so the other sixteen come from the Internet Archive (public domain facsimiles of Codex Vaticanus, Codex Bezae, Codex Washingtonianus and the Aleppo Codex), the Wellcome Collection (public domain and CC BY 4.0) and the Cleveland Museum of Art (CC0).
 
 - **How does scripture reread scripture? 8 points, from Daniel to the Quran** (revelatory-exegesis), Comparative Religion, The Islamic Dilemma and Tahrif.
 - **Can a later prophet reinterpret the Quran? 8 answers** (seal-of-the-prophets), Comparative Religion, The Islamic Dilemma and Tahrif.
@@ -391,7 +404,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 ### Added
 
 - The Glossary has 5 new kinds: Worship (87 entries), Belief (125), Law (84), Scripture (64) and Ethics & Society (72). I read the 603 entries filed as Term or Topic and moved 432 of them by meaning; each record now names its kind, and nothing is guessed at runtime. Term keeps 111 and Topic 60, the general ones. All still reads 797.
-- Each new tile has its own photograph from Wikimedia Commons, credited in `inc/glossary-images.json`: Muslims praying at Fatih Mosque (Mors et Vita, CC BY 4.0), a Tahdhib al-Ahkam manuscript (Library, Museum and Document Center of the Iranian Parliament, public domain), the Sheikh Lotfollah dome (Phillip Maiwald, CC BY-SA 3.0), an early Kufic Quran folio (Morgan Library MS M.712, public domain) and the Grand Bazaar of Istanbul (Mickey Mystique, CC BY-SA 4.0). None is used by any of the sister sites.
+- Each new tile has its own photograph from Wikimedia Commons, credited in `inc/glossary-images.json`: Muslims praying at Fatih Mosque (Mors et Vita, CC BY 4.0), a Tahdhib al-Ahkam manuscript (Library, Museum and Document Center of the Iranian Parliament, public domain), the Sheikh Lotfollah dome (Phillip Maiwald, CC BY-SA 3.0), an early Kufic Quran folio (Morgan Library MS M.712, public domain) and the Grand Bazaar of Istanbul (Mickey Mystique, CC BY-SA 4.0). None is used on any of the linked sites.
 - 15 subcategories. Comparative Religion: The Bible and Its Text, The Islamic Dilemma and Tahrif, Jesus and the Trinity, Yahweh and the Same God, Prophets in Both Scriptures, Answering Polemics. Belief & Practices: Creed and Theology, Worship and Rituals, Law and Ethics, Women and Marriage. History: The Prophet's Life, Companions and Early Muslims, Islam and Other Peoples. Faith & Reason: The Quran's Text and Revelation, Hadith and Sira Under Scrutiny. Every article sits in a leaf, except 2 in Faith & Reason (the existence of God) and 3 in History (the Quran's stories), which fit none.
 - `bin/check-content.py` checks that every Glossary entry has a valid kind (`--kinds` prints the counts), that articles sit in a leaf, that an article's category sits under its own section, and that every leaf holds 5 articles.
 
@@ -415,6 +428,14 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 - Asset versions come from `boi_asset_version()`, which falls back to `BOI_VERSION` when a file is missing. That ends the `filemtime(): stat failed` warnings for front.css, header-search, back-to-top, scripts.css, article.css and the glossary files.
 - Glossary auto-linking was timing out: 30-second fatals in `inc/glossary-links.php` on 1 November, and 230 504s during a Facebook crawler burst on 27 October. The filter built and ran a regex for each of the 2,067 glossary phrases on every paragraph. Each phrase is now compiled once per request, and a paragraph is only tested against the phrases whose plain letters it contains. On the 143 seeded articles that cuts the work from 78 ms to 5 ms an article, with the same links in the same places (`tests/glossary-links-test.php` checks every article, as written and texturized, at 3 link budgets).
 - The linked output is kept on the post (`_boi_gl_cache`), keyed by the content, the glossary map and the link budget, so a repeat view or a crawler does no linking at all. Embeds, feeds and REST requests now skip the filter outright.
+
+## [1.89.1] - 2026-11-02
+
+### Fixed
+- A half-uploaded theme no longer takes the site down. An FTP upload sends the files one at a time, and on 1 November it took more than 20 minutes; until then every request in that window died with "Failed opening required inc/util.php" (27 and 29 October, 1 and 2 November). `functions.php` lists every file it loads and hands the list to `inc/maintenance.php` first. If one is missing, nothing else loads. Visitors get a short 503 page ("Updating, back in a minute") with `Retry-After: 120` and noindex, and the admin screens stay up with a notice naming the missing files. The guard needs no other theme file.
+- Asset versions come from `boi_asset_version()`, which falls back to `BOI_VERSION` when a file is missing. That ends the `filemtime(): stat failed` warnings for front.css, header-search, back-to-top, scripts.css, article.css and the glossary files.
+- Glossary auto-linking was timing out: 30-second fatals in `inc/glossary-links.php` on 1 November, and 230 504s during a Facebook crawler burst on 27 October. The filter built and ran a regex for each of the 2,067 glossary phrases on every paragraph. Each phrase is now compiled once per request, and a paragraph is tested only against the phrases whose plain letters it contains. On the 143 seeded articles of the time that cut the work from 78 ms to 5 ms an article, with the same links in the same places (`tests/glossary-links-test.php` checks every article, as written and texturized, at 3 link budgets).
+- The linked output is kept on the post (`_boi_gl_cache`), keyed by the content, the glossary map and the link budget, so a repeat view or a crawler does no linking at all. Embeds, feeds and REST requests skip the filter outright.
 
 ## [1.89.0] - 2026-11-02
 
@@ -464,7 +485,7 @@ All thirteen are placed in the reading order (`inc/reading.php`): the four on pr
 - **manuscript-transmission** and **where-is-the-injil** gain a paragraph each pointing to the new articles on the codices, 1 John 5:7, Old Testament variants and the alteration claim before Islam.
 - Notes in those six articles are renumbered to take the new references. The additions were merged into the versions of the six articles on main, so their images, captions and earlier expansions stay as they were.
 
-Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited. `inc/data/network-links.json` is unchanged, since it must change in all seven themes together; phrases for the new articles can be added there in a later network release. `BOI_GLOSSARY_VERSION` stays at 12.
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited. `inc/data/network-links.json` is unchanged, since it changes only in a coordinated release; phrases for the new articles can be added there later. `BOI_GLOSSARY_VERSION` stays at 12.
 
 ## [1.87.2] - 2026-11-01
 
@@ -482,8 +503,8 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Added
 
-- On Apache the "Turn off XML-RPC" switch also denies xmlrpc.php in the site's .htaccess, in a "Block xmlrpc.php" marker section (Apache 2.4 and 2.2 rules) shared with the sister themes, so the requests never reach PHP. The section is checked at most hourly in the admin and repaired if missing, rewritten when the options are saved or the theme is activated, and removed when the switch is off or the theme is switched away. The Security tab says when .htaccess cannot be written. There is no separate switch.
-- A Security tab under Appearance, Theme Options (`inc/security.php`, `inc/security-detector.php`, `assets/js/security.js`, `assets/css/security.css`), ported from the sister theme after the October 2026 attack on abrahamic-religions.com: XML-RPC password guessing from 701 rotating addresses under forged "Jetpack by WordPress.com" user agents, a correct password found, then a casino spam post every 18 to 20 minutes through wp.newPost under the owner's own account. All switches are on by default.
+- On Apache the "Turn off XML-RPC" switch also denies xmlrpc.php in the site's .htaccess, in a "Block xmlrpc.php" marker section (Apache 2.4 and 2.2 rules) shared with other themes that write the same block, so the requests never reach PHP. The section is checked at most hourly in the admin and repaired if missing, rewritten when the options are saved or the theme is activated, and removed when the switch is off or the theme is switched away. The Security tab says when .htaccess cannot be written. There is no separate switch.
+- A Security tab under Appearance, Theme Options (`inc/security.php`, `inc/security-detector.php`, `assets/js/security.js`, `assets/css/security.css`), built from the access logs of an October 2026 attack on a WordPress site: XML-RPC password guessing from 701 rotating addresses under forged "Jetpack by WordPress.com" user agents, a correct password found, then a casino spam post every 18 to 20 minutes through wp.newPost under the owner's own account. All switches are on by default.
   - XML-RPC off: xmlrpc.php answers 403, and requests are counted per day (and those posing as Jetpack), never logged one by one.
   - Application passwords off.
   - REST writes made while logged in must come from a browser session with a valid `wp_rest` nonce. Anonymous requests are unchanged, so the contact form (admin-post.php), voting (`bestofislam/v1/vote`, sent with its nonce), the block editor and Rank Math work as before.
@@ -506,6 +527,11 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 - Security counters now add one small tally row per event and day with a single query, folded daily, instead of rewriting the whole counts option on every blocked XML-RPC request.
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` stays at 13.
+
+## [1.86.2] - 2026-11-01
+
+### Changed
+- Images, batch 6. Ten articles gain a third in-text image: prophet-died-poisoning, instruments-islamic-world, moon-craters, indonesia, dome-inscriptions, hajj-rites-explained, raids-badr-and-the-conquest-of-mecca, paul-and-the-law, quranic-stories-and-history and fastest-growing-religion. Every in-text image of these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates. All new pictures are Pexels photographs, because Wikimedia Commons was refusing requests; the captions name a place only where the source does, and say so where the photograph is of somewhere else (Nizwa Fort in Oman for the Khaybar article, the drum tiles of the Dome of the Rock, a Genesis page for the Paul article). No picture shows a prophet.
 
 ## [1.86.1] - 2026-11-01
 
@@ -569,6 +595,21 @@ Existing sites receive the new article, the images and the excerpts through `boi
 
 - **Images, batch 2 of 6: ten more articles gain photographs and captions.** seven-libraries, verses-read-differently and women-in-the-prophets-life (+2 each); apes-and-pigs-and-the-jews, apostasy-in-islam, arabic-words-science, companions-who-started-with-nothing, crucifixion-quran, crusades-5-facts and do-muslims-worship-muhammad (+1 each). Every in-text image has a caption and descriptive alt text, and each figure sits beside the entry it illustrates. Review fixes: figures moved beside the entries they illustrate (the city gate in apes-and-pigs-and-the-jews, the Persian ruins in companions-who-started-with-nothing), the crusades article no longer shows the same castle twice, and `bin/fetch-stock-images.py` no longer prints a Commons artist name twice (fixed in five existing entries). One image in seven-libraries is a page of the Timbuktu manuscripts from the Library of Congress (public domain, via Wikimedia Commons).
 
+## [1.79.2] - 2026-11-01
+
+### Fixed
+- The featured images of deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse are the Wikimedia Commons manuscripts again. 1.79.1 replaced them with Pexels photographs because no credit was recorded for them; they turned out to be copies of the Commons images already credited for same-god (the Walters Arabic Gospel illumination, 1684), manuscript-transmission (the Birmingham Quran manuscript) and uthman-copies (the Codex Parisino-petropolitanus), and they now carry those credits.
+
+## [1.79.1] - 2026-11-01
+
+### Fixed
+- Five articles had no featured image, because neither `inc/images.php` nor `inc/images-data.json` listed one: muhammad-false-prophet-claim, muslim-societies-backwardness-claim, deuteronomy-18-and-the-paraclete, aisha-sheep-report-stoning-and-suckling-verses and seven-ahruf-cairo-edition-stoning-verse. The last three had image files on disk with no credit or source recorded anywhere, so those files were replaced. All five have credited Pexels images (Wikimedia Commons was refusing requests).
+- muhammad-false-prophet-claim and muslim-societies-backwardness-claim also had no in-text images; each now has two, with figure blocks in entries 2 and 4.
+- Three articles were missing from the reading order (D33): muhammad-false-prophet-claim is placed in "The Prophet and the hard questions", and islamisation-of-the-west and muslim-societies-backwardness-claim in "The Muslim world today".
+- Three excerpts were over the 160-character meta description limit in `docs/SEO.md` (167, 178 and 190 characters); they are rewritten to 124 to 129.
+
+Existing sites pick up the images and excerpts through `boi_migrate_seed()` and the image attachment pass on this version change.
+
 ## [1.79.0] - 2026-10-31
 
 ### Changed
@@ -607,13 +648,13 @@ Existing sites receive the new article, the images and the excerpts through `boi
 
 ### Changed
 
-- The Islamic dilemma article (islamic-dilemma) calls the two parts of the argument its two claims, the term the sister sites use: "each claim is meant to be fatal on its own", "Two claims, no exit" and "no first claim".
+- The Islamic dilemma article (islamic-dilemma) calls the two parts of the argument its two claims: "each claim is meant to be fatal on its own", "Two claims, no exit" and "no first claim".
 - The fate and free will article (fate-and-free-will) puts the Euthyphro question as a choice between two answers: the Muʿtazila took the second answer, al-Ashʿarī the first, and al-Māturīdī picked neither.
 - The glossary entry on the adhān gives the Jewish proposal in al-Bukhārī's report as a trumpet.
 
 ### Added
 
-- `FARUQI.md`: the Faruqian core, al-tawḥīd as al-Fārūqī set it out in *Al Tawhid: Its Implications for Thought and Life*, which every site in the network rests on. `CLAUDE.md` points contributors to it first. Both stay out of the release archive.
+- `FARUQI.md`: the Faruqian core, al-tawḥīd as al-Fārūqī set it out in *Al Tawhid: Its Implications for Thought and Life*, which the site rests on. `CLAUDE.md` points contributors to it first. Both stay out of the release archive.
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited; `BOI_GLOSSARY_VERSION` rises to 13 for the adhān entry.
 
@@ -638,7 +679,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Changed
 
-- The Islamic dilemma article (islamic-dilemma) is expanded for the network brief, keeping the same slug and URL. It now has a fair statement of the argument (5:47, 5:68, 10:94, 3:3, 5:48), and the five entries draw on Shamela-checked sources: Ibn Kathir on 3:3, 5:47, 5:48, 5:68 and 10:94; al-Tabari on 4:46; Ibn Taymiyya, al-Jawab al-Sahih 2/407 and 3/425; and Ibn Hazm, al-Fisal 2/2. Note 5 is corrected. The "no one can remove a word" gloss sits in a chapter heading of Kitab al-Tawhid, and Ibn Hajar (Fath 13/523) found no sound chain for it to Ibn Abbas. Bukhari 7363, where Ibn Abbas says the People of the Book altered the book, is now cited for what it says. A rounded "The Islamic dilemma across the network" box (`.boi-network`, in article.css) links the six sister pieces. The excerpt and the first image's alt text now name the focus keyword. Existing sites receive the new body through `boi_migrate_seed` on the 1.76.2 update, but only where the article is still as the theme wrote it.
+- The Islamic dilemma article (islamic-dilemma) is expanded for the owner's brief, keeping the same slug and URL. It now has a fair statement of the argument (5:47, 5:68, 10:94, 3:3, 5:48), and the five entries draw on Shamela-checked sources: Ibn Kathir on 3:3, 5:47, 5:48, 5:68 and 10:94; al-Tabari on 4:46; Ibn Taymiyya, al-Jawab al-Sahih 2/407 and 3/425; and Ibn Hazm, al-Fisal 2/2. Note 5 is corrected. The "no one can remove a word" gloss sits in a chapter heading of Kitab al-Tawhid, and Ibn Hajar (Fath 13/523) found no sound chain for it to Ibn Abbas. Bukhari 7363, where Ibn Abbas says the People of the Book altered the book, is now cited for what it says. A rounded box (`.boi-network`, in article.css) links six related pieces on other sites. The excerpt and the first image's alt text now name the focus keyword. Existing sites receive the new body through `boi_migrate_seed` on the 1.76.2 update, but only where the article is still as the theme wrote it.
 
 ### Fixed
 
@@ -656,7 +697,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Changed
 
-- **The settings screen is called Theme Options** (Appearance, Theme Options), as in the other themes of the network; its address (`themes.php?page=boi-settings`) and its tabs are unchanged. Contextual Links keeps its own screen.
+- **The settings screen is called Theme Options** (Appearance, Theme Options); its address (`themes.php?page=boi-settings`) and its tabs are unchanged. Contextual Links keeps its own screen.
 - **The Quranic face is served as a woff2** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.woff2`, 107 KB) in place of the original TTF (298 KB, removed). The owner chose on 2026-10-26 to serve a WOFF2 conversion of the KFGQPC HAFS Uthmanic Script (107 KB, from 298 KB), accepting that the KFGQPC licence forbids modifying the font. The conversion is lossless for glyphs, cmap and OpenType layout; the digital signature (DSIG) is dropped. Recorded in SSOT D11.
 - **A Glossary entry's Read more list shows at most six articles** (filter `boi_glossary_read_more_max`), in the entry's own order, and its structured data lists the same six. Al Faruqi's entry listed all thirty articles that cite him; its list now runs from the articles that cite him most (Islamic art, jizya, the five pillars, Hajj, Schacht on isnads, war) to the fewest. Glossary data version 12, so unedited entry pages are rewritten on the next sync; an entry an editor changed keeps its content and still shows at most six.
 
@@ -688,7 +729,7 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Changed
 
-- **Quranic verses set in KFGQPC HAFS Uthmanic Script, shipped as the original TTF** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf`, version 2.2), with its licence in `kfgqpc-hafs-uthmanic-script-LICENSE.txt`. The face is applied through a new `--boi-font-quran` token to `.boi-script-quran` and to Glossary entries with a `quran_ref`, and to nothing else: hadith, epithets, names and other Arabic keep Noto Naskh Arabic. The same font now sets Quranic verses in all seven themes of the network.
+- **Quranic verses set in KFGQPC HAFS Uthmanic Script, shipped as the original TTF** (`assets/fonts/scripts/kfgqpc-hafs-uthmanic-script.ttf`, version 2.2), with its licence in `kfgqpc-hafs-uthmanic-script-LICENSE.txt`. The face is applied through a new `--boi-font-quran` token to `.boi-script-quran` and to Glossary entries with a `quran_ref`, and to nothing else: hadith, epithets, names and other Arabic keep Noto Naskh Arabic.
 - **The Glossary index sets a Quranic entry's Arabic in the Uthmanic face** (`.boi-glossary__ar--quran`), as its own page already did. The index reads `quran_ref` from the entry's data, so no stored page needs updating.
 - **A Quranic Glossary entry's script line is taller** (line height 2) and drops the faux medium weight, so the small high marks and the end-of-verse sign have room.
 
@@ -701,15 +742,20 @@ Article content reaches existing sites through `boi_migrate_seed()` on this vers
 
 ### Added
 
-- **Contextual links to articles here and to inner pages on the sister sites.** In the running text of an article or page, the first mention of a known phrase links to the article on this site, or the inner page on abrahamic-religions.com, injil.help, apostleofdoom.org, compelling-evidence.com, murtadd.org or lailatulqadar.guide, that treats it. The phrases come from `inc/data/network-links.json`, a shared map kept identical in all seven themes (90 entries for this site, 314 for the sister sites). At most four links to this site and three to the sister sites on a page, one a paragraph, never in a heading, quotation, caption, note, footnote mark or existing link, and never to the page itself. The Notes list under an article is left alone.
-- **Contextual Links settings:** the Rules tab gains separate switches and caps for links to this site and to the sister sites, and a list of pages that never receive links; the Phrases tab now accepts `phrase | /path/` for this site; the six sister sites are always approved on the Domains tab. Settings saved by an earlier version carry over: the old switch and cap apply to the sister sites.
+- Contextual links to articles here and to inner pages on other sites. In the running text of an article or page, the first mention of a known phrase links to the article on this site, or the inner page on abrahamic-religions.com, injil.help, apostleofdoom.org, compelling-evidence.com, murtadd.org or lailatulqadar.guide, that treats it. The phrases come from `inc/data/network-links.json`, a shared phrase map (90 entries for this site, 314 for the other sites). At most four links to this site and three to the other sites on a page, one a paragraph, never in a heading, quotation, caption, note, footnote mark or existing link, and never to the page itself. The Notes list under an article is left alone.
+- Contextual Links settings: the Rules tab gains separate switches and caps for links to this site and to the other sites, and a list of pages that never receive links; the Phrases tab now accepts `phrase | /path/` for this site; the six linked sites are always approved on the Domains tab. Settings saved by an earlier version carry over: the old switch and cap apply to the other sites.
 - **Protected names:** a phrase that is part of a longer name meaning something else is not linked; "Ismail al Faruqi" no longer links "Ismail" to the page on the prophet. Filter `boi_cl_guards`.
 
 ### Changed
 
 - **Contextual links run before the Glossary links** (22, Glossary at 24), so an article link takes the words first. A later Glossary link on the same words is taken back to plain text, so one phrase never leads to two places in one article. Pages now receive contextual links as well as articles (filter `boi_cl_post_types`).
 
-- **Ten articles cite al Faruqi's *Essential Writings* (2021) directly:** jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. Four further articles cite his *Christian Ethics* (1967), checked against the page images because the PDF's text layer is poor OCR: morality-without-god (pp. 22 to 23), quranic-ethics (pp. 252 to 253), shared-prophets (pp. 193 to 194) and paul-and-the-law (p. 81, given as a dissenting reading). In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
+## [1.74.0] - 2026-10-23
+
+### Changed
+- Ten articles cite al Faruqi's *Essential Writings* (2021) directly: jizya, jesus-not-god, where-is-the-injil, quran-on-christians, islamic-art-and-the-one-god, shared-prophets, same-god, islam-religion-of-peace, war-and-killing-in-islam and medina-jewish-tribes-and-qurayza. Each quotation is checked against the book's printed page, and each addition says where the view is his own or differs from the sources. Four further articles cite his *Christian Ethics* (1967), checked against the page images because the PDF's text layer is poor OCR: morality-without-god (pp. 22 to 23), quranic-ethics (pp. 252 to 253), shared-prophets (pp. 193 to 194) and paul-and-the-law (p. 81, given as a dissenting reading). In jizya: Four additions: the charter of Aelia quoted from pp. 47 to 48, including its clause on Jews; the refund of the jizya to a non-Muslim who serves, p. 133; his comparison with zakah, p. 61; and his account of falling jizya revenue after conversions, p. 166. Notes 16 to 19.
+
+The citations reach existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
 
 ## [1.73.0] - 2026-10-23
 

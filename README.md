@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.100.12. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 151 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 152 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -76,9 +76,9 @@ Under Appearance, Theme Options, in eight tabs. The screen is a set of cards und
 
 Under Appearance, Contextual Links, in three tabs:
 
-- **Domains:** the sister sites (always approved) and any other domain links may lead to.
+- **Domains:** the linked sites (always approved) and any other domain links may lead to.
 - **Phrases:** site-wide `phrase | /path/` or `phrase | https://…` lines, which win over the shared map in `inc/data/network-links.json`. Each article also has its own list in the Contextual links box.
-- **Rules:** switches and caps for links to this site (four a page) and to the sister sites (three a page), a new-tab choice for links to other sites, and the pages that never receive links.
+- **Rules:** switches and caps for links to this site (four a page) and to the other sites (three a page), a new-tab choice for links to other sites, and the pages that never receive links.
 
 ## Requirements
 
@@ -92,7 +92,7 @@ Under Appearance, Contextual Links, in three tabs:
 2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
    The working notes for coding agents, `.claude/CLAUDE.md` and `.claude/FARUQI.md`, stay out of the zip and out of `git archive`. On a server, the theme deletes `.claude` with the other development files on activation, but never in a folder that holds `.git`.
-3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 151 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
+3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 152 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
 4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
@@ -107,42 +107,206 @@ Insert the **Listicle starter** pattern, or add a `Listicle` block and fill its 
 
 ```
 bestofislam/
-├── style.css            Theme header
-├── functions.php        Bootstrap and asset loading
+├── style.css            Theme header (Version)
+├── functions.php        BOI_VERSION, the file list, the upload guard, asset loading
 ├── theme.json           Palette, typography, spacing and listicle tokens
 ├── screenshot.png       1200 by 900 theme screenshot
-├── inc/                 One file per concern:
-│                        appearance, blocks, contact, contextual-links,
-│                        features, front, glossary-links, icons,
-│                        images, login, login-screen, questions, reading,
-│                        reflections, schema, schema-graph, search,
-│                        reading-progress, search-permalinks,
-│                        sections, security, security-detector, seo,
-│                        settings, setup, structured-data,
-│                        taxonomy, unlist, voting
-├── inc/data/            network-links.json, the shared map of phrases to
-│                        inner pages, identical in all seven themes;
-│                        seed.json (topics, categories, tags, articles, pages),
-│                        questions.json and image-credits.json. Seed data
-│                        is JSON, read and never executed
-├── blocks/              Block definitions and editor scripts
-├── templates/           404, archive, front-page, home, page, search,
-│                        single, single-listicle, tag, taxonomy-listicle-topic
+├── readme.txt           For site owners (served: the Theme Options footer links it)
+├── CHANGELOG.md         History (served: the Theme Options footer links it)
+├── README.md            This file (refused by .htaccess)
+├── .htaccess            Refuses dot entries, theme PHP, the dev folders and Markdown
+├── .gitattributes       export-ignore list for the release zip
+├── inc/                 One file per concern, loaded in this order by functions.php:
+│                        util, taxonomy, blocks, schema, voting, settings,
+│                        setup, appearance, reflections, search, sections,
+│                        seo, icons, features, contact, front, inline-images,
+│                        images, questions, reading, structured-data,
+│                        schema-graph, rank-math, unlist, search-permalinks,
+│                        reading-progress, login, login-screen, favicon,
+│                        glossary, glossary-links, renamed-slugs, error-pages,
+│                        error-page-static, lock, housekeeping,
+│                        security-headers, security. Loaded by those:
+│                        maintenance (first, the upload guard),
+│                        contextual-links, glossary-data, security-detector
+├── inc/data/            network-links.json (the shared phrase map),
+│                        seed.json (topics, categories, tags, 152 articles,
+│                        8 pages), questions.json (45), image-credits.json,
+│                        schema-entities.json. Read, never executed
+├── inc/glossary-data/   a.json to z.json: the 797 Glossary entries
+├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
+├── content/             The 152 seeded articles as block markup, one JSON file each
+├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
+├── templates/           404, archive, front-page, home, page, page-glossary,
+│                        search, single, single-listicle, tag, taxonomy-listicle-topic
 ├── parts/               header, footer
 ├── patterns/            Listicle starter, Brand lockup, Follow icons
-├── styles/              Style variations
-├── content/             The 36 seeded articles as block markup
-├── assets/css/          admin-settings, editor-listicle, editor-typography,
-│                        footer, front, listicle, login, navigation, print,
-│                        reading-progress, scripts, search, theme-toggle,
-│                        typography, voting
-├── assets/js/           admin-settings, questions, reading-progress,
-│                        theme-toggle, unlist-admin, voting
-├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office, EB Garamond; script fonts guide
+├── styles/              Best of Islam, Best of Islam Night
+├── assets/css/          One file per concern (front, listicle, glossary, security ...)
+├── assets/js/           One file per concern (theme-toggle, voting, questions ...)
+├── assets/fonts/        Platypi, Vollkorn, Ysabeau Office, EB Garamond; scripts/ with its README
 ├── assets/icons/        45 SVG icons and their licence
-├── assets/images/       mark.svg, mark-solid.svg, logo-512.png, and
-│                        featured/ and inline/ with the article images, in AVIF (run bin/convert-images.py before a release)
-└── docs/                SSOT, UPGRADING, CREDITS
+├── assets/images/       mark.svg, mark-solid.svg, logo-512.png; featured/ and inline/ (AVIF)
+├── errors/              Static 403, 500, 502, 503, 504 pages for a site at the domain root
+├── bin/                 build-error-pages.php, build-related.py, check-content.py,
+│                        convert-images.py, fetch-commons-images.py,
+│                        fetch-stock-images.py, make-original-graphics.py,
+│                        install-hooks.sh (own .htaccess; export-ignored)
+├── tests/               Command-line self-tests (own .htaccess; export-ignored)
+├── docs/                SSOT, UPGRADING, CREDITS, SEO, POLEMICS, CONTENT-REVIEW,
+│                        SHAMELA-REVIEW (own .htaccess)
+├── .github/workflows/   checks.yml, images.yml, package.yml
+└── .claude/             Notes for contributors (export-ignored, refused, removed on a live site)
 ```
 
 No build step is required. Editor scripts use `wp.element.createElement` directly, without JSX.
+
+## Boot sequence
+
+1. `functions.php` defines `BOI_VERSION`, `BOI_DIR` and `BOI_URI`, then hands the full file list (`$boi_need`) to `inc/maintenance.php`.
+2. If any file is missing, nothing else loads. Visitors get a 503 page with `Retry-After: 120` and noindex; the admin stays up with a notice naming the missing files. The files load inside `try`, so a half-written file (a `ParseError`) gives the same page. The log gets one line per problem every ten minutes. The login screen, AJAX, cron and the command line go on without the page.
+3. The `inc/` files load in the order shown above. Each adds its own hooks.
+4. On `init` (priority 99) the first request of a new version runs the dev-file clean-up and the `.htaccess` sync, each under the lock in `inc/lock.php`.
+
+## Hooks and filters
+
+The theme's own filters:
+
+| Filter | Effect |
+|---|---|
+| `boi_author_same_as` | Profile addresses in the author's `sameAs` |
+| `boi_cl_guards`, `boi_cl_post_types` | Longer names never linked, so a shorter phrase inside them is not taken ("Ismail al Faruqi"); the post types that get contextual links |
+| `boi_contextual_links_enabled`, `boi_contextual_links_map` | Switch contextual links off for one post; change the phrase map |
+| `boi_deferred_style_handles` | Styles loaded after first paint |
+| `boi_dev_paths` | The paths the live-server clean-up removes |
+| `boi_front_title_focus` | The front page title's focus phrase (default "Objections to Islam, answered") |
+| `boi_gl_always`, `boi_gl_max`, `boi_gl_stoplist`, `boi_glossary_read_more_max` | Glossary: entries linked at first mention whatever the budget, the link budget, words never linked, and the Read more count on an entry (6) |
+| `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
+| `boi_renamed_paths` | Old addresses and the articles they redirect to |
+| `boi_schema_nodes` | The nodes of the page graph |
+| `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
+| `boi_security_headers` | The front-end security headers |
+| `boi_title_max_length` | The title tag limit |
+| `boi_unlist_enabled`, `unlist_posts_enabled` | Switch the unlist feature off |
+
+`grep -n "add_action\|add_filter" inc/*.php` lists every hook the theme uses. The ones a host meets most:
+
+| Hook | Callback | Purpose |
+|---|---|---|
+| `init` (99) | `boi_remove_dev_files_front`, `boi_sec_sync_htaccess_once` | Clean-up and `.htaccess` sync on the first request of a version |
+| `admin_init` | `boi_remove_dev_files`, `boi_sec_sync_htaccess` | The same from the admin, the sync at most hourly |
+| `switch_theme` | `boi_sec_remove_htaccess`, `boi_error_remove` | Takes the `.htaccess` sections and the theme's drop-ins out |
+| `send_headers` | `boi_send_security_headers` | Security headers |
+
+## Constants
+
+Set these in `wp-config.php`. Each is optional.
+
+| Constant | Effect |
+|---|---|
+| `BOI_SECURITY_LOCK` | `false` lifts the three Security locks (XML-RPC, application passwords, REST writes) without changing the options |
+| `BOI_HIDE_LOGIN` | `false` switches the private login address off |
+| `BOI_KEEP_DEV_FILES` | `true` keeps the development files on a live server. Wins over `BOI_REMOVE_GIT_DIR` |
+| `BOI_REMOVE_GIT_DIR` | `true` forces the clean-up, `.git` included, even in a development environment; `false` keeps `.git` on production while the rest goes |
+| `BOI_BLOCK_DIRECT_FILES` | `false` leaves the "Best of Islam: block direct file access" section out of `.htaccess` |
+| `BOI_SPAM_THRESHOLD` | Spam score at which a post is held (default 3) |
+| `WP_ENVIRONMENT_TYPE` | `local` or `development` keeps the development files |
+
+Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (14), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
+
+## Security
+
+- Upload guard: see the boot sequence. A theme caught half uploaded answers 503, never a fatal error.
+- REST users: visitors who are not logged in get no `/wp/v2/users` routes (404), and `?author=N` gives them a 404 (`boi_sec_hide_user_routes()`, `boi_sec_block_author_query()`).
+- XML-RPC is off while "Turn off XML-RPC" is on (the default), and a correct password sent through it is refused even when it is back on.
+- The theme folder's `.htaccess` refuses every dot entry but `.well-known`, every theme PHP file, the `tests`, `bin`, `docs` and `dist` folders, and every Markdown file but `CHANGELOG.md`. It works with mod_alias, with mod_rewrite (`RewriteOptions Inherit`), with neither (`FilesMatch`), and on Apache 2.4 with an `<If>` for dot folders. `tests/`, `bin/` and `docs/` carry their own deny file.
+- The live-server clean-up removes the paths in `boi_dev_paths()` (`.git`, `.github`, `.githooks`, `.claude`, `.vscode`, `.idea`, `.gitattributes`, `.gitignore`, `.editorconfig`, `.DS_Store`, `dist`, `tests`, `bin`, `docs`) once per version, on activation, on the first admin page and on the first front-end request, under a lock it renews while it works.
+
+### Root .htaccess sections
+
+On Apache the theme keeps two sections in the site's `.htaccess`, through `insert_with_markers()`, and removes both on a theme switch. The Security tab says when the file cannot be written.
+
+```
+# BEGIN Block xmlrpc.php
+<Files xmlrpc.php>
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order Deny,Allow
+Deny from all
+</IfModule>
+</Files>
+# END Block xmlrpc.php
+```
+
+The xmlrpc section follows the "Turn off XML-RPC" switch. Other themes that write the same block use the same marker, so it is never written twice.
+
+The direct-file section, for a site at the domain root with WordPress in the same folder:
+
+```
+# BEGIN Best of Islam: block direct file access
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (^|/)\.(git|claude) - [F]
+RewriteRule ^wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) - [F]
+RewriteRule ^wp-admin/includes/.+\.php(/|$) - [F]
+RewriteRule ^(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)(/|$) - [F]
+RewriteRule ^wp-content/themes/.+\.php(/|$) - [F]
+RewriteRule ^wp-content/themes/bestofislam/(tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]
+</IfModule>
+# END Best of Islam: block direct file access
+```
+
+The rules carry the site's own folder prefixes, and add a `wp-config.php` rule for the folder above WordPress when WordPress sits in a subfolder. `BOI_BLOCK_DIRECT_FILES` false leaves the section out.
+
+### Nginx
+
+Nginx ignores `.htaccess`, so neither section is written and the theme folder's own file does nothing. The PHP side still works: the locks, the upload guard, the clean-up and the security headers. Put the equivalent rules in the server block, ahead of the `location ~ \.php$` block, since Nginx uses the first regular expression that matches:
+
+```
+location ~ /\.(?!well-known/) { deny all; }
+location = /xmlrpc.php { deny all; }
+location ~ ^/wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php { deny all; }
+location ~ ^/wp-admin/includes/.+\.php { deny all; }
+location ~ ^/(wp-config|wp-settings|wp-config-sample)\.php { deny all; }
+location ~ ^/(wp-admin/install\.php|readme\.html|license\.txt) { deny all; }
+location ~ ^/wp-content/themes/.+\.php { deny all; }
+location ~ ^/wp-content/themes/bestofislam/(tests|bin|docs|dist)/ { deny all; }
+location ~* ^/wp-content/themes/bestofislam/(?!changelog\.md$).+\.md$ { deny all; }
+error_page 403 /wp-content/bestofislam-errors/403.html;
+error_page 500 /wp-content/bestofislam-errors/500.html;
+error_page 502 /wp-content/bestofislam-errors/502.html;
+error_page 503 /wp-content/bestofislam-errors/503.html;
+error_page 504 /wp-content/bestofislam-errors/504.html;
+```
+
+Leave out the `xmlrpc.php` line while Jetpack is in use. Prefix the paths when WordPress lives in a subfolder.
+
+## Error pages
+
+The Errors and Server errors entries under Settings above describe the drop-ins (`maintenance.php` and `db-error.php` at 503 with `Retry-After: 300`, `php-error.php` at 500), the static pages and the per-site copies in `wp-content/bestofislam-errors/`. Build the copies for a root site with `php bin/build-error-pages.php`.
+
+## Multisite
+
+Settings, seeded content, votes and the Security records are per site. On a network:
+
+- Only the main site writes and repairs the drop-ins and the static copies, which every site shares, and the Install error pages button does nothing on a subsite. A theme switch never removes them, since another site may still use them.
+- The private login address is unavailable.
+- The lock in `inc/lock.php` lives in the main site's options table, so every site that runs the theme shares one lock, as they share the theme files and `.htaccess`.
+- A theme switch on any site removes the two root `.htaccess` sections until another site's next sync writes them back.
+
+## Build, test and release
+
+```
+for t in tests/*.php; do php "$t" || exit 1; done   # every self-test; WordPress is stubbed
+python3 bin/check-content.py                         # Glossary, links, footnotes, JSON
+php bin/build-error-pages.php                        # rebuild errors/*.html
+python3 bin/build-related.py                         # rebuild inc/related-articles.json
+python3 bin/convert-images.py                        # every image to AVIF
+sh bin/install-hooks.sh                              # run the image scripts before each commit
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.100.12.zip HEAD
+```
+
+Every script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` (the release zip) on GitHub. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.
+
+Deploy through the dashboard (Upload Theme, "Replace active with uploaded") or by FTP: show hidden files, upload to a temporary folder, then rename the old folder away and the new one into place, one straight after the other. Load one admin page afterwards.

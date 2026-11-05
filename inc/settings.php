@@ -305,7 +305,7 @@ function boi_settings_tabs() {
 		'content'  => array(
 			'label' => __( 'Content', 'bestofislam' ),
 			'icon'  => 'dashicons-admin-page',
-			'usage' => __( 'Population builds the sections, the pages, the menu and the 151 seeded articles. It adds what is missing and leaves alone what is there. If a seeded article differs from this release, it is listed here, and you choose whether to replace it.', 'bestofislam' ),
+			'usage' => __( 'Population builds the sections, the pages, the menu and the 152 seeded articles. It adds what is missing and leaves alone what is there. If a seeded article differs from this release, it is listed here, and you choose whether to replace it.', 'bestofislam' ),
 		),
 		'seo'      => array(
 			'label' => __( 'Search engines', 'bestofislam' ),
