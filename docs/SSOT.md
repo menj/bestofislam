@@ -613,7 +613,8 @@ cannot, the web server refuses them. On Apache the theme keeps a second
 in the themes folder,
 for `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`,
 `readme.html` and `license.txt`, for any path segment that starts with `.git`
-or `.claude`, and for the theme's `tests`, `bin` and `docs` folders. The
+or `.claude`, and for the theme's `tests`, `bin`, `docs` and `dist` folders and
+editor files. The
 rules use mod_rewrite inside `<IfModule mod_rewrite.c>`, carry the site's own
 folder prefixes, and leave the admin, `admin-ajax.php`, `wp-cron.php`, the
 login page, the REST API and the editor's assets alone.

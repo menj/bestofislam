@@ -183,7 +183,9 @@ function boi_sec_files_htaccess_lines( $home = '' ) {
 		$rules[] = 'RewriteRule ^' . $themes . '.+\.php(/|$) - [F]';
 	}
 	if ( null !== $theme && '' !== $theme ) {
-		$rules[] = 'RewriteRule ^' . $theme . '(tests|bin|docs)(/|$) - [F]';
+		// Every folder and file in boi_dev_paths() that the .git rule above
+		// does not already cover, for a server where PHP cannot delete them.
+		$rules[] = 'RewriteRule ^' . $theme . '(tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]';
 	}
 
 	return array_merge( array( '<IfModule mod_rewrite.c>', 'RewriteEngine On' ), $rules, array( '</IfModule>' ) );
@@ -273,14 +275,17 @@ add_action( 'admin_init', 'boi_sec_sync_htaccess' );
  * first request after the new files arrive.
  */
 function boi_sec_sync_htaccess_once() {
-	if ( get_option( 'boi_sec_htaccess_version' ) === BOI_VERSION || get_transient( 'boi_sec_htaccess_lock' ) ) {
+	// The key carries the BOI_BLOCK_DIRECT_FILES choice, so changing that
+	// constant takes effect on the next request too.
+	$key = BOI_VERSION . ( boi_sec_files_block_on() ? '' : '-files-off' );
+	if ( get_option( 'boi_sec_htaccess_version' ) === $key || get_transient( 'boi_sec_htaccess_lock' ) ) {
 		return;
 	}
 	set_transient( 'boi_sec_htaccess_lock', 1, MINUTE_IN_SECONDS );
 	// Recorded only once the sections are written, or where no .htaccess
 	// applies (not Apache); a failed write is tried again a minute later.
 	if ( boi_sec_sync_htaccess( true ) || empty( $GLOBALS['is_apache'] ) ) {
-		update_option( 'boi_sec_htaccess_version', BOI_VERSION, false );
+		update_option( 'boi_sec_htaccess_version', $key, false );
 	}
 }
 add_action( 'init', 'boi_sec_sync_htaccess_once', 99 );
