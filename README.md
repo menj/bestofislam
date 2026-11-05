@@ -62,14 +62,15 @@ Under Appearance, Theme Options, in eight tabs. The screen is a set of cards und
 - **Search engines:** meta descriptions, verification codes, and readable search addresses with their base word.
 - **Access:** the custom login address, the security headers, and the list of unlisted items.
 - **Security:** XML-RPC, application passwords and REST writes from outside the browser switched off, the gambling spam gate, 410 Gone for removed spam, the spam scan and clean-up tools, buttons that revoke every application password and end every session, and the attack reports and security log. Add `define( 'BOI_SECURITY_LOCK', false );` to `wp-config.php` to lift the three locks in an emergency.
-- **Errors:** the branded maintenance, database and PHP error pages, email alerts and the minutes between them. The tab shows each file in `wp-content` as installed, outdated, absent or another file left alone, and **Install error pages** writes them at once. `maintenance.php` and `db-error.php` answer 503 with `Retry-After`; `php-error.php` answers 500. A file without the marker `Best of Islam error drop-in` is never touched.
-- **Server errors:** static 403, 500, 502 and 503 pages in `errors/`, built by `php bin/build-error-pages.php` from the drop-in template. Add to `.htaccess`, with the folder name of the theme:
+- **Errors:** the branded maintenance, database and PHP error pages, email alerts and the minutes between them. The tab shows each file in `wp-content` as installed, outdated, absent, left behind by another theme or another file left alone, and **Install error pages** writes them at once. A copy another theme left behind, marked "safe to delete", is replaced; the theme's own files are removed when another theme is activated. `maintenance.php` and `db-error.php` answer 503 with `Retry-After`; `php-error.php` answers 500. A file without the marker `Best of Islam error drop-in` is never touched.
+- **Server errors:** static 403, 500, 502, 503 and 504 pages in `errors/`, built by `php bin/build-error-pages.php` from the drop-in template. Add to `.htaccess`, with the folder name of the theme:
 
   ```
   ErrorDocument 403 /wp-content/themes/bestofislam/errors/403.html
   ErrorDocument 500 /wp-content/themes/bestofislam/errors/500.html
   ErrorDocument 502 /wp-content/themes/bestofislam/errors/502.html
   ErrorDocument 503 /wp-content/themes/bestofislam/errors/503.html
+  ErrorDocument 504 /wp-content/themes/bestofislam/errors/504.html
   ```
 
 Under Appearance, Contextual Links, in three tabs:

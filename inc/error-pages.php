@@ -7,7 +7,9 @@
  * and php-error.php (fatal PHP error). They run before any theme loads, so the
  * theme generates self-contained copies, with the stylesheet inlined from
  * assets/error-pages/, and writes them to wp-content. Only files carrying the
- * theme's marker are ever replaced or removed.
+ * theme's marker are ever removed; a copy another theme left behind, marked
+ * "Written by the ... theme; safe to delete", is replaced on install, and a
+ * file with no such mark is never touched.
  *
  * Alerts are emailed to the configured address, rate limited by a stamp file
  * so a failing site cannot flood an inbox. The triggers follow the site's own
@@ -270,10 +272,26 @@ function boi_error_is_ours( $path ) {
 }
 
 /**
+ * Whether a file is a drop-in another theme left behind: it carries the
+ * "Written by the ... theme; safe to delete" mark and is not ours.
+ *
+ * @param string $path File path.
+ * @return bool
+ */
+function boi_error_is_other_theme( $path ) {
+	if ( ! is_readable( $path ) || boi_error_is_ours( $path ) ) {
+		return false;
+	}
+	$head = (string) file_get_contents( $path, false, null, 0, 400 ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	return 1 === preg_match( '/Written by the .{1,60} theme; safe to delete/', $head );
+}
+
+/**
  * Status of each drop-in for the settings screen.
  *
  * @return array kind => string state: ours (current), outdated (ours, from
- *               another version or other settings), foreign, absent.
+ *               another version or other settings), theme (another theme's
+ *               leftover, replaced on install), foreign, absent.
  */
 function boi_error_state() {
 	$out = array();
@@ -281,6 +299,8 @@ function boi_error_state() {
 		$path = WP_CONTENT_DIR . '/' . $def['file'];
 		if ( ! file_exists( $path ) ) {
 			$out[ $kind ] = 'absent';
+		} elseif ( boi_error_is_other_theme( $path ) ) {
+			$out[ $kind ] = 'theme';
 		} elseif ( ! boi_error_is_ours( $path ) ) {
 			$out[ $kind ] = 'foreign';
 		} else {
@@ -322,7 +342,7 @@ add_action( 'admin_post_boi_install_error_pages', 'boi_error_handle_install' );
 function boi_error_htaccess_snippet() {
 	$base  = untrailingslashit( (string) wp_parse_url( get_stylesheet_directory_uri(), PHP_URL_PATH ) ) . '/errors/';
 	$lines = array( '# Best of Islam: pages for the errors the web server answers before WordPress runs' );
-	foreach ( array( 403, 500, 502, 503 ) as $code ) {
+	foreach ( array( 403, 500, 502, 503, 504 ) as $code ) {
 		$lines[] = 'ErrorDocument ' . $code . ' ' . $base . $code . '.html';
 	}
 	return implode( "\n", $lines );
@@ -343,8 +363,9 @@ function boi_error_sync_failures( $set = null ) {
 }
 
 /**
- * Writes or removes the drop-ins to match the settings. Files that are not
- * ours are never touched.
+ * Writes or removes the drop-ins to match the settings. Another theme's
+ * marked leftover is replaced; a file with no theme's mark is never touched,
+ * and only our own files are removed.
  *
  * @return bool True when every file it meant to write was written.
  */
@@ -360,7 +381,7 @@ function boi_error_sync() {
 		// while either the pages or the alerts are on.
 		$enabled = ! empty( $opts['errors_pages'] ) || ( $def['alert'] && ! empty( $opts['errors_alerts'] ) );
 
-		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) ) {
+		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) && ! ( $enabled && boi_error_is_other_theme( $path ) ) ) {
 			continue;
 		}
 
@@ -408,7 +429,8 @@ function boi_error_maybe_sync() {
 		return;
 	}
 
-	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! in_array( 'absent', boi_error_state(), true ) ) {
+	$state = boi_error_state();
+	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! in_array( 'absent', $state, true ) && ! in_array( 'theme', $state, true ) ) {
 		return;
 	}
 
@@ -418,6 +440,26 @@ add_action( 'admin_init', 'boi_error_maybe_sync' );
 add_action( 'update_option_' . BOI_OPTION_KEY, 'boi_error_sync' );
 add_action( 'update_option_admin_email', 'boi_error_sync' );
 add_action( 'after_switch_theme', 'boi_error_sync' );
+
+/**
+ * Removes this theme's own drop-ins when another theme is activated. Only
+ * files carrying the theme's marker are deleted.
+ *
+ * @return void
+ */
+function boi_error_remove() {
+	if ( is_multisite() && ! is_main_site() ) {
+		return;
+	}
+	foreach ( boi_error_kinds() as $def ) {
+		$path = WP_CONTENT_DIR . '/' . $def['file'];
+		if ( boi_error_is_ours( $path ) ) {
+			wp_delete_file( $path );
+		}
+	}
+	delete_option( 'boi_error_dropins_fingerprint' );
+}
+add_action( 'switch_theme', 'boi_error_remove' );
 
 /**
  * Sends an alert from a running site, rate limited.
@@ -532,6 +574,7 @@ function boi_render_errors_tab( $opts ) {
 	$label = array(
 		'ours'     => __( 'Installed, current', 'bestofislam' ),
 		'outdated' => __( 'Installed by the theme, outdated', 'bestofislam' ),
+		'theme'    => __( 'Left behind by another theme; replaced on the next install', 'bestofislam' ),
 		'foreign' => __( 'Another file is present and has been left untouched', 'bestofislam' ),
 		'absent'  => __( 'Not installed', 'bestofislam' ),
 	);
@@ -581,7 +624,7 @@ function boi_render_errors_tab( $opts ) {
 	boi_opt_row_close();
 	boi_opt_row_open( __( 'Server errors', 'bestofislam' ), 'boi-errors-htaccess' );
 	echo '<p class="description">' . esc_html__( 'For the errors the web server answers before WordPress starts, static pages are in the errors folder of the theme. Add these lines to .htaccess to use them:', 'bestofislam' ) . '</p>';
-	echo '<textarea id="boi-errors-htaccess" readonly rows="5" class="large-text code">' . esc_textarea( boi_error_htaccess_snippet() ) . '</textarea>';
+	echo '<textarea id="boi-errors-htaccess" readonly rows="6" class="large-text code">' . esc_textarea( boi_error_htaccess_snippet() ) . '</textarea>';
 	boi_opt_row_close();
 	boi_opt_card_close();
 
