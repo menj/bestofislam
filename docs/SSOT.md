@@ -596,7 +596,8 @@ agent notes serve no page. On a production server `boi_remove_dev_files()`
 (`inc/housekeeping.php`) deletes the paths in `boi_dev_paths()`: `.git`,
 `.github`, `.githooks`, `.claude`, `tests`, `bin`, `docs`, `dist` and the
 editor files. It runs on activation and once per theme version, even when the
-folder is a git working tree.
+folder is a git working tree, and on the first front-end request of a new
+version, since an FTP update fires no switch hook.
 
 The files stay only where they are worked on: `wp_get_environment_type()` is
 `local` or `development`, or `BOI_KEEP_DEV_FILES` is true in `wp-config.php`.

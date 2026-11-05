@@ -141,7 +141,8 @@ function boi_sec_rewrite_prefix( $path, $home ) {
  * @return string
  */
 function boi_sec_rewrite_quote( $segment ) {
-	return preg_replace( '/[^A-Za-z0-9_\/-]/', '\\$0', $segment );
+	// '\\\\$0' is the PHP string \\$0: a literal backslash, then the match.
+	return preg_replace( '/[^A-Za-z0-9_-]/', '\\\\$0', (string) $segment );
 }
 
 /**
@@ -260,6 +261,22 @@ function boi_sec_sync_htaccess( $force = false ) {
 	update_option( 'boi_security_htaccess_files', $ok_files ? ( $want_files ? 'written' : 'off' ) : 'unavailable', false );
 }
 add_action( 'admin_init', 'boi_sec_sync_htaccess' );
+
+/**
+ * Once per theme version, on whatever request comes first: the owner
+ * updates the theme over FTP, which fires no switch hook, and the site may
+ * see no admin visit for days. The .htaccess sections are written on the
+ * first request after the new files arrive.
+ */
+function boi_sec_sync_htaccess_once() {
+	if ( get_option( 'boi_sec_htaccess_version' ) === BOI_VERSION || get_transient( 'boi_sec_htaccess_lock' ) ) {
+		return;
+	}
+	set_transient( 'boi_sec_htaccess_lock', 1, MINUTE_IN_SECONDS );
+	boi_sec_sync_htaccess( true );
+	update_option( 'boi_sec_htaccess_version', BOI_VERSION, false );
+}
+add_action( 'init', 'boi_sec_sync_htaccess_once', 99 );
 add_action( 'after_switch_theme', function () { boi_sec_sync_htaccess( true ); } );
 add_action( 'update_option_' . BOI_OPTION_KEY, function () { boi_sec_sync_htaccess( true ); } );
 

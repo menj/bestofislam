@@ -106,6 +106,11 @@ foreach ( $boi_sites as $boi_label => $boi_site ) {
 	}
 }
 
+// A folder name with a regex metacharacter is quoted, so its own paths match.
+boi_check( 'wp\\.6/' === boi_sec_rewrite_prefix( '/srv/wp.6/', '/srv/' ), 'a dot in a folder name is escaped, not replaced' );
+$boi_pfx = boi_sec_rewrite_prefix( '/srv/wp.6/', '/srv/' );
+boi_check( 1 === preg_match( '#^' . $boi_pfx . 'wp-includes/.+\\.php$#', 'wp.6/wp-includes/version.php' ) && 0 === preg_match( '#^' . $boi_pfx . 'wp-includes/.+\\.php$#', 'wpx6/wp-includes/version.php' ), 'a pattern with the quoted prefix matches that folder only' );
+
 // WordPress in its own folder below the .htaccess (wp/), themes beside it.
 $GLOBALS['boi_theme_root'] = '/srv/site/wp-content/themes';
 $boi_split = boi_sec_files_htaccess_lines( '/srv/' );

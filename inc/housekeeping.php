@@ -130,3 +130,20 @@ function boi_remove_dev_files() {
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );
+
+/**
+ * The same, on the first front-end request after an FTP update: such an
+ * update fires no switch hook, and the site may see no admin visit for
+ * days. A one-minute lock keeps two requests from deleting at once.
+ *
+ * @return void
+ */
+function boi_remove_dev_files_front() {
+	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === BOI_VERSION || boi_keep_dev_files() || get_transient( 'boi_dev_files_lock' ) ) {
+		return;
+	}
+	set_transient( 'boi_dev_files_lock', 1, MINUTE_IN_SECONDS );
+	boi_remove_dev_files();
+	delete_transient( 'boi_dev_files_lock' );
+}
+add_action( 'init', 'boi_remove_dev_files_front', 99 );
