@@ -33,7 +33,7 @@ function wp_strip_all_tags( $s ) { return strip_tags( (string) $s ); }
 function get_bloginfo( $k = '' ) { return 'language' === $k ? 'en-GB' : 'Best of Islam'; }
 function home_url( $p = '' ) { return $GLOBALS['boi_home'] . $p; }
 $GLOBALS['boi_home'] = 'https://example.test';
-function content_url( $p = '' ) { return 'https://example.test/wp-content' . $p; }
+function content_url( $p = '' ) { return $GLOBALS['boi_home'] . '/wp-content' . $p; }
 function wp_mkdir_p( $d ) { return is_dir( $d ) || mkdir( $d, 0700, true ); }
 function wp_parse_url( $u, $c = -1 ) { return parse_url( $u, $c ); }
 function untrailingslashit( $s ) { return rtrim( $s, '/' ); }
@@ -46,7 +46,7 @@ function wp_generate_password() { return bin2hex( random_bytes( 4 ) ); }
 function wp_delete_file( $p ) { @unlink( $p ); }
 function delete_option( $k ) { unset( $GLOBALS['boi_o'][ $k ] ); }
 function is_multisite() { return false; }
-function boi_get_options() { return array( 'errors_pages' => 1, 'errors_alerts' => 0, 'errors_email' => '', 'errors_cooldown' => 30 ); }
+function boi_get_options() { return $GLOBALS['boi_opts'] ?? array( 'errors_pages' => 1, 'errors_alerts' => 0, 'errors_email' => '', 'errors_cooldown' => 30 ); }
 require dirname( __DIR__ ) . '/inc/error-pages.php';
 
 $boi_fail = 0;
@@ -106,7 +106,7 @@ $GLOBALS['boi_home'] = 'https://example.test/blog';
 boi_check( 'outdated' === boi_error_static_state()['bestofislam-errors/503.html'], 'a new home address makes the static copies outdated' );
 boi_error_sync();
 boi_check( false !== strpos( (string) file_get_contents( "$boi_static/503.html" ), 'href="https://example.test/blog/"' ) && false !== strpos( (string) file_get_contents( "$boi_static/503.html" ), '<html lang="en-GB">' ), 'a subfolder install gets its own home link and language' );
-boi_check( false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 503 /wp-content/bestofislam-errors/503.html' ) && false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 504 /wp-content/bestofislam-errors/504.html' ), '.htaccess lines point at the site copies' );
+boi_check( false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 503 /blog/wp-content/bestofislam-errors/503.html' ) && false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 504 /blog/wp-content/bestofislam-errors/504.html' ), '.htaccess lines point at the site copies under the subfolder' );
 file_put_contents( "$boi_static/500.html", "<p>owner's own</p>\n" );
 boi_error_sync();
 boi_check( "<p>owner's own</p>\n" === file_get_contents( "$boi_static/500.html" ), 'a static page the theme did not write is left alone' );
@@ -115,6 +115,13 @@ boi_check( ! file_exists( "$boi_tmp/maintenance.php" ) && ! file_exists( "$boi_t
 boi_check( ! file_exists( "$boi_static/503.html" ) && file_exists( "$boi_static/500.html" ), 'switching away removes the theme\'s static copies and keeps the others' );
 unlink( "$boi_static/500.html" );
 rmdir( $boi_static );
+$GLOBALS['boi_opts'] = array( 'errors_pages' => 0, 'errors_alerts' => 1, 'errors_email' => '', 'errors_cooldown' => 30 );
+boi_error_sync();
+unlink( "$boi_tmp/.boi-alert-config.php" );
+boi_error_maybe_sync();
+boi_check( ! file_exists( "$boi_tmp/.boi-alert-config.php" ) && ! is_dir( $boi_static ), 'with alerts alone, the absent static copies do not trigger a rewrite on each admin load' );
+boi_error_remove();
+unset( $GLOBALS['boi_opts'] );
 
 exec( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( dirname( __DIR__ ) . '/bin/build-error-pages.php' ) . ' --check 2>&1', $boi_o, $boi_code );
 boi_check( 0 === $boi_code, 'errors/*.html match the builder' );

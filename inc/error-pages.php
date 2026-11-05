@@ -515,7 +515,18 @@ function boi_error_maybe_sync() {
 		return;
 	}
 
-	$state = array_merge( array_values( boi_error_state() ), array_values( boi_error_static_state() ) );
+	// Only the files the settings call for count: with alerts alone,
+	// maintenance.php and the static copies stay absent, and must not trigger
+	// a rewrite on every admin load.
+	$state = array();
+	foreach ( boi_error_state() as $kind => $kind_state ) {
+		if ( ! empty( $opts['errors_pages'] ) || boi_error_kinds()[ $kind ]['alert'] ) {
+			$state[] = $kind_state;
+		}
+	}
+	if ( ! empty( $opts['errors_pages'] ) ) {
+		$state = array_merge( $state, array_values( boi_error_static_state() ) );
+	}
 	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! array_intersect( array( 'absent', 'theme', 'outdated' ), $state ) ) {
 		return;
 	}
