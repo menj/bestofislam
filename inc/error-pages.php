@@ -170,6 +170,7 @@ function boi_error_dropin_source( $kind ) {
 			'{{LINE2}}'   => esc_html( $copy['line2'] ),
 			'{{AGAIN}}'   => esc_html( $copy['again'] ),
 			'{{HOME}}'    => esc_url( home_url( '/' ) ),
+			'{{ICON}}'    => boi_error_page_icon( BOI_DIR ),
 		)
 	);
 

@@ -30,6 +30,19 @@ function boi_static_error_pages() {
 }
 
 /**
+ * The 32px icon as a link with a data address. An error page answers at any
+ * path, in a subfolder install too, and while WordPress or PHP is down, so it
+ * carries the icon inside the page and asks the server for nothing.
+ *
+ * @param string $root Theme folder on disk.
+ * @return string The link tag, or '' when the file is missing.
+ */
+function boi_error_page_icon( $root ) {
+	$png = @file_get_contents( $root . '/assets/images/favicon-32.png' ); // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+	return $png ? '<link rel="icon" href="data:image/png;base64,' . base64_encode( $png ) . '" sizes="32x32" type="image/png">' : ''; // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions
+}
+
+/**
  * One static page, filled from assets/error-pages/page.html and page.css.
  *
  * @param string $root Theme folder on disk.
@@ -56,6 +69,7 @@ function boi_static_error_html( $root, $code, $site ) {
 			'{{LINE2}}'   => $e( $p[3] ),
 			'{{AGAIN}}'   => $e( $p[4] ),
 			'{{HOME}}'    => $e( $site['home'] ),
+			'{{ICON}}'    => boi_error_page_icon( $root ),
 		)
 	);
 }

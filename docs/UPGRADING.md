@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.100.15
+
+Replace the theme files. The new files are in `assets/images/`: `favicon.ico`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` and `site.webmanifest`. The next admin page rewrites the error pages with the icon. If a `favicon.ico` file sits in the site root, the web server sends it and the theme never answers; delete it to use the theme's.
+
 ## Upgrading to 1.100.14
 
 Documentation only: the FTP steps send the `.htaccess` files first. Replace the theme files; nothing else to do.

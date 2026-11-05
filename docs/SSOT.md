@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.100.14, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.100.15, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -695,6 +695,10 @@ The owner approved the article anatomy on 2026-11-05, with every sales prompt re
 ### D54. The theme is licensed GPL version 3 or later
 
 The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code adapted from GPLv2-or-later plugins may be carried under version 3. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
+
+### D55. Every theme ships a full favicon set
+
+The owner asked on 2026-11-05: "make sure you have favicon too." While no Site Icon is set, the theme prints its own icon tags (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`, `theme-color` #0D2B4F) on the site, the login screen and the admin, and answers `/favicon.ico` with `assets/images/favicon.ico`. Every icon is rendered from `favicon.svg`, the solid mark. A Site Icon always wins, and the theme then prints none of its own.
 
 ### D15. The glossary is pages, not a post type
 
