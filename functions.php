@@ -136,6 +136,14 @@ try {
 	return;
 }
 
+// A guard file that loaded but is cut short (empty, or "<?php" alone) defines
+// nothing: the theme is half uploaded all the same.
+if ( $boi_guard && ! function_exists( 'boi_maintenance_guard' ) ) {
+	boi_incomplete_theme( 'inc/maintenance.php is incomplete' );
+	unset( $boi_load, $boi_need, $boi_guard );
+	return;
+}
+
 if ( $boi_guard ) {
 	if ( ! boi_maintenance_guard( $boi_need, BOI_DIR ) ) {
 		unset( $boi_load, $boi_need, $boi_guard );
