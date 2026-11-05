@@ -286,17 +286,12 @@ function boi_sec_sync_htaccess_once() {
 	if ( get_option( 'boi_sec_htaccess_version' ) === $key || get_transient( 'boi_sec_htaccess_retry' ) ) {
 		return;
 	}
-	// add_option() inserts a unique row, so only one request takes the lock;
-	// one older than a minute is from a request that died. (insert_with_markers()
-	// also locks the file itself while it writes.)
-	if ( ! add_option( 'boi_sec_htaccess_lock', time(), '', false ) ) {
-		if ( time() - (int) get_option( 'boi_sec_htaccess_lock' ) < MINUTE_IN_SECONDS ) {
-			return;
-		}
-		delete_option( 'boi_sec_htaccess_lock' );
-		if ( ! add_option( 'boi_sec_htaccess_lock', time(), '', false ) ) {
-			return;
-		}
+	// One request at a time (inc/lock.php); a lock older than a minute is
+	// from a request that died. (insert_with_markers() also locks the file
+	// itself while it writes.)
+	$token = function_exists( 'boi_lock_take' ) ? boi_lock_take( 'boi_sec_htaccess_lock', MINUTE_IN_SECONDS ) : '';
+	if ( '' === $token ) {
+		return;
 	}
 	// Recorded only once the sections are written, or where no .htaccess
 	// applies (not Apache); a failed write is tried again a minute later.
@@ -305,7 +300,7 @@ function boi_sec_sync_htaccess_once() {
 	} else {
 		set_transient( 'boi_sec_htaccess_retry', 1, MINUTE_IN_SECONDS );
 	}
-	delete_option( 'boi_sec_htaccess_lock' );
+	boi_lock_release( 'boi_sec_htaccess_lock', $token );
 }
 add_action( 'init', 'boi_sec_sync_htaccess_once', 99 );
 add_action( 'after_switch_theme', function () { boi_sec_sync_htaccess( true ); } );
@@ -324,6 +319,46 @@ function boi_sec_remove_htaccess() {
 	delete_transient( 'boi_sec_htaccess_checked' );
 }
 add_action( 'switch_theme', 'boi_sec_remove_htaccess' );
+
+/**
+ * The user list is not for visitors (1.100.9). A visitor who is not logged
+ * in gets no /wp/v2/users routes (the REST API answers rest_no_route, 404)
+ * and a 404 for ?author=N, where WordPress would redirect to the author's
+ * address and so name the account. Logged-in editors keep both, so the
+ * block editor's author panel works.
+ *
+ * @param array $endpoints REST routes.
+ * @return array
+ */
+function boi_sec_hide_user_routes( $endpoints ) {
+	if ( is_user_logged_in() ) {
+		return $endpoints;
+	}
+	foreach ( array_keys( (array) $endpoints ) as $route ) {
+		if ( preg_match( '#^/wp/v2/users(/|$)#', (string) $route ) ) {
+			unset( $endpoints[ $route ] );
+		}
+	}
+	return $endpoints;
+}
+add_filter( 'rest_endpoints', 'boi_sec_hide_user_routes', 99 );
+
+/**
+ * ?author=N for a visitor who is not logged in: a 404.
+ *
+ * @param array $query_vars Parsed query variables.
+ * @return array
+ */
+function boi_sec_block_author_query( $query_vars ) {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only check of the raw query.
+	if ( is_admin() || ! isset( $_GET['author'] ) || is_user_logged_in() ) {
+		return $query_vars;
+	}
+	unset( $query_vars['author'], $query_vars['author_name'] );
+	$query_vars['error'] = '404';
+	return $query_vars;
+}
+add_filter( 'request', 'boi_sec_block_author_query', 99 );
 
 /**
  * Application passwords off.

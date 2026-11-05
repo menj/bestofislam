@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.100.8' );
+define( 'BOI_VERSION', '1.100.9' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -49,6 +49,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/renamed-slugs.php',
 	BOI_DIR . '/inc/error-pages.php',
 	BOI_DIR . '/inc/error-page-static.php',
+	BOI_DIR . '/inc/lock.php',
 	BOI_DIR . '/inc/housekeeping.php',
 	BOI_DIR . '/inc/security-headers.php',
 	BOI_DIR . '/inc/security.php',
@@ -91,26 +92,85 @@ $boi_need = array_merge(
 	)
 );
 
-if ( is_readable( BOI_DIR . '/inc/maintenance.php' ) ) {
-	require_once BOI_DIR . '/inc/maintenance.php';
+/**
+ * The short 503 page for a request that finds the theme half uploaded: a
+ * file there but half written (a ParseError), inc/maintenance.php itself
+ * included. The log gets one line per problem and ten minutes. The login
+ * screen (by its path, not a query that holds the word), AJAX, cron and
+ * WP-CLI go on; the admin gets the page too, since the theme is half set up.
+ *
+ * @param string $what What is wrong, for the log.
+ */
+function boi_incomplete_theme( $what ) {
+	$key = 'boi_incomplete_' . md5( $what );
+	if ( ! get_transient( $key ) ) {
+		set_transient( $key, 1, 10 * MINUTE_IN_SECONDS );
+		error_log( 'Best of Islam: the theme is incomplete or being uploaded (' . $what . '); visitors see the maintenance notice until it is whole.' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
+	}
+	$path = (string) wp_parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	if ( wp_doing_ajax() || wp_doing_cron() || 'cli' === PHP_SAPI || 'wp-login.php' === basename( $path ) || 'wp-login.php' === ( $GLOBALS['pagenow'] ?? '' ) ) {
+		return;
+	}
+	if ( function_exists( 'boi_maintenance_send' ) ) {
+		boi_maintenance_send();
+	}
+	if ( ! headers_sent() ) {
+		header( 'HTTP/1.1 503 Service Unavailable', true, 503 );
+		header( 'Content-Type: text/html; charset=utf-8' );
+		header( 'Retry-After: 120' );
+		header( 'Cache-Control: no-store, max-age=0' );
+		header( 'X-Robots-Tag: noindex' );
+	}
+	echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Updating</title></head><body><h1>Updating, back in a minute</h1><p>Please try again shortly.</p></body></html>';
+	exit;
+}
+
+try {
+	$boi_guard = is_readable( BOI_DIR . '/inc/maintenance.php' );
+	if ( $boi_guard ) {
+		require_once BOI_DIR . '/inc/maintenance.php';
+	}
+} catch ( Throwable $boi_error ) {
+	boi_incomplete_theme( $boi_error->getMessage() . ' in ' . basename( $boi_error->getFile() ) );
+	unset( $boi_load, $boi_need, $boi_error, $boi_guard );
+	return;
+}
+
+// A guard file that loaded but is cut short (empty, or "<?php" alone) defines
+// nothing: the theme is half uploaded all the same.
+if ( $boi_guard && ! function_exists( 'boi_maintenance_guard' ) ) {
+	boi_incomplete_theme( 'inc/maintenance.php is incomplete' );
+	unset( $boi_load, $boi_need, $boi_guard );
+	return;
+}
+
+if ( $boi_guard ) {
 	if ( ! boi_maintenance_guard( $boi_need, BOI_DIR ) ) {
-		unset( $boi_load, $boi_need );
+		unset( $boi_load, $boi_need, $boi_guard );
 		return;
 	}
 } else {
 	// The guard itself has not arrived yet: load nothing rather than fail.
 	foreach ( $boi_need as $boi_file ) {
 		if ( ! is_readable( $boi_file ) ) {
-			unset( $boi_load, $boi_need, $boi_file );
+			unset( $boi_load, $boi_need, $boi_file, $boi_guard );
 			return;
 		}
 	}
 }
 
-foreach ( $boi_load as $boi_file ) {
-	require_once $boi_file;
+// A file that is there but half written (an upload caught mid-file) throws a
+// ParseError: the same 503 page as for a missing one.
+try {
+	foreach ( $boi_load as $boi_file ) {
+		require_once $boi_file;
+	}
+} catch ( Throwable $boi_error ) {
+	boi_incomplete_theme( $boi_error->getMessage() . ' in ' . basename( $boi_error->getFile() ) );
+	unset( $boi_load, $boi_need, $boi_file, $boi_error, $boi_guard );
+	return;
 }
-unset( $boi_load, $boi_need, $boi_file );
+unset( $boi_load, $boi_need, $boi_file, $boi_guard );
 
 /**
  * Version string for an asset: BOI_VERSION plus the file's modification
