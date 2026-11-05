@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.6] - 2026-11-05
+
+### Changed
+- The agent notes moved from the theme root into `.claude/`: `CLAUDE.md` is now `.claude/CLAUDE.md` and `FARUQI.md` is now `.claude/FARUQI.md`. `.gitattributes` export-ignores `/.claude` in place of the two root entries, and the Package theme workflow leaves `.claude`, `.gitattributes`, `.gitignore` and `.editorconfig` out of the zip.
+- The static 403, 500, 502, 503 and 504 pages now work when WordPress is installed in a subfolder. The theme writes a copy of each into `wp-content/bestofislam-errors/` with the site's name, language and home address (`boi_error_static_source()`), keeps it current with the drop-ins, lists it on the Errors tab and removes it when another theme is activated. The `.htaccess` lines on the Errors tab point at that folder. `errors/` stays as the copy for a site at the domain root. The page text and the builder now live in `inc/error-page-static.php`, shared by the theme and `bin/build-error-pages.php`.
+
+### Fixed
+- `boi_remove_dev_files()` no longer deletes anything in a theme folder that holds `.git` (a folder, or the file a worktree uses). It had removed `.claude` and `.gitattributes` from a working copy during testing. A git-deployed server can still be cleaned by defining `BOI_REMOVE_GIT_DIR` true. `tests/housekeeping-test.php` checks both cases.
+
 ## [1.100.5] - 2026-11-05
 
 ### Fixed

@@ -63,15 +63,16 @@ Under Appearance, Theme Options, in eight tabs. The screen is a set of cards und
 - **Access:** the custom login address, the security headers, and the list of unlisted items.
 - **Security:** XML-RPC, application passwords and REST writes from outside the browser switched off, the gambling spam gate, 410 Gone for removed spam, the spam scan and clean-up tools, buttons that revoke every application password and end every session, and the attack reports and security log. Add `define( 'BOI_SECURITY_LOCK', false );` to `wp-config.php` to lift the three locks in an emergency.
 - **Errors:** the branded maintenance, database and PHP error pages, email alerts and the minutes between them. The tab shows each file in `wp-content` as installed, outdated, absent, left behind by another theme or another file left alone, and **Install error pages** writes them at once. A copy another theme left behind, marked "safe to delete", is replaced; the theme's own files are removed when another theme is activated. `maintenance.php` and `db-error.php` answer 503 with `Retry-After`; `php-error.php` answers 500. A file without the marker `Best of Islam error drop-in` is never touched.
-- **Server errors:** static 403, 500, 502, 503 and 504 pages in `errors/`, built by `php bin/build-error-pages.php` from the drop-in template. Add to `.htaccess`, with the folder name of the theme:
+- **Server errors:** static 403, 500, 502, 503 and 504 pages for the errors the web server answers before WordPress starts. The theme writes a copy of each into `wp-content/bestofislam-errors/` with the site's own name, language and home address, so the pages work when WordPress sits in a subfolder, and removes them when another theme is activated. `errors/` holds the copies for a site at the domain root, built by `php bin/build-error-pages.php` from the drop-in template. The Errors tab gives the `.htaccess` lines for the site; at the domain root they read:
 
   ```
-  ErrorDocument 403 /wp-content/themes/bestofislam/errors/403.html
-  ErrorDocument 500 /wp-content/themes/bestofislam/errors/500.html
-  ErrorDocument 502 /wp-content/themes/bestofislam/errors/502.html
-  ErrorDocument 503 /wp-content/themes/bestofislam/errors/503.html
-  ErrorDocument 504 /wp-content/themes/bestofislam/errors/504.html
+  ErrorDocument 403 /wp-content/bestofislam-errors/403.html
+  ErrorDocument 500 /wp-content/bestofislam-errors/500.html
+  ErrorDocument 502 /wp-content/bestofislam-errors/502.html
+  ErrorDocument 503 /wp-content/bestofislam-errors/503.html
+  ErrorDocument 504 /wp-content/bestofislam-errors/504.html
   ```
+
 
 Under Appearance, Contextual Links, in three tabs:
 
@@ -90,6 +91,7 @@ Under Appearance, Contextual Links, in three tabs:
 1. Install Twenty Twenty-Five and keep it in the themes directory.
 2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
+   The working notes for coding agents, `.claude/CLAUDE.md` and `.claude/FARUQI.md`, stay out of the zip and out of `git archive`. On a server, the theme deletes `.claude` with the other development files on activation, but never in a folder that holds `.git`.
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 151 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
 4. Configure under Appearance, Theme Options.
 

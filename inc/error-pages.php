@@ -25,6 +25,66 @@ defined( 'ABSPATH' ) || exit;
 
 const BOI_ERR_MARKER = 'Best of Islam error drop-in';
 
+require_once __DIR__ . '/error-page-static.php';
+
+/** The folder in wp-content that holds this site's copies of the static pages. */
+const BOI_STATIC_ERRORS = 'bestofislam-errors';
+
+/**
+ * The site's copies of the static pages, relative to wp-content. The pages in
+ * errors/ assume a site at the domain root; these carry the site's own name,
+ * language and home address, so they also work for a site in a subfolder.
+ *
+ * @return array<string,string> Status code => file.
+ */
+function boi_error_static_files() {
+	$out = array();
+	foreach ( array_keys( boi_static_error_pages() ) as $code ) {
+		$out[ (string) $code ] = BOI_STATIC_ERRORS . '/' . $code . '.html';
+	}
+	return $out;
+}
+
+/**
+ * The text of the site's copy of one static page, with the theme's marker.
+ *
+ * @param string $code Status code.
+ * @return string
+ */
+function boi_error_static_source( $code ) {
+	$name = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( get_bloginfo( 'name' ) ) ) );
+	return '<!-- ' . BOI_ERR_MARKER . ' ' . BOI_VERSION . " ({$code}). Written by the Best of Islam theme; safe to delete. -->\n"
+		. boi_static_error_html(
+			BOI_DIR,
+			$code,
+			array(
+				'name' => $name,
+				'home' => esc_url( home_url( '/' ) ),
+				'lang' => get_bloginfo( 'language' ),
+			)
+		);
+}
+
+/**
+ * Status of each static copy: ours, outdated, foreign or absent.
+ *
+ * @return array<string,string> File => state.
+ */
+function boi_error_static_state() {
+	$out = array();
+	foreach ( boi_error_static_files() as $code => $file ) {
+		$path = WP_CONTENT_DIR . '/' . $file;
+		if ( ! file_exists( $path ) ) {
+			$out[ $file ] = 'absent';
+		} elseif ( ! boi_error_is_ours( $path ) ) {
+			$out[ $file ] = 'foreign';
+		} else {
+			$out[ $file ] = (string) file_get_contents( $path ) === boi_error_static_source( (string) $code ) ? 'ours' : 'outdated'; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		}
+	}
+	return $out;
+}
+
 /**
  * The drop-ins: file name, HTTP status and whether a failure is alertable.
  *
@@ -335,13 +395,13 @@ function boi_error_handle_install() {
 add_action( 'admin_post_boi_install_error_pages', 'boi_error_handle_install' );
 
 /**
- * The lines for .htaccess that point the web server at the static pages in
- * errors/ (built by bin/build-error-pages.php).
+ * The lines for .htaccess that point the web server at the site's copies of
+ * the static pages in wp-content/bestofislam-errors/.
  *
  * @return string
  */
 function boi_error_htaccess_snippet() {
-	$base  = untrailingslashit( (string) wp_parse_url( get_stylesheet_directory_uri(), PHP_URL_PATH ) ) . '/errors/';
+	$base  = untrailingslashit( (string) wp_parse_url( content_url( '/' ), PHP_URL_PATH ) ) . '/' . BOI_STATIC_ERRORS . '/';
 	$lines = array( '# Best of Islam: pages for the errors the web server answers before WordPress runs' );
 	foreach ( array( 403, 500, 502, 503, 504 ) as $code ) {
 		$lines[] = 'ErrorDocument ' . $code . ' ' . $base . $code . '.html';
@@ -395,6 +455,26 @@ function boi_error_sync() {
 		}
 	}
 
+	foreach ( boi_error_static_files() as $code => $file ) {
+		$path = WP_CONTENT_DIR . '/' . $file;
+		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) ) {
+			continue;
+		}
+		if ( ! empty( $opts['errors_pages'] ) ) {
+			if ( ! is_dir( dirname( $path ) ) ) {
+				wp_mkdir_p( dirname( $path ) );
+			}
+			if ( ! is_writable( dirname( $path ) ) || ! boi_error_write( $path, boi_error_static_source( (string) $code ) ) ) {
+				$failed[] = $file;
+			}
+		} elseif ( file_exists( $path ) ) {
+			wp_delete_file( $path );
+		}
+	}
+	if ( empty( $opts['errors_pages'] ) && is_dir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ) ) {
+		@rmdir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions -- only when empty.
+	}
+
 	$config = "<?php\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\nreturn " . var_export(
 		array(
 			'to'       => boi_error_recipient(),
@@ -435,7 +515,7 @@ function boi_error_maybe_sync() {
 		return;
 	}
 
-	$state = boi_error_state();
+	$state = array_merge( array_values( boi_error_state() ), array_values( boi_error_static_state() ) );
 	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! array_intersect( array( 'absent', 'theme', 'outdated' ), $state ) ) {
 		return;
 	}
@@ -464,6 +544,15 @@ function boi_error_remove() {
 		if ( boi_error_is_ours( $path ) ) {
 			wp_delete_file( $path );
 		}
+	}
+	foreach ( boi_error_static_files() as $file ) {
+		$path = WP_CONTENT_DIR . '/' . $file;
+		if ( boi_error_is_ours( $path ) ) {
+			wp_delete_file( $path );
+		}
+	}
+	if ( is_dir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ) ) {
+		@rmdir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions -- only when empty.
 	}
 	delete_option( 'boi_error_dropins_fingerprint' );
 }
@@ -602,6 +691,9 @@ function boi_render_errors_tab( $opts ) {
 	foreach ( boi_error_kinds() as $kind => $def ) {
 		echo '<li><code>' . esc_html( $def['file'] ) . '</code>: ' . esc_html( $label[ $state[ $kind ] ] ) . '</li>';
 	}
+	foreach ( boi_error_static_state() as $file => $file_state ) {
+		echo '<li><code>' . esc_html( $file ) . '</code>: ' . esc_html( $label[ $file_state ] ) . '</li>';
+	}
 	echo '</ul>';
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
 	if ( isset( $_GET['boi_errors_installed'] ) ) {
@@ -609,7 +701,7 @@ function boi_render_errors_tab( $opts ) {
 	}
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
 	if ( isset( $_GET['boi_errors_failed'] ) ) {
-		$known = array_merge( wp_list_pluck( boi_error_kinds(), 'file' ), array( basename( boi_error_config_path() ) ) );
+		$known = array_merge( wp_list_pluck( boi_error_kinds(), 'file' ), array_values( boi_error_static_files() ), array( basename( boi_error_config_path() ) ) );
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only, and only known names are shown.
 		$names = array_values( array_intersect( $known, explode( ',', sanitize_text_field( wp_unslash( $_GET['boi_errors_failed'] ) ) ) ) );
 		echo '<p class="notice notice-error inline">' . esc_html(
@@ -631,7 +723,7 @@ function boi_render_errors_tab( $opts ) {
 	}
 	boi_opt_row_close();
 	boi_opt_row_open( __( 'Server errors', 'bestofislam' ), 'boi-errors-htaccess' );
-	echo '<p class="description">' . esc_html__( 'For the errors the web server answers before WordPress starts, static pages are in the errors folder of the theme. Add these lines to .htaccess to use them:', 'bestofislam' ) . '</p>';
+	echo '<p class="description">' . esc_html__( 'For the errors the web server answers before WordPress starts, the theme writes static pages into wp-content/bestofislam-errors with this site\'s name and home address. Add these lines to .htaccess to use them:', 'bestofislam' ) . '</p>';
 	echo '<textarea id="boi-errors-htaccess" readonly rows="6" class="large-text code">' . esc_textarea( boi_error_htaccess_snippet() ) . '</textarea>';
 	boi_opt_row_close();
 	boi_opt_card_close();

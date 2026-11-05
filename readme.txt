@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.5
+Stable tag: 1.100.6
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.6 =
+* The web server error pages work when WordPress sits in a subfolder. The theme writes a copy of each into wp-content/bestofislam-errors with the site's home address, and the .htaccess lines on the Errors tab point there.
+* The theme no longer deletes development files from a folder that is a git checkout.
 
 = 1.100.5 =
 * An edited or half-restored copy of the error pages is written back on the next admin visit.
