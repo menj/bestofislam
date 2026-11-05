@@ -60,6 +60,8 @@ function add_option( $k, $v, $d = '', $a = true ) { if ( isset( $GLOBALS['boi_o'
 // inc/lock.php is tested on its own (tests/lock-test.php); here the same
 // rules over the option stub: a fresh lock is refused, a stale one taken over.
 function boi_lock_take( $k, $ttl ) { if ( isset( $GLOBALS['boi_o'][ $k ] ) && time() - (int) $GLOBALS['boi_o'][ $k ] < $ttl ) { return ''; } $GLOBALS['boi_o'][ $k ] = time() . '|t'; return $GLOBALS['boi_o'][ $k ]; }
+function boi_lock_holds( $k, $token ) { return empty( $GLOBALS['boi_lost'] ) && ( $GLOBALS['boi_o'][ $k ] ?? null ) === $token; }
+function boi_lock_renew( $k, $token ) { return boi_lock_holds( $k, $token ); }
 function boi_lock_release( $k, $token ) { if ( ( $GLOBALS['boi_o'][ $k ] ?? null ) === $token ) { unset( $GLOBALS['boi_o'][ $k ] ); } }
 function delete_option( $k ) { unset( $GLOBALS['boi_o'][ $k ] ); return true; }
 define( 'HOUR_IN_SECONDS', 3600 );
@@ -97,7 +99,18 @@ switch ( $boi_case ) {
 		rmdir( "$boi_tmp/tests" );
 		break;
 	case 'lock':
-		$GLOBALS['boi_env'] = 'production';
+		$GLOBALS['boi_env']  = 'production';
+		$GLOBALS['boi_lost'] = true;
+		boi_remove_dev_files();
+		boi_check( false === get_option( 'boi_dev_files_removed' ), 'a holder that lost its lock part-way records nothing' );
+		$GLOBALS['boi_lost'] = false;
+		unset( $GLOBALS['boi_o']['boi_dev_files_lock'] );
+		foreach ( array( '.claude', '.git/objects', 'tests', 'bin', 'docs' ) as $boi_d ) {
+			@mkdir( "$boi_tmp/$boi_d", 0700, true ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		}
+		foreach ( array( '.claude/CLAUDE.md', '.git/objects/ab', '.git/HEAD', 'tests/a-test.php', 'bin/build.php', 'docs/SSOT.md', '.gitattributes' ) as $boi_f ) {
+			file_put_contents( "$boi_tmp/$boi_f", 'x' );
+		}
 		add_option( 'boi_dev_files_lock', time() );
 		boi_remove_dev_files();
 		boi_check( 6 === count( boi_dev_left( $boi_tmp ) ) && false === get_option( 'boi_dev_files_removed' ), 'a fresh lock held by another request: nothing is deleted' );

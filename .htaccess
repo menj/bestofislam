@@ -20,6 +20,17 @@ RedirectMatch 403 /themes/[^/]+/(tests|bin|docs|dist)(/|$)
 RedirectMatch 403 \.php(/|$)
 </IfModule>
 
+# Theme PHP files by their own name, with neither mod_alias nor mod_rewrite.
+<FilesMatch "\.php$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
 # Dot files, also without mod_alias.
 <FilesMatch "^\.">
 <IfModule mod_authz_core.c>

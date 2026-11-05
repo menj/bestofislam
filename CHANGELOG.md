@@ -9,7 +9,7 @@ versioning.
 No band or feature removed and no public identifier renamed.
 
 ### Fixed
-- The lock in `inc/lock.php` could be taken over from a holder that was still working: its time was never renewed, so a cleanup that ran past ten minutes (a large `.git` tree on a slow disk) looked dead. The holder now renews it (`boi_lock_renew()`), and the dev-file cleanup does so every 200 entries it deletes. Only a lock nobody renewed is taken over. The row holds `<time>|<holder>`, and a release or renewal touches only the holder's own row. `tests/lock-test.php` covers renewal, and a holder that lost the lock cannot renew it. This came from the review of the sister theme's identical code.
+- The lock in `inc/lock.php` could be taken over from a holder that was still working: its time was never renewed, so a cleanup that ran past ten minutes (a large `.git` tree on a slow disk) looked dead. The holder now renews it (`boi_lock_renew()`), and the dev-file cleanup does so every 200 entries it deletes. A holder that finds its lock gone stops at once and records nothing. The theme folder's `.htaccess` also refuses theme PHP by file name, where neither mod_alias nor mod_rewrite is loaded. Only a lock nobody renewed is taken over. The row holds `<time>|<holder>`, and a release or renewal touches only the holder's own row. `tests/lock-test.php` covers renewal, and a holder that lost the lock cannot renew it. This came from the review of the sister theme's identical code.
 
 ## [1.100.9] - 2026-11-05
 
