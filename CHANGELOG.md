@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.14] - 2026-11-05
+
+Documentation only.
+
+### Changed
+- The FTP update steps in `readme.txt` and `docs/UPGRADING.md` send the theme's `.htaccess` files first (the theme folder's, then `docs/`, and `bin/` and `tests/` when the copy has them), so its private files stay closed to visitors while the rest uploads.
+- `.claude/skills/theme-docs/SKILL.md` takes the refreshed standard.
+
 ## [1.100.13] - 2026-11-05
 
 The article anatomy: the pieces a single article was missing. No band, setting or address removed, and no public identifier renamed.

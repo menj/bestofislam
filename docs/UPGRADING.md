@@ -13,7 +13,11 @@
 1. Upload the new package under Appearance, Themes, Add New, and replace the
    existing installation. There is no need to switch themes. By FTP instead:
    turn on hidden files in the FTP program, so the `.htaccess` files go up;
-   upload the folder as `bestofislam-new`; then rename `bestofislam` to
+   upload the folder into `wp-content/themes/` as `bestofislam-new`, its
+   `.htaccess` files first (the theme folder's, then `docs/`, and `bin/` and
+   `tests/` when the copy has them), so on Apache their rules apply while the rest arrives; on
+   Nginx, which ignores them, add the server rules in `README.md` before the
+   first FTP update; then rename `bestofislam` to
    `bestofislam-old` and, straight after, `bestofislam-new` to `bestofislam`,
    with the admin closed in between. Delete `bestofislam-old` once the site
    checks out. Never upload WordPress itself without keeping `wp-config.php`.
@@ -60,6 +64,10 @@ feature stands aside, so nothing runs twice.
 ## Upgrading to 1.100.12
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
+
+## Upgrading to 1.100.14
+
+Documentation only: the FTP steps send the `.htaccess` files first. Replace the theme files; nothing else to do.
 
 ## Upgrading to 1.100.13
 

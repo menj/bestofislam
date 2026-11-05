@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.13
+Stable tag: 1.100.14
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -53,7 +53,7 @@ Upload the new zip under Appearance, Themes, Add New, and choose "Replace active
 = Updating by FTP =
 
 1. Turn on hidden files in your FTP program. The theme carries files whose names begin with a dot, such as .htaccess, which keep its private files closed to visitors. In FileZilla: Server, Force showing hidden files.
-2. Upload the new bestofislam folder next to the old one under a temporary name, such as wp-content/themes/bestofislam-new. Wait until every file has arrived.
+2. Upload the new bestofislam folder next to the old one under a temporary name, such as wp-content/themes/bestofislam-new. Send its .htaccess files first: the one at the top of the folder, then the one in docs, and those in bin and tests when your copy has them. On Apache they close the theme's private files to visitors while the rest arrives. On Nginx, which ignores them, add the server rules from README.md before the first FTP update. Wait until every file has arrived.
 3. Rename the old folder to bestofislam-old and, straight after, rename bestofislam-new to bestofislam. Between the two renames the site has no bestofislam folder and its pages may fail for that moment, so do them one after the other and keep the admin closed until both are done.
 4. Open any admin page, check the site, then delete bestofislam-old.
 
@@ -160,6 +160,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.100.14 =
+* The FTP update steps send the theme's .htaccess files first, so its private files stay closed while the rest uploads.
+
 = 1.100.13 =
 * An article with key points opens with an "In short" box, which now also holds the questions the piece answers. Key points and a review date are typed in the new Key points and review box.
 * The line under the title shows when an article was updated and when it was last reviewed.
@@ -248,6 +251,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.100.14 =
+Documentation only. Replace the theme files; nothing else to do.
 
 = 1.100.13 =
 Two new switches on the Display tab, both on: Contents and Next step. Nothing else to do.
