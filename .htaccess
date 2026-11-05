@@ -12,7 +12,7 @@
 # Every file and folder whose name begins with a dot, wherever it sits in
 # the theme: .git, .github, .gitignore, .claude, .vscode, .idea, .DS_Store,
 # .env and the like. .well-known stays open.
-RedirectMatch 403 /\.(?!well-known(/|$))[^/]+(/|$)
+RedirectMatch 403 /[.](?!well-known(/|$))[^/]+(/|$)
 # The tests, build scripts, docs and packaging output at the theme root, by
 # address; the rewrite rule below matches them wherever the folder sits.
 RedirectMatch 403 /themes/[^/]+/(tests|bin|docs|dist)(/|$)
