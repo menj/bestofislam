@@ -163,7 +163,7 @@ No build step is required. Editor scripts use `wp.element.createElement` directl
 ## Boot sequence
 
 1. `functions.php` defines `BOI_VERSION`, `BOI_DIR` and `BOI_URI`, then hands the full file list (`$boi_need`) to `inc/maintenance.php`.
-2. If any file is missing, nothing else loads. Visitors get a 503 page with `Retry-After: 120` and noindex; the admin stays up with a notice naming the missing files. The files load inside `try`, so a half-written file (a `ParseError`) gives the same page. The log gets one line per problem every ten minutes. The login screen, AJAX, cron and the command line go on without the page.
+2. If any file is missing, nothing else loads. Visitors get a 503 page with `Retry-After: 120` and noindex; the admin stays up with a notice naming the missing files. The exception is `inc/maintenance.php` itself: while it is missing, `functions.php` checks the other files and, if one is absent, returns without the 503 page or the notice. The files load inside `try`, so a half-written file (a `ParseError`) gives the same page. The log gets one line per problem every ten minutes. The login screen, AJAX, cron and the command line go on without the page.
 3. The `inc/` files load in the order shown above. Each adds its own hooks.
 4. On `init` (priority 99) the first request of a new version runs the dev-file clean-up and the `.htaccess` sync, each under the lock in `inc/lock.php`.
 
@@ -190,7 +190,7 @@ The theme's own filters:
 | `boi_title_max_length` | The title tag limit |
 | `boi_unlist_enabled`, `unlist_posts_enabled` | Switch the unlist feature off |
 
-`grep -n "add_action\|add_filter" inc/*.php` lists every hook the theme uses. The ones a host meets most:
+`grep -n "add_action\|add_filter" functions.php inc/*.php` lists every hook the theme uses. The ones a host meets most:
 
 | Hook | Callback | Purpose |
 |---|---|---|
@@ -270,7 +270,8 @@ location ~ /\.(?!well-known/) { deny all; }
 location = /xmlrpc.php { deny all; }
 location ~ ^/wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php { deny all; }
 location ~ ^/wp-admin/includes/.+\.php { deny all; }
-location ~ ^/(wp-config|wp-settings|wp-config-sample)\.php { deny all; }
+location ~ (^|/)wp-config\.php$ { deny all; }
+location ~ ^/(wp-settings|wp-config-sample)\.php { deny all; }
 location ~ ^/(wp-admin/install\.php|readme\.html|license\.txt) { deny all; }
 location ~ ^/wp-content/themes/.+\.php { deny all; }
 location ~ ^/wp-content/themes/bestofislam/(tests|bin|docs|dist)/ { deny all; }
@@ -282,7 +283,7 @@ error_page 503 /wp-content/bestofislam-errors/503.html;
 error_page 504 /wp-content/bestofislam-errors/504.html;
 ```
 
-Nginx serves `error_page` for PHP's own 500 and 503 answers only with `fastcgi_intercept_errors on;` in the FastCGI location; without it those answers reach visitors as PHP sent them. Jetpack needs XML-RPC: leave out the `xmlrpc.php` line and also switch "Turn off XML-RPC" off on the Security tab, since the theme refuses XML-RPC in PHP too. Prefix the paths when WordPress lives in a subfolder, and when `wp-config.php` sits in the folder above WordPress, add a rule for it there as well, for example `location = /wp-config.php { deny all; }` above a WordPress in `/wp/`.
+Nginx serves `error_page` for PHP's own 500 and 503 answers only with `fastcgi_intercept_errors on;` in the FastCGI location; without it those answers reach visitors as PHP sent them. Jetpack needs XML-RPC: leave out the `xmlrpc.php` line and also switch "Turn off XML-RPC" off on the Security tab, since the theme refuses XML-RPC in PHP too. These rules do not follow the Security switches or `BOI_SECURITY_LOCK`: to let XML-RPC through, take the `xmlrpc.php` line out by hand as well. The `wp-config.php` rule matches at any depth, so it also covers a `wp-config.php` in the folder above a WordPress that lives in a subfolder. Prefix the other paths when WordPress lives in a subfolder.
 
 ## Error pages
 
@@ -292,7 +293,7 @@ The Errors and Server errors entries under Settings above describe the drop-ins 
 
 Settings, seeded content, votes and the Security records are per site. On a network:
 
-- Only the main site writes and repairs the drop-ins and the static copies, which every site shares, and the Install error pages button does nothing on a subsite. A theme switch never removes them, since another site may still use them.
+- The drop-ins and the static copies are shared by every site. The admin-page repair (`boi_error_maybe_sync()`) and the Install error pages button run on the main site only. Activating the theme or saving Theme Options on any site runs `boi_error_sync()`, which has no network guard, so a subsite can rewrite the shared files with its own name and address, or remove them if its settings turn the error pages off. A theme switch never removes them, since another site may still use them.
 - The private login address is unavailable.
 - The lock in `inc/lock.php` lives in the main site's options table, so every site that runs the theme shares one lock, as they share the theme files and `.htaccess`.
 - A theme switch on any site removes the two root `.htaccess` sections until another site's next sync writes them back.
@@ -300,6 +301,7 @@ Settings, seeded content, votes and the Security records are per site. On a netw
 ## Build, test and release
 
 ```
+set -e                                               # stop at the first failure
 for t in tests/*.php; do php "$t" || exit 1; done   # every self-test; WordPress is stubbed
 python3 bin/check-content.py                         # Glossary, links, footnotes, JSON
 php bin/build-error-pages.php                        # rebuild errors/*.html

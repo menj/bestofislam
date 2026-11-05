@@ -101,7 +101,7 @@ Add define( 'BOI_HIDE_LOGIN', false ); to wp-config.php and log in at wp-login.p
 
 = A tool I use stopped publishing after an update. =
 
-The Security tab turns off XML-RPC, application passwords and REST writes from outside the browser by default, because spam tools use them. Switch off the one your tool needs. In an emergency, define( 'BOI_SECURITY_LOCK', false ); in wp-config.php lifts all 3.
+The Security tab turns off XML-RPC, application passwords and REST writes from outside the browser by default, because spam tools use them. Switch off the one your tool needs. A tool that logs in to XML-RPC with a password needs both the XML-RPC switch and the REST switch off, since either one refuses password logins there. In an emergency, define( 'BOI_SECURITY_LOCK', false ); in wp-config.php lifts all 3.
 
 = Why is there no colour picker in Theme Options? =
 
@@ -117,7 +117,7 @@ WordPress shows a plain screen when it is updating, when PHP fails or when the d
 
 = Why did the theme delete .git, tests and docs from its folder? =
 
-They are development files, and a web server can hand them to anyone who asks. On a live server the theme removes them on the first visit after an update, and the web server refuses them until then. A site where you work on the theme keeps them: set WP_ENVIRONMENT_TYPE to local or development in wp-config.php, or add define( 'BOI_KEEP_DEV_FILES', true );.
+They are development files, and a web server can hand them to anyone who asks. On a live server the theme removes them on the first visit after an update. Until then Apache refuses them through the theme's .htaccess; Nginx does so only if the host has added the rules in README.md. A site where you work on the theme keeps them: set WP_ENVIRONMENT_TYPE to local or development in wp-config.php, or add define( 'BOI_KEEP_DEV_FILES', true );.
 
 = What do the security headers do? =
 

@@ -134,7 +134,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 ### Next
 
 - Export, import and reset for Theme Options. The abrahamic theme has all three on its Tools tab; here a move to a new site means setting every tab again by hand.
-- Error pages on a network whose main site runs another theme. Only the main site writes the drop-ins (`boi_error_maybe_sync()`), so they stop updating once it leaves the theme. The abrahamic theme hands the job to the subsite with the lowest ID that runs it.
+- Error pages on a network. The admin-page repair runs on the main site only (`boi_error_maybe_sync()`), so the shared drop-ins stop updating once it leaves the theme, while activation and a settings save on any subsite run `boi_error_sync()` unguarded and can rewrite them with that subsite's address. The abrahamic theme hands the job to one site, the lowest ID that runs it.
 - Keep the root `.htaccess` sections on a network when one site leaves the theme. `boi_sec_remove_htaccess()` runs on any site's `switch_theme`, and the shared file then lacks both sections until another site's next sync.
 
 ### Later
