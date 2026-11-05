@@ -217,7 +217,8 @@ function boi_anatomy_has_jump_list( $post ) {
 	}
 
 	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $listicle ) {
-		if ( ! empty( $listicle['attrs']['showJumpList'] ) ) {
+		// The block's default is true: the jump list shows unless the attribute turns it off.
+		if ( ! isset( $listicle['attrs']['showJumpList'] ) || ! empty( $listicle['attrs']['showJumpList'] ) ) {
 			return true;
 		}
 	}

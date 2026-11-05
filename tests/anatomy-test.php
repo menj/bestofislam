@@ -75,5 +75,15 @@ $table             = boi_anatomy_table_region( '<figure class="wp-block-table"><
 check( false !== strpos( $table, '<figure class="wp-block-table" role="region" tabindex="0" aria-label="Three dates">' ), 'a table is a region named by its caption' );
 check( $table === boi_anatomy_table_region( $table ), 'a region is not wrapped twice' );
 
+// The jump list shows by default (block.json: showJumpList true), so a list without the attribute has one.
+function has_block() { return true; }
+function parse_blocks( $c ) { return $c; }
+function boi_find_listicles( $b ) { return $b; }
+$list          = new WP_Post();
+$list->post_content = array( array( 'attrs' => array() ) );
+check( boi_anatomy_has_jump_list( $list ), 'a list without showJumpList has its jump list' );
+$list->post_content = array( array( 'attrs' => array( 'showJumpList' => false ) ) );
+check( ! boi_anatomy_has_jump_list( $list ), 'a list with the jump list off gets the contents' );
+
 echo $fails ? "$fails of $count checks failed\n" : "All $count checks passed\n";
 exit( $fails ? 1 : 0 );
