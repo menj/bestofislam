@@ -130,6 +130,11 @@ function boi_render_sections() {
  * browsers repair by moving the inner one out of its frame, over the card's
  * title. The article being read shows no placeholder in its own hero slot.
  *
+ * A linked block passes the post title as alt text, since the image is then
+ * the link's only content. The placeholder takes it as its accessible name
+ * (role img), so the link is named; with no alt it stays hidden, as an
+ * ornament beside a title that carries the link.
+ *
  * @param string       $html              Existing markup.
  * @param int          $post_id           Post identifier.
  * @param int          $post_thumbnail_id Attachment identifier, or 0.
@@ -158,6 +163,13 @@ function boi_featured_image_fallback( $html, $post_id, $post_thumbnail_id = 0, $
 		. '<line x1="30" y1="60" x2="78" y2="60" stroke="var(--wp--preset--color--accent-1)" stroke-width="10"/>'
 		. '<line x1="30" y1="82" x2="60" y2="82" stroke="currentColor" stroke-width="10"/>'
 		. '</g></svg>';
+
+	$attr = is_array( $attr ) ? $attr : wp_parse_args( $attr );
+	$name = isset( $attr['alt'] ) ? trim( wp_strip_all_tags( (string) $attr['alt'] ) ) : '';
+
+	if ( '' !== $name ) {
+		return '<span class="boi-placeholder" role="img" aria-label="' . esc_attr( $name ) . '">' . $svg . '</span>';
+	}
 
 	return '<span class="boi-placeholder" aria-hidden="true">' . $svg . '</span>';
 }

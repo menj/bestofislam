@@ -4,6 +4,17 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.8] - 2026-11-05
+
+No band or feature removed and no public identifier renamed.
+
+### Fixed
+- A post with no featured image left an empty link in any block set to link its image, such as the latest articles on the front page and the archive cards (axe `link-name`, serious). The theme's placeholder was hidden from screen readers, and the link held nothing else. When the block passes the post title as alt text, as a linked featured image block does, the placeholder now takes it as its accessible name (`role="img"`). Unlinked placeholders stay hidden, as before.
+- The "All reflections" link in the Reflections band was 21px tall on a phone, under the 24px target size of WCAG 2.5.8 (axe `target-size`, serious). It is now at least 24px tall.
+
+### Tested
+- axe (WCAG 2.0 to 2.2 A and AA, and best practices) on the front page, an archive and the 404 page at 1280 and 375 pixels: no violations. Before the change the front page reported both items at 375 pixels.
+
 ## [1.100.7] - 2026-11-05
 
 No band or feature removed and no public identifier renamed.

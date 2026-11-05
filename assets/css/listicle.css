@@ -892,6 +892,9 @@
 }
 
 .boi-strip__more {
+	display: inline-flex;
+	align-items: center;
+	min-height: 24px; /* WCAG 2.5.8 target size, where the head wraps on a phone. */
 	font-size: 0.88rem;
 	font-weight: 600;
 	text-decoration: none;
