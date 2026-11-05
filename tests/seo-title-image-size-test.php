@@ -11,6 +11,10 @@
  * @package BestOfIslam
  */
 
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
+
 define( 'BOI_DIR', dirname( __DIR__ ) );
 
 $GLOBALS['ctx'] = array();

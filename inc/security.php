@@ -110,6 +110,103 @@ function boi_sec_htaccess_lines() {
 }
 
 /**
+ * The .htaccess marker for the direct-access block. It names this theme,
+ * since the rules carry this theme's folder.
+ */
+define( 'BOI_SEC_FILES_MARKER', 'Best of Islam: block direct file access' );
+
+/**
+ * A filesystem path relative to the folder that holds .htaccess, as a
+ * mod_rewrite pattern prefix ('' at the same folder, 'wp/' below it), or
+ * null when the path lies outside that folder.
+ *
+ * @param string $path Absolute path of a folder.
+ * @param string $home Absolute path of the folder that holds .htaccess.
+ * @return string|null
+ */
+function boi_sec_rewrite_prefix( $path, $home ) {
+	$path = trailingslashit( wp_normalize_path( $path ) );
+	$home = trailingslashit( wp_normalize_path( $home ) );
+	if ( 0 !== strpos( $path, $home ) ) {
+		return null;
+	}
+	$rel = (string) substr( $path, strlen( $home ) );
+	return '' === $rel ? '' : implode( '/', array_map( 'boi_sec_rewrite_quote', explode( '/', rtrim( $rel, '/' ) ) ) ) . '/';
+}
+
+/**
+ * One path segment quoted for a mod_rewrite pattern.
+ *
+ * @param string $segment Folder name.
+ * @return string
+ */
+function boi_sec_rewrite_quote( $segment ) {
+	// '\\\\$0' is the PHP string \\$0: a literal backslash, then the match.
+	return preg_replace( '/[^A-Za-z0-9_-]/', '\\\\$0', (string) $segment );
+}
+
+/**
+ * mod_rewrite lines that refuse direct requests for files that never serve
+ * a page: PHP files in wp-includes, wp-admin/includes and the themes
+ * folder, core files that only reveal the version or run the installer, any
+ * path segment that starts with .git or .claude, and this theme's tests, bin and docs
+ * folders. Each answers 403.
+ *
+ * wp-includes/js/tinymce/wp-tinymce.php (the classic editor) and
+ * wp-includes/ms-files.php (uploads on old multisite networks) stay open.
+ * The admin, admin-ajax.php, wp-cron.php, wp-login.php, the REST API and
+ * the editor's scripts and styles are outside these patterns.
+ *
+ * @param string $home Folder that holds .htaccess; get_home_path() if empty.
+ * @return string[] Empty when no rule applies.
+ */
+function boi_sec_files_htaccess_lines( $home = '' ) {
+	if ( '' === $home ) {
+		if ( ! function_exists( 'get_home_path' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+		}
+		$home = get_home_path();
+	}
+	$core   = boi_sec_rewrite_prefix( ABSPATH, $home );
+	$themes = boi_sec_rewrite_prefix( get_theme_root(), $home );
+	$theme  = boi_sec_rewrite_prefix( BOI_DIR, $home );
+
+	$rules = array( 'RewriteRule (^|/)\.(git|claude) - [F]' );
+	if ( null !== $core ) {
+		// The two exceptions are exact paths after the prefix; a PHP file
+		// with either one appended as path info is still refused.
+		$rules[] = 'RewriteRule ^' . $core . 'wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) - [F]';
+		$rules[] = 'RewriteRule ^' . $core . 'wp-admin/includes/.+\.php(/|$) - [F]';
+		// WordPress also reads wp-config.php from the folder above its own.
+		$parent = '' === $core ? null : boi_sec_rewrite_prefix( dirname( untrailingslashit( wp_normalize_path( ABSPATH ) ) ), $home );
+		if ( null !== $parent ) {
+			$rules[] = 'RewriteRule ^' . $parent . 'wp-config\.php(/|$) - [F]';
+		}
+		$rules[] = 'RewriteRule ^' . $core . '(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)(/|$) - [F]';
+	}
+	if ( null !== $themes && '' !== $themes ) {
+		$rules[] = 'RewriteRule ^' . $themes . '.+\.php(/|$) - [F]';
+	}
+	if ( null !== $theme && '' !== $theme ) {
+		// Every folder and file in boi_dev_paths() that the .git rule above
+		// does not already cover, for a server where PHP cannot delete them.
+		$rules[] = 'RewriteRule ^' . $theme . '(tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]';
+	}
+
+	return array_merge( array( '<IfModule mod_rewrite.c>', 'RewriteEngine On' ), $rules, array( '</IfModule>' ) );
+}
+
+/**
+ * Whether the direct-access block is wanted. On by default; defining
+ * BOI_BLOCK_DIRECT_FILES false in wp-config.php leaves it out.
+ *
+ * @return bool
+ */
+function boi_sec_files_block_on() {
+	return ! ( defined( 'BOI_BLOCK_DIRECT_FILES' ) && ! BOI_BLOCK_DIRECT_FILES );
+}
+
+/**
  * Path of the site's .htaccess, or '' when the server is not Apache or the
  * file cannot be written.
  *
@@ -139,19 +236,20 @@ function boi_sec_htaccess_file() {
  * hour, so a lost or overwritten .htaccess is repaired without any action.
  *
  * @param bool $force Skip the hourly throttle.
+ * @return bool Whether both sections are now as wanted.
  */
 function boi_sec_sync_htaccess( $force = false ) {
 	if ( ! $force && ( ! current_user_can( 'manage_options' ) || wp_doing_ajax() ) ) {
-		return;
+		return false;
 	}
 	if ( ! $force && get_transient( 'boi_sec_htaccess_checked' ) ) {
-		return;
+		return false;
 	}
 	set_transient( 'boi_sec_htaccess_checked', 1, HOUR_IN_SECONDS );
 	$file = boi_sec_htaccess_file();
 	if ( '' === $file ) {
 		update_option( 'boi_security_htaccess', 'unavailable', false );
-		return;
+		return false;
 	}
 	$want    = boi_sec_on( 'sec_xmlrpc_off' );
 	$current = function_exists( 'extract_from_markers' ) ? extract_from_markers( $file, 'Block xmlrpc.php' ) : array();
@@ -162,8 +260,54 @@ function boi_sec_sync_htaccess( $force = false ) {
 		$ok = true === insert_with_markers( $file, 'Block xmlrpc.php', array() );
 	}
 	update_option( 'boi_security_htaccess', $ok ? ( $want ? 'written' : 'off' ) : 'unavailable', false );
+
+	$want_files    = boi_sec_files_block_on() ? boi_sec_files_htaccess_lines() : array();
+	$current_files = function_exists( 'extract_from_markers' ) ? extract_from_markers( $file, BOI_SEC_FILES_MARKER ) : array();
+	$ok_files      = true;
+	if ( $current_files !== $want_files ) {
+		$ok_files = true === insert_with_markers( $file, BOI_SEC_FILES_MARKER, $want_files );
+	}
+	update_option( 'boi_security_htaccess_files', $ok_files ? ( $want_files ? 'written' : 'off' ) : 'unavailable', false );
+
+	return $ok && $ok_files;
 }
 add_action( 'admin_init', 'boi_sec_sync_htaccess' );
+
+/**
+ * Once per theme version, on whatever request comes first: the owner
+ * updates the theme over FTP, which fires no switch hook, and the site may
+ * see no admin visit for days. The .htaccess sections are written on the
+ * first request after the new files arrive.
+ */
+function boi_sec_sync_htaccess_once() {
+	// The key carries the BOI_BLOCK_DIRECT_FILES choice, so changing that
+	// constant takes effect on the next request too.
+	$key = BOI_VERSION . ( boi_sec_files_block_on() ? '' : '-files-off' );
+	if ( get_option( 'boi_sec_htaccess_version' ) === $key || get_transient( 'boi_sec_htaccess_retry' ) ) {
+		return;
+	}
+	// add_option() inserts a unique row, so only one request takes the lock;
+	// one older than a minute is from a request that died. (insert_with_markers()
+	// also locks the file itself while it writes.)
+	if ( ! add_option( 'boi_sec_htaccess_lock', time(), '', false ) ) {
+		if ( time() - (int) get_option( 'boi_sec_htaccess_lock' ) < MINUTE_IN_SECONDS ) {
+			return;
+		}
+		delete_option( 'boi_sec_htaccess_lock' );
+		if ( ! add_option( 'boi_sec_htaccess_lock', time(), '', false ) ) {
+			return;
+		}
+	}
+	// Recorded only once the sections are written, or where no .htaccess
+	// applies (not Apache); a failed write is tried again a minute later.
+	if ( boi_sec_sync_htaccess( true ) || empty( $GLOBALS['is_apache'] ) ) {
+		update_option( 'boi_sec_htaccess_version', $key, true ); // Autoloaded: read on every request.
+	} else {
+		set_transient( 'boi_sec_htaccess_retry', 1, MINUTE_IN_SECONDS );
+	}
+	delete_option( 'boi_sec_htaccess_lock' );
+}
+add_action( 'init', 'boi_sec_sync_htaccess_once', 99 );
 add_action( 'after_switch_theme', function () { boi_sec_sync_htaccess( true ); } );
 add_action( 'update_option_' . BOI_OPTION_KEY, function () { boi_sec_sync_htaccess( true ); } );
 
@@ -175,6 +319,7 @@ function boi_sec_remove_htaccess() {
 	$file = boi_sec_htaccess_file();
 	if ( '' !== $file ) {
 		insert_with_markers( $file, 'Block xmlrpc.php', array() );
+		insert_with_markers( $file, BOI_SEC_FILES_MARKER, array() );
 	}
 	delete_transient( 'boi_sec_htaccess_checked' );
 }
@@ -1120,6 +1265,10 @@ function boi_sec_render_settings( $opts ) {
 		echo '<p class="description boi-card__note">' . esc_html__( 'The web server also refuses xmlrpc.php: the theme keeps a "Block xmlrpc.php" section in .htaccess and repairs it if it goes missing.', 'bestofislam' ) . '</p>';
 	} elseif ( 'unavailable' === $state ) {
 		echo '<p class="description boi-card__note">' . esc_html__( 'The theme could not write .htaccess (the server is not Apache, or the file is read-only). WordPress still refuses xmlrpc.php; ask the host to deny it at the server as well.', 'bestofislam' ) . '</p>';
+	}
+	$files_state = get_option( 'boi_security_htaccess_files', '' );
+	if ( 'written' === $files_state ) {
+		echo '<p class="description boi-card__note">' . esc_html__( 'The web server also refuses direct requests for PHP files in wp-includes, wp-admin/includes and the themes folder, the installer and version files, .git and .claude, and the theme\'s tests, bin and docs folders: the theme keeps a "Best of Islam: block direct file access" section in .htaccess. Define BOI_BLOCK_DIRECT_FILES as false in wp-config.php to leave it out.', 'bestofislam' ) . '</p>';
 	}
 	boi_sec_field( $opts, 'sec_app_passwords_off', __( 'Application passwords', 'bestofislam' ), __( 'Turn off application passwords', 'bestofislam' ), __( 'Stored application passwords stop working at once. Revoke them as well, below, so they cannot return if this is switched off.', 'bestofislam' ) );
 	boi_sec_field( $opts, 'sec_rest_lock', __( 'REST API changes', 'bestofislam' ), __( 'Allow REST API changes only from a logged-in browser', 'bestofislam' ), __( 'Any request that creates, changes or deletes content while logged in must come from a browser session on this site. Basic authentication and passwords sent in a header are refused. Reading through the API, and anything a visitor does without logging in, is unchanged.', 'bestofislam' ) );

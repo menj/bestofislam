@@ -11,6 +11,10 @@
  * @package BestOfIslam
  */
 
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
+
 define( 'ABSPATH', __DIR__ . '/' );
 define( 'BOI_DIR', dirname( __DIR__ ) );
 define( 'BOI_URI', 'https://bestofislam.org/wp-content/themes/bestofislam' );

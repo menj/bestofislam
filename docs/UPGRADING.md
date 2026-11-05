@@ -52,6 +52,12 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.100.8
+
+Replace the theme files. On the first admin page load the theme deletes its development files on a production server: `.git`, `.claude`, `tests`, `bin`, `docs` and the editor files (D52). To keep them on a server where you work on the theme, set `WP_ENVIRONMENT_TYPE` to `local` or `development`, or define `BOI_KEEP_DEV_FILES` as true, in `wp-config.php` before you upload. To keep only `.git`, define `BOI_REMOVE_GIT_DIR` as false.
+
+On Apache the same page load adds a "Best of Islam: block direct file access" section to `.htaccess`. If anything that used to load now answers 403, define `BOI_BLOCK_DIRECT_FILES` as false and tell the theme's maintainer which address it was.
+
 ## Upgrading from 1.78.0 to 1.78.1
 
 Replace the theme files. On Apache, with "Turn off XML-RPC" on (the default), the theme adds a "Block xmlrpc.php" section to .htaccess on the next admin page load, so the manual step 7 below is no longer needed. Switching it off removes the section. If the Security tab says .htaccess could not be written, ask the host to deny xmlrpc.php at the server.

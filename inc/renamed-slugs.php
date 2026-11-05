@@ -67,8 +67,27 @@ function boi_renamed_path_for( $path ) {
 }
 
 /**
- * Sends the 301 for a renamed address. Runs only on a 404, so a page that
- * now sits at an old address keeps it.
+ * The post slug in an address from the old dated permalinks,
+ * YYYY/MM/DD/<slug>, or '' for any other path. A renamed slug gives its
+ * current one.
+ *
+ * @param string $path Request path.
+ * @return string
+ */
+function boi_dated_slug_for( $path ) {
+	if ( ! preg_match( '#^(\d{4})/(\d{2})/(\d{2})/([a-z0-9][a-z0-9_-]*)$#', strtolower( trim( (string) $path, '/' ) ), $m ) ) {
+		return '';
+	}
+
+	$renamed = boi_post_slug_renames();
+
+	return isset( $renamed[ $m[4] ] ) ? $renamed[ $m[4] ] : $m[4];
+}
+
+/**
+ * Sends the 301 for a renamed address, and for the old dated address of a
+ * published post. Runs only on a 404, so a page that now sits at an old
+ * address keeps it.
  *
  * @return void
  */
@@ -89,16 +108,25 @@ function boi_redirect_renamed_slugs() {
 	$path = strtolower( rawurldecode( $path ) );
 
 	$new = boi_renamed_path_for( $path );
+	$url = '' === $new ? '' : home_url( user_trailingslashit( $new ) );
 
-	if ( '' === $new ) {
+	// The old dated address of a post, /YYYY/MM/DD/<slug>/, goes to the
+	// post's own address when that post is published.
+	if ( '' === $url ) {
+		$slug = boi_dated_slug_for( $path );
+		$post = '' === $slug ? null : get_page_by_path( $slug, OBJECT, 'post' );
+		$url  = ( $post && 'publish' === $post->post_status ) ? (string) get_permalink( $post ) : '';
+	}
+
+	if ( '' === $url ) {
 		return;
 	}
 
-	$url   = home_url( user_trailingslashit( $new ) );
 	$query = (string) wp_parse_url( $uri, PHP_URL_QUERY );
 
 	if ( '' !== $query ) {
-		$url .= '?' . $query;
+		// get_permalink() can already carry a query (?p=123 under plain permalinks).
+		$url .= ( false === strpos( $url, '?' ) ? '?' : '&' ) . $query;
 	}
 
 	wp_safe_redirect( $url, 301 );

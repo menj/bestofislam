@@ -2,17 +2,22 @@
 /**
  * Removes development files from the theme directory.
  *
- * A theme installed from a clone or a repository archive carries the
+ * A theme uploaded from a clone carries the repository (.git), the agent
+ * notes (.claude), the tests, the build scripts and the docs, beside the
  * workflow definitions, git hooks and editor settings used to develop it.
- * None of them serve a page, and a web-readable .github or .githooks folder
- * is clutter at best. This deletes them on activation and after each
- * version change.
+ * None of them serve a page. Several are readable over the web, and .git
+ * holds the whole source history, so this deletes them on activation and
+ * after each version change.
  *
- * A theme folder that is a git working tree (it holds .git, a folder or the
- * file a worktree uses) is left alone: there these files are the sources
- * being worked on, .claude among them, and deleting them loses work. The
- * owner can still clean a git-deployed live server by defining
- * BOI_REMOVE_GIT_DIR true in wp-config.php, which also removes .git.
+ * Decision (1.100.8): on a production server the cleanup runs even when
+ * the theme folder is a git working tree, and .git goes with the rest. The
+ * owner deploys over FTP with .git included, and a public .git is the
+ * theme's full source. The files are kept only in a development
+ * environment: wp_get_environment_type() is "local" or "development", or
+ * BOI_KEEP_DEV_FILES is defined true in wp-config.php. BOI_REMOVE_GIT_DIR
+ * still works: true forces the cleanup, .git included, even in a
+ * development environment, and false keeps .git on production while the
+ * other paths go.
  *
  * @package BestOfIslam
  */
@@ -25,10 +30,11 @@ defined( 'ABSPATH' ) || exit;
  * @return string[]
  */
 function boi_dev_paths() {
-	$paths = array( '.github', '.githooks', '.claude', '.vscode', '.idea', '.gitattributes', '.gitignore', '.editorconfig', '.DS_Store', 'dist' );
+	$paths = array( '.git', '.github', '.githooks', '.claude', '.vscode', '.idea', '.gitattributes', '.gitignore', '.editorconfig', '.DS_Store', 'dist', 'tests', 'bin', 'docs' );
 
-	if ( defined( 'BOI_REMOVE_GIT_DIR' ) && BOI_REMOVE_GIT_DIR ) {
-		$paths[] = '.git';
+	// BOI_REMOVE_GIT_DIR defined false keeps the repository on production.
+	if ( defined( 'BOI_REMOVE_GIT_DIR' ) && ! BOI_REMOVE_GIT_DIR ) {
+		$paths = array_values( array_diff( $paths, array( '.git' ) ) );
 	}
 
 	return (array) apply_filters( 'boi_dev_paths', $paths );
@@ -76,20 +82,70 @@ function boi_is_git_checkout() {
 }
 
 /**
+ * Whether the development files must stay: a development environment, or
+ * BOI_KEEP_DEV_FILES defined true. BOI_KEEP_DEV_FILES wins over
+ * BOI_REMOVE_GIT_DIR; BOI_REMOVE_GIT_DIR true wins over the environment.
+ *
+ * @return bool
+ */
+function boi_keep_dev_files() {
+	if ( defined( 'BOI_KEEP_DEV_FILES' ) && BOI_KEEP_DEV_FILES ) {
+		return true;
+	}
+
+	if ( defined( 'BOI_REMOVE_GIT_DIR' ) && BOI_REMOVE_GIT_DIR ) {
+		return false;
+	}
+
+	$env = function_exists( 'wp_get_environment_type' ) ? wp_get_environment_type() : 'production';
+
+	return in_array( $env, array( 'local', 'development' ), true );
+}
+
+/**
+ * The value recorded when the cleanup is done: the theme version, plus the
+ * BOI_REMOVE_GIT_DIR choice, so changing that constant runs the cleanup
+ * again without a new version.
+ *
+ * @return string
+ */
+function boi_dev_files_key() {
+	if ( ! defined( 'BOI_REMOVE_GIT_DIR' ) ) {
+		return BOI_VERSION;
+	}
+	return BOI_VERSION . ( BOI_REMOVE_GIT_DIR ? '-git' : '-keep-git' );
+}
+
+/**
  * Removes the development files, once per theme version.
  *
  * @return void
  */
 function boi_remove_dev_files() {
-	if ( get_option( 'boi_dev_files_removed' ) === BOI_VERSION ) {
+	if ( get_option( 'boi_dev_files_removed' ) === boi_dev_files_key() ) {
 		return;
 	}
 
-	// A git working tree: nothing is deleted, and the version is not
-	// recorded, so the files go once the folder stops being a checkout.
-	if ( boi_is_git_checkout() && ! ( defined( 'BOI_REMOVE_GIT_DIR' ) && BOI_REMOVE_GIT_DIR ) ) {
+	// A development environment: nothing is deleted, and the version is not
+	// recorded, so the files go once the site runs as production.
+	if ( boi_keep_dev_files() ) {
 		return;
 	}
+
+	// One cleanup at a time, whichever hook started it. add_option() inserts
+	// a unique row, so only one request can take the lock; a lock older than
+	// ten minutes is left from a request that died, and is taken over.
+	if ( ! add_option( 'boi_dev_files_lock', time(), '', false ) ) {
+		if ( time() - (int) get_option( 'boi_dev_files_lock' ) < 10 * MINUTE_IN_SECONDS ) {
+			return;
+		}
+		delete_option( 'boi_dev_files_lock' );
+		if ( ! add_option( 'boi_dev_files_lock', time(), '', false ) ) {
+			return;
+		}
+	}
+
+	$left = array();
 
 	foreach ( boi_dev_paths() as $rel ) {
 		$path = BOI_DIR . DIRECTORY_SEPARATOR . ltrim( $rel, '/\\' );
@@ -97,9 +153,38 @@ function boi_remove_dev_files() {
 		if ( file_exists( $path ) || is_link( $path ) ) {
 			boi_remove_path( $path );
 		}
+		clearstatcache();
+		if ( file_exists( $path ) || is_link( $path ) ) {
+			$left[] = $rel;
+		}
 	}
 
-	update_option( 'boi_dev_files_removed', BOI_VERSION, false );
+	// The version is recorded only once every path is gone. A path PHP could
+	// not delete (file ownership, say) is tried again an hour later from the
+	// front end, and on every admin page load.
+	if ( $left ) {
+		set_transient( 'boi_dev_files_retry', $left, HOUR_IN_SECONDS );
+	} else {
+		update_option( 'boi_dev_files_removed', boi_dev_files_key(), true ); // Autoloaded: read on every request.
+	}
+
+	delete_option( 'boi_dev_files_lock' );
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );
+
+/**
+ * The same, on the first front-end request after an FTP update: such an
+ * update fires no switch hook, and the site may see no admin visit for
+ * days. boi_remove_dev_files() takes the lock that keeps two requests from
+ * deleting at once.
+ *
+ * @return void
+ */
+function boi_remove_dev_files_front() {
+	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === boi_dev_files_key() || boi_keep_dev_files() || get_transient( 'boi_dev_files_retry' ) ) {
+		return;
+	}
+	boi_remove_dev_files();
+}
+add_action( 'init', 'boi_remove_dev_files_front', 99 );

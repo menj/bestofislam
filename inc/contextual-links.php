@@ -307,6 +307,9 @@ function boi_cl_filter( $content ) {
 	// A tag ends at the first ">" outside a quoted attribute value, so an alt
 	// text such as "a > b" never reads as running text.
 	$tokens   = preg_split( '/(<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+	if ( ! is_array( $tokens ) ) {
+		return $content; // PCRE stopped: keep the text, without links, and no fatal from implode().
+	}
 	$open     = array(); // Every open element: array( tag, forbids links ).
 	$skipping = 0;       // Open elements that forbid links.
 	$blocks   = array(); // Indexes in $open of the open p and li elements.
