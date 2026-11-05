@@ -4,6 +4,19 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.16] - 2026-11-05
+
+Reflections, the sections and the archives open with a lead and list. No feature removed and the front page is unchanged.
+
+### Added
+- A lead and list on the first page of Reflections (`templates/home.html`), of each section (`templates/taxonomy-listicle-topic.html`) and of each archive (`templates/archive.html`). The newest piece leads, large, with its title on a dark band at the foot of the image and a short gold rule above it. Its credit sits below the image. The next five stand in a list on the right, each a 16:9 thumbnail with the title beside it. On a phone the lead comes first.
+- The pieces it shows leave the grid below, so each page still holds 10 pieces and page 2 starts where it did.
+- With fewer than five pieces, or a lead with neither a featured image nor a bundled one, nothing changes. Unlisted posts never appear in it.
+- `inc/lead-list.php` (`boi_lead_list()`, the `bestofislam/lead-list` block), `assets/css/lead-list.css`, loaded on the first page of Reflections, the sections and the archives, and `tests/lead-list-test.php`.
+
+### Changed
+- The image code of the front page's featured lead and of "Keep reading" moves into `boi_lead_image()` and `boi_list_thumbnail()` in `inc/features.php`, and the image-credit block's line into `boi_image_credit_markup()` in `inc/images.php`, so the lead and list shares them. Their output is unchanged: the front page's HTML is byte for byte the same.
+
 ## [1.100.15] - 2026-11-05
 
 The browser icon set is complete. No feature removed.

@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.15
+Stable tag: 1.100.16
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -160,6 +160,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.100.16 =
+* Reflections, each section and each archive open with the newest piece large, with its image credit, and the next five in a list beside it. The grid carries on below. With fewer than five pieces, or a newest piece without an image, the page looks as before. The front page is unchanged.
+
 = 1.100.15 =
 * The browser icon set is complete: favicon.ico, 192px, 512px and maskable icons and a web app manifest, all from the mark. The site answers /favicon.ico with the icon, and the error pages show it in the tab. A Site Icon you set still wins.
 
@@ -254,6 +257,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.100.16 =
+Replace the theme files. Nothing else to do.
 
 = 1.100.15 =
 Replace the theme files. The error pages pick up the icon on the next admin page.
