@@ -119,5 +119,28 @@ boi_check( (bool) preg_grep( '#\^site/wp-includes/#', $boi_split ) && (bool) pre
 boi_check( boi_forbidden( $boi_split, '/wp-config.php', '/' ) && boi_forbidden( $boi_split, '/site/wp-config.php', '/' ), 'wp-config.php is refused in the core folder and in the folder above it' );
 boi_check( boi_forbidden( $boi_split, '/site/wp-includes/version.php', '/' ) && ! boi_forbidden( $boi_split, '/site/wp-includes/js/tinymce/wp-tinymce.php', '/' ), 'the prefixed rules refuse and allow as at the root' );
 
+// The theme folder's own .htaccess, which Apache reads before WordPress runs.
+$boi_own = array();
+foreach ( file( dirname( __DIR__ ) . '/.htaccess', FILE_IGNORE_NEW_LINES ) as $boi_line ) {
+	if ( preg_match( '/^RedirectMatch 403 (\S+)$/', $boi_line, $boi_m ) ) {
+		$boi_own[] = $boi_m[1];
+	}
+}
+$boi_own_hit = function ( $uri ) use ( $boi_own ) {
+	foreach ( $boi_own as $p ) {
+		if ( preg_match( '#' . $p . '#', $uri ) ) {
+			return true;
+		}
+	}
+	return false;
+};
+boi_check( 3 === count( $boi_own ), "the theme's .htaccess has its 3 RedirectMatch lines" );
+foreach ( array( '.git/config', '.github/workflows/ci.yml', '.gitignore', '.claude/CLAUDE.md', '.DS_Store', 'tests/unlist-test.php', 'bin/build-error-pages.php', 'docs/SSOT.md', 'functions.php', 'inc/setup.php/x' ) as $boi_p ) {
+	boi_check( $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: 403 for $boi_p" );
+}
+foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'assets/css/front.css', 'testsuite.css', 'assets/css/docs.css' ) as $boi_p ) {
+	boi_check( ! $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: open $boi_p" );
+}
+
 echo $boi_fail ? "$boi_fail failed\n" : "all passed\n";
 exit( $boi_fail ? 1 : 0 );

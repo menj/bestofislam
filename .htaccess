@@ -1,0 +1,18 @@
+# Best of Islam theme folder. Written by the Best of Islam theme.
+#
+# Apache reads this file on every request into the theme folder, before
+# WordPress starts, so the development files an FTP upload brings along are
+# refused from the moment they arrive. inc/housekeeping.php deletes them on
+# production, and the "Best of Islam: block direct file access" section in
+# the site's own .htaccess refuses them as well (docs/SSOT.md, D52).
+# Nothing here touches the styles, scripts, fonts or images the pages load.
+
+<IfModule mod_alias.c>
+# .git, .github, .githooks, .gitattributes, .gitignore, .claude and the
+# editor files, wherever they sit in the theme.
+RedirectMatch 403 /\.(git|claude|vscode|idea|editorconfig|DS_Store)
+# The tests, build scripts, docs and packaging output at the theme root.
+RedirectMatch 403 /themes/[^/]+/(tests|bin|docs|dist)(/|$)
+# No PHP file in the theme serves a page of its own.
+RedirectMatch 403 \.php(/|$)
+</IfModule>

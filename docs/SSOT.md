@@ -619,6 +619,9 @@ rules use mod_rewrite inside `<IfModule mod_rewrite.c>`, carry the site's own
 folder prefixes, and leave the admin, `admin-ajax.php`, `wp-cron.php`, the
 login page, the REST API and the editor's assets alone.
 `BOI_BLOCK_DIRECT_FILES` false in `wp-config.php` leaves the section out.
+The theme folder also ships its own `.htaccess` (mod_alias `RedirectMatch
+403`), which Apache applies before WordPress runs, so the files are refused
+even on the first request after an upload.
 Every PHP file in `tests` and `bin` exits unless it runs from the command line.
 
 ## Asset conventions
