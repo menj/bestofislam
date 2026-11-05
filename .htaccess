@@ -4,15 +4,38 @@
 # WordPress starts, so the development files an FTP upload brings along are
 # refused from the moment they arrive. inc/housekeeping.php deletes them on
 # production, and the "Best of Islam: block direct file access" section in
-# the site's own .htaccess refuses them as well (docs/SSOT.md, D52).
-# Nothing here touches the styles, scripts, fonts or images the pages load.
+# the site's own .htaccess refuses them as well (docs/SSOT.md, D52). The
+# tests, bin and docs folders also carry an .htaccess of their own. Nothing
+# here touches the styles, scripts, fonts or images the pages load.
 
 <IfModule mod_alias.c>
-# .git, .github, .githooks, .gitattributes, .gitignore, .claude and the
-# editor files, wherever they sit in the theme.
-RedirectMatch 403 /\.(git|claude|vscode|idea|editorconfig|DS_Store)
-# The tests, build scripts, docs and packaging output at the theme root.
+# Every file and folder whose name begins with a dot, wherever it sits in
+# the theme: .git, .github, .gitignore, .claude, .vscode, .idea, .DS_Store,
+# .env and the like. .well-known stays open.
+RedirectMatch 403 /\.(?!well-known(/|$))[^/]+(/|$)
+# The tests, build scripts, docs and packaging output at the theme root, by
+# address; the rewrite rule below matches them wherever the folder sits.
 RedirectMatch 403 /themes/[^/]+/(tests|bin|docs|dist)(/|$)
 # No PHP file in the theme serves a page of its own.
 RedirectMatch 403 \.php(/|$)
+</IfModule>
+
+# Dot files, also without mod_alias.
+<FilesMatch "^\.">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+
+# The same folders by the path below this folder, whatever its address.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Keep the site's own rules (WordPress's 404 for a missing file) for
+# requests into this folder.
+RewriteOptions Inherit
+RewriteRule ^(tests|bin|docs|dist)(/|$) - [F]
 </IfModule>

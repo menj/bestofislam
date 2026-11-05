@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.9] - 2026-11-05
+
+No band or feature removed and no public identifier renamed. These bring the theme in line with the hardening the sister themes merged, and carry over what the review of the sister theme's identical code found after 1.100.8.
+
+### Security
+- Visitors who are not logged in get no `/wp/v2/users` routes (404), and `?author=N` gives them a 404 where WordPress redirected to `/author/<username>/` and so named the account (`boi_sec_hide_user_routes()`, `boi_sec_block_author_query()`). Logged-in editors keep both. XML-RPC was already off.
+- The update guard also catches a file that is there but half written. The theme loads inside a `try`, so a `ParseError` mid-upload gives visitors, and the admin, the same 503 page as a missing file. The error log gets one line per problem every ten minutes, and the login screen, AJAX, cron and WP-CLI go on. Checked on the scratch site with a truncated `inc/sections.php`: 503 for the front page, 200 for `wp-login.php`.
+- The dev-file cleanup and the front-end `.htaccess` sync take a real lock (`inc/lock.php`). `add_option()` was no lock, since it reads first and then inserts with `ON DUPLICATE KEY UPDATE`. `boi_lock_take()` wins with one `INSERT IGNORE` and writes a token per holder. A stale lock is taken over with an `UPDATE` that succeeds only while the old token is still there, and `boi_lock_release()` deletes the row only while it holds the releaser's token. `tests/lock-test.php` checks this against a real SQL table.
+- The theme folder's `.htaccess` refuses every dot entry (`.well-known` excepted), with a `FilesMatch` for dot files where mod_alias is missing. It refuses `tests`, `bin`, `docs` and `dist` by the path below the theme folder too (mod_rewrite, `RewriteOptions Inherit`), whatever that folder's address. `tests/`, `bin/` and `docs/` carry an `.htaccess` of their own that refuses everything in them.
+
 ## [1.100.8] - 2026-11-05
 
 No band or feature removed and no public identifier renamed.

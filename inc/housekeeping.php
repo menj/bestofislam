@@ -132,17 +132,11 @@ function boi_remove_dev_files() {
 		return;
 	}
 
-	// One cleanup at a time, whichever hook started it. add_option() inserts
-	// a unique row, so only one request can take the lock; a lock older than
-	// ten minutes is left from a request that died, and is taken over.
-	if ( ! add_option( 'boi_dev_files_lock', time(), '', false ) ) {
-		if ( time() - (int) get_option( 'boi_dev_files_lock' ) < 10 * MINUTE_IN_SECONDS ) {
-			return;
-		}
-		delete_option( 'boi_dev_files_lock' );
-		if ( ! add_option( 'boi_dev_files_lock', time(), '', false ) ) {
-			return;
-		}
+	// One cleanup at a time, whichever hook started it (inc/lock.php); a lock
+	// older than ten minutes is from a request that died, and is taken over.
+	$token = function_exists( 'boi_lock_take' ) ? boi_lock_take( 'boi_dev_files_lock', 10 * MINUTE_IN_SECONDS ) : '';
+	if ( '' === $token ) {
+		return;
 	}
 
 	$left = array();
@@ -168,7 +162,7 @@ function boi_remove_dev_files() {
 		update_option( 'boi_dev_files_removed', boi_dev_files_key(), true ); // Autoloaded: read on every request.
 	}
 
-	delete_option( 'boi_dev_files_lock' );
+	boi_lock_release( 'boi_dev_files_lock', $token );
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );

@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.100.8' );
+define( 'BOI_VERSION', '1.100.9' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -49,6 +49,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/renamed-slugs.php',
 	BOI_DIR . '/inc/error-pages.php',
 	BOI_DIR . '/inc/error-page-static.php',
+	BOI_DIR . '/inc/lock.php',
 	BOI_DIR . '/inc/housekeeping.php',
 	BOI_DIR . '/inc/security-headers.php',
 	BOI_DIR . '/inc/security.php',
@@ -107,8 +108,26 @@ if ( is_readable( BOI_DIR . '/inc/maintenance.php' ) ) {
 	}
 }
 
-foreach ( $boi_load as $boi_file ) {
-	require_once $boi_file;
+// A file that is there but half written (an upload caught mid-file) throws a
+// ParseError: visitors get the same 503 page, the log one line per problem
+// and ten minutes, and the login screen, AJAX, cron and WP-CLI go on.
+try {
+	foreach ( $boi_load as $boi_file ) {
+		require_once $boi_file;
+	}
+} catch ( Throwable $boi_error ) {
+	$boi_key = 'boi_incomplete_' . md5( $boi_error->getMessage() );
+	if ( ! get_transient( $boi_key ) ) {
+		set_transient( $boi_key, 1, 10 * MINUTE_IN_SECONDS );
+		error_log( 'Best of Islam: the theme is incomplete or being uploaded (' . $boi_error->getMessage() . ' in ' . basename( $boi_error->getFile() ) . '); visitors see the maintenance notice until it is whole.' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
+	}
+	$boi_uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	if ( ! wp_doing_ajax() && ! wp_doing_cron() && 'cli' !== PHP_SAPI && false === strpos( $boi_uri, 'wp-login' ) && function_exists( 'boi_maintenance_send' ) ) {
+		// The admin too: the theme is half set up, so its screens would fail.
+		boi_maintenance_send();
+	}
+	unset( $boi_load, $boi_need, $boi_file, $boi_error, $boi_key, $boi_uri );
+	return;
 }
 unset( $boi_load, $boi_need, $boi_file );
 

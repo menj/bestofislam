@@ -620,8 +620,12 @@ folder prefixes, and leave the admin, `admin-ajax.php`, `wp-cron.php`, the
 login page, the REST API and the editor's assets alone.
 `BOI_BLOCK_DIRECT_FILES` false in `wp-config.php` leaves the section out.
 The theme folder also ships its own `.htaccess` (mod_alias `RedirectMatch
-403`), which Apache applies before WordPress runs, so the files are refused
-even on the first request after an upload.
+403` for every dot entry but `.well-known`, the dev folders and theme PHP;
+mod_rewrite for the dev folders by the path below the theme), and `tests/`,
+`bin/` and `docs/` each carry one that refuses everything in them. Apache
+applies them before WordPress runs, so the files are refused even on the
+first request after an upload. The cleanup and the sync share one lock,
+`inc/lock.php`.
 Every PHP file in `tests` and `bin` exits unless it runs from the command line.
 
 ## Asset conventions

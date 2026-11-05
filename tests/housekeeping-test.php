@@ -57,6 +57,10 @@ function update_option( $k, $v ) { $GLOBALS['boi_o'][ $k ] = $v; return true; }
 function wp_get_environment_type() { return $GLOBALS['boi_env']; }
 function set_transient( $k, $v, $t = 0 ) { $GLOBALS['boi_t'][ $k ] = $v; return true; }
 function add_option( $k, $v, $d = '', $a = true ) { if ( isset( $GLOBALS['boi_o'][ $k ] ) ) { return false; } $GLOBALS['boi_o'][ $k ] = $v; return true; }
+// inc/lock.php is tested on its own (tests/lock-test.php); here the same
+// rules over the option stub: a fresh lock is refused, a stale one taken over.
+function boi_lock_take( $k, $ttl ) { if ( isset( $GLOBALS['boi_o'][ $k ] ) && time() - (int) $GLOBALS['boi_o'][ $k ] < $ttl ) { return ''; } $GLOBALS['boi_o'][ $k ] = time() . '|t'; return $GLOBALS['boi_o'][ $k ]; }
+function boi_lock_release( $k, $token ) { if ( ( $GLOBALS['boi_o'][ $k ] ?? null ) === $token ) { unset( $GLOBALS['boi_o'][ $k ] ); } }
 function delete_option( $k ) { unset( $GLOBALS['boi_o'][ $k ] ); return true; }
 define( 'HOUR_IN_SECONDS', 3600 );
 define( 'MINUTE_IN_SECONDS', 60 );

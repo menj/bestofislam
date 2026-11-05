@@ -135,11 +135,19 @@ $boi_own_hit = function ( $uri ) use ( $boi_own ) {
 	return false;
 };
 boi_check( 3 === count( $boi_own ), "the theme's .htaccess has its 3 RedirectMatch lines" );
-foreach ( array( '.git/config', '.github/workflows/ci.yml', '.gitignore', '.claude/CLAUDE.md', '.DS_Store', 'tests/unlist-test.php', 'bin/build-error-pages.php', 'docs/SSOT.md', 'functions.php', 'inc/setup.php/x' ) as $boi_p ) {
+foreach ( array( '.git/config', '.github/workflows/ci.yml', '.gitignore', '.claude/CLAUDE.md', '.DS_Store', '.env', '.vscode/settings.json', 'assets/.DS_Store', 'tests/unlist-test.php', 'bin/build-error-pages.php', 'docs/SSOT.md', 'functions.php', 'inc/setup.php/x' ) as $boi_p ) {
 	boi_check( $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: 403 for $boi_p" );
 }
-foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'assets/css/front.css', 'testsuite.css', 'assets/css/docs.css' ) as $boi_p ) {
+foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'assets/css/front.css', 'assets/css/front.min.css', 'testsuite.css', 'assets/css/docs.css', '.well-known/x' ) as $boi_p ) {
 	boi_check( ! $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: open $boi_p" );
+}
+
+// The rewrite rule, on the path below the theme folder, and the folders' own deny files.
+$boi_rw = preg_match( '/^RewriteRule (\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
+boi_check( '' !== $boi_rw && 1 === preg_match( '#' . $boi_rw . '#', 'docs/SSOT.md' ) && 1 === preg_match( '#' . $boi_rw . '#', 'tests' ) && 0 === preg_match( '#' . $boi_rw . '#', 'assets/docs/x.css' ), "theme .htaccess rewrite: the folders by the path below the theme, assets open" );
+foreach ( array( 'tests', 'bin', 'docs' ) as $boi_d ) {
+	$boi_ht = (string) @file_get_contents( dirname( __DIR__ ) . "/$boi_d/.htaccess" ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+	boi_check( false !== strpos( $boi_ht, 'Require all denied' ) && false !== strpos( $boi_ht, 'Deny from all' ), "$boi_d/.htaccess refuses everything, on Apache 2.4 and 2.2" );
 }
 
 echo $boi_fail ? "$boi_fail failed\n" : "all passed\n";

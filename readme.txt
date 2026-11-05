@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.8
+Stable tag: 1.100.9
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.9 =
+* Visitors can no longer list the site's user accounts.
+* A theme caught half uploaded shows the short "updating" page instead of an error, even when a file arrived only in part.
 
 = 1.100.8 =
 * On a live server the theme deletes its development files again, the .git repository included, and the web server refuses direct requests for core and theme PHP files, .git, .claude and the theme's tests, bin and docs folders. See UPGRADING.md to keep them where you work on the theme.
