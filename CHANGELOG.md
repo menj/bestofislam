@@ -4,6 +4,11 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.5] - 2026-11-05
+
+### Fixed
+- `boi_error_maybe_sync()` also rewrites a drop-in that carries the theme's marker but differs from what the theme would write now (state `outdated`), so an edited or half-restored copy is repaired on the next admin page load even when the fingerprint is current. `tests/error-pages-test.php` checks it.
+
 ## [1.100.4] - 2026-11-05
 
 ### Changed

@@ -92,6 +92,9 @@ file_put_contents( "$boi_tmp/maintenance.php", "<?php\n// Paulus error page drop
 boi_check( 'theme' === boi_error_state()['maintenance'], 'another theme\'s marked leftover reads as theme' );
 boi_error_sync();
 boi_check( file_get_contents( "$boi_tmp/maintenance.php" ) === $boi_src['maintenance'], 'sync replaces another theme\'s marked leftover' );
+file_put_contents( "$boi_tmp/maintenance.php", str_replace( 'Back shortly', 'Edited', $boi_src['maintenance'] ) );
+boi_error_maybe_sync();
+boi_check( file_get_contents( "$boi_tmp/maintenance.php" ) === $boi_src['maintenance'], 'an admin visit repairs an edited copy with the fingerprint current' );
 boi_error_remove();
 boi_check( ! file_exists( "$boi_tmp/maintenance.php" ) && ! file_exists( "$boi_tmp/php-error.php" ) && "<?php // someone else's\n" === file_get_contents( "$boi_tmp/db-error.php" ), 'switching away removes only the theme\'s own files' );
 

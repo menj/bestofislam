@@ -431,7 +431,7 @@ function boi_error_maybe_sync() {
 	}
 
 	$state = boi_error_state();
-	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! in_array( 'absent', $state, true ) && ! in_array( 'theme', $state, true ) ) {
+	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! array_intersect( array( 'absent', 'theme', 'outdated' ), $state ) ) {
 		return;
 	}
 
