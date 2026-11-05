@@ -439,10 +439,21 @@ function boi_render_contents() {
 		return '';
 	}
 
-	$items = '';
-	$count = 0;
+	// The text is rendered to read its headings; a contents block placed in the text would render
+	// itself again inside that pass, so it prints nothing while the pass runs.
+	static $busy = false;
 
-	foreach ( boi_anatomy_heading_list( do_blocks( $post->post_content ) ) as $h ) {
+	if ( $busy ) {
+		return '';
+	}
+
+	$busy     = true;
+	$rendered = do_blocks( $post->post_content );
+	$busy     = false;
+	$items    = '';
+	$count    = 0;
+
+	foreach ( boi_anatomy_heading_list( $rendered ) as $h ) {
 		if ( '' === $h[0] || '' === $h[1] ) {
 			continue;
 		}
@@ -455,7 +466,11 @@ function boi_render_contents() {
 		return '';
 	}
 
-	return '<nav class="boi-contents" aria-labelledby="boi-contents-title"><p id="boi-contents-title" class="boi-contents__label">' . esc_html__( 'In this article', 'bestofislam' ) . '</p><ol class="boi-contents__list">' . $items . '</ol></nav>';
+	static $shown = 0;
+	++$shown;
+	$lid = 1 === $shown ? 'boi-contents-title' : 'boi-contents-title-' . $shown;
+
+	return '<nav class="boi-contents" aria-labelledby="' . $lid . '"><p id="' . $lid . '" class="boi-contents__label">' . esc_html__( 'In this article', 'bestofislam' ) . '</p><ol class="boi-contents__list">' . $items . '</ol></nav>';
 }
 
 /* The mid-article next step ---------------------------------------------- */
