@@ -1,0 +1,189 @@
+/* Lead and list: one large piece and a stacked list of five, above the grid
+   on the first page of Reflections, of each section and of each archive
+   (inc/lead-list.php). Colours come from the preset tokens, which the dark
+   appearance redefines (theme-toggle.css). */
+
+.boi-lead-list {
+	--boi-ll-radius: var(--boi-radius, var(--wp--custom--radius--md, 10px));
+	--boi-ll-gap: clamp(1.25rem, 3vw, 2.5rem);
+	margin-block: clamp(1.5rem, 3vw, 2.5rem) var(--boi-ll-gap);
+}
+
+.boi-lead-list__heading {
+	margin: 0 0 1.25rem;
+	font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+	line-height: 1.25;
+	color: var(--wp--preset--color--contrast);
+}
+
+.boi-lead-list__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+	gap: var(--boi-ll-gap);
+	align-items: start;
+}
+
+/* Lead */
+.boi-lead-list__lead,
+.boi-lead-list__figure { margin: 0; }
+
+.boi-lead-list__media {
+	position: relative;
+	overflow: hidden;
+	border-radius: var(--boi-ll-radius);
+	background: var(--wp--preset--color--accent-3);
+	aspect-ratio: 3 / 2;
+	display: grid;
+	isolation: isolate;
+}
+
+.boi-lead-list__media > * { grid-area: 1 / 1; min-width: 0; min-height: 0; }
+
+.boi-lead-list__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.35s ease;
+}
+
+.boi-lead-list__lead:hover .boi-lead-list__img { transform: scale(1.03); }
+
+/* The gradient runs from 85% black at the foot to clear; the text sits on the
+   solid 85% part, so white type keeps well above 4.5:1 on any photograph. */
+.boi-lead-list__overlay {
+	align-self: end;
+	padding: 4.5rem clamp(1rem, 2.5vw, 1.75rem) clamp(1rem, 2.5vw, 1.5rem);
+	background: linear-gradient(to top, rgb(0 0 0 / 0.85) 0, rgb(0 0 0 / 0.85) calc(100% - 4.5rem), rgb(0 0 0 / 0) 100%);
+	color: #fff;
+}
+
+.boi-lead-list__rule {
+	display: block;
+	width: 3rem;
+	height: 3px;
+	margin-bottom: 0.85rem;
+	background: var(--wp--preset--color--accent-2);
+	border-radius: 2px;
+}
+
+.boi-lead-list__title {
+	margin: 0;
+	text-align: start;
+	text-wrap: balance;
+	font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+	line-height: 1.2;
+	font-weight: 700;
+	color: #fff;
+}
+
+.boi-lead-list__title .boi-lead-list__link { color: #fff; }
+
+.boi-lead-list__credit {
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	color: var(--wp--preset--color--accent-5);
+}
+
+.boi-lead-list__credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.boi-lead-list__credit a:hover,
+.boi-lead-list__credit a:focus-visible { color: var(--wp--preset--color--accent-1); }
+
+/* List */
+.boi-lead-list__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.boi-lead-list__item {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(6.5rem, 40%) minmax(0, 1fr);
+	gap: 1rem;
+	align-items: center;
+	padding-block: 0.9rem;
+	border-top: 1px solid var(--wp--preset--color--accent-6);
+}
+
+.boi-lead-list__item:first-child { padding-top: 0; border-top: 0; }
+.boi-lead-list__item:last-child { padding-bottom: 0; }
+
+.boi-lead-list__thumb {
+	display: block;
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+	border-radius: var(--boi-ll-radius);
+	background: var(--wp--preset--color--accent-3);
+}
+
+.boi-lead-list__thumb-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.35s ease;
+}
+
+.boi-lead-list__item:hover .boi-lead-list__thumb-img { transform: scale(1.04); }
+
+.boi-lead-list__item-title {
+	margin: 0;
+	text-align: start;
+	hyphens: manual;
+	font-size: 1.05rem;
+	line-height: 1.3;
+	font-weight: 700;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.boi-lead-list__item-title .boi-lead-list__link { color: var(--wp--preset--color--contrast); }
+.boi-lead-list__item:hover .boi-lead-list__link { color: var(--wp--preset--color--accent-1); }
+
+/* The whole card is the link: the link's ::after covers the card, and the
+   focus ring is drawn on it. */
+.boi-lead-list__link {
+	text-decoration: none;
+	outline: none;
+}
+
+.boi-lead-list__link::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	border-radius: var(--boi-ll-radius);
+}
+
+.boi-lead-list__link:focus-visible::after {
+	outline: 3px solid var(--wp--preset--color--accent-2);
+	outline-offset: 3px;
+}
+
+/* The lead's link covers the photograph only, so the credit links below it stay usable. */
+
+@media (max-width: 781px) {
+	.boi-lead-list__grid { grid-template-columns: minmax(0, 1fr); }
+	.boi-lead-list__media { aspect-ratio: 16 / 9; }
+	.boi-lead-list__overlay { padding-top: 3.5rem; background: linear-gradient(to top, rgb(0 0 0 / 0.85) 0, rgb(0 0 0 / 0.85) calc(100% - 3.5rem), rgb(0 0 0 / 0) 100%); }
+	.boi-lead-list__title { font-size: 1.3rem; }
+	.boi-lead-list__item { grid-template-columns: minmax(6.5rem, 38%) minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-lead-list__img,
+	.boi-lead-list__thumb-img { transition: none; }
+	.boi-lead-list__lead:hover .boi-lead-list__img,
+	.boi-lead-list__item:hover .boi-lead-list__thumb-img { transform: none; }
+}
+
+@media (forced-colors: active) {
+	.boi-lead-list__overlay { background: Canvas; color: CanvasText; }
+	.boi-lead-list__title .boi-lead-list__link { color: LinkText; }
+	.boi-lead-list__link:focus-visible::after { outline-color: Highlight; }
+}

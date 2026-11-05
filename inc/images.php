@@ -292,10 +292,27 @@ function boi_image_source_name( $url ) {
  * @return string
  */
 function boi_render_image_credit() {
-	$id = get_post_thumbnail_id();
+	return boi_image_credit_markup( get_post() );
+}
+
+/**
+ * The credit line of a post's featured image, or of its bundled image when it
+ * has none. The image-credit block and the lead and list share it.
+ *
+ * @param WP_Post|int|null $post Post.
+ * @return string
+ */
+function boi_image_credit_markup( $post ) {
+	$post = get_post( $post );
+
+	if ( ! $post ) {
+		return '';
+	}
+
+	$id = get_post_thumbnail_id( $post );
 
 	if ( ! $id ) {
-		$bundled = boi_bundled_image( get_post() );
+		$bundled = boi_bundled_image( $post );
 
 		if ( ! $bundled ) {
 			return '';

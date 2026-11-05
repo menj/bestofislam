@@ -1,0 +1,253 @@
+<?php
+/**
+ * Lead and list: the newest piece large on the left, the next five as a
+ * stacked list on the right, above the grid on the first page of Reflections,
+ * of each section and of each archive. The bestofislam/lead-list block draws
+ * it; with fewer than five pieces, or a lead with neither a featured image nor
+ * a bundled one, it draws nothing and the grid shows as before. The image
+ * helpers are the ones the front page's featured lead and "Keep reading" use
+ * (inc/features.php), and the credit is the image-credit block's
+ * (inc/images.php).
+ *
+ * @package BestOfIslam
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+/** How many pieces the list beside the lead holds. */
+const BOI_LEAD_LIST_MAX = 5;
+
+/** The fewest pieces the layout needs, the lead included. */
+const BOI_LEAD_LIST_MIN = 5;
+
+/**
+ * Draw the lead and list.
+ *
+ * @param WP_Post[] $posts Pieces, newest first.
+ * @param array     $args  {
+ *     @type string $heading    Section heading.
+ *     @type string $heading_id ID of the heading, for aria-labelledby.
+ *     @type int    $lead_id    Piece to lead with; the newest leads when it is 0 or not usable.
+ *     @type int    $max        Pieces in the list (at most five).
+ * }
+ * @return array { html: string, ids: int[] } html is '' when the layout does not apply.
+ */
+function boi_lead_list( array $posts, array $args = array() ) {
+	$args  = wp_parse_args(
+		$args,
+		array(
+			'heading'    => __( 'Latest reflections', 'bestofislam' ),
+			'heading_id' => 'boi-lead-list-heading',
+			'lead_id'    => 0,
+			'max'        => BOI_LEAD_LIST_MAX,
+		)
+	);
+	$empty = array(
+		'html' => '',
+		'ids'  => array(),
+	);
+
+	$posts = array_values(
+		array_filter(
+			array_map( 'get_post', $posts ),
+			static function ( $p ) {
+				return $p instanceof WP_Post && 'publish' === $p->post_status && ! ( function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( $p ) );
+			}
+		)
+	);
+
+	$lead    = null;
+	$lead_id = (int) $args['lead_id'];
+	if ( $lead_id ) {
+		foreach ( $posts as $i => $p ) {
+			if ( $p->ID === $lead_id ) {
+				$lead = $p;
+				unset( $posts[ $i ] );
+				break;
+			}
+		}
+		if ( ! $lead ) {
+			$chosen = get_post( $lead_id );
+			if ( $chosen instanceof WP_Post && 'publish' === $chosen->post_status && ! ( function_exists( 'boi_is_unlisted' ) && boi_is_unlisted( $chosen ) ) ) {
+				$lead = $chosen;
+			}
+		}
+	}
+	if ( ! $lead ) {
+		$lead = array_shift( $posts );
+	}
+	$list = array_slice( array_values( $posts ), 0, max( 1, min( BOI_LEAD_LIST_MAX, (int) $args['max'] ) ) );
+
+	// The bundled image counts as the lead's photograph; the drawn placeholder does not.
+	if ( ! $lead || 1 + count( $list ) < BOI_LEAD_LIST_MIN || ! ( has_post_thumbnail( $lead ) || ( function_exists( 'boi_bundled_image' ) && boi_bundled_image( $lead ) ) ) ) {
+		return $empty;
+	}
+
+	$heading_id = sanitize_html_class( $args['heading_id'] );
+	$lead_img   = boi_lead_image( $lead, '(max-width: 781px) calc(100vw - 2rem), 60vw', array( 'class' => 'boi-lead-list__img' ) );
+	if ( '' === $lead_img || false !== strpos( $lead_img, 'boi-placeholder' ) ) {
+		return $empty;
+	}
+	$credit = boi_image_credit_markup( $lead );
+
+	$html  = '<section class="boi-lead-list alignwide" aria-labelledby="' . esc_attr( $heading_id ) . '">';
+	$html .= '<h2 class="boi-lead-list__heading" id="' . esc_attr( $heading_id ) . '">' . esc_html( $args['heading'] ) . '</h2>';
+	$html .= '<div class="boi-lead-list__grid">';
+	$html .= '<article class="boi-lead-list__lead"><figure class="boi-lead-list__figure">';
+	$html .= '<div class="boi-lead-list__media">' . $lead_img;
+	$html .= '<div class="boi-lead-list__overlay"><span class="boi-lead-list__rule" aria-hidden="true"></span>';
+	$html .= '<h3 class="boi-lead-list__title"><a class="boi-lead-list__link" href="' . esc_url( get_permalink( $lead ) ) . '">' . esc_html( get_the_title( $lead ) ) . '</a></h3>';
+	$html .= '</div></div>';
+	if ( '' !== $credit ) {
+		$html .= '<figcaption class="boi-lead-list__credit">' . $credit . '</figcaption>';
+	}
+	$html .= '</figure></article>';
+
+	$html .= '<ul class="boi-lead-list__list">';
+	foreach ( $list as $item ) {
+		$thumb = boi_list_thumbnail(
+			$item,
+			array(
+				'class' => 'boi-lead-list__thumb-img',
+				'alt'   => '',
+				'sizes' => '(max-width: 781px) 40vw, 12rem',
+			)
+		);
+		$html .= '<li class="boi-lead-list__item">';
+		$html .= '<span class="boi-lead-list__thumb" aria-hidden="true">' . $thumb . '</span>';
+		$html .= '<h3 class="boi-lead-list__item-title"><a class="boi-lead-list__link" href="' . esc_url( get_permalink( $item ) ) . '">' . esc_html( get_the_title( $item ) ) . '</a></h3>';
+		$html .= '</li>';
+	}
+	$html .= '</ul></div></section>';
+
+	return array(
+		'html' => $html,
+		'ids'  => array_merge( array( $lead->ID ), wp_list_pluck( $list, 'ID' ) ),
+	);
+}
+
+/**
+ * Pieces the lead and list showed on this request, so the grid below can
+ * leave them out.
+ *
+ * @param int[]|null $ids IDs to record, or null to read.
+ * @return int[]
+ */
+function boi_lead_list_shown( $ids = null ) {
+	static $shown = array();
+	if ( null !== $ids ) {
+		$shown = array_map( 'intval', $ids );
+	}
+	return $shown;
+}
+
+/**
+ * Render callback of the bestofislam/lead-list block: the first page of the
+ * Reflections page, of a section and of an archive, from the pieces the main query already holds.
+ *
+ * @param array $attributes Block attributes.
+ * @return string
+ */
+function boi_lead_list_block_render( $attributes ) {
+	global $wp_query;
+	if ( is_admin() || is_paged() || ! ( is_home() || is_archive() ) || ! $wp_query instanceof WP_Query || empty( $wp_query->posts ) ) {
+		return '';
+	}
+	$attributes = is_array( $attributes ) ? $attributes : array();
+	$heading    = isset( $attributes['heading'] ) ? trim( (string) $attributes['heading'] ) : '';
+	if ( '' === $heading ) {
+		$term = is_category() || is_tag() || is_tax() ? get_queried_object() : null;
+		/* translators: %s: section, category or tag name. */
+		$heading = $term instanceof WP_Term ? sprintf( __( 'Latest in %s', 'bestofislam' ), $term->name ) : ( is_home() ? __( 'Latest reflections', 'bestofislam' ) : __( 'Latest pieces', 'bestofislam' ) );
+	}
+	$out        = boi_lead_list(
+		array_slice( $wp_query->posts, 0, 1 + BOI_LEAD_LIST_MAX ),
+		array(
+			'heading' => $heading,
+			'lead_id' => isset( $attributes['leadId'] ) ? (int) $attributes['leadId'] : 0,
+		)
+	);
+	if ( '' === $out['html'] ) {
+		return '';
+	}
+	boi_lead_list_shown( $out['ids'] );
+	wp_enqueue_style( 'boi-lead-list', BOI_URI . '/assets/css/lead-list.css', array( 'boi-front' ), boi_asset_version( '/assets/css/lead-list.css' ) );
+	return $out['html'];
+}
+
+/**
+ * Register the block. It is dynamic and has no editor script: the site editor
+ * shows it as a placeholder, and the page draws it from the main query.
+ */
+function boi_lead_list_register() {
+	register_block_type(
+		'bestofislam/lead-list',
+		array(
+			'api_version'     => 3,
+			'title'           => __( 'Lead and list', 'bestofislam' ),
+			'category'        => 'theme',
+			'attributes'      => array(
+				'heading' => array(
+					'type'    => 'string',
+					'default' => '',
+				),
+				'leadId'  => array(
+					'type'    => 'integer',
+					'default' => 0,
+				),
+			),
+			'render_callback' => 'boi_lead_list_block_render',
+		)
+	);
+}
+add_action( 'init', 'boi_lead_list_register' );
+
+/**
+ * The grid of the main query leaves out the pieces the lead and list
+ * already showed: its post template runs on the remaining ones, then the
+ * main query is restored for pagination and everything after it.
+ *
+ * @param string|null   $pre    Short-circuit output.
+ * @param array         $parsed Parsed block.
+ * @param WP_Block|null $parent Parent block.
+ * @return string|null
+ */
+function boi_lead_list_grid_before( $pre, $parsed, $parent = null ) {
+	global $wp_query;
+	$shown = boi_lead_list_shown();
+	if ( null !== $pre || ! $shown || 'core/post-template' !== ( $parsed['blockName'] ?? '' ) || ! $parent instanceof WP_Block || empty( $parent->parsed_block['attrs']['query']['inherit'] ) || ! $wp_query instanceof WP_Query ) {
+		return $pre;
+	}
+	$GLOBALS['boi_lead_list_saved'] = array( $wp_query->posts, $wp_query->post_count );
+	$rest                           = array_values(
+		array_filter(
+			$wp_query->posts,
+			static function ( $p ) use ( $shown ) {
+				return ! in_array( (int) ( is_object( $p ) ? $p->ID : $p ), $shown, true );
+			}
+		)
+	);
+	$wp_query->posts      = $rest;
+	$wp_query->post_count = count( $rest );
+	$wp_query->rewind_posts();
+	return $pre;
+}
+add_filter( 'pre_render_block', 'boi_lead_list_grid_before', 10, 3 );
+
+/**
+ * Restore the main query after the grid's post template.
+ *
+ * @param string $content Block HTML.
+ * @param array  $block   Parsed block.
+ * @return string
+ */
+function boi_lead_list_grid_after( $content, $block ) {
+	global $wp_query;
+	if ( 'core/post-template' === ( $block['blockName'] ?? '' ) && isset( $GLOBALS['boi_lead_list_saved'] ) && $wp_query instanceof WP_Query ) {
+		list( $wp_query->posts, $wp_query->post_count ) = $GLOBALS['boi_lead_list_saved'];
+		unset( $GLOBALS['boi_lead_list_saved'] );
+		$wp_query->rewind_posts();
+	}
+	return $content;
+}
+add_filter( 'render_block', 'boi_lead_list_grid_after', 10, 2 );

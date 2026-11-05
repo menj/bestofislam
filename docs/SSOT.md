@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.100.15, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.100.16, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -699,6 +699,10 @@ The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.c
 ### D55. Every theme ships a full favicon set
 
 The owner asked on 2026-11-05: "make sure you have favicon too." While no Site Icon is set, the theme prints its own icon tags (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`, `theme-color` #0D2B4F) on the site, the login screen and the admin, and answers `/favicon.ico` with `assets/images/favicon.ico`. Every icon is rendered from `favicon.svg`, the solid mark. A Site Icon always wins, and the theme then prints none of its own.
+
+### D56. Listings open with a lead and list where it makes sense
+
+The owner asked on 2026-11-05 to "only use this style of layout (not the colours) where it makes sense to do so." An audit marked three templates: Reflections (`home.html`), the sections (`taxonomy-listicle-topic.html`) and the archives (`archive.html`). On their first page the newest piece leads, large, with its credit below, and the next five stand in a list beside it; the grid below leaves those six out. Below five pieces, or with a lead that has neither a featured image nor a bundled one, the grid shows alone. The front page keeps its featured lead and is not changed. Colours, fonts and radii are the theme's own.
 
 ### D15. The glossary is pages, not a post type
 

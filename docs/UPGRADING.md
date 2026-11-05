@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.100.16
+
+Replace the theme files. The new files are `inc/lead-list.php`, `assets/css/lead-list.css` and `tests/lead-list-test.php`. If you edited the Reflections, section or archive template in the Site Editor, your copy wins and shows no lead and list; reset it, or add the Lead and list block above the query. Nothing else to do.
+
 ## Upgrading to 1.100.15
 
 Replace the theme files. The new files are in `assets/images/`: `favicon.ico`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` and `site.webmanifest`. The next admin page rewrites the error pages with the icon. If a `favicon.ico` file sits in the site root, the web server sends it and the theme never answers; delete it to use the theme's.
@@ -155,6 +159,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 
 ### Later
 
+- A preview of the `bestofislam/lead-list` block in the Site Editor. It renders on the server only, so the editor shows a placeholder. Waits on an editor script for the theme's server-rendered blocks.
 - A translation template, `languages/bestofislam.pot`. The FAQ in `readme.txt` tells owners where to put a `.mo` file, but the theme ships no template to make one from. The injil.help and compelling-evidence themes ship a `languages/` folder. Waits on a string freeze after the current round of article work.
 - A full Content-Security-Policy. `inc/security-headers.php` sends `frame-ancestors` only, because WordPress and its plugins print inline scripts and styles an enforcing policy would block. Waits on WordPress core.
 
