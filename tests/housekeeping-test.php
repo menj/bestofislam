@@ -21,7 +21,7 @@ $boi_case = $argv[1] ?? '';
 
 if ( '' === $boi_case ) {
 	$boi_fail = 0;
-	foreach ( array( 'env', 'keep', 'force', 'keep-git', 'stuck' ) as $boi_c ) {
+	foreach ( array( 'env', 'keep', 'force', 'keep-git', 'stuck', 'lock' ) as $boi_c ) {
 		passthru( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( __FILE__ ) . ' ' . escapeshellarg( $boi_c ), $boi_code );
 		$boi_fail += $boi_code ? 1 : 0;
 	}
@@ -56,7 +56,10 @@ function get_option( $k, $d = false ) { return $GLOBALS['boi_o'][ $k ] ?? $d; }
 function update_option( $k, $v ) { $GLOBALS['boi_o'][ $k ] = $v; return true; }
 function wp_get_environment_type() { return $GLOBALS['boi_env']; }
 function set_transient( $k, $v, $t = 0 ) { $GLOBALS['boi_t'][ $k ] = $v; return true; }
+function add_option( $k, $v, $d = '', $a = true ) { if ( isset( $GLOBALS['boi_o'][ $k ] ) ) { return false; } $GLOBALS['boi_o'][ $k ] = $v; return true; }
+function delete_option( $k ) { unset( $GLOBALS['boi_o'][ $k ] ); return true; }
 define( 'HOUR_IN_SECONDS', 3600 );
+define( 'MINUTE_IN_SECONDS', 60 );
 require dirname( __DIR__ ) . '/inc/housekeeping.php';
 
 $boi_fail = 0;
@@ -88,6 +91,15 @@ switch ( $boi_case ) {
 		boi_remove_dev_files();
 		boi_check( is_dir( "$boi_tmp/tests" ), 'the cleanup runs once per version' );
 		rmdir( "$boi_tmp/tests" );
+		break;
+	case 'lock':
+		$GLOBALS['boi_env'] = 'production';
+		add_option( 'boi_dev_files_lock', time() );
+		boi_remove_dev_files();
+		boi_check( 6 === count( boi_dev_left( $boi_tmp ) ) && false === get_option( 'boi_dev_files_removed' ), 'a fresh lock held by another request: nothing is deleted' );
+		$GLOBALS['boi_o']['boi_dev_files_lock'] = time() - 3600;
+		boi_remove_dev_files();
+		boi_check( array() === boi_dev_left( $boi_tmp ) && '9.9.9' === get_option( 'boi_dev_files_removed' ) && false === get_option( 'boi_dev_files_lock' ), 'a stale lock is taken over, and released after the run' );
 		break;
 	case 'keep':
 		$GLOBALS['boi_env'] = 'production';

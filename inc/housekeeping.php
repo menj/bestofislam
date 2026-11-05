@@ -132,6 +132,19 @@ function boi_remove_dev_files() {
 		return;
 	}
 
+	// One cleanup at a time, whichever hook started it. add_option() inserts
+	// a unique row, so only one request can take the lock; a lock older than
+	// ten minutes is left from a request that died, and is taken over.
+	if ( ! add_option( 'boi_dev_files_lock', time(), '', false ) ) {
+		if ( time() - (int) get_option( 'boi_dev_files_lock' ) < 10 * MINUTE_IN_SECONDS ) {
+			return;
+		}
+		delete_option( 'boi_dev_files_lock' );
+		if ( ! add_option( 'boi_dev_files_lock', time(), '', false ) ) {
+			return;
+		}
+	}
+
 	$left = array();
 
 	foreach ( boi_dev_paths() as $rel ) {
@@ -151,10 +164,11 @@ function boi_remove_dev_files() {
 	// front end, and on every admin page load.
 	if ( $left ) {
 		set_transient( 'boi_dev_files_retry', $left, HOUR_IN_SECONDS );
-		return;
+	} else {
+		update_option( 'boi_dev_files_removed', boi_dev_files_key(), true ); // Autoloaded: read on every request.
 	}
 
-	update_option( 'boi_dev_files_removed', boi_dev_files_key(), false );
+	delete_option( 'boi_dev_files_lock' );
 }
 add_action( 'after_switch_theme', 'boi_remove_dev_files' );
 add_action( 'admin_init', 'boi_remove_dev_files' );
@@ -162,16 +176,15 @@ add_action( 'admin_init', 'boi_remove_dev_files' );
 /**
  * The same, on the first front-end request after an FTP update: such an
  * update fires no switch hook, and the site may see no admin visit for
- * days. A one-minute lock keeps two requests from deleting at once.
+ * days. boi_remove_dev_files() takes the lock that keeps two requests from
+ * deleting at once.
  *
  * @return void
  */
 function boi_remove_dev_files_front() {
-	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === boi_dev_files_key() || boi_keep_dev_files() || get_transient( 'boi_dev_files_lock' ) || get_transient( 'boi_dev_files_retry' ) ) {
+	if ( is_admin() || get_option( 'boi_dev_files_removed' ) === boi_dev_files_key() || boi_keep_dev_files() || get_transient( 'boi_dev_files_retry' ) ) {
 		return;
 	}
-	set_transient( 'boi_dev_files_lock', 1, MINUTE_IN_SECONDS );
 	boi_remove_dev_files();
-	delete_transient( 'boi_dev_files_lock' );
 }
 add_action( 'init', 'boi_remove_dev_files_front', 99 );

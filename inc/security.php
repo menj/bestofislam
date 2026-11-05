@@ -283,15 +283,29 @@ function boi_sec_sync_htaccess_once() {
 	// The key carries the BOI_BLOCK_DIRECT_FILES choice, so changing that
 	// constant takes effect on the next request too.
 	$key = BOI_VERSION . ( boi_sec_files_block_on() ? '' : '-files-off' );
-	if ( get_option( 'boi_sec_htaccess_version' ) === $key || get_transient( 'boi_sec_htaccess_lock' ) ) {
+	if ( get_option( 'boi_sec_htaccess_version' ) === $key || get_transient( 'boi_sec_htaccess_retry' ) ) {
 		return;
 	}
-	set_transient( 'boi_sec_htaccess_lock', 1, MINUTE_IN_SECONDS );
+	// add_option() inserts a unique row, so only one request takes the lock;
+	// one older than a minute is from a request that died. (insert_with_markers()
+	// also locks the file itself while it writes.)
+	if ( ! add_option( 'boi_sec_htaccess_lock', time(), '', false ) ) {
+		if ( time() - (int) get_option( 'boi_sec_htaccess_lock' ) < MINUTE_IN_SECONDS ) {
+			return;
+		}
+		delete_option( 'boi_sec_htaccess_lock' );
+		if ( ! add_option( 'boi_sec_htaccess_lock', time(), '', false ) ) {
+			return;
+		}
+	}
 	// Recorded only once the sections are written, or where no .htaccess
 	// applies (not Apache); a failed write is tried again a minute later.
 	if ( boi_sec_sync_htaccess( true ) || empty( $GLOBALS['is_apache'] ) ) {
-		update_option( 'boi_sec_htaccess_version', $key, false );
+		update_option( 'boi_sec_htaccess_version', $key, true ); // Autoloaded: read on every request.
+	} else {
+		set_transient( 'boi_sec_htaccess_retry', 1, MINUTE_IN_SECONDS );
 	}
+	delete_option( 'boi_sec_htaccess_lock' );
 }
 add_action( 'init', 'boi_sec_sync_htaccess_once', 99 );
 add_action( 'after_switch_theme', function () { boi_sec_sync_htaccess( true ); } );
