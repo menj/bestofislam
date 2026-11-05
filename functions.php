@@ -48,6 +48,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/glossary-links.php',
 	BOI_DIR . '/inc/renamed-slugs.php',
 	BOI_DIR . '/inc/error-pages.php',
+	BOI_DIR . '/inc/error-page-static.php',
 	BOI_DIR . '/inc/housekeeping.php',
 	BOI_DIR . '/inc/security-headers.php',
 	BOI_DIR . '/inc/security.php',
