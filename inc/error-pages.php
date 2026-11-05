@@ -424,6 +424,11 @@ function boi_error_sync() {
  * @return void
  */
 function boi_error_maybe_sync() {
+	// wp-content is shared on a network, and each site would write its own
+	// name into the files, so only the main site keeps them current.
+	if ( is_multisite() && ! is_main_site() ) {
+		return;
+	}
 	$opts = boi_get_options();
 
 	if ( empty( $opts['errors_pages'] ) && empty( $opts['errors_alerts'] ) ) {
@@ -431,7 +436,7 @@ function boi_error_maybe_sync() {
 	}
 
 	$state = boi_error_state();
-	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! in_array( 'absent', $state, true ) && ! in_array( 'theme', $state, true ) ) {
+	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! array_intersect( array( 'absent', 'theme', 'outdated' ), $state ) ) {
 		return;
 	}
 
