@@ -56,7 +56,7 @@ Upload the new zip under Appearance, Themes, Add New, and choose "Replace active
 3. Rename the old folder to bestofislam-old and, straight after, rename bestofislam-new to bestofislam. Between the two renames the site has no bestofislam folder and its pages may fail for that moment, so do them one after the other and keep the admin closed until both are done.
 4. Open any admin page, check the site, then delete bestofislam-old.
 
-If you upload straight over the live folder and the copy stops halfway, leaving a file missing or broken, visitors see a short "Updating, back in a minute" page with a 503 status instead of an error, and the admin names the files still missing. Upload them and the site returns. That page comes from functions.php, so it cannot help while functions.php itself is missing or half written, or in the moment between the two renames above. A file cut short at a point where it still reads as valid code also slips past it. The temporary-folder method avoids those cases: an upload that stops there leaves the live theme untouched.
+If you upload straight over the live folder and the copy stops halfway, leaving one of the theme's PHP files missing or broken, visitors see a short "Updating, back in a minute" page with a 503 status instead of an error, and the admin names the files still missing. Upload them and the site returns. That page comes from functions.php, so it cannot help while functions.php itself is missing or half written, or in the moment between the two renames above. It checks the PHP files only: a missing stylesheet, font or data file, or a PHP file cut short at a point where it still reads as valid code, slips past it. The temporary-folder method avoids those cases: an upload that stops there leaves the live theme untouched.
 
 Never upload a fresh copy of WordPress itself over the site without keeping wp-config.php. That file holds the database details; without it WordPress opens its installer to anyone who visits.
 
@@ -101,7 +101,7 @@ Add define( 'BOI_HIDE_LOGIN', false ); to wp-config.php and log in at wp-login.p
 
 = A tool I use stopped publishing after an update. =
 
-The Security tab turns off XML-RPC, application passwords and REST writes from outside the browser by default, because spam tools use them. Switch off the one your tool needs. A tool that logs in to XML-RPC with a password needs both the XML-RPC switch and the REST switch off, since either one refuses password logins there. In an emergency, define( 'BOI_SECURITY_LOCK', false ); in wp-config.php lifts all 3.
+The Security tab turns off XML-RPC, application passwords and REST writes from outside the browser by default, because spam tools use them. Switch off the one your tool needs. Password logins sent through XML-RPC are refused while either the XML-RPC switch or the REST switch is on (the REST switch guards that route too), so a tool that logs in to XML-RPC with a password needs both off. A tool that writes through the REST API needs only the REST switch off. In an emergency, define( 'BOI_SECURITY_LOCK', false ); in wp-config.php lifts all 3.
 
 = Why is there no colour picker in Theme Options? =
 

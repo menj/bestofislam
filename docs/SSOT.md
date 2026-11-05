@@ -26,7 +26,7 @@ runs a separate theme.
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
 | wp-config switches | `BOI_SECURITY_LOCK`, `BOI_HIDE_LOGIN`, `BOI_KEEP_DEV_FILES`, `BOI_REMOVE_GIT_DIR`, `BOI_BLOCK_DIRECT_FILES` (README, Constants) |
-| Served documents | `readme.txt` and `CHANGELOG.md`, which the Theme Options footer links. Every other Markdown file is refused, and `docs/` is removed on a live server (D52) |
+| Served documents | `readme.txt` and `CHANGELOG.md`, which the Theme Options footer links. On Apache every other Markdown file is refused by the theme `.htaccess`; on Nginx only if the host adds the rules in the README. `docs/` is removed on a live server (D52) |
 | Release zip | `git archive`; `.gitattributes` export-ignores `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `/.claude` |
 
 These names are public identifiers. Renaming one is a breaking change and needs an upgrade note.
