@@ -184,7 +184,7 @@ The theme's own filters:
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
 | `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
-| `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to type an article with FAQ-style Details blocks as `FAQPage` and to add `.boi-answer` to `speakable` |
+| `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to add an `FAQPage` node for an article with FAQ-style Details blocks and to add `.boi-answer` to `speakable` |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
 | `boi_security_headers` | The front-end security headers |
 | `boi_title_max_length` | The title tag limit |

@@ -13,7 +13,7 @@ The article anatomy: the pieces a single article was missing. No band, setting o
 - `bestofislam/article-dates` in the meta row: "Updated" when the article changed a day or more after it was published, and "Reviewed" with the date set in the Key points and review box (`_boi_reviewed`).
 - `bestofislam/contents`: the article's sections, from three level-two headings up, built on the server. A list with its own jump list keeps that instead. Headings without an id get one from their text, and the Notes heading gets `id="notes"`.
 - A next step before the third section, or between the second and third entries of a list: the notes, the next piece in the reading order (`boi_next_in_order()`) and the Contact page. Nothing else, and no sales wording.
-- The FAQ style for the Details block (`is-style-faq`) and the `bestofislam/faq` pattern. An article with FAQ-style Details blocks is typed `FAQPage` as well, with one Question for each question it shows (through `boi_schema_nodes`).
+- The FAQ style for the Details block (`is-style-faq`) and the `bestofislam/faq` pattern. An article with FAQ-style Details blocks gains an `FAQPage` node (`#faq`, part of the page), with one Question for each question it shows (through `boi_schema_nodes`). The page keeps the Article as its main entity.
 - The table style: ruled rows, a gold header line, styled captions, and each table a focusable region named by its caption.
 - Two switches on the Display tab, both on: `article_contents` and `article_mid_next`.
 - `inc/anatomy.php`, `assets/css/anatomy.css`, `patterns/faq.php` and `tests/anatomy-test.php`.

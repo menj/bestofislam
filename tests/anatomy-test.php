@@ -61,8 +61,8 @@ check( '<h3 id="notes">Notes</h3>' === boi_anatomy_notes_anchor( '<h3 id="notes"
 
 $mid = boi_anatomy_insert_mid( '<h2>1</h2><h2>2</h2><h2>3</h2>', '<aside>N</aside>' );
 check( '<h2>1</h2><h2>2</h2><aside>N</aside><h2>3</h2>' === $mid, 'before the third section' );
-$entries = '<div><article class="boi-entry a"><h2>1</h2></article><article class="boi-entry a"><h2>2</h2></article><article class="boi-entry a"><h2>3</h2></article></div>';
-check( false !== strpos( boi_anatomy_insert_mid( $entries, '<aside>N</aside>' ), '</article><aside>N</aside><article class="boi-entry a"><h2>3</h2>' ), 'in a listicle, between the second and third entries' );
+$entries = '<div><article id="e" class="wp-block-bestofislam-entry boi-entry"><h2>1</h2></article><article id="e" class="wp-block-bestofislam-entry boi-entry"><h2>2</h2></article><article id="e" class="wp-block-bestofislam-entry boi-entry"><h2>3</h2></article></div>';
+check( false !== strpos( boi_anatomy_insert_mid( $entries, '<aside>N</aside>' ), '</article><aside>N</aside><article id="e" class="wp-block-bestofislam-entry boi-entry"><h2>3</h2>' ), 'in a listicle, between the second and third entries' );
 check( '<h2>1</h2><h2>2</h2>' === boi_anatomy_insert_mid( '<h2>1</h2><h2>2</h2>', '<aside>N</aside>' ), 'two sections: nothing added' );
 
 check( array( 'One', 'Two', 'Three' ) === boi_anatomy_points( " One\n\nTwo ;; Three\r\n" ), 'key points split on lines and ;;' );

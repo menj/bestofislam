@@ -356,7 +356,32 @@ function boi_render_answer_box( $attributes = array() ) {
  * @return bool
  */
 function boi_anatomy_answer_shows( $post ) {
-	return $post instanceof WP_Post && (bool) boi_anatomy_points( get_post_meta( $post->ID, '_boi_takeaways', true ) );
+	if ( ! $post instanceof WP_Post ) {
+		return false;
+	}
+
+	if ( boi_anatomy_points( get_post_meta( $post->ID, '_boi_takeaways', true ) ) ) {
+		return true;
+	}
+
+	// A box placed in the text shows with its own summary or points.
+	$found = false;
+	$walk  = static function ( $blocks ) use ( &$walk, &$found ) {
+		foreach ( $blocks as $block ) {
+			if ( 'bestofislam/answer-box' === $block['blockName'] && ( '' !== trim( (string) ( $block['attrs']['summary'] ?? '' ) ) || boi_anatomy_points( $block['attrs']['points'] ?? '' ) ) ) {
+				$found = true;
+				return;
+			}
+
+			if ( ! empty( $block['innerBlocks'] ) ) {
+				$walk( $block['innerBlocks'] );
+			}
+		}
+	};
+
+	$walk( parse_blocks( $post->post_content ) );
+
+	return $found;
 }
 
 /**
@@ -463,7 +488,8 @@ function boi_anatomy_insert_mid( $html, $aside ) {
 		return $html;
 	}
 
-	foreach ( array( '#<article class="boi-entry[\s"]#', '#<h2[\s>]#i' ) as $pattern ) {
+	// An entry's wrapper carries boi-entry among other classes, in any order.
+	foreach ( array( '#<article\b[^>]*\bclass="(?:[^"]*\s)?boi-entry(?:\s[^"]*)?"#', '#<h2[\s>]#i' ) as $pattern ) {
 		if ( preg_match_all( $pattern, $html, $found, PREG_OFFSET_CAPTURE ) && count( $found[0] ) >= 3 ) {
 			$at = (int) $found[0][2][1];
 
@@ -555,8 +581,8 @@ function boi_anatomy_faq_pairs( $post ) {
 }
 
 /**
- * On an article with FAQ-style Details blocks, the page is an FAQPage too,
- * and each question it shows is a Question node. The "In short" box joins
+ * On an article with FAQ-style Details blocks, an FAQPage node, part of the
+ * page, lists each question it shows as a Question node. The "In short" box joins
  * the parts read aloud when it shows.
  *
  * @param array $nodes Graph nodes.
@@ -591,31 +617,40 @@ function boi_anatomy_schema_nodes( $nodes ) {
 		);
 	}
 
-	foreach ( $nodes as $k => $node ) {
-		$types = (array) ( $node['@type'] ?? array() );
+	$page_id = '';
 
-		if ( ! in_array( 'WebPage', $types, true ) ) {
+	foreach ( $nodes as $k => $node ) {
+		if ( ! in_array( 'WebPage', (array) ( $node['@type'] ?? array() ), true ) ) {
 			continue;
 		}
 
-		if ( $found ) {
-			$nodes[ $k ]['@type']      = array_values( array_unique( array_merge( $types, array( 'FAQPage' ) ) ) );
-			$main                      = isset( $node['mainEntity'] ) ? ( isset( $node['mainEntity']['@id'] ) ? array( $node['mainEntity'] ) : (array) $node['mainEntity'] ) : array();
-			$nodes[ $k ]['mainEntity'] = array_merge(
-				$main,
-				array_map(
-					static function ( $q ) {
-						return array( '@id' => $q['@id'] );
-					},
-					$found
-				)
-			);
-		}
+		$page_id = (string) ( $node['@id'] ?? '' );
 
 		if ( $answer && isset( $node['speakable']['cssSelector'] ) ) {
 			$nodes[ $k ]['speakable']['cssSelector'][] = '.boi-answer';
 		}
 		break;
+	}
+
+	// The FAQ is a node of its own, part of the page, so the page keeps the
+	// Article as its main entity and the FAQPage lists Questions only.
+	if ( $found ) {
+		$faq = array(
+			'@type'      => 'FAQPage',
+			'@id'        => $url . '#faq',
+			'mainEntity' => array_map(
+				static function ( $q ) {
+					return array( '@id' => $q['@id'] );
+				},
+				$found
+			),
+		);
+
+		if ( '' !== $page_id ) {
+			$faq['isPartOf'] = array( '@id' => $page_id );
+		}
+
+		$found[] = $faq;
 	}
 
 	return array_merge( $nodes, $found );
