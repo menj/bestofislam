@@ -16,8 +16,10 @@ in `assets/`.
 ## Features adapted from plugins
 
 Four features of this theme are adapted from plugins released under the GNU
-General Public License, version 2 or later, as the theme is. Their authors
-are credited here with thanks.
+General Public License, version 2 or later, which allows them to be carried
+under the theme's version 3 or later. Reading Progress Bar's readme says
+GPLv2; its main file, `reading-progressbar.php`, declares `GPL-2.0+`, and that
+header is the grant. Their authors are credited here with thanks.
 
 - **Unlisted posts and pages** (`inc/unlist.php`), adapted from Unlist Posts
   & Pages 1.2.1 by Nikhil Chavan, https://www.nikhilchavan.com/

@@ -235,7 +235,22 @@ function boi_anatomy_has_jump_list( $post ) {
  */
 function boi_register_anatomy_blocks() {
 	register_block_type( 'bestofislam/article-dates', array( 'render_callback' => 'boi_render_article_dates' ) );
-	register_block_type( 'bestofislam/answer-box', array( 'render_callback' => 'boi_render_answer_box' ) );
+	register_block_type(
+		'bestofislam/answer-box',
+		array(
+			'render_callback' => 'boi_render_answer_box',
+			'attributes'      => array(
+				'summary' => array(
+					'type'    => 'string',
+					'default' => '',
+				),
+				'points'  => array(
+					'type'    => 'string',
+					'default' => '',
+				),
+			),
+		)
+	);
 	register_block_type( 'bestofislam/contents', array( 'render_callback' => 'boi_render_contents' ) );
 
 	register_block_style(

@@ -19,7 +19,7 @@ The article anatomy: the pieces a single article was missing. No band, setting o
 - `inc/anatomy.php`, `assets/css/anatomy.css`, `patterns/faq.php` and `tests/anatomy-test.php`.
 
 ### Changed
-- The theme is licensed GNU GPL version 3 or later (`style.css`, `readme.txt`), and the full text ships in a new `LICENSE` file. Bundled fonts, icons and photographs keep their own licences.
+- The theme is licensed GNU GPL version 3 or later (`style.css`, `readme.txt`), and the full text ships in a new `LICENSE` file. Bundled fonts, icons and photographs keep their own licences. The four plugins the theme adapts are GPLv2 or later; `docs/CREDITS.md` and `inc/reading-progress.php` now say so for Reading Progress Bar, whose readme says GPLv2 while its main file declares `GPL-2.0+`.
 
 ### Already in place
 - The breadcrumbs, the excerpt, the published date, reading time, the jump list on lists, "Read next", share links, the author card and related pieces.
