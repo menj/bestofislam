@@ -173,13 +173,14 @@ function boi_sec_files_htaccess_lines( $home = '' ) {
 
 	$rules = array( 'RewriteRule (^|/)\.(git|claude) - [F]' );
 	if ( null !== $core ) {
-		$rules[] = 'RewriteCond %{REQUEST_URI} !/wp-includes/(js/tinymce/wp-tinymce|ms-files)\.php$';
-		$rules[] = 'RewriteRule ^' . $core . 'wp-includes/.+\.php$ - [F]';
-		$rules[] = 'RewriteRule ^' . $core . 'wp-admin/includes/.+\.php$ - [F]';
-		$rules[] = 'RewriteRule ^' . $core . '(wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)$ - [F]';
+		// The two exceptions are exact paths after the prefix; a PHP file
+		// with either one appended as path info is still refused.
+		$rules[] = 'RewriteRule ^' . $core . 'wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) - [F]';
+		$rules[] = 'RewriteRule ^' . $core . 'wp-admin/includes/.+\.php(/|$) - [F]';
+		$rules[] = 'RewriteRule ^' . $core . '(wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)(/|$) - [F]';
 	}
 	if ( null !== $themes && '' !== $themes ) {
-		$rules[] = 'RewriteRule ^' . $themes . '.+\.php$ - [F]';
+		$rules[] = 'RewriteRule ^' . $themes . '.+\.php(/|$) - [F]';
 	}
 	if ( null !== $theme && '' !== $theme ) {
 		$rules[] = 'RewriteRule ^' . $theme . '(tests|bin|docs)(/|$) - [F]';
