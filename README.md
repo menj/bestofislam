@@ -274,14 +274,16 @@ location ~ (^|/)wp-config\.php$ { deny all; }
 location ~ ^/(wp-settings|wp-config-sample)\.php { deny all; }
 location ~ ^/(wp-admin/install\.php|readme\.html|license\.txt) { deny all; }
 location ~ ^/wp-content/themes/.+\.php { deny all; }
-location ~ ^/wp-content/themes/bestofislam/(tests|bin|docs|dist)/ { deny all; }
-location ~* ^/wp-content/themes/bestofislam/(?!changelog\.md$).+\.md$ { deny all; }
+location ~ ^/wp-content/themes/bestofislam[^/]*/(tests|bin|docs|dist)/ { deny all; }
+location ~* ^/wp-content/themes/bestofislam[^/]*/(?!changelog\.md$).+\.md$ { deny all; }
 error_page 403 /wp-content/bestofislam-errors/403.html;
 error_page 500 /wp-content/bestofislam-errors/500.html;
 error_page 502 /wp-content/bestofislam-errors/502.html;
 error_page 503 /wp-content/bestofislam-errors/503.html;
 error_page 504 /wp-content/bestofislam-errors/504.html;
 ```
+
+The `bestofislam[^/]*` in the theme lines also covers the `bestofislam-new` and `bestofislam-old` folders of an FTP update, whose Markdown files and development folders Nginx would otherwise serve while they sit beside the live folder. Put these lines in place before the first FTP update.
 
 Nginx serves `error_page` for PHP's own 500 and 503 answers only with `fastcgi_intercept_errors on;` in the FastCGI location; without it those answers reach visitors as PHP sent them. Jetpack needs XML-RPC: leave out the `xmlrpc.php` line and also switch "Turn off XML-RPC" off on the Security tab, since the theme refuses XML-RPC in PHP too. Where the client logs in to XML-RPC, with a password or any other credential, switch the REST lock off as well, since `boi_sec_refuse_remote_password()` refuses every XML-RPC login while either switch is on. These rules do not follow the Security switches or `BOI_SECURITY_LOCK`: to let XML-RPC through, take the `xmlrpc.php` line out by hand as well. The `wp-config.php` rule matches at any depth, so it also covers a `wp-config.php` in the folder above a WordPress that lives in a subfolder. Prefix the other paths when WordPress lives in a subfolder.
 
