@@ -289,7 +289,7 @@ function boi_sec_sync_htaccess_once() {
 	// One request at a time (inc/lock.php); a lock older than a minute is
 	// from a request that died. (insert_with_markers() also locks the file
 	// itself while it writes.)
-	$token = function_exists( 'boi_lock_take' ) ? boi_lock_take( 'boi_sec_htaccess_lock', MINUTE_IN_SECONDS ) : '';
+	$token = defined( 'BOI_LOCK_READY' ) ? boi_lock_take( 'boi_sec_htaccess_lock', MINUTE_IN_SECONDS ) : '';
 	if ( '' === $token ) {
 		return;
 	}

@@ -56,7 +56,7 @@ function boi_remove_path( $path ) {
 	if ( ! empty( $GLOBALS['boi_dev_files_lost'] ) ) {
 		return false;
 	}
-	if ( 0 === ++$seen % 200 && ! empty( $GLOBALS['boi_dev_files_token'] ) && function_exists( 'boi_lock_renew' )
+	if ( 0 === ++$seen % 200 && ! empty( $GLOBALS['boi_dev_files_token'] ) && defined( 'BOI_LOCK_READY' )
 		&& ! boi_lock_renew( 'boi_dev_files_lock', $GLOBALS['boi_dev_files_token'] ) ) {
 		$GLOBALS['boi_dev_files_lost'] = true; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 		return false;
@@ -147,7 +147,7 @@ function boi_remove_dev_files() {
 
 	// One cleanup at a time, whichever hook started it (inc/lock.php); a lock
 	// not renewed for ten minutes is from a request that died, and is taken over.
-	$token = function_exists( 'boi_lock_take' ) ? boi_lock_take( 'boi_dev_files_lock', 10 * MINUTE_IN_SECONDS ) : '';
+	$token = defined( 'BOI_LOCK_READY' ) ? boi_lock_take( 'boi_dev_files_lock', 10 * MINUTE_IN_SECONDS ) : '';
 	if ( '' === $token ) {
 		return;
 	}
