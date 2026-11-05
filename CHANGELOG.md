@@ -9,7 +9,7 @@ versioning.
 Documentation only.
 
 ### Changed
-- The FTP update steps in `readme.txt` and `docs/UPGRADING.md` send the theme's `.htaccess` files first (the theme folder's, then those in `bin/`, `docs/` and `tests/`), so its private files stay closed to visitors while the rest uploads.
+- The FTP update steps in `readme.txt` and `docs/UPGRADING.md` send the theme's `.htaccess` files first (the theme folder's, then `docs/`, and `bin/` and `tests/` when the copy has them), so its private files stay closed to visitors while the rest uploads.
 - `.claude/skills/theme-docs/SKILL.md` takes the refreshed standard.
 
 ## [1.100.13] - 2026-11-05

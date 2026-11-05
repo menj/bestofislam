@@ -53,7 +53,7 @@ Upload the new zip under Appearance, Themes, Add New, and choose "Replace active
 = Updating by FTP =
 
 1. Turn on hidden files in your FTP program. The theme carries files whose names begin with a dot, such as .htaccess, which keep its private files closed to visitors. In FileZilla: Server, Force showing hidden files.
-2. Upload the new bestofislam folder next to the old one under a temporary name, such as wp-content/themes/bestofislam-new. Send its .htaccess files first: the one at the top of the folder, then those in bin, docs and tests. On Apache they close the theme's private files to visitors while the rest arrives. On Nginx, which ignores them, add the server rules from README.md before the first FTP update. Wait until every file has arrived.
+2. Upload the new bestofislam folder next to the old one under a temporary name, such as wp-content/themes/bestofislam-new. Send its .htaccess files first: the one at the top of the folder, then the one in docs, and those in bin and tests when your copy has them. On Apache they close the theme's private files to visitors while the rest arrives. On Nginx, which ignores them, add the server rules from README.md before the first FTP update. Wait until every file has arrived.
 3. Rename the old folder to bestofislam-old and, straight after, rename bestofislam-new to bestofislam. Between the two renames the site has no bestofislam folder and its pages may fail for that moment, so do them one after the other and keep the admin closed until both are done.
 4. Open any admin page, check the site, then delete bestofislam-old.
 

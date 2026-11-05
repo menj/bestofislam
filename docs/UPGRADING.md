@@ -14,8 +14,8 @@
    existing installation. There is no need to switch themes. By FTP instead:
    turn on hidden files in the FTP program, so the `.htaccess` files go up;
    upload the folder into `wp-content/themes/` as `bestofislam-new`, its
-   `.htaccess` files first (the theme folder's, then those in `bin/`, `docs/`
-   and `tests/`), so on Apache their rules apply while the rest arrives; on
+   `.htaccess` files first (the theme folder's, then `docs/`, and `bin/` and
+   `tests/` when the copy has them), so on Apache their rules apply while the rest arrives; on
    Nginx, which ignores them, add the server rules in `README.md` before the
    first FTP update; then rename `bestofislam` to
    `bestofislam-old` and, straight after, `bestofislam-new` to `bestofislam`,
