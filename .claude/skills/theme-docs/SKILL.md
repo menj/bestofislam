@@ -21,7 +21,8 @@ The reference implementation is the injil.help theme (menj/injil.help), which ke
 
 ## Where they live
 
-- Keep each theme's existing locations. Some themes keep the docs at the root, others in `docs/` or `doc/`. Settings pages, tests, deny rules and links point at those paths, so never move a file without updating every reference (`git grep` for the path first).
+- The names in the table are the roles, not exact spellings. A repo's existing file fills a role whatever its folder or letter case: `docs/readme.md`, `doc/ssot.md` and `docs/changelog.md` count as README.md, SSOT.md and CHANGELOG.md. Never add a second file for a role that one already fills.
+- Keep each theme's existing locations and names. Some themes keep the docs at the root, others in `docs/`, `doc/` or `assets/docs/`. Settings pages, tests, deny rules and links point at those paths, so never move a file without updating every reference (`git grep` for the path first).
 - A new theme puts all five at the root, as injil.help does.
 - `readme.txt` stays where WordPress and the theme's admin expect it.
 
@@ -60,7 +61,7 @@ The reference implementation is the injil.help theme (menj/injil.help), which ke
 ### SSOT.md (fixed facts)
 - **Identity:** site name, domain, theme folder name (with its exact case on the live server), author for schema, text domain.
 - **Purpose and position.**
-- **Owner decisions:** copied word for word from `.claude/CLAUDE.md`, with the date each was made.
+- **Owner decisions:** copied word for word from wherever the repo already records them (`.claude/CLAUDE.md`, an existing SSOT, or both), with the date each was made. Where no date is recorded, say so; never invent one.
 - **Contributor rules:**
   - banned words;
   - the title format `<page> | <site name>` under 60 characters;
@@ -112,7 +113,9 @@ Every theme is licensed under the GNU General Public License, version 3 or later
 
 ## Release checklist
 
-Before merging a change:
+Run it before merging any change that the skill's description covers: a release, or a change to features, settings, paths, constants, hooks, security rules or upgrade steps. A change that touches none of these (a typo, a comment, a test) needs no version bump and no document edits.
+
+Before merging such a change:
 1. The version is the same in `style.css`, `readme.txt` (Stable tag and changelog), `functions.php`, `CHANGELOG.md` and any manifest.
 2. `CHANGELOG.md` has the new entry, and `readme.txt` has the short form.
 3. `UPGRADING.md` has a note if the site owner must do anything, and the roadmap is updated: shipped items removed, new gaps added.
