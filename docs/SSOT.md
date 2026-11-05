@@ -568,6 +568,24 @@ Each page has one JSON-LD graph, built in `inc/schema-graph.php` and joined by
 graph through `rank_math/json_ld` and prints nothing of its own.
 `tests/schema-graph-test.php` checks both cases.
 
+### D51. The front page tells one story
+
+The bands run in the order a reader meets the argument, and a new band takes
+its place in that order. The hero states the claim: every objection stated in
+its own terms and answered from the sources. The live counts show the size of
+the work. Step 1 puts the questions most often asked of Muslims, with short
+answers. Step 2, the editor's picks, gives the three pieces that carry the
+case in full, and steps 3 and 4 show the newest argument and the rest of the
+recent work. Step 5 is the reader's way in, the three-step first visit, and
+step 6 opens every section. The mission band closes the page with what the
+site is for and where the Reflections are.
+
+The order follows `.claude/FARUQI.md`: Islam's claims are public and open to
+test, so the questions come first and the evidence follows them. Each label
+carries its step number. Backgrounds alternate tint and white, with the
+counts and the picks dark, and a band that moves takes the background its
+neighbours need.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,

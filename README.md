@@ -23,7 +23,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ### Reading
 
-- **Front page.** Nine full-width bands: the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; the newest article; a three-step start; the sections; the questions; the latest articles; editor's picks; and the mission.
+- **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission.
 - **Articles.** Reading time, a jump list for lists of three or more, share buttons, an author card, related pieces, questions answered, and "Read next".
 - **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
 - **Reading progress.** A bar on single posts and pages fills as you scroll. It is drawn in the palette, updates once per animation frame from a passive listener, drops its animation under `prefers-reduced-motion` and sits below the admin bar. It is `aria-hidden`: it repeats what the scrollbar shows, and a live progressbar would be read out on every scroll.

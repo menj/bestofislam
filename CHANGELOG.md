@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.7] - 2026-11-05
+
+No band or feature removed and no public identifier renamed.
+
+### Changed
+- The front page tells one story, at the site owner's request (D51). The bands now run: hero; live counts; Step 1, the questions; Step 2, the editor's picks; Step 3, the newest argument; Step 4, recently published; Step 5, the three-step first visit; Step 6, the sections; the Reflections and mission band. Before, the newest argument, the first visit and the sections came ahead of the questions, and the picks came last but one.
+- Each band label carries its step number. The labels were Featured, Start here, Sections, Questions answered, Latest and Editor's picks.
+- The editor's picks band, now right after the questions, is headed "Three pieces that carry the most weight", and its subtitle links it to the band above: "Each short answer above leads to a full argument. If you read only three, read these." Its old heading, "Where to begin if you read only three", would have clashed with the first-visit band further down.
+- Backgrounds follow the new order, alternating tint and white with the counts and picks dark: the latest articles and the sections bands are tinted, and the first-visit and mission bands are white.
+- `docs/SSOT.md` records the arc as D51, and the README's front page entry follows it.
+
+### Tested
+- Front page rendered before and after at 1280 and 375 pixels: bands in the new order, backgrounds alternate, no horizontal overflow, no script errors. axe reports the same two items before and after, the links around the latest articles' featured images on the test site, whose two newest posts have no image.
+
 ## [1.100.6] - 2026-11-05
 
 ### Changed
