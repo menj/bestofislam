@@ -132,6 +132,10 @@ They ask browsers not to show the site inside another site's frame, not to guess
 
 Yes. The text domain is bestofislam. Put bestofislam-<locale>.mo in the theme's languages folder or in wp-content/languages/themes.
 
+= My site is in a subfolder. Where does the browser icon go? =
+
+Browsers ask for /favicon.ico at the top of the domain, such as example.com/favicon.ico, even when the site lives in example.com/blog/. WordPress never sees that request, so put a copy of the theme's favicon.ico in the domain root folder. The icon tags in each page cover the pages either way.
+
 == Privacy ==
 
 The theme sends nothing to another server. It loads no fonts, scripts, styles or images from a third party, and it has no analytics, tracking or advertising.
@@ -157,10 +161,6 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Minimalist Social & Platform Icons Pack 2.8: GNU General Public License (assets/icons/LICENSE.txt).
 * Photographs: public domain or CC0 from Wikimedia Commons, the Pexels licence and the Pixabay Content Licence, credited under each image and on the Sources and standards page.
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
-
-= My site is in a subfolder. Where does the browser icon go? =
-
-Browsers ask for /favicon.ico at the top of the domain, such as example.com/favicon.ico, even when the site lives in example.com/blog/. WordPress never sees that request, so put a copy of the theme's favicon.ico in the domain root folder. The icon tags in each page cover the pages either way.
 
 == Changelog ==
 
@@ -267,7 +267,7 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.100.17 =
-Replace the theme files. Nothing else to do.
+Replace the theme files. On a site in a subfolder, also put a copy of assets/images/favicon.ico in the domain root folder; otherwise nothing to do.
 
 = 1.100.16 =
 Replace the theme files. Nothing else to do.
