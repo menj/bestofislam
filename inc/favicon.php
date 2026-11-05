@@ -55,13 +55,23 @@ function boi_serve_favicon() {
 	header( 'Content-Type: image/x-icon' );
 	header( 'Cache-Control: public, max-age=86400' );
 	header( 'ETag: ' . $etag );
-	if ( isset( $_SERVER['HTTP_IF_NONE_MATCH'] ) && trim( wp_unslash( (string) $_SERVER['HTTP_IF_NONE_MATCH'] ) ) === $etag ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	// If-None-Match may list several validators, weak ones (W/"...") or *.
+	$sent = array_map(
+		static function ( $v ) {
+			return preg_replace( '#^W/#', '', trim( $v ) );
+		},
+		explode( ',', wp_unslash( (string) ( $_SERVER['HTTP_IF_NONE_MATCH'] ?? '' ) ) ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	);
+	if ( in_array( '*', $sent, true ) || in_array( $etag, $sent, true ) ) {
 		status_header( 304 );
 		exit;
 	}
 	status_header( 200 );
 	header( 'Content-Length: ' . (string) filesize( $file ) );
-	readfile( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	// A HEAD request gets the headers alone.
+	if ( 'HEAD' !== ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		readfile( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	}
 	exit;
 }
 add_action( 'do_faviconico', 'boi_serve_favicon', 5 );

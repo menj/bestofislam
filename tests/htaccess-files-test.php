@@ -138,7 +138,7 @@ boi_check( 3 === count( $boi_own ), "the theme's .htaccess has its 3 RedirectMat
 foreach ( array( '.git/config', '.github/workflows/ci.yml', '.gitignore', '.claude/CLAUDE.md', '.DS_Store', '.env', '.vscode/settings.json', 'assets/.DS_Store', 'tests/unlist-test.php', 'bin/build-error-pages.php', 'docs/SSOT.md', 'functions.php', 'inc/setup.php/x' ) as $boi_p ) {
 	boi_check( $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: 403 for $boi_p" );
 }
-foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'assets/css/front.css', 'assets/css/front.min.css', 'testsuite.css', 'assets/css/docs.css', '.well-known/x' ) as $boi_p ) {
+foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'assets/css/front.css', 'assets/css/front.min.css', 'testsuite.css', 'assets/css/docs.css', '.well-known/x', 'assets/images/favicon.ico', 'assets/images/favicon.svg', 'assets/images/site.webmanifest', 'assets/images/icon-maskable-512.png' ) as $boi_p ) {
 	boi_check( ! $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: open $boi_p" );
 }
 
