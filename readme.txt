@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.11
+Stable tag: 1.100.12
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 151 articles, each with a featured image and 2 more in its text. A Glossary of 797 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 152 articles, each with a featured image and 2 more in its text. A Glossary of 797 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -26,7 +26,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
 * A Glossary of 797 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
-* Contextual links from phrases in articles to other articles here and to inner pages of the sister sites, set under Appearance, Contextual Links.
+* Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
 * Search with readable addresses such as /search/Paul/, filters for kind and section, and links straight to the matching entry.
@@ -43,7 +43,24 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 3. On activation the theme creates its votes table and fills the site. Images are copied into the media library 3 at a time as pages load. Until a copy arrives, the copy bundled with the theme is shown.
 4. Open Appearance, Theme Options and work through the tabs.
 
-On an update, replace the theme folder and open any admin page. The theme brings its tables, terms and unedited seeded articles up to date by itself. Read docs/UPGRADING.md before updating a live site.
+To install by FTP, turn on hidden files in your FTP program, upload the bestofislam folder to wp-content/themes/, then activate it under Appearance, Themes.
+
+= Updating from the dashboard =
+
+Upload the new zip under Appearance, Themes, Add New, and choose "Replace active with uploaded". Then open any admin page. The theme brings its tables, terms, error pages and unedited seeded articles up to date by itself. The Content tab lists any seeded article it could not update because it may have been edited.
+
+= Updating by FTP =
+
+1. Turn on hidden files in your FTP program. The theme carries files whose names begin with a dot, such as .htaccess, which keep its private files closed to visitors. In FileZilla: Server, Force showing hidden files.
+2. Upload the new bestofislam folder next to the old one under a temporary name, such as wp-content/themes/bestofislam-new. Wait until every file has arrived.
+3. Rename the old folder to bestofislam-old and, straight after, rename bestofislam-new to bestofislam. Between the two renames the site has no bestofislam folder and its pages may fail for that moment, so do them one after the other and keep the admin closed until both are done.
+4. Open any admin page, check the site, then delete bestofislam-old.
+
+If you upload straight over the live folder and the copy stops halfway, leaving one of the theme's files missing or broken, visitors see a short "Updating, back in a minute" page with a 503 status instead of an error, and the admin names the files still missing. Upload them and the site returns. That page comes from functions.php, so it cannot help while functions.php itself is missing or half written, or in the moment between the two renames above. It checks the PHP files and the data files the theme lists in functions.php: a missing stylesheet, font or image, or a file cut short at a point where it still reads as valid, slips past it. The temporary-folder method avoids those cases: an upload that stops there leaves the live theme untouched.
+
+Never upload a fresh copy of WordPress itself over the site without keeping wp-config.php. That file holds the database details; without it WordPress opens its installer to anyone who visits.
+
+docs/UPGRADING.md has the notes for each version. On a live server the theme removes its docs folder after the update, so read the copy in the zip.
 
 == Usage ==
 
@@ -56,7 +73,13 @@ Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a no
 * Search engines: meta descriptions, Google and Bing verification codes, and readable search addresses.
 * Access: the private login address, the security headers and the list of unlisted items.
 * Security: switches for XML-RPC, application passwords, REST writes from outside the browser, the spam gate and 410 Gone, then the spam tools and reports.
-* Errors: the branded error pages, email alerts and the minutes between 2 alerts.
+* Errors: the branded error pages, email alerts and the minutes between 2 alerts. The tab shows whether each page is installed, and gives the lines to paste into .htaccess for the errors the web server answers itself.
+
+Appearance, Contextual Links holds 3 more tabs:
+
+* Domains: the other sites links may lead to.
+* Phrases: your own phrase and address pairs, which win over the shared list. Each article also has its own list in the editor.
+* Rules: switches and caps for links to this site and to other sites, whether outside links open a new tab, and the pages that never receive links.
 
 To write a list, insert the Listicle starter pattern, or add a Listicle block and fill its entries. Each entry takes a title, an optional image, an optional objection, an optional outbound link and the answer as ordinary blocks. Then assign the article to a section.
 
@@ -78,7 +101,7 @@ Add define( 'BOI_HIDE_LOGIN', false ); to wp-config.php and log in at wp-login.p
 
 = A tool I use stopped publishing after an update. =
 
-The Security tab turns off XML-RPC, application passwords and REST writes from outside the browser by default, because spam tools use them. Switch off the one your tool needs. In an emergency, define( 'BOI_SECURITY_LOCK', false ); in wp-config.php lifts all 3.
+The Security tab turns off XML-RPC, application passwords and REST writes from outside the browser by default, because spam tools use them. Switch off the one your tool needs. Every login sent through XML-RPC, with a password or any other credential, is refused while either the XML-RPC switch or the REST switch is on (the REST switch guards that route too), so a tool that logs in to XML-RPC needs both off. A tool that writes through the REST API with an application password needs both the REST switch and the application-password switch off; one that uses a logged-in browser session needs neither. In an emergency, define( 'BOI_SECURITY_LOCK', false ); in wp-config.php lifts all 3. That works in PHP at once; on Apache the xmlrpc.php block in .htaccess may stay until the theme next checks it from an admin page, so to let XML-RPC through at once, also delete the lines between # BEGIN Block xmlrpc.php and # END Block xmlrpc.php in the site's .htaccess.
 
 = Why is there no colour picker in Theme Options? =
 
@@ -87,6 +110,18 @@ Colours are theme.json tokens. Change them in the Site Editor under Styles, or p
 = I chose "Your latest posts" under Settings, Reading. Will an update undo it? =
 
 From 1.98.0 the front page follows Settings, Reading. With "Your latest posts" the site shows the posts index, and later population runs leave that choice alone.
+
+= What are the error pages? =
+
+WordPress shows a plain screen when it is updating, when PHP fails or when the database is down. The theme replaces those screens with its own, and can email you when one appears. It also ships pages for the errors your web server answers before WordPress starts (403, 500, 502, 503 and 504). The Errors tab shows their state and the lines for .htaccess.
+
+= Why did the theme delete .git, tests and docs from its folder? =
+
+They are development files, and a web server can hand them to anyone who asks. On a live server the theme removes them on the first visit after an update. Until then Apache refuses them through the theme's .htaccess; Nginx does so only if the host has added the rules in README.md. A site where you work on the theme keeps them: set WP_ENVIRONMENT_TYPE to local or development in wp-config.php, or add define( 'BOI_KEEP_DEV_FILES', true );.
+
+= What do the security headers do? =
+
+They ask browsers not to show the site inside another site's frame, not to guess file types, and to send other sites only your address, never the page a reader came from. They are on by default under the Access tab. HSTS, which tells browsers to use HTTPS for a year, is off until you switch it on, because it cannot be undone from the site.
 
 = Can I translate the theme? =
 
@@ -119,6 +154,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.12 =
+* The documentation is up to date with the theme: how to update by FTP, every settings screen, the security switches, the error pages and the files the theme removes from a live server.
+* The Content tab gives the right number of seeded articles, 152.
 
 = 1.100.11 =
 * The web server refuses the theme's Markdown notes, such as README.md. The changelog the settings page links to stays open.

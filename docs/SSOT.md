@@ -8,6 +8,38 @@ theme. Amend this file whenever a decision here is superseded.
 bestofislam.org, a listicle publication. Distinct from bestofislam.com, which
 runs a separate theme.
 
+## Fixed facts
+
+| Fact | Value |
+|---|---|
+| Site | bestofislam.org |
+| Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
+| Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
+| Version | 1.100.12, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
+| Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
+| Text domain | `bestofislam` |
+| Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); eight tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
+| Seeded content | 8 sections, 23 categories, 160 tags, 152 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 797 Glossary entries (`inc/glossary-data/`) |
+| Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
+| Votes table | `{prefix}_boi_votes` |
+| Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
+| Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
+| wp-config switches | `BOI_SECURITY_LOCK`, `BOI_HIDE_LOGIN`, `BOI_KEEP_DEV_FILES`, `BOI_REMOVE_GIT_DIR`, `BOI_BLOCK_DIRECT_FILES` (README, Constants) |
+| Served documents | `readme.txt` and `CHANGELOG.md`, which the Theme Options footer links. On Apache every other Markdown file is refused by the theme `.htaccess`; on Nginx only if the host adds the rules in the README. `docs/` is removed on a live server (D52) |
+| Release zip | Built by `.github/workflows/package.yml` (`rsync` with exclusions, then `zip`); a local `git archive` of a clean checkout gives the same files, since `.gitattributes` export-ignores `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `/.claude` |
+
+These names are public identifiers. Renaming one is a breaking change and needs an upgrade note.
+
+## Contributor rules
+
+- Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
+- Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
+- English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
+- The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
+- Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).
+- A release updates the version in every place listed above, adds a `CHANGELOG.md` entry and its short form in `readme.txt`, adds a note to `docs/UPGRADING.md` when the owner must act, and passes every test in `tests/` and `bin/check-content.py`.
+
 ## Decisions
 
 ### D1. Everything ships in the child theme

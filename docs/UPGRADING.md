@@ -11,7 +11,12 @@
 ## Procedure
 
 1. Upload the new package under Appearance, Themes, Add New, and replace the
-   existing installation. There is no need to switch themes.
+   existing installation. There is no need to switch themes. By FTP instead:
+   turn on hidden files in the FTP program, so the `.htaccess` files go up;
+   upload the folder as `bestofislam-new`; then rename `bestofislam` to
+   `bestofislam-old` and, straight after, `bestofislam-new` to `bestofislam`,
+   with the admin closed in between. Delete `bestofislam-old` once the site
+   checks out. Never upload WordPress itself without keeping `wp-config.php`.
 2. Load any page of the site, in the admin or on the front end. The theme
    compares its stored version with the new one and migrates on that first
    load: it updates the votes table, adds any missing seeded content,
@@ -51,6 +56,14 @@ feature stands aside, so nothing runs twice.
 3. For the login address, confirm the address on the Access tab and switch it
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
+
+## Upgrading to 1.100.12
+
+Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
+
+## Upgrading to 1.100.9, 1.100.10 or 1.100.11
+
+Replace the theme files and load one page. Visitors who are not logged in lose the `/wp/v2/users` routes and `?author=N` (both answer 404). Nothing to set.
 
 ## Upgrading to 1.100.8
 
@@ -113,6 +126,27 @@ Reinstall the previous package. The votes table is additive across 1.x, so no
 schema reversal is needed. Settings added in a later version are ignored by an
 earlier one and return when the later version is reinstalled. Should a future
 release alter the database schema, the change will be documented here first.
+
+## Roadmap
+
+These are plans, not promises. Each item rests on something on record: the code, the server logs of November 2026, a documented limit, or a feature another of the owner's themes already has. Items leave this list when they ship and go into `CHANGELOG.md`. GitHub had no open issues or pull requests when the list was last checked (2026-11-05), and the code carries no TODO markers.
+
+### Next
+
+- Export, import and reset for Theme Options. The abrahamic theme has all three on its Tools tab; here a move to a new site means setting every tab again by hand.
+- Error pages on a network. The admin-page repair runs on the main site only (`boi_error_maybe_sync()`), so the shared drop-ins stop updating once it leaves the theme, while activation and a settings save on any subsite run `boi_error_sync()` unguarded and can rewrite them with that subsite's address. The abrahamic theme hands the job to one site, the lowest ID that runs it.
+- Keep the root `.htaccess` sections on a network when one site leaves the theme. `boi_sec_remove_htaccess()` runs on any site's `switch_theme`, and the shared file then lacks both sections until another site's next sync.
+
+### Later
+
+- A translation template, `languages/bestofislam.pot`. The FAQ in `readme.txt` tells owners where to put a `.mo` file, but the theme ships no template to make one from. The injil.help and compelling-evidence themes ship a `languages/` folder. Waits on a string freeze after the current round of article work.
+- A full Content-Security-Policy. `inc/security-headers.php` sends `frame-ancestors` only, because WordPress and its plugins print inline scripts and styles an enforcing policy would block. Waits on WordPress core.
+
+### Ideas
+
+- A crawl rule for the heaviest bots. In the November 2026 log QlyzeBot made 1,014 requests and Amazonbot 825, against 378 from Googlebot.
+- Fixed publication dates for seeded articles, as the abrahamic seeder has (`post_date`, published or Scheduled), so new articles can go out on a plan.
+- An image sitemap that stays on beside Rank Math. `boi_image_sitemap_enabled()` turns it off whenever Rank Math is active, and leaves the images to Rank Math's own sitemap; weigh whether the theme's licence data should reach search engines there too.
 
 ## Version history
 
