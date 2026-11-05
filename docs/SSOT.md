@@ -552,7 +552,9 @@ verse number, a count, a year or a `-2` suffix. The number stays in the title,
 the heading and the description. A renamed article or Glossary entry keeps
 its post. A request for its old address that would otherwise end in a 404
 gets a 301 to the new one; if a live post or page holds that address, it is
-served and nothing redirects. The map is
+served and nothing redirects. The dated addresses of the old permalinks,
+`/YYYY/MM/DD/<slug>/`, get a 301 to the post's address when that post is
+published (`boi_dated_slug_for()`). The map is
 `inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
 `boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
 
@@ -585,6 +587,36 @@ test, so the questions come first and the evidence follows them. Each label
 carries its step number. Backgrounds alternate tint and white, with the
 counts and the picks dark, and a band that moves takes the background its
 neighbours need.
+
+### D52. Development files never stay on a live server
+
+The owner uploads the theme over FTP, `.git` included. A web-readable `.git`
+hands out the whole source history, and the tests, build scripts, docs and
+agent notes serve no page. On a production server `boi_remove_dev_files()`
+(`inc/housekeeping.php`) deletes the paths in `boi_dev_paths()`: `.git`,
+`.github`, `.githooks`, `.claude`, `tests`, `bin`, `docs`, `dist` and the
+editor files. It runs on activation and once per theme version, even when the
+folder is a git working tree.
+
+The files stay only where they are worked on: `wp_get_environment_type()` is
+`local` or `development`, or `BOI_KEEP_DEV_FILES` is true in `wp-config.php`.
+`BOI_REMOVE_GIT_DIR` still works: true forces the cleanup
+with `.git`, even in a development environment, and false keeps `.git` on
+production while the rest goes. `BOI_KEEP_DEV_FILES` wins over both.
+
+Until the next admin page load deletes them, and on any server where PHP
+cannot, the web server refuses them. On Apache the theme keeps a second
+`.htaccess` section, "Best of Islam: block direct file access", beside
+"Block xmlrpc.php". It answers 403 for PHP files in `wp-includes` (except
+`js/tinymce/wp-tinymce.php` and `ms-files.php`) and in the themes folder,
+for `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`,
+`readme.html` and `license.txt`, for any path segment that starts with `.git`
+or `.claude`, and for the theme's `tests`, `bin` and `docs` folders. The
+rules use mod_rewrite inside `<IfModule mod_rewrite.c>`, carry the site's own
+folder prefixes, and leave the admin, `admin-ajax.php`, `wp-cron.php`, the
+login page, the REST API and the editor's assets alone.
+`BOI_BLOCK_DIRECT_FILES` false in `wp-config.php` leaves the section out.
+Every PHP file in `tests` and `bin` exits unless it runs from the command line.
 
 ## Asset conventions
 

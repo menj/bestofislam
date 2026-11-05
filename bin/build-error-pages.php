@@ -11,6 +11,10 @@
  * @package BestOfIslam
  */
 
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
+
 $boi_root = dirname( __DIR__ );
 require $boi_root . '/inc/error-page-static.php';
 

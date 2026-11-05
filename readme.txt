@@ -121,6 +121,8 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.100.8 =
+* On a live server the theme deletes its development files again, the .git repository included, and the web server refuses direct requests for core and theme PHP files, .git, .claude and the theme's tests, bin and docs folders. See UPGRADING.md to keep them where you work on the theme.
+* Old dated addresses such as /2019/04/12/what-is-the-qibla/ redirect to the article.
 * A post with no featured image no longer leaves an unnamed link on the front page and in archives: the placeholder carries the post title for screen readers.
 * The All reflections link is large enough to tap on a phone.
 

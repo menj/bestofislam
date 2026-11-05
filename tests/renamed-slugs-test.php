@@ -8,6 +8,10 @@
  * @package BestOfIslam
  */
 
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
+
 define( 'ABSPATH', __DIR__ . '/' );
 define( 'BOI_DIR', dirname( __DIR__ ) );
 
@@ -59,6 +63,24 @@ foreach ( boi_post_slug_renames() as $old => $new ) {
 	}
 	if ( in_array( $old, $seeds, true ) ) {
 		echo "FAIL: $old is still seeded\n";
+		++$fail;
+	}
+}
+
+$dated = array(
+	'/2019/04/12/what-is-the-qibla/' => 'what-is-the-qibla',
+	'2019/04/12/what-is-the-qibla'   => 'what-is-the-qibla',
+	'/2018/01/05/Crusades-5-Facts/'  => 'crusades-facts',
+	'/2019/04/what-is-the-qibla/'    => '',
+	'/2019/04/12/a/b/'               => '',
+	'/19/04/12/what-is-the-qibla/'   => '',
+	'/2019/04/12/'                   => '',
+	'/what-is-the-qibla/'            => '',
+);
+foreach ( $dated as $from => $to ) {
+	$got = boi_dated_slug_for( $from );
+	if ( $got !== $to ) {
+		echo "FAIL: dated $from gave '$got', expected '$to'\n";
 		++$fail;
 	}
 }

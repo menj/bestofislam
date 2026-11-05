@@ -245,6 +245,13 @@ function boi_gl_apply( $content, $compiled, $budget ) {
 	// text such as "a > b" never reads as running text.
 	$tokens = preg_split( '/(<(?:[^>"\']|"[^"]*"|\'[^\']*\')*>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
 
+	// preg_split() gives false when PCRE stops (backtrack or JIT stack limit
+	// on a long page). implode() below would then be a fatal TypeError, so
+	// the page keeps its text without the links.
+	if ( ! is_array( $tokens ) ) {
+		return $content;
+	}
+
 	foreach ( $tokens as $i => $tok ) {
 		if ( '' !== $tok && '<' === $tok[0] ) {
 			if ( preg_match( '#^<(/?)([a-z0-9]+)#i', $tok, $m ) ) {
