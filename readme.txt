@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.3
+Stable tag: 1.100.4
 Template: twentytwentyfive
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.100.4 =
+* The theme removes its error pages from wp-content when another theme is activated, and replaces error pages another theme left behind.
+* A 504 page for the web server, with its .htaccess line.
 
 = 1.100.3 =
 * A new article on Ka'b ibn al-Ashraf, Abu Rafi' and the poets Asma bint Marwan and Abu Afak.

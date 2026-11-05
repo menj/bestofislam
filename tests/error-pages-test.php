@@ -2,7 +2,8 @@
 /**
  * The error drop-ins (inc/error-pages.php): each kind has its own page and
  * status, runs without WordPress, sends noindex and no-store; the state reads
- * current, outdated, foreign and absent; the static pages in errors/ are
+ * current, outdated, another theme's, foreign and absent; another theme's
+ * marked leftover is replaced; switching away removes only the theme's files; the static pages in errors/ are
  * current. WordPress is replaced by small stubs.
  *
  * Run: php tests/error-pages-test.php
@@ -39,6 +40,8 @@ function is_email( $s ) { return false !== strpos( (string) $s, '@' ); }
 function wp_json_encode( $v ) { return json_encode( $v ); }
 function wp_generate_password() { return bin2hex( random_bytes( 4 ) ); }
 function wp_delete_file( $p ) { @unlink( $p ); }
+function delete_option( $k ) { unset( $GLOBALS['boi_o'][ $k ] ); }
+function is_multisite() { return false; }
 function boi_get_options() { return array( 'errors_pages' => 1, 'errors_alerts' => 0, 'errors_email' => '', 'errors_cooldown' => 30 ); }
 require dirname( __DIR__ ) . '/inc/error-pages.php';
 
@@ -85,13 +88,20 @@ if ( function_exists( 'posix_geteuid' ) && 0 !== posix_geteuid() ) {
 	boi_check( false === $boi_ok && in_array( 'php-error.php', boi_error_sync_failures(), true ), 'an unwritable wp-content fails the sync and names the file' );
 }
 
+file_put_contents( "$boi_tmp/maintenance.php", "<?php\n// Paulus error page drop-in 2.77.3. Written by the Paulus theme; safe to delete.\n" );
+boi_check( 'theme' === boi_error_state()['maintenance'], 'another theme\'s marked leftover reads as theme' );
+boi_error_sync();
+boi_check( file_get_contents( "$boi_tmp/maintenance.php" ) === $boi_src['maintenance'], 'sync replaces another theme\'s marked leftover' );
+boi_error_remove();
+boi_check( ! file_exists( "$boi_tmp/maintenance.php" ) && ! file_exists( "$boi_tmp/php-error.php" ) && "<?php // someone else's\n" === file_get_contents( "$boi_tmp/db-error.php" ), 'switching away removes only the theme\'s own files' );
+
 exec( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( dirname( __DIR__ ) . '/bin/build-error-pages.php' ) . ' --check 2>&1', $boi_o, $boi_code );
 boi_check( 0 === $boi_code, 'errors/*.html match the builder' );
-foreach ( array( '403', '500', '502', '503' ) as $boi_c ) {
+foreach ( array( '403', '500', '502', '503', '504' ) as $boi_c ) {
 	$boi_h = (string) file_get_contents( dirname( __DIR__ ) . "/errors/$boi_c.html" );
 	boi_check( false !== strpos( $boi_h, 'noindex' ) && false === strpos( $boi_h, '{{' ) && preg_match( '~<title>[^<|]+ \| Best of Islam</title>~', $boi_h ), "errors/$boi_c.html is filled and noindex" );
 }
-boi_check( false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 503 /wp-content/themes/bestofislam/errors/503.html' ), '.htaccess lines point at errors/' );
+boi_check( false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 503 /wp-content/themes/bestofislam/errors/503.html' ) && false !== strpos( boi_error_htaccess_snippet(), 'ErrorDocument 504 /wp-content/themes/bestofislam/errors/504.html' ), '.htaccess lines point at errors/' );
 
 array_map( 'unlink', array_filter( glob( "$boi_tmp/{,.}*", GLOB_BRACE ) ?: array(), 'is_file' ) );
 @rmdir( $boi_tmp );

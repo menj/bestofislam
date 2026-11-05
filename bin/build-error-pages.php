@@ -14,6 +14,7 @@ $boi_pages = array(
 	'403' => array( 'Access denied', 'Access denied', 'This address is closed to visitors.', 'Every page of the site is open from the home page.', 'Go to the home page' ),
 	'500' => array( 'Something went wrong', 'Something went wrong', 'An error stopped this page from loading.', 'Please try again shortly.', 'Try again' ),
 	'502' => array( 'Bad gateway', 'Bad gateway', 'A server between you and the site gave a wrong answer.', 'Please try again shortly.', 'Try again' ),
+	'504' => array( 'Gateway timeout', 'Gateway timeout', 'A server between you and the site took too long to answer.', 'Please try again shortly.', 'Try again' ),
 	'503' => array( 'Temporarily unavailable', 'Back shortly', 'The site is busy or offline for a short while.', 'Please try again in a few minutes.', 'Try again' ),
 );
 $boi_tpl   = (string) file_get_contents( $boi_root . '/assets/error-pages/page.html' );

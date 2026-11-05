@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.4] - 2026-11-05
+
+### Changed
+- The error drop-ins in `wp-content` are removed when another theme is activated (`boi_error_remove()` on `switch_theme`). Only files carrying the `Best of Islam error drop-in` marker are deleted.
+- A drop-in another theme left behind, marked "Written by the ... theme; safe to delete", is now replaced when the theme writes its own (`boi_error_is_other_theme()`). The Errors tab shows it as "Left behind by another theme; replaced on the next install", and the next admin page load writes over it. A file with no such mark is still never touched.
+
+### Added
+- `errors/504.html` (gateway timeout), built by `bin/build-error-pages.php` in the same design as the 502 page, and an `ErrorDocument 504` line in the Errors tab and the README.
+- `tests/error-pages-test.php` checks the replacement, the removal and the 504 page.
+
 ## [1.100.3] - 2026-11-04
 
 ### Added
