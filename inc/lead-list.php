@@ -171,7 +171,6 @@ function boi_lead_list_block_render( $attributes ) {
 		return '';
 	}
 	boi_lead_list_shown( $out['ids'] );
-	wp_enqueue_style( 'boi-lead-list', BOI_URI . '/assets/css/lead-list.css', array( 'boi-front' ), boi_asset_version( '/assets/css/lead-list.css' ) );
 	return $out['html'];
 }
 
@@ -256,3 +255,17 @@ function boi_lead_list_grid_after( $content, $block ) {
 	return $content;
 }
 add_filter( 'render_block', 'boi_lead_list_grid_after', 10, 2 );
+
+/**
+ * The stylesheet, on the first page of Reflections, of the sections and of the archives (tags have tag.html). It is
+ * enqueued with the theme's own styles rather than while the block or list
+ * renders: an enqueue made during rendering prints the theme stylesheet it
+ * depends on above the core block styles, and they then win over it.
+ */
+function boi_lead_list_assets() {
+	if ( is_paged() || ! ( is_home() || ( is_archive() && ! is_tag() ) ) ) {
+		return;
+	}
+	wp_enqueue_style( 'boi-lead-list', BOI_URI . '/assets/css/lead-list.css', array( 'boi-front' ), boi_asset_version( '/assets/css/lead-list.css' ) );
+}
+add_action( 'wp_enqueue_scripts', 'boi_lead_list_assets', 20 );
