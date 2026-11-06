@@ -7,14 +7,24 @@
     "alt": "Close-up of a beautifully decorated dome inside a grand mosque, showcasing intricate Islamic patterns.",
     "artist": "Diego F. Parra",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-ornamented-wall-in-mosque-15129213/"
+    "source": "https://www.pexels.com/photo/close-up-of-ornamented-wall-in-mosque-15129213/",
+    "caption": "The inside of a decorated mosque dome. The Quran states the ban on killing in universal terms (5:32)."
    },
    {
     "file": "islam-religion-of-peace-2.avif",
     "alt": "Black and white photo showcasing mosque domes with geometric windows against a clear sky.",
     "artist": "Çiğdem Bilgin",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/monochrome-mosque-domes-against-clear-sky-33815260/"
+    "source": "https://www.pexels.com/photo/monochrome-mosque-domes-against-clear-sky-33815260/",
+    "caption": "Mosque domes with geometric patterns. The rules of war bind the winner."
+   },
+   {
+    "file": "islam-religion-of-peace-3.avif",
+    "alt": "A tranquil courtyard garden in an Istanbul mosque.",
+    "caption": "A mosque courtyard in Istanbul. Islam and salam, peace, share the Arabic root s-l-m.",
+    "artist": "Abdullah Öğük",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/serene-courtyard-garden-at-istanbul-mosque-32033220/"
    }
   ]
  },
@@ -2185,6 +2195,14 @@
     "artist": "Pexels",
     "licence": "Pixabay licence",
     "source": "https://pixabay.com/photos/cave-light-person-rocky-silhouette-1835825/"
+   },
+   {
+    "file": "first-revelation-demonic-claim-4.avif",
+    "alt": "The Hira cave on Jabal al-Nour near Makkah under a blue sky.",
+    "caption": "The Hira cave on Jabal al-Nour near Mecca, where the Prophet ﷺ retreated before the first revelation.",
+    "artist": "Musaddek Sayek",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/hira-cave-on-jabal-al-nour-in-makkah-38336046/"
    }
   ]
  },
@@ -3999,14 +4017,24 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "nabi-and-rasul-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "nabi-and-rasul-3.avif",
+    "alt": "Ancient book pages with intricate Arabic calligraphy.",
+    "caption": "Pages of an old Arabic book. The Quran uses two words, nabi and rasul, and once uses them side by side.",
+    "artist": "Adam Noor",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/old-book-with-handwriting-18491910/"
    }
   ]
  },
@@ -4024,14 +4052,24 @@
     "alt": "Gold, blue and white star rings on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "messenger-to-every-nation-2.avif",
     "alt": "A many-pointed star in gold and blue lines on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "messenger-to-every-nation-3.avif",
+    "alt": "A vintage world map on old paper.",
+    "caption": "An old world map. The Quran says that a warner has passed among every nation (35:24).",
+    "artist": "Aaditya Arora",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/world-map-illustration-592753/"
    }
   ]
  },
@@ -4049,14 +4087,24 @@
     "alt": "Concentric star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "muhammad-and-the-hebrew-prophets-2.avif",
     "alt": "Star rings in white, blue and gold on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "muhammad-and-the-hebrew-prophets-3.avif",
+    "alt": "An open Psalms book showing Hebrew and English text.",
+    "caption": "A book of Psalms in Hebrew and English. The Quran quotes the Psalms almost word for word (21:105).",
+    "artist": "Joachim Schnürle",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/open-psalms-book-in-hebrew-and-english-39222072/"
    }
   ]
  },
@@ -4074,14 +4122,24 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "ishmael-in-the-quran-and-genesis-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "ishmael-in-the-quran-and-genesis-3.avif",
+    "alt": "The Kaaba at dusk under a clear sky in Mecca.",
+    "caption": "The Kaaba at dusk. The Quran places Ishmael at the Kaaba with his father.",
+    "artist": "Neo Evenger",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/kaaba-28209449/"
    }
   ]
  },
@@ -4099,14 +4157,24 @@
     "alt": "Gold, blue and white star rings on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "no-compulsion-in-religion-2.avif",
     "alt": "A many-pointed star in gold and blue lines on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "no-compulsion-in-religion-3.avif",
+    "alt": "The architecture of Jama Masjid, a historic mosque in New Delhi.",
+    "caption": "Jama Masjid in Delhi. In India the dhimma was extended to Hindus from the first conquest.",
+    "artist": "Roshan Bhatt",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-the-jama-masjid-delhi-11255192/"
    }
   ]
  },
@@ -4124,14 +4192,32 @@
     "alt": "Concentric star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "holy-war-in-the-bible-2.avif",
     "alt": "Star rings in white, blue and gold on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "holy-war-in-the-bible-3.avif",
+    "alt": "A hand pointing to text in a Torah scroll.",
+    "caption": "A hand pointing to Hebrew text in a Torah scroll. Deuteronomy 20 lays down rules for war, including total destruction.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/tora-and-hand-over-it-5192346/"
+   },
+   {
+    "file": "holy-war-in-the-bible-4.avif",
+    "alt": "Krak des Chevaliers, a historic castle in Syria, framed by trees.",
+    "caption": "Krak des Chevaliers, a Crusader castle in Syria. The Church fought holy wars and called them that.",
+    "artist": "mori dad",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/krak-des-chevaliers-castle-in-homs-syria-36756273/"
    }
   ]
  },
@@ -4149,14 +4235,32 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "septuagint-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "septuagint-3.avif",
+    "alt": "Papyrus Rylands 458, a fragment of the Greek Septuagint text of Deuteronomy.",
+    "caption": "Papyrus Rylands 458, a fragment of Deuteronomy in the Greek Septuagint, from the second century BCE.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:P._Rylands_458.jpg"
+   },
+   {
+    "file": "septuagint-4.avif",
+    "alt": "A close-up of an antique leather-bound book with ornate engraving and aged paper.",
+    "caption": "An antique leather-bound book. The early Church treated the Greek translation as inspired, and argued over whether to leave it.",
+    "artist": "Marta Branco",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-antique-leather-bound-book-38374178/"
    }
   ]
  },
@@ -4174,14 +4278,32 @@
     "alt": "Gold, blue and white star rings on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "oldest-bible-codices-2.avif",
     "alt": "A many-pointed star in gold and blue lines on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "oldest-bible-codices-3.avif",
+    "alt": "An old book open at a page of Latin text on yellowed paper.",
+    "caption": "An old book open at a page of Latin text. The three great Greek codices predate Islam; this photograph is of a much later book, not of a biblical codex.",
+    "artist": "Alyona Nagel",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscript-with-latin-text-on-yellowed-pages-35031603/"
+   },
+   {
+    "file": "oldest-bible-codices-4.avif",
+    "alt": "A close-up of an old, weathered book with tattered pages.",
+    "caption": "An old book with tattered pages. Early codices are full of corrections by later hands; this photograph is of an old book, not of a biblical codex.",
+    "artist": "Zakhar Vozhdaienko",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-worn-book-with-tattered-pages-on-white-background-36878207/"
    }
   ]
  },
