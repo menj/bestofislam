@@ -4,6 +4,17 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.101.0] - 2026-11-06
+
+Eight new articles that answer the arguments in a collection of ex-Muslim testimonies. No person and no book is named; the articles answer claims and leave people alone. No feature removed and no public identifier renamed.
+
+### Added
+- will-every-non-muslim-go-to-hell, jews-behind-the-stone-hadith, can-a-muslim-befriend-a-non-muslim, women-in-hell-and-deficient-intelligence-hadith, three-divorces-and-the-one-night-marriage, was-muhammad-a-narcissist, safiyya-and-the-women-captured-in-war and what-former-muslims-testimonies-show, each with footnotes that say what was and was not checked on a printed page.
+- Reading-order slots, seed entries and related-article links for all eight.
+
+### Known gaps
+- The eight articles have no images yet (image rule, D48/D30); they follow in the next release.
+
 ## [1.100.21] - 2026-11-06
 
 Images, batch 9: the last thirteen articles below the image rule (about one in-text image per two entries) gain images. No feature removed and no public identifier renamed.

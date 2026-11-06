@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.21
+Stable tag: 1.101.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.101.0 =
+* Eight new articles, answering the arguments in a collection of ex-Muslim testimonies without naming any person or the book: non-Muslims and Hell, the hadith of the Jews behind the stone, befriending non-Muslims, women in Hell and "deficient in intelligence", three divorces and the one-night marriage, the narcissism claim, Safiyya and captive women, and what testimonies can show. Their images follow in the next release.
+
 = 1.100.21 =
 * Thirteen more articles gain in-text images, and every in-text image in them now has a caption. Every article now meets the image rule. Nothing else changes.
 
@@ -277,6 +280,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.101.0 =
+Replace the theme files. The new articles reach existing sites through the seed migration on this version.
 
 = 1.100.21 =
 Replace the theme files. Nothing else to do.
