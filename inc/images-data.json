@@ -4235,14 +4235,24 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "septuagint-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "septuagint-3.avif",
+    "alt": "Papyrus Rylands 458, a fragment of the Greek Septuagint text of Deuteronomy.",
+    "caption": "Papyrus Rylands 458, a fragment of Deuteronomy in the Greek Septuagint, from the second century BCE.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:P._Rylands_458.jpg"
    }
   ]
  },
