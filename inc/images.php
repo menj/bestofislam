@@ -68,6 +68,20 @@ function boi_attach_featured_images( $limit = 3 ) {
 			break;
 		}
 
+		// An attachment made before the article was renamed is stored under
+		// its old slug. Move it to the current one so it is reused, never
+		// sideloaded a second time.
+		if ( empty( $map[ $slug ] ) && function_exists( 'boi_post_slug_renames' ) ) {
+			foreach ( array_keys( boi_post_slug_renames(), $slug, true ) as $old ) {
+				if ( ! empty( $map[ $old ] ) && get_post( (int) $map[ $old ] ) ) {
+					$map[ $slug ] = (int) $map[ $old ];
+					unset( $map[ $old ] );
+					update_option( 'boi_image_attachments', $map, false );
+					break;
+				}
+			}
+		}
+
 		// Reuse an attachment created on an earlier run.
 		if ( ! empty( $map[ $slug ] ) && get_post( (int) $map[ $slug ] ) ) {
 			set_post_thumbnail( $post, (int) $map[ $slug ] );
@@ -253,14 +267,20 @@ function boi_credit_html( $lead, $source ) {
  * @return string
  */
 function boi_image_source_name( $url ) {
-	$host = (string) wp_parse_url( (string) $url, PHP_URL_HOST );
+	$host  = strtolower( (string) wp_parse_url( (string) $url, PHP_URL_HOST ) );
+	$names = array(
+		'pexels.com'             => 'Pexels',
+		'pixabay.com'            => 'Pixabay',
+		'archive.org'            => 'Internet Archive',
+		'wellcomecollection.org' => 'Wellcome Collection',
+		'clevelandart.org'       => 'Cleveland Museum of Art',
+	);
 
-	if ( false !== strpos( $host, 'pexels.com' ) ) {
-		return 'Pexels';
-	}
-
-	if ( false !== strpos( $host, 'pixabay.com' ) ) {
-		return 'Pixabay';
+	foreach ( $names as $domain => $name ) {
+		// The host itself or a subdomain of it, never a look-alike suffix.
+		if ( $host === $domain || substr( $host, -strlen( '.' . $domain ) ) === '.' . $domain ) {
+			return $name;
+		}
 	}
 
 	return 'Wikimedia Commons';
@@ -272,10 +292,27 @@ function boi_image_source_name( $url ) {
  * @return string
  */
 function boi_render_image_credit() {
-	$id = get_post_thumbnail_id();
+	return boi_image_credit_markup( get_post() );
+}
+
+/**
+ * The credit line of a post's featured image, or of its bundled image when it
+ * has none. The image-credit block and the lead and list share it.
+ *
+ * @param WP_Post|int|null $post Post.
+ * @return string
+ */
+function boi_image_credit_markup( $post ) {
+	$post = get_post( $post );
+
+	if ( ! $post ) {
+		return '';
+	}
+
+	$id = get_post_thumbnail_id( $post );
 
 	if ( ! $id ) {
-		$bundled = boi_bundled_image( get_post() );
+		$bundled = boi_bundled_image( $post );
 
 		if ( ! $bundled ) {
 			return '';

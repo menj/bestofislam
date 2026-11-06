@@ -2,8 +2,9 @@
 """Fetches the photographs named in bin/stock-images.json and wires them into
 inc/images-data.json.
 
-For each article the plan names one featured image and up to three in-text
-images, each from Pexels, Pixabay or Wikimedia Commons, with the alt text and
+For each article the plan names one featured image and up to six in-text
+images, each from Pexels, Pixabay, Wikimedia Commons, the Internet Archive,
+Wellcome Collection or the Cleveland Museum of Art, with the alt text and
 the caption to print. The script downloads the file, crops it to 3:2, resizes it
 (1400px wide for the featured image, 960px for the others), stores it as AVIF
 and writes the credit entry (artist, licence, source, alt, caption).
@@ -16,7 +17,10 @@ them:
     PEXELS_KEY=... PIXABAY_KEY=... python3 bin/fetch-stock-images.py
 
 Commons needs no key; only public domain, CC0, CC BY and CC BY-SA files are
-accepted. ONLY=slug,slug limits a run to those articles. A file already in place is not downloaded again, so a rerun without
+accepted. Wellcome Collection images must be public domain, CC0 or CC BY;
+Cleveland Museum of Art images must be CC0. An Internet Archive id has the
+form "item/n<page>" and its spec names the artist and licence, since only
+scans of works out of copyright are used. ONLY=slug,slug limits a run to those articles. A file already in place is not downloaded again, so a rerun without
 keys only rewrites the credit entries. Needs Pillow 11.3 or later with AVIF.
 """
 import html
@@ -103,7 +107,45 @@ def commons(title):
             'source': 'https://commons.wikimedia.org/wiki/' + page['title'].replace(' ', '_')}
 
 
+def archive(pid, spec):
+    item, page = pid.split('/')
+    return {'url': 'https://archive.org/download/%s/page/%s_w2000.jpg' % (item, page),
+            'artist': spec.get('artist', 'Unknown author'), 'licence': spec.get('licence', 'Public domain'),
+            'source': 'https://archive.org/details/%s/page/%s' % (item, page)}
+
+
+def wellcome(pid, spec=None):
+    raw = get('https://api.wellcomecollection.org/catalogue/v2/images/%s?include=source.contributors' % pid)
+    if not raw:
+        return None
+    r = json.loads(raw)
+    loc = r['locations'][0]
+    licence = {'pdm': 'Public domain', 'cc-0': 'CC0', 'cc-by': 'CC BY 4.0'}.get(loc.get('license', {}).get('id'))
+    if not licence:
+        print('SKIPPED, licence is', loc.get('license', {}).get('id'), '-', pid)
+        return None
+    names = [c['agent']['label'] for c in r['source'].get('contributors', [])]
+    artist = (spec or {}).get('artist') or (names[0] if names else 'Unknown artist')
+    return {'url': loc['url'].replace('info.json', 'full/2000,/0/default.jpg'), 'artist': artist + ', Wellcome Collection',
+            'licence': licence, 'source': 'https://wellcomecollection.org/works/' + r['source']['id']}
+
+
+def cleveland(pid, spec=None):
+    raw = get('https://openaccess-api.clevelandart.org/api/artworks/%s' % pid, {'User-Agent': 'Mozilla/5.0 ' + UA['User-Agent']})
+    if not raw:
+        return None
+    a = json.loads(raw)['data']
+    if a.get('share_license_status') != 'CC0':
+        print('SKIPPED, licence is', a.get('share_license_status'), '-', pid)
+        return None
+    names = [c['description'].split(' (')[0] for c in a.get('creators') or []]
+    artist = (spec or {}).get('artist') or (names[0] if names else (a.get('culture') or ['Unknown artist'])[0])
+    img = a['images'].get('print') or a['images']['web']
+    return {'url': img['url'], 'artist': artist + ', Cleveland Museum of Art', 'licence': 'CC0', 'source': a['url']}
+
+
 PROVIDERS = {'pexels': pexels, 'pixabay': pixabay, 'commons': commons}
+SPEC_PROVIDERS = {'archive': archive, 'wellcome': wellcome, 'cleveland': cleveland}
 
 
 def store(spec, folder, name, width, current=None):
@@ -113,12 +155,15 @@ def store(spec, folder, name, width, current=None):
     names a different source, so a picture is never left under another
     photographer's credit."""
     path = os.path.join(ROOT, 'assets', 'images', folder, name)
-    found = PROVIDERS[spec['src']](spec['id'])
+    if spec['src'] in SPEC_PROVIDERS:
+        found = SPEC_PROVIDERS[spec['src']](spec['id'], spec)
+    else:
+        found = PROVIDERS[spec['src']](spec['id'])
     if found is None:
         return None
     same = bool(current) and current.get('source') == found['source'] and os.path.exists(path) and not os.environ.get('FORCE')
     if not same:
-        blob = get(found['url'])
+        blob = get(found['url'], {'User-Agent': 'Mozilla/5.0 ' + UA['User-Agent']} if 'clevelandart' in found['url'] else None)
         if blob is None:
             return None
         image = Image.open(io.BytesIO(blob)).convert('RGB')

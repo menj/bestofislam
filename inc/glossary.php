@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '13';
+const BOI_GLOSSARY_VERSION = '14';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -358,8 +358,8 @@ function boi_glossary_retired_slugs() {
  * and takes the new slug and title; a merged duplicate is deleted outright
  * once the entry it duplicated has its own page, whatever its status, along
  * with any copy already in the trash. No page is left under a suffixed
- * address, and the theme does not redirect the old addresses: they return
- * 404 like any other address that does not exist.
+ * address. The old addresses answer with a 301 to the entry that replaced
+ * them (inc/renamed-slugs.php).
  *
  * @param array $hashes Fingerprints by slug, updated in place.
  * @return void
@@ -378,7 +378,7 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 		}
 
 		// A page renamed by an earlier release still carries the old-slug note
-		// WordPress keeps for its own redirect; the theme does not redirect.
+		// WordPress keeps for its own redirect; inc/renamed-slugs.php redirects.
 		if ( $current ) {
 			delete_post_meta( $current->ID, '_wp_old_slug', $old );
 		}
@@ -404,7 +404,7 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 		);
 
 		// WordPress notes the old slug on a rename so it can redirect it later;
-		// the theme does not redirect, so the note goes.
+		// inc/renamed-slugs.php redirects instead, so the note goes.
 		delete_post_meta( $page->ID, '_wp_old_slug' );
 
 		if ( isset( $hashes[ $old ] ) ) {
@@ -645,7 +645,7 @@ function boi_glossary_aliases( $entry ) {
  * The photographs used on the Glossary: one for the index and one for each
  * kind of entry. Credits live in inc/glossary-images.json.
  *
- * @return array Key (hero, person, prophet, place, event, group, book, topic, term) => image.
+ * @return array Key (hero, or a kind from boi_glossary_types()) => image.
  */
 function boi_glossary_images() {
 	static $data = null;
@@ -694,7 +694,14 @@ function boi_glossary_entry_image( $kind, $slug ) {
 	}
 
 	$all  = boi_glossary_images();
-	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : ( isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array() );
+	$term = isset( $all['kinds']['term'] ) ? $all['kinds']['term'] : array();
+	$pool = ! empty( $all['kinds'][ $kind ] ) ? $all['kinds'][ $kind ] : $term;
+
+	// The kinds added in 1.90.0 have one photograph each, for their tile; their
+	// entries draw on it and on the Term photographs, so neighbours still differ.
+	if ( count( $pool ) < 2 && 'term' !== $kind ) {
+		$pool = array_merge( $pool, $term );
+	}
 
 	if ( empty( $pool ) ) {
 		return null;
@@ -916,21 +923,17 @@ function boi_render_glossary_index() {
 		}
 	}
 
-	$hero  = boi_glossary_image( 'hero' );
-	$intro = '';
-
-	if ( $hero ) {
-		$intro .= '<figure class="boi-glossary__hero"><img src="' . esc_url( $hero['url'] ) . '" alt="' . esc_attr( $hero['alt'] ) . '" width="' . (int) $hero['width'] . '" height="' . (int) $hero['height'] . '" decoding="async"><figcaption>' . boi_glossary_credit( $hero ) . '</figcaption></figure>';
-	}
-
-	$intro .= '<p class="boi-glossary__basis">' . sprintf(
+	// The index opens with its text and the tiles; the photograph that once
+	// headed it (and its caption) is gone. The "hero" record stays as the
+	// photograph of the All tile.
+	$intro = '<p class="boi-glossary__basis">' . sprintf(
 		/* translators: %s: the scholar's name, linked to his entry. */
 		esc_html__( 'The terms and their Arabic forms follow the lists in %s\'s Toward Islamic English. Each definition is restated here, with the source of the term given on its page.', 'bestofislam' ),
 		boi_glossary_faruqi_name() // phpcs:ignore WordPress.Security.EscapeOutput
 	) . '</p>';
 
 	return sprintf(
-		'%1$s<div class="boi-glossary" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
+		'%1$s<div class="boi-glossary" id="boi-glossary-list" data-total="%2$d"><div class="boi-glossary__tools" hidden><div class="boi-glossary__types" role="group" aria-label="%3$s">%4$s</div><p class="boi-glossary__count" role="status" aria-live="polite"></p><button type="button" class="boi-glossary__reset" hidden>%5$s</button></div>%6$s<p class="boi-glossary__empty" hidden>%7$s</p></div>',
 		$intro, // phpcs:ignore WordPress.Security.EscapeOutput
 		(int) $total,
 		esc_attr__( 'Filter by kind', 'bestofislam' ),
@@ -979,14 +982,24 @@ function boi_render_glossary_bar() {
 		}
 	}
 
+	// On the index the box filters the list in place and never opens the
+	// suggestions, so it is a plain search box that controls the list (the
+	// count is announced by the index's own status line). Elsewhere it is a
+	// combobox over the suggestions list.
+	$is_index   = boi_is_glossary_page() && ! get_queried_object()->post_parent;
+	$input_aria = $is_index
+		? 'aria-controls="boi-glossary-list"'
+		: 'role="combobox" aria-autocomplete="list" aria-controls="boi-gresults" aria-expanded="false"';
+
 	return sprintf(
-		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" aria-controls="boi-gresults" aria-expanded="false"><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
+		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" %7$s><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
 		esc_url( $base ),
 		esc_html__( 'Glossary', 'bestofislam' ),
 		esc_attr__( 'Find a term', 'bestofislam' ),
 		esc_attr__( 'Jump to a letter', 'bestofislam' ),
 		$az,
-		wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES )
+		wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
+		$input_aria
 	);
 }
 
@@ -1109,24 +1122,23 @@ function boi_render_term_related( $attributes ) {
 
 /**
  * Structured data for the Glossary. The Glossary is a DefinedTermSet and each
- * entry a DefinedTerm with its other names, its Arabic script and the terms
- * and articles it points to. Under the theme's own graph the pages also get a
- * CollectionPage (the index) or a WebPage (an entry); with Rank Math's schema
- * active that page node is Rank Math's, and these nodes refer to it by id. The
- * breadcrumb trail comes from the breadcrumbs block.
+ * entry a DefinedTerm with its other names, its Arabic script, its photograph
+ * and the terms and articles it points to. The pages are a CollectionPage (the
+ * index) and a WebPage (an entry). These are nodes of the one page graph that
+ * inc/schema-graph.php prints, or merges into Rank Math's by @id.
  *
- * @return void
+ * @return array Graph nodes, empty off the Glossary.
  */
-function boi_glossary_schema() {
+function boi_glossary_schema_nodes() {
 	if ( ! boi_is_glossary_page() ) {
-		return;
+		return array();
 	}
 
 	$post   = get_queried_object();
 	$parent = boi_glossary_parent();
 
-	if ( ! $parent ) {
-		return;
+	if ( ! $parent || ! $post instanceof WP_Post ) {
+		return array();
 	}
 
 	$set_url = get_permalink( $parent );
@@ -1144,13 +1156,22 @@ function boi_glossary_schema() {
 		$terms = array();
 
 		foreach ( boi_glossary_entries() as $entry ) {
-			$terms[] = array(
-				'@type'       => 'DefinedTerm',
-				'@id'         => get_permalink( $entry ) . '#term',
-				'name'        => wp_strip_all_tags( get_the_title( $entry ) ),
-				'description' => wp_strip_all_tags( $entry->post_excerpt ),
-				'url'         => get_permalink( $entry ),
+			$node    = array(
+				'@type'            => 'DefinedTerm',
+				'@id'              => get_permalink( $entry ) . '#term',
+				'name'             => wp_strip_all_tags( get_the_title( $entry ) ),
+				'description'      => wp_strip_all_tags( $entry->post_excerpt ),
+				'url'              => get_permalink( $entry ),
+				'termCode'         => $entry->post_name,
+				'inDefinedTermSet' => array( '@id' => $set_id ),
 			);
+			$aliases = boi_glossary_schema_aliases( $entry );
+
+			if ( $aliases ) {
+				$node['alternateName'] = $aliases;
+			}
+
+			$terms[] = $node;
 		}
 
 		$graph[] = $set_ref + array(
@@ -1160,25 +1181,24 @@ function boi_glossary_schema() {
 			'mainEntityOfPage' => array( '@id' => $page_id ),
 		);
 
-		if ( ! boi_glossary_rank_math() ) {
-			$graph[] = array(
-				'@type'      => 'CollectionPage',
-				'@id'        => $page_id,
-				'url'        => $set_url,
-				'name'       => wp_strip_all_tags( get_the_title( $parent ) ),
-				'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
-				'inLanguage' => get_bloginfo( 'language' ),
-				'mainEntity' => array( '@id' => $set_id ),
-			);
+		$hero = boi_glossary_image( 'hero' );
+
+		if ( $hero ) {
+			$graph[ count( $graph ) - 1 ]['image'] = boi_glossary_image_node( $hero, $set_url . '#hero-image' );
 		}
+
+		$graph[] = array(
+			'@type'      => 'CollectionPage',
+			'@id'        => $page_id,
+			'url'        => $set_url,
+			'name'       => wp_strip_all_tags( get_the_title( $parent ) ),
+			'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+			'inLanguage' => get_bloginfo( 'language' ),
+			'mainEntity' => array( '@id' => $set_id ),
+		);
 	} else {
 		$url     = get_permalink( $post );
-		$aliases = array_values( array_filter( array_map( 'strval', (array) get_post_meta( $post->ID, '_boi_term_aliases', true ) ) ) );
-		$ar      = (string) get_post_meta( $post->ID, '_boi_term_ar', true );
-
-		if ( '' !== $ar ) {
-			$aliases[] = $ar;
-		}
+		$aliases = boi_glossary_schema_aliases( $post );
 
 		$related = array();
 
@@ -1224,44 +1244,79 @@ function boi_glossary_schema() {
 			$term['alternateName'] = $aliases;
 		}
 
+		$type  = (string) get_post_meta( $post->ID, '_boi_term_type', true );
+		$photo = boi_glossary_entry_image( isset( boi_glossary_types()[ $type ] ) ? $type : 'term', $post->post_name );
+
+		if ( $photo ) {
+			$term['image'] = boi_glossary_image_node( $photo, $url . '#term-image' );
+		}
+
 		$graph[] = $term;
 		$graph[] = $set_ref;
 
-		if ( ! boi_glossary_rank_math() ) {
-			$page = array(
-				'@type'      => 'WebPage',
-				'@id'        => $page_id,
-				'url'        => $url,
-				'name'       => wp_strip_all_tags( get_the_title( $post ) ),
-				'isPartOf'   => array( '@id' => $set_id ),
-				'inLanguage' => get_bloginfo( 'language' ),
-				'mainEntity' => array( '@id' => $url . '#term' ),
-			);
+		$page = array(
+			'@type'      => 'WebPage',
+			'@id'        => $page_id,
+			'url'        => $url,
+			'name'       => wp_strip_all_tags( get_the_title( $post ) ),
+			'isPartOf'   => array( '@id' => $set_id ),
+			'inLanguage' => get_bloginfo( 'language' ),
+			'mainEntity' => array( '@id' => $url . '#term' ),
+		);
 
-			if ( $related ) {
-				$page['relatedLink'] = $related;
-			}
-
-			$graph[] = $page;
+		if ( $related ) {
+			$page['relatedLink'] = $related;
 		}
+
+		if ( $photo ) {
+			$page['primaryImageOfPage'] = array( '@id' => $url . '#term-image' );
+		}
+
+		$graph[] = $page;
+
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
-		array(
-			'@context' => 'https://schema.org',
-			'@graph'   => $graph,
-		)
-	) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+	return $graph;
 }
-add_action( 'wp_head', 'boi_glossary_schema', 22 );
 
 /**
- * Whether Rank Math's schema is active, so it supplies the page node.
+ * An entry's other names and its Arabic script, as shown on its page.
  *
- * @return bool
+ * @param WP_Post $entry Glossary entry.
+ * @return string[]
  */
-function boi_glossary_rank_math() {
-	return function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active();
+function boi_glossary_schema_aliases( $entry ) {
+	$aliases = array_values( array_filter( array_map( 'strval', (array) get_post_meta( $entry->ID, '_boi_term_aliases', true ) ) ) );
+	$ar      = (string) get_post_meta( $entry->ID, '_boi_term_ar', true );
+
+	if ( '' !== $ar ) {
+		$aliases[] = $ar;
+	}
+
+	return $aliases;
+}
+
+/**
+ * A Glossary photograph as an ImageObject with the credit printed under it.
+ *
+ * @param array  $image Image from boi_glossary_image() or boi_glossary_entry_image().
+ * @param string $id    Its @id.
+ * @return array
+ */
+function boi_glossary_image_node( $image, $id ) {
+	$node = array(
+		'@type'      => 'ImageObject',
+		'@id'        => $id,
+		'url'        => $image['url'],
+		'contentUrl' => $image['url'],
+	);
+
+	if ( ! empty( $image['width'] ) && ! empty( $image['height'] ) ) {
+		$node['width']  = (int) $image['width'];
+		$node['height'] = (int) $image['height'];
+	}
+
+	return array_merge( $node, boi_image_credit_fields( $image, $image['url'] ) );
 }
 
 /**
@@ -1293,3 +1348,59 @@ function boi_glossary_template_hierarchy( $templates ) {
 	return $templates;
 }
 add_filter( 'page_template_hierarchy', 'boi_glossary_template_hierarchy' );
+
+/**
+ * The "Add as a preferred source on Google" button belongs to the G Preferred
+ * plugin (wp-content/plugins/g-preferred), which puts it before the content
+ * of every page in a the_content filter. It has no place on the Glossary, so
+ * on the index and its entries the plugin's the_content callbacks are taken
+ * off. The plugin's hook has no stable name the theme can rely on, so each
+ * callback is recognised by its class or function name (GPR_*, gpr_*).
+ * Everywhere else the button stays.
+ *
+ * @return void
+ */
+function boi_glossary_drop_preferred_source() {
+	global $wp_filter;
+
+	if ( ! boi_is_glossary_page() || empty( $wp_filter['the_content'] ) || ! is_object( $wp_filter['the_content'] ) ) {
+		return;
+	}
+
+	foreach ( $wp_filter['the_content']->callbacks as $priority => $callbacks ) {
+		foreach ( $callbacks as $cb ) {
+			$fn   = $cb['function'];
+			$name = '';
+
+			if ( is_string( $fn ) ) {
+				$name = $fn;
+			} elseif ( is_array( $fn ) && isset( $fn[0] ) ) {
+				$name = is_object( $fn[0] ) ? get_class( $fn[0] ) : (string) $fn[0];
+			}
+
+			if ( '' !== $name && 0 === stripos( $name, 'gpr' ) ) {
+				remove_filter( 'the_content', $fn, $priority );
+			}
+		}
+	}
+}
+add_action( 'wp', 'boi_glossary_drop_preferred_source', 99 );
+
+/**
+ * Second line of defence, should the plugin change how it hooks in: its slot
+ * is taken out of the Glossary's content by its class. assets/css/glossary.css
+ * hides it as a last resort.
+ *
+ * @param string $content Content.
+ * @return string
+ */
+function boi_glossary_strip_preferred_source( $content ) {
+	if ( false === strpos( $content, 'gpr-slot' ) || ! boi_is_glossary_page() ) {
+		return $content;
+	}
+
+	$stripped = preg_replace( '#<div class="gpr-slot(?:\s[^"]*)?">.*?</div>#s', '', $content );
+
+	return null === $stripped ? $content : $stripped;
+}
+add_filter( 'the_content', 'boi_glossary_strip_preferred_source', PHP_INT_MAX );

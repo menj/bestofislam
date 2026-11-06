@@ -893,6 +893,9 @@
 }
 
 .boi-strip__more {
+	display: inline-flex;
+	align-items: center;
+	min-height: 24px; /* WCAG 2.5.8 target size, where the head wraps on a phone. */
 	font-size: 0.88rem;
 	font-weight: 600;
 	text-decoration: none;
@@ -1407,9 +1410,22 @@ video {
 	text-decoration: underline;
 }
 
+/* The owner's retro arrow (assets/images/arrow-next.webp), decoration only. Still under reduced motion. */
 .boi-next__title::after {
-	content: " \2192";
-	color: var(--wp--preset--color--accent-2, #E8B33C);
+	content: "";
+	display: inline-block;
+	width: 35px;
+	height: 21px;
+	margin-inline-start: 0.5rem;
+	vertical-align: middle;
+	background: url(../images/arrow-next.webp) center / contain no-repeat;
+	image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-next__title::after {
+		background-image: url(../images/arrow-next-static.webp);
+	}
 }
 
 .boi-next__part {
@@ -1536,6 +1552,24 @@ ul.boi-social > li::marker {
 	content: none;
 }
 
+/* Colours are variables, so the row follows the colour scheme: the footer
+   values below, and the text colour where [boi_social_icons] places the
+   row in content. Each link is 36px square, above the 24px target minimum. */
+.boi-social {
+	/* The footer is navy in both appearances, so its values are fixed. */
+	--boi-social-fg: #EAF2FB;
+	--boi-social-rule: #2A4A70;
+	--boi-social-hover-bg: #fff;
+	--boi-social-hover-fg: #0D2B4E;
+}
+
+.boi-social--inline {
+	--boi-social-fg: currentColor;
+	--boi-social-rule: var(--wp--preset--color--accent-6, #D9E3EF);
+	--boi-social-hover-bg: var(--wp--preset--color--contrast, #0D2B4E);
+	--boi-social-hover-fg: var(--wp--preset--color--base, #fff);
+}
+
 .boi-social__link {
 	display: inline-flex;
 	align-items: center;
@@ -1543,17 +1577,22 @@ ul.boi-social > li::marker {
 	inline-size: 2.25rem;
 	block-size: 2.25rem;
 	font-size: 1.05rem;
-	color: #EAF2FB;
-	border: 1px solid #2A4A70;
+	color: var(--boi-social-fg);
+	border: 1px solid var(--boi-social-rule);
 	border-radius: 50%;
 	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .boi-social__link:hover,
 .boi-social__link:focus-visible {
-	background: #fff;
-	border-color: #fff;
-	color: #0D2B4E;
+	background: var(--boi-social-hover-bg);
+	border-color: var(--boi-social-hover-bg);
+	color: var(--boi-social-hover-fg);
+}
+
+.boi-social__link:focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent-2, #E8B33C);
+	outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1654,4 +1693,10 @@ ul.boi-social > li::marker {
 	block-size: 1.5rem;
 	margin-inline-end: 0.5rem;
 	vertical-align: middle;
+}
+
+/* A taller hit area for the link under the answered questions (2.5.8),
+   without changing the line box. Mobile-first audit, 2026-11-04. */
+.boi-answers__more {
+	padding-block: 0.4rem;
 }

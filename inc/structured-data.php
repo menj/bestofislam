@@ -4,21 +4,20 @@
  *
  * Google's list of supported structured data (June 2026) names the features
  * that apply to this site: Article, Breadcrumb, Image metadata and
- * Organization. Breadcrumbs are emitted by seo.php and the reading lists by
- * schema.php. This file adds the rest:
+ * Organization. Breadcrumbs come from seo.php and the reading lists from
+ * schema.php. This file builds the rest:
  *
- *  - Organization and WebSite on every page (completed in schema-pages.php),
- *    with the logo and the follow links as sameAs.
+ *  - Organization and WebSite on the front page, with the logo and the
+ *    follow links as sameAs.
  *  - Article on every article: headline, description, dates, author,
- *    publisher, section, image, word count, the Notes as citations, the
- *    Glossary terms it uses, its numbered lists and its comments, carried
- *    by a WebPage with the breadcrumb and the related articles.
+ *    publisher, section and image.
  *  - Image metadata on the article's image: licence, the page where the
  *    licence can be checked, a credit line and the creator, drawn from the
  *    Commons credit the theme records for every seeded image.
  *
  * Everything is one @graph per page, joined by @id, so the entities refer to
- * each other rather than repeating themselves.
+ * each other rather than repeating themselves. inc/schema-graph.php collects
+ * the nodes from here and from the other modules and prints that graph once.
  *
  * @package BestOfIslam
  */
@@ -157,9 +156,11 @@ function boi_article_image_object( $post ) {
 	}
 
 	$image = array(
-		'@type'      => 'ImageObject',
-		'url'        => $url,
-		'contentUrl' => $url,
+		'@type'               => 'ImageObject',
+		'@id'                 => get_permalink( $post ) . '#primaryimage',
+		'url'                 => $url,
+		'contentUrl'          => $url,
+		'representativeOfPage' => true,
 	);
 
 	if ( $width && $height ) {
@@ -167,17 +168,27 @@ function boi_article_image_object( $post ) {
 		$image['height'] = (int) $height;
 	}
 
-	return array_merge( $image, boi_image_credit_fields( $credit ) );
+	return array_merge( $image, boi_image_credit_fields( $credit, $url ) );
 }
 
 /**
  * The licence and credit properties of an ImageObject, from an image credit.
  *
- * @param array $credit Credit: artist, licence, source.
- * @return array creator, creditText, license and acquireLicensePage, as known.
+ * The creator is the copyright holder only under a licence that keeps the
+ * copyright (CC BY and CC BY-SA); a public-domain image has no holder.
+ *
+ * @param array  $credit Credit: artist, licence, source.
+ * @param string $url    The image address, for its encodingFormat.
+ * @return array creator, creditText, copyrightHolder, copyrightNotice,
+ *               license, acquireLicensePage and encodingFormat, as known.
  */
-function boi_image_credit_fields( $credit ) {
+function boi_image_credit_fields( $credit, $url = '' ) {
 	$fields = array();
+	$format = boi_image_encoding_format( '' !== $url ? $url : ( isset( $credit['file'] ) ? $credit['file'] : '' ) );
+
+	if ( '' !== $format ) {
+		$fields['encodingFormat'] = $format;
+	}
 
 	if ( ! empty( $credit['artist'] ) ) {
 		$fields['creator']    = array(
@@ -194,6 +205,11 @@ function boi_image_credit_fields( $credit ) {
 		if ( '' !== $licence ) {
 			$fields['license'] = $licence;
 		}
+
+		if ( ! empty( $credit['artist'] ) && false !== strpos( $licence, '/licenses/by' ) ) {
+			$fields['copyrightHolder'] = $fields['creator'];
+			$fields['copyrightNotice'] = $credit['artist'] . ', ' . $credit['licence'];
+		}
 	}
 
 	if ( '' !== boi_image_source_url( isset( $credit['source'] ) ? $credit['source'] : '' ) ) {
@@ -201,6 +217,27 @@ function boi_image_credit_fields( $credit ) {
 	}
 
 	return $fields;
+}
+
+/**
+ * The media type of an image, from its file extension.
+ *
+ * @param string $file Address or file name.
+ * @return string Empty when the extension is not one the theme uses.
+ */
+function boi_image_encoding_format( $file ) {
+	$ext   = strtolower( pathinfo( (string) wp_parse_url( (string) $file, PHP_URL_PATH ), PATHINFO_EXTENSION ) );
+	$types = array(
+		'avif' => 'image/avif',
+		'webp' => 'image/webp',
+		'jpg'  => 'image/jpeg',
+		'jpeg' => 'image/jpeg',
+		'png'  => 'image/png',
+		'gif'  => 'image/gif',
+		'svg'  => 'image/svg+xml',
+	);
+
+	return isset( $types[ $ext ] ) ? $types[ $ext ] : '';
 }
 
 /**
@@ -245,14 +282,15 @@ function boi_inline_image_objects( $post ) {
 			$node['height'] = (int) $size[1];
 		}
 
-		$objects[] = array_merge( $node, boi_image_credit_fields( $credit ) );
+		$objects[] = array_merge( $node, boi_image_credit_fields( $credit, $url ) );
 	}
 
 	return $objects;
 }
 
 /**
- * Organization and WebSite, for the front page.
+ * Organization and WebSite, on every page: the publisher and the site that
+ * every other node refers to.
  *
  * @return array Graph nodes.
  */
@@ -282,7 +320,7 @@ function boi_site_entities() {
 	}
 
 	if ( $same_as ) {
-		$organization['sameAs'] = $same_as;
+		$organization['sameAs'] = boi_schema_with_menj( $same_as );
 	}
 
 	$website = array(
@@ -292,6 +330,15 @@ function boi_site_entities() {
 		'url'        => home_url( '/' ),
 		'inLanguage' => get_bloginfo( 'language' ),
 		'publisher'  => array( '@id' => boi_entity_id( 'organization' ) ),
+		// The search in the header, which every page carries.
+		'potentialAction' => array(
+			'@type'       => 'SearchAction',
+			'target'      => array(
+				'@type'       => 'EntryPoint',
+				'urlTemplate' => home_url( '/?s={search_term_string}' ),
+			),
+			'query-input' => 'required name=search_term_string',
+		),
 	);
 
 	return array( $organization, $website );
@@ -315,7 +362,7 @@ function boi_article_entities( $post ) {
 		'@id'              => $url . '#article',
 		'headline'         => mb_strlen( $title ) > 110 ? mb_substr( $title, 0, 109 ) . '…' : $title,
 		'url'              => $url,
-		'mainEntityOfPage' => array( '@id' => $url . '#webpage' ),
+		'mainEntityOfPage' => $url,
 		'datePublished'    => get_post_time( 'c', true, $post ),
 		'dateModified'     => get_post_modified_time( 'c', true, $post ),
 		'inLanguage'       => get_bloginfo( 'language' ),
@@ -333,73 +380,20 @@ function boi_article_entities( $post ) {
 		$article['description'] = boi_plain( get_the_excerpt( $post ) );
 	}
 
-	if ( $author ) {
-		$article['author'] = array(
-			'@type' => 'Person',
-			'name'  => $author->display_name,
-			'url'   => get_author_posts_url( $author->ID ),
-		);
-
-		$same_as = boi_author_same_as( $author );
-
-		if ( $same_as ) {
-			$article['author']['sameAs'] = $same_as;
-		}
-	}
+	// One author on every article: the owner, named in the structured data
+	// only (owner rule, 4 November 2026). boi_schema_one_author() adds the
+	// Person node this points to.
+	$article['author'] = array( '@id' => boi_schema_author_id() );
 
 	if ( '' !== $section ) {
 		$article['articleSection'] = $section;
-	}
-
-	$article['isAccessibleForFree'] = true;
-	$article['copyrightHolder']     = array( '@id' => boi_entity_id( 'organization' ) );
-	$article['copyrightYear']       = (int) get_post_time( 'Y', true, $post );
-
-	$plain = boi_plain( preg_replace( '/<!--.*?-->/s', ' ', (string) $post->post_content ) );
-
-	if ( '' !== $plain ) {
-		$article['wordCount'] = count( preg_split( '/\s+/u', $plain, -1, PREG_SPLIT_NO_EMPTY ) );
-	}
-
-	$citations = boi_article_citations( $post );
-
-	if ( $citations ) {
-		$article['citation'] = $citations;
-	}
-
-	$mentions = boi_article_mentions( $plain );
-
-	if ( $mentions ) {
-		$article['mentions'] = $mentions;
-		$article['keywords'] = implode( ', ', array_slice( wp_list_pluck( $mentions, 'name' ), 0, 12 ) );
-	}
-
-	if ( function_exists( 'boi_item_list_ids' ) ) {
-		$parts = boi_item_list_ids( $post );
-
-		if ( $parts ) {
-			$article['hasPart'] = array_map(
-				function ( $id ) {
-					return array( '@id' => $id );
-				},
-				$parts
-			);
-		}
-	}
-
-	$comments = boi_article_comments( $post );
-
-	if ( $comments ) {
-		$article['commentCount'] = (int) get_comments_number( $post );
-		$article['comment']      = $comments;
 	}
 
 	$images = array();
 	$image  = boi_article_image_object( $post );
 
 	if ( $image ) {
-		$image['@id'] = $url . '#primaryimage';
-		$images[]     = $image;
+		$images[] = $image;
 	}
 
 	$inline = boi_inline_image_objects( $post );
@@ -412,185 +406,7 @@ function boi_article_entities( $post ) {
 		$article['image'] = $images;
 	}
 
-	// The page that carries the article: its breadcrumb, the picture that
-	// represents it, and the articles it points readers to next.
-	$page = function_exists( 'boi_schema_page_node' )
-		? boi_schema_page_node( 'WebPage', $title )
-		: array(
-			'@type' => 'WebPage',
-			'name'  => $title,
-		);
-
-	$page['@id']           = $url . '#webpage';
-	$page['url']           = $url;
-	$page['mainEntity']    = array( '@id' => $url . '#article' );
-	$page['datePublished'] = $article['datePublished'];
-	$page['dateModified']  = $article['dateModified'];
-
-	if ( $image ) {
-		$page['primaryImageOfPage'] = array( '@id' => $url . '#primaryimage' );
-	}
-
-	$related = boi_article_related_links( $post );
-
-	if ( $related ) {
-		$page['relatedLink'] = $related;
-	}
-
-	$page['potentialAction'] = array(
-		array(
-			'@type'  => 'ReadAction',
-			'target' => array( $url ),
-		),
-	);
-
-	if ( comments_open( $post ) ) {
-		$page['potentialAction'][] = array(
-			'@type'  => 'CommentAction',
-			'name'   => __( 'Comment', 'bestofislam' ),
-			'target' => array( $url . '#respond' ),
-		);
-	}
-
-	return array_merge( array( $page, $article ), $inline );
-}
-
-/**
- * The sources an article cites: the items of its Notes list.
- *
- * @param WP_Post $post Article.
- * @return string[] Citations as plain text, in order.
- */
-function boi_article_citations( $post ) {
-	$content = (string) $post->post_content;
-	$at      = strripos( $content, '>Notes</h' );
-
-	if ( false === $at || ! preg_match( '#<ol[^>]*>(.*?)</ol>#is', substr( $content, $at ), $m ) ) {
-		return array();
-	}
-
-	$out = array();
-
-	foreach ( preg_split( '#</li>#i', $m[1] ) as $item ) {
-		$text = boi_plain( $item );
-
-		if ( '' !== $text ) {
-			$out[] = $text;
-		}
-	}
-
-	return $out;
-}
-
-/**
- * The Glossary terms an article uses, as DefinedTerms joined by @id to the
- * term nodes on their own Glossary pages: the terms the Glossary linker can
- * link in the text.
- *
- * @param string $plain The article as plain text.
- * @return array[] DefinedTerm references, at most forty.
- */
-function boi_article_mentions( $plain ) {
-	if ( '' === $plain || ! function_exists( 'boi_gl_map' ) ) {
-		return array();
-	}
-
-	$quotes = array( "\u{2019}", "\u{2018}" );
-	$text   = str_replace( $quotes, "'", $plain );
-	$found  = array();
-
-	foreach ( boi_gl_map() as $item ) {
-		if ( isset( $found[ $item['id'] ] ) || count( $found ) >= 40 ) {
-			continue;
-		}
-
-		$phrase = str_replace( $quotes, "'", $item['phrase'] );
-
-		if ( preg_match( '/(?<![\p{L}\p{N}])' . preg_quote( $phrase, '/' ) . '(?![\p{L}\p{N}])/iu', $text ) ) {
-			$term                 = get_post( $item['id'] );
-			$found[ $item['id'] ] = array(
-				'@type' => 'DefinedTerm',
-				'@id'   => $item['url'] . '#term',
-				'name'  => $term ? boi_plain( get_the_title( $term ) ) : $item['phrase'],
-				'url'   => $item['url'],
-			);
-		}
-	}
-
-	return array_values( $found );
-}
-
-/**
- * The articles the Keep reading list points to after this one.
- *
- * @param WP_Post $post Article.
- * @return string[] Permalinks.
- */
-function boi_article_related_links( $post ) {
-	if ( ! function_exists( 'boi_related_map' ) ) {
-		return array();
-	}
-
-	$map   = boi_related_map();
-	$links = array();
-
-	foreach ( isset( $map[ $post->post_name ] ) ? $map[ $post->post_name ] : array() as $slug ) {
-		$item = get_page_by_path( $slug, OBJECT, 'post' );
-
-		if ( $item && 'publish' === $item->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $item ) ) ) {
-			$links[] = get_permalink( $item );
-		}
-	}
-
-	return $links;
-}
-
-/**
- * The approved comments on an article, the most recent twenty.
- *
- * @param WP_Post $post Article.
- * @return array[] Comment nodes.
- */
-function boi_article_comments( $post ) {
-	if ( ! get_comments_number( $post ) ) {
-		return array();
-	}
-
-	$comments = get_comments(
-		array(
-			'post_id' => $post->ID,
-			'status'  => 'approve',
-			'type'    => 'comment',
-			'number'  => 20,
-			'orderby' => 'comment_date_gmt',
-			'order'   => 'DESC',
-		)
-	);
-
-	$out = array();
-
-	foreach ( $comments as $comment ) {
-		$text = boi_plain( $comment->comment_content );
-
-		if ( '' === $text ) {
-			continue;
-		}
-
-		$link  = get_comment_link( $comment );
-		$out[] = array(
-			'@type'         => 'Comment',
-			'@id'           => $link,
-			'url'           => $link,
-			'text'          => $text,
-			'datePublished' => mysql2date( 'c', $comment->comment_date_gmt, false ),
-			'author'        => array(
-				'@type' => 'Person',
-				'name'  => boi_plain( $comment->comment_author ),
-			),
-		);
-	}
-
-	return $out;
+	return array_merge( array( $article ), $inline );
 }
 
 /**
@@ -640,7 +456,23 @@ function boi_profile_entities( $author ) {
 		return array();
 	}
 
-	$url    = get_author_posts_url( $author->ID );
+	$url = get_author_posts_url( $author->ID );
+
+	// The owner's archive is about the one author Person.
+	if ( function_exists( 'boi_seed_author' ) && (int) $author->ID === (int) boi_seed_author() ) {
+		return array(
+			array(
+				'@type'      => 'ProfilePage',
+				'@id'        => $url . '#profilepage',
+				'url'        => $url,
+				'name'       => $author->display_name,
+				'inLanguage' => get_bloginfo( 'language' ),
+				'isPartOf'   => array( '@id' => boi_entity_id( 'website' ) ),
+				'mainEntity' => array( '@id' => boi_schema_author_id() ),
+			),
+		);
+	}
+
 	$person = array(
 		'@type' => 'Person',
 		'@id'   => $url . '#person',
@@ -670,50 +502,156 @@ function boi_profile_entities( $author ) {
 		'mainEntity' => array( '@id' => $person['@id'] ),
 	);
 
-	if ( function_exists( 'boi_schema_has_breadcrumb' ) && boi_schema_has_breadcrumb() ) {
-		$profile['breadcrumb'] = array( '@id' => boi_schema_breadcrumb_id() );
-	}
-
 	return array( $profile, $person );
 }
 
 /**
- * Prints the graph for the current page.
+ * The @id of the author Person.
  *
- * @return void
+ * @return string
  */
-function boi_print_structured_data() {
-	// Rank Math prints its own graph; boi_rank_math_json_ld() adds to it.
-	if ( function_exists( 'boi_rank_math_schema_active' ) && boi_rank_math_schema_active() ) {
-		return;
-	}
-
-	// Every page names the site and the organisation it belongs to, and
-	// carries the site's menus (schema-pages.php).
-	$nodes = function_exists( 'boi_schema_site_nodes' ) ? boi_schema_site_nodes() : boi_site_entities();
-
-	if ( function_exists( 'boi_schema_navigation_nodes' ) ) {
-		$nodes = array_merge( $nodes, boi_schema_navigation_nodes() );
-	}
-
-	if ( is_singular( 'post' ) ) {
-		$post = get_post();
-
-		if ( $post ) {
-			$nodes = array_merge( $nodes, boi_article_entities( $post ) );
-		}
-	} elseif ( is_author() ) {
-		$nodes = array_merge( $nodes, boi_profile_entities( get_queried_object() ) );
-	} elseif ( ! ( function_exists( 'boi_is_glossary_page' ) && boi_is_glossary_page() ) && function_exists( 'boi_schema_view_entities' ) ) {
-		// The Glossary prints its own page and term nodes (glossary.php).
-		$nodes = array_merge( $nodes, boi_schema_view_entities() );
-	}
-
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
-		array(
-			'@context' => 'https://schema.org',
-			'@graph'   => $nodes,
-		)
-	) . "</script>\n";
+function boi_schema_author_id() {
+	return home_url( '/#author' );
 }
-add_action( 'wp_head', 'boi_print_structured_data', 19 );
+
+/**
+ * A sameAs list with https://menj.bio appended when it is missing. Existing
+ * entries keep their order.
+ *
+ * @param string[] $same_as Existing entries.
+ * @return string[]
+ */
+function boi_schema_with_menj( $same_as ) {
+	$same_as = array_values( array_filter( (array) $same_as, 'is_string' ) );
+	if ( ! in_array( 'https://menj.bio', $same_as, true ) ) {
+		$same_as[] = 'https://menj.bio';
+	}
+	return $same_as;
+}
+
+/**
+ * The author Person: Mohd Elfie Nieshaem Juferi, at https://menj.bio. The
+ * owner ruled on 4 November 2026 that the structured data names him as the
+ * author of every article; nothing visible changes. The owner's other
+ * addresses (boi_author_same_as() for the seeded author) stay in sameAs,
+ * ahead of https://menj.bio.
+ *
+ * @return array
+ */
+function boi_schema_author_node() {
+	$same = array();
+	$id   = function_exists( 'boi_seed_author' ) ? (int) boi_seed_author() : 0;
+	$user = $id ? get_userdata( $id ) : false;
+	if ( $user instanceof WP_User ) {
+		$same = boi_author_same_as( $user );
+	}
+	return array(
+		'@type'  => 'Person',
+		'@id'    => boi_schema_author_id(),
+		'name'   => 'Mohd Elfie Nieshaem Juferi',
+		'url'    => 'https://menj.bio',
+		'sameAs' => boi_schema_with_menj( $same ),
+	);
+}
+
+/**
+ * Types that carry the author: articles and the pages of the site.
+ *
+ * @return string[]
+ */
+function boi_schema_authored_types() {
+	return array( 'Article', 'BlogPosting', 'NewsArticle', 'ScholarlyArticle', 'WebPage', 'AboutPage', 'ProfilePage', 'FAQPage', 'CollectionPage', 'ContactPage', 'ItemPage', 'SearchResultsPage', 'QAPage' );
+}
+
+/**
+ * One author across a graph, the theme's own or Rank Math's after the merge.
+ *
+ * Every author value, at any depth, points to boi_schema_author_id(); every
+ * top-level article or page node without an author gets that reference; a
+ * Person that Rank Math made for the WordPress user, which nothing points to
+ * once the authors are repointed, is dropped and its sameAs entries join the
+ * author's; and the author Person is added where the graph lacks it. The
+ * publisher is left as it is.
+ *
+ * @param array $nodes Top-level nodes (a list, or Rank Math's keyed array).
+ * @return array
+ */
+function boi_schema_one_author( $nodes ) {
+	if ( ! is_array( $nodes ) || ! $nodes ) {
+		return $nodes;
+	}
+	$id   = boi_schema_author_id();
+	$list = array_values( $nodes ) === $nodes;
+	$old  = array();
+	$walk = function ( $node ) use ( &$walk, &$old, $id ) {
+		if ( ! is_array( $node ) ) {
+			return $node;
+		}
+		foreach ( $node as $k => $v ) {
+			if ( 'author' === $k && is_array( $v ) ) {
+				if ( ! empty( $v['@id'] ) && $id !== $v['@id'] ) {
+					$old[ (string) $v['@id'] ] = true;
+				}
+				$node[ $k ] = array( '@id' => $id );
+			} elseif ( is_array( $v ) ) {
+				$node[ $k ] = $walk( $v );
+			}
+		}
+		return $node;
+	};
+	$nodes = $walk( $nodes );
+
+	// Any other reference to a dropped Person points to the author.
+	$relink = function ( $n ) use ( &$relink, $old, $id ) {
+		if ( ! is_array( $n ) ) {
+			return $n;
+		}
+		if ( 1 === count( $n ) && isset( $n['@id'] ) && isset( $old[ (string) $n['@id'] ] ) ) {
+			return array( '@id' => $id );
+		}
+		foreach ( $n as $k => $v ) {
+			if ( is_array( $v ) ) {
+				$n[ $k ] = $relink( $v );
+			}
+		}
+		return $n;
+	};
+	$nodes = $relink( $nodes );
+	$extra = array();
+	$out   = array();
+	$have  = null;
+	foreach ( $nodes as $key => $node ) {
+		if ( ! is_array( $node ) ) {
+			$out[ $key ] = $node;
+			continue;
+		}
+		$types = (array) ( isset( $node['@type'] ) ? $node['@type'] : array() );
+		if ( ! empty( $node['@id'] ) && isset( $old[ (string) $node['@id'] ] ) && in_array( 'Person', $types, true ) ) {
+			$extra = array_merge( $extra, array_filter( (array) ( isset( $node['sameAs'] ) ? $node['sameAs'] : array() ), 'is_string' ) );
+			continue;
+		}
+		if ( array_intersect( $types, boi_schema_authored_types() ) && empty( $node['author'] ) ) {
+			$node['author'] = array( '@id' => $id );
+		}
+		if ( isset( $node['@id'] ) && $id === $node['@id'] ) {
+			$have = $key;
+		}
+		$out[ $key ] = $node;
+	}
+	$person = boi_schema_author_node();
+	if ( null === $have ) {
+		if ( $list ) {
+			$out[] = $person;
+			$have  = count( $out ) - 1;
+		} else {
+			$have         = 'boi_author';
+			$out[ $have ] = $person;
+		}
+	} else {
+		$out[ $have ] = array_merge( $out[ $have ], $person );
+	}
+	$same = array_merge( $person['sameAs'], $extra );
+	$same = array_values( array_unique( array_diff( $same, array( 'https://menj.bio' ) ) ) );
+	$out[ $have ]['sameAs'] = boi_schema_with_menj( $same );
+	return $list ? array_values( $out ) : $out;
+}

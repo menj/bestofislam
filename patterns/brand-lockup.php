@@ -9,6 +9,8 @@
  * @package BestOfIslam
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"className":"boi-brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group boi-brand">

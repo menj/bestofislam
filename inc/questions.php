@@ -219,7 +219,7 @@ function boi_render_article_questions() {
 	}
 
 	return sprintf(
-		'<aside class="boi-answers"><p class="boi-answers__label">%1$s</p><ul>%2$s</ul><a class="boi-answers__more" href="%3$s">%4$s</a></aside>',
+		'<aside class="boi-answers" aria-label="%1$s"><p class="boi-answers__label">%1$s</p><ul>%2$s</ul><a class="boi-answers__more" href="%3$s">%4$s</a></aside>',
 		esc_html__( 'Questions this piece answers', 'bestofislam' ),
 		$links,
 		esc_url( boi_questions_url() ),
@@ -228,15 +228,13 @@ function boi_render_article_questions() {
 }
 
 /**
- * FAQPage structured data on the front page, where the answers are.
+ * The questions answered on the front page, as Question nodes for the page
+ * graph (inc/schema-graph.php), which types the front page FAQPage when there
+ * are any. Each has the @id of its anchor in the band.
  *
- * @return void
+ * @return array Question nodes.
  */
-function boi_print_questions_schema() {
-	if ( ! is_front_page() ) {
-		return;
-	}
-
+function boi_questions_schema_nodes() {
 	$entities = array();
 
 	foreach ( boi_questions() as $group ) {
@@ -249,6 +247,7 @@ function boi_print_questions_schema() {
 
 			$entities[] = array(
 				'@type'          => 'Question',
+				'@id'            => home_url( '/#' . boi_question_anchor( $item['q'] ) ),
 				'name'           => $item['q'],
 				'acceptedAnswer' => array(
 					'@type' => 'Answer',
@@ -259,22 +258,5 @@ function boi_print_questions_schema() {
 		}
 	}
 
-	if ( empty( $entities ) ) {
-		return;
-	}
-
-	$faq = array(
-		'@context'   => 'https://schema.org',
-		'@type'      => 'FAQPage',
-		'mainEntity' => $entities,
-	);
-
-	// The same page as the front page's WebPage node (schema-pages.php), so
-	// the two describe one page.
-	if ( function_exists( 'boi_schema_page_id' ) ) {
-		$faq['@id'] = boi_schema_page_id();
-	}
-
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld( $faq ) . "</script>\n";
+	return $entities;
 }
-add_action( 'wp_head', 'boi_print_questions_schema', 21 );

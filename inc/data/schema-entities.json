@@ -1,0 +1,331 @@
+{
+	"_comment": "Things a page is about and the ones it names. \"about\" lists entity keys by listicle-topic slug, and \"*\" applies to every article. An entity is named on a page when one of its \"names\" appears in the title or the text as a whole word. \"collections\" maps a hadith collection key to the pattern that finds it in a note. \"surahs\" are the 114 chapter names of the Qur'an in order. sameAs carries a Wikidata item only where the identity is certain.",
+	"entities": {
+		"islam": {
+			"@type": "Thing",
+			"name": "Islam",
+			"sameAs": "https://www.wikidata.org/wiki/Q432",
+			"names": [
+				"Islam"
+			]
+		},
+		"quran": {
+			"@type": "Book",
+			"name": "The Qur'an",
+			"alternateName": "al-Qurʾān",
+			"genre": "Scripture",
+			"inLanguage": "ar",
+			"sameAs": "https://www.wikidata.org/wiki/Q428",
+			"names": [
+				"Qur'an",
+				"Quran",
+				"Qur’an"
+			]
+		},
+		"muhammad": {
+			"@type": "Person",
+			"name": "Muḥammad",
+			"sameAs": "https://www.wikidata.org/wiki/Q9458",
+			"names": [
+				"Muhammad",
+				"Muḥammad"
+			]
+		},
+		"jesus": {
+			"@type": "Person",
+			"name": "Jesus",
+			"alternateName": "ʿĪsā",
+			"sameAs": "https://www.wikidata.org/wiki/Q302",
+			"names": [
+				"Jesus"
+			]
+		},
+		"moses": {
+			"@type": "Person",
+			"name": "Moses",
+			"alternateName": "Mūsā",
+			"sameAs": "https://www.wikidata.org/wiki/Q9077",
+			"names": [
+				"Moses"
+			]
+		},
+		"abraham": {
+			"@type": "Person",
+			"name": "Abraham",
+			"alternateName": "Ibrāhīm",
+			"sameAs": "https://www.wikidata.org/wiki/Q9181",
+			"names": [
+				"Abraham"
+			]
+		},
+		"mary": {
+			"@type": "Person",
+			"name": "Maryam",
+			"alternateName": "Mary, mother of Jesus",
+			"sameAs": "https://www.wikidata.org/wiki/Q345",
+			"names": [
+				"Maryam",
+				"Mary"
+			]
+		},
+		"paul": {
+			"@type": "Person",
+			"name": "Paul of Tarsus",
+			"sameAs": "https://www.wikidata.org/wiki/Q9200",
+			"names": [
+				"Paul of Tarsus",
+				"Paul the Apostle",
+				"Saint Paul"
+			]
+		},
+		"christianity": {
+			"@type": "Thing",
+			"name": "Christianity",
+			"sameAs": "https://www.wikidata.org/wiki/Q5043",
+			"names": [
+				"Christianity",
+				"Christian",
+				"Christians"
+			]
+		},
+		"judaism": {
+			"@type": "Thing",
+			"name": "Judaism",
+			"sameAs": "https://www.wikidata.org/wiki/Q9268",
+			"names": [
+				"Judaism"
+			]
+		},
+		"bible": {
+			"@type": "Book",
+			"name": "The Bible",
+			"genre": "Scripture",
+			"sameAs": "https://www.wikidata.org/wiki/Q1845",
+			"names": [
+				"Bible"
+			]
+		},
+		"torah": {
+			"@type": "Book",
+			"name": "The Torah",
+			"alternateName": "al-Tawrāh",
+			"genre": "Scripture",
+			"sameAs": "https://www.wikidata.org/wiki/Q34990",
+			"names": [
+				"Torah",
+				"Tawrat"
+			]
+		},
+		"faruqi": {
+			"@type": "Person",
+			"name": "Ismāʿīl Rājī al-Fārūqī",
+			"names": [
+				"al-Faruqi",
+				"al-Fārūqī",
+				"Faruqi"
+			]
+		},
+		"sahih-al-bukhari": {
+			"@type": "Book",
+			"name": "Sahih al-Bukhari",
+			"genre": "Hadith collection",
+			"names": [
+				"Sahih al-Bukhari",
+				"Bukhari"
+			]
+		},
+		"sahih-muslim": {
+			"@type": "Book",
+			"name": "Sahih Muslim",
+			"genre": "Hadith collection",
+			"names": [
+				"Sahih Muslim"
+			]
+		},
+		"sunan-abi-dawud": {
+			"@type": "Book",
+			"name": "Sunan Abi Dawud",
+			"genre": "Hadith collection",
+			"names": [
+				"Abu Dawud",
+				"Abi Dawud"
+			]
+		},
+		"jami-al-tirmidhi": {
+			"@type": "Book",
+			"name": "Jamiʿ al-Tirmidhi",
+			"genre": "Hadith collection",
+			"names": [
+				"Tirmidhi"
+			]
+		},
+		"sunan-al-nasai": {
+			"@type": "Book",
+			"name": "Sunan al-Nasa'i",
+			"genre": "Hadith collection",
+			"names": [
+				"al-Nasa'i",
+				"al-Nasai"
+			]
+		},
+		"sunan-ibn-majah": {
+			"@type": "Book",
+			"name": "Sunan Ibn Majah",
+			"genre": "Hadith collection",
+			"names": [
+				"Ibn Majah"
+			]
+		},
+		"musnad-ahmad": {
+			"@type": "Book",
+			"name": "Musnad Ahmad ibn Hanbal",
+			"genre": "Hadith collection",
+			"names": [
+				"Musnad Ahmad",
+				"Musnad Aḥmad"
+			]
+		},
+		"muwatta-malik": {
+			"@type": "Book",
+			"name": "al-Muwaṭṭaʾ of Malik",
+			"genre": "Hadith collection",
+			"names": [
+				"Muwatta"
+			]
+		}
+	},
+	"about": {
+		"*": [
+			"islam"
+		],
+		"comparative-religion": [
+			"christianity"
+		]
+	},
+	"collections": {
+		"sahih-al-bukhari": "Sahih al-Bukhari",
+		"sahih-muslim": "Sahih Muslim",
+		"sunan-abi-dawud": "(?:Sunan )?Ab(?:u|i) Dawud",
+		"jami-al-tirmidhi": "(?:Jami[ʿ']? )?al-Tirmidhi|Tirmidhi",
+		"sunan-al-nasai": "(?:Sunan )?al-Nasa'?i",
+		"sunan-ibn-majah": "(?:Sunan )?Ibn Majah",
+		"musnad-ahmad": "Musnad A[hḥ]mad|Ahmad ibn Hanbal",
+		"muwatta-malik": "Muwa[tṭ][tṭ]a"
+	},
+	"surahs": [
+		"Al-Fatihah",
+		"Al-Baqarah",
+		"Al Imran",
+		"An-Nisa",
+		"Al-Maidah",
+		"Al-Anam",
+		"Al-Araf",
+		"Al-Anfal",
+		"At-Tawbah",
+		"Yunus",
+		"Hud",
+		"Yusuf",
+		"Ar-Rad",
+		"Ibrahim",
+		"Al-Hijr",
+		"An-Nahl",
+		"Al-Isra",
+		"Al-Kahf",
+		"Maryam",
+		"Ta-Ha",
+		"Al-Anbiya",
+		"Al-Hajj",
+		"Al-Muminun",
+		"An-Nur",
+		"Al-Furqan",
+		"Ash-Shuara",
+		"An-Naml",
+		"Al-Qasas",
+		"Al-Ankabut",
+		"Ar-Rum",
+		"Luqman",
+		"As-Sajdah",
+		"Al-Ahzab",
+		"Saba",
+		"Fatir",
+		"Ya-Sin",
+		"As-Saffat",
+		"Sad",
+		"Az-Zumar",
+		"Ghafir",
+		"Fussilat",
+		"Ash-Shura",
+		"Az-Zukhruf",
+		"Ad-Dukhan",
+		"Al-Jathiyah",
+		"Al-Ahqaf",
+		"Muhammad",
+		"Al-Fath",
+		"Al-Hujurat",
+		"Qaf",
+		"Adh-Dhariyat",
+		"At-Tur",
+		"An-Najm",
+		"Al-Qamar",
+		"Ar-Rahman",
+		"Al-Waqiah",
+		"Al-Hadid",
+		"Al-Mujadilah",
+		"Al-Hashr",
+		"Al-Mumtahanah",
+		"As-Saff",
+		"Al-Jumuah",
+		"Al-Munafiqun",
+		"At-Taghabun",
+		"At-Talaq",
+		"At-Tahrim",
+		"Al-Mulk",
+		"Al-Qalam",
+		"Al-Haqqah",
+		"Al-Maarij",
+		"Nuh",
+		"Al-Jinn",
+		"Al-Muzzammil",
+		"Al-Muddaththir",
+		"Al-Qiyamah",
+		"Al-Insan",
+		"Al-Mursalat",
+		"An-Naba",
+		"An-Naziat",
+		"Abasa",
+		"At-Takwir",
+		"Al-Infitar",
+		"Al-Mutaffifin",
+		"Al-Inshiqaq",
+		"Al-Buruj",
+		"At-Tariq",
+		"Al-Ala",
+		"Al-Ghashiyah",
+		"Al-Fajr",
+		"Al-Balad",
+		"Ash-Shams",
+		"Al-Layl",
+		"Ad-Duha",
+		"Ash-Sharh",
+		"At-Tin",
+		"Al-Alaq",
+		"Al-Qadr",
+		"Al-Bayyinah",
+		"Az-Zalzalah",
+		"Al-Adiyat",
+		"Al-Qariah",
+		"At-Takathur",
+		"Al-Asr",
+		"Al-Humazah",
+		"Al-Fil",
+		"Quraysh",
+		"Al-Maun",
+		"Al-Kawthar",
+		"Al-Kafirun",
+		"An-Nasr",
+		"Al-Masad",
+		"Al-Ikhlas",
+		"Al-Falaq",
+		"An-Nas"
+	]
+}

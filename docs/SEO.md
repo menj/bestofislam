@@ -14,7 +14,7 @@ ranking, and the guide itself says to write for readers first.
 | URLs with words | Slugs are words (`/who-is-allah/`, `/glossary/hijab/`, `/topic/history/`). Set Settings, Permalinks to Post name so an article has one address; old dated addresses redirect by slug. | WordPress |
 | One version of a URL | Canonical link on every indexable view; `redirect_canonical` for the rest. | `inc/seo.php` |
 | Navigation and breadcrumbs | Eight sections in the header and footer, breadcrumb trail with BreadcrumbList markup, a "Read next" card and a Keep reading grid of six related articles (two rows of three) on every article, the first mention of each glossary term linked in the text, related terms and articles on glossary entries, and a text link for every article (no drop-downs or image maps). | `parts/`, `inc/seo.php`, `inc/reading.php`, `inc/glossary.php` |
-| Sitemap for users and for search engines | An HTML Sitemap page and the core XML sitemap (articles, pages, glossary, sections; users, categories and tags left out; unlisted articles excluded). | `inc/setup.php`, `inc/seo.php` |
+| Sitemap for users and for search engines | An HTML Sitemap page, the core XML sitemap (articles, pages, glossary, sections; users, categories and tags left out; unlisted articles excluded) and an image sitemap at `/sitemap-images.xml` with the featured image and the images in the text of each article. | `inc/setup.php`, `inc/seo.php` |
 | Useful 404 page | Real HTTP 404, the site's own design, a way home, the sections and the latest articles. | `templates/404.html` |
 | Quality content | Each article is a numbered argument with sources in Notes; each glossary entry defines the term, says what it means, and cites. | `content/`, `inc/glossary-data/` |
 | Anchor text | Links in running text are the name of what they point to; the glossary linker links the term itself; the lead card's button carries the article title. | `inc/glossary-links.php`, `inc/features.php` |
@@ -35,44 +35,21 @@ Google's list, as of June 2026, and where each feature applies to this site.
 | Article | Yes | Every article: headline, description, dates, author, publisher, section and images. |
 | Breadcrumb | Yes | Every page with a trail. |
 | Image metadata | Yes | Licence, creator, credit and acquire-licence page on the featured image and on the two images in the text. |
-| Organization | Yes | Front page: name, logo, `sameAs` links. WebSite beside it, for the site name. |
+| Organization | Yes | Every page: name, logo, `sameAs` links. WebSite beside it, for the site name and the search. |
 | Profile page | Yes | Author archives: ProfilePage with the author as a Person. |
 | Carousel, Course, Dataset, Event, Job posting, Local business, Math solver, Movie, Product, Recipe, Review snippet, Software app, Vacation rental, Employer rating | No | The site has none of these things. |
 | Discussion forum, Q&A, Education Q&A | No | The site has no user-generated discussion, and its questions are the site's own answers rather than a quiz. |
 | Video | No | There is no video. Add VideoObject if videos are embedded later. |
-| Speakable, Subscription and paywalled content | No | Speakable is for news publishers; nothing is paywalled. |
+| Speakable | Marked | Google reads it only for news publishers. The page node names the title and, on a Reflection, the summary. |
+| Subscription and paywalled content | No | Nothing is paywalled. |
 
-The theme also prints ItemList for each listicle and FAQPage for the front-page
-questions. They describe their pages accurately. Google restricts FAQ rich
-results to a narrow class of sites, so none is promised.
-
-## schema.org beyond Google's list
-
-Every view carries one JSON-LD graph joined by `@id`, so search engines and
-other readers of schema.org see what each page is and how it fits the site.
-Google uses only part of it; the rest is accurate description.
-
-| Element | schema.org | Where |
-|---|---|---|
-| Every page | Organization (logo, `sameAs`, `contactPoint` to the Contact page, `publishingPrinciples`, `correctionsPolicy` and `verificationFactCheckingPolicy` to Sources and standards) and WebSite (with the site search as a SearchAction) | `inc/schema-pages.php` |
-| Header and footer menus | ItemList of SiteNavigationElement, read from the template parts as last saved | `inc/schema-pages.php` |
-| Article page | WebPage (breadcrumb, primary image, `relatedLink` to the Keep reading articles, ReadAction, CommentAction when comments are open) with the Article as `mainEntity` | `inc/structured-data.php` |
-| Article | `wordCount`, `citation` (the Notes), `mentions` and `keywords` (the Glossary terms it uses, joined to their DefinedTerm), `hasPart` (its numbered lists), `isAccessibleForFree`, `copyrightHolder`, `copyrightYear`, `comment` and `commentCount` | `inc/structured-data.php` |
-| Numbered entries | ItemList with an `@id`; each ListItem links to the entry's anchor | `inc/schema.php` |
-| Breadcrumb trail | BreadcrumbList with an `@id` the page node names | `inc/seo.php` |
-| About, Contact, FAQ pages | AboutPage, ContactPage, FAQPage (questions and answers read from the page's headings and paragraphs) | `inc/schema-pages.php` |
-| Sources and standards, Sitemap, Privacy, other pages | WebPage | `inc/schema-pages.php` |
-| Section archives, Reflections | CollectionPage with an ItemList of the articles shown | `inc/schema-pages.php` |
-| Search results | SearchResultsPage with an ItemList of the results | `inc/schema-pages.php` |
-| Page not found | WebPage | `inc/schema-pages.php` |
-| Front page | WebPage, the same node as the FAQPage of the questions band, with the hero image | `inc/schema-pages.php`, `inc/questions.php` |
-| Glossary and its entries | DefinedTermSet, DefinedTerm, CollectionPage, WebPage | `inc/glossary.php` |
-| Author archive | ProfilePage and Person | `inc/structured-data.php` |
-
-Left out on purpose: the votes on entries (a site's own readers' votes as a
-rating is self-serving markup, and a vote total can be negative), the share
-buttons (actions on other sites' addresses), and the light and dark toggle
-(no schema.org meaning).
+Every page has one graph, built in `inc/schema-graph.php` (SSOT D50). Beside
+the features above it holds ItemList for each listicle, FAQPage for the
+front-page questions, a DefinedTermSet for the Glossary, the header, footer
+and menus, the page type, and the Qur'an quotations and notes an article
+cites. They describe their pages
+accurately. Google restricts FAQ rich results to a narrow class of sites, so
+none is promised. The owner keeps all three for AI answer engines (GEO, AEO).
 
 Validate with the Rich Results Test after any change.
 
@@ -83,19 +60,19 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 
 | Concern | Without Rank Math | With Rank Math |
 |---|---|---|
-| Titles | Theme | Rank Math |
+| Titles | Theme | Rank Math, held to `<page> \| Best of Islam` under 60 characters by the theme's `rank_math/frontend/title` filter |
 | Description | Theme | Rank Math; the theme's text fills in where Rank Math has none |
 | Canonical link | Theme | Rank Math |
 | Robots directives | Theme (`wp_robots`) | Rank Math, told to noindex search results and paged archives |
 | XML sitemap | Core, filtered | Rank Math, told to leave out unlisted articles |
-| Article, Organization, WebSite, ProfilePage | Theme graph | Rank Math graph |
+| Article, Organization, WebSite, ProfilePage | Theme graph | Rank Math graph, with the theme's properties added where Rank Math has none |
 | Image licence and credit | In the theme's Article | Added to Rank Math's primary image |
 | Images in the text | ImageObjects in the theme's graph | Added to Rank Math's graph |
 | Breadcrumb markup | Theme | Rank Math when its breadcrumbs are on, otherwise the theme |
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
 | Open Graph and Twitter Card tags | Theme | Rank Math |
-| ItemList, FAQPage | Theme | Theme (Rank Math does not produce them) |
-| Page types, menus, article citations and mentions (`inc/schema-pages.php`) | Theme | Rank Math's page graph |
+| ItemList, FAQPage, DefinedTermSet, quotations, citations, header, footer and menus | Theme graph | Merged into Rank Math's graph by `@id`; the theme prints no second block |
+| Image sitemap | Theme, at `/sitemap-images.xml`, named in robots.txt | Rank Math's sitemap, which lists each post's images |
 
 Rank Math's Image SEO module may rewrite alt text and titles; turn it off for
 this site, since every image already carries its own.

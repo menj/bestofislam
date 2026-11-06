@@ -2,7 +2,7 @@
  {
   "slug": "race-and-skin-colour",
   "title": "Race and skin colour",
-  "type": "topic",
+  "type": "ethics",
   "ar": "",
   "tr": "",
   "def": "The Quran makes colour and language signs of God’s creation, and no ground of superiority (49:13, 30:22).",
@@ -49,7 +49,7 @@
  {
   "slug": "reason-and-faith",
   "title": "Reason and faith",
-  "type": "topic",
+  "type": "belief",
   "ar": "عقل",
   "tr": "ʿAql",
   "def": "Islam does not call for blind belief; the Quran calls on people to reflect, reason and examine claims.",
@@ -100,10 +100,10 @@
   ],
   "articles": [
    "why-no-interest",
-   "crusades-5-facts",
+   "crusades-facts",
    "quranic-stories-and-history"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Interest",
    "Interest On Loans",
@@ -134,7 +134,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Rabbi",
    "Rabbana",
@@ -163,7 +163,7 @@
    "muttaqi"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Rabbana Hab Lana"
   ],
@@ -190,7 +190,7 @@
    "pharaoh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Rabbi Ishrah Li Sadri"
   ],
@@ -273,7 +273,7 @@
    "allah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Rahim",
    "Rahim"
@@ -356,7 +356,7 @@
    "divine-attributes"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Rahman",
    "Rahman"
@@ -383,7 +383,7 @@
    "zakat"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Raka’a",
    "Raka"
@@ -411,7 +411,7 @@
    "qiraat"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Al-Rasm al-Qur'ani",
    "Al-Rasm al-Qurani",
@@ -494,7 +494,7 @@
    "divine-attributes"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Ra'uf",
    "Al-Rauf",
@@ -522,7 +522,7 @@
    "allah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Raziq",
    "Raziq",
@@ -578,7 +578,7 @@
    "mustalah-al-hadith"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Rijal al-Hadith",
    "Asma al-Rijal"
@@ -633,7 +633,7 @@
    "wahy"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Risalah",
    "Risalah",
@@ -662,7 +662,7 @@
    "rijal-al-hadith"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Riwayah al-Hadith",
    "Riwaya"
@@ -690,7 +690,7 @@
    "trade-and-business"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Rizq",
    "Rizk"
@@ -717,7 +717,7 @@
    "quud"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Ruku",
    "Rak’ah",

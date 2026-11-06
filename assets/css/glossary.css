@@ -814,12 +814,43 @@
 	all: unset;
 }
 
-/* Kinds of entry, as photograph tiles that filter the list. */
+/* Kinds of entry, as photograph tiles that filter the list. There are 14
+   (All and 13 kinds): 7 to a row on desktop, 2 rows; 4 to a row on a tablet
+   and 2 on a phone. A short last row is centred rather than left half
+   empty. */
 .boi-glossary__types {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
-	gap: 0.75rem;
+	--boi-kind-cols: 2;
+	--boi-kind-gap: 0.75rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--boi-kind-gap);
 	inline-size: 100%;
+}
+
+.boi-glossary__types > .boi-chip.boi-kind {
+	flex: 0 0 calc((100% - (var(--boi-kind-cols) - 1) * var(--boi-kind-gap)) / var(--boi-kind-cols));
+	min-inline-size: 0;
+}
+
+@media (min-width: 600px) {
+	.boi-glossary__types {
+		--boi-kind-cols: 4;
+	}
+}
+
+@media (min-width: 1000px) {
+	.boi-glossary__types {
+		--boi-kind-cols: 7;
+	}
+}
+
+/* The G Preferred plugin's button is kept off the Glossary
+   (inc/glossary.php); this rule catches it if the plugin changes. */
+.boi-glossary-page .gpr-slot,
+.boi-glossary-index .gpr-slot,
+.boi-glossary-entry .gpr-slot {
+	display: none !important;
 }
 
 .boi-glossary__tools {
@@ -1084,4 +1115,57 @@
 
 .boi-glossary__item.has-long-ar .boi-glossary__term {
 	grid-column: 1 / -1;
+}
+
+/* Mobile-first audit and WCAG 2.2 pass (2026-11-04). */
+
+/* Below 380px the search box takes its own row. Before, the brand and the
+   box shared a row in the fallback font and split onto 2 rows once the web
+   font arrived, which moved the whole page (CLS 0.1 on every entry). */
+.boi-gbar__search {
+	flex-basis: 100%;
+	max-inline-size: none;
+}
+
+/* 16px in the box, so iOS does not zoom the page on focus. */
+.boi-gbar__search input {
+	font-size: 1rem;
+}
+
+/* The bar is sticky: keep a focused link or a jumped-to letter clear of it
+   (2.4.11). The scroll padding takes over from the scroll margins. */
+html:has(.boi-gbar) {
+	scroll-padding-block-start: 9.5rem;
+}
+
+html:has(.boi-gbar) .boi-glossary__part,
+html:has(.boi-gbar) .boi-glossary__group {
+	scroll-margin-block-start: 0;
+}
+
+/* Back to top: a 24px-plus hit area without moving the heading. */
+.boi-glossary__top {
+	padding-block: 0.45rem;
+	margin-block: -0.45rem;
+}
+
+@media (min-width: 380px) {
+	.boi-gbar__search {
+		flex: 1 1 14rem;
+		max-inline-size: 22rem;
+	}
+
+	html:has(.boi-gbar) {
+		scroll-padding-block-start: 7rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.boi-gbar__search input {
+		font-size: 0.95rem;
+	}
+
+	html:has(.boi-gbar) {
+		scroll-padding-block-start: 8rem;
+	}
 }

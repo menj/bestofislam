@@ -7,7 +7,9 @@
  * and php-error.php (fatal PHP error). They run before any theme loads, so the
  * theme generates self-contained copies, with the stylesheet inlined from
  * assets/error-pages/, and writes them to wp-content. Only files carrying the
- * theme's marker are ever replaced or removed.
+ * theme's marker are ever removed; a copy another theme left behind, marked
+ * "Written by the ... theme; safe to delete", is replaced on install, and a
+ * file with no such mark is never touched.
  *
  * Alerts are emailed to the configured address, rate limited by a stamp file
  * so a failing site cannot flood an inbox. The triggers follow the site's own
@@ -22,6 +24,66 @@
 defined( 'ABSPATH' ) || exit;
 
 const BOI_ERR_MARKER = 'Best of Islam error drop-in';
+
+require_once __DIR__ . '/error-page-static.php';
+
+/** The folder in wp-content that holds this site's copies of the static pages. */
+const BOI_STATIC_ERRORS = 'bestofislam-errors';
+
+/**
+ * The site's copies of the static pages, relative to wp-content. The pages in
+ * errors/ assume a site at the domain root; these carry the site's own name,
+ * language and home address, so they also work for a site in a subfolder.
+ *
+ * @return array<string,string> Status code => file.
+ */
+function boi_error_static_files() {
+	$out = array();
+	foreach ( array_keys( boi_static_error_pages() ) as $code ) {
+		$out[ (string) $code ] = BOI_STATIC_ERRORS . '/' . $code . '.html';
+	}
+	return $out;
+}
+
+/**
+ * The text of the site's copy of one static page, with the theme's marker.
+ *
+ * @param string $code Status code.
+ * @return string
+ */
+function boi_error_static_source( $code ) {
+	$name = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( get_bloginfo( 'name' ) ) ) );
+	return '<!-- ' . BOI_ERR_MARKER . ' ' . BOI_VERSION . " ({$code}). Written by the Best of Islam theme; safe to delete. -->\n"
+		. boi_static_error_html(
+			BOI_DIR,
+			$code,
+			array(
+				'name' => $name,
+				'home' => esc_url( home_url( '/' ) ),
+				'lang' => get_bloginfo( 'language' ),
+			)
+		);
+}
+
+/**
+ * Status of each static copy: ours, outdated, foreign or absent.
+ *
+ * @return array<string,string> File => state.
+ */
+function boi_error_static_state() {
+	$out = array();
+	foreach ( boi_error_static_files() as $code => $file ) {
+		$path = WP_CONTENT_DIR . '/' . $file;
+		if ( ! file_exists( $path ) ) {
+			$out[ $file ] = 'absent';
+		} elseif ( ! boi_error_is_ours( $path ) ) {
+			$out[ $file ] = 'foreign';
+		} else {
+			$out[ $file ] = (string) file_get_contents( $path ) === boi_error_static_source( (string) $code ) ? 'ours' : 'outdated'; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		}
+	}
+	return $out;
+}
 
 /**
  * The drop-ins: file name, HTTP status and whether a failure is alertable.
@@ -62,7 +124,7 @@ function boi_error_copy( $kind ) {
 			'status'  => 503,
 		),
 		'db-error'    => array(
-			'title'   => __( 'Temporarily unavailable', 'bestofislam' ),
+			'title'   => __( 'We cannot reach our database', 'bestofislam' ),
 			'heading' => __( 'We cannot reach our database', 'bestofislam' ),
 			'line1'   => __( 'This is temporary, and nothing you did caused it.', 'bestofislam' ),
 			'line2'   => __( 'Please try again in a few minutes.', 'bestofislam' ),
@@ -108,6 +170,7 @@ function boi_error_dropin_source( $kind ) {
 			'{{LINE2}}'   => esc_html( $copy['line2'] ),
 			'{{AGAIN}}'   => esc_html( $copy['again'] ),
 			'{{HOME}}'    => esc_url( home_url( '/' ) ),
+			'{{ICON}}'    => boi_error_page_icon( BOI_DIR ),
 		)
 	);
 
@@ -117,9 +180,13 @@ function boi_error_dropin_source( $kind ) {
 	// trigger the alert mail.
 	$src .= "if ( ! defined( 'ABSPATH' ) ) {\n\theader( 'HTTP/1.1 403 Forbidden', true, 403 );\n\texit;\n}\n";
 	$src .= "if ( ! headers_sent() ) {\n";
-	$src .= "\theader( 'HTTP/1.1 {$copy['status']}', true, {$copy['status']} );\n";
+	$reason = 503 === (int) $copy['status'] ? 'Service Unavailable' : 'Internal Server Error';
+	$src   .= "\theader( 'HTTP/1.1 {$copy['status']} {$reason}', true, {$copy['status']} );\n";
 	$src .= "\theader( 'Content-Type: text/html; charset=utf-8' );\n";
-	$src .= "\theader( 'Retry-After: 300' );\n";
+	if ( 503 === (int) $copy['status'] ) {
+		$src .= "\theader( 'Retry-After: 300' );\n";
+	}
+	$src .= "\theader( 'X-Robots-Tag: noindex' );\n";
 	$src .= "\theader( 'Cache-Control: no-store, max-age=0' );\n}\n";
 
 	$to = ! empty( $opts['errors_alerts'] ) ? boi_error_recipient() : '';
@@ -216,11 +283,16 @@ function boi_error_saved_config() {
  */
 function boi_error_write( $path, $contents ) {
 	$tmp = $path . '.' . wp_generate_password( 8, false ) . '.tmp';
-	if ( false !== file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
-		if ( ! rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
-			wp_delete_file( $tmp );
-		}
+	// A short write (a full disk) must not be moved into place as a whole page.
+	if ( strlen( $contents ) !== @file_put_contents( $tmp, $contents, LOCK_EX ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+		wp_delete_file( $tmp );
+		return false;
 	}
+	if ( ! @rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors
+		wp_delete_file( $tmp );
+		return false;
+	}
+	return true;
 }
 
 /**
@@ -261,27 +333,107 @@ function boi_error_is_ours( $path ) {
 }
 
 /**
+ * Whether a file is a drop-in another theme left behind: it carries the
+ * "Written by the ... theme; safe to delete" mark and is not ours.
+ *
+ * @param string $path File path.
+ * @return bool
+ */
+function boi_error_is_other_theme( $path ) {
+	if ( ! is_readable( $path ) || boi_error_is_ours( $path ) ) {
+		return false;
+	}
+	$head = (string) file_get_contents( $path, false, null, 0, 400 ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	// The mark must sit on a comment line of the file's header.
+	return 1 === preg_match( '~^//[^\n]*Written by the [^\n]{1,80} theme; safe to delete~m', $head );
+}
+
+/**
  * Status of each drop-in for the settings screen.
  *
- * @return array kind => string state: ours, foreign, absent.
+ * @return array kind => string state: ours (current), outdated (ours, from
+ *               another version or other settings), theme (another theme's
+ *               leftover, replaced on install), foreign, absent.
  */
 function boi_error_state() {
 	$out = array();
 	foreach ( boi_error_kinds() as $kind => $def ) {
-		$path        = WP_CONTENT_DIR . '/' . $def['file'];
-		$out[ $kind ] = ! file_exists( $path ) ? 'absent' : ( boi_error_is_ours( $path ) ? 'ours' : 'foreign' );
+		$path = WP_CONTENT_DIR . '/' . $def['file'];
+		if ( ! file_exists( $path ) ) {
+			$out[ $kind ] = 'absent';
+		} elseif ( boi_error_is_other_theme( $path ) ) {
+			$out[ $kind ] = 'theme';
+		} elseif ( ! boi_error_is_ours( $path ) ) {
+			$out[ $kind ] = 'foreign';
+		} else {
+			$out[ $kind ] = (string) file_get_contents( $path ) === boi_error_dropin_source( $kind ) ? 'ours' : 'outdated'; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		}
 	}
 	return $out;
 }
 
 /**
- * Writes or removes the drop-ins to match the settings. Files that are not
- * ours are never touched.
+ * "Install error pages" on the Error pages tab: a nonce link, since the tab
+ * sits inside the settings form. Writes the pages at once.
+ */
+function boi_error_handle_install() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( esc_html__( 'You are not allowed to do that.', 'bestofislam' ), 403 );
+	}
+	check_admin_referer( 'boi_install_error_pages' );
+	if ( is_multisite() && ! is_main_site() ) {
+		wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors' ) );
+		exit;
+	}
+	if ( boi_error_sync() ) {
+		wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_installed=1' ) );
+		exit;
+	}
+	$failed = implode( ',', boi_error_sync_failures() );
+	wp_safe_redirect( admin_url( 'themes.php?page=boi-settings&tab=errors&boi_errors_failed=' . rawurlencode( $failed ) ) );
+	exit;
+}
+add_action( 'admin_post_boi_install_error_pages', 'boi_error_handle_install' );
+
+/**
+ * The lines for .htaccess that point the web server at the site's copies of
+ * the static pages in wp-content/bestofislam-errors/.
  *
- * @return void
+ * @return string
+ */
+function boi_error_htaccess_snippet() {
+	$base  = untrailingslashit( (string) wp_parse_url( content_url( '/' ), PHP_URL_PATH ) ) . '/' . BOI_STATIC_ERRORS . '/';
+	$lines = array( '# Best of Islam: pages for the errors the web server answers before WordPress runs' );
+	foreach ( array( 403, 500, 502, 503, 504 ) as $code ) {
+		$lines[] = 'ErrorDocument ' . $code . ' ' . $base . $code . '.html';
+	}
+	return implode( "\n", $lines );
+}
+
+/**
+ * The file names the last boi_error_sync() could not write.
+ *
+ * @param string[]|null $set Replaces the list when given.
+ * @return string[]
+ */
+function boi_error_sync_failures( $set = null ) {
+	static $failed = array();
+	if ( null !== $set ) {
+		$failed = $set;
+	}
+	return $failed;
+}
+
+/**
+ * Writes or removes the drop-ins to match the settings. Another theme's
+ * marked leftover is replaced; a file with no theme's mark is never touched,
+ * and only our own files are removed.
+ *
+ * @return bool True when every file it meant to write was written.
  */
 function boi_error_sync() {
-	$opts = boi_get_options();
+	$opts   = boi_get_options();
+	$failed = array();
 
 	foreach ( boi_error_kinds() as $kind => $def ) {
 		$path = WP_CONTENT_DIR . '/' . $def['file'];
@@ -291,31 +443,49 @@ function boi_error_sync() {
 		// while either the pages or the alerts are on.
 		$enabled = ! empty( $opts['errors_pages'] ) || ( $def['alert'] && ! empty( $opts['errors_alerts'] ) );
 
-		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) ) {
+		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) && ! ( $enabled && boi_error_is_other_theme( $path ) ) ) {
 			continue;
 		}
 
 		if ( $enabled ) {
-			if ( is_writable( WP_CONTENT_DIR ) || is_writable( $path ) ) {
-				boi_error_write( $path, boi_error_dropin_source( $kind ) );
+			if ( ! ( is_writable( WP_CONTENT_DIR ) || is_writable( $path ) ) || ! boi_error_write( $path, boi_error_dropin_source( $kind ) ) ) {
+				$failed[] = $def['file'];
 			}
 		} elseif ( file_exists( $path ) ) {
 			wp_delete_file( $path );
 		}
 	}
 
-	if ( is_writable( WP_CONTENT_DIR ) ) {
-		boi_error_write(
-			boi_error_config_path(),
-			"<?php\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\nreturn " . var_export(
-				array(
-					'to'       => boi_error_recipient(),
-					'alerts'   => (int) $opts['errors_alerts'],
-					'cooldown' => (int) $opts['errors_cooldown'],
-				),
-				true
-			) . ";\n"
-		);
+	foreach ( boi_error_static_files() as $code => $file ) {
+		$path = WP_CONTENT_DIR . '/' . $file;
+		if ( file_exists( $path ) && ! boi_error_is_ours( $path ) ) {
+			continue;
+		}
+		if ( ! empty( $opts['errors_pages'] ) ) {
+			if ( ! is_dir( dirname( $path ) ) ) {
+				wp_mkdir_p( dirname( $path ) );
+			}
+			if ( ! is_writable( dirname( $path ) ) || ! boi_error_write( $path, boi_error_static_source( (string) $code ) ) ) {
+				$failed[] = $file;
+			}
+		} elseif ( file_exists( $path ) ) {
+			wp_delete_file( $path );
+		}
+	}
+	if ( empty( $opts['errors_pages'] ) && is_dir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ) ) {
+		@rmdir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions -- only when empty.
+	}
+
+	$config = "<?php\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\nreturn " . var_export(
+		array(
+			'to'       => boi_error_recipient(),
+			'alerts'   => (int) $opts['errors_alerts'],
+			'cooldown' => (int) $opts['errors_cooldown'],
+		),
+		true
+	) . ";\n";
+	if ( ! is_writable( WP_CONTENT_DIR ) || ! boi_error_write( boi_error_config_path(), $config ) ) {
+		$failed[] = basename( boi_error_config_path() );
 	}
 
 	// An earlier version kept these settings in a readable JSON file.
@@ -324,6 +494,8 @@ function boi_error_sync() {
 	}
 
 	update_option( 'boi_error_dropins_fingerprint', boi_error_fingerprint(), false );
+	boi_error_sync_failures( $failed );
+	return array() === $failed;
 }
 
 /**
@@ -333,13 +505,30 @@ function boi_error_sync() {
  * @return void
  */
 function boi_error_maybe_sync() {
+	// wp-content is shared on a network, and each site would write its own
+	// name into the files, so only the main site keeps them current.
+	if ( is_multisite() && ! is_main_site() ) {
+		return;
+	}
 	$opts = boi_get_options();
 
 	if ( empty( $opts['errors_pages'] ) && empty( $opts['errors_alerts'] ) ) {
 		return;
 	}
 
-	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! in_array( 'absent', boi_error_state(), true ) ) {
+	// Only the files the settings call for count: with alerts alone,
+	// maintenance.php and the static copies stay absent, and must not trigger
+	// a rewrite on every admin load.
+	$state = array();
+	foreach ( boi_error_state() as $kind => $kind_state ) {
+		if ( ! empty( $opts['errors_pages'] ) || boi_error_kinds()[ $kind ]['alert'] ) {
+			$state[] = $kind_state;
+		}
+	}
+	if ( ! empty( $opts['errors_pages'] ) ) {
+		$state = array_merge( $state, array_values( boi_error_static_state() ) );
+	}
+	if ( get_option( 'boi_error_dropins_fingerprint' ) === boi_error_fingerprint() && ! array_intersect( array( 'absent', 'theme', 'outdated' ), $state ) ) {
 		return;
 	}
 
@@ -349,6 +538,37 @@ add_action( 'admin_init', 'boi_error_maybe_sync' );
 add_action( 'update_option_' . BOI_OPTION_KEY, 'boi_error_sync' );
 add_action( 'update_option_admin_email', 'boi_error_sync' );
 add_action( 'after_switch_theme', 'boi_error_sync' );
+
+/**
+ * Removes this theme's own drop-ins when another theme is activated. Only
+ * files carrying the theme's marker are deleted. On a network the files are
+ * left in place: wp-content is shared, and another site may still use this
+ * theme.
+ *
+ * @return void
+ */
+function boi_error_remove() {
+	if ( is_multisite() ) {
+		return;
+	}
+	foreach ( boi_error_kinds() as $def ) {
+		$path = WP_CONTENT_DIR . '/' . $def['file'];
+		if ( boi_error_is_ours( $path ) ) {
+			wp_delete_file( $path );
+		}
+	}
+	foreach ( boi_error_static_files() as $file ) {
+		$path = WP_CONTENT_DIR . '/' . $file;
+		if ( boi_error_is_ours( $path ) ) {
+			wp_delete_file( $path );
+		}
+	}
+	if ( is_dir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ) ) {
+		@rmdir( WP_CONTENT_DIR . '/' . BOI_STATIC_ERRORS ); // phpcs:ignore WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions -- only when empty.
+	}
+	delete_option( 'boi_error_dropins_fingerprint' );
+}
+add_action( 'switch_theme', 'boi_error_remove' );
 
 /**
  * Sends an alert from a running site, rate limited.
@@ -461,45 +681,91 @@ function boi_render_errors_tab( $opts ) {
 	$key   = BOI_OPTION_KEY;
 	$state = boi_error_state();
 	$label = array(
-		'ours'    => __( 'Installed', 'bestofislam' ),
+		'ours'     => __( 'Installed, current', 'bestofislam' ),
+		'outdated' => __( 'Installed by the theme, outdated', 'bestofislam' ),
+		'theme'    => __( 'Left behind by another theme; replaced on the next install', 'bestofislam' ),
 		'foreign' => __( 'Another file is present and has been left untouched', 'bestofislam' ),
 		'absent'  => __( 'Not installed', 'bestofislam' ),
 	);
+
+	boi_opt_card_open( __( 'Error pages', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'errors_pages',
+			'label'   => __( 'Error pages', 'bestofislam' ),
+			'text'    => __( 'Show branded maintenance, database and PHP error pages', 'bestofislam' ),
+			'help'    => __( 'Written to wp-content. If a folder upload removes them, they are restored on the next admin page load.', 'bestofislam' ),
+			'checked' => ! empty( $opts['errors_pages'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Files', 'bestofislam' ) );
+	echo '<ul class="boi-checklist">';
+	foreach ( boi_error_kinds() as $kind => $def ) {
+		echo '<li><code>' . esc_html( $def['file'] ) . '</code>: ' . esc_html( $label[ $state[ $kind ] ] ) . '</li>';
+	}
+	foreach ( boi_error_static_state() as $file => $file_state ) {
+		echo '<li><code>' . esc_html( $file ) . '</code>: ' . esc_html( $label[ $file_state ] ) . '</li>';
+	}
+	echo '</ul>';
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
+	if ( isset( $_GET['boi_errors_installed'] ) ) {
+		echo '<p class="notice notice-success inline">' . esc_html__( 'The error pages were written where the theme may write them.', 'bestofislam' ) . '</p>';
+	}
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
+	if ( isset( $_GET['boi_errors_failed'] ) ) {
+		$known = array_merge( wp_list_pluck( boi_error_kinds(), 'file' ), array_values( boi_error_static_files() ), array( basename( boi_error_config_path() ) ) );
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only, and only known names are shown.
+		$names = array_values( array_intersect( $known, explode( ',', sanitize_text_field( wp_unslash( $_GET['boi_errors_failed'] ) ) ) ) );
+		echo '<p class="notice notice-error inline">' . esc_html(
+			sprintf(
+				/* translators: %s: comma-separated file names */
+				__( 'These files could not be written to wp-content: %s. Check that the web server may write there.', 'bestofislam' ),
+				$names ? implode( ', ', $names ) : __( 'unknown', 'bestofislam' )
+			)
+		) . '</p>';
+	}
+	if ( is_multisite() && ! is_main_site() ) {
+		echo '<p class="description">' . esc_html__( 'The whole network shares wp-content, so the error pages are installed from the main site.', 'bestofislam' ) . '</p>';
+	} else {
+		printf(
+			'<p><a class="button" href="%s">%s</a></p>',
+			esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=boi_install_error_pages' ), 'boi_install_error_pages' ) ),
+			esc_html__( 'Install error pages', 'bestofislam' )
+		);
+	}
+	boi_opt_row_close();
+	boi_opt_row_open( __( 'Server errors', 'bestofislam' ), 'boi-errors-htaccess' );
+	echo '<p class="description">' . esc_html__( 'For the errors the web server answers before WordPress starts, the theme writes static pages into wp-content/bestofislam-errors with this site\'s name and home address. Add these lines to .htaccess to use them:', 'bestofislam' ) . '</p>';
+	echo '<textarea id="boi-errors-htaccess" readonly rows="6" class="large-text code">' . esc_textarea( boi_error_htaccess_snippet() ) . '</textarea>';
+	boi_opt_row_close();
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Alerts', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'errors_alerts',
+			'label'   => __( 'Alerts', 'bestofislam' ),
+			'text'    => __( 'Email when the database fails, a PHP fatal occurs, a core table is missing or a page answers with HTTP 500', 'bestofislam' ),
+			'help'    => __( 'Database and PHP failures are reported by their error pages, which stay installed while alerts are on.', 'bestofislam' ),
+			'checked' => ! empty( $opts['errors_alerts'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Send alerts to', 'bestofislam' ), 'boi-errors-email' );
 	?>
-	<table class="form-table" role="presentation">
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Error pages', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[errors_pages]" value="1" <?php checked( $opts['errors_pages'], 1 ); ?> /> <?php esc_html_e( 'Show branded maintenance, database and PHP error pages', 'bestofislam' ); ?></label>
-				<ul>
-					<?php foreach ( boi_error_kinds() as $kind => $def ) : ?>
-						<li><code><?php echo esc_html( $def['file'] ); ?></code>: <?php echo esc_html( $label[ $state[ $kind ] ] ); ?></li>
-					<?php endforeach; ?>
-				</ul>
-				<p class="description"><?php esc_html_e( 'Written to wp-content. If a folder upload removes them, they are restored on the next admin page load.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><?php esc_html_e( 'Alerts', 'bestofislam' ); ?></th>
-			<td>
-				<label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[errors_alerts]" value="1" <?php checked( $opts['errors_alerts'], 1 ); ?> /> <?php esc_html_e( 'Email when the database fails, a PHP fatal occurs, a core table is missing or a page answers with HTTP 500', 'bestofislam' ); ?></label>
-				<p class="description"><?php esc_html_e( 'Database and PHP failures are reported by their error pages, which stay installed while alerts are on.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-errors-email"><?php esc_html_e( 'Send alerts to', 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="email" id="boi-errors-email" class="regular-text" name="<?php echo esc_attr( $key ); ?>[errors_email]" value="<?php echo esc_attr( $opts['errors_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" />
-				<p class="description"><?php esc_html_e( 'Leave empty to use the site admin email.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="boi-errors-cooldown"><?php esc_html_e( 'Minutes between alerts', 'bestofislam' ); ?></label></th>
-			<td>
-				<input type="number" id="boi-errors-cooldown" min="5" max="1440" name="<?php echo esc_attr( $key ); ?>[errors_cooldown]" value="<?php echo esc_attr( $opts['errors_cooldown'] ); ?>" />
-				<p class="description"><?php esc_html_e( 'One alert per kind of failure in this window, so a long outage sends one email, not hundreds.', 'bestofislam' ); ?></p>
-			</td>
-		</tr>
-	</table>
+	<input type="email" id="boi-errors-email" class="regular-text" name="<?php echo esc_attr( $key ); ?>[errors_email]" value="<?php echo esc_attr( $opts['errors_email'] ); ?>" placeholder="<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" aria-describedby="boi-errors-email-help" />
+	<p class="description" id="boi-errors-email-help"><?php esc_html_e( 'Leave empty to use the site admin email.', 'bestofislam' ); ?></p>
 	<?php
+	boi_opt_row_close();
+	boi_opt_range(
+		array(
+			'key'   => 'errors_cooldown',
+			'label' => __( 'Minutes between alerts', 'bestofislam' ),
+			'value' => (int) $opts['errors_cooldown'],
+			'min'   => 5,
+			'max'   => 1440,
+			'unit'  => __( 'minutes', 'bestofislam' ),
+			'help'  => __( 'One alert per kind of failure in this window, so a long outage sends one email, not hundreds.', 'bestofislam' ),
+		)
+	);
+	boi_opt_card_close();
 }

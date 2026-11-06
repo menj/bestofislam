@@ -42,7 +42,7 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | first-muslims-kept-the-faith | Partly done: Bukhari 3231 and 3612 verified; Ibn Ishaq (Guillaume), Tabari, Ahmad notes still to verify |
 | funeral-dhikr-dua | Partly done: Bukhari 1245, 1253, 1264, 1303, 1315, 1325, 6340, 6407 verified with Fath al-Bari pages; Muslim, Abu Dawud and Tirmidhi notes still to verify |
 | raids-badr-and-the-conquest-of-mecca | Partly done: Bukhari 1846, 2048, 3045, 3957, 3986, 4276 verified; Badr casualty nuance added from Ibn Hajar; Bukhari 4086, 4318, 4339, Abu Dawud, Ahmad and Ibn Ishaq notes still to verify |
-| taqiyya-5-myths | Partly done: Bukhari 2692 and 3029 checked on sunnah.com; Quran commentary and remaining hadith notes (Muslim, Kab ibn Malik, Hudaybiyya) still to verify |
+| taqiyya-myths | Partly done: Bukhari 2692 and 3029 checked on sunnah.com; Quran commentary and remaining hadith notes (Muslim, Kab ibn Malik, Hudaybiyya) still to verify |
 | apes-and-pigs-and-the-jews | Partly done: Muslim 2663b and 2922, Bukhari 2916, 2926 and 4121, Abu Dawud 3002 checked on sunnah.com and Shamela; Tabari and Ibn Hisham notes still to verify |
 | questions-about-aisha | Partly done: Bukhari 2664, 2880, 3894, 4141, 5133, 5136, 5158, Muslim 177a, Tirmidhi 3883 checked; Hisham ibn Urwa sentence corrected from Tahdhib al-Tahdhib; Taqrib on Asma, Zarkashi and Tabari notes still to verify |
 | quranic-ethics | Partly done: Bukhari 13, 33, 2620, 5304, 6979 (Fath pages); Muslim 45a, 1787, 2589; Abu Dawud 3580; Tirmidhi 1337 checked. Remaining: Tabarani (note 5), Nawawi Riyad al-Salihin (note 16), Muslim and Bukhari in notes 9 to 22 where no number given |
@@ -84,13 +84,13 @@ Method: find the book id with a search restricted to shamela.ws, locate the page
 | who-wrote-the-quran | Partly done: Bukhari 113 (Fath 1/206). Remaining: Muslim 3004 (fetch failed), Bukhari on collection |
 | uthman-copies | Partly done: Bukhari 4998 (9/43), 4987 (9/11) checked |
 | natural-world-verses | Partly done: Muslim 2229a checked. Remaining: Bukhari chapter heading quoting Qatada |
-| islamophobia-5-facts | Partly done: Bukhari 10 (Fath 1/53) |
+| islamophobia-facts | Partly done: Bukhari 10 (Fath 1/53) |
 | prophets-you-may-not-know | Partly done: Bukhari 4485 (Fath 8/170) |
 | prophet-died-poisoning | Partly done: Bukhari 2617 (5/230); Muslim 2190a; Abu Dawud 4510 (weak per al-Albani, Bishr not named in that wording) checked. Remaining: Ibn Ishaq on Bishr |
 | satanic-verses-report | Partly done: Bukhari 1071 (2/553) checked. Remaining: Tabari, Ibn Saad, Qadi Iyad, Ibn Hajar on sura 53 |
 | who-saw-gabriel | Partly done: Bukhari 3 checked. Remaining: Muslim Dihya report |
 | hanif-poets-and-musaylima | Partly done: Bukhari 3826-3828 (Fath 7/142-143; Ibn Hajar says Zayd died before the mission). Remaining: Ibn Ishaq, Tabari |
-| end-of-the-world-1110-claim | Partly done: Bukhari 6504 (Fath 11/347) |
+| end-of-the-world-prediction | Partly done: Bukhari 6504 (Fath 11/347) |
 | shared-prophets | Partly done: Bukhari 1385, 122 (Fath pages) |
 | scholars-who-shaped-islamic-study | Partly done: Bukhari 143, 75 (Fath pages) |
 | kaaba-witnesses | Partly done: Bukhari 4355, 1583 (Fath pages) |
@@ -131,9 +131,20 @@ Checked for number, book, chapter, narrator and grade, and matching the claim in
 | ezra-and-mary | Partly done: Tabari 9:30 report 16620 (vol. 14, p. 202). Remaining: Ibn Kathir on 9:30. |
 | second-peter, jesus-not-god, same-god, verses-read-differently, seven-libraries, haman-anachronism | Reviewed: notes cite only modern scholarship or the Bible; no classical Arabic source to verify. |
 | islam-in-china | Partly done: Bukhari 335 and 428 verified on sunnah.com; Fath vol. 1, pp. 435, 524–525, 540. |
-| crusades-5-facts | Partly done: Tabari History vol. 3, p. 609 (terms of Aelia) text checked on Shamela. |
+| crusades-facts | Partly done: Tabari History vol. 3, p. 609 (terms of Aelia) text checked on Shamela. |
 | kharijites-and-takfir | Added a point on Ibn Abbas's debate with the Haruriyya (Nasa'i, Sunan al-Kubra 8575). |
 | gods-attributes-and-anthropomorphism | New article. Fath vol. 13, pp. 406–408 (istawa, Malik via Ibn Wahb, Juwayni, six positions), vol. 5, p. 183 (pronoun in the image hadith), vol. 11, p. 3 (Bukhari 6227); Bukhari 1145 on sunnah.com; Tabari vol. 22, pp. 375–376 (Quran 50:38). |
 | temporary-marriage-mutah | New article. Fath vol. 9, pp. 167–173 (Bukhari 5115–5119 commentary, the six occasions, Umar's announcement, consensus reports); Bukhari 5071, 5115, 4216, Muslim 1405a and 1406d on sunnah.com; Tabari vol. 8, pp. 175–181 (Quran 4:24). |
 | do-muslims-worship-muhammad | New article. Bukhari 3445, 1043, 435, 3416, 3667–3668 and Muslim 2278 on sunnah.com; Fath vol. 6, pp. 478, 490; vol. 7, p. 19 on Shamela. |
-| muslims-by-the-numbers-2020 | New data article. Figures checked against Pew Research Center reports of 9 June 2025 (muslim-population-change and the global religious landscape report). |
+| muslims-by-the-numbers | New data article. Figures checked against Pew Research Center reports of 9 June 2025 (muslim-population-change and the global religious landscape report). |
+| nabi-and-rasul | New article (1.78.0). Bukhari 3340 cited from memory. Remaining: Ibn Taymiyya, al-Nubuwwat 2/714–718 (Shamela book 11817, page located, text not read); Qurtubi on 22:52; Ibn Kathir on 33:40; the Abu Dharr and Abu Umama reports (Ahmad, Ibn Hibban) and al-Albani, Sahiha 2668 |
+| messenger-to-every-nation | New article (1.78.0). Bukhari 335 and 4419 already verified in other articles (Fath 8/125). Remaining: Bukhari 3443; Tabari on 16:36; Ibn Kathir on 17:15 |
+| muhammad-and-the-hebrew-prophets | New article (1.78.0). Bukhari 2125 checked on sunnah.com (Sales, raising the voice in the market, Ata ibn Yasar from Abd Allah ibn Amr); Bukhari 4485 already verified (Fath 8/170). Remaining: Bukhari 3461 (sunnah.com fetch failed), 3413, 3416; Tabari on 21:105 |
+| ishmael-in-the-quran-and-genesis | New article (1.78.0). Bukhari 3373 checked on sunnah.com (Salama ibn al-Akwa, Book of the Prophets); Muslim 2276 checked on sunnah.com (Wathila ibn al-Asqa, Book of Virtues); Bukhari 3364 already verified (Fath 6/396). Remaining: Tabari on 19:54 and 37:107; Ibn Kathir on 37:107 |
+| no-compulsion-in-religion | New article (1.78.0). Abu Dawud 2682 checked on sunnah.com (Ibn Abbas, sahih per al-Albani); Qurtubi on 9:29 checked (Malik, al-Awzai, al-Shafii, the Arab idolaters, the Magians) on quran.ksu.edu.sa; Tabari 2:256 verdict already located (vol. 5, p. 407); Tabari, History 3/609 already verified. Remaining: Bukhari 3156–3157 (sunnah.com fetch failed); al-Baladhuri, Futuh al-Buldan, Futuh al-Sind (Shamela book 12221, section located at page 413, text not read); Ibn Qudama, al-Mughni, on the compelled dhimmi; al-Kasani on the Hanafi position |
+| holy-war-in-the-bible | New article (1.78.0). Bukhari 3015 already verified. Remaining: Muslim 1744a; Muwatta on Abu Bakr's instructions |
+| septuagint, oldest-bible-codices, comma-johanneum, old-testament-variant-readings, kings-and-chronicles-numbers, genealogies-of-jesus | New articles (1.78.0). Notes cite the Bible, rabbinic texts, the church fathers and modern scholarship only; the Quran references in genealogies-of-jesus and kings-and-chronicles-numbers need no Shamela check beyond Ibn Kathir and Qurtubi on 70:4, already listed under quran-contradictions-claims |
+| bible-alteration-claim-before-islam | New article (1.78.0). Bukhari 7363 and the chapter-heading gloss already verified (Fath 13/333–334, 13/522–523); Ibn Hazm, al-Fisal 2/2 and Ibn Taymiyya, al-Jawab al-Sahih 2/407 already verified in islamic-dilemma |
+| muhammad-false-prophet-claim (1.78.0 additions) | Remaining: Bukhari 4252; Tabari on 24:55; Ibn Kathir on 9:33 |
+| jihad-meaning-quran-hadith-jurists (1.78.0 additions) | Remaining: Ibn Abidin, Radd al-Muhtar, Book of Jihad (definition and the stages); Ibn al-Humam, Fath al-Qadir |
+| ezra-and-mary (1.78.0 addition) | Muslim 2135 checked on sunnah.com (al-Mughira ibn Shuba, Book of Manners) |

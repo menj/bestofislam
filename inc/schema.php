@@ -1,6 +1,6 @@
 <?php
 /**
- * Structured data output for listicles.
+ * Structured data for listicles: the ItemList nodes the page graph takes.
  *
  * Schema is derived from the parsed block tree so that it cannot diverge from
  * the content a visitor actually sees.
@@ -11,42 +11,32 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Prints ItemList JSON-LD in the document head for singular listicle views.
+ * The ItemList nodes of every listicle in a post, for the page graph that
+ * inc/schema-graph.php prints. Each list has its own @id, so the article can
+ * point to it with hasPart.
  *
- * @return void
+ * @param WP_Post $post Host post.
+ * @return array Graph nodes.
  */
-function boi_print_schema() {
-	if ( ! is_singular() ) {
-		return;
-	}
-
-	$post = get_post();
-
+function boi_listicle_schema_nodes( $post ) {
 	if ( ! $post || ! has_block( 'bestofislam/listicle', $post ) ) {
-		return;
+		return array();
 	}
 
-	$graphs = array();
+	$nodes = array();
 
 	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $n => $listicle ) {
-		$graph = boi_build_item_list( $listicle, $post, $n );
+		$node = boi_build_item_list( $listicle, $post );
 
-		if ( $graph ) {
-			$graphs[] = $graph;
+		if ( $node ) {
+			unset( $node['@context'] );
+			$node['@id'] = get_permalink( $post ) . '#itemlist' . ( $n ? '-' . ( $n + 1 ) : '' );
+			$nodes[]     = $node;
 		}
 	}
 
-	if ( empty( $graphs ) ) {
-		return;
-	}
-
-	$payload = 1 === count( $graphs ) ? $graphs[0] : $graphs;
-
-	echo "\n<script type=\"application/ld+json\">" .
-		boi_json_ld( $payload ) .
-		"</script>\n";
+	return $nodes;
 }
-add_action( 'wp_head', 'boi_print_schema', 20 );
 
 /**
  * Recursively collects listicle blocks from a parsed block tree.
@@ -76,10 +66,9 @@ function boi_find_listicles( $blocks ) {
  *
  * @param array   $listicle Parsed listicle block.
  * @param WP_Post $post     Host post.
- * @param int     $n        Position of the list in the post, from 0.
  * @return array|null
  */
-function boi_build_item_list( $listicle, $post, $n = 0 ) {
+function boi_build_item_list( $listicle, $post ) {
 	$attrs = isset( $listicle['attrs'] ) ? $listicle['attrs'] : array();
 	$type = isset( $attrs['schemaType'] ) ? $attrs['schemaType'] : 'ItemList';
 
@@ -91,10 +80,12 @@ function boi_build_item_list( $listicle, $post, $n = 0 ) {
 	}
 
 	$entries = array();
+	$bodies  = array();
 
 	foreach ( $listicle['innerBlocks'] as $inner ) {
 		if ( 'bestofislam/entry' === $inner['blockName'] ) {
 			$entries[] = isset( $inner['attrs'] ) ? $inner['attrs'] : array();
+			$bodies[]  = $inner;
 		}
 	}
 
@@ -123,10 +114,31 @@ function boi_build_item_list( $listicle, $post, $n = 0 ) {
 
 		if ( ! empty( $entry['linkUrl'] ) ) {
 			$item['url'] = esc_url_raw( $entry['linkUrl'] );
-		} elseif ( function_exists( 'boi_entry_anchor' ) ) {
-			// The entry's own place on the page, as the jump list links it.
-			$item['url'] = get_permalink( $post ) . '#' . boi_entry_anchor( $entry );
 		}
+
+		// The entry itself, at its anchor on the page, with its opening
+		// paragraph as the description a reader sees first.
+		$thing = array(
+			'@type' => 'CreativeWork',
+			'@id'   => get_permalink( $post ) . '#' . boi_entry_anchor( $entry ),
+			'name'  => $name,
+			'url'   => get_permalink( $post ) . '#' . boi_entry_anchor( $entry ),
+		);
+		$lede  = boi_entry_lede( $bodies[ $offset ] );
+
+		if ( '' !== $lede ) {
+			$item['description']  = $lede;
+			$thing['description'] = $lede;
+		}
+
+		if ( ! empty( $entry['claim'] ) ) {
+			$thing['about'] = array(
+				'@type' => 'Claim',
+				'text'  => boi_plain( $entry['claim'] ),
+			);
+		}
+
+		$item['item'] = $thing;
 
 		if ( ! empty( $entry['imageId'] ) ) {
 			$src = wp_get_attachment_image_url( (int) $entry['imageId'], 'large' );
@@ -148,7 +160,6 @@ function boi_build_item_list( $listicle, $post, $n = 0 ) {
 	return array(
 		'@context'        => 'https://schema.org',
 		'@type'           => 'ItemList',
-		'@id'             => boi_item_list_id( $post, $n ),
 		'name'            => boi_plain( get_the_title( $post ) ),
 		'url'             => get_permalink( $post ),
 		'numberOfItems'   => count( $elements ),
@@ -160,35 +171,33 @@ function boi_build_item_list( $listicle, $post, $n = 0 ) {
 }
 
 /**
- * The @id of the n-th numbered list of a post, so the Article can name its
- * lists as its parts.
+ * The opening paragraph of a listicle entry as plain text, cut at a word
+ * near 300 characters.
  *
- * @param WP_Post $post Host post.
- * @param int     $n    Position of the list in the post, from 0.
+ * @param array $entry Parsed entry block.
  * @return string
  */
-function boi_item_list_id( $post, $n = 0 ) {
-	return get_permalink( $post ) . '#itemlist' . ( $n ? '-' . ( $n + 1 ) : '' );
-}
-
-/**
- * The @ids of the numbered lists a post prints as ItemList.
- *
- * @param WP_Post $post Post.
- * @return string[]
- */
-function boi_item_list_ids( $post ) {
-	if ( ! has_block( 'bestofislam/listicle', $post ) ) {
-		return array();
-	}
-
-	$ids = array();
-
-	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $n => $listicle ) {
-		if ( boi_build_item_list( $listicle, $post, $n ) ) {
-			$ids[] = boi_item_list_id( $post, $n );
+function boi_entry_lede( $entry ) {
+	foreach ( isset( $entry['innerBlocks'] ) ? $entry['innerBlocks'] : array() as $inner ) {
+		if ( 'core/paragraph' !== $inner['blockName'] ) {
+			continue;
 		}
+
+		$text = boi_plain( preg_replace( '#<sup>.*?</sup>#s', '', (string) $inner['innerHTML'] ) );
+
+		if ( '' === $text ) {
+			continue;
+		}
+
+		if ( mb_strlen( $text ) > 300 ) {
+			$cut  = mb_substr( $text, 0, 300 );
+			$space = mb_strrpos( $cut, ' ' );
+			// With no space to break at, cut at 300 rather than return "…".
+			$text  = rtrim( false === $space ? $cut : mb_substr( $cut, 0, $space ), ' ,;:' ) . '…';
+		}
+
+		return $text;
 	}
 
-	return $ids;
+	return '';
 }

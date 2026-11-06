@@ -87,7 +87,7 @@ Five spreadsheets (a single-source-of-truth workbook, two article-proposal sheet
 | A18 | Which rites existed before Islam? 6 answers from the sources | `islamic-rites-before-islam` |
 | A20 | Apes and pigs and the Jews in the Quran and hadith: 6 facts | `apes-and-pigs-and-the-jews` |
 | A22 | Terrorism and Muslims: 5 facts about the data and the texts | `terrorism-and-muslims-the-data` |
-| A39 | Did Muhammad predict the end in 1110? 5 facts on the reports | `end-of-the-world-1110-claim` |
+| A39 | Did Muhammad predict the end in 1110? 5 facts on the reports | `end-of-the-world-prediction` |
 | A40 | Five answers on race in the Quran and the hadith reports critics cite | `race-in-quran-and-hadith` |
 | A41 | What the Quran says about Christians and Christianity: 6 answers | `quran-on-christians` |
 
@@ -125,7 +125,7 @@ A saved copy of islamicdilemma.com, a Christian site built on the Islamic dilemm
 | D3 | The Injil cannot be a separate book: where is it, and who quoted it? | `where-is-the-injil`, `islamic-dilemma` (first entry, Ibn Hazm's "four histories") | Covered |
 | D4 | **18:27, "none can change His words": so the Bible cannot have been corrupted** | `islamic-dilemma` (third entry, 1.77.1) | Covered. The phrase covers God's promise (6:34, 10:64) and the Quran itself (6:115, 18:27); Ibn Kathir on 18:27 and al-Tabari on 6:115, checked on Shamela; the Quran's own use of *baddala* for people changing words (2:59, 48:15) |
 | D5 | "Allah, Gabriel and Muhammad never said the Gospel was corrupt"; every mention of the Injil praises it | `islamic-dilemma` (the mixed-text entry), `where-is-the-injil` | Covered: 5:14 added to the second entry of `islamic-dilemma` (1.77.1) |
-| D6 | The site's own list of Injil verses (3:3, 3:48, 3:65, 5:46–47, 5:66, 5:68, 5:110, 7:157, 9:111, 48:29, 57:27) | `islamic-dilemma`, `deuteronomy-18-and-the-paraclete` (7:157) | Covered: the first entry of `islamic-dilemma` (1.77.1) notes that 7:157 and 9:111 say what the Injil contains in the Quran's own terms, and that calling this an error about the Gospels assumes the Quran was describing them. A Christian may point to Matthew 19:29 for 9:111; the article does not lean on the absence |
+| D6 | The site's own list of Injil verses (3:3, 3:48, 3:65, 5:46–47, 5:66, 5:68, 5:110, 7:157, 9:111, 48:29, 57:27) | `islamic-dilemma`, `deuteronomy-prophecy-and-the-paraclete` (7:157) | Covered: the first entry of `islamic-dilemma` (1.77.1) notes that 7:157 and 9:111 say what the Injil contains in the Quran's own terms, and that calling this an error about the Gospels assumes the Quran was describing them. A Christian may point to Matthew 19:29 for 9:111; the article does not lean on the absence |
 | D7 | Three "contradictions": 1 Timothy 2:5 vs 4:171 (mediator), 1 Corinthians 8:6 vs the Quran (Trinity), John 3:16 vs 3:185 (eternal life) | `pauline-letters-authorship`, `paul-claim-to-apostleship`, `jesus-not-god`, `relationship-with-god` | Covered in substance. **Point to make:** two of the three are from Paul, not from any Gospel, and 1 Timothy is one of the Pastorals most critical scholars do not attribute to Paul, so the site's own examples do not come from the Injil. The page's citations are also confused: the Arabic under the 4:171 heading is 2:255, and the Trinity item quotes 3:185 in English over 4:171 in Arabic. Note this; it is not an argument |
 | D8 | 29:46 commands Muslims to say "we believe in what was revealed to you", yet Muslims call the Bible corrupt and the Christian God false | `quran-on-christians`, `same-god`, `who-is-allah` | Covered. The verse speaks of what was revealed, not of what is now bound in a Bible; see D2 |
 | D9 | "If Allah revealed the Torah and Gospel as guidance, how could they become corrupted?" | `where-is-the-injil` (entry on preservation: earlier scriptures entrusted to their communities, 5:44; the promise of 15:9 attached to the Quran) | Covered |
@@ -140,3 +140,60 @@ A saved copy of islamicdilemma.com, a Christian site built on the Islamic dilemm
 ### Still open
 
 - **D10, D13 and D14** are small additions to `where-is-the-injil`, `crucifixion-quran` and `relationship-with-god`, to be made as those articles are expanded.
+
+## Source 5: three recorded missionary lectures on Islam
+
+Three transcripts of lectures given in English with German interpretation, probably at a missionary training seminar in the late 1980s, saved 29 October 2026. Each transcript stops at thirty minutes. The articles do not name the speakers or the seminar. Claims that rest on a particular polemicist's booklet are answered on the evidence and the booklet is not defended.
+
+### Lecture 1: apostleship, prophecy and prophethood
+
+| # | Claim, in summary | Answered in | Status |
+|---|---|---|---|
+| L1 | The Quran's *nabi* and *rasul* cannot be told apart; the distinction was invented later | `nabi-and-rasul` (**new**) | Covered |
+| L2 | A *rasul* receives a book, yet Adam, Noah and Abraham received none | `nabi-and-rasul` (**new**) | Covered (scrolls of Abraham, 87:19, 53:36) |
+| L3 | *Nabi* means one who "bubbles forth" (Gesenius) | `nabi-and-rasul` (**new**) | Covered |
+| L4 | 315 messengers means most nations had one; a prophet for every people makes no sense | `nabi-and-rasul`, `messenger-to-every-nation` (**new**) | Covered |
+| L5 | The Quran records messengers only to Hebrews, Arabs or Judeo-Arabs | `messenger-to-every-nation` (**new**) | Covered (Moses to Pharaoh, Jonah to Nineveh) |
+| L6 | Hud, Salih and Shuayb are legend | `messenger-to-every-nation` (**new**), `quranic-stories-and-history` | Covered |
+| L7 | Muhammad never quotes David, Job or John and did not know the writing prophets | `muhammad-and-the-hebrew-prophets` (**new**) | Covered (21:105 and Psalm 37:29; Jonah) |
+| L8 | Ishmael was neither prophet nor apostle, only a tribal sheikh | `ishmael-in-the-quran-and-genesis` (**new**) | Covered |
+| L9 | Muslim expositors give prophethood to the "seed" of Isaac, Ishmael and Lot | `ishmael-in-the-quran-and-genesis` (**new**) | Covered |
+| L10 | Miriam of Exodus confused with Mary | `ezra-and-mary` (paragraph added, Muslim 2135) | Covered |
+| L11 | No genuine prophecy in the Quran; no clear statement that Islam will prevail | `muhammad-false-prophet-claim` (paragraphs added: 48:27, 24:55, 9:33) | Covered |
+| L12 | Muhammad used "the last shall be first" to place himself at the head of the prophets | None | Not answered: no source given, and the Quranic term is *khatam* (33:40), discussed in `nabi-and-rasul` |
+| L13 | Fanatical devotion to the Prophet | `do-muslims-worship-muhammad`, `blasphemy-and-insults-to-the-prophet` | Covered |
+
+### Lecture 2: jihad or the holy war
+
+| # | Claim, in summary | Answered in | Status |
+|---|---|---|---|
+| J1 | Jihad in itself means war; the milder meaning is a liberal invention | `jihad-meaning-quran-hadith-jurists` (paragraphs added on *qital*) | Covered |
+| J2 | Many verses command aggression and only one, 2:256, commands tolerance | `no-compulsion-in-religion` (**new**), `fighting-verses-in-context` | Covered |
+| J3 | 2:256 excludes idolaters, so Hindus and Buddhists are excluded (Sell) | `no-compulsion-in-religion` (**new**) | Covered (Malik, al-Awzai, the Hanafis; Sind) |
+| J4 | 2:256 is abrogated by 9:5 | `no-compulsion-in-religion` (**new**), `abrogation-and-the-sword-verse` | Covered |
+| J5 | Ibn Abidin's stages from preaching to fighting absolutely | `jihad-meaning-quran-hadith-jurists` (paragraph added) | Conceded and set in context |
+| J6 | A holy war is a contradiction in terms; Christ reversed the Old Testament | `holy-war-in-the-bible` (**new**) | Covered |
+| J7 | Muslims cite the Crusades and never their own holy wars | `holy-war-in-the-bible` (**new**), `crusades-facts` | Covered |
+| J8 | Jihad is a sixth pillar | `five-pillars-explained`, `jihad-meaning-quran-hadith-jurists` | Partly covered; no article traces the "sixth pillar" phrase |
+| J9 | An aside on Jewish money-lenders | None | Not an argument; not repeated |
+
+### Lecture 3: has the Bible been falsified?
+
+| # | Claim, in summary | Answered in | Status |
+|---|---|---|---|
+| B1 | No other religion says the Bible was altered; Muslims start from a presupposition | `bible-alteration-claim-before-islam` (**new**) | Covered |
+| B2 | The Septuagint has exactly the same books and text as the Hebrew | `septuagint` (**new**) | Covered |
+| B3 | The Old Testament has no variant readings | `old-testament-variant-readings` (**new**) | Covered |
+| B4 | Some 4,000 New Testament manuscripts before 400; three complete Bibles | `oldest-bible-codices` (**new**), `manuscript-transmission` | Covered |
+| B5 | Only two disputed passages, half a page | `oldest-bible-codices`, `comma-johanneum` (**new**) | Covered |
+| B6 | 1 John 5:7 first appears in Jerome's Vulgate; Matthew 28:19 does the same work | `comma-johanneum` (**new**) | Covered |
+| B7 | 40,000 and 4,000 stalls differ by a dot | `kings-and-chronicles-numbers` (**new**) | Covered |
+| B8 | Quran 32:5 and 70:4 are the same kind of discrepancy | `kings-and-chronicles-numbers` (**new**), `quran-contradictions-claims` | Covered |
+| B9 | The genealogies are Joseph's and Mary's | `genealogies-of-jesus` (**new**) | Covered |
+| B10 | John 3:16 "begotten" is only a translation question | `jesus-not-god` (paragraph added) | Covered |
+| B11 | The four women in Matthew's genealogy; the "50,000 errors" figure | None | Not answered by choice: these rest on one polemicist's booklet, which the site does not defend |
+
+### Still open
+
+- The second half of each lecture was not transcribed. The hadith section of lecture 1, the blackboard list of verses in lecture 2 and the remaining objections of lecture 3 are not catalogued.
+- The details in the new articles that need checking against sources are listed in `docs/CONTENT-REVIEW.md` under "Lecture articles (29 October 2026, released in 1.88.0)".

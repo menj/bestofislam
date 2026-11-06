@@ -20,7 +20,7 @@
   `.boi-glossary__ar--quran` in the Glossary index, both reserved for entries
   with a `quran_ref`, through the `--boi-font-quran` token. It is not in the
   `body` stack, so unmarked Arabic never resolves to it. The same file ships in
-  all seven themes of the network.
+  all seven themes.
 
 The remaining four files are not bundled, since their licences require the
 site owner to obtain them. Drop each woff2 into this directory under the

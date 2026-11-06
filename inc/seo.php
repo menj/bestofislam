@@ -145,7 +145,8 @@ function boi_title_parts( $parts ) {
 			/* translators: %s: author name. */
 			$parts['title'] = sprintf( __( 'Articles by %s', 'bestofislam' ), $name );
 		}
-	} elseif ( is_singular( 'post' ) ) {
+	} elseif ( is_singular( 'post' ) && empty( $parts['boi_custom'] ) ) {
+		// A title the owner set in Rank Math ("boi_custom") keeps its wording.
 		$short = boi_seed_seo_title( get_queried_object() );
 
 		if ( '' !== $short ) {
@@ -295,6 +296,42 @@ function boi_print_meta_description() {
 add_action( 'wp_head', 'boi_print_meta_description', 1 );
 
 /**
+ * The canonical archive of a seeded top-level category: the section
+ * (listicle-topic) it mirrors. A subcategory mirrors no section, so it is
+ * its own canonical archive, indexed and in the sitemaps. The section archive carries the menus, the section pages and
+ * the breadcrumbs, so it is the one search engines index.
+ *
+ * @return WP_Term|null
+ */
+function boi_category_canonical_topic() {
+	if ( ! is_category() || ! function_exists( 'boi_topic_for_category' ) ) {
+		return null;
+	}
+
+	return boi_topic_for_category( get_queried_object() );
+}
+
+/**
+ * Whether this archive would be a thin or duplicate page in the index: a
+ * seeded category, which repeats its section, or a tag only one article
+ * carries. Such pages stay crawlable (follow) and out of the index.
+ *
+ * @return bool
+ */
+function boi_is_duplicate_archive() {
+	if ( boi_category_canonical_topic() ) {
+		return true;
+	}
+
+	if ( is_tag() ) {
+		$term = get_queried_object();
+		return $term && (int) $term->count < 2;
+	}
+
+	return false;
+}
+
+/**
  * Keeps search results and paginated archives out of the index.
  *
  * The guide is explicit that search result pages should not be crawled. Paged
@@ -309,7 +346,7 @@ function boi_robots( $robots ) {
 		return $robots;
 	}
 
-	if ( is_search() || ( is_paged() && ( is_home() || is_archive() ) ) ) {
+	if ( is_search() || is_404() || ( is_paged() && ( is_home() || is_archive() ) ) || boi_is_duplicate_archive() ) {
 		$robots['noindex'] = true;
 		$robots['follow']  = true;
 		unset( $robots['index'] );
@@ -423,6 +460,33 @@ function boi_breadcrumb_trail() {
 		return $trail;
 	}
 
+	// A seeded category leads to its section, the canonical archive.
+	$topic = boi_category_canonical_topic();
+
+	if ( $topic ) {
+		$trail[] = array( 'label' => $topic->name, 'url' => get_term_link( $topic ) );
+		return $trail;
+	}
+
+	// A subcategory leads to the section its parent mirrors, then to itself.
+	if ( is_category() ) {
+		$term = get_queried_object();
+
+		if ( $term instanceof WP_Term && $term->parent ) {
+			$parent  = get_term( $term->parent, 'category' );
+			$section = ( $parent && ! is_wp_error( $parent ) && function_exists( 'boi_topic_for_category' ) ) ? boi_topic_for_category( $parent ) : null;
+
+			if ( $section ) {
+				$trail[] = array( 'label' => $section->name, 'url' => get_term_link( $section ) );
+			} elseif ( $parent && ! is_wp_error( $parent ) ) {
+				$trail[] = array( 'label' => $parent->name, 'url' => get_term_link( $parent ) );
+			}
+
+			$trail[] = array( 'label' => $term->name, 'url' => '' );
+			return $trail;
+		}
+	}
+
 	if ( is_tag() ) {
 		$trail[] = array( 'label' => __( 'Tags', 'bestofislam' ), 'url' => '' );
 		$trail[] = array( 'label' => single_tag_title( '', false ), 'url' => '' );
@@ -447,7 +511,7 @@ function boi_breadcrumb_trail() {
 }
 
 /**
- * Renders the breadcrumb trail with its BreadcrumbList graph.
+ * Renders the breadcrumb trail.
  *
  * @return string
  */
@@ -463,52 +527,62 @@ function boi_render_breadcrumbs() {
 	}
 
 	$items = '';
-	$graph = array();
 	$last  = count( $trail ) - 1;
 
 	foreach ( $trail as $i => $crumb ) {
-		$is_last = $i === $last;
-
-		$items .= $is_last
+		$items .= $i === $last
 			? sprintf( '<li aria-current="page">%s</li>', esc_html( $crumb['label'] ) )
 			: sprintf( '<li><a href="%1$s">%2$s</a></li>', esc_url( $crumb['url'] ), esc_html( $crumb['label'] ) );
+	}
 
+	// The BreadcrumbList is a node of the page graph (boi_breadcrumb_node()).
+	return sprintf(
+		'<nav class="boi-breadcrumbs" aria-label="%1$s"><ol>%2$s</ol></nav>',
+		esc_attr__( 'Breadcrumb', 'bestofislam' ),
+		$items
+	);
+}
+
+/**
+ * The BreadcrumbList for the trail boi_render_breadcrumbs() shows, as a node
+ * of the page graph. None on the front page, which shows no trail.
+ *
+ * @param string $page_url Address of the current page.
+ * @return array|null
+ */
+function boi_breadcrumb_node( $page_url ) {
+	if ( is_front_page() ) {
+		return null;
+	}
+
+	$trail = boi_breadcrumb_trail();
+
+	if ( count( $trail ) < 2 ) {
+		return null;
+	}
+
+	$list = array();
+	$last = count( $trail ) - 1;
+
+	foreach ( $trail as $i => $crumb ) {
 		$node = array(
 			'@type'    => 'ListItem',
 			'position' => $i + 1,
 			'name'     => boi_plain( $crumb['label'] ),
 		);
 
-		if ( ! $is_last && '' !== $crumb['url'] ) {
+		if ( $i !== $last && '' !== $crumb['url'] ) {
 			$node['item'] = esc_url_raw( $crumb['url'] );
 		}
 
-		$graph[] = $node;
+		$list[] = $node;
 	}
 
-	$nav = sprintf(
-		'<nav class="boi-breadcrumbs" aria-label="%1$s"><ol>%2$s</ol></nav>',
-		esc_attr__( 'Breadcrumb', 'bestofislam' ),
-		$items
-	);
-
-	// Rank Math adds a BreadcrumbList to its own graph; two would be a duplicate.
-	if ( function_exists( 'boi_rank_math_breadcrumb_schema' ) && boi_rank_math_breadcrumb_schema() ) {
-		return $nav;
-	}
-
-	$list = array(
-		'@context'        => 'https://schema.org',
+	return array(
 		'@type'           => 'BreadcrumbList',
-		'itemListElement' => $graph,
+		'@id'             => $page_url . '#breadcrumb',
+		'itemListElement' => $list,
 	);
-
-	// The page node names the trail by this @id (schema-pages.php).
-	if ( function_exists( 'boi_schema_breadcrumb_id' ) ) {
-		$list['@id'] = boi_schema_breadcrumb_id();
-	}
-
-	return $nav . '<script type="application/ld+json">' . boi_json_ld( $list ) . '</script>';
 }
 
 /**
@@ -527,8 +601,9 @@ function boi_canonical_link() {
 	$url = '';
 
 	if ( is_tax() || is_category() || is_tag() ) {
-		$term = get_queried_object();
-		$link = $term ? get_term_link( $term ) : '';
+		$topic = boi_category_canonical_topic();
+		$term  = $topic ? $topic : get_queried_object();
+		$link  = $term ? get_term_link( $term ) : '';
 		$url  = is_wp_error( $link ) ? '' : $link;
 	} elseif ( is_home() ) {
 		$page = (int) get_option( 'page_for_posts' );
@@ -553,16 +628,207 @@ function boi_canonical_link() {
 add_action( 'wp_head', 'boi_canonical_link', 2 );
 
 /**
- * Keeps WordPress's default category and tag archives out of the XML sitemap.
- * The site organises its articles by section, so those archives hold nothing
- * a reader would want to land on.
+ * Category archives in the XML sitemap follow the robots rule: a top-level
+ * seeded category repeats its section (the canonical archive) and is
+ * noindexed, so it is left out. Every other category stays in: the
+ * subcategories, which no section repeats, and any category the owner adds.
  *
- * @param array $taxonomies Taxonomy objects keyed by name.
+ * @param array  $args     Term query arguments.
+ * @param string $taxonomy Taxonomy name.
  * @return array
  */
-function boi_sitemap_taxonomies( $taxonomies ) {
-	unset( $taxonomies['category'], $taxonomies['post_tag'] );
+function boi_sitemap_category_args( $args, $taxonomy ) {
+	if ( 'category' !== $taxonomy || ! function_exists( 'boi_seed_categories' ) ) {
+		return $args;
+	}
 
-	return $taxonomies;
+	$skip = array();
+
+	foreach ( boi_seed_categories() as $slug => $cat ) {
+		if ( ! empty( $cat['parent'] ) || empty( $cat['topic'] ) ) {
+			continue;
+		}
+
+		$term = get_term_by( 'slug', $slug, 'category' );
+
+		if ( $term && ! is_wp_error( $term ) && boi_topic_for_category( $term ) ) {
+			$skip[] = (int) $term->term_id;
+		}
+	}
+
+	if ( $skip ) {
+		$args['exclude'] = array_merge( isset( $args['exclude'] ) ? (array) $args['exclude'] : array(), $skip );
+	}
+
+	return $args;
 }
-add_filter( 'wp_sitemaps_taxonomies', 'boi_sitemap_taxonomies' );
+add_filter( 'wp_sitemaps_taxonomies_query_args', 'boi_sitemap_category_args', 10, 2 );
+
+/**
+ * Tag archives with fewer than two articles are not indexed, so they are
+ * left out of the sitemap too.
+ *
+ * @param array  $args     Term query arguments.
+ * @param string $taxonomy Taxonomy name.
+ * @return array
+ */
+function boi_sitemap_tag_args( $args, $taxonomy ) {
+	if ( 'post_tag' !== $taxonomy ) {
+		return $args;
+	}
+
+	$skip = array();
+
+	foreach ( get_terms( array( 'taxonomy' => 'post_tag', 'hide_empty' => false ) ) as $term ) {
+		if ( (int) $term->count < 2 ) {
+			$skip[] = (int) $term->term_id;
+		}
+	}
+
+	if ( $skip ) {
+		$args['exclude'] = $skip;
+	}
+
+	return $args;
+}
+add_filter( 'wp_sitemaps_taxonomies_query_args', 'boi_sitemap_tag_args', 10, 2 );
+
+/**
+ * Address of the theme's image sitemap.
+ *
+ * @return string
+ */
+function boi_image_sitemap_url() {
+	return home_url( '/sitemap-images.xml' );
+}
+
+/**
+ * Whether the theme serves its own image sitemap. Rank Math lists the images
+ * of each post in its own sitemap, so the theme leaves the job to it.
+ *
+ * @return bool
+ */
+function boi_image_sitemap_enabled() {
+	return ! defined( 'RANK_MATH_VERSION' ) && (bool) get_option( 'blog_public' ) && (bool) apply_filters( 'boi_image_sitemap', true );
+}
+
+/**
+ * Serves /sitemap-images.xml: every published, listed article with its
+ * featured image and the images set in its text, in the image sitemap format
+ * the guide recommends.
+ *
+ * @param WP $wp Request.
+ * @return void
+ */
+function boi_serve_image_sitemap( $wp ) {
+	if ( 'sitemap-images.xml' !== $wp->request || ! boi_image_sitemap_enabled() ) {
+		return;
+	}
+
+	status_header( 200 );
+	header( 'Content-Type: application/xml; charset=UTF-8' );
+	header( 'X-Robots-Tag: noindex, follow' );
+
+	echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+	echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' . "\n";
+
+	// Every article, 200 at a time: whole posts with their meta in one query
+	// per batch, and their featured images primed in one more.
+	for ( $paged = 1; ; $paged++ ) {
+		$posts = get_posts(
+			array(
+				'post_type'              => 'post',
+				'post_status'            => 'publish',
+				'posts_per_page'         => 200,
+				'paged'                  => $paged,
+				'no_found_rows'          => true,
+				'update_post_term_cache' => false,
+				'has_password'           => false,
+				'orderby'                => array(
+					'modified' => 'DESC',
+					'ID'       => 'DESC',
+				),
+				'suppress_filters'       => false,
+			)
+		);
+
+		if ( ! $posts ) {
+			break;
+		}
+
+		$thumbs = array_filter( array_map( 'get_post_thumbnail_id', $posts ) );
+
+		if ( $thumbs && function_exists( '_prime_post_caches' ) ) {
+			_prime_post_caches( array_map( 'intval', $thumbs ), false, true );
+		}
+
+		boi_print_image_sitemap_urls( $posts );
+
+		if ( count( $posts ) < 200 ) {
+			break;
+		}
+	}
+
+	echo "</urlset>\n";
+	exit;
+}
+add_action( 'parse_request', 'boi_serve_image_sitemap', 1 );
+
+/**
+ * Prints the image sitemap entries for one batch of articles.
+ *
+ * @param WP_Post[] $posts Articles.
+ * @return void
+ */
+function boi_print_image_sitemap_urls( $posts ) {
+	foreach ( $posts as $post ) {
+		if ( ! $post instanceof WP_Post || ( function_exists( 'boi_is_unlisted_anywhere' ) && boi_is_unlisted_anywhere( $post ) ) ) {
+			continue;
+		}
+
+		$images = array();
+		$main   = function_exists( 'boi_article_image_object' ) ? boi_article_image_object( $post ) : null;
+
+		if ( $main && ! empty( $main['url'] ) ) {
+			$images[] = $main['url'];
+		}
+
+		if ( function_exists( 'boi_inline_image_objects' ) ) {
+			foreach ( boi_inline_image_objects( $post ) as $node ) {
+				if ( ! empty( $node['url'] ) ) {
+					$images[] = $node['url'];
+				}
+			}
+		}
+
+		$images = array_unique( $images );
+
+		if ( ! $images ) {
+			continue;
+		}
+
+		echo "\t<url>\n\t\t<loc>" . esc_url( get_permalink( $post ) ) . "</loc>\n";
+
+		foreach ( $images as $image ) {
+			echo "\t\t<image:image><image:loc>" . esc_url( $image ) . "</image:loc></image:image>\n";
+		}
+
+		echo "\t</url>\n";
+	}
+}
+
+/**
+ * Names the image sitemap in robots.txt, next to the core sitemap.
+ *
+ * @param string $output Existing robots.txt content.
+ * @param bool   $public Whether the site is public.
+ * @return string
+ */
+function boi_robots_txt_image_sitemap( $output, $public ) {
+	if ( $public && boi_image_sitemap_enabled() ) {
+		$output .= "\nSitemap: " . esc_url_raw( boi_image_sitemap_url() ) . "\n";
+	}
+
+	return $output;
+}
+add_filter( 'robots_txt', 'boi_robots_txt_image_sitemap', 20, 2 );

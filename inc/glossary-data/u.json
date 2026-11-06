@@ -21,7 +21,7 @@
    "sharia-and-hudud",
    "women-in-the-prophets-life",
    "fate-and-free-will",
-   "crusades-5-facts",
+   "crusades-facts",
    "black-stone-and-kissing"
   ],
   "aliases": [
@@ -93,7 +93,7 @@
  {
   "slug": "umrah",
   "title": "Umrah",
-  "type": "term",
+  "type": "worship",
   "ar": "عمرة",
   "tr": "ʿumra",
   "def": "The lesser pilgrimage, which can be made at any time of year.",
@@ -130,7 +130,7 @@
    "hukm"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-'Urf",
    "Urf"
@@ -158,7 +158,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Usul al-Fiqh",
    "Usool al-Fiqh"
@@ -186,7 +186,7 @@
    "fiqh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Usul-i Fiqh"
   ],

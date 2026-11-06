@@ -132,11 +132,7 @@ function boi_render_related() {
 	$items = '';
 
 	foreach ( $related as $item ) {
-		$thumb = get_the_post_thumbnail( $item, 'medium_large', array( 'loading' => 'lazy' ) );
-
-		if ( '' === $thumb ) {
-			$thumb = boi_featured_image_fallback( '', $item->ID );
-		}
+		$thumb = boi_list_thumbnail( $item );
 
 		$items .= sprintf(
 			'<li class="boi-related__item">%1$s<a class="boi-related__link" href="%2$s">%3$s</a></li>',
@@ -215,6 +211,53 @@ function boi_render_author_card() {
 }
 
 /**
+ * A lead image: the featured image at the large size, or the bundled
+ * fallback. The lead image is the largest thing above the fold, whether it is
+ * an attachment or the bundled fallback: never lazy, fetched first. The front
+ * page's featured lead and the lead and list (inc/lead-list.php) share it.
+ *
+ * @param WP_Post $post  Post.
+ * @param string  $sizes The sizes attribute for the layout the image sits in.
+ * @param array   $attr  Further image attributes.
+ * @return string
+ */
+function boi_lead_image( $post, $sizes, $attr = array() ) {
+	$attr  = array_merge( $attr, array( 'sizes' => $sizes ) );
+	$thumb = get_the_post_thumbnail( $post, 'large', $attr );
+
+	if ( '' === $thumb ) {
+		$thumb = boi_featured_image_fallback( '', $post->ID, 0, 'large', $attr );
+	}
+
+	if ( false !== strpos( $thumb, ' loading="lazy"' ) ) {
+		$thumb = str_replace( ' loading="lazy"', '', $thumb );
+	}
+	if ( false === strpos( $thumb, 'fetchpriority=' ) ) {
+		$thumb = preg_replace( '/<img\b/', '<img fetchpriority="high"', $thumb, 1 );
+	}
+
+	return $thumb;
+}
+
+/**
+ * A list thumbnail: the featured image at the medium-large size, lazy, or the
+ * bundled fallback. "Keep reading" and the lead and list share it.
+ *
+ * @param WP_Post $item Post.
+ * @param array   $attr Further image attributes.
+ * @return string
+ */
+function boi_list_thumbnail( $item, $attr = array() ) {
+	$thumb = get_the_post_thumbnail( $item, 'medium_large', array_merge( array( 'loading' => 'lazy' ), $attr ) );
+
+	if ( '' === $thumb ) {
+		$thumb = boi_featured_image_fallback( '', $item->ID, 0, '', $attr );
+	}
+
+	return $thumb;
+}
+
+/**
  * Renders the most recent piece as a wide lead card on the front page.
  *
  * @return string
@@ -237,24 +280,7 @@ function boi_render_featured_lead() {
 	// The card shows the image in its left column (about 46 per cent of the
 	// wide width) and full width below 782 pixels; the sizes say so, so the
 	// browser fetches the rendition that fits rather than the 1024 one.
-	$thumb = get_the_post_thumbnail(
-		$post,
-		'large',
-		array( 'sizes' => '(max-width: 781px) calc(100vw - 4rem), (max-width: 1280px) calc(50vw - 3rem), 610px' )
-	);
-
-	if ( '' === $thumb ) {
-		$thumb = boi_featured_image_fallback( '', $post->ID );
-	}
-
-	// The lead image is the largest thing above the fold, whether it is an
-	// attachment or the bundled fallback: never lazy, fetched first.
-	if ( false !== strpos( $thumb, ' loading="lazy"' ) ) {
-		$thumb = str_replace( ' loading="lazy"', '', $thumb );
-	}
-	if ( false === strpos( $thumb, 'fetchpriority=' ) ) {
-		$thumb = preg_replace( '/<img\b/', '<img fetchpriority="high"', $thumb, 1 );
-	}
+	$thumb = boi_lead_image( $post, '(max-width: 781px) calc(100vw - 4rem), (max-width: 1280px) calc(50vw - 3rem), 610px' );
 
 	return sprintf(
 		'<article class="boi-lead alignwide">

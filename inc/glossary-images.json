@@ -456,6 +456,61 @@
     "width": 800,
     "height": 533
    }
+  ],
+  "worship": [
+   {
+    "alt": "Worshippers at prayer in the Fatih Mosque",
+    "artist": "Mors et Vita",
+    "file": "worship-1.avif",
+    "height": 533,
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Muslims_praying_at_Fatih_Mosque.jpg",
+    "width": 800
+   }
+  ],
+  "law": [
+   {
+    "alt": "A manuscript of Tahdhib al-Ahkam, a book of rulings",
+    "artist": "Library, Museum and Document Center of the Iranian Parliament",
+    "file": "law-1.avif",
+    "height": 533,
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tahdhib_al-Ahkam.jpg",
+    "width": 800
+   }
+  ],
+  "belief": [
+   {
+    "alt": "The inner dome of the Sheikh Lotfollah Mosque in Isfahan",
+    "artist": "Phillip Maiwald (Nikopol)",
+    "file": "belief-1.avif",
+    "height": 533,
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Isfahan_Lotfollah_mosque_ceiling_symmetric.jpg",
+    "width": 800
+   }
+  ],
+  "scripture": [
+   {
+    "alt": "A folio from an early Quran manuscript in Kufic script",
+    "artist": "Unknown artist",
+    "file": "scripture-1.avif",
+    "height": 533,
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Qur%27an_(MS_M.712,_f._19v).jpg",
+    "width": 800
+   }
+  ],
+  "ethics": [
+   {
+    "alt": "Shops in the Grand Bazaar of Istanbul",
+    "artist": "Mickey Mystique",
+    "file": "ethics-1.avif",
+    "height": 533,
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bazaar_Kapal%C4%B1%C3%A7ar%C5%9F%C4%B1_in_Istanbul,_01.jpg",
+    "width": 800
+   }
   ]
  }
 }

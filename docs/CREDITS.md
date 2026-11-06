@@ -1,10 +1,25 @@
 # Credits
 
+This is the theme's one resources file: its copyright, its licence, and the
+licence and source of every bundled font, icon, image and adapted piece of code.
+
+## Copyright and licence
+
+Best of Islam, Copyright 2026 Mohd Elfie Nieshaem Juferi. The theme's
+code is licensed under the GNU General Public License, version 3 or later.
+The full text is in `LICENSE`; see https://www.gnu.org/licenses/gpl-3.0.html.
+
+Bundled resources keep their owners' licences and are not relicensed. The
+theme loads none of them from another server: every font, icon and image ships
+in `assets/`.
+
 ## Features adapted from plugins
 
-Three features of this theme are adapted from plugins released under the GNU
-General Public License, version 2 or later, as the theme is. Their authors
-are credited here with thanks.
+Four features of this theme are adapted from plugins released under the GNU
+General Public License, version 2 or later, which allows them to be carried
+under the theme's version 3 or later. Reading Progress Bar's readme says
+GPLv2; its main file, `reading-progressbar.php`, declares `GPL-2.0+`, and that
+header is the grant. Their authors are credited here with thanks.
 
 - **Unlisted posts and pages** (`inc/unlist.php`), adapted from Unlist Posts
   & Pages 1.2.1 by Nikhil Chavan, https://www.nikhilchavan.com/
@@ -12,11 +27,21 @@ are credited here with thanks.
   Pretty Search Permalinks 1.3 by Angel Costa, https://netmundo.com.br/
 - **Custom login address** (`inc/login.php`), adapted from WPS Hide Login
   1.9.18 by WPServeur, NicolasKulka and wpformation, https://wpserveur.net
+- **Reading progress bar** (`inc/reading-progress.php`), adapted from Reading
+  Progress Bar 1.3.1 by Jean-Baptiste Audras, https://jeanbaptisteaudras.com/
 
 ## Icons
 
 Minimalist Social & Platform Icons Pack 2.8, under the GNU General Public
 License. See `assets/icons/LICENSE.txt`.
+
+## Theme graphics
+
+The logo, the marks, the favicons and the arrow in `assets/images/`, and the
+geometric graphics `bin/make-original-graphics.py` draws for articles with no
+suitable photograph, are the theme's own and share its licence.
+`assets/images/lanat-allah.svg` comes from the sister theme injil.help, which
+has the same owner.
 
 ## Images
 
@@ -29,6 +54,9 @@ on the Sources and standards page, and the credits are recorded in
 ## Fonts
 
 - **EB Garamond** (`assets/fonts/eb-garamond/`), by Georg Duffner, Octavio Pardo and the EB Garamond Project Authors, under the SIL Open Font Licence 1.1. Regular, Medium, Bold, Italic and Bold Italic, converted to WOFF2. It sets the running text. The licence text travels with the files in `assets/fonts/eb-garamond/OFL.txt`.
+- **Vollkorn** (`assets/fonts/vollkorn/`), by Friedrich Althausen and the Vollkorn Project Authors, under the SIL Open Font Licence 1.1. Variable weight, upright and italic, as WOFF2. It sets the site name. Licence text in `assets/fonts/vollkorn/OFL.txt`.
+- **Platypi** (`assets/fonts/platypi/`), by David Sargent and the Platypi Project Authors, under the SIL Open Font Licence 1.1. Variable weight, upright and italic, as WOFF2. It sets the headings. Licence text in `assets/fonts/platypi/OFL.txt`.
+- **Ysabeau Office** (`assets/fonts/ysabeau-office/`), by Christian Thalmann (Catharsis Fonts) and the Ysabeau Project Authors, under the SIL Open Font Licence 1.1. Variable weight, upright and italic, as WOFF2. It sets buttons and interface labels. Licence text in `assets/fonts/ysabeau-office/OFL.txt`.
 - **Noto Naskh Arabic** (`assets/fonts/scripts/noto-naskh-arabic.woff2`), by
   Google and the Noto Project Authors, under the SIL Open Font Licence 1.1,
   https://openfontlicense.org/. It sets the Arabic in the Glossary and in

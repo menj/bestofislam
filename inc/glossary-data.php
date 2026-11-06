@@ -53,13 +53,18 @@ function boi_glossary_terms() {
  */
 function boi_glossary_types() {
 	return array(
-		'term'    => __( 'Term', 'bestofislam' ),
-		'person'  => __( 'Person', 'bestofislam' ),
-		'prophet' => __( 'Prophet', 'bestofislam' ),
-		'place'   => __( 'Place', 'bestofislam' ),
-		'event'   => __( 'Event', 'bestofislam' ),
-		'group'   => __( 'Group', 'bestofislam' ),
-		'book'    => __( 'Book', 'bestofislam' ),
-		'topic'   => __( 'Topic', 'bestofislam' ),
+		'term'      => __( 'Term', 'bestofislam' ),
+		'worship'   => __( 'Worship', 'bestofislam' ),
+		'belief'    => __( 'Belief', 'bestofislam' ),
+		'law'       => __( 'Law', 'bestofislam' ),
+		'scripture' => __( 'Scripture', 'bestofislam' ),
+		'ethics'    => __( 'Ethics & Society', 'bestofislam' ),
+		'person'    => __( 'Person', 'bestofislam' ),
+		'prophet'   => __( 'Prophet', 'bestofislam' ),
+		'place'     => __( 'Place', 'bestofislam' ),
+		'event'     => __( 'Event', 'bestofislam' ),
+		'group'     => __( 'Group', 'bestofislam' ),
+		'book'      => __( 'Book', 'bestofislam' ),
+		'topic'     => __( 'Topic', 'bestofislam' ),
 	);
 }

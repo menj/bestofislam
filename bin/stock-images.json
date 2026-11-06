@@ -407,7 +407,7 @@
    }
   ]
  },
- "crusades-5-facts": {
+ "crusades-facts": {
   "inline": [
    {
     "keep": true,
@@ -480,10 +480,14 @@
     "caption": "Clouds drifting over a night sky. The Quran says the Prophet saw Gabriel on the clear horizon (81:23; 53:7)."
    },
    {
-    "src": "pixabay",
-    "id": 1835825,
-    "alt": "A cave entrance with light and a small silhouette.",
+    "keep": true,
     "caption": "A cave opening full of light. Muhammad ﷺ used to retreat to the cave of Hira before the first revelation."
+   },
+   {
+    "src": "pexels",
+    "id": "38336046",
+    "alt": "The Hira cave on Jabal al-Nour near Makkah under a blue sky.",
+    "caption": "The Hira cave on Jabal al-Nour near Mecca, where the Prophet ﷺ retreated before the first revelation."
    }
   ]
  },
@@ -762,114 +766,90 @@
   ]
  },
  "early-christians-charged-others-with-corrupting-scripture": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Codex Vaticanus B, 2Thess. 3,11-18, Hebr. 1,1-2,2.jpg",
-   "alt": "A page of the Codex Vaticanus, a fourth-century Greek Bible manuscript.",
-   "caption": "A page of the Codex Vaticanus, a fourth-century Greek Bible. Early Christians charged Jews, heretics and each other with changing scripture."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "keep": true,
     "caption": "The Great Isaiah Scroll. Justin said the Jews had cut passages out of their scriptures, and the manuscripts known today do not bear him out."
    },
    {
-    "src": "commons",
-    "id": "File:Codex Sinaiticus.jpg",
-    "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+    "keep": true,
     "caption": "The Codex Sinaiticus. It ends the Gospel of Mark at 16:8, one of the places where Christian scribes left a record of their own textual history."
    },
    {
-    "src": "commons",
-    "id": "File:Rabbula Gospels (9v & 10r; Four Evangelists).jpg",
-    "alt": "Two pages of the Rabbula Gospels, a Syriac Gospel book of 586, showing the four evangelists.",
+    "keep": true,
     "caption": "The Rabbula Gospels, a Syriac Gospel book copied in 586. In the early centuries the charge of altering scripture was an ordinary move in argument."
+   },
+   {
+    "src": "commons",
+    "id": "File:Papyrus 52.jpg",
+    "alt": "Papyrus 52, a small fragment of the Gospel of John from the early second century.",
+    "caption": "Papyrus 52, a small fragment of the Gospel of John from the early second century and the oldest known New Testament manuscript text, shown with an English rendering of its words. Celsus said the Gospel had been remodelled; early manuscripts are the evidence for the question."
    }
   ]
  },
  "quran-word-kitab-meanings": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Folio Blue Quran Met 2004.88.jpg",
-   "alt": "A folio of the Blue Quran in gold Kufic script on blue-dyed parchment.",
-   "caption": "A folio of the Blue Quran, ninth to tenth century. The Quran uses the word kitāb for a decree, a heavenly Book, a revelation and a written page."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Folio from a Koran (8th-9th century).jpg",
-    "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
+    "keep": true,
     "caption": "A Quran folio in Kufic script. The Quran speaks of a Mother of the Book in heaven behind every revelation."
    },
    {
-    "src": "commons",
-    "id": "File:Vangeli di Rabbula, Biblioteca Medicea Laurenziana, Cod. Plut. I, 56, fol. 13r.jpg",
-    "alt": "A folio of the Rabbula Gospels, a Syriac Gospel book of 586.",
+    "keep": true,
     "caption": "A page of the Rabbula Gospels, a Syriac Gospel book of 586. The Quran says God gave Jesus the Gospel, which the written Gospels may carry in part."
    },
    {
-    "src": "commons",
-    "id": "File:Hebrew Sefer Torah Scroll side view.JPG",
-    "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+    "keep": true,
     "caption": "A Torah scroll. Waraqa is reported to have written from the Gospel in Hebrew letters, as much as God wished him to write."
+   },
+   {
+    "src": "pexels",
+    "id": "35689882",
+    "alt": "Close-up of calligraphy on parchment with antique writing tools on a wooden desk.",
+    "caption": "Calligraphy on parchment with antique writing tools. The Quran knows pages and pens, and says plainly when it means them."
    }
   ]
  },
  "trinity-in-the-hebrew-bible-tested": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Open Torah Case with Scroll.jpg",
-   "alt": "An open Torah case with the scroll inside.",
-   "caption": "An open Torah case. The Hebrew Bible says that God is one, and the Christian doctrine of three persons is read into it from later texts."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Hebrew Sefer Torah Scroll side view.JPG",
-    "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+    "keep": true,
     "caption": "A Torah scroll. Genesis 1:26 says \"Let us make man\", a plural that Jews, Christians and Muslims read differently."
    },
    {
-    "src": "commons",
-    "id": "File:Abraham's Oak) - Bonfils LCCN92500736.jpg",
-    "alt": "A nineteenth-century photograph of Abraham's Oak near Hebron.",
+    "keep": true,
     "caption": "Abraham's Oak near Hebron, photographed in the nineteenth century. In several stories of the Hebrew Bible a messenger speaks in the voice of God."
    },
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "keep": true,
     "caption": "The Great Isaiah Scroll, copied before the time of Jesus. No text from before the New Testament states a Trinity."
+   },
+   {
+    "src": "commons",
+    "id": "File:Angelsatmamre-trinity-rublev-1410.jpg",
+    "alt": "Andrei Rublev's icon of the three angels at Mamre, the Trinity icon of about 1411.",
+    "caption": "Andrei Rublev's icon of the Trinity, painted about 1411 from Genesis 18. Christian art reads the three visitors as the Trinity; the Hebrew text says that God is one."
    }
   ]
  },
  "matthew-fulfilment-quotations-checked": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Codex Sinaiticus.jpg",
-   "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
-   "caption": "The Codex Sinaiticus, a fourth-century Greek Bible containing the Gospel of Matthew. Matthew's quotations of the Hebrew Bible differ from the originals in several places."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "keep": true,
     "caption": "The Great Isaiah Scroll. Matthew reads Isaiah 7:14 and Isaiah 42 in ways that move them beyond their first setting."
    },
    {
-    "src": "commons",
-    "id": "File:The Commentary on Habakkuk Scroll (1QpHab) Written in Hebrew - Google Art Project.jpg",
-    "alt": "The Commentary on Habakkuk scroll from Qumran, written in Hebrew.",
+    "keep": true,
     "caption": "The Habakkuk commentary from Qumran, which reads a prophet's words as pointing to the community's own time, a method close to Matthew's."
    },
    {
-    "src": "commons",
-    "id": "File:Codex Vaticanus B, 2Thess. 3,11-18, Hebr. 1,1-2,2.jpg",
-    "alt": "A page of the Codex Vaticanus, a fourth-century Greek Bible manuscript.",
+    "keep": true,
     "caption": "A page of the Codex Vaticanus. Matthew's quotations often follow the Greek form of the Hebrew Bible."
+   },
+   {
+    "src": "pexels",
+    "id": "5311784",
+    "alt": "Close-up of an open Bible displaying Old Testament scriptures.",
+    "caption": "An open Bible at an Old Testament page. Matthew's Micah quotation turns \"small\" into \"in no way least\"."
    }
   ]
  },
@@ -1080,6 +1060,902 @@
     "id": "36306963",
     "alt": "A vintage manuscript with Arabic script open on aged pages.",
     "caption": "An old Arabic manuscript. Radiocarbon dating puts the Birmingham leaves and the lower text of the Sana'a palimpsest between the late sixth and the seventh century."
+   }
+  ]
+ },
+ "prophet-died-poisoning": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Nizwa Fort and its oasis in Oman. Khaybar was an oasis of forts and date palms in northern Arabia; the photograph is of Oman, not Khaybar."
+   },
+   {
+    "keep": true,
+    "caption": "Ripe dates on a palm. Khaybar was a date-growing oasis."
+   },
+   {
+    "src": "pexels",
+    "id": "19863261",
+    "alt": "Roasted lamb served on a wooden platter with lime slices.",
+    "caption": "Roasted lamb on a wooden platter. In the reports the poison was put in a roasted sheep."
+   }
+  ]
+ },
+ "instruments-islamic-world": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A sundial among autumn leaves. Instruments for measuring time and the sky were central to the work this article describes."
+   },
+   {
+    "keep": true,
+    "caption": "An Islamic astrolabe in a museum. Muslim astronomers refined the astrolabe into a portable instrument for finding time, direction and the stars."
+   },
+   {
+    "src": "pexels",
+    "id": "29847626",
+    "alt": "A close-up of an antique celestial globe showing constellations.",
+    "caption": "An antique globe of the constellations. Observatories in the Islamic world scaled up the instruments used to chart the sky."
+   }
+  ]
+ },
+ "moon-craters": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A half moon in the night sky. Many craters on the near side carry the Latinised names of Muslim astronomers."
+   },
+   {
+    "keep": true,
+    "caption": "A full moon with its craters visible. Albategnius is named for al-Battani and Alhazen for Ibn al-Haytham."
+   },
+   {
+    "src": "pexels",
+    "id": "7615732",
+    "alt": "High-resolution view of the Moon's craters and surface textures.",
+    "caption": "The Moon's cratered surface. Craters named for Muslim astronomers lie across the near side and, in al-Biruni's case, on the far side."
+   }
+  ]
+ },
+ "indonesia": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The Baiturrahman Grand Mosque in Banda Aceh, Indonesia. More Muslims live in Indonesia than in any other country."
+   },
+   {
+    "keep": true,
+    "caption": "A mosque in Indonesia with a domed roof and two minarets. Indonesian Muslims pray in Arabic and speak Indonesian."
+   },
+   {
+    "src": "pexels",
+    "id": "37221142",
+    "alt": "The grand dome and architecture of Istiqlal Mosque in Jakarta.",
+    "caption": "Istiqlal Mosque in Jakarta. Its name means independence, and it is Indonesia's national mosque."
+   }
+  ]
+ },
+ "dome-inscriptions": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The Dome of the Rock seen through ancient arches in Jerusalem. The inscriptions inside it are dated to 72 AH."
+   },
+   {
+    "keep": true,
+    "caption": "Jerusalem seen from the Mount of Olives, with the Dome of the Rock lit by the sun. The inscriptions address Christians in the city of the Christian holy places."
+   },
+   {
+    "src": "pexels",
+    "id": "17646472",
+    "alt": "Close-up of intricate mosaic details on the Dome of the Rock.",
+    "caption": "Blue tilework on the outside of the Dome of the Rock, added in later centuries. The inscriptions discussed here are inside the building."
+   }
+  ]
+ },
+ "hajj-rites-explained": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An aerial view of the Kaaba in Mecca, with thousands of pilgrims circling it in tawaf."
+   },
+   {
+    "keep": true,
+    "caption": "A camel caravan travelling to Mecca in 1910. Pilgrims once made the journey this way."
+   },
+   {
+    "src": "pexels",
+    "id": "12765598",
+    "alt": "Thousands of pilgrims at Mount Arafat during Hajj.",
+    "caption": "Pilgrims at Mount Arafat. Standing there from noon until sunset is the central rite of Hajj."
+   }
+  ]
+ },
+ "raids-badr-and-the-conquest-of-mecca": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Golden light on desert hills. Badr lay on a caravan route in the Arabian desert; the photograph does not show Badr."
+   },
+   {
+    "keep": true,
+    "caption": "The arched ruins of an old stone building. The photograph is not of a site named in this article."
+   },
+   {
+    "src": "pexels",
+    "id": "38546870",
+    "alt": "Aerial view of the Grand Mosque in Mecca in daylight.",
+    "caption": "The Grand Mosque in Mecca from the air. The Prophet ﷺ entered the city in 8 AH and granted an amnesty to most of its people."
+   }
+  ]
+ },
+ "paul-and-the-law": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A Roman arch at Side on the south coast of Turkey, in the region Paul travelled through."
+   },
+   {
+    "keep": true,
+    "caption": "The ruins of Perge in Turkey. Paul and Barnabas passed through Perge on their first journey (Acts 13:13, 14:25)."
+   },
+   {
+    "src": "pexels",
+    "id": "4747529",
+    "alt": "Close-up of a Bible page showing scripture text and verses.",
+    "caption": "An open Bible; the page shown is from Genesis. In Matthew 5:17 to 18 Jesus says that not one stroke of the Law will pass away until all is accomplished."
+   }
+  ]
+ },
+ "quranic-stories-and-history": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A rock-cut tomb in a rugged desert landscape. Rock-cut tombs of this kind are the setting scholars link with Thamud."
+   },
+   {
+    "keep": true,
+    "caption": "The Obelisk Tomb at Petra, Jordan. Ad and Iram have not been securely placed on any map, and the sites travellers photograph, like this one, belong to later peoples."
+   },
+   {
+    "src": "pexels",
+    "id": "35332385",
+    "alt": "Aerial view of Masjid al-Haram and the Kaaba in Mecca with pilgrims gathered for prayer.",
+    "caption": "Masjid al-Haram and the Kaaba from the air. The Quran's chapter of the Elephant recalls an army that marched on Mecca."
+   }
+  ]
+ },
+ "fastest-growing-religion": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A globe turned to the Eurasian continent. Most Muslims live in Asia and not in the Arab world."
+   },
+   {
+    "keep": true,
+    "caption": "A vintage globe with a sepia world map behind it. The projections point to Muslims and Christians reaching parity in the next decades."
+   },
+   {
+    "src": "pexels",
+    "id": "35266860",
+    "alt": "Rows of worshippers inside Baitul Mukarram Mosque in Dhaka, viewed from above.",
+    "caption": "Worshippers in rows inside Baitul Mukarram Mosque in Dhaka, Bangladesh. The world's Muslim population grew by 347 million in a single decade."
+   }
+  ]
+ },
+ "covenant-of-the-prophets": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An early Quran leaf. The commentators read the messenger of 3:81 as the one who confirms what the prophets held."
+   },
+   {
+    "keep": true,
+    "caption": "The Aleppo Codex, photographed in 1910. Read with 7:157, Deuteronomy 18:18 promises a prophet like Moses."
+   },
+   {
+    "src": "pexels",
+    "id": "5207627",
+    "alt": "A stack of vintage letters tied with twine, a sepia photo and a handwritten note.",
+    "caption": "A bundle of old letters. Al-Ṭabarī and Ibn Kathir pass on what earlier commentators reported."
+   },
+   {
+    "src": "pexels",
+    "id": "14747971",
+    "alt": "Vintage books on library shelves in London.",
+    "caption": "Books on a library shelf. The verse says nothing about the state of the seventh-century copies."
+   }
+  ]
+ },
+ "ask-those-who-read-the-scripture": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The Gulf of Suez seen from orbit. The verse comes at the end of the story of Moses, Pharaoh and the sea."
+   },
+   {
+    "keep": true,
+    "caption": "A Persian version of al-Tabari's commentary, early thirteenth century. Al-Tabari's reports name Abdullah ibn Salam among those who could be asked."
+   },
+   {
+    "src": "pexels",
+    "id": "5192345",
+    "alt": "Hands pointing to text in a Torah scroll.",
+    "caption": "Hands on a Torah scroll. Those to be asked are the People of the Book who read the scripture, as witnesses."
+   }
+  ]
+ },
+ "muhammad-never-wrote-it-down": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A leaf of the Birmingham manuscript. Early copies fit the account of written pieces gathered after the Prophet."
+   },
+   {
+    "keep": true,
+    "caption": "Papyrus 75, about 200, at Luke 14. The Gospels carry no chain of named narrators back to Jesus."
+   },
+   {
+    "src": "pexels",
+    "id": "5425611",
+    "alt": "Hands writing in calligraphy on rustic parchment paper.",
+    "caption": "Hands writing on parchment. The Prophet ﷺ dictated the Quran to scribes as it came."
+   },
+   {
+    "src": "pexels",
+    "id": "34652787",
+    "alt": "A collection of ancient manuscripts with Arabic script.",
+    "caption": "Ancient Arabic manuscripts. Abu Bakr had the pages gathered, and Uthman made the standard copies."
+   }
+  ]
+ },
+ "ransom-bible-quran": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Codex Bezae, a Gospel book of about 400. Mark 10:45 speaks of a ransom for many."
+   },
+   {
+    "keep": true,
+    "caption": "A ram, painted in Mughal India. The sacrifice at the Hajj recalls the ram that ransomed Abraham's son (37:107)."
+   },
+   {
+    "src": "pexels",
+    "id": "38729301",
+    "alt": "A minimalist wooden balance scale on a black marble surface.",
+    "caption": "A balance scale. The Quran says that no ransom will be taken on the Last Day."
+   },
+   {
+    "src": "pexels",
+    "id": "5706784",
+    "alt": "An elderly man bent under a large sack, walking past an old building.",
+    "caption": "A man bent under a heavy sack. The Quran says no bearer of burdens bears another's burden (35:18)."
+   }
+  ]
+ },
+ "revelatory-exegesis": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. Daniel turns Jeremiah's seventy years into seventy weeks of years."
+   },
+   {
+    "keep": true,
+    "caption": "A Hebrew scroll. The Habakkuk commentary from Qumran, also a scroll, says the prophet did not know when the end would come."
+   },
+   {
+    "keep": true,
+    "caption": "Codex Washingtonianus at Mark 14. Matthew and Luke took over most of Mark and rewrote it."
+   },
+   {
+    "src": "pexels",
+    "id": "29342499",
+    "alt": "A close-up of an ancient manuscript with elaborate Arabic calligraphy and geometric designs.",
+    "caption": "An old Arabic manuscript. The Quran calls itself muhaymin over the earlier books."
+   }
+  ]
+ },
+ "who-changed-the-bible": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Codex Bezae carries many readings found in no other manuscript."
+   },
+   {
+    "keep": true,
+    "caption": "Codex Washingtonianus at Mark 16. It adds a passage after 16:14 that no other Greek manuscript has."
+   },
+   {
+    "src": "pexels",
+    "id": "51191",
+    "alt": "Handwritten letters and papers stacked together.",
+    "caption": "A stack of handwritten letters. Seven of the 13 letters under Paul's name are accepted as his."
+   },
+   {
+    "src": "pexels",
+    "id": "1650203",
+    "alt": "A person using a quill pen to write in a vintage notebook.",
+    "caption": "A quill and a notebook. Scribes made the Gospels agree with each other as they copied."
+   }
+  ]
+ },
+ "torah-on-the-cushion-hadith": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. The parallel accounts tell of a hand placed over the verse of stoning."
+   },
+   {
+    "keep": true,
+    "caption": "A synagogue, painted by Magnasco. The report shows a Torah in Jewish hands in Medina. It cannot show that the whole text was intact."
+   },
+   {
+    "src": "pexels",
+    "id": "5986494",
+    "alt": "A Sefer Torah scroll displayed on a bimah in a synagogue.",
+    "caption": "A Torah scroll on a bimah. The report shows a Torah in Jewish hands in Medina."
+   },
+   {
+    "src": "pexels",
+    "id": "9825398",
+    "alt": "Rolled vintage scrolls and a small apothecary bottle on a wooden surface.",
+    "caption": "Rolled scrolls. The report does not show that the whole text was intact."
+   }
+  ]
+ },
+ "seal-of-the-prophets": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Mecca in a lithograph of about 1820. Quran 5:3 was revealed at Arafat, outside Mecca, during the Farewell Pilgrimage."
+   },
+   {
+    "keep": true,
+    "caption": "A Quran page in Kufic script. The Quran calls itself the guardian over the books before it."
+   },
+   {
+    "keep": true,
+    "caption": "A brickmaker at work. The Prophet compared himself to the last brick that completes a house."
+   },
+   {
+    "src": "pexels",
+    "id": "37559006",
+    "alt": "Aged classic books lined up on wooden shelves.",
+    "caption": "Shelves of old books. Whether a later book may complete an earlier one is argued from inside each tradition."
+   }
+  ]
+ },
+ "gods-attributes-and-anthropomorphism": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Ayat al-Kursi (2:255) in calligraphy: the verse that speaks of God's knowledge and throne."
+   },
+   {
+    "keep": true,
+    "caption": "The night sky over a desert: the Quran points to creation as a sign of the Creator, who is not like it (42:11)."
+   },
+   {
+    "keep": true,
+    "caption": "A tiled dome with a pattern that repeats without a centre, an image of the infinite and not of God."
+   },
+   {
+    "src": "pexels",
+    "id": "36072208",
+    "alt": "Arabic calligraphy on stone walls of an old Islamic building.",
+    "caption": "Arabic calligraphy carved in stone. The later schools disagreed on what to do with the Quran's words about God's hand and face."
+   }
+  ]
+ },
+ "temporary-marriage-mutah": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An illustrated Arabic manuscript page. The rulings on mutah were recorded and argued over in books of hadith and law."
+   },
+   {
+    "keep": true,
+    "caption": "Travellers crossing the desert. The short permission for mutah came on campaigns and journeys, far from home."
+   },
+   {
+    "keep": true,
+    "caption": "Minarets at sunset in Konya. Sunni and Shia scholars still differ on whether mutah remains lawful."
+   },
+   {
+    "src": "pexels",
+    "id": "29342503",
+    "alt": "Detailed image of ancient Arabic calligraphy with decorative elements.",
+    "caption": "An old Arabic manuscript page. Scholars explained the repeated bans on mutah in two ways in their books of hadith and law."
+   }
+  ]
+ },
+ "muslims-by-the-numbers": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Pilgrims at the Kaaba in Mecca. Muslims are one of the most widely spread faith communities."
+   },
+   {
+    "keep": true,
+    "caption": "A world map. Pew Research Center's count of Muslims by country covers the decade from 2010 to 2020."
+   },
+   {
+    "keep": true,
+    "caption": "A market in Amman, Jordan: a Muslim-majority country in the Middle East and North Africa region."
+   },
+   {
+    "src": "pexels",
+    "id": "38307877",
+    "alt": "Colorful architectural details of a mosque in Kano, Nigeria.",
+    "caption": "A mosque in Kano, Nigeria. Sub-Saharan Africa held 369 million Muslims in 2020, by Pew Research Center's count."
+   }
+  ]
+ },
+ "kharijites-and-takfir": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Vehicles crossing a desert. The photograph is not of any place in this article; Ali's army marched across the deserts of Iraq and Syria."
+   },
+   {
+    "keep": true,
+    "caption": "Camel riders on sand dunes. The photograph is not of any place in this article."
+   },
+   {
+    "src": "pexels",
+    "id": "37196808",
+    "alt": "The golden domes and ornate designs of the Imam Ali Mosque in Najaf.",
+    "caption": "A shrine with golden domes and minarets in Iraq, described by its source as the Imam Ali Mosque in Najaf, which Shia Muslims venerate as Ali's resting place. A Kharijite, Ibn Muljam, struck Ali in Kufa in 40 AH."
+   }
+  ]
+ },
+ "funeral-dhikr-dua": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Prayer beads resting on an open book. Dhikr, remembrance of God, is counted on beads or on the fingers."
+   },
+   {
+    "keep": true,
+    "caption": "A hand holding prayer beads. Duʿāʾ, supplication, is the believer's plain speech to God."
+   },
+   {
+    "src": "pexels",
+    "id": "20189642",
+    "alt": "Traditional gravestones in a Muslim cemetery in Istanbul.",
+    "caption": "Gravestones in a Muslim cemetery in Istanbul. A Muslim grave is dug so that the body lies on its right side facing the qibla."
+   }
+  ]
+ },
+ "magic-jinn-and-satan-hadiths": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An old round stone well in a field. The report says the spell was put in a well."
+   },
+   {
+    "keep": true,
+    "caption": "A lantern on a dark table. The sayings about Satan in daily life concern small habits of the night and the home."
+   },
+   {
+    "src": "pexels",
+    "id": "14491621",
+    "alt": "A sun-bleached animal skull on dry rocky desert terrain.",
+    "caption": "A sun-bleached skull on dry ground. In one report, bones are the jinn's provision."
+   }
+  ]
+ },
+ "prophets-marriages-zaynab-and-others": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A tent lit at night under the Milky Way. Many of the Prophet's later marriages were tied to captives and campaigns."
+   },
+   {
+    "keep": true,
+    "caption": "A camel caravan in silhouette at sunset. Juwayriyah and Safiyya came into the community through raids on caravans and fortresses."
+   },
+   {
+    "src": "pexels",
+    "id": "38498729",
+    "alt": "The Prophet's Mosque in Madinah with its green dome and minarets.",
+    "caption": "The Prophet's Mosque in Madinah. The marriages discussed here were made in the city he led."
+   }
+  ]
+ },
+ "islam-religion-of-peace": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The inside of a decorated mosque dome. The Quran states the ban on killing in universal terms (5:32)."
+   },
+   {
+    "keep": true,
+    "caption": "Mosque domes with geometric patterns. The rules of war bind the winner."
+   },
+   {
+    "src": "pexels",
+    "id": "32033220",
+    "alt": "A tranquil courtyard garden in an Istanbul mosque.",
+    "caption": "A mosque courtyard in Istanbul. Islam and salam, peace, share the Arabic root s-l-m."
+   }
+  ]
+ },
+ "nabi-and-rasul": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "18491910",
+    "alt": "Ancient book pages with intricate Arabic calligraphy.",
+    "caption": "Pages of an old Arabic book. The Quran uses two words, nabi and rasul, and once uses them side by side."
+   }
+  ]
+ },
+ "messenger-to-every-nation": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "592753",
+    "alt": "A vintage world map on old paper.",
+    "caption": "An old world map. The Quran says that a warner has passed among every nation (35:24)."
+   }
+  ]
+ },
+ "muhammad-and-the-hebrew-prophets": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "39222072",
+    "alt": "An open Psalms book showing Hebrew and English text.",
+    "caption": "A book of Psalms in Hebrew and English. The Quran quotes the Psalms almost word for word (21:105)."
+   }
+  ]
+ },
+ "ishmael-in-the-quran-and-genesis": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "28209449",
+    "alt": "The Kaaba at dusk under a clear sky in Mecca.",
+    "caption": "The Kaaba at dusk. The Quran places Ishmael at the Kaaba with his father."
+   }
+  ]
+ },
+ "no-compulsion-in-religion": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "11255192",
+    "alt": "The architecture of Jama Masjid, a historic mosque in New Delhi.",
+    "caption": "Jama Masjid in Delhi. In India the dhimma was extended to Hindus from the first conquest."
+   }
+  ]
+ },
+ "holy-war-in-the-bible": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5192346",
+    "alt": "A hand pointing to text in a Torah scroll.",
+    "caption": "A hand pointing to Hebrew text in a Torah scroll. Deuteronomy 20 lays down rules for war, including total destruction."
+   },
+   {
+    "src": "pexels",
+    "id": "36756273",
+    "alt": "Krak des Chevaliers, a historic castle in Syria, framed by trees.",
+    "caption": "Krak des Chevaliers, a Crusader castle in Syria. The Church fought holy wars and called them that."
+   }
+  ]
+ },
+ "septuagint": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "commons",
+    "id": "File:P. Rylands 458.jpg",
+    "alt": "Papyrus Rylands 458, a fragment of the Greek Septuagint text of Deuteronomy.",
+    "caption": "Papyrus Rylands 458, a fragment of Deuteronomy in the Greek Septuagint, from the second century BCE."
+   },
+   {
+    "src": "pexels",
+    "id": "38374178",
+    "alt": "A close-up of an antique leather-bound book with ornate engraving and aged paper.",
+    "caption": "An antique leather-bound book. The early Church treated the Greek translation as inspired, and argued over whether to leave it."
+   }
+  ]
+ },
+ "oldest-bible-codices": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "35031603",
+    "alt": "An ancient manuscript with Latin text on yellowed pages.",
+    "caption": "An old book open at a page of Latin text. The three great Greek codices predate Islam; this photograph is of a much later book, not of a biblical codex."
+   },
+   {
+    "src": "pexels",
+    "id": "36878207",
+    "alt": "A close-up of an old, weathered book with tattered pages.",
+    "caption": "An old book with tattered pages. Early codices are full of corrections by later hands; this photograph is of an old book, not of a biblical codex."
+   }
+  ]
+ },
+ "a-father-says-this-is-islam": {
+  "featured": {
+   "src": "pexels",
+   "id": "29539105",
+   "alt": "A rustic wooden door with a dark frame on a white wall.",
+   "caption": "A closed door. Many accounts of leaving Islam are accounts of a household, and the sources can be checked against what was said inside it."
+  },
+  "inline": [
+   {
+    "src": "pexels",
+    "id": "12654941",
+    "alt": "A wooden house facade with a window reflecting the evening sky.",
+    "caption": "A house at evening. The Quran tells husbands to live with their wives in kindness (4:19)."
+   },
+   {
+    "src": "pexels",
+    "id": "327882",
+    "alt": "A pile of open books on a table.",
+    "caption": "Open books. The Quran asks, \"Are those who know equal to those who do not know?\" (39:9)."
+   },
+   {
+    "src": "pexels",
+    "id": "5184136",
+    "alt": "Hands holding in a gesture of connection and support.",
+    "caption": "Hands joined in support. Each person answers for her own deeds (6:164), and the Prophet ﷺ told Muslims to screen one another and not to expose."
+   },
+   {
+    "src": "pexels",
+    "id": "36626430",
+    "alt": "Two women reading the Quran inside a mosque in West Java, Indonesia.",
+    "caption": "Women reading the Quran in a mosque in West Java, Indonesia. The Prophet ﷺ said not to stop God's women from God's mosques."
+   }
+  ]
+ },
+ "sadness-and-depression-in-islam": {
+  "featured": {
+   "src": "pexels",
+   "id": "268832",
+   "alt": "Close-up of water droplets on a teal glass window.",
+   "caption": "Rain on a window. The Quran, the Prophet's sayings and the Muslim medical tradition all make room for grief."
+  },
+  "inline": [
+   {
+    "src": "pexels",
+    "id": "18714427",
+    "alt": "A lone person walks along a tranquil beach at sunset.",
+    "caption": "A figure walking alone at dusk. The Quran records Jacob's grief for Joseph, and how it dimmed his eyes (12:84)."
+   },
+   {
+    "src": "pexels",
+    "id": "8564636",
+    "alt": "Three candles burn with a warm glow in a dimly lit room.",
+    "caption": "Candles in a dim room. The Prophet ﷺ wept at his son's death and called it mercy."
+   },
+   {
+    "src": "pexels",
+    "id": "5407246",
+    "alt": "A flat lay of medical tools and supplies on a wooden desk.",
+    "caption": "Medical tools. The Prophet ﷺ told the Bedouin to make use of medical treatment."
+   },
+   {
+    "src": "pexels",
+    "id": "34344546",
+    "alt": "An open notebook with a handwritten poem, tea and a newspaper.",
+    "caption": "An open notebook with a poem. The Prophet ﷺ said that some poetry contains wisdom."
+   }
+  ]
+ },
+ "why-does-god-allow-suffering": {
+  "featured": {
+   "src": "pexels",
+   "id": "39630411",
+   "alt": "Dark clouds against a lightening sky at sunrise.",
+   "caption": "Dark clouds at sunrise. The argument from suffering is serious, and the Islamic sources take it so."
+  },
+  "inline": [
+   {
+    "src": "pexels",
+    "id": "2928186",
+    "alt": "An empty swing set amid fall leaves and foggy trees.",
+    "caption": "An empty swing among autumn leaves. The objection is felt most when a child is hurt."
+   },
+   {
+    "src": "pexels",
+    "id": "14542649",
+    "alt": "A tranquil desert oasis with large boulders, greenery and a calm stream.",
+    "caption": "A stream in a desert. \"With hardship will be ease\" (94:5 to 6)."
+   },
+   {
+    "src": "pexels",
+    "id": "10638724",
+    "alt": "Two hands reaching toward each other in warm light.",
+    "caption": "Two hands reaching toward each other. In the sources, relieving a brother's distress is a duty."
+   }
+  ]
+ },
+ "comma-johanneum": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5402688",
+    "alt": "A vintage still life with glass ink bottles, a quill pen and a leather-bound notebook.",
+    "caption": "A quill, ink and a notebook. The clause entered the printed Greek text through Erasmus in 1522; the photograph is a still life and not of his work."
+   },
+   {
+    "src": "pexels",
+    "id": "895449",
+    "alt": "A close-up of an open Bible with highlighted text.",
+    "caption": "An open Bible with a highlighted passage. Matthew 28:19 names Father, Son and Holy Spirit, and it does not do the same work as the clause."
+   }
+  ]
+ },
+ "old-testament-variant-readings": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5986484",
+    "alt": "Adorned Torah scrolls with silver crowns in a synagogue.",
+    "caption": "Torah scrolls in a synagogue. The rabbis chose between differing scrolls by majority, and the standard Hebrew text came later."
+   },
+   {
+    "src": "pexels",
+    "id": "7161376",
+    "alt": "The desert caves of Qumran National Park.",
+    "caption": "The caves of Qumran National Park. The Dead Sea Scrolls found there restore a missing paragraph of Samuel."
+   }
+  ]
+ },
+ "kings-and-chronicles-numbers": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "6159081",
+    "alt": "Ancient stone architecture and skyline in Jerusalem on a sunny day.",
+    "caption": "Jerusalem. The lists of the temple's furnishings and officers in Kings and Chronicles do not match."
+   },
+   {
+    "src": "pexels",
+    "id": "360941",
+    "alt": "A man writing with a quill pen on a manuscript indoors.",
+    "caption": "A copyist at work. Many of the number differences are best explained as copyist errors."
+   }
+  ]
+ },
+ "genealogies-of-jesus": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "6274899",
+    "alt": "Vintage family photo albums filled with black and white photographs.",
+    "caption": "Old family albums. Matthew and Luke give two different lines for Joseph, with different fathers."
+   },
+   {
+    "src": "pexels",
+    "id": "12085516",
+    "alt": "An antique open book with handwritten pages on a rustic wooden table.",
+    "caption": "An antique book with handwritten pages. Matthew's three groups of fourteen leave out four kings."
+   }
+  ]
+ },
+ "bible-alteration-claim-before-islam": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5192347",
+    "alt": "A hand pointing at text on an open Torah scroll.",
+    "caption": "A hand pointing at a Torah scroll. Jews and Samaritans accused each other of falsifying it."
+   },
+   {
+    "src": "pexels",
+    "id": "34640259",
+    "alt": "A vintage scene with candlelight and a handwritten manuscript on lace.",
+    "caption": "A handwritten manuscript by candlelight. Christians accused other Christians of altering scripture."
    }
   ]
  }

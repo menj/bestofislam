@@ -8,6 +8,39 @@ theme. Amend this file whenever a decision here is superseded.
 bestofislam.org, a listicle publication. Distinct from bestofislam.com, which
 runs a separate theme.
 
+## Fixed facts
+
+| Fact | Value |
+|---|---|
+| Site | bestofislam.org |
+| Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
+| Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
+| Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
+| Version | 1.100.21, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
+| Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
+| Text domain | `bestofislam` |
+| Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); eight tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
+| Seeded content | 8 sections, 23 categories, 160 tags, 152 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 797 Glossary entries (`inc/glossary-data/`) |
+| Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
+| Votes table | `{prefix}_boi_votes` |
+| Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
+| Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
+| wp-config switches | `BOI_SECURITY_LOCK`, `BOI_HIDE_LOGIN`, `BOI_KEEP_DEV_FILES`, `BOI_REMOVE_GIT_DIR`, `BOI_BLOCK_DIRECT_FILES` (README, Constants) |
+| Served documents | `readme.txt` and `CHANGELOG.md`, which the Theme Options footer links. On Apache every other Markdown file is refused by the theme `.htaccess`; on Nginx only if the host adds the rules in the README. `docs/` is removed on a live server (D52) |
+| Release zip | Built by `.github/workflows/package.yml` (`rsync` with exclusions, then `zip`); a local `git archive` of a clean checkout gives the same files, since `.gitattributes` export-ignores `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `/.claude` |
+
+These names are public identifiers. Renaming one is a breaking change and needs an upgrade note.
+
+## Contributor rules
+
+- Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
+- Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
+- English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
+- The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
+- Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).
+- A release updates the version in every place listed above, adds a `CHANGELOG.md` entry and its short form in `readme.txt`, adds a note to `docs/UPGRADING.md` when the owner must act, and passes every test in `tests/` and `bin/check-content.py`.
+
 ## Decisions
 
 ### D1. Everything ships in the child theme
@@ -191,6 +224,11 @@ through `page_for_posts` and rendered by `templates/home.html`. Keeping the two
 apart means the site always has one URL listing every article, whatever the
 front page later becomes.
 
+The first population sets the static front page. After that, Settings,
+Reading decides: later runs repair a static front page whose page has gone,
+and leave "Your latest posts" alone, and `templates/front-page.html` is used
+only while a static front page is set (1.98.0).
+
 ### D18. Content type is derived, not declared
 
 The site publishes two kinds of post. Listicles take the ranked format and are
@@ -363,7 +401,7 @@ corrected there is corrected everywhere, including the Markdown export used
 for replies elsewhere.
 
 FAQPage markup is emitted on the front page because the answers are there. Google limits FAQ rich results to a narrow class of sites,
-so the markup should not be expected to produce them.
+so the markup should not be expected to produce them. It stays for AI answer engines.
 
 ### D33. The site has a reading order
 
@@ -422,9 +460,10 @@ same credits shown beneath each image, so the licence a reader sees
 and the licence Google reads are one record. Markup Google no longer rewards,
 FAQ and list carousels, stays only because it describes its page accurately.
 
-### D40. Three plugins, rebuilt inside the theme
+### D40. Plugins rebuilt inside the theme
 
-Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide Login are
+Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading
+Progress Bar are
 rebuilt natively, in keeping with D1, and credited in docs/CREDITS.md. Each
 was rebuilt to suit the theme's own structure, never copied in whole:
 
@@ -432,6 +471,8 @@ was rebuilt to suit the theme's own structure, never copied in whole:
   is skipped by get_posts(), which builds most of the theme's modules.
 - Search redirects keep every query argument, since the theme's search
   filters travel as arguments and the plugin dropped them.
+- The progress bar is plain JavaScript and aria-hidden. It repeats the
+  scrollbar, and a progressbar role would be announced on every scroll.
 - The login address intercepts at wp_loaded, since a theme loads after the
   plugins_loaded hook the plugin used.
 
@@ -537,6 +578,92 @@ The rule applies to new images only: images already bundled, whether from
 Commons, Pexels or Pixabay, stay as they are and are not swapped. Every image
 still follows D30, which means it is credited and never depicts a prophet.
 
+### D49. Addresses carry no digits, and a renamed one redirects
+
+The owner's rule of 3 November 2026: an address names its subject, never a
+verse number, a count, a year or a `-2` suffix. The number stays in the title,
+the heading and the description. A renamed article or Glossary entry keeps
+its post. A request for its old address that would otherwise end in a 404
+gets a 301 to the new one; if a live post or page holds that address, it is
+served and nothing redirects. The dated addresses of the old permalinks,
+`/YYYY/MM/DD/<slug>/`, get a 301 to the post's address when that post is
+published (`boi_dated_slug_for()`). The map is
+`inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
+`boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
+
+### D50. The owner keeps all schema.org markup, in one graph per page
+
+The owner's rule of 3 November 2026: every schema.org type and property the
+site marks stays, including the ones Google Search does not use, since AI
+answer engines read them. A type is never removed. A new one goes on a page
+only when it describes something that page shows, or a plain fact about it.
+
+Each page has one JSON-LD graph, built in `inc/schema-graph.php` and joined by
+`@id`. With Rank Math's schema on, the theme adds its nodes to Rank Math's
+graph through `rank_math/json_ld` and prints nothing of its own.
+`tests/schema-graph-test.php` checks both cases.
+
+### D51. The front page tells one story
+
+The bands run in the order a reader meets the argument, and a new band takes
+its place in that order. The hero states the claim: every objection stated in
+its own terms and answered from the sources. The live counts show the size of
+the work. Step 1 puts the questions most often asked of Muslims, with short
+answers. Step 2, the editor's picks, gives the three pieces that carry the
+case in full, and steps 3 and 4 show the newest argument and the rest of the
+recent work. Step 5 is the reader's way in, the three-step first visit, and
+step 6 opens every section. The mission band closes the page with what the
+site is for and where the Reflections are.
+
+The order follows `.claude/FARUQI.md`: Islam's claims are public and open to
+test, so the questions come first and the evidence follows them. Each label
+carries its step number. Backgrounds alternate tint and white, with the
+counts and the picks dark, and a band that moves takes the background its
+neighbours need.
+
+### D52. Development files never stay on a live server
+
+The owner uploads the theme over FTP, `.git` included. A web-readable `.git`
+hands out the whole source history, and the tests, build scripts, docs and
+agent notes serve no page. On a production server `boi_remove_dev_files()`
+(`inc/housekeeping.php`) deletes the paths in `boi_dev_paths()`: `.git`,
+`.github`, `.githooks`, `.claude`, `tests`, `bin`, `docs`, `dist` and the
+editor files. It runs on activation and once per theme version, even when the
+folder is a git working tree, and on the first front-end request of a new
+version, since an FTP update fires no switch hook.
+
+The files stay only where they are worked on: `wp_get_environment_type()` is
+`local` or `development`, or `BOI_KEEP_DEV_FILES` is true in `wp-config.php`.
+`BOI_REMOVE_GIT_DIR` still works: true forces the cleanup
+with `.git`, even in a development environment, and false keeps `.git` on
+production while the rest goes. `BOI_KEEP_DEV_FILES` wins over both.
+
+Until the next admin page load deletes them, and on any server where PHP
+cannot, the web server refuses them. On Apache the theme keeps a second
+`.htaccess` section, "Best of Islam: block direct file access", beside
+"Block xmlrpc.php". It answers 403 for PHP files in `wp-includes` (except
+`js/tinymce/wp-tinymce.php` and `ms-files.php`), in `wp-admin/includes` and
+in the themes folder,
+for `wp-config.php`, `wp-settings.php`, `wp-config-sample.php`, `wp-admin/install.php`,
+`readme.html` and `license.txt`, for any path segment that starts with `.git`
+or `.claude`, and for the theme's `tests`, `bin`, `docs` and `dist` folders and
+editor files. The
+rules use mod_rewrite inside `<IfModule mod_rewrite.c>`, carry the site's own
+folder prefixes, and leave the admin, `admin-ajax.php`, `wp-cron.php`, the
+login page, the REST API and the editor's assets alone.
+`BOI_BLOCK_DIRECT_FILES` false in `wp-config.php` leaves the section out.
+The theme folder also ships its own `.htaccess` (mod_alias `RedirectMatch
+403` for every dot entry but `.well-known`, the dev folders and theme PHP;
+mod_rewrite for the dev folders by the path below the theme), and `tests/`,
+`bin/` and `docs/` each carry one that refuses everything in them. A
+`FilesMatch` there also refuses every Markdown file by name (`README.md`, the
+font notes), on any module set; `CHANGELOG.md` stays open, since the Theme
+Options footer links to it. Apache
+applies them before WordPress runs, so the files are refused even on the
+first request after an upload. The cleanup and the sync share one lock,
+`inc/lock.php`.
+Every PHP file in `tests` and `bin` exits unless it runs from the command line.
+
 ## Asset conventions
 
 CSS in `assets/css/`, JavaScript in `assets/js/`, fonts in `assets/fonts/`,
@@ -560,6 +687,22 @@ icons in `assets/icons/`, images in `assets/images/`; one file per concern.
 Prefix `boi_` for functions, `boi-` for CSS classes and handles, `bestofislam/`
 for block names, `bestofislam` for the text domain. Package archives follow
 `[theme name]-[version].zip`.
+
+### D53. The article anatomy, with no sales step
+
+The owner approved the article anatomy on 2026-11-05, with every sales prompt removed. A single article carries, in order: the breadcrumbs, the title, the excerpt, the meta row (date, reading time, "Updated", "Reviewed", the author), "In short" with the questions it answers, the contents (three sections up, unless a jump list shows), the text with a next step before its third section, the notes, "Read next" and the related cards. A next step is only ever the notes, the next piece in the reading order or the Contact page. FAQPage markup is emitted only for FAQ-style Details blocks on the page. The author card keeps the WordPress display name; no name was added.
+
+### D54. The theme is licensed GPL version 3 or later
+
+The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code adapted from GPLv2-or-later plugins may be carried under version 3. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
+
+### D55. Every theme ships a full favicon set
+
+The owner asked on 2026-11-05: "make sure you have favicon too." While no Site Icon is set, the theme prints its own icon tags (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`, `theme-color` #0D2B4F) on the site, the login screen and the admin, and answers `/favicon.ico` with `assets/images/favicon.ico`. Every icon is rendered from `favicon.svg`, the solid mark. A Site Icon always wins, and the theme then prints none of its own.
+
+### D56. Listings open with a lead and list where it makes sense
+
+The owner asked on 2026-11-05 to "only use this style of layout (not the colours) where it makes sense to do so." An audit marked three templates: Reflections (`home.html`), the sections (`taxonomy-listicle-topic.html`) and the archives (`archive.html`). On their first page the newest piece leads, large, with its credit below, and the next five stand in a list beside it; the grid below leaves those six out. Below five pieces, or with a lead that has neither a featured image nor a bundled one, the grid shows alone. The front page keeps its featured lead and is not changed. Colours, fonts and radii are the theme's own.
 
 ### D15. The glossary is pages, not a post type
 

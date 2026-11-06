@@ -159,10 +159,12 @@ function boi_render_entry( $attributes, $content ) {
 			)
 		);
 	} elseif ( '' !== $atts['imageUrl'] ) {
+		$size = boi_entry_image_size( $atts['imageUrl'] );
 		$media = sprintf(
-			'<figure class="boi-entry__media"><img src="%1$s" alt="%2$s" loading="lazy" /></figure>',
+			'<figure class="boi-entry__media"><img src="%1$s" alt="%2$s"%3$s loading="lazy" decoding="async" /></figure>',
 			esc_url( $atts['imageUrl'] ),
-			esc_attr( $atts['imageAlt'] )
+			esc_attr( $atts['imageAlt'] ),
+			$size ? sprintf( ' width="%d" height="%d"', $size[0], $size[1] ) : ''
 		);
 	}
 
@@ -293,4 +295,90 @@ function boi_entry_anchor( $attributes ) {
 	}
 
 	return 'entry-' . $slug;
+}
+
+/**
+ * Width and height of a media library image given by URL. A resized copy
+ * ("photo-300x200.jpg") is found through its original and measured as that
+ * size, never as the original.
+ *
+ * @param string $url Image URL.
+ * @return int[]|null Width and height, or null when the URL is not in the library.
+ */
+function boi_attachment_image_size( $url ) {
+	$id = attachment_url_to_postid( $url );
+
+	if ( ! $id ) {
+		$original = preg_replace( '/-\d+x\d+(\.[a-z0-9]+)(\?.*)?$/i', '$1', (string) $url );
+
+		if ( $original !== $url ) {
+			$id = attachment_url_to_postid( $original );
+		}
+	}
+
+	if ( ! $id ) {
+		return null;
+	}
+
+	$meta = wp_get_attachment_metadata( $id );
+
+	if ( ! is_array( $meta ) ) {
+		return null;
+	}
+
+	$file = wp_basename( (string) wp_parse_url( $url, PHP_URL_PATH ) );
+
+	if ( ! empty( $meta['sizes'] ) && is_array( $meta['sizes'] ) ) {
+		foreach ( $meta['sizes'] as $variant ) {
+			if ( ! empty( $variant['file'] ) && $variant['file'] === $file && ! empty( $variant['width'] ) && ! empty( $variant['height'] ) ) {
+				return array( (int) $variant['width'], (int) $variant['height'] );
+			}
+		}
+	}
+
+	if ( ! empty( $meta['width'] ) && ! empty( $meta['height'] ) && ( empty( $meta['file'] ) || wp_basename( $meta['file'] ) === $file ) ) {
+		return array( (int) $meta['width'], (int) $meta['height'] );
+	}
+
+	return null;
+}
+
+/**
+ * Width and height of an entry image given by URL, so the browser can hold
+ * its space before it loads. A media library file or a file bundled with the
+ * theme is measured; any other address gives nothing.
+ *
+ * @param string $url Image URL.
+ * @return int[]|null Width and height, or null when unknown.
+ */
+function boi_entry_image_size( $url ) {
+	$size = boi_attachment_image_size( $url );
+
+	if ( $size ) {
+		return $size;
+	}
+
+	$path  = (string) wp_parse_url( $url, PHP_URL_PATH );
+	$roots = array(
+		(string) wp_parse_url( get_stylesheet_directory_uri(), PHP_URL_PATH ) => get_stylesheet_directory(),
+		(string) wp_parse_url( get_template_directory_uri(), PHP_URL_PATH )   => get_template_directory(),
+	);
+
+	foreach ( $roots as $uri => $dir ) {
+		if ( '' === $uri || 0 !== strpos( $path, trailingslashit( $uri ) ) ) {
+			continue;
+		}
+
+		$file = $dir . substr( $path, strlen( $uri ) );
+
+		if ( false === strpos( $file, '..' ) && is_readable( $file ) ) {
+			$size = wp_getimagesize( $file );
+
+			if ( $size && $size[0] && $size[1] ) {
+				return array( (int) $size[0], (int) $size[1] );
+			}
+		}
+	}
+
+	return null;
 }

@@ -58,18 +58,26 @@ weight = {t: math.log(len(text) / n) for t, n in df.items()}
 
 # Hand-picked first choices where the score alone reads oddly.
 PINS = {
-    'islamophobia-5-facts': ['taqiyya-5-myths', 'war-and-killing-in-islam', 'islam-religion-of-peace', 'crusades-5-facts'],
-    'taqiyya-5-myths': ['kharijites-and-takfir', 'war-and-killing-in-islam', 'islamophobia-5-facts', 'islam-religion-of-peace'],
+    'islamophobia-facts': ['taqiyya-myths', 'war-and-killing-in-islam', 'islam-religion-of-peace', 'crusades-facts'],
+    'taqiyya-myths': ['kharijites-and-takfir', 'war-and-killing-in-islam', 'islamophobia-facts', 'islam-religion-of-peace'],
     'does-the-quran-allow-wife-beating': ['hijab-and-modesty', 'child-marriage-in-islam', 'questions-about-aisha', 'quranic-ethics'],
-    'hijab-and-modesty': ['does-the-quran-allow-wife-beating', 'questions-about-aisha', 'women-in-the-prophets-life', 'islamophobia-5-facts'],
+    'hijab-and-modesty': ['does-the-quran-allow-wife-beating', 'questions-about-aisha', 'women-in-the-prophets-life', 'islamophobia-facts'],
     'women-in-the-prophets-life': ['questions-about-aisha', 'companions-who-started-with-nothing', 'does-the-quran-allow-wife-beating', 'hijab-and-modesty'],
-    'kharijites-and-takfir': ['taqiyya-5-myths', 'war-and-killing-in-islam', 'islam-religion-of-peace', 'apostasy-in-islam'],
-    'war-and-killing-in-islam': ['islam-religion-of-peace', 'kharijites-and-takfir', 'crusades-5-facts', 'jizya'],
+    'kharijites-and-takfir': ['taqiyya-myths', 'war-and-killing-in-islam', 'islam-religion-of-peace', 'apostasy-in-islam'],
+    'war-and-killing-in-islam': ['islam-religion-of-peace', 'kharijites-and-takfir', 'crusades-facts', 'jizya'],
     'mosques-adapt-to-place': ['islamic-art-and-the-one-god', 'islam-in-china', 'dome-inscriptions', 'before-your-first-friday-prayer'],
     'islamic-art-and-the-one-god': ['mosques-adapt-to-place', 'dome-inscriptions', 'who-is-allah', 'islam-in-china'],
     'sharia-and-hudud': ['apostasy-in-islam', 'why-no-interest', 'war-and-killing-in-islam', 'jizya'],
     'why-no-interest': ['sharia-and-hudud', 'quranic-ethics', 'jizya', 'instruments-islamic-world'],
     'six-articles-of-faith': ['who-is-allah', 'five-pillars-explained', 'fate-and-free-will', 'end-of-time'],
+    'revelatory-exegesis': ['seal-of-the-prophets', 'christian-twin-of-the-islamic-dilemma', 'matthew-fulfilment-quotations-checked', 'islamic-dilemma'],
+    'seal-of-the-prophets': ['revelatory-exegesis', 'covenant-of-the-prophets', 'nabi-and-rasul', 'islamic-dilemma'],
+    'covenant-of-the-prophets': ['seal-of-the-prophets', 'ask-those-who-read-the-scripture', 'quran-verses-on-torah-and-gospel', 'deuteronomy-prophecy-and-the-paraclete'],
+    'ask-those-who-read-the-scripture': ['torah-on-the-cushion-hadith', 'covenant-of-the-prophets', 'islamic-dilemma', 'quran-verses-on-torah-and-gospel'],
+    'torah-on-the-cushion-hadith': ['ask-those-who-read-the-scripture', 'does-islam-teach-the-bible-was-corrupted', 'who-changed-the-bible', 'quran-verses-on-torah-and-gospel'],
+    'who-changed-the-bible': ['does-islam-teach-the-bible-was-corrupted', 'bible-alteration-claim-before-islam', 'muhammad-never-wrote-it-down', 'manuscript-transmission'],
+    'muhammad-never-wrote-it-down': ['who-changed-the-bible', 'uthman-copies', 'was-muhammad-illiterate-ummi', 'schacht-isnads-dating-hadith'],
+    'ransom-bible-quran': ['crucifixion-quran', 'ishmael-in-the-quran-and-genesis', 'relationship-with-god'],
 }
 
 related = {}

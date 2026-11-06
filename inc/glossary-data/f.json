@@ -28,7 +28,7 @@
  {
   "slug": "fahisha",
   "title": "Fahisha",
-  "type": "term",
+  "type": "ethics",
   "ar": "فاحشة",
   "tr": "fāḥisha",
   "def": "Shameful and indecent conduct, and especially unlawful sexual relations, which the Quran forbids.",
@@ -57,7 +57,7 @@
  {
   "slug": "fal-and-istikhara",
   "title": "Fal and istikhara",
-  "type": "topic",
+  "type": "worship",
   "ar": "استخارة",
   "tr": "Istikhāra",
   "def": "Islam forbids divination, but teaches the prayer of istikhara to ask God’s guidance in a decision.",
@@ -83,7 +83,7 @@
  {
   "slug": "family",
   "title": "Family",
-  "type": "topic",
+  "type": "ethics",
   "ar": "أسرة",
   "tr": "Usra",
   "def": "The Quran stresses ties of kinship, obedience to parents and mercy to children, and speaks of families reunited in Paradise (13:23).",
@@ -106,7 +106,7 @@
  {
   "slug": "faqir",
   "title": "Faqir",
-  "type": "term",
+  "type": "ethics",
   "ar": "فقير",
   "tr": "Faqīr",
   "def": "A poor person; the Quran uses it for those in need (9:60), and the term is also used of Sufi ascetics.",
@@ -125,7 +125,7 @@
  {
   "slug": "fatiha",
   "title": "Fatiha",
-  "type": "term",
+  "type": "scripture",
   "ar": "الفاتحة",
   "tr": "al-Fātiḥa",
   "def": "The opening chapter of the Quran, recited in every unit of the prayer.",
@@ -207,7 +207,7 @@
  {
   "slug": "fatwa",
   "title": "Fatwa",
-  "type": "term",
+  "type": "law",
   "ar": "فتوى",
   "tr": "Fatwā",
   "def": "A legal opinion given by a qualified scholar (<em>muftī</em>) in answer to a question; it is not binding.",
@@ -237,7 +237,7 @@
  {
   "slug": "fidya",
   "title": "Fidya",
-  "type": "term",
+  "type": "law",
   "ar": "فدية",
   "tr": "Fidya",
   "def": "A compensation, such as feeding the poor, in place of a fast or for a failure in the pilgrimage.",
@@ -262,7 +262,7 @@
  {
   "slug": "fig-and-olive",
   "title": "Fig and olive",
-  "type": "topic",
+  "type": "scripture",
   "ar": "تين",
   "tr": "Tīn",
   "def": "Chapter 95, “The Fig”, swears by the fig and the olive, and by Mount Sinai and the safe city of Mecca.",
@@ -287,7 +287,7 @@
  {
   "slug": "fighting",
   "title": "Fighting",
-  "type": "topic",
+  "type": "law",
   "ar": "قتال",
   "tr": "Qitāl",
   "def": "The Quran’s rules on fighting are limited: against those who attack, in defence, with justice, and ending when they stop.",
@@ -359,7 +359,7 @@
    "sharia-and-hudud",
    "why-no-interest"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": [],
   "faruqi": [
    {
@@ -388,7 +388,7 @@
    "library-of-alexandria",
    "apostasy-in-islam",
    "quranic-ethics",
-   "taqiyya-5-myths"
+   "taqiyya-myths"
   ],
   "aliases": []
  },
@@ -427,7 +427,7 @@
  {
   "slug": "fitra",
   "title": "Fitra",
-  "type": "term",
+  "type": "belief",
   "ar": "فطرة",
   "tr": "Fiṭra",
   "def": "The innate disposition with which every person is born, inclined to recognise God.",
@@ -454,7 +454,7 @@
  {
   "slug": "five-pillars",
   "title": "Five pillars",
-  "type": "topic",
+  "type": "worship",
   "ar": "أركان الإسلام",
   "tr": "arkān al-Islām",
   "def": "The five basic acts of Islam: the declaration of faith, prayer, zakat, fasting in Ramadan and the pilgrimage.",
@@ -478,7 +478,7 @@
  {
   "slug": "forgetting",
   "title": "Forgetting",
-  "type": "topic",
+  "type": "scripture",
   "ar": "نسيان",
   "tr": "Nisyān",
   "def": "The Quran says that God will make the Prophet recite so that he does not forget except what God wills (87:6–7), and some verses were caused to be forgotten.",
@@ -500,7 +500,7 @@
  {
   "slug": "forgiveness",
   "title": "Forgiveness",
-  "type": "topic",
+  "type": "belief",
   "ar": "مغفرة",
   "tr": "Maghfira",
   "def": "God forgives all sins for those who repent; the Quran also urges forgiveness between people.",
@@ -528,7 +528,7 @@
  {
   "slug": "freedom",
   "title": "Freedom",
-  "type": "topic",
+  "type": "ethics",
   "ar": "حرية",
   "tr": "Ḥurriyya",
   "def": "Islam teaches freedom of belief and liberation from servitude to anything but God; the Quran also retells the exodus from Egypt.",
@@ -555,7 +555,7 @@
  {
   "slug": "friday",
   "title": "Friday",
-  "type": "term",
+  "type": "worship",
   "ar": "جمعة",
   "tr": "Jumʿa",
   "def": "The day of congregational prayer, which the Quran says should interrupt trade for a time and then allow people to disperse for their work (62:9–10).",
@@ -580,7 +580,7 @@
  {
   "slug": "funeral",
   "title": "Funeral",
-  "type": "topic",
+  "type": "worship",
   "ar": "جنازة",
   "tr": "Janāza",
   "def": "The Muslim rites for the dead: washing, shrouding, a funeral prayer, and prompt burial in a simple grave.",
@@ -605,7 +605,7 @@
  {
   "slug": "furqan",
   "title": "Furqan",
-  "type": "term",
+  "type": "scripture",
   "ar": "فرقان",
   "tr": "Furqān",
   "def": "“The criterion”: the Quran’s name for itself and for the Torah, and the day of Badr.",
@@ -644,7 +644,7 @@
    "fasaqa"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Al-Fahishah",
    "Al-Fahsha'",
@@ -758,7 +758,7 @@
    "fatwa"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Fuqaha",
    "Fuqaha'"
@@ -786,7 +786,7 @@
    "kafir"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Fisq",
    "Fasiq",
@@ -895,7 +895,7 @@
    "allah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Fatih",
    "Al-Fattah",
@@ -924,7 +924,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Fatihah",
    "Fatihah",
@@ -954,7 +954,7 @@
    "qiraat"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Muqattaat",
    "Disjointed Letters",

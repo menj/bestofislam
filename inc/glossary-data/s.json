@@ -27,7 +27,7 @@
  {
   "slug": "sahih",
   "title": "Sahih",
-  "type": "term",
+  "type": "scripture",
   "ar": "صحيح",
   "tr": "ṣaḥīḥ",
   "def": "“Sound”: the highest grade of a hadith, and the title of the two most trusted hadith collections.",
@@ -57,7 +57,7 @@
  {
   "slug": "salah",
   "title": "Salah",
-  "type": "term",
+  "type": "worship",
   "ar": "صلاة",
   "tr": "ṣalāh",
   "def": "The ritual prayer, performed five times a day, the second pillar of Islam.",
@@ -119,7 +119,7 @@
  {
   "slug": "sawm",
   "title": "Sawm",
-  "type": "term",
+  "type": "worship",
   "ar": "صوم",
   "tr": "Ṣawm",
   "def": "Fasting from dawn to sunset in Ramadan, one of the five pillars.",
@@ -149,7 +149,7 @@
  {
   "slug": "secret-counsels",
   "title": "Secret counsels",
-  "type": "topic",
+  "type": "ethics",
   "ar": "نجوى",
   "tr": "Najwā",
   "def": "The Quran forbids plotting in secret for sin and enmity, and allows private counsel for good (58:9).",
@@ -169,7 +169,7 @@
  {
   "slug": "self-defence",
   "title": "Self-defence",
-  "type": "topic",
+  "type": "law",
   "ar": "دفاع",
   "tr": "Difāʿ",
   "def": "The Quran allows defence against attack and tells believers to take precautions, within the limits of justice.",
@@ -217,7 +217,7 @@
    "child-marriage-in-islam",
    "islamisation-of-the-west"
   ],
-  "type": "term",
+  "type": "law",
   "aliases": []
  },
  {
@@ -246,7 +246,7 @@
    "who-is-allah",
    "black-stone-and-kissing"
   ],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Deities",
    "Idolatry",
@@ -270,7 +270,7 @@
  {
   "slug": "shooting-stars-and-the-jinn",
   "title": "Shooting stars and the jinn",
-  "type": "topic",
+  "type": "belief",
   "ar": "شهب",
   "tr": "Shuhub",
   "def": "The Quran says that jinn used to listen at the heavens and now find guards and flames (72:8–9).",
@@ -319,7 +319,7 @@
  {
   "slug": "shura",
   "title": "Shura",
-  "type": "term",
+  "type": "ethics",
   "ar": "شورى",
   "tr": "Shūrā",
   "def": "Mutual consultation in decisions of the community, praised in the Quran (42:38).",
@@ -376,7 +376,7 @@
  {
   "slug": "slavery-and-concubinage",
   "title": "Slavery and concubinage",
-  "type": "topic",
+  "type": "law",
   "ar": "رق",
   "tr": "Riqq",
   "def": "The Quran regulated an existing institution and urged freeing slaves; Muslim scholars today hold that slavery is forbidden.",
@@ -437,7 +437,7 @@
  {
   "slug": "spoils-of-war",
   "title": "Spoils of war",
-  "type": "topic",
+  "type": "law",
   "ar": "غنيمة",
   "tr": "Ghanīma",
   "def": "The Quran’s rules on property taken in war, with a fifth for charity and a rule against its staying among the rich.",
@@ -460,7 +460,7 @@
  {
   "slug": "sufism",
   "title": "Sufism",
-  "type": "term",
+  "type": "worship",
   "ar": "تصوف",
   "tr": "taṣawwuf",
   "def": "The inner, devotional dimension of Islam, centred on remembrance of God and purification of the heart.",
@@ -509,7 +509,7 @@
    "why-five-prayers",
    "ramadan-last-ten-nights"
   ],
-  "type": "term",
+  "type": "scripture",
   "aliases": [],
   "faruqi": [
    {
@@ -565,7 +565,7 @@
    "rasm-al-qurani-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "scripture",
   "aliases": [
    "Sabatu Ahruf",
    "Seven Ahruf"
@@ -595,7 +595,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Sabbaha",
    "Sabbah",
@@ -690,7 +690,7 @@
    "iblis"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Sajada",
    "Sajdah",
@@ -752,7 +752,7 @@
    "five-pillars"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Salat al-Fard",
    "Fard Prayer",
@@ -784,7 +784,7 @@
    "dua"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Salat al-Nafila",
    "Nafl Prayer",
@@ -817,7 +817,7 @@
    "sunnah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Salat al-Sunna",
    "Sunnah Prayer",
@@ -880,7 +880,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Salam",
    "As-Salam",
@@ -945,7 +945,7 @@
    "ablutions"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Salla",
    "Salat",
@@ -1011,7 +1011,7 @@
    "salam-al"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Sami",
    "As-Sami",
@@ -1043,7 +1043,7 @@
    "muhammad"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Shafaʿa",
    "Shafa",
@@ -1075,7 +1075,7 @@
    "shirk"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Shafaah",
    "Shafaʿa",
@@ -1139,7 +1139,7 @@
    "iman"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Shahada",
    "Shahida",
@@ -1171,7 +1171,7 @@
    "adhan"
   ],
   "articles": [],
-  "type": "term",
+  "type": "belief",
   "aliases": [
    "Al-Shahadah",
    "Shahadah",
@@ -1204,7 +1204,7 @@
    "dhikr"
   ],
   "articles": [],
-  "type": "topic",
+  "type": "belief",
   "aliases": [
    "Al-Shakur",
    "As-Shakur",
@@ -1235,7 +1235,7 @@
    "fiqh"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Shara'a",
    "Shaaraa",
@@ -1267,7 +1267,7 @@
    "sharaa"
   ],
   "articles": [],
-  "type": "term",
+  "type": "law",
   "aliases": [
    "Al-Shariah",
    "Al-Shari'a",
@@ -1301,7 +1301,7 @@
    "iman"
   ],
   "articles": [],
-  "type": "term",
+  "type": "ethics",
   "aliases": [
    "Sidq",
    "Sadaqa",
@@ -1368,7 +1368,7 @@
    "dhikr"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Subhana Alladhi Sakhkhara Lana",
    "Travel Dua",
@@ -1401,7 +1401,7 @@
    "tawhid"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Subhanallah",
    "Subhan Allah",
@@ -1433,7 +1433,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Subhanallahi Wa Bihamdihi",
    "Subhan Allah Wa Bihamdihi",
@@ -1527,7 +1527,7 @@
    "subhana-allah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "worship",
   "aliases": [
    "Sujud",
    "Sajdah",
@@ -1559,7 +1559,7 @@
    "sunnah-al-qawliyyah-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Sunnah",
    "Al-Sunna",
@@ -1590,7 +1590,7 @@
    "salah"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Sunnah al-Fiʿliyya",
    "Sunnah Fi'liyyah",
@@ -1622,7 +1622,7 @@
    "sunnah-al-filiyyah-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Sunnah al-Qawliyya",
    "Sunnah Qawliyyah",
@@ -1654,7 +1654,7 @@
    "sunnah-al-filiyyah-al"
   ],
   "articles": [],
-  "type": "term",
+  "type": "scripture",
   "aliases": [
    "Al-Sunnah al-Taqririyya",
    "Sunnah Taqririyyah",

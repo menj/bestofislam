@@ -163,6 +163,7 @@
 		box.hidden = true;
 		box.innerHTML = '';
 		input.setAttribute( 'aria-expanded', 'false' );
+		input.removeAttribute( 'aria-activedescendant' );
 		current = -1;
 	}
 
@@ -181,6 +182,7 @@
 
 		box.innerHTML = '';
 		current = -1;
+		input.removeAttribute( 'aria-activedescendant' );
 
 		if ( ! hits.length ) {
 			close();
