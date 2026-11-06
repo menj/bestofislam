@@ -1575,7 +1575,7 @@
    {
     "file": "kharijites-and-takfir-3.avif",
     "alt": "The golden domes and ornate designs of the Imam Ali Mosque in Najaf.",
-    "caption": "The Imam Ali Mosque in Najaf, Iraq, which Shia Muslims venerate as Ali's resting place. A Kharijite, Ibn Muljam, struck Ali in Kufa in 40 AH.",
+    "caption": "A shrine with golden domes and minarets in Iraq, described by its source as the Imam Ali Mosque in Najaf, which Shia Muslims venerate as Ali's resting place. A Kharijite, Ibn Muljam, struck Ali in Kufa in 40 AH.",
     "artist": "hassan mehdi",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/stunning-view-of-imam-ali-mosque-architecture-37196808/"
@@ -2280,14 +2280,24 @@
     "alt": "An old round stone well in a field",
     "artist": "Efraimstochter",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/fountain-old-stone-wall-wall-round-788430/"
+    "source": "https://pixabay.com/photos/fountain-old-stone-wall-wall-round-788430/",
+    "caption": "An old round stone well in a field. The report says the spell was put in a well."
    },
    {
     "file": "magic-jinn-and-satan-hadiths-2.avif",
     "alt": "A lantern on a dark table",
     "artist": "SoyKhaler",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/lantern-lamp-candlestick-light-6843880/"
+    "source": "https://pixabay.com/photos/lantern-lamp-candlestick-light-6843880/",
+    "caption": "A lantern on a dark table. The sayings about Satan in daily life concern small habits of the night and the home."
+   },
+   {
+    "file": "magic-jinn-and-satan-hadiths-3.avif",
+    "alt": "A sun-bleached animal skull on dry rocky desert terrain.",
+    "caption": "A sun-bleached skull on dry ground. In one report, bones are the jinn's provision.",
+    "artist": "Moaz Tobok",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/brown-and-white-stone-on-brown-sand-14491621/"
    }
   ]
  },
@@ -2330,14 +2340,24 @@
     "alt": "A tent lit at night under the Milky Way",
     "artist": "Wolfgang_Hasselmann",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/night-milky-way-time-warehouse-10094398/"
+    "source": "https://pixabay.com/photos/night-milky-way-time-warehouse-10094398/",
+    "caption": "A tent lit at night under the Milky Way. Many of the Prophet's later marriages were tied to captives and campaigns."
    },
    {
     "file": "prophets-marriages-zaynab-and-others-2.avif",
     "alt": "A camel caravan in silhouette at sunset",
     "artist": "rauschenberger",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/camels-sunset-caravan-desert-5750126/"
+    "source": "https://pixabay.com/photos/camels-sunset-caravan-desert-5750126/",
+    "caption": "A camel caravan in silhouette at sunset. Juwayriyah and Safiyya came into the community through raids on caravans and fortresses."
+   },
+   {
+    "file": "prophets-marriages-zaynab-and-others-3.avif",
+    "alt": "The Prophet's Mosque in Madinah with its green dome and minarets.",
+    "caption": "The Prophet's Mosque in Madinah. The marriages discussed here were made in the city he led.",
+    "artist": "Samet Kaplan 🇹🇷",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/majestic-view-of-al-masjid-an-nabawi-in-madinah-38498729/"
    }
   ]
  },
@@ -3826,7 +3846,7 @@
    {
     "file": "early-christians-charged-others-with-corrupting-scripture-4.avif",
     "alt": "Papyrus 52, a small fragment of the Gospel of John from the early second century.",
-    "caption": "Papyrus 52, a small fragment of the Gospel of John from the early second century and the oldest known New Testament manuscript text. Celsus said the Gospel had been remodelled; early manuscripts are the evidence for the question.",
+    "caption": "Papyrus 52, a small fragment of the Gospel of John from the early second century and the oldest known New Testament manuscript text, shown with an English rendering of its words. Celsus said the Gospel had been remodelled; early manuscripts are the evidence for the question.",
     "artist": "KetefHinnomFan",
     "licence": "CC0",
     "source": "https://commons.wikimedia.org/wiki/File:Papyrus_52.jpg"
