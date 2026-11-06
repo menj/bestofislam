@@ -67,7 +67,7 @@ Documentation only, plus the article count on the Content tab. Replace the theme
 
 ## Upgrading to 1.101.0
 
-Replace the theme files. The new articles reach existing sites through `boi_migrate_seed()` on this version; images follow in the next release.
+Replace the theme files. The new articles reach existing sites through `boi_migrate_seed()` on this version; their images are in `assets/images/`, and the credits are in `inc/images-data.json`.
 
 ## Upgrading to 1.100.21
 

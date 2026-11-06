@@ -165,7 +165,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.101.0 =
-* Eight new articles, answering the arguments in a collection of ex-Muslim testimonies without naming any person or the book: non-Muslims and Hell, the hadith of the Jews behind the stone, befriending non-Muslims, women in Hell and "deficient in intelligence", three divorces and the one-night marriage, the narcissism claim, Safiyya and captive women, and what testimonies can show. Their images follow in the next release.
+* Eight new articles, answering the arguments in a collection of ex-Muslim testimonies without naming any person or the book: non-Muslims and Hell, the hadith of the Jews behind the stone, befriending non-Muslims, women in Hell and "deficient in intelligence", three divorces and the one-night marriage, the narcissism claim, Safiyya and captive women, and what testimonies can show. Each has a featured image and three or four in-text images from Pixabay.
 
 = 1.100.21 =
 * Thirteen more articles gain in-text images, and every in-text image in them now has a caption. Every article now meets the image rule. Nothing else changes.
