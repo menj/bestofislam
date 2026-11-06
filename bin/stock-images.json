@@ -480,10 +480,14 @@
     "caption": "Clouds drifting over a night sky. The Quran says the Prophet saw Gabriel on the clear horizon (81:23; 53:7)."
    },
    {
-    "src": "pixabay",
-    "id": 1835825,
-    "alt": "A cave entrance with light and a small silhouette.",
+    "keep": true,
     "caption": "A cave opening full of light. Muhammad ﷺ used to retreat to the cave of Hira before the first revelation."
+   },
+   {
+    "src": "pexels",
+    "id": "38336046",
+    "alt": "The Hira cave on Jabal al-Nour near Makkah under a blue sky.",
+    "caption": "The Hira cave on Jabal al-Nour near Mecca, where the Prophet ﷺ retreated before the first revelation."
    }
   ]
  },
@@ -1588,6 +1592,187 @@
     "id": "38498729",
     "alt": "The Prophet's Mosque in Madinah with its green dome and minarets.",
     "caption": "The Prophet's Mosque in Madinah. The marriages discussed here were made in the city he led."
+   }
+  ]
+ },
+ "islam-religion-of-peace": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "The inside of a decorated mosque dome. The Quran states the ban on killing in universal terms (5:32)."
+   },
+   {
+    "keep": true,
+    "caption": "Mosque domes with geometric patterns. The rules of war bind the winner."
+   },
+   {
+    "src": "pexels",
+    "id": "32033220",
+    "alt": "A tranquil courtyard garden in an Istanbul mosque.",
+    "caption": "A mosque courtyard in Istanbul. Islam and salam, peace, share the Arabic root s-l-m."
+   }
+  ]
+ },
+ "nabi-and-rasul": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "18491910",
+    "alt": "Ancient book pages with intricate Arabic calligraphy.",
+    "caption": "Pages of an old Arabic book. The Quran uses two words, nabi and rasul, and once uses them side by side."
+   }
+  ]
+ },
+ "messenger-to-every-nation": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "592753",
+    "alt": "A vintage world map on old paper.",
+    "caption": "An old world map. The Quran says that a warner has passed among every nation (35:24)."
+   }
+  ]
+ },
+ "muhammad-and-the-hebrew-prophets": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "39222072",
+    "alt": "An open Psalms book showing Hebrew and English text.",
+    "caption": "A book of Psalms in Hebrew and English. The Quran quotes the Psalms almost word for word (21:105)."
+   }
+  ]
+ },
+ "ishmael-in-the-quran-and-genesis": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "28209449",
+    "alt": "The Kaaba at dusk under a clear sky in Mecca.",
+    "caption": "The Kaaba at dusk. The Quran places Ishmael at the Kaaba with his father."
+   }
+  ]
+ },
+ "no-compulsion-in-religion": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "11255192",
+    "alt": "The architecture of Jama Masjid, a historic mosque in New Delhi.",
+    "caption": "Jama Masjid in Delhi. In India the dhimma was extended to Hindus from the first conquest."
+   }
+  ]
+ },
+ "holy-war-in-the-bible": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5192346",
+    "alt": "A hand pointing to text in a Torah scroll.",
+    "caption": "A hand pointing to Hebrew text in a Torah scroll. Deuteronomy 20 lays down rules for war, including total destruction."
+   },
+   {
+    "src": "pexels",
+    "id": "36756273",
+    "alt": "Krak des Chevaliers, a historic castle in Syria, framed by trees.",
+    "caption": "Krak des Chevaliers, a Crusader castle in Syria. The Church fought holy wars and called them that."
+   }
+  ]
+ },
+ "septuagint": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "commons",
+    "id": "File:P. Rylands 458.jpg",
+    "alt": "Papyrus Rylands 458, a fragment of the Greek Septuagint text of Deuteronomy.",
+    "caption": "Papyrus Rylands 458, a fragment of Deuteronomy in the Greek Septuagint, from the second century BCE."
+   },
+   {
+    "src": "commons",
+    "id": "File:CodexAlexandrinus 0858.jpg",
+    "alt": "A page of the Codex Alexandrinus, a fifth-century Greek Bible.",
+    "caption": "A page of the Codex Alexandrinus, a fifth-century Greek Bible that carries the Septuagint."
+   }
+  ]
+ },
+ "oldest-bible-codices": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "commons",
+    "id": "File:CodexAlexandrinus 0022.jpg",
+    "alt": "A page of the Codex Alexandrinus, a fifth-century Greek Bible.",
+    "caption": "A page of the Codex Alexandrinus, one of the three great early Greek Bibles. It predates Islam."
+   },
+   {
+    "src": "commons",
+    "id": "File:CodexAlexandrinus 1072.jpg",
+    "alt": "A page of the Codex Alexandrinus showing its Greek script in columns.",
+    "caption": "A second page of the Codex Alexandrinus. Early codices are full of corrections by later hands.",
+    "top": 0.3
    }
   ]
  }
