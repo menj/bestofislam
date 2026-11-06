@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.101.1] - 2026-11-06
+
+### Changed
+
+- Six articles brought within the 1,600 to 2,500 word range for body text. kaab-ibn-al-ashraf-and-the-poets (917 to 1,604) gains the Bukhari chapter on deception in war, the agreement the Jews of Medina wrote with the Prophet after Ka'b's death (Abu Dawud 3000), the Muwatta's report that the party sent to Abu Rafi' was forbidden to kill women and children, the answering of hostile verse with verse through Hassan ibn Thabit, the pardons of Ka'b ibn Zuhayr and Ibn al-Ziba'ra, Watt's acceptance of the poet stories and why the article does not, and the rule that penalties belong to the courts, with al-Azhar's condemnation of the 2015 Charlie Hebdo attack. hijab-and-modesty, who-changed-the-bible, homosexuality-in-islam and verses-read-differently, each a word or two short, gain a sentence. islamic-dilemma (2,509) drops a sentence that repeated its neighbours and now reads 2,489. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
 ## [1.101.0] - 2026-11-06
 
 ### Added

@@ -416,3 +416,7 @@ The thirteen articles of 1.88.0 and the additions to six others were written wit
 - **genealogies-of-jesus**: Julian's remark as preserved in Cyril; Annius of Viterbo as the source of the Mary theory (Brown, p. 89); the Bezae text of Luke 3; Africanus quoted in Eusebius 1.7.15.
 - **bible-alteration-claim-before-islam**: Sotah 33b and y. Sotah 7:3 wording; Origen, Against Celsus 2.27; Eusebius 4.23.12 and 5.28; Augustine, Reply to Faustus 32.2 and 33.3; the Pseudo-Clementine "false pericopes" (Homilies 2.38, 3.47–50); Crone 1980.
 - **Additions to existing articles**: Bukhari 4252 for the Umra of fulfilment; the Hanafi definition and the stages in Radd al-Muhtar; Abu Zahra's book; Bauer-Danker on *monogenes*.
+
+## Expansion, twenty-first batch (1.101.1)
+
+- **kaab-ibn-al-ashraf-and-the-poets**: Bukhari 3030-3031 (deception in war); Abu Dawud 3000 (the agreement after Ka'b's killing) and al-Albani's grading; Bukhari 4123-4124 and Muslim 2486 (Hassan ibn Thabit); Ka'b ibn Zuhayr and "Banat Su'ad", with the mantle as later tradition; Ibn al-Ziba'ra's pardon; the Muwatta report on the raid on Ibn Abi al-Huqayq (chapter and number to confirm); Watt, Muhammad at Medina (chapter to confirm); al-Azhar's statement of 7 January 2015.
