@@ -4253,6 +4253,14 @@
     "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:P._Rylands_458.jpg"
+   },
+   {
+    "file": "septuagint-4.avif",
+    "alt": "A close-up of an antique leather-bound book with ornate engraving and aged paper.",
+    "caption": "An antique leather-bound book. The early Church treated the Greek translation as inspired, and argued over whether to leave it.",
+    "artist": "Marta Branco",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-antique-leather-bound-book-38374178/"
    }
   ]
  },
@@ -4270,14 +4278,32 @@
     "alt": "Gold, blue and white star rings on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "oldest-bible-codices-2.avif",
     "alt": "A many-pointed star in gold and blue lines on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "oldest-bible-codices-3.avif",
+    "alt": "An old book open at a page of Latin text on yellowed paper.",
+    "caption": "An old book open at a page of Latin text. The three great Greek codices predate Islam; this photograph is of a much later book, not of a biblical codex.",
+    "artist": "Alyona Nagel",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscript-with-latin-text-on-yellowed-pages-35031603/"
+   },
+   {
+    "file": "oldest-bible-codices-4.avif",
+    "alt": "A close-up of an old, weathered book with tattered pages.",
+    "caption": "An old book with tattered pages. Early codices are full of corrections by later hands.",
+    "artist": "Zakhar Vozhdaienko",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-worn-book-with-tattered-pages-on-white-background-36878207/"
    }
   ]
  },

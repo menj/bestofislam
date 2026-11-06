@@ -10,7 +10,7 @@ Images, batch 8: ten articles below the image rule (about one in-text image per 
 
 ### Changed
 - islam-religion-of-peace, first-revelation-demonic-claim, nabi-and-rasul, messenger-to-every-nation, muhammad-and-the-hebrew-prophets, ishmael-in-the-quran-and-genesis and no-compulsion-in-religion gain one image each; holy-war-in-the-bible, septuagint and oldest-bible-codices gain two each. Every in-text image in these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates (the Hira cave photograph is at the first-revelation accounts).
-- The new pictures come from Wikimedia Commons (Papyrus Rylands 458 and pages of the Codex Alexandrinus, CC0 or public domain) and from Pexels (the rest); none shows a prophet (D30). The star patterns already in some articles are captioned as original artwork.
+- The new pictures come from Wikimedia Commons (Papyrus Rylands 458, public domain) and from Pexels (the rest, because the Commons API was refusing requests when the Codex Alexandrinus pages were fetched); none shows a prophet (D30). The star patterns already in some articles are captioned as original artwork.
 
 ## [1.100.18] - 2026-11-06
 
