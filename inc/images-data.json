@@ -1561,14 +1561,24 @@
     "alt": "A convoy of off-road vehicles navigating through vast desert dunes during the day.",
     "artist": "光曦 刘",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/vehicles-with-flags-on-brown-desert-10658203/"
+    "source": "https://www.pexels.com/photo/vehicles-with-flags-on-brown-desert-10658203/",
+    "caption": "Vehicles crossing a desert. The photograph is not of any place in this article; Ali's army marched across the deserts of Iraq and Syria."
    },
    {
     "file": "kharijites-and-takfir-2.avif",
     "alt": "Camel riders traverse the sandy dunes in Nelson Bay, Australia, capturing an adventurous essence.",
     "artist": "Federico Abis",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/men-riding-camels-in-a-desert-15571980/"
+    "source": "https://www.pexels.com/photo/men-riding-camels-in-a-desert-15571980/",
+    "caption": "Camel riders on sand dunes. The photograph is not of any place in this article."
+   },
+   {
+    "file": "kharijites-and-takfir-3.avif",
+    "alt": "The golden domes and ornate designs of the Imam Ali Mosque in Najaf.",
+    "caption": "A shrine with golden domes and minarets in Iraq, described by its source as the Imam Ali Mosque in Najaf, which Shia Muslims venerate as Ali's resting place. A Kharijite, Ibn Muljam, struck Ali in Kufa in 40 AH.",
+    "artist": "hassan mehdi",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stunning-view-of-imam-ali-mosque-architecture-37196808/"
    }
   ]
  },
@@ -1711,17 +1721,27 @@
   "inline": [
    {
     "file": "funeral-dhikr-dua-1.avif",
-    "alt": "Detailed shot of Islamic prayer beads resting on a Quran, highlighting spiritual themes.",
+    "alt": "Close-up of prayer beads resting on an open book.",
     "artist": "Towfiqu barbhuiya",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/close-up-of-a-rosary-on-top-of-a-bible-8717617/"
+    "source": "https://www.pexels.com/photo/close-up-of-a-rosary-on-top-of-a-bible-8717617/",
+    "caption": "Prayer beads resting on an open book. Dhikr, remembrance of God, is counted on beads or on the fingers."
    },
    {
     "file": "funeral-dhikr-dua-2.avif",
     "alt": "A Muslim woman holding prayer beads in a peaceful and spiritual moment indoors.",
     "artist": "Rizky Sabriansyah",
     "licence": "Pexels licence",
-    "source": "https://www.pexels.com/photo/muslim-woman-praying-with-prayer-beads-36211935/"
+    "source": "https://www.pexels.com/photo/muslim-woman-praying-with-prayer-beads-36211935/",
+    "caption": "A hand holding prayer beads. Duʿāʾ, supplication, is the believer's plain speech to God."
+   },
+   {
+    "file": "funeral-dhikr-dua-3.avif",
+    "alt": "Traditional gravestones in a Muslim cemetery in Istanbul.",
+    "caption": "Gravestones in a Muslim cemetery in Istanbul. A Muslim grave is dug so that the body lies on its right side facing the qibla.",
+    "artist": "Pablo RAMON",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/gravestones-at-muslim-cemetery-20189642/"
    }
   ]
  },
@@ -2260,14 +2280,24 @@
     "alt": "An old round stone well in a field",
     "artist": "Efraimstochter",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/fountain-old-stone-wall-wall-round-788430/"
+    "source": "https://pixabay.com/photos/fountain-old-stone-wall-wall-round-788430/",
+    "caption": "An old round stone well in a field. The report says the spell was put in a well."
    },
    {
     "file": "magic-jinn-and-satan-hadiths-2.avif",
     "alt": "A lantern on a dark table",
     "artist": "SoyKhaler",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/lantern-lamp-candlestick-light-6843880/"
+    "source": "https://pixabay.com/photos/lantern-lamp-candlestick-light-6843880/",
+    "caption": "A lantern on a dark table. The sayings about Satan in daily life concern small habits of the night and the home."
+   },
+   {
+    "file": "magic-jinn-and-satan-hadiths-3.avif",
+    "alt": "A sun-bleached animal skull on dry rocky desert terrain.",
+    "caption": "A sun-bleached skull on dry ground. In one report, bones are the jinn's provision.",
+    "artist": "Moaz Tobok",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/brown-and-white-stone-on-brown-sand-14491621/"
    }
   ]
  },
@@ -2310,14 +2340,24 @@
     "alt": "A tent lit at night under the Milky Way",
     "artist": "Wolfgang_Hasselmann",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/night-milky-way-time-warehouse-10094398/"
+    "source": "https://pixabay.com/photos/night-milky-way-time-warehouse-10094398/",
+    "caption": "A tent lit at night under the Milky Way. Many of the Prophet's later marriages were tied to captives and campaigns."
    },
    {
     "file": "prophets-marriages-zaynab-and-others-2.avif",
     "alt": "A camel caravan in silhouette at sunset",
     "artist": "rauschenberger",
     "licence": "Pixabay licence",
-    "source": "https://pixabay.com/photos/camels-sunset-caravan-desert-5750126/"
+    "source": "https://pixabay.com/photos/camels-sunset-caravan-desert-5750126/",
+    "caption": "A camel caravan in silhouette at sunset. Juwayriyah and Safiyya came into the community through raids on caravans and fortresses."
+   },
+   {
+    "file": "prophets-marriages-zaynab-and-others-3.avif",
+    "alt": "The Prophet's Mosque in Madinah with its green dome and minarets.",
+    "caption": "The Prophet's Mosque in Madinah. The marriages discussed here were made in the city he led.",
+    "artist": "Samet Kaplan 🇹🇷",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/majestic-view-of-al-masjid-an-nabawi-in-madinah-38498729/"
    }
   ]
  },
@@ -3041,6 +3081,14 @@
     "artist": "hoomarg",
     "licence": "Pixabay licence",
     "source": "https://pixabay.com/photos/persian-art-tradiotional-islamic-809945/"
+   },
+   {
+    "file": "gods-attributes-and-anthropomorphism-4.avif",
+    "alt": "Arabic calligraphy on stone walls of an old Islamic building.",
+    "caption": "Arabic calligraphy carved in stone. The later schools disagreed on what to do with the Quran's words about God's hand and face.",
+    "artist": "Nur Coşar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/historic-islamic-architecture-with-arabic-inscriptions-36072208/"
    }
   ]
  },
@@ -3077,6 +3125,14 @@
     "artist": "Necati Ömer Karpuzoğlu",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/scenic-sunset-view-of-konya-minarets-40100992/"
+   },
+   {
+    "file": "temporary-marriage-mutah-4.avif",
+    "alt": "Detailed image of ancient Arabic calligraphy with decorative elements.",
+    "caption": "An old Arabic manuscript page. Scholars explained the repeated bans on mutah in two ways in their books of hadith and law.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-ancient-arabic-manuscript-text-29342503/"
    }
   ]
  },
@@ -3157,6 +3213,14 @@
     "artist": "Sameh Swaiss",
     "licence": "Pexels licence",
     "source": "https://www.pexels.com/photo/merchandise-display-in-market-19454239/"
+   },
+   {
+    "file": "muslims-by-the-numbers-4.avif",
+    "alt": "Colorful architectural details of a mosque in Kano, Nigeria.",
+    "caption": "A mosque in Kano, Nigeria. Sub-Saharan Africa held 369 million Muslims in 2020, by Pew Research Center's count.",
+    "artist": "mg shotz",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vibrant-mosque-architecture-in-kano-nigeria-38307877/"
    }
   ]
  },
@@ -3778,6 +3842,14 @@
     "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Rabbula_Gospels_(9v_&_10r;_Four_Evangelists).jpg"
+   },
+   {
+    "file": "early-christians-charged-others-with-corrupting-scripture-4.avif",
+    "alt": "Papyrus 52, a small fragment of the Gospel of John from the early second century.",
+    "caption": "Papyrus 52, a small fragment of the Gospel of John from the early second century and the oldest known New Testament manuscript text, shown with an English rendering of its words. Celsus said the Gospel had been remodelled; early manuscripts are the evidence for the question.",
+    "artist": "KetefHinnomFan",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Papyrus_52.jpg"
    }
   ]
  },
@@ -3814,6 +3886,14 @@
     "artist": "Bejinhan",
     "licence": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Hebrew_Sefer_Torah_Scroll_side_view.JPG"
+   },
+   {
+    "file": "quran-word-kitab-meanings-4.avif",
+    "alt": "Close-up of calligraphy on parchment with antique writing tools on a wooden desk.",
+    "caption": "Calligraphy on parchment with antique writing tools. The Quran knows pages and pens, and says plainly when it means them.",
+    "artist": "Zeynep Kahraman",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-calligraphy-art-on-antique-desk-35689882/"
    }
   ]
  },
@@ -3850,6 +3930,14 @@
     "artist": "Photography by Ardon Bar Hama (see [2], author of original document is unknown.",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg"
+   },
+   {
+    "file": "trinity-in-the-hebrew-bible-tested-4.avif",
+    "alt": "Andrei Rublev's icon of the three angels at Mamre, the Trinity icon of about 1411.",
+    "caption": "Andrei Rublev's icon of the Trinity, painted about 1411 from Genesis 18. Christian art reads the three visitors as the Trinity; the Hebrew text says that God is one.",
+    "artist": "Andrei Rublev",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Angelsatmamre-trinity-rublev-1410.jpg"
    }
   ]
  },
@@ -3886,6 +3974,14 @@
     "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg"
+   },
+   {
+    "file": "matthew-fulfilment-quotations-checked-4.avif",
+    "alt": "Close-up of an open Bible displaying Old Testament scriptures.",
+    "caption": "An open Bible at an Old Testament page. Matthew's Micah quotation turns \"small\" into \"in no way least\".",
+    "artist": "Brett Jordan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/an-open-bible-on-a-wooden-surface-5311784/"
    }
   ]
  },

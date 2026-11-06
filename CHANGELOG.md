@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.18] - 2026-11-06
+
+Images, batch 7: eleven articles that were one image short of the rule (about one in-text image per two entries) gain one. No feature removed and no public identifier renamed.
+
+### Changed
+- early-christians-charged-others-with-corrupting-scripture, quran-word-kitab-meanings, trinity-in-the-hebrew-bible-tested, matthew-fulfilment-quotations-checked, gods-attributes-and-anthropomorphism, temporary-marriage-mutah, muslims-by-the-numbers, kharijites-and-takfir, funeral-dhikr-dua, magic-jinn-and-satan-hadiths and prophets-marriages-zaynab-and-others each gain an in-text image. Every in-text image in these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates.
+- The new pictures come from Wikimedia Commons (Papyrus 52 and Rublev's Trinity icon) and from Pexels (the rest, because the Commons search was too slow); none shows a prophet (D30). Captions say where a photograph is of somewhere else.
+- temporary-marriage-mutah says "seven points" and its title and excerpt now say 7, matching its seven entries. quran-word-kitab-meanings counts its moderate points correctly. The Muslims-by-the-numbers caption dates the 369 million to 2020. The funeral-dhikr-dua picture is described as prayer beads on an open book, not on a Quran. The notes in `bin/fetch-stock-images.py` and `inc/inline-images.php` say up to six in-text images, as the rule allows.
+
 ## [1.100.17] - 2026-11-05
 
 The theme now speaks of "the other sites" in its settings and notes, and the docs name the subfolder favicon step. No feature removed and no public identifier renamed.

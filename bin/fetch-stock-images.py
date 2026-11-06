@@ -2,7 +2,7 @@
 """Fetches the photographs named in bin/stock-images.json and wires them into
 inc/images-data.json.
 
-For each article the plan names one featured image and up to three in-text
+For each article the plan names one featured image and up to six in-text
 images, each from Pexels, Pixabay, Wikimedia Commons, the Internet Archive,
 Wellcome Collection or the Cleveland Museum of Art, with the alt text and
 the caption to print. The script downloads the file, crops it to 3:2, resizes it

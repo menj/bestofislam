@@ -2,10 +2,10 @@
 /**
  * Images from Pexels and Pixabay.
  *
- * Every article carries one featured image and up to three more in its text. The
+ * Every article carries one featured image and up to six more in its text, one for about every two entries. The
  * credits for all of them live in inc/images-data.json, keyed by article slug:
  * a "featured" entry for articles whose featured image comes from here, and an
- * "inline" list of two. Articles place the inline ones with the
+ * "inline" list. Articles place the inline ones with the
  * bestofislam/figure block, so a file can be replaced without editing posts.
  *
  * @package BestOfIslam

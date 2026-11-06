@@ -762,114 +762,90 @@
   ]
  },
  "early-christians-charged-others-with-corrupting-scripture": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Codex Vaticanus B, 2Thess. 3,11-18, Hebr. 1,1-2,2.jpg",
-   "alt": "A page of the Codex Vaticanus, a fourth-century Greek Bible manuscript.",
-   "caption": "A page of the Codex Vaticanus, a fourth-century Greek Bible. Early Christians charged Jews, heretics and each other with changing scripture."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "keep": true,
     "caption": "The Great Isaiah Scroll. Justin said the Jews had cut passages out of their scriptures, and the manuscripts known today do not bear him out."
    },
    {
-    "src": "commons",
-    "id": "File:Codex Sinaiticus.jpg",
-    "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
+    "keep": true,
     "caption": "The Codex Sinaiticus. It ends the Gospel of Mark at 16:8, one of the places where Christian scribes left a record of their own textual history."
    },
    {
-    "src": "commons",
-    "id": "File:Rabbula Gospels (9v & 10r; Four Evangelists).jpg",
-    "alt": "Two pages of the Rabbula Gospels, a Syriac Gospel book of 586, showing the four evangelists.",
+    "keep": true,
     "caption": "The Rabbula Gospels, a Syriac Gospel book copied in 586. In the early centuries the charge of altering scripture was an ordinary move in argument."
+   },
+   {
+    "src": "commons",
+    "id": "File:Papyrus 52.jpg",
+    "alt": "Papyrus 52, a small fragment of the Gospel of John from the early second century.",
+    "caption": "Papyrus 52, a small fragment of the Gospel of John from the early second century and the oldest known New Testament manuscript text, shown with an English rendering of its words. Celsus said the Gospel had been remodelled; early manuscripts are the evidence for the question."
    }
   ]
  },
  "quran-word-kitab-meanings": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Folio Blue Quran Met 2004.88.jpg",
-   "alt": "A folio of the Blue Quran in gold Kufic script on blue-dyed parchment.",
-   "caption": "A folio of the Blue Quran, ninth to tenth century. The Quran uses the word kitāb for a decree, a heavenly Book, a revelation and a written page."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Folio from a Koran (8th-9th century).jpg",
-    "alt": "Folio from a Quran in early Kufic script, 8th to 9th century.",
+    "keep": true,
     "caption": "A Quran folio in Kufic script. The Quran speaks of a Mother of the Book in heaven behind every revelation."
    },
    {
-    "src": "commons",
-    "id": "File:Vangeli di Rabbula, Biblioteca Medicea Laurenziana, Cod. Plut. I, 56, fol. 13r.jpg",
-    "alt": "A folio of the Rabbula Gospels, a Syriac Gospel book of 586.",
+    "keep": true,
     "caption": "A page of the Rabbula Gospels, a Syriac Gospel book of 586. The Quran says God gave Jesus the Gospel, which the written Gospels may carry in part."
    },
    {
-    "src": "commons",
-    "id": "File:Hebrew Sefer Torah Scroll side view.JPG",
-    "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+    "keep": true,
     "caption": "A Torah scroll. Waraqa is reported to have written from the Gospel in Hebrew letters, as much as God wished him to write."
+   },
+   {
+    "src": "pexels",
+    "id": "35689882",
+    "alt": "Close-up of calligraphy on parchment with antique writing tools on a wooden desk.",
+    "caption": "Calligraphy on parchment with antique writing tools. The Quran knows pages and pens, and says plainly when it means them."
    }
   ]
  },
  "trinity-in-the-hebrew-bible-tested": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Open Torah Case with Scroll.jpg",
-   "alt": "An open Torah case with the scroll inside.",
-   "caption": "An open Torah case. The Hebrew Bible says that God is one, and the Christian doctrine of three persons is read into it from later texts."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Hebrew Sefer Torah Scroll side view.JPG",
-    "alt": "A Hebrew Torah scroll seen from the side, wound on its two rollers.",
+    "keep": true,
     "caption": "A Torah scroll. Genesis 1:26 says \"Let us make man\", a plural that Jews, Christians and Muslims read differently."
    },
    {
-    "src": "commons",
-    "id": "File:Abraham's Oak) - Bonfils LCCN92500736.jpg",
-    "alt": "A nineteenth-century photograph of Abraham's Oak near Hebron.",
+    "keep": true,
     "caption": "Abraham's Oak near Hebron, photographed in the nineteenth century. In several stories of the Hebrew Bible a messenger speaks in the voice of God."
    },
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "keep": true,
     "caption": "The Great Isaiah Scroll, copied before the time of Jesus. No text from before the New Testament states a Trinity."
+   },
+   {
+    "src": "commons",
+    "id": "File:Angelsatmamre-trinity-rublev-1410.jpg",
+    "alt": "Andrei Rublev's icon of the three angels at Mamre, the Trinity icon of about 1411.",
+    "caption": "Andrei Rublev's icon of the Trinity, painted about 1411 from Genesis 18. Christian art reads the three visitors as the Trinity; the Hebrew text says that God is one."
    }
   ]
  },
  "matthew-fulfilment-quotations-checked": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Codex Sinaiticus.jpg",
-   "alt": "The open Codex Sinaiticus, a fourth-century Greek Bible manuscript.",
-   "caption": "The Codex Sinaiticus, a fourth-century Greek Bible containing the Gospel of Matthew. Matthew's quotations of the Hebrew Bible differ from the originals in several places."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Great Isaiah Scroll Ch53.jpg",
-    "alt": "Section of the Great Isaiah Scroll, a Hebrew manuscript from the Dead Sea caves.",
+    "keep": true,
     "caption": "The Great Isaiah Scroll. Matthew reads Isaiah 7:14 and Isaiah 42 in ways that move them beyond their first setting."
    },
    {
-    "src": "commons",
-    "id": "File:The Commentary on Habakkuk Scroll (1QpHab) Written in Hebrew - Google Art Project.jpg",
-    "alt": "The Commentary on Habakkuk scroll from Qumran, written in Hebrew.",
+    "keep": true,
     "caption": "The Habakkuk commentary from Qumran, which reads a prophet's words as pointing to the community's own time, a method close to Matthew's."
    },
    {
-    "src": "commons",
-    "id": "File:Codex Vaticanus B, 2Thess. 3,11-18, Hebr. 1,1-2,2.jpg",
-    "alt": "A page of the Codex Vaticanus, a fourth-century Greek Bible manuscript.",
+    "keep": true,
     "caption": "A page of the Codex Vaticanus. Matthew's quotations often follow the Greek form of the Hebrew Bible."
+   },
+   {
+    "src": "pexels",
+    "id": "5311784",
+    "alt": "Close-up of an open Bible displaying Old Testament scriptures.",
+    "caption": "An open Bible at an Old Testament page. Matthew's Micah quotation turns \"small\" into \"in no way least\"."
    }
   ]
  },
@@ -1474,6 +1450,144 @@
     "caption": "A brickmaker at work. The Prophet compared himself to the last brick that completes a house.",
     "artist": "Jost Amman",
     "top": 0.4
+   }
+  ]
+ },
+ "gods-attributes-and-anthropomorphism": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Ayat al-Kursi (2:255) in calligraphy: the verse that speaks of God's knowledge and throne."
+   },
+   {
+    "keep": true,
+    "caption": "The night sky over a desert: the Quran points to creation as a sign of the Creator, who is not like it (42:11)."
+   },
+   {
+    "keep": true,
+    "caption": "A tiled dome with a pattern that repeats without a centre, an image of the infinite and not of God."
+   },
+   {
+    "src": "pexels",
+    "id": "36072208",
+    "alt": "Arabic calligraphy on stone walls of an old Islamic building.",
+    "caption": "Arabic calligraphy carved in stone. The later schools disagreed on what to do with the Quran's words about God's hand and face."
+   }
+  ]
+ },
+ "temporary-marriage-mutah": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An illustrated Arabic manuscript page. The rulings on mutah were recorded and argued over in books of hadith and law."
+   },
+   {
+    "keep": true,
+    "caption": "Travellers crossing the desert. The short permission for mutah came on campaigns and journeys, far from home."
+   },
+   {
+    "keep": true,
+    "caption": "Minarets at sunset in Konya. Sunni and Shia scholars still differ on whether mutah remains lawful."
+   },
+   {
+    "src": "pexels",
+    "id": "29342503",
+    "alt": "Detailed image of ancient Arabic calligraphy with decorative elements.",
+    "caption": "An old Arabic manuscript page. Scholars explained the repeated bans on mutah in two ways in their books of hadith and law."
+   }
+  ]
+ },
+ "muslims-by-the-numbers": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Pilgrims at the Kaaba in Mecca. Muslims are one of the most widely spread faith communities."
+   },
+   {
+    "keep": true,
+    "caption": "A world map. Pew Research Center's count of Muslims by country covers the decade from 2010 to 2020."
+   },
+   {
+    "keep": true,
+    "caption": "A market in Amman, Jordan: a Muslim-majority country in the Middle East and North Africa region."
+   },
+   {
+    "src": "pexels",
+    "id": "38307877",
+    "alt": "Colorful architectural details of a mosque in Kano, Nigeria.",
+    "caption": "A mosque in Kano, Nigeria. Sub-Saharan Africa held 369 million Muslims in 2020, by Pew Research Center's count."
+   }
+  ]
+ },
+ "kharijites-and-takfir": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Vehicles crossing a desert. The photograph is not of any place in this article; Ali's army marched across the deserts of Iraq and Syria."
+   },
+   {
+    "keep": true,
+    "caption": "Camel riders on sand dunes. The photograph is not of any place in this article."
+   },
+   {
+    "src": "pexels",
+    "id": "37196808",
+    "alt": "The golden domes and ornate designs of the Imam Ali Mosque in Najaf.",
+    "caption": "A shrine with golden domes and minarets in Iraq, described by its source as the Imam Ali Mosque in Najaf, which Shia Muslims venerate as Ali's resting place. A Kharijite, Ibn Muljam, struck Ali in Kufa in 40 AH."
+   }
+  ]
+ },
+ "funeral-dhikr-dua": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "Prayer beads resting on an open book. Dhikr, remembrance of God, is counted on beads or on the fingers."
+   },
+   {
+    "keep": true,
+    "caption": "A hand holding prayer beads. Duʿāʾ, supplication, is the believer's plain speech to God."
+   },
+   {
+    "src": "pexels",
+    "id": "20189642",
+    "alt": "Traditional gravestones in a Muslim cemetery in Istanbul.",
+    "caption": "Gravestones in a Muslim cemetery in Istanbul. A Muslim grave is dug so that the body lies on its right side facing the qibla."
+   }
+  ]
+ },
+ "magic-jinn-and-satan-hadiths": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An old round stone well in a field. The report says the spell was put in a well."
+   },
+   {
+    "keep": true,
+    "caption": "A lantern on a dark table. The sayings about Satan in daily life concern small habits of the night and the home."
+   },
+   {
+    "src": "pexels",
+    "id": "14491621",
+    "alt": "A sun-bleached animal skull on dry rocky desert terrain.",
+    "caption": "A sun-bleached skull on dry ground. In one report, bones are the jinn's provision."
+   }
+  ]
+ },
+ "prophets-marriages-zaynab-and-others": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "A tent lit at night under the Milky Way. Many of the Prophet's later marriages were tied to captives and campaigns."
+   },
+   {
+    "keep": true,
+    "caption": "A camel caravan in silhouette at sunset. Juwayriyah and Safiyya came into the community through raids on caravans and fortresses."
+   },
+   {
+    "src": "pexels",
+    "id": "38498729",
+    "alt": "The Prophet's Mosque in Madinah with its green dome and minarets.",
+    "caption": "The Prophet's Mosque in Madinah. The marriages discussed here were made in the city he led."
    }
   ]
  }
