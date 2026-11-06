@@ -420,3 +420,9 @@ The thirteen articles of 1.88.0 and the additions to six others were written wit
 ## Expansion, twenty-first batch (1.101.1)
 
 - **kaab-ibn-al-ashraf-and-the-poets**: Bukhari 3030-3031 (deception in war); Abu Dawud 3000 (the agreement after Ka'b's killing) and al-Albani's grading; Bukhari 4123-4124 and Muslim 2486 (Hassan ibn Thabit); Ka'b ibn Zuhayr and "Banat Su'ad", with the mantle as later tradition; Ibn al-Ziba'ra's pardon; the Muwatta report on the raid on Ibn Abi al-Huqayq (chapter and number to confirm); Watt, Muhammad at Medina (chapter to confirm); al-Azhar's statement of 7 January 2015.
+
+## Expansion, twenty-second batch (1.101.2)
+
+- **women-in-the-prophets-life**: Bukhari 3432 and Quran 3:42; Umm Salama's question and Quran 33:35 (al-Tabari; the Musnad Ahmad number to confirm).
+- **apostasy-in-islam**: Muslim 1784 (the Hudaybiyya term and the words "God has sent him away"); Abu Dawud 2683 and 4358 on Abd Allah ibn Sa'd.
+- **quran-anachronism-claims**: Quran 2:249 and Judges 7:4-7; the characterisation of the two tests.

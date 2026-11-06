@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.101.2] - 2026-11-06
+
+### Changed
+
+- Three more articles reach at least 1,600 words of body text. women-in-the-prophets-life (1,453 to 1,642) adds the hadith ranking Khadija beside Mary (Bukhari 3432) and Umm Salama's question behind Quran 33:35. apostasy-in-islam (1,446 to 1,608) adds the Hudaybiyya term that Muslims who went over to Quraysh would not be returned (Muslim 1784) and the pardon of Abd Allah ibn Sa'd, with how each side of the debate reads them. quran-anachronism-claims (1,458 to 1,639) answers the charge that Talut's river test belongs to Gideon. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
 ## [1.101.1] - 2026-11-06
 
 ### Changed
