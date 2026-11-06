@@ -1,4 +1,10 @@
 {
+ "a-father-says-this-is-islam": [
+  "apes-and-pigs-and-the-jews",
+  "prophets-marriages-zaynab-and-others",
+  "child-marriage-in-islam",
+  "slavery-in-islam"
+ ],
  "abrogation-and-the-sword-verse": [
   "no-compulsion-in-religion",
   "prophet-died-poisoning",
@@ -111,7 +117,7 @@
   "muhammad-and-the-hebrew-prophets",
   "ransom-bible-quran",
   "nabi-and-rasul",
-  "shared-prophets"
+  "apes-and-pigs-and-the-jews"
  ],
  "crusades-facts": [
   "holy-war-in-the-bible",
@@ -177,7 +183,7 @@
   "sharia-and-hudud",
   "apostasy-in-islam",
   "islam-religion-of-peace",
-  "fate-and-free-will"
+  "sadness-and-depression-in-islam"
  ],
  "ezra-and-mary": [
   "genealogies-of-jesus",
@@ -216,8 +222,8 @@
   "apes-and-pigs-and-the-jews"
  ],
  "five-pillars-explained": [
-  "before-your-first-friday-prayer",
   "islamic-rites-before-islam",
+  "before-your-first-friday-prayer",
   "companions-who-started-with-nothing",
   "hajj-rites-explained"
  ],
@@ -254,8 +260,8 @@
  "haman-anachronism": [
   "quran-anachronism-claims",
   "who-was-yahweh-archaeological-origins",
-  "messenger-to-every-nation",
-  "is-yahweh-satan"
+  "is-yahweh-satan",
+  "messenger-to-every-nation"
  ],
  "hanif-poets-and-musaylima": [
   "islamic-rites-before-islam",
@@ -303,7 +309,7 @@
   "kings-and-chronicles-numbers",
   "early-christians-yahweh-evil-gnosticism-marcion",
   "is-yahweh-the-same-as-allah",
-  "same-god"
+  "septuagint"
  ],
  "is-yahweh-the-same-as-allah": [
   "same-god",
@@ -368,8 +374,8 @@
  "jihad-meaning-quran-hadith-jurists": [
   "war-and-killing-in-islam",
   "kharijites-and-takfir",
-  "blasphemy-and-insults-to-the-prophet",
-  "women-in-the-prophets-life"
+  "women-in-the-prophets-life",
+  "blasphemy-and-insults-to-the-prophet"
  ],
  "jizya": [
   "no-compulsion-in-religion",
@@ -399,7 +405,7 @@
   "is-yahweh-satan",
   "septuagint",
   "holy-war-in-the-bible",
-  "muhammad-and-the-hebrew-prophets"
+  "old-testament-variant-readings"
  ],
  "library-of-alexandria": [
   "seven-libraries",
@@ -426,8 +432,8 @@
   "trinity-in-the-hebrew-bible-tested"
  ],
  "medina-jewish-tribes-and-qurayza": [
-  "prophets-marriages-zaynab-and-others",
   "kaab-ibn-al-ashraf-and-the-poets",
+  "prophets-marriages-zaynab-and-others",
   "raids-badr-and-the-conquest-of-mecca",
   "slavery-in-islam"
  ],
@@ -465,7 +471,7 @@
   "prophet-died-poisoning",
   "first-revelation-demonic-claim",
   "quran-on-christians",
-  "war-and-killing-in-islam"
+  "apes-and-pigs-and-the-jews"
  ],
  "muhammad-never-wrote-it-down": [
   "who-changed-the-bible",
@@ -591,7 +597,7 @@
   "quranic-stories-and-history",
   "prophets-you-may-not-know",
   "quran-anachronism-claims",
-  "is-yahweh-the-same-as-allah"
+  "kings-and-chronicles-numbers"
  ],
  "quran-on-christians": [
   "buraq-and-miracle-stories",
@@ -663,7 +669,7 @@
   "ransom-bible-quran",
   "muhammad-and-the-hebrew-prophets",
   "quran-on-christians",
-  "shared-prophets"
+  "why-does-god-allow-suffering"
  ],
  "revelatory-exegesis": [
   "seal-of-the-prophets",
@@ -682,6 +688,12 @@
   "prophets-marriages-zaynab-and-others",
   "kharijites-and-takfir",
   "women-in-the-prophets-life"
+ ],
+ "sadness-and-depression-in-islam": [
+  "funeral-dhikr-dua",
+  "why-does-god-allow-suffering",
+  "do-muslims-worship-muhammad",
+  "war-and-killing-in-islam"
  ],
  "same-god": [
   "is-yahweh-the-same-as-allah",
@@ -739,8 +751,8 @@
  ],
  "shared-prophets": [
   "ransom-bible-quran",
-  "messenger-to-every-nation",
   "ishmael-in-the-quran-and-genesis",
+  "messenger-to-every-nation",
   "quran-on-christians"
  ],
  "sharia-and-hudud": [
@@ -879,7 +891,7 @@
   "is-yahweh-satan",
   "was-yahweh-one-of-many-gods",
   "haman-anachronism",
-  "who-is-allah"
+  "septuagint"
  ],
  "who-wrote-the-quran": [
   "muhammad-never-wrote-it-down",
@@ -887,11 +899,17 @@
   "prophet-died-poisoning",
   "satanic-verses-report"
  ],
+ "why-does-god-allow-suffering": [
+  "six-articles-of-faith",
+  "ransom-bible-quran",
+  "relationship-with-god",
+  "fate-and-free-will"
+ ],
  "why-five-prayers": [
   "five-pillars-explained",
   "jihad-meaning-quran-hadith-jurists",
   "fate-and-free-will",
-  "before-your-first-friday-prayer"
+  "prophets-you-may-not-know"
  ],
  "why-no-interest": [
   "sharia-and-hudud",
