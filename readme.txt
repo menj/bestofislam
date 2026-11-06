@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.17
+Stable tag: 1.100.18
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.100.18 =
+* Eleven more articles gain an in-text image, and every in-text image in them now has a caption. Nothing else changes.
+
 = 1.100.17 =
 * The settings and the notes speak of the other sites in plain words. Links to them stay.
 * The readme says where the browser icon goes on a site in a subfolder: a copy of favicon.ico in the domain root.
@@ -265,6 +268,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.100.18 =
+Replace the theme files. Nothing else to do.
 
 = 1.100.17 =
 Replace the theme files. On a site in a subfolder, also put a copy of assets/images/favicon.ico in the domain root folder; otherwise nothing to do.

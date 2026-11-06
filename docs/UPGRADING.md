@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.100.18
+
+Replace the theme files. Nothing else changes: eleven articles gain an image file each in `assets/images/inline/`, and the credits are in `inc/images-data.json`.
+
 ## Upgrading to 1.100.17
 
 Replace the theme files. Nothing else changes. On a site in a subfolder, put a copy of `assets/images/favicon.ico` in the domain root, since browsers ask for `/favicon.ico` there.

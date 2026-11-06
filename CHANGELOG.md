@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.18] - 2026-11-06
+
+Images, batch 7: eleven articles that were one image short of the rule (about one in-text image per two entries) gain one. No feature removed and no public identifier renamed.
+
+### Changed
+- early-christians-charged-others-with-corrupting-scripture, quran-word-kitab-meanings, trinity-in-the-hebrew-bible-tested, matthew-fulfilment-quotations-checked, gods-attributes-and-anthropomorphism, temporary-marriage-mutah, muslims-by-the-numbers, kharijites-and-takfir, funeral-dhikr-dua, magic-jinn-and-satan-hadiths and prophets-marriages-zaynab-and-others each gain an in-text image. Every in-text image in these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates.
+- The new pictures come from Wikimedia Commons (Papyrus 52 and Rublev's Trinity icon) and from Pexels (the rest, because the Commons search was too slow); none shows a prophet (D30). Captions say where a photograph is of somewhere else.
+
 ## [1.100.17] - 2026-11-05
 
 The theme now speaks of "the other sites" in its settings and notes, and the docs name the subfolder favicon step. No feature removed and no public identifier renamed.
