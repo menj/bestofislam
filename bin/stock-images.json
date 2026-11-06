@@ -1244,216 +1244,184 @@
   ]
  },
  "covenant-of-the-prophets": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Khalili Collection Islamic Art kfq 0093.a.jpg",
-   "alt": "A single folio of an early Quran manuscript in the Khalili Collection.",
-   "caption": "A folio of an early Quran. Quran 3:81 speaks of a covenant God took from the prophets."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Khalili Collection Islamic Art kfq 0050.1.jpg",
-    "alt": "A page of an early Quran manuscript in the Khalili Collection.",
+    "keep": true,
     "caption": "An early Quran leaf. The commentators read the messenger of 3:81 as the one who confirms what the prophets held."
    },
    {
-    "src": "commons",
-    "id": "File:Aleppo Deut 1910 Photo.jpg",
-    "alt": "A 1910 photograph of the Aleppo Codex at a page of Deuteronomy.",
-    "caption": "The Aleppo Codex, photographed in 1910. Deuteronomy 18:18 promises a prophet like Moses."
+    "keep": true,
+    "caption": "The Aleppo Codex, photographed in 1910. Read with 7:157, Deuteronomy 18:18 promises a prophet like Moses."
+   },
+   {
+    "src": "pexels",
+    "id": "5207627",
+    "alt": "A stack of vintage letters tied with twine, a sepia photo and a handwritten note.",
+    "caption": "A bundle of old letters. Al-Ṭabarī and Ibn Kathir pass on what earlier commentators reported."
+   },
+   {
+    "src": "pexels",
+    "id": "14747971",
+    "alt": "Vintage books on library shelves in London.",
+    "caption": "Books on a library shelf. The verse says nothing about the state of the seventh-century copies."
    }
   ]
  },
  "ask-those-who-read-the-scripture": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Aryamehr Quran 258.jpg",
-   "alt": "A decorated Quran manuscript copied by Ahmad Neyrizi in the eighteenth century.",
-   "caption": "A Quran copied by Ahmad Neyrizi. Quran 10:94 tells the Prophet to ask those who read the scripture before him."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:ISS-65 Mediterranean Sea and Gulf of Suez moonglint.jpg",
-    "alt": "The Gulf of Suez and the Mediterranean photographed from the International Space Station.",
+    "keep": true,
     "caption": "The Gulf of Suez seen from orbit. The verse comes at the end of the story of Moses, Pharaoh and the sea."
    },
    {
-    "src": "commons",
-    "id": "File:Iran, tafis (commentario al corano) di tabari (in persiano), 1210-25 ca. (bnf).jpg",
-    "alt": "A page of a Persian translation of al-Tabari's commentary on the Quran, about 1210 to 1225.",
+    "keep": true,
     "caption": "A Persian version of al-Tabari's commentary, early thirteenth century. Al-Tabari's reports name Abdullah ibn Salam among those who could be asked."
+   },
+   {
+    "src": "pexels",
+    "id": "5192345",
+    "alt": "Hands pointing to text in a Torah scroll.",
+    "caption": "Hands on a Torah scroll. Those to be asked are the People of the Book who read the scripture, as witnesses."
    }
   ]
  },
  "muhammad-never-wrote-it-down": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Birmingham Quran manuscript full.jpg",
-   "alt": "The leaves of the Birmingham Quran manuscript in early Hijazi script.",
-   "caption": "The Birmingham Quran leaves, radiocarbon dated to the first decades of Islam. The Prophet dictated the Quran to scribes."
-  },
   "inline": [
    {
-    "src": "commons",
-    "id": "File:Birmingham Quran manuscript folio 1 recto.jpg",
-    "alt": "A single leaf of the Birmingham Quran manuscript.",
+    "keep": true,
     "caption": "A leaf of the Birmingham manuscript. Early copies fit the account of written pieces gathered after the Prophet."
    },
    {
-    "src": "commons",
-    "id": "File:Vatican, Apostolic Library Ms Hanna Papyrus 1 - Papyrus Bodmer XIV–XV (Papyrus 75) fol 1B9r Luke 14, 3-14.jpg",
-    "alt": "A page of Papyrus 75 with Luke 14.",
+    "keep": true,
     "caption": "Papyrus 75, about 200, at Luke 14. The Gospels carry no chain of named narrators back to Jesus."
+   },
+   {
+    "src": "pexels",
+    "id": "5425611",
+    "alt": "Hands writing in calligraphy on rustic parchment paper.",
+    "caption": "Hands writing on parchment. The Prophet ﷺ dictated the Quran to scribes as it came."
+   },
+   {
+    "src": "pexels",
+    "id": "34652787",
+    "alt": "A collection of ancient manuscripts with Arabic script.",
+    "caption": "Ancient Arabic manuscripts. Abu Bakr had the pages gathered, and Uthman made the standard copies."
    }
   ]
  },
  "ransom-bible-quran": {
-  "featured": {
-   "src": "commons",
-   "id": "File:Tyrian Half-Shekel Heb.JPG",
-   "alt": "A Tyrian half-shekel coin of the Second Temple period.",
-   "caption": "A Tyrian half shekel. Exodus 30 calls the half-shekel census payment a ransom for each life."
-  },
   "inline": [
    {
-    "src": "archive",
-    "id": "codexbezaecantab01univ/n150",
-    "alt": "A page of the Latin text of Codex Bezae at Matthew 21:46 to 22:11, from the 1899 facsimile.",
-    "caption": "Codex Bezae, a Gospel book of about 400. Mark 10:45 speaks of a ransom for many.",
-    "artist": "Cambridge University Press, facsimile of 1899",
-    "licence": "Public domain"
+    "keep": true,
+    "caption": "Codex Bezae, a Gospel book of about 400. Mark 10:45 speaks of a ransom for many."
    },
    {
-    "src": "cleveland",
-    "id": "170791",
-    "alt": "A Mughal painting of about 1585 of a ram with a gold chain.",
-    "caption": "A ram, painted in Mughal India. The sacrifice at the Hajj recalls the ram that ransomed Abraham's son (37:107).",
-    "top": 0.3,
-    "artist": "Unknown Mughal artist"
+    "keep": true,
+    "caption": "A ram, painted in Mughal India. The sacrifice at the Hajj recalls the ram that ransomed Abraham's son (37:107)."
+   },
+   {
+    "src": "pexels",
+    "id": "38729301",
+    "alt": "A minimalist wooden balance scale on a black marble surface.",
+    "caption": "A balance scale. The Quran says that no ransom will be taken on the Last Day."
+   },
+   {
+    "src": "pexels",
+    "id": "5706784",
+    "alt": "An elderly man bent under a large sack, walking past an old building.",
+    "caption": "A man bent under a heavy sack. The Quran says no bearer of burdens bears another's burden (35:18)."
    }
   ]
  },
  "revelatory-exegesis": {
-  "featured": {
-   "src": "archive",
-   "id": "CodexVaticanusbFacSimile/n2",
-   "alt": "A page of the 1868 printed edition of Codex Vaticanus, with Matthew 1:22 to 2:18 in Greek capitals.",
-   "caption": "Codex Vaticanus at Matthew 2, in its 1868 edition. Matthew reads the older prophets as fulfilled in Jesus.",
-   "artist": "Vatican Library, edition of 1868",
-   "licence": "Public domain"
-  },
   "inline": [
    {
-    "src": "archive",
-    "id": "Aleppo_Codex/n300",
-    "alt": "A page of the Aleppo Codex, a Hebrew Bible in three columns.",
-    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. Daniel turns Jeremiah's seventy years into seventy weeks of years.",
-    "artist": "Shlomo ben Buya'a",
-    "licence": "Public domain"
+    "keep": true,
+    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. Daniel turns Jeremiah's seventy years into seventy weeks of years."
    },
    {
-    "src": "cleveland",
-    "id": "98209",
-    "alt": "A Hebrew scroll of Esther on vellum, about 1850, in the Cleveland Museum of Art.",
-    "caption": "A Hebrew scroll. The Habakkuk commentary from Qumran, also a scroll, says the prophet did not know when the end would come.",
-    "top": 0.1,
-    "artist": "Unknown scribe"
+    "keep": true,
+    "caption": "A Hebrew scroll. The Habakkuk commentary from Qumran, also a scroll, says the prophet did not know when the end would come."
    },
    {
-    "src": "archive",
-    "id": "facsimileofwashi02sand/n389",
-    "alt": "A page of Codex Washingtonianus at Mark 14:29 to 40, from the 1912 facsimile.",
-    "caption": "Codex Washingtonianus at Mark 14. Matthew and Luke took over most of Mark and rewrote it.",
-    "artist": "Freer Gallery of Art, facsimile of 1912",
-    "licence": "Public domain"
+    "keep": true,
+    "caption": "Codex Washingtonianus at Mark 14. Matthew and Luke took over most of Mark and rewrote it."
+   },
+   {
+    "src": "pexels",
+    "id": "29342499",
+    "alt": "A close-up of an ancient manuscript with elaborate Arabic calligraphy and geometric designs.",
+    "caption": "An old Arabic manuscript. The Quran calls itself muhaymin over the earlier books."
    }
   ]
  },
  "who-changed-the-bible": {
-  "featured": {
-   "src": "archive",
-   "id": "facsimileofwashi02sand/n100",
-   "alt": "A page of Codex Washingtonianus, a Greek Gospel book of about 400, from the 1912 facsimile.",
-   "caption": "Codex Washingtonianus, about 400, a copy of the four Gospels. The four Gospels name no author in their own text.",
-   "artist": "Freer Gallery of Art, facsimile of 1912",
-   "licence": "Public domain"
-  },
   "inline": [
    {
-    "src": "archive",
-    "id": "codexbezaecantab01univ/n250",
-    "alt": "A page of the Latin text of Codex Bezae at John 7:8 to 22, from the 1899 facsimile.",
-    "caption": "Codex Bezae carries many readings found in no other manuscript.",
-    "artist": "Cambridge University Press, facsimile of 1899",
-    "licence": "Public domain"
+    "keep": true,
+    "caption": "Codex Bezae carries many readings found in no other manuscript."
    },
    {
-    "src": "archive",
-    "id": "facsimileofwashi02sand/n396",
-    "alt": "A page of Codex Washingtonianus at Mark 16:12 to 17, from the 1912 facsimile.",
-    "caption": "Codex Washingtonianus at Mark 16. It adds a passage after 16:14 that no other Greek manuscript has.",
-    "artist": "Freer Gallery of Art, facsimile of 1912",
-    "licence": "Public domain"
+    "keep": true,
+    "caption": "Codex Washingtonianus at Mark 16. It adds a passage after 16:14 that no other Greek manuscript has."
+   },
+   {
+    "src": "pexels",
+    "id": "51191",
+    "alt": "Handwritten letters and papers stacked together.",
+    "caption": "A stack of handwritten letters. Seven of the 13 letters under Paul's name are accepted as his."
+   },
+   {
+    "src": "pexels",
+    "id": "1650203",
+    "alt": "A person using a quill pen to write in a vintage notebook.",
+    "caption": "A quill and a notebook. Scribes made the Gospels agree with each other as they copied."
    }
   ]
  },
  "torah-on-the-cushion-hadith": {
-  "featured": {
-   "src": "wellcome",
-   "id": "hs9q2kdz",
-   "alt": "The decorated opening page of a Hebrew Pentateuch printed in 1505.",
-   "caption": "A Hebrew Torah, printed in 1505. In Abu Dawud 4449 the Prophet set the Torah on a cushion and said he believed in it.",
-   "top": 0.3,
-   "artist": "Unknown printer"
-  },
   "inline": [
    {
-    "src": "archive",
-    "id": "Aleppo_Codex/n0",
-    "alt": "A page of the Aleppo Codex, a Hebrew Bible in three columns.",
-    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. The parallel accounts tell of a hand placed over the verse of stoning.",
-    "artist": "Shlomo ben Buya'a",
-    "licence": "Public domain"
+    "keep": true,
+    "caption": "The Aleppo Codex, a Hebrew Bible of the 900s. The parallel accounts tell of a hand placed over the verse of stoning."
    },
    {
-    "src": "cleveland",
-    "id": "111691",
-    "alt": "A painting of a crowded synagogue interior by Alessandro Magnasco, about 1730.",
+    "keep": true,
     "caption": "A synagogue, painted by Magnasco. The report shows a Torah in Jewish hands in Medina. It cannot show that the whole text was intact."
+   },
+   {
+    "src": "pexels",
+    "id": "5986494",
+    "alt": "A Sefer Torah scroll displayed on a bimah in a synagogue.",
+    "caption": "A Torah scroll on a bimah. The report shows a Torah in Jewish hands in Medina."
+   },
+   {
+    "src": "pexels",
+    "id": "9825398",
+    "alt": "Rolled vintage scrolls and a small apothecary bottle on a wooden surface.",
+    "caption": "Rolled scrolls. The report does not show that the whole text was intact."
    }
   ]
  },
  "seal-of-the-prophets": {
-  "featured": {
-   "src": "cleveland",
-   "id": "157145",
-   "alt": "A Quran folio of the 800s written in gold Kufic script on parchment.",
-   "caption": "A Quran folio of the 800s. Quran 33:40 calls Muhammad the seal of the prophets.",
-   "artist": "Unknown scribe"
-  },
   "inline": [
    {
-    "src": "wellcome",
-    "id": "q8y3e63f",
-    "alt": "A lithograph of about 1820 showing the Kaaba and the Sacred Mosque with Mecca behind.",
+    "keep": true,
     "caption": "Mecca in a lithograph of about 1820. Quran 5:3 was revealed at Arafat, outside Mecca, during the Farewell Pilgrimage."
    },
    {
-    "src": "cleveland",
-    "id": "114265",
-    "alt": "A Quran folio of the 800s in Kufic script, probably from Egypt.",
-    "caption": "A Quran page in Kufic script. The Quran calls itself the guardian over the books before it.",
-    "artist": "Unknown scribe"
+    "keep": true,
+    "caption": "A Quran page in Kufic script. The Quran calls itself the guardian over the books before it."
    },
    {
-    "src": "wellcome",
-    "id": "yjzsdd6y",
-    "alt": "A woodcut by Jost Amman of a brickmaker shaping bricks.",
-    "caption": "A brickmaker at work. The Prophet compared himself to the last brick that completes a house.",
-    "artist": "Jost Amman",
-    "top": 0.4
+    "keep": true,
+    "caption": "A brickmaker at work. The Prophet compared himself to the last brick that completes a house."
+   },
+   {
+    "src": "pexels",
+    "id": "37559006",
+    "alt": "Aged classic books lined up on wooden shelves.",
+    "caption": "Shelves of old books. Whether a later book may complete an earlier one is argued from inside each tradition."
    }
   ]
  },
@@ -1868,6 +1836,126 @@
     "id": "10638724",
     "alt": "Two hands reaching toward each other in warm light.",
     "caption": "Two hands reaching toward each other. In the sources, relieving a brother's distress is a duty."
+   }
+  ]
+ },
+ "comma-johanneum": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5402688",
+    "alt": "A vintage still life with glass ink bottles, a quill pen and a leather-bound notebook.",
+    "caption": "A quill, ink and a notebook. The clause entered the printed Greek text through Erasmus in 1522; the photograph is a still life and not of his work."
+   },
+   {
+    "src": "pexels",
+    "id": "895449",
+    "alt": "A close-up of an open Bible with highlighted text.",
+    "caption": "An open Bible with a highlighted passage. Matthew 28:19 names Father, Son and Holy Spirit, and it does not do the same work as the clause."
+   }
+  ]
+ },
+ "old-testament-variant-readings": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5986484",
+    "alt": "Adorned Torah scrolls with silver crowns in a synagogue.",
+    "caption": "Torah scrolls in a synagogue. The rabbis chose between differing scrolls by majority, and the standard Hebrew text came later."
+   },
+   {
+    "src": "pexels",
+    "id": "7161376",
+    "alt": "The desert caves of Qumran National Park.",
+    "caption": "The caves of Qumran National Park. The Dead Sea Scrolls found there restore a missing paragraph of Samuel."
+   }
+  ]
+ },
+ "kings-and-chronicles-numbers": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "6159081",
+    "alt": "Ancient stone architecture and skyline in Jerusalem on a sunny day.",
+    "caption": "Jerusalem. The lists of the temple's furnishings and officers in Kings and Chronicles do not match."
+   },
+   {
+    "src": "pexels",
+    "id": "360941",
+    "alt": "A man writing with a quill pen on a manuscript indoors.",
+    "caption": "A copyist at work. Many of the number differences are best explained as copyist errors."
+   }
+  ]
+ },
+ "genealogies-of-jesus": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "6274899",
+    "alt": "Vintage family photo albums filled with black and white photographs.",
+    "caption": "Old family albums. Matthew and Luke give two different lines for Joseph, with different fathers."
+   },
+   {
+    "src": "pexels",
+    "id": "12085516",
+    "alt": "An antique open book with handwritten pages on a rustic wooden table.",
+    "caption": "An antique book with handwritten pages. Matthew's three groups of fourteen leave out four kings."
+   }
+  ]
+ },
+ "bible-alteration-claim-before-islam": {
+  "inline": [
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "keep": true,
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "src": "pexels",
+    "id": "5192347",
+    "alt": "A hand pointing at text on an open Torah scroll.",
+    "caption": "A hand pointing at a Torah scroll. Jews and Samaritans accused each other of falsifying it."
+   },
+   {
+    "src": "pexels",
+    "id": "34640259",
+    "alt": "A vintage scene with candlelight and a handwritten manuscript on lace.",
+    "caption": "A handwritten manuscript by candlelight. Christians accused other Christians of altering scripture."
    }
   ]
  }

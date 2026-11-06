@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.100.21
+
+Replace the theme files. Nothing else changes: image files are added in `assets/images/inline/`, and the credits are in `inc/images-data.json`.
+
 ## Upgrading to 1.100.20
 
 Replace the theme files. The new articles reach existing sites through `boi_migrate_seed()` on this version; their images are added in `assets/images/`.

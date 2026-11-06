@@ -4321,14 +4321,32 @@
     "alt": "Concentric star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "comma-johanneum-2.avif",
     "alt": "Star rings in white, blue and gold on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "comma-johanneum-3.avif",
+    "alt": "A vintage still life with glass ink bottles, a quill pen and a leather-bound notebook.",
+    "caption": "A quill, ink and a notebook. The clause entered the printed Greek text through Erasmus in 1522; the photograph is a still life and not of his work.",
+    "artist": "Yashasvi Nagda",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-ink-bottles-and-a-fountain-pen-beside-a-notebook-5402688/"
+   },
+   {
+    "file": "comma-johanneum-4.avif",
+    "alt": "A close-up of an open Bible with highlighted text.",
+    "caption": "An open Bible with a highlighted passage. Matthew 28:19 names Father, Son and Holy Spirit, and it does not do the same work as the clause.",
+    "artist": "D0N MIL04K",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-photography-of-bible-895449/"
    }
   ]
  },
@@ -4346,14 +4364,32 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "old-testament-variant-readings-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "old-testament-variant-readings-3.avif",
+    "alt": "Adorned Torah scrolls with silver crowns in a synagogue.",
+    "caption": "Torah scrolls in a synagogue. The rabbis chose between differing scrolls by majority, and the standard Hebrew text came later.",
+    "artist": "cottonbro studio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/arranged-torah-scrolls-5986484/"
+   },
+   {
+    "file": "old-testament-variant-readings-4.avif",
+    "alt": "The desert caves of Qumran National Park.",
+    "caption": "The caves of Qumran National Park. The Dead Sea Scrolls found there restore a missing paragraph of Samuel.",
+    "artist": "BOGDAN SIUDY",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/caves-at-qumran-national-park-7161376/"
    }
   ]
  },
@@ -4371,14 +4407,32 @@
     "alt": "Gold, blue and white star rings on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "kings-and-chronicles-numbers-2.avif",
     "alt": "A many-pointed star in gold and blue lines on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "kings-and-chronicles-numbers-3.avif",
+    "alt": "Ancient stone architecture and skyline in Jerusalem on a sunny day.",
+    "caption": "Jerusalem. The lists of the temple's furnishings and officers in Kings and Chronicles do not match.",
+    "artist": "Karolína Balogová",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stone-walls-in-an-old-town-and-clouds-in-a-blue-sky-6159081/"
+   },
+   {
+    "file": "kings-and-chronicles-numbers-4.avif",
+    "alt": "A man writing with a quill pen on a manuscript indoors.",
+    "caption": "A copyist at work. Many of the number differences are best explained as copyist errors.",
+    "artist": "Nathan Engel",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/person-writing-calligraphy-360941/"
    }
   ]
  },
@@ -4396,14 +4450,32 @@
     "alt": "Concentric star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "genealogies-of-jesus-2.avif",
     "alt": "Star rings in white, blue and gold on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "genealogies-of-jesus-3.avif",
+    "alt": "Vintage family photo albums filled with black and white photographs.",
+    "caption": "Old family albums. Matthew and Luke give two different lines for Joseph, with different fathers.",
+    "artist": "Thiago José Amaral",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/old-pictures-on-photo-album-6274899/"
+   },
+   {
+    "file": "genealogies-of-jesus-4.avif",
+    "alt": "An antique open book with handwritten pages on a rustic wooden table.",
+    "caption": "An antique book with handwritten pages. Matthew's three groups of fourteen leave out four kings.",
+    "artist": "Vaan Photography",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/white-book-on-the-table-12085516/"
    }
   ]
  },
@@ -4421,14 +4493,32 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "bible-alteration-claim-before-islam-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "bible-alteration-claim-before-islam-3.avif",
+    "alt": "A hand pointing at text on an open Torah scroll.",
+    "caption": "A hand pointing at a Torah scroll. Jews and Samaritans accused each other of falsifying it.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/hand-over-tora-5192347/"
+   },
+   {
+    "file": "bible-alteration-claim-before-islam-4.avif",
+    "alt": "A vintage scene with candlelight and a handwritten manuscript on lace.",
+    "caption": "A handwritten manuscript by candlelight. Christians accused other Christians of altering scripture.",
+    "artist": "betül nur akyürek",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-still-life-with-candlelight-and-manuscript-34640259/"
    }
   ]
  },
@@ -4453,10 +4543,26 @@
    {
     "file": "covenant-of-the-prophets-2.avif",
     "alt": "A 1910 photograph of the Aleppo Codex at a page of Deuteronomy.",
-    "caption": "The Aleppo Codex, photographed in 1910. Deuteronomy 18:18 promises a prophet like Moses.",
+    "caption": "The Aleppo Codex, photographed in 1910. Read with 7:157, Deuteronomy 18:18 promises a prophet like Moses.",
     "artist": "Joseph Segall",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Aleppo_Deut_1910_Photo.jpg"
+   },
+   {
+    "file": "covenant-of-the-prophets-3.avif",
+    "alt": "A stack of vintage letters tied with twine, a sepia photo and a handwritten note.",
+    "caption": "A bundle of old letters. Al-Ṭabarī and Ibn Kathir pass on what earlier commentators reported.",
+    "artist": "Suzy Hazelwood",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/letters-on-the-table-5207627/"
+   },
+   {
+    "file": "covenant-of-the-prophets-4.avif",
+    "alt": "Vintage books on library shelves in London.",
+    "caption": "Books on a library shelf. The verse says nothing about the state of the seventh-century copies.",
+    "artist": "Bo Ponomari",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/books-on-shelves-14747971/"
    }
   ]
  },
@@ -4485,6 +4591,14 @@
     "artist": "Francesco Bini",
     "licence": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Iran,_tafis_(commentario_al_corano)_di_tabari_(in_persiano),_1210-25_ca._(bnf).jpg"
+   },
+   {
+    "file": "ask-those-who-read-the-scripture-3.avif",
+    "alt": "Hands pointing to text in a Torah scroll.",
+    "caption": "Hands on a Torah scroll. Those to be asked are the People of the Book who read the scripture, as witnesses.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/hands-over-tora-5192345/"
    }
   ]
  },
@@ -4513,6 +4627,22 @@
     "artist": "Unknown author",
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Vatican,_Apostolic_Library_Ms_Hanna_Papyrus_1_-_Papyrus_Bodmer_XIV–XV_(Papyrus_75)_fol_1B9r_Luke_14,_3-14.jpg"
+   },
+   {
+    "file": "muhammad-never-wrote-it-down-3.avif",
+    "alt": "Hands writing in calligraphy on rustic parchment paper.",
+    "caption": "Hands writing on parchment. The Prophet ﷺ dictated the Quran to scribes as it came.",
+    "artist": "Anna Tarazevich",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-person-writing-on-a-paper-5425611/"
+   },
+   {
+    "file": "muhammad-never-wrote-it-down-4.avif",
+    "alt": "A collection of ancient manuscripts with Arabic script.",
+    "caption": "Ancient Arabic manuscripts. Abu Bakr had the pages gathered, and Uthman made the standard copies.",
+    "artist": "caffeine",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-manuscripts-with-arabic-script-historical-archives-34652787/"
    }
   ]
  },
@@ -4541,6 +4671,22 @@
     "artist": "Unknown Mughal artist, Cleveland Museum of Art",
     "licence": "CC0",
     "source": "https://clevelandart.org/art/2013.298"
+   },
+   {
+    "file": "ransom-bible-quran-3.avif",
+    "alt": "A minimalist wooden balance scale on a black marble surface.",
+    "caption": "A balance scale. The Quran says that no ransom will be taken on the Last Day.",
+    "artist": "Ann Hannes",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/wooden-balance-scale-on-marble-surface-38729301/"
+   },
+   {
+    "file": "ransom-bible-quran-4.avif",
+    "alt": "An elderly man bent under a large sack, walking past an old building.",
+    "caption": "A man bent under a heavy sack. The Quran says no bearer of burdens bears another's burden (35:18).",
+    "artist": "Javad Esmaeili",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/an-elderly-man-walking-on-the-street-while-carrying-a-heavy-sack-and-a-plastic-bag-5706784/"
    }
   ]
  },
@@ -4577,6 +4723,14 @@
     "artist": "Freer Gallery of Art, facsimile of 1912",
     "licence": "Public domain",
     "source": "https://archive.org/details/facsimileofwashi02sand/page/n389"
+   },
+   {
+    "file": "revelatory-exegesis-4.avif",
+    "alt": "A close-up of an ancient manuscript with elaborate Arabic calligraphy and geometric designs.",
+    "caption": "An old Arabic manuscript. The Quran calls itself muhaymin over the earlier books.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/intricate-arabic-calligraphy-on-ancient-manuscript-29342499/"
    }
   ]
  },
@@ -4605,6 +4759,22 @@
     "artist": "Freer Gallery of Art, facsimile of 1912",
     "licence": "Public domain",
     "source": "https://archive.org/details/facsimileofwashi02sand/page/n396"
+   },
+   {
+    "file": "who-changed-the-bible-3.avif",
+    "alt": "Handwritten letters and papers stacked together.",
+    "caption": "A stack of handwritten letters. Seven of the 13 letters under Paul's name are accepted as his.",
+    "artist": "Pixabay",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/white-stacked-worksheets-on-table-51191/"
+   },
+   {
+    "file": "who-changed-the-bible-4.avif",
+    "alt": "A person using a quill pen to write in a vintage notebook.",
+    "caption": "A quill and a notebook. Scribes made the Gospels agree with each other as they copied.",
+    "artist": "Vika Glitter",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/person-writing-on-paper-1650203/"
    }
   ]
  },
@@ -4633,6 +4803,22 @@
     "artist": "Alessandro Magnasco, Cleveland Museum of Art",
     "licence": "CC0",
     "source": "https://clevelandart.org/art/1930.22"
+   },
+   {
+    "file": "torah-on-the-cushion-hadith-3.avif",
+    "alt": "A Sefer Torah scroll displayed on a bimah in a synagogue.",
+    "caption": "A Torah scroll on a bimah. The report shows a Torah in Jewish hands in Medina.",
+    "artist": "cottonbro studio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/a-sefer-torah-on-a-table-5986494/"
+   },
+   {
+    "file": "torah-on-the-cushion-hadith-4.avif",
+    "alt": "Rolled vintage scrolls and a small apothecary bottle on a wooden surface.",
+    "caption": "Rolled scrolls. The report does not show that the whole text was intact.",
+    "artist": "pembegül",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/retro-glass-bottle-and-paper-recipes-on-table-9825398/"
    }
   ]
  },
@@ -4669,6 +4855,14 @@
     "artist": "Jost Amman, Wellcome Collection",
     "licence": "Public domain",
     "source": "https://wellcomecollection.org/works/qbr54wvz"
+   },
+   {
+    "file": "seal-of-the-prophets-4.avif",
+    "alt": "Aged classic books lined up on wooden shelves.",
+    "caption": "Shelves of old books. Whether a later book may complete an earlier one is argued from inside each tradition.",
+    "artist": "Mia's Photography",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-library-books-on-wooden-shelves-37559006/"
    }
   ]
  },
