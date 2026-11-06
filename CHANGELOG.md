@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.101.3] - 2026-11-06
+
+### Changed
+
+- The last seven short articles reach at least 1,600 words of body text, so every one of the 155 seeded articles now carries between 1,600 and 2,500. fighting-verses-in-context (1,528 to 1,606) adds the purpose the fighting verses state (2:193, 8:39, 8:61, 60:7); medina-jewish-tribes-and-qurayza (1,528 to 1,611) the Quran's distinction between those who fought and those who kept faith (3:113, 60:8); talmud-midrash-apocrypha-borrowing (1,529 to 1,613) the Quran's own record of the borrowing charge (16:103, 25:5); six-articles-of-faith (1,530 to 1,612) the verses behind the order of the creed (2:285, 4:136, 54:49); islamic-rites-before-islam (1,557 to 1,647) what the Quran removed from the pagan pilgrimage (7:31, 9:37), and a neutral pronoun for the generic reader; same-god (1,576 to 1,639) Paul at Athens (Acts 17:23); islamic-art-and-the-one-god (1,579 to 1,637) the Mamluk mosque lamps inscribed with the verse of light. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
 ## [1.101.2] - 2026-11-06
 
 ### Changed
