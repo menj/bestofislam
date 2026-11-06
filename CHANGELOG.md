@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.21] - 2026-11-06
+
+Images, batch 9: the last thirteen articles below the image rule (about one in-text image per two entries) gain images. No feature removed and no public identifier renamed.
+
+### Changed
+- comma-johanneum, old-testament-variant-readings, kings-and-chronicles-numbers, genealogies-of-jesus, bible-alteration-claim-before-islam, covenant-of-the-prophets, torah-on-the-cushion-hadith, who-changed-the-bible, muhammad-never-wrote-it-down and ransom-bible-quran gain two images each; revelatory-exegesis, seal-of-the-prophets and ask-those-who-read-the-scripture gain one each. Every in-text image in these articles, old and new, now has a caption, and each figure sits beside the entry it illustrates. The original star patterns are captioned as original artwork.
+- All new pictures are Pexels photographs (Wikimedia Commons is first under D48, and swaps can follow); none shows a prophet (D30). Captions say where a photograph is only a still life or a stock picture.
+
 ## [1.100.20] - 2026-11-06
 
 Three new articles that answer the arguments in an ex-Muslim memoir, without naming the author or the book, and without any comment on her inner life. No feature removed and no public identifier renamed.
