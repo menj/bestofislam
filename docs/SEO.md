@@ -9,11 +9,11 @@ ranking, and the guide itself says to write for readers first.
 
 | Guide topic | What the theme does | Where |
 |---|---|---|
-| Unique, accurate page titles | Every title tag reads `<page> | Best of Islam` and stays under 60 characters (D47). Articles use a short `seo_title` from the seed where the headline is too long; Glossary entries with long names carry one in their data; section archives use the section name; the front page leads with its focus ("Objections to Islam, answered | Best of Islam"). Anything still too long is cut at a word boundary, and `bin/check-content.py` refuses a seed or Glossary title that would overflow. | `inc/seo.php` |
+| Unique, accurate page titles | Every title tag reads `<page> | Best of Islam` and stays under 60 characters (D47). Articles use a short `seo_title` from the seed where the headline is too long; Glossary entries with long names carry one in their data; section archives use the section name; the front page leads with its focus ("Objections to Islam, answered | Best of Islam"); an author archive reads "Articles by <name>", or "Who writes Best of Islam" when the author account carries the site's own name, so the tag never repeats it. Anything still too long is cut at a word boundary, and `bin/check-content.py` refuses a seed or Glossary title that would overflow. | `inc/seo.php` |
 | Description meta tag | One per page: the excerpt on articles and glossary entries (one line, under 160 characters), the section description on archives, a written promise on the front page. None on search results. | `inc/seo.php` |
 | URLs with words | Slugs are words (`/who-is-allah/`, `/glossary/hijab/`, `/topic/history/`). Set Settings, Permalinks to Post name so an article has one address; old dated addresses redirect by slug. | WordPress |
 | One version of a URL | Canonical link on every indexable view; `redirect_canonical` for the rest. | `inc/seo.php` |
-| Navigation and breadcrumbs | Eight sections in the header and footer, breadcrumb trail with BreadcrumbList markup, a "Read next" card and a Keep reading list of four related articles on every article, the first mention of each glossary term linked in the text, related terms and articles on glossary entries, and a text link for every article (no drop-downs or image maps). | `parts/`, `inc/seo.php`, `inc/reading.php`, `inc/glossary.php` |
+| Navigation and breadcrumbs | Eight sections in the header and footer, breadcrumb trail with BreadcrumbList markup, a "Read next" card and a Keep reading grid of six related articles (two rows of three) on every article, the first mention of each glossary term linked in the text, related terms and articles on glossary entries, and a text link for every article (no drop-downs or image maps). | `parts/`, `inc/seo.php`, `inc/reading.php`, `inc/glossary.php` |
 | Sitemap for users and for search engines | An HTML Sitemap page, the core XML sitemap (articles, pages, glossary, sections; users, categories and tags left out; unlisted articles excluded) and an image sitemap at `/sitemap-images.xml` with the featured image and the images in the text of each article. | `inc/setup.php`, `inc/seo.php` |
 | Useful 404 page | Real HTTP 404, the site's own design, a way home, the sections and the latest articles. | `templates/404.html` |
 | Quality content | Each article is a numbered argument with sources in Notes; each glossary entry defines the term, says what it means, and cites. | `content/`, `inc/glossary-data/` |
@@ -23,7 +23,7 @@ ranking, and the guide itself says to write for readers first.
 | robots.txt | Search results disallowed; nothing sensitive is hidden with it. Search results and paged archives also carry noindex. | `inc/seo.php` |
 | nofollow | Core adds `rel="nofollow ugc"` to comment links; links the owner configures under Contextual Links go only to approved domains. | core, `inc/contextual-links.php` |
 | Mobile | Responsive layout, one URL for every device, no separate mobile site. | `assets/css/` |
-| Promotion | RSS feed with autodiscovery, follow links, shareable articles. | core, `inc/features.php` |
+| Promotion | RSS feed with autodiscovery, follow links, shareable articles. A shared link previews with its title, description and picture: Open Graph and Twitter Card tags on every indexable view, using the same title, description and canonical address as the search tags. The picture is a JPEG copy of the featured image (link previews do not show AVIF), made once in `uploads/boi-share/` and made again when the image changes. | core, `inc/features.php`, `inc/social-meta.php` |
 | Free webmaster tools | Fields for the Search Console and Bing verification codes (Appearance, Best of Islam, Search engines); submit `/wp-sitemap.xml`. | `inc/settings.php`, `inc/seo.php` |
 
 ## Structured data Google Search supports
@@ -70,6 +70,7 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 | Images in the text | ImageObjects in the theme's graph | Added to Rank Math's graph |
 | Breadcrumb markup | Theme | Rank Math when its breadcrumbs are on, otherwise the theme |
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
+| Open Graph and Twitter Card tags | Theme | Rank Math |
 | ItemList, FAQPage, DefinedTermSet, quotations, citations, header, footer and menus | Theme graph | Merged into Rank Math's graph by `@id`; the theme prints no second block |
 | Image sitemap | Theme, at `/sitemap-images.xml`, named in robots.txt | Rank Math's sitemap, which lists each post's images |
 

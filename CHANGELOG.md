@@ -4,6 +4,45 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.101.3] - 2026-11-06
+
+### Changed
+
+- The last seven short articles reach at least 1,600 words of body text, so every one of the 155 seeded articles now carries between 1,600 and 2,500. fighting-verses-in-context (1,528 to 1,606) adds the purpose the fighting verses state (2:193, 8:39, 8:61, 60:7); medina-jewish-tribes-and-qurayza (1,528 to 1,611) the Quran's distinction between those who fought and those who kept faith (3:113, 60:8); talmud-midrash-apocrypha-borrowing (1,529 to 1,613) the Quran's own record of the borrowing charge (16:103, 25:5); six-articles-of-faith (1,530 to 1,612) the verses behind the order of the creed (2:285, 4:136, 54:49); islamic-rites-before-islam (1,557 to 1,647) what the Quran removed from the pagan pilgrimage (7:31, 9:37), and a neutral pronoun for the generic reader; same-god (1,576 to 1,639) Paul at Athens (Acts 17:23); islamic-art-and-the-one-god (1,579 to 1,637) the Mamluk mosque lamps inscribed with the verse of light. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
+## [1.101.2] - 2026-11-06
+
+### Changed
+
+- Three more articles reach at least 1,600 words of body text. women-in-the-prophets-life (1,453 to 1,642) adds the hadith ranking Khadija beside Mary (Bukhari 3432) and Umm Salama's question behind Quran 33:35. apostasy-in-islam (1,446 to 1,608) adds the Hudaybiyya term that Muslims who went over to Quraysh would not be returned (Muslim 1784) and the pardon of Abd Allah ibn Sa'd, with how each side of the debate reads them. quran-anachronism-claims (1,458 to 1,639) answers the charge that Talut's river test belongs to Gideon. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
+## [1.101.1] - 2026-11-06
+
+### Changed
+
+- Six articles brought within the 1,600 to 2,500 word range for body text. kaab-ibn-al-ashraf-and-the-poets (917 to 1,604) gains the Bukhari chapter on deception in war, the agreement the Jews of Medina wrote with the Prophet after Ka'b's death (Abu Dawud 3000), the Muwatta's report that the party sent to Abu Rafi' was forbidden to kill women and children, the answering of hostile verse with verse through Hassan ibn Thabit, the pardons of Ka'b ibn Zuhayr and Ibn al-Ziba'ra, Watt's acceptance of the poet stories and why the article does not, and the rule that penalties belong to the courts, with al-Azhar's condemnation of the 2015 Charlie Hebdo attack. hijab-and-modesty, who-changed-the-bible, homosexuality-in-islam and verses-read-differently, each a word or two short, gain a sentence. islamic-dilemma (2,509) drops a sentence that repeated its neighbours and now reads 2,489. Details still to check are listed in `docs/CONTENT-REVIEW.md`.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
+## [1.101.0] - 2026-11-06
+
+### Added
+
+- Link previews. Every indexable view carries Open Graph and Twitter Card tags (`inc/social-meta.php`), so an article shared on WhatsApp, Facebook, X, LinkedIn or Telegram shows its title, description and picture instead of a bare address. The tags reuse the title, description and canonical address the theme gives search engines. Link previews do not show AVIF, so the picture is a JPEG copy of the featured image, no wider than 1,200 pixels, made once in `uploads/boi-share/` and made again only when the image changes. With an SEO plugin active the theme prints none, as the plugin prints its own.
+
+### Changed
+
+- The Keep reading list at the end of each article shows six related articles in two rows of three. It showed four in a grid that fitted three to a row, which left the fourth card alone on a second row. `bin/build-related.py` keeps the six best matches and `inc/related-articles.json` is rebuilt. The renderer cuts the list to a multiple of three, so an unlisted article never leaves a gap, and the fallback by section asks for six. On phones each card sets a small picture beside its title.
+
+### Fixed
+
+- Opening a question in the front-page questions band no longer leaves an empty space beside it. The featured questions sat in a grid of rows, so an opened answer made its whole row taller and left a gap under its closed neighbour. They now sit in two columns that each stack on their own, alternating so they still read across; on phones the columns merge back into one list in the original order.
+- The author archive's title tag read "Best of Islam | Best of Islam", because the author account carries the site's name. It now reads "Who writes Best of Islam | Best of Islam", or "Articles by <name>" for any other author, and its description no longer reads "Articles by Best of Islam on Best of Islam".
+
 ## [1.100.21] - 2026-11-06
 
 Images, batch 9: the last thirteen articles below the image rule (about one in-text image per two entries) gain images. No feature removed and no public identifier renamed.

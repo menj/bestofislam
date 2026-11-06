@@ -102,20 +102,23 @@ add_action( 'init', 'boi_register_question_blocks' );
 /**
  * One question as an accordion item.
  *
- * @param array   $item Question item.
- * @param WP_Post $post Answering article.
- * @param bool    $id   Whether to give the item an anchor.
+ * @param array   $item  Question item.
+ * @param WP_Post $post  Answering article.
+ * @param bool    $id    Whether to give the item an anchor.
+ * @param int     $order Position in the list, kept for the one-column phone
+ *                       layout when the items are split into two columns.
  * @return string
  */
-function boi_question_item( $item, $post, $id = true ) {
+function boi_question_item( $item, $post, $id = true, $order = 0 ) {
 	return sprintf(
-		'<details class="boi-objection"%1$s><summary><span class="boi-objection__label">%2$s</span><span class="boi-objection__claim">%3$s</span></summary><div class="boi-objection__answer"><p>%4$s</p><a href="%5$s">%6$s</a></div></details>',
+		'<details class="boi-objection"%1$s%7$s><summary><span class="boi-objection__label">%2$s</span><span class="boi-objection__claim">%3$s</span></summary><div class="boi-objection__answer"><p>%4$s</p><a href="%5$s">%6$s</a></div></details>',
 		$id ? ' id="' . esc_attr( boi_question_anchor( $item['q'] ) ) . '"' : '',
 		esc_html__( 'The question', 'bestofislam' ),
 		esc_html( $item['q'] ),
 		esc_html( $item['a'] ),
 		esc_url( get_permalink( $post ) ),
-		esc_html( sprintf( /* translators: %s: title. */ __( 'Full answer: %s', 'bestofislam' ), get_the_title( $post ) ) )
+		esc_html( sprintf( /* translators: %s: title. */ __( 'Full answer: %s', 'bestofislam' ), get_the_title( $post ) ) ),
+		$order ? ' style="--boi-o:' . (int) $order . '"' : ''
 	);
 }
 
@@ -127,7 +130,7 @@ function boi_question_item( $item, $post, $id = true ) {
  * @return string
  */
 function boi_render_objections() {
-	$featured = '';
+	$featured = array();
 	$groups   = '';
 	$rest     = 0;
 
@@ -142,7 +145,7 @@ function boi_render_objections() {
 			}
 
 			if ( ! empty( $item['feat'] ) ) {
-				$featured .= boi_question_item( $item, $post );
+				$featured[] = boi_question_item( $item, $post, true, count( $featured ) + 1 );
 			} else {
 				$items .= boi_question_item( $item, $post );
 				++$rest;
@@ -159,7 +162,7 @@ function boi_render_objections() {
 		}
 	}
 
-	if ( '' === $featured && '' === $groups ) {
+	if ( empty( $featured ) && '' === $groups ) {
 		return '';
 	}
 
@@ -169,7 +172,19 @@ function boi_render_objections() {
 		$groups
 	);
 
-	return '<div class="boi-objections">' . $featured . '</div>' . $more;
+	// Two columns that each stack on their own: in a grid of rows, an opened
+	// question made its whole row taller and left a gap beside its closed
+	// neighbour. Items alternate between the columns so the reading order
+	// runs across; on a phone the columns merge and --boi-o restores it.
+	$columns = array( '', '' );
+
+	foreach ( $featured as $i => $html ) {
+		$columns[ $i % 2 ] .= $html;
+	}
+
+	$band = '' === $columns[0] ? '' : '<div class="boi-objections boi-objections--cols"><div class="boi-objections__col">' . $columns[0] . '</div><div class="boi-objections__col">' . $columns[1] . '</div></div>';
+
+	return $band . $more;
 }
 
 /**
