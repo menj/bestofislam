@@ -4407,14 +4407,32 @@
     "alt": "Gold, blue and white star rings on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "kings-and-chronicles-numbers-2.avif",
     "alt": "A many-pointed star in gold and blue lines on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "kings-and-chronicles-numbers-3.avif",
+    "alt": "Ancient stone architecture and skyline in Jerusalem on a sunny day.",
+    "caption": "Jerusalem. The lists of the temple's furnishings and officers in Kings and Chronicles do not match.",
+    "artist": "Karolína Balogová",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/stone-walls-in-an-old-town-and-clouds-in-a-blue-sky-6159081/"
+   },
+   {
+    "file": "kings-and-chronicles-numbers-4.avif",
+    "alt": "A man writing with a quill pen on a manuscript indoors.",
+    "caption": "A copyist at work. Many of the number differences are best explained as copyist errors.",
+    "artist": "Nathan Engel",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/person-writing-calligraphy-360941/"
    }
   ]
  },
@@ -4432,14 +4450,32 @@
     "alt": "Concentric star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "genealogies-of-jesus-2.avif",
     "alt": "Star rings in white, blue and gold on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "genealogies-of-jesus-3.avif",
+    "alt": "Vintage family photo albums filled with black and white photographs.",
+    "caption": "Old family albums. Matthew and Luke give two different lines for Joseph, with different fathers.",
+    "artist": "Thiago José Amaral",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/old-pictures-on-photo-album-6274899/"
+   },
+   {
+    "file": "genealogies-of-jesus-4.avif",
+    "alt": "An antique open book with handwritten pages on a rustic wooden table.",
+    "caption": "An antique book with handwritten pages. Matthew's three groups of fourteen leave out four kings.",
+    "artist": "Vaan Photography",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/white-book-on-the-table-12085516/"
    }
   ]
  },
@@ -4457,14 +4493,32 @@
     "alt": "Layered star outlines on a navy ground.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
    },
    {
     "file": "bible-alteration-claim-before-islam-2.avif",
     "alt": "Gold and blue star outlines around a gold dot on navy.",
     "artist": "Best of Islam",
     "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py"
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "bible-alteration-claim-before-islam-3.avif",
+    "alt": "A hand pointing at text on an open Torah scroll.",
+    "caption": "A hand pointing at a Torah scroll. Jews and Samaritans accused each other of falsifying it.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/hand-over-tora-5192347/"
+   },
+   {
+    "file": "bible-alteration-claim-before-islam-4.avif",
+    "alt": "A vintage scene with candlelight and a handwritten manuscript on lace.",
+    "caption": "A handwritten manuscript by candlelight. Christians accused other Christians of altering scripture.",
+    "artist": "betül nur akyürek",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/vintage-still-life-with-candlelight-and-manuscript-34640259/"
    }
   ]
  },
