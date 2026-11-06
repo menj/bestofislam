@@ -1774,5 +1774,101 @@
     "caption": "An old book with tattered pages. Early codices are full of corrections by later hands; this photograph is of an old book, not of a biblical codex."
    }
   ]
+ },
+ "a-father-says-this-is-islam": {
+  "featured": {
+   "src": "pexels",
+   "id": "29539105",
+   "alt": "A rustic wooden door with a dark frame on a white wall.",
+   "caption": "A closed door. Many accounts of leaving Islam are accounts of a household, and the sources can be checked against what was said inside it."
+  },
+  "inline": [
+   {
+    "src": "pexels",
+    "id": "12654941",
+    "alt": "A wooden house facade with a window reflecting the evening sky.",
+    "caption": "A house at evening. The Quran tells husbands to live with their wives in kindness (4:19)."
+   },
+   {
+    "src": "pexels",
+    "id": "327882",
+    "alt": "A pile of open books on a table.",
+    "caption": "Open books. The Quran asks, \"Are those who know equal to those who do not know?\" (39:9)."
+   },
+   {
+    "src": "pexels",
+    "id": "5184136",
+    "alt": "Hands holding in a gesture of connection and support.",
+    "caption": "Hands joined in support. Each person answers for her own deeds (6:164), and the Prophet ﷺ told Muslims to screen one another and not to expose."
+   },
+   {
+    "src": "pexels",
+    "id": "36626430",
+    "alt": "Two women reading the Quran inside a mosque in West Java, Indonesia.",
+    "caption": "Women reading the Quran in a mosque in West Java, Indonesia. The Prophet ﷺ said not to stop God's women from God's mosques."
+   }
+  ]
+ },
+ "sadness-and-depression-in-islam": {
+  "featured": {
+   "src": "pexels",
+   "id": "268832",
+   "alt": "Close-up of water droplets on a teal glass window.",
+   "caption": "Rain on a window. The Quran, the Prophet's sayings and the Muslim medical tradition all make room for grief."
+  },
+  "inline": [
+   {
+    "src": "pexels",
+    "id": "18714427",
+    "alt": "A lone person walks along a tranquil beach at sunset.",
+    "caption": "A figure walking alone at dusk. The Quran records Jacob's grief for Joseph, and how it dimmed his eyes (12:84)."
+   },
+   {
+    "src": "pexels",
+    "id": "8564636",
+    "alt": "Three candles burn with a warm glow in a dimly lit room.",
+    "caption": "Candles in a dim room. The Prophet ﷺ wept at his son's death and called it mercy."
+   },
+   {
+    "src": "pexels",
+    "id": "5407246",
+    "alt": "A flat lay of medical tools and supplies on a wooden desk.",
+    "caption": "Medical tools. The Prophet ﷺ told the Bedouin to make use of medical treatment."
+   },
+   {
+    "src": "pexels",
+    "id": "34344546",
+    "alt": "An open notebook with a handwritten poem, tea and a newspaper.",
+    "caption": "An open notebook with a poem. The Prophet ﷺ said that some poetry contains wisdom."
+   }
+  ]
+ },
+ "why-does-god-allow-suffering": {
+  "featured": {
+   "src": "pexels",
+   "id": "39630411",
+   "alt": "Dark clouds against a lightening sky at sunrise.",
+   "caption": "Dark clouds at sunrise. The argument from suffering is serious, and the Islamic sources take it so."
+  },
+  "inline": [
+   {
+    "src": "pexels",
+    "id": "2928186",
+    "alt": "An empty swing set amid fall leaves and foggy trees.",
+    "caption": "An empty swing among autumn leaves. The objection is felt most when a child is hurt."
+   },
+   {
+    "src": "pexels",
+    "id": "14542649",
+    "alt": "A tranquil desert oasis with large boulders, greenery and a calm stream.",
+    "caption": "A stream in a desert. \"With hardship will be ease\" (94:5 to 6)."
+   },
+   {
+    "src": "pexels",
+    "id": "10638724",
+    "alt": "Two hands reaching toward each other in warm light.",
+    "caption": "Two hands reaching toward each other. In the sources, relieving a brother's distress is a duty."
+   }
+  ]
  }
 }

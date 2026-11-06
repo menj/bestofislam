@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.100.20] - 2026-11-06
+
+Three new articles that answer the arguments in an ex-Muslim memoir, without naming the author or the book, and without any comment on her inner life. No feature removed and no public identifier renamed.
+
+### Added
+- `a-father-says-this-is-islam` ("When a father says \"this is Islam\": 7 rules checked against the sources"): striking a wife, forcing a marriage, a father's say over a daughter's career, mockery, public shaming and "family honour", women in the house and the mosque, and hatred and conspiracy talk presented as faith, each tested against the Quran and the Prophet's sayings with a verdict.
+- `sadness-and-depression-in-islam` ("Is it un-Islamic to feel empty or depressed?"): the Quran on Jacob, Mary, Job and Jonah, the Prophet's tears and his prayer for refuge from worry and grief, the command to seek treatment, and al-Balkhi, with a note on what to do in a crisis.
+- `why-does-god-allow-suffering` ("Why does God allow suffering?"): six answers from the sources and where they stop.
+- Each has a featured image and three or four captioned in-text images from Pexels; none shows a prophet (D30). Quotations of the sources were read on the Quran.com API and in the English text of the hadith-api edition; the notes say what was not checked on a printed page.
+
 ## [1.100.19] - 2026-11-06
 
 Images, batch 8: ten articles below the image rule (about one in-text image per two entries) gain thirteen images. No feature removed and no public identifier renamed.

@@ -25,11 +25,11 @@ function boi_reading_order() {
 	return array(
 		array(
 			'label' => __( 'What Islam teaches', 'bestofislam' ),
-			'slugs' => array( 'who-is-allah', 'gods-attributes-and-anthropomorphism', 'five-pillars-explained', 'do-muslims-worship-muhammad', 'temporary-marriage-mutah', 'why-five-prayers', 'six-articles-of-faith', 'fate-and-free-will', 'end-of-time', 'prophets-you-may-not-know', 'quranic-ethics', 'before-your-first-friday-prayer', 'hajj-rites-explained', 'ramadan-last-ten-nights', 'funeral-dhikr-dua', 'relationship-with-god', 'black-stone-and-kissing' ),
+			'slugs' => array( 'who-is-allah', 'gods-attributes-and-anthropomorphism', 'five-pillars-explained', 'do-muslims-worship-muhammad', 'temporary-marriage-mutah', 'why-five-prayers', 'six-articles-of-faith', 'fate-and-free-will', 'sadness-and-depression-in-islam', 'end-of-time', 'prophets-you-may-not-know', 'quranic-ethics', 'before-your-first-friday-prayer', 'hajj-rites-explained', 'ramadan-last-ten-nights', 'funeral-dhikr-dua', 'relationship-with-god', 'black-stone-and-kissing' ),
 		),
 		array(
 			'label' => __( 'Whether belief is reasonable', 'bestofislam' ),
-			'slugs' => array( 'universe-demands-creator', 'morality-without-god', 'who-saw-gabriel', 'quran-science-claims-graded', 'natural-world-verses' ),
+			'slugs' => array( 'universe-demands-creator', 'why-does-god-allow-suffering', 'morality-without-god', 'who-saw-gabriel', 'quran-science-claims-graded', 'natural-world-verses' ),
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
@@ -41,7 +41,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),
-			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'muhammad-false-prophet-claim', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'does-the-quran-allow-wife-beating', 'women-in-islamic-law-testimony-inheritance', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise', 'camel-urine-hadith', 'fly-hadith-and-adult-suckling', 'first-revelation-demonic-claim', 'satanic-verses-report', 'prophets-marriages-zaynab-and-others', 'magic-jinn-and-satan-hadiths', 'islamic-rites-before-islam', 'abrogation-and-the-sword-verse', 'end-of-the-world-prediction', 'was-muhammad-illiterate-ummi', 'hanif-poets-and-musaylima', 'first-muslims-kept-the-faith' ),
+			'slugs' => array( 'prophet-died-poisoning', 'al-zutt-allegation', 'muhammad-false-prophet-claim', 'questions-about-aisha', 'women-in-the-prophets-life', 'companions-who-started-with-nothing', 'does-the-quran-allow-wife-beating', 'a-father-says-this-is-islam', 'women-in-islamic-law-testimony-inheritance', 'child-marriage-in-islam', 'slavery-in-islam', 'houris-and-paradise', 'camel-urine-hadith', 'fly-hadith-and-adult-suckling', 'first-revelation-demonic-claim', 'satanic-verses-report', 'prophets-marriages-zaynab-and-others', 'magic-jinn-and-satan-hadiths', 'islamic-rites-before-islam', 'abrogation-and-the-sword-verse', 'end-of-the-world-prediction', 'was-muhammad-illiterate-ummi', 'hanif-poets-and-musaylima', 'first-muslims-kept-the-faith' ),
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),

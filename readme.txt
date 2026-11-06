@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.100.19
+Stable tag: 1.100.20
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.100.20 =
+* Three new articles: what the sources say about a father who cites Islam for his rules, whether it is un-Islamic to feel sad or depressed, and why God allows suffering. Nothing else changes.
+
 = 1.100.19 =
 * Ten more articles gain in-text images, and every in-text image in them now has a caption. Nothing else changes.
 
@@ -271,6 +274,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.100.20 =
+Replace the theme files. Nothing else to do.
 
 = 1.100.19 =
 Replace the theme files. Nothing else to do.
