@@ -497,13 +497,18 @@ function boi_render_breadcrumbs() {
 		return $nav;
 	}
 
-	return $nav . '<script type="application/ld+json">' . boi_json_ld(
-		array(
-			'@context'        => 'https://schema.org',
-			'@type'           => 'BreadcrumbList',
-			'itemListElement' => $graph,
-		)
-	) . '</script>';
+	$list = array(
+		'@context'        => 'https://schema.org',
+		'@type'           => 'BreadcrumbList',
+		'itemListElement' => $graph,
+	);
+
+	// The page node names the trail by this @id (schema-pages.php).
+	if ( function_exists( 'boi_schema_breadcrumb_id' ) ) {
+		$list['@id'] = boi_schema_breadcrumb_id();
+	}
+
+	return $nav . '<script type="application/ld+json">' . boi_json_ld( $list ) . '</script>';
 }
 
 /**

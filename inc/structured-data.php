@@ -7,10 +7,12 @@
  * Organization. Breadcrumbs are emitted by seo.php and the reading lists by
  * schema.php. This file adds the rest:
  *
- *  - Organization and WebSite on the front page, with the logo and the
- *    follow links as sameAs.
+ *  - Organization and WebSite on every page (completed in schema-pages.php),
+ *    with the logo and the follow links as sameAs.
  *  - Article on every article: headline, description, dates, author,
- *    publisher, section and image.
+ *    publisher, section, image, word count, the Notes as citations, the
+ *    Glossary terms it uses, its numbered lists and its comments, carried
+ *    by a WebPage with the breadcrumb and the related articles.
  *  - Image metadata on the article's image: licence, the page where the
  *    licence can be checked, a credit line and the creator, drawn from the
  *    Commons credit the theme records for every seeded image.
@@ -313,7 +315,7 @@ function boi_article_entities( $post ) {
 		'@id'              => $url . '#article',
 		'headline'         => mb_strlen( $title ) > 110 ? mb_substr( $title, 0, 109 ) . '…' : $title,
 		'url'              => $url,
-		'mainEntityOfPage' => $url,
+		'mainEntityOfPage' => array( '@id' => $url . '#webpage' ),
 		'datePublished'    => get_post_time( 'c', true, $post ),
 		'dateModified'     => get_post_modified_time( 'c', true, $post ),
 		'inLanguage'       => get_bloginfo( 'language' ),
@@ -349,11 +351,55 @@ function boi_article_entities( $post ) {
 		$article['articleSection'] = $section;
 	}
 
+	$article['isAccessibleForFree'] = true;
+	$article['copyrightHolder']     = array( '@id' => boi_entity_id( 'organization' ) );
+	$article['copyrightYear']       = (int) get_post_time( 'Y', true, $post );
+
+	$plain = boi_plain( preg_replace( '/<!--.*?-->/s', ' ', (string) $post->post_content ) );
+
+	if ( '' !== $plain ) {
+		$article['wordCount'] = count( preg_split( '/\s+/u', $plain, -1, PREG_SPLIT_NO_EMPTY ) );
+	}
+
+	$citations = boi_article_citations( $post );
+
+	if ( $citations ) {
+		$article['citation'] = $citations;
+	}
+
+	$mentions = boi_article_mentions( $plain );
+
+	if ( $mentions ) {
+		$article['mentions'] = $mentions;
+		$article['keywords'] = implode( ', ', array_slice( wp_list_pluck( $mentions, 'name' ), 0, 12 ) );
+	}
+
+	if ( function_exists( 'boi_item_list_ids' ) ) {
+		$parts = boi_item_list_ids( $post );
+
+		if ( $parts ) {
+			$article['hasPart'] = array_map(
+				function ( $id ) {
+					return array( '@id' => $id );
+				},
+				$parts
+			);
+		}
+	}
+
+	$comments = boi_article_comments( $post );
+
+	if ( $comments ) {
+		$article['commentCount'] = (int) get_comments_number( $post );
+		$article['comment']      = $comments;
+	}
+
 	$images = array();
 	$image  = boi_article_image_object( $post );
 
 	if ( $image ) {
-		$images[] = $image;
+		$image['@id'] = $url . '#primaryimage';
+		$images[]     = $image;
 	}
 
 	$inline = boi_inline_image_objects( $post );
@@ -366,7 +412,185 @@ function boi_article_entities( $post ) {
 		$article['image'] = $images;
 	}
 
-	return array_merge( array( $article ), $inline );
+	// The page that carries the article: its breadcrumb, the picture that
+	// represents it, and the articles it points readers to next.
+	$page = function_exists( 'boi_schema_page_node' )
+		? boi_schema_page_node( 'WebPage', $title )
+		: array(
+			'@type' => 'WebPage',
+			'name'  => $title,
+		);
+
+	$page['@id']           = $url . '#webpage';
+	$page['url']           = $url;
+	$page['mainEntity']    = array( '@id' => $url . '#article' );
+	$page['datePublished'] = $article['datePublished'];
+	$page['dateModified']  = $article['dateModified'];
+
+	if ( $image ) {
+		$page['primaryImageOfPage'] = array( '@id' => $url . '#primaryimage' );
+	}
+
+	$related = boi_article_related_links( $post );
+
+	if ( $related ) {
+		$page['relatedLink'] = $related;
+	}
+
+	$page['potentialAction'] = array(
+		array(
+			'@type'  => 'ReadAction',
+			'target' => array( $url ),
+		),
+	);
+
+	if ( comments_open( $post ) ) {
+		$page['potentialAction'][] = array(
+			'@type'  => 'CommentAction',
+			'name'   => __( 'Comment', 'bestofislam' ),
+			'target' => array( $url . '#respond' ),
+		);
+	}
+
+	return array_merge( array( $page, $article ), $inline );
+}
+
+/**
+ * The sources an article cites: the items of its Notes list.
+ *
+ * @param WP_Post $post Article.
+ * @return string[] Citations as plain text, in order.
+ */
+function boi_article_citations( $post ) {
+	$content = (string) $post->post_content;
+	$at      = strripos( $content, '>Notes</h' );
+
+	if ( false === $at || ! preg_match( '#<ol[^>]*>(.*?)</ol>#is', substr( $content, $at ), $m ) ) {
+		return array();
+	}
+
+	$out = array();
+
+	foreach ( preg_split( '#</li>#i', $m[1] ) as $item ) {
+		$text = boi_plain( $item );
+
+		if ( '' !== $text ) {
+			$out[] = $text;
+		}
+	}
+
+	return $out;
+}
+
+/**
+ * The Glossary terms an article uses, as DefinedTerms joined by @id to the
+ * term nodes on their own Glossary pages: the terms the Glossary linker can
+ * link in the text.
+ *
+ * @param string $plain The article as plain text.
+ * @return array[] DefinedTerm references, at most forty.
+ */
+function boi_article_mentions( $plain ) {
+	if ( '' === $plain || ! function_exists( 'boi_gl_map' ) ) {
+		return array();
+	}
+
+	$quotes = array( "\u{2019}", "\u{2018}" );
+	$text   = str_replace( $quotes, "'", $plain );
+	$found  = array();
+
+	foreach ( boi_gl_map() as $item ) {
+		if ( isset( $found[ $item['id'] ] ) || count( $found ) >= 40 ) {
+			continue;
+		}
+
+		$phrase = str_replace( $quotes, "'", $item['phrase'] );
+
+		if ( preg_match( '/(?<![\p{L}\p{N}])' . preg_quote( $phrase, '/' ) . '(?![\p{L}\p{N}])/iu', $text ) ) {
+			$term                 = get_post( $item['id'] );
+			$found[ $item['id'] ] = array(
+				'@type' => 'DefinedTerm',
+				'@id'   => $item['url'] . '#term',
+				'name'  => $term ? boi_plain( get_the_title( $term ) ) : $item['phrase'],
+				'url'   => $item['url'],
+			);
+		}
+	}
+
+	return array_values( $found );
+}
+
+/**
+ * The articles the Keep reading list points to after this one.
+ *
+ * @param WP_Post $post Article.
+ * @return string[] Permalinks.
+ */
+function boi_article_related_links( $post ) {
+	if ( ! function_exists( 'boi_related_map' ) ) {
+		return array();
+	}
+
+	$map   = boi_related_map();
+	$links = array();
+
+	foreach ( isset( $map[ $post->post_name ] ) ? $map[ $post->post_name ] : array() as $slug ) {
+		$item = get_page_by_path( $slug, OBJECT, 'post' );
+
+		if ( $item && 'publish' === $item->post_status && ( ! function_exists( 'boi_is_unlisted' ) || ! boi_is_unlisted( $item ) ) ) {
+			$links[] = get_permalink( $item );
+		}
+	}
+
+	return $links;
+}
+
+/**
+ * The approved comments on an article, the most recent twenty.
+ *
+ * @param WP_Post $post Article.
+ * @return array[] Comment nodes.
+ */
+function boi_article_comments( $post ) {
+	if ( ! get_comments_number( $post ) ) {
+		return array();
+	}
+
+	$comments = get_comments(
+		array(
+			'post_id' => $post->ID,
+			'status'  => 'approve',
+			'type'    => 'comment',
+			'number'  => 20,
+			'orderby' => 'comment_date_gmt',
+			'order'   => 'DESC',
+		)
+	);
+
+	$out = array();
+
+	foreach ( $comments as $comment ) {
+		$text = boi_plain( $comment->comment_content );
+
+		if ( '' === $text ) {
+			continue;
+		}
+
+		$link  = get_comment_link( $comment );
+		$out[] = array(
+			'@type'         => 'Comment',
+			'@id'           => $link,
+			'url'           => $link,
+			'text'          => $text,
+			'datePublished' => mysql2date( 'c', $comment->comment_date_gmt, false ),
+			'author'        => array(
+				'@type' => 'Person',
+				'name'  => boi_plain( $comment->comment_author ),
+			),
+		);
+	}
+
+	return $out;
 }
 
 /**
@@ -446,6 +670,10 @@ function boi_profile_entities( $author ) {
 		'mainEntity' => array( '@id' => $person['@id'] ),
 	);
 
+	if ( function_exists( 'boi_schema_has_breadcrumb' ) && boi_schema_has_breadcrumb() ) {
+		$profile['breadcrumb'] = array( '@id' => boi_schema_breadcrumb_id() );
+	}
+
 	return array( $profile, $person );
 }
 
@@ -460,22 +688,25 @@ function boi_print_structured_data() {
 		return;
 	}
 
-	$nodes = array();
+	// Every page names the site and the organisation it belongs to, and
+	// carries the site's menus (schema-pages.php).
+	$nodes = function_exists( 'boi_schema_site_nodes' ) ? boi_schema_site_nodes() : boi_site_entities();
 
-	if ( is_front_page() ) {
-		$nodes = boi_site_entities();
-	} elseif ( is_singular( 'post' ) ) {
+	if ( function_exists( 'boi_schema_navigation_nodes' ) ) {
+		$nodes = array_merge( $nodes, boi_schema_navigation_nodes() );
+	}
+
+	if ( is_singular( 'post' ) ) {
 		$post = get_post();
 
 		if ( $post ) {
-			$nodes = boi_article_entities( $post );
+			$nodes = array_merge( $nodes, boi_article_entities( $post ) );
 		}
 	} elseif ( is_author() ) {
-		$nodes = boi_profile_entities( get_queried_object() );
-	}
-
-	if ( empty( $nodes ) ) {
-		return;
+		$nodes = array_merge( $nodes, boi_profile_entities( get_queried_object() ) );
+	} elseif ( ! ( function_exists( 'boi_is_glossary_page' ) && boi_is_glossary_page() ) && function_exists( 'boi_schema_view_entities' ) ) {
+		// The Glossary prints its own page and term nodes (glossary.php).
+		$nodes = array_merge( $nodes, boi_schema_view_entities() );
 	}
 
 	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(

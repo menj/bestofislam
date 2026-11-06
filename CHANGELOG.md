@@ -6,6 +6,15 @@ versioning.
 
 ## [Unreleased]
 
+## [1.87.0] - 2026-11-06
+
+### Added
+
+- schema.org structured data on every view, joined into one graph by `@id` (`inc/schema-pages.php`; details in `docs/SEO.md`). Organization and WebSite now appear on every page, the Organization with its contact page and publishing, corrections and fact-checking standards, the WebSite with the site search as a SearchAction. The header and footer menus are ItemLists of SiteNavigationElement. Each page has a node of its own type: AboutPage, ContactPage, FAQPage (the FAQ page's questions and answers), CollectionPage for section archives and Reflections with the articles they show, SearchResultsPage, and WebPage for the rest, each naming its breadcrumb.
+- Articles gain a WebPage carrying the Article, with the breadcrumb, the primary image, the Keep reading articles as `relatedLink`, and Read and Comment actions. The Article gains its word count, its Notes as `citation`, the Glossary terms it uses as `mentions` and `keywords`, its numbered lists as `hasPart`, its comments, and `isAccessibleForFree` and copyright. Each numbered entry links to its own anchor, and the front page's questions share the front page's `@id`.
+
+Votes, share buttons and the appearance toggle carry no markup, for the reasons given in `docs/SEO.md`. With Rank Math active the theme's page graph stays off, as before.
+
 ## [1.86.3] - 2026-11-01
 
 ### Added

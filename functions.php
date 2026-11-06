@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.86.3' );
+define( 'BOI_VERSION', '1.87.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -32,6 +32,7 @@ require_once BOI_DIR . '/inc/images.php';
 require_once BOI_DIR . '/inc/questions.php';
 require_once BOI_DIR . '/inc/reading.php';
 require_once BOI_DIR . '/inc/structured-data.php';
+require_once BOI_DIR . '/inc/schema-pages.php';
 require_once BOI_DIR . '/inc/social-meta.php';
 require_once BOI_DIR . '/inc/rank-math.php';
 require_once BOI_DIR . '/inc/unlist.php';

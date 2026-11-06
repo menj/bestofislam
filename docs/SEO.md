@@ -46,6 +46,34 @@ The theme also prints ItemList for each listicle and FAQPage for the front-page
 questions. They describe their pages accurately. Google restricts FAQ rich
 results to a narrow class of sites, so none is promised.
 
+## schema.org beyond Google's list
+
+Every view carries one JSON-LD graph joined by `@id`, so search engines and
+other readers of schema.org see what each page is and how it fits the site.
+Google uses only part of it; the rest is accurate description.
+
+| Element | schema.org | Where |
+|---|---|---|
+| Every page | Organization (logo, `sameAs`, `contactPoint` to the Contact page, `publishingPrinciples`, `correctionsPolicy` and `verificationFactCheckingPolicy` to Sources and standards) and WebSite (with the site search as a SearchAction) | `inc/schema-pages.php` |
+| Header and footer menus | ItemList of SiteNavigationElement, read from the template parts as last saved | `inc/schema-pages.php` |
+| Article page | WebPage (breadcrumb, primary image, `relatedLink` to the Keep reading articles, ReadAction, CommentAction when comments are open) with the Article as `mainEntity` | `inc/structured-data.php` |
+| Article | `wordCount`, `citation` (the Notes), `mentions` and `keywords` (the Glossary terms it uses, joined to their DefinedTerm), `hasPart` (its numbered lists), `isAccessibleForFree`, `copyrightHolder`, `copyrightYear`, `comment` and `commentCount` | `inc/structured-data.php` |
+| Numbered entries | ItemList with an `@id`; each ListItem links to the entry's anchor | `inc/schema.php` |
+| Breadcrumb trail | BreadcrumbList with an `@id` the page node names | `inc/seo.php` |
+| About, Contact, FAQ pages | AboutPage, ContactPage, FAQPage (questions and answers read from the page's headings and paragraphs) | `inc/schema-pages.php` |
+| Sources and standards, Sitemap, Privacy, other pages | WebPage | `inc/schema-pages.php` |
+| Section archives, Reflections | CollectionPage with an ItemList of the articles shown | `inc/schema-pages.php` |
+| Search results | SearchResultsPage with an ItemList of the results | `inc/schema-pages.php` |
+| Page not found | WebPage | `inc/schema-pages.php` |
+| Front page | WebPage, the same node as the FAQPage of the questions band, with the hero image | `inc/schema-pages.php`, `inc/questions.php` |
+| Glossary and its entries | DefinedTermSet, DefinedTerm, CollectionPage, WebPage | `inc/glossary.php` |
+| Author archive | ProfilePage and Person | `inc/structured-data.php` |
+
+Left out on purpose: the votes on entries (a site's own readers' votes as a
+rating is self-serving markup, and a vote total can be negative), the share
+buttons (actions on other sites' addresses), and the light and dark toggle
+(no schema.org meaning).
+
 Validate with the Rich Results Test after any change.
 
 ## Rank Math
@@ -67,6 +95,7 @@ supplies the plugin with what only the theme knows (`inc/rank-math.php`):
 | Verification codes | Theme settings | Rank Math's Webmaster Tools |
 | Open Graph and Twitter Card tags | Theme | Rank Math |
 | ItemList, FAQPage | Theme | Theme (Rank Math does not produce them) |
+| Page types, menus, article citations and mentions (`inc/schema-pages.php`) | Theme | Rank Math's page graph |
 
 Rank Math's Image SEO module may rewrite alt text and titles; turn it off for
 this site, since every image already carries its own.

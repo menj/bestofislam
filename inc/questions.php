@@ -253,6 +253,7 @@ function boi_print_questions_schema() {
 				'acceptedAnswer' => array(
 					'@type' => 'Answer',
 					'text'  => $item['a'] . ' ' . get_permalink( $post ),
+					'url'   => get_permalink( $post ),
 				),
 			);
 		}
@@ -262,12 +263,18 @@ function boi_print_questions_schema() {
 		return;
 	}
 
-	echo "\n<script type=\"application/ld+json\">" . boi_json_ld(
-		array(
-			'@context'   => 'https://schema.org',
-			'@type'      => 'FAQPage',
-			'mainEntity' => $entities,
-		)
-	) . "</script>\n";
+	$faq = array(
+		'@context'   => 'https://schema.org',
+		'@type'      => 'FAQPage',
+		'mainEntity' => $entities,
+	);
+
+	// The same page as the front page's WebPage node (schema-pages.php), so
+	// the two describe one page.
+	if ( function_exists( 'boi_schema_page_id' ) ) {
+		$faq['@id'] = boi_schema_page_id();
+	}
+
+	echo "\n<script type=\"application/ld+json\">" . boi_json_ld( $faq ) . "</script>\n";
 }
 add_action( 'wp_head', 'boi_print_questions_schema', 21 );

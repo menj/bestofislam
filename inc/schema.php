@@ -28,8 +28,8 @@ function boi_print_schema() {
 
 	$graphs = array();
 
-	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $listicle ) {
-		$graph = boi_build_item_list( $listicle, $post );
+	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $n => $listicle ) {
+		$graph = boi_build_item_list( $listicle, $post, $n );
 
 		if ( $graph ) {
 			$graphs[] = $graph;
@@ -76,9 +76,10 @@ function boi_find_listicles( $blocks ) {
  *
  * @param array   $listicle Parsed listicle block.
  * @param WP_Post $post     Host post.
+ * @param int     $n        Position of the list in the post, from 0.
  * @return array|null
  */
-function boi_build_item_list( $listicle, $post ) {
+function boi_build_item_list( $listicle, $post, $n = 0 ) {
 	$attrs = isset( $listicle['attrs'] ) ? $listicle['attrs'] : array();
 	$type = isset( $attrs['schemaType'] ) ? $attrs['schemaType'] : 'ItemList';
 
@@ -122,6 +123,9 @@ function boi_build_item_list( $listicle, $post ) {
 
 		if ( ! empty( $entry['linkUrl'] ) ) {
 			$item['url'] = esc_url_raw( $entry['linkUrl'] );
+		} elseif ( function_exists( 'boi_entry_anchor' ) ) {
+			// The entry's own place on the page, as the jump list links it.
+			$item['url'] = get_permalink( $post ) . '#' . boi_entry_anchor( $entry );
 		}
 
 		if ( ! empty( $entry['imageId'] ) ) {
@@ -144,6 +148,7 @@ function boi_build_item_list( $listicle, $post ) {
 	return array(
 		'@context'        => 'https://schema.org',
 		'@type'           => 'ItemList',
+		'@id'             => boi_item_list_id( $post, $n ),
 		'name'            => boi_plain( get_the_title( $post ) ),
 		'url'             => get_permalink( $post ),
 		'numberOfItems'   => count( $elements ),
@@ -152,4 +157,38 @@ function boi_build_item_list( $listicle, $post ) {
 			: 'https://schema.org/ItemListOrderDescending',
 		'itemListElement' => $elements,
 	);
+}
+
+/**
+ * The @id of the n-th numbered list of a post, so the Article can name its
+ * lists as its parts.
+ *
+ * @param WP_Post $post Host post.
+ * @param int     $n    Position of the list in the post, from 0.
+ * @return string
+ */
+function boi_item_list_id( $post, $n = 0 ) {
+	return get_permalink( $post ) . '#itemlist' . ( $n ? '-' . ( $n + 1 ) : '' );
+}
+
+/**
+ * The @ids of the numbered lists a post prints as ItemList.
+ *
+ * @param WP_Post $post Post.
+ * @return string[]
+ */
+function boi_item_list_ids( $post ) {
+	if ( ! has_block( 'bestofislam/listicle', $post ) ) {
+		return array();
+	}
+
+	$ids = array();
+
+	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $n => $listicle ) {
+		if ( boi_build_item_list( $listicle, $post, $n ) ) {
+			$ids[] = boi_item_list_id( $post, $n );
+		}
+	}
+
+	return $ids;
 }
