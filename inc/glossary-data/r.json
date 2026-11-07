@@ -755,5 +755,54 @@
    "page": 55,
    "term": "RUKŪ‘"
   }
+ },
+ {
+  "slug": "ruh",
+  "title": "Rūḥ",
+  "type": "belief",
+  "ar": "روح",
+  "tr": "Rūḥ",
+  "def": "The spirit in the Quran: what God breathed into Adam, and a name given to Gabriel, whose nature the Quran leaves to God.",
+  "what": [
+   "The Quran speaks of the <em>rūḥ</em> in three settings. God shaped the first man and “breathed into him of My [created] soul” (15:29, 32:9). The angel who brought the revelation is “the Trustworthy Spirit” (26:193), and in the story of Mary God sent “Our Angel [i.e., Gabriel]” (19:17). Angels and the Spirit descend on the Night of Power “by permission of their Lord for every matter” (97:4).",
+   "When people asked the Prophet ﷺ about it, the answer was short: “The soul is of the affair [i.e., concern] of my Lord. And you [i.e., mankind] have not been given of knowledge except a little” (17:85). Muslim scholars have written long books on the soul, and the Quran itself stops there."
+  ],
+  "misread": "That the Quran says the spirit is a part of God, or that a human being has something of the divine in him.",
+  "sources": [
+   "The words “My spirit” attach the spirit to God as a possession and an honour, as “the house of God” names the Kaaba, and they do not make it a piece of God. The Quran keeps Creator and creature apart (42:11), and the translation used here puts “[created]” in square brackets to say so. These words are the translator's, and the Arabic has only “My spirit”. That the Quran leaves the nature of the spirit to God is read from 17:85 and not from a commentary checked on a page for this entry."
+  ],
+  "terms": [
+   "gabriel",
+   "angels",
+   "wahy",
+   "jinn",
+   "iman"
+  ],
+  "articles": [
+   "who-saw-gabriel"
+  ],
+  "aliases": [
+   "Spirit",
+   "Soul",
+   "The Holy Spirit",
+   "Ruh al-Qudus"
+  ],
+  "lexicon": {
+   "root": "ر و ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وجعل اسما للجزء الذي به تحصل الحياة والتّحرّك، واستجلاب المنافع واستدفاع المضارّ",
+     "gloss": "Al-Rāghib says <em>rūḥ</em> was also made the name of the part by which life, movement, the drawing of benefit and the warding off of harm come about, and he points to 17:85 and 15:29.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5452#456485"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإضافته إلى نفسه إضافة ملك، وتخصيصه بالإضافة تشريفا له وتعظيما",
+     "gloss": "He explains the words \"My spirit\" as an attribution of ownership, and the singling out of the spirit by that attribution as an honour and a mark of its dignity. They do not make it a part of God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5452#456485"
+    }
+   ]
+  }
  }
 ]

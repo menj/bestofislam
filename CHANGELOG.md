@@ -4,6 +4,18 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.106.0] - 2026-11-07
+
+Glossary: two new entries and more classical-dictionary excerpts. No feature removed and no public identifier renamed.
+
+### Added
+- Two entries: Ruh (the spirit) and Sabr (patience), each with Quran references, a hadith read in the hadith-api edition (sabr) and al-Rāghib excerpts.
+- "In the classical dictionaries" notes on sixteen existing entries: ihsan, quran, umrah, qiblah, din, ibadah, shahada, taharah, fitna, batil, ilm (al-ʿIlm), adhan, hypocrites, atonement and repentance, justice, and divination and the unseen. Forty-two entries now carry notes.
+
+### Changed
+- `BOI_GLOSSARY_VERSION` 15 to 16, so the Glossary sync creates the new entries and rebuilds the changed pages.
+- The Glossary has 799 entries.
+
 ## [1.105.0] - 2026-11-07
 
 Glossary, second batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.

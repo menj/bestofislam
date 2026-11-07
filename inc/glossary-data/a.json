@@ -771,7 +771,18 @@
     "page": 23,
     "term": "ADHĀN"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ذ ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والمُؤَذِّنُ: كل من يعلم بشيءٍ نداءً",
+     "gloss": "Under the root <em>ʾ-dh-n</em> al-Rāghib says a <em>muʾadhdhin</em> is anyone who makes something known by calling out, and cites 12:70.",
+     "url": "https://arabiclexicon.hawramani.com/?p=234#1b1939"
+    }
+   ]
+  }
  },
  {
   "slug": "adoption",
@@ -2579,7 +2590,24 @@
    "Atonement",
    "Tawba",
    "Repentance"
-  ]
+  ],
+  "lexicon": {
+   "root": "ت و ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّوْبَةُ في الشرع: ترك الذنب لقبحه والندم على ما فرط منه، والعزيمة على ترك المعاودة، وتدارك ما أمكنه أن يتدارك من الأعمال بالأعمال بالإعادة، فمتى اجتمعت هذه الأربع فقد كملت شرائط التوبة",
+     "gloss": "Al-Rāghib says that in the law <em>tawba</em> is leaving the sin because of its ugliness, regret for what was done, resolve not to return, and putting right what can be put right. When all four are together, he says, the conditions of <em>tawba</em> are complete.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6470#8da772"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فالعبد تائب إلى الله، والله تائب على عبده",
+     "gloss": "He notes that <em>tāʾib</em> is said both of the one who offers repentance and of the one who accepts it: the servant turns to God, and God turns to His servant.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6470#8da772"
+    }
+   ]
+  }
  },
  {
   "slug": "authority",

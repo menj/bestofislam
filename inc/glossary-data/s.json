@@ -1204,6 +1204,17 @@
   "faruqi": {
    "page": 37,
    "term": "SHAHADA"
+  },
+  "lexicon": {
+   "root": "ش ه د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشُّهُودُ والشَّهَادَةُ: الحضور مع المشاهدة، إمّا بالبصر، أو بالبصيرة",
+     "gloss": "Al-Rāghib defines <em>shuhūd</em> and <em>shahāda</em> as presence together with witnessing, whether by sight or by insight.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6117#761d5c"
+    }
+   ]
   }
  },
  {
@@ -1721,6 +1732,55 @@
   "faruqi": {
    "page": 52,
    "term": "AL SUNNAH AL TAQRĪRIYYAH"
+  }
+ },
+ {
+  "slug": "sabr",
+  "title": "Sabr",
+  "type": "ethics",
+  "ar": "صبر",
+  "tr": "Ṣabr",
+  "def": "Patience: holding the self steady in hardship, in obedience and against sin, a quality the Quran praises more often than almost any other.",
+  "what": [
+   "“O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient” (2:153). The Quran tells the believers that they will be tested with fear, hunger and loss, and gives good news to “the patient, who, when disaster strikes them, say, ‘Indeed we belong to Allah, and indeed to Him we will return’” (2:155–156). It promises that “the patient will be given their reward without account” (39:10).",
+   "Patience is not only for loss. It is asked of the believers in conflict (8:46, 3:200) and it is one of the four things by which people are saved from loss: faith, righteous deeds, “advising each other to truth” and “advising each other to patience” (103:3)."
+  ],
+  "misread": "That patience means accepting injustice in silence.",
+  "sources": [
+   "Patience in the Quran sits beside action. It is told to the oppressed together with the command to resist wrongdoing, and it is joined to forgiveness in “whoever is patient and forgives, indeed that is of the matters worthy of resolve” (42:43). In a report in al-Bukhari the Prophet ﷺ said: “Whoever remains patient, Allah will make him patient. Nobody can be given a blessing better and greater than patience.” The report is read in the English text of the hadith-api edition, as book 24, hadith 71 of Sahih al-Bukhari 1469."
+  ],
+  "terms": [
+   "taqwa",
+   "iman",
+   "tawakkul",
+   "qadar",
+   "dua"
+  ],
+  "articles": [
+   "why-does-god-allow-suffering",
+   "sadness-and-depression-in-islam"
+  ],
+  "aliases": [
+   "Patience",
+   "Steadfastness",
+   "Endurance"
+  ],
+  "lexicon": {
+   "root": "ص ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصَّبْرُ: حبس النّفس على ما يقتضيه العقل والشرع، أو عمّا يقتضيان حبسها عنه",
+     "gloss": "Al-Rāghib defines <em>ṣabr</em> as holding the self to what reason and the law require, or back from what they require it be held back from.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8961#784157"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإن كان في محاربة سمّي شجاعة، ويضادّه الجبن",
+     "gloss": "He adds that the word is general, and that its name changes with its setting: when the self is held in a fight it is called courage, and its opposite is cowardice.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8961#784157"
+    }
+   ]
   }
  }
 ]

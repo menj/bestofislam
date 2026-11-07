@@ -110,7 +110,18 @@
   "articles": [],
   "aliases": [
    "Lesser Pilgrimage"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع م ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْعُمْرَةُ: الزيارة التي فيها عِمَارَةُ الودّ، وجعل في الشّريعة للقصد المخصوص",
+     "gloss": "Al-Rāghib defines <em>ʿumra</em> as the visit in which affection is kept flourishing, which the law then assigned to a particular intent. The word shares its root with <em>ʿimāra</em>, the opposite of ruin.",
+     "url": "https://arabiclexicon.hawramani.com/?p=482#723382"
+    }
+   ]
+  }
  },
  {
   "slug": "urf-al",
