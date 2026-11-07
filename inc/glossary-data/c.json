@@ -540,7 +540,18 @@
    "war-and-killing-in-islam",
    "quran-mysteries-in-the-stories"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ف س د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفَسَادُ: خروج الشيء عن الاعتدال، قليلا كان الخروج عنه أو كثيرا، ويضادّه الصّلاح",
+     "gloss": "Al-Rāghib defines <em>fasād</em> as a thing departing from balance, by little or by much, and says its opposite is <em>ṣalāḥ</em>, soundness.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7577#7eb818"
+    }
+   ]
+  }
  },
  {
   "slug": "covenant",
