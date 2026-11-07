@@ -1,7 +1,7 @@
 /**
  * Article anatomy (inc/anatomy.php): the extra dates in the meta row, the
- * "In short" box, the contents, the mid-article next step, the FAQ style and
- * tables. Built on the questions panel and the palette tokens set on
+ * "In short" box, the contents, links to notes, the mid-article next step, the
+ * FAQ style and tables. Built on the questions panel and the palette tokens set on
  * .boi-article, so the Night variation recolours it all.
  */
 
@@ -81,8 +81,16 @@
 	text-underline-offset: 0.22em;
 }
 
-.boi-article .wp-block-post-content :is(h2, h3)[id] {
+.boi-article .wp-block-post-content :is(h2, h3, ol:last-child > li)[id] {
 	scroll-margin-block-start: 5rem;
+}
+
+.boi-article .boi-note-ref {
+	white-space: nowrap;
+}
+
+.boi-article .wp-block-post-content > ol:last-child > li:target {
+	background: var(--boi-tint);
 }
 
 /* Next step, in the middle of the text. */

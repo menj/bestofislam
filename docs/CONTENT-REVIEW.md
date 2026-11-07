@@ -22,7 +22,7 @@ Also corrected in the old text during the expansion: the Hajj article said every
 - **quran-science-claims-graded**: Moore's edition "with al-Zindani" (1982); Galton 1892 and Aristotle, Meteorologica 1; Ibn Rushd, Fasl al-Maqal.
 - **quranic-ethics**: Hudhayfa's promise before Badr (Muslim); al-Nawawi's six permitted cases of backbiting; the zakah collector and the gift; Asma and her polytheist mother.
 - **quranic-stories-and-history**: dating of the Hegra tombs; Murayghan inscription (Ry 506, 552 CE); Clapp and Ubar; Azad on Cyrus; Nöldeke on the Syriac Alexander legend; Jonah 4:11; Nineveh 612 BC.
-- **haman-anachronism**: Vienna door-jamb title and inventory numbers 5821 and 5822 (now presented as disputed); Reland 1705; Nöldeke, Mingana, Lammens, EI1 and EQ attributions; "about eight centuries" from Moses to Esther.
+- **haman-anachronism**: Reland 1705, Nöldeke, Mingana, Lammens, EI1 and EQ attributions, and "about eight centuries" from Moses to Esther. The Vienna door jamb was checked separately in 1.109.0.
 - **natural-world-verses**: Sahih Muslim chapter and the al-Zuhri remark; Qatada on the stars (al-Bukhari chapter heading); Ibn Abbas on the fig and olive; "seas of Persia and Rome".
 - **universe-demands-creator**: Weinberg 1987; the 10^500 landscape figure; "120 orders of magnitude".
 - **morality-without-god**: Parker as source of the "arc" line; Huxley's 1893 lecture; Nuremberg Charter Article 6(c).
@@ -436,3 +436,11 @@ The thirteen articles of 1.88.0 and the additions to six others were written wit
 - **islamic-rites-before-islam**: Quran 7:31 (al-Tabari's report from Ibn Abbas on circling naked) and 9:37.
 - **same-god**: Acts 17:22-23.
 - **islamic-art-and-the-one-god**: enamelled Mamluk mosque lamps with Quran 24:35 (name a catalogued example to replace the general museum reference).
+
+## Source checks in 1.109.0
+
+- **haman-anachronism**: Checked Vienna inventory 5821/5822 against the Global Egyptian Museum catalogue. The translation gives Hemen-hetep as the name and overseer of Amun's stonemasons as the office. The catalogue places the jamb in the 19th or 20th Dynasty.
+- **who-was-yahweh-archaeological-origins**: Linked Louvre AO 5066 and checked the description of Mesha's sacrifice and Israel's withdrawal against 2 Kings 3:26–27.
+- **uthman-copies**: Checked the Birmingham conservation record for OxA-29418, the testing and announcement dates, and the difference between parchment dating and handwriting analysis.
+- **child-marriage-in-islam**: Checked the marriage provisions cited for Turkey, Egypt, Tunisia, Morocco, Indonesia and Sindh. The text distinguishes ordinary marriage age, registration, and court exceptions.
+- **terrorism-and-muslims-the-data**: Checked the source and figures for the 2026 Global Terrorism Index, the 2020 population estimate in Pew's 2025 report, and the national and local findings in the Casey audit.
