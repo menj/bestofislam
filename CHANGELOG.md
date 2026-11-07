@@ -4,7 +4,7 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.108.2] - 2026-11-07
+## [1.110.1] - 2026-11-07
 
 ### Changed
 
@@ -16,6 +16,32 @@ versioning.
 - `bin/commons-api.py`, a command-line tool for Wikimedia Commons. `info` prints a file's licences, author, size and description from Magnus Manske's Commons API, or from the MediaWiki API when that does not answer. `fetch` downloads the original, saves it as AVIF (1,400 pixels wide for a featured image, 960 for an inline one) and records its credit in `inc/images-data.json`. It refuses any licence but public domain or CC0, keeps an image already in place unless `--replace` is given (D48), and with `--dry-run` changes nothing in the theme. The tool is in `bin/`, so it is not in the theme zip.
 
 Nothing on the site changes.
+
+## [1.110.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- jeremiah-new-covenant-hebrews-and-the-quran: Jeremiah 31 read in full, the same law written inside, the renewals of the covenant in Deuteronomy, Joshua and 2 Kings, how Hebrews reads the passage, and the covenants of the Quran. Quotations checked in the World English Bible and on the Quran.com API; the Septuagint wording and the Luke 22 manuscript note are flagged as general knowledge.
+- what-the-pagans-of-mecca-said-about-allah: what the Quran and early reports say the Meccans believed about Allah, and why the moon-god thesis is weak at Mecca. It says that no Meccan text survives and that Muslim 1185 was read in a translation whose wording should be rechecked.
+- A featured image and four in-text images for each (Pixabay; none shows a prophet). Both are in the reading guide and the related-article links.
+
+## [1.109.1] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- "In the classical dictionaries" notes on five more entries: greed-and-avarice, deception, inheritance, corruption and hukm (al-Raghib, Mufradat). 67 entries now carry notes. `BOI_GLOSSARY_VERSION` is 18, so the Glossary rebuilds once.
+
+## [1.109.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- nine-questions-from-the-floor-islamic-dilemma-debate: nine audience questions from the question session at the end of the debate transcript the owner supplied, each answered with what the speaker said, where the site agrees or differs, and a link to the article that holds the evidence. It names no one. A featured image and four in-text images (Pixabay; none shows a prophet).
+
+### Changed
+- al-zutt-allegation: the chain of the report (Musnad Ahmad, with the parallel in al-Tirmidhi 2861) and the objections to it (ʿAmr's hearing, Ibn Kathir, the Musnad's editors, Muslim 450), as reported by IslamQA's Arabic answer. The notes say that the primary books and the narrators' gradings were not opened, and no narrator is scored.
 
 ## [1.108.1] - 2026-11-07
 

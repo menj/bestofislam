@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.108.2
+Stable tag: 1.110.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,8 +164,17 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.108.2 =
+= 1.110.1 =
 * Documentation only. The three editorial work lists (citations to check, the Shamela and sunnah.com review, and the catalogue of objections) now live in UPGRADING.md under Content review, and three items join the roadmap. Nothing on the site changes.
+
+= 1.110.0 =
+* Two new articles: "The new covenant: what Jeremiah, Hebrews and the Quran say in 6 points" and "What did the pagans of Mecca believe about Allah? 8 answers", each with a featured image and four in-text images.
+
+= 1.109.1 =
+* Five more Glossary entries show excerpts from al-Raghib's word-book: greed and avarice, deception, inheritance, corruption and hukm. 67 in all.
+
+= 1.109.0 =
+* A new article, "Nine questions from the floor on the Islamic dilemma", from the audience question session of the debate transcript, with a featured image and four in-text images. The al-Zutt article gains the chain of the report and the objections to it, with notes that say what was and was not opened.
 
 = 1.108.1 =
 * The article on befriending non-Muslims shows its three in-text images again; a later edit of its text had dropped them. README, SSOT and UPGRADING record the link previews and the 164 seeded articles, say that only featured images go into the media library, and describe the links to other sites as plain cross-links. Nothing else changes.
@@ -320,9 +329,15 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.108.2 =
+= 1.110.1 =
 Replace the theme files. Nothing else to do.
 
+= 1.110.0 =
+Replace the theme files. The two new articles are created when the version changes.
+= 1.109.1 =
+Replace the theme files. The Glossary rebuilds once on the version change to show the new notes.
+= 1.109.0 =
+Replace the theme files. The new article is created, and the changed al-Zutt article refreshed where the owner has not edited it, when the version changes.
 = 1.108.1 =
 Replace the theme files. The restored images reach existing sites through the seed migration on this version change, for an article the owner has not edited.
 

@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.108.2, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.110.1, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
