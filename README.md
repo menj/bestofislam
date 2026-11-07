@@ -134,7 +134,7 @@ bestofislam/
 │                        seed.json (topics, categories, tags, 152 articles,
 │                        8 pages), questions.json (45), image-credits.json,
 │                        schema-entities.json. Read, never executed
-├── inc/glossary-data/   a.json to z.json: the 797 Glossary entries
+├── inc/glossary-data/   a.json to z.json: the 799 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
 ├── content/             The 152 seeded articles as block markup, one JSON file each
 ├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
