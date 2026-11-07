@@ -9,7 +9,7 @@ versioning.
 Glossary, fourth batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
 
 ### Added
-- "In the classical dictionaries" notes on twenty-one more entries: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 83 entries now carry notes.
+- "In the classical dictionaries" notes on twenty-one more entries: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 62 entries now carry notes.
 
 ### Changed
 - `BOI_GLOSSARY_VERSION` 16 to 17, so the Glossary sync rebuilds the changed pages on existing sites.

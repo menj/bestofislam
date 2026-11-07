@@ -165,7 +165,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.107.0 =
-* Twenty-one more Glossary entries show excerpts from al-Raghib's word-book: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 83 in all.
+* Twenty-one more Glossary entries show excerpts from al-Raghib's word-book: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 62 in all.
 
 = 1.106.1 =
 * The content check refuses a new Glossary entry that reuses another entry's title or alias. Nothing changes on the site.
