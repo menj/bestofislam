@@ -572,8 +572,12 @@ same form.
 The owner's rule for every image added from now on: Wikimedia Commons is
 searched first, and a public-domain or CC0 file is used whenever one suits
 the subject. Pexels is used only when Commons has nothing suitable, and
-Pixabay after that. When the Commons API refuses requests, its HTML file
-pages still carry the licence and author, and they are read there instead.
+Pixabay after that. `bin/commons-api.py` looks a file up through Magnus
+Manske's Commons API, falling back to the MediaWiki API, and installs it as
+AVIF with its credit only when its licence is public domain or CC0; it keeps
+an image already in place unless told to replace it. When both APIs refuse
+requests, the HTML file pages still carry the licence and author, and they
+are read there instead.
 The rule applies to new images only: images already bundled, whether from
 Commons, Pexels or Pixabay, stay as they are and are not swapped. Every image
 still follows D30, which means it is credited and never depicts a prophet.

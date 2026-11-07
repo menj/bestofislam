@@ -11,6 +11,10 @@ versioning.
 - The three editorial work lists move into `docs/UPGRADING.md`, under a new Content review section: `docs/CONTENT-REVIEW.md` becomes "Citations to check", `docs/SHAMELA-REVIEW.md` becomes "Shamela and sunnah.com review", and `docs/POLEMICS.md` becomes "Objections catalogue". Their headings are nested two levels down and their text is unchanged, except that the catalogue's three pointers to `docs/CONTENT-REVIEW.md` now point to "Citations to check". The three files are removed, and the README file tree names the docs folder's remaining files.
 - `docs/UPGRADING.md` gains three roadmap items under Next: one limit for meta descriptions (130 or 160 characters), a stricter test before `boi_migrate_seed()` refreshes an article, and the theme's PHP checked against the owner's `php-maintainable-code` skill.
 
+### Added
+
+- `bin/commons-api.py`, a command-line tool for Wikimedia Commons. `info` prints a file's licences, author, size and description from Magnus Manske's Commons API, or from the MediaWiki API when that does not answer. `fetch` downloads the original, saves it as AVIF (1,400 pixels wide for a featured image, 960 for an inline one) and records its credit in `inc/images-data.json`. It refuses any licence but public domain or CC0, keeps an image already in place unless `--replace` is given (D48), and with `--dry-run` changes nothing in the theme. The tool is in `bin/`, so it is not in the theme zip.
+
 Nothing on the site changes.
 
 ## [1.108.1] - 2026-11-07

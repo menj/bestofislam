@@ -152,7 +152,7 @@ bestofislam/
 ├── assets/images/       mark.svg, mark-solid.svg, logo-512.png; featured/ and inline/ (AVIF)
 ├── errors/              Static 403, 500, 502, 503, 504 pages for a site at the domain root
 ├── bin/                 build-error-pages.php, build-related.py, check-content.py,
-│                        convert-images.py, fetch-commons-images.py,
+│                        commons-api.py, convert-images.py, fetch-commons-images.py,
 │                        fetch-stock-images.py, make-original-graphics.py,
 │                        install-hooks.sh (own .htaccess; export-ignored)
 ├── tests/               Command-line self-tests (own .htaccess; export-ignored)
@@ -313,6 +313,7 @@ python3 bin/check-content.py                         # Glossary, links, footnote
 php bin/build-error-pages.php                        # rebuild errors/*.html
 python3 bin/build-related.py                         # rebuild inc/related-articles.json
 python3 bin/convert-images.py                        # every image to AVIF
+python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
 git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.108.2.zip HEAD   # the committed files: commit the release first
 ```
