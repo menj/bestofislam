@@ -367,7 +367,18 @@
    "evil-eye"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ح س د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحسد: تمنّي زوال نعمة من مستحق لها، وربما كان مع ذلك سعي في إزالتها",
+     "gloss": "Al-Rāghib defines <em>ḥasad</em> as wishing that a blessing leave one who deserves it, and says it may be joined with an effort to remove it. He cites 113:5.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1253#860da9"
+    }
+   ]
+  }
  },
  {
   "slug": "equality",

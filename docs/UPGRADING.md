@@ -65,6 +65,34 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.108.0
+
+Replace the theme files. The new article reaches existing sites through `boi_migrate_seed()` on this version; its images are in `assets/images/`.
+
+## Upgrading to 1.107.0
+
+Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 17) and rebuilds the pages that gained notes; entries the owner has edited are left alone.
+
+## Upgrading to 1.106.1
+
+Replace the theme files. Nothing else changes: `bin/check-content.py` gains a check, with the names already shared listed, with their entries, in `bin/glossary-name-baseline.json`.
+
+## Upgrading to 1.106.0
+
+Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 16) and creates the new entry, Ruh; entries the owner has edited are left alone.
+
+## Upgrading to 1.105.0
+
+Replace the theme files. The new Glossary notes reach existing sites through the Glossary sync, which re-runs because `BOI_GLOSSARY_VERSION` is now 15; entries the owner has edited are left alone.
+
+## Upgrading to 1.104.0
+
+Replace the theme files. The Images tab appears in Theme Options; the setting `pexels_key` is added to `boi_settings` only when you save a key.
+
+## Upgrading to 1.103.0
+
+Replace the theme files. Glossary entries gain an optional "In the classical dictionaries" section from `inc/glossary-data/*.json` (field `lexicon`), styled in `assets/css/glossary.css`; it reaches existing sites through the Glossary sync (`BOI_GLOSSARY_VERSION` 15).
+
 ## Upgrading to 1.102.0
 
 Replace the theme files. The new articles reach existing sites through `boi_migrate_seed()` on this version; their images are in `assets/images/`, and the credits are in `inc/images-data.json`.
@@ -190,7 +218,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 ### Ideas
 
 - A sticky contents variant for long articles, as the compelling-evidence theme has (`#ce-toc`). The contents here are inline only.
-- Key points for the 163 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
+- Key points for the 164 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
 - A crawl rule for the heaviest bots. In the November 2026 log QlyzeBot made 1,014 requests and Amazonbot 825, against 378 from Googlebot.
 - Fixed publication dates for seeded articles, as the abrahamic seeder has (`post_date`, published or Scheduled), so new articles can go out on a plan.
 - An image sitemap that stays on beside Rank Math. `boi_image_sitemap_enabled()` turns it off whenever Rank Math is active, and leaves the images to Rank Math's own sitemap; weigh whether the theme's licence data should reach search engines there too.

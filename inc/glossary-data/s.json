@@ -144,7 +144,24 @@
    "Iftar",
    "Suhur",
    "Siyam"
-  ]
+  ],
+  "lexicon": {
+   "root": "ص و م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصَّوْمُ في الأصل: الإمساك عن الفعل مطعما كان، أو كلاما، أو مشيا، ولذلك قيل للفرس الممسك عن السّير، أو العلف: صَائِمٌ",
+     "gloss": "In its root sense, al-Rāghib says, <em>ṣawm</em> is holding back from an act, whether eating, speech or walking. A horse that stops walking or grazing is called <em>ṣāʾim</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9098#420c2b"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصَّوْمُ في الشّرع: إمساك المكلّف بالنّية من الخيط الأبيض إلى الخيط الأسود عن تناول الأطيبين، والاستمناء والاستقاء",
+     "gloss": "In the law, he says, it is the abstaining of a person under obligation, with intention, from the white thread to the black thread (a reference to 2:187), from the two best things (<em>al-aṭyabayn</em>), from seeking emission and from inducing vomiting.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9098#420c2b"
+    }
+   ]
+  }
  },
  {
   "slug": "secret-counsels",
@@ -218,7 +235,18 @@
    "islamisation-of-the-west"
   ],
   "type": "law",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ش ر ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشَّرْعُ: نهج الطّريق الواضح. يقال: شَرَعْتُ له طريقا، والشَّرْعُ: مصدر، ثم جعل اسما للطريق النّهج فقيل له: شِرْعٌ، وشَرْعٌ، وشَرِيعَةٌ، واستعير ذلك للطريقة الإلهيّة",
+     "gloss": "Al-Rāghib says that <em>shar</em>ʿ is the making of a clear road. The word came to name the road itself (<em>shirʿ</em>, <em>sharʿ</em>, <em>sharīʿa</em>) and was then used by extension for the divine way. He cites 5:48, where God says that to each community He prescribed a <em>shirʿa</em> and a <em>minhāj</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6245#644c61"
+    }
+   ]
+  }
  },
  {
   "slug": "shirk",
@@ -265,7 +293,24 @@
     "page": 37,
     "term": "MUSHRIK"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ش ر ك",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وشِرْكُ الإنسان في الدّين ضربان: أحدهما: الشِّرْكُ العظيم، وهو: إثبات شريك لله تعالى. يقال: أَشْرَكَ فلان بالله، وذلك أعظم كفر",
+     "gloss": "Al-Rāghib divides <em>shirk</em> in religion into two kinds. The great <em>shirk</em> is to affirm a partner with God, which he calls the greatest unbelief, and he cites 4:48.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6320#12b658"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والثاني: الشِّرْكُ الصّغير، وهو مراعاة غير الله معه في بعض الأمور، وهو الرّياء والنّفاق",
+     "gloss": "The second kind is the lesser <em>shirk</em>: regard for someone other than God alongside Him in some matters, which he identifies with ostentation and hypocrisy.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6320#12b658"
+    }
+   ]
+  }
  },
  {
   "slug": "shooting-stars-and-the-jinn",
@@ -516,7 +561,18 @@
     "page": 35,
     "term": "SUNNAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "س ن ن",
+   "notes": [
+    {
+     "src": "Ibn al-Athīr, al-Nihāya fī gharīb al-ḥadīth wa-l-athar (d. 1210)",
+     "ar": "وَالْأَصْلُ فِيهَا الطَّرِيقَةُ والسِّيرة. وَإِذَا أُطْلِقَت فِي الشَّرع فَإِنَّمَا يُرادُ بِهَا مَا أمَر بِهِ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَنَهَى عَنْهُ ونَدَب إِلَيْهِ قَوْلًا وفِعْلا، مِمَّا لَمْ يَنْطق بِهِ الكِتابُ العزيزُ",
+     "gloss": "Ibn al-Athīr says the basic sense of <em>sunna</em> is the way and the conduct. When the word is used without qualification in the law, he says, it means what the Prophet ﷺ commanded, forbade or urged, in word and in deed, beyond what the Quran itself states. This is why the sources of the law are called the Book and the Sunna.",
+     "url": "https://arabiclexicon.hawramani.com/?p=19620#7fcec3"
+    }
+   ]
+  }
  },
  {
   "slug": "sabara",
@@ -1148,6 +1204,17 @@
   "faruqi": {
    "page": 37,
    "term": "SHAHADA"
+  },
+  "lexicon": {
+   "root": "ش ه د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشُّهُودُ والشَّهَادَةُ: الحضور مع المشاهدة، إمّا بالبصر، أو بالبصيرة",
+     "gloss": "Al-Rāghib defines <em>shuhūd</em> and <em>shahāda</em> as presence together with witnessing, whether by sight or by insight.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6117#761d5c"
+    }
+   ]
   }
  },
  {
@@ -1311,6 +1378,17 @@
   "faruqi": {
    "page": 35,
    "term": "ṢIDQ"
+  },
+  "lexicon": {
+   "root": "ص د ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصِّدْقُ والكذب أصلهما في القول، ماضيا كان أو مستقبلا، وعدا كان أو غيره، ولا يكونان بالقصد الأوّل إلّا في القول",
+     "gloss": "Al-Rāghib says truthfulness and lying belong at root to speech, whether it is about the past or the future, a promise or anything else, and are not at first intent found except in speech.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9032#b2a50f"
+    }
+   ]
   }
  },
  {
@@ -1537,6 +1615,17 @@
   "faruqi": {
    "page": 55,
    "term": "SUJŪD"
+  },
+  "lexicon": {
+   "root": "س ج د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "السُّجُودُ أصله: التّطامن والتّذلّل، وجعل ذلك عبارة عن التّذلّل لله وعبادته",
+     "gloss": "Al-Rāghib says the root sense of <em>sujūd</em> is bending low and humility, and that it was made to stand for humbling oneself before God and worshipping Him.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9188#8dd35c"
+    }
+   ]
   }
  },
  {

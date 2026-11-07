@@ -246,7 +246,18 @@
     "page": 27,
     "term": "JIHĀD"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ج ه د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والجِهادُ والمجاهدة: استفراغ الوسع في مدافعة العدو، والجِهَاد ثلاثة أضرب: - مجاهدة العدو الظاهر. - ومجاهدة الشيطان. - ومجاهدة النفس",
+     "gloss": "Al-Rāghib defines <em>jihād</em> and <em>mujāhada</em> as the exhausting of one's capacity in repelling an enemy, and he says there are three kinds: against the outward enemy, against Satan and against the self.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3300#0c6cd7"
+    }
+   ]
+  }
  },
  {
   "slug": "jinn",
@@ -504,7 +515,18 @@
    "Adl",
    "Just Dealing",
    "Fairness"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع د ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَدْلُ ضربان: مطلق: يقتضي العقل حسنه، ولا يكون في شيء من الأزمنة منسوخا، ولا يوصف بالاعتداء بوجه، نحو: الإحسان إلى من أحسن إليك، وكفّ الأذيّة عمّن كفّ أذاه عنك. وعَدْلٌ يُعرَف كونه عَدْلًا بالشّرع، ويمكن أن يكون منسوخا في بعض الأزمنة",
+     "gloss": "Al-Rāghib says <em>ʿadl</em> is of two kinds. One is absolute: reason sees that it is good, it is never abrogated, and it is never called transgression, as in repaying kindness to the one who was kind to you. The other is known to be just through the law, and may be abrogated at some times.",
+     "url": "https://arabiclexicon.hawramani.com/?p=728#d69312"
+    }
+   ]
+  }
  },
  {
   "slug": "jabbar-al",

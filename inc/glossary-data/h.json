@@ -214,7 +214,18 @@
     "page": 28,
     "term": "ḤAJJ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ج ج",
+   "notes": [
+    {
+     "src": "Ibn al-Athīr, al-Nihāya fī gharīb al-ḥadīth wa-l-athar (d. 1210)",
+     "ar": "الحَجُّ فِي اللُّغَةِ. القَصْد إِلَى كلِّ شَيْءٍ، فخصَّه الشَّرع بقَصْدٍ مُعَيَّنٍ ذِي شُرُوطٍ مَعْلُومَةٍ",
+     "gloss": "In the language, Ibn al-Athīr says, <em>ḥajj</em> is directing oneself toward a thing. The law gave the word a particular direction with known conditions.",
+     "url": "https://arabiclexicon.hawramani.com/?p=18569#8d70ab"
+    }
+   ]
+  }
  },
  {
   "slug": "halal-and-haram-food",
@@ -657,7 +668,18 @@
     "page": 28,
     "term": "ḤIJĀB"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ج ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحَجْب والحِجَاب: المنع من الوصول",
+     "gloss": "Al-Rāghib defines <em>ḥajb</em> and <em>ḥijāb</em> as preventing something from reaching. His first example is the barrier between the people of Paradise and the people of the Fire in 7:46, which he says is not a thing that blocks the sight.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1170#f9c438"
+    }
+   ]
+  }
  },
  {
   "slug": "hijra",
@@ -1163,7 +1185,18 @@
   "aliases": [
    "Munafiqun",
    "Hypocrisy"
-  ]
+  ],
+  "lexicon": {
+   "root": "ن ف ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النِّفَاقُ، وهو الدّخولُ في الشَّرْعِ من بابٍ والخروجُ عنه من بابٍ",
+     "gloss": "Al-Rāghib derives <em>nifāq</em> from <em>nāfiqāʾ</em>, the second exit of a jerboa's burrow. Hypocrisy, he says, is entering the law by one door and leaving it by another. He cites 9:67, where the hypocrites are named the defiantly disobedient, and 4:145.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4724#0bb8cf"
+    }
+   ]
+  }
  },
  {
   "slug": "hada",
@@ -1602,6 +1635,17 @@
   "faruqi": {
    "page": 53,
    "term": "AL ḤARĀM"
+  },
+  "lexicon": {
+   "root": "ح ر م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحرام: الممنوع منه إمّا بتسخير إلهي وإمّا بشريّ، وإما بمنع قهريّ، وإمّا بمنع من جهة العقل أو من جهة الشرع، أو من جهة من يرتسم أمره",
+     "gloss": "Al-Rāghib defines <em>ḥarām</em> as what a person is kept from, whether by a divine ordering or a human one, by force, by reason, by the law or by someone whose command he follows. The word is wider than a ruling of the law.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1524#f9e99d"
+    }
+   ]
   }
  },
  {
@@ -1785,6 +1829,17 @@
   "faruqi": {
    "page": 46,
    "term": "HIJRAH"
+  },
+  "lexicon": {
+   "root": "ه ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الهَجْرُ والهِجْرَان: مفارقة الإنسان غيره، إمّا بالبدن، أو باللّسان، أو بالقلب",
+     "gloss": "Under the root <em>h-j-r</em> al-Rāghib defines <em>hajr</em> as one person's leaving another, whether by the body, by the tongue or by the heart.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3008#4621a5"
+    }
+   ]
   }
  },
  {
@@ -1814,6 +1869,17 @@
   "faruqi": {
    "page": 30,
    "term": "ḤIKMAH"
+  },
+  "lexicon": {
+   "root": "ح ك م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحِكْمَةُ: إصابة الحق بالعلم والعقل، فالحكمة من الله تعالى: معرفة الأشياء وإيجادها على غاية الإحكام، ومن الإنسان: معرفة الموجودات وفعل الخيرات",
+     "gloss": "Al-Rāghib defines <em>ḥikma</em> as hitting upon the truth by knowledge and reason. In God, he says, it is knowing things and bringing them into being with the utmost firmness. In a human being it is knowing what exists and doing what is good. He points to Luqman in 31:12.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1543#d91c76"
+    }
+   ]
   }
  },
  {

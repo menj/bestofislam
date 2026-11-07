@@ -366,7 +366,24 @@
     "page": 51,
     "term": "FIQH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ق ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفِقْهُ: هو التّوصل إلى علم غائب بعلم شاهد، فهو أخصّ من العلم",
+     "gloss": "Al-Rāghib defines <em>fiqh</em> as reaching knowledge of what is hidden by way of what is seen, which makes it narrower than knowledge in general.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7816#da1415"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفِقْهُ: العلم بأحكام الشريعة",
+     "gloss": "He then gives the sense the word has in the law: knowledge of the rulings of the <em>sharīʿa</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7816#da1415"
+    }
+   ]
+  }
  },
  {
   "slug": "fire",
@@ -422,7 +439,18 @@
     "page": 42,
     "term": "FITNAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ت ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الفَتْنِ: إدخال الذّهب النار لتظهر جودته من رداءته",
+     "gloss": "Al-Rāghib says the root sense of <em>fatn</em> is putting gold into the fire so that its quality shows apart from its dross, and that the word was then used of putting a person to the test.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7792#78e6be"
+    }
+   ]
+  }
  },
  {
   "slug": "fitra",
@@ -523,7 +551,24 @@
   "aliases": [
    "Forgiving",
    "Pardon"
-  ]
+  ],
+  "lexicon": {
+   "root": "غ ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَفْرُ: إلباس ما يصونه عن الدّنس، ومنه قيل: اغْفِرْ ثوبك في الوعاء",
+     "gloss": "Al-Rāghib says the root sense of <em>ghafr</em> is clothing a thing with what protects it from dirt, and gives the saying about putting one's garment away in its bag.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2755#59becf"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والغُفْرَانُ والْمَغْفِرَةُ من الله هو أن يصون العبد من أن يمسّه العذاب",
+     "gloss": "Forgiveness from God, he says, is that He protects the servant from being touched by punishment.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2755#59becf"
+    }
+   ]
+  }
  },
  {
   "slug": "freedom",

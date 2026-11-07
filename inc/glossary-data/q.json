@@ -37,7 +37,18 @@
     "page": 44,
     "term": "QAḌĀ'"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ق د ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصف الله تعالى بها فهي نفي العجز عنه",
+     "gloss": "Of a human being, al-Rāghib says, <em>qudra</em> is a state that lets him do a thing. Of God it means the negation of incapacity in Him. This is the root of <em>qadar</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4990#755b41"
+    }
+   ]
+  }
  },
  {
   "slug": "qarun",
@@ -160,7 +171,24 @@
    "preservation-and-truth"
   ],
   "type": "scripture",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ق ر أ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْقُرْآنُ في الأصل مصدر، نحو: كفران ورجحان",
+     "gloss": "Al-Rāghib says that in its root <em>qurʾān</em> is a verbal noun, of the pattern of <em>kufrān</em> and <em>rujḥān</em>. He cites 75:17-18, where it goes with gathering, and gives Ibn ʿAbbās's explanation of the verse.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4846#1012ec"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقد خصّ بالكتاب المنزّل على محمد صلّى الله عليه وسلم، فصار له كالعلم",
+     "gloss": "It was then restricted, he says, to the book sent down to Muhammad ﷺ, and became for it like a proper name, as <em>al-Tawrāt</em> is for the book sent down to Moses.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4846#1012ec"
+    }
+   ]
+  }
  },
  {
   "slug": "quraysh",
@@ -261,6 +289,23 @@
   "faruqi": {
    "page": 44,
    "term": "QAṢAṢ"
+  },
+  "lexicon": {
+   "root": "ق ص ص",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْقَصُّ: تتبّع الأثر، يقال: قَصَصْتُ أثره، والْقَصَصُ: الأثر",
+     "gloss": "Al-Rāghib says <em>qaṣṣ</em> is following a trace, and that <em>qaṣaṣ</em> is the trace itself.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5116#4375cd"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْقَصَصُ: الأخبار المتتبّعة",
+     "gloss": "He adds that <em>qaṣaṣ</em> is also used of reports that are traced step by step, which is the sense of the accounts in the Quran.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5116#4375cd"
+    }
+   ]
   }
  },
  {
@@ -315,6 +360,17 @@
   "faruqi": {
    "page": 54,
    "term": "QIBLAH"
+  },
+  "lexicon": {
+   "root": "ق ب ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "القِبْلةُ في الأصل اسم للحالة التي عليها الْمُقَابِلُ نحو: الجلسة والقعدة، وفي التّعارف صار اسما للمكان الْمُقَابَلِ المتوجّهِ إليه للصلاة",
+     "gloss": "Al-Rāghib says that <em>qibla</em> was originally the name of a posture, that of one who faces something, as <em>jilsa</em> names a way of sitting. In common usage it became the name of the place that is faced for prayer. He cites 2:144.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9595#1a964c"
+    }
+   ]
   }
  },
  {

@@ -114,7 +114,18 @@
     "page": 32,
     "term": "RIBĀ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ر ب و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الزيادة على رأس المال، لكن خصّ في الشرع بالزيادة على وجه دون وجه",
+     "gloss": "Al-Rāghib says <em>ribā</em> is, in the language, increase over the principal, and that the law narrowed it to increase in one manner and not in another. He cites 30:39 and 2:276 on the increase that God removes from ribā and gives to charity.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10836#b898ce"
+    }
+   ]
+  }
  },
  {
   "slug": "rabb",
@@ -448,6 +459,23 @@
   "faruqi": {
    "page": 33,
    "term": "RASŪL, MURSAL"
+  },
+  "lexicon": {
+   "root": "ر س ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الرِّسْلِ: الانبعاث على التّؤدة ويقال: ناقة رِسْلَةٌ: سهلة السّير، وإبل مَرَاسِيلُ: منبعثة انبعاثا سهلا",
+     "gloss": "Al-Rāghib says the root sense of <em>rasl</em> is setting out with ease and without haste, as a she-camel goes smoothly, and that <em>rasūl</em> is one who is sent forth.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ورُسُلُ الله تارة يراد بها الملائكة، وتارة يراد بها الأنبياء",
+     "gloss": "He adds that the messengers of God are at times the angels and at times the prophets.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    }
+   ]
   }
  },
  {
@@ -698,6 +726,17 @@
   "faruqi": {
    "page": 33,
    "term": "RIZQ"
+  },
+  "lexicon": {
+   "root": "ر ز ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرِّزْقُ يقال للعطاء الجاري تارة، دنيويّا كان أم أخرويّا، وللنّصيب تارة، ولما يصل إلى الجوف ويتغذّى به تارة",
+     "gloss": "Al-Rāghib says <em>rizq</em> is said at times of a continuing grant, at times of a share, and at times of what reaches the stomach and nourishes. He notes that it may be worldly or of the Hereafter.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5610#c0743e"
+    }
+   ]
   }
  },
  {
@@ -726,6 +765,64 @@
   "faruqi": {
    "page": 55,
    "term": "RUKŪ‘"
+  },
+  "lexicon": {
+   "root": "ر ك ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرُّكُوعُ: الانحناء، فتارة يستعمل في الهيئة المخصوصة في الصلاة كما هي، وتارة في التّواضع والتّذلّل",
+     "gloss": "Al-Rāghib defines <em>rukūʿ</em> as bowing, used at times of the particular posture in prayer and at times of lowliness and humility.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5568#ef6eac"
+    }
+   ]
+  }
+ },
+ {
+  "slug": "ruh",
+  "title": "Rūḥ",
+  "type": "belief",
+  "ar": "روح",
+  "tr": "Rūḥ",
+  "def": "The spirit in the Quran: what God breathed into Adam, and a name given to Gabriel, whose nature the Quran leaves to God.",
+  "what": [
+   "The Quran speaks of the <em>rūḥ</em> in three settings. God shaped the first man and “breathed into him of My [created] soul” (15:29, 32:9). The angel who brought the revelation is “the Trustworthy Spirit” (26:193), and in the story of Mary God sent “Our Angel [i.e., Gabriel]” (19:17). Angels and the Spirit descend on the Night of Power “by permission of their Lord for every matter” (97:4).",
+   "When people asked the Prophet ﷺ about it, the answer was short: “The soul is of the affair [i.e., concern] of my Lord. And you [i.e., mankind] have not been given of knowledge except a little” (17:85). Muslim scholars have written long books on the soul, and the Quran itself stops there."
+  ],
+  "misread": "That the Quran says the spirit is a part of God, or that a human being has something of the divine in him.",
+  "sources": [
+   "The words “My spirit” attach the spirit to God as a possession and an honour, as “the house of God” names the Kaaba, and they do not make it a piece of God. The Quran keeps Creator and creature apart (42:11), and the translation used here puts “[created]” in square brackets to say so. These words are the translator's, and the Arabic has only “My spirit”. That the Quran leaves the nature of the spirit to God is read from 17:85 and not from a commentary checked on a page for this entry."
+  ],
+  "terms": [
+   "gabriel",
+   "angels",
+   "wahy",
+   "jinn",
+   "iman"
+  ],
+  "articles": [
+   "who-saw-gabriel"
+  ],
+  "aliases": [
+   "Spirit",
+   "Soul"
+  ],
+  "lexicon": {
+   "root": "ر و ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وجعل اسما للجزء الذي به تحصل الحياة والتّحرّك، واستجلاب المنافع واستدفاع المضارّ",
+     "gloss": "Al-Rāghib says <em>rūḥ</em> was also made the name of the part by which life, movement, the drawing of benefit and the warding off of harm come about, and he points to 17:85 and 15:29.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5452#456485"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإضافته إلى نفسه إضافة ملك، وتخصيصه بالإضافة تشريفا له وتعظيما",
+     "gloss": "He explains the words \"My spirit\" as an attribution of ownership, and the singling out of the spirit by that attribution as an honour and a mark of its dignity. They do not make it a part of God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5452#456485"
+    }
+   ]
   }
  }
 ]

@@ -207,7 +207,18 @@
    "prophet-died-poisoning",
    "crucifixion-quran"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "م و ت",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أنواع الموت بحسب أنواع الحياة: فالأوّل: ما هو بإزاء القوَّة النامية الموجودة في الإنسان والحيوانات والنّبات",
+     "gloss": "Al-Rāghib says the kinds of death follow the kinds of life. The first is death with respect to the growing power found in human beings, animals and plants, and he then lists the loss of the power of sense and the other senses in which the Quran uses the word.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4082#115ecf"
+    }
+   ]
+  }
  },
  {
   "slug": "debates",
@@ -391,7 +402,18 @@
     "page": 32,
     "term": "DHIKR"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ذ ك ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الذِّكْرُ: تارة يقال ويراد به هيئة للنّفس بها يمكن للإنسان أن يحفظ ما يقتنيه من المعرفة، وهو كالحفظ إلّا أنّ الحفظ يقال اعتبارا بإحرازه، والذِّكْرُ يقال اعتبارا باستحضاره",
+     "gloss": "Al-Rāghib distinguishes <em>dhikr</em> from memorising. Memorising, he says, is a matter of keeping a thing safe, and <em>dhikr</em> is a matter of bringing it to mind.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8249#ac0059"
+    }
+   ]
+  }
  },
  {
   "slug": "dhilla",
@@ -500,7 +522,18 @@
   "aliases": [
    "Deen",
    "Religion"
-  ]
+  ],
+  "lexicon": {
+   "root": "د ي ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والدِّينُ يقال للطاعة والجزاء، واستعير للشريعة، والدِّينُ كالملّة، لكنّه يقال اعتبارا بالطاعة والانقياد للشريعة",
+     "gloss": "Al-Rāghib says <em>dīn</em> is said of obedience and of recompense, and is used by extension for the law. It is like <em>milla</em>, he says, but is said with regard to obedience and submission to the law. He cites 3:19.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10101#d9592e"
+    }
+   ]
+  }
  },
  {
   "slug": "dirham",
@@ -579,7 +612,24 @@
     "page": 42,
     "term": "GHAYB"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "غ ي ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَيْبُ: مصدر غَابَتِ الشّمسُ وغيرها: إذا استترت عن العين، يقال: غَابَ عنّي كذا. قال تعالى: أَمْ كانَ مِنَ الْغائِبِينَ [النمل/ 20] ، واستعمل في كلّ غَائِبٍ عن الحاسّة، وعمّا يَغِيبُ عن علم الإنسان بمعنى الغَائِبِ",
+     "gloss": "Al-Rāghib says <em>ghayb</em> is the verbal noun of the sun's hiding from the eye, and is used of whatever is absent from the senses and from a person's knowledge.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2709#56f537"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويقال للشيء: غَيْبٌ وغَائِبٌ باعتباره بالناس لا بالله تعالى",
+     "gloss": "A thing is called unseen, he adds, only with regard to people and not with regard to God, from whom nothing is absent.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2709#56f537"
+    }
+   ]
+  }
  },
  {
   "slug": "divine-attributes",

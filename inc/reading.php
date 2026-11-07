@@ -49,7 +49,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'muslims-by-the-numbers', 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'what-former-muslims-testimonies-show', 'islam-in-china', 'islamophobia-facts', 'islamisation-of-the-west', 'muslim-societies-backwardness-claim', 'taqiyya-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'no-compulsion-in-religion', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
+			'slugs' => array( 'muslims-by-the-numbers', 'islam-religion-of-peace', 'apostasy-in-islam', 'fastest-growing-religion', 'indonesia', 'ex-muslim-blog-study', 'what-former-muslims-testimonies-show', 'islam-in-china', 'islamophobia-facts', 'when-a-stranger-online-calls-islam-a-cult', 'islamisation-of-the-west', 'muslim-societies-backwardness-claim', 'taqiyya-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'no-compulsion-in-religion', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
 		),
 	);
 }

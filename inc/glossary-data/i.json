@@ -27,7 +27,18 @@
     "page": 39,
     "term": "ʿIBĀDAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ب د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العُبُودِيَّةُ: إظهار التّذلّل، والعِبَادَةُ أبلغُ منها، لأنها غاية التّذلّل، ولا يستحقّها إلا من له غاية الإفضال",
+     "gloss": "Al-Rāghib says <em>ʿubūdiyya</em> is the showing of lowliness, and that <em>ʿibāda</em> goes further because it is the utmost lowliness. Only one of utmost bounty deserves it, which is God, and he cites 17:23.",
+     "url": "https://arabiclexicon.hawramani.com/?p=397#1fc7b3"
+    }
+   ]
+  }
  },
  {
   "slug": "iblis",
@@ -267,7 +278,18 @@
     "page": 29,
     "term": "IḤSĀN"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والإحسان يقال على وجهين: أحدهما: الإنعام على الغير، يقال: أحسن إلى فلان. والثاني: إحسان في فعله، وذلك إذا علم علما حسنا، أو عمل عملا حسنا",
+     "gloss": "Al-Rāghib says <em>iḥsān</em> is said in two ways: doing good to another person, and excellence in one's own act, which is to know well or to do well. He adds that it is wider than doing a favour.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#35cf1a"
+    }
+   ]
+  }
  },
  {
   "slug": "ijma",
@@ -432,7 +454,24 @@
     "page": 23,
     "term": "ĪMĀN"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ م ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الأَمْن: طمأنينة النفس وزوال الخوف",
+     "gloss": "The root of <em>īmān</em> is <em>amn</em>, which al-Rāghib defines as the settling of the soul and the removal of fear.",
+     "url": "https://arabiclexicon.hawramani.com/?p=248#a8f479"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "إلا أنّ الإيمان هو التصديق الذي معه أمن",
+     "gloss": "<em>Īmān</em>, he says, is assent that is accompanied by security. It is more than saying that something is true.",
+     "url": "https://arabiclexicon.hawramani.com/?p=248#a8f479"
+    }
+   ]
+  }
  },
  {
   "slug": "immaculate-conception",
@@ -806,7 +845,24 @@
     "page": 35,
     "term": "MUSLIM"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "س ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْإِسْلَامُ في الشّرع على ضربين: أحدهما: دون الإيمان، وهو الاعتراف باللسان، وبه يحقن الدّم، حصل معه الاعتقاد أو لم يحصل، وإيّاه قصد بقوله: قالَتِ الْأَعْرابُ آمَنَّا قُلْ لَمْ تُؤْمِنُوا وَلكِنْ قُولُوا أَسْلَمْنا [الحجرات/ 14] . والثاني: فوق الإيمان، وهو أن يكون مع الاعتراف اعتقاد بالقلب، ووفاء بالفعل، واستسلام لله في جميع ما قضى وقدّر",
+     "gloss": "In the law, al-Rāghib says, <em>islām</em> is of two kinds. One falls short of <em>īmān</em>: acknowledgement by the tongue, which protects a person's blood whether or not belief is present (he points to 49:14). The other goes beyond <em>īmān</em>: acknowledgement joined to belief in the heart, faithfulness in action and submission to God in everything He decreed and measured out.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9709#ba18f8"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "السِّلْمُ والسَّلَامَةُ: التّعرّي من الآفات الظاهرة والباطنة",
+     "gloss": "The same root gives <em>salāma</em>, safety, which al-Rāghib defines as freedom from outward and inward afflictions. The two words are kin, and the lexicon treats them under one root.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9709#ba18f8"
+    }
+   ]
+  }
  },
  {
   "slug": "islamic-finance",
@@ -1016,7 +1072,18 @@
   "aliases": [
    "I'tikaf",
    "Seclusion"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ك ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العُكُوفُ: الإقبال على الشيء وملازمته على سبيل التّعظيم له، والاعْتِكَافُ في الشّرع: هو الاحتباس في المسجد على سبيل القربة",
+     "gloss": "Al-Rāghib defines <em>ʿukūf</em> as turning to a thing and staying with it out of reverence for it, and <em>iʿtikāf</em> in the law as staying in the mosque as an act of nearness to God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=665#72ef9e"
+    }
+   ]
+  }
  },
  {
   "slug": "id-mubarak",
@@ -1274,6 +1341,17 @@
   "faruqi": {
    "page": 39,
    "term": "AL ʿILM"
+  },
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العِلْمُ: إدراك الشيء بحقيقته",
+     "gloss": "Al-Rāghib defines <em>ʿilm</em> as grasping a thing as it truly is. He then divides it into grasping the thing itself and judging that something is, or is not, true of it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
   }
  },
  {

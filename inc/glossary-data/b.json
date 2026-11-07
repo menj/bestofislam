@@ -473,7 +473,18 @@
   "aliases": [
    "Bid`Ah",
    "Innovation"
-  ]
+  ],
+  "lexicon": {
+   "root": "ب د ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الإِبْدَاع: إنشاء صنعة بلا احتذاء واقتداء، ومنه قيل: ركيّة بَدِيع أي: جديدة الحفر ، وإذا استعمل في الله تعالى فهو إيجاد الشيء بغير آلة ولا مادّة ولا زمان ولا مكان",
+     "gloss": "Al-Rāghib says <em>ibdāʿ</em> is making a thing without imitating or following a model. Said of God, it means bringing a thing into being without tool, matter, time or place. <em>Bidʿa</em> comes from this root.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1862#822d2c"
+    }
+   ]
+  }
  },
  {
   "slug": "bilal",
@@ -1116,6 +1127,17 @@
   "faruqi": {
    "page": 25,
    "term": "BĀṬIL"
+  },
+  "lexicon": {
+   "root": "ب ط ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البَاطِل: نقيض الحق، وهو ما لا ثبات له عند الفحص عنه",
+     "gloss": "Al-Rāghib defines <em>bāṭil</em> as the opposite of <em>ḥaqq</em>: what has no standing when it is examined. He cites 22:62.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1966#2c8233"
+    }
+   ]
   }
  },
  {

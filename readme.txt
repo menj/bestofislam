@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.102.1
+Stable tag: 1.108.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 163 articles, each with a featured image and 2 more in its text. A Glossary of 797 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 164 articles, each with a featured image and 2 more in its text. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -25,7 +25,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A section taxonomy (listicle-topic) at /topic/<section>/, with categories and tags on every seeded article.
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
-* A Glossary of 797 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
+* A Glossary of 798 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
 * Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
@@ -164,8 +164,29 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.102.1 =
-* The article on befriending non-Muslims shows its three in-text images again; a later edit of its text had dropped them. README, SSOT and UPGRADING record the link previews and the 163 seeded articles, and no longer call the other sites sister sites. Nothing else changes.
+= 1.108.1 =
+* The article on befriending non-Muslims shows its three in-text images again; a later edit of its text had dropped them. README, SSOT and UPGRADING record the link previews and the 164 seeded articles, say that only featured images go into the media library, and describe the links to other sites as plain cross-links. Nothing else changes.
+
+= 1.108.0 =
+* A new article, "When a stranger online says Islam is a cult": six claims from a hostile comment thread (cult, deprogramming, "a lie", modesty, hate speech, and a comparison to a killer) checked against the Quran and the data, with a note on how to reply. It names no one and quotes no insult.
+
+= 1.107.0 =
+* Twenty-one more Glossary entries show excerpts from al-Raghib's word-book: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 62 in all.
+
+= 1.106.1 =
+* The content check refuses a new Glossary entry that reuses another entry's title or alias. Nothing changes on the site.
+
+= 1.106.0 =
+* Glossary: one new entry (Ruh), and classical-dictionary excerpts on 18 more entries. Forty-two entries now carry them: ihsan, quran, umrah, qiblah, din, ibadah, shahada, taharah, fitna, batil, ilm, adhan, hypocrites, atonement and repentance, justice, divination and the unseen, adversity (the patience entry) and Ruh.
+
+= 1.105.0 =
+* Nine more Glossary entries show excerpts from the classical word-books: hikmah, zulm, tawakkul, dhikr, fiqh, riba, rasul, haram and hijrah. Twenty-four in all.
+
+= 1.104.0 =
+* Theme Options has an Images tab: save a Pexels key and search Pexels for photographs with the official Pexels client, then copy the plan entry for the image script. Nothing changes on the public site.
+
+= 1.103.0 =
+* Glossary entries can now show short excerpts from the classical Arabic word-books (al-Rāghib, Ibn al-Athīr) with an English paraphrase and a link to the Arabic Lexicon. Fifteen entries carry them: islam, iman, tawhid, shirk, kufr, jihad, sawm, wali, kitab, qadar, nabiyy, sunnah, hajj, sharia and hijab.
 
 = 1.102.0 =
 * Eight new articles, answering the arguments in a collection of ex-Muslim testimonies without naming any person or the book: non-Muslims and Hell, the hadith of the Jews behind the stone, befriending non-Muslims, women in Hell and "deficient in intelligence", three divorces and the one-night marriage, the narcissism claim, Safiyya and captive women, and what testimonies can show. Each has a featured image and three or four in-text images from Pixabay.
@@ -296,8 +317,29 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.102.1 =
+= 1.108.1 =
 Replace the theme files. The restored images reach existing sites through the seed migration on this version change, for an article the owner has not edited.
+
+= 1.108.0 =
+Replace the theme files. The new article reaches existing sites through the seed migration on this version.
+
+= 1.107.0 =
+Replace the theme files. The new notes reach existing sites through the Glossary sync on this version.
+
+= 1.106.1 =
+Tooling only. Replace the theme files; nothing else to do.
+
+= 1.106.0 =
+Replace the theme files. The new entry and the new notes reach existing sites through the Glossary sync on this version.
+
+= 1.105.0 =
+Replace the theme files. The new notes reach existing sites through the Glossary sync on this version.
+
+= 1.104.0 =
+Replace the theme files. Nothing else to do.
+
+= 1.103.0 =
+Replace the theme files. The new Glossary section reaches existing sites through the Glossary sync on this version.
 
 = 1.102.0 =
 Replace the theme files. The new articles reach existing sites through the seed migration on this version.

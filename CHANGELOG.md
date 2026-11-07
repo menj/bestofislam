@@ -4,15 +4,78 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.102.1] - 2026-11-07
+## [1.108.1] - 2026-11-07
 
 ### Fixed
 
 - can-a-muslim-befriend-a-non-muslim shows its three in-text images again. The edit that softened its reading of "ally" (c573427) rewrote the article without its three figure blocks, so the images recorded for it in `inc/images-data.json` were never placed. The blocks are back where they stood before the edit.
-- The documents agree with the code again: `README.md` names `inc/social-meta.php` in the load order and describes link previews, the seeded article count reads 163 (it read 152) in `README.md`, `readme.txt`, `docs/SSOT.md` and `docs/UPGRADING.md`, and `readme.txt` carries the short entries for 1.101.0 to 1.101.3.
-- `docs/SSOT.md` (D46) and `docs/UPGRADING.md` no longer call the other sites sister sites or a network, as the documentation standard requires of shipped documents.
+- The documents agree with the code again: `README.md` names `inc/social-meta.php` in the load order and describes link previews; the seeded article count reads 164 (it read 152) in `README.md`, `readme.txt`, `docs/SSOT.md` and `docs/UPGRADING.md`; `README.md` says every article has at least two in-text images (61 have two, the rest three to five) and that only featured images are copied into the media library, the in-text images being served from the theme; and `readme.txt` carries the short entries for 1.101.0 to 1.101.3.
+- `docs/SSOT.md` (D46) and `docs/UPGRADING.md` describe the links to other sites as plain cross-links, as the documentation standard requires of shipped documents.
 
 Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
+## [1.108.0] - 2026-11-07
+
+A new article. No feature removed and no public identifier renamed.
+
+### Added
+- when-a-stranger-online-calls-islam-a-cult: six claims from a hostile online thread answered from the sources, with footnotes that say what was and was not checked. It names no one and quotes no insult. It has a featured image and three in-text images (Pixabay; D48 swaps can follow; none shows a prophet, D30).
+- A description for the tag Hijab, which two articles now use.
+
+## [1.107.0] - 2026-11-07
+
+Glossary, fourth batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
+
+### Added
+- "In the classical dictionaries" notes on twenty-one more entries: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 62 entries now carry notes.
+
+### Changed
+- `BOI_GLOSSARY_VERSION` 16 to 17, so the Glossary sync rebuilds the changed pages on existing sites.
+
+## [1.106.1] - 2026-11-07
+
+Tooling. No change to the site.
+
+### Added
+- `bin/check-content.py` refuses a Glossary entry whose title or alias is already used by another entry, because the link map keeps the first match (a duplicate Sabr entry shipped in review for this reason). The 65 names already shared are listed in `bin/glossary-name-baseline.json` with the entries that share each one; those pairs pass, and any other entry that uses one of those names is refused. Names are compared trimmed and lowercased, as the link map does.
+
+## [1.106.0] - 2026-11-07
+
+Glossary: one new entry and more classical-dictionary excerpts. No feature removed and no public identifier renamed.
+
+### Added
+- One entry, Ruh (the spirit), with Quran references and al-Rāghib excerpts. A first Sabr entry was dropped before release: the Glossary already has the patience entry as Adversity (Arabic ṣabr), so the ṣabr excerpts went onto that entry.
+- "In the classical dictionaries" notes on seventeen existing entries: ihsan, quran, umrah, qiblah, din, ibadah, shahada, taharah, fitna, batil, ilm (al-ʿIlm), adhan, hypocrites, atonement and repentance, justice, divination and the unseen, and adversity. Forty-two entries now carry notes.
+
+### Changed
+- `BOI_GLOSSARY_VERSION` 15 to 16, so the Glossary sync creates the new entries and rebuilds the changed pages.
+- The Glossary has 798 entries.
+
+## [1.105.0] - 2026-11-07
+
+Glossary, second batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
+
+### Changed
+- `BOI_GLOSSARY_VERSION` 14 to 15, so the Glossary sync re-runs on existing sites and the "In the classical dictionaries" notes (1.103.0 onward) reach entry pages already built.
+
+### Added
+- "In the classical dictionaries" notes on nine more entries: hikmah, zulm, tawakkul, dhikr, fiqh, riba, rasul, haram (al-Ḥarām) and hijrah. Twenty-four entries now carry notes. Same method as 1.103.0: the Arabic is copied from the Arabic Lexicon page it links to, and the English is the site's own paraphrase.
+
+## [1.104.0] - 2026-11-07
+
+The official Pexels JavaScript client is part of the theme. No feature removed and no public identifier renamed.
+
+### Added
+- An Images tab in Theme Options (nine tabs now): a Pexels key field (stored in the `boi_settings` option, or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder. Search, then copy the plan entry for `bin/stock-images.json`.
+- `assets/js/vendor/pexels/main.umd.js`, the `pexels` package 1.4.0 (MIT) unchanged, with a README; `assets/js/admin-images.js`; styles in `assets/css/admin-settings.css`. They load on the Theme Options screen for administrators only.
+
+## [1.103.0] - 2026-11-07
+
+Glossary: excerpts from the classical Arabic word-books. No feature removed and no public identifier renamed.
+
+### Added
+- An optional `lexicon` record on a Glossary entry (root, and notes of source, Arabic excerpt, English paraphrase and link), shown as "In the classical dictionaries" (`boi_glossary_lexicon_section()` in `inc/glossary.php`, `assets/css/glossary.css`). `bin/check-content.py` checks that each note has all four parts, that its link is on arabiclexicon.hawramani.com and that an excerpt stays within 450 characters.
+- Fifteen entries carry notes: islam, iman, tawhid, shirk, kufr, jihad, sawm, wali, kitab, qadar, nabiyy (al-Rāghib al-Iṣfahānī, *al-Mufradāt*) and sunnah, hajj (Ibn al-Athīr, *al-Nihāya*), sharia, hijab (al-Rāghib). Each Arabic excerpt was copied from the Arabic Lexicon page it links to and then trimmed to the passage glossed; the English is the site's own paraphrase.
 
 ## [1.102.0] - 2026-11-07
 
