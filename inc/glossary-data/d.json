@@ -391,7 +391,18 @@
     "page": 32,
     "term": "DHIKR"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ذ ك ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الذِّكْرُ: تارة يقال ويراد به هيئة للنّفس بها يمكن للإنسان أن يحفظ ما يقتنيه من المعرفة، وهو كالحفظ إلّا أنّ الحفظ يقال اعتبارا بإحرازه، والذِّكْرُ يقال اعتبارا باستحضاره",
+     "gloss": "Al-Rāghib distinguishes <em>dhikr</em> from memorising. Memorising, he says, is a matter of keeping a thing safe, and <em>dhikr</em> is a matter of bringing it to mind.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8249#ac0059"
+    }
+   ]
+  }
  },
  {
   "slug": "dhilla",

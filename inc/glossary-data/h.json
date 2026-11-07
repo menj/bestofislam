@@ -1624,6 +1624,17 @@
   "faruqi": {
    "page": 53,
    "term": "AL ḤARĀM"
+  },
+  "lexicon": {
+   "root": "ح ر م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحرام: الممنوع منه إمّا بتسخير إلهي وإمّا بشريّ، وإما بمنع قهريّ، وإمّا بمنع من جهة العقل أو من جهة الشرع، أو من جهة من يرتسم أمره",
+     "gloss": "Al-Rāghib defines <em>ḥarām</em> as what a person is kept from, whether by a divine ordering or a human one, by force, by reason, by the law or by someone whose command he follows. The word is wider than a ruling of the law.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1524#f9e99d"
+    }
+   ]
   }
  },
  {
@@ -1807,6 +1818,17 @@
   "faruqi": {
    "page": 46,
    "term": "HIJRAH"
+  },
+  "lexicon": {
+   "root": "ه ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الهَجْرُ والهِجْرَان: مفارقة الإنسان غيره، إمّا بالبدن، أو باللّسان، أو بالقلب",
+     "gloss": "Under the root <em>h-j-r</em> al-Rāghib defines <em>hajr</em> as one person's leaving another, whether by the body, by the tongue or by the heart.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3008#4621a5"
+    }
+   ]
   }
  },
  {
@@ -1836,6 +1858,17 @@
   "faruqi": {
    "page": 30,
    "term": "ḤIKMAH"
+  },
+  "lexicon": {
+   "root": "ح ك م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحِكْمَةُ: إصابة الحق بالعلم والعقل، فالحكمة من الله تعالى: معرفة الأشياء وإيجادها على غاية الإحكام، ومن الإنسان: معرفة الموجودات وفعل الخيرات",
+     "gloss": "Al-Rāghib defines <em>ḥikma</em> as hitting upon the truth by knowledge and reason. In God, he says, it is knowing things and bringing them into being with the utmost firmness. In a human being it is knowing what exists and doing what is good. He points to Luqman in 31:12.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1543#d91c76"
+    }
+   ]
   }
  },
  {

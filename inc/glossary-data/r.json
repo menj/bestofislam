@@ -114,7 +114,18 @@
     "page": 32,
     "term": "RIBĀ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ر ب و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الزيادة على رأس المال، لكن خصّ في الشرع بالزيادة على وجه دون وجه",
+     "gloss": "Al-Rāghib says <em>ribā</em> is, in the language, increase over the principal, and that the law narrowed it to increase in one manner and not in another. He cites 30:39 and 2:276 on the increase that God removes from ribā and gives to charity.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10836#b898ce"
+    }
+   ]
+  }
  },
  {
   "slug": "rabb",
@@ -448,6 +459,23 @@
   "faruqi": {
    "page": 33,
    "term": "RASŪL, MURSAL"
+  },
+  "lexicon": {
+   "root": "ر س ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الرِّسْلِ: الانبعاث على التّؤدة ويقال: ناقة رِسْلَةٌ: سهلة السّير، وإبل مَرَاسِيلُ: منبعثة انبعاثا سهلا",
+     "gloss": "Al-Rāghib says the root sense of <em>rasl</em> is setting out with ease and without haste, as a she-camel goes smoothly, and that <em>rasūl</em> is one who is sent forth.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ورُسُلُ الله تارة يراد بها الملائكة، وتارة يراد بها الأنبياء",
+     "gloss": "He adds that the messengers of God are at times the angels and at times the prophets.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    }
+   ]
   }
  },
  {

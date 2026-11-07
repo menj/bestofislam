@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.105.0
+
+Replace the theme files. The new Glossary notes reach existing sites through `boi_migrate_seed()` on this version.
+
 ## Upgrading to 1.104.0
 
 Replace the theme files. The Images tab appears in Theme Options; the setting `pexels_key` is added to `boi_settings` only when you save a key.

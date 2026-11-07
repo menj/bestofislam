@@ -191,6 +191,17 @@
   "faruqi": {
    "page": 38,
    "term": "ẒULM"
+  },
+  "lexicon": {
+   "root": "ظ ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وضع الشيء في غير موضعه المختصّ به، إمّا بنقصان أو بزيادة، وإمّا بعدول عن وقته أو مكانه",
+     "gloss": "Al-Rāghib defines <em>ẓulm</em> as putting a thing in a place that is not its own, whether by shortfall or excess, or by departing from its time or place. The word is wider than injury to another person, and the lexicon gives the examples of a skin of milk taken at the wrong time and ground dug where it should not be.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7475#878f42"
+    }
+   ]
   }
  }
 ]

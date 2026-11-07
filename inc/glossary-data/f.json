@@ -366,7 +366,24 @@
     "page": 51,
     "term": "FIQH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ق ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفِقْهُ: هو التّوصل إلى علم غائب بعلم شاهد، فهو أخصّ من العلم",
+     "gloss": "Al-Rāghib defines <em>fiqh</em> as reaching knowledge of what is hidden by way of what is seen, which makes it narrower than knowledge in general.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7816#da1415"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفِقْهُ: العلم بأحكام الشريعة",
+     "gloss": "He then gives the sense the word has in the law: knowledge of the rulings of the <em>sharīʿa</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7816#da1415"
+    }
+   ]
+  }
  },
  {
   "slug": "fire",

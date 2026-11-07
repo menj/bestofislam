@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.105.0] - 2026-11-07
+
+Glossary, second batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
+
+### Added
+- "In the classical dictionaries" notes on nine more entries: hikmah, zulm, tawakkul, dhikr, fiqh, riba, rasul, haram (al-Ḥarām) and hijrah. Twenty-four entries now carry notes. Same method as 1.103.0: the Arabic is copied from the Arabic Lexicon page it links to, and the English is the site's own paraphrase.
+
 ## [1.104.0] - 2026-11-07
 
 The official Pexels JavaScript client is part of the theme. No feature removed and no public identifier renamed.

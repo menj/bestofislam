@@ -912,6 +912,17 @@
   "faruqi": {
    "page": 47,
    "term": "TAWAKKUL"
+  },
+  "lexicon": {
+   "root": "و ك ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التَّوَكُّلُ يقال على وجهين، يقال: تَوَكَّلْتُ لفلان بمعنى: تولّيت له، ويقال: وَكَّلْتُهُ فَتَوَكَّلَ لي، وتَوَكَّلْتُ عليه بمعنى: اعتمدته",
+     "gloss": "Al-Rāghib says <em>tawakkul</em> is said in two ways: acting as someone's agent, and relying on someone. In the second sense he cites the verses on relying on God (9:51, 65:3).",
+     "url": "https://arabiclexicon.hawramani.com/?p=7049#b0f012"
+    }
+   ]
   }
  },
  {
