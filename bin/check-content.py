@@ -157,6 +157,27 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
                 if len(n.get('ar', '')) > 450:
                     errors.append('glossary: "%s" lexicon excerpt runs %d characters (limit 450); quote a shorter passage' % (t.get('slug'), len(n['ar'])))
 
+# A new entry must not reuse another entry's title or alias: the link map keeps
+# the first match, so mentions would link to the older entry. Names that were
+# already shared when this check was added are listed in
+# bin/glossary-name-baseline.json; fix those when an entry is next touched.
+_names = {}
+for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'))):
+    try:
+        _data = json.load(open(path, encoding='utf-8'))
+    except json.JSONDecodeError:
+        continue
+    for t in _data:
+        for n in {t.get('title', '').lower()} | {a.lower() for a in t.get('aliases', [])}:
+            _names.setdefault(n, []).append(t.get('slug'))
+try:
+    _baseline = set(json.load(open(os.path.join(ROOT, 'bin', 'glossary-name-baseline.json'), encoding='utf-8')))
+except (OSError, json.JSONDecodeError):
+    _baseline = set()
+for n, slugs in sorted(_names.items()):
+    if len(slugs) > 1 and n not in _baseline:
+        errors.append('glossary: the name "%s" is used by %s; give the new entry its own title or alias' % (n, ', '.join(slugs)))
+
 # Article content.
 for path in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):
     rel = os.path.relpath(path, ROOT)

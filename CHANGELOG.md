@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.106.1] - 2026-11-07
+
+Tooling. No change to the site.
+
+### Added
+- `bin/check-content.py` refuses a Glossary entry whose title or alias is already used by another entry, because the link map keeps the first match (a duplicate Sabr entry shipped in review for this reason). The 65 names already shared are listed in `bin/glossary-name-baseline.json`; the check is a ratchet and passes while that list is not exceeded.
+
 ## [1.106.0] - 2026-11-07
 
 Glossary: one new entry and more classical-dictionary excerpts. No feature removed and no public identifier renamed.

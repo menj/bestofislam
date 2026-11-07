@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.106.0
+Stable tag: 1.106.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.106.1 =
+* The content check refuses a new Glossary entry that reuses another entry's title or alias. Nothing changes on the site.
+
 = 1.106.0 =
 * Glossary: one new entry (Ruh), and classical-dictionary excerpts on 18 more entries. Forty-two entries now carry them: ihsan, quran, umrah, qiblah, din, ibadah, shahada, taharah, fitna, batil, ilm, adhan, hypocrites, atonement and repentance, justice, divination and the unseen, adversity (the patience entry) and Ruh.
 
@@ -292,6 +295,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.106.1 =
+Tooling only. Replace the theme files; nothing else to do.
 
 = 1.106.0 =
 Replace the theme files. The new entry and the new notes reach existing sites through the Glossary sync on this version.
