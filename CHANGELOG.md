@@ -4,6 +4,30 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.111.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- quran-pronoun-shifts-iltifat: why the Quran turns between "He", "We" and "I", and between "you" and "they". Six answers from M. A. S. Abdel Haleem (BSOAS, 1992), Neal Robinson (*Discovering the Qur'an*, 1996) and Mustansir Mir (*Islamic Studies*, 1990): Nöldeke's objection stated first, the device and its name in Arabic rhetoric, where the turns fall, the singular and plural of God's speech, how the turns keep the Messenger outside the speech, and Mir's reading of 2:217. A featured image and four in-text images, all public domain from Wikimedia Commons, fetched with `bin/commons-api.py`. It is in the reading guide after the grammar article and in the related-article links.
+
+### Changed
+- quran-grammar-errors-claim: a closing paragraph links to the new article.
+- `docs/UPGRADING.md`: the 1.100.12 upgrade note moves to its place in version order.
+
+## [1.110.1] - 2026-11-07
+
+### Changed
+
+- The three editorial work lists move into `docs/UPGRADING.md`, under a new Content review section: `docs/CONTENT-REVIEW.md` becomes "Citations to check", `docs/SHAMELA-REVIEW.md` becomes "Shamela and sunnah.com review", and `docs/POLEMICS.md` becomes "Objections catalogue". Their headings are nested two levels down and their text is unchanged, except that the catalogue's three pointers to `docs/CONTENT-REVIEW.md` now point to "Citations to check". The three files are removed, and the README file tree names the docs folder's remaining files.
+- `docs/UPGRADING.md` gains three roadmap items under Next: one limit for meta descriptions (130 or 160 characters), a stricter test before `boi_migrate_seed()` refreshes an article, and the theme's PHP checked against the owner's `php-maintainable-code` skill.
+
+### Added
+
+- `bin/commons-api.py`, a command-line tool for Wikimedia Commons. `info` prints a file's licences, author, size and description from Magnus Manske's Commons API, or from the MediaWiki API when that does not answer. `fetch` downloads the original, saves it as AVIF (1,400 pixels wide for a featured image, 960 for an inline one) and records its credit in `inc/images-data.json`. It refuses any licence but public domain or CC0, keeps an image already in place unless `--replace` is given (D48), and with `--dry-run` changes nothing in the theme. The tool is in `bin/`, so it is not in the theme zip.
+
+Nothing on the site changes.
+
 ## [1.110.0] - 2026-11-07
 
 No feature removed and no public identifier renamed.
