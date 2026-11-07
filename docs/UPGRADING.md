@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.106.0
+
+Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 16) and creates the new entry, Ruh; entries the owner has edited are left alone.
+
 ## Upgrading to 1.105.0
 
 Replace the theme files. The new Glossary notes reach existing sites through the Glossary sync, which re-runs because `BOI_GLOSSARY_VERSION` is now 15; entries the owner has edited are left alone.

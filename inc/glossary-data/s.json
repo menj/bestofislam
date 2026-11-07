@@ -1204,6 +1204,17 @@
   "faruqi": {
    "page": 37,
    "term": "SHAHADA"
+  },
+  "lexicon": {
+   "root": "ش ه د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشُّهُودُ والشَّهَادَةُ: الحضور مع المشاهدة، إمّا بالبصر، أو بالبصيرة",
+     "gloss": "Al-Rāghib defines <em>shuhūd</em> and <em>shahāda</em> as presence together with witnessing, whether by sight or by insight.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6117#761d5c"
+    }
+   ]
   }
  },
  {

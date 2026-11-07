@@ -694,6 +694,17 @@
   "faruqi": {
    "page": 38,
    "term": "ṬAHĀRAH"
+  },
+  "lexicon": {
+   "root": "ط ه ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والطَّهَارَةُ ضربان: طَهَارَةُ جسمٍ، وطَهَارَةُ نفسٍ",
+     "gloss": "Al-Rāghib says there are two kinds of <em>ṭahāra</em>, purity of the body and purity of the self, and that most of the verses on the subject are taken as referring to both.",
+     "url": "https://arabiclexicon.hawramani.com/?p=979#d1def9"
+    }
+   ]
   }
  },
  {

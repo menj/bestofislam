@@ -439,7 +439,18 @@
     "page": 42,
     "term": "FITNAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ت ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الفَتْنِ: إدخال الذّهب النار لتظهر جودته من رداءته",
+     "gloss": "Al-Rāghib says the root sense of <em>fatn</em> is putting gold into the fire so that its quality shows apart from its dross, and that the word was then used of putting a person to the test.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7792#78e6be"
+    }
+   ]
+  }
  },
  {
   "slug": "fitra",

@@ -27,7 +27,18 @@
     "page": 39,
     "term": "ʿIBĀDAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ب د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العُبُودِيَّةُ: إظهار التّذلّل، والعِبَادَةُ أبلغُ منها، لأنها غاية التّذلّل، ولا يستحقّها إلا من له غاية الإفضال",
+     "gloss": "Al-Rāghib says <em>ʿubūdiyya</em> is the showing of lowliness, and that <em>ʿibāda</em> goes further because it is the utmost lowliness. Only one of utmost bounty deserves it, which is God, and he cites 17:23.",
+     "url": "https://arabiclexicon.hawramani.com/?p=397#1fc7b3"
+    }
+   ]
+  }
  },
  {
   "slug": "iblis",
@@ -267,7 +278,18 @@
     "page": 29,
     "term": "IḤSĀN"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والإحسان يقال على وجهين: أحدهما: الإنعام على الغير، يقال: أحسن إلى فلان. والثاني: إحسان في فعله، وذلك إذا علم علما حسنا، أو عمل عملا حسنا",
+     "gloss": "Al-Rāghib says <em>iḥsān</em> is said in two ways: doing good to another person, and excellence in one's own act, which is to know well or to do well. He adds that it is wider than doing a favour.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#35cf1a"
+    }
+   ]
+  }
  },
  {
   "slug": "ijma",
@@ -1308,6 +1330,17 @@
   "faruqi": {
    "page": 39,
    "term": "AL ʿILM"
+  },
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العِلْمُ: إدراك الشيء بحقيقته",
+     "gloss": "Al-Rāghib defines <em>ʿilm</em> as grasping a thing as it truly is. He then divides it into grasping the thing itself and judging that something is, or is not, true of it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
   }
  },
  {

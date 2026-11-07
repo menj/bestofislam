@@ -1185,7 +1185,18 @@
   "aliases": [
    "Munafiqun",
    "Hypocrisy"
-  ]
+  ],
+  "lexicon": {
+   "root": "ن ف ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النِّفَاقُ، وهو الدّخولُ في الشَّرْعِ من بابٍ والخروجُ عنه من بابٍ",
+     "gloss": "Al-Rāghib derives <em>nifāq</em> from <em>nāfiqāʾ</em>, the second exit of a jerboa's burrow. Hypocrisy, he says, is entering the law by one door and leaving it by another. He cites 9:67, where the hypocrites are named the defiantly disobedient, and 4:145.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4724#0bb8cf"
+    }
+   ]
+  }
  },
  {
   "slug": "hada",
