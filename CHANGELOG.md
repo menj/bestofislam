@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.110.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- jeremiah-new-covenant-hebrews-and-the-quran: Jeremiah 31 read in full, the same law written inside, the renewals of the covenant in Deuteronomy, Joshua and 2 Kings, how Hebrews reads the passage, and the covenants of the Quran. Quotations checked in the World English Bible and on the Quran.com API; the Septuagint wording and the Luke 22 manuscript note are flagged as general knowledge.
+- what-the-pagans-of-mecca-said-about-allah: what the Quran and early reports say the Meccans believed about Allah, and why the moon-god thesis is weak at Mecca. It says that no Meccan text survives and that Muslim 1185 was read in a translation whose wording should be rechecked.
+- A featured image and four in-text images for each (Pixabay; none shows a prophet). Both are in the reading guide and the related-article links.
+
 ## [1.109.1] - 2026-11-07
 
 No feature removed and no public identifier renamed.
