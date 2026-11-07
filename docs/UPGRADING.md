@@ -75,7 +75,7 @@ Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 17) a
 
 ## Upgrading to 1.106.1
 
-Replace the theme files. Nothing else changes: `bin/check-content.py` gains a check, with the names already shared listed in `bin/glossary-name-baseline.json`.
+Replace the theme files. Nothing else changes: `bin/check-content.py` gains a check, with the names already shared listed, with their entries, in `bin/glossary-name-baseline.json`.
 
 ## Upgrading to 1.106.0
 

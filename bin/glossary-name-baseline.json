@@ -1,67 +1,263 @@
-[
- "aflaha",
- "ahl al-bayt",
- "al-hamdu lillah",
- "alayhi salam",
- "alhamdulillah",
- "alim",
- "amal",
- "ash'ari",
- "assalamu alaikum",
- "awliya",
- "deeds",
- "deen",
- "fahisha",
- "falah",
- "fatihah",
- "fiqh",
- "fitna",
- "hadi",
- "haram",
- "hejira",
- "hereafter",
- "hijra",
- "huda",
- "ijma",
- "ijtihad",
- "intercession",
- "jumah",
- "kufr",
- "migration",
- "muhajir",
- "nabi",
- "pbuh",
- "qibla",
- "qisas",
- "qiyas",
- "rahma",
- "rasul",
- "repentance",
- "rida",
- "sabr",
- "sacred house",
- "sadaqa",
- "sahih",
- "sahihayn",
- "sajda",
- "sajdah",
- "salam",
- "salat",
- "salawat",
- "shafa'a",
- "shafaa",
- "shafaʿa",
- "shahada",
- "shahid",
- "subhan allah",
- "subhanahu wa taala",
- "swt",
- "takbir",
- "tala",
- "taskhir",
- "tawba",
- "umm al-kitab",
- "urf",
- "uswa hasana",
- "wahy"
-]
+{
+ "aflaha": [
+  "aflaha",
+  "falah"
+ ],
+ "ahl al-bayt": [
+  "ahl-al-bayt",
+  "al-bayt-al"
+ ],
+ "al-hamdu lillah": [
+  "al-hamdu-lillah",
+  "hamd-al"
+ ],
+ "alayhi salam": [
+  "alayh-al-salam",
+  "honorifics"
+ ],
+ "alhamdulillah": [
+  "al-hamdu-lillah",
+  "hamd-al"
+ ],
+ "alim": [
+  "alim",
+  "alim-al"
+ ],
+ "amal": [
+  "amala",
+  "deeds"
+ ],
+ "ash'ari": [
+  "ashari",
+  "ashari-al"
+ ],
+ "assalamu alaikum": [
+  "al-salamu-alaykum-wa-rahmah-allah",
+  "common-phrases"
+ ],
+ "awliya": [
+  "wali",
+  "waliyy"
+ ],
+ "deeds": [
+  "amala",
+  "deeds"
+ ],
+ "deen": [
+  "din",
+  "din-al"
+ ],
+ "fahisha": [
+  "fahisha",
+  "fahishah-al"
+ ],
+ "falah": [
+  "aflaha",
+  "falah"
+ ],
+ "fatihah": [
+  "fatiha",
+  "fatihah-al"
+ ],
+ "fiqh": [
+  "faqaha",
+  "fiqh"
+ ],
+ "fitna": [
+  "fatana",
+  "fitna"
+ ],
+ "hadi": [
+  "hadi-al",
+  "hajj"
+ ],
+ "haram": [
+  "halal-and-haram-food",
+  "haram-al"
+ ],
+ "hejira": [
+  "hijra",
+  "hijrah"
+ ],
+ "hereafter": [
+  "akhira",
+  "akhirah-al"
+ ],
+ "hijra": [
+  "hijra",
+  "hijrah"
+ ],
+ "huda": [
+  "hada",
+  "huda"
+ ],
+ "ijma": [
+  "ijma",
+  "ijma-al"
+ ],
+ "ijtihad": [
+  "ijtihad",
+  "ijtihad-al"
+ ],
+ "intercession": [
+  "intercession",
+  "shafaah"
+ ],
+ "jumah": [
+  "friday",
+  "jumuah-al"
+ ],
+ "kufr": [
+  "kafara",
+  "kufr"
+ ],
+ "migration": [
+  "hijra",
+  "hijrah"
+ ],
+ "muhajir": [
+  "hajara",
+  "muhajir"
+ ],
+ "nabi": [
+  "nabiyy",
+  "prophets"
+ ],
+ "pbuh": [
+  "honorifics",
+  "salla-allahu-alayhi-wa-sallam"
+ ],
+ "qibla": [
+  "kaaba",
+  "qiblah"
+ ],
+ "qisas": [
+  "qisas",
+  "qisas-al"
+ ],
+ "qiyas": [
+  "qiyas",
+  "qiyas-al"
+ ],
+ "rahma": [
+  "kindness",
+  "rahima"
+ ],
+ "rasul": [
+  "apostle",
+  "rasul"
+ ],
+ "repentance": [
+  "atonement-and-repentance",
+  "taba"
+ ],
+ "rida": [
+  "radiya",
+  "rida-al"
+ ],
+ "sabr": [
+  "adversity",
+  "sabara"
+ ],
+ "sacred house": [
+  "al-bayt-al-haram",
+  "kaaba"
+ ],
+ "sadaqa": [
+  "almsgiving",
+  "sidq"
+ ],
+ "sahih": [
+  "sahih",
+  "sahih-al"
+ ],
+ "sahihayn": [
+  "sahih",
+  "sahih-al"
+ ],
+ "sajda": [
+  "sajada",
+  "sujud"
+ ],
+ "sajdah": [
+  "sajada",
+  "sujud"
+ ],
+ "salam": [
+  "al-salamu-alaykum-wa-rahmah-allah",
+  "salam"
+ ],
+ "salat": [
+  "salah",
+  "salla"
+ ],
+ "salawat": [
+  "al-salatu-wal-salamu-ala-sayyidina-muhammad",
+  "honorifics",
+  "salla-allahu-alayhi-wa-sallam"
+ ],
+ "shafa'a": [
+  "intercession",
+  "shafaah"
+ ],
+ "shafaa": [
+  "intercession",
+  "shafa"
+ ],
+ "shafaʿa": [
+  "shafa",
+  "shafaah"
+ ],
+ "shahada": [
+  "shahada",
+  "shahadah-al"
+ ],
+ "shahid": [
+  "martyrdom-and-the-dead",
+  "shahada"
+ ],
+ "subhan allah": [
+  "common-phrases",
+  "subhana-allah"
+ ],
+ "subhanahu wa taala": [
+  "subhanahu",
+  "subhanahu-wa-taala"
+ ],
+ "swt": [
+  "subhanahu",
+  "subhanahu-wa-taala"
+ ],
+ "takbir": [
+  "akbar",
+  "kabbara"
+ ],
+ "tala": [
+  "taala",
+  "tala"
+ ],
+ "taskhir": [
+  "sakhkhara",
+  "taskhir"
+ ],
+ "tawba": [
+  "atonement-and-repentance",
+  "taba"
+ ],
+ "umm al-kitab": [
+  "fatiha",
+  "fatihah-al"
+ ],
+ "urf": [
+  "custom",
+  "urf-al"
+ ],
+ "uswa hasana": [
+  "al-uswah-al-hasanah",
+  "uswah-hasanah"
+ ],
+ "wahy": [
+  "wahy",
+  "wahy-al"
+ ]
+}

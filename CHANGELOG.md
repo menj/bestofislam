@@ -27,7 +27,7 @@ Glossary, fourth batch of excerpts from al-Rāghib's *Mufradāt*. No feature rem
 Tooling. No change to the site.
 
 ### Added
-- `bin/check-content.py` refuses a Glossary entry whose title or alias is already used by another entry, because the link map keeps the first match (a duplicate Sabr entry shipped in review for this reason). The 65 names already shared are listed in `bin/glossary-name-baseline.json`; the check is a ratchet and passes while that list is not exceeded.
+- `bin/check-content.py` refuses a Glossary entry whose title or alias is already used by another entry, because the link map keeps the first match (a duplicate Sabr entry shipped in review for this reason). The 65 names already shared are listed in `bin/glossary-name-baseline.json` with the entries that share each one; those pairs pass, and any other entry that uses one of those names is refused. Names are compared trimmed and lowercased, as the link map does.
 
 ## [1.106.0] - 2026-11-07
 
