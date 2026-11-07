@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.102.1] - 2026-11-07
+
+### Fixed
+
+- can-a-muslim-befriend-a-non-muslim shows its three in-text images again. The edit that softened its reading of "ally" (c573427) rewrote the article without its three figure blocks, so the images recorded for it in `inc/images-data.json` were never placed. The blocks are back where they stood before the edit.
+- The documents agree with the code again: `README.md` names `inc/social-meta.php` in the load order and describes link previews, the seeded article count reads 163 (it read 152) in `README.md`, `readme.txt`, `docs/SSOT.md` and `docs/UPGRADING.md`, and `readme.txt` carries the short entries for 1.101.0 to 1.101.3.
+- `docs/SSOT.md` (D46) and `docs/UPGRADING.md` no longer call the other sites sister sites or a network, as the documentation standard requires of shipped documents.
+
+Article content reaches existing sites through `boi_migrate_seed()` on this version change, for articles the owner has not edited.
+
 ## [1.102.0] - 2026-11-07
 
 Eight new articles that answer the arguments in a collection of ex-Muslim testimonies. No person and no book is named; the articles answer claims and leave people alone. No feature removed and no public identifier renamed.

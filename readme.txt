@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.102.0
+Stable tag: 1.102.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 152 articles, each with a featured image and 2 more in its text. A Glossary of 797 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 163 articles, each with a featured image and 2 more in its text. A Glossary of 797 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -164,8 +164,23 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.102.1 =
+* The article on befriending non-Muslims shows its three in-text images again; a later edit of its text had dropped them. README, SSOT and UPGRADING record the link previews and the 163 seeded articles, and no longer call the other sites sister sites. Nothing else changes.
+
 = 1.102.0 =
 * Eight new articles, answering the arguments in a collection of ex-Muslim testimonies without naming any person or the book: non-Muslims and Hell, the hadith of the Jews behind the stone, befriending non-Muslims, women in Hell and "deficient in intelligence", three divorces and the one-night marriage, the narcissism claim, Safiyya and captive women, and what testimonies can show. Each has a featured image and three or four in-text images from Pixabay.
+
+= 1.101.3 =
+* The last seven short articles reach at least 1,600 words, so every seeded article carries between 1,600 and 2,500.
+
+= 1.101.2 =
+* Three more articles reach at least 1,600 words.
+
+= 1.101.1 =
+* The article on Ka'b ibn al-Ashraf and the poets is expanded to 1,604 words; four articles a word or two short gain a sentence, and the Islamic dilemma article drops a repeated sentence to stay under 2,500.
+
+= 1.101.0 =
+* Link previews: shared links show a title, description and picture, from a JPEG copy of the featured image. Keep reading shows six related articles in two rows of three. Opening a front-page question no longer leaves a gap beside it. The author page title no longer repeats the site name.
 
 = 1.100.21 =
 * Thirteen more articles gain in-text images, and every in-text image in them now has a caption. Every article now meets the image rule. Nothing else changes.
@@ -280,6 +295,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.102.1 =
+Replace the theme files. The restored images reach existing sites through the seed migration on this version change, for an article the owner has not edited.
 
 = 1.102.0 =
 Replace the theme files. The new articles reach existing sites through the seed migration on this version.
