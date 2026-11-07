@@ -21,7 +21,7 @@ runs a separate theme.
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 152 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 799 Glossary entries (`inc/glossary-data/`) |
+| Seeded content | 8 sections, 23 categories, 160 tags, 152 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
 | Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |

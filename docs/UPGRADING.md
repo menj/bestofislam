@@ -67,7 +67,7 @@ Documentation only, plus the article count on the Content tab. Replace the theme
 
 ## Upgrading to 1.106.0
 
-Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 16) and creates the two new entries, Ruh and Sabr; entries the owner has edited are left alone.
+Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 16) and creates the new entry, Ruh; entries the owner has edited are left alone.
 
 ## Upgrading to 1.105.0
 

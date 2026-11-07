@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 152 articles, each with a featured image and 2 more in its text. A Glossary of 799 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 152 articles, each with a featured image and 2 more in its text. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -25,7 +25,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A section taxonomy (listicle-topic) at /topic/<section>/, with categories and tags on every seeded article.
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
-* A Glossary of 799 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
+* A Glossary of 798 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
 * Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
@@ -165,7 +165,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.106.0 =
-* Glossary: two new entries (Ruh and Sabr), and classical-dictionary excerpts on 18 more entries. Forty-two entries now carry them: ihsan, quran, umrah, qiblah, din, ibadah, shahada, taharah, fitna, batil, ilm, adhan, hypocrites, atonement and repentance, justice, divination and the unseen, and the two new entries.
+* Glossary: one new entry (Ruh), and classical-dictionary excerpts on 18 more entries. Forty-two entries now carry them: ihsan, quran, umrah, qiblah, din, ibadah, shahada, taharah, fitna, batil, ilm, adhan, hypocrites, atonement and repentance, justice, divination and the unseen, adversity (the patience entry) and Ruh.
 
 = 1.105.0 =
 * Nine more Glossary entries show excerpts from the classical word-books: hikmah, zulm, tawakkul, dhikr, fiqh, riba, rasul, haram and hijrah. Twenty-four in all.
@@ -294,7 +294,7 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.106.0 =
-Replace the theme files. The two new entries and the new notes reach existing sites through the Glossary sync on this version.
+Replace the theme files. The new entry and the new notes reach existing sites through the Glossary sync on this version.
 
 = 1.105.0 =
 Replace the theme files. The new notes reach existing sites through the Glossary sync on this version.
