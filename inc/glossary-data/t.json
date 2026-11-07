@@ -179,7 +179,18 @@
    "relationship-with-god"
   ],
   "type": "belief",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "و ح د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصف الله تعالى بالواحد فمعناه: هو الذي لا يصحّ عليه التّجزّي ولا التكثّر",
+     "gloss": "Al-Rāghib lists six senses in which a thing is called one. When God is called one, he says, the meaning is that division and multiplicity cannot apply to Him. This matches the Quran's own line between the Creator and everything created.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6863#00074b"
+    }
+   ]
+  }
  },
  {
   "slug": "thamud",

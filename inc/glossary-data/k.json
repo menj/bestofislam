@@ -324,7 +324,18 @@
     "page": 45,
     "term": "KITĀB"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ت ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فالأصل في الْكِتَابَةِ: النّظم بالخطّ لكن يستعار كلّ واحد للآخر، ولهذا سمّي كلام الله- وإن لم يُكْتَبْ- كِتَاباً",
+     "gloss": "Al-Rāghib says that the basic sense of writing is the arranging of letters in script, but that the word is used for arranging in speech as well. For that reason, he says, the speech of God is called a <em>kitāb</em> even when it has not been written.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3645#c1abab"
+    }
+   ]
+  }
  },
  {
   "slug": "knowledge",
@@ -399,7 +410,24 @@
     "page": 45,
     "term": "KUFR"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والكَافِرُ على الإطلاق متعارف فيمن يجحد الوحدانيّة، أو النّبوّة، أو الشريعة، أو ثلاثتها",
+     "gloss": "Al-Rāghib says that <em>kāfir</em> without qualification is the usual name for one who denies the oneness of God, or prophethood, or the law, or all three.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3792#4131cd"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقد يقال: كَفَرَ لمن أخلّ بالشّريعة، وترك ما لزمه من شكر الله عليه",
+     "gloss": "He adds that the verb <em>kafara</em> is also said of one who neglects the law and leaves undone the thanks he owes to God. The word has a range of uses, and the lexicon records them.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3792#4131cd"
+    }
+   ]
+  }
  },
  {
   "slug": "kutub",

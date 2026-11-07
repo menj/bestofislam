@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.103.0] - 2026-11-07
+
+Glossary: excerpts from the classical Arabic word-books. No feature removed and no public identifier renamed.
+
+### Added
+- An optional `lexicon` record on a Glossary entry (root, and notes of source, Arabic excerpt, English paraphrase and link), shown as "In the classical dictionaries" (`boi_glossary_lexicon_section()` in `inc/glossary.php`, `assets/css/glossary.css`). `bin/check-content.py` checks that each note has all four parts, that its link is on arabiclexicon.hawramani.com and that an excerpt stays within 450 characters.
+- Fifteen entries carry notes: islam, iman, tawhid, shirk, kufr, jihad, sawm, wali, kitab, qadar, nabiyy (al-Rāghib al-Iṣfahānī, *al-Mufradāt*) and sunnah, hajj (Ibn al-Athīr, *al-Nihāya*), sharia, hijab (al-Rāghib). Each Arabic excerpt was copied from the Arabic Lexicon page it links to and then trimmed to the passage glossed; the English is the site's own paraphrase.
+
 ## [1.102.0] - 2026-11-07
 
 Eight new articles that answer the arguments in a collection of ex-Muslim testimonies. No person and no book is named; the articles answer claims and leave people alone. No feature removed and no public identifier renamed.

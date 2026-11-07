@@ -1169,3 +1169,30 @@ html:has(.boi-gbar) .boi-glossary__group {
 		scroll-padding-block-start: 8rem;
 	}
 }
+
+.boi-article .boi-term__root {
+	margin-block: 0 1rem;
+	font-size: 0.875rem;
+	color: var(--wp--preset--color--accent-5, #4A5A6E);
+}
+
+.boi-article .boi-term__lexicon {
+	margin-block: 0.75rem 1.5rem;
+	padding: 0.75rem 1.25rem;
+	border-inline-start: 3px solid var(--wp--preset--color--accent-1, #1F6FB2);
+	background: var(--wp--preset--color--accent-3, #EAF2FB);
+	border-radius: var(--wp--custom--radius--md, 10px);
+}
+
+.boi-article .boi-term__lexicon-ar {
+	margin: 0 0 0.5rem;
+	font-size: 1.125rem;
+	line-height: 1.9;
+	text-align: start;
+}
+
+.boi-article .boi-term__lexicon-src {
+	margin: 0;
+	font-size: 0.8125rem;
+	color: var(--wp--preset--color--accent-5, #4A5A6E);
+}

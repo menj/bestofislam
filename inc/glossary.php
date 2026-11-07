@@ -125,6 +125,7 @@ function boi_glossary_content( $t ) {
 		}
 	}
 
+	$out .= boi_glossary_lexicon_section( $t );
 	$out .= boi_glossary_faruqi_note( $t );
 
 	$attrs = wp_json_encode(
@@ -135,6 +136,46 @@ function boi_glossary_content( $t ) {
 	);
 
 	return $out . '<!-- wp:bestofislam/term-related ' . $attrs . " /-->\n";
+}
+
+/**
+ * The "In the classical dictionaries" section: short Arabic excerpts from the
+ * classical word-books, each with an English paraphrase and a link to the
+ * entry on the Arabic Lexicon (arabiclexicon.hawramani.com). The excerpts are
+ * copied from the lexicon, never retyped, and the English is the site's own
+ * wording. An entry carries a "lexicon" record: root, and notes of src, ar,
+ * gloss and url.
+ *
+ * @param array $t Entry.
+ * @return string Block markup.
+ */
+function boi_glossary_lexicon_section( $t ) {
+	if ( empty( $t['lexicon']['notes'] ) ) {
+		return '';
+	}
+
+	$out = "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">In the classical dictionaries</h2>\n<!-- /wp:heading -->\n\n";
+
+	if ( ! empty( $t['lexicon']['root'] ) ) {
+		$out .= "<!-- wp:paragraph {\"className\":\"boi-term__root\"} -->\n<p class=\"boi-term__root\">Root: <span lang=\"ar\" dir=\"rtl\">" . esc_html( $t['lexicon']['root'] ) . "</span></p>\n<!-- /wp:paragraph -->\n\n";
+	}
+
+	foreach ( $t['lexicon']['notes'] as $note ) {
+		if ( empty( $note['ar'] ) || empty( $note['gloss'] ) || empty( $note['src'] ) ) {
+			continue;
+		}
+
+		$out .= "<!-- wp:paragraph -->\n<p>" . $note['gloss'] . "</p>\n<!-- /wp:paragraph -->\n\n";
+
+		$cite = esc_html( $note['src'] );
+		if ( ! empty( $note['url'] ) ) {
+			$cite .= ' (<a href="' . esc_url( $note['url'] ) . '" rel="noopener">read in the Arabic Lexicon</a>)';
+		}
+
+		$out .= "<!-- wp:group {\"className\":\"boi-term__lexicon\"} -->\n<div class=\"wp-block-group boi-term__lexicon\"><p class=\"boi-term__lexicon-ar\" lang=\"ar\" dir=\"rtl\">" . esc_html( $note['ar'] ) . '</p><p class="boi-term__lexicon-src">' . $cite . "</p></div>\n<!-- /wp:group -->\n\n";
+	}
+
+	return $out;
 }
 
 /**

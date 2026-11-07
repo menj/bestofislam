@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.102.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.103.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -716,6 +716,10 @@ trashed entry is never recreated. Content takes a positive but sourced stance:
 each term states what it means to Muslims, the misunderstanding it is often
 given, and the passage or report that answers it, with Quran and hadith
 references that can be checked.
+
+### D57. Glossary entries may quote the classical word-books
+
+The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
 
 ### D20. Articles follow Islamic English conventions
 

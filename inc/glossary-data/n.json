@@ -143,6 +143,17 @@
   "faruqi": {
    "page": 45,
    "term": "NABIYY"
+  },
+  "lexicon": {
+   "root": "ن ب أ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "خبر ذو فائدة عظيمة يحصل به علم أو غَلَبَة ظنّ",
+     "gloss": "Under the root <em>n-b-ʾ</em> al-Rāghib defines <em>nabaʾ</em> as a report of great benefit by which knowledge, or a strong probability, is gained, and says that a report is not called <em>nabaʾ</em> unless it carries these.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4410#ed2ee5"
+    }
+   ]
   }
  },
  {

@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.102.0
+Stable tag: 1.103.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.103.0 =
+* Glossary entries can now show short excerpts from the classical Arabic word-books (al-Rāghib, Ibn al-Athīr) with an English paraphrase and a link to the Arabic Lexicon. Fifteen entries carry them: islam, iman, tawhid, shirk, kufr, jihad, sawm, wali, kitab, qadar, nabiyy, sunnah, hajj, sharia and hijab.
+
 = 1.102.0 =
 * Eight new articles, answering the arguments in a collection of ex-Muslim testimonies without naming any person or the book: non-Muslims and Hell, the hadith of the Jews behind the stone, befriending non-Muslims, women in Hell and "deficient in intelligence", three divorces and the one-night marriage, the narcissism claim, Safiyya and captive women, and what testimonies can show. Each has a featured image and three or four in-text images from Pixabay.
 
@@ -280,6 +283,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.103.0 =
+Replace the theme files. The new Glossary section reaches existing sites through the seed migration on this version.
 
 = 1.102.0 =
 Replace the theme files. The new articles reach existing sites through the seed migration on this version.

@@ -214,7 +214,18 @@
     "page": 28,
     "term": "ḤAJJ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ج ج",
+   "notes": [
+    {
+     "src": "Ibn al-Athīr, al-Nihāya fī gharīb al-ḥadīth wa-l-athar (d. 1210)",
+     "ar": "الحَجُّ فِي اللُّغَةِ. القَصْد إِلَى كلِّ شَيْءٍ، فخصَّه الشَّرع بقَصْدٍ مُعَيَّنٍ ذِي شُرُوطٍ مَعْلُومَةٍ",
+     "gloss": "In the language, Ibn al-Athīr says, <em>ḥajj</em> is directing oneself toward a thing. The law gave the word a particular direction with known conditions.",
+     "url": "https://arabiclexicon.hawramani.com/?p=18569#8d70ab"
+    }
+   ]
+  }
  },
  {
   "slug": "halal-and-haram-food",
@@ -657,7 +668,18 @@
     "page": 28,
     "term": "ḤIJĀB"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ج ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحَجْب والحِجَاب: المنع من الوصول",
+     "gloss": "Al-Rāghib defines <em>ḥajb</em> and <em>ḥijāb</em> as preventing something from reaching. His first example is the barrier between the people of Paradise and the people of the Fire in 7:46, which he says is not a thing that blocks the sight.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1170#f9c438"
+    }
+   ]
+  }
  },
  {
   "slug": "hijra",
