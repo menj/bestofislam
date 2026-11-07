@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.109.0
+
+Replace the theme files. If the Content tab lists any of the five revised articles after the update, compare your saved edits with the revised copy before deciding which text to keep.
+
 ## Upgrading to 1.100.12
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.

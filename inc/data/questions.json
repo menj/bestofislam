@@ -4,7 +4,7 @@
 		"items": [
 			{
 				"q": "Where are Uthman's copies of the Quran?",
-				"a": "The Samarkand codex, now in Tashkent, is the copy tradition has attributed to Uthman for centuries, and its dating is argued. The Birmingham leaves are settled: radiocarbon dated to 568 to 645, in the Prophet's own generation. Both carry the text Muslims recite today.",
+				"a": "Tradition attributes the Samarkand codex, now in Tashkent, to Uthman. The Birmingham leaves are a separate early witness. Their parchment dates to 568–645 CE by radiocarbon, and scholars assess the age of the writing from the script.",
 				"slug": "uthman-copies",
 				"feat": true
 			},
@@ -115,7 +115,7 @@
 			},
 			{
 				"q": "Did the Quran borrow Haman from the Book of Esther?",
-				"a": "A shared name proves nothing by itself. An Egyptian title for the overseer of quarry workers, attested in the reign of Ramesses II, matches the office the Quran gives Haman.",
+				"a": "A shared name leaves room for more than one explanation. A New Kingdom inscription names Hemen-hetep as an overseer of Amun's stonemasons. His office offers a parallel to Haman's work in the Quran. The identification remains a hypothesis.",
 				"slug": "haman-anachronism",
 				"feat": true
 			},

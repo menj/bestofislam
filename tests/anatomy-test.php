@@ -1,7 +1,7 @@
 <?php
 /**
  * Article anatomy (inc/anatomy.php): heading ids and the contents they feed,
- * the Notes anchor, where the mid-article next step goes, key points, review
+ * the Notes anchor and links, where the mid-article next step goes, key points, review
  * dates and the table region. WordPress is replaced by stubs.
  *
  * Run: php tests/anatomy-test.php
@@ -28,6 +28,7 @@ function get_queried_object() { return $GLOBALS['t_post']; }
 class WP_Post {
 	public $ID            = 1;
 	public $post_password = '';
+	public $post_content  = '';
 }
 
 require dirname( __DIR__ ) . '/inc/anatomy.php';
@@ -60,6 +61,22 @@ check( 1 === substr_count( $notes, 'id="notes"' ) && false !== strpos( $notes, '
 check( '<h3 id="notes">Notes</h3>' === boi_anatomy_notes_anchor( '<h3 id="notes">Notes</h3>' ), 'an existing anchor is kept' );
 check( 'own-notes' === boi_anatomy_notes_id( '<h2>A</h2><h3 class="x" id="own-notes"><span>Notes</span></h3>' ), 'the Notes heading\'s own id is the link target' );
 check( '' === boi_anatomy_notes_id( '<h3>Notes</h3>' ), 'a Notes heading without an id is no target' );
+
+$note_html = '<p id="note-1">Text<sup>[1]</sup> repeated<sup>[1]</sup> and another<sup>[2]</sup> or missing<sup>[3]</sup>.</p>'
+	. '<p><a href="/source/">Quoted<sup>[1]</sup></a> <code><sup>[2]</sup></code></p>'
+	. '<h3>Other list</h3><ol><li>Unrelated</li></ol>'
+	. '<h3 class="has-hicon"><svg aria-hidden="true"></svg><span>Notes</span></h3>'
+	. '<ol class="wp-block-list"><li>Source one</li><li id="own-note"><a href="https://example.org/">Source two</a></li></ol>';
+$linked_notes = boi_anatomy_link_notes( $note_html );
+check( 2 === substr_count( $linked_notes, 'href="#note-1-2" aria-label="Note 1">[1]</a>' ) && false !== strpos( $linked_notes, '<li id="note-1-2">Source one</li>' ), 'repeated references share a collision-free note id' );
+check( false !== strpos( $linked_notes, 'href="#own-note" aria-label="Note 2">[2]</a>' ) && false !== strpos( $linked_notes, '<li id="own-note"><a href="https://example.org/">' ), 'a note keeps its own anchor and source link' );
+check( false !== strpos( $linked_notes, 'missing<sup>[3]</sup>' ) && false !== strpos( $linked_notes, '<a href="/source/">Quoted<sup>[1]</sup></a> <code><sup>[2]</sup></code>' ), 'missing targets, existing links and code samples are untouched' );
+check( false !== strpos( $linked_notes, '<ol><li>Unrelated</li></ol>' ) && $linked_notes === boi_anatomy_link_notes( $linked_notes ), 'other lists stay untouched and filtering twice is safe' );
+$unlinked = '<p>Text<sup>[1]</sup></p><h3>Notes</h3><ol start="2"><li>Source</li></ol>';
+check( $unlinked === boi_anatomy_link_notes( $unlinked ), 'a custom starting number does not turn into a wrong reference' );
+check( '<p>Text<sup>[1]</sup></p>' === boi_anatomy_link_notes( '<p>Text<sup>[1]</sup></p>' ), 'a reference without a Notes list stays plain' );
+$grouped = boi_anatomy_link_notes( '<p>Text<sup>[1][2]</sup></p><h3>Notes</h3><ol><li>One</li><li>Two</li></ol>' );
+check( false !== strpos( $grouped, 'aria-label="Note 1">[1]</a><a class="boi-note-ref" href="#note-2" aria-label="Note 2">[2]</a></sup>' ), 'adjacent markers in one superscript get separate links' );
 
 $mid = boi_anatomy_insert_mid( '<h2>1</h2><h2>2</h2><h2>3</h2>', '<aside>N</aside>' );
 check( '<h2>1</h2><h2>2</h2><aside>N</aside><h2>3</h2>' === $mid, 'before the third section' );

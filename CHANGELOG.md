@@ -4,6 +4,19 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.109.0] - 2026-11-07
+
+### Added
+
+- Numbered footnote markers link directly to the relevant items in Notes. The links are rendered with the article HTML.
+- Direct references to the Egyptian catalogue, Louvre record, Birmingham manuscript research, marriage laws and terrorism data in five articles.
+
+### Fixed
+
+- Clarified the Egyptian inscription in the Haman article, the Mesha account in 2 Kings, the dating of the Birmingham parchment, and the legal exceptions in the child marriage article.
+- Updated the terrorism article to the 2026 Global Terrorism Index and the 2025 Casey audit. The headline count now matches the seven entries.
+- Revised the homepage answers on Haman and the Birmingham Quran leaves to match their sources.
+
 ## [1.108.1] - 2026-11-07
 
 ### Fixed
