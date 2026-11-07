@@ -1072,7 +1072,18 @@
   "aliases": [
    "I'tikaf",
    "Seclusion"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ك ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العُكُوفُ: الإقبال على الشيء وملازمته على سبيل التّعظيم له، والاعْتِكَافُ في الشّرع: هو الاحتباس في المسجد على سبيل القربة",
+     "gloss": "Al-Rāghib defines <em>ʿukūf</em> as turning to a thing and staying with it out of reverence for it, and <em>iʿtikāf</em> in the law as staying in the mosque as an act of nearness to God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=665#72ef9e"
+    }
+   ]
+  }
  },
  {
   "slug": "id-mubarak",

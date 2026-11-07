@@ -22,7 +22,24 @@
    "verses-read-differently"
   ],
   "type": "scripture",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ف س ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفَسْرُ: إظهار المعنى المعقول",
+     "gloss": "Al-Rāghib defines <em>fasr</em> as bringing out the meaning that is grasped by the mind.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7598#8b75e4"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّفْسِيرُ قد يقال فيما يختصّ بمفردات الألفاظ وغريبها، وفيما يختصّ بالتأويل",
+     "gloss": "<em>Tafsīr</em>, he adds, is said of what concerns single words and rare words, and of what concerns interpretation (<em>taʾwīl</em>).",
+     "url": "https://arabiclexicon.hawramani.com/?p=7598#8b75e4"
+    }
+   ]
+  }
  },
  {
   "slug": "tafsir-al-jalalayn",
@@ -757,6 +774,17 @@
   "faruqi": {
    "page": 46,
    "term": "TANZĪL"
+  },
+  "lexicon": {
+   "root": "ن ز ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النُّزُولُ في الأصل هو انحِطَاطٌ من عُلْوّ",
+     "gloss": "Al-Rāghib says the root sense of <em>nuzūl</em> is descending from a height, as one dismounts from a mount or alights in a place.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4759#497087"
+    }
+   ]
   }
  },
  {
@@ -896,6 +924,17 @@
   "faruqi": {
    "page": 38,
    "term": "ṬAWĀF"
+  },
+  "lexicon": {
+   "root": "ط و ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الطَّوْفُ: المشيُ حولَ الشيءِ",
+     "gloss": "Al-Rāghib defines <em>ṭawf</em> as walking around a thing.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1052#edcda5"
+    }
+   ]
   }
  },
  {

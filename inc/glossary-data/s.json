@@ -1378,6 +1378,17 @@
   "faruqi": {
    "page": 35,
    "term": "ṢIDQ"
+  },
+  "lexicon": {
+   "root": "ص د ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصِّدْقُ والكذب أصلهما في القول، ماضيا كان أو مستقبلا، وعدا كان أو غيره، ولا يكونان بالقصد الأوّل إلّا في القول",
+     "gloss": "Al-Rāghib says truthfulness and lying belong at root to speech, whether it is about the past or the future, a promise or anything else, and are not at first intent found except in speech.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9032#b2a50f"
+    }
+   ]
   }
  },
  {
@@ -1604,6 +1615,17 @@
   "faruqi": {
    "page": 55,
    "term": "SUJŪD"
+  },
+  "lexicon": {
+   "root": "س ج د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "السُّجُودُ أصله: التّطامن والتّذلّل، وجعل ذلك عبارة عن التّذلّل لله وعبادته",
+     "gloss": "Al-Rāghib says the root sense of <em>sujūd</em> is bending low and humility, and that it was made to stand for humbling oneself before God and worshipping Him.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9188#8dd35c"
+    }
+   ]
   }
  },
  {

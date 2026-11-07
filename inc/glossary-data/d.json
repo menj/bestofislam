@@ -207,7 +207,18 @@
    "prophet-died-poisoning",
    "crucifixion-quran"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "م و ت",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أنواع الموت بحسب أنواع الحياة: فالأوّل: ما هو بإزاء القوَّة النامية الموجودة في الإنسان والحيوانات والنّبات",
+     "gloss": "Al-Rāghib says the kinds of death follow the kinds of life. The first is death with respect to the growing power found in human beings, animals and plants, and he then lists the loss of the power of sense and the other senses in which the Quran uses the word.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4082#115ecf"
+    }
+   ]
+  }
  },
  {
   "slug": "debates",

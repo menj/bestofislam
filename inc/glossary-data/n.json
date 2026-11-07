@@ -24,7 +24,24 @@
   "type": "scripture",
   "aliases": [
    "Abrogation"
-  ]
+  ],
+  "lexicon": {
+   "root": "ن س خ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النَّسْخُ: إزالةُ شَيْءٍ بِشَيْءٍ يَتَعَقَّبُهُ، كنَسْخِ الشَّمْسِ الظِّلَّ، والظِّلِّ الشمسَ، والشَّيْبِ الشَّبَابَ",
+     "gloss": "Al-Rāghib defines <em>naskh</em> as removing one thing by something that follows it, as the sun removes the shade and the shade the sun, and grey hair youth.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4512#7d8437"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ونَسْخُ الكتاب: إزالة الحُكْمِ بحكم يَتَعَقَّبُهُ",
+     "gloss": "In a book, he says, it is the removal of one ruling by a ruling that follows it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4512#7d8437"
+    }
+   ]
+  }
  },
  {
   "slug": "nation-of-islam",

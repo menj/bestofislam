@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.107.0
+
+Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 17) and rebuilds the pages that gained notes; entries the owner has edited are left alone.
+
 ## Upgrading to 1.106.1
 
 Replace the theme files. Nothing else changes: `bin/check-content.py` gains a check, with the names already shared listed in `bin/glossary-name-baseline.json`.

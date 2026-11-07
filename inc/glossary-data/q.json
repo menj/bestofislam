@@ -289,6 +289,23 @@
   "faruqi": {
    "page": 44,
    "term": "QAṢAṢ"
+  },
+  "lexicon": {
+   "root": "ق ص ص",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْقَصُّ: تتبّع الأثر، يقال: قَصَصْتُ أثره، والْقَصَصُ: الأثر",
+     "gloss": "Al-Rāghib says <em>qaṣṣ</em> is following a trace, and that <em>qaṣaṣ</em> is the trace itself.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5116#4375cd"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْقَصَصُ: الأخبار المتتبّعة",
+     "gloss": "He adds that <em>qaṣaṣ</em> is also used of reports that are traced step by step, which is the sense of the accounts in the Quran.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5116#4375cd"
+    }
+   ]
   }
  },
  {

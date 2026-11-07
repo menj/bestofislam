@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.106.1
+Stable tag: 1.107.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.107.0 =
+* Twenty-one more Glossary entries show excerpts from al-Raghib's word-book: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 83 in all.
+
 = 1.106.1 =
 * The content check refuses a new Glossary entry that reuses another entry's title or alias. Nothing changes on the site.
 
@@ -295,6 +298,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.107.0 =
+Replace the theme files. The new notes reach existing sites through the Glossary sync on this version.
 
 = 1.106.1 =
 Tooling only. Replace the theme files; nothing else to do.
