@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.108.0] - 2026-11-07
+
+A new article. No feature removed and no public identifier renamed.
+
+### Added
+- when-a-stranger-online-calls-islam-a-cult: six claims from a hostile online thread answered from the sources, with footnotes that say what was and was not checked. It names no one and quotes no insult. It has a featured image and three in-text images (Pixabay; D48 swaps can follow; none shows a prophet, D30).
+- A description for the tag Hijab, which two articles now use.
+
 ## [1.107.0] - 2026-11-07
 
 Glossary, fourth batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
