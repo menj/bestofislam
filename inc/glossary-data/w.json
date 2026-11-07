@@ -52,7 +52,18 @@
    "Awliya",
    "Saint",
    "Friend Of God"
-  ]
+  ],
+  "lexicon": {
+   "root": "و ل ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الوَلَاءُ والتَّوَالِي: أن يَحْصُلَ شيئان فصاعدا حصولا ليس بينهما ما ليس منهما، ويستعار ذلك للقرب من حيث المكان، ومن حيث النّسبة، ومن حيث الدّين، ومن حيث الصّداقة والنّصرة والاعتقاد",
+     "gloss": "Al-Rāghib says the root means two things coming together with nothing between them, and that it is then used for nearness of place, of lineage, of religion, of friendship, of support and of belief. The word covers ground that English keeps in several words: ally, patron, protector and friend.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10720#ef0739"
+    }
+   ]
+  }
  },
  {
   "slug": "water-cycle",

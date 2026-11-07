@@ -4,6 +4,32 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.105.0] - 2026-11-07
+
+Glossary, second batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
+
+### Changed
+- `BOI_GLOSSARY_VERSION` 14 to 15, so the Glossary sync re-runs on existing sites and the "In the classical dictionaries" notes (1.103.0 onward) reach entry pages already built.
+
+### Added
+- "In the classical dictionaries" notes on nine more entries: hikmah, zulm, tawakkul, dhikr, fiqh, riba, rasul, haram (al-Ḥarām) and hijrah. Twenty-four entries now carry notes. Same method as 1.103.0: the Arabic is copied from the Arabic Lexicon page it links to, and the English is the site's own paraphrase.
+
+## [1.104.0] - 2026-11-07
+
+The official Pexels JavaScript client is part of the theme. No feature removed and no public identifier renamed.
+
+### Added
+- An Images tab in Theme Options (nine tabs now): a Pexels key field (stored in the `boi_settings` option, or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder. Search, then copy the plan entry for `bin/stock-images.json`.
+- `assets/js/vendor/pexels/main.umd.js`, the `pexels` package 1.4.0 (MIT) unchanged, with a README; `assets/js/admin-images.js`; styles in `assets/css/admin-settings.css`. They load on the Theme Options screen for administrators only.
+
+## [1.103.0] - 2026-11-07
+
+Glossary: excerpts from the classical Arabic word-books. No feature removed and no public identifier renamed.
+
+### Added
+- An optional `lexicon` record on a Glossary entry (root, and notes of source, Arabic excerpt, English paraphrase and link), shown as "In the classical dictionaries" (`boi_glossary_lexicon_section()` in `inc/glossary.php`, `assets/css/glossary.css`). `bin/check-content.py` checks that each note has all four parts, that its link is on arabiclexicon.hawramani.com and that an excerpt stays within 450 characters.
+- Fifteen entries carry notes: islam, iman, tawhid, shirk, kufr, jihad, sawm, wali, kitab, qadar, nabiyy (al-Rāghib al-Iṣfahānī, *al-Mufradāt*) and sunnah, hajj (Ibn al-Athīr, *al-Nihāya*), sharia, hijab (al-Rāghib). Each Arabic excerpt was copied from the Arabic Lexicon page it links to and then trimmed to the passage glossed; the English is the site's own paraphrase.
+
 ## [1.102.0] - 2026-11-07
 
 Eight new articles that answer the arguments in a collection of ex-Muslim testimonies. No person and no book is named; the articles answer claims and leave people alone. No feature removed and no public identifier renamed.

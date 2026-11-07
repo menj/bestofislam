@@ -144,6 +144,18 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
         for r in t.get('articles', []):
             if r not in seeds:
                 errors.append('glossary: "%s" links to unknown article "%s"' % (t.get('slug'), r))
+        lex = t.get('lexicon')
+        if lex:
+            if not lex.get('root') or not lex.get('notes'):
+                errors.append('glossary: "%s" lexicon needs a root and at least one note' % t.get('slug'))
+            for n in lex.get('notes', []):
+                for k in ('src', 'ar', 'gloss', 'url'):
+                    if not n.get(k):
+                        errors.append('glossary: "%s" lexicon note lacks "%s"' % (t.get('slug'), k))
+                if not str(n.get('url', '')).startswith('https://arabiclexicon.hawramani.com/'):
+                    errors.append('glossary: "%s" lexicon url must be on arabiclexicon.hawramani.com' % t.get('slug'))
+                if len(n.get('ar', '')) > 450:
+                    errors.append('glossary: "%s" lexicon excerpt runs %d characters (limit 450); quote a shorter passage' % (t.get('slug'), len(n['ar'])))
 
 # Article content.
 for path in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):

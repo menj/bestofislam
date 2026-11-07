@@ -37,7 +37,18 @@
     "page": 44,
     "term": "QAḌĀ'"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ق د ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصف الله تعالى بها فهي نفي العجز عنه",
+     "gloss": "Of a human being, al-Rāghib says, <em>qudra</em> is a state that lets him do a thing. Of God it means the negation of incapacity in Him. This is the root of <em>qadar</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4990#755b41"
+    }
+   ]
+  }
  },
  {
   "slug": "qarun",
