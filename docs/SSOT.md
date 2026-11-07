@@ -16,11 +16,11 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.103.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.104.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
-| Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); eight tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
+| Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
 | Seeded content | 8 sections, 23 categories, 160 tags, 152 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 797 Glossary entries (`inc/glossary-data/`) |
 | Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
@@ -720,6 +720,10 @@ references that can be checked.
 ### D57. Glossary entries may quote the classical word-books
 
 The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
+
+### D58. A Pexels photograph finder sits in Theme Options
+
+The owner asked on 2026-11-07 for the official Pexels JavaScript client (the `pexels` npm package, MIT) to be part of the theme. It is vendored unchanged at `assets/js/vendor/pexels/main.umd.js` and used only by `assets/js/admin-images.js` on the Images tab, which searches Pexels and copies a plan entry (`{"src":"pexels","id":…}`) for `bin/stock-images.json`. The key is the `BOI_PEXELS_KEY` constant or the `pexels_key` setting; it is printed to administrators only, on that screen, and never written into a theme file or onto the public site. The finder does not download or store images: D48 (Commons first, then Pexels, then Pixabay) and D30 (credits, no prophets) still govern what is used, and `bin/fetch-stock-images.py` still does the downloading.
 
 ### D20. Articles follow Islamic English conventions
 

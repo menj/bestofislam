@@ -58,6 +58,7 @@ function boi_get_options() {
 		'errors_alerts'       => 1,
 		'errors_email'        => '',
 		'errors_cooldown'     => 30,
+		'pexels_key'          => '',
 		'sec_xmlrpc_off'        => 1,
 		'sec_app_passwords_off' => 1,
 		'sec_rest_lock'         => 1,
@@ -238,6 +239,15 @@ function boi_sanitize_options( $input ) {
 			}
 			break;
 
+		case 'images':
+			// A key left blank keeps the saved one; the tick box removes it.
+			if ( ! empty( $input['pexels_key_clear'] ) ) {
+				$current['pexels_key'] = '';
+			} elseif ( ! empty( $input['pexels_key'] ) ) {
+				$current['pexels_key'] = preg_replace( '/[^A-Za-z0-9]/', '', (string) $input['pexels_key'] );
+			}
+			break;
+
 		case 'errors':
 			$current['errors_pages']    = empty( $input['errors_pages'] ) ? 0 : 1;
 			$current['errors_alerts']   = empty( $input['errors_alerts'] ) ? 0 : 1;
@@ -279,6 +289,14 @@ function boi_settings_assets( $hook ) {
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'boi-admin-settings', BOI_URI . '/assets/css/admin-settings.css', array( 'dashicons' ), BOI_VERSION );
 	wp_enqueue_script( 'boi-admin-settings', BOI_URI . '/assets/js/admin-settings.js', array(), BOI_VERSION, true );
+
+	if ( current_user_can( 'manage_options' ) ) {
+		// The Pexels client and the finder that uses it (Images tab). The key
+		// reaches this screen only for an administrator.
+		wp_enqueue_script( 'boi-pexels', BOI_URI . '/assets/js/vendor/pexels/main.umd.js', array(), '1.4.0', true );
+		wp_enqueue_script( 'boi-admin-images', BOI_URI . '/assets/js/admin-images.js', array( 'boi-pexels' ), BOI_VERSION, true );
+		wp_localize_script( 'boi-admin-images', 'boiImages', array( 'key' => boi_pexels_key() ) );
+	}
 }
 add_action( 'admin_enqueue_scripts', 'boi_settings_assets' );
 
@@ -326,6 +344,11 @@ function boi_settings_tabs() {
 			'label' => __( 'Security', 'bestofislam' ),
 			'icon'  => 'dashicons-shield',
 			'usage' => __( 'The switches at the top close the routes spam tools use to publish from outside the site. Below them are the spam scan, the clean-up buttons, the attack reports and the security log. Each button asks before it changes anything.', 'bestofislam' ),
+		),
+		'images'   => array(
+			'label' => __( 'Images', 'bestofislam' ),
+			'icon'  => 'dashicons-format-image',
+			'usage' => __( 'Find photographs on Pexels for an article. Search, then copy the plan entry for the photograph you choose and paste it into bin/stock-images.json; the image script downloads it, converts it to AVIF and records the photographer\'s credit. Save a Pexels key first (or define BOI_PEXELS_KEY in wp-config.php).', 'bestofislam' ),
 		),
 		'errors'   => array(
 			'label' => __( 'Errors', 'bestofislam' ),
@@ -671,6 +694,9 @@ function boi_render_settings_panel( $slug, $opts ) {
 		case 'errors':
 			boi_render_errors_tab( $opts );
 			break;
+		case 'images':
+			boi_render_images_tab( $opts );
+			break;
 		default:
 			boi_render_display_tab( $opts );
 	}
@@ -678,6 +704,10 @@ function boi_render_settings_panel( $slug, $opts ) {
 	echo '<div class="boi-opt__actions">';
 	submit_button( __( 'Save changes', 'bestofislam' ), 'primary', 'submit', false, array( 'id' => 'boi-save-' . $slug ) );
 	echo '</div></form>';
+
+	if ( 'images' === $slug ) {
+		boi_render_images_finder();
+	}
 
 	if ( 'voting' === $slug ) {
 		boi_render_vote_log();
@@ -1190,3 +1220,63 @@ function boi_search_rules_ready() {
 	return false;
 }
 add_action( 'init', 'boi_maybe_flush_rewrites', 99 );
+
+/**
+ * The Pexels key: the BOI_PEXELS_KEY constant when defined, else the saved
+ * option. Never written into a file of the theme.
+ *
+ * @return string
+ */
+function boi_pexels_key() {
+	if ( defined( 'BOI_PEXELS_KEY' ) && is_string( BOI_PEXELS_KEY ) ) {
+		return preg_replace( '/[^A-Za-z0-9]/', '', BOI_PEXELS_KEY );
+	}
+
+	$opts = boi_get_options();
+
+	return isset( $opts['pexels_key'] ) ? (string) $opts['pexels_key'] : '';
+}
+
+/**
+ * Images tab: the Pexels key.
+ *
+ * @param array $opts Current options.
+ * @return void
+ */
+function boi_render_images_tab( $opts ) {
+	$key      = BOI_OPTION_KEY;
+	$fixed    = defined( 'BOI_PEXELS_KEY' );
+	$has_key  = '' !== boi_pexels_key();
+
+	boi_opt_card_open( __( 'Pexels key', 'bestofislam' ), __( 'A free key from pexels.com/api. It is stored in the site database, or in wp-config.php if you define BOI_PEXELS_KEY there, and is never written into the theme files.', 'bestofislam' ) );
+	if ( $fixed ) {
+		echo '<div class="notice notice-info inline"><p>' . esc_html__( 'The key is set by BOI_PEXELS_KEY in wp-config.php, so this field is not used.', 'bestofislam' ) . '</p></div>';
+	}
+	boi_opt_row_open( __( 'Key', 'bestofislam' ), 'boi-pexels-key' );
+	?>
+	<input type="password" class="regular-text" id="boi-pexels-key" name="<?php echo esc_attr( $key ); ?>[pexels_key]" value="" autocomplete="off" placeholder="<?php echo $has_key ? esc_attr__( 'A key is saved. Type a new one to replace it.', 'bestofislam' ) : esc_attr__( 'Paste your Pexels key', 'bestofislam' ); ?>" <?php disabled( $fixed ); ?> />
+	<?php if ( $has_key && ! $fixed ) : ?>
+		<p><label><input type="checkbox" name="<?php echo esc_attr( $key ); ?>[pexels_key_clear]" value="1" /> <?php esc_html_e( 'Remove the saved key', 'bestofislam' ); ?></label></p>
+	<?php endif; ?>
+	<?php
+	boi_opt_row_close();
+	boi_opt_card_close();
+}
+
+/**
+ * Images tab: the photograph finder. It sits outside the settings form; the
+ * script in assets/js/admin-images.js fills it.
+ *
+ * @return void
+ */
+function boi_render_images_finder() {
+	echo '<div class="boi-card boi-images" id="boi-images">';
+	echo '<h2 class="boi-card__title">' . esc_html__( 'Find a photograph', 'bestofislam' ) . '</h2>';
+	echo '<p class="description">' . esc_html__( 'Pexels photographs are free to use and need no credit, but this site credits the photographer anyway. Check that no photograph shows a prophet, and write a caption that says where a picture is only a stock picture.', 'bestofislam' ) . '</p>';
+	echo '<div class="boi-images__bar"><label class="screen-reader-text" for="boi-images-q">' . esc_html__( 'Search Pexels', 'bestofislam' ) . '</label>';
+	echo '<input type="search" id="boi-images-q" class="regular-text" placeholder="' . esc_attr__( 'for example, old books on a shelf', 'bestofislam' ) . '" />';
+	echo '<button type="button" class="button button-primary" id="boi-images-go">' . esc_html__( 'Search', 'bestofislam' ) . '</button></div>';
+	echo '<p class="boi-images__status" id="boi-images-status" role="status" aria-live="polite"></p>';
+	echo '<div class="boi-images__grid" id="boi-images-grid"></div>';
+	echo '</div>';
+}

@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.103.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.104.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -55,7 +55,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ## Settings
 
-Under Appearance, Theme Options, in eight tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. Without JavaScript the tabs are links and still work.
+Under Appearance, Theme Options, in nine tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. The Images tab holds a Pexels key (or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder built on the official Pexels JavaScript client (`assets/js/vendor/pexels/`, `assets/js/admin-images.js`); it copies a plan entry for `bin/stock-images.json`. Without JavaScript the tabs are links and still work.
 
 - **Display:** rank badges, the entry image size, the article contents and the mid-article next step (`article_contents`, `article_mid_next`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Schema:** the default list markup.
@@ -312,7 +312,7 @@ php bin/build-error-pages.php                        # rebuild errors/*.html
 python3 bin/build-related.py                         # rebuild inc/related-articles.json
 python3 bin/convert-images.py                        # every image to AVIF
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.103.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.104.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

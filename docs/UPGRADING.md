@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.104.0
+
+Replace the theme files. The Images tab appears in Theme Options; the setting `pexels_key` is added to `boi_settings` only when you save a key.
+
 ## Upgrading to 1.103.0
 
 Replace the theme files. Glossary entries gain an optional "In the classical dictionaries" section from `inc/glossary-data/*.json` (field `lexicon`), styled in `assets/css/glossary.css`; it reaches existing sites through `boi_migrate_seed()` on this version.

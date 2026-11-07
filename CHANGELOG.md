@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.104.0] - 2026-11-07
+
+The official Pexels JavaScript client is part of the theme. No feature removed and no public identifier renamed.
+
+### Added
+- An Images tab in Theme Options (nine tabs now): a Pexels key field (stored in the `boi_settings` option, or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder. Search, then copy the plan entry for `bin/stock-images.json`.
+- `assets/js/vendor/pexels/main.umd.js`, the `pexels` package 1.4.0 (MIT) unchanged, with a README; `assets/js/admin-images.js`; styles in `assets/css/admin-settings.css`. They load on the Theme Options screen for administrators only.
+
 ## [1.103.0] - 2026-11-07
 
 Glossary: excerpts from the classical Arabic word-books. No feature removed and no public identifier renamed.

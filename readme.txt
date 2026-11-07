@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.103.0
+Stable tag: 1.104.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.104.0 =
+* Theme Options has an Images tab: save a Pexels key and search Pexels for photographs with the official Pexels client, then copy the plan entry for the image script. Nothing changes on the public site.
+
 = 1.103.0 =
 * Glossary entries can now show short excerpts from the classical Arabic word-books (al-Rāghib, Ibn al-Athīr) with an English paraphrase and a link to the Arabic Lexicon. Fifteen entries carry them: islam, iman, tawhid, shirk, kufr, jihad, sawm, wali, kitab, qadar, nabiyy, sunnah, hajj, sharia and hijab.
 
@@ -283,6 +286,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.104.0 =
+Replace the theme files. Nothing else to do.
 
 = 1.103.0 =
 Replace the theme files. The new Glossary section reaches existing sites through the seed migration on this version.
