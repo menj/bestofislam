@@ -67,7 +67,7 @@ Documentation only, plus the article count on the Content tab. Replace the theme
 
 ## Upgrading to 1.105.0
 
-Replace the theme files. The new Glossary notes reach existing sites through `boi_migrate_seed()` on this version.
+Replace the theme files. The new Glossary notes reach existing sites through the Glossary sync, which re-runs because `BOI_GLOSSARY_VERSION` is now 15; entries the owner has edited are left alone.
 
 ## Upgrading to 1.104.0
 
@@ -75,7 +75,7 @@ Replace the theme files. The Images tab appears in Theme Options; the setting `p
 
 ## Upgrading to 1.103.0
 
-Replace the theme files. Glossary entries gain an optional "In the classical dictionaries" section from `inc/glossary-data/*.json` (field `lexicon`), styled in `assets/css/glossary.css`; it reaches existing sites through `boi_migrate_seed()` on this version.
+Replace the theme files. Glossary entries gain an optional "In the classical dictionaries" section from `inc/glossary-data/*.json` (field `lexicon`), styled in `assets/css/glossary.css`; it reaches existing sites through the Glossary sync (`BOI_GLOSSARY_VERSION` 15).
 
 ## Upgrading to 1.102.0
 

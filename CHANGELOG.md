@@ -8,6 +8,9 @@ versioning.
 
 Glossary, second batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
 
+### Changed
+- `BOI_GLOSSARY_VERSION` 14 to 15, so the Glossary sync re-runs on existing sites and the "In the classical dictionaries" notes (1.103.0 onward) reach entry pages already built.
+
 ### Added
 - "In the classical dictionaries" notes on nine more entries: hikmah, zulm, tawakkul, dhikr, fiqh, riba, rasul, haram (al-Ḥarām) and hijrah. Twenty-four entries now carry notes. Same method as 1.103.0: the Arabic is copied from the Arabic Lexicon page it links to, and the English is the site's own paraphrase.
 

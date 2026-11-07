@@ -291,13 +291,13 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.105.0 =
-Replace the theme files. The new notes reach existing sites through the seed migration on this version.
+Replace the theme files. The new notes reach existing sites through the Glossary sync on this version.
 
 = 1.104.0 =
 Replace the theme files. Nothing else to do.
 
 = 1.103.0 =
-Replace the theme files. The new Glossary section reaches existing sites through the seed migration on this version.
+Replace the theme files. The new Glossary section reaches existing sites through the Glossary sync on this version.
 
 = 1.102.0 =
 Replace the theme files. The new articles reach existing sites through the seed migration on this version.
