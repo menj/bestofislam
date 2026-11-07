@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.108.1
+Stable tag: 1.108.2
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.108.2 =
+* Documentation only. The three editorial work lists (citations to check, the Shamela and sunnah.com review, and the catalogue of objections) now live in UPGRADING.md under Content review, and three items join the roadmap. Nothing on the site changes.
+
 = 1.108.1 =
 * The article on befriending non-Muslims shows its three in-text images again; a later edit of its text had dropped them. README, SSOT and UPGRADING record the link previews and the 164 seeded articles, say that only featured images go into the media library, and describe the links to other sites as plain cross-links. Nothing else changes.
 
@@ -316,6 +319,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.108.2 =
+Replace the theme files. Nothing else to do.
 
 = 1.108.1 =
 Replace the theme files. The restored images reach existing sites through the seed migration on this version change, for an article the owner has not edited.

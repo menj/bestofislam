@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.108.2] - 2026-11-07
+
+### Changed
+
+- The three editorial work lists move into `docs/UPGRADING.md`, under a new Content review section: `docs/CONTENT-REVIEW.md` becomes "Citations to check", `docs/SHAMELA-REVIEW.md` becomes "Shamela and sunnah.com review", and `docs/POLEMICS.md` becomes "Objections catalogue". Their headings are nested two levels down and their text is unchanged, except that the catalogue's three pointers to `docs/CONTENT-REVIEW.md` now point to "Citations to check". The three files are removed, and the README file tree names the docs folder's remaining files.
+- `docs/UPGRADING.md` gains three roadmap items under Next: one limit for meta descriptions (130 or 160 characters), a stricter test before `boi_migrate_seed()` refreshes an article, and the theme's PHP checked against the owner's `php-maintainable-code` skill.
+
+Nothing on the site changes.
+
 ## [1.108.1] - 2026-11-07
 
 ### Fixed
