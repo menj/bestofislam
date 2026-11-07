@@ -4,6 +4,31 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.108.0] - 2026-11-07
+
+A new article. No feature removed and no public identifier renamed.
+
+### Added
+- when-a-stranger-online-calls-islam-a-cult: six claims from a hostile online thread answered from the sources, with footnotes that say what was and was not checked. It names no one and quotes no insult. It has a featured image and three in-text images (Pixabay; D48 swaps can follow; none shows a prophet, D30).
+- A description for the tag Hijab, which two articles now use.
+
+## [1.107.0] - 2026-11-07
+
+Glossary, fourth batch of excerpts from al-Rāghib's *Mufradāt*. No feature removed and no public identifier renamed.
+
+### Added
+- "In the classical dictionaries" notes on twenty-one more entries: anger, adultery, bidah, covenant, death, envy, forgiveness, itikaf, khawf, khayr, naskh, qasas, rizq, ruku, sidq, sujud, tafsir, tanzil, tawaf, yaqin and zinah. 62 entries now carry notes.
+
+### Changed
+- `BOI_GLOSSARY_VERSION` 16 to 17, so the Glossary sync rebuilds the changed pages on existing sites.
+
+## [1.106.1] - 2026-11-07
+
+Tooling. No change to the site.
+
+### Added
+- `bin/check-content.py` refuses a Glossary entry whose title or alias is already used by another entry, because the link map keeps the first match (a duplicate Sabr entry shipped in review for this reason). The 65 names already shared are listed in `bin/glossary-name-baseline.json` with the entries that share each one; those pairs pass, and any other entry that uses one of those names is refused. Names are compared trimmed and lowercased, as the link map does.
+
 ## [1.106.0] - 2026-11-07
 
 Glossary: one new entry and more classical-dictionary excerpts. No feature removed and no public identifier renamed.

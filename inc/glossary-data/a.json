@@ -902,7 +902,18 @@
     "page": 34,
     "term": "ZINĀ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ز ن ا",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الزِّنَاءُ: وطء المرأة من غير عقد شرعيّ",
+     "gloss": "Al-Rāghib defines <em>zināʾ</em> as intercourse with a woman without a lawful contract. He cites 24:3.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7438#31716c"
+    }
+   ]
+  }
  },
  {
   "slug": "adversity",
@@ -1791,7 +1802,24 @@
   "articles": [
    "ex-muslim-blog-study"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "غ ض ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَضَبُ: ثوران دم القلب إرادة الانتقام",
+     "gloss": "Al-Rāghib defines <em>ghaḍab</em> as the surging of the heart's blood from the wish for revenge.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2703#bd7024"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصف الله تعالى به فالمراد به الانتقام دون غيره",
+     "gloss": "When the word is said of God, he adds, the meaning intended is retribution and nothing else.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2703#bd7024"
+    }
+   ]
+  }
  },
  {
   "slug": "animals",

@@ -551,7 +551,24 @@
   "aliases": [
    "Forgiving",
    "Pardon"
-  ]
+  ],
+  "lexicon": {
+   "root": "غ ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَفْرُ: إلباس ما يصونه عن الدّنس، ومنه قيل: اغْفِرْ ثوبك في الوعاء",
+     "gloss": "Al-Rāghib says the root sense of <em>ghafr</em> is clothing a thing with what protects it from dirt, and gives the saying about putting one's garment away in its bag.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2755#59becf"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والغُفْرَانُ والْمَغْفِرَةُ من الله هو أن يصون العبد من أن يمسّه العذاب",
+     "gloss": "Forgiveness from God, he says, is that He protects the servant from being touched by punishment.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2755#59becf"
+    }
+   ]
+  }
  },
  {
   "slug": "freedom",

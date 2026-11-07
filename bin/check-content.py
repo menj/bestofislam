@@ -157,6 +157,31 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'
                 if len(n.get('ar', '')) > 450:
                     errors.append('glossary: "%s" lexicon excerpt runs %d characters (limit 450); quote a shorter passage' % (t.get('slug'), len(n['ar'])))
 
+# A new entry must not reuse another entry's title or alias: the link map keeps
+# the first match, so mentions would link to the older entry. The baseline file
+# bin/glossary-name-baseline.json lists, for each name that was already shared
+# when this check was added, the slugs that shared it. Those pairs are allowed;
+# any other entry that uses the name is refused. Names are compared trimmed and
+# lowercased, as the link map does.
+_names = {}
+for path in sorted(glob.glob(os.path.join(ROOT, 'inc', 'glossary-data', '*.json'))):
+    try:
+        _data = json.load(open(path, encoding='utf-8'))
+    except json.JSONDecodeError:
+        continue
+    for t in _data:
+        for n in {t.get('title', '').strip().lower()} | {a.strip().lower() for a in t.get('aliases', [])}:
+            _names.setdefault(n, []).append(t.get('slug'))
+try:
+    _baseline = json.load(open(os.path.join(ROOT, 'bin', 'glossary-name-baseline.json'), encoding='utf-8'))
+except (OSError, json.JSONDecodeError):
+    _baseline = {}
+for n, slugs in sorted(_names.items()):
+    if len(slugs) > 1:
+        extra = [x for x in slugs if x not in set(_baseline.get(n, []))]
+        if extra:
+            errors.append('glossary: the name "%s" is used by %s; give %s its own title or alias' % (n, ', '.join(slugs), ', '.join(extra)))
+
 # Article content.
 for path in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):
     rel = os.path.relpath(path, ROOT)

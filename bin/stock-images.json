@@ -2188,5 +2188,33 @@
     "caption": "A door ajar. The root of \"Islam\" and of \"peace\" is the same in Arabic (s-l-m)."
    }
   ]
+ },
+ "when-a-stranger-online-calls-islam-a-cult": {
+  "featured": {
+   "src": "pixabay",
+   "id": "1850613",
+   "alt": "A pair of hands typing on a laptop beside a cup of coffee.",
+   "caption": "Typing a reply. The Quran asks a Muslim to answer provocation with what is better (41:34)."
+  },
+  "inline": [
+   {
+    "src": "pixabay",
+    "id": "4551193",
+    "alt": "The painted domed ceiling and arches inside a mosque.",
+    "caption": "A mosque interior, a stock picture. Pew counted about 1.8 billion Muslims in 2015, nearly a quarter of the world."
+   },
+   {
+    "src": "pixabay",
+    "id": "10546407",
+    "alt": "A market stall hung with colourful fabrics and textiles.",
+    "caption": "A market stall of fabrics, a stock picture. The Quran's reason for the outer garment is that women \"will be known and not be abused\" (33:59)."
+   },
+   {
+    "src": "pixabay",
+    "id": "4587034",
+    "alt": "A lit candle among dark roses.",
+    "caption": "A candle among roses. Fifty-one people were killed in two Christchurch mosques on 15 March 2019."
+   }
+  ]
  }
 }

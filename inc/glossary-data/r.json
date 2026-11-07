@@ -726,6 +726,17 @@
   "faruqi": {
    "page": 33,
    "term": "RIZQ"
+  },
+  "lexicon": {
+   "root": "ر ز ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرِّزْقُ يقال للعطاء الجاري تارة، دنيويّا كان أم أخرويّا، وللنّصيب تارة، ولما يصل إلى الجوف ويتغذّى به تارة",
+     "gloss": "Al-Rāghib says <em>rizq</em> is said at times of a continuing grant, at times of a share, and at times of what reaches the stomach and nourishes. He notes that it may be worldly or of the Hereafter.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5610#c0743e"
+    }
+   ]
   }
  },
  {
@@ -754,6 +765,17 @@
   "faruqi": {
    "page": 55,
    "term": "RUKŪ‘"
+  },
+  "lexicon": {
+   "root": "ر ك ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرُّكُوعُ: الانحناء، فتارة يستعمل في الهيئة المخصوصة في الصلاة كما هي، وتارة في التّواضع والتّذلّل",
+     "gloss": "Al-Rāghib defines <em>rukūʿ</em> as bowing, used at times of the particular posture in prayer and at times of lowliness and humility.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5568#ef6eac"
+    }
+   ]
   }
  },
  {

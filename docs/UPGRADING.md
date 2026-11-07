@@ -65,6 +65,18 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.108.0
+
+Replace the theme files. The new article reaches existing sites through `boi_migrate_seed()` on this version; its images are in `assets/images/`.
+
+## Upgrading to 1.107.0
+
+Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 17) and rebuilds the pages that gained notes; entries the owner has edited are left alone.
+
+## Upgrading to 1.106.1
+
+Replace the theme files. Nothing else changes: `bin/check-content.py` gains a check, with the names already shared listed, with their entries, in `bin/glossary-name-baseline.json`.
+
 ## Upgrading to 1.106.0
 
 Replace the theme files. The Glossary sync re-runs (`BOI_GLOSSARY_VERSION` 16) and creates the new entry, Ruh; entries the owner has edited are left alone.

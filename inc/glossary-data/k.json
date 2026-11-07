@@ -188,7 +188,18 @@
   "aliases": [
    "Fear",
    "Fear Of God"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ و ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الخَوْف: توقّع مكروه عن أمارة مظنونة، أو معلومة",
+     "gloss": "Al-Rāghib defines <em>khawf</em> as expecting something disliked, from a sign that is supposed or known. Hope, he says, is expecting something liked in the same way, and fear is the opposite of security (<em>amn</em>).",
+     "url": "https://arabiclexicon.hawramani.com/?p=8783#3eb290"
+    }
+   ]
+  }
  },
  {
   "slug": "khaybar",
@@ -672,6 +683,17 @@
   "faruqi": {
    "page": 31,
    "term": "KHAYR"
+  },
+  "lexicon": {
+   "root": "خ ي ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الخَيْرُ: ما يرغب فيه الكلّ، كالعقل مثلا، والعدل، والفضل، والشيء النافع",
+     "gloss": "Al-Rāghib defines <em>khayr</em> as what everyone desires, such as reason, justice, bounty and whatever is useful.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8662#cbee67"
+    }
+   ]
   }
  },
  {
