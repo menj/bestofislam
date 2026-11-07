@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.109.1
+
+Replace the theme files. The Glossary sync rebuilds once on the version change (`BOI_GLOSSARY_VERSION` 18) to show the five new dictionary notes. Nothing else changes.
+
 ## Upgrading to 1.109.0
 
 Replace the theme files. The new article is created on existing sites by `boi_create_listicles()` when the version changes, and the changed al-Zutt article is refreshed by `boi_migrate_seed()` where the owner has not edited it; the new images are in `assets/images/`.

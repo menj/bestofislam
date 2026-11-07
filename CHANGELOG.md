@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.109.1] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- "In the classical dictionaries" notes on five more entries: greed-and-avarice, deception, inheritance, corruption and hukm (al-Raghib, Mufradat). 67 entries now carry notes. `BOI_GLOSSARY_VERSION` is 18, so the Glossary rebuilds once.
+
 ## [1.109.0] - 2026-11-07
 
 No feature removed and no public identifier renamed.
