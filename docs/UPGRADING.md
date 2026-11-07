@@ -151,7 +151,7 @@ Replace the theme files. On Apache, with "Turn off XML-RPC" on (the default), th
 
 Replace the theme files. The Security tab (Appearance, Theme Options, Security) is on by default: XML-RPC, application passwords and REST writes from outside the browser stop at once. XML-RPC was already off in this theme, so only the last two are new.
 
-After the October 2026 attack on the sister site, the owner checklist:
+After the October 2026 attack on another site, the owner checklist:
 
 1. Change the password of every administrator to a long random one used nowhere else, then Log Out Everywhere Else (Users, Profile), or press "Log out all sessions" on the Security tab.
 2. Create a new administrator whose name is not the site name, log in as it, and delete the old account, attributing its content to the new one.
@@ -218,7 +218,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 ### Ideas
 
 - A sticky contents variant for long articles, as the compelling-evidence theme has (`#ce-toc`). The contents here are inline only.
-- Key points for the 152 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
+- Key points for the 164 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
 - A crawl rule for the heaviest bots. In the November 2026 log QlyzeBot made 1,014 requests and Amazonbot 825, against 378 from Googlebot.
 - Fixed publication dates for seeded articles, as the abrahamic seeder has (`post_date`, published or Scheduled), so new articles can go out on a plan.
 - An image sitemap that stays on beside Rank Math. `boi_image_sitemap_enabled()` turns it off whenever Rank Math is active, and leaves the images to Rank Math's own sitemap; weigh whether the theme's licence data should reach search engines there too.

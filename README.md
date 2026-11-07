@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.108.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.108.1. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 152 published articles across eight sections, each with one featured image and two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 164 published articles across eight sections, each with one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -34,6 +34,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 - **Following Google's SEO Starter Guide.** Unique titles; meta descriptions of up to 130 characters, including the front and author pages; canonical links on every indexable view; breadcrumbs; a clean heading outline; search results kept out of the index; and an XML sitemap limited to useful pages.
 - **Structured data for search and AI answers.** Article on every article, with its image's licence metadata drawn from the Commons credits; Organization and WebSite on the front page, with a 512px logo; BreadcrumbList throughout; ProfilePage on author archives; ItemList on every list; FAQ markup for the questions; a DefinedTermSet for the Glossary. Markup off Google's list stays, because AI answer engines read it. All names are plain text. An image sitemap at `/sitemap-images.xml` lists every article's images.
+- **Link previews.** Open Graph and Twitter Card tags on every indexable view (`inc/social-meta.php`), from the same title, description and canonical address the search tags use. The preview picture is a JPEG copy of the featured image, at most 1,200 pixels wide, made once in `uploads/boi-share/` and made again when the image changes, since link previews do not show AVIF. With an SEO plugin active the theme prints none.
 - **Steps aside for SEO plugins.** Descriptions and canonical links yield to Yoast SEO, Rank Math, All in One SEO and SEOPress. With Rank Math the theme also yields robots, sitemap and structured data, holds Rank Math's titles to the site's title rule, and adds its image credits and the rest of its page graph to Rank Math's graph through the plugin's own hooks, so a page never has two. See `docs/SEO.md`.
 
 ### Access
@@ -94,7 +95,7 @@ Under Appearance, Contextual Links, in three tabs:
 2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
    The working notes for coding agents, `.claude/CLAUDE.md` and `.claude/FARUQI.md`, stay out of the zip and out of `git archive`. On a production server the theme deletes `.claude` and `.git` with the other development files (see Security); a local or development environment, or `BOI_KEEP_DEV_FILES`, keeps them.
-3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 152 articles. Images are copied into the media library three at a time as pages load; until then the bundled copies are shown.
+3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 164 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
 4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
@@ -123,20 +124,21 @@ bestofislam/
 │                        setup, appearance, reflections, search, sections,
 │                        seo, icons, features, lead-list, contact, front, inline-images,
 │                        images, questions, reading, anatomy, structured-data,
-│                        schema-graph, rank-math, unlist, search-permalinks,
-│                        reading-progress, login, login-screen, favicon,
+│                        schema-graph, social-meta, rank-math, unlist,
+│                        search-permalinks, reading-progress, login,
+│                        login-screen, favicon,
 │                        glossary, glossary-links, renamed-slugs, error-pages,
 │                        error-page-static, lock, housekeeping,
 │                        security-headers, security. Loaded by those:
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
 ├── inc/data/            network-links.json (the shared phrase map),
-│                        seed.json (topics, categories, tags, 152 articles,
+│                        seed.json (topics, categories, tags, 164 articles,
 │                        8 pages), questions.json (45), image-credits.json,
 │                        schema-entities.json. Read, never executed
 ├── inc/glossary-data/   a.json to z.json: the 798 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
-├── content/             The 152 seeded articles as block markup, one JSON file each
+├── content/             The 164 seeded articles as block markup, one JSON file each
 ├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic
@@ -312,7 +314,7 @@ php bin/build-error-pages.php                        # rebuild errors/*.html
 python3 bin/build-related.py                         # rebuild inc/related-articles.json
 python3 bin/convert-images.py                        # every image to AVIF
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.108.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.108.1.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.
