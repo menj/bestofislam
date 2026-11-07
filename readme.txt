@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.108.0
+Stable tag: 1.109.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.109.0 =
+* A new article, "Nine questions from the floor on the Islamic dilemma", from the audience question session of the debate transcript, with a featured image and four in-text images. The al-Zutt article gains the chain of the report and the objections to it, with notes that say what was and was not opened.
+
 = 1.108.0 =
 * A new article, "When a stranger online says Islam is a cult": six claims from a hostile comment thread (cult, deprogramming, "a lie", modesty, hate speech, and a comparison to a killer) checked against the Quran and the data, with a note on how to reply. It names no one and quotes no insult.
 
@@ -301,6 +304,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.109.0 =
+Replace the theme files. The new article and the changed al-Zutt article reach existing sites through the seed migration on this version.
 
 = 1.108.0 =
 Replace the theme files. The new article reaches existing sites through the seed migration on this version.

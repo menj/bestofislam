@@ -2216,5 +2216,39 @@
     "caption": "A candle among roses. Fifty-one people were killed in two Christchurch mosques on 15 March 2019."
    }
   ]
+ },
+ "nine-questions-from-the-floor-islamic-dilemma-debate": {
+  "featured": {
+   "src": "pixabay",
+   "id": "347316",
+   "alt": "Rows of seats in an empty lecture hall.",
+   "caption": "A lecture hall. Nine questions from the floor of a debate on the Islamic dilemma."
+  },
+  "inline": [
+   {
+    "src": "pixabay",
+    "id": "1410168",
+    "alt": "A scroll with Hebrew writing beside a quill and an ink pot.",
+    "caption": "A scroll and a quill, a stock picture. The Quran speaks of people who write the \"scripture\" with their own hands (2:79); it names no date or council."
+   },
+   {
+    "src": "pixabay",
+    "id": "1679750",
+    "alt": "A close view of a Hebrew Torah scroll.",
+    "caption": "A Hebrew scroll, a stock picture. Verse 10:94 tells the Prophet to ask those who have been reading the Scripture before him."
+   },
+   {
+    "src": "pixabay",
+    "id": "7362632",
+    "alt": "A crescent moon in a dark blue sky.",
+    "caption": "A crescent moon. The moon-god theory has no support in the evidence cited, and Arabic-speaking Christians use the word Allah."
+   },
+   {
+    "src": "pixabay",
+    "id": "3052477",
+    "alt": "A knotted rope.",
+    "caption": "A knotted rope. A covenant that replaces and a covenant that confirms are not one thing."
+   }
+  ]
  }
 }

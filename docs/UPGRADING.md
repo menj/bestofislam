@@ -65,6 +65,10 @@ feature stands aside, so nothing runs twice.
 
 Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
+## Upgrading to 1.109.0
+
+Replace the theme files. The new article reaches existing sites through `boi_migrate_seed()` on this version; its images are in `assets/images/`.
+
 ## Upgrading to 1.108.0
 
 Replace the theme files. The new article reaches existing sites through `boi_migrate_seed()` on this version; its images are in `assets/images/`.

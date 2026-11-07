@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.109.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- nine-questions-from-the-floor-islamic-dilemma-debate: nine audience questions from the question session at the end of the debate transcript the owner supplied, each answered with what the speaker said, where the site agrees or differs, and a link to the article that holds the evidence. It names no one. A featured image and four in-text images (Pixabay; none shows a prophet).
+
+### Changed
+- al-zutt-allegation: the chain of the report (Musnad Ahmad, with the parallel in al-Tirmidhi 2861) and the objections to it (ʿAmr's hearing, Ibn Kathir, the Musnad's editors, Muslim 450), as reported by IslamQA's Arabic answer. The notes say that the primary books and the narrators' gradings were not opened, and no narrator is scored.
+
 ## [1.108.0] - 2026-11-07
 
 A new article. No feature removed and no public identifier renamed.
