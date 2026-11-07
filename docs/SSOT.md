@@ -21,7 +21,7 @@ runs a separate theme.
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 152 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
+| Seeded content | 8 sections, 23 categories, 160 tags, 164 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
 | Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
@@ -527,20 +527,20 @@ through WordPress's own block parser and serialiser. Where the theme cannot
 tell whether the owner edited an article, it leaves the article alone and
 asks; an update never overwrites what it cannot prove it wrote.
 
-### D46. Contextual links come from one map shared by the network
+### D46. Contextual links come from one shared link map
 
 The first mention of a known phrase in the running text links to the inner
-page that treats it, here or on one of the six sister sites, and nothing
+page that treats it, here or on one of six other sites, and nothing
 else: no "related" section, no list of links. The phrases live in
-`inc/data/network-links.json`, which is the same file, byte for byte, in all
-seven themes; it is changed in all seven together, never in one. Each phrase
-belongs to the one site whose subject it is, so no phrase leads to two
-places across the network. Own-site addresses go through `home_url()`, so a
+`inc/data/network-links.json`, which is the same file, byte for byte, in
+every theme that uses it; it is changed in all of them together, never in
+one. Each phrase belongs to the one site whose subject it is, so no phrase
+leads to two places. Own-site addresses go through `home_url()`, so a
 staging copy links to itself.
 
 The pass (`inc/contextual-links.php`) runs at 22, before the Glossary links
 at 24, and adds at most one link a paragraph or list item, four to this site
-and three to the sister sites a page. The Glossary pass keeps its own rules
+and three to other sites a page. The Glossary pass keeps its own rules
 and never links inside an existing link; a Glossary link on words this pass
 already linked is unwrapped at 26. When this pass takes the first mention of
 a name the Glossary gives an epithet (Aisha, Khadija, Gabriel and the
