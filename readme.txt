@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.110.1
+Stable tag: 1.111.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.111.0 =
+* A new article, "Why does the Quran switch between He, We and I? 6 answers", on iltifat, the changes of grammatical person that the Arab rhetoricians named and explained, from studies by Muhammad Abdel Haleem, Neal Robinson and Mustansir Mir. It has a featured image and four in-text images. The article on the claim of grammatical errors links to it.
 
 = 1.110.1 =
 * Documentation only. The three editorial work lists (citations to check, the Shamela and sunnah.com review, and the catalogue of objections) now live in UPGRADING.md under Content review, and three items join the roadmap. Nothing on the site changes.
@@ -328,6 +331,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.111.0 =
+Replace the theme files. The new article is created, and the changed grammar article refreshed where the owner has not edited it, when the version changes.
 
 = 1.110.1 =
 Replace the theme files. Nothing else to do.

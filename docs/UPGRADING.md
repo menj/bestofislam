@@ -61,9 +61,13 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
-## Upgrading to 1.100.12
+## Upgrading to 1.111.0
 
-Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
+Replace the theme files. The new article, on the Quran's changes of grammatical person, is created on existing sites by `boi_create_listicles()` when the version changes, and the changed grammar article is refreshed where the owner has not edited it. Its images are in `assets/images/`.
+
+## Upgrading to 1.110.1
+
+Documentation only, plus `bin/commons-api.py`, which is not in the theme zip. Replace the theme files; nothing else to do.
 
 ## Upgrading to 1.110.0
 
@@ -144,6 +148,10 @@ Documentation only: the FTP steps send the `.htaccess` files first. Replace the 
 ## Upgrading to 1.100.13
 
 Replace the theme files. The new files are `LICENSE`, `inc/anatomy.php`, `assets/css/anatomy.css`, `patterns/faq.php` and `tests/anatomy-test.php`. Two switches join the Display tab, both on: Contents and Next step. Key points and a review date are typed per article, in the Key points and review box; until then the head of an article looks as before, with the questions panel.
+
+## Upgrading to 1.100.12
+
+Documentation only, plus the article count on the Content tab. Replace the theme files; nothing else to do.
 
 ## Upgrading to 1.100.9, 1.100.10 or 1.100.11
 
