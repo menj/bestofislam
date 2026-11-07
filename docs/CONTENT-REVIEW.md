@@ -416,3 +416,23 @@ The thirteen articles of 1.88.0 and the additions to six others were written wit
 - **genealogies-of-jesus**: Julian's remark as preserved in Cyril; Annius of Viterbo as the source of the Mary theory (Brown, p. 89); the Bezae text of Luke 3; Africanus quoted in Eusebius 1.7.15.
 - **bible-alteration-claim-before-islam**: Sotah 33b and y. Sotah 7:3 wording; Origen, Against Celsus 2.27; Eusebius 4.23.12 and 5.28; Augustine, Reply to Faustus 32.2 and 33.3; the Pseudo-Clementine "false pericopes" (Homilies 2.38, 3.47–50); Crone 1980.
 - **Additions to existing articles**: Bukhari 4252 for the Umra of fulfilment; the Hanafi definition and the stages in Radd al-Muhtar; Abu Zahra's book; Bauer-Danker on *monogenes*.
+
+## Expansion, twenty-first batch (1.101.1)
+
+- **kaab-ibn-al-ashraf-and-the-poets**: Bukhari 3030-3031 (deception in war); Abu Dawud 3000 (the agreement after Ka'b's killing) and al-Albani's grading; Bukhari 4123-4124 and Muslim 2486 (Hassan ibn Thabit); Ka'b ibn Zuhayr and "Banat Su'ad", with the mantle as later tradition; Ibn al-Ziba'ra's pardon; the Muwatta report on the raid on Ibn Abi al-Huqayq (chapter and number to confirm); Watt, Muhammad at Medina (chapter to confirm); al-Azhar's statement of 7 January 2015.
+
+## Expansion, twenty-second batch (1.101.2)
+
+- **women-in-the-prophets-life**: Bukhari 3432 and Quran 3:42; Umm Salama's question and Quran 33:35 (al-Tabari; the Musnad Ahmad number to confirm).
+- **apostasy-in-islam**: Muslim 1784 (the Hudaybiyya term and the words "God has sent him away"); Abu Dawud 2683 and 4358 on Abd Allah ibn Sa'd.
+- **quran-anachronism-claims**: Quran 2:249 and Judges 7:4-7; the characterisation of the two tests.
+
+## Expansion, twenty-third and last batch (1.101.3)
+
+- **fighting-verses-in-context**: Quran 2:193, 8:39, 8:61, 60:7.
+- **medina-jewish-tribes-and-qurayza**: Quran 3:113-115 and 60:8-9.
+- **talmud-midrash-apocrypha-borrowing**: Quran 16:103 and 25:4-6.
+- **six-articles-of-faith**: Quran 2:285, 4:136, 54:49; Muslim 8.
+- **islamic-rites-before-islam**: Quran 7:31 (al-Tabari's report from Ibn Abbas on circling naked) and 9:37.
+- **same-god**: Acts 17:22-23.
+- **islamic-art-and-the-one-god**: enamelled Mamluk mosque lamps with Quran 24:35 (name a catalogued example to replace the general museum reference).
