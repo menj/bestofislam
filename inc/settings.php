@@ -759,8 +759,8 @@ function boi_render_display_tab( $opts ) {
 		array(
 			'key'     => 'article_contents',
 			'label'   => __( 'Contents', 'bestofislam' ),
-			'text'    => __( 'List the sections at the head of an article with three or more', 'bestofislam' ),
-			'help'    => __( 'A list with its own jump list keeps that instead.', 'bestofislam' ),
+			'text'    => __( 'List the sections at the head of an article or page with three or more', 'bestofislam' ),
+			'help'    => __( 'Level-three headings are nested under their section. A list with its own jump list keeps that instead; [wp_toc] in the text places the contents there.', 'bestofislam' ),
 			'checked' => ! empty( $opts['article_contents'] ),
 		)
 	);

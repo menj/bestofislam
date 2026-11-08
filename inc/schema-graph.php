@@ -499,6 +499,11 @@ function boi_schema_article_details( $post, $page_id ) {
 		$details['keywords'] = implode( ', ', array_map( 'boi_plain', wp_list_pluck( $tags, 'name' ) ) );
 	}
 
+	// The contents at the head of the article, from WP TOC's rules in inc/anatomy.php.
+	if ( function_exists( 'boi_toc_page_tree' ) && boi_toc_page_tree() ) {
+		$details['accessibilityFeature'][] = 'tableOfContents';
+	}
+
 	if ( boi_article_image_object( $post ) || boi_inline_image_objects( $post ) ) {
 		$details['accessMode'][]            = 'visual';
 		$details['accessibilityFeature'][] = 'alternativeText';

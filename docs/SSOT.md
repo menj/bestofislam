@@ -16,8 +16,8 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.113.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
-| Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
+| Version | 1.114.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
@@ -728,6 +728,14 @@ The owner supplied a list of classical Arabic dictionaries and word-books on 202
 ### D58. A Pexels photograph finder sits in Theme Options
 
 The owner asked on 2026-11-07 for the official Pexels JavaScript client (the `pexels` npm package, MIT) to be part of the theme. It is vendored unchanged at `assets/js/vendor/pexels/main.umd.js` and used only by `assets/js/admin-images.js` on the Images tab, which searches Pexels and copies a plan entry (`{"src":"pexels","id":…}`) for `bin/stock-images.json`. The key is the `BOI_PEXELS_KEY` constant or the `pexels_key` setting; it is printed to administrators only, on that screen, and never written into a theme file or onto the public site. The finder does not download or store images: D48 (Commons first, then Pexels, then Pixabay) and D30 (credits, no prophets) still govern what is used, and `bin/fetch-stock-images.py` still does the downloading.
+
+### D59. The theme requires PHP 8.4
+
+The owner set PHP 8.4 as the minimum on 2026-11-08. `style.css` and `readme.txt` declare `Requires PHP: 8.4`, so WordPress will not install or activate the theme on older PHP. The Content checks workflow lints every PHP file and runs every `tests/*-test.php` on PHP 8.4. The code does not yet use syntax that needs 8.4, so a site still on older PHP when it updates keeps running, but that setup is unsupported.
+
+### D60. The contents are adapted from WP TOC
+
+The owner asked on 2026-11-08 for WP TOC (https://github.com/menj/wp-toc, GPL-3.0-or-later, itself based on Ikram Hawramani's MIT-licensed work) to be part of the theme. It is not bundled: its rules are carried into the theme's own contents in `inc/anatomy.php`, so the page has one contents list and one graph. Carried over: level-two and level-three headings, nested; ids kept when present and otherwise made from the text, unique against every id in the text, with Arabic headings keeping readable ids; headings marked `no-toc` or `data-no-toc`, empty headings and anything inside a template element are passed over; the `[wp_toc]` and `[auto_toc]` shortcodes with the attributes `tags` (h2, h3), `title`, `depth`, `min`, `collapsible` and `collapsed`; a SiteNavigationElement with one WebPageElement per section in the page graph. Kept from the theme: the list shows from three level-two headings on articles and pages (not the front page), under the Contents switch, and a listicle keeps its jump list. Left out: the plugin's settings filters, its own JSON-LD block and microdata (the theme's single graph carries the same facts), and Rank Math's TOC check, which only counts plugins. When the WP TOC plugin is active (`WP_TOC_VERSION`), the theme stands aside: no contents block, no shortcodes and no contents schema.
 
 ### D20. Articles follow Islamic English conventions
 

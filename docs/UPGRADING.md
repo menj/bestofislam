@@ -61,6 +61,14 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.114.0
+
+1. Check that the server runs PHP 8.4 or later (Tools, Site Health, Info, Server). WordPress will not update or activate the theme on older PHP.
+2. If the WP TOC plugin is active, deactivate it and delete it once the theme is updated. While it stays active the theme leaves the contents to it, so nothing shows twice. Texts that use `[wp_toc]` or `[auto_toc]` keep working with the theme alone.
+3. Replace the theme files.
+
+Anchors to level-two headings written in Arabic change from the percent-encoded form to readable Arabic. Links inside the site do not use them.
+
 ## Upgrading to 1.113.0
 
 Replace the theme files. The new article is created on existing sites by `boi_create_listicles()` when the version changes. Its images follow in a later release.

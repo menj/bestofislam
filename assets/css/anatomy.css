@@ -59,6 +59,7 @@
 }
 
 .boi-contents__label {
+	display: block;
 	margin: 0 0 0.5rem;
 	font-size: 0.75rem;
 	font-weight: 600;
@@ -79,6 +80,38 @@
 	text-decoration: underline;
 	text-decoration-color: var(--boi-gold);
 	text-underline-offset: 0.22em;
+}
+
+/* Subsections, nested under their section (adapted from WP TOC). */
+.boi-contents__sublist {
+	margin: 0.3rem 0 0.2rem;
+	padding-inline-start: 1.2rem;
+	display: grid;
+	gap: 0.25rem;
+	list-style-type: lower-alpha;
+	font-size: 0.95em;
+}
+
+.boi-article .boi-contents__sublist a {
+	text-decoration-color: var(--boi-rule);
+}
+
+/* Folded contents, with [wp_toc collapsible="yes"]. */
+.boi-contents__summary {
+	cursor: pointer;
+}
+
+.boi-contents__summary .boi-contents__label {
+	display: inline;
+}
+
+.boi-contents__details[open] > .boi-contents__summary {
+	margin-block-end: 0.5rem;
+}
+
+/* The text of a page sits in the same column as the contents above it. */
+.wp-block-post-content .boi-contents {
+	margin-block: 1.5rem;
 }
 
 .boi-article .wp-block-post-content :is(h2, h3)[id] {
