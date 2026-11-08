@@ -5524,5 +5524,49 @@
     "source": "https://commons.wikimedia.org/wiki/File:Double_page_from_the_Sultan_Baybars_Qur'an._Sura_Al-Fatiha_(BL_Add_Ms_22406,_ff.2v-3r).jpg"
    }
   ]
+ },
+ "quran-iblis-fallen-angels-borrowing": {
+  "featured": {
+   "file": "quran-iblis-fallen-angels-borrowing.avif",
+   "alt": "Crumbling mud-brick walls among the ruins of ancient Babylon, under a pale sky.",
+   "caption": "The ruins of Babylon, photographed by the Matson Photo Service in the 1930s. The Quran names Babylon as the place where the two angels Harut and Marut were sent as a trial (2:102).",
+   "artist": "Matson Photo Service (G. Eric and Edith Matson Photograph Collection, Library of Congress)",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Iraq._Babylon_'the_great.'_Various_views_of_the_crumbling_ruins._Among_the_great_palaces_LOC_matpc.16073.jpg"
+  },
+  "inline": [
+   {
+    "file": "quran-iblis-fallen-angels-borrowing-1.avif",
+    "alt": "A handwritten Arabic page in black and red ink, with some phrases underlined in red.",
+    "caption": "A page of al-Tabari's History of the Prophets and Kings (Fazil Ahmed Pasha Library, 1043). Jung draws many of his Muslim stories from al-Tabari's reports. The red underlining was added by the uploader.",
+    "artist": "Al-Tabari (author); unknown copyist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ahwaz_Altabari.png"
+   },
+   {
+    "file": "quran-iblis-fallen-angels-borrowing-2.avif",
+    "alt": "An open printed volume of the Talmud, Hebrew text in columns around a central block.",
+    "caption": "The Babylonian Talmud, Seder Zera'im, printed by Daniel Bomberg in Venice, 1543 to 1544. Jung's first witness for the angels' objection is the Talmud, Sanhedrin 38b.",
+    "artist": "Daniel Bomberg (printer)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Babylonian_Talmud,_Seder_Zera'im.jpg"
+   },
+   {
+    "file": "quran-iblis-fallen-angels-borrowing-3.avif",
+    "alt": "An open parchment manuscript with two pages of Syriac script in brown ink.",
+    "caption": "Ephrem's Commentary on the Diatessaron in Syriac, Egypt, late fifth or early sixth century (Chester Beatty Library). The Cave of Treasures, which Jung cites for Satan's refusal, was written in Syriac in about the same period.",
+    "artist": "Ephrem the Syrian (author); unknown copyist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ephrem's_Commentary_on_the_Diatessaron.jpg"
+   },
+   {
+    "file": "quran-iblis-fallen-angels-borrowing-4.avif",
+    "alt": "A deep trench cut between mud-brick walls in the ruins of Babylon, with a man standing at the top.",
+    "caption": "An underground chamber in the ruins of Babylon, 1930s. Later Muslim storytellers placed Harut and Marut in a pit at Babylon; the Quran says nothing of a pit, a fall or a woman.",
+    "artist": "Matson Photo Service (G. Eric and Edith Matson Photograph Collection, Library of Congress)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Iraq._Babylon_'the_great.'_Various_views_of_the_crumbling_ruins._A_subterranean_dwelling._Used_of_old_to_escape_the_summer_heat_LOC_matpc.16083.jpg"
+   }
+  ]
  }
 }
