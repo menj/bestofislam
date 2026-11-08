@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.111.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.112.0. Licensed GNU GPL v3 or later. The full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 164 published articles across eight sections, each with one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 168 published articles across eight sections, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Article images come from Wikimedia Commons, Pexels and Pixabay. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -25,6 +25,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 - **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission.
 - **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles of three or more sections (a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
+- **Footnotes.** The main article renderer links numbered superscripts to the corresponding items in Notes. It uses HTML fragments, typically with the `#note-N` ids in the citation data.
 - **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
 - **Reading progress.** A bar on single posts and pages fills as you scroll. It is drawn in the palette, updates once per animation frame from a passive listener, drops its animation under `prefers-reduced-motion` and sits below the admin bar. It is `aria-hidden`: it repeats what the scrollbar shows, and a live progressbar would be read out on every scroll.
 - **Lead and list.** The first page of Reflections, of each section and of each archive opens with the newest piece large, its title on a dark band at the foot of the image under a gold rule, and its credit below. The next five stand in a list beside it, each a 16:9 thumbnail and a title clamped at three lines; the grid below leaves those six out, so pagination does not move. `inc/lead-list.php` draws it as the `bestofislam/lead-list` block from the main query (`boi_lead_list( $posts, $args )`, with `heading`, `heading_id`, `lead_id` and `max`; the block takes `heading` and `leadId`). It uses the front page's image helpers (`boi_lead_image()`, `boi_list_thumbnail()` in `inc/features.php`) and the image-credit block's line (`boi_image_credit_markup()` in `inc/images.php`). Below five pieces, or when the lead has neither a featured image nor a bundled one, it draws nothing and the grid shows alone. Unlisted posts never appear. `assets/css/lead-list.css` loads on the first page of those views (`boi_lead_list_assets()` on `wp_enqueue_scripts`, never from the block, since an enqueue made during rendering would print the theme styles above the core block styles); columns are `minmax(0,3fr) minmax(0,2fr)`, stacked under 782px, and the title sits on `rgb(0 0 0 / .85)` so white type stays above 4.5:1. The front page is unchanged.
@@ -95,7 +96,7 @@ Under Appearance, Contextual Links, in three tabs:
 2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
    The working notes for coding agents, `.claude/CLAUDE.md` and `.claude/FARUQI.md`, stay out of the zip and out of `git archive`. On a production server the theme deletes `.claude` and `.git` with the other development files (see Security); a local or development environment, or `BOI_KEEP_DEV_FILES`, keeps them.
-3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 164 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
+3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site with the sections, the front page, the Reflections index, the standing pages, the menus and the 168 articles. Featured images are copied into the media library three at a time as pages load. The bundled copies are shown until then. In-text images are always served from the theme's `assets/images/inline/`.
 4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
@@ -133,12 +134,12 @@ bestofislam/
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
 ├── inc/data/            network-links.json (the shared phrase map),
-│                        seed.json (topics, categories, tags, 164 articles,
+│                        seed.json (topics, categories, tags, 168 articles,
 │                        8 pages), questions.json (45), image-credits.json,
 │                        schema-entities.json. Read, never executed
 ├── inc/glossary-data/   a.json to z.json: the 798 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
-├── content/             The 164 seeded articles as block markup, one JSON file each
+├── content/             The 168 seeded articles as block markup, one JSON file each
 ├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic
@@ -315,7 +316,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.111.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.112.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

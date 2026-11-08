@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.112.0
+
+Replace the theme files. If the Content tab lists any of the five revised articles after the update, compare your saved edits with the revised copy before deciding which text to keep.
+
 ## Upgrading to 1.111.0
 
 Replace the theme files. The new article, on the Quran's changes of grammatical person, is created on existing sites by `boi_create_listicles()` when the version changes, and the changed grammar article is refreshed where the owner has not edited it. Its images are in `assets/images/`.
@@ -241,7 +245,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 ### Ideas
 
 - A sticky contents variant for long articles, as the compelling-evidence theme has (`#ce-toc`). The contents here are inline only.
-- Key points for the 164 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
+- Key points for the seeded articles. The box currently shows the questions panel.
 - A crawl rule for the heaviest bots. In the November 2026 log QlyzeBot made 1,014 requests and Amazonbot 825, against 378 from Googlebot.
 - Fixed publication dates for seeded articles, as the abrahamic seeder has (`post_date`, published or Scheduled), so new articles can go out on a plan.
 - An image sitemap that stays on beside Rank Math. `boi_image_sitemap_enabled()` turns it off whenever Rank Math is active, and leaves the images to Rank Math's own sitemap; weigh whether the theme's licence data should reach search engines there too.
@@ -274,7 +278,7 @@ Also corrected in the old text during the expansion: the Hajj article said every
 - **quran-science-claims-graded**: Moore's edition "with al-Zindani" (1982); Galton 1892 and Aristotle, Meteorologica 1; Ibn Rushd, Fasl al-Maqal.
 - **quranic-ethics**: Hudhayfa's promise before Badr (Muslim); al-Nawawi's six permitted cases of backbiting; the zakah collector and the gift; Asma and her polytheist mother.
 - **quranic-stories-and-history**: dating of the Hegra tombs; Murayghan inscription (Ry 506, 552 CE); Clapp and Ubar; Azad on Cyrus; Nöldeke on the Syriac Alexander legend; Jonah 4:11; Nineveh 612 BC.
-- **haman-anachronism**: Vienna door-jamb title and inventory numbers 5821 and 5822 (now presented as disputed); Reland 1705; Nöldeke, Mingana, Lammens, EI1 and EQ attributions; "about eight centuries" from Moses to Esther.
+- **haman-anachronism**: Reland 1705, the Nöldeke, Mingana, Lammens, EI1 and EQ attributions, and "about eight centuries" from Moses to Esther. The Vienna door jamb was checked in 1.112.0.
 - **natural-world-verses**: Sahih Muslim chapter and the al-Zuhri remark; Qatada on the stars (al-Bukhari chapter heading); Ibn Abbas on the fig and olive; "seas of Persia and Rome".
 - **universe-demands-creator**: Weinberg 1987; the 10^500 landscape figure; "120 orders of magnitude".
 - **morality-without-god**: Parker as source of the "arc" line; Huxley's 1893 lecture; Nuremberg Charter Article 6(c).
@@ -688,6 +692,14 @@ The thirteen articles of 1.88.0 and the additions to six others were written wit
 - **islamic-rites-before-islam**: Quran 7:31 (al-Tabari's report from Ibn Abbas on circling naked) and 9:37.
 - **same-god**: Acts 17:22-23.
 - **islamic-art-and-the-one-god**: enamelled Mamluk mosque lamps with Quran 24:35 (name a catalogued example to replace the general museum reference).
+
+#### Source checks in 1.112.0
+
+- **haman-anachronism**. The Global Egyptian Museum catalogue records the Vienna door jamb as inventory 5821/5822. Its translation gives Hemen-hetep as the name and overseer of Amun's stonemasons as the office. The catalogue dates the jamb to the 19th or 20th Dynasty.
+- **who-was-yahweh-archaeological-origins**. Linked Louvre AO 5066 and checked the account of Mesha's sacrifice and Israel's withdrawal against 2 Kings 3:26–27.
+- **uthman-copies**. Checked the Birmingham conservation record for OxA-29418, the testing and announcement dates, and the difference between parchment dating and handwriting analysis.
+- **child-marriage-in-islam**. Checked the cited provisions for Turkey, Egypt, Tunisia, Morocco, Indonesia and Sindh. The text distinguishes ordinary marriage age, registration and court exceptions.
+- **terrorism-and-muslims-the-data**. Checked the 2026 Global Terrorism Index, the 2020 population estimate in Pew's 2025 report, and the national and local findings in the Casey audit.
 
 ### Shamela and sunnah.com review
 

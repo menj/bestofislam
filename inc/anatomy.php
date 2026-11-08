@@ -12,7 +12,7 @@
  *                              questions the piece answers
  *   bestofislam/contents       the sections, from three level-two headings,
  *                              on an article without a jump list
- *   the_content 12             heading ids, the notes anchor and the
+ *   the_content 12             heading ids, links to numbered notes and the
  *                              mid-article next step
  *   is-style-faq               the FAQ style for a Details block, read by the
  *                              FAQPage data only when it is on the page
@@ -202,6 +202,88 @@ function boi_anatomy_notes_id( $html ) {
 	}
 
 	return '';
+}
+
+/**
+ * Connects bracketed superscripts to the items in the article's Notes list.
+ * Existing links and anchors are kept. Plain, sequential notes get the same
+ * fragment ids as the article's citation data.
+ *
+ * @param string $html Rendered article.
+ * @return string
+ */
+function boi_anatomy_link_notes( $html ) {
+	if ( false === stripos( $html, '<sup' ) ) {
+		return $html;
+	}
+
+	$pattern = '#<(h[2-4])(?:\s[^>]*)?>((?:(?!</\1>).)*)</\1>\s*(<ol\b[^>]*>(.*?)</ol>)#is';
+	preg_match_all( $pattern, $html, $sections, PREG_SET_ORDER | PREG_OFFSET_CAPTURE );
+
+	foreach ( $sections as $section ) {
+		list( $list, $list_at ) = $section[3];
+
+		// The numbered references belong to a flat list starting at one.
+		if ( 'Notes' !== boi_anatomy_text( $section[2][0] ) || preg_match( '#^<ol\b[^>]*\s(?:start|reversed)\b#i', $list ) || preg_match( '#<[ou]l\b|<li\b[^>]*\svalue\s*=#i', $section[4][0] ) ) {
+			continue;
+		}
+
+		preg_match_all( '/\sid\s*=\s*["\']([^"\']+)["\']/i', $html, $ids );
+		$used    = array_fill_keys( $ids[1], true );
+		$targets = array();
+		$number  = 0;
+		$notes   = preg_replace_callback(
+			'#<li\b([^>]*)>#i',
+			static function ( $m ) use ( &$number, &$targets, &$used ) {
+				++$number;
+				if ( preg_match( '/\sid\s*=\s*["\']([^"\']+)["\']/i', $m[1], $existing ) ) {
+					$targets[ $number ] = html_entity_decode( $existing[1], ENT_QUOTES, 'UTF-8' );
+					return $m[0];
+				}
+
+				$base = 'note-' . $number;
+				$id   = $base;
+				for ( $n = 2; isset( $used[ $id ] ); ++$n ) {
+					$id = $base . '-' . $n;
+				}
+
+				$used[ $id ]        = true;
+				$targets[ $number ] = $id;
+				return '<li id="' . esc_attr( $id ) . '"' . $m[1] . '>';
+			},
+			$list
+		);
+
+		$heading_at = $section[0][1];
+		$body       = preg_replace_callback(
+			'#(?:<!--.*?-->|<(a|code|pre|script|style)\b[^>]*>.*?</\1\s*>)(*SKIP)(*F)|(<sup(?:\s[^>]*)?>)((?:\[[1-9][0-9]*\]\s*)+)</sup>|<[^>]+>(*SKIP)(*F)#is',
+			static function ( $m ) use ( $targets ) {
+				$links = preg_replace_callback(
+					'/\[([1-9][0-9]*)\]/',
+					static function ( $ref ) use ( $targets ) {
+						$number = $ref[1];
+						if ( ! isset( $targets[ $number ] ) ) {
+							return $ref[0];
+						}
+						/* translators: %s: footnote number. */
+						$label = sprintf( __( 'Note %s', 'bestofislam' ), $number );
+						return '<a class="boi-note-ref" href="#' . rawurlencode( $targets[ $number ] ) . '" aria-label="' . esc_attr( $label ) . '">' . $ref[0] . '</a>';
+					},
+					$m[3]
+				);
+				return $m[2] . $links . '</sup>';
+			},
+			substr( $html, 0, $heading_at )
+		);
+
+		if ( null === $notes || null === $body ) {
+			return $html;
+		}
+
+		return $body . substr( $html, $heading_at, $list_at - $heading_at ) . $notes . substr( $html, $list_at + strlen( $list ) );
+	}
+
+	return $html;
 }
 
 /**
@@ -560,7 +642,7 @@ function boi_anatomy_insert_mid( $html, $aside ) {
 }
 
 /**
- * The main text of an article: heading ids, the notes anchor and the
+ * The main text of an article: heading ids, note links and the
  * mid-article next step.
  *
  * @param string $content Rendered text.
@@ -573,6 +655,7 @@ function boi_anatomy_filter_content( $content ) {
 
 	$post    = boi_anatomy_post();
 	$content = boi_anatomy_notes_anchor( boi_anatomy_heading_ids( $content ) );
+	$content = boi_anatomy_link_notes( $content );
 
 	if ( boi_anatomy_on( 'article_mid_next' ) ) {
 		$content = boi_anatomy_insert_mid( $content, boi_anatomy_next_step( $post, $content ) );
