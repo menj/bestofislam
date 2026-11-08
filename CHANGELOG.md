@@ -12,6 +12,9 @@ No feature removed and no public identifier renamed.
 - quran-iblis-fallen-angels-borrowing: a reply to Leo Jung, *Fallen Angels in Jewish, Christian and Mohammedan Literature* (Philadelphia: Dropsie College, 1926), which argues that the Quran took the angels' question (2:30), Iblis's refusal and Harut and Marut from Jewish and Christian legend. Seven answers from Jung's own pages: his use of later Muslim legend as if it were the Quran; the angels who question and are not punished; Iblis who disobeys and does not rebel; the Augustine passage that says nothing about the jinn; the Venus tale that Muslim scholars rejected; and a witness, Pirke de Rabbi Eliezer, that Jung dates after the Quran. A featured image and four in-text images, all public domain from Wikimedia Commons: two 1930s Matson photographs of Babylon, a page of al-Tabari's History, the Bomberg Talmud and a Syriac manuscript of Ephrem. None shows a prophet. In the reading guide after the article on Talmud, midrash and apocrypha, and in the related-article links.
 - The Jinn tag, now on two articles, gains a description.
 
+### Fixed
+- quran-pronoun-shifts-iltifat and the new article: a cross-link to another article was left as Markdown text and now prints as a link. Unedited copies refresh on the version change.
+
 ## [1.111.1] - 2026-11-08
 
 No feature removed and no public identifier renamed.
