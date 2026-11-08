@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.113.0] - 2026-11-08
+
+No feature removed and no public identifier renamed.
+
+### Added
+- i-read-the-entire-quran-reply: a reply to A. C. Rosenthal, "I read the entire Quran, all the Hadiths, and the Sira. Here is what I found." (May 2026). Seven answers: what he gets right; four factual errors (al-Suyuti shortened the abrogation lists, Ibn Ishaq was no companion, the poets' killings rest on rejected reports, 2:191 is bounded by 2:190); the arrangement of the Quran and of Paul's letters; "the founder is the standard" against 18:110 and the verses that correct the Prophet; sinlessness and purity; God's love (85:14; 7:156; 39:53; Bukhari 7405); and salvation by mercy (Bukhari 6467). Links to the site's articles on each hard text. Its images follow in a later release. In the reading guide under the Prophet and the hard questions, and in the related-article links.
+
 ## [1.112.0] - 2026-11-08
 
 No feature removed and no public identifier renamed.
