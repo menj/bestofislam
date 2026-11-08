@@ -16,12 +16,12 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.109.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.112.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 164 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
+| Seeded content | 8 sections, 23 categories, 160 tags, 168 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
 | Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
@@ -572,8 +572,12 @@ same form.
 The owner's rule for every image added from now on: Wikimedia Commons is
 searched first, and a public-domain or CC0 file is used whenever one suits
 the subject. Pexels is used only when Commons has nothing suitable, and
-Pixabay after that. When the Commons API refuses requests, its HTML file
-pages still carry the licence and author, and they are read there instead.
+Pixabay after that. `bin/commons-api.py` looks a file up through Magnus
+Manske's Commons API, falling back to the MediaWiki API, and installs it as
+AVIF with its credit only when its licence is public domain or CC0; it keeps
+an image already in place unless told to replace it. When both APIs refuse
+requests, the HTML file pages still carry the licence and author, and they
+are read there instead.
 The rule applies to new images only: images already bundled, whether from
 Commons, Pexels or Pixabay, stay as they are and are not swapped. Every image
 still follows D30, which means it is credited and never depicts a prophet.
@@ -692,7 +696,7 @@ for block names, `bestofislam` for the text domain. Package archives follow
 
 The owner approved the article anatomy on 2026-11-05, with every sales prompt removed. A single article carries, in order: the breadcrumbs, the title, the excerpt, the meta row (date, reading time, "Updated", "Reviewed", the author), "In short" with the questions it answers, the contents (three sections up, unless a jump list shows), the text with a next step before its third section, the notes, "Read next" and the related cards. A next step is only ever the notes, the next piece in the reading order or the Contact page. FAQPage markup is emitted only for FAQ-style Details blocks on the page. The author card keeps the WordPress display name; no name was added.
 
-On the single article, each numbered reference links to its item under Notes. The renderer supplies `note-N` ids for standard lists and honours existing anchors.
+Each numbered reference with a matching note links to that item under Notes. The renderer uses `note-N` ids where available and preserves existing anchors.
 
 ### D54. The theme is licensed GPL version 3 or later
 

@@ -407,7 +407,24 @@
    "Greed",
    "Covetousness",
    "Hoarding"
-  ]
+  ],
+  "lexicon": {
+   "root": "ب خ ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البُخْلُ: إمساك المقتنيات عمّا لا يحق حبسها عنه",
+     "gloss": "Al-Rāghib defines <em>bukhl</em> as holding back possessions from where it is wrong to withhold them. Its opposite, he says, is generosity (<em>jūd</em>).",
+     "url": "https://arabiclexicon.hawramani.com/?p=1952#f57f11"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبُخْلُ ضربان: بخل بقنيات نفسه، وبخل بقنيات غيره، وهو أكثرها ذمّا",
+     "gloss": "He divides it in two: stinginess with one's own goods and stinginess with the goods of others, and the second is the more blameworthy. He cites 4:37.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1952#f57f11"
+    }
+   ]
+  }
  },
  {
   "slug": "greeting-non-muslims",

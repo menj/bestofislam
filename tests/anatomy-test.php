@@ -77,6 +77,8 @@ check( $unlinked === boi_anatomy_link_notes( $unlinked ), 'a custom starting num
 check( '<p>Text<sup>[1]</sup></p>' === boi_anatomy_link_notes( '<p>Text<sup>[1]</sup></p>' ), 'a reference without a Notes list stays plain' );
 $grouped = boi_anatomy_link_notes( '<p>Text<sup>[1][2]</sup></p><h3>Notes</h3><ol><li>One</li><li>Two</li></ol>' );
 check( false !== strpos( $grouped, 'aria-label="Note 1">[1]</a><a class="boi-note-ref" href="#note-2" aria-label="Note 2">[2]</a></sup>' ), 'adjacent markers in one superscript get separate links' );
+$attributed = boi_anatomy_link_notes( '<p>Text<sup class="reference" id="ref-1">[1]</sup></p><h3>Notes</h3><ol><li>One</li></ol>' );
+check( false !== strpos( $attributed, '<sup class="reference" id="ref-1"><a class="boi-note-ref" href="#note-1" aria-label="Note 1">[1]</a></sup>' ), 'a superscript keeps its class and id when linked' );
 
 $mid = boi_anatomy_insert_mid( '<h2>1</h2><h2>2</h2><h2>3</h2>', '<aside>N</aside>' );
 check( '<h2>1</h2><h2>2</h2><aside>N</aside><h2>3</h2>' === $mid, 'before the third section' );

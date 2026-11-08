@@ -1512,6 +1512,21 @@
 			]
 		},
 		{
+			"slug": "quran-pronoun-shifts-iltifat",
+			"title": "Why does the Quran switch between He, We and I? 6 answers",
+			"excerpt": "Why does God speak as He, We and I in one passage? 6 answers on iltifat, the turn of person the Arab rhetoricians explained.",
+			"topic": "faith-and-reason",
+			"seo_title": "Why the Quran switches between He, We and I",
+			"category": "quran-text-revelation",
+			"tags": [
+				"Arabic",
+				"Quran",
+				"Quran commentary",
+				"Orientalism",
+				"Polemics"
+			]
+		},
+		{
 			"slug": "who-wrote-the-quran",
 			"title": "Who wrote the Quran? 5 answers to the authorship claim",
 			"excerpt": "Revelation or composition? How the claim was argued from the start, how the text was fixed and what each side can and cannot show. 5 answers.",
@@ -2426,6 +2441,48 @@
 				"Polemics",
 				"Hijab",
 				"Freedom of religion"
+			]
+		},
+		{
+			"slug": "nine-questions-from-the-floor-islamic-dilemma-debate",
+			"title": "Nine questions from the floor on the Islamic dilemma: answered from the sources",
+			"excerpt": "Corruption, the cushion hadith, revelatory exegesis, the ransom, textual variants, secular scholarship, the moon god and the new covenant: nine audience questions answered. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Nine questions from the floor",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Islamic Dilemma",
+				"Tahrif",
+				"Polemics",
+				"Torah"
+			]
+		},
+		{
+			"slug": "jeremiah-new-covenant-hebrews-and-the-quran",
+			"title": "The new covenant: what Jeremiah, Hebrews and the Quran say in 6 points",
+			"excerpt": "Jeremiah 31 promises a new covenant. Does it cancel the old one? 6 points from Jeremiah, Hebrews and the Quran, quoted in full. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The new covenant: Jeremiah, Hebrews, Quran",
+			"category": "islamic-dilemma-tahrif",
+			"tags": [
+				"Islamic Dilemma",
+				"Torah",
+				"Quran commentary",
+				"People of the Book"
+			]
+		},
+		{
+			"slug": "what-the-pagans-of-mecca-said-about-allah",
+			"title": "What did the pagans of Mecca believe about Allah? 8 answers",
+			"excerpt": "Did the Meccans take Allah for a moon god? 8 answers from the Quran and early reports on what they believed about Allah. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "What the pagans of Mecca said about Allah",
+			"category": "creed-theology",
+			"tags": [
+				"Allah",
+				"Arabia before Islam",
+				"Same God",
+				"Polemics"
 			]
 		}
 	],

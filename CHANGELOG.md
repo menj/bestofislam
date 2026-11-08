@@ -4,18 +4,68 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.109.0] - 2026-11-07
+## [1.112.0] - 2026-11-08
 
 ### Added
 
-- Numbered footnote markers link directly to the relevant items in Notes. The links are rendered with the article HTML.
-- Direct references to the Egyptian catalogue, Louvre record, Birmingham manuscript research, marriage laws and terrorism data in five articles.
+- Numbered footnote markers link directly to their entries in Notes.
+- Five articles gain direct links to catalogue records, manuscript research, legislation and terrorism data.
 
 ### Fixed
 
-- Clarified the Egyptian inscription in the Haman article, the Mesha account in 2 Kings, the dating of the Birmingham parchment, and the legal exceptions in the child marriage article.
-- Updated the terrorism article to the 2026 Global Terrorism Index and the 2025 Casey audit. The headline count now matches the seven entries.
+- Clarified the Haman inscription, the Mesha account in 2 Kings, the dating of the Birmingham parchment and the exceptions in marriage laws.
+- Updated the terrorism article with the 2026 Global Terrorism Index and the 2025 Casey audit. The headline now counts all seven entries.
 - Revised the homepage answers on Haman and the Birmingham Quran leaves to match their sources.
+
+## [1.111.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- quran-pronoun-shifts-iltifat: why the Quran turns between "He", "We" and "I", and between "you" and "they". Six answers from M. A. S. Abdel Haleem (BSOAS, 1992), Neal Robinson (*Discovering the Qur'an*, 1996) and Mustansir Mir (*Islamic Studies*, 1990): Nöldeke's objection stated first, the device and its name in Arabic rhetoric, where the turns fall, the singular and plural of God's speech, how the turns keep the Messenger outside the speech, and Mir's reading of 2:217. A featured image and four in-text images, all public domain from Wikimedia Commons, fetched with `bin/commons-api.py`. It is in the reading guide after the grammar article and in the related-article links.
+
+### Changed
+- quran-grammar-errors-claim: a closing paragraph links to the new article.
+- `docs/UPGRADING.md`: the 1.100.12 upgrade note moves to its place in version order.
+
+## [1.110.1] - 2026-11-07
+
+### Changed
+
+- The three editorial work lists move into `docs/UPGRADING.md`, under a new Content review section: `docs/CONTENT-REVIEW.md` becomes "Citations to check", `docs/SHAMELA-REVIEW.md` becomes "Shamela and sunnah.com review", and `docs/POLEMICS.md` becomes "Objections catalogue". Their headings are nested two levels down and their text is unchanged, except that the catalogue's three pointers to `docs/CONTENT-REVIEW.md` now point to "Citations to check". The three files are removed, and the README file tree names the docs folder's remaining files.
+- `docs/UPGRADING.md` gains three roadmap items under Next: one limit for meta descriptions (130 or 160 characters), a stricter test before `boi_migrate_seed()` refreshes an article, and the theme's PHP checked against the owner's `php-maintainable-code` skill.
+
+### Added
+
+- `bin/commons-api.py`, a command-line tool for Wikimedia Commons. `info` prints a file's licences, author, size and description from Magnus Manske's Commons API, or from the MediaWiki API when that does not answer. `fetch` downloads the original, saves it as AVIF (1,400 pixels wide for a featured image, 960 for an inline one) and records its credit in `inc/images-data.json`. It refuses any licence but public domain or CC0, keeps an image already in place unless `--replace` is given (D48), and with `--dry-run` changes nothing in the theme. The tool is in `bin/`, so it is not in the theme zip.
+
+Nothing on the site changes.
+
+## [1.110.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- jeremiah-new-covenant-hebrews-and-the-quran: Jeremiah 31 read in full, the same law written inside, the renewals of the covenant in Deuteronomy, Joshua and 2 Kings, how Hebrews reads the passage, and the covenants of the Quran. Quotations checked in the World English Bible and on the Quran.com API; the Septuagint wording and the Luke 22 manuscript note are flagged as general knowledge.
+- what-the-pagans-of-mecca-said-about-allah: what the Quran and early reports say the Meccans believed about Allah, and why the moon-god thesis is weak at Mecca. It says that no Meccan text survives and that Muslim 1185 was read in a translation whose wording should be rechecked.
+- A featured image and four in-text images for each (Pixabay; none shows a prophet). Both are in the reading guide and the related-article links.
+
+## [1.109.1] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- "In the classical dictionaries" notes on five more entries: greed-and-avarice, deception, inheritance, corruption and hukm (al-Raghib, Mufradat). 67 entries now carry notes. `BOI_GLOSSARY_VERSION` is 18, so the Glossary rebuilds once.
+
+## [1.109.0] - 2026-11-07
+
+No feature removed and no public identifier renamed.
+
+### Added
+- nine-questions-from-the-floor-islamic-dilemma-debate: nine audience questions from the question session at the end of the debate transcript the owner supplied, each answered with what the speaker said, where the site agrees or differs, and a link to the article that holds the evidence. It names no one. A featured image and four in-text images (Pixabay; none shows a prophet).
+
+### Changed
+- al-zutt-allegation: the chain of the report (Musnad Ahmad, with the parallel in al-Tirmidhi 2861) and the objections to it (ʿAmr's hearing, Ibn Kathir, the Musnad's editors, Muslim 450), as reported by IslamQA's Arabic answer. The notes say that the primary books and the narrators' gradings were not opened, and no narrator is scored.
 
 ## [1.108.1] - 2026-11-07
 

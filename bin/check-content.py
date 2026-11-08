@@ -194,7 +194,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):
         errors.append('%s: unbalanced entry blocks' % rel)
     if c.count('<!-- wp:paragraph') != c.count('<!-- /wp:paragraph -->'):
         errors.append('%s: unbalanced paragraph blocks' % rel)
-    markers = re.findall(r'<sup>((?:\[\d+\]\s*)+)</sup>', c)
+    markers = re.findall(r'<sup(?:\s[^>]*)?>((?:\[\d+\]\s*)+)</sup>', c, re.IGNORECASE)
     sups = sorted({int(n) for n in re.findall(r'\[(\d+)\]', ''.join(markers))})
     notes = None
     for m in re.finditer(r'<h[2-4][^>]*>Notes</h[2-4]>', c):

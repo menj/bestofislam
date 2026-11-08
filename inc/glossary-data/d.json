@@ -266,7 +266,24 @@
    "Makr",
    "Best Of Deceivers",
    "Schemers"
-  ]
+  ],
+  "lexicon": {
+   "root": "م ك ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "المَكْرُ: صرف الغير عمّا يقصده بحيلة",
+     "gloss": "Al-Rāghib defines <em>makr</em> as turning another from what he intends by a stratagem.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4186#d9c437"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وذلك ضربان: مكر محمود، وذلك أن يتحرّى بذلك فعل جميل، وعلى ذلك قال: وَاللَّهُ خَيْرُ الْماكِرِينَ",
+     "gloss": "He says it is of two kinds, praiseworthy, when the aim is a good act, and blameworthy, when the aim is a bad one, and cites 3:54 for the first.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4186#d9c437"
+    }
+   ]
+  }
  },
  {
   "slug": "deedat-ahmad",

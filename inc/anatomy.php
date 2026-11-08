@@ -213,7 +213,7 @@ function boi_anatomy_notes_id( $html ) {
  * @return string
  */
 function boi_anatomy_link_notes( $html ) {
-	if ( false === strpos( $html, '<sup>[' ) ) {
+	if ( false === stripos( $html, '<sup' ) ) {
 		return $html;
 	}
 
@@ -256,7 +256,7 @@ function boi_anatomy_link_notes( $html ) {
 
 		$heading_at = $section[0][1];
 		$body       = preg_replace_callback(
-			'#(?:<!--.*?-->|<(a|code|pre|script|style)\b[^>]*>.*?</\1\s*>)(*SKIP)(*F)|<sup>((?:\[[1-9][0-9]*\]\s*)+)</sup>|<[^>]+>(*SKIP)(*F)#is',
+			'#(?:<!--.*?-->|<(a|code|pre|script|style)\b[^>]*>.*?</\1\s*>)(*SKIP)(*F)|(<sup(?:\s[^>]*)?>)((?:\[[1-9][0-9]*\]\s*)+)</sup>|<[^>]+>(*SKIP)(*F)#is',
 			static function ( $m ) use ( $targets ) {
 				$links = preg_replace_callback(
 					'/\[([1-9][0-9]*)\]/',
@@ -269,9 +269,9 @@ function boi_anatomy_link_notes( $html ) {
 						$label = sprintf( __( 'Note %s', 'bestofislam' ), $number );
 						return '<a class="boi-note-ref" href="#' . rawurlencode( $targets[ $number ] ) . '" aria-label="' . esc_attr( $label ) . '">' . $ref[0] . '</a>';
 					},
-					$m[2]
+					$m[3]
 				);
-				return '<sup>' . $links . '</sup>';
+				return $m[2] . $links . '</sup>';
 			},
 			substr( $html, 0, $heading_at )
 		);

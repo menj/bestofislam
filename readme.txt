@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.109.0
+Stable tag: 1.112.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 164 articles, each with a featured image and 2 more in its text. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. On activation the theme creates 8 sections, the standing pages, the menus and 168 articles. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -164,8 +164,23 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.109.0 =
+= 1.112.0 =
 * Numbered footnotes link directly to their notes. Five articles gain source links and corrections, and the homepage answers on Haman and the Birmingham Quran leaves are updated.
+
+= 1.111.0 =
+* A new article, "Why does the Quran switch between He, We and I? 6 answers", on iltifat, the changes of grammatical person that the Arab rhetoricians named and explained, from studies by Muhammad Abdel Haleem, Neal Robinson and Mustansir Mir. It has a featured image and four in-text images. The article on the claim of grammatical errors links to it.
+
+= 1.110.1 =
+* Documentation only. The three editorial work lists (citations to check, the Shamela and sunnah.com review, and the catalogue of objections) now live in UPGRADING.md under Content review, and three items join the roadmap. Nothing on the site changes.
+
+= 1.110.0 =
+* Two new articles: "The new covenant: what Jeremiah, Hebrews and the Quran say in 6 points" and "What did the pagans of Mecca believe about Allah? 8 answers", each with a featured image and four in-text images.
+
+= 1.109.1 =
+* Five more Glossary entries show excerpts from al-Raghib's word-book: greed and avarice, deception, inheritance, corruption and hukm. 67 in all.
+
+= 1.109.0 =
+* A new article, "Nine questions from the floor on the Islamic dilemma", from the audience question session of the debate transcript, with a featured image and four in-text images. The al-Zutt article gains the chain of the report and the objections to it, with notes that say what was and was not opened.
 
 = 1.108.1 =
 * The article on befriending non-Muslims shows its three in-text images again; a later edit of its text had dropped them. README, SSOT and UPGRADING record the link previews and the 164 seeded articles, say that only featured images go into the media library, and describe the links to other sites as plain cross-links. Nothing else changes.
@@ -320,9 +335,21 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.109.0 =
-Replace the theme files. The updated articles reach existing sites through the regular content update for articles the owner has not edited.
+= 1.112.0 =
+Replace the theme files. The regular content update applies the new text to articles the owner has not edited.
 
+= 1.111.0 =
+Replace the theme files. The new article is created, and the changed grammar article refreshed where the owner has not edited it, when the version changes.
+
+= 1.110.1 =
+Replace the theme files. Nothing else to do.
+
+= 1.110.0 =
+Replace the theme files. The two new articles are created when the version changes.
+= 1.109.1 =
+Replace the theme files. The Glossary rebuilds once on the version change to show the new notes.
+= 1.109.0 =
+Replace the theme files. The new article is created, and the changed al-Zutt article refreshed where the owner has not edited it, when the version changes.
 = 1.108.1 =
 Replace the theme files. The restored images reach existing sites through the seed migration on this version change, for an article the owner has not edited.
 
