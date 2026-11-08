@@ -104,6 +104,22 @@ function boi_toc_slug( $text ) {
 }
 
 /**
+ * The value of an attribute in a tag or an attribute string, quoted with
+ * double or single quotes or not quoted at all, as HTML allows.
+ *
+ * @param string $attrs A tag or its attributes.
+ * @param string $name  Attribute name.
+ * @return string The trimmed value, or '' when absent.
+ */
+function boi_toc_attr( $attrs, $name ) {
+	if ( ! preg_match( '/\s' . preg_quote( $name, '/' ) . '\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s"\'>=`]+))/i', ' ' . $attrs, $m ) ) {
+		return '';
+	}
+
+	return trim( html_entity_decode( (string) ( $m[1] . ( $m[2] ?? '' ) . ( $m[3] ?? '' ) ), ENT_QUOTES, 'UTF-8' ) );
+}
+
+/**
  * The level-two and level-three headings of a piece of HTML, in order, each
  * with the id it has or the id made from its text.
  *
@@ -122,13 +138,17 @@ function boi_toc_headings( $html ) {
 		return array();
 	}
 
-	// Ids outside template elements, of every element.
+	// Ids outside template elements, of every element, quoted or not.
 	$seen = array();
 	$bare = (string) preg_replace( '#<template\b.*?</template>#is', '', $html );
 
-	if ( preg_match_all( '/<[a-z][^>]*\sid\s*=\s*["\']([^"\']+)["\']/i', $bare, $ids ) ) {
-		foreach ( $ids[1] as $id ) {
-			$seen[ trim( $id ) ] = true;
+	if ( preg_match_all( '/<[a-z][^>]*>/i', $bare, $tags ) ) {
+		foreach ( $tags[0] as $tag ) {
+			$id = boi_toc_attr( $tag, 'id' );
+
+			if ( '' !== $id ) {
+				$seen[ $id ] = true;
+			}
 		}
 	}
 
@@ -141,10 +161,10 @@ function boi_toc_headings( $html ) {
 
 		$attrs = (string) ( $m[2] ?? '' );
 		$text  = boi_anatomy_text( $m[3] );
-		$own   = preg_match( '/\sid\s*=\s*["\']([^"\']+)["\']/i', $attrs, $idm ) ? trim( $idm[1] ) : '';
+		$own   = boi_toc_attr( $attrs, 'id' );
 		$skip  = '' === $text
-			|| (bool) preg_match( '/\sclass\s*=\s*["\'][^"\']*\bno-toc\b/i', $attrs )
-			|| (bool) preg_match( '/\sdata-no-toc\b/i', $attrs );
+			|| in_array( 'no-toc', preg_split( '/\s+/', strtolower( boi_toc_attr( $attrs, 'class' ) ) ), true )
+			|| (bool) preg_match( '/\sdata-no-toc(?=[\s=>\/]|$)/i', $attrs );
 		$id    = $own;
 
 		if ( '' === $id && ! $skip ) {
@@ -750,6 +770,34 @@ function boi_toc_view_tree() {
 }
 
 /**
+ * The contents the current view shows anywhere: the list at its head, or the
+ * list the text places with the first [wp_toc] or [auto_toc], read with that
+ * shortcode's settings. The schema and the article's accessibility features
+ * describe this one.
+ *
+ * @return array Tree, empty when the view shows no contents.
+ */
+function boi_toc_page_tree() {
+	$tree = boi_toc_view_tree();
+	$post = boi_toc_post();
+
+	if ( $tree || ! $post || boi_toc_plugin_active() || ! boi_toc_has_shortcode( $post ) ) {
+		return $tree;
+	}
+
+	$atts = array();
+
+	if ( preg_match( '/' . get_shortcode_regex( array( 'wp_toc', 'auto_toc' ) ) . '/', $post->post_content, $m ) ) {
+		$atts = shortcode_parse_atts( $m[3] );
+	}
+
+	$settings = boi_toc_settings( $atts );
+	$tree     = boi_toc_tree( boi_toc_headings( boi_toc_rendered( $post ) ), $settings['levels'], $settings['depth'] );
+
+	return boi_toc_count( $tree ) >= $settings['min'] ? $tree : array();
+}
+
+/**
  * The contents block: the sections of the article or page, from three
  * level-two headings up, with the level-three headings under them.
  *
@@ -776,7 +824,10 @@ function boi_render_contents() {
  * @return string
  */
 function boi_toc_shortcode( $atts ) {
-	if ( ! empty( $GLOBALS['boi_toc_busy'] ) || ! boi_toc_post() || is_feed() || doing_filter( 'get_the_excerpt' ) ) {
+	$post = boi_toc_post();
+
+	// Only the main text is filled; anywhere else (a widget, another loop) the marker would stay.
+	if ( ! empty( $GLOBALS['boi_toc_busy'] ) || ! $post || is_feed() || doing_filter( 'get_the_excerpt' ) || ! is_main_query() || (int) get_the_ID() !== $post->ID ) {
 		return '';
 	}
 
@@ -835,7 +886,7 @@ add_action( 'init', 'boi_toc_register_shortcodes' );
  * @return array
  */
 function boi_toc_schema_nodes( $nodes ) {
-	$tree = boi_toc_view_tree();
+	$tree = boi_toc_page_tree();
 	$post = boi_toc_post();
 
 	if ( ! $tree || ! $post || ! function_exists( 'boi_schema_page_url' ) ) {

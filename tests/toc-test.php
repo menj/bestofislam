@@ -30,6 +30,8 @@ function doing_filter() { return false; }
 function is_singular() { return true; }
 function is_front_page() { return false; }
 function get_queried_object() { return $GLOBALS['t_post']; }
+function is_main_query() { return $GLOBALS['t_main'] ?? true; }
+function get_the_ID() { return $GLOBALS['t_id'] ?? 1; }
 
 // Like WordPress: lower case, spaces to hyphens, other punctuation dropped,
 // and letters outside ASCII percent-encoded.
@@ -81,6 +83,13 @@ check( 'shown' === $h[3]['id'], 'the rest are listed' );
 $ids = boi_anatomy_heading_ids( $skip );
 check( false !== strpos( $ids, '<h2 class="lead no-toc">Hidden</h2>' ) && false !== strpos( $ids, '<template><h2>In a template</h2></template>' ) && false !== strpos( $ids, '<h2 id="shown">Shown</h2>' ), 'skipped headings keep their markup' );
 
+// Unquoted attributes, as HTML allows.
+$h = boi_toc_headings( '<p id=taken></p><h2 id=custom>Mine</h2><h2 class=no-toc>Hidden</h2><h2 class="a  no-toc b">Hidden too</h2><h2 class="no-tocx">Shown</h2><h2>Taken</h2>' );
+check( 'custom' === $h[0]['id'] && $h[0]['own'], 'an unquoted id is the author\'s id' );
+check( $h[1]['skip'] && $h[2]['skip'] && ! $h[3]['skip'], 'class no-toc, quoted or not, among other classes; no-tocx is not no-toc' );
+check( 'taken-2' === $h[4]['id'], 'an unquoted id elsewhere is reserved' );
+check( false === strpos( boi_anatomy_heading_ids( '<h2 id=custom>Mine</h2>' ), 'id="' ), 'no second id on a heading with an unquoted one' );
+
 // Arabic headings keep readable ids.
 check( 'مرحبا-بالعالم' === boi_toc_slug( 'مرحبا بالعالم' ), 'an Arabic heading gets an Arabic id' );
 check( 'section' === boi_toc_slug( '!!!' ), 'a heading with no letters gets "section"' );
@@ -117,6 +126,13 @@ $filled = boi_toc_fill( $text );
 check( 0 === strpos( $filled, '<nav class="boi-contents"' ) && false !== strpos( $filled, '<a href="#alpha">Alpha</a></li><li><a href="#beta">Beta</a>' ) && false === strpos( $filled, 'Sub</a>' ), 'the marker and its paragraph become the list, at the levels asked' );
 check( '<h2>Only</h2>' === boi_toc_fill( '<!--boi-toc:' . bin2hex( json_encode( array( 'min' => 3 ) ) ) . '--><h2>Only</h2>' ), 'below min: nothing printed' );
 check( 0 === strpos( boi_toc_fill( '<!--boi-toc:abc--><h2 id="a">A</h2>' ), '<nav class="boi-contents"' ), 'a broken marker falls back to the defaults' );
+
+$GLOBALS['t_id'] = 2;
+check( '' === boi_toc_shortcode( array() ), 'nothing outside the main text (a widget, another loop)' );
+$GLOBALS['t_id'] = 1;
+$GLOBALS['t_main'] = false;
+check( '' === boi_toc_shortcode( array() ), 'nothing in a secondary query' );
+$GLOBALS['t_main'] = true;
 
 $GLOBALS['boi_toc_busy'] = true;
 check( '' === boi_toc_shortcode( array() ), 'nothing while the text is read for its headings' );

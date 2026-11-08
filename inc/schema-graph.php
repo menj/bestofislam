@@ -500,7 +500,7 @@ function boi_schema_article_details( $post, $page_id ) {
 	}
 
 	// The contents at the head of the article, from WP TOC's rules in inc/anatomy.php.
-	if ( function_exists( 'boi_toc_view_tree' ) && boi_toc_view_tree() ) {
+	if ( function_exists( 'boi_toc_page_tree' ) && boi_toc_page_tree() ) {
 		$details['accessibilityFeature'][] = 'tableOfContents';
 	}
 
