@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.111.1
+
+Replace the theme files. The new article's featured image is added to the media library when the version changes; its in-text images are served from `assets/images/inline/`.
+
 ## Upgrading to 1.111.0
 
 Replace the theme files. The new article, on the Quran's changes of grammatical person, is created on existing sites by `boi_create_listicles()` when the version changes, and the changed grammar article is refreshed where the owner has not edited it. Its images are in `assets/images/`.

@@ -5480,5 +5480,49 @@
     "source": "https://pixabay.com/photos/half-moon-moon-night-sky-space-4900302/"
    }
   ]
+ },
+ "quran-pronoun-shifts-iltifat": {
+  "featured": {
+   "file": "quran-pronoun-shifts-iltifat.avif",
+   "alt": "A page of the Quran in early Kufic script, brown ink on parchment.",
+   "caption": "A folio of the Quran in Kufic script, Egypt, Abbasid period. The changes of grammatical person discussed here run through every copy of the text.",
+   "artist": "Unknown copyist, Abbasid period",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Abbasid_Koran_folio_from_Egypt.jpg"
+  },
+  "inline": [
+   {
+    "file": "quran-pronoun-shifts-iltifat-1.avif",
+    "alt": "Two pages of a handwritten Arabic commentary, black ink on paper.",
+    "caption": "A fragment of al-Zamakhshari's commentary on the Quran, al-Kashshaf (Bibliothèque nationale de France, Arabe 6313). He explained iltifat from the opening pages of his commentary.",
+    "artist": "Al-Zamakhshari (author); unknown copyist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fragment_du_commentaire_du_Koran_par_Zamakhshari._-_btv1b10031416j_(012_of_148).jpg"
+   },
+   {
+    "file": "quran-pronoun-shifts-iltifat-2.avif",
+    "alt": "A column of rain falls from a cloud over a calm bay at sunset.",
+    "caption": "A rain shaft at sunset, seen from Man-of-War Bay (NOAA). In the verses on rain the Quran turns to \"We\" at the point where the land is given life (27:60; 35:9).",
+    "artist": "NOAA Photo Library",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:A_rain_shaft_pierces_a_tropical_sunset_as_seen_from_Man-of-War_Bay_-_NOAA.jpg"
+   },
+   {
+    "file": "quran-pronoun-shifts-iltifat-3.avif",
+    "alt": "Large Kufic letters in brown ink with red vowel dots on parchment.",
+    "caption": "A folio of the Quran in Kufic script with part of 48:27–28, Abbasid period (Freer Gallery of Art, F1930.62).",
+    "artist": "Unknown copyist, Abbasid period",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Koran_(8th-9th_century).jpg"
+   },
+   {
+    "file": "quran-pronoun-shifts-iltifat-4.avif",
+    "alt": "A double page of the opening chapter of the Quran in gold script, framed in blue and gold illumination.",
+    "caption": "The opening chapter in the Quran of Baybars al-Jashnakir, Cairo, 1304–1306 (British Library, Add MS 22406). The left page begins \"You alone we worship\", where the prayer turns to address God (1:5).",
+    "artist": "Muhammad ibn al-Wahid (copyist); Abu Bakr Sandal and others (illumination)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Double_page_from_the_Sultan_Baybars_Qur'an._Sura_Al-Fatiha_(BL_Add_Ms_22406,_ff.2v-3r).jpg"
+   }
+  ]
  }
 }

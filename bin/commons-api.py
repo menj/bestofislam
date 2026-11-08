@@ -167,7 +167,7 @@ def cmd_fetch(args):
         name, occupied = args.slug + '.avif', bool(entry.get('featured'))
     else:
         n = args.n or len(entry['inline']) + 1
-        if n < 1 or n > len(entry['inline']) + 1:
+        if n < 1 or (n > len(entry['inline']) + 1 and not args.dry_run):
             sys.exit('--n must be between 1 and %d for %s.' % (len(entry['inline']) + 1, args.slug))
         name, occupied = '%s-%d.avif' % (args.slug, n), n <= len(entry['inline'])
     if occupied and not args.replace and not args.dry_run:

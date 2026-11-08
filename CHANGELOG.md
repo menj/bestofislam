@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.111.1] - 2026-11-08
+
+No feature removed and no public identifier renamed.
+
+### Added
+- quran-pronoun-shifts-iltifat: a featured image and four in-text images, all public domain from Wikimedia Commons: an Abbasid Kufic folio; a page of al-Zamakhshari's *al-Kashshaf* (BnF Arabe 6313); a NOAA photograph of rain at sunset; a Kufic folio with 48:27–28 (Freer F1930.62); and the opening chapter in the Quran of Baybars al-Jashnakir (British Library Add MS 22406). None shows a person. Credits in `inc/images-data.json`.
+
+### Changed
+- `bin/commons-api.py`: `--dry-run` accepts any inline position, so a set of images can be tried out before the first is installed.
+
 ## [1.111.0] - 2026-11-07
 
 No feature removed and no public identifier renamed.
