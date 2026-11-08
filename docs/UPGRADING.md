@@ -63,7 +63,7 @@ feature stands aside, so nothing runs twice.
 
 ## Upgrading to 1.113.0
 
-Replace the theme files. The new article is created on existing sites by `boi_create_listicles()` when the version changes, and its featured image is added to the media library; its images are in `assets/images/`.
+Replace the theme files. The new article is created on existing sites by `boi_create_listicles()` when the version changes. Its images follow in a later release.
 
 ## Upgrading to 1.112.0
 

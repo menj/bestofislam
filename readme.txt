@@ -165,7 +165,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.113.0 =
-* A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026, with a featured image and four in-text images.
+* A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026. Its images follow in a later release.
 
 = 1.112.0 =
 * A new article, "Did the Quran borrow the story of Iblis from Jewish and Christian legend? 7 answers", a reply to Leo Jung's Fallen Angels in Jewish, Christian and Mohammedan Literature (1926), with a featured image and four in-text images. The Jinn tag gains a description.
