@@ -11,9 +11,12 @@
  *   bestofislam/answer-box     "In short": the key points, paired with the
  *                              questions the piece answers
  *   bestofislam/contents       the sections, from three level-two headings,
- *                              on an article without a jump list
- *   the_content 12             heading ids, the notes anchor and the
- *                              mid-article next step
+ *                              with the level-three ones under them, on an
+ *                              article or page without a jump list; the
+ *                              [wp_toc] and [auto_toc] shortcodes place it in
+ *                              the text instead (adapted from WP TOC)
+ *   the_content 12             heading ids, the notes anchor, the placed
+ *                              contents and the mid-article next step
  *   is-style-faq               the FAQ style for a Details block, read by the
  *                              FAQPage data only when it is on the page
  *
@@ -76,82 +79,220 @@ function boi_anatomy_text( $html ) {
 }
 
 /**
- * The level-two headings of a piece of HTML, in order, each with the id it
- * has or the id made from its text. The author's ids are reserved first, so
- * a made id never repeats one.
+ * The pattern the heading functions read the text with: a template block,
+ * whose content is never shown and is passed over whole, or a level-two or
+ * level-three heading. Groups: 1 the tag, 2 its attributes, 3 its inner HTML.
+ */
+const BOI_TOC_PATTERN = '#<template\b.*?</template>|<(h[23])(\s[^>]*)?>((?:(?!</\1>).)*)</\1>#is';
+
+/**
+ * An id made from heading text. sanitize_title() percent-encodes letters
+ * outside ASCII ("%d9%85"); a "%" in an id is ambiguous in an address, so
+ * the slug is decoded back to readable letters, which ids and fragments
+ * both accept: an Arabic heading keeps an Arabic id.
+ *
+ * @param string $text Heading text.
+ * @return string
+ */
+function boi_toc_slug( $text ) {
+	$slug    = sanitize_title( $text );
+	$decoded = rawurldecode( $slug );
+	$slug    = ( $decoded !== $slug && preg_match( '//u', $decoded ) ) ? $decoded : $slug;
+	$slug    = trim( (string) preg_replace( '/\s+/u', '-', $slug ), '-' );
+
+	return '' !== $slug ? $slug : 'section';
+}
+
+/**
+ * The level-two and level-three headings of a piece of HTML, in order, each
+ * with the id it has or the id made from its text.
+ *
+ * Every id already in the text is reserved first, a heading's or any other
+ * element's, so a made id never repeats one; a repeat is numbered -2, -3.
+ * A heading marked no-toc (class) or data-no-toc is passed over and gets no
+ * id, as does an empty one, and so is anything inside a template element.
  *
  * @param string $html Stored or rendered text.
- * @return array List of array( id, text, whether the heading already has the id ).
+ * @return array List of array( 'level', 'id', 'text', 'own', 'skip' ).
  */
-function boi_anatomy_heading_list( $html ) {
-	if ( ! preg_match_all( '#<h2(\s[^>]*)?>(.*?)</h2>#is', (string) $html, $found, PREG_SET_ORDER ) ) {
+function boi_toc_headings( $html ) {
+	$html = (string) $html;
+
+	if ( ! preg_match_all( BOI_TOC_PATTERN, $html, $found, PREG_SET_ORDER ) ) {
 		return array();
 	}
 
+	// Ids outside template elements, of every element.
 	$seen = array();
-	$own  = array();
+	$bare = (string) preg_replace( '#<template\b.*?</template>#is', '', $html );
 
-	foreach ( $found as $i => $m ) {
-		if ( preg_match( '/\sid\s*=\s*["\']([^"\']+)["\']/i', (string) ( $m[1] ?? '' ), $idm ) ) {
-			$own[ $i ]       = $idm[1];
-			$seen[ $idm[1] ] = true;
+	if ( preg_match_all( '/<[a-z][^>]*\sid\s*=\s*["\']([^"\']+)["\']/i', $bare, $ids ) ) {
+		foreach ( $ids[1] as $id ) {
+			$seen[ trim( $id ) ] = true;
 		}
 	}
 
 	$out = array();
 
-	foreach ( $found as $i => $m ) {
-		$text = boi_anatomy_text( $m[2] );
-
-		if ( isset( $own[ $i ] ) ) {
-			$out[] = array( $own[ $i ], $text, true );
-			continue;
+	foreach ( $found as $m ) {
+		if ( empty( $m[1] ) ) {
+			continue; // A template block.
 		}
 
-		if ( '' === $text ) {
-			$out[] = array( '', '', false );
-			continue;
+		$attrs = (string) ( $m[2] ?? '' );
+		$text  = boi_anatomy_text( $m[3] );
+		$own   = preg_match( '/\sid\s*=\s*["\']([^"\']+)["\']/i', $attrs, $idm ) ? trim( $idm[1] ) : '';
+		$skip  = '' === $text
+			|| (bool) preg_match( '/\sclass\s*=\s*["\'][^"\']*\bno-toc\b/i', $attrs )
+			|| (bool) preg_match( '/\sdata-no-toc\b/i', $attrs );
+		$id    = $own;
+
+		if ( '' === $id && ! $skip ) {
+			$base = boi_toc_slug( $text );
+			$id   = $base;
+
+			for ( $n = 2; isset( $seen[ $id ] ); $n++ ) {
+				$id = $base . '-' . $n;
+			}
+
+			$seen[ $id ] = true;
 		}
 
-		$base = sanitize_title( $text );
-		$base = '' !== $base ? $base : 'section';
-		$slug = $base;
-
-		for ( $n = 2; isset( $seen[ $slug ] ); $n++ ) {
-			$slug = $base . '-' . $n;
-		}
-
-		$seen[ $slug ] = true;
-		$out[]         = array( $slug, $text, false );
+		$out[] = array(
+			'level' => (int) substr( strtolower( $m[1] ), 1 ),
+			'id'    => $skip ? $own : $id,
+			'text'  => $text,
+			'own'   => '' !== $own,
+			'skip'  => $skip,
+		);
 	}
 
 	return $out;
 }
 
 /**
- * Gives each level-two heading without an id the one boi_anatomy_heading_list()
- * made for it, so the contents can link to it.
+ * The level-two headings of a piece of HTML, as the contents and the
+ * mid-article next step count them.
+ *
+ * @param string $html Stored or rendered text.
+ * @return array List of array( id, text, whether the heading already has the id ).
+ */
+function boi_anatomy_heading_list( $html ) {
+	$out = array();
+
+	foreach ( boi_toc_headings( $html ) as $h ) {
+		if ( 2 === $h['level'] ) {
+			$out[] = array( $h['id'], $h['text'], $h['own'] );
+		}
+	}
+
+	return $out;
+}
+
+/**
+ * Gives each level-two and level-three heading without an id the one
+ * boi_toc_headings() made for it, so the contents can link to it.
  *
  * @param string $html Rendered text.
  * @return string
  */
 function boi_anatomy_heading_ids( $html ) {
-	$list = boi_anatomy_heading_list( $html );
+	$list = boi_toc_headings( $html );
 	$i    = 0;
 
 	return (string) preg_replace_callback(
-		'#<h2(\s[^>]*)?>(.*?)</h2>#is',
+		BOI_TOC_PATTERN,
 		static function ( $m ) use ( $list, &$i ) {
-			$h = $list[ $i++ ] ?? array( '', '', true );
-
-			if ( $h[2] || '' === $h[0] ) {
+			if ( empty( $m[1] ) ) {
 				return $m[0];
 			}
 
-			return '<h2 id="' . esc_attr( $h[0] ) . '"' . (string) ( $m[1] ?? '' ) . '>' . $m[2] . '</h2>';
+			$h = $list[ $i++ ] ?? null;
+
+			if ( ! $h || $h['own'] || '' === $h['id'] ) {
+				return $m[0];
+			}
+
+			return '<' . $m[1] . ' id="' . esc_attr( $h['id'] ) . '"' . (string) ( $m[2] ?? '' ) . '>' . $m[3] . '</' . $m[1] . '>';
 		},
 		(string) $html
 	);
+}
+
+/**
+ * The contents as a tree: each heading a child of the nearest heading above
+ * it with a lower level, so a level-three heading before any level-two one
+ * stays at the top.
+ *
+ * @param array $headings From boi_toc_headings().
+ * @param array $levels   Heading levels to include.
+ * @param int   $depth    Deepest nesting, 0 for no limit.
+ * @return array Nodes: array( 'level', 'id', 'text', 'children' ).
+ */
+function boi_toc_tree( $headings, $levels = array( 2, 3 ), $depth = 0 ) {
+	$nodes = array();
+	$roots = array();
+	$stack = array();
+
+	foreach ( $headings as $h ) {
+		if ( $h['skip'] || '' === $h['id'] || ! in_array( $h['level'], $levels, true ) ) {
+			continue;
+		}
+
+		while ( $stack && $nodes[ end( $stack ) ]['level'] >= $h['level'] ) {
+			array_pop( $stack );
+		}
+
+		if ( $depth > 0 && count( $stack ) >= $depth ) {
+			continue;
+		}
+
+		$index           = count( $nodes );
+		$nodes[ $index ] = array(
+			'level'    => $h['level'],
+			'id'       => $h['id'],
+			'text'     => $h['text'],
+			'children' => array(),
+		);
+
+		if ( $stack ) {
+			$nodes[ end( $stack ) ]['children'][] = $index;
+		} else {
+			$roots[] = $index;
+		}
+
+		$stack[] = $index;
+	}
+
+	$nest = static function ( $indices ) use ( &$nest, $nodes ) {
+		$out = array();
+
+		foreach ( $indices as $index ) {
+			$node             = $nodes[ $index ];
+			$node['children'] = $nest( $node['children'] );
+			$out[]            = $node;
+		}
+
+		return $out;
+	};
+
+	return $nest( $roots );
+}
+
+/**
+ * How many entries a tree has, at every level.
+ *
+ * @param array $tree From boi_toc_tree().
+ * @return int
+ */
+function boi_toc_count( $tree ) {
+	$count = 0;
+
+	foreach ( $tree as $node ) {
+		$count += 1 + boi_toc_count( $node['children'] );
+	}
+
+	return $count;
 }
 
 /**
@@ -427,51 +568,319 @@ function boi_anatomy_answer_shows( $post ) {
 }
 
 /**
- * The contents: a list of the article's sections, from three level-two
- * headings up, on an article that has no jump list of its own.
+ * The post whose contents the current view can show: the queried article or
+ * page, when it has no password.
+ *
+ * @return WP_Post|null
+ */
+function boi_toc_post() {
+	// The front page is a page, but it is a landing page with its own sections.
+	if ( ! is_singular( array( 'post', 'page' ) ) || is_front_page() ) {
+		return null;
+	}
+
+	$post = get_queried_object();
+
+	return ( $post instanceof WP_Post && '' === $post->post_password ) ? $post : null;
+}
+
+/**
+ * Whether the WP TOC plugin is running. The theme then leaves the contents,
+ * the shortcodes and the contents schema to the plugin, so a page never gets
+ * two lists.
+ *
+ * @return bool
+ */
+function boi_toc_plugin_active() {
+	return defined( 'WP_TOC_VERSION' );
+}
+
+/**
+ * The settings of a contents list, from shortcode attributes or the
+ * defaults. The attributes are those of the WP TOC plugin, so a text written
+ * for it reads the same here.
+ *
+ * @param array|string $atts Attributes.
+ * @return array( 'levels', 'title', 'depth', 'min', 'collapsible', 'collapsed' ).
+ */
+function boi_toc_settings( $atts = array() ) {
+	$atts = is_array( $atts ) ? array_change_key_case( $atts, CASE_LOWER ) : array();
+	$bool = static function ( $v ) {
+		return in_array( strtolower( trim( (string) $v ) ), array( '1', 'true', 'yes', 'on' ), true );
+	};
+
+	$levels = array();
+
+	foreach ( explode( ',', (string) ( $atts['tags'] ?? 'h2,h3' ) ) as $tag ) {
+		if ( preg_match( '/^h([1-6])$/', strtolower( trim( $tag ) ), $m ) ) {
+			$levels[] = (int) $m[1];
+		}
+	}
+
+	// The theme reads level-two and level-three headings only.
+	$levels = array_values( array_intersect( array_unique( $levels ), array( 2, 3 ) ) );
+
+	return array(
+		'levels'      => $levels ? $levels : array( 2, 3 ),
+		'title'       => isset( $atts['title'] ) ? trim( wp_strip_all_tags( (string) $atts['title'] ) ) : __( 'In this article', 'bestofislam' ),
+		'depth'       => max( 0, (int) ( $atts['depth'] ?? 0 ) ),
+		'min'         => max( 1, (int) ( $atts['min'] ?? 1 ) ),
+		'collapsible' => $bool( $atts['collapsible'] ?? '' ),
+		'collapsed'   => $bool( $atts['collapsed'] ?? '' ),
+	);
+}
+
+/**
+ * One level of the contents list.
+ *
+ * @param array $nodes Nodes.
+ * @return string
+ */
+function boi_toc_list( $nodes ) {
+	$html = '';
+
+	foreach ( $nodes as $node ) {
+		$html .= '<li><a href="#' . esc_attr( $node['id'] ) . '">' . esc_html( $node['text'] ) . '</a>';
+
+		if ( $node['children'] ) {
+			$html .= '<ol class="boi-contents__sublist">' . boi_toc_list( $node['children'] ) . '</ol>';
+		}
+
+		$html .= '</li>';
+	}
+
+	return $html;
+}
+
+/**
+ * The contents list: a navigation region named by its label, the sections
+ * in order with their subsections nested, folded into a details element
+ * when asked. No script is needed.
+ *
+ * @param array $tree     From boi_toc_tree().
+ * @param array $settings From boi_toc_settings().
+ * @return string
+ */
+function boi_toc_html( $tree, $settings ) {
+	static $shown = 0;
+	++$shown;
+
+	$lid   = 1 === $shown ? 'boi-contents-title' : 'boi-contents-title-' . $shown;
+	$name  = '' !== $settings['title'] ? $settings['title'] : __( 'In this article', 'bestofislam' );
+	$list  = '<ol class="boi-contents__list">' . boi_toc_list( $tree ) . '</ol>';
+	$label = '<span id="' . $lid . '" class="boi-contents__label">' . esc_html( $name ) . '</span>';
+
+	if ( $settings['collapsible'] ) {
+		$body = '<details class="boi-contents__details"' . ( $settings['collapsed'] ? '' : ' open' ) . '><summary class="boi-contents__summary">' . $label . '</summary>' . $list . '</details>';
+	} elseif ( '' === $settings['title'] ) {
+		return '<nav class="boi-contents" aria-label="' . esc_attr( $name ) . '">' . $list . '</nav>';
+	} else {
+		$body = $label . $list;
+	}
+
+	return '<nav class="boi-contents" aria-labelledby="' . $lid . '">' . $body . '</nav>';
+}
+
+/**
+ * The text of a post rendered to read its headings. A contents list in the
+ * text would render itself again inside that pass, so the contents block and
+ * the shortcodes print nothing while it runs.
+ *
+ * @param WP_Post $post Post.
+ * @return string
+ */
+function boi_toc_rendered( $post ) {
+	static $cache = array();
+
+	if ( isset( $cache[ $post->ID ] ) ) {
+		return $cache[ $post->ID ];
+	}
+
+	$GLOBALS['boi_toc_busy'] = true;
+	$html                    = do_shortcode( do_blocks( $post->post_content ) );
+	$GLOBALS['boi_toc_busy'] = false;
+
+	return $cache[ $post->ID ] = $html;
+}
+
+/**
+ * Whether a post places its own contents with [wp_toc] or [auto_toc].
+ *
+ * @param WP_Post $post Post.
+ * @return bool
+ */
+function boi_toc_has_shortcode( $post ) {
+	return has_shortcode( $post->post_content, 'wp_toc' ) || has_shortcode( $post->post_content, 'auto_toc' );
+}
+
+/**
+ * The contents the current view shows at its head, as a tree: an article or
+ * page with three or more level-two headings, the Contents switch on, no
+ * jump list of its own, no shortcode placing the list in the text and no WP
+ * TOC plugin.
+ *
+ * @return array Tree, empty when the view shows no contents.
+ */
+function boi_toc_view_tree() {
+	static $tree = null;
+
+	if ( null !== $tree ) {
+		return $tree;
+	}
+
+	$tree = array();
+	$post = boi_toc_post();
+
+	if ( ! $post || boi_toc_plugin_active() || ! boi_anatomy_on( 'article_contents' ) || boi_toc_has_shortcode( $post ) || boi_anatomy_has_jump_list( $post ) ) {
+		return $tree;
+	}
+
+	$headings = boi_toc_headings( boi_toc_rendered( $post ) );
+	$sections = 0;
+
+	foreach ( $headings as $h ) {
+		$sections += ( 2 === $h['level'] && ! $h['skip'] ) ? 1 : 0;
+	}
+
+	if ( $sections >= 3 ) {
+		$tree = boi_toc_tree( $headings );
+	}
+
+	return $tree;
+}
+
+/**
+ * The contents block: the sections of the article or page, from three
+ * level-two headings up, with the level-three headings under them.
  *
  * @return string
  */
 function boi_render_contents() {
-	$post = boi_anatomy_post();
-
-	if ( ! $post || ! boi_anatomy_on( 'article_contents' ) || boi_anatomy_has_jump_list( $post ) ) {
+	if ( ! empty( $GLOBALS['boi_toc_busy'] ) ) {
 		return '';
 	}
 
-	// The text is rendered to read its headings; a contents block placed in the text would render
-	// itself again inside that pass, so it prints nothing while the pass runs.
-	static $busy = false;
+	$tree = boi_toc_view_tree();
 
-	if ( $busy ) {
+	return $tree ? boi_toc_html( $tree, boi_toc_settings() ) : '';
+}
+
+/**
+ * The [wp_toc] and [auto_toc] shortcodes place the contents in the text.
+ * The headings get their ids only later, in the_content, so the shortcode
+ * leaves a marker carrying its settings, and boi_toc_fill() builds the list
+ * there from the finished text. Outside the main text of an article or page
+ * (an excerpt, a feed, a widget) it prints nothing.
+ *
+ * @param array|string $atts Attributes.
+ * @return string
+ */
+function boi_toc_shortcode( $atts ) {
+	if ( ! empty( $GLOBALS['boi_toc_busy'] ) || ! boi_toc_post() || is_feed() || doing_filter( 'get_the_excerpt' ) ) {
 		return '';
 	}
 
-	$busy     = true;
-	$rendered = do_blocks( $post->post_content );
-	$busy     = false;
-	$items    = '';
-	$count    = 0;
+	return '<!--boi-toc:' . bin2hex( (string) wp_json_encode( boi_toc_settings( $atts ) ) ) . '-->';
+}
 
-	foreach ( boi_anatomy_heading_list( $rendered ) as $h ) {
-		if ( '' === $h[0] || '' === $h[1] ) {
-			continue;
+/**
+ * Replaces each contents marker with its list, built from the headings of
+ * the finished text. A marker wpautop wrapped in a paragraph loses the
+ * paragraph too.
+ *
+ * @param string $html Rendered text, with heading ids.
+ * @return string
+ */
+function boi_toc_fill( $html ) {
+	if ( false === strpos( (string) $html, '<!--boi-toc:' ) ) {
+		return $html;
+	}
+
+	$headings = boi_toc_headings( $html );
+
+	return (string) preg_replace_callback(
+		'#(<p>\s*)?<!--boi-toc:([0-9a-f]*)-->(?(1)\s*</p>)#',
+		static function ( $m ) use ( $headings ) {
+			$settings = json_decode( (string) hex2bin( strlen( $m[2] ) % 2 ? '' : $m[2] ), true );
+			$settings = is_array( $settings ) ? array_merge( boi_toc_settings(), $settings ) : boi_toc_settings();
+			$tree     = boi_toc_tree( $headings, array_map( 'intval', (array) $settings['levels'] ), (int) $settings['depth'] );
+
+			return boi_toc_count( $tree ) >= (int) $settings['min'] ? boi_toc_html( $tree, $settings ) : '';
+		},
+		(string) $html
+	);
+}
+
+/**
+ * Registers the shortcodes, unless the WP TOC plugin runs and has its own.
+ *
+ * @return void
+ */
+function boi_toc_register_shortcodes() {
+	if ( boi_toc_plugin_active() ) {
+		return;
+	}
+
+	add_shortcode( 'wp_toc', 'boi_toc_shortcode' );
+	add_shortcode( 'auto_toc', 'boi_toc_shortcode' );
+}
+add_action( 'init', 'boi_toc_register_shortcodes' );
+
+/**
+ * The contents in the page's graph: a SiteNavigationElement, part of the
+ * WebPage, with one WebPageElement per section. Each section's @id is the
+ * address of its heading, as the WP TOC plugin writes it.
+ *
+ * @param array $nodes Graph nodes.
+ * @return array
+ */
+function boi_toc_schema_nodes( $nodes ) {
+	$tree = boi_toc_view_tree();
+	$post = boi_toc_post();
+
+	if ( ! $tree || ! $post || ! function_exists( 'boi_schema_page_url' ) ) {
+		return $nodes;
+	}
+
+	$url     = boi_schema_page_url();
+	$page_id = boi_schema_page_id( $url );
+	$parts   = static function ( $tree ) use ( &$parts, $url ) {
+		$out = array();
+
+		foreach ( $tree as $node ) {
+			$address = $url . '#' . rawurlencode( $node['id'] );
+			$part    = array(
+				'@type' => 'WebPageElement',
+				'@id'   => $address,
+				'name'  => $node['text'],
+				'url'   => $address,
+			);
+
+			if ( $node['children'] ) {
+				$part['hasPart'] = $parts( $node['children'] );
+			}
+
+			$out[] = $part;
 		}
 
-		$items .= '<li><a href="#' . esc_attr( $h[0] ) . '">' . esc_html( $h[1] ) . '</a></li>';
-		++$count;
-	}
+		return $out;
+	};
 
-	if ( $count < 3 ) {
-		return '';
-	}
+	$nodes[] = array(
+		'@type'    => 'SiteNavigationElement',
+		'@id'      => $url . '#contents',
+		'name'     => __( 'In this article', 'bestofislam' ),
+		'isPartOf' => array( '@id' => $page_id ),
+		'hasPart'  => $parts( $tree ),
+	);
+	$nodes[] = array(
+		'@id'     => $page_id,
+		'hasPart' => array( array( '@id' => $url . '#contents' ) ),
+	);
 
-	static $shown = 0;
-	++$shown;
-	$lid = 1 === $shown ? 'boi-contents-title' : 'boi-contents-title-' . $shown;
-
-	return '<nav class="boi-contents" aria-labelledby="' . $lid . '"><p id="' . $lid . '" class="boi-contents__label">' . esc_html__( 'In this article', 'bestofislam' ) . '</p><ol class="boi-contents__list">' . $items . '</ol></nav>';
+	return $nodes;
 }
+add_filter( 'boi_schema_nodes', 'boi_toc_schema_nodes' );
 
 /* The mid-article next step ---------------------------------------------- */
 
@@ -560,19 +969,27 @@ function boi_anatomy_insert_mid( $html, $aside ) {
 }
 
 /**
- * The main text of an article: heading ids, the notes anchor and the
- * mid-article next step.
+ * The main text of an article: heading ids, the notes anchor, any contents
+ * the text places with a shortcode and the mid-article next step. A page
+ * gets the heading ids and the contents.
  *
  * @param string $content Rendered text.
  * @return string
  */
 function boi_anatomy_filter_content( $content ) {
 	if ( ! boi_anatomy_is_main() ) {
+		// A page gets heading ids and any contents its text places, nothing else.
+		$page = boi_toc_post();
+
+		if ( $page && 'page' === $page->post_type && ! is_admin() && ! is_feed() && is_main_query() && (int) get_the_ID() === $page->ID ) {
+			return boi_toc_fill( boi_anatomy_heading_ids( $content ) );
+		}
+
 		return $content;
 	}
 
 	$post    = boi_anatomy_post();
-	$content = boi_anatomy_notes_anchor( boi_anatomy_heading_ids( $content ) );
+	$content = boi_toc_fill( boi_anatomy_notes_anchor( boi_anatomy_heading_ids( $content ) ) );
 
 	if ( boi_anatomy_on( 'article_mid_next' ) ) {
 		$content = boi_anatomy_insert_mid( $content, boi_anatomy_next_step( $post, $content ) );
@@ -783,12 +1200,13 @@ add_action( 'save_post_post', 'boi_anatomy_save' );
 /* Assets ---------------------------------------------------------------------- */
 
 /**
- * Loads the anatomy styles on single articles.
+ * Loads the anatomy styles on single articles, and on pages for the
+ * contents.
  *
  * @return void
  */
 function boi_anatomy_assets() {
-	if ( is_singular( 'post' ) ) {
+	if ( is_singular( 'post' ) || ( is_page() && ! is_front_page() ) ) {
 		wp_enqueue_style( 'boi-anatomy', BOI_URI . '/assets/css/anatomy.css', array( 'boi-article' ), boi_asset_version( '/assets/css/anatomy.css' ) );
 	}
 }

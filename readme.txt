@@ -2,8 +2,8 @@
 Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
-Requires PHP: 7.4
-Stable tag: 1.113.0
+Requires PHP: 8.4
+Stable tag: 1.114.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -160,9 +160,13 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * KFGQPC HAFS Uthmanic Script: King Fahd Glorious Quran Printing Complex, under its own licence (assets/fonts/scripts/kfgqpc-hafs-uthmanic-script-LICENSE.txt).
 * Minimalist Social & Platform Icons Pack 2.8: GNU General Public License (assets/icons/LICENSE.txt).
 * Photographs: public domain or CC0 from Wikimedia Commons, the Pexels licence and the Pixabay Content Licence, credited under each image and on the Sources and standards page.
-* Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
+* Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later, and from WP TOC by MENJ (GPLv3 or later, based on work by Ikram Hawramani under the MIT License).
 
 == Changelog ==
+
+= 1.114.0 =
+* The theme now requires PHP 8.4.
+* The contents list is adapted from WP TOC: level-three headings are nested under their section, pages get the list too, headings marked no-toc are left out, Arabic headings keep readable anchors, and [wp_toc] or [auto_toc] places the list in the text. Search engines see the sections in the page's structured data.
 
 = 1.113.0 =
 * A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026. Its images follow in a later release.
@@ -340,6 +344,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.114.0 =
+Requires PHP 8.4: check the server's PHP version first. If the WP TOC plugin is active, deactivate it; the theme now does the same work. Then replace the theme files.
 
 = 1.113.0 =
 Replace the theme files. The new article is created when the version changes.
