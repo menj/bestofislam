@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.113.0
+
+Replace the theme files. The new article is created on existing sites by `boi_create_listicles()` when the version changes, and its featured image is added to the media library; its images are in `assets/images/`.
+
 ## Upgrading to 1.112.0
 
 Replace the theme files. The new article is created on existing sites by `boi_create_listicles()` when the version changes, and its featured image is added to the media library; its images are in `assets/images/`.
