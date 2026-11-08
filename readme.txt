@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.111.1
+Stable tag: 1.112.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.112.0 =
+* A new article, "Did the Quran borrow the story of Iblis from Jewish and Christian legend? 7 answers", a reply to Leo Jung's Fallen Angels in Jewish, Christian and Mohammedan Literature (1926), with a featured image and four in-text images. The Jinn tag gains a description.
 
 = 1.111.1 =
 * The article on why the Quran switches between He, We and I gains its featured image and four in-text images, all public domain from Wikimedia Commons.
@@ -334,6 +337,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.112.0 =
+Replace the theme files. The new article is created when the version changes.
 
 = 1.111.1 =
 Replace the theme files. The featured image is added to the media library when the version changes.
