@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.113.6] - 2026-11-09
+
+Verification pass on `does-islam-teach-the-bible-was-corrupted`. No feature removed, no identifier renamed.
+
+### Changed
+- Notes: Ibn Kathir on 12:100 (vol. 4, p. 412) and on 6:115 (vol. 3, p. 322), al-Qurṭubī on 5:13 (vol. 6, p. 115) and on 15:9 (vol. 10, pp. 5 to 6), the page of Ibn al-Qayyim's three views (vol. 2, p. 351), and al-Haythamī's attribution of the Muʿādh report to al-Bazzār in full and to Aḥmad in abridged form (vol. 4, p. 309). All were read in the Shamela text. The claims in the article text match what the pages say.
+
 ## [1.113.5] - 2026-11-09
 
 Canon articles and corrections. No feature removed, no identifier renamed.
