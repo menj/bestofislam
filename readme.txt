@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.113.2
+Stable tag: 1.113.3
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.113.3 =
+* One article no longer names the author of the compilation it draws on. It cites the verses, hadith and tafsir entries themselves.
 
 = 1.113.2 =
 * Wide screens: the page no longer jumps down when the menu font loads, because the three fonts every page paints first are now fetched at once.
@@ -351,6 +354,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.113.3 =
+Replace the theme files. Nothing else to do. An article you have edited keeps your text; the Content tab lists it so you can choose to refresh it.
 
 = 1.113.2 =
 Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.

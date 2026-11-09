@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.113.3
+
+Replace the theme files. `boi_migrate_seed()` refreshes the one changed article on a site where it is unedited. A copy you edited is left alone and listed on the Content tab, where you can tick it to bring it up to date. Git history still holds the earlier wording.
+
 ## Upgrading to 1.113.2
 
 Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.
@@ -457,18 +461,18 @@ Checked against the page images of Ismail R. al Faruqi, *Christian Ethics: A His
 
 #### New article: does-islam-teach-the-bible-was-corrupted (1.78.0)
 
-Built from Bassam Zawadi's compilation of evidence for taḥrīf, with every reference rechecked where a source could be read, and graded by strength in the article. Checked: al-Ṭabarī on 4:46, Ibn Taymiyya (al-Jawab al-Sahih 2/407), Ibn Ḥazm (al-Fisal 2/2-3), Bukhari 7363 and 6841 with Fath al-Bari (all via the Shamela references already used in islamic-dilemma); Ibn Kathir on 12:100 and 6:115, al-Qurtubi on 5:13 and 15:9 (quran.ksu.edu.sa, text only); Majma al-Zawaid 4/312 and Ahmad 19403 / Ibn Majah 1853 (surahquran.com); Ibn al-Qayyim, Ighathat al-Lahfan ch. 13 (Wikisource, no page numbers).
+Built from a widely circulated compilation of evidence for taḥrīf, with every reference rechecked where a source could be read, and graded by strength in the article. Checked: al-Ṭabarī on 4:46, Ibn Taymiyya (al-Jawab al-Sahih 2/407), Ibn Ḥazm (al-Fisal 2/2-3), Bukhari 7363 and 6841 with Fath al-Bari (all via the Shamela references already used in islamic-dilemma); Ibn Kathir on 12:100 and 6:115, al-Qurtubi on 5:13 and 15:9 (quran.ksu.edu.sa, text only); Majma al-Zawaid 4/312 and Ahmad 19403 / Ibn Majah 1853 (surahquran.com); Ibn al-Qayyim, Ighathat al-Lahfan ch. 13 (Wikisource, no page numbers).
 
 Findings that shaped the article:
 
-- The sentence "they lied about their prophets just as they distorted their book" is in Muʿādh's version only (Majmaʿ al-Zawāʾid 4/312, graded by al-Haythamī). The Ibn Abī Awfā version (Ahmad 19403, Ibn Majah 1853) has the same scene without it. Zawadi names the grader "Ibn Hajar al-Haytami"; Majmaʿ al-Zawāʾid is by Nūr al-Dīn al-Haythamī.
-- Al-Qurṭubī on 5:13 gives the meaning reading as his own gloss and the letter-changing reading as "it is said"; Zawadi's use of the passage as a plain statement of textual change overstates it.
+- The sentence "they lied about their prophets just as they distorted their book" is in Muʿādh's version only (Majmaʿ al-Zawāʾid 4/312, graded by al-Haythamī). The Ibn Abī Awfā version (Ahmad 19403, Ibn Majah 1853) has the same scene without it. The compilation names the grader "Ibn Hajar al-Haytami"; Majmaʿ al-Zawāʾid is by Nūr al-Dīn al-Haythamī.
+- Al-Qurṭubī on 5:13 gives the meaning reading as his own gloss and the letter-changing reading as "it is said"; the common use of the passage as a plain statement of textual change overstates it.
 - Ibn al-Qayyim's three views show that the interpretation-only view is a recognised Muslim position, and that he himself sits nearest the middle view. The article concedes this.
-- Zawadi's use of 4:157 and of Hudhayfa's remark (Bukhari 4987) as evidence of textual change is dropped as weak. The stoning report is used for concealment and the mixed state, not for textual loss.
-- Reports from Kaʿb, ʿAbdullāh ibn Salām and Ibn Masʿūd on what the Torah contained are not cited one by one; Bukhari 2125 stands for the group, with the Isaiah 42 parallel. Zawadi's "Banu Israel wrote a book" hadiths (al-Albani, Silsila 2694 and 3860) were not cited because the gradings could not be read from a primary page.
+- The common use of 4:157 and of Hudhayfa's remark (Bukhari 4987) as evidence of textual change is dropped as weak. The stoning report is used for concealment and the mixed state, not for textual loss.
+- Reports from Kaʿb, ʿAbdullāh ibn Salām and Ibn Masʿūd on what the Torah contained are not cited one by one; Bukhari 2125 stands for the group, with the Isaiah 42 parallel. The "Banu Israel wrote a book" hadiths (al-Albani, Silsila 2694 and 3860) were not cited because the gradings could not be read from a primary page.
 - Checked later: Bukhari 4987 (hadithunlocked.com; Fath al-Bari 9/17-18 comments on Hudhayfa's alarm but not on the Jews-and-Christians clause) and 2125 (Fath al-Bari 4/342-343, where Ibn Hajar says Ata may have taken the report from Ibn Amr and Ibn Salam); the names in Ibn al-Qayyim's second view (al-Bukhari, and al-Razi in his tafsir) on the Wikisource text; al-Hakim 7325, which carries the Muʿādh sentence and is graded to the standard of the two Sahihs by al-Hakim and al-Dhahabi. The entry's strength label moves from "moderate at most" to "moderate".
-- Still not checked: the Ahmad Musnad reference Zawadi gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
-- The Tanwir al-Miqbas tafsir, which Zawadi cites as Ibn Abbas, is not used.
+- Still not checked: the Ahmad Musnad reference the compilation gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
+- The Tanwir al-Miqbas tafsir, which the compilation cites as Ibn Abbas, is not used.
 
 Images, batch 4 (1.82.0): the four remaining articles below the rule that `claude/modest-ride-rgvjvk` does not edit. No close-up of a worshipper's face and no prophet in any picture added; the candle photograph for the terrorism article is a plain row of tea lights, not a memorial of a particular attack.
 

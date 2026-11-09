@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.113.3] - 2026-11-09
+
+Content attribution. No feature removed, no identifier renamed.
+
+### Changed
+- `does-islam-teach-the-bible-was-corrupted`: the Notes and the upgrade record credit the compilation of reports, with no personal name and no article title. Every reference, grading and unchecked item stays.
+- `docs/CREDITS.md`: a Sources of material entry credits the compiler there, and only there.
+- `docs/SSOT.md`: a contributor rule that compilers are credited in the credits only.
+
 ## [1.113.2] - 2026-11-09
 
 Mobile-first audit at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 17 page types. No feature removed, no identifier renamed.

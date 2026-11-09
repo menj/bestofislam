@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.113.2, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.113.3, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -37,6 +37,7 @@ These names are public identifiers. Renaming one is a breaking change and needs 
 - Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
 - Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
 - English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
+- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Do not name the individuals who present arguments for or against any position in an article, excerpt, heading, list or published note. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
 - The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
 - Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).
 - A release updates the version in every place listed above, adds a `CHANGELOG.md` entry and its short form in `readme.txt`, adds a note to `docs/UPGRADING.md` when the owner must act, and passes every test in `tests/` and `bin/check-content.py`.
