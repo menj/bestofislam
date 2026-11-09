@@ -165,7 +165,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.113.6 =
-* The notes of the article on whether Islam teaches that the Bible was corrupted now give the volume and page for five commentary and hadith references, checked against the Shamela text.
+* The notes of the article on whether Islam teaches that the Bible was corrupted now give the volume and page for six commentary and hadith references, checked against the Shamela text.
 
 = 1.113.5 =
 * Four new articles on how the canon took shape: the meeting at Jamnia, the earliest New Testament lists, the warning at the end of Revelation, and the disputed books. Each cites its sources by page.
