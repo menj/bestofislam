@@ -786,3 +786,17 @@
 		linear-gradient(100deg, rgba(6, 24, 44, 0.95) 0%, rgba(6, 24, 44, 0.88) 45%, rgba(6, 24, 44, 0.66) 100%),
 		var(--boi-hero-img);
 }
+
+/* ---------- Mobile-first audit (1.113.2) ----------
+   Additive and scoped. Long titles, links and excerpts wrap inside their
+   column instead of running past it; small links get a 24 px target at every
+   width and a finger-sized one on touch screens. Desktop sizes are unchanged
+   except the "Full answer" links, which gain 3 px above and below. */
+.wp-site-blocks { overflow-wrap: break-word; }
+.boi-breadcrumbs li { min-width: 0; overflow-wrap: anywhere; }
+.boi-objection__answer a { display: inline-block; padding-block: 0.2em; }
+@media (pointer: coarse), (max-width: 781px) {
+	.wp-block-post-template .wp-block-post-title a,
+	.wp-block-post-terms a,
+	.boi-related__link { display: inline-block; padding-block: 0.35em; }
+}

@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.113.1. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.113.2. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -101,6 +101,10 @@ Under Appearance, Contextual Links, in three tabs:
 ### Moving from the plugins the theme replaces
 
 Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar are rebuilt inside the theme. While any of them is active, the theme's version of that feature stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
+
+## Performance and mobile
+
+`boi_preload_fonts()` (`inc/front.php`, `wp_head` priority 1) preloads Ysabeau Office, EB Garamond Regular and Platypi, the three files every page paints first, so the header menu does not change height when its font arrives. The paths mirror `theme.json`. `assets/js/nav-state.js` (footer, deferred) mirrors the core menu overlay state into `aria-expanded` on the menu button. The mobile-first audit of 1.113.2, with its findings and open items, is in `docs/UPGRADING.md`.
 
 ## Authoring a listicle
 
@@ -315,7 +319,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.113.1.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.113.2.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

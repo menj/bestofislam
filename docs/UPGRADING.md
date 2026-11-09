@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.113.2
+
+Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.
+
 ## Upgrading to 1.113.1
 
 Replace the theme files. The new file is `assets/js/lead-list.js`. The Display tab gains a Lead and list card with category tabs and arrows and motion on, and no accent override. Nothing else to do.
@@ -235,12 +239,54 @@ schema reversal is needed. Settings added in a later version are ignored by an
 earlier one and return when the later version is reinstalled. Should a future
 release alter the database schema, the change will be documented here first.
 
+## Mobile-first audit, 1.113.2
+
+Measured with Playwright at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 17 page types: home, long-title article, two articles, topic, category, search with and without results, 404, login, glossary, FAQ, reflections, start here, contact, donate and topics. Axe 4, WCAG 2.0 to 2.1 AA and best-practice tags.
+
+| Finding | Severity | Risk of the fix | Status |
+|---|---|---|---|
+| Layout shift of 0.72 to 0.75 on most pages at 1280 (0.06 to 0.08 at 768 and 1024) from the menu font swap | High | Low | Fixed (font preload) |
+| Unbroken long titles, links and excerpts run past their column and are cut off by the page edge (the page itself does not scroll sideways) | High | Low | Fixed |
+| Home section cards 12 px wider than a 320 px column | Medium | Low | Fixed |
+| "Full answer" links 19 px high; post-list title, tag and related links 16 to 22 px high | Medium | Low | Fixed |
+| Menu button lacks `aria-expanded` | Medium | Medium (JS) | Fixed |
+| Desktop menu items 21 px high (pass WCAG 2.2 through spacing) | Low | Medium | Open |
+| Body-size text at 14.4 to 15.2 px in cards and lists; labels at 11.5 to 14 px | Low | Medium | Open |
+| Lead and list slides arrows 10 px past its column on hover offsets (not past the viewport) | Low | Medium | Open |
+| Several `max-width` blocks in `listicle.css`, `footer.css`, `front.css` could be mobile-first | Low | High | Open |
+| Posts with no author print an empty author link (test content only; every real post has an author) | Low | Low | Open |
+| Login screen: remember-me checkbox 21 px; axe landmark and region notes | Low | None (core) | Not ours |
+
+Overflow check results: no page scrolled sideways at any width, before or after, so the usual page-width count is 0 in both rows. The fixed defect was text running past its column inside a page that clips at the edge. Pages with text running past its column (out of 17):
+
+| Width | 320 | 768 | 1280 |
+|---|---|---|---|
+| Before | 7 | 6 | 6 |
+| After | 4 | 4 | 5 |
+
+What remains is 1 to 2 px of rounding in the article body and the 10 px lead-and-list offset. Layout shift, worst page: 0.7511 before and 0.0045 after at 1280; 0.0784 and 0.0116 at 768; 0.0638 and 0.0071 at 1024.
+
+### For manual review
+
+- The font preload names three files by path in `boi_preload_fonts()`. If `theme.json` swaps a font file, change the list to match.
+- `assets/js/nav-state.js` watches the `is-menu-open` class of the core navigation overlay. A WordPress release that renames the class stops the sync without any other effect.
+- The 14.4 to 15.2 px card text and the 11.5 to 14 px labels are a design call. Raising them changes the look of the cards.
+
+### Remaining risks
+
+- Converting the `max-width` blocks needs 1024 and 1280 screenshots per block.
+- Menu items at 21 px pass through spacing; a taller pill would change the header height at desktop widths.
+
+---
+
 ## Roadmap
 
 These are plans, not promises. Each item rests on something on record: the code, the server logs of November 2026, a documented limit, or a feature another of the owner's themes already has. Items leave this list when they ship and go into `CHANGELOG.md`. GitHub had no open issues or pull requests when the list was last checked (2026-11-05), and the code carries no TODO markers.
 
 ### Next
 
+- Convert the desktop-first `max-width` blocks (`listicle.css` lines 155 to 1636, `footer.css`, `front.css`) to `min-width`, one block at a time, with 1024 and 1280 screenshots. Found in the 1.113.2 audit.
+- Lift desktop menu items, tags and card text to the sizes in the audit table. Found in the 1.113.2 audit.
 - Export, import and reset for Theme Options. The abrahamic theme has all three on its Tools tab; here a move to a new site means setting every tab again by hand.
 - Error pages on a network. The admin-page repair runs on the main site only (`boi_error_maybe_sync()`), so the shared drop-ins stop updating once it leaves the theme, while activation and a settings save on any subsite run `boi_error_sync()` unguarded and can rewrite them with that subsite's address. The abrahamic theme hands the job to one site, the lowest ID that runs it.
 - Keep the root `.htaccess` sections on a network when one site leaves the theme. `boi_sec_remove_htaccess()` runs on any site's `switch_theme`, and the shared file then lacks both sections until another site's next sync.
