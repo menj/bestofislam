@@ -800,3 +800,32 @@
 	.wp-block-post-terms a,
 	.boi-related__link { display: inline-block; padding-block: 0.35em; }
 }
+
+/* ---------- WCAG 2.2 AA (1.113.4) ----------
+   One focus ring for every control, drawn in the accent that already swaps
+   with the light and dark switch (5:1 or better on the page background).
+   The footer is navy in both modes, so its ring takes the footer link colour.
+   Field edges use accent-5, which reads at 3:1 or better, in place of the
+   pale accent-6 rule (1.4.11). Links in lists and kickers are 24 pixels
+   tall at every width (2.5.8). */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent-1);
+	outline-offset: 2px;
+}
+.boi-footer :where(a, button, input, select, textarea, summary):focus-visible {
+	outline-color: var(--boi-footer-link, #fff);
+}
+.boi-contact__field input,
+.boi-contact__field textarea,
+.wp-block-search__input {
+	border-color: var(--wp--preset--color--accent-5, currentColor);
+}
+.boi-lead__kicker,
+.wp-block-post-terms a {
+	display: inline-block;
+	min-block-size: 24px;
+	line-height: 24px;
+}
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+}

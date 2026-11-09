@@ -1033,14 +1033,15 @@ function boi_render_glossary_bar() {
 		: 'role="combobox" aria-autocomplete="list" aria-controls="boi-gresults" aria-expanded="false"';
 
 	return sprintf(
-		'<div class="boi-gbar" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" %7$s><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
+		'<div class="boi-gbar" role="region" aria-label="%8$s" data-index="%1$s"><div class="boi-gbar__inner"><a class="boi-gbar__brand" href="%1$s">%2$s</a><div class="boi-gbar__search" role="search"><label class="screen-reader-text" for="boi-gq">%3$s</label><input id="boi-gq" type="search" placeholder="%3$s" autocomplete="off" spellcheck="false" %7$s><ul id="boi-gresults" class="boi-gbar__results" role="listbox" hidden></ul></div><nav class="boi-gbar__az" aria-label="%4$s"><ul>%5$s</ul></nav></div><script type="application/json" id="boi-gterms">%6$s</script></div>',
 		esc_url( $base ),
 		esc_html__( 'Glossary', 'bestofislam' ),
 		esc_attr__( 'Find a term', 'bestofislam' ),
 		esc_attr__( 'Jump to a letter', 'bestofislam' ),
 		$az,
 		wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
-		$input_aria
+		$input_aria,
+		esc_attr__( 'Glossary tools', 'bestofislam' )
 	);
 }
 
