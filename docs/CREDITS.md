@@ -34,6 +34,8 @@ header is the grant. Their authors are credited here with thanks.
 
 The list of reports on textual corruption (taḥrīf) in the article on whether Islam teaches that the Bible was corrupted draws on the compilation of evidence by Bassam Zawadi. Each reference was rechecked where a source could be read. The article itself cites only the verses, hadith, tafsir entries and works.
 
+Samuel Davidson, *The Canon of the Bible: Its Formation, History, and Fluctuations* (New York: Peter Eckler, 1877; Project Gutenberg eBook 30132, https://www.gutenberg.org/ebooks/30132) is a public-domain text. The articles on the canon quote it by printed page, with a modern source beside it.
+
 ## Icons
 
 Minimalist Social & Platform Icons Pack 2.8, under the GNU General Public

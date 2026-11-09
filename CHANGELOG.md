@@ -4,6 +4,19 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.113.5] - 2026-11-09
+
+Canon articles and corrections. No feature removed, no identifier renamed.
+
+### Added
+- Four articles: `jamnia-and-the-hebrew-canon`, `earliest-new-testament-lists`, `revelation-warning-and-the-canon` and `disputed-books-of-the-new-testament`. They join the reading order after `second-peter`. They ship without photographs; D30 asks for three each, to come from Wikimedia Commons.
+- `docs/CREDITS.md`: Davidson's history of the canon, as a public-domain text.
+
+### Changed
+- `pauline-letters-authorship`: the Muratorian fragment is called "usually dated to the later second century", the letter to the Alexandrians may mean Hebrews, and the canon is said to have "taken shape" instead of "closed" with 2 Peter 3:16.
+- `septuagint`: the lists of the Ethiopian church vary between authorities.
+- Page references to Davidson's history added to the notes of `septuagint`, `second-peter`, `who-changed-the-bible`, `oldest-bible-codices`, `early-christians-yahweh-evil-gnosticism-marcion` and `pauline-letters-authorship`.
+
 ## [1.113.4] - 2026-11-09
 
 WCAG 2.2 AA pass. No feature removed, no identifier renamed.
