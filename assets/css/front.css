@@ -804,7 +804,7 @@
 /* ---------- WCAG 2.2 AA (1.113.4) ----------
    One focus ring for every control, drawn in the accent that already swaps
    with the light and dark switch (5:1 or better on the page background).
-   The footer is navy in both modes, so its ring takes the footer link colour.
+   The footer and the dark bands are navy in both modes, so their rings are light.
    Field edges use accent-5, which reads at 3:1 or better, in place of the
    pale accent-6 rule (1.4.11). Links in lists and kickers are 24 pixels
    tall at every width (2.5.8). */
@@ -814,6 +814,9 @@
 }
 .boi-footer :where(a, button, input, select, textarea, summary):focus-visible {
 	outline-color: var(--boi-footer-link, #fff);
+}
+.boi-band.is-dark :where(a, button, input, select, textarea, summary):focus-visible {
+	outline-color: #fff;
 }
 .boi-contact__field input,
 .boi-contact__field textarea,
