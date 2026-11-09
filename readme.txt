@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.113.5
+Stable tag: 1.113.6
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.113.6 =
+* The notes of the article on whether Islam teaches that the Bible was corrupted now give the volume and page for six commentary and hadith references, checked against the Shamela text.
 
 = 1.113.5 =
 * Four new articles on how the canon took shape: the meeting at Jamnia, the earliest New Testament lists, the warning at the end of Revelation, and the disputed books. Each cites its sources by page.
@@ -363,6 +366,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.113.6 =
+Replace the theme files. Nothing else to do.
 
 = 1.113.5 =
 Replace the theme files. Nothing else to do. The four new articles appear on the next admin page load; an edited article keeps your text.

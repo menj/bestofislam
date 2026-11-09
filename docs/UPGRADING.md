@@ -61,6 +61,12 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.113.6
+
+Replace the theme files. The seeded article refreshes where it is unedited; an edited copy is listed on the Content tab.
+
+Still unverified in the article: the printed pages of the editions that Shamela reproduces for al-Qurṭubī and Ibn al-Qayyim; the number of the abridged report in the Musnad of Ahmad; and every grading on dorar.net, which was not contacted ("grading not checked on dorar.net").
+
 ## Upgrading to 1.113.5
 
 Replace the theme files. Population creates the four new articles on the next load of an admin page, and `boi_migrate_seed()` refreshes the changed articles where they are unedited. An article you edited keeps your text and appears on the Content tab for a manual refresh.
@@ -497,7 +503,7 @@ Findings that shaped the article:
 - The common use of 4:157 and of Hudhayfa's remark (Bukhari 4987) as evidence of textual change is dropped as weak. The stoning report is used for concealment and the mixed state, not for textual loss.
 - Reports from Kaʿb, ʿAbdullāh ibn Salām and Ibn Masʿūd on what the Torah contained are not cited one by one; Bukhari 2125 stands for the group, with the Isaiah 42 parallel. The "Banu Israel wrote a book" hadiths (al-Albani, Silsila 2694 and 3860) were not cited because the gradings could not be read from a primary page.
 - Checked later: Bukhari 4987 (hadithunlocked.com; Fath al-Bari 9/17-18 comments on Hudhayfa's alarm but not on the Jews-and-Christians clause) and 2125 (Fath al-Bari 4/342-343, where Ibn Hajar says Ata may have taken the report from Ibn Amr and Ibn Salam); the names in Ibn al-Qayyim's second view (al-Bukhari, and al-Razi in his tafsir) on the Wikisource text; al-Hakim 7325, which carries the Muʿādh sentence and is graded to the standard of the two Sahihs by al-Hakim and al-Dhahabi. The entry's strength label moves from "moderate at most" to "moderate".
-- Still not checked: the Ahmad Musnad reference the compilation gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
+- Still not checked: the number of the abridged report in the Ahmad Musnad (al-Haythamī says Ahmad has the Muʿādh report in abridged form; the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence). Checked in 1.113.6: the volume and page of Ibn Kathir, al-Qurṭubī, al-Haythamī and Ibn al-Qayyim in the Shamela text.
 - The Tanwir al-Miqbas tafsir, which the compilation cites as Ibn Abbas, is not used.
 
 Images, batch 4 (1.82.0): the four remaining articles below the rule that `claude/modest-ride-rgvjvk` does not edit. No close-up of a worshipper's face and no prophet in any picture added; the candle photograph for the terrorism article is a plain row of tea lights, not a memorial of a particular attack.
