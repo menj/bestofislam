@@ -1268,6 +1268,11 @@ function boi_handle_refresh_articles() {
 
 	check_admin_referer( 'boi_refresh_articles' );
 
+	if ( function_exists( 'boi_sync_disabled' ) && boi_sync_disabled() ) {
+		wp_safe_redirect( add_query_arg( array( 'page' => 'boi-settings', 'tab' => 'content' ), admin_url( 'themes.php' ) ) ); // The switch comes first: nothing is written.
+		exit;
+	}
+
 	$chosen  = isset( $_POST['boi_articles'] ) ? array_map( 'sanitize_title', (array) wp_unslash( $_POST['boi_articles'] ) ) : array();
 	$allowed = boi_differing_articles();
 	$hashes  = (array) get_option( 'boi_article_hashes', array() );

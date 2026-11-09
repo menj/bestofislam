@@ -1030,9 +1030,11 @@ function boi_render_content_tab() {
 			printf( '<div class="notice notice-success is-dismissible inline"><p>%s</p></div>', esc_html( sprintf( /* translators: %d: number of articles. */ _n( '%d article brought up to date.', '%d articles brought up to date.', absint( $_GET['boi_refreshed'] ), 'bestofislam' ), absint( $_GET['boi_refreshed'] ) ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
 
-		$differing = boi_differing_articles();
+		$differing = ( function_exists( 'boi_sync_disabled' ) && boi_sync_disabled() ) ? array() : boi_differing_articles();
 
-		if ( empty( $differing ) ) {
+		if ( function_exists( 'boi_sync_disabled' ) && boi_sync_disabled() ) {
+			echo '<p>' . esc_html__( 'The content sync is switched off by BOI_DISABLE_CONTENT_SYNC.', 'bestofislam' ) . '</p>';
+		} elseif ( empty( $differing ) ) {
 			echo '<p>' . esc_html__( 'Every seeded article matches this version of the theme.', 'bestofislam' ) . '</p>';
 		} else {
 			echo '<p>' . esc_html__( 'These articles differ from this version of the theme. Updates refresh a seeded article automatically only when they can tell it has not been edited; for these they cannot, so they are left alone. Tick any you have not edited yourself to bring them up to date. Ticked articles are replaced with this version\'s text, and any edits in them are lost.', 'bestofislam' ) . '</p>';

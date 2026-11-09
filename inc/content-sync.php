@@ -268,6 +268,7 @@ function boi_sync_record( $post_id, $item ) {
 		update_post_meta( $post_id, '_boi_sync_bfp', $item['fp'] );
 		update_post_meta( $post_id, '_boi_sync_key', $item['slug'] );
 		delete_post_meta( $post_id, '_boi_sync_ack' );
+		delete_post_meta( $post_id, '_boi_sync_keep_replaced' );
 	}
 }
 
@@ -336,7 +337,7 @@ function boi_superseded_pairs() {
 			continue;
 		}
 		$s = boi_sync_state( $old_post, $old );
-		if ( '' !== $s['recorded'] && $s['recorded'] === $s['stored'] && 'superseded' !== $s['ack'] ) {
+		if ( '' !== $s['recorded'] && $s['recorded'] === $s['stored'] && 'superseded' !== $s['ack'] && ! get_post_meta( $old_post->ID, '_boi_sync_keep_replaced', true ) ) {
 			$cache[ (int) $old_post->ID ] = (int) $new_post->ID; // Not when the owner chose to keep it.
 		}
 	}
@@ -391,7 +392,8 @@ function boi_sync_plan() {
 			continue;
 		}
 		$ack    = (string) get_post_meta( $old_post->ID, '_boi_sync_ack', true );
-		$rows[] = array( 'key' => $old, 'slug' => $old, 'title' => $old_post->post_title, 'post_id' => (int) $old_post->ID, 'action' => isset( $pairs[ $old_post->ID ] ) ? 'supersede' : ( in_array( $ack, array( 'superseded', 'removed' ), true ) ? 'kept' : 'superseded' ) );
+		$held   = in_array( $ack, array( 'superseded', 'removed' ), true ) || get_post_meta( $old_post->ID, '_boi_sync_keep_replaced', true );
+		$rows[] = array( 'key' => $old, 'slug' => $old, 'title' => $old_post->post_title, 'post_id' => (int) $old_post->ID, 'action' => isset( $pairs[ $old_post->ID ] ) ? 'supersede' : ( $held ? 'kept' : 'superseded' ) );
 	}
 	return $rows;
 }
@@ -533,6 +535,9 @@ function boi_sync_handle_item() {
 			boi_sync_log( $slug, 'the Trash was refused while a removal guard holds' );
 		} else {
 			update_post_meta( $post->ID, '_boi_sync_ack', $item ? $item['fp'] : ( isset( boi_supersedes()[ $slug ] ) ? 'superseded' : 'removed' ) );
+			if ( isset( boi_supersedes()[ $slug ] ) ) {
+				update_post_meta( $post->ID, '_boi_sync_keep_replaced', 1 ); // Holds whether or not the old slug stays in the bundle.
+			}
 			boi_sync_log( $slug, 'kept the owner text' );
 		}
 		boi_sync_apply();
@@ -771,9 +776,15 @@ function boi_superseded_fallback() {
 				return;
 			}
 			$ids = boi_superseded_ids();
-			if ( $ids && ! $q->get( 'post__in' ) ) {
-				$q->set( 'post__not_in', array_values( array_unique( array_merge( (array) $q->get( 'post__not_in' ), $ids ) ) ) );
+			if ( ! $ids ) {
+				return;
 			}
+			if ( $q->get( 'post__in' ) ) {
+				// A query that names its posts still must not return a superseded one.
+				$q->set( 'post__in', array_values( array_diff( array_map( 'intval', (array) $q->get( 'post__in' ) ), $ids ) ) ?: array( 0 ) );
+				return;
+			}
+			$q->set( 'post__not_in', array_values( array_unique( array_merge( (array) $q->get( 'post__not_in' ), $ids ) ) ) );
 		}
 	);
 	add_filter(
