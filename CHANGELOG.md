@@ -4,6 +4,21 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.114.0] - 2026-11-09
+
+Seeded articles follow the bundle, safely. No feature removed, no identifier renamed.
+
+### Changed
+- Population updates an article only while a fingerprint recorded when the theme wrote it proves the owner has not edited it. An article with no record counts as edited. The older rule that took a never-modified article for untouched is removed.
+- An article the bundle dropped goes to the Trash when it is untouched, and only articles that carry `_boi_sync_key` are candidates.
+- A corrected article reaches the site without a version bump: the sync runs when the manifest checksum changes.
+
+### Added
+- `inc/content-sync.php`: the review card on Theme Options, Content (dry run, diff, Take the bundled text, Keep mine, Run the review now, a log of the last 100 changes), the supersedes map with a 301 at any address, hiding through the unlist module and the Trash, the guards, and the `BOI_DISABLE_CONTENT_SYNC` switch.
+- `inc/data/supersedes.json` (empty), `inc/data/seed-manifest.json` and `bin/seed-manifest.php`. `bin/check-content.py` checks that the manifest is current.
+- `tests/content-sync-test.php`.
+- The integrity check is never cached, a "Keep mine" on an article to be replaced holds when a guard later clears, the bundled slug is recorded before an article is trashed so its old address still redirects, and the text record moves with a renamed article. The legacy refresh form obeys the kill switch, a replaced article's "Keep mine" holds whether or not its slug stays in the bundle, and the fallback hiding also cuts superseded IDs out of queries that name their posts.
+
 ## [1.113.6] - 2026-11-09
 
 Verification pass on `does-islam-teach-the-bible-was-corrupted`. No feature removed, no identifier renamed.
