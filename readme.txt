@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.113.0
+Stable tag: 1.113.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -67,7 +67,7 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
-* Display: rank badges, the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
 * Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace.
@@ -163,6 +163,12 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.113.1 =
+* The lead and list reacts. A row under the pointer or the keyboard focus gets a soft tint that grows past it, an accent bar on its left edge, a zoom on its thumbnail, an underlined accent title and an arrow. The first row carries the bar at rest.
+* Each piece shows its category as a coloured tab that links to the category, with its date and reading time under the title. The large piece shows a Read arrow on hover and focus.
+* The block fades up in turn as it scrolls into view. Visitors who ask for reduced motion see colour changes only.
+* The Display tab has a Lead and list card: category tabs, arrows and motion, and an accent colour.
 
 = 1.113.0 =
 * A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026. Its images follow in a later release.
@@ -340,6 +346,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.113.1 =
+Replace the theme files. Nothing else to do; the new Lead and list card on the Display tab starts with everything on.
 
 = 1.113.0 =
 Replace the theme files. The new article is created when the version changes.

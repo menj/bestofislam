@@ -17,6 +17,7 @@ define( 'ABSPATH', __DIR__ . '/' );
 
 class WP_Post {
 	public $ID;
+	public $post_content = 'one two three four five six seven eight nine ten';
 	public $post_status = 'publish';
 	public $post_title  = '';
 	public function __construct( $id, $img = true ) {
@@ -26,13 +27,18 @@ class WP_Post {
 	}
 	public $img;
 }
-class WP_Term {}
+class WP_Term {
+	public $slug;
+	public $name;
+	public $term_id;
+}
 class WP_Query {}
 class WP_Block {}
 
 $GLOBALS['boi_t'] = array(
 	'posts'    => array(),
 	'unlisted' => array(),
+	'filters'  => array(),
 );
 function boi_t_posts( array $spec ) {
 	$GLOBALS['boi_t']['posts'] = array();
@@ -43,10 +49,45 @@ function boi_t_posts( array $spec ) {
 }
 function add_action() {}
 function add_filter() {}
-function __( $s ) {
+function apply_filters( $tag, $value ) {
+	return $GLOBALS['boi_t']['filters'][ $tag ] ?? $value;
+}
+function strip_shortcodes( $s ) {
 	return $s;
 }
+function wp_strip_all_tags( $s ) {
+	return strip_tags( (string) $s );
+}
+function _n( $a ) {
+	return $a;
+}
 function esc_html__( $s ) {
+	return $s;
+}
+function get_the_date( $f, $p ) {
+	return 'c' === $f ? '2026-11-05T00:00:00+00:00' : '5 Nov 2026';
+}
+function get_the_category( $id ) {
+	$cats = array(
+		1 => array( 'history' ),
+		2 => array( 'uncategorized', 'scripture' ),
+		3 => array( 'uncategorized' ),
+		4 => array( 'a-new-section' ),
+	);
+	$out  = array();
+	foreach ( $cats[ $id ] ?? array( 'theology' ) as $slug ) {
+		$c           = new WP_Term();
+		$c->slug     = $slug;
+		$c->name     = ucfirst( str_replace( '-', ' ', $slug ) );
+		$c->term_id  = crc32( $slug ) % 1000;
+		$out[]       = $c;
+	}
+	return $out;
+}
+function get_category_link( $id ) {
+	return '/category/' . $id . '/';
+}
+function __( $s ) {
 	return $s;
 }
 function esc_html( $s ) {
@@ -164,5 +205,46 @@ boi_test_check( array( 7, 2, 3, 4, 5, 6 ) === $r['ids'] && false !== strpos( $r[
 
 $r = boi_lead_list( boi_t_posts( array( 1 => true, 2 => false, 3 => true, 4 => true, 5 => true, 6 => true ) ) );
 boi_test_check( 1 === substr_count( $r['html'], 'boi-placeholder' ), 'a list piece without a photograph shows the drawn placeholder' );
+
+// Category tabs, meta line, current row, settings.
+$r = boi_lead_list( boi_t_posts( array( 1 => true, 2 => true, 3 => true, 4 => true, 5 => true, 6 => true ) ) );
+boi_test_check( 6 === substr_count( $r['html'], 'class="boi-lead-list__meta"' ) && false !== strpos( $r['html'], '1 min read' ), 'the lead and each item carry a date and reading-time line' );
+boi_test_check( 1 === preg_match( '#<a class="boi-lead-list__tab boi-lead-list__tab--c2" href="/category/\d+/">History</a>#', $r['html'] ), 'the lead tab is a link that names the category and keeps its colour' );
+boi_test_check( false !== strpos( $r['html'], '--c1" href="/category/' ) && false === strpos( $r['html'], '>Uncategorized<' ), 'the uncategorised term is skipped for the next category' );
+boi_test_check( 5 === substr_count( $r['html'], '<a class="boi-lead-list__tab' ), 'a piece with only the default category has no tab' );
+boi_test_check( 1 === substr_count( $r['html'], 'is-current' ) && false !== strpos( $r['html'], 'boi-lead-list__item is-current' ), 'only the first list item is the current row' );
+boi_test_check( 5 === substr_count( $r['html'], 'class="boi-lead-list__arrow" aria-hidden="true"' ) && false !== strpos( $r['html'], 'boi-lead-list__read" aria-hidden="true"' ), 'arrows are decoration and hidden from assistive technology' );
+boi_test_check( false === strpos( $r['html'], 'boi-lead-list--calm' ) && false === strpos( $r['html'], 'style="--boi-ll-accent' ), 'by default the motion is on and the theme accent is used' );
+
+$GLOBALS['boi_t']['filters'] = array(
+	'boi_lead_list_show_tabs' => false,
+	'boi_lead_list_motion'    => false,
+	'boi_lead_list_accent'    => '#8a1f2c',
+);
+$r = boi_lead_list( boi_t_posts( array( 1 => true, 2 => true, 3 => true, 4 => true, 5 => true, 6 => true ) ) );
+boi_test_check( false === strpos( $r['html'], '<a class="boi-lead-list__tab' ), 'the tabs switch removes the tabs' );
+boi_test_check( false !== strpos( $r['html'], 'boi-lead-list--calm' ) && false !== strpos( $r['html'], 'style="--boi-ll-accent:#8a1f2c"' ), 'the motion switch adds the calm class and the accent override is applied' );
+$GLOBALS['boi_t']['filters'] = array( 'boi_lead_list_accent' => 'red; background:url(x)' );
+$r = boi_lead_list( boi_t_posts( array( 1 => true, 2 => true, 3 => true, 4 => true, 5 => true, 6 => true ) ) );
+boi_test_check( false === strpos( $r['html'], 'style=' . '"--boi-ll-accent' ), 'an accent that is not a hex colour is dropped' );
+$GLOBALS['boi_t']['filters'] = array();
+
+// Contrast: the tab pairs in both appearances, and the hovered title on its tint.
+$boi_light = array( 'base' => '#ffffff', 'contrast' => '#0d2b4e', 'a1' => '#1d6ac3', 'a2' => '#e8b33c', 'a3' => '#eaf2fb', 'a5' => '#4a5a6e' );
+$boi_dark  = array( 'base' => '#0a2038', 'contrast' => '#eaf2fb', 'a1' => '#3fa9f5', 'a2' => '#e8b33c', 'a3' => '#0f2b49', 'a5' => '#9db3c9' );
+foreach ( array( 'light' => $boi_light, 'dark' => $boi_dark ) as $mode => $t ) {
+	$pairs = array( 'c0' => array( $t['a1'], $t['base'] ), 'c1' => array( $t['a2'], '#0d2b4e' ), 'c2' => array( $t['contrast'], $t['base'] ), 'c3' => array( $t['a5'], $t['base'] ), 'c4' => array( $t['a3'], $t['contrast'] ) );
+	foreach ( $pairs as $name => $pair ) {
+		$ratio = boi_lead_list_ratio( $pair[0], $pair[1] );
+		boi_test_check( $ratio >= 4.5, sprintf( 'tab %s in the %s appearance reads at %.1f:1 (needs 4.5)', $name, $mode, $ratio ) );
+	}
+	$text = boi_lead_list_mix( $t['a1'], $t['contrast'], 70 );
+	$tint = boi_lead_list_mix( $t['a1'], $t['base'], 9 );
+	$ratio = boi_lead_list_ratio( $text, $tint );
+	boi_test_check( $ratio >= 4.5, sprintf( 'the hovered title in the %s appearance reads at %.1f:1 on its tint', $mode, $ratio ) );
+	$ratio = boi_lead_list_ratio( $t['a5'], boi_lead_list_mix( $t['a1'], $t['base'], 9 ) );
+	boi_test_check( $ratio >= 4.5, sprintf( 'the meta line in the %s appearance reads at %.1f:1 on the tint', $mode, $ratio ) );
+}
+boi_test_check( boi_lead_list_accent_ok( '#1d6ac3' ) && ! boi_lead_list_accent_ok( '#ffffff' ) && ! boi_lead_list_accent_ok( '#f5f5a0' ) && ! boi_lead_list_accent_ok( '#8a1f2c' ), 'an accent override that cannot carry text in both appearances is refused' );
 
 exit( $boi_fail ? 1 : 0 );

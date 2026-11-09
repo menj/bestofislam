@@ -89,14 +89,21 @@ function boi_lead_list( array $posts, array $args = array() ) {
 		return $empty;
 	}
 	$credit = boi_image_credit_markup( $lead );
+	$set    = boi_lead_list_settings();
 
-	$html  = '<section class="boi-lead-list alignwide" aria-labelledby="' . esc_attr( $heading_id ) . '">';
+	$classes = 'boi-lead-list alignwide' . ( $set['motion'] ? '' : ' boi-lead-list--calm' );
+	$style   = '' !== $set['accent'] ? ' style="--boi-ll-accent:' . esc_attr( $set['accent'] ) . '"' : '';
+
+	$html  = '<section class="' . esc_attr( $classes ) . '" aria-labelledby="' . esc_attr( $heading_id ) . '"' . $style . '>';
 	$html .= '<h2 class="boi-lead-list__heading" id="' . esc_attr( $heading_id ) . '">' . esc_html( $args['heading'] ) . '</h2>';
 	$html .= '<div class="boi-lead-list__grid">';
 	$html .= '<article class="boi-lead-list__lead"><figure class="boi-lead-list__figure">';
 	$html .= '<div class="boi-lead-list__media">' . $lead_img;
 	$html .= '<div class="boi-lead-list__overlay"><span class="boi-lead-list__rule" aria-hidden="true"></span>';
+	$html .= $set['tabs'] ? boi_lead_list_tab( $lead ) : '';
 	$html .= '<h3 class="boi-lead-list__title"><a class="boi-lead-list__link" href="' . esc_url( get_permalink( $lead ) ) . '">' . esc_html( get_the_title( $lead ) ) . '</a></h3>';
+	$html .= boi_lead_list_meta( $lead );
+	$html .= '<span class="boi-lead-list__read" aria-hidden="true">' . esc_html__( 'Read', 'bestofislam' ) . ' <span class="boi-lead-list__arrow">&rarr;</span></span>';
 	$html .= '</div></div>';
 	if ( '' !== $credit ) {
 		$html .= '<figcaption class="boi-lead-list__credit">' . $credit . '</figcaption>';
@@ -104,7 +111,7 @@ function boi_lead_list( array $posts, array $args = array() ) {
 	$html .= '</figure></article>';
 
 	$html .= '<ul class="boi-lead-list__list">';
-	foreach ( $list as $item ) {
+	foreach ( $list as $n => $item ) {
 		$thumb = boi_list_thumbnail(
 			$item,
 			array(
@@ -113,9 +120,14 @@ function boi_lead_list( array $posts, array $args = array() ) {
 				'sizes' => '(max-width: 781px) 40vw, 12rem',
 			)
 		);
-		$html .= '<li class="boi-lead-list__item">';
+		$html .= '<li class="boi-lead-list__item' . ( 0 === $n ? ' is-current' : '' ) . '" style="--boi-ll-i:' . (int) $n . '">';
 		$html .= '<span class="boi-lead-list__thumb" aria-hidden="true">' . $thumb . '</span>';
+		$html .= '<div class="boi-lead-list__text">';
+		$html .= $set['tabs'] ? boi_lead_list_tab( $item ) : '';
 		$html .= '<h3 class="boi-lead-list__item-title"><a class="boi-lead-list__link" href="' . esc_url( get_permalink( $item ) ) . '">' . esc_html( get_the_title( $item ) ) . '</a></h3>';
+		$html .= boi_lead_list_meta( $item );
+		$html .= '</div>';
+		$html .= '<span class="boi-lead-list__arrow" aria-hidden="true">&rarr;</span>';
 		$html .= '</li>';
 	}
 	$html .= '</ul></div></section>';
@@ -124,6 +136,151 @@ function boi_lead_list( array $posts, array $args = array() ) {
 		'html' => $html,
 		'ids'  => array_merge( array( $lead->ID ), wp_list_pluck( $list, 'ID' ) ),
 	);
+}
+
+/**
+ * The lead and list settings: the accent colour override, the category tabs
+ * and the arrows and motion. The Display tab of the Theme Options screen
+ * saves them; each has a filter.
+ *
+ * @return array { accent: string, tabs: bool, motion: bool }
+ */
+function boi_lead_list_settings() {
+	$opts   = function_exists( 'boi_get_options' ) ? boi_get_options() : array();
+	$accent = isset( $opts['ll_accent'] ) ? (string) $opts['ll_accent'] : '';
+	$accent = (string) apply_filters( 'boi_lead_list_accent', $accent );
+
+	return array(
+		'accent' => preg_match( '/^#[0-9a-f]{6}$/i', $accent ) ? strtolower( $accent ) : '',
+		'tabs'   => (bool) apply_filters( 'boi_lead_list_show_tabs', ! isset( $opts['ll_tabs'] ) || ! empty( $opts['ll_tabs'] ) ),
+		'motion' => (bool) apply_filters( 'boi_lead_list_motion', ! isset( $opts['ll_motion'] ) || ! empty( $opts['ll_motion'] ) ),
+	);
+}
+
+/**
+ * Relative luminance of a hex colour.
+ *
+ * @param string $hex Colour, #rrggbb.
+ * @return float
+ */
+function boi_lead_list_luminance( $hex ) {
+	$hex = ltrim( $hex, '#' );
+	$out = 0.0;
+	foreach ( array( array( 0.2126, 0 ), array( 0.7152, 2 ), array( 0.0722, 4 ) ) as list( $weight, $at ) ) {
+		$c    = hexdec( substr( $hex, $at, 2 ) ) / 255;
+		$out += $weight * ( $c <= 0.03928 ? $c / 12.92 : pow( ( $c + 0.055 ) / 1.055, 2.4 ) );
+	}
+	return $out;
+}
+
+/**
+ * Mix two hex colours, the first at $share percent.
+ *
+ * @param string $a     First colour.
+ * @param string $b     Second colour.
+ * @param int    $share Percent of the first.
+ * @return string
+ */
+function boi_lead_list_mix( $a, $b, $share ) {
+	$a   = ltrim( $a, '#' );
+	$b   = ltrim( $b, '#' );
+	$out = '#';
+	foreach ( array( 0, 2, 4 ) as $at ) {
+		$out .= str_pad( dechex( (int) round( hexdec( substr( $a, $at, 2 ) ) * $share / 100 + hexdec( substr( $b, $at, 2 ) ) * ( 100 - $share ) / 100 ) ), 2, '0', STR_PAD_LEFT );
+	}
+	return $out;
+}
+
+/**
+ * The contrast ratio of two hex colours.
+ *
+ * @param string $a First colour.
+ * @param string $b Second colour.
+ * @return float
+ */
+function boi_lead_list_ratio( $a, $b ) {
+	$la = boi_lead_list_luminance( $a );
+	$lb = boi_lead_list_luminance( $b );
+	return ( max( $la, $lb ) + 0.05 ) / ( min( $la, $lb ) + 0.05 );
+}
+
+/**
+ * Whether an accent override can carry the hovered title at 4.5:1 on the
+ * hover tint, in the light and the dark appearance. The stylesheet mixes the
+ * accent 70% with the contrast colour for text, and 9% with the base for the
+ * tint, so this does the same sums with the theme's own values.
+ *
+ * @param string $hex Colour, #rrggbb.
+ * @return bool
+ */
+function boi_lead_list_accent_ok( $hex ) {
+	foreach ( array( array( '#ffffff', '#0d2b4e' ), array( '#0a2038', '#eaf2fb' ) ) as $mode ) {
+		$text = boi_lead_list_mix( $hex, $mode[1], 70 );
+		$tint = boi_lead_list_mix( $hex, $mode[0], 9 );
+		if ( boi_lead_list_ratio( $text, $tint ) < 4.5 ) {
+			return false;
+		}
+	}
+	return true;
+}
+
+/** How many colours the category tabs rotate through (see lead-list.css). */
+const BOI_LEAD_LIST_TAB_COLOURS = 5;
+
+/**
+ * The category tab of a piece: a pill that names its first category and
+ * links to that category's archive. The ten sections have a fixed colour, two
+ * to a colour; any other category takes its slug's hash. A category keeps
+ * one colour everywhere.
+ *
+ * @param WP_Post $post Piece.
+ * @return string Markup, or '' when the piece has no category.
+ */
+function boi_lead_list_tab( $post ) {
+	$cats = get_the_category( $post->ID );
+	$cats = is_array( $cats ) ? $cats : array();
+	$cat  = null;
+	foreach ( $cats as $c ) {
+		if ( 'uncategorized' !== $c->slug ) {
+			$cat = $c;
+			break;
+		}
+	}
+	if ( ! $cat ) {
+		return '';
+	}
+	$map    = array(
+		'theology'          => 0,
+		'politics-today'    => 0,
+		'scripture'         => 1,
+		'archaeology'       => 1,
+		'history'           => 2,
+		'interfaith-studies' => 2,
+		'religion'          => 3,
+		'philosophy'        => 3,
+		'culture'           => 4,
+		'science-and-reason' => 4,
+	);
+	$colour = isset( $map[ $cat->slug ] ) ? $map[ $cat->slug ] : abs( crc32( (string) $cat->slug ) ) % BOI_LEAD_LIST_TAB_COLOURS;
+
+	return '<a class="boi-lead-list__tab boi-lead-list__tab--c' . (int) $colour . '" href="' . esc_url( get_category_link( $cat->term_id ) ) . '">' . esc_html( $cat->name ) . '</a>';
+}
+
+/**
+ * The line under a title: the date and the reading time at 220 words a
+ * minute, the rate the reading-time block uses.
+ *
+ * @param WP_Post $post Piece.
+ * @return string
+ */
+function boi_lead_list_meta( $post ) {
+	$words   = str_word_count( wp_strip_all_tags( strip_shortcodes( (string) $post->post_content ) ) );
+	$minutes = max( 1, (int) round( $words / 220 ) );
+
+	return '<p class="boi-lead-list__meta"><time datetime="' . esc_attr( get_the_date( 'c', $post ) ) . '">' . esc_html( get_the_date( 'j M Y', $post ) ) . '</time>'
+		. '<span class="boi-lead-list__sep" aria-hidden="true">&middot;</span>'
+		/* translators: %d: minutes. */
+		. '<span>' . esc_html( sprintf( _n( '%d min read', '%d min read', $minutes, 'bestofislam' ), $minutes ) ) . '</span></p>';
 }
 
 /**
@@ -267,5 +424,6 @@ function boi_lead_list_assets() {
 		return;
 	}
 	wp_enqueue_style( 'boi-lead-list', BOI_URI . '/assets/css/lead-list.css', array( 'boi-front' ), boi_asset_version( '/assets/css/lead-list.css' ) );
+	wp_enqueue_script( 'boi-lead-list', BOI_URI . '/assets/js/lead-list.js', array(), boi_asset_version( '/assets/js/lead-list.js' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'boi_lead_list_assets', 20 );
