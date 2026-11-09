@@ -568,6 +568,34 @@ function boi_preload_hero_background() {
 add_action( 'wp_head', 'boi_preload_hero_background', 1 );
 
 /**
+ * Preloads the three font files every page paints first: the header menu face
+ * (Ysabeau Office), the body face (EB Garamond Regular) and the headings face
+ * (Platypi). Without it the menu is measured in the fallback face, then again
+ * in the real one, and on wide screens the header changes height and moves the
+ * page. The files are the ones theme.json declares; the crossorigin attribute
+ * is required for font preloads.
+ *
+ * @return void
+ */
+function boi_preload_fonts() {
+	if ( is_admin() ) {
+		return;
+	}
+	$files = array(
+		'ysabeau-office/YsabeauOffice-VariableFont_wght.woff2',
+		'eb-garamond/EBGaramond-Regular.woff2',
+		'platypi/Platypi-VariableFont_wght.woff2',
+	);
+	foreach ( $files as $file ) {
+		printf(
+			"<link rel=\"preload\" as=\"font\" type=\"font/woff2\" href=\"%s\" crossorigin>\n",
+			esc_url( BOI_URI . '/assets/fonts/' . $file )
+		);
+	}
+}
+add_action( 'wp_head', 'boi_preload_fonts', 1 );
+
+/**
  * Flags the front page when the hero has an image.
  *
  * @param array $classes Body classes.

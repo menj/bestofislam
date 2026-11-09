@@ -4,6 +4,21 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.113.2] - 2026-11-09
+
+Mobile-first audit at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 17 page types. No feature removed, no identifier renamed.
+
+### Fixed
+- Wide screens: layout shift on first load fell from 0.75 to under 0.01. The header menu was measured in the fallback font and again in Ysabeau Office, so the header changed height and pushed the page down 52 pixels. `boi_preload_fonts()` now preloads Ysabeau Office, EB Garamond Regular and Platypi.
+- Long titles, breadcrumbs, excerpts and links wrap inside their column. Before, an unbroken long title in a list or an article ran 600 to 2,000 pixels past its column and was cut off by the page edge.
+- Home page section cards (`.boi-sections`) fit a 320 pixel screen; the grid minimum is now `min(17rem, 100%)`.
+- "Full answer" links on the home page are 24 pixels high or more. Links in post lists, post tags and related-article links get a finger-sized target below 782 pixels and on touch screens.
+- The menu button reports `aria-expanded` as the menu opens and closes (`assets/js/nav-state.js`).
+
+## [1.113.1] - 2026-11-09
+
+The lead and list reacts to hover, focus and tap, with category tabs. See `readme.txt`.
+
 ## [1.113.0] - 2026-11-08
 
 No feature removed and no public identifier renamed.

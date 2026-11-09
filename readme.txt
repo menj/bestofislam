@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.113.1
+Stable tag: 1.113.2
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,11 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.113.2 =
+* Wide screens: the page no longer jumps down when the menu font loads, because the three fonts every page paints first are now fetched at once.
+* Phones: long titles, links and excerpts wrap inside their column, small links in lists, tags and answers are easier to tap, and the home page section cards fit a 320 pixel screen.
+* The menu button tells screen readers whether the menu is open.
 
 = 1.113.1 =
 * The lead and list reacts. A row under the pointer or the keyboard focus gets a soft tint that grows past it, an accent bar on its left edge, a zoom on its thumbnail, an underlined accent title and an arrow. The first row carries the bar at rest.
@@ -346,6 +351,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.113.2 =
+Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.
 
 = 1.113.1 =
 Replace the theme files. Nothing else to do; the new Lead and list card on the Display tab starts with everything on.

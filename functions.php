@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.113.1' );
+define( 'BOI_VERSION', '1.113.2' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -218,6 +218,14 @@ function boi_enqueue_assets() {
 		BOI_URI . '/assets/css/front.css',
 		array( 'boi-navigation' ),
 		boi_asset_version( '/assets/css/front.css' )
+	);
+
+	wp_enqueue_script(
+		'boi-nav-state',
+		BOI_URI . '/assets/js/nav-state.js',
+		array(),
+		BOI_VERSION,
+		array( 'in_footer' => true, 'strategy' => 'defer' )
 	);
 
 	if ( is_front_page() ) {
