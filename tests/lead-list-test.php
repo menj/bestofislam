@@ -219,11 +219,11 @@ boi_test_check( false === strpos( $r['html'], 'boi-lead-list--calm' ) && false =
 $GLOBALS['boi_t']['filters'] = array(
 	'boi_lead_list_show_tabs' => false,
 	'boi_lead_list_motion'    => false,
-	'boi_lead_list_accent'    => '#8a1f2c',
+	'boi_lead_list_accent'    => '#1d6ac3',
 );
 $r = boi_lead_list( boi_t_posts( array( 1 => true, 2 => true, 3 => true, 4 => true, 5 => true, 6 => true ) ) );
 boi_test_check( false === strpos( $r['html'], '<a class="boi-lead-list__tab' ), 'the tabs switch removes the tabs' );
-boi_test_check( false !== strpos( $r['html'], 'boi-lead-list--calm' ) && false !== strpos( $r['html'], 'style="--boi-ll-accent:#8a1f2c"' ), 'the motion switch adds the calm class and the accent override is applied' );
+boi_test_check( false !== strpos( $r['html'], 'boi-lead-list--calm' ) && false !== strpos( $r['html'], 'style="--boi-ll-accent:#1d6ac3"' ), 'the motion switch adds the calm class and the accent override is applied' );
 $GLOBALS['boi_t']['filters'] = array( 'boi_lead_list_accent' => 'red; background:url(x)' );
 $r = boi_lead_list( boi_t_posts( array( 1 => true, 2 => true, 3 => true, 4 => true, 5 => true, 6 => true ) ) );
 boi_test_check( false === strpos( $r['html'], 'style=' . '"--boi-ll-accent' ), 'an accent that is not a hex colour is dropped' );

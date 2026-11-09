@@ -151,7 +151,7 @@ function boi_lead_list_settings() {
 	$accent = (string) apply_filters( 'boi_lead_list_accent', $accent );
 
 	return array(
-		'accent' => preg_match( '/^#[0-9a-f]{6}$/i', $accent ) ? strtolower( $accent ) : '',
+		'accent' => preg_match( '/^#[0-9a-f]{6}$/i', $accent ) && boi_lead_list_accent_ok( $accent ) ? strtolower( $accent ) : '',
 		'tabs'   => (bool) apply_filters( 'boi_lead_list_show_tabs', ! isset( $opts['ll_tabs'] ) || ! empty( $opts['ll_tabs'] ) ),
 		'motion' => (bool) apply_filters( 'boi_lead_list_motion', ! isset( $opts['ll_motion'] ) || ! empty( $opts['ll_motion'] ) ),
 	);
