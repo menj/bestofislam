@@ -30,6 +30,10 @@ header is the grant. Their authors are credited here with thanks.
 - **Reading progress bar** (`inc/reading-progress.php`), adapted from Reading
   Progress Bar 1.3.1 by Jean-Baptiste Audras, https://jeanbaptisteaudras.com/
 
+## Sources of material
+
+The list of reports on textual corruption (taḥrīf) in the article on whether Islam teaches that the Bible was corrupted draws on the compilation of evidence by Bassam Zawadi. Each reference was rechecked where a source could be read. The article itself cites only the verses, hadith, tafsir entries and works.
+
 ## Icons
 
 Minimalist Social & Platform Icons Pack 2.8, under the GNU General Public
