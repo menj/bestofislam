@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.113.6
+Stable tag: 1.114.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,13 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
 
 == Changelog ==
+
+= 1.114.0 =
+* Seeded articles follow the bundle, safely. An article you edited is never overwritten. Content lists it with the differences, and you take the new text or keep yours.
+* An article the theme drops goes to the Trash only if you have not edited it. Nothing is deleted.
+* A replacement map retires an old article behind a 301, hides it from lists and search, and moves it to the Trash. It ships empty.
+* The Content tab has a dry-run card, a log of the last 100 changes and a run button. BOI_DISABLE_CONTENT_SYNC switches it all off.
+* A corrected article reaches the site without a version bump.
 
 = 1.113.6 =
 * The notes of the article on whether Islam teaches that the Bible was corrupted now give the volume and page for six commentary and hadith references, checked against the Shamela text.
@@ -366,6 +373,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.114.0 =
+Replace the theme files. Open Theme Options, Content: articles you edited are listed there with a diff.
 
 = 1.113.6 =
 Replace the theme files. Nothing else to do.

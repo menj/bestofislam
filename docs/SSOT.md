@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.113.6, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.114.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -725,6 +725,19 @@ references that can be checked.
 ### D57. Glossary entries may quote the classical word-books
 
 The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
+
+### D60. Seeded articles follow the bundle, safely
+
+`inc/content-sync.php` decides what population may touch. When the theme writes an article it records `_boi_sync_fp` (the fingerprint of the stored title, excerpt and body), `_boi_sync_bfp` (the bundled entry) and `_boi_sync_key` (its bundled slug). An article is edited when its stored text differs from `_boi_sync_fp`, or when no record exists; the older option records (`boi_article_hashes`, `boi_article_text_hashes`) are honoured when both still match. The older rule that took a never-modified article for untouched is gone.
+
+| Event | Untouched article | Edited article, or no record |
+|---|---|---|
+| The bundle text changes | Takes the new text, logged | Stays. Listed on the Content tab with a diff: Take the bundled text, or Keep mine |
+| The bundle drops it | Moved to the Trash | Stays, listed |
+| Renamed in `renamed-slugs.php` or the seed list | The post keeps its identity and the record moves with it; the old address answers 301 as before | Same |
+| `supersedes` names it as old and the new one is published | 301 at any address, hidden through the unlist module, noindex, then the Trash | Stays, listed |
+
+Only posts that carry `_boi_seeded` are updated and only posts that carry `_boi_sync_key` are ever trashed. Nothing is deleted. `inc/data/supersedes.json` is `{ "post": { old slug: new slug } }` and ships empty; the `boi_supersedes` filter can add pairs. The sync runs when the theme version, the manifest checksum (`inc/data/seed-manifest.json`, written by `php bin/seed-manifest.php`), the supersedes map or the guard state changes, so a corrected article needs no version bump. Removals, the redirect and the hiding stop when a bundled file fails its checksum, when the bundle lists more than 10 percent fewer articles than at the last good sync (a button accepts the new count), or when `BOI_DISABLE_CONTENT_SYNC` is true; the constant also stops updates. The Content tab card has a dry run, the owner's choices and a log of the last 100 changes. `bin/check-content.py` fails when the manifest is stale.
 
 ### D59. Accessibility rests on shared rules and is measured
 

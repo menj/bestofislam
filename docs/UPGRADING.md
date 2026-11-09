@@ -61,6 +61,16 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.114.0
+
+Replace the theme files. Nothing else to do.
+
+What changed for you: an article you edited is never overwritten when the theme ships new text. Open Theme Options, Content to see the articles that have a newer bundled text, with a diff. Choose "Take the bundled text" or "Keep mine" for each. An article the theme cannot prove you left alone (no recorded fingerprint) is listed the same way. "Run the review now" applies the bundled text to the articles you have not edited without waiting for a version bump.
+
+To retire an article behind a replacement, add a pair to `inc/data/supersedes.json`, for example `{ "post": { "old-slug": "new-slug" } }`, and run `php bin/seed-manifest.php`. The map ships empty.
+
+After editing anything in `content/`, `inc/data/seed.json` or `supersedes.json`, run `php bin/seed-manifest.php`. Without it the guard holds removals and the redirect, and `bin/check-content.py` fails.
+
 ## Upgrading to 1.113.6
 
 Replace the theme files. The seeded article refreshes where it is unedited; an edited copy is listed on the Content tab.

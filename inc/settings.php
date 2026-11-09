@@ -1018,6 +1018,10 @@ function boi_render_content_tab() {
 		boi_opt_card_close();
 	}
 
+	if ( function_exists( 'boi_render_content_sync_card' ) ) {
+		boi_render_content_sync_card(); // Drawn outside every other form.
+	}
+
 	if ( function_exists( 'boi_differing_articles' ) ) {
 		boi_opt_card_open( __( 'Seeded articles', 'bestofislam' ) );
 

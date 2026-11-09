@@ -267,6 +267,9 @@ function boi_rename_seeded_posts() {
 			)
 		);
 		delete_post_meta( $post->ID, '_wp_old_slug' );
+		if ( get_post_meta( $post->ID, '_boi_sync_key', true ) ) {
+			update_post_meta( $post->ID, '_boi_sync_key', $new ); // The record moves with the post.
+		}
 
 		$hashes = (array) get_option( 'boi_article_hashes', array() );
 
@@ -322,6 +325,11 @@ function boi_create_listicles( $topics ) {
 
 		// A new post holds only the default category, so it takes its own.
 		boi_assign_seed_terms( $post_id, $listicle );
+
+		// The text the theme wrote is recorded, so a later edit is proven and never guessed.
+		if ( function_exists( 'boi_sync_bundle' ) && isset( boi_sync_bundle()[ $listicle['slug'] ] ) ) {
+			boi_sync_record( $post_id, boi_sync_bundle()[ $listicle['slug'] ] );
+		}
 
 		$created[] = $post_id;
 	}
@@ -997,58 +1005,27 @@ function boi_migrate_seed( $topics ) {
 		}
 
 		$args = array();
+		$slug = $listicle['slug'];
 
-		// Refresh the body only while the owner has not edited it. Four cases:
-		// already current; damaged by the old unslashed save and otherwise
-		// untouched, which is repaired; recorded as written by the theme,
-		// which is refreshed; anything else is left for the owner to decide
-		// from the Content tab.
-		$fresh   = boi_load_article( $listicle['slug'] );
-		$hashes  = (array) get_option( 'boi_article_hashes', array() );
-		$slug    = $listicle['slug'];
-		$current = boi_content_fingerprint( $post->post_content );
-
-		// The theme's own text may be refreshed only while the owner has not
-		// touched the article. An edited body means the title and excerpt may
-		// have been edited too, so they are left alone as well.
-		$untouched = false;
-
-		if ( '' !== $fresh ) {
-			$target  = boi_content_fingerprint( $fresh );
-			$damaged = boi_content_fingerprint( wp_unslash( $fresh ) );
-
-			if ( $current === $target ) {
-				$hashes[ $slug ] = $current;
-				update_option( 'boi_article_hashes', $hashes, false );
-				$untouched = true;
-			} elseif ( ( isset( $hashes[ $slug ] ) && $hashes[ $slug ] === $current )
-				|| $current === $damaged
-				|| ( ! isset( $hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt ) ) {
-				$args['post_content'] = $fresh;
-				$untouched            = true;
+		// The text follows the bundle only while the owner has not edited it, and "not edited" is proven by
+		// the fingerprint the theme recorded when it wrote the article (inc/content-sync.php). An article with
+		// no record counts as edited and is left for the owner to decide from the Content tab.
+		if ( function_exists( 'boi_sync_bundle' ) && ! boi_sync_disabled() && get_post_meta( $post->ID, '_boi_seeded', true ) ) {
+			$item = boi_sync_bundle()[ $slug ] ?? null;
+			if ( $item ) {
+				$sync = boi_sync_state( $post, $slug );
+				$act  = boi_sync_decide( $item['fp'], $sync['stored'], $sync['recorded'], $sync['bfp'], $sync['ack'] );
+				if ( 'update' === $act ) {
+					$args['post_content'] = $item['content'];
+					$args['post_title']   = $item['title'];
+					$args['post_excerpt'] = $item['excerpt'];
+					boi_sync_log( $slug, 'updated to the bundled text' );
+				} elseif ( 'newer' === $act && boi_content_fingerprint( $post->post_content ) === boi_content_fingerprint( wp_unslash( $item['content'] ) ) && boi_content_fingerprint( $post->post_content ) !== boi_content_fingerprint( $item['content'] ) ) {
+					$args['post_content'] = $item['content']; // Damaged by the old unslashed save and otherwise as written: repaired.
+				} elseif ( 'current' === $act && $sync['stored'] === $item['fp'] && '' === (string) get_post_meta( $post->ID, '_boi_sync_fp', true ) ) {
+					boi_sync_record( $post->ID, $item ); // Ours and equal to the bundle: record it.
+				}
 			}
-		}
-
-		// Title and excerpt are judged on their own record: a body left alone
-		// says nothing about whether the owner reworded the title.
-		$text_hashes = (array) get_option( 'boi_article_text_hashes', array() );
-		$text_now    = md5( $post->post_title . "\n" . $post->post_excerpt );
-		$text_seed   = md5( $listicle['title'] . "\n" . $listicle['excerpt'] );
-		$text_free   = $text_now === $text_seed
-			|| ( isset( $text_hashes[ $slug ] ) && $text_hashes[ $slug ] === $text_now )
-			|| ( ! isset( $text_hashes[ $slug ] ) && $post->post_modified_gmt === $post->post_date_gmt );
-
-		if ( $text_free ) {
-			if ( $post->post_title !== $listicle['title'] ) {
-				$args['post_title'] = $listicle['title'];
-			}
-
-			if ( $post->post_excerpt !== $listicle['excerpt'] ) {
-				$args['post_excerpt'] = $listicle['excerpt'];
-			}
-
-			$text_hashes[ $slug ] = $text_seed;
-			update_option( 'boi_article_text_hashes', $text_hashes, false );
 		}
 
 		if ( isset( $topics[ $listicle['topic'] ] ) ) {
@@ -1059,11 +1036,15 @@ function boi_migrate_seed( $topics ) {
 			$args['ID'] = $post->ID;
 			boi_update_post( $args );
 
-			if ( isset( $args['post_content'] ) ) {
+			if ( isset( $args['post_content'] ) && function_exists( 'boi_sync_bundle' ) && isset( boi_sync_bundle()[ $slug ] ) ) {
+				boi_sync_record( $post->ID, boi_sync_bundle()[ $slug ] ); // After the write, so the record is the stored text.
 				$saved           = get_post( $post->ID );
 				$hashes          = (array) get_option( 'boi_article_hashes', array() );
 				$hashes[ $slug ] = boi_content_fingerprint( $saved->post_content );
 				update_option( 'boi_article_hashes', $hashes, false );
+				$text_hashes          = (array) get_option( 'boi_article_text_hashes', array() );
+				$text_hashes[ $slug ] = md5( $saved->post_title . "\n" . $saved->post_excerpt );
+				update_option( 'boi_article_text_hashes', $text_hashes, false );
 			}
 		}
 	}
@@ -1289,12 +1270,17 @@ function boi_handle_refresh_articles() {
 			continue;
 		}
 
-		boi_update_post(
-			array(
-				'ID'           => $allowed[ $slug ]->ID,
-				'post_content' => boi_load_article( $slug ),
-			)
-		);
+		if ( function_exists( 'boi_sync_bundle' ) && isset( boi_sync_bundle()[ $slug ] ) && boi_sync_post( $slug ) ) {
+			boi_sync_write( $allowed[ $slug ], boi_sync_bundle()[ $slug ] ); // Records the fingerprints too.
+			boi_sync_log( $slug, 'took the bundled text' );
+		} else {
+			boi_update_post(
+				array(
+					'ID'           => $allowed[ $slug ]->ID,
+					'post_content' => boi_load_article( $slug ),
+				)
+			);
+		}
 
 		$hashes[ $slug ] = boi_content_fingerprint( get_post( $allowed[ $slug ]->ID )->post_content );
 		++$done;
