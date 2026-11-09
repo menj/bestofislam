@@ -61,6 +61,15 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.113.5
+
+Replace the theme files. Population creates the four new articles on the next load of an admin page, and `boi_migrate_seed()` refreshes the changed articles where they are unedited. An article you edited keeps your text and appears on the Content tab for a manual refresh.
+
+Open items for the owner:
+- The four new articles have no photographs. D30 asks for one featured image and two in the text, from Wikimedia Commons, none of a prophet.
+- Every modern citation in the new notes needs a check against the book: Metzger, Bruce, McDonald, Lewis, Barton, Leiman, Beckwith, Sundberg, Hahneman and Aune.
+- Davidson's page numbers are the printed pages of the Gutenberg eBook 30132 text.
+
 ## Upgrading to 1.113.4
 
 Replace the theme files. Nothing else to do.
