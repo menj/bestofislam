@@ -278,6 +278,14 @@ function boi_rename_seeded_posts() {
 			unset( $hashes[ $old ] );
 			update_option( 'boi_article_hashes', $hashes, false );
 		}
+
+		// The text record moves too, or a renamed article whose text also changed would count as edited.
+		$text_hashes = (array) get_option( 'boi_article_text_hashes', array() );
+		if ( isset( $text_hashes[ $old ] ) ) {
+			$text_hashes[ $new ] = $text_hashes[ $old ];
+			unset( $text_hashes[ $old ] );
+			update_option( 'boi_article_text_hashes', $text_hashes, false );
+		}
 	}
 }
 

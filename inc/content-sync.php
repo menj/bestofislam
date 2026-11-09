@@ -138,8 +138,7 @@ function boi_sync_manifest() {
 }
 
 /**
- * Whether every bundled file matches the manifest. The answer is kept for an hour per manifest, so the front
- * end does not hash three megabytes.
+ * Whether every bundled file matches the manifest.
  *
  * @return bool
  */
@@ -148,11 +147,8 @@ function boi_sync_checksums_ok() {
 	if ( ! $m['files'] || '' === $m['checksum'] || md5( (string) wp_json_encode( $m['files'] ) ) !== $m['checksum'] ) {
 		return false;
 	}
-	$key    = 'boi_sync_intact_' . substr( $m['checksum'], 0, 12 );
-	$cached = get_transient( $key );
-	if ( false !== $cached ) {
-		return '1' === $cached;
-	}
+	// Every request that asks hashes the files: the answer is never cached, since a cached "intact" could
+	// outlive an upload in progress. The map of replacements ships empty, so a site without a pair pays nothing.
 	$ok = true;
 	foreach ( $m['files'] as $rel => $sum ) {
 		$file = BOI_DIR . '/' . ltrim( (string) $rel, '/' );
@@ -161,7 +157,6 @@ function boi_sync_checksums_ok() {
 			break;
 		}
 	}
-	set_transient( $key, $ok ? '1' : '0', HOUR_IN_SECONDS );
 	return $ok;
 }
 
@@ -300,6 +295,19 @@ function boi_sync_write( $post, $item ) {
 }
 
 /**
+ * Move a post the theme created to the Trash, after recording its bundled slug, so a 404 at its old address can
+ * still find it and redirect.
+ *
+ * @param WP_Post $post Post.
+ * @param string  $slug Bundled slug.
+ * @return bool
+ */
+function boi_sync_trash( $post, $slug ) {
+	update_post_meta( $post->ID, '_boi_sync_key', $slug );
+	return (bool) wp_trash_post( $post->ID );
+}
+
+/**
  * Superseded pairs that qualify now: old post ID => new post ID. The new one is published, the old one was made
  * by the theme and has not been edited.
  *
@@ -328,8 +336,8 @@ function boi_superseded_pairs() {
 			continue;
 		}
 		$s = boi_sync_state( $old_post, $old );
-		if ( '' !== $s['recorded'] && $s['recorded'] === $s['stored'] ) {
-			$cache[ (int) $old_post->ID ] = (int) $new_post->ID;
+		if ( '' !== $s['recorded'] && $s['recorded'] === $s['stored'] && 'superseded' !== $s['ack'] ) {
+			$cache[ (int) $old_post->ID ] = (int) $new_post->ID; // Not when the owner chose to keep it.
 		}
 	}
 	$busy = false;
@@ -435,7 +443,7 @@ function boi_sync_apply() {
 				break;
 			case 'trash':
 			case 'supersede':
-				if ( '' === $blocked && 'trash' !== $post->post_status && wp_trash_post( $post->ID ) ) {
+				if ( '' === $blocked && 'trash' !== $post->post_status && boi_sync_trash( $post, $row['key'] ) ) {
 					++$out['trashed'];
 					boi_sync_log( $row['key'], 'supersede' === $row['action'] ? 'moved to the Trash, replaced' : 'moved to the Trash, dropped from the bundle' );
 				}
@@ -519,7 +527,7 @@ function boi_sync_handle_item() {
 			boi_sync_write( $post, $item );
 			boi_sync_log( $slug, 'took the bundled text' );
 		} elseif ( 'take' === $choice && '' === boi_sync_removal_block() ) {
-			wp_trash_post( $post->ID ); // Dropped or superseded: the bundled choice is the Trash, never a deletion.
+			boi_sync_trash( $post, $slug ); // Dropped or superseded: the bundled choice is the Trash, never a deletion.
 			boi_sync_log( $slug, 'moved to the Trash by choice' );
 		} elseif ( 'take' === $choice ) {
 			boi_sync_log( $slug, 'the Trash was refused while a removal guard holds' );

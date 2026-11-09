@@ -17,6 +17,7 @@ Seeded articles follow the bundle, safely. No feature removed, no identifier ren
 - `inc/content-sync.php`: the review card on Theme Options, Content (dry run, diff, Take the bundled text, Keep mine, Run the review now, a log of the last 100 changes), the supersedes map with a 301 at any address, hiding through the unlist module and the Trash, the guards, and the `BOI_DISABLE_CONTENT_SYNC` switch.
 - `inc/data/supersedes.json` (empty), `inc/data/seed-manifest.json` and `bin/seed-manifest.php`. `bin/check-content.py` checks that the manifest is current.
 - `tests/content-sync-test.php`.
+- The integrity check is never cached, a "Keep mine" on an article to be replaced holds when a guard later clears, the bundled slug is recorded before an article is trashed so its old address still redirects, and the text record moves with a renamed article.
 
 ## [1.113.6] - 2026-11-09
 

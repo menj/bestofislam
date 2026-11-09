@@ -357,6 +357,8 @@ try:
         expected['content/' + os.path.basename(f)] = hashlib.md5(open(f, 'rb').read()).hexdigest()
     for n in ('seed', 'supersedes'):
         expected['inc/data/%s.json' % n] = hashlib.md5(open(os.path.join(ROOT, 'inc', 'data', n + '.json'), 'rb').read()).hexdigest()
+    if manifest.get('checksum') != hashlib.md5(json.dumps(expected, separators=(',', ':')).replace('/', '\\/').encode()).hexdigest():
+        errors.append('inc/data/seed-manifest.json: the aggregate checksum does not match its files: run  php bin/seed-manifest.php')
     if manifest.get('files') != expected:
         errors.append('inc/data/seed-manifest.json is stale: run  php bin/seed-manifest.php')
 except (OSError, ValueError) as e:
