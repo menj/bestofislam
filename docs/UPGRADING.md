@@ -61,6 +61,23 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.113.4
+
+Replace the theme files. Nothing else to do.
+
+Accessibility issue register (WCAG 2.2 AA; measured with axe-core on 14 templates at 375 and 1280 pixels, a keyboard walk, a target-size probe and a text-spacing probe):
+
+| Id | Severity | Criterion | Where | Status |
+|---|---|---|---|---|
+| A11Y-1 | Major | 1.4.11 | Contact and search field edges at 1.3:1 | Fixed |
+| A11Y-2 | Major | 2.4.7 | No shared focus rule; each component set its own | Fixed with one base rule |
+| A11Y-3 | Major | 2.5.8 | Category links 16 to 18 pixels tall | Fixed |
+| A11Y-4 | Minor | 1.3.1 | Glossary bar outside any landmark | Fixed |
+| A11Y-5 | Manual | Various | Screen reader smoke test | Open: needs a person with NVDA or VoiceOver |
+| A11Y-6 | Manual | 1.4.4, 1.4.10 | Small text and desktop-first blocks from the mobile-first audit | Open, as noted below |
+
+Upgrade rules checked: no remote assets, no minified sources, the credits file is `docs/CREDITS.md`, and the debug log stayed empty over the front end.
+
 ## Upgrading to 1.113.3
 
 Replace the theme files. `boi_migrate_seed()` refreshes the one changed article on a site where it is unedited. A copy you edited is left alone and listed on the Content tab, where you can tick it to bring it up to date. Git history still holds the earlier wording.

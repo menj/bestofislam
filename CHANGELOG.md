@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.113.4] - 2026-11-09
+
+WCAG 2.2 AA pass. No feature removed, no identifier renamed.
+
+### Fixed
+- One focus ring for every control, in the accent that swaps with the light and dark switch. The footer uses its own link colour (2.4.7, 1.4.11).
+- Contact and search field edges use accent-5 and read at 3:1 or better. Before, the pale accent-6 rule measured 1.3:1 (1.4.11).
+- Category links and lead kickers are 24 pixels tall at every width. Before, they were 16 to 18 pixels tall on wide screens (2.5.8).
+- The glossary bar is a region named "Glossary tools" (1.3.1).
+- Smooth scrolling stops when the visitor asks for reduced motion (2.3.3).
+
+### Added
+- `tests/axe-check.js`: axe-core on the main templates at 375 and 1280 pixels.
+
 ## [1.113.3] - 2026-11-09
 
 Content attribution. No feature removed, no identifier renamed.
