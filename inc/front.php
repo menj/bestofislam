@@ -466,7 +466,7 @@ function boi_hero_post() {
  * Uses the attached featured image when there is one, and the image bundled
  * with the theme when there is not yet.
  *
- * @return array|null Array( large, small, artist, licence, source ), or null.
+ * @return array|null Image URLs, post ID and credit, or null.
  */
 function boi_hero_image() {
 	static $hero = false;
@@ -482,13 +482,15 @@ function boi_hero_image() {
 		return $hero;
 	}
 
-	$id = (int) get_post_thumbnail_id( $post );
+	$id    = (int) get_post_thumbnail_id( $post );
+	$large = $id ? wp_get_attachment_image_url( $id, 'full' ) : false;
 
-	if ( $id && wp_get_attachment_image_url( $id, 'full' ) ) {
+	if ( $large ) {
 		$credit = get_post_meta( $id, '_boi_credit', true );
 		$hero   = array(
-			'large'   => wp_get_attachment_image_url( $id, 'full' ),
-			'small'   => wp_get_attachment_image_url( $id, 'large' ),
+			'post_id' => (int) $post->ID,
+			'large'   => $large,
+			'small'   => wp_get_attachment_image_url( $id, 'large' ) ?: $large,
 			'artist'  => is_array( $credit ) && ! empty( $credit['artist'] ) ? $credit['artist'] : '',
 			'licence' => is_array( $credit ) && ! empty( $credit['licence'] ) ? $credit['licence'] : '',
 			'source'  => is_array( $credit ) && ! empty( $credit['source'] ) ? $credit['source'] : '',
@@ -500,6 +502,7 @@ function boi_hero_image() {
 
 	if ( $bundled ) {
 		$hero = array(
+			'post_id' => (int) $post->ID,
 			'large'   => $bundled['url'],
 			'small'   => $bundled['url'],
 			'artist'  => $bundled['artist'],
@@ -531,7 +534,7 @@ function boi_print_hero_background() {
 	printf(
 		"<style id=\"boi-hero-bg\">:root{--boi-hero-img:url(%1\$s)}@media (max-width:781px){:root{--boi-hero-img:url(%2\$s)}}</style>\n",
 		esc_url( $hero['large'] ),
-		esc_url( $hero['small'] ? $hero['small'] : $hero['large'] )
+		esc_url( $hero['small'] )
 	);
 }
 add_action( 'wp_head', 'boi_print_hero_background', 20 );
@@ -555,14 +558,14 @@ function boi_preload_hero_background() {
 		return;
 	}
 
-	$small = $hero['small'] ? $hero['small'] : $hero['large'];
+	$small = $hero['small'];
 
 	if ( $small === $hero['large'] ) {
 		printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" fetchpriority=\"high\">\n", esc_url( $hero['large'] ) );
 		return;
 	}
 
-	printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" media=\"(min-width: 782px)\" fetchpriority=\"high\">\n", esc_url( $hero['large'] ) );
+	printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" media=\"not all and (max-width: 781px)\" fetchpriority=\"high\">\n", esc_url( $hero['large'] ) );
 	printf( "<link rel=\"preload\" as=\"image\" href=\"%s\" media=\"(max-width: 781px)\" fetchpriority=\"high\">\n", esc_url( $small ) );
 }
 add_action( 'wp_head', 'boi_preload_hero_background', 1 );
