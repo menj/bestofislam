@@ -24,6 +24,7 @@ No feature removed and no public identifier renamed. The PHP requirement changes
 ### Added
 - `tests/toc-test.php`: 35 checks of the ids (quoted or not), skipped headings, the tree, the shortcode settings, where the shortcode may leave its marker and the list that replaces it.
 - `docs/CREDITS.md`: WP TOC and the MIT notice of Ikram Hawramani's original work.
+- i-read-the-entire-quran-reply: the images promised in 1.113.0, all from Wikimedia Commons: a fourteenth-century Moroccan Sahih al-Bukhari, the Taroudant Bukhari of 1097 (CC0), Papyrus 46, a fragment of Surat 'Abasa and al-Qundusi's Basmala. None shows a person.
 
 ## [1.113.0] - 2026-11-08
 

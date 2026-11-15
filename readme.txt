@@ -167,6 +167,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 = 1.114.0 =
 * The theme now requires PHP 8.4.
 * The contents list is adapted from WP TOC: level-three headings are nested under their section, pages get the list too, headings marked no-toc are left out, Arabic headings keep readable anchors, and [wp_toc] or [auto_toc] places the list in the text. Search engines see the sections in the page's structured data.
+* The reply to "I read the entire Quran" gains its featured image and four in-text images.
 
 = 1.113.0 =
 * A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026. Its images follow in a later release.
