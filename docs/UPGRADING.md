@@ -61,13 +61,67 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
-## Upgrading to 1.114.0
+## Upgrading to 1.115.0
 
 1. Check that the server runs PHP 8.4 or later (Tools, Site Health, Info, Server). WordPress will not update or activate the theme on older PHP.
 2. If the WP TOC plugin is active, deactivate it and delete it once the theme is updated. While it stays active the theme leaves the contents to it, so nothing shows twice. Texts that use `[wp_toc]` or `[auto_toc]` keep working with the theme alone.
 3. Replace the theme files.
 
 Anchors to level-two headings written in Arabic change from the percent-encoded form to readable Arabic. Links inside the site do not use them.
+
+## Upgrading to 1.114.0
+
+Replace the theme files. Nothing else to do.
+
+What changed for you: an article you edited is never overwritten when the theme ships new text. Open Theme Options, Content to see the articles that have a newer bundled text, with a diff. Choose "Take the bundled text" or "Keep mine" for each. An article the theme cannot prove you left alone (no recorded fingerprint) is listed the same way. "Run the review now" applies the bundled text to the articles you have not edited without waiting for a version bump.
+
+To retire an article behind a replacement, add a pair to `inc/data/supersedes.json`, for example `{ "post": { "old-slug": "new-slug" } }`, and run `php bin/seed-manifest.php`. The map ships empty.
+
+After editing anything in `content/`, `inc/data/seed.json` or `supersedes.json`, run `php bin/seed-manifest.php`. Without it the guard holds removals and the redirect, and `bin/check-content.py` fails.
+
+## Upgrading to 1.113.6
+
+Replace the theme files. The seeded article refreshes where it is unedited; an edited copy is listed on the Content tab.
+
+Still unverified in the article: the printed pages of the editions that Shamela reproduces for al-Qurṭubī and Ibn al-Qayyim; the number of the abridged report in the Musnad of Ahmad; and every grading on dorar.net, which was not contacted ("grading not checked on dorar.net").
+
+## Upgrading to 1.113.5
+
+Replace the theme files. Population creates the four new articles on the next load of an admin page, and `boi_migrate_seed()` refreshes the changed articles where they are unedited. An article you edited keeps your text and appears on the Content tab for a manual refresh.
+
+Open items for the owner:
+- The four new articles have no photographs. D30 asks for one featured image and two in the text, from Wikimedia Commons, none of a prophet.
+- Every modern citation in the new notes needs a check against the book: Metzger, Bruce, McDonald, Lewis, Barton, Leiman, Beckwith, Sundberg, Hahneman and Aune.
+- Davidson's page numbers are the printed pages of the Gutenberg eBook 30132 text.
+
+## Upgrading to 1.113.4
+
+Replace the theme files. Nothing else to do.
+
+Accessibility issue register (WCAG 2.2 AA; measured with axe-core on 14 templates at 375 and 1280 pixels, a keyboard walk, a target-size probe and a text-spacing probe):
+
+| Id | Severity | Criterion | Where | Status |
+|---|---|---|---|---|
+| A11Y-1 | Major | 1.4.11 | Contact and search field edges at 1.3:1 | Fixed |
+| A11Y-2 | Major | 2.4.7 | No shared focus rule; each component set its own | Fixed with one base rule |
+| A11Y-3 | Major | 2.5.8 | Category links 16 to 18 pixels tall | Fixed |
+| A11Y-4 | Minor | 1.3.1 | Glossary bar outside any landmark | Fixed |
+| A11Y-5 | Manual | Various | Screen reader smoke test | Open: needs a person with NVDA or VoiceOver |
+| A11Y-6 | Manual | 1.4.4, 1.4.10 | Small text and desktop-first blocks from the mobile-first audit | Open, as noted below |
+
+Upgrade rules checked: no remote assets, no minified sources, the credits file is `docs/CREDITS.md`, and the debug log stayed empty over the front end.
+
+## Upgrading to 1.113.3
+
+Replace the theme files. `boi_migrate_seed()` refreshes the one changed article on a site where it is unedited. A copy you edited is left alone and listed on the Content tab, where you can tick it to bring it up to date. Git history still holds the earlier wording.
+
+## Upgrading to 1.113.2
+
+Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.
+
+## Upgrading to 1.113.1
+
+Replace the theme files. The new file is `assets/js/lead-list.js`. The Display tab gains a Lead and list card with category tabs and arrows and motion on, and no accent override. Nothing else to do.
 
 ## Upgrading to 1.113.0
 
@@ -239,12 +293,54 @@ schema reversal is needed. Settings added in a later version are ignored by an
 earlier one and return when the later version is reinstalled. Should a future
 release alter the database schema, the change will be documented here first.
 
+## Mobile-first audit, 1.113.2
+
+Measured with Playwright at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 17 page types: home, long-title article, two articles, topic, category, search with and without results, 404, login, glossary, FAQ, reflections, start here, contact, donate and topics. Axe 4, WCAG 2.0 to 2.1 AA and best-practice tags.
+
+| Finding | Severity | Risk of the fix | Status |
+|---|---|---|---|
+| Layout shift of 0.72 to 0.75 on most pages at 1280 (0.06 to 0.08 at 768 and 1024) from the menu font swap | High | Low | Fixed (font preload) |
+| Unbroken long titles, links and excerpts run past their column and are cut off by the page edge (the page itself does not scroll sideways) | High | Low | Fixed |
+| Home section cards 12 px wider than a 320 px column | Medium | Low | Fixed |
+| "Full answer" links 19 px high; post-list title, tag and related links 16 to 22 px high | Medium | Low | Fixed |
+| Menu button lacks `aria-expanded` | Medium | Medium (JS) | Fixed |
+| Desktop menu items 21 px high (pass WCAG 2.2 through spacing) | Low | Medium | Open |
+| Body-size text at 14.4 to 15.2 px in cards and lists; labels at 11.5 to 14 px | Low | Medium | Open |
+| Lead and list slides arrows 10 px past its column on hover offsets (not past the viewport) | Low | Medium | Open |
+| Several `max-width` blocks in `listicle.css`, `footer.css`, `front.css` could be mobile-first | Low | High | Open |
+| Posts with no author print an empty author link (test content only; every real post has an author) | Low | Low | Open |
+| Login screen: remember-me checkbox 21 px; axe landmark and region notes | Low | None (core) | Not ours |
+
+Overflow check results: no page scrolled sideways at any width, before or after, so the usual page-width count is 0 in both rows. The fixed defect was text running past its column inside a page that clips at the edge. Pages with text running past its column (out of 17):
+
+| Width | 320 | 768 | 1280 |
+|---|---|---|---|
+| Before | 7 | 6 | 6 |
+| After | 4 | 4 | 5 |
+
+What remains is 1 to 2 px of rounding in the article body and the 10 px lead-and-list offset. Layout shift, worst page: 0.7511 before and 0.0045 after at 1280; 0.0784 and 0.0116 at 768; 0.0638 and 0.0071 at 1024.
+
+### For manual review
+
+- The font preload names three files by path in `boi_preload_fonts()`. If `theme.json` swaps a font file, change the list to match.
+- `assets/js/nav-state.js` watches the `is-menu-open` class of the core navigation overlay. A WordPress release that renames the class stops the sync without any other effect.
+- The 14.4 to 15.2 px card text and the 11.5 to 14 px labels are a design call. Raising them changes the look of the cards.
+
+### Remaining risks
+
+- Converting the `max-width` blocks needs 1024 and 1280 screenshots per block.
+- Menu items at 21 px pass through spacing; a taller pill would change the header height at desktop widths.
+
+---
+
 ## Roadmap
 
 These are plans, not promises. Each item rests on something on record: the code, the server logs of November 2026, a documented limit, or a feature another of the owner's themes already has. Items leave this list when they ship and go into `CHANGELOG.md`. GitHub had no open issues or pull requests when the list was last checked (2026-11-05), and the code carries no TODO markers.
 
 ### Next
 
+- Convert the desktop-first `max-width` blocks (`listicle.css` lines 155 to 1636, `footer.css`, `front.css`) to `min-width`, one block at a time, with 1024 and 1280 screenshots. Found in the 1.113.2 audit.
+- Lift desktop menu items, tags and card text to the sizes in the audit table. Found in the 1.113.2 audit.
 - Export, import and reset for Theme Options. The abrahamic theme has all three on its Tools tab; here a move to a new site means setting every tab again by hand.
 - Error pages on a network. The admin-page repair runs on the main site only (`boi_error_maybe_sync()`), so the shared drop-ins stop updating once it leaves the theme, while activation and a settings save on any subsite run `boi_error_sync()` unguarded and can rewrite them with that subsite's address. The abrahamic theme hands the job to one site, the lowest ID that runs it.
 - Keep the root `.htaccess` sections on a network when one site leaves the theme. `boi_sec_remove_htaccess()` runs on any site's `switch_theme`, and the shared file then lacks both sections until another site's next sync.
@@ -415,18 +511,18 @@ Checked against the page images of Ismail R. al Faruqi, *Christian Ethics: A His
 
 #### New article: does-islam-teach-the-bible-was-corrupted (1.78.0)
 
-Built from Bassam Zawadi's compilation of evidence for taḥrīf, with every reference rechecked where a source could be read, and graded by strength in the article. Checked: al-Ṭabarī on 4:46, Ibn Taymiyya (al-Jawab al-Sahih 2/407), Ibn Ḥazm (al-Fisal 2/2-3), Bukhari 7363 and 6841 with Fath al-Bari (all via the Shamela references already used in islamic-dilemma); Ibn Kathir on 12:100 and 6:115, al-Qurtubi on 5:13 and 15:9 (quran.ksu.edu.sa, text only); Majma al-Zawaid 4/312 and Ahmad 19403 / Ibn Majah 1853 (surahquran.com); Ibn al-Qayyim, Ighathat al-Lahfan ch. 13 (Wikisource, no page numbers).
+Built from a widely circulated compilation of evidence for taḥrīf, with every reference rechecked where a source could be read, and graded by strength in the article. Checked: al-Ṭabarī on 4:46, Ibn Taymiyya (al-Jawab al-Sahih 2/407), Ibn Ḥazm (al-Fisal 2/2-3), Bukhari 7363 and 6841 with Fath al-Bari (all via the Shamela references already used in islamic-dilemma); Ibn Kathir on 12:100 and 6:115, al-Qurtubi on 5:13 and 15:9 (quran.ksu.edu.sa, text only); Majma al-Zawaid 4/312 and Ahmad 19403 / Ibn Majah 1853 (surahquran.com); Ibn al-Qayyim, Ighathat al-Lahfan ch. 13 (Wikisource, no page numbers).
 
 Findings that shaped the article:
 
-- The sentence "they lied about their prophets just as they distorted their book" is in Muʿādh's version only (Majmaʿ al-Zawāʾid 4/312, graded by al-Haythamī). The Ibn Abī Awfā version (Ahmad 19403, Ibn Majah 1853) has the same scene without it. Zawadi names the grader "Ibn Hajar al-Haytami"; Majmaʿ al-Zawāʾid is by Nūr al-Dīn al-Haythamī.
-- Al-Qurṭubī on 5:13 gives the meaning reading as his own gloss and the letter-changing reading as "it is said"; Zawadi's use of the passage as a plain statement of textual change overstates it.
+- The sentence "they lied about their prophets just as they distorted their book" is in Muʿādh's version only (Majmaʿ al-Zawāʾid 4/312, graded by al-Haythamī). The Ibn Abī Awfā version (Ahmad 19403, Ibn Majah 1853) has the same scene without it. The compilation names the grader "Ibn Hajar al-Haytami"; Majmaʿ al-Zawāʾid is by Nūr al-Dīn al-Haythamī.
+- Al-Qurṭubī on 5:13 gives the meaning reading as his own gloss and the letter-changing reading as "it is said"; the common use of the passage as a plain statement of textual change overstates it.
 - Ibn al-Qayyim's three views show that the interpretation-only view is a recognised Muslim position, and that he himself sits nearest the middle view. The article concedes this.
-- Zawadi's use of 4:157 and of Hudhayfa's remark (Bukhari 4987) as evidence of textual change is dropped as weak. The stoning report is used for concealment and the mixed state, not for textual loss.
-- Reports from Kaʿb, ʿAbdullāh ibn Salām and Ibn Masʿūd on what the Torah contained are not cited one by one; Bukhari 2125 stands for the group, with the Isaiah 42 parallel. Zawadi's "Banu Israel wrote a book" hadiths (al-Albani, Silsila 2694 and 3860) were not cited because the gradings could not be read from a primary page.
+- The common use of 4:157 and of Hudhayfa's remark (Bukhari 4987) as evidence of textual change is dropped as weak. The stoning report is used for concealment and the mixed state, not for textual loss.
+- Reports from Kaʿb, ʿAbdullāh ibn Salām and Ibn Masʿūd on what the Torah contained are not cited one by one; Bukhari 2125 stands for the group, with the Isaiah 42 parallel. The "Banu Israel wrote a book" hadiths (al-Albani, Silsila 2694 and 3860) were not cited because the gradings could not be read from a primary page.
 - Checked later: Bukhari 4987 (hadithunlocked.com; Fath al-Bari 9/17-18 comments on Hudhayfa's alarm but not on the Jews-and-Christians clause) and 2125 (Fath al-Bari 4/342-343, where Ibn Hajar says Ata may have taken the report from Ibn Amr and Ibn Salam); the names in Ibn al-Qayyim's second view (al-Bukhari, and al-Razi in his tafsir) on the Wikisource text; al-Hakim 7325, which carries the Muʿādh sentence and is graded to the standard of the two Sahihs by al-Hakim and al-Dhahabi. The entry's strength label moves from "moderate at most" to "moderate".
-- Still not checked: the Ahmad Musnad reference Zawadi gives for the Muʿādh report (the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence); the printed page of Ighathat al-Lahfan.
-- The Tanwir al-Miqbas tafsir, which Zawadi cites as Ibn Abbas, is not used.
+- Still not checked: the number of the abridged report in the Ahmad Musnad (al-Haythamī says Ahmad has the Muʿādh report in abridged form; the Ahmad report found, 19403, is the Ibn Abi Awfa version without the sentence). Checked in 1.113.6: the volume and page of Ibn Kathir, al-Qurṭubī, al-Haythamī and Ibn al-Qayyim in the Shamela text.
+- The Tanwir al-Miqbas tafsir, which the compilation cites as Ibn Abbas, is not used.
 
 Images, batch 4 (1.82.0): the four remaining articles below the rule that `claude/modest-ride-rgvjvk` does not edit. No close-up of a worshipper's face and no prophet in any picture added; the candle photograph for the terrorism article is a plain row of tea lights, not a memorial of a particular attack.
 

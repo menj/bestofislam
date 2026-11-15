@@ -66,11 +66,16 @@ const BOI_UNLISTED_META = '_boi_unlisted';
 function boi_unlisted_ids() {
 	boi_unlist_sync_from_plugin();
 
-	$ids = get_option( BOI_UNLISTED_OPTION, array() );
+	$ids = (array) get_option( BOI_UNLISTED_OPTION, array() );
 
-	return array_values( array_filter( array_map( 'intval', (array) $ids ), static function ( $id ) {
+	// Articles the bundle replaced are hidden the same way while their 301 stands (content-sync.php).
+	if ( function_exists( 'boi_superseded_ids' ) ) {
+		$ids = array_merge( $ids, boi_superseded_ids() );
+	}
+
+	return array_values( array_unique( array_filter( array_map( 'intval', $ids ), static function ( $id ) {
 		return $id > 0;
-	} ) );
+	} ) ) );
 }
 
 /**
@@ -203,7 +208,7 @@ function boi_is_unlisted_anywhere( $post ) {
 		return boi_is_unlisted( $id );
 	}
 
-	return $id > 0 && in_array( $id, boi_unlist_plugin_ids(), true );
+	return $id > 0 && ( in_array( $id, boi_unlist_plugin_ids(), true ) || ( function_exists( 'boi_superseded_ids' ) && in_array( $id, boi_superseded_ids(), true ) ) );
 }
 
 /**

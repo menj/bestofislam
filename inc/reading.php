@@ -37,7 +37,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
-			'slugs' => array( 'manuscript-transmission', 'septuagint', 'old-testament-variant-readings', 'kings-and-chronicles-numbers', 'oldest-bible-codices', 'comma-johanneum', 'bible-alteration-claim-before-islam', 'who-changed-the-bible', 'second-peter', 'uthman-copies', 'muhammad-never-wrote-it-down', 'seven-ahruf-cairo-edition-stoning-verse', 'aisha-sheep-report-stoning-and-suckling-verses', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'quran-pronoun-shifts-iltifat', 'preservation-and-truth', 'quran-contradictions-claims', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
+			'slugs' => array( 'manuscript-transmission', 'septuagint', 'old-testament-variant-readings', 'kings-and-chronicles-numbers', 'oldest-bible-codices', 'comma-johanneum', 'bible-alteration-claim-before-islam', 'who-changed-the-bible', 'second-peter', 'jamnia-and-the-hebrew-canon', 'earliest-new-testament-lists', 'disputed-books-of-the-new-testament', 'revelation-warning-and-the-canon', 'uthman-copies', 'muhammad-never-wrote-it-down', 'seven-ahruf-cairo-edition-stoning-verse', 'aisha-sheep-report-stoning-and-suckling-verses', 'quran-preservation-reddit', 'who-wrote-the-quran', 'quran-grammar-errors-claim', 'quran-pronoun-shifts-iltifat', 'preservation-and-truth', 'quran-contradictions-claims', 'revisionist-case-weighed', 'sira-ibn-ishaq-hisham-tabari', 'schacht-isnads-dating-hadith' ),
 		),
 		array(
 			'label' => __( 'The Prophet and the hard questions', 'bestofislam' ),

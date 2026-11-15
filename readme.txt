@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.114.0
+Stable tag: 1.115.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -67,7 +67,7 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
-* Display: rank badges, the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
 * Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace.
@@ -164,10 +164,43 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.114.0 =
+= 1.115.0 =
 * The theme now requires PHP 8.4.
 * The contents list is adapted from WP TOC: level-three headings are nested under their section, pages get the list too, headings marked no-toc are left out, Arabic headings keep readable anchors, and [wp_toc] or [auto_toc] places the list in the text. Search engines see the sections in the page's structured data.
 * The reply to "I read the entire Quran" gains its featured image and four in-text images.
+
+= 1.114.0 =
+* Seeded articles follow the bundle, safely. An article you edited is never overwritten. Content lists it with the differences, and you take the new text or keep yours.
+* An article the theme drops goes to the Trash only if you have not edited it. Nothing is deleted.
+* A replacement map retires an old article behind a 301, hides it from lists and search, and moves it to the Trash. It ships empty.
+* The Content tab has a dry-run card, a log of the last 100 changes and a run button. BOI_DISABLE_CONTENT_SYNC switches it all off.
+* A corrected article reaches the site without a version bump.
+
+= 1.113.6 =
+* The notes of the article on whether Islam teaches that the Bible was corrupted now give the volume and page for six commentary and hadith references, checked against the Shamela text.
+
+= 1.113.5 =
+* Four new articles on how the canon took shape: the meeting at Jamnia, the earliest New Testament lists, the warning at the end of Revelation, and the disputed books. Each cites its sources by page.
+* Corrections to the articles on the Septuagint, the second letter of Peter, the letters of Paul and the oldest Bible codices, with page references.
+
+= 1.113.4 =
+* Accessibility pass to WCAG 2.2 AA. Every control shows one clear focus ring, form fields have a visible edge, and category links are 24 pixels tall.
+* The glossary bar is a named region, so a screen reader announces it.
+* A new check, `tests/axe-check.js`, runs axe-core on the main templates.
+
+= 1.113.3 =
+* One article no longer names the author of the compilation it draws on. It cites the verses, hadith and tafsir entries themselves.
+
+= 1.113.2 =
+* Wide screens: the page no longer jumps down when the menu font loads, because the three fonts every page paints first are now fetched at once.
+* Phones: long titles, links and excerpts wrap inside their column, small links in lists, tags and answers are easier to tap, and the home page section cards fit a 320 pixel screen.
+* The menu button tells screen readers whether the menu is open.
+
+= 1.113.1 =
+* The lead and list reacts. A row under the pointer or the keyboard focus gets a soft tint that grows past it, an accent bar on its left edge, a zoom on its thumbnail, an underlined accent title and an arrow. The first row carries the bar at rest.
+* Each piece shows its category as a coloured tab that links to the category, with its date and reading time under the title. The large piece shows a Read arrow on hover and focus.
+* The block fades up in turn as it scrolls into view. Visitors who ask for reduced motion see colour changes only.
+* The Display tab has a Lead and list card: category tabs, arrows and motion, and an accent colour.
 
 = 1.113.0 =
 * A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026. Its images follow in a later release.
@@ -346,8 +379,29 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.114.0 =
+= 1.115.0 =
 Requires PHP 8.4: check the server's PHP version first. If the WP TOC plugin is active, deactivate it; the theme now does the same work. Then replace the theme files.
+
+= 1.114.0 =
+Replace the theme files. Open Theme Options, Content: articles you edited are listed there with a diff.
+
+= 1.113.6 =
+Replace the theme files. Nothing else to do.
+
+= 1.113.5 =
+Replace the theme files. Nothing else to do. The four new articles appear on the next admin page load; an edited article keeps your text.
+
+= 1.113.4 =
+Replace the theme files. Nothing else to do.
+
+= 1.113.3 =
+Replace the theme files. Nothing else to do. An article you have edited keeps your text; the Content tab lists it so you can choose to refresh it.
+
+= 1.113.2 =
+Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.
+
+= 1.113.1 =
+Replace the theme files. Nothing else to do; the new Lead and list card on the Display tab starts with everything on.
 
 = 1.113.0 =
 Replace the theme files. The new article is created when the version changes.

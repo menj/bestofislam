@@ -4,13 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.114.0] - 2026-11-08
+## [1.115.0] - 2026-11-15
 
 No feature removed and no public identifier renamed. The PHP requirement changes.
 
 ### Changed
-- **Requires PHP 8.4** (was 7.4), in `style.css`, `readme.txt`, `README.md` and `docs/SSOT.md` (D59). The Content checks workflow now lints and runs every `tests/*-test.php` on PHP 8.4.
-- **The contents list is adapted from WP TOC** (D60), in `inc/anatomy.php`:
+- **Requires PHP 8.4** (was 7.4), in `style.css`, `readme.txt`, `README.md` and `docs/SSOT.md` (D61). The Content checks workflow now lints and runs every `tests/*-test.php` on PHP 8.4.
+- **The contents list is adapted from WP TOC** (D62), in `inc/anatomy.php`:
   - level-three headings get ids and are nested under their section in the list;
   - ids are made unique against every id in the text, not only other headings, and an Arabic heading keeps a readable Arabic id instead of a percent-encoded one;
   - headings with the class `no-toc` or a `data-no-toc` attribute, empty headings and headings inside a template element are left out;
@@ -25,6 +25,79 @@ No feature removed and no public identifier renamed. The PHP requirement changes
 - `tests/toc-test.php`: 35 checks of the ids (quoted or not), skipped headings, the tree, the shortcode settings, where the shortcode may leave its marker and the list that replaces it.
 - `docs/CREDITS.md`: WP TOC and the MIT notice of Ikram Hawramani's original work.
 - i-read-the-entire-quran-reply: the images promised in 1.113.0, all from Wikimedia Commons: a fourteenth-century Moroccan Sahih al-Bukhari, the Taroudant Bukhari of 1097 (CC0), Papyrus 46, a fragment of Surat 'Abasa and al-Qundusi's Basmala. None shows a person.
+
+## [1.114.0] - 2026-11-09
+
+Seeded articles follow the bundle, safely. No feature removed, no identifier renamed.
+
+### Changed
+- Population updates an article only while a fingerprint recorded when the theme wrote it proves the owner has not edited it. An article with no record counts as edited. The older rule that took a never-modified article for untouched is removed.
+- An article the bundle dropped goes to the Trash when it is untouched, and only articles that carry `_boi_sync_key` are candidates.
+- A corrected article reaches the site without a version bump: the sync runs when the manifest checksum changes.
+
+### Added
+- `inc/content-sync.php`: the review card on Theme Options, Content (dry run, diff, Take the bundled text, Keep mine, Run the review now, a log of the last 100 changes), the supersedes map with a 301 at any address, hiding through the unlist module and the Trash, the guards, and the `BOI_DISABLE_CONTENT_SYNC` switch.
+- `inc/data/supersedes.json` (empty), `inc/data/seed-manifest.json` and `bin/seed-manifest.php`. `bin/check-content.py` checks that the manifest is current.
+- `tests/content-sync-test.php`.
+- The integrity check is never cached, a "Keep mine" on an article to be replaced holds when a guard later clears, the bundled slug is recorded before an article is trashed so its old address still redirects, and the text record moves with a renamed article. The legacy refresh form obeys the kill switch, a replaced article's "Keep mine" holds whether or not its slug stays in the bundle, and the fallback hiding also cuts superseded IDs out of queries that name their posts.
+
+## [1.113.6] - 2026-11-09
+
+Verification pass on `does-islam-teach-the-bible-was-corrupted`. No feature removed, no identifier renamed.
+
+### Changed
+- Notes: Ibn Kathir on 12:100 (vol. 4, p. 412) and on 6:115 (vol. 3, p. 322), al-Qurṭubī on 5:13 (vol. 6, p. 115) and on 15:9 (vol. 10, pp. 5 to 6), the page of Ibn al-Qayyim's three views (vol. 2, p. 351), and al-Haythamī's attribution of the Muʿādh report to al-Bazzār in full and to Aḥmad in abridged form (vol. 4, p. 309). All were read in the Shamela text. The claims in the article text match what the pages say.
+
+## [1.113.5] - 2026-11-09
+
+Canon articles and corrections. No feature removed, no identifier renamed.
+
+### Added
+- Four articles: `jamnia-and-the-hebrew-canon`, `earliest-new-testament-lists`, `revelation-warning-and-the-canon` and `disputed-books-of-the-new-testament`. They join the reading order after `second-peter`. They ship without photographs; D30 asks for three each, to come from Wikimedia Commons.
+- `docs/CREDITS.md`: Davidson's history of the canon, as a public-domain text.
+
+### Changed
+- `pauline-letters-authorship`: the Muratorian fragment is called "usually dated to the later second century", the letter to the Alexandrians may mean Hebrews, and the canon is said to have "taken shape" instead of "closed" with 2 Peter 3:16.
+- `septuagint`: the lists of the Ethiopian church vary between authorities.
+- Page references to Davidson's history added to the notes of `septuagint`, `second-peter`, `who-changed-the-bible`, `oldest-bible-codices`, `early-christians-yahweh-evil-gnosticism-marcion` and `pauline-letters-authorship`.
+
+## [1.113.4] - 2026-11-09
+
+WCAG 2.2 AA pass. No feature removed, no identifier renamed.
+
+### Fixed
+- One focus ring for every control, in the accent that swaps with the light and dark switch. The footer uses its own link colour (2.4.7, 1.4.11).
+- Contact and search field edges use accent-5 and read at 3:1 or better. Before, the pale accent-6 rule measured 1.3:1 (1.4.11).
+- Category links and lead kickers are 24 pixels tall at every width. Before, they were 16 to 18 pixels tall on wide screens (2.5.8).
+- The glossary bar is a region named "Glossary tools" (1.3.1).
+- Smooth scrolling stops when the visitor asks for reduced motion (2.3.3).
+
+### Added
+- `tests/axe-check.js`: axe-core on the main templates at 375 and 1280 pixels.
+
+## [1.113.3] - 2026-11-09
+
+Content attribution. No feature removed, no identifier renamed.
+
+### Changed
+- `does-islam-teach-the-bible-was-corrupted`: the Notes and the upgrade record credit the compilation of reports, with no personal name and no article title. Every reference, grading and unchecked item stays.
+- `docs/CREDITS.md`: a Sources of material entry credits the compiler there, and only there.
+- `docs/SSOT.md`: a contributor rule that compilers are credited in the credits only.
+
+## [1.113.2] - 2026-11-09
+
+Mobile-first audit at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 17 page types. No feature removed, no identifier renamed.
+
+### Fixed
+- Wide screens: layout shift on first load fell from 0.75 to under 0.01. The header menu was measured in the fallback font and again in Ysabeau Office, so the header changed height and pushed the page down 52 pixels. `boi_preload_fonts()` now preloads Ysabeau Office, EB Garamond Regular and Platypi.
+- Long titles, breadcrumbs, excerpts and links wrap inside their column. Before, an unbroken long title in a list or an article ran 600 to 2,000 pixels past its column and was cut off by the page edge.
+- Home page section cards (`.boi-sections`) fit a 320 pixel screen; the grid minimum is now `min(17rem, 100%)`.
+- "Full answer" links on the home page are 24 pixels high or more. Links in post lists, post tags and related-article links get a finger-sized target below 782 pixels and on touch screens.
+- The menu button reports `aria-expanded` as the menu opens and closes (`assets/js/nav-state.js`).
+
+## [1.113.1] - 2026-11-09
+
+The lead and list reacts to hover, focus and tap, with category tabs. See `readme.txt`.
 
 ## [1.113.0] - 2026-11-08
 

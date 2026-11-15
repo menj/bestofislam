@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.114.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.115.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -37,6 +37,7 @@ These names are public identifiers. Renaming one is a breaking change and needs 
 - Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
 - Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
 - English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
+- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Do not name the individuals who present arguments for or against any position in an article, excerpt, heading, list or published note. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
 - The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
 - Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).
 - A release updates the version in every place listed above, adds a `CHANGELOG.md` entry and its short form in `readme.txt`, adds a note to `docs/UPGRADING.md` when the owner must act, and passes every test in `tests/` and `bin/check-content.py`.
@@ -725,15 +726,32 @@ references that can be checked.
 
 The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
 
+### D60. Seeded articles follow the bundle, safely
+
+`inc/content-sync.php` decides what population may touch. When the theme writes an article it records `_boi_sync_fp` (the fingerprint of the stored title, excerpt and body), `_boi_sync_bfp` (the bundled entry) and `_boi_sync_key` (its bundled slug). An article is edited when its stored text differs from `_boi_sync_fp`, or when no record exists; the older option records (`boi_article_hashes`, `boi_article_text_hashes`) are honoured when both still match. The older rule that took a never-modified article for untouched is gone.
+
+| Event | Untouched article | Edited article, or no record |
+|---|---|---|
+| The bundle text changes | Takes the new text, logged | Stays. Listed on the Content tab with a diff: Take the bundled text, or Keep mine |
+| The bundle drops it | Moved to the Trash | Stays, listed |
+| Renamed in `renamed-slugs.php` or the seed list | The post keeps its identity and the record moves with it; the old address answers 301 as before | Same |
+| `supersedes` names it as old and the new one is published | 301 at any address, hidden through the unlist module, noindex, then the Trash | Stays, listed |
+
+Only posts that carry `_boi_seeded` are updated and only posts that carry `_boi_sync_key` are ever trashed. Nothing is deleted. `inc/data/supersedes.json` is `{ "post": { old slug: new slug } }` and ships empty; the `boi_supersedes` filter can add pairs. The sync runs when the theme version, the manifest checksum (`inc/data/seed-manifest.json`, written by `php bin/seed-manifest.php`), the supersedes map or the guard state changes, so a corrected article needs no version bump. Removals, the redirect and the hiding stop when a bundled file fails its checksum, when the bundle lists more than 10 percent fewer articles than at the last good sync (a button accepts the new count), or when `BOI_DISABLE_CONTENT_SYNC` is true; the constant also stops updates. The Content tab card has a dry run, the owner's choices and a log of the last 100 changes. `bin/check-content.py` fails when the manifest is stale.
+
+### D59. Accessibility rests on shared rules and is measured
+
+The theme meets WCAG 2.2 AA. One base rule in `assets/css/front.css` draws the focus ring for every control, in the accent that swaps with the light and dark switch. Field edges use accent-5 and category links are 24 pixels tall. Components add their own focus styles only where the base ring would be hidden. `tests/axe-check.js` runs axe-core on the main templates and exits 1 on a serious or critical violation. A release does not ship with one.
+
 ### D58. A Pexels photograph finder sits in Theme Options
 
 The owner asked on 2026-11-07 for the official Pexels JavaScript client (the `pexels` npm package, MIT) to be part of the theme. It is vendored unchanged at `assets/js/vendor/pexels/main.umd.js` and used only by `assets/js/admin-images.js` on the Images tab, which searches Pexels and copies a plan entry (`{"src":"pexels","id":…}`) for `bin/stock-images.json`. The key is the `BOI_PEXELS_KEY` constant or the `pexels_key` setting; it is printed to administrators only, on that screen, and never written into a theme file or onto the public site. The finder does not download or store images: D48 (Commons first, then Pexels, then Pixabay) and D30 (credits, no prophets) still govern what is used, and `bin/fetch-stock-images.py` still does the downloading.
 
-### D59. The theme requires PHP 8.4
+### D61. The theme requires PHP 8.4
 
 The owner set PHP 8.4 as the minimum on 2026-11-08. `style.css` and `readme.txt` declare `Requires PHP: 8.4`, so WordPress will not install or activate the theme on older PHP. The Content checks workflow lints every PHP file and runs every `tests/*-test.php` on PHP 8.4. The code does not yet use syntax that needs 8.4, so a site still on older PHP when it updates keeps running, but that setup is unsupported.
 
-### D60. The contents are adapted from WP TOC
+### D62. The contents are adapted from WP TOC
 
 The owner asked on 2026-11-08 for WP TOC (https://github.com/menj/wp-toc, GPL-3.0-or-later, itself based on Ikram Hawramani's MIT-licensed work) to be part of the theme. It is not bundled: its rules are carried into the theme's own contents in `inc/anatomy.php`, so the page has one contents list and one graph. Carried over: level-two and level-three headings, nested; ids kept when present and otherwise made from the text, unique against every id in the text, with Arabic headings keeping readable ids; headings marked `no-toc` or `data-no-toc`, empty headings and anything inside a template element are passed over; the `[wp_toc]` and `[auto_toc]` shortcodes with the attributes `tags` (h2, h3), `title`, `depth`, `min`, `collapsible` and `collapsed`; a SiteNavigationElement with one WebPageElement per section in the page graph. Kept from the theme: the list shows from three level-two headings on articles and pages (not the front page), under the Contents switch, and a listicle keeps its jump list. Left out: the plugin's settings filters, its own JSON-LD block and microdata (the theme's single graph carries the same facts), and Rank Math's TOC check, which only counts plugins. When the WP TOC plugin is active (`WP_TOC_VERSION`), the theme stands aside: no contents block, no shortcodes and no contents schema.
 
