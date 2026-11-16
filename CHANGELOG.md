@@ -4,6 +4,28 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.115.0] - 2026-11-15
+
+No feature removed and no public identifier renamed. The PHP requirement changes.
+
+### Changed
+- **Requires PHP 8.4** (was 7.4), in `style.css`, `readme.txt`, `README.md` and `docs/SSOT.md` (D61). The Content checks workflow now lints and runs every `tests/*-test.php` on PHP 8.4.
+- **The contents list is adapted from WP TOC** (D62), in `inc/anatomy.php`:
+  - level-three headings get ids and are nested under their section in the list;
+  - ids are made unique against every id in the text, not only other headings, and an Arabic heading keeps a readable Arabic id instead of a percent-encoded one;
+  - headings with the class `no-toc` or a `data-no-toc` attribute, empty headings and headings inside a template element are left out;
+  - pages show the contents too (`templates/page.html`), under the same Contents switch, but not the front page;
+  - the `[wp_toc]` and `[auto_toc]` shortcodes place the list in the text, with WP TOC's attributes `tags`, `title`, `depth`, `min`, `collapsible` and `collapsed`; a text that places its own list gets no list at its head;
+  - the page graph gains a SiteNavigationElement with one WebPageElement per section, and the article gains `accessibilityFeature: tableOfContents`, whether the list is at the head or placed by the shortcode;
+  - when the WP TOC plugin is active the theme stands aside.
+- `assets/css/anatomy.css`: styles for the nested list and the folded list; the stylesheet also loads on pages.
+- The Contents switch's help text in Theme Options names pages, the nesting and the shortcode.
+
+### Added
+- `tests/toc-test.php`: 35 checks of the ids (quoted or not), skipped headings, the tree, the shortcode settings, where the shortcode may leave its marker and the list that replaces it.
+- `docs/CREDITS.md`: WP TOC and the MIT notice of Ikram Hawramani's original work.
+- i-read-the-entire-quran-reply: the images promised in 1.113.0, all from Wikimedia Commons: a fourteenth-century Moroccan Sahih al-Bukhari, the Taroudant Bukhari of 1097 (CC0), Papyrus 46, a fragment of Surat 'Abasa and al-Qundusi's Basmala. None shows a person.
+
 ## [1.114.0] - 2026-11-09
 
 Seeded articles follow the bundle, safely. No feature removed, no identifier renamed.

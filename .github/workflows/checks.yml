@@ -26,7 +26,19 @@ jobs:
       - name: Check Glossary data and article content
         run: python bin/check-content.py
 
+      # The theme requires PHP 8.4 (style.css, readme.txt), so the code is
+      # linted and tested on 8.4.
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
       - name: PHP syntax
         run: |
+          php -v | head -1
           for f in functions.php inc/*.php; do php -l "$f" > /dev/null || exit 1; done
           echo "PHP syntax OK"
+
+      - name: PHP tests
+        run: |
+          for t in tests/*-test.php; do echo "$t"; php "$t" || exit 1; done
