@@ -63,7 +63,7 @@ feature stands aside, so nothing runs twice.
 
 ## Upgrading to 1.115.1
 
-Replace the theme files. The two reworded articles are refreshed by `boi_migrate_seed()` where the owner has not edited them. Nothing else to do.
+Replace the theme files. The thirteen reworded articles are refreshed by `boi_migrate_seed()` where the owner has not edited them. Nothing else to do.
 
 ## Upgrading to 1.115.0
 

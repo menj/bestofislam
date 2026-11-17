@@ -9,7 +9,7 @@ versioning.
 No feature removed and no public identifier renamed.
 
 ### Changed
-- jeremiah-new-covenant-hebrews-and-the-quran and what-the-pagans-of-mecca-said-about-allah: eight sentences that denied one claim before stating another now state the claim directly, following the owner's writing rules. No fact, quotation or note changes.
+- 46 sentences in thirteen articles that denied one claim before stating another now state the claim directly, following the owner's writing rules (3F): jeremiah-new-covenant-hebrews-and-the-quran, what-the-pagans-of-mecca-said-about-allah, will-every-non-muslim-go-to-hell, jews-behind-the-stone-hadith, can-a-muslim-befriend-a-non-muslim, women-in-hell-and-deficient-intelligence-hadith, three-divorces-and-the-one-night-marriage, was-muhammad-a-narcissist, safiyya-and-the-women-captured-in-war, what-former-muslims-testimonies-show, when-a-stranger-online-calls-islam-a-cult, nine-questions-from-the-floor-islamic-dilemma-debate and al-zutt-allegation. No fact, quotation or note changes.
 
 ## [1.115.0] - 2026-11-15
 

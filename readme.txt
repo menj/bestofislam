@@ -165,7 +165,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.115.1 =
-* Wording fixes in the two covenant and Meccan articles: eight sentences that denied one claim before stating another now state the claim directly. No fact changes.
+* Wording fixes in thirteen articles: 46 sentences that denied one claim before stating another now state the claim directly. No fact, quotation or note changes.
 
 = 1.115.0 =
 * The theme now requires PHP 8.4.
@@ -383,7 +383,7 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.115.1 =
-Replace the theme files. The two reworded articles refresh where the owner has not edited them.
+Replace the theme files. The thirteen reworded articles refresh where the owner has not edited them.
 
 = 1.115.0 =
 Requires PHP 8.4: check the server's PHP version first. If the WP TOC plugin is active, deactivate it; the theme now does the same work. Then replace the theme files.
