@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.115.1
+
+Replace the theme files. The thirteen reworded articles are refreshed by `boi_migrate_seed()` where the owner has not edited them. Nothing else to do.
+
 ## Upgrading to 1.115.0
 
 1. Check that the server runs PHP 8.4 or later (Tools, Site Health, Info, Server). WordPress will not update or activate the theme on older PHP.
