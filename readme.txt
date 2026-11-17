@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.115.0
+Stable tag: 1.115.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later, and from WP TOC by MENJ (GPLv3 or later, based on work by Ikram Hawramani under the MIT License).
 
 == Changelog ==
+
+= 1.115.1 =
+* Wording fixes in the two covenant and Meccan articles: eight sentences that denied one claim before stating another now state the claim directly. No fact changes.
 
 = 1.115.0 =
 * The theme now requires PHP 8.4.
@@ -378,6 +381,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.115.1 =
+Replace the theme files. The two reworded articles refresh where the owner has not edited them.
 
 = 1.115.0 =
 Requires PHP 8.4: check the server's PHP version first. If the WP TOC plugin is active, deactivate it; the theme now does the same work. Then replace the theme files.
