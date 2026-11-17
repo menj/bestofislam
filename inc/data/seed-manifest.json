@@ -66,7 +66,7 @@
         "content\/islamisation-of-the-west.json": "dce227ead2f828d7f6d3fd5aaa91549a",
         "content\/islamophobia-facts.json": "f3f14a81d9eb360df9404eec66a6c3ff",
         "content\/jamnia-and-the-hebrew-canon.json": "dc534004a9dcd594911f38185b47d314",
-        "content\/jeremiah-new-covenant-hebrews-and-the-quran.json": "f290888da6efde9f2f76a659b3143a3c",
+        "content\/jeremiah-new-covenant-hebrews-and-the-quran.json": "561af52400e1a901f8e973957907cc06",
         "content\/jesus-not-god.json": "163edb446e388519d9d567343c681edc",
         "content\/jews-behind-the-stone-hadith.json": "4ff28efad002c0e5663f4b42773b650b",
         "content\/jihad-meaning-quran-hadith-jurists.json": "c0e1cad1cf03a5c32a6245d72aa0f72c",
@@ -158,7 +158,7 @@
         "content\/was-yahweh-one-of-many-gods.json": "fa39a0f02d40e0a07642a82d94b9010c",
         "content\/western-scholars-of-islam.json": "90d884c71ac80dd1ab6e4de42d52ad96",
         "content\/what-former-muslims-testimonies-show.json": "bf5dbfdd838b0f614e38b4f425de62f6",
-        "content\/what-the-pagans-of-mecca-said-about-allah.json": "1664499e0b450c5b0864332d1dcb19e8",
+        "content\/what-the-pagans-of-mecca-said-about-allah.json": "b5e20ed2222fc8c54774573028297ee7",
         "content\/when-a-stranger-online-calls-islam-a-cult.json": "3dff4d559429a1d2fe354de9b4abeca5",
         "content\/where-did-jesus-say-he-is-god.json": "8c38382e3e075239cc57f55c0483f81f",
         "content\/where-is-the-injil.json": "c41f18d5d5af2d47dba4b67e1d7d1797",
@@ -177,5 +177,5 @@
         "inc\/data\/seed.json": "507464c79a5e80a5b1fad60fd1ac8050",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "c74914c6c5d06299fa8b8b72eb22c627"
+    "checksum": "474a478bc981b60ee0d1ddfd4a74b947"
 }
