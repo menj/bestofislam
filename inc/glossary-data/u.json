@@ -137,7 +137,7 @@
   "terms": [
    "custom",
    "fiqh",
-   "usul-al-fiqh",
+   "usul-fiqh",
    "hukm"
   ],
   "articles": [],
@@ -152,34 +152,6 @@
   }
  },
  {
-  "slug": "usul-al-fiqh",
-  "title": "Usul al-Fiqh",
-  "ar": "أصول الفقه",
-  "tr": "Uṣūl al-Fiqh",
-  "def": "The sources of Islamic law: the Quran, the Sunnah, consensus and analogy, together with the principles for using them",
-  "what": [
-   "<em>Uṣūl al-fiqh</em> means the roots of the law. The agreed sources are the Quran, the Sunnah of the Prophet (peace be upon him), the consensus of qualified scholars (<em>ijmāʿ</em>) and analogy (<em>qiyās</em>). Jurists also discuss further principles, such as public interest, custom and presumption of continuity, on which the schools differ. The distinction between the two terms is one of level. <em>Fiqh</em> is the body of rulings, and <em>uṣūl al-fiqh</em> is the set of sources and rules from which the rulings are drawn. Al-Shāfiʿī’s <em>Risālah</em> is the earliest surviving systematic treatment."
-  ],
-  "misread": "That it is the same as fiqh, when it names the sources from which fiqh is derived.",
-  "sources": [],
-  "terms": [
-   "fiqh",
-   "ijma",
-   "qiyas",
-   "sunnah"
-  ],
-  "articles": [],
-  "type": "law",
-  "aliases": [
-   "Usul al-Fiqh",
-   "Usool al-Fiqh"
-  ],
-  "faruqi": {
-   "page": 51,
-   "term": "UṢŪL AL FIQH"
-  }
- },
- {
   "slug": "usul-fiqh",
   "title": "Usul Fiqh",
   "ar": "أصول فقه",
@@ -191,20 +163,30 @@
   "misread": "That Islamic law is a fixed list of rules, when it is a method of reasoning from sources.",
   "sources": [],
   "terms": [
-   "usul-al-fiqh",
    "ijtihad",
    "hukm",
-   "fiqh"
+   "fiqh",
+   "ijma",
+   "qiyas",
+   "sunnah"
   ],
   "articles": [],
   "type": "law",
   "aliases": [
-   "Usul-i Fiqh"
+   "Usul-i Fiqh",
+   "Usul al-Fiqh",
+   "Usool al-Fiqh"
   ],
-  "faruqi": {
-   "page": 51,
-   "term": "UṢŪL FIQH"
-  }
+  "faruqi": [
+   {
+    "page": 51,
+    "term": "UṢŪL FIQH"
+   },
+   {
+    "page": 51,
+    "term": "UṢŪL AL FIQH"
+   }
+  ]
  },
  {
   "slug": "uswah-hasanah",
@@ -221,16 +203,25 @@
    "sunnah",
    "muhammad",
    "hadith",
-   "ihsan"
+   "ihsan",
+   "sira"
   ],
   "articles": [],
   "type": "term",
   "aliases": [
-   "Uswa Hasana"
+   "Uswa Hasana",
+   "Al-Uswah al-Hasanah",
+   "Good Example"
   ],
-  "faruqi": {
-   "page": 23,
-   "term": "USWAH ḤASANAH"
-  }
+  "faruqi": [
+   {
+    "page": 23,
+    "term": "USWAH ḤASANAH"
+   },
+   {
+    "page": 64,
+    "term": "AL USWAH AL ḤASANAH"
+   }
+  ]
  }
 ]

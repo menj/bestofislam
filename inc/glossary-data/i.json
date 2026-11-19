@@ -301,14 +301,15 @@
   "what": [
    "The Sunni schools take four sources of law: the Quran, the Sunnah, <em>ijmāʿ</em> and analogy (<em>qiyās</em>). Consensus means agreement among qualified scholars of an age on a point of law. The Prophet is reported to have said that his community will not agree on error (Ibn Majah, graded hasan by some), and the idea is also argued from the Quran (4:115)."
   ],
-  "misread": "",
+  "misread": "Some picture it as a vote of the general public or a majority decision, but it refers to the agreement of those qualified to give legal rulings.",
   "sources": [
    "Scholars have debated whether it can truly be known, and the schools differ on its scope. A few matters, such as the five daily prayers, are accepted by all Muslims."
   ],
   "terms": [
    "sharia",
    "fiqh",
-   "ijtihad"
+   "ijtihad",
+   "qiyas"
   ],
   "articles": [
    "morality-without-god",
@@ -316,8 +317,14 @@
   ],
   "aliases": [
    "Consensus",
-   "Ijmaa"
-  ]
+   "Ijmaa",
+   "Ijma', al-",
+   "Al-Ijma'"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL IJMĀ'"
+  }
  },
  {
   "slug": "ijtihad",
@@ -329,22 +336,29 @@
   "what": [
    "The Prophet said: “When a judge exercises ijtihad and is right he has two rewards, and if he errs he has one” (Sahih al-Bukhari and Sahih Muslim). A scholar qualified in Arabic, the Quran, hadith and the principles of law is called a mujtahid. Ijtihad is how the law meets new cases, from medicine to finance, within the limits of the text and consensus."
   ],
-  "misread": "",
+  "misread": "It is mistaken for private opinion or freedom to reinterpret the religion at will, but it is a disciplined method that only trained scholars may use.",
   "sources": [
    "The old claim that “the gate of ijtihad was closed” is rejected by many historians, who show that jurists went on giving fresh rulings, and by modern scholars who ask for it to be used more freely."
   ],
   "terms": [
    "ijma",
    "qiyas",
-   "hukm"
+   "hukm",
+   "fiqh"
   ],
   "articles": [
    "sharia-and-hudud"
   ],
   "aliases": [
    "Mujtahid",
-   "Independent Reasoning"
-  ]
+   "Independent Reasoning",
+   "Ijtihad, al-",
+   "Al-Ijtihad"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL IJTIHĀD"
+  }
  },
  {
   "slug": "illiyin",
@@ -1154,36 +1168,6 @@
   }
  },
  {
-  "slug": "ijma-al",
-  "title": "Ijma', al-",
-  "ar": "الإجماع",
-  "tr": "al-Ijmāʿ",
-  "def": "Consensus: the agreement of qualified scholars on a ruling, accepted as a source of Islamic law after the Quran and Sunna.",
-  "what": [
-   "<em>Ijmāʿ</em> means agreement. In Islamic law it names the agreement of the qualified jurists of a given age on a legal question, and the schools count it among the sources of law after the Quran and the Sunna. Once such agreement is established, later scholars treat the ruling as settled. Jurists base the authority of consensus on texts such as 4:115, which warns against following a path other than that of the believers, and on a saying reported in several forms that the Prophet’s community will not agree on an error. Faruqi counts it with the sources from which Islamic law is derived."
-  ],
-  "misread": "Some picture it as a vote of the general public or a majority decision, but it refers to the agreement of those qualified to give legal rulings.",
-  "sources": [
-   "Scholars disagree about who counts for consensus, whether it extends beyond the Companions, and whether it can be known to have taken place. Some, such as Ahmad ibn Hanbal, were cautious about claiming it."
-  ],
-  "terms": [
-   "ijma",
-   "ijtihad",
-   "qiyas",
-   "sharia"
-  ],
-  "articles": [],
-  "type": "law",
-  "aliases": [
-   "Al-Ijma'",
-   "Ijma"
-  ],
-  "faruqi": {
-   "page": 52,
-   "term": "AL IJMĀ'"
-  }
- },
- {
   "slug": "ijma-al-sarih-al",
   "title": "Ijma' al-Sarih, al-",
   "ar": "الإجماع الصريح",
@@ -1195,7 +1179,7 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "ijma-al",
+   "ijma",
    "ijma-al-sukuti-al",
    "ijtihad",
    "sharia"
@@ -1223,7 +1207,7 @@
   "misread": "",
   "sources": [],
   "terms": [
-   "ijma-al",
+   "ijma",
    "ijma-al-sarih-al",
    "ijtihad",
    "fiqh"
@@ -1238,36 +1222,6 @@
   "faruqi": {
    "page": 52,
    "term": "AL IJMĀ' AL SUKŪTĪ"
-  }
- },
- {
-  "slug": "ijtihad-al",
-  "title": "Ijtihad, al-",
-  "ar": "الاجتهاد",
-  "tr": "al-Ijtihād",
-  "def": "Independent reasoning by a qualified scholar to derive rulings from the Quran, the Sunna and the other legitimate sources.",
-  "what": [
-   "<em>Ijtihād</em> comes from the root <em>j-h-d</em>, meaning to exert effort, and it names the exertion of a qualified jurist to reach a ruling on a matter that the sources do not settle directly. Faruqi calls it creative self-exertion to derive laws from the legitimate sources. It works with the Quran, the Sunna, consensus and analogy, and the person doing it is called a <em>mujtahid</em>. A well-known hadith says that a judge who exerts himself and judges correctly has two rewards, and one who errs has one (Sahih al-Bukhari, Sahih Muslim). The saying shows that sincere effort is valued even when the result is mistaken."
-  ],
-  "misread": "It is mistaken for private opinion or freedom to reinterpret the religion at will, but it is a disciplined method that only trained scholars may use.",
-  "sources": [
-   "Scholars set conditions for the mujtahid: knowledge of Arabic, the Quran, hadith and the principles of jurisprudence. A long-running debate asks whether the “gate” of ijtihad closed in later centuries, and many modern scholars say that it did not."
-  ],
-  "terms": [
-   "ijtihad",
-   "ijma",
-   "qiyas",
-   "fiqh"
-  ],
-  "articles": [],
-  "type": "law",
-  "aliases": [
-   "Al-Ijtihad",
-   "Ijtihad"
-  ],
-  "faruqi": {
-   "page": 52,
-   "term": "AL IJTIHĀD"
   }
  },
  {

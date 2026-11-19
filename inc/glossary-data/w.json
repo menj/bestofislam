@@ -16,7 +16,9 @@
   "terms": [
    "quran",
    "sunnah",
-   "kutub"
+   "kutub",
+   "tanzil",
+   "gabriel"
   ],
   "articles": [
    "who-saw-gabriel",
@@ -27,8 +29,14 @@
   "aliases": [
    "Ilham",
    "Inspiration",
-   "Revelation"
-  ]
+   "Revelation",
+   "Wahy, al-",
+   "Al-Wahy"
+  ],
+  "faruqi": {
+   "page": 48,
+   "term": "AL WAḤY"
+  }
  },
  {
   "slug": "wali",
@@ -197,34 +205,6 @@
   }
  },
  {
-  "slug": "wahy-al",
-  "title": "Wahy, al-",
-  "ar": "الوحي",
-  "tr": "al-Waḥy",
-  "def": "Revelation: the verbatim communication of a verse or more from Allah to the Prophet, as in the case of the noble Quran",
-  "what": [
-   "<em>Al-Waḥy</em> is revelation, a communication from Allah to His prophets. The root means a swift or hidden signal. The Quran says Allah speaks to a human being only by inspiration, from behind a veil, or by sending a messenger who conveys the revelation (42:51). Ismail al Faruqi uses the term for the verbatim revelation of one or more verses, as in the Quran, whose words are held to be the words of Allah. Scholars also speak of the Sunnah as inspired in meaning, although its wording is the Prophet’s own. The Quran says of Muhammad (peace be upon him) that “it is nothing but a revelation revealed” (53:4)."
-  ],
-  "misread": "That revelation is the inspiration or insight of the Prophet himself, when the Quran is held to be the word of Allah.",
-  "sources": [],
-  "terms": [
-   "wahy",
-   "quran",
-   "tanzil",
-   "gabriel"
-  ],
-  "articles": [],
-  "type": "scripture",
-  "aliases": [
-   "Al-Wahy",
-   "Wahy"
-  ],
-  "faruqi": {
-   "page": 48,
-   "term": "AL WAḤY"
-  }
- },
- {
   "slug": "waid-al",
   "title": "Wa'id, al-",
   "ar": "الوعيد",
@@ -295,7 +275,7 @@
    "hukm",
    "fiqh",
    "sharia",
-   "usul-al-fiqh"
+   "usul-fiqh"
   ],
   "articles": [],
   "type": "law",

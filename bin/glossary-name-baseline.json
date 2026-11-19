@@ -43,10 +43,6 @@
   "amala",
   "deeds"
  ],
- "deen": [
-  "din",
-  "din-al"
- ],
  "fahisha": [
   "fahisha",
   "fahishah-al"
@@ -91,14 +87,6 @@
   "hada",
   "huda"
  ],
- "ijma": [
-  "ijma",
-  "ijma-al"
- ],
- "ijtihad": [
-  "ijtihad",
-  "ijtihad-al"
- ],
  "intercession": [
   "intercession",
   "shafaah"
@@ -131,14 +119,6 @@
   "kaaba",
   "qiblah"
  ],
- "qisas": [
-  "qisas",
-  "qisas-al"
- ],
- "qiyas": [
-  "qiyas",
-  "qiyas-al"
- ],
  "rahma": [
   "kindness",
   "rahima"
@@ -166,14 +146,6 @@
  "sadaqa": [
   "almsgiving",
   "sidq"
- ],
- "sahih": [
-  "sahih",
-  "sahih-al"
- ],
- "sahihayn": [
-  "sahih",
-  "sahih-al"
  ],
  "sajda": [
   "sajada",
@@ -251,13 +223,5 @@
  "urf": [
   "custom",
   "urf-al"
- ],
- "uswa hasana": [
-  "al-uswah-al-hasanah",
-  "uswah-hasanah"
- ],
- "wahy": [
-  "wahy",
-  "wahy-al"
  ]
 }

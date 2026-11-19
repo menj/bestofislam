@@ -763,18 +763,27 @@
   "misread": "That it is the same as “revelation” in the sense of inspiration or insight, when it names a message sent down from Allah.",
   "sources": [],
   "terms": [
-   "tanzil-al",
    "wahy",
    "quran",
-   "injil"
+   "injil",
+   "gabriel"
   ],
   "articles": [],
   "type": "scripture",
-  "aliases": [],
-  "faruqi": {
-   "page": 46,
-   "term": "TANZĪL"
-  },
+  "aliases": [
+   "Tanzil, al-",
+   "Al-Tanzil"
+  ],
+  "faruqi": [
+   {
+    "page": 46,
+    "term": "TANZĪL"
+   },
+   {
+    "page": 46,
+    "term": "AL TANZĪL"
+   }
+  ],
   "lexicon": {
    "root": "ن ز ل",
    "notes": [
@@ -785,33 +794,6 @@
      "url": "https://arabiclexicon.hawramani.com/?p=4759#497087"
     }
    ]
-  }
- },
- {
-  "slug": "tanzil-al",
-  "title": "Tanzil, al-",
-  "ar": "التنزيل",
-  "tr": "al-Tanzīl",
-  "def": "The message sent down through Muhammad (peace be upon him), that is, the noble Quran",
-  "what": [
-   "<em>Al-Tanzīl</em>, with the article, names the particular message sent down through Muhammad (peace be upon him), which is <em>al-Qurʾān al-Karīm</em>, the noble Quran. The Quran describes itself in these terms: “It is a revelation (<em>tanzīl</em>) from the Lord of the worlds” (26:192; see also 69:43). Muslims hold that the angel Gabriel brought the text to the Prophet over about twenty-three years and that its words are those of Allah. The name stresses that the Quran was sent down to him from outside, and Muslims therefore speak of it as the speech of Allah that was revealed and recited."
-  ],
-  "misread": "That the Quran is a text composed by Muhammad, when its own name states that it was sent down to him.",
-  "sources": [],
-  "terms": [
-   "quran",
-   "tanzil",
-   "wahy",
-   "gabriel"
-  ],
-  "articles": [],
-  "type": "scripture",
-  "aliases": [
-   "Al-Tanzil"
-  ],
-  "faruqi": {
-   "page": 46,
-   "term": "AL TANZĪL"
   }
  },
  {

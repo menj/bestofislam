@@ -110,16 +110,27 @@
   "what": [
    "“O you who believe, retaliation is prescribed for you in the case of the killed” (2:178), followed by the words, “but whoever is forgiven by his brother, then let him follow it with fairness.” In the case of killing, the family of the victim may demand retribution, accept blood-money, or forgive for the sake of God (5:45, 42:40). Courts and proof are required."
   ],
-  "misread": "",
-  "sources": [],
+  "misread": "That it is only vengeance, when it limits the response to the harm done and invites forgiveness.",
+  "sources": [
+   "The jurists treat <em>qiṣāṣ</em> as a right of the injured party, and the state carries out the judgment after the court has proved the case. The Quran puts forgiveness above retribution, and a judge may not impose it where the family has pardoned."
+  ],
   "terms": [
    "killing",
-   "justice"
+   "justice",
+   "diya",
+   "hudud",
+   "fiqh"
   ],
   "articles": [],
   "aliases": [
-   "Lex Talionis"
-  ]
+   "Lex Talionis",
+   "Qisas, al-",
+   "Al-Qisas"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL QIṢĀṢ"
+  }
  },
  {
   "slug": "qiyas",
@@ -131,17 +142,25 @@
   "what": [
    "Jurists apply a ruling to a new matter when the reason for the ruling is present there too, for example the ban on wine extended to other intoxicants. It is the fourth source of law for most Sunni schools after the Quran, the Sunna and consensus. The report of Mu‘adh ibn Jabal, who said he would use his own reasoning when sources were silent, is cited as support, although its chain is discussed."
   ],
-  "misread": "",
+  "misread": "That jurists invent law from opinion, when <em>qiyās</em> works from a stated reason found in the sources.",
   "sources": [],
   "terms": [
    "ijma",
    "ijtihad",
-   "hukm"
+   "hukm",
+   "fiqh",
+   "sunnah"
   ],
   "articles": [],
   "aliases": [
-   "Analogy"
-  ]
+   "Analogy",
+   "Qiyas, al-",
+   "Al-Qiyas"
+  ],
+  "faruqi": {
+   "page": 52,
+   "term": "AL QIYĀS"
+  }
  },
  {
   "slug": "quran",
@@ -374,36 +393,6 @@
   }
  },
  {
-  "slug": "qisas-al",
-  "title": "Qisas, al-",
-  "ar": "القصاص",
-  "tr": "al-Qiṣāṣ",
-  "def": "The retributive and compensatory punishment prescribed for homicide and for injury to a person.",
-  "what": [
-   "<em>Al-Qiṣāṣ</em> is the law of equal retribution for killing and for bodily injury. It allows the victim or the family of the victim to demand a penalty equal to the harm done, and it also allows them to forgive the offender or to accept compensation instead. The compensation for a life or an injury is called <em>diya</em>. The Quran prescribes it for the killed (2:178) and says that in <em>qiṣāṣ</em> there is life for people of understanding (2:179). It also lists the principle of a life for a life and like for like in wounds, and calls forgiveness an act of charity that wipes away sins for the one who forgives (5:45)."
-  ],
-  "misread": "That it is only vengeance, when it limits the response to the harm done and invites forgiveness.",
-  "sources": [
-   "The jurists treat <em>qiṣāṣ</em> as a right of the injured party, and the state carries out the judgment after the court has proved the case. The Quran puts forgiveness above retribution, and a judge may not impose it where the family has pardoned."
-  ],
-  "terms": [
-   "diya",
-   "hudud",
-   "fiqh",
-   "justice"
-  ],
-  "articles": [],
-  "type": "law",
-  "aliases": [
-   "Al-Qisas",
-   "Qisas"
-  ],
-  "faruqi": {
-   "page": 53,
-   "term": "AL QIṢĀṢ"
-  }
- },
- {
   "slug": "qist",
   "title": "Qist",
   "ar": "قسط",
@@ -427,34 +416,6 @@
   "faruqi": {
    "page": 44,
    "term": "QIST"
-  }
- },
- {
-  "slug": "qiyas-al",
-  "title": "Qiyas, al-",
-  "ar": "القياس",
-  "tr": "al-Qiyās",
-  "def": "Reasoning by analogy from the Quran and the Sunnah, as a source of Islamic law.",
-  "what": [
-   "<em>Al-Qiyās</em> is logical deduction applied to the sources of Islamic law. When no text of the Quran or of the Sunnah, nor consensus (<em>ijmāʿ</em>), settles a new case, the jurist compares it with a case that a text does settle, finds the shared reason (<em>ʿillah</em>), and extends the ruling to the new case. Most Sunni jurists count it as the fourth source of law, after the Quran, the Sunnah and consensus, and the schools differ on how widely they apply it. It is the main means by which the law meets circumstances the early community did not face."
-  ],
-  "misread": "That jurists invent law from opinion, when <em>qiyās</em> works from a stated reason found in the sources.",
-  "sources": [],
-  "terms": [
-   "fiqh",
-   "ijma",
-   "ijtihad",
-   "sunnah"
-  ],
-  "articles": [],
-  "type": "law",
-  "aliases": [
-   "Al-Qiyas",
-   "Qiyas"
-  ],
-  "faruqi": {
-   "page": 52,
-   "term": "AL QIYĀS"
   }
  },
  {

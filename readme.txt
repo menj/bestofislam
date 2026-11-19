@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.115.2
+Stable tag: 1.116.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 174 articles, each with a featured image and at least 2 more in its text. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 174 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -25,7 +25,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A section taxonomy (listicle-topic) at /topic/<section>/, with categories and tags on every seeded article.
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
-* A Glossary of 798 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
+* A Glossary of 784 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
 * Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later, and from WP TOC by MENJ (GPLv3 or later, based on work by Ikram Hawramani under the MIT License).
 
 == Changelog ==
+
+= 1.116.0 =
+* Fourteen Glossary terms that had two entries each, such as Ijma and "Ijma', al-", now have one. The old address of each removed entry sends readers to the one that stays. The Glossary has 784 entries.
 
 = 1.115.2 =
 * The four articles on the canon of scripture now have pictures: a featured image and two in the text each, from manuscripts on Wikimedia Commons and from the Cleveland Museum of Art.
@@ -384,6 +387,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.116.0 =
+Replace the theme files. Fourteen duplicate Glossary pages are removed and their addresses redirect to the entry that stays. If you rewrote one of them, copy your text into the surviving entry first.
 
 = 1.115.2 =
 Replace the theme files. The four canon articles gain their featured images; the pictures in the text arrive where the owner has not edited the article.
