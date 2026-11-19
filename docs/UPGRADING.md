@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.115.2
+
+Replace the theme files. The featured images of the four articles on the canon of scripture go into the media library as pages load, for any of them that has no featured image yet, edited or not. The in-text pictures reach an article through the seed refresh, so only where the owner has not edited it. Nothing else to do.
+
 ## Upgrading to 1.115.1
 
 Replace the theme files. The thirteen reworded articles are refreshed by `boi_migrate_seed()` where the owner has not edited them. Nothing else to do.
@@ -351,7 +355,6 @@ These are plans, not promises. Each item rests on something on record: the code,
 - One limit for meta descriptions. `docs/SSOT.md` says excerpts stay within 130 characters, while `docs/SEO.md` and `boi_print_meta_description()` allow 160, and 53 seeded excerpts run between 131 and 160. The owner decides which limit stands; then either those excerpts are shortened or the SSOT is changed to 160.
 - A stricter test before the seed migration refreshes an article. `boi_migrate_seed()` treats an article with no stored fingerprint as untouched when its modified time equals its creation time, so an edit made directly in the database, or by a plugin that keeps the old modified date, would be replaced on the next update. Requiring a stored fingerprint before any refresh would close that path (raised in the review of pull request 88).
 - The theme's PHP checked against the owner's `php-maintainable-code` skill, for readable, secure and maintainable conventions.
-- Pictures for the four articles on the canon of scripture added in 1.113.5 (jamnia-and-the-hebrew-canon, earliest-new-testament-lists, revelation-warning-and-the-canon, disputed-books-of-the-new-testament). They have no featured or in-text image, the only seeded articles without one. Wikimedia Commons first (D48), with `bin/commons-api.py`.
 - A decision on 19 pairs of Glossary entries that share a title once "al-" is set aside, such as `ijma` and `ijma-al`, `din` and `din-al`. Each entry has its own address, so a merge needs a redirect (D49). The owner decides whether to merge.
 
 ### Later
