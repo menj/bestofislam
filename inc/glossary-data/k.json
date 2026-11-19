@@ -315,25 +315,33 @@
   "what": [
    "The Quran is “the Book, in which is no doubt” (2:2). It speaks of God sending scripture to earlier prophets, such as the Torah to Moses and the Gospel to Jesus (3:3–4), and of the “Mother of the Book” (43:4), the source. Believers have faith in the books of God (2:285). The record of deeds is also a kitab (18:49)."
   ],
-  "misread": "",
+  "misread": "Reading it only as “book” as in any printed volume hides that the Quran uses the word as a name of the revelation itself.",
   "sources": [
    "Some scholars of Arabic think the word came from Aramaic or Akkadian roots; Muslims scholars note that Arabic has borrowed words, as other languages do, and that this does not alter its meaning."
   ],
   "terms": [
    "quran",
    "injil",
-   "kutub"
+   "kutub",
+   "ahl-al-kitab",
+   "furqan"
   ],
   "articles": [],
   "aliases": [
    "Book",
    "Kitab Allah",
-   "Kitab Al-Allah"
+   "Kitab Al-Allah",
+   "Kitab, al-",
+   "Al-Kitab"
   ],
   "faruqi": [
    {
     "page": 45,
     "term": "KITĀB"
+   },
+   {
+    "page": 45,
+    "term": "AL KITĀB"
    }
   ],
   "lexicon": {
@@ -746,33 +754,6 @@
   "faruqi": {
    "page": 31,
    "term": "KHILĀFAH"
-  }
- },
- {
-  "slug": "kitab-al",
-  "title": "Kitab, al-",
-  "ar": "الكتاب",
-  "tr": "al-Kitāb",
-  "def": "“The Book”, used in the Quran for the Quran itself; the word also names earlier scriptures and the record of what God has decreed.",
-  "what": [
-   "<em>Al-Kitāb</em> means “the Book”, from a root meaning to write. The Quran opens its second surah, “This is the Book, in which there is no doubt, a guidance for the God-fearing” (2:2), and in this use the word names the Quran itself. Faruqi lists it as another name for <em>al-Qurʾān al-Karīm</em>, the Noble Quran. The word is also used in other ways. The Quran calls the earlier scriptures given to Moses and Jesus <em>kitāb</em>, and it calls their followers <em>ahl al-kitāb</em>, the People of the Book. It also speaks of a record in which God’s decree and each person’s deeds are written."
-  ],
-  "misread": "Reading it only as “book” as in any printed volume hides that the Quran uses the word as a name of the revelation itself.",
-  "sources": [],
-  "terms": [
-   "quran",
-   "kutub",
-   "ahl-al-kitab",
-   "furqan"
-  ],
-  "articles": [],
-  "type": "scripture",
-  "aliases": [
-   "Al-Kitab"
-  ],
-  "faruqi": {
-   "page": 45,
-   "term": "AL KITĀB"
   }
  }
 ]

@@ -16,13 +16,13 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.115.2, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.116.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 174 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
-| Data versions | `BOI_GLOSSARY_VERSION` 18, `BOI_TERMS_VERSION` 2 |
+| Seeded content | 8 sections, 23 categories, 160 tags, 174 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 784 Glossary entries (`inc/glossary-data/`) |
+| Data versions | `BOI_GLOSSARY_VERSION` 19, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
@@ -595,6 +595,8 @@ served and nothing redirects. The dated addresses of the old permalinks,
 published (`boi_dated_slug_for()`). The map is
 `inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
 `boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
+
+The owner's rule of 19 November 2026, on merged Glossary entries: "must delete dupes auto". When an entry is merged into another, the sync deletes the duplicate's page automatically, edited or not and whatever the surviving entry's status, and its address redirects to the surviving entry.
 
 ### D50. The owner keeps all schema.org markup, in one graph per page
 

@@ -61,6 +61,10 @@ feature stands aside, so nothing runs twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.116.0
+
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 19). Where the surviving entry's page exists, it deletes the page of the merged entry, such as `/glossary/ijma-al/`, edited or not, and the old address then answers with a 301 to the entry that replaced it (`/glossary/ijma/`). Where the surviving page is missing or in the trash, the merged page is renamed to take its place instead. An owner who rewrote one of those fourteen pages and wants to keep the wording should copy it into the surviving entry before upgrading. The surviving entries are rebuilt where the owner has not edited them.
+
 ## Upgrading to 1.115.2
 
 Replace the theme files. The featured images of the four articles on the canon of scripture go into the media library as pages load, for any of them that has no featured image yet, edited or not. The in-text pictures reach an article through the seed refresh, so only where the owner has not edited it. Nothing else to do.
@@ -355,13 +359,12 @@ These are plans, not promises. Each item rests on something on record: the code,
 - One limit for meta descriptions. `docs/SSOT.md` says excerpts stay within 130 characters, while `docs/SEO.md` and `boi_print_meta_description()` allow 160, and 53 seeded excerpts run between 131 and 160. The owner decides which limit stands; then either those excerpts are shortened or the SSOT is changed to 160.
 - A stricter test before the seed migration refreshes an article. `boi_migrate_seed()` treats an article with no stored fingerprint as untouched when its modified time equals its creation time, so an edit made directly in the database, or by a plugin that keeps the old modified date, would be replaced on the next update. Requiring a stored fingerprint before any refresh would close that path (raised in the review of pull request 88).
 - The theme's PHP checked against the owner's `php-maintainable-code` skill, for readable, secure and maintainable conventions.
-- A decision on 19 pairs of Glossary entries that share a title once "al-" is set aside, such as `ijma` and `ijma-al`, `din` and `din-al`. Each entry has its own address, so a merge needs a redirect (D49). The owner decides whether to merge.
 
 ### Later
 
 - A preview of the `bestofislam/lead-list` block in the Site Editor. It renders on the server only, so the editor shows a placeholder. Waits on an editor script for the theme's server-rendered blocks.
 - A translation template, `languages/bestofislam.pot`. The FAQ in `readme.txt` tells owners where to put a `.mo` file, but the theme ships no template to make one from. The injil.help and compelling-evidence themes ship a `languages/` folder. Waits on a string freeze after the current round of article work.
-- More "In the classical dictionaries" notes on Glossary entries: 67 of 798 carry them. Waits on arabiclexicon.hawramani.com, whose security certificate had expired when last checked on 18 November 2026.
+- More "In the classical dictionaries" notes on Glossary entries: 67 of 784 carry them. Waits on arabiclexicon.hawramani.com, whose security certificate had expired when last checked on 18 November 2026.
 - A full Content-Security-Policy. `inc/security-headers.php` sends `frame-ancestors` only, because WordPress and its plugins print inline scripts and styles an enforcing policy would block. Waits on WordPress core.
 
 ### Ideas

@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once BOI_DIR . '/inc/glossary-data.php';
 
-const BOI_GLOSSARY_VERSION = '18';
+const BOI_GLOSSARY_VERSION = '19';
 
 /** Entries created or refreshed per request, so a large glossary seeds in steps. */
 const BOI_GLOSSARY_BATCH = 30;
@@ -376,7 +376,9 @@ function boi_glossary_fingerprint( $post ) {
  * Entry slugs that have changed, old => current. A slug ending in -2 is the
  * suffix WordPress adds on a collision and never belongs in an address;
  * entries that carried one were merged into the entry they duplicated or
- * given their own name. Verse numbers are kept out of addresses too.
+ * given their own name. Verse numbers are kept out of addresses too. The
+ * fourteen "X, al-" entries of 1.116.0 were merged into the plain entry
+ * for the same term.
  *
  * @return array
  */
@@ -390,6 +392,20 @@ function boi_glossary_retired_slugs() {
 			'hafiz-al-2'                       => 'hafeez-al',
 			'mubarak-2'                        => 'mabruk',
 			'domestic-discipline-quran-4-34'   => 'domestic-discipline',
+			'al-uswah-al-hasanah'              => 'uswah-hasanah',
+			'din-al'                           => 'din',
+			'haqq-al'                          => 'haqq',
+			'hudud-al'                         => 'hudud',
+			'ijma-al'                          => 'ijma',
+			'ijtihad-al'                       => 'ijtihad',
+			'kitab-al'                         => 'kitab',
+			'qisas-al'                         => 'qisas',
+			'qiyas-al'                         => 'qiyas',
+			'sahih-al'                         => 'sahih',
+			'sunnah-al'                        => 'sunnah',
+			'tanzil-al'                        => 'tanzil',
+			'usul-al-fiqh'                     => 'usul-fiqh',
+			'wahy-al'                          => 'wahy',
 		)
 	);
 }

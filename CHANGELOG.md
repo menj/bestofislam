@@ -4,6 +4,17 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.116.0] - 2026-11-19
+
+No feature removed and no public identifier renamed. Fourteen Glossary addresses retire, with redirects.
+
+### Changed
+- Fourteen Glossary terms that had a plain entry and a second "X, al-" entry now have one entry each: uswah-hasanah (from al-uswah-al-hasanah), din (din-al), haqq (haqq-al), hudud (hudud-al), ijma (ijma-al), ijtihad (ijtihad-al), kitab (kitab-al), qisas (qisas-al), qiyas (qiyas-al), sahih (sahih-al), sunnah (sunnah-al), tanzil (tanzil-al), usul-fiqh (usul-al-fiqh) and wahy (wahy-al). The plain entry keeps its slug and wording, and gains the other entry's title and aliases, its page reference to al-Faruqi's list, its "misread" note and its sources where it had none, and its related terms. Related-term links across the Glossary point to the surviving entry. The Glossary has 784 entries.
+- The fourteen old slugs are in `boi_glossary_retired_slugs()`: the sync deletes their pages and `inc/renamed-slugs.php` answers their addresses with a 301 (D49). `BOI_GLOSSARY_VERSION` is 19.
+- `bin/glossary-name-baseline.json` drops the nine shared names these merges resolved.
+- The duplicate pages are deleted automatically on every site, whatever their status or the surviving entry's status (owner's decision, 19 November 2026).
+- Five pairs from the same audit stay apart, because the two entries name different things: `alim` (a scholar) and `alim-al` (the divine name), `bayt-al` (the Kaaba) and `al-bayt-al` (the Prophet's household), `salam` (peace) and `salam-al` (the divine name), `rasul` (the word) and `rasul-al` (the Prophet's title), `ashari` (the school) and `ashari-al` (its founder).
+
 ## [1.115.2] - 2026-11-19
 
 No feature removed and no public identifier renamed.
