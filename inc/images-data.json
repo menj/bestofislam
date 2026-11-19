@@ -5612,5 +5612,67 @@
     "source": "https://commons.wikimedia.org/wiki/File:Basmala,_Shahada,_Muhammad_bin_Al-Qasim_al-Qundusi.jpg"
    }
   ]
+ },
+ "jamnia-and-the-hebrew-canon": {
+  "featured": {
+   "file": "jamnia-and-the-hebrew-canon.avif",
+   "alt": "A page of Hebrew text in three columns from the Aleppo Codex.",
+   "caption": "A page of Deuteronomy in the Aleppo Codex, a manuscript of the Hebrew Bible written about 930.",
+   "artist": "Shlomo ben Buya'a",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Aleppo_Codex_(Deut).jpg"
+  },
+  "inline": [
+   {
+    "file": "jamnia-and-the-hebrew-canon-1.avif",
+    "alt": "A line of Hebrew text with vowel marks from the Aleppo Codex.",
+    "caption": "Joshua 1:1 in the Aleppo Codex.",
+    "artist": "see en:Aleppo Codex ; scanned by http://www.aleppocodex.org",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Aleppo_Codex_Joshua_1_1.jpg"
+   }
+  ]
+ },
+ "earliest-new-testament-lists": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "earliest-new-testament-lists-1.avif",
+    "alt": "A papyrus leaf written in Greek, with ragged edges.",
+    "caption": "A leaf of Papyrus 46, a collection of Paul's letters from about AD 200, with 2 Corinthians 11:33 to 12:9.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:P46.jpg"
+   },
+   {
+    "file": "earliest-new-testament-lists-2.avif",
+    "alt": "A page of Latin handwriting from the Muratorian fragment.",
+    "caption": "The Muratorian fragment in the Ambrosian Library, Milan (Cod. J 101 sup.), a Latin list of books whose date is disputed.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Muratorian_Fragment.jpg"
+   }
+  ]
+ },
+ "disputed-books-of-the-new-testament": {
+  "featured": null,
+  "inline": [
+   {
+    "file": "disputed-books-of-the-new-testament-1.avif",
+    "alt": "Three columns of Greek capitals from Codex Vaticanus.",
+    "caption": "The end of 2 Thessalonians and the opening of Hebrews in Codex Vaticanus, a fourth-century Greek Bible.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg"
+   },
+   {
+    "file": "disputed-books-of-the-new-testament-2.avif",
+    "alt": "Columns of Greek capitals from Codex Sinaiticus.",
+    "caption": "Matthew 6 in Codex Sinaiticus, a fourth-century Greek Bible that also contains the Letter of Barnabas and the Shepherd of Hermas.",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus_Matthew_6,4-32.JPG"
+   }
+  ]
  }
 }
