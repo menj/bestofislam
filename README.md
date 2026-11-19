@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 164 published articles across eight sections, each with one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 174 published articles across eight sections. All but the four canon articles of 1.113.5 have one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -195,7 +195,7 @@ The theme's own filters:
 | `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
-| `boi_supersedes` | Pairs of an old seeded article and the new one that replaces it, added to `inc/data/supersedes.json`. The content sync redirects, hides and trashes the old one while it is untouched |
+| `boi_supersedes` | Pairs of an old seeded article and the new one that replaces it, added to `inc/data/supersedes.json`. While the new article is published, the old one is untouched and the sync's guards pass, the content sync redirects, hides and trashes the old one |
 | `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
 | `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to add an `FAQPage` node for an article with FAQ-style Details blocks and to add `.boi-answer` to `speakable` |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
