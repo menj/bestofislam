@@ -23,12 +23,12 @@
         "content\/crucifixion-quran.json": "901d10624b95f0513b26ce2b1cd59ff7",
         "content\/crusades-facts.json": "88618e2bcd127cef05518a2c9db0c8f0",
         "content\/deuteronomy-prophecy-and-the-paraclete.json": "a9e7c282265577cf0c471e44d7648740",
-        "content\/disputed-books-of-the-new-testament.json": "efa482ed99d7ee77529ae18b2ab0915d",
+        "content\/disputed-books-of-the-new-testament.json": "86b1bdfb6da253a6a3363163423088ac",
         "content\/do-muslims-worship-muhammad.json": "65c70ed47208f7c4981384d261c2423b",
         "content\/does-islam-teach-the-bible-was-corrupted.json": "66143ca1ad5d5ed13177e48b6bb51f31",
         "content\/does-the-quran-allow-wife-beating.json": "645d7ae91ee7ead8945679f70bdab2f1",
         "content\/dome-inscriptions.json": "c10be53b8a791b54e7a281cc25aaf3b0",
-        "content\/earliest-new-testament-lists.json": "231480a19141800f49fbfa9cd16e8d68",
+        "content\/earliest-new-testament-lists.json": "90a548662a958238abb70f6db8bf529e",
         "content\/early-christians-charged-others-with-corrupting-scripture.json": "efb1d7a493b2e8ccad680cd31c8bf0cf",
         "content\/early-christians-yahweh-evil-gnosticism-marcion.json": "9afd91d92875763079ee65760c124444",
         "content\/end-of-the-world-prediction.json": "3d6a3eb59b5bfff40b46b25e3e045c77",
@@ -65,7 +65,7 @@
         "content\/islamic-rites-before-islam.json": "6b1ec0b6773713db16fa9c192810b7b4",
         "content\/islamisation-of-the-west.json": "dce227ead2f828d7f6d3fd5aaa91549a",
         "content\/islamophobia-facts.json": "f3f14a81d9eb360df9404eec66a6c3ff",
-        "content\/jamnia-and-the-hebrew-canon.json": "dc534004a9dcd594911f38185b47d314",
+        "content\/jamnia-and-the-hebrew-canon.json": "db97cb409c392ab56088a3a862a51925",
         "content\/jeremiah-new-covenant-hebrews-and-the-quran.json": "561af52400e1a901f8e973957907cc06",
         "content\/jesus-not-god.json": "163edb446e388519d9d567343c681edc",
         "content\/jews-behind-the-stone-hadith.json": "f034550da918b2018a1439d43da8a3ef",
@@ -122,7 +122,7 @@
         "content\/ramadan-last-ten-nights.json": "991731a52bcd2b2bcda5cd9736a41870",
         "content\/ransom-bible-quran.json": "25cb9f3af29791bc0cf19d9007f79c83",
         "content\/relationship-with-god.json": "1173b5d05e34b9be63ba021975e5ba43",
-        "content\/revelation-warning-and-the-canon.json": "ac2328cf3e993d336d3d8b24c8e3c502",
+        "content\/revelation-warning-and-the-canon.json": "cda4868c0bc045dd8a37f261041c434e",
         "content\/revelatory-exegesis.json": "ee69cc35c98b6120344781c370d4690a",
         "content\/revisionist-case-weighed.json": "ca3d6044ab4bbbc0f17be50a0acc8147",
         "content\/ridda-wars-abu-bakr-fadak.json": "b5574c67f56cca220dee8c0b2e035909",
@@ -177,5 +177,5 @@
         "inc\/data\/seed.json": "507464c79a5e80a5b1fad60fd1ac8050",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "d7962035bca7cd1f443fff8b4192b5c5"
+    "checksum": "d5a1ef26d21fe29f3ff92f1d9c1571c3"
 }

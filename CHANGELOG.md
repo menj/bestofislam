@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.115.2] - 2026-11-19
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Pictures for the four articles on the canon of scripture, the only seeded articles without them: jamnia-and-the-hebrew-canon (the Aleppo Codex and the Great Isaiah Scroll), earliest-new-testament-lists (Codex Alexandrinus, Papyrus 46 and the Muratorian fragment), disputed-books-of-the-new-testament (Codex Claromontanus V, Codex Vaticanus at the opening of Hebrews, Codex Sinaiticus) and revelation-warning-and-the-canon (a miniature of the war in heaven from about 1295, Dürer's Four Horsemen and a Greek Gospel book, all three from the Cleveland Museum of Art). The Commons files are public domain and the Cleveland ones CC0. None shows a prophet (D30).
+
 ## [1.115.1] - 2026-11-17
 
 No feature removed and no public identifier renamed.

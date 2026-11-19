@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.115.1
+Stable tag: 1.115.2
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 174 articles. All but four carry a featured image and at least 2 more in the text; the four articles on the canon of scripture have no pictures yet. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 174 articles, each with a featured image and at least 2 more in its text. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later, and from WP TOC by MENJ (GPLv3 or later, based on work by Ikram Hawramani under the MIT License).
 
 == Changelog ==
+
+= 1.115.2 =
+* The four articles on the canon of scripture now have pictures: a featured image and two in the text each, from manuscripts on Wikimedia Commons and from the Cleveland Museum of Art.
 
 = 1.115.1 =
 * Wording fixes in thirteen articles: 46 sentences that denied one claim before stating another now state the claim directly. No fact, quotation or note changes.
@@ -381,6 +384,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.115.2 =
+Replace the theme files. The four canon articles gain their pictures where the owner has not edited them.
 
 = 1.115.1 =
 Replace the theme files. The thirteen reworded articles refresh where the owner has not edited them.
