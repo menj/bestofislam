@@ -444,6 +444,12 @@ function boi_glossary_migrate_slugs( &$hashes ) {
 			continue;
 		}
 
+		// The owner has taken the surviving entry offline: keep the retired page
+		// as it is, so its address is not deleted and redirected to a draft.
+		if ( $current && 'publish' !== $current->post_status && 'trash' !== $current->post_status && 'publish' === $page->post_status ) {
+			continue;
+		}
+
 		if ( 'trash' === $page->post_status || ( $current && 'trash' !== $current->post_status ) ) {
 			wp_delete_post( $page->ID, true );
 			unset( $hashes[ $old ] );
