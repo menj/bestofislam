@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 164 published articles across eight sections, each with one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 174 published articles across eight sections. All but the four canon articles of 1.113.5 have one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -95,7 +95,7 @@ Under Appearance, Contextual Links, in three tabs:
 2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
    The working notes for coding agents, `.claude/CLAUDE.md` and `.claude/FARUQI.md`, stay out of the zip and out of `git archive`. On a production server the theme deletes `.claude` and `.git` with the other development files (see Security); a local or development environment, or `BOI_KEEP_DEV_FILES`, keeps them.
-3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 164 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
+3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 174 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
 4. Configure under Appearance, Theme Options.
 
 ### Moving from the plugins the theme replaces
@@ -125,7 +125,7 @@ bestofislam/
 ├── .gitattributes       export-ignore list for the release zip
 ├── inc/                 One file per concern, loaded in this order by functions.php:
 │                        util, taxonomy, blocks, schema, voting, settings,
-│                        setup, appearance, reflections, search, sections,
+│                        setup, content-sync, appearance, reflections, search, sections,
 │                        seo, icons, features, lead-list, contact, front, inline-images,
 │                        images, questions, reading, anatomy, structured-data,
 │                        schema-graph, social-meta, rank-math, unlist,
@@ -137,12 +137,14 @@ bestofislam/
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
 ├── inc/data/            network-links.json (the shared phrase map),
-│                        seed.json (topics, categories, tags, 164 articles,
+│                        seed.json (topics, categories, tags, 174 articles,
 │                        8 pages), questions.json (45), image-credits.json,
-│                        schema-entities.json. Read, never executed
+│                        schema-entities.json, supersedes.json (old slug to new,
+│                        ships empty), seed-manifest.json (the checksums the
+│                        content sync trusts). Read, never executed
 ├── inc/glossary-data/   a.json to z.json: the 798 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
-├── content/             The 164 seeded articles as block markup, one JSON file each
+├── content/             The 174 seeded articles as block markup, one JSON file each
 ├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic
@@ -158,7 +160,9 @@ bestofislam/
 ├── bin/                 build-error-pages.php, build-related.py, check-content.py,
 │                        commons-api.py, convert-images.py, fetch-commons-images.py,
 │                        fetch-stock-images.py, make-original-graphics.py,
-│                        install-hooks.sh (own .htaccess; export-ignored)
+│                        install-hooks.sh, seed-manifest.php; the data files
+│                        stock-images.json, commons-swaps.json and
+│                        glossary-name-baseline.json (own .htaccess; export-ignored)
 ├── tests/               Command-line self-tests (own .htaccess; export-ignored)
 ├── docs/                SSOT, UPGRADING (with the content review lists), CREDITS,
 │                        SEO (own .htaccess)
@@ -191,6 +195,7 @@ The theme's own filters:
 | `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
+| `boi_supersedes` | Pairs of an old seeded article and the new one that replaces it, added to `inc/data/supersedes.json`. While the new article is published, the old one is untouched and the sync's guards pass, the content sync redirects, hides and trashes the old one |
 | `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
 | `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to add an `FAQPage` node for an article with FAQ-style Details blocks and to add `.boi-answer` to `speakable` |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
@@ -219,9 +224,10 @@ Set these in `wp-config.php`. Each is optional.
 | `BOI_REMOVE_GIT_DIR` | `true` forces the clean-up, `.git` included, even in a development environment; `false` keeps `.git` on production while the rest goes |
 | `BOI_BLOCK_DIRECT_FILES` | `false` leaves the "Best of Islam: block direct file access" section out of `.htaccess` |
 | `BOI_SPAM_THRESHOLD` | Spam score at which a post is held (default 3) |
+| `BOI_DISABLE_CONTENT_SYNC` | `true` stops the content sync: no updates, removals, redirects or hiding of seeded articles. The Content tab says so |
 | `WP_ENVIRONMENT_TYPE` | `local` or `development` keeps the development files |
 
-Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (14), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
+Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (18), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
 
 ## Security
 
