@@ -596,6 +596,8 @@ published (`boi_dated_slug_for()`). The map is
 `inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
 `boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
 
+The owner's rule of 19 November 2026, on merged Glossary entries: "must delete dupes auto". When an entry is merged into another, the sync deletes the duplicate's page automatically, edited or not and whatever the surviving entry's status, and its address redirects to the surviving entry.
+
 ### D50. The owner keeps all schema.org markup, in one graph per page
 
 The owner's rule of 3 November 2026: every schema.org type and property the

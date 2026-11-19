@@ -63,7 +63,7 @@ feature stands aside, so nothing runs twice.
 
 ## Upgrading to 1.116.0
 
-Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 19). Where the surviving entry's page exists, it deletes the page of the merged entry, such as `/glossary/ijma-al/`, edited or not, and the old address then answers with a 301 to the entry that replaced it (`/glossary/ijma/`). Where the surviving page is missing or in the trash, the merged page is renamed to take its place instead. Where the owner has made the surviving page a draft or private and the merged page is still published, the merged page is left as it is. An owner who rewrote one of those fourteen pages and wants to keep the wording should copy it into the surviving entry before upgrading. The surviving entries are rebuilt where the owner has not edited them.
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 19). Where the surviving entry's page exists, it deletes the page of the merged entry, such as `/glossary/ijma-al/`, edited or not, and the old address then answers with a 301 to the entry that replaced it (`/glossary/ijma/`). Where the surviving page is missing or in the trash, the merged page is renamed to take its place instead. An owner who rewrote one of those fourteen pages and wants to keep the wording should copy it into the surviving entry before upgrading. The surviving entries are rebuilt where the owner has not edited them.
 
 ## Upgrading to 1.115.2
 
