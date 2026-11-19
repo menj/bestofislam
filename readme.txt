@@ -386,7 +386,7 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.115.2 =
-Replace the theme files. The four canon articles gain their pictures where the owner has not edited them.
+Replace the theme files. The four canon articles gain their featured images; the pictures in the text arrive where the owner has not edited the article.
 
 = 1.115.1 =
 Replace the theme files. The thirteen reworded articles refresh where the owner has not edited them.

@@ -63,7 +63,7 @@ feature stands aside, so nothing runs twice.
 
 ## Upgrading to 1.115.2
 
-Replace the theme files. The four articles on the canon of scripture gain their pictures where the owner has not edited them; the featured images go into the media library as pages load. Nothing else to do.
+Replace the theme files. The featured images of the four articles on the canon of scripture go into the media library as pages load, for any of them that has no featured image yet, edited or not. The in-text pictures reach an article through the seed refresh, so only where the owner has not edited it. Nothing else to do.
 
 ## Upgrading to 1.115.1
 
