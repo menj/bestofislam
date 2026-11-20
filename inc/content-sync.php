@@ -20,7 +20,9 @@
  *   current     the bundle has not changed since the last write, or equals the stored text: nothing to do
  *   update      untouched by the owner, bundle text changed: takes the new text
  *   newer       edited by the owner, bundle text changed: listed with a diff; the owner takes the bundled
- *               text or keeps their own
+ *               text or keeps their own. With "Replace edited articles" on (Content tab, or the
+ *               boi_sync_replace_edited filter) it takes the bundled text instead, after a revision or a
+ *               backup copy of the owner's text is saved. An article the owner chose to keep stays kept.
  *   trash       dropped from the bundle and untouched: moved to the Trash, never deleted
  *   removed     dropped from the bundle and edited: listed
  *
@@ -34,8 +36,8 @@
  * fewer articles than at the last good sync, or when BOI_DISABLE_CONTENT_SYNC is true. The constant also
  * switches off updates.
  *
- * Delivery. The sync runs when the theme version, the manifest checksum, the supersedes map or the guard state
- * changes, so a corrected article reaches a site without a version bump.
+ * Delivery. The sync runs when the theme version, the manifest checksum, the supersedes map, the guard state or
+ * the switch for edited articles changes, so a corrected article reaches a site without a version bump.
  *
  * @package bestofislam
  * @since   1.114.0
@@ -85,6 +87,64 @@ function boi_sync_decide( $bundle_fp, $stored_fp, $recorded_fp, $last_bundle_fp,
 		return 'update';
 	}
 	return $ack === $bundle_fp ? 'kept' : 'newer';
+}
+
+/**
+ * The action the review takes, once the owner's switch for edited articles is applied. Pure.
+ *
+ * @param string $action  From boi_sync_decide().
+ * @param bool   $replace Whether edited articles take the bundled text.
+ * @return string The action, or 'replace' for an edited article that takes the bundled text.
+ */
+function boi_sync_forced( $action, $replace ) {
+	return ( $replace && 'newer' === $action ) ? 'replace' : $action;
+}
+
+/**
+ * Whether the review replaces edited articles with the bundled text. Off unless the owner switched it on.
+ *
+ * @return bool
+ */
+function boi_sync_replace_edited() {
+	$opts = function_exists( 'boi_get_options' ) ? boi_get_options() : array();
+	return (bool) apply_filters( 'boi_sync_replace_edited', ! empty( $opts['sync_replace_edited'] ) );
+}
+
+/**
+ * Keep the owner's text before the review replaces it: a revision where revisions are on, otherwise a copy in
+ * the _boi_sync_previous meta (title, excerpt, body and time), overwritten by the next replacement.
+ *
+ * @param WP_Post $post Post.
+ * @return string 'revision' or 'copy' for where the text was kept, '' when it could not be kept: the caller
+ *                then leaves the article alone.
+ */
+function boi_sync_keep_previous( $post ) {
+	if ( function_exists( 'wp_revisions_enabled' ) && wp_revisions_enabled( $post ) && wp_save_post_revision( $post->ID ) ) {
+		return 'revision';
+	}
+	$copy = array(
+		'title'   => $post->post_title,
+		'excerpt' => $post->post_excerpt,
+		'content' => $post->post_content,
+	);
+	update_post_meta( $post->ID, '_boi_sync_previous', wp_slash( $copy + array( 'time' => time() ) ) );
+	$kept = get_post_meta( $post->ID, '_boi_sync_previous', true ); // Read back: update_post_meta() also returns false for an unchanged value.
+	if ( is_array( $kept ) && array_intersect_key( $kept, $copy ) === $copy ) {
+		return 'copy';
+	}
+	return '';
+}
+
+/**
+ * The log line for an edited article replaced with the bundled text. Pure.
+ *
+ * @param string $saved_as From boi_sync_keep_previous().
+ * @return string
+ */
+function boi_sync_replaced_note( $saved_as ) {
+	return 'copy' === $saved_as
+		? 'edited text replaced with the bundled text; the earlier text is kept in the _boi_sync_previous copy'
+		: 'edited text replaced with the bundled text; the earlier text is in the revisions';
 }
 
 /**
@@ -425,13 +485,14 @@ function boi_sync_apply() {
 	}
 	$bundle         = boi_sync_bundle();
 	$blocked        = boi_sync_removal_block();
+	$replace        = boi_sync_replace_edited();
 	$out['blocked'] = $blocked;
 	foreach ( boi_sync_plan() as $row ) {
 		$post = get_post( $row['post_id'] );
 		if ( ! $post ) {
 			continue;
 		}
-		switch ( $row['action'] ) {
+		switch ( boi_sync_forced( $row['action'], $replace ) ) {
 			case 'current':
 				if ( isset( $bundle[ $row['key'] ] ) && '' === (string) get_post_meta( $post->ID, '_boi_sync_fp', true ) && boi_sync_state( $post, $row['key'] )['stored'] === $bundle[ $row['key'] ]['fp'] ) {
 					boi_sync_record( $post->ID, $bundle[ $row['key'] ] ); // Ours and equal to the bundle: record it.
@@ -441,6 +502,17 @@ function boi_sync_apply() {
 				if ( isset( $bundle[ $row['key'] ] ) && boi_sync_write( $post, $bundle[ $row['key'] ] ) ) {
 					++$out['updated'];
 					boi_sync_log( $row['key'], 'updated to the bundled text' );
+				}
+				break;
+			case 'replace':
+				if ( isset( $bundle[ $row['key'] ] ) ) {
+					$saved_as = boi_sync_keep_previous( $post );
+					if ( '' === $saved_as ) {
+						boi_sync_log( $row['key'], 'left as edited: the earlier text could not be kept, so it was not replaced' );
+					} elseif ( boi_sync_write( $post, $bundle[ $row['key'] ] ) ) {
+						++$out['updated'];
+						boi_sync_log( $row['key'], boi_sync_replaced_note( $saved_as ) );
+					}
 				}
 				break;
 			case 'trash':
@@ -479,7 +551,7 @@ function boi_sync_maybe_run() {
 	if ( boi_sync_disabled() || wp_doing_ajax() || ! current_user_can( 'manage_options' ) || ! boi_seed_ready() ) {
 		return;
 	}
-	$fp = md5( BOI_VERSION . boi_sync_manifest()['checksum'] . wp_json_encode( boi_supersedes() ) . boi_sync_removal_block() );
+	$fp = md5( BOI_VERSION . boi_sync_manifest()['checksum'] . wp_json_encode( boi_supersedes() ) . boi_sync_removal_block() . ( boi_sync_replace_edited() ? 'replace' : '' ) );
 	if ( get_option( 'boi_sync_fp' ) === $fp ) {
 		return;
 	}

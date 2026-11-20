@@ -61,7 +61,7 @@ Under Appearance, Theme Options, in nine tabs. The screen is a set of cards unde
 - **Display:** rank badges, the entry image size, the article contents and the mid-article next step (`article_contents`, `article_mid_next`), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
-- **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
+- **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them. The **Replace edited articles** switch (`sync_replace_edited`, off by default) makes updates give edited articles the new text too, after saving the owner's text as a revision or, where revisions are off, in `_boi_sync_previous`; an article the owner chose to keep stays kept.
 - **Search engines:** meta descriptions, verification codes, and readable search addresses with their base word.
 - **Access:** the custom login address, the security headers, and the list of unlisted items.
 - **Security:** XML-RPC, application passwords and REST writes from outside the browser switched off, the gambling spam gate, 410 Gone for removed spam, the spam scan and clean-up tools, buttons that revoke every application password and end every session, and the attack reports and security log. Add `define( 'BOI_SECURITY_LOCK', false );` to `wp-config.php` to lift the three locks in an emergency.
@@ -196,6 +196,7 @@ The theme's own filters:
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
 | `boi_supersedes` | Pairs of an old seeded article and the new one that replaces it, added to `inc/data/supersedes.json`. While the new article is published, the old one is untouched and the sync's guards pass, the content sync redirects, hides and trashes the old one |
+| `boi_sync_replace_edited` | Whether the content sync replaces edited seeded articles with the bundled text. Defaults to the Content tab's Replace edited articles switch |
 | `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
 | `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to add an `FAQPage` node for an article with FAQ-style Details blocks and to add `.boi-answer` to `speakable` |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |

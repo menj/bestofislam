@@ -67,6 +67,7 @@ function boi_get_options() {
 		'sec_rest_lock'         => 1,
 		'sec_spam_gate'         => 1,
 		'sec_gone'              => 1,
+		'sync_replace_edited'   => 0,
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
@@ -266,6 +267,10 @@ function boi_sanitize_options( $input ) {
 			$current['errors_alerts']   = empty( $input['errors_alerts'] ) ? 0 : 1;
 			$current['errors_email']    = isset( $input['errors_email'] ) && is_email( $input['errors_email'] ) ? sanitize_email( $input['errors_email'] ) : '';
 			$current['errors_cooldown'] = max( 5, min( 1440, (int) ( isset( $input['errors_cooldown'] ) ? $input['errors_cooldown'] : 30 ) ) );
+			break;
+
+		case 'content':
+			$current['sync_replace_edited'] = empty( $input['sync_replace_edited'] ) ? 0 : 1;
 			break;
 
 		case 'security':
@@ -1021,6 +1026,23 @@ function boi_render_content_tab() {
 	if ( function_exists( 'boi_render_content_sync_card' ) ) {
 		boi_render_content_sync_card(); // Drawn outside every other form.
 	}
+
+	boi_opt_card_open( __( 'Edited articles', 'bestofislam' ), __( 'What an update does with a seeded article you have edited.', 'bestofislam' ) );
+	echo '<form action="' . esc_url( admin_url( 'options.php' ) ) . '" method="post" class="boi-settings__form">';
+	boi_settings_hidden_fields( 'content' );
+	boi_opt_toggle(
+		array(
+			'key'     => 'sync_replace_edited',
+			'label'   => __( 'Replace edited articles', 'bestofislam' ),
+			'text'    => __( 'Give edited articles the new text on every update', 'bestofislam' ),
+			'help'    => __( 'Off: an article you edited keeps your text and is listed above, where you choose. On: updates replace it with the theme\'s new text. Your text is saved first as a revision, or as a backup copy where revisions are off. An article you chose to keep stays yours.', 'bestofislam' ),
+			'checked' => ! empty( boi_get_options()['sync_replace_edited'] ),
+		)
+	);
+	echo '<div class="boi-opt__actions">';
+	submit_button( __( 'Save changes', 'bestofislam' ), 'primary', 'submit', false, array( 'id' => 'boi-save-content' ) );
+	echo '</div></form>';
+	boi_opt_card_close();
 
 	if ( function_exists( 'boi_differing_articles' ) ) {
 		boi_opt_card_open( __( 'Seeded articles', 'bestofislam' ) );
