@@ -115,24 +115,36 @@ function boi_sync_replace_edited() {
  * the _boi_sync_previous meta (title, excerpt, body and time), overwritten by the next replacement.
  *
  * @param WP_Post $post Post.
- * @return void
+ * @return string 'revision' or 'copy' for where the text was kept, '' when it could not be kept: the caller
+ *                then leaves the article alone.
  */
 function boi_sync_keep_previous( $post ) {
 	if ( function_exists( 'wp_revisions_enabled' ) && wp_revisions_enabled( $post ) && wp_save_post_revision( $post->ID ) ) {
-		return;
+		return 'revision';
 	}
-	update_post_meta(
-		$post->ID,
-		'_boi_sync_previous',
-		wp_slash(
-			array(
-				'title'   => $post->post_title,
-				'excerpt' => $post->post_excerpt,
-				'content' => $post->post_content,
-				'time'    => time(),
-			)
-		)
+	$copy = array(
+		'title'   => $post->post_title,
+		'excerpt' => $post->post_excerpt,
+		'content' => $post->post_content,
 	);
+	update_post_meta( $post->ID, '_boi_sync_previous', wp_slash( $copy + array( 'time' => time() ) ) );
+	$kept = get_post_meta( $post->ID, '_boi_sync_previous', true ); // Read back: update_post_meta() also returns false for an unchanged value.
+	if ( is_array( $kept ) && array_intersect_key( $kept, $copy ) === $copy ) {
+		return 'copy';
+	}
+	return '';
+}
+
+/**
+ * The log line for an edited article replaced with the bundled text. Pure.
+ *
+ * @param string $saved_as From boi_sync_keep_previous().
+ * @return string
+ */
+function boi_sync_replaced_note( $saved_as ) {
+	return 'copy' === $saved_as
+		? 'edited text replaced with the bundled text; the earlier text is kept in the _boi_sync_previous copy'
+		: 'edited text replaced with the bundled text; the earlier text is in the revisions';
 }
 
 /**
@@ -494,10 +506,12 @@ function boi_sync_apply() {
 				break;
 			case 'replace':
 				if ( isset( $bundle[ $row['key'] ] ) ) {
-					boi_sync_keep_previous( $post );
-					if ( boi_sync_write( $post, $bundle[ $row['key'] ] ) ) {
+					$saved_as = boi_sync_keep_previous( $post );
+					if ( '' === $saved_as ) {
+						boi_sync_log( $row['key'], 'left as edited: the earlier text could not be kept, so it was not replaced' );
+					} elseif ( boi_sync_write( $post, $bundle[ $row['key'] ] ) ) {
 						++$out['updated'];
-						boi_sync_log( $row['key'], 'edited text replaced with the bundled text; the earlier text is in the revisions' );
+						boi_sync_log( $row['key'], boi_sync_replaced_note( $saved_as ) );
 					}
 				}
 				break;

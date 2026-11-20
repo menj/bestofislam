@@ -1039,6 +1039,14 @@ function boi_migrate_seed( $topics ) {
 					boi_sync_log( $slug, 'updated to the bundled text' );
 				} elseif ( 'newer' === $act && boi_content_fingerprint( $post->post_content ) === boi_content_fingerprint( wp_unslash( $item['content'] ) ) && boi_content_fingerprint( $post->post_content ) !== boi_content_fingerprint( $item['content'] ) ) {
 					$args['post_content'] = $item['content']; // Damaged by the old unslashed save and otherwise as written: repaired.
+					if ( function_exists( 'boi_sync_replace_edited' ) && boi_sync_replace_edited() && $post->post_title . "\n" . $post->post_excerpt !== $item['title'] . "\n" . $item['excerpt'] ) {
+						$saved_as = boi_sync_keep_previous( $post );
+						if ( '' !== $saved_as ) { // The edited title and excerpt follow the bundle too, once the owner's text is kept.
+							$args['post_title']   = $item['title'];
+							$args['post_excerpt'] = $item['excerpt'];
+							boi_sync_log( $slug, boi_sync_replaced_note( $saved_as ) );
+						}
+					}
 				} elseif ( 'current' === $act && $sync['stored'] === $item['fp'] && '' === (string) get_post_meta( $post->ID, '_boi_sync_fp', true ) ) {
 					boi_sync_record( $post->ID, $item ); // Ours and equal to the bundle: record it.
 				}
@@ -1053,7 +1061,9 @@ function boi_migrate_seed( $topics ) {
 			$args['ID'] = $post->ID;
 			boi_update_post( $args );
 
-			if ( isset( $args['post_content'] ) && function_exists( 'boi_sync_bundle' ) && isset( boi_sync_bundle()[ $slug ] ) ) {
+			// Recorded only when the stored text now equals the bundle: a repaired body under an edited title or
+			// excerpt stays edited, so the sync still lists it (or replaces it, with the switch on).
+			if ( isset( $args['post_content'] ) && function_exists( 'boi_sync_bundle' ) && isset( boi_sync_bundle()[ $slug ] ) && boi_sync_state( get_post( $post->ID ), $slug )['stored'] === boi_sync_bundle()[ $slug ]['fp'] ) {
 				boi_sync_record( $post->ID, boi_sync_bundle()[ $slug ] ); // After the write, so the record is the stored text.
 				$saved           = get_post( $post->ID );
 				$hashes          = (array) get_option( 'boi_article_hashes', array() );
