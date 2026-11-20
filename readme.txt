@@ -70,7 +70,7 @@ Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a no
 * Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
-* Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace.
+* Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace. Switch on "Replace edited articles" to have every update give your edited articles the new text as well. Your text is kept as a revision first, and an article you chose to keep stays yours.
 * Search engines: meta descriptions, Google and Bing verification codes, and readable search addresses.
 * Access: the private login address, the security headers and the list of unlisted items.
 * Security: switches for XML-RPC, application passwords, REST writes from outside the browser, the spam gate and 410 Gone, then the spam tools and reports.
@@ -167,6 +167,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 = 1.118.0 =
 * Nine new articles on questions long argued in online debate: the sun in a muddy spring, the authority of the Sunnah, the Prophet and sin, Islam and evolution, the slander against Mary, the uncreated Quran, honour killing, women leading the prayer, and the oaths of the Quran. Each has a featured image and two in its text, drawn by the theme.
 * New articles now take their place in the dated reading order.
+* A "Replace edited articles" switch on the Content tab, off by default, lets updates replace edited articles too, keeping your text as a revision.
 * About 110 sentences in 65 existing articles rewritten so that no article concedes the critic's argument, and the science article reduced to the four claims that hold up.
 * New entries or paragraphs in fourteen existing articles, among them Sawda and 4:128, Pharaoh's wife, the first Muslim, Solomon's wives, The True Furqan, the Night Journey, the Diatessaron and al-Samiri.
 

@@ -66,6 +66,8 @@ twice.
 
 Replace the theme files. The nine new articles are created when the version changes, and `boi_migrate_seed()` refreshes the changed articles (about seventy) and the Sources and standards page where they are unedited; an edited copy is listed on the Content tab.
 
+To have the updated text replace articles you edited on the live site as well, switch on Theme Options, Content, Replace edited articles, before or after updating. Your text is kept as a revision.
+
 Open items for the owner:
 - The citations in the new text were compiled from published scholarship and were not checked against the printed pages. altafsir.com and searchtruth.com load their texts by script and could not be read automatically, so the tafsir passages (Ibn Kathir and al-Razi on 18:86, al-Tabari on 48:2, 93:7, 6:14 and 17:1, Ibn Kathir on 4:128 and 91:1, al-Zamakhshari on 3:54) and the hadith numbers (Bukhari 631, 2679, 3199, 3424, 3888, 4802, 5212; Muslim 159, 1463, 1498, 1654; Abu Dawud 591-592, 2135; Tirmidhi 1400, 3040) should be checked there by hand.
 - Figures to confirm before quoting elsewhere: the Pew 2013 evolution percentages and the lower figures from Riaz Hassan's surveys; the UNFPA estimate of 5,000 honour killings; the 2 percent polygamy figure (Pew, December 2020); the size of al-Wafa' bi-Asma' al-Nisa' (43 volumes, more than 10,000 entries).

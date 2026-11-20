@@ -42,6 +42,12 @@ boi_check( 'newer' === boi_sync_decide( $fb, $fa, '', '', '' ), 'no recorded fin
 boi_check( 'kept' === boi_sync_decide( $fb, 'mine', $fa, $fa, $fb ), 'the owner chose to keep against this bundle text' );
 boi_check( 'newer' === boi_sync_decide( $fb, 'mine', $fa, $fa, $fa ), 'a keep against an older bundle text does not hold' );
 
+boi_check( 'newer' === boi_sync_forced( 'newer', false ), 'with the switch off, an edited article waits for the owner' );
+boi_check( 'replace' === boi_sync_forced( 'newer', true ), 'with the switch on, an edited article takes the bundled text' );
+boi_check( 'kept' === boi_sync_forced( 'kept', true ), 'the switch never overrides an article the owner chose to keep' );
+boi_check( 'update' === boi_sync_forced( 'update', true ) && 'current' === boi_sync_forced( 'current', true ), 'the switch leaves other actions alone' );
+boi_check( 'removed' === boi_sync_forced( 'removed', true ), 'the switch never trashes an edited article the bundle dropped' );
+
 boi_check( 'trash' === boi_sync_decide_removed( $fa, $fa, '' ), 'dropped and untouched: trash' );
 boi_check( 'removed' === boi_sync_decide_removed( 'mine', $fa, '' ), 'dropped and edited: listed' );
 boi_check( 'removed' === boi_sync_decide_removed( $fa, '', '' ), 'dropped with no record: listed, never trashed' );

@@ -738,7 +738,7 @@ The owner supplied a list of classical Arabic dictionaries and word-books on 202
 
 | Event | Untouched article | Edited article, or no record |
 |---|---|---|
-| The bundle text changes | Takes the new text, logged | Stays. Listed on the Content tab with a diff: Take the bundled text, or Keep mine |
+| The bundle text changes | Takes the new text, logged | Stays. Listed on the Content tab with a diff: Take the bundled text, or Keep mine. With Replace edited articles on (`sync_replace_edited`, off by default, filter `boi_sync_replace_edited`), takes the new text once a revision (or, with revisions off, the `_boi_sync_previous` copy) holds the owner's text; an article kept with Keep mine stays kept |
 | The bundle drops it | Moved to the Trash | Stays, listed |
 | Renamed in `renamed-slugs.php` or the seed list | The post keeps its identity and the record moves with it; the old address answers 301 as before | Same |
 | `supersedes` names it as old and the new one is published | 301 at any address, hidden through the unlist module, noindex, then the Trash | Stays, listed |

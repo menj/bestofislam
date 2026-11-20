@@ -12,6 +12,9 @@ No feature removed and no public identifier renamed.
 - Nine articles, on questions long argued in online debate: sun-muddy-spring-and-fixed-earth, authority-of-the-sunnah-quran-alone, did-the-quran-say-muhammad-sinned, islam-and-evolution, slander-against-mary, uncreated-quran-and-the-logos, honour-killing-and-islamic-law, women-leading-prayer and oaths-in-the-quran. Each is in the reading guide and the related-article links.
 - A featured image and two in-text images for each, drawn by `bin/make-original-graphics.py` (theme graphics, under the theme's licence), since the image sources could not be reached when they were made.
 
+### Added (Content tab)
+- A "Replace edited articles" switch (`sync_replace_edited`, off by default; filter `boi_sync_replace_edited`). When it is on, the content sync gives an edited seeded article the new bundled text instead of listing it, after saving the owner's text as a revision, or in the `_boi_sync_previous` meta where revisions are off. An article the owner chose to keep stays kept, and an edited article the bundle dropped is never trashed. Switching it on starts a sync on the next admin page.
+
 ### Changed
 - New entries: prophets-marriages-zaynab-and-others (Sawda and 4:128), quran-contradictions-claims (Pharaoh's wife; the first Muslim), fly-hadith-and-adult-suckling (Solomon's wives), who-wrote-the-quran (The True Furqan), buraq-and-miracle-stories (the Night Journey as a dream), who-changed-the-bible (the Diatessaron) and quran-anachronism-claims (al-Samiri). Titles, excerpts and counts follow.
 - New paragraphs: prophets-you-may-not-know (Idris and Osiris), first-revelation-demonic-claim (the history of the epilepsy charge; jinn and the diagnosis of delusion), fate-and-free-will (the word makr), women-in-islamic-law-testimony-inheritance (polygamy) and what-former-muslims-testimonies-show (pseudonymous accounts).
