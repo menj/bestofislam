@@ -339,6 +339,15 @@ function boi_create_listicles( $topics ) {
 			boi_sync_record( $post_id, boi_sync_bundle()[ $listicle['slug'] ] );
 		}
 
+		// The fingerprint too, so the date stagger counts the new article as unedited.
+		$saved = get_post( $post_id );
+
+		if ( $saved ) {
+			$hashes                      = (array) get_option( 'boi_article_hashes', array() );
+			$hashes[ $listicle['slug'] ] = boi_content_fingerprint( $saved->post_content );
+			update_option( 'boi_article_hashes', $hashes, false );
+		}
+
 		$created[] = $post_id;
 	}
 

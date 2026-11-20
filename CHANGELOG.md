@@ -4,6 +4,26 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.118.0] - 2026-11-20
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Nine articles, on questions long argued in online debate: sun-muddy-spring-and-fixed-earth, authority-of-the-sunnah-quran-alone, did-the-quran-say-muhammad-sinned, islam-and-evolution, slander-against-mary, uncreated-quran-and-the-logos, honour-killing-and-islamic-law, women-leading-prayer and oaths-in-the-quran. Each is in the reading guide and the related-article links.
+- A featured image and two in-text images for each, drawn by `bin/make-original-graphics.py` (theme graphics, under the theme's licence), since the image sources could not be reached when they were made.
+
+### Changed
+- New entries: prophets-marriages-zaynab-and-others (Sawda and 4:128), quran-contradictions-claims (Pharaoh's wife; the first Muslim), fly-hadith-and-adult-suckling (Solomon's wives), who-wrote-the-quran (The True Furqan), buraq-and-miracle-stories (the Night Journey as a dream), who-changed-the-bible (the Diatessaron) and quran-anachronism-claims (al-Samiri). Titles, excerpts and counts follow.
+- New paragraphs: prophets-you-may-not-know (Idris and Osiris), first-revelation-demonic-claim (the history of the epilepsy charge; jinn and the diagnosis of delusion), fate-and-free-will (the word makr), women-in-islamic-law-testimony-inheritance (polygamy) and what-former-muslims-testimonies-show (pseudonymous accounts).
+- Notes on tafsir and hadith say where the texts can be read, on altafsir.com and searchtruth.com.
+- `.claude/FARUQI.md` and SSOT: articles never concede the critic's argument (owner, 2026-11-20).
+- The Divine attributes tag has a description, filled in when the new articles are created.
+- A newly created article records its content fingerprint, so the date stagger places it in the reading order instead of skipping it.
+- fate-and-free-will: the title counts its seven questions.
+- The existing articles follow the same rule. About 110 sentences in 65 articles that conceded ground to critics, and the "Strength" grades below firm, are rewritten to answer the critic from the sources. Eleven entry titles that conceded a point are reworded.
+- quran-science-claims-graded keeps its address and is now "4 scientific claims about the Quran that hold up on the evidence": the entries on atoms, fingerprints and iron are removed, the 51:47 paragraph moves to the orbits entry, and links to it are retitled.
+- The Sources and standards page: "What gets conceded" becomes "How objections are answered".
+
 ## [1.117.0] - 2026-11-20
 
 One filter removed: `unlist_posts_enabled`. One function renamed: `boi_pretty_search_enabled()` is now `boi_search_permalinks_enabled()`.

@@ -62,6 +62,16 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.118.0
+
+Replace the theme files. The nine new articles are created when the version changes, and `boi_migrate_seed()` refreshes the changed articles (about seventy) and the Sources and standards page where they are unedited; an edited copy is listed on the Content tab.
+
+Open items for the owner:
+- The citations in the new text were compiled from published scholarship and were not checked against the printed pages. altafsir.com and searchtruth.com load their texts by script and could not be read automatically, so the tafsir passages (Ibn Kathir and al-Razi on 18:86, al-Tabari on 48:2, 93:7, 6:14 and 17:1, Ibn Kathir on 4:128 and 91:1, al-Zamakhshari on 3:54) and the hadith numbers (Bukhari 631, 2679, 3199, 3424, 3888, 4802, 5212; Muslim 159, 1463, 1498, 1654; Abu Dawud 591-592, 2135; Tirmidhi 1400, 3040) should be checked there by hand.
+- Figures to confirm before quoting elsewhere: the Pew 2013 evolution percentages and the lower figures from Riaz Hassan's surveys; the UNFPA estimate of 5,000 honour killings; the 2 percent polygamy figure (Pew, December 2020); the size of al-Wafa' bi-Asma' al-Nisa' (43 volumes, more than 10,000 entries).
+- Wording to confirm: Theodoret's account of the two hundred copies of the Diatessaron; Ibn Hajar's harmonising of the numbers in the report on Solomon; Jordan's fatwa of 1 December 2016.
+- Replace the theme graphics with photographs (Wikimedia Commons first, D48) when the image sources can be reached.
+
 ## Upgrading to 1.117.0
 
 Replace the theme files. Code that hooked the `unlist_posts_enabled` filter to switch unlisting off should hook `boi_unlist_enabled`, which the theme reads alone. The theme no longer writes the `unlist_posts` option: a site that later activates Unlist Posts & Pages finds that plugin's own list as the plugin last left it, and the theme's list stays in `boi_unlisted`. The `[boi_contents]` shortcode places the contents in the text; texts that use `[wp_toc]` or `[auto_toc]` render as before.
