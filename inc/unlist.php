@@ -136,8 +136,11 @@ function boi_unlist_sync_from_plugin( $again = false ) {
 		update_post_meta( (int) $id, BOI_UNLISTED_META, 1 );
 	}
 
-	boi_unlist_rebuild();
-	update_option( 'boi_unlisted_synced', $hash, true );
+	// Recorded as synced only once every flag the plugin's list asks for is
+	// written, so a failed write is retried on the next request.
+	if ( ! array_diff( array_map( 'intval', $plugin ), boi_unlist_rebuild() ) ) {
+		update_option( 'boi_unlisted_synced', $hash, true );
+	}
 }
 
 /**
@@ -160,12 +163,14 @@ function boi_unlist_flagged_ids() {
 /**
  * Rebuilds the option from the meta flags.
  *
- * @return void
+ * @return int[] The flagged IDs.
  */
 function boi_unlist_rebuild() {
 	$ids = boi_unlist_flagged_ids();
 
 	update_option( BOI_UNLISTED_OPTION, $ids, true );
+
+	return $ids;
 }
 
 /**

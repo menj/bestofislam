@@ -9,9 +9,9 @@ versioning.
 One filter removed: `unlist_posts_enabled`. One function renamed: `boi_pretty_search_enabled()` is now `boi_search_permalinks_enabled()`.
 
 ### Changed
-- The five features that overlap a plugin (unlisting, readable search addresses, the custom login address, the reading progress bar and the contents list) carry no name, credit, option write or hook of that plugin in their code, styles, settings screen or documentation (owner, 2026-11-20). The GPL and MIT notices the licences require stay in `docs/CREDITS.md`, and nowhere else.
-- Detection stays: each feature still stands aside while its plugin is active, says so on its card, and imports the plugin's saved settings once.
-- Unlisting reads the `unlist_posts` option to import and to re-sync, and no longer writes it; the theme's list lives in `boi_unlisted` alone. `boi_unlist_enabled()` reads only the `boi_unlist_enabled` filter.
+- The five features that overlap a plugin (unlisting, readable search addresses, the custom login address, the reading progress bar and the contents list) carry no name, credit, option write or hook of that plugin in their code, styles, settings screen or documentation, outside the detection that names it (owner, 2026-11-20). The GPL and MIT notices the licences require stay in `docs/CREDITS.md`. Release notes before 1.117.0 stay as written.
+- Detection stays: each feature still stands aside while its plugin is active, says so on its card, and imports the plugin's saved settings. Unlisting also re-syncs whenever that plugin's list changes.
+- Unlisting reads the `unlist_posts` option to import and to re-sync, and no longer writes it. The theme's list lives in the per-post `_boi_unlisted` flags, cached in `boi_unlisted`. The sync is recorded only once every flag is written, so a failed write is retried. `boi_unlist_enabled()` reads only the `boi_unlist_enabled` filter.
 - SSOT D40 and D62 restated to match.
 
 ### Added

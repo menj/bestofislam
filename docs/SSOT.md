@@ -479,8 +479,9 @@ and nowhere else (owner, 2026-11-20):
 
 Detection stays. Each feature stands aside while Unlist Posts & Pages, Pretty
 Search Permalinks, WPS Hide Login or Reading Progress Bar is active, says so
-on its card, and imports that plugin's saved settings once. The theme reads
-those plugins' options and never writes them. The login address is off by default, refuses
+on its card, and imports that plugin's saved settings; unlisting re-syncs
+whenever that plugin's list changes. The theme reads those plugins' options
+and never writes them. The login address is off by default, refuses
 any address that would not work, and yields to BOI_HIDE_LOGIN false in
 wp-config.php. Because it belongs to the theme, activating another theme
 restores wp-login.php; the failure mode is an open door, never a locked one.
