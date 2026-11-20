@@ -587,9 +587,10 @@ function boi_assign_seed_terms( $post_id, $listicle ) {
 /**
  * Version of the category and tag map. Raise it when the seed's categories
  * or tags change, and the migration below runs once more. 2: the
- * subcategories of 1.90.0.
+ * subcategories of 1.90.0. 3: the description of the Divine attributes tag
+ * in 1.118.0.
  */
-const BOI_TERMS_VERSION = 2;
+const BOI_TERMS_VERSION = 3;
 
 /**
  * Once per term-map version: gives every seeded post that a site already

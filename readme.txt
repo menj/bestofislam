@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.117.0
+Stable tag: 1.118.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 174 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 183 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -163,6 +163,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.118.0 =
+* Nine new articles on questions long argued in online debate: the sun in a muddy spring, the authority of the Sunnah, the Prophet and sin, Islam and evolution, the slander against Mary, the uncreated Quran, honour killing, women leading the prayer, and the oaths of the Quran. Each has a featured image and two in its text, drawn by the theme.
+* New entries or paragraphs in fourteen existing articles, among them Sawda and 4:128, Pharaoh's wife, the first Muslim, Solomon's wives, The True Furqan, the Night Journey, the Diatessaron and al-Samiri.
 
 = 1.117.0 =
 * The contents list, unlisting, readable search addresses, the custom login address and the reading progress bar carry only the theme's own names. A new [boi_contents] shortcode places the contents in the text; texts that use an older contents shortcode keep working.
@@ -390,6 +394,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.118.0 =
+Replace the theme files. The nine new articles are created when the version changes, and the changed articles refresh where you have not edited them.
 
 = 1.117.0 =
 Replace the theme files. Code that hooked unlist_posts_enabled should hook boi_unlist_enabled.
