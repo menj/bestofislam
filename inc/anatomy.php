@@ -13,8 +13,8 @@
  *   bestofislam/contents       the sections, from three level-two headings,
  *                              with the level-three ones under them, on an
  *                              article or page without a jump list; the
- *                              [wp_toc] and [auto_toc] shortcodes place it in
- *                              the text instead (adapted from WP TOC)
+ *                              [boi_contents] shortcode places it in the
+ *                              text instead
  *   the_content 12             heading ids, the notes anchor, the placed
  *                              contents and the mid-article next step
  *   is-style-faq               the FAQ style for a Details block, read by the
@@ -617,8 +617,7 @@ function boi_toc_plugin_active() {
 
 /**
  * The settings of a contents list, from shortcode attributes or the
- * defaults. The attributes are those of the WP TOC plugin, so a text written
- * for it reads the same here.
+ * defaults.
  *
  * @param array|string $atts Attributes.
  * @return array( 'levels', 'title', 'depth', 'min', 'collapsible', 'collapsed' ).
@@ -724,13 +723,30 @@ function boi_toc_rendered( $post ) {
 }
 
 /**
- * Whether a post places its own contents with [wp_toc] or [auto_toc].
+ * The shortcodes that place the contents in the text: the theme's own, and
+ * the names an earlier contents plugin used, which detection keeps working in
+ * texts written for it.
+ *
+ * @return string[]
+ */
+function boi_toc_shortcode_names() {
+	return array( 'boi_contents', 'wp_toc', 'auto_toc' );
+}
+
+/**
+ * Whether a post places its own contents with a contents shortcode.
  *
  * @param WP_Post $post Post.
  * @return bool
  */
 function boi_toc_has_shortcode( $post ) {
-	return has_shortcode( $post->post_content, 'wp_toc' ) || has_shortcode( $post->post_content, 'auto_toc' );
+	foreach ( boi_toc_shortcode_names() as $tag ) {
+		if ( has_shortcode( $post->post_content, $tag ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
@@ -771,7 +787,7 @@ function boi_toc_view_tree() {
 
 /**
  * The contents the current view shows anywhere: the list at its head, or the
- * list the text places with the first [wp_toc] or [auto_toc], read with that
+ * list the text places with the first contents shortcode, read with that
  * shortcode's settings. The schema and the article's accessibility features
  * describe this one.
  *
@@ -787,7 +803,7 @@ function boi_toc_page_tree() {
 
 	$atts = array();
 
-	if ( preg_match( '/' . get_shortcode_regex( array( 'wp_toc', 'auto_toc' ) ) . '/', $post->post_content, $m ) ) {
+	if ( preg_match( '/' . get_shortcode_regex( boi_toc_shortcode_names() ) . '/', $post->post_content, $m ) ) {
 		$atts = shortcode_parse_atts( $m[3] );
 	}
 
@@ -814,7 +830,7 @@ function boi_render_contents() {
 }
 
 /**
- * The [wp_toc] and [auto_toc] shortcodes place the contents in the text.
+ * The [boi_contents] shortcode places the contents in the text.
  * The headings get their ids only later, in the_content, so the shortcode
  * leaves a marker carrying its settings, and boi_toc_fill() builds the list
  * there from the finished text. Outside the main text of an article or page
@@ -863,7 +879,8 @@ function boi_toc_fill( $html ) {
 }
 
 /**
- * Registers the shortcodes, unless the WP TOC plugin runs and has its own.
+ * Registers the shortcodes, unless the original contents plugin runs and has
+ * its own.
  *
  * @return void
  */
@@ -872,15 +889,16 @@ function boi_toc_register_shortcodes() {
 		return;
 	}
 
-	add_shortcode( 'wp_toc', 'boi_toc_shortcode' );
-	add_shortcode( 'auto_toc', 'boi_toc_shortcode' );
+	foreach ( boi_toc_shortcode_names() as $tag ) {
+		add_shortcode( $tag, 'boi_toc_shortcode' );
+	}
 }
 add_action( 'init', 'boi_toc_register_shortcodes' );
 
 /**
  * The contents in the page's graph: a SiteNavigationElement, part of the
  * WebPage, with one WebPageElement per section. Each section's @id is the
- * address of its heading, as the WP TOC plugin writes it.
+ * address of its heading.
  *
  * @param array $nodes Graph nodes.
  * @return array

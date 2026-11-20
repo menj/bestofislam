@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.116.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.117.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -24,7 +24,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Reading
 
 - **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission.
-- **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles and pages of three or more sections, with the subsections nested and a `[wp_toc]` shortcode to place it in the text (adapted from WP TOC; a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
+- **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles and pages of three or more sections, with the subsections nested and a `[boi_contents]` shortcode to place it in the text (a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
 - **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
 - **Reading progress.** A bar on single posts and pages fills as you scroll. It is drawn in the palette, updates once per animation frame from a passive listener, drops its animation under `prefers-reduced-motion` and sits below the admin bar. It is `aria-hidden`: it repeats what the scrollbar shows, and a live progressbar would be read out on every scroll.
 - **Lead and list.** Rows and the lead react to hover, focus and a tap (one `--boi-ll-on` variable drives every state), each piece has a category tab and a date and reading-time line, and the block fades up on scroll with `assets/js/lead-list.js`. The Display tab sets category tabs, arrows and motion and an accent colour (`ll_tabs`, `ll_motion`, `ll_accent`; filters `boi_lead_list_show_tabs`, `boi_lead_list_motion`, `boi_lead_list_accent`). Underneath that: The first page of Reflections, of each section and of each archive opens with the newest piece large, its title on a dark band at the foot of the image under a gold rule, and its credit below. The next five stand in a list beside it, each a 16:9 thumbnail and a title clamped at three lines; the grid below leaves those six out, so pagination does not move. `inc/lead-list.php` draws it as the `bestofislam/lead-list` block from the main query (`boi_lead_list( $posts, $args )`, with `heading`, `heading_id`, `lead_id` and `max`; the block takes `heading` and `leadId`). It uses the front page's image helpers (`boi_lead_image()`, `boi_list_thumbnail()` in `inc/features.php`) and the image-credit block's line (`boi_image_credit_markup()` in `inc/images.php`). Below five pieces, or when the lead has neither a featured image nor a bundled one, it draws nothing and the grid shows alone. Unlisted posts never appear. `assets/css/lead-list.css` loads on the first page of those views (`boi_lead_list_assets()` on `wp_enqueue_scripts`, never from the block, since an enqueue made during rendering would print the theme styles above the core block styles); columns are `minmax(0,3fr) minmax(0,2fr)`, stacked under 782px, and the title sits on `rgb(0 0 0 / .85)` so white type stays above 4.5:1. The front page is unchanged.
@@ -98,9 +98,9 @@ Under Appearance, Contextual Links, in three tabs:
 3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 174 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
 4. Configure under Appearance, Theme Options.
 
-### Moving from the plugins the theme replaces
+### Sites with an overlapping plugin
 
-Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar are rebuilt inside the theme. While any of them is active, the theme's version of that feature stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
+The theme detects Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login, Reading Progress Bar and WP TOC. While one of them is active, the theme's own feature that does the same work stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
 
 ## Performance and mobile
 
@@ -201,7 +201,7 @@ The theme's own filters:
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
 | `boi_security_headers` | The front-end security headers |
 | `boi_title_max_length` | The title tag limit |
-| `boi_unlist_enabled`, `unlist_posts_enabled` | Switch the unlist feature off |
+| `boi_unlist_enabled` | Switch the unlist feature off |
 
 `grep -n "add_action\|add_filter" functions.php inc/*.php` lists every hook the theme uses. The ones a host meets most:
 
@@ -325,7 +325,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.116.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.117.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

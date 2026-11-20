@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.116.0
+Stable tag: 1.117.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -160,9 +160,12 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * KFGQPC HAFS Uthmanic Script: King Fahd Glorious Quran Printing Complex, under its own licence (assets/fonts/scripts/kfgqpc-hafs-uthmanic-script-LICENSE.txt).
 * Minimalist Social & Platform Icons Pack 2.8: GNU General Public License (assets/icons/LICENSE.txt).
 * Photographs: public domain or CC0 from Wikimedia Commons, the Pexels licence and the Pixabay Content Licence, credited under each image and on the Sources and standards page.
-* Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later, and from WP TOC by MENJ (GPLv3 or later, based on work by Ikram Hawramani under the MIT License).
+* Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.117.0 =
+* The contents list, unlisting, readable search addresses, the custom login address and the reading progress bar carry only the theme's own names. A new [boi_contents] shortcode places the contents in the text; texts that use an older contents shortcode keep working.
 
 = 1.116.0 =
 * Fourteen Glossary terms that had two entries each, such as Ijma and "Ijma', al-", now have one. The old address of each removed entry sends readers to the one that stays. The Glossary has 784 entries.
@@ -387,6 +390,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.117.0 =
+Replace the theme files. Code that hooked unlist_posts_enabled should hook boi_unlist_enabled.
 
 = 1.116.0 =
 Replace the theme files. Fourteen duplicate Glossary pages are removed and their addresses redirect to the entry that stays. If you rewrote one of them, copy your text into the surviving entry first.

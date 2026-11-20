@@ -69,11 +69,11 @@ function check( $ok, $msg ) {
 	}
 }
 
-// Import from the plugin's option on first use: flags written, both lists in step.
+// Import from the plugin's option on first use: flags written, its list left alone.
 $GLOBALS['t_options']['unlist_posts'] = array( '9', 7 );
 check( array( 7, 9 ) === boi_unlisted_ids(), 'imports the plugin list' );
 check( array( 7 => 1, 9 => 1 ) === $GLOBALS['t_meta']['_boi_unlisted'], 'one meta flag per imported post' );
-check( array( 7, 9 ) === $GLOBALS['t_options']['unlist_posts'], 'plugin list kept in step' );
+check( array( '9', 7 ) === $GLOBALS['t_options']['unlist_posts'], 'plugin list left untouched' );
 
 // Two saves on different posts: the second never erases the first, because
 // each writes only its own flag and the list is rebuilt from all flags.
@@ -83,7 +83,7 @@ boi_set_unlisted( 12, true );
 check( array( 7, 9, 11, 12 ) === $GLOBALS['t_options']['boi_unlisted'], 'concurrent saves both survive' );
 boi_set_unlisted( 11, false );
 boi_set_unlisted( 12, false );
-check( array( 7, 9 ) === $GLOBALS['t_options']['boi_unlisted'] && array( 7, 9 ) === $GLOBALS['t_options']['unlist_posts'], 'listing again rebuilds both lists' );
+check( array( 7, 9 ) === $GLOBALS['t_options']['boi_unlisted'] && array( '9', 7 ) === $GLOBALS['t_options']['unlist_posts'], 'listing again rebuilds the theme list only' );
 check( boi_is_unlisted( 7 ) && boi_is_unlisted( new WP_Post( 9 ) ) && ! boi_is_unlisted( 8 ), 'boi_is_unlisted' );
 
 // A listing query (home, archive, feed, search, sitemap, REST list) loses them.

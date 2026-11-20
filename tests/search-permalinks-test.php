@@ -124,7 +124,7 @@ check( 2 === $GLOBALS['t_flushes'], 'no flush without the marker' );
 $GLOBALS['t_options'] = array();
 
 eval( "function wpseosearch_base() {}" ); // phpcs:ignore -- declared late on purpose: a top-level declaration is hoisted.
-check( ! boi_pretty_search_enabled(), 'stands aside for the plugin' );
+check( ! boi_search_permalinks_enabled(), 'stands aside for the plugin' );
 
 echo $fail ? "$fail failure(s)\n" : "search-permalinks: all checks passed\n";
 exit( $fail ? 1 : 0 );

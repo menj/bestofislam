@@ -48,11 +48,12 @@
   update, save Settings, Permalinks once. Changing the search base word on
   the Search engines tab rebuilds them automatically on the next page load.
 
-## Moving from the plugins the theme replaces
+## Sites with an overlapping plugin
 
-The theme rebuilds Unlist Posts & Pages, Pretty Search Permalinks and WPS Hide
-Login. While any of these plugins is active, the theme's version of that
-feature stands aside, so nothing runs twice.
+The theme detects Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide
+Login, Reading Progress Bar and WP TOC. While one of them is active, the
+theme's own feature that does the same work stands aside, so nothing runs
+twice.
 
 1. Deactivate the plugin.
 2. Open Appearance, Theme Options. The theme imports the plugin's saved settings:
@@ -60,6 +61,10 @@ feature stands aside, so nothing runs twice.
 3. For the login address, confirm the address on the Access tab and switch it
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
+
+## Upgrading to 1.117.0
+
+Replace the theme files. Code that hooked the `unlist_posts_enabled` filter to switch unlisting off should hook `boi_unlist_enabled`, which the theme reads alone. The theme no longer writes the `unlist_posts` option: a site that later activates Unlist Posts & Pages finds that plugin's own list as the plugin last left it, and the theme's list stays in `boi_unlisted`. The `[boi_contents]` shortcode places the contents in the text; texts that use `[wp_toc]` or `[auto_toc]` render as before.
 
 ## Upgrading to 1.116.0
 

@@ -7,11 +7,8 @@
  * archives, search, feeds, the XML sitemap, previous and next links, page
  * lists or the question list. It is also marked noindex.
  *
- * Adapted from the Unlist Posts & Pages plugin by Nikhil Chavan (GPLv2 or
- * later). The plugin filters posts_where, which get_posts() skips; the theme
- * builds most of its modules with get_posts(), so this version filters at
- * pre_get_posts, which every query passes through, and the theme's direct
- * lookups check boi_is_unlisted().
+ * It filters at pre_get_posts, which every query passes through, get_posts()
+ * included, and the theme's direct lookups check boi_is_unlisted().
  *
  * Editors still see unlisted items throughout the admin and in the block
  * editor's own requests, so nothing becomes hard to find for the people who
@@ -31,13 +28,11 @@ const BOI_UNLISTED_OPTION = 'boi_unlisted';
  * @return bool
  */
 function boi_unlist_enabled() {
-	// unlist_posts_enabled is the plugin's own switch; honouring it keeps any
-	// code written against the plugin working.
-	return ! class_exists( 'Unlist_Posts' ) && (bool) apply_filters( 'boi_unlist_enabled', (bool) apply_filters( 'unlist_posts_enabled', true ) );
+	return ! class_exists( 'Unlist_Posts' ) && (bool) apply_filters( 'boi_unlist_enabled', true );
 }
 
 /**
- * Post types that can be unlisted: every public type, as in the plugin.
+ * Post types that can be unlisted: every public type.
  *
  * @return string[]
  */
@@ -52,9 +47,7 @@ const BOI_UNLISTED_META = '_boi_unlisted';
  *
  * Each item carries its own flag in post meta (_boi_unlisted), so two saves
  * on different posts cannot erase each other. The boi_unlisted option is a
- * cache of those flags, rebuilt from them after every change, and it is kept
- * equal to the plugin's unlist_posts list so the plugin finds the same items
- * if it is switched back on.
+ * cache of those flags, rebuilt from them after every change.
  *
  * The plugin's list is read on the first call of any request, front end
  * included, and again whenever it differs from the copy last synced: an
@@ -143,7 +136,11 @@ function boi_unlist_sync_from_plugin( $again = false ) {
 		update_post_meta( (int) $id, BOI_UNLISTED_META, 1 );
 	}
 
-	boi_unlist_rebuild();
+	// Recorded as synced only once every flag the plugin's list asks for is
+	// written, so a failed write is retried on the next request.
+	if ( ! array_diff( array_map( 'intval', $plugin ), boi_unlist_rebuild() ) ) {
+		update_option( 'boi_unlisted_synced', $hash, true );
+	}
 }
 
 /**
@@ -164,17 +161,16 @@ function boi_unlist_flagged_ids() {
 }
 
 /**
- * Rebuilds the option and the plugin's list from the meta flags, and
- * records the plugin list as synced.
+ * Rebuilds the option from the meta flags.
  *
- * @return void
+ * @return int[] The flagged IDs.
  */
 function boi_unlist_rebuild() {
 	$ids = boi_unlist_flagged_ids();
 
 	update_option( BOI_UNLISTED_OPTION, $ids, true );
-	update_option( 'unlist_posts', $ids );
-	update_option( 'boi_unlisted_synced', md5( implode( ',', $ids ) ), true );
+
+	return $ids;
 }
 
 /**
