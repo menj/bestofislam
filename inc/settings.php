@@ -773,7 +773,7 @@ function boi_render_display_tab( $opts ) {
 			'key'     => 'article_contents',
 			'label'   => __( 'Contents', 'bestofislam' ),
 			'text'    => __( 'List the sections at the head of an article or page with three or more', 'bestofislam' ),
-			'help'    => __( 'Level-three headings are nested under their section. A list with its own jump list keeps that instead; [wp_toc] in the text places the contents there.', 'bestofislam' ),
+			'help'    => __( 'Level-three headings are nested under their section. A list with its own jump list keeps that instead; [boi_contents] in the text places the contents there.', 'bestofislam' ),
 			'checked' => ! empty( $opts['article_contents'] ),
 		)
 	);
@@ -1245,7 +1245,7 @@ function boi_maybe_flush_rewrites() {
  * @return bool
  */
 function boi_search_rules_ready() {
-	if ( ! function_exists( 'boi_pretty_search_enabled' ) || ! boi_pretty_search_enabled() ) {
+	if ( ! function_exists( 'boi_search_permalinks_enabled' ) || ! boi_search_permalinks_enabled() ) {
 		return true;
 	}
 

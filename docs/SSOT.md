@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.116.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.117.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -461,24 +461,26 @@ same credits shown beneath each image, so the licence a reader sees
 and the licence Google reads are one record. Markup Google no longer rewards,
 FAQ and list carousels, stays only because it describes its page accurately.
 
-### D40. Plugins rebuilt inside the theme
+### D40. Unlisting, search addresses, the login address and the progress bar are the theme's own
 
-Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading
-Progress Bar are
-rebuilt natively, in keeping with D1, and credited in docs/CREDITS.md. Each
-was rebuilt to suit the theme's own structure, never copied in whole:
+These four features are native, in keeping with D1. Each is built to the
+theme's own structure and carries no name, prefix, option or hook of any
+plugin; the licence notices the GPL requires are kept in docs/CREDITS.md
+and nowhere else (owner, 2026-11-20):
 
-- Unlisting filters at pre_get_posts, since the plugin's posts_where filter
-  is skipped by get_posts(), which builds most of the theme's modules.
+- Unlisting filters at pre_get_posts, which every query passes through,
+  get_posts() included, since get_posts() builds most of the theme's modules.
 - Search redirects keep every query argument, since the theme's search
-  filters travel as arguments and the plugin dropped them.
+  filters travel as arguments.
 - The progress bar is plain JavaScript and aria-hidden. It repeats the
   scrollbar, and a progressbar role would be announced on every scroll.
-- The login address intercepts at wp_loaded, since a theme loads after the
-  plugins_loaded hook the plugin used.
+- The login address intercepts at wp_loaded, which runs before the login
+  page does any work.
 
-Each feature stands aside while its original plugin is active and imports
-that plugin's saved settings. The login address is off by default, refuses
+Detection stays. Each feature stands aside while Unlist Posts & Pages, Pretty
+Search Permalinks, WPS Hide Login or Reading Progress Bar is active, says so
+on its card, and imports that plugin's saved settings once. The theme reads
+those plugins' options and never writes them. The login address is off by default, refuses
 any address that would not work, and yields to BOI_HIDE_LOGIN false in
 wp-config.php. Because it belongs to the theme, activating another theme
 restores wp-login.php; the failure mode is an open door, never a locked one.
@@ -701,7 +703,7 @@ The owner approved the article anatomy on 2026-11-05, with every sales prompt re
 
 ### D54. The theme is licensed GPL version 3 or later
 
-The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code adapted from GPLv2-or-later plugins may be carried under version 3. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
+The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code received under GPLv2-or-later grants is carried under version 3, with the notices in docs/CREDITS.md. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
 
 ### D55. Every theme ships a full favicon set
 
@@ -753,9 +755,9 @@ The owner asked on 2026-11-07 for the official Pexels JavaScript client (the `pe
 
 The owner set PHP 8.4 as the minimum on 2026-11-08. `style.css` and `readme.txt` declare `Requires PHP: 8.4`, so WordPress will not install or activate the theme on older PHP. The Content checks workflow lints every PHP file and runs every `tests/*-test.php` on PHP 8.4. The code does not yet use syntax that needs 8.4, so a site still on older PHP when it updates keeps running, but that setup is unsupported.
 
-### D62. The contents are adapted from WP TOC
+### D62. The contents list
 
-The owner asked on 2026-11-08 for WP TOC (https://github.com/menj/wp-toc, GPL-3.0-or-later, itself based on Ikram Hawramani's MIT-licensed work) to be part of the theme. It is not bundled: its rules are carried into the theme's own contents in `inc/anatomy.php`, so the page has one contents list and one graph. Carried over: level-two and level-three headings, nested; ids kept when present and otherwise made from the text, unique against every id in the text, with Arabic headings keeping readable ids; headings marked `no-toc` or `data-no-toc`, empty headings and anything inside a template element are passed over; the `[wp_toc]` and `[auto_toc]` shortcodes with the attributes `tags` (h2, h3), `title`, `depth`, `min`, `collapsible` and `collapsed`; a SiteNavigationElement with one WebPageElement per section in the page graph. Kept from the theme: the list shows from three level-two headings on articles and pages (not the front page), under the Contents switch, and a listicle keeps its jump list. Left out: the plugin's settings filters, its own JSON-LD block and microdata (the theme's single graph carries the same facts), and Rank Math's TOC check, which only counts plugins. When the WP TOC plugin is active (`WP_TOC_VERSION`), the theme stands aside: no contents block, no shortcodes and no contents schema.
+The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and 2026-11-20): one list and one graph per page. It takes level-two and level-three headings, nested; keeps ids when present and otherwise makes them from the text, unique against every id in the text, with Arabic headings keeping readable ids; passes over headings marked `no-toc` or `data-no-toc`, empty headings and anything inside a template element. The `[boi_contents]` shortcode places it in the text, with the attributes `tags` (h2, h3), `title`, `depth`, `min`, `collapsible` and `collapsed`; the graph carries a SiteNavigationElement with one WebPageElement per section. The list shows from three level-two headings on articles and pages (not the front page), under the Contents switch, and a listicle keeps its jump list. Detection stays: while the WP TOC plugin is active (`WP_TOC_VERSION`), the theme stands aside, with no contents block, no shortcodes and no contents schema, and texts written with that plugin's `[wp_toc]` or `[auto_toc]` still render under the theme alone. The licence notices are in docs/CREDITS.md.
 
 ### D20. Articles follow Islamic English conventions
 

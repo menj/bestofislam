@@ -82,7 +82,7 @@
 	text-underline-offset: 0.22em;
 }
 
-/* Subsections, nested under their section (adapted from WP TOC). */
+/* Subsections, nested under their section. */
 .boi-contents__sublist {
 	margin: 0.3rem 0 0.2rem;
 	padding-inline-start: 1.2rem;
@@ -96,7 +96,7 @@
 	text-decoration-color: var(--boi-rule);
 }
 
-/* Folded contents, with [wp_toc collapsible="yes"]. */
+/* Folded contents, with [boi_contents collapsible="yes"]. */
 .boi-contents__summary {
 	cursor: pointer;
 }

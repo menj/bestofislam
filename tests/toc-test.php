@@ -1,6 +1,6 @@
 <?php
 /**
- * The contents adapted from WP TOC (inc/anatomy.php): heading ids at levels
+ * The contents list (inc/anatomy.php): heading ids at levels
  * two and three, skipped headings, ids unique against every id in the text,
  * readable ids for Arabic headings, the nested tree, the shortcode settings,
  * the marker the shortcode leaves and the list that replaces it.
@@ -103,7 +103,7 @@ check( 5 === boi_toc_count( $tree ), 'every entry is counted' );
 check( 2 === count( boi_toc_tree( $items, array( 2 ) ) ), 'tags="h2" lists the sections only' );
 check( array() === boi_toc_tree( $items, array( 2, 3 ), 1 )[1]['children'], 'depth="1" stops at one level' );
 
-// Settings, read like WP TOC's attributes.
+// Settings, read from the shortcode attributes.
 $s = boi_toc_settings( array( 'tags' => 'H2, h4, x', 'title' => '<b>Parts</b>', 'collapsible' => 'yes', 'collapsed' => 'on', 'min' => '0', 'depth' => '-2' ) );
 check( array( 2 ) === $s['levels'], 'tags: only h2 and h3 are read; others are dropped' );
 check( 'Parts' === $s['title'] && $s['collapsible'] && $s['collapsed'] && 1 === $s['min'] && 0 === $s['depth'], 'title stripped, booleans and numbers read' );
