@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.118.0
 
-Replace the theme files. The nine new articles are created when the version changes, and `boi_migrate_seed()` refreshes the changed articles (about seventy) and the Sources and standards page where they are unedited; an edited copy is listed on the Content tab. The term map runs once more (`BOI_TERMS_VERSION` 3) to fill the Divine attributes tag description.
+Replace the theme files. The nine new articles are created when the version changes, and `boi_migrate_seed()` refreshes the changed articles (about seventy) and the Sources and standards page where they are unedited; an edited copy is listed on the Content tab.
 
 Open items for the owner:
 - The citations in the new text were compiled from published scholarship and were not checked against the printed pages. altafsir.com and searchtruth.com load their texts by script and could not be read automatically, so the tafsir passages (Ibn Kathir and al-Razi on 18:86, al-Tabari on 48:2, 93:7, 6:14 and 17:1, Ibn Kathir on 4:128 and 91:1, al-Zamakhshari on 3:54) and the hadith numbers (Bukhari 631, 2679, 3199, 3424, 3888, 4802, 5212; Muslim 159, 1463, 1498, 1654; Abu Dawud 591-592, 2135; Tirmidhi 1400, 3040) should be checked there by hand.

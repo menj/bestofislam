@@ -17,7 +17,9 @@ No feature removed and no public identifier renamed.
 - New paragraphs: prophets-you-may-not-know (Idris and Osiris), first-revelation-demonic-claim (the history of the epilepsy charge; jinn and the diagnosis of delusion), fate-and-free-will (the word makr), women-in-islamic-law-testimony-inheritance (polygamy) and what-former-muslims-testimonies-show (pseudonymous accounts).
 - Notes on tafsir and hadith say where the texts can be read, on altafsir.com and searchtruth.com.
 - `.claude/FARUQI.md` and SSOT: articles never concede the critic's argument (owner, 2026-11-20).
-- The Divine attributes tag has a description; `BOI_TERMS_VERSION` is 3.
+- The Divine attributes tag has a description, filled in when the new articles are created.
+- A newly created article records its content fingerprint, so the date stagger places it in the reading order instead of skipping it.
+- fate-and-free-will: the title counts its seven questions.
 - The existing articles follow the same rule. About 110 sentences in 65 articles that conceded ground to critics, and the "Strength" grades below firm, are rewritten to answer the critic from the sources. Eleven entry titles that conceded a point are reworded.
 - quran-science-claims-graded keeps its address and is now "4 scientific claims about the Quran that hold up on the evidence": the entries on atoms, fingerprints and iron are removed, the 51:47 paragraph moves to the orbits entry, and links to it are retitled.
 - The Sources and standards page: "What gets conceded" becomes "How objections are answered".

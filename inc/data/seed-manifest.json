@@ -13,7 +13,7 @@
         "content\/bible-alteration-claim-before-islam.json": "ffbb9bfaed0de0db10903a0a7c356619",
         "content\/black-stone-and-kissing.json": "900002a6a810d0bea88a310057d2387e",
         "content\/blasphemy-and-insults-to-the-prophet.json": "f90ed126c64c038af12e3b7e8c2798ec",
-        "content\/buraq-and-miracle-stories.json": "8154c823253f642d01bf3b729e919dee",
+        "content\/buraq-and-miracle-stories.json": "0ec1de01a6af7a20ab245017e24bcba4",
         "content\/camel-urine-hadith.json": "918d89e432da072b7b7df261dc23f6df",
         "content\/can-a-muslim-befriend-a-non-muslim.json": "9e9c1780429adb9dedf408e3a9f07613",
         "content\/child-marriage-in-islam.json": "e24604bafc1c4a4b9521e475410500da",
@@ -24,7 +24,7 @@
         "content\/crucifixion-quran.json": "901d10624b95f0513b26ce2b1cd59ff7",
         "content\/crusades-facts.json": "88618e2bcd127cef05518a2c9db0c8f0",
         "content\/deuteronomy-prophecy-and-the-paraclete.json": "a9e7c282265577cf0c471e44d7648740",
-        "content\/did-the-quran-say-muhammad-sinned.json": "3ff65a8806cf6b8eefacc90423202a14",
+        "content\/did-the-quran-say-muhammad-sinned.json": "c55fe87b742a6c18834aa702e5f4c749",
         "content\/disputed-books-of-the-new-testament.json": "86b1bdfb6da253a6a3363163423088ac",
         "content\/do-muslims-worship-muhammad.json": "65c70ed47208f7c4981384d261c2423b",
         "content\/does-islam-teach-the-bible-was-corrupted.json": "3e5cab0bf2840d0cff51def24cd85529",
@@ -170,7 +170,7 @@
         "content\/when-a-stranger-online-calls-islam-a-cult.json": "3ed7fffaf449ba6ec95ec52e2a402ae6",
         "content\/where-did-jesus-say-he-is-god.json": "dbc0d459fc4b8c83da679cbccfe67c1d",
         "content\/where-is-the-injil.json": "c41f18d5d5af2d47dba4b67e1d7d1797",
-        "content\/who-changed-the-bible.json": "0edb14f3fe041b46fcea4cd44d1d6ee1",
+        "content\/who-changed-the-bible.json": "2ec83fc7733fea66a89ba802906346d5",
         "content\/who-is-allah.json": "f2098a31f7f627593bb1e0a46551a632",
         "content\/who-saw-gabriel.json": "b41884196d2c71cefd1121da85d4321e",
         "content\/who-was-yahweh-archaeological-origins.json": "04bddda880049d41a77610e6111687d4",
@@ -183,8 +183,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "e868af66b8f001e3eed18ccda59c59c7",
         "content\/women-in-the-prophets-life.json": "7cceda50332599fb8fae985d8a3131bb",
         "content\/women-leading-prayer.json": "16bbaeb185073b56e610d1aafebcc9e9",
-        "inc\/data\/seed.json": "102440a3a2fbeea5470d37b41f36a3d1",
+        "inc\/data\/seed.json": "b2d29161015015827c7949cd0c7418a6",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "41026b304a6b9adb06ad014ae4780757"
+    "checksum": "dfc1d4037c0dee3d652153ed463fb55b"
 }

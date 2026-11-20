@@ -166,6 +166,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 = 1.118.0 =
 * Nine new articles on questions long argued in online debate: the sun in a muddy spring, the authority of the Sunnah, the Prophet and sin, Islam and evolution, the slander against Mary, the uncreated Quran, honour killing, women leading the prayer, and the oaths of the Quran. Each has a featured image and two in its text, drawn by the theme.
+* New articles now take their place in the dated reading order.
 * About 110 sentences in 65 existing articles rewritten so that no article concedes the critic's argument, and the science article reduced to the four claims that hold up.
 * New entries or paragraphs in fourteen existing articles, among them Sawda and 4:128, Pharaoh's wife, the first Muslim, Solomon's wives, The True Furqan, the Night Journey, the Diatessaron and al-Samiri.
 

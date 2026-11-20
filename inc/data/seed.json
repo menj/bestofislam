@@ -1,5 +1,5 @@
 {
-	"terms_version": 3,
+	"terms_version": 2,
 	"topics": {
 		"belief-and-practices": {
 			"name": "Belief & Practices",
@@ -885,8 +885,8 @@
 		},
 		{
 			"slug": "fate-and-free-will",
-			"title": "Fate and free will in Islam: 6 questions answered",
-			"excerpt": "If God knows everything, are we free? Six questions about qadar, answered from the Quran, the hadith and the scholars. Read on.",
+			"title": "Fate and free will in Islam: 7 questions answered",
+			"excerpt": "If God knows everything, are we free? Seven questions about qadar, answered from the Quran, the hadith and the scholars. Read on.",
 			"topic": "belief-and-practices",
 			"seo_title": "Fate and free will in Islam",
 			"category": "creed-theology",

@@ -339,6 +339,15 @@ function boi_create_listicles( $topics ) {
 			boi_sync_record( $post_id, boi_sync_bundle()[ $listicle['slug'] ] );
 		}
 
+		// The fingerprint too, so the date stagger counts the new article as unedited.
+		$saved = get_post( $post_id );
+
+		if ( $saved ) {
+			$hashes                      = (array) get_option( 'boi_article_hashes', array() );
+			$hashes[ $listicle['slug'] ] = boi_content_fingerprint( $saved->post_content );
+			update_option( 'boi_article_hashes', $hashes, false );
+		}
+
 		$created[] = $post_id;
 	}
 
@@ -587,10 +596,9 @@ function boi_assign_seed_terms( $post_id, $listicle ) {
 /**
  * Version of the category and tag map. Raise it when the seed's categories
  * or tags change, and the migration below runs once more. 2: the
- * subcategories of 1.90.0. 3: the description of the Divine attributes tag
- * in 1.118.0.
+ * subcategories of 1.90.0.
  */
-const BOI_TERMS_VERSION = 3;
+const BOI_TERMS_VERSION = 2;
 
 /**
  * Once per term-map version: gives every seeded post that a site already
