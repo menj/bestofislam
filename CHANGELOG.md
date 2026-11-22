@@ -17,6 +17,7 @@ No feature removed and no public identifier renamed.
 
 ### Changed
 - Flickr joins the image sources (SSOT D48, `docs/CREDITS.md`, readme): public domain, "no known copyright restrictions" or CC0 only, after Commons and before Pexels.
+- `boi_image_source_name()` (`inc/images.php`) names Flickr and the Library of Congress, so a credit from either is no longer labelled Wikimedia Commons. `docs/CREDITS.md` says an article has up to four in-text images.
 
 ## [1.118.0] - 2026-11-20
 

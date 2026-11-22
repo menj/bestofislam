@@ -24,8 +24,8 @@
         "content\/crucifixion-quran.json": "901d10624b95f0513b26ce2b1cd59ff7",
         "content\/crusades-facts.json": "88618e2bcd127cef05518a2c9db0c8f0",
         "content\/deuteronomy-prophecy-and-the-paraclete.json": "a9e7c282265577cf0c471e44d7648740",
-        "content\/did-jesus-pray-to-whom.json": "311aac24faa648192ccd404db9817cac",
-        "content\/did-muhammad-perform-miracles.json": "ed3338eabe5ff0f20fd0791504319ebb",
+        "content\/did-jesus-pray-to-whom.json": "2a7a11971b3e6ea7df369659f5371f60",
+        "content\/did-muhammad-perform-miracles.json": "4d06fc0b806c80f5e0b96dfc7aa78ab7",
         "content\/did-the-quran-say-muhammad-sinned.json": "c55fe87b742a6c18834aa702e5f4c749",
         "content\/disputed-books-of-the-new-testament.json": "86b1bdfb6da253a6a3363163423088ac",
         "content\/do-muslims-worship-muhammad.json": "65c70ed47208f7c4981384d261c2423b",
@@ -60,7 +60,7 @@
         "content\/i-read-the-entire-quran-reply.json": "3fddd1dad409192c6fcff2e27fcd1d85",
         "content\/indonesia.json": "c010224a3f644f725422f3eae7f76893",
         "content\/instruments-islamic-world.json": "47c208134c729add0597fe2824e65de5",
-        "content\/is-allah-a-deceiver-makr.json": "36541f4f3376368fb44e842a920ff9d9",
+        "content\/is-allah-a-deceiver-makr.json": "33cf5f56bf64b017d3741f5e39520751",
         "content\/is-yahweh-satan.json": "6c08ca6224319d40350f2c67a8de091c",
         "content\/is-yahweh-the-same-as-allah.json": "d55c5dba75e7f1e6fddeb5711f5f46fe",
         "content\/ishmael-in-the-quran-and-genesis.json": "402cbe5ce1499f10dda0d2b6b43e82de",
@@ -175,7 +175,7 @@
         "content\/where-is-the-injil.json": "c41f18d5d5af2d47dba4b67e1d7d1797",
         "content\/who-changed-the-bible.json": "2ec83fc7733fea66a89ba802906346d5",
         "content\/who-is-allah.json": "f2098a31f7f627593bb1e0a46551a632",
-        "content\/who-is-the-holy-spirit.json": "4c895c002c3c7c11b1ca9191769722f3",
+        "content\/who-is-the-holy-spirit.json": "5c46d8579dca458bc0b830ab49e538cb",
         "content\/who-saw-gabriel.json": "b41884196d2c71cefd1121da85d4321e",
         "content\/who-was-yahweh-archaeological-origins.json": "04bddda880049d41a77610e6111687d4",
         "content\/who-wrote-the-quran.json": "aaa7ef0276e687946eb729b522b7c0e2",
@@ -190,5 +190,5 @@
         "inc\/data\/seed.json": "54dfda1c0cb4ba06c4119cd43334392a",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "7ca9cf7c2158d5866c137ea2730b7f4d"
+    "checksum": "321100691d265221bc0528b6280fb743"
 }

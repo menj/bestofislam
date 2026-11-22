@@ -83,7 +83,7 @@ Article images come from Wikimedia Commons (public domain or CC0), Flickr
 (public domain, no known copyright restrictions or CC0 only; among them the
 Walters Art Museum's manuscripts), Pexels (Pexels licence) and Pixabay
 (Pixabay Content Licence). Each article has one
-featured image and two in its text. Each is credited beneath it on the site and
+featured image and up to four in its text. Each is credited beneath it on the site and
 on the Sources and standards page, and the credits are recorded in
 `inc/images-data.json` and `inc/images.php`.
 
