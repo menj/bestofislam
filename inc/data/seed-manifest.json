@@ -59,7 +59,7 @@
         "content\/honour-killing-and-islamic-law.json": "a4970c7c706505d5b4d8b6e48cd2e686",
         "content\/houris-and-paradise.json": "60b0060e110a9b835f18ed4605989485",
         "content\/i-read-the-entire-quran-reply.json": "3fddd1dad409192c6fcff2e27fcd1d85",
-        "content\/iblis-and-the-command-to-prostrate.json": "bcaa931586eae7dde3d3ded11e092e63",
+        "content\/iblis-and-the-command-to-prostrate.json": "cb42109e9315bd3bc69b29ceab20bfe4",
         "content\/indonesia.json": "c010224a3f644f725422f3eae7f76893",
         "content\/instruments-islamic-world.json": "47c208134c729add0597fe2824e65de5",
         "content\/is-allah-a-deceiver-makr.json": "33cf5f56bf64b017d3741f5e39520751",
@@ -193,5 +193,5 @@
         "inc\/data\/seed.json": "749e8deefe46636011133461c3b35e6f",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "a95375e011772f8ceb37c4c41a561c96"
+    "checksum": "81099e853d7a2b365cff447b908409fe"
 }

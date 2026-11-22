@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.122.1] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse on thebible.exposed (`/bible/{book}/{chapter}/#v{verse}`). The notes name the ESV at thebible.exposed in place of the World English Bible.
+
 ## [1.122.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
