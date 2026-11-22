@@ -54,6 +54,7 @@ function boi_get_options() {
 		'progress_types'      => array( 'post', 'page' ),
 		'article_contents'    => 1,
 		'article_mid_next'    => 1,
+		'preferred_source'    => 1,
 		'll_accent'           => '',
 		'll_tabs'             => 1,
 		'll_motion'           => 1,
@@ -143,6 +144,7 @@ function boi_sanitize_options( $input ) {
 
 			$current['article_contents'] = empty( $input['article_contents'] ) ? 0 : 1;
 			$current['article_mid_next'] = empty( $input['article_mid_next'] ) ? 0 : 1;
+			$current['preferred_source'] = empty( $input['preferred_source'] ) ? 0 : 1;
 
 			// Lead and list. An accent that cannot carry text at 4.5:1 in both appearances is dropped.
 			$current['ll_tabs']   = empty( $input['ll_tabs'] ) ? 0 : 1;
@@ -789,6 +791,15 @@ function boi_render_display_tab( $opts ) {
 			'text'    => __( 'Show a next step before the third section of an article', 'bestofislam' ),
 			'help'    => __( 'It points to the notes, the next piece in the reading order and the Contact page.', 'bestofislam' ),
 			'checked' => ! empty( $opts['article_mid_next'] ),
+		)
+	);
+	boi_opt_toggle(
+		array(
+			'key'     => 'preferred_source',
+			'label'   => __( 'Preferred source', 'bestofislam' ),
+			'text'    => __( 'Invite readers to add the site as a preferred source on Google', 'bestofislam' ),
+			'help'    => __( 'A link to Google\'s source preferences, under the share links of an article and in the Follow band. Readers who add the site see more of it in Top Stories and AI Mode. Shown only when the site is at the root of its domain.', 'bestofislam' ),
+			'checked' => ! empty( $opts['preferred_source'] ),
 		)
 	);
 	boi_opt_card_close();
