@@ -6153,6 +6153,34 @@
    }
   ]
  },
+ "iblis-and-the-command-to-prostrate": {
+  "featured": {
+   "file": "iblis-and-the-command-to-prostrate.avif",
+   "alt": "A single folio of an early Quran manuscript in the Khalili Collection.",
+   "caption": "A folio of an early Quran. The command to the angels to prostrate to Adam is told in seven surahs, and in 7:12 God says to Iblis, \"when I commanded you\".",
+   "artist": "Khalili Collections",
+   "licence": "CC BY-SA 3.0 igo",
+   "source": "https://commons.wikimedia.org/wiki/File:Khalili_Collection_Islamic_Art_kfq_0093.a.jpg"
+  },
+  "inline": [
+   {
+    "file": "iblis-and-the-command-to-prostrate-1.avif",
+    "alt": "Two pages of a handwritten Arabic commentary, black ink on paper.",
+    "caption": "A fragment of al-Zamakhshari's commentary on the Quran, al-Kashshaf (Bibliothèque nationale de France, Arabe 6313). The classical commentators asked whether the command to the angels reached Iblis, and answered that it did.",
+    "artist": "Al-Zamakhshari (author); unknown copyist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fragment_du_commentaire_du_Koran_par_Zamakhshari._-_btv1b10031416j_(012_of_148).jpg"
+   },
+   {
+    "file": "iblis-and-the-command-to-prostrate-2.avif",
+    "alt": "A page of a Persian translation of al-Tabari's commentary on the Quran, about 1210 to 1225.",
+    "caption": "A Persian version of al-Tabari's commentary, early thirteenth century. Al-Tabari records the early glosses on Iblis's words \"because You have put me in error\".",
+    "artist": "Francesco Bini",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iran,_tafis_(commentario_al_corano)_di_tabari_(in_persiano),_1210-25_ca._(bnf).jpg"
+   }
+  ]
+ },
  "can-god-die": {
   "featured": {
    "file": "can-god-die.avif",

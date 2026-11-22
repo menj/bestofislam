@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.120.0
+Stable tag: 1.122.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 183 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 190 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -164,10 +164,19 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.120.0 =
+= 1.122.0 =
 * Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
 * A link under each article, and in the follow band, lets readers add the site as a preferred source on Google. It is a plain link in the theme's colours, loads nothing from Google, and can be switched off under Theme Options, Display.
 * Articles print cleanly: page margins, paper-sized type, no breaks inside pictures, quotations or table rows, and link addresses shown in full. Save the printed page as a PDF for a PDF copy.
+
+= 1.121.1 =
+* The featured card below the front-page hero loads its photo lazily, and when it shows the same article as the hero it reuses the hero image instead of downloading a second one.
+
+= 1.121.0 =
+* Numbered footnotes link directly to their notes. Five articles gain source links and corrections, and the homepage answers on Haman and the Birmingham Quran leaves are updated.
+
+= 1.120.0 =
+* New article: "Was Iblis punished for a command that was not his? 8 answers". It answers the charge that God condemned Iblis, a jinn, for refusing an order given to angels, from 7:12, the commentaries of Ibn Kathir, al-Qurtubi and al-Tabari, and the Bible. The Arabic of each commentary was checked against its Shamela text and the hadith grading on dorar.net.
 
 = 1.119.0 =
 * Four new articles: "Did Muhammad perform miracles? 6 answers", "Is Allah a deceiver? 7 answers on makr", "Who is the Holy Spirit? 7 answers from the Quran and the Bible" and "Did Jesus pray, and to whom? 7 answers", each with a featured image and four in-text images.
@@ -407,8 +416,17 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.120.0 =
+= 1.122.0 =
 Replace the theme files. The two new articles are created when the version changes. The preferred source link is on by default.
+
+= 1.121.1 =
+Replace the theme files. Nothing else to do.
+
+= 1.121.0 =
+Replace the theme files. The regular content update applies the new text to articles the owner has not edited.
+
+= 1.120.0 =
+Replace the theme files. The new article is created when the version changes.
 
 = 1.119.0 =
 Replace the theme files. The four new articles are created when the version changes.

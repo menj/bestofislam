@@ -4,7 +4,7 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.120.0] - 2026-11-22
+## [1.122.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
 
@@ -16,6 +16,38 @@ No feature removed and no public identifier renamed.
 
 ### Changed
 - `assets/css/print.css` rewritten with page, type, break and table rules adapted from the Hartija CSS Print Framework (MIT; notice in `docs/CREDITS.md`): 2cm margins, 12pt type, orphans and widows of three, no breaks inside pictures, quotations, table rows or code, repeated table headers, link addresses after outside links in the article text, and the preferred source link, contents, progress bar and other screen-only parts hidden.
+- Rebased on 1.121.1. The article counts in readme.txt, README.md and docs/SSOT.md now read 190.
+
+## [1.121.1] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- The featured card below the front-page hero lazy-loads its photo (`boi_home_featured_image()` in `inc/features.php`). When it shows the same article as the hero, it requests the rendition the hero already uses at that width, so the browser downloads one image instead of two. `boi_hero_image()` now also returns the hero's post ID.
+
+## [1.121.0] - 2026-11-23
+
+### Added
+
+- Numbered footnote markers link directly to their entries in Notes.
+- Five articles gain direct links to catalogue records, manuscript research, legislation and terrorism data.
+
+### Fixed
+
+- Clarified the Haman inscription, the Mesha account in 2 Kings, the dating of the Birmingham parchment and the exceptions in marriage laws.
+- Updated the terrorism article with the 2026 Global Terrorism Index and the 2025 Casey audit. The headline now counts all seven entries.
+- Revised the homepage answers on Haman and the Birmingham Quran leaves to match their sources.
+
+## [1.120.0] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Added
+- iblis-and-the-command-to-prostrate: eight answers to the charge that God condemned Iblis for an order given only to the angels, that the angels committed shirk by bowing to Adam, and that "because You have put me in error" (7:16) makes God a deceiver. Sources: the Quran (7:12, 38:75, 18:50, 2:34, 12:100, 61:5, 14:22, 15:42, 16:99-100), Sahih Muslim 2996 (graded on dorar.net), Ibn Kathir on 2:34 and 18:50, al-Qurtubi on 2:34 and al-Tabari on 7:16 (Arabic checked against the Shamela texts), the Life of Adam and Eve 13-16, and the Bible (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11). Placed in the reading order after quran-iblis-fallen-angels-borrowing.
+- Its three images reuse files already bundled from Wikimedia Commons, with captions written for this article.
+
+### Changed
+- The article counts in readme.txt, README.md and docs/SSOT.md now read 188, the number check-content.py reports.
 
 ## [1.119.0] - 2026-11-21
 
