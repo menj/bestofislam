@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.118.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.119.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -576,8 +576,12 @@ same form.
 
 The owner's rule for every image added from now on: Wikimedia Commons is
 searched first, and a public-domain or CC0 file is used whenever one suits
-the subject. Pexels is used only when Commons has nothing suitable, and
-Pixabay after that. `bin/commons-api.py` looks a file up through Magnus
+the subject. Flickr comes next, on the same licence terms: only photographs
+marked public domain, "No known copyright restrictions" or CC0 (Flickr's
+licence codes 10, 7 and 9), which includes the Walters Art Museum's
+manuscripts; its search page carries each photograph's licence, owner and
+image addresses, so no key is needed. Pexels is used only when Commons and
+Flickr have nothing suitable, and Pixabay after that. `bin/commons-api.py` looks a file up through Magnus
 Manske's Commons API, falling back to the MediaWiki API, and installs it as
 AVIF with its credit only when its licence is public domain or CC0; it keeps
 an image already in place unless told to replace it. When both APIs refuse

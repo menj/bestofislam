@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.119.0
+
+Replace the theme files. The four new articles are created on existing sites by `boi_create_listicles()` when the version changes, and their featured images are added to the media library. Their images are in `assets/images/`.
+
 ## Upgrading to 1.118.0
 
 Replace the theme files. The nine new articles are created when the version changes, and `boi_migrate_seed()` refreshes the changed articles (about seventy) and the Sources and standards page where they are unedited; an edited copy is listed on the Content tab.

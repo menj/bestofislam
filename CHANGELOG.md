@@ -4,6 +4,21 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.119.0] - 2026-11-21
+
+No feature removed and no public identifier renamed.
+
+### Added
+- did-muhammad-perform-miracles: six answers to the claim that the Quran admits Muhammad had no signs (13:7, 29:50, 17:90-93): why signs on demand were refused (17:59, 6:109, 40:78) and the Gospels' parallel (Mark 8:12), the Quran as the sign (29:51, 2:23; Bukhari 4981), the splitting of the moon (54:1-2; Bukhari 3636, 3637) and Badr (8:17), the companions' reports (Bukhari 3576, 3578, 3583, 3584, 4101; Qadi Iyad, al-Bayhaqi), and what a miracle proves (Deuteronomy 13:1-3, Matthew 24:24, John 10:41).
+- is-allah-a-deceiver-makr: seven answers on makr (3:54, 8:30, 4:142, 86:15-16, 4:157): the word's meaning (35:43; al-Baghawi quoting al-Zajjaj), every use answering a plot (8:30, 9:40, 27:50), requital named by the deed (42:40, 9:67, 2:15; the Tirmidhi list of names has no "Plotter"), who was deceived in 4:157 (al-Tabari, Ibn Kathir), the Bible's stronger language (Psalm 18:26, 1 Kings 22, Ezekiel 14:9, 2 Thessalonians 2:11), and God as the Truth (4:87, 4:122, 22:6).
+- who-is-the-holy-spirit: seven answers: the creed of 381 and the later filioque, Ruh al-Qudus in the Quran (2:87, 2:253, 5:110, 16:102, 26:193, 42:52), the Spirit as Gabriel (2:97; al-Tabari's judgement on 2:87; Ibn Kathir; Bukhari 453, 3212, 3213), the Spirit sent to Mary (19:17-19; Luke 1), the spirit of God in the Hebrew Bible, Gregory of Nazianzus's Oration 31 on the late settling of the doctrine, and "a spirit from Him" (4:171, 15:29, 58:22).
+- did-jesus-pray-to-whom: seven answers on the Gospels' praying Jesus (Mark 1:35, Luke 6:12, Matthew 26:39, Hebrews 5:7, John 17:3, 20:17), the prayer he taught (Luke 11:1-2), the two-natures answer of Chalcedon (451) and Constantinople III (681) weighed, and the Quran's Jesus at prayer (19:30-36, 5:117, 4:172).
+- Each article has a featured image and four in-text images: the Walters Art Museum's CC0 manuscripts on Flickr, Matson photographs of the Mount of Olives (public domain, from the Library of Congress), Codex Alexandrinus and Papyrus 46 from Wikimedia Commons, and Pexels photographs. None shows a prophet. Credits in `inc/images-data.json`. In the reading guide and the related-article links.
+
+### Changed
+- Flickr joins the image sources (SSOT D48, `docs/CREDITS.md`, readme): public domain, "no known copyright restrictions" or CC0 only, after Commons and before Pexels.
+- `boi_image_source_name()` (`inc/images.php`) names Flickr and the Library of Congress, so a credit from either is no longer labelled Wikimedia Commons. `docs/CREDITS.md` says an article has up to four in-text images.
+
 ## [1.118.0] - 2026-11-20
 
 No feature removed and no public identifier renamed.
