@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.120.0
+Stable tag: 1.121.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.121.0 =
+* Numbered footnotes link directly to their notes. Five articles gain source links and corrections, and the homepage answers on Haman and the Birmingham Quran leaves are updated.
 
 = 1.120.0 =
 * New article: "Was Iblis punished for a command that was not his? 8 answers". It answers the charge that God condemned Iblis, a jinn, for refusing an order given to angels, from 7:12, the commentaries of Ibn Kathir, al-Qurtubi and al-Tabari, and the Bible. The Arabic of each commentary was checked against its Shamela text and the hadith grading on dorar.net.
@@ -404,6 +407,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.121.0 =
+Replace the theme files. The regular content update applies the new text to articles the owner has not edited.
 
 = 1.120.0 =
 Replace the theme files. The new article is created when the version changes.
