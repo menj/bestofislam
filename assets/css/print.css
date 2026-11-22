@@ -1,8 +1,18 @@
 /**
  * Print. An article should print as an article: no header band, no toggle,
  * no share links, no navigation; black on white; links shown in full.
+ *
+ * The page, type, break and table rules are adapted from the Hartija CSS
+ * Print Framework 1.0 by Vladimir Carrer (MIT License; see docs/CREDITS.md).
+ * Saving the printed page as a PDF from the browser gives a clean PDF of
+ * the article, with no server software.
  */
 @media print {
+	@page {
+		margin: 2cm 1.8cm;
+	}
+
+	/* Everything that only works on a screen. */
 	.boi-header,
 	.boi-footer,
 	.boi-share,
@@ -10,12 +20,30 @@
 	.boi-author,
 	.boi-vote,
 	.boi-jump,
+	.boi-contents,
+	.boi-step,
 	.boi-breadcrumbs,
 	.boi-appearance,
+	.boi-progress,
+	.boi-totop,
+	.boi-search-toggle,
+	.boi-search-overlay,
 	.wp-block-post-comments-form,
 	.wp-block-comments,
 	.boi-postnav {
 		display: none !important;
+	}
+
+	/* Black on white, in the site's serif, at a size made for paper. */
+	html,
+	body {
+		width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		background: #fff !important;
+		color: #000 !important;
+		font-size: 12pt;
+		line-height: 1.45;
 	}
 
 	body,
@@ -24,6 +52,18 @@
 		background: #fff !important;
 		color: #000 !important;
 		box-shadow: none !important;
+	}
+
+	h1 {
+		font-size: 19pt;
+	}
+
+	h2 {
+		font-size: 16pt;
+	}
+
+	h3 {
+		font-size: 14pt;
 	}
 
 	.boi-entry {
@@ -38,15 +78,72 @@
 		color: #000 !important;
 	}
 
-	.boi-entry__content a[href^="http"]::after {
+	/* Pages break between blocks, never inside a heading's first lines,
+	   a picture, a quotation or a table row. */
+	h1,
+	h2,
+	h3,
+	h4 {
+		break-after: avoid;
+	}
+
+	p,
+	li,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	img,
+	figure,
+	blockquote,
+	tr,
+	pre {
+		break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	blockquote {
+		margin: 1em 1.2em;
+		padding: 0 0 0 1em;
+		border-inline-start: 2px solid #999;
+	}
+
+	/* A table's header row repeats on each page it runs over. */
+	thead {
+		display: table-header-group;
+	}
+
+	th,
+	td {
+		padding: 4px 10px 4px 0;
+		border-bottom: 1px solid #666;
+		text-align: start;
+	}
+
+	/* Links show where they go; links within the page and links around
+	   pictures do not. */
+	a {
+		color: #000 !important;
+		text-decoration: underline;
+	}
+
+	:is(.boi-entry__content, .wp-block-post-content) a[href^="http"]::after {
 		content: " (" attr(href) ")";
 		font-size: 0.8em;
 		word-break: break-all;
 	}
 
-	h1,
-	h2,
-	h3 {
-		break-after: avoid;
+	:is(.boi-entry__content, .wp-block-post-content) a[href^="http"]:has(img)::after {
+		content: "";
+	}
+
+	abbr[title]::after {
+		content: " (" attr(title) ")";
 	}
 }

@@ -30,6 +30,15 @@ header is the grant. Their authors are credited here with thanks.
 - **Reading progress bar** (`inc/reading-progress.php`), adapted from Reading
   Progress Bar 1.3.1 by Jean-Baptiste Audras, https://jeanbaptisteaudras.com/
 
+The print stylesheet (`assets/css/print.css`) adapts the page, type, page
+break and table rules of the **Hartija CSS Print Framework** 1.0 by Vladimir
+Carrer, https://github.com/vladocar/Hartija---CSS-Print-Framework, released
+under the MIT License: Copyright (c) 2014 Vladimir Carrer. Permission is
+granted, free of charge, to use, copy, modify, merge, publish, distribute,
+sublicense and sell copies, provided the copyright notice and this permission
+notice are included; the software is provided "as is", without warranty of
+any kind.
+
 The contents list (`inc/anatomy.php`, `assets/css/anatomy.css`) is adapted
 from **WP TOC** 1.1.0 by MENJ, https://github.com/menj/wp-toc, released under
 the GNU GPL version 3 or later. WP TOC is based on original work by Ikram
