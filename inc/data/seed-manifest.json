@@ -58,6 +58,7 @@
         "content\/honour-killing-and-islamic-law.json": "a4970c7c706505d5b4d8b6e48cd2e686",
         "content\/houris-and-paradise.json": "60b0060e110a9b835f18ed4605989485",
         "content\/i-read-the-entire-quran-reply.json": "3fddd1dad409192c6fcff2e27fcd1d85",
+        "content\/iblis-and-the-command-to-prostrate.json": "bcaa931586eae7dde3d3ded11e092e63",
         "content\/indonesia.json": "c010224a3f644f725422f3eae7f76893",
         "content\/instruments-islamic-world.json": "47c208134c729add0597fe2824e65de5",
         "content\/is-allah-a-deceiver-makr.json": "33cf5f56bf64b017d3741f5e39520751",
@@ -187,8 +188,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "e868af66b8f001e3eed18ccda59c59c7",
         "content\/women-in-the-prophets-life.json": "7cceda50332599fb8fae985d8a3131bb",
         "content\/women-leading-prayer.json": "16bbaeb185073b56e610d1aafebcc9e9",
-        "inc\/data\/seed.json": "54dfda1c0cb4ba06c4119cd43334392a",
+        "inc\/data\/seed.json": "6c142db5735fb0530e4037db504ac64f",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "321100691d265221bc0528b6280fb743"
+    "checksum": "0f1cf6a25741631996163a285a3b99fb"
 }

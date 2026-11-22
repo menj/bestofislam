@@ -4,6 +4,17 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.120.0] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Added
+- iblis-and-the-command-to-prostrate: eight answers to the charge that God condemned Iblis for an order given only to the angels, that the angels committed shirk by bowing to Adam, and that "because You have put me in error" (7:16) makes God a deceiver. Sources: the Quran (7:12, 38:75, 18:50, 2:34, 12:100, 61:5, 14:22, 15:42, 16:99-100), Sahih Muslim 2996 (graded on dorar.net), Ibn Kathir on 2:34 and 18:50, al-Qurtubi on 2:34 and al-Tabari on 7:16 (Arabic checked against the Shamela texts), the Life of Adam and Eve 13-16, and the Bible (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11). Placed in the reading order after quran-iblis-fallen-angels-borrowing.
+- Its three images reuse files already bundled from Wikimedia Commons, with captions written for this article.
+
+### Changed
+- The article counts in readme.txt, README.md and docs/SSOT.md now read 188, the number check-content.py reports.
+
 ## [1.119.0] - 2026-11-21
 
 No feature removed and no public identifier renamed.
