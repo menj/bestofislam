@@ -10,7 +10,7 @@ article's entry or paragraph blocks are unbalanced; a seeded article
 lacks a category, sits in a category that has subcategories, or in a
 category outside its section, or has fewer than 3 or more than 6 tags; a tag slug holds
 digits; two tags are near-duplicates; a shared tag has no description; a
-Glossary entry has no valid kind. --kinds prints the count for each kind.
+Glossary entry has no valid kind; the seed manifest (inc/data/seed-manifest.json) is stale. --kinds prints the count for each kind.
 
 Run it by hand:  python3 bin/check-content.py
 The workflow in .github/workflows/checks.yml runs it on every pull request.
@@ -344,6 +344,25 @@ if '--summary' in sys.argv:
     print('Tags: %d (%d used once)' % (len(tag_use), sum(1 for v in tag_use.values() if v == 1)))
     for name, n in sorted(tag_use.items(), key=lambda x: (-x[1], x[0]))[:30]:
         print('  %-28s %d' % (name, n))
+
+
+# The seed manifest: the content sync stops removals and waits for a new checksum when a bundled file
+# differs from it. Regenerate with: php bin/seed-manifest.php
+import hashlib
+manifest_path = os.path.join(ROOT, 'inc', 'data', 'seed-manifest.json')
+try:
+    manifest = json.load(open(manifest_path, encoding='utf-8'))
+    expected = {}
+    for f in sorted(glob.glob(os.path.join(ROOT, 'content', '*.json'))):
+        expected['content/' + os.path.basename(f)] = hashlib.md5(open(f, 'rb').read()).hexdigest()
+    for n in ('seed', 'supersedes'):
+        expected['inc/data/%s.json' % n] = hashlib.md5(open(os.path.join(ROOT, 'inc', 'data', n + '.json'), 'rb').read()).hexdigest()
+    if manifest.get('checksum') != hashlib.md5(json.dumps(expected, separators=(',', ':')).replace('/', '\\/').encode()).hexdigest():
+        errors.append('inc/data/seed-manifest.json: the aggregate checksum does not match its files: run  php bin/seed-manifest.php')
+    if manifest.get('files') != expected:
+        errors.append('inc/data/seed-manifest.json is stale: run  php bin/seed-manifest.php')
+except (OSError, ValueError) as e:
+    errors.append('inc/data/seed-manifest.json is missing or invalid (%s): run  php bin/seed-manifest.php' % e)
 
 
 if errors:

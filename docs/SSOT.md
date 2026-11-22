@@ -16,13 +16,13 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.111.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
-| Requires | WordPress 6.7, PHP 7.4; tested on WordPress 7.1 and PHP 8.3 |
+| Version | 1.120.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 164 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 798 Glossary entries (`inc/glossary-data/`) |
-| Data versions | `BOI_GLOSSARY_VERSION` 14, `BOI_TERMS_VERSION` 2 |
+| Seeded content | 8 sections, 23 categories, 160 tags, 188 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 784 Glossary entries (`inc/glossary-data/`) |
+| Data versions | `BOI_GLOSSARY_VERSION` 19, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
@@ -37,6 +37,8 @@ These names are public identifiers. Renaming one is a breaking change and needs 
 - Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
 - Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
 - English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
+- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Do not name the individuals who present arguments for or against any position in an article, excerpt, heading, list or published note. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
+- Articles never concede the critic's argument. Each answer meets the critic with the strongest case the sources support, and a claim the sources cannot support is left out (owner, 2026-11-20).
 - The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
 - Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).
 - A release updates the version in every place listed above, adds a `CHANGELOG.md` entry and its short form in `readme.txt`, adds a note to `docs/UPGRADING.md` when the owner must act, and passes every test in `tests/` and `bin/check-content.py`.
@@ -460,24 +462,27 @@ same credits shown beneath each image, so the licence a reader sees
 and the licence Google reads are one record. Markup Google no longer rewards,
 FAQ and list carousels, stays only because it describes its page accurately.
 
-### D40. Plugins rebuilt inside the theme
+### D40. Unlisting, search addresses, the login address and the progress bar are the theme's own
 
-Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading
-Progress Bar are
-rebuilt natively, in keeping with D1, and credited in docs/CREDITS.md. Each
-was rebuilt to suit the theme's own structure, never copied in whole:
+These four features are native, in keeping with D1. Each is built to the
+theme's own structure and carries no name, prefix, option or hook of any
+plugin; the licence notices the GPL requires are kept in docs/CREDITS.md
+and nowhere else (owner, 2026-11-20):
 
-- Unlisting filters at pre_get_posts, since the plugin's posts_where filter
-  is skipped by get_posts(), which builds most of the theme's modules.
+- Unlisting filters at pre_get_posts, which every query passes through,
+  get_posts() included, since get_posts() builds most of the theme's modules.
 - Search redirects keep every query argument, since the theme's search
-  filters travel as arguments and the plugin dropped them.
+  filters travel as arguments.
 - The progress bar is plain JavaScript and aria-hidden. It repeats the
   scrollbar, and a progressbar role would be announced on every scroll.
-- The login address intercepts at wp_loaded, since a theme loads after the
-  plugins_loaded hook the plugin used.
+- The login address intercepts at wp_loaded, which runs before the login
+  page does any work.
 
-Each feature stands aside while its original plugin is active and imports
-that plugin's saved settings. The login address is off by default, refuses
+Detection stays. Each feature stands aside while Unlist Posts & Pages, Pretty
+Search Permalinks, WPS Hide Login or Reading Progress Bar is active, says so
+on its card, and imports that plugin's saved settings; unlisting re-syncs
+whenever that plugin's list changes. The theme reads those plugins' options
+and never writes them. The login address is off by default, refuses
 any address that would not work, and yields to BOI_HIDE_LOGIN false in
 wp-config.php. Because it belongs to the theme, activating another theme
 restores wp-login.php; the failure mode is an open door, never a locked one.
@@ -571,8 +576,12 @@ same form.
 
 The owner's rule for every image added from now on: Wikimedia Commons is
 searched first, and a public-domain or CC0 file is used whenever one suits
-the subject. Pexels is used only when Commons has nothing suitable, and
-Pixabay after that. `bin/commons-api.py` looks a file up through Magnus
+the subject. Flickr comes next, on the same licence terms: only photographs
+marked public domain, "No known copyright restrictions" or CC0 (Flickr's
+licence codes 10, 7 and 9), which includes the Walters Art Museum's
+manuscripts; its search page carries each photograph's licence, owner and
+image addresses, so no key is needed. Pexels is used only when Commons and
+Flickr have nothing suitable, and Pixabay after that. `bin/commons-api.py` looks a file up through Magnus
 Manske's Commons API, falling back to the MediaWiki API, and installs it as
 AVIF with its credit only when its licence is public domain or CC0; it keeps
 an image already in place unless told to replace it. When both APIs refuse
@@ -594,6 +603,8 @@ served and nothing redirects. The dated addresses of the old permalinks,
 published (`boi_dated_slug_for()`). The map is
 `inc/renamed-slugs.php`; the renames run from `boi_seed_renames()` and
 `boi_glossary_retired_slugs()`. Old addresses stay in the map for good.
+
+The owner's rule of 19 November 2026, on merged Glossary entries: "must delete dupes auto". When an entry is merged into another, the sync deletes the duplicate's page automatically, edited or not and whatever the surviving entry's status, and its address redirects to the surviving entry.
 
 ### D50. The owner keeps all schema.org markup, in one graph per page
 
@@ -698,7 +709,7 @@ The owner approved the article anatomy on 2026-11-05, with every sales prompt re
 
 ### D54. The theme is licensed GPL version 3 or later
 
-The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code adapted from GPLv2-or-later plugins may be carried under version 3. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
+The owner set GNU GPL version 3 or later for every theme on 2026-11-05. `style.css` and `readme.txt` name it, and `LICENSE` holds the full text. Code received under GPLv2-or-later grants is carried under version 3, with the notices in docs/CREDITS.md. Fonts, icons and photographs keep their own licences, listed in `readme.txt`.
 
 ### D55. Every theme ships a full favicon set
 
@@ -725,9 +736,34 @@ references that can be checked.
 
 The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
 
+### D60. Seeded articles follow the bundle, safely
+
+`inc/content-sync.php` decides what population may touch. When the theme writes an article it records `_boi_sync_fp` (the fingerprint of the stored title, excerpt and body), `_boi_sync_bfp` (the bundled entry) and `_boi_sync_key` (its bundled slug). An article is edited when its stored text differs from `_boi_sync_fp`, or when no record exists; the older option records (`boi_article_hashes`, `boi_article_text_hashes`) are honoured when both still match. The older rule that took a never-modified article for untouched is gone.
+
+| Event | Untouched article | Edited article, or no record |
+|---|---|---|
+| The bundle text changes | Takes the new text, logged | Stays. Listed on the Content tab with a diff: Take the bundled text, or Keep mine. With Replace edited articles on (`sync_replace_edited`, off by default, filter `boi_sync_replace_edited`), takes the new text once a revision (or, with revisions off, the `_boi_sync_previous` copy) holds the owner's text; an article kept with Keep mine stays kept |
+| The bundle drops it | Moved to the Trash | Stays, listed |
+| Renamed in `renamed-slugs.php` or the seed list | The post keeps its identity and the record moves with it; the old address answers 301 as before | Same |
+| `supersedes` names it as old and the new one is published | 301 at any address, hidden through the unlist module, noindex, then the Trash | Stays, listed |
+
+Only posts that carry `_boi_seeded` are updated and only posts that carry `_boi_sync_key` are ever trashed. Nothing is deleted. `inc/data/supersedes.json` is `{ "post": { old slug: new slug } }` and ships empty; the `boi_supersedes` filter can add pairs. The sync runs when the theme version, the manifest checksum (`inc/data/seed-manifest.json`, written by `php bin/seed-manifest.php`), the supersedes map or the guard state changes, so a corrected article needs no version bump. Removals, the redirect and the hiding stop when a bundled file fails its checksum, when the bundle lists more than 10 percent fewer articles than at the last good sync (a button accepts the new count), or when `BOI_DISABLE_CONTENT_SYNC` is true; the constant also stops updates. The Content tab card has a dry run, the owner's choices and a log of the last 100 changes. `bin/check-content.py` fails when the manifest is stale.
+
+### D59. Accessibility rests on shared rules and is measured
+
+The theme meets WCAG 2.2 AA. One base rule in `assets/css/front.css` draws the focus ring for every control, in the accent that swaps with the light and dark switch. Field edges use accent-5 and category links are 24 pixels tall. Components add their own focus styles only where the base ring would be hidden. `tests/axe-check.js` runs axe-core on the main templates and exits 1 on a serious or critical violation. A release does not ship with one.
+
 ### D58. A Pexels photograph finder sits in Theme Options
 
 The owner asked on 2026-11-07 for the official Pexels JavaScript client (the `pexels` npm package, MIT) to be part of the theme. It is vendored unchanged at `assets/js/vendor/pexels/main.umd.js` and used only by `assets/js/admin-images.js` on the Images tab, which searches Pexels and copies a plan entry (`{"src":"pexels","id":…}`) for `bin/stock-images.json`. The key is the `BOI_PEXELS_KEY` constant or the `pexels_key` setting; it is printed to administrators only, on that screen, and never written into a theme file or onto the public site. The finder does not download or store images: D48 (Commons first, then Pexels, then Pixabay) and D30 (credits, no prophets) still govern what is used, and `bin/fetch-stock-images.py` still does the downloading.
+
+### D61. The theme requires PHP 8.4
+
+The owner set PHP 8.4 as the minimum on 2026-11-08. `style.css` and `readme.txt` declare `Requires PHP: 8.4`, so WordPress will not install or activate the theme on older PHP. The Content checks workflow lints every PHP file and runs every `tests/*-test.php` on PHP 8.4. The code does not yet use syntax that needs 8.4, so a site still on older PHP when it updates keeps running, but that setup is unsupported.
+
+### D62. The contents list
+
+The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and 2026-11-20): one list and one graph per page. It takes level-two and level-three headings, nested; keeps ids when present and otherwise makes them from the text, unique against every id in the text, with Arabic headings keeping readable ids; passes over headings marked `no-toc` or `data-no-toc`, empty headings and anything inside a template element. The `[boi_contents]` shortcode places it in the text, with the attributes `tags` (h2, h3), `title`, `depth`, `min`, `collapsible` and `collapsed`; the graph carries a SiteNavigationElement with one WebPageElement per section. The list shows from three level-two headings on articles and pages (not the front page), under the Contents switch, and a listicle keeps its jump list. Detection stays: while the WP TOC plugin is active (`WP_TOC_VERSION`), the theme stands aside, with no contents block, no shortcodes and no contents schema, and texts written with that plugin's `[wp_toc]` or `[auto_toc]` still render under the theme alone. The licence notices are in docs/CREDITS.md.
 
 ### D20. Articles follow Islamic English conventions
 

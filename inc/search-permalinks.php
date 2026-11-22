@@ -6,11 +6,8 @@
  * the Search engines tab. WordPress already routes /search/term/; the theme
  * adds the redirect and the configurable base.
  *
- * Adapted from the Pretty Search Permalinks plugin by Angel Costa (GPLv2 or
- * later). The plugin's redirect dropped every query argument but the term;
- * the theme's search page filters by kind and section through query
- * arguments, so this version carries them across, along with the page
- * number.
+ * The redirect carries the search page's own query arguments (kind and
+ * section filters) and the page number across.
  *
  * @package BestOfIslam
  */
@@ -23,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return bool
  */
-function boi_pretty_search_enabled() {
+function boi_search_permalinks_enabled() {
 	if ( function_exists( 'wpseosearch_base' ) ) {
 		return false;
 	}
@@ -59,7 +56,7 @@ function boi_search_base() {
 function boi_apply_search_base() {
 	global $wp_rewrite;
 
-	if ( boi_pretty_search_enabled() && $wp_rewrite instanceof WP_Rewrite ) {
+	if ( boi_search_permalinks_enabled() && $wp_rewrite instanceof WP_Rewrite ) {
 		$wp_rewrite->search_base = boi_search_base();
 	}
 }
@@ -74,7 +71,7 @@ add_action( 'init', 'boi_apply_search_base', 1 );
 function boi_redirect_search() {
 	global $wp_rewrite;
 
-	if ( ! boi_pretty_search_enabled() || ! is_search() || is_admin() || ! $wp_rewrite->using_permalinks() ) {
+	if ( ! boi_search_permalinks_enabled() || ! is_search() || is_admin() || ! $wp_rewrite->using_permalinks() ) {
 		return;
 	}
 
@@ -122,7 +119,7 @@ add_action( 'template_redirect', 'boi_redirect_search', 1 );
 function boi_search_base_robots( $output ) {
 	$base = boi_search_base();
 
-	if ( boi_pretty_search_enabled() && 'search' !== $base && false === strpos( $output, "Disallow: /{$base}/" ) ) {
+	if ( boi_search_permalinks_enabled() && 'search' !== $base && false === strpos( $output, "Disallow: /{$base}/" ) ) {
 		$output .= "Disallow: /{$base}/\n";
 	}
 
@@ -170,7 +167,7 @@ function boi_search_base_permalink_screen() {
 
 		global $wp_rewrite;
 
-		if ( boi_pretty_search_enabled() && $wp_rewrite instanceof WP_Rewrite ) {
+		if ( boi_search_permalinks_enabled() && $wp_rewrite instanceof WP_Rewrite ) {
 			$wp_rewrite->search_base = $base;
 		}
 	}

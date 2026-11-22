@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.111.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.120.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -13,7 +13,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Content
 
 - **Listicle blocks.** A `Listicle` container and a `Listicle Entry` child block, both rendered on the server, so rank numbers and tallies always reflect the current state. Numbering counts down or up, and renumbers itself when entries are added, removed or reordered.
-- **Seeded content.** 164 published articles across eight sections, each with one featured image and at least two in the text, from Wikimedia Commons, Pexels and Pixabay, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
+- **Seeded content.** 188 published articles across eight sections, each with one featured image and at least two in the text, from Wikimedia Commons, Pexels, Pixabay and the Cleveland Museum of Art or drawn by the theme, and the About, FAQ, Contact, Sources and standards, Privacy and Sitemap pages. Seeded content belongs to the site's first administrator.
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
@@ -24,10 +24,10 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 ### Reading
 
 - **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission. The hero background is preloaded. The featured card farther down lazy-loads its photo and uses the hero rendition when both show the same article.
-- **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles of three or more sections (a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
+- **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles and pages of three or more sections, with the subsections nested and a `[boi_contents]` shortcode to place it in the text (a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
 - **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
 - **Reading progress.** A bar on single posts and pages fills as you scroll. It is drawn in the palette, updates once per animation frame from a passive listener, drops its animation under `prefers-reduced-motion` and sits below the admin bar. It is `aria-hidden`: it repeats what the scrollbar shows, and a live progressbar would be read out on every scroll.
-- **Lead and list.** The first page of Reflections, of each section and of each archive opens with the newest piece large, its title on a dark band at the foot of the image under a gold rule, and its credit below. The next five stand in a list beside it, each a 16:9 thumbnail and a title clamped at three lines; the grid below leaves those six out, so pagination does not move. `inc/lead-list.php` draws it as the `bestofislam/lead-list` block from the main query (`boi_lead_list( $posts, $args )`, with `heading`, `heading_id`, `lead_id` and `max`; the block takes `heading` and `leadId`). It uses the front page's image helpers (`boi_lead_image()`, `boi_list_thumbnail()` in `inc/features.php`) and the image-credit block's line (`boi_image_credit_markup()` in `inc/images.php`). Below five pieces, or when the lead has neither a featured image nor a bundled one, it draws nothing and the grid shows alone. Unlisted posts never appear. `assets/css/lead-list.css` loads on the first page of those views (`boi_lead_list_assets()` on `wp_enqueue_scripts`, never from the block, since an enqueue made during rendering would print the theme styles above the core block styles); columns are `minmax(0,3fr) minmax(0,2fr)`, stacked under 782px, and the title sits on `rgb(0 0 0 / .85)` so white type stays above 4.5:1. The front page is unchanged.
+- **Lead and list.** Rows and the lead react to hover, focus and a tap (one `--boi-ll-on` variable drives every state), each piece has a category tab and a date and reading-time line, and the block fades up on scroll with `assets/js/lead-list.js`. The Display tab sets category tabs, arrows and motion and an accent colour (`ll_tabs`, `ll_motion`, `ll_accent`; filters `boi_lead_list_show_tabs`, `boi_lead_list_motion`, `boi_lead_list_accent`). Underneath that: The first page of Reflections, of each section and of each archive opens with the newest piece large, its title on a dark band at the foot of the image under a gold rule, and its credit below. The next five stand in a list beside it, each a 16:9 thumbnail and a title clamped at three lines; the grid below leaves those six out, so pagination does not move. `inc/lead-list.php` draws it as the `bestofislam/lead-list` block from the main query (`boi_lead_list( $posts, $args )`, with `heading`, `heading_id`, `lead_id` and `max`; the block takes `heading` and `leadId`). It uses the front page's image helpers (`boi_lead_image()`, `boi_list_thumbnail()` in `inc/features.php`) and the image-credit block's line (`boi_image_credit_markup()` in `inc/images.php`). Below five pieces, or when the lead has neither a featured image nor a bundled one, it draws nothing and the grid shows alone. Unlisted posts never appear. `assets/css/lead-list.css` loads on the first page of those views (`boi_lead_list_assets()` on `wp_enqueue_scripts`, never from the block, since an enqueue made during rendering would print the theme styles above the core block styles); columns are `minmax(0,3fr) minmax(0,2fr)`, stacked under 782px, and the title sits on `rgb(0 0 0 / .85)` so white type stays above 4.5:1. The front page is unchanged.
 - **Images.** Every image is credited beneath it and on the Sources and standards page. Where the media library copy of a seeded image is missing, the copy bundled with the theme is shown.
 
 ### Search engines
@@ -58,10 +58,10 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 Under Appearance, Theme Options, in nine tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. The Images tab holds a Pexels key (or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder built on the official Pexels JavaScript client (`assets/js/vendor/pexels/`, `assets/js/admin-images.js`); it copies a plan entry for `bin/stock-images.json`. Without JavaScript the tabs are links and still work.
 
-- **Display:** rank badges, the entry image size, the article contents and the mid-article next step (`article_contents`, `article_mid_next`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
+- **Display:** rank badges, the entry image size, the article contents and the mid-article next step (`article_contents`, `article_mid_next`), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
-- **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them.
+- **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them. The **Replace edited articles** switch (`sync_replace_edited`, off by default) makes updates give edited articles the new text too, after saving the owner's text as a revision or, where revisions are off, in `_boi_sync_previous`; an article the owner chose to keep stays kept.
 - **Search engines:** meta descriptions, verification codes, and readable search addresses with their base word.
 - **Access:** the custom login address, the security headers, and the list of unlisted items.
 - **Security:** XML-RPC, application passwords and REST writes from outside the browser switched off, the gambling spam gate, 410 Gone for removed spam, the spam scan and clean-up tools, buttons that revoke every application password and end every session, and the attack reports and security log. Add `define( 'BOI_SECURITY_LOCK', false );` to `wp-config.php` to lift the three locks in an emergency.
@@ -86,7 +86,7 @@ Under Appearance, Contextual Links, in three tabs:
 ## Requirements
 
 - WordPress 6.7 or later (tested on 7.1.1)
-- PHP 7.4 or later (tested on 8.3)
+- PHP 8.4 or later
 - Twenty Twenty-Five 1.5 installed as the parent theme
 
 ## Installation
@@ -95,12 +95,16 @@ Under Appearance, Contextual Links, in three tabs:
 2. Upload `bestofislam-<version>.zip` under Appearance, Themes, Add New, and activate it.
    The zip is built by the Package theme workflow (`.github/workflows/package.yml`), after the image scripts have run. The Images workflow (`.github/workflows/images.yml`) runs `bin/fetch-commons-images.py` and `bin/convert-images.py` on every pull request and commits any change, so images are always AVIF and the Commons swaps are made without anyone running them. To run them before each local commit, run `sh bin/install-hooks.sh` once. The Content checks workflow (`.github/workflows/checks.yml`) runs `bin/check-content.py` on every pull request: it refuses a Glossary slug with a collision suffix (`-2`), a dangling link between entries or to an article, an article whose footnotes do not match its Notes list, and JSON that does not parse.
    The working notes for coding agents, `.claude/CLAUDE.md` and `.claude/FARUQI.md`, stay out of the zip and out of `git archive`. On a production server the theme deletes `.claude` and `.git` with the other development files (see Security); a local or development environment, or `BOI_KEEP_DEV_FILES`, keeps them.
-3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 164 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
+3. On activation, or on the first page load after an update, the theme creates its votes table and populates the site: the sections, the front page, the Reflections index, the standing pages, the menus and the 188 articles. Featured images are copied into the media library three at a time as pages load; until then the bundled copies are shown. In-text images are always served from the theme's `assets/images/inline/`.
 4. Configure under Appearance, Theme Options.
 
-### Moving from the plugins the theme replaces
+### Sites with an overlapping plugin
 
-Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar are rebuilt inside the theme. While any of them is active, the theme's version of that feature stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
+The theme detects Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login, Reading Progress Bar and WP TOC. While one of them is active, the theme's own feature that does the same work stands aside. Deactivate the plugin, and the theme takes over, importing the plugin's saved settings. The custom login address still needs switching on in the Access tab.
+
+## Performance and mobile
+
+`boi_preload_fonts()` (`inc/front.php`, `wp_head` priority 1) preloads Ysabeau Office, EB Garamond Regular and Platypi, the three files every page paints first, so the header menu does not change height when its font arrives. The paths mirror `theme.json`. `assets/js/nav-state.js` (footer, deferred) mirrors the core menu overlay state into `aria-expanded` on the menu button. The mobile-first audit of 1.114.0, with its findings and open items, is in `docs/UPGRADING.md`.
 
 ## Authoring a listicle
 
@@ -121,7 +125,7 @@ bestofislam/
 ├── .gitattributes       export-ignore list for the release zip
 ├── inc/                 One file per concern, loaded in this order by functions.php:
 │                        util, taxonomy, blocks, schema, voting, settings,
-│                        setup, appearance, reflections, search, sections,
+│                        setup, content-sync, appearance, reflections, search, sections,
 │                        seo, icons, features, lead-list, contact, front, inline-images,
 │                        images, questions, reading, anatomy, structured-data,
 │                        schema-graph, social-meta, rank-math, unlist,
@@ -133,12 +137,14 @@ bestofislam/
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
 ├── inc/data/            network-links.json (the shared phrase map),
-│                        seed.json (topics, categories, tags, 164 articles,
+│                        seed.json (topics, categories, tags, 188 articles,
 │                        8 pages), questions.json (45), image-credits.json,
-│                        schema-entities.json. Read, never executed
-├── inc/glossary-data/   a.json to z.json: the 798 Glossary entries
+│                        schema-entities.json, supersedes.json (old slug to new,
+│                        ships empty), seed-manifest.json (the checksums the
+│                        content sync trusts). Read, never executed
+├── inc/glossary-data/   a.json to z.json: the 784 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
-├── content/             The 164 seeded articles as block markup, one JSON file each
+├── content/             The 188 seeded articles as block markup, one JSON file each
 ├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic
@@ -154,7 +160,9 @@ bestofislam/
 ├── bin/                 build-error-pages.php, build-related.py, check-content.py,
 │                        commons-api.py, convert-images.py, fetch-commons-images.py,
 │                        fetch-stock-images.py, make-original-graphics.py,
-│                        install-hooks.sh (own .htaccess; export-ignored)
+│                        install-hooks.sh, seed-manifest.php; the data files
+│                        stock-images.json, commons-swaps.json and
+│                        glossary-name-baseline.json (own .htaccess; export-ignored)
 ├── tests/               Command-line self-tests (own .htaccess; export-ignored)
 ├── docs/                SSOT, UPGRADING (with the content review lists), CREDITS,
 │                        SEO (own .htaccess)
@@ -187,12 +195,14 @@ The theme's own filters:
 | `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
+| `boi_supersedes` | Pairs of an old seeded article and the new one that replaces it, added to `inc/data/supersedes.json`. While the new article is published, the old one is untouched and the sync's guards pass, the content sync redirects, hides and trashes the old one |
+| `boi_sync_replace_edited` | Whether the content sync replaces edited seeded articles with the bundled text. Defaults to the Content tab's Replace edited articles switch |
 | `boi_glossary_retired_slugs` | Glossary entry slugs that changed or merged, old to current |
 | `boi_schema_nodes` | The nodes of the page graph. `inc/anatomy.php` uses it to add an `FAQPage` node for an article with FAQ-style Details blocks and to add `.boi-answer` to `speakable` |
 | `boi_sec_rest_allow` | REST route prefixes that may write with non-cookie authentication, for example `/jetpack/` |
 | `boi_security_headers` | The front-end security headers |
 | `boi_title_max_length` | The title tag limit |
-| `boi_unlist_enabled`, `unlist_posts_enabled` | Switch the unlist feature off |
+| `boi_unlist_enabled` | Switch the unlist feature off |
 
 `grep -n "add_action\|add_filter" functions.php inc/*.php` lists every hook the theme uses. The ones a host meets most:
 
@@ -215,9 +225,10 @@ Set these in `wp-config.php`. Each is optional.
 | `BOI_REMOVE_GIT_DIR` | `true` forces the clean-up, `.git` included, even in a development environment; `false` keeps `.git` on production while the rest goes |
 | `BOI_BLOCK_DIRECT_FILES` | `false` leaves the "Best of Islam: block direct file access" section out of `.htaccess` |
 | `BOI_SPAM_THRESHOLD` | Spam score at which a post is held (default 3) |
+| `BOI_DISABLE_CONTENT_SYNC` | `true` stops the content sync: no updates, removals, redirects or hiding of seeded articles. The Content tab says so |
 | `WP_ENVIRONMENT_TYPE` | `local` or `development` keeps the development files |
 
-Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (14), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
+Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (19), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
 
 ## Security
 
@@ -315,7 +326,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.111.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.120.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

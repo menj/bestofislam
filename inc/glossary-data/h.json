@@ -380,11 +380,12 @@
   "what": [
    "Al-Ḥaqq is among the names of God (22:6, 24:25). The Quran says: “the truth has come and falsehood has vanished; falsehood is bound to vanish” (17:81). Ḥaqq also means a right or due: the rights of God, of people, of the wife and of the neighbour. A hadith in Sahih al-Bukhari lists rights that the body, the eyes and the family have upon a person."
   ],
-  "misread": "",
+  "misread": "Reduced to “truth” as a statement; the Arabic joins truth, reality and right in one word.",
   "sources": [],
   "terms": [
    "allah",
-   "divine-attributes"
+   "divine-attributes",
+   "tawhid"
   ],
   "articles": [
    "verses-read-differently",
@@ -395,8 +396,14 @@
   "aliases": [
    "Haq",
    "Truth",
-   "Right"
-  ]
+   "Right",
+   "Haqq, al-",
+   "Al-Haqq"
+  ],
+  "faruqi": {
+   "page": 30,
+   "term": "AL ḤAQQ"
+  }
  },
  {
   "slug": "harpur-tom",
@@ -978,14 +985,16 @@
   "what": [
    "The word means “limits”. The offences are theft, highway robbery, adultery, false accusation of adultery and, for some jurists, drinking and apostasy. The Prophet said: “Avoid the hudud wherever you can” (al-Tirmidhi, in other versions “avert”). Proof is demanding, any doubt prevents them, and repentance can remove them."
   ],
-  "misread": "",
+  "misread": "The word is often translated as “Islamic criminal code” or simply “punishments”, which hides that the root meaning is limits.",
   "sources": [
    "Umar suspended the penalty for theft during a famine. Many modern scholars hold the hudud are rarely applicable without conditions that are hard to meet."
   ],
   "terms": [
    "adultery",
    "fahisha",
-   "qisas"
+   "qisas",
+   "sharia",
+   "fiqh"
   ],
   "articles": [
    "sharia-and-hudud"
@@ -993,8 +1002,14 @@
   "aliases": [
    "Hadd",
    "Hudood",
-   "Islamic Penalties"
-  ]
+   "Islamic Penalties",
+   "Hudud, al-",
+   "Al-Hudud"
+  ],
+  "faruqi": {
+   "page": 53,
+   "term": "AL ḤUDŪD"
+  }
  },
  {
   "slug": "hui",
@@ -1591,34 +1606,6 @@
   }
  },
  {
-  "slug": "haqq-al",
-  "title": "Haqq, al-",
-  "ar": "الحق",
-  "tr": "al-Ḥaqq",
-  "def": "A divine name meaning the ultimately True, Righteous and Real; also the quality of ultimate truth, righteousness and reality.",
-  "what": [
-   "<em>Al-Ḥaqq</em> is a name of God that means the Real and the True, the One Whose being is certain and Whose word is right. The Quran says: “That is because God is the Truth, and what they call on besides Him is falsehood” (22:62), and “Exalted is God, the Sovereign, the Truth” (20:114). The same word, with the article, is also used for the revelation: “The truth has come and falsehood has vanished” (17:81).",
-   "The root carries a wide family of meanings: a thing that is real, a right owed to another, and a claim that is just. For this reason <em>ḥaqq</em> also means “right” in law, and Faruqi gives the second sense: the quality of ultimate truth, righteousness and reality. The believer’s speech and conduct are called to follow it. Sufis have used the name for God Himself."
-  ],
-  "misread": "Reduced to “truth” as a statement; the Arabic joins truth, reality and right in one word.",
-  "sources": [],
-  "terms": [
-   "haqq",
-   "divine-attributes",
-   "allah",
-   "tawhid"
-  ],
-  "articles": [],
-  "type": "belief",
-  "aliases": [
-   "Al-Haqq"
-  ],
-  "faruqi": {
-   "page": 30,
-   "term": "AL ḤAQQ"
-  }
- },
- {
   "slug": "haram-al",
   "title": "Haram, al-",
   "ar": "الحرام",
@@ -1948,35 +1935,6 @@
   "faruqi": {
    "page": 47,
    "term": "HUDĀ"
-  }
- },
- {
-  "slug": "hudud-al",
-  "title": "Hudud, al-",
-  "ar": "الحدود",
-  "tr": "al-Ḥudūd",
-  "def": "The fixed limits and penalties set by God or the Prophet for six offences: intoxication, theft, armed rebellion, adultery, false accusation of adultery and apostasy.",
-  "what": [
-   "<em>Ḥudūd</em> is the plural of <em>ḥadd</em>, meaning a limit or boundary. The Quran speaks of “the limits of God” (2:229) for the bounds that a believer must not cross. In the law, the word names the penalties that God or the Prophet (peace be upon him) fixed for particular offences. Faruqi lists six: intoxication, theft, armed rebellion, adultery, false accusation of adultery, and apostasy. The classical jurists differed on the exact list and on the basis for some items. They also surrounded these penalties with strict conditions of proof and treated any doubt as a reason not to apply them. They are matters for a court and never for private individuals."
-  ],
-  "misread": "The word is often translated as “Islamic criminal code” or simply “punishments”, which hides that the root meaning is limits.",
-  "sources": [
-   "The Quran gives penalties for theft (5:38), for those who wage war against society (5:33) and for false accusation (24:4), and it sets out the case of adultery in surah 24. Jurists drew the other penalties from the Prophet’s practice and debated them at length."
-  ],
-  "terms": [
-   "hudud",
-   "sharia",
-   "fiqh",
-   "qisas"
-  ],
-  "articles": [],
-  "type": "law",
-  "aliases": [
-   "Al-Hudud"
-  ],
-  "faruqi": {
-   "page": 53,
-   "term": "AL ḤUDŪD"
   }
  },
  {

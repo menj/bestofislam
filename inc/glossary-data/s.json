@@ -34,12 +34,15 @@
   "what": [
    "A hadith is sahih if its chain is connected through upright and exact narrators, with no hidden defect. The collections of al-Bukhari (d. 870) and Muslim (d. 875), called the Sahihayn, are regarded as the most reliable books after the Quran. Other grades are hasan (good) and da‘if (weak)."
   ],
-  "misread": "",
-  "sources": [],
+  "misread": "The six books are sometimes treated as equal in rank, although scholars place al-Bukhari and Muslim above the rest and grade individual reports in all of them.",
+  "sources": [
+   "Scholars generally rank Sahih al-Bukhari first and Sahih Muslim second, and reports found in both carry the highest standing. Later scholars such as Ibn al-Salah set out the conditions of a sound report: a connected chain, trustworthy and accurate narrators, and no hidden defect or irregularity."
+  ],
   "terms": [
    "hadith",
    "isnad",
-   "sunnah"
+   "sunnah",
+   "bukhari-al"
   ],
   "articles": [
    "apostasy-in-islam",
@@ -51,8 +54,15 @@
   "aliases": [
    "Sahih Bukhari",
    "Sahih Muslim",
-   "Sahihayn"
-  ]
+   "Sahihayn",
+   "Sahih, al-",
+   "Al-Sahih",
+   "Al-Sihah"
+  ],
+  "faruqi": {
+   "page": 50,
+   "term": "AL ṢAḤĪḤ"
+  }
  },
  {
   "slug": "salah",
@@ -548,18 +558,29 @@
   "terms": [
    "hadith",
    "sharia",
-   "sira"
+   "sira",
+   "sunnah-al-filiyyah-al",
+   "sunnah-al-qawliyyah-al"
   ],
   "articles": [
    "why-five-prayers",
    "ramadan-last-ten-nights"
   ],
   "type": "scripture",
-  "aliases": [],
+  "aliases": [
+   "Sunnah, al-",
+   "Al-Sunnah",
+   "Al-Sunna",
+   "Sunna"
+  ],
   "faruqi": [
    {
     "page": 35,
     "term": "SUNNAH"
+   },
+   {
+    "page": 50,
+    "term": "AL SUNNAH"
    }
   ],
   "lexicon": {
@@ -692,38 +713,6 @@
   "faruqi": {
    "page": 35,
    "term": "ṢĀBIR"
-  }
- },
- {
-  "slug": "sahih-al",
-  "title": "Sahih, al-",
-  "ar": "الصحيح",
-  "tr": "al-Ṣaḥīḥ",
-  "def": "A hadith collection whose reports meet strict standards of soundness; the name is given to the two sahihs and to the other four main collections.",
-  "what": [
-   "<em>Al-Ṣaḥīḥ</em> means “the sound” or “the authentic”. As a title it belongs to the collections of Muhammad ibn Ismaʿil al-Bukhari and Muslim ibn al-Hajjaj, who each set out to include only reports whose chain of narrators and text met strict tests. Faruqi uses the name for the six widely trusted collections: al-Bukhari, Muslim, Abu Dawud al-Sijistani, al-Tirmidhi, al-Nasaʾi and Ibn Majah. Readers should know that the title <em>Ṣaḥīḥ</em> is strictly carried by the first two, while the other four are called <em>Sunan</em>, and they include reports that scholars grade as good or weak as well as sound. The six together are known as <em>al-kutub al-sitta</em>, “the six books”."
-  ],
-  "misread": "The six books are sometimes treated as equal in rank, although scholars place al-Bukhari and Muslim above the rest and grade individual reports in all of them.",
-  "sources": [
-   "Scholars generally rank Sahih al-Bukhari first and Sahih Muslim second, and reports found in both carry the highest standing. Later scholars such as Ibn al-Salah set out the conditions of a sound report: a connected chain, trustworthy and accurate narrators, and no hidden defect or irregularity."
-  ],
-  "terms": [
-   "hadith",
-   "bukhari-al",
-   "isnad",
-   "sunnah"
-  ],
-  "articles": [],
-  "type": "book",
-  "aliases": [
-   "Al-Sahih",
-   "Sahih",
-   "Sahihayn",
-   "Al-Sihah"
-  ],
-  "faruqi": {
-   "page": 50,
-   "term": "AL ṢAḤĪḤ"
   }
  },
  {
@@ -1629,37 +1618,6 @@
   }
  },
  {
-  "slug": "sunnah-al",
-  "title": "Sunnah, al-",
-  "ar": "السنّة",
-  "tr": "al-Sunna",
-  "def": "The path and example of the Prophet Muhammad, made up of what he said, did, approved or condemned.",
-  "what": [
-   "<em>Al-Sunna</em> means a way or a customary practice. In Islamic law it names the example of the Prophet Muhammad (peace be upon him): what he said, what he did, and what he approved or disapproved. It is the second source of Islamic guidance after the Quran, and it is largely known through the hadith, the reports passed down by his Companions. The Quran tells believers, “In the Messenger of God you have a good example” (33:21), and “Whatever the Messenger gives you, take it, and whatever he forbids you, abstain from it” (59:7). Faruqi divides the sunna into three kinds: his words (<em>qawliyya</em>), his deeds (<em>fiʿliyya</em>) and his tacit approvals (<em>taqrīriyya</em>)."
-  ],
-  "misread": "The sunna is sometimes treated as a synonym of hadith, although the hadith are the reports and the sunna is the way of life they describe.",
-  "sources": [
-   "Most jurists treat the sunna as an authority that explains the Quran: it details the prayer, the fast, the alms and the pilgrimage. Muslim scholars developed the science of hadith to separate sound reports from weak ones, and the sunna in its legal sense rests on the reports that meet their standards."
-  ],
-  "terms": [
-   "sunnah",
-   "hadith",
-   "sunnah-al-filiyyah-al",
-   "sunnah-al-qawliyyah-al"
-  ],
-  "articles": [],
-  "type": "scripture",
-  "aliases": [
-   "Al-Sunnah",
-   "Al-Sunna",
-   "Sunna"
-  ],
-  "faruqi": {
-   "page": 50,
-   "term": "AL SUNNAH"
-  }
- },
- {
   "slug": "sunnah-al-filiyyah-al",
   "title": "Sunnah al-Fi'liyyah, al-",
   "ar": "السنة الفعلية",
@@ -1673,7 +1631,6 @@
    "Scholars treat deeds that the Prophet did as part of his role as a prophet and teacher as binding examples, and deeds that came from his human nature, such as how he dressed or ate, as optional models. Jurists discuss which of his acts were obligatory and which were recommended or permitted."
   ],
   "terms": [
-   "sunnah-al",
    "sunnah",
    "sunnah-al-qawliyyah-al",
    "salah"
@@ -1705,7 +1662,7 @@
    "Hadith scholars classify sayings by the strength of their chain of narrators and by how many people transmitted them. A saying reported by so many that agreement on a falsehood is impossible is called <em>mutawātir</em>, and the great majority are reports by fewer narrators, which are examined one by one."
   ],
   "terms": [
-   "sunnah-al",
+   "sunnah",
    "hadith",
    "isnad",
    "sunnah-al-filiyyah-al"
@@ -1737,7 +1694,6 @@
    "Scholars note that this sunna applies only when the act was done with the Prophet’s knowledge and he was able to object. They also hold that it shows what is permitted and does not make an act obligatory, unless other evidence says so."
   ],
   "terms": [
-   "sunnah-al",
    "sunnah",
    "sunnah-al-qawliyyah-al",
    "sunnah-al-filiyyah-al"
