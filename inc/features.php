@@ -258,6 +258,33 @@ function boi_list_thumbnail( $item, $attr = array() ) {
 }
 
 /**
+ * Lazy-loads the card below the homepage hero. When both show the same photo,
+ * the card requests the exact rendition the hero already uses at that width.
+ *
+ * @param WP_Post $post  Post.
+ * @param string  $sizes Sizes for a card with its own image.
+ * @return string
+ */
+function boi_home_featured_image( $post, $sizes ) {
+	$attr = array( 'loading' => 'lazy', 'fetchpriority' => false );
+	$hero = boi_hero_image();
+
+	if ( ! $hero || (int) $post->ID !== $hero['post_id'] ) {
+		$attr['sizes'] = $sizes;
+		return get_the_post_thumbnail( $post, 'large', $attr );
+	}
+
+	$attr['srcset'] = $hero['large'];
+	$thumb = get_the_post_thumbnail( $post, 'full', $attr );
+
+	if ( $hero['small'] === $hero['large'] ) {
+		return $thumb;
+	}
+
+	return sprintf( '<picture><source media="(max-width: 781px)" srcset="%s">%s</picture>', esc_url( $hero['small'] ), $thumb );
+}
+
+/**
  * Renders the most recent piece as a wide lead card on the front page.
  *
  * @return string
@@ -277,10 +304,8 @@ function boi_render_featured_lead() {
 	$post  = $posts[0];
 	$terms = get_the_terms( $post->ID, 'listicle-topic' );
 	$term  = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
-	// The card shows the image in its left column (about 46 per cent of the
-	// wide width) and full width below 782 pixels; the sizes say so, so the
-	// browser fetches the rendition that fits rather than the 1024 one.
-	$thumb = boi_lead_image( $post, '(max-width: 781px) calc(100vw - 4rem), (max-width: 1280px) calc(50vw - 3rem), 610px' );
+	$sizes = '(max-width: 781px) calc(100vw - 4rem), (max-width: 1280px) calc(50vw - 3rem), 610px';
+	$thumb = is_front_page() ? boi_home_featured_image( $post, $sizes ) : boi_lead_image( $post, $sizes );
 
 	return sprintf(
 		'<article class="boi-lead alignwide">

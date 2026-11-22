@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.121.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.121.1. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -23,7 +23,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ### Reading
 
-- **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission.
+- **Front page.** Nine full-width bands that tell one story (`docs/SSOT.md`, D51): the hero, with the Birmingham Quran leaves as its background and the opening entries of the first article; live counts; then six numbered steps, the questions, the editor's picks, the newest article, the latest articles, a three-step start and the sections; and the mission. The hero background is preloaded. The featured card farther down lazy-loads its photo and uses the hero rendition when both show the same article.
 - **Articles.** Reading time, the updated and reviewed dates, an "In short" box of key points with the questions the piece answers, a contents list for articles and pages of three or more sections, with the subsections nested and a `[boi_contents]` shortcode to place it in the text (a jump list on lists), a next step before the third section, a FAQ style for Details blocks, ruled tables, share buttons, an author card, related pieces, and "Read next".
 - **Footnotes.** The main article renderer links numbered superscripts to the corresponding items in Notes. It uses HTML fragments, typically with the `#note-N` ids in the citation data.
 - **Search.** Relevance-ordered results with links straight to matching entries, filters for kind and section, and readable addresses such as `/search/Paul/`. The base word is set on the Search engines tab or in Settings, Permalinks.
@@ -327,7 +327,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.121.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.121.1.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

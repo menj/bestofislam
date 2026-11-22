@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.121.1] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- The featured card below the front-page hero lazy-loads its photo (`boi_home_featured_image()` in `inc/features.php`). When it shows the same article as the hero, it requests the rendition the hero already uses at that width, so the browser downloads one image instead of two. `boi_hero_image()` now also returns the hero's post ID.
+
 ## [1.121.0] - 2026-11-23
 
 ### Added
