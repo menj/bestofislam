@@ -6152,5 +6152,93 @@
     "source": "https://commons.wikimedia.org/wiki/File:Tablet_of_the_Lord's_Prayer_in_Greek_in_Church_of_Pater_Noster,_Mt._of_Olives._LOC_matpc.04123.jpg"
    }
   ]
+ },
+ "can-god-die": {
+  "featured": {
+   "file": "can-god-die.avif",
+   "alt": "A hand pointing to the Hebrew text of an open Torah scroll.",
+   "caption": "An open Torah scroll. \"From everlasting to everlasting you are God\" (Psalm 90:2).",
+   "artist": "Maor Attias",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/tora-and-hand-over-it-5192346/"
+  },
+  "inline": [
+   {
+    "file": "can-god-die-1.avif",
+    "alt": "A hand following the lines of Hebrew text on an old scroll.",
+    "caption": "Reading a scroll. Habakkuk 1:12 is one of the \"corrections of the scribes\" that the rabbis listed.",
+    "artist": "Maor Attias",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/close-up-of-person-reading-old-scroll-book-5192343/"
+   },
+   {
+    "file": "can-god-die-2.avif",
+    "alt": "A decorated opening page of a Gospel manuscript, with an ornamental headpiece and a large initial.",
+    "caption": "The opening of the Gospel of John in a Gospel book (Walters Art Museum, Ms. W.546, fol. 219r).",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://www.flickr.com/photos/medmss/8816561378"
+   },
+   {
+    "file": "can-god-die-3.avif",
+    "alt": "The walled temple area in Jerusalem with the Mount of Olives behind, in an old black and white photograph.",
+    "caption": "The temple area in Jerusalem with the Mount of Olives beyond, early twentieth century. \"Heaven and the highest heaven cannot contain you\" (1 Kings 8:27).",
+    "artist": "Matson Photo Service (G. Eric and Edith Matson Photograph Collection, Library of Congress)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Temple_area,_Mosque_of_Omar_(i.e.,_Dome_of_the_Rock),_etc._Mosque_el-Aksa_(i.e.,_al-Aqsa)_and_Olivet._LOC_matpc.00899.jpg"
+   },
+   {
+    "file": "can-god-die-4.avif",
+    "alt": "The brick walls and dome of the church of Hagia Irene in Istanbul, beside a flowering tree.",
+    "caption": "Hagia Irene in Istanbul. The council of 381, which declared the Holy Spirit God, met in the church that stood on this site.",
+    "artist": "Gülşah Aydoğan",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/hagia-irene-temple-in-istanbul-19941523/"
+   }
+  ]
+ },
+ "paul-and-food-offered-to-idols": {
+  "featured": {
+   "file": "paul-and-food-offered-to-idols.avif",
+   "alt": "The Doric columns of the Temple of Apollo in ancient Corinth under a blue sky.",
+   "caption": "The Temple of Apollo at Corinth. Paul wrote to the Corinthians about meat sacrificed in temples like this one (1 Corinthians 8 to 10).",
+   "artist": "Daciana Cristina Visan",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/ancient-greek-temple-in-corinth-greece-32153261/"
+  },
+  "inline": [
+   {
+    "file": "paul-and-food-offered-to-idols-1.avif",
+    "alt": "Ruined columns and a carved entablature of a Roman temple on the acropolis of Pergamon.",
+    "caption": "Temple ruins on the acropolis of Pergamon, the city of the letter in Revelation 2:12-17.",
+    "artist": "muhammed diler",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-roman-temple-ruins-in-pergamon-38876184/"
+   },
+   {
+    "file": "paul-and-food-offered-to-idols-2.avif",
+    "alt": "Ancient temple columns in Corinth seen across a grassy field under blossoming branches.",
+    "caption": "Ancient Corinth, whose meat market Paul mentions (1 Corinthians 10:25).",
+    "artist": "Konstantinos Sarampalos",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/ancient-greek-temple-ruins-in-corinth-36453564/"
+   },
+   {
+    "file": "paul-and-food-offered-to-idols-3.avif",
+    "alt": "The opening page of the Gospel of Mark in a manuscript, with a decorated headpiece.",
+    "caption": "The opening of the Gospel of Mark in a Gospel book (Walters Art Museum, Ms. W.527, fol. 2r).",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://www.flickr.com/photos/medmss/8162003327"
+   },
+   {
+    "file": "paul-and-food-offered-to-idols-4.avif",
+    "alt": "A lectionary page with a decorated headpiece above two columns of text.",
+    "caption": "A Gospel lectionary, readings from John (Walters Art Museum, Ms. W.520, fol. 1r).",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://www.flickr.com/photos/medmss/8241870728"
+   }
+  ]
  }
 }

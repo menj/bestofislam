@@ -16,6 +16,7 @@
         "content\/buraq-and-miracle-stories.json": "0ec1de01a6af7a20ab245017e24bcba4",
         "content\/camel-urine-hadith.json": "918d89e432da072b7b7df261dc23f6df",
         "content\/can-a-muslim-befriend-a-non-muslim.json": "9e9c1780429adb9dedf408e3a9f07613",
+        "content\/can-god-die.json": "19661a277f938e97d2a9f98be2e3dd74",
         "content\/child-marriage-in-islam.json": "e24604bafc1c4a4b9521e475410500da",
         "content\/christian-twin-of-the-islamic-dilemma.json": "220f7270d99ef0ed91918f75d556f2e4",
         "content\/comma-johanneum.json": "3206a0346c2a0833318dfd14b68e6516",
@@ -103,6 +104,7 @@
         "content\/oaths-in-the-quran.json": "8d3322f97e0c568c03e0bc961d570323",
         "content\/old-testament-variant-readings.json": "41f69492624deb1c59db92f69a7d491a",
         "content\/oldest-bible-codices.json": "d4faa8b00c32386e272f906cf1bc482a",
+        "content\/paul-and-food-offered-to-idols.json": "af4f19b8bffd10ff1f407e8d9ee16b5c",
         "content\/paul-and-the-law.json": "496fda52c607a04e50d1ddb50039dfd1",
         "content\/paul-claim-to-apostleship.json": "a7010970454bb46c89f288465209a15e",
         "content\/pauline-letters-authorship.json": "94a9e82025a81b38390572abd1ebd83b",
@@ -187,8 +189,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "e868af66b8f001e3eed18ccda59c59c7",
         "content\/women-in-the-prophets-life.json": "7cceda50332599fb8fae985d8a3131bb",
         "content\/women-leading-prayer.json": "16bbaeb185073b56e610d1aafebcc9e9",
-        "inc\/data\/seed.json": "54dfda1c0cb4ba06c4119cd43334392a",
+        "inc\/data\/seed.json": "24dd46503fe50e7700720d02ca23106f",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "321100691d265221bc0528b6280fb743"
+    "checksum": "adde029fc640dbf6d584e4074e3e1439"
 }

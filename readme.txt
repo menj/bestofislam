@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.119.0
+Stable tag: 1.120.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,11 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.120.0 =
+* Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
+* A link under each article, and in the follow band, lets readers add the site as a preferred source on Google. It is a plain link in the theme's colours, loads nothing from Google, and can be switched off under Theme Options, Display.
+* Articles print cleanly: page margins, paper-sized type, no breaks inside pictures, quotations or table rows, and link addresses shown in full. Save the printed page as a PDF for a PDF copy.
 
 = 1.119.0 =
 * Four new articles: "Did Muhammad perform miracles? 6 answers", "Is Allah a deceiver? 7 answers on makr", "Who is the Holy Spirit? 7 answers from the Quran and the Bible" and "Did Jesus pray, and to whom? 7 answers", each with a featured image and four in-text images.
@@ -401,6 +406,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.120.0 =
+Replace the theme files. The two new articles are created when the version changes. The preferred source link is on by default.
 
 = 1.119.0 =
 Replace the theme files. The four new articles are created when the version changes.
