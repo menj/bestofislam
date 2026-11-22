@@ -658,6 +658,82 @@
 	border-color: var(--wp--preset--color--accent-1, currentColor);
 }
 
+/* "Add as a preferred source on Google": the deeplink Google offers
+   publishers, drawn in the theme's colours. Pale blue pill, gold rule on the
+   leading edge, azure on hover and focus. */
+.boi-psource {
+	margin: 0.9rem 0 0;
+}
+
+.boi-psource__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	padding: 0.5rem 1rem 0.5rem 0.85rem;
+	font-size: 0.88rem;
+	font-weight: 600;
+	line-height: 1.3;
+	text-decoration: none;
+	color: var(--wp--preset--color--contrast, #0D2B4E);
+	background: var(--wp--preset--color--accent-3, #EAF2FB);
+	border: 1px solid var(--wp--preset--color--accent-6, #D9E3EF);
+	border-inline-start: 3px solid var(--wp--preset--color--accent-2, #E8B33C);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.boi-psource__link .boi-hicon {
+	inline-size: 1.05rem;
+	block-size: 1.05rem;
+	flex: none;
+	color: var(--wp--preset--color--accent-1, #1D6AC3);
+}
+
+.boi-psource__link:hover,
+.boi-psource__link:focus-visible {
+	border-color: var(--wp--preset--color--accent-1, #1D6AC3);
+	background: var(--wp--preset--color--base, #fff);
+}
+
+.boi-psource--follow {
+	margin-block-start: 1rem;
+}
+
+/* On the navy band: light text, the gold rule kept. */
+.boi-band.is-dark .boi-psource__link {
+	color: #fff;
+	background: transparent;
+	border-color: #3A5A80;
+	border-inline-start-color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-band.is-dark .boi-psource__link:hover,
+.boi-band.is-dark .boi-psource__link:focus-visible {
+	border-color: var(--wp--preset--color--accent-4, #3FA9F5);
+	border-inline-start-color: var(--wp--preset--color--accent-2, #E8B33C);
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.boi-band.is-dark .boi-psource__link .boi-hicon {
+	color: var(--wp--preset--color--accent-2, #E8B33C);
+}
+
+.boi-band.is-dark .boi-psource--follow {
+	text-align: center;
+}
+
+/* Dark appearance. */
+:root[data-theme="dark"] .boi-psource__link {
+	color: inherit;
+	background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.boi-psource__link {
+		transition: none;
+	}
+}
+
 .boi-author {
 	display: grid;
 	grid-template-columns: 4.5rem 1fr;

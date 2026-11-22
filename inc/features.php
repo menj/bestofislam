@@ -150,6 +150,61 @@ function boi_render_related() {
 }
 
 /**
+ * The address of Google's source preferences tool for this site: the
+ * deeplink Google offers publishers, which takes a reader straight to the
+ * site in "Preferred sources" (https://www.google.com/preferences/source).
+ * Only a whole domain or subdomain can be chosen there, so a site installed
+ * in a subfolder gets no link.
+ *
+ * @return string The address, or '' when the site is not eligible.
+ */
+function boi_preferred_source_url() {
+	$home = wp_parse_url( home_url( '/' ) );
+	$host = isset( $home['host'] ) ? strtolower( $home['host'] ) : '';
+	$path = isset( $home['path'] ) ? trim( $home['path'], '/' ) : '';
+
+	if ( '' === $host || '' !== $path || 'localhost' === $host || false === strpos( $host, '.' )
+		|| false !== filter_var( trim( $host, '[]' ), FILTER_VALIDATE_IP ) ) {
+		return '';
+	}
+
+	$host = preg_replace( '/^www\./', '', $host );
+
+	return 'https://www.google.com/preferences/source?q=' . rawurlencode( $host );
+}
+
+/**
+ * The invitation to add the site as a preferred source on Google: a link in
+ * the theme's own style, with no Google script and no tracking. It follows
+ * Google's deeplink method; the theme loads no remote assets.
+ *
+ * @param string $class Extra class for the wrapper.
+ * @return string Empty when the switch is off or the site is not eligible.
+ */
+function boi_render_preferred_source( $class = '' ) {
+	$options = boi_get_options();
+	$url     = boi_preferred_source_url();
+
+	if ( '' === $url || ( isset( $options['preferred_source'] ) && empty( $options['preferred_source'] ) ) ) {
+		return '';
+	}
+
+	return sprintf(
+		'<p class="boi-psource%1$s"><a class="boi-psource__link" href="%2$s" rel="noopener" target="_blank">%3$s<span>%4$s</span></a></p>',
+		'' !== $class ? ' ' . esc_attr( $class ) : '',
+		esc_url( $url ),
+		boi_ui_icon( 'newspaper' ),
+		esc_html(
+			sprintf(
+				/* translators: %s: site name. */
+				__( 'Add %s as a preferred source on Google', 'bestofislam' ),
+				wp_strip_all_tags( get_bloginfo( 'name', 'display' ) )
+			)
+		)
+	);
+}
+
+/**
  * Renders plain share links. No scripts, no tracking.
  *
  * @return string
@@ -178,9 +233,10 @@ function boi_render_share() {
 	}
 
 	return sprintf(
-		'<div class="boi-share"><span class="boi-share__label">%1$s</span>%2$s</div>',
+		'<div class="boi-share"><span class="boi-share__label">%1$s</span>%2$s</div>%3$s',
 		esc_html__( 'Share', 'bestofislam' ),
-		$items
+		$items,
+		is_singular( 'post' ) ? boi_render_preferred_source() : ''
 	);
 }
 
@@ -424,10 +480,11 @@ function boi_render_follow() {
 	}
 
 	return boi_add_heading_icon( sprintf(
-		'<section class="boi-follow alignwide"><h2 class="boi-eyebrow">%1$s</h2><p class="boi-follow__text">%2$s</p><div class="boi-follow__links">%3$s</div></section>',
+		'<section class="boi-follow alignwide"><h2 class="boi-eyebrow">%1$s</h2><p class="boi-follow__text">%2$s</p><div class="boi-follow__links">%3$s</div>%4$s</section>',
 		esc_html__( 'Follow', 'bestofislam' ),
 		esc_html__( 'New pieces are published as they are finished. Follow wherever suits you.', 'bestofislam' ),
-		$items
+		$items,
+		boi_render_preferred_source( 'boi-psource--follow' )
 	) );
 }
 

@@ -115,8 +115,8 @@
   "fly-hadith-and-adult-suckling",
   "sharia-and-hudud",
   "islam-religion-of-peace",
-  "war-and-killing-in-islam",
   "apostasy-in-islam",
+  "war-and-killing-in-islam",
   "magic-jinn-and-satan-hadiths"
  ],
  "can-a-muslim-befriend-a-non-muslim": [
@@ -124,8 +124,16 @@
   "quranic-ethics",
   "jews-behind-the-stone-hadith",
   "raids-badr-and-the-conquest-of-mecca",
-  "islam-religion-of-peace",
-  "i-read-the-entire-quran-reply"
+  "i-read-the-entire-quran-reply",
+  "islam-religion-of-peace"
+ ],
+ "can-god-die": [
+  "i-read-the-entire-quran-reply",
+  "ransom-bible-quran",
+  "crucifixion-quran",
+  "christian-twin-of-the-islamic-dilemma",
+  "shared-prophets",
+  "early-christians-yahweh-evil-gnosticism-marcion"
  ],
  "child-marriage-in-islam": [
   "prophets-marriages-zaynab-and-others",
@@ -138,15 +146,15 @@
  "christian-twin-of-the-islamic-dilemma": [
   "paul-and-the-law",
   "revelatory-exegesis",
+  "paul-and-food-offered-to-idols",
   "ishmael-in-the-quran-and-genesis",
   "early-christians-charged-others-with-corrupting-scripture",
-  "shared-prophets",
-  "is-yahweh-the-same-as-allah"
+  "can-god-die"
  ],
  "comma-johanneum": [
   "trinity-in-the-hebrew-bible-tested",
-  "holy-war-in-the-bible",
   "apes-and-pigs-and-the-jews",
+  "holy-war-in-the-bible",
   "bible-alteration-claim-before-islam",
   "who-is-the-holy-spirit",
   "i-read-the-entire-quran-reply"
@@ -171,9 +179,9 @@
   "muhammad-and-the-hebrew-prophets",
   "ransom-bible-quran",
   "i-read-the-entire-quran-reply",
-  "shared-prophets",
+  "can-god-die",
   "nabi-and-rasul",
-  "apes-and-pigs-and-the-jews"
+  "shared-prophets"
  ],
  "crusades-facts": [
   "holy-war-in-the-bible",
@@ -181,15 +189,15 @@
   "raids-badr-and-the-conquest-of-mecca",
   "quran-on-christians",
   "slavery-in-islam",
-  "prophet-died-poisoning"
+  "war-and-killing-in-islam"
  ],
  "deuteronomy-prophecy-and-the-paraclete": [
   "i-read-the-entire-quran-reply",
   "muhammad-and-the-hebrew-prophets",
   "ishmael-in-the-quran-and-genesis",
   "who-wrote-the-quran",
-  "messenger-to-every-nation",
-  "is-yahweh-the-same-as-allah"
+  "paul-and-food-offered-to-idols",
+  "messenger-to-every-nation"
  ],
  "did-jesus-pray-to-whom": [
   "where-did-jesus-say-he-is-god",
@@ -316,8 +324,8 @@
   "no-compulsion-in-religion",
   "ex-muslim-blog-study",
   "first-muslims-kept-the-faith",
-  "shared-prophets",
-  "prophet-died-poisoning"
+  "prophet-died-poisoning",
+  "shared-prophets"
  ],
  "fate-and-free-will": [
   "scholars-who-shaped-islamic-study",
@@ -469,7 +477,7 @@
   "shared-prophets",
   "where-did-jesus-say-he-is-god",
   "ishmael-in-the-quran-and-genesis",
-  "is-yahweh-satan"
+  "quran-on-christians"
  ],
  "indonesia": [
   "islam-in-china",
@@ -492,8 +500,8 @@
   "fate-and-free-will",
   "ransom-bible-quran",
   "is-yahweh-the-same-as-allah",
-  "six-articles-of-faith",
-  "did-muhammad-perform-miracles"
+  "can-god-die",
+  "six-articles-of-faith"
  ],
  "is-yahweh-satan": [
   "early-christians-yahweh-evil-gnosticism-marcion",
@@ -525,7 +533,7 @@
   "who-is-allah",
   "natural-world-verses",
   "quran-science-claims-graded",
-  "early-christians-yahweh-evil-gnosticism-marcion"
+  "can-god-die"
  ],
  "islam-in-china": [
   "indonesia",
@@ -629,7 +637,7 @@
   "kharijites-and-takfir",
   "quran-on-christians",
   "apostasy-in-islam",
-  "crusades-facts"
+  "blasphemy-and-insults-to-the-prophet"
  ],
  "kaab-ibn-al-ashraf-and-the-poets": [
   "medina-jewish-tribes-and-qurayza",
@@ -744,8 +752,8 @@
   "apes-and-pigs-and-the-jews"
  ],
  "muhammad-false-prophet-claim": [
-  "prophet-died-poisoning",
   "first-revelation-demonic-claim",
+  "prophet-died-poisoning",
   "apes-and-pigs-and-the-jews",
   "war-and-killing-in-islam",
   "quran-on-christians",
@@ -831,13 +839,21 @@
   "early-christians-yahweh-evil-gnosticism-marcion",
   "earliest-new-testament-lists"
  ],
+ "paul-and-food-offered-to-idols": [
+  "paul-and-the-law",
+  "christian-twin-of-the-islamic-dilemma",
+  "is-yahweh-satan",
+  "messenger-to-every-nation",
+  "deuteronomy-prophecy-and-the-paraclete",
+  "i-read-the-entire-quran-reply"
+ ],
  "paul-and-the-law": [
+  "paul-and-food-offered-to-idols",
   "christian-twin-of-the-islamic-dilemma",
   "paul-claim-to-apostleship",
   "early-christians-yahweh-evil-gnosticism-marcion",
-  "holy-war-in-the-bible",
   "ishmael-in-the-quran-and-genesis",
-  "apes-and-pigs-and-the-jews"
+  "holy-war-in-the-bible"
  ],
  "paul-claim-to-apostleship": [
   "messenger-to-every-nation",
@@ -845,13 +861,13 @@
   "bible-alteration-claim-before-islam",
   "crucifixion-quran",
   "early-christians-charged-others-with-corrupting-scripture",
-  "apes-and-pigs-and-the-jews"
+  "paul-and-food-offered-to-idols"
  ],
  "pauline-letters-authorship": [
   "jeremiah-new-covenant-hebrews-and-the-quran",
   "paul-claim-to-apostleship",
-  "i-read-the-entire-quran-reply",
   "bible-alteration-claim-before-islam",
+  "i-read-the-entire-quran-reply",
   "paul-and-the-law",
   "second-peter"
  ],
@@ -915,8 +931,8 @@
   "six-articles-of-faith",
   "i-read-the-entire-quran-reply",
   "fighting-verses-in-context",
-  "shared-prophets",
   "quran-pronoun-shifts-iltifat",
+  "shared-prophets",
   "messenger-to-every-nation"
  ],
  "quran-grammar-errors-claim": [
@@ -965,7 +981,7 @@
   "islam-in-china",
   "who-is-allah",
   "quran-contradictions-claims",
-  "race-in-quran-and-hadith"
+  "is-yahweh-the-same-as-allah"
  ],
  "quran-science-claims-graded": [
   "quran-iblis-fallen-angels-borrowing",
@@ -989,7 +1005,7 @@
   "messenger-to-every-nation",
   "quran-on-christians",
   "same-god",
-  "quran-iblis-fallen-angels-borrowing"
+  "iblis-and-the-command-to-prostrate"
  ],
  "quranic-ethics": [
   "prophets-marriages-zaynab-and-others",
@@ -1044,8 +1060,8 @@
   "ransom-bible-quran",
   "muhammad-and-the-hebrew-prophets",
   "apostasy-in-islam",
-  "why-does-god-allow-suffering",
-  "shared-prophets"
+  "shared-prophets",
+  "why-does-god-allow-suffering"
  ],
  "revelation-warning-and-the-canon": [
   "disputed-books-of-the-new-testament",
@@ -1061,7 +1077,7 @@
   "matthew-fulfilment-quotations-checked",
   "islamic-dilemma",
   "ishmael-in-the-quran-and-genesis",
-  "holy-war-in-the-bible"
+  "paul-and-food-offered-to-idols"
  ],
  "revisionist-case-weighed": [
   "islamic-rites-before-islam",
@@ -1289,11 +1305,11 @@
  ],
  "universe-demands-creator": [
   "preservation-and-truth",
-  "houris-and-paradise",
   "who-is-allah",
+  "houris-and-paradise",
   "schacht-isnads-dating-hadith",
   "natural-world-verses",
-  "relationship-with-god"
+  "ex-muslim-blog-study"
  ],
  "uthman-copies": [
   "quran-preservation-reddit",
@@ -1444,14 +1460,14 @@
   "ransom-bible-quran",
   "relationship-with-god",
   "fate-and-free-will",
-  "paul-and-the-law",
-  "apostasy-in-islam"
+  "apostasy-in-islam",
+  "paul-and-the-law"
  ],
  "why-five-prayers": [
   "five-pillars-explained",
   "jihad-meaning-quran-hadith-jurists",
-  "fate-and-free-will",
   "prophets-you-may-not-know",
+  "fate-and-free-will",
   "black-stone-and-kissing",
   "before-your-first-friday-prayer"
  ],

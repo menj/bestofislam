@@ -16,12 +16,12 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.121.1, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.122.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 188 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 784 Glossary entries (`inc/glossary-data/`) |
+| Seeded content | 8 sections, 23 categories, 160 tags, 190 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 784 Glossary entries (`inc/glossary-data/`) |
 | Data versions | `BOI_GLOSSARY_VERSION` 19, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
@@ -766,6 +766,10 @@ The owner set PHP 8.4 as the minimum on 2026-11-08. `style.css` and `readme.txt`
 ### D62. The contents list
 
 The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and 2026-11-20): one list and one graph per page. It takes level-two and level-three headings, nested; keeps ids when present and otherwise makes them from the text, unique against every id in the text, with Arabic headings keeping readable ids; passes over headings marked `no-toc` or `data-no-toc`, empty headings and anything inside a template element. The `[boi_contents]` shortcode places it in the text, with the attributes `tags` (h2, h3), `title`, `depth`, `min`, `collapsible` and `collapsed`; the graph carries a SiteNavigationElement with one WebPageElement per section. The list shows from three level-two headings on articles and pages (not the front page), under the Contents switch, and a listicle keeps its jump list. Detection stays: while the WP TOC plugin is active (`WP_TOC_VERSION`), the theme stands aside, with no contents block, no shortcodes and no contents schema, and texts written with that plugin's `[wp_toc]` or `[auto_toc]` still render under the theme alone. The licence notices are in docs/CREDITS.md.
+
+### D63. Readers can add the site as a preferred source on Google
+
+The owner asked on 2026-11-22 for Google's "preferred sources" (Google Search Central, last updated 2026-09-18) to be applied natively, in the theme's colours. Google offers three methods: its standard button and its advanced script, which both load `news.google.com/swg/js/v1/publisher.js`, and a deeplink to `https://www.google.com/preferences/source?q=<domain>`. The theme uses the deeplink only, because it loads no remote assets and sends no reader data to a third party until the reader clicks. `boi_render_preferred_source()` in `inc/features.php` prints it as a pill link in the theme's palette (pale blue fill, gold leading rule, azure on hover, the newspaper icon from the theme's own set), worded "Add Best of Islam as a preferred source on Google". Google's G logo is not used. It appears under the share links of an article and in the Follow band. Only a domain or subdomain can be a preferred source, so `boi_preferred_source_url()` gives no link for a site in a subfolder, on a bare host or at an IP address, and drops `www.`. The `preferred_source` switch on the Display tab turns it off. The link is hidden in print.
 
 ### D20. Articles follow Islamic English conventions
 

@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.121.1
+Stable tag: 1.122.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 188 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 190 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -163,6 +163,11 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.122.0 =
+* Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
+* A link under each article, and in the follow band, lets readers add the site as a preferred source on Google. It is a plain link in the theme's colours, loads nothing from Google, and can be switched off under Theme Options, Display.
+* Articles print cleanly: page margins, paper-sized type, no breaks inside pictures, quotations or table rows, and link addresses shown in full. Save the printed page as a PDF for a PDF copy.
 
 = 1.121.1 =
 * The featured card below the front-page hero loads its photo lazily, and when it shows the same article as the hero it reuses the hero image instead of downloading a second one.
@@ -410,6 +415,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.122.0 =
+Replace the theme files. The two new articles are created when the version changes. The preferred source link is on by default.
 
 = 1.121.1 =
 Replace the theme files. Nothing else to do.

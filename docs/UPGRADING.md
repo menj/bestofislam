@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.122.0
+
+Replace the theme files. The two new articles are created on existing sites by `boi_create_listicles()` when the version changes, and their featured images are added to the media library. The preferred source link is on by default; switch it off under Theme Options, Display, Preferred source if wanted. It appears only when the site is at the root of a public domain.
+
 ## Upgrading to 1.121.1
 
 Replace the theme files. Nothing else to do.
