@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.120.0
+
+Replace the theme files. The new article, iblis-and-the-command-to-prostrate, is created on existing sites by `boi_create_listicles()` when the version changes, and its featured image is added to the media library. Its images are in `assets/images/`.
+
 ## Upgrading to 1.119.0
 
 Replace the theme files. The four new articles are created on existing sites by `boi_create_listicles()` when the version changes, and their featured images are added to the media library. Their images are in `assets/images/`.

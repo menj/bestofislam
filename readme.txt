@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.119.0
+Stable tag: 1.120.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 183 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 188 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.120.0 =
+* New article: "Was Iblis punished for a command that was not his? 8 answers". It answers the charge that God condemned Iblis, a jinn, for refusing an order given to angels, from 7:12, the commentaries of Ibn Kathir, al-Qurtubi and al-Tabari, and the Bible. The Arabic of each commentary was checked against its Shamela text and the hadith grading on dorar.net.
 
 = 1.119.0 =
 * Four new articles: "Did Muhammad perform miracles? 6 answers", "Is Allah a deceiver? 7 answers on makr", "Who is the Holy Spirit? 7 answers from the Quran and the Bible" and "Did Jesus pray, and to whom? 7 answers", each with a featured image and four in-text images.
@@ -401,6 +404,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.120.0 =
+Replace the theme files. The new article is created when the version changes.
 
 = 1.119.0 =
 Replace the theme files. The four new articles are created when the version changes.
