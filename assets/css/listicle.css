@@ -707,6 +707,13 @@
 	border-inline-start-color: var(--wp--preset--color--accent-2, #E8B33C);
 }
 
+.boi-band.is-dark .boi-psource__link:hover,
+.boi-band.is-dark .boi-psource__link:focus-visible {
+	border-color: var(--wp--preset--color--accent-4, #3FA9F5);
+	border-inline-start-color: var(--wp--preset--color--accent-2, #E8B33C);
+	background: rgba(255, 255, 255, 0.08);
+}
+
 .boi-band.is-dark .boi-psource__link .boi-hicon {
 	color: var(--wp--preset--color--accent-2, #E8B33C);
 }

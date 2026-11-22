@@ -163,7 +163,8 @@ function boi_preferred_source_url() {
 	$host = isset( $home['host'] ) ? strtolower( $home['host'] ) : '';
 	$path = isset( $home['path'] ) ? trim( $home['path'], '/' ) : '';
 
-	if ( '' === $host || '' !== $path || 'localhost' === $host || false === strpos( $host, '.' ) ) {
+	if ( '' === $host || '' !== $path || 'localhost' === $host || false === strpos( $host, '.' )
+		|| false !== filter_var( trim( $host, '[]' ), FILTER_VALIDATE_IP ) ) {
 		return '';
 	}
 

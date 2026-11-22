@@ -46,6 +46,10 @@ $GLOBALS['t_home'] = 'https://example.org/blog/';
 check( '' === boi_preferred_source_url(), 'a subfolder is not eligible' );
 $GLOBALS['t_home'] = 'http://localhost/';
 check( '' === boi_preferred_source_url(), 'a bare host gets no link' );
+$GLOBALS['t_home'] = 'http://192.168.1.10/';
+check( '' === boi_preferred_source_url(), 'an IPv4 address gets no link' );
+$GLOBALS['t_home'] = 'http://[2001:db8::1]/';
+check( '' === boi_preferred_source_url(), 'an IPv6 address gets no link' );
 
 echo $fails ? "$fails of $count checks failed\n" : "All $count checks passed\n";
 exit( $fails ? 1 : 0 );
