@@ -163,7 +163,7 @@
 		{
 			"slug": "islam-religion-of-peace",
 			"title": "6 reasons why Islam is the religion of peace",
-			"excerpt": "6 reasons Islam is called the religion of peace, plus an honest look at the violence done in its name. Read the case.",
+			"excerpt": "6 reasons Islam is called the religion of peace, and the violence done in its name set against its teaching. Read the case.",
 			"topic": "the-muslim-world",
 			"seo_title": "Is Islam the religion of peace? 6 reasons",
 			"category": "muslim-world",
@@ -200,6 +200,20 @@
 				"Prophethood",
 				"Miracles",
 				"Prophecy"
+			]
+		},
+		{
+			"slug": "did-muhammad-perform-miracles",
+			"title": "Did Muhammad perform miracles? 6 answers",
+			"excerpt": "The Quran calls him only a warner, critics say, so he had no signs. 6 answers from the Quran, the hadith and the Gospels.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Muhammad perform miracles?",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Prophet Muhammad",
+				"Miracles",
+				"Prophethood",
+				"Polemics"
 			]
 		},
 		{
@@ -314,6 +328,20 @@
 			]
 		},
 		{
+			"slug": "who-is-the-holy-spirit",
+			"title": "Who is the Holy Spirit? 7 answers from the Quran and the Bible",
+			"excerpt": "Gabriel in the Quran, the third person of the Trinity for most Christians: 7 answers on the Holy Spirit from both scriptures.",
+			"topic": "comparative-religion",
+			"seo_title": "Who is the Holy Spirit?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Trinity",
+				"Gabriel",
+				"Angels",
+				"Tawhid"
+			]
+		},
+		{
 			"slug": "matthew-fulfilment-quotations-checked",
 			"title": "Do Matthew's \"fulfilled\" prophecies say what he says? 8 cases, checked",
 			"excerpt": "Eight citations in Matthew set beside the passages they quote. 8 points on what matches and what moves. Read on.",
@@ -353,6 +381,20 @@
 				"Tawhid",
 				"Arabic",
 				"Same God"
+			]
+		},
+		{
+			"slug": "is-allah-a-deceiver-makr",
+			"title": "Is Allah a deceiver? 7 answers on makr",
+			"excerpt": "\"God is the best of plotters\" (3:54): does the Quran call God a deceiver? 7 answers on the Arabic word makr and the Bible.",
+			"topic": "belief-and-practices",
+			"seo_title": "Is Allah a deceiver? Makr in the Quran",
+			"category": "creed-theology",
+			"tags": [
+				"Allah",
+				"Divine attributes",
+				"Arabic",
+				"Polemics"
 			]
 		},
 		{
@@ -474,6 +516,20 @@
 				"Divinity of Jesus",
 				"Gospels",
 				"Trinity"
+			]
+		},
+		{
+			"slug": "did-jesus-pray-to-whom",
+			"title": "Did Jesus pray, and to whom? 7 answers",
+			"excerpt": "If Jesus is God, to whom did he pray? 7 answers from the Gospels, the church councils and the Quran's account of Jesus.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Jesus pray, and to whom?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"Prayer",
+				"Gospels"
 			]
 		},
 		{
@@ -885,8 +941,8 @@
 		},
 		{
 			"slug": "fate-and-free-will",
-			"title": "Fate and free will in Islam: 6 questions answered",
-			"excerpt": "If God knows everything, are we free? Six questions about qadar, answered from the Quran, the hadith and the scholars. Read on.",
+			"title": "Fate and free will in Islam: 7 questions answered",
+			"excerpt": "If God knows everything, are we free? Seven questions about qadar, answered from the Quran, the hadith and the scholars. Read on.",
 			"topic": "belief-and-practices",
 			"seo_title": "Fate and free will in Islam",
 			"category": "creed-theology",
@@ -1125,10 +1181,10 @@
 		},
 		{
 			"slug": "quran-science-claims-graded",
-			"title": "7 scientific claims about the Quran, graded on the evidence",
-			"excerpt": "Embryology, the water cycle, iron, fingerprints and more: 7 popular scientific claims about the Quran, each graded for how well it holds up.",
+			"title": "4 scientific claims about the Quran that hold up on the evidence",
+			"excerpt": "The water cycle, orbits, the embryo and the ant: 4 verses on the natural world that science confirms, read in their own words.",
 			"topic": "science",
-			"seo_title": "Quran science claims, graded: 7 claims",
+			"seo_title": "Quran and science: 4 verses that hold up",
 			"category": "science",
 			"tags": [
 				"Quran and science",
@@ -1470,8 +1526,8 @@
 		},
 		{
 			"slug": "fly-hadith-and-adult-suckling",
-			"title": "The fly hadith and the adult suckling report: 4 points",
-			"excerpt": "The fly in the drink and Sahla's nursing of Salim, read in full with what the Prophet's wives and the jurists made of them. 4 points.",
+			"title": "The fly hadith, adult suckling and Solomon's wives: 5 points",
+			"excerpt": "The fly in the drink and Sahla's nursing of Salim, read in full with what the Prophet's wives and the jurists made of them. 5 points.",
 			"topic": "faith-and-reason",
 			"seo_title": "The fly hadith and adult suckling",
 			"category": "hadith-sira",
@@ -1528,10 +1584,10 @@
 		},
 		{
 			"slug": "who-wrote-the-quran",
-			"title": "Who wrote the Quran? 5 answers to the authorship claim",
-			"excerpt": "Revelation or composition? How the claim was argued from the start, how the text was fixed and what each side can and cannot show. 5 answers.",
+			"title": "Who wrote the Quran? 6 answers to the authorship claim",
+			"excerpt": "Revelation or composition? How the claim was argued from the start, how the text was fixed and what each side can and cannot show. 6 answers.",
 			"topic": "faith-and-reason",
-			"seo_title": "Who wrote the Quran? 5 answers",
+			"seo_title": "Who wrote the Quran? 6 answers",
 			"category": "quran-text-revelation",
 			"tags": [
 				"Revelation",
@@ -1542,10 +1598,10 @@
 		},
 		{
 			"slug": "quran-contradictions-claims",
-			"title": "Contradictions in the Quran? 4 points on the cases critics cite",
-			"excerpt": "Six days or eight, a thousand years or fifty thousand, and who takes the soul: the classical answers. 4 points. Read on.",
+			"title": "Contradictions in the Quran? 6 points on the cases critics cite",
+			"excerpt": "Six days or eight, a thousand years or fifty thousand, and who takes the soul: the classical answers. 6 points. Read on.",
 			"topic": "faith-and-reason",
-			"seo_title": "Contradictions in the Quran? 4 points",
+			"seo_title": "Contradictions in the Quran? 6 points",
 			"category": "quran-text-revelation",
 			"tags": [
 				"Quran",
@@ -1582,10 +1638,10 @@
 		},
 		{
 			"slug": "buraq-and-miracle-stories",
-			"title": "5 miracle stories critics call a fairy tale, and what the sources say",
-			"excerpt": "The Night Journey, the Buraq, a talking donkey and the Bible's own miracles: 5 miracle stories critics mock, and what the sources say.",
+			"title": "6 miracle stories critics call a fairy tale, and what the sources say",
+			"excerpt": "The Night Journey, the Buraq, a talking donkey and the Bible's own miracles: 6 miracle stories critics mock, and what the sources say.",
 			"topic": "comparative-religion",
-			"seo_title": "5 miracle stories critics call fairy tales",
+			"seo_title": "6 miracle stories critics call fairy tales",
 			"category": "answering-polemics",
 			"tags": [
 				"Miracles",
@@ -1726,10 +1782,10 @@
 		},
 		{
 			"slug": "prophets-marriages-zaynab-and-others",
-			"title": "6 facts about Muhammad's marriages: Zaynab, Safiyya and others",
-			"excerpt": "Zaynab, Safiyya, Juwayriyah, Rayhana, Mariya and verse 33:50: 6 facts from the Quran, hadith and early biographies.",
+			"title": "7 facts about Muhammad's marriages: Zaynab, Safiyya and others",
+			"excerpt": "Zaynab, Safiyya, Juwayriyah, Rayhana, Mariya and verse 33:50: 7 facts from the Quran, hadith and early biographies.",
 			"topic": "history",
-			"seo_title": "Muhammad's marriages: 6 facts",
+			"seo_title": "Muhammad's marriages: 7 facts",
 			"category": "prophets-life",
 			"tags": [
 				"Marriages of the Prophet",
@@ -1851,8 +1907,8 @@
 		},
 		{
 			"slug": "quran-anachronism-claims",
-			"title": "6 answers to the claim that the Quran gets its history wrong",
-			"excerpt": "Six alleged historical slips, from Nimrod and Talut to Job and Pharaoh's punishment, checked against what the verses say and what commentators added.",
+			"title": "7 answers to the claim that the Quran gets its history wrong",
+			"excerpt": "Seven alleged historical slips, from Nimrod and Talut to Job and Pharaoh's punishment, checked against what the verses say and what commentators added.",
 			"topic": "comparative-religion",
 			"seo_title": "Does the Quran get history wrong?",
 			"category": "answering-polemics",
@@ -1889,6 +1945,49 @@
 				"Jews",
 				"Polemics",
 				"Quran and history"
+			]
+		},
+		{
+			"slug": "quran-iblis-fallen-angels-borrowing",
+			"title": "Did the Quran borrow the story of Iblis from Jewish and Christian legend? 7 answers",
+			"excerpt": "Leo Jung's Fallen Angels says the Quran took Iblis and Harut and Marut from older legends. 7 answers from his own evidence.",
+			"topic": "comparative-religion",
+			"seo_title": "Did the Quran borrow the story of Iblis?",
+			"category": "answering-polemics",
+			"tags": [
+				"Satan",
+				"Angels",
+				"Sources of the Quran",
+				"Jinn",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "iblis-and-the-command-to-prostrate",
+			"title": "Was Iblis punished for a command that was not his? 8 answers",
+			"excerpt": "The charge: God condemned Iblis, a jinn, for refusing an order given to angels. 8 answers from the Quran and its commentators.",
+			"topic": "comparative-religion",
+			"seo_title": "Was Iblis punished unjustly?",
+			"category": "answering-polemics",
+			"tags": [
+				"Satan",
+				"Angels",
+				"Jinn",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "i-read-the-entire-quran-reply",
+			"title": "\"I read the entire Quran, the hadith and the Sira\": 7 answers",
+			"excerpt": "A reader of the Quran, hadith and Sira says the founder is the problem and God's love conditional. 7 answers from the sources.",
+			"topic": "comparative-religion",
+			"seo_title": "Reply to \"I read the entire Quran\"",
+			"category": "answering-polemics",
+			"tags": [
+				"Polemics",
+				"Prophet Muhammad",
+				"Abrogation",
+				"Divinity of Jesus"
 			]
 		},
 		{
@@ -2129,6 +2228,59 @@
 			]
 		},
 		{
+			"slug": "jamnia-and-the-hebrew-canon",
+			"title": "Jamnia: 6 facts about the meeting that did not close the Hebrew canon",
+			"excerpt": "Did rabbis close the Hebrew Bible at Jamnia in AD 90? 6 facts on what the sources record. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Jamnia and the canon: 6 facts",
+			"category": "bible-text",
+			"tags": [
+				"Bible",
+				"Old Testament",
+				"Torah"
+			]
+		},
+		{
+			"slug": "earliest-new-testament-lists",
+			"title": "The earliest New Testament lists: 7 facts from Marcion to Athanasius",
+			"excerpt": "Who first listed the 27 books of the New Testament? 7 facts on the early lists. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Earliest New Testament lists",
+			"category": "bible-text",
+			"tags": [
+				"Bible",
+				"New Testament",
+				"Early Christianity",
+				"Manuscripts"
+			]
+		},
+		{
+			"slug": "revelation-warning-and-the-canon",
+			"title": "Does Revelation 22:18 close the Bible? 5 facts",
+			"excerpt": "Does the warning at the end of Revelation seal the Bible? 5 facts on the verse and the book. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Revelation 22:18 and the canon",
+			"category": "answering-polemics",
+			"tags": [
+				"Bible",
+				"New Testament",
+				"Revelation"
+			]
+		},
+		{
+			"slug": "disputed-books-of-the-new-testament",
+			"title": "The books the early church argued about: 6 facts",
+			"excerpt": "Which New Testament books were disputed, and for how long? 6 facts on the doubts. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Disputed New Testament books",
+			"category": "bible-text",
+			"tags": [
+				"Bible",
+				"New Testament",
+				"Early Christianity"
+			]
+		},
+		{
 			"slug": "comma-johanneum",
 			"title": "1 John 5:7: 8 facts about the verse that left the Bible",
 			"excerpt": "Where did the three heavenly witnesses come from, and why did they go? 8 facts from Priscillian to Erasmus and 1897. Read on.",
@@ -2274,8 +2426,8 @@
 		},
 		{
 			"slug": "who-changed-the-bible",
-			"title": "Who changed the Bible, when and how? 8 answers to the \"every copy\" objection",
-			"excerpt": "If nobody controlled every copy, who changed the Bible and how? 8 answers on authorship, added passages, scribes and the canon. Read on.",
+			"title": "Who changed the Bible, when and how? 9 answers to the \"every copy\" objection",
+			"excerpt": "If nobody controlled every copy, who changed the Bible and how? 9 answers on authorship, added passages, scribes and the canon. Read on.",
 			"topic": "comparative-religion",
 			"seo_title": "Who changed the Bible, and when?",
 			"category": "bible-text",
@@ -2484,6 +2636,132 @@
 				"Same God",
 				"Polemics"
 			]
+		},
+		{
+			"slug": "sun-muddy-spring-and-fixed-earth",
+			"title": "Does the Quran say the sun sets in a muddy spring? 6 answers",
+			"excerpt": "Quran 18:86, 36:38, 39:5 and the hadith of the sun beneath the Throne: 6 points on what the texts say and what to concede.",
+			"topic": "science",
+			"seo_title": "The sun in a muddy spring? 6 points",
+			"category": "science",
+			"tags": [
+				"Quran and science",
+				"Astronomy",
+				"Quran commentary",
+				"Hadith"
+			]
+		},
+		{
+			"slug": "authority-of-the-sunnah-quran-alone",
+			"title": "\"Follow the Quran alone\": 6 answers on the authority of the Sunnah",
+			"excerpt": "The hadith were written late and some were forged, so why not follow the Quran alone? 6 answers from the Quran and the record.",
+			"topic": "faith-and-reason",
+			"seo_title": "Follow the Quran alone? 6 answers",
+			"category": "hadith-sira",
+			"tags": [
+				"Hadith",
+				"Hadith criticism",
+				"Prayer",
+				"Islamic scholarship"
+			]
+		},
+		{
+			"slug": "did-the-quran-say-muhammad-sinned",
+			"title": "Does the Quran say Muhammad sinned? 6 answers on prophetic protection",
+			"excerpt": "Quran 47:19, 48:2 and 80:1-10 speak of fault and correction. 6 points on what Muslims mean by a prophet's protection, graded.",
+			"topic": "belief-and-practices",
+			"seo_title": "Did Muhammad sin? 6 points",
+			"category": "creed-theology",
+			"tags": [
+				"Prophet Muhammad",
+				"Prophethood",
+				"Prophets",
+				"Quran commentary"
+			]
+		},
+		{
+			"slug": "islam-and-evolution",
+			"title": "Can Islam accept evolution? 7 answers",
+			"excerpt": "Adam made from clay, life from water, creation in stages: 7 points on what the Quran fixes, what it leaves open and what Muslims think.",
+			"topic": "science",
+			"seo_title": "Can Islam accept evolution? 7 points",
+			"category": "science",
+			"tags": [
+				"Creation",
+				"Quran and science",
+				"Pew Research",
+				"Islamic scholarship"
+			]
+		},
+		{
+			"slug": "slander-against-mary",
+			"title": "Did anyone slander Mary before Islam? 6 answers on Quran 4:156",
+			"excerpt": "Quran 4:156 condemns a great slander against Mary. 6 answers on Celsus, Tertullian, the Talmud and the Toledot Yeshu, with dates.",
+			"topic": "comparative-religion",
+			"seo_title": "The slander against Mary: 6 answers",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Mary",
+				"Jesus",
+				"Jews",
+				"Early Christianity"
+			]
+		},
+		{
+			"slug": "uncreated-quran-and-the-logos",
+			"title": "Is the uncreated Quran a Muslim Logos? 6 answers",
+			"excerpt": "Muslims call the Quran the uncreated Word of God. Is that John 1:1 by another name? 6 points on the mihna, kalam and the analogy.",
+			"topic": "belief-and-practices",
+			"seo_title": "Is the uncreated Quran a Logos?",
+			"category": "creed-theology",
+			"tags": [
+				"Ashari theology",
+				"Divine attributes",
+				"Trinity",
+				"Quran"
+			]
+		},
+		{
+			"slug": "honour-killing-and-islamic-law",
+			"title": "Does Islam permit honour killing? 7 answers",
+			"excerpt": "What the Quran requires before an accusation of adultery, what the jurists ruled, what the laws allowed and what has changed. 7 points.",
+			"topic": "belief-and-practices",
+			"seo_title": "Does Islam permit honour killing?",
+			"category": "law-ethics",
+			"tags": [
+				"Women in Islam",
+				"Sharia",
+				"Justice",
+				"Muslim societies"
+			]
+		},
+		{
+			"slug": "women-leading-prayer",
+			"title": "Can a woman lead the prayer in Islam? 6 answers",
+			"excerpt": "The Umm Waraqa hadith, A'isha leading women, the classical minority and the 2005 prayer in New York: 6 points, graded on the sources.",
+			"topic": "belief-and-practices",
+			"seo_title": "Can a woman lead the prayer? 6 points",
+			"category": "women-marriage",
+			"tags": [
+				"Women in Islam",
+				"Prayer",
+				"Hadith criticism",
+				"Fiqh"
+			]
+		},
+		{
+			"slug": "oaths-in-the-quran",
+			"title": "Why does God swear by creation in the Quran? 5 answers",
+			"excerpt": "\"By the sun\", \"by the fig\": does an oath appeal to something higher than the speaker? 5 answers on the oaths of the Quran.",
+			"topic": "faith-and-reason",
+			"seo_title": "Why does the Quran swear by creation?",
+			"category": "quran-text-revelation",
+			"tags": [
+				"Quran",
+				"Arabic",
+				"Quran commentary",
+				"Creation"
+			]
 		}
 	],
 	"pages": {
@@ -2603,11 +2881,11 @@
 				],
 				[
 					"h",
-					"What gets conceded"
+					"How objections are answered"
 				],
 				[
 					"p",
-					"Where a critic is right, the article says so. Where Muslim scholars disagree, the article names the disagreement. A site that concedes nothing cannot be trusted when it concedes nothing."
+					"Every objection is stated in its own terms and answered with the strongest case the sources support. Where Muslim scholars disagree, the article names the disagreement."
 				],
 				[
 					"h",
@@ -2721,7 +2999,7 @@
 		"Day of Judgement": "The Last Day, when every soul answers for its deeds.",
 		"Demographics": "How many Muslims there are, where they live and how the numbers are changing.",
 		"Dhikr": "",
-		"Divine attributes": "",
+		"Divine attributes": "The names and attributes of God in the Quran, and how the theologians read them.",
 		"Divine decree": "Qadar: belief that God knows and decrees all things, and what that means for human choice.",
 		"Divinity of Jesus": "Whether Jesus claimed to be God, read from the gospels and from the Quran.",
 		"Dome of the Rock": "",
@@ -2765,7 +3043,7 @@
 		"Jesus": "Jesus son of Mary, servant and messenger of God, in the Quran and in the gospels.",
 		"Jews": "What the Quran and the hadith say about the Jews, read in context.",
 		"Jihad": "Striving in the way of God, and what the Quran, the hadith and the jurists mean by it.",
-		"Jinn": "",
+		"Jinn": "The jinn, beings made from smokeless fire, in the Quran and the hadith.",
 		"Jizya": "",
 		"Justice": "The Quran's demand for justice in trade, in law and between people.",
 		"Kaaba": "The House in Mecca that Abraham and Ishmael raised, and its history.",

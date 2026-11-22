@@ -4,7 +4,7 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.112.0] - 2026-11-08
+## [1.121.0] - 2026-11-23
 
 ### Added
 
@@ -16,6 +16,217 @@ versioning.
 - Clarified the Haman inscription, the Mesha account in 2 Kings, the dating of the Birmingham parchment and the exceptions in marriage laws.
 - Updated the terrorism article with the 2026 Global Terrorism Index and the 2025 Casey audit. The headline now counts all seven entries.
 - Revised the homepage answers on Haman and the Birmingham Quran leaves to match their sources.
+
+## [1.120.0] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Added
+- iblis-and-the-command-to-prostrate: eight answers to the charge that God condemned Iblis for an order given only to the angels, that the angels committed shirk by bowing to Adam, and that "because You have put me in error" (7:16) makes God a deceiver. Sources: the Quran (7:12, 38:75, 18:50, 2:34, 12:100, 61:5, 14:22, 15:42, 16:99-100), Sahih Muslim 2996 (graded on dorar.net), Ibn Kathir on 2:34 and 18:50, al-Qurtubi on 2:34 and al-Tabari on 7:16 (Arabic checked against the Shamela texts), the Life of Adam and Eve 13-16, and the Bible (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11). Placed in the reading order after quran-iblis-fallen-angels-borrowing.
+- Its three images reuse files already bundled from Wikimedia Commons, with captions written for this article.
+
+### Changed
+- The article counts in readme.txt, README.md and docs/SSOT.md now read 188, the number check-content.py reports.
+
+## [1.119.0] - 2026-11-21
+
+No feature removed and no public identifier renamed.
+
+### Added
+- did-muhammad-perform-miracles: six answers to the claim that the Quran admits Muhammad had no signs (13:7, 29:50, 17:90-93): why signs on demand were refused (17:59, 6:109, 40:78) and the Gospels' parallel (Mark 8:12), the Quran as the sign (29:51, 2:23; Bukhari 4981), the splitting of the moon (54:1-2; Bukhari 3636, 3637) and Badr (8:17), the companions' reports (Bukhari 3576, 3578, 3583, 3584, 4101; Qadi Iyad, al-Bayhaqi), and what a miracle proves (Deuteronomy 13:1-3, Matthew 24:24, John 10:41).
+- is-allah-a-deceiver-makr: seven answers on makr (3:54, 8:30, 4:142, 86:15-16, 4:157): the word's meaning (35:43; al-Baghawi quoting al-Zajjaj), every use answering a plot (8:30, 9:40, 27:50), requital named by the deed (42:40, 9:67, 2:15; the Tirmidhi list of names has no "Plotter"), who was deceived in 4:157 (al-Tabari, Ibn Kathir), the Bible's stronger language (Psalm 18:26, 1 Kings 22, Ezekiel 14:9, 2 Thessalonians 2:11), and God as the Truth (4:87, 4:122, 22:6).
+- who-is-the-holy-spirit: seven answers: the creed of 381 and the later filioque, Ruh al-Qudus in the Quran (2:87, 2:253, 5:110, 16:102, 26:193, 42:52), the Spirit as Gabriel (2:97; al-Tabari's judgement on 2:87; Ibn Kathir; Bukhari 453, 3212, 3213), the Spirit sent to Mary (19:17-19; Luke 1), the spirit of God in the Hebrew Bible, Gregory of Nazianzus's Oration 31 on the late settling of the doctrine, and "a spirit from Him" (4:171, 15:29, 58:22).
+- did-jesus-pray-to-whom: seven answers on the Gospels' praying Jesus (Mark 1:35, Luke 6:12, Matthew 26:39, Hebrews 5:7, John 17:3, 20:17), the prayer he taught (Luke 11:1-2), the two-natures answer of Chalcedon (451) and Constantinople III (681) weighed, and the Quran's Jesus at prayer (19:30-36, 5:117, 4:172).
+- Each article has a featured image and four in-text images: the Walters Art Museum's CC0 manuscripts on Flickr, Matson photographs of the Mount of Olives (public domain, from the Library of Congress), Codex Alexandrinus and Papyrus 46 from Wikimedia Commons, and Pexels photographs. None shows a prophet. Credits in `inc/images-data.json`. In the reading guide and the related-article links.
+
+### Changed
+- Flickr joins the image sources (SSOT D48, `docs/CREDITS.md`, readme): public domain, "no known copyright restrictions" or CC0 only, after Commons and before Pexels.
+- `boi_image_source_name()` (`inc/images.php`) names Flickr and the Library of Congress, so a credit from either is no longer labelled Wikimedia Commons. `docs/CREDITS.md` says an article has up to four in-text images.
+
+## [1.118.0] - 2026-11-20
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Nine articles, on questions long argued in online debate: sun-muddy-spring-and-fixed-earth, authority-of-the-sunnah-quran-alone, did-the-quran-say-muhammad-sinned, islam-and-evolution, slander-against-mary, uncreated-quran-and-the-logos, honour-killing-and-islamic-law, women-leading-prayer and oaths-in-the-quran. Each is in the reading guide and the related-article links.
+- A featured image and two in-text images for each, drawn by `bin/make-original-graphics.py` (theme graphics, under the theme's licence), since the image sources could not be reached when they were made.
+
+### Added (Content tab)
+- A "Replace edited articles" switch (`sync_replace_edited`, off by default; filter `boi_sync_replace_edited`). When it is on, the content sync gives an edited seeded article the new bundled text instead of listing it, after saving the owner's text as a revision, or in the `_boi_sync_previous` meta where revisions are off. If the earlier text cannot be kept, the article is left as it is, and the log says so and where any kept text is. An article the owner chose to keep stays kept, and an edited article the bundle dropped is never trashed. Switching it on starts a sync on the next admin page.
+- A body repaired from the old unslashed save is recorded as following the bundle only when its title and excerpt follow it too, so an edited title or excerpt stays listed (or is replaced, with the switch on).
+
+### Changed
+- New entries: prophets-marriages-zaynab-and-others (Sawda and 4:128), quran-contradictions-claims (Pharaoh's wife; the first Muslim), fly-hadith-and-adult-suckling (Solomon's wives), who-wrote-the-quran (The True Furqan), buraq-and-miracle-stories (the Night Journey as a dream), who-changed-the-bible (the Diatessaron) and quran-anachronism-claims (al-Samiri). Titles, excerpts and counts follow.
+- New paragraphs: prophets-you-may-not-know (Idris and Osiris), first-revelation-demonic-claim (the history of the epilepsy charge; jinn and the diagnosis of delusion), fate-and-free-will (the word makr), women-in-islamic-law-testimony-inheritance (polygamy) and what-former-muslims-testimonies-show (pseudonymous accounts).
+- Notes on tafsir and hadith say where the texts can be read, on altafsir.com and searchtruth.com.
+- `.claude/FARUQI.md` and SSOT: articles never concede the critic's argument (owner, 2026-11-20).
+- The Divine attributes tag has a description, filled in when the new articles are created.
+- A newly created article records its content fingerprint, so the date stagger places it in the reading order instead of skipping it.
+- fate-and-free-will: the title counts its seven questions.
+- The existing articles follow the same rule. About 110 sentences in 65 articles that conceded ground to critics, and the "Strength" grades below firm, are rewritten to answer the critic from the sources. Eleven entry titles that conceded a point are reworded.
+- quran-science-claims-graded keeps its address and is now "4 scientific claims about the Quran that hold up on the evidence": the entries on atoms, fingerprints and iron are removed, the 51:47 paragraph moves to the orbits entry, and links to it are retitled.
+- The Sources and standards page: "What gets conceded" becomes "How objections are answered".
+
+## [1.117.0] - 2026-11-20
+
+One filter removed: `unlist_posts_enabled`. One function renamed: `boi_pretty_search_enabled()` is now `boi_search_permalinks_enabled()`.
+
+### Changed
+- The five features that overlap a plugin (unlisting, readable search addresses, the custom login address, the reading progress bar and the contents list) carry no name, credit, option write or hook of that plugin in their code, styles, settings screen or documentation, outside the detection that names it (owner, 2026-11-20). The GPL and MIT notices the licences require stay in `docs/CREDITS.md`. Release notes before 1.117.0 stay as written.
+- Detection stays: each feature still stands aside while its plugin is active, says so on its card, and imports the plugin's saved settings. Unlisting also re-syncs whenever that plugin's list changes.
+- Unlisting reads the `unlist_posts` option to import and to re-sync, and no longer writes it. The theme's list lives in the per-post `_boi_unlisted` flags, cached in `boi_unlisted`. The sync is recorded only once every flag is written, so a failed write is retried. `boi_unlist_enabled()` reads only the `boi_unlist_enabled` filter.
+- SSOT D40 and D62 restated to match.
+
+### Added
+- The `[boi_contents]` shortcode places the contents in the text, with the same attributes as before. `[wp_toc]` and `[auto_toc]` stay registered, so texts written for that plugin render unchanged.
+
+## [1.116.0] - 2026-11-19
+
+No feature removed and no public identifier renamed. Fourteen Glossary addresses retire, with redirects.
+
+### Changed
+- Fourteen Glossary terms that had a plain entry and a second "X, al-" entry now have one entry each: uswah-hasanah (from al-uswah-al-hasanah), din (din-al), haqq (haqq-al), hudud (hudud-al), ijma (ijma-al), ijtihad (ijtihad-al), kitab (kitab-al), qisas (qisas-al), qiyas (qiyas-al), sahih (sahih-al), sunnah (sunnah-al), tanzil (tanzil-al), usul-fiqh (usul-al-fiqh) and wahy (wahy-al). The plain entry keeps its slug and wording, and gains the other entry's title and aliases, its page reference to al-Faruqi's list, its "misread" note and its sources where it had none, and its related terms. Related-term links across the Glossary point to the surviving entry. The Glossary has 784 entries.
+- The fourteen old slugs are in `boi_glossary_retired_slugs()`: the sync deletes their pages and `inc/renamed-slugs.php` answers their addresses with a 301 (D49). `BOI_GLOSSARY_VERSION` is 19.
+- `bin/glossary-name-baseline.json` drops the nine shared names these merges resolved.
+- The duplicate pages are deleted automatically on every site, whatever their status or the surviving entry's status (owner's decision, 19 November 2026).
+- Five pairs from the same audit stay apart, because the two entries name different things: `alim` (a scholar) and `alim-al` (the divine name), `bayt-al` (the Kaaba) and `al-bayt-al` (the Prophet's household), `salam` (peace) and `salam-al` (the divine name), `rasul` (the word) and `rasul-al` (the Prophet's title), `ashari` (the school) and `ashari-al` (its founder).
+
+## [1.115.2] - 2026-11-19
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Pictures for the four articles on the canon of scripture, the only seeded articles without them: jamnia-and-the-hebrew-canon (the Aleppo Codex and the Great Isaiah Scroll), earliest-new-testament-lists (Codex Alexandrinus, Papyrus 46 and the Muratorian fragment), disputed-books-of-the-new-testament (Codex Claromontanus V, Codex Vaticanus at the opening of Hebrews, Codex Sinaiticus) and revelation-warning-and-the-canon (a miniature of the war in heaven from about 1295, Dürer's Four Horsemen and a Greek Gospel book, all three from the Cleveland Museum of Art). The Commons files are public domain and the Cleveland ones CC0. None shows a prophet (D30).
+
+## [1.115.1] - 2026-11-17
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- 46 sentences in thirteen articles that denied one claim before stating another now state the claim directly, following the owner's writing rules (3F): jeremiah-new-covenant-hebrews-and-the-quran, what-the-pagans-of-mecca-said-about-allah, will-every-non-muslim-go-to-hell, jews-behind-the-stone-hadith, can-a-muslim-befriend-a-non-muslim, women-in-hell-and-deficient-intelligence-hadith, three-divorces-and-the-one-night-marriage, was-muhammad-a-narcissist, safiyya-and-the-women-captured-in-war, what-former-muslims-testimonies-show, when-a-stranger-online-calls-islam-a-cult, nine-questions-from-the-floor-islamic-dilemma-debate and al-zutt-allegation. No fact, quotation or note changes.
+
+## [1.115.0] - 2026-11-15
+
+No feature removed and no public identifier renamed. The PHP requirement changes.
+
+### Changed
+- **Requires PHP 8.4** (was 7.4), in `style.css`, `readme.txt`, `README.md` and `docs/SSOT.md` (D61). The Content checks workflow now lints and runs every `tests/*-test.php` on PHP 8.4.
+- **The contents list is adapted from WP TOC** (D62), in `inc/anatomy.php`:
+  - level-three headings get ids and are nested under their section in the list;
+  - ids are made unique against every id in the text, not only other headings, and an Arabic heading keeps a readable Arabic id instead of a percent-encoded one;
+  - headings with the class `no-toc` or a `data-no-toc` attribute, empty headings and headings inside a template element are left out;
+  - pages show the contents too (`templates/page.html`), under the same Contents switch, but not the front page;
+  - the `[wp_toc]` and `[auto_toc]` shortcodes place the list in the text, with WP TOC's attributes `tags`, `title`, `depth`, `min`, `collapsible` and `collapsed`; a text that places its own list gets no list at its head;
+  - the page graph gains a SiteNavigationElement with one WebPageElement per section, and the article gains `accessibilityFeature: tableOfContents`, whether the list is at the head or placed by the shortcode;
+  - when the WP TOC plugin is active the theme stands aside.
+- `assets/css/anatomy.css`: styles for the nested list and the folded list; the stylesheet also loads on pages.
+- The Contents switch's help text in Theme Options names pages, the nesting and the shortcode.
+
+### Added
+- `tests/toc-test.php`: 35 checks of the ids (quoted or not), skipped headings, the tree, the shortcode settings, where the shortcode may leave its marker and the list that replaces it.
+- `docs/CREDITS.md`: WP TOC and the MIT notice of Ikram Hawramani's original work.
+- i-read-the-entire-quran-reply: the images promised in 1.113.0, all from Wikimedia Commons: a fourteenth-century Moroccan Sahih al-Bukhari, the Taroudant Bukhari of 1097 (CC0), Papyrus 46, a fragment of Surat 'Abasa and al-Qundusi's Basmala. None shows a person.
+
+## [1.114.0] - 2026-11-09
+
+Seeded articles follow the bundle, safely. No feature removed, no identifier renamed.
+
+### Changed
+- Population updates an article only while a fingerprint recorded when the theme wrote it proves the owner has not edited it. An article with no record counts as edited. The older rule that took a never-modified article for untouched is removed.
+- An article the bundle dropped goes to the Trash when it is untouched, and only articles that carry `_boi_sync_key` are candidates.
+- A corrected article reaches the site without a version bump: the sync runs when the manifest checksum changes.
+
+### Added
+- `inc/content-sync.php`: the review card on Theme Options, Content (dry run, diff, Take the bundled text, Keep mine, Run the review now, a log of the last 100 changes), the supersedes map with a 301 at any address, hiding through the unlist module and the Trash, the guards, and the `BOI_DISABLE_CONTENT_SYNC` switch.
+- `inc/data/supersedes.json` (empty), `inc/data/seed-manifest.json` and `bin/seed-manifest.php`. `bin/check-content.py` checks that the manifest is current.
+- `tests/content-sync-test.php`.
+- The integrity check is never cached, a "Keep mine" on an article to be replaced holds when a guard later clears, the bundled slug is recorded before an article is trashed so its old address still redirects, and the text record moves with a renamed article. The legacy refresh form obeys the kill switch, a replaced article's "Keep mine" holds whether or not its slug stays in the bundle, and the fallback hiding also cuts superseded IDs out of queries that name their posts.
+
+## [1.113.6] - 2026-11-09
+
+Verification pass on `does-islam-teach-the-bible-was-corrupted`. No feature removed, no identifier renamed.
+
+### Changed
+- Notes: Ibn Kathir on 12:100 (vol. 4, p. 412) and on 6:115 (vol. 3, p. 322), al-Qurṭubī on 5:13 (vol. 6, p. 115) and on 15:9 (vol. 10, pp. 5 to 6), the page of Ibn al-Qayyim's three views (vol. 2, p. 351), and al-Haythamī's attribution of the Muʿādh report to al-Bazzār in full and to Aḥmad in abridged form (vol. 4, p. 309). All were read in the Shamela text. The claims in the article text match what the pages say.
+
+## [1.113.5] - 2026-11-09
+
+Canon articles and corrections. No feature removed, no identifier renamed.
+
+### Added
+- Four articles: `jamnia-and-the-hebrew-canon`, `earliest-new-testament-lists`, `revelation-warning-and-the-canon` and `disputed-books-of-the-new-testament`. They join the reading order after `second-peter`. They ship without photographs; D30 asks for three each, to come from Wikimedia Commons.
+- `docs/CREDITS.md`: Davidson's history of the canon, as a public-domain text.
+
+### Changed
+- `pauline-letters-authorship`: the Muratorian fragment is called "usually dated to the later second century", the letter to the Alexandrians may mean Hebrews, and the canon is said to have "taken shape" instead of "closed" with 2 Peter 3:16.
+- `septuagint`: the lists of the Ethiopian church vary between authorities.
+- Page references to Davidson's history added to the notes of `septuagint`, `second-peter`, `who-changed-the-bible`, `oldest-bible-codices`, `early-christians-yahweh-evil-gnosticism-marcion` and `pauline-letters-authorship`.
+
+## [1.113.4] - 2026-11-09
+
+WCAG 2.2 AA pass. No feature removed, no identifier renamed.
+
+### Fixed
+- One focus ring for every control, in the accent that swaps with the light and dark switch. The footer uses its own link colour (2.4.7, 1.4.11).
+- Contact and search field edges use accent-5 and read at 3:1 or better. Before, the pale accent-6 rule measured 1.3:1 (1.4.11).
+- Category links and lead kickers are 24 pixels tall at every width. Before, they were 16 to 18 pixels tall on wide screens (2.5.8).
+- The glossary bar is a region named "Glossary tools" (1.3.1).
+- Smooth scrolling stops when the visitor asks for reduced motion (2.3.3).
+
+### Added
+- `tests/axe-check.js`: axe-core on the main templates at 375 and 1280 pixels.
+
+## [1.113.3] - 2026-11-09
+
+Content attribution. No feature removed, no identifier renamed.
+
+### Changed
+- `does-islam-teach-the-bible-was-corrupted`: the Notes and the upgrade record credit the compilation of reports, with no personal name and no article title. Every reference, grading and unchecked item stays.
+- `docs/CREDITS.md`: a Sources of material entry credits the compiler there, and only there.
+- `docs/SSOT.md`: a contributor rule that compilers are credited in the credits only.
+
+## [1.113.2] - 2026-11-09
+
+Mobile-first audit at 320, 360, 375, 390, 414, 480, 768, 1024 and 1280 pixels on 17 page types. No feature removed, no identifier renamed.
+
+### Fixed
+- Wide screens: layout shift on first load fell from 0.75 to under 0.01. The header menu was measured in the fallback font and again in Ysabeau Office, so the header changed height and pushed the page down 52 pixels. `boi_preload_fonts()` now preloads Ysabeau Office, EB Garamond Regular and Platypi.
+- Long titles, breadcrumbs, excerpts and links wrap inside their column. Before, an unbroken long title in a list or an article ran 600 to 2,000 pixels past its column and was cut off by the page edge.
+- Home page section cards (`.boi-sections`) fit a 320 pixel screen; the grid minimum is now `min(17rem, 100%)`.
+- "Full answer" links on the home page are 24 pixels high or more. Links in post lists, post tags and related-article links get a finger-sized target below 782 pixels and on touch screens.
+- The menu button reports `aria-expanded` as the menu opens and closes (`assets/js/nav-state.js`).
+
+## [1.113.1] - 2026-11-09
+
+The lead and list reacts to hover, focus and tap, with category tabs. See `readme.txt`.
+
+## [1.113.0] - 2026-11-08
+
+No feature removed and no public identifier renamed.
+
+### Added
+- i-read-the-entire-quran-reply: a reply to A. C. Rosenthal, "I read the entire Quran, all the Hadiths, and the Sira. Here is what I found." (May 2026). Seven answers: what he gets right; four factual errors (al-Suyuti shortened the abrogation lists, Ibn Ishaq was no companion, the poets' killings rest on rejected reports, 2:191 is bounded by 2:190); the arrangement of the Quran and of Paul's letters; "the founder is the standard" against 18:110 and the verses that correct the Prophet; sinlessness and purity; God's love (85:14; 7:156; 39:53; Bukhari 7405); and salvation by mercy (Bukhari 6467). Links to the site's articles on each hard text. Its images follow in a later release. In the reading guide under the Prophet and the hard questions, and in the related-article links.
+
+## [1.112.0] - 2026-11-08
+
+No feature removed and no public identifier renamed.
+
+### Added
+- quran-iblis-fallen-angels-borrowing: a reply to Leo Jung, *Fallen Angels in Jewish, Christian and Mohammedan Literature* (Philadelphia: Dropsie College, 1926), which argues that the Quran took the angels' question (2:30), Iblis's refusal and Harut and Marut from Jewish and Christian legend. Seven answers from Jung's own pages: his use of later Muslim legend as if it were the Quran; the angels who question and are not punished; Iblis who disobeys and does not rebel; the Augustine passage that says nothing about the jinn; the Venus tale that Muslim scholars rejected; and a witness, Pirke de Rabbi Eliezer, that Jung dates after the Quran. A featured image and four in-text images, all public domain from Wikimedia Commons: two 1930s Matson photographs of Babylon, a page of al-Tabari's History, the Bomberg Talmud and a Syriac manuscript of Ephrem. None shows a prophet. In the reading guide after the article on Talmud, midrash and apocrypha, and in the related-article links.
+- The Jinn tag, now on two articles, gains a description.
+
+### Fixed
+- quran-pronoun-shifts-iltifat and the new article: a cross-link to another article was left as Markdown text and now prints as a link. Unedited copies refresh on the version change.
+
+## [1.111.1] - 2026-11-08
+
+No feature removed and no public identifier renamed.
+
+### Added
+- quran-pronoun-shifts-iltifat: a featured image and four in-text images, all public domain from Wikimedia Commons: an Abbasid Kufic folio; a page of al-Zamakhshari's *al-Kashshaf* (BnF Arabe 6313); a NOAA photograph of rain at sunset; a Kufic folio with 48:27–28 (Freer F1930.62); and the opening chapter in the Quran of Baybars al-Jashnakir (British Library Add MS 22406). None shows a person. Credits in `inc/images-data.json`.
+
+### Changed
+- `bin/commons-api.py`: `--dry-run` accepts any inline position, so a set of images can be tried out before the first is installed.
 
 ## [1.111.0] - 2026-11-07
 

@@ -2,8 +2,8 @@
 Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
-Requires PHP: 7.4
-Stable tag: 1.112.0
+Requires PHP: 8.4
+Stable tag: 1.121.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. On activation the theme creates 8 sections, the standing pages, the menus and 168 articles. A Glossary of 798 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 188 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -25,7 +25,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A section taxonomy (listicle-topic) at /topic/<section>/, with categories and tags on every seeded article.
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
-* A Glossary of 798 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
+* A Glossary of 784 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
 * Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
@@ -67,10 +67,10 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
-* Display: rank badges, the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
-* Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace.
+* Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace. Switch on "Replace edited articles" to have every update give your edited articles the new text as well. Your text is kept as a revision first, and an article you chose to keep stays yours.
 * Search engines: meta descriptions, Google and Bing verification codes, and readable search addresses.
 * Access: the private login address, the security headers and the list of unlisted items.
 * Security: switches for XML-RPC, application passwords, REST writes from outside the browser, the spam gate and 410 Gone, then the spam tools and reports.
@@ -159,13 +159,86 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * EB Garamond, Platypi, Ysabeau Office, Vollkorn and Noto Naskh Arabic: SIL Open Font License 1.1, with the licence text beside each font.
 * KFGQPC HAFS Uthmanic Script: King Fahd Glorious Quran Printing Complex, under its own licence (assets/fonts/scripts/kfgqpc-hafs-uthmanic-script-LICENSE.txt).
 * Minimalist Social & Platform Icons Pack 2.8: GNU General Public License (assets/icons/LICENSE.txt).
-* Photographs: public domain or CC0 from Wikimedia Commons, the Pexels licence and the Pixabay Content Licence, credited under each image and on the Sources and standards page.
-* Code adapted from Unlist Posts & Pages, Pretty Search Permalinks, WPS Hide Login and Reading Progress Bar, all GPLv2 or later.
+* Photographs: public domain or CC0 from Wikimedia Commons and Flickr, the Pexels licence and the Pixabay Content Licence, credited under each image and on the Sources and standards page.
+* Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
 
-= 1.112.0 =
+= 1.121.0 =
 * Numbered footnotes link directly to their notes. Five articles gain source links and corrections, and the homepage answers on Haman and the Birmingham Quran leaves are updated.
+
+= 1.120.0 =
+* New article: "Was Iblis punished for a command that was not his? 8 answers". It answers the charge that God condemned Iblis, a jinn, for refusing an order given to angels, from 7:12, the commentaries of Ibn Kathir, al-Qurtubi and al-Tabari, and the Bible. The Arabic of each commentary was checked against its Shamela text and the hadith grading on dorar.net.
+
+= 1.119.0 =
+* Four new articles: "Did Muhammad perform miracles? 6 answers", "Is Allah a deceiver? 7 answers on makr", "Who is the Holy Spirit? 7 answers from the Quran and the Bible" and "Did Jesus pray, and to whom? 7 answers", each with a featured image and four in-text images.
+* New images may now also come from Flickr, public domain or CC0 only.
+
+= 1.118.0 =
+* Nine new articles on questions long argued in online debate: the sun in a muddy spring, the authority of the Sunnah, the Prophet and sin, Islam and evolution, the slander against Mary, the uncreated Quran, honour killing, women leading the prayer, and the oaths of the Quran. Each has a featured image and two in its text, drawn by the theme.
+* New articles now take their place in the dated reading order.
+* A "Replace edited articles" switch on the Content tab, off by default, lets updates replace edited articles too, keeping your text as a revision.
+* About 110 sentences in 65 existing articles rewritten so that no article concedes the critic's argument, and the science article reduced to the four claims that hold up.
+* New entries or paragraphs in fourteen existing articles, among them Sawda and 4:128, Pharaoh's wife, the first Muslim, Solomon's wives, The True Furqan, the Night Journey, the Diatessaron and al-Samiri.
+
+= 1.117.0 =
+* The contents list, unlisting, readable search addresses, the custom login address and the reading progress bar carry only the theme's own names. A new [boi_contents] shortcode places the contents in the text; texts that use an older contents shortcode keep working.
+
+= 1.116.0 =
+* Fourteen Glossary terms that had two entries each, such as Ijma and "Ijma', al-", now have one. The old address of each removed entry sends readers to the one that stays. The Glossary has 784 entries.
+
+= 1.115.2 =
+* The four articles on the canon of scripture now have pictures: a featured image and two in the text each, from manuscripts on Wikimedia Commons and from the Cleveland Museum of Art.
+
+= 1.115.1 =
+* Wording fixes in thirteen articles: 46 sentences that denied one claim before stating another now state the claim directly. No fact, quotation or note changes.
+
+= 1.115.0 =
+* The theme now requires PHP 8.4.
+* The contents list is adapted from WP TOC: level-three headings are nested under their section, pages get the list too, headings marked no-toc are left out, Arabic headings keep readable anchors, and [wp_toc] or [auto_toc] places the list in the text. Search engines see the sections in the page's structured data.
+* The reply to "I read the entire Quran" gains its featured image and four in-text images.
+
+= 1.114.0 =
+* Seeded articles follow the bundle, safely. An article you edited is never overwritten. Content lists it with the differences, and you take the new text or keep yours.
+* An article the theme drops goes to the Trash only if you have not edited it. Nothing is deleted.
+* A replacement map retires an old article behind a 301, hides it from lists and search, and moves it to the Trash. It ships empty.
+* The Content tab has a dry-run card, a log of the last 100 changes and a run button. BOI_DISABLE_CONTENT_SYNC switches it all off.
+* A corrected article reaches the site without a version bump.
+
+= 1.113.6 =
+* The notes of the article on whether Islam teaches that the Bible was corrupted now give the volume and page for six commentary and hadith references, checked against the Shamela text.
+
+= 1.113.5 =
+* Four new articles on how the canon took shape: the meeting at Jamnia, the earliest New Testament lists, the warning at the end of Revelation, and the disputed books. Each cites its sources by page.
+* Corrections to the articles on the Septuagint, the second letter of Peter, the letters of Paul and the oldest Bible codices, with page references.
+
+= 1.113.4 =
+* Accessibility pass to WCAG 2.2 AA. Every control shows one clear focus ring, form fields have a visible edge, and category links are 24 pixels tall.
+* The glossary bar is a named region, so a screen reader announces it.
+* A new check, `tests/axe-check.js`, runs axe-core on the main templates.
+
+= 1.113.3 =
+* One article no longer names the author of the compilation it draws on. It cites the verses, hadith and tafsir entries themselves.
+
+= 1.113.2 =
+* Wide screens: the page no longer jumps down when the menu font loads, because the three fonts every page paints first are now fetched at once.
+* Phones: long titles, links and excerpts wrap inside their column, small links in lists, tags and answers are easier to tap, and the home page section cards fit a 320 pixel screen.
+* The menu button tells screen readers whether the menu is open.
+
+= 1.113.1 =
+* The lead and list reacts. A row under the pointer or the keyboard focus gets a soft tint that grows past it, an accent bar on its left edge, a zoom on its thumbnail, an underlined accent title and an arrow. The first row carries the bar at rest.
+* Each piece shows its category as a coloured tab that links to the category, with its date and reading time under the title. The large piece shows a Read arrow on hover and focus.
+* The block fades up in turn as it scrolls into view. Visitors who ask for reduced motion see colour changes only.
+* The Display tab has a Lead and list card: category tabs, arrows and motion, and an accent colour.
+
+= 1.113.0 =
+* A new article, "'I read the entire Quran, the hadith and the Sira': 7 answers", a reply to A. C. Rosenthal's essay of May 2026. Its images follow in a later release.
+
+= 1.112.0 =
+* A new article, "Did the Quran borrow the story of Iblis from Jewish and Christian legend? 7 answers", a reply to Leo Jung's Fallen Angels in Jewish, Christian and Mohammedan Literature (1926), with a featured image and four in-text images. The Jinn tag gains a description.
+
+= 1.111.1 =
+* The article on why the Quran switches between He, We and I gains its featured image and four in-text images, all public domain from Wikimedia Commons.
 
 = 1.111.0 =
 * A new article, "Why does the Quran switch between He, We and I? 6 answers", on iltifat, the changes of grammatical person that the Arab rhetoricians named and explained, from studies by Muhammad Abdel Haleem, Neal Robinson and Mustansir Mir. It has a featured image and four in-text images. The article on the claim of grammatical errors links to it.
@@ -335,8 +408,62 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.112.0 =
+= 1.121.0 =
 Replace the theme files. The regular content update applies the new text to articles the owner has not edited.
+
+= 1.120.0 =
+Replace the theme files. The new article is created when the version changes.
+
+= 1.119.0 =
+Replace the theme files. The four new articles are created when the version changes.
+
+= 1.118.0 =
+Replace the theme files. The nine new articles are created when the version changes, and the changed articles refresh where you have not edited them.
+
+= 1.117.0 =
+Replace the theme files. Code that hooked unlist_posts_enabled should hook boi_unlist_enabled.
+
+= 1.116.0 =
+Replace the theme files. Fourteen duplicate Glossary pages are removed and their addresses redirect to the entry that stays. If you rewrote one of them, copy your text into the surviving entry first.
+
+= 1.115.2 =
+Replace the theme files. The four canon articles gain their featured images; the pictures in the text arrive where the owner has not edited the article.
+
+= 1.115.1 =
+Replace the theme files. The thirteen reworded articles refresh where the owner has not edited them.
+
+= 1.115.0 =
+Requires PHP 8.4: check the server's PHP version first. If the WP TOC plugin is active, deactivate it; the theme now does the same work. Then replace the theme files.
+
+= 1.114.0 =
+Replace the theme files. Open Theme Options, Content: articles you edited are listed there with a diff.
+
+= 1.113.6 =
+Replace the theme files. Nothing else to do.
+
+= 1.113.5 =
+Replace the theme files. Nothing else to do. The four new articles appear on the next admin page load; an edited article keeps your text.
+
+= 1.113.4 =
+Replace the theme files. Nothing else to do.
+
+= 1.113.3 =
+Replace the theme files. Nothing else to do. An article you have edited keeps your text; the Content tab lists it so you can choose to refresh it.
+
+= 1.113.2 =
+Replace the theme files. The new file is `assets/js/nav-state.js`. Nothing else to do.
+
+= 1.113.1 =
+Replace the theme files. Nothing else to do; the new Lead and list card on the Display tab starts with everything on.
+
+= 1.113.0 =
+Replace the theme files. The new article is created when the version changes.
+
+= 1.112.0 =
+Replace the theme files. The new article is created when the version changes.
+
+= 1.111.1 =
+Replace the theme files. The featured image is added to the media library when the version changes.
 
 = 1.111.0 =
 Replace the theme files. The new article is created, and the changed grammar article refreshed where the owner has not edited it, when the version changes.

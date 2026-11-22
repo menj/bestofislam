@@ -521,14 +521,17 @@
   "what": [
    "<em>Dīn</em> in the Quran means the religion God revealed (3:19, “the religion with God is Islam”), the Day of Judgement (<em>yawm al-dīn</em>, 1:4) and a way of life. Muhammad’s message is “the guidance and the religion of truth” (9:33). Muslims distinguish <em>islām</em>, submission to God; <em>īmān</em>, faith; and <em>iḥsān</em>, excellence."
   ],
-  "misread": "",
+  "misread": "That it translates as “religion” in the sense of a private matter, when it is a whole way of life with a day of reckoning.",
   "sources": [
    "The verse “the religion with God is Islam” (3:19) uses the word in its general sense of submission to God, which the Quran says all the prophets practised: Abraham was “a Muslim” in this sense (3:67), and the apostles of Jesus said “we are Muslims” (3:52)."
   ],
   "terms": [
    "iman",
    "ihsan",
-   "no-compulsion-in-religion"
+   "no-compulsion-in-religion",
+   "islam",
+   "sharia",
+   "judgement"
   ],
   "articles": [
    "fastest-growing-religion",
@@ -538,7 +541,9 @@
   ],
   "aliases": [
    "Deen",
-   "Religion"
+   "Religion",
+   "Din, al-",
+   "Al-Din"
   ],
   "lexicon": {
    "root": "د ي ن",
@@ -550,6 +555,10 @@
      "url": "https://arabiclexicon.hawramani.com/?p=10101#d9592e"
     }
    ]
+  },
+  "faruqi": {
+   "page": 32,
+   "term": "AL DĪN"
   }
  },
  {
@@ -998,36 +1007,6 @@
   "faruqi": {
    "page": 36,
    "term": "ḌALLA"
-  }
- },
- {
-  "slug": "din-al",
-  "title": "Din, al-",
-  "ar": "الدين",
-  "tr": "al-Dīn",
-  "def": "The normative, perfect religion that God ordained for humanity, covering faith, ethics, law, worship, institutions and judgment.",
-  "what": [
-   "<em>Al-dīn</em> is the word for religion, but it is wider than the English term. Faruqi defines it as the norm, the perfect way God ordained for humankind. It includes belief, ethics, law, devotion, institutions and the final reckoning. Religion in the narrow sense of private belief does not capture it. The Quran says that the <em>dīn</em> with God is Islam (3:19). At the end of the Prophet’s mission it says that God has perfected the <em>dīn</em> for believers and completed His favour on them (5:3). The word also means judgment, as in <em>yawm al-dīn</em>, the Day of Judgment (1:4), where the same root points to accountability."
-  ],
-  "misread": "That it translates as “religion” in the sense of a private matter, when it is a whole way of life with a day of reckoning.",
-  "sources": [
-   "The root <em>d-y-n</em> carries the senses of obedience, debt and judgment, which scholars find joined in the single concept."
-  ],
-  "terms": [
-   "islam",
-   "iman",
-   "sharia",
-   "judgement"
-  ],
-  "articles": [],
-  "type": "term",
-  "aliases": [
-   "Al-Din",
-   "Deen"
-  ],
-  "faruqi": {
-   "page": 32,
-   "term": "AL DĪN"
   }
  },
  {

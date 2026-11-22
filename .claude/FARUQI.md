@@ -44,7 +44,7 @@ Al-tawḥīd as a principle of knowledge holds that truth is one, knowable and o
 2. Deny ultimate contradiction. Reason and revelation come from one source and cannot finally conflict. When they seem to, the reader returns to his reading of the revelation, or to his reasoning, or to both; revelation itself is never bent. A paradox is never offered as an answer.
 3. Stay open to new and contrary evidence, and close with *Allāhu aʿlam*, "for the truth is bigger than can be totally mastered" by anyone at any time.
 
-For the sites this means: name the source, the work and the page; label every claim for what it is; keep a corrections page and use it; concede a point the evidence does not support, even one that would help the case.
+For the sites this means: name the source, the work and the page; label every claim for what it is; keep a corrections page and use it. Never concede the critic's argument: answer it with the strongest case the sources support, and leave out any claim they cannot support (owner, 2026-11-20).
 
 Īmān is conviction reached through evidence. Al-Fārūqī rejects "faith" in the sense of a wager on the unknowable (Pascal) or a stumbling block to the mind (1 Corinthians 1:22-23). The sites present Islam's claims as public, reasoned and testable: "Islam is not afraid of counterevidence."
 
@@ -74,7 +74,7 @@ Ask of every page, excerpt and design change:
 
 - Does it keep Creator and creature apart, in wording as well as doctrine?
 - Does it fault the historical record and honour the revelation behind it?
-- Is every factual claim sourced, labelled and true, including the ones that cost the argument something?
+- Is every factual claim sourced, labelled and true, and does each answer meet the critic with the strongest case the sources support?
 - Does it answer the argument and leave the person and the community their dignity?
 - Does it treat the reader as a free, reasoning person addressed on equal terms?
 

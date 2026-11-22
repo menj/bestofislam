@@ -54,6 +54,9 @@ function boi_get_options() {
 		'progress_types'      => array( 'post', 'page' ),
 		'article_contents'    => 1,
 		'article_mid_next'    => 1,
+		'll_accent'           => '',
+		'll_tabs'             => 1,
+		'll_motion'           => 1,
 		'errors_pages'        => 1,
 		'errors_alerts'       => 1,
 		'errors_email'        => '',
@@ -64,6 +67,7 @@ function boi_get_options() {
 		'sec_rest_lock'         => 1,
 		'sec_spam_gate'         => 1,
 		'sec_gone'              => 1,
+		'sync_replace_edited'   => 0,
 	);
 
 	$stored = get_option( BOI_OPTION_KEY, array() );
@@ -139,6 +143,16 @@ function boi_sanitize_options( $input ) {
 
 			$current['article_contents'] = empty( $input['article_contents'] ) ? 0 : 1;
 			$current['article_mid_next'] = empty( $input['article_mid_next'] ) ? 0 : 1;
+
+			// Lead and list. An accent that cannot carry text at 4.5:1 in both appearances is dropped.
+			$current['ll_tabs']   = empty( $input['ll_tabs'] ) ? 0 : 1;
+			$current['ll_motion'] = empty( $input['ll_motion'] ) ? 0 : 1;
+			$accent               = isset( $input['ll_accent'] ) ? sanitize_hex_color( trim( (string) $input['ll_accent'] ) ) : '';
+			if ( $accent && ! boi_lead_list_accent_ok( $accent ) ) {
+				add_settings_error( BOI_OPTION_KEY, 'boi_ll_accent', __( 'The lead and list accent colour was not saved: as text it does not reach 4.5:1 in both the light and the dark appearance. Choose a mid-tone colour, or leave the field empty for the theme accent.', 'bestofislam' ), 'error' );
+				$accent = '';
+			}
+			$current['ll_accent'] = $accent ? strtolower( $accent ) : '';
 
 			$current['picks'] = isset( $input['picks'] ) ? implode( ',', array_filter( array_map( 'sanitize_title', explode( ',', (string) $input['picks'] ) ) ) ) : '';
 
@@ -253,6 +267,10 @@ function boi_sanitize_options( $input ) {
 			$current['errors_alerts']   = empty( $input['errors_alerts'] ) ? 0 : 1;
 			$current['errors_email']    = isset( $input['errors_email'] ) && is_email( $input['errors_email'] ) ? sanitize_email( $input['errors_email'] ) : '';
 			$current['errors_cooldown'] = max( 5, min( 1440, (int) ( isset( $input['errors_cooldown'] ) ? $input['errors_cooldown'] : 30 ) ) );
+			break;
+
+		case 'content':
+			$current['sync_replace_edited'] = empty( $input['sync_replace_edited'] ) ? 0 : 1;
 			break;
 
 		case 'security':
@@ -759,8 +777,8 @@ function boi_render_display_tab( $opts ) {
 		array(
 			'key'     => 'article_contents',
 			'label'   => __( 'Contents', 'bestofislam' ),
-			'text'    => __( 'List the sections at the head of an article with three or more', 'bestofislam' ),
-			'help'    => __( 'A list with its own jump list keeps that instead.', 'bestofislam' ),
+			'text'    => __( 'List the sections at the head of an article or page with three or more', 'bestofislam' ),
+			'help'    => __( 'Level-three headings are nested under their section. A list with its own jump list keeps that instead; [boi_contents] in the text places the contents there.', 'bestofislam' ),
 			'checked' => ! empty( $opts['article_contents'] ),
 		)
 	);
@@ -773,6 +791,33 @@ function boi_render_display_tab( $opts ) {
 			'checked' => ! empty( $opts['article_mid_next'] ),
 		)
 	);
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Lead and list', 'bestofislam' ), __( 'The large piece and the list beside it on Reflections, the sections and the archives.', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'll_tabs',
+			'label'   => __( 'Category tabs', 'bestofislam' ),
+			'text'    => __( 'Show a category tab above each title', 'bestofislam' ),
+			'help'    => __( 'The tab names the category and links to its archive.', 'bestofislam' ),
+			'checked' => ! empty( $opts['ll_tabs'] ),
+		)
+	);
+	boi_opt_toggle(
+		array(
+			'key'     => 'll_motion',
+			'label'   => __( 'Arrows and motion', 'bestofislam' ),
+			'text'    => __( 'Show the arrows, the zoom and the fade-up', 'bestofislam' ),
+			'help'    => __( 'Switched off, the colour changes on hover and focus stay. Visitors who ask their device for reduced motion never see movement.', 'bestofislam' ),
+			'checked' => ! empty( $opts['ll_motion'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Accent colour', 'bestofislam' ), 'boi-ll-accent' );
+	?>
+	<input type="text" class="regular-text code" id="boi-ll-accent" name="<?php echo esc_attr( $key ); ?>[ll_accent]" value="<?php echo esc_attr( $opts['ll_accent'] ); ?>" placeholder="#1d6ac3" maxlength="7" pattern="#[0-9A-Fa-f]{6}" aria-describedby="boi-ll-accent-help" />
+	<p class="description" id="boi-ll-accent-help"><?php esc_html_e( 'A six-digit hex colour for the row highlight, the accent bar, the arrows and the hovered title. Leave it empty to use the theme accent. The colour must reach 4.5:1 as text.', 'bestofislam' ); ?></p>
+	<?php
+	boi_opt_row_close();
 	boi_opt_card_close();
 
 	boi_opt_card_open( __( 'Front page', 'bestofislam' ) );
@@ -978,6 +1023,27 @@ function boi_render_content_tab() {
 		boi_opt_card_close();
 	}
 
+	if ( function_exists( 'boi_render_content_sync_card' ) ) {
+		boi_render_content_sync_card(); // Drawn outside every other form.
+	}
+
+	boi_opt_card_open( __( 'Edited articles', 'bestofislam' ), __( 'What an update does with a seeded article you have edited.', 'bestofislam' ) );
+	echo '<form action="' . esc_url( admin_url( 'options.php' ) ) . '" method="post" class="boi-settings__form">';
+	boi_settings_hidden_fields( 'content' );
+	boi_opt_toggle(
+		array(
+			'key'     => 'sync_replace_edited',
+			'label'   => __( 'Replace edited articles', 'bestofislam' ),
+			'text'    => __( 'Give edited articles the new text on every update', 'bestofislam' ),
+			'help'    => __( 'Off: an article you edited keeps your text and is listed above, where you choose. On: updates replace it with the theme\'s new text. Your text is saved first as a revision, or as a backup copy where revisions are off. An article you chose to keep stays yours.', 'bestofislam' ),
+			'checked' => ! empty( boi_get_options()['sync_replace_edited'] ),
+		)
+	);
+	echo '<div class="boi-opt__actions">';
+	submit_button( __( 'Save changes', 'bestofislam' ), 'primary', 'submit', false, array( 'id' => 'boi-save-content' ) );
+	echo '</div></form>';
+	boi_opt_card_close();
+
 	if ( function_exists( 'boi_differing_articles' ) ) {
 		boi_opt_card_open( __( 'Seeded articles', 'bestofislam' ) );
 
@@ -986,9 +1052,11 @@ function boi_render_content_tab() {
 			printf( '<div class="notice notice-success is-dismissible inline"><p>%s</p></div>', esc_html( sprintf( /* translators: %d: number of articles. */ _n( '%d article brought up to date.', '%d articles brought up to date.', absint( $_GET['boi_refreshed'] ), 'bestofislam' ), absint( $_GET['boi_refreshed'] ) ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
 
-		$differing = boi_differing_articles();
+		$differing = ( function_exists( 'boi_sync_disabled' ) && boi_sync_disabled() ) ? array() : boi_differing_articles();
 
-		if ( empty( $differing ) ) {
+		if ( function_exists( 'boi_sync_disabled' ) && boi_sync_disabled() ) {
+			echo '<p>' . esc_html__( 'The content sync is switched off by BOI_DISABLE_CONTENT_SYNC.', 'bestofislam' ) . '</p>';
+		} elseif ( empty( $differing ) ) {
 			echo '<p>' . esc_html__( 'Every seeded article matches this version of the theme.', 'bestofislam' ) . '</p>';
 		} else {
 			echo '<p>' . esc_html__( 'These articles differ from this version of the theme. Updates refresh a seeded article automatically only when they can tell it has not been edited; for these they cannot, so they are left alone. Tick any you have not edited yourself to bring them up to date. Ticked articles are replaced with this version\'s text, and any edits in them are lost.', 'bestofislam' ) . '</p>';
@@ -1199,7 +1267,7 @@ function boi_maybe_flush_rewrites() {
  * @return bool
  */
 function boi_search_rules_ready() {
-	if ( ! function_exists( 'boi_pretty_search_enabled' ) || ! boi_pretty_search_enabled() ) {
+	if ( ! function_exists( 'boi_search_permalinks_enabled' ) || ! boi_search_permalinks_enabled() ) {
 		return true;
 	}
 

@@ -274,6 +274,9 @@ function boi_image_source_name( $url ) {
 		'archive.org'            => 'Internet Archive',
 		'wellcomecollection.org' => 'Wellcome Collection',
 		'clevelandart.org'       => 'Cleveland Museum of Art',
+		'flickr.com'             => 'Flickr',
+		'staticflickr.com'       => 'Flickr',
+		'loc.gov'                => 'Library of Congress',
 	);
 
 	foreach ( $names as $domain => $name ) {

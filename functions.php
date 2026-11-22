@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.112.0' );
+define( 'BOI_VERSION', '1.121.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -22,6 +22,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/voting.php',
 	BOI_DIR . '/inc/settings.php',
 	BOI_DIR . '/inc/setup.php',
+	BOI_DIR . '/inc/content-sync.php',
 	BOI_DIR . '/inc/appearance.php',
 	BOI_DIR . '/inc/reflections.php',
 	BOI_DIR . '/inc/search.php',
@@ -218,6 +219,14 @@ function boi_enqueue_assets() {
 		BOI_URI . '/assets/css/front.css',
 		array( 'boi-navigation' ),
 		boi_asset_version( '/assets/css/front.css' )
+	);
+
+	wp_enqueue_script(
+		'boi-nav-state',
+		BOI_URI . '/assets/js/nav-state.js',
+		array(),
+		BOI_VERSION,
+		array( 'in_footer' => true, 'strategy' => 'defer' )
 	);
 
 	if ( is_front_page() ) {

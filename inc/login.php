@@ -8,13 +8,11 @@
  * wp-login.php, including those in password-reset and privacy emails, is
  * rewritten to the new address.
  *
- * Adapted from the WPS Hide Login plugin by WPServeur, NicolasKulka and
- * wpformation (GPLv2 or later). The plugin intercepts requests at
- * plugins_loaded, which fires before a theme loads; WordPress loads the theme
- * for every request, wp-login.php included, so this version intercepts at
- * wp_loaded, which still runs before the login page does any work.
+ * Requests are intercepted at wp_loaded, which runs before the login page
+ * does any work; WordPress loads the theme for every request, wp-login.php
+ * included.
  *
- * Kept from the plugin, because each one breaks something if lost:
+ * Kept open, because each one breaks something if lost:
  *  - password-protected posts still submit to wp-login.php?action=postpass;
  *  - admin-post.php and admin-ajax.php stay open, since the contact form and
  *    the front end use them;
