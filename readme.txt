@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.122.0
+Stable tag: 1.122.1
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.122.1 =
+* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and link to each verse on thebible.exposed.
 
 = 1.122.0 =
 * Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
@@ -415,6 +418,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.122.1 =
+Replace the theme files. The revised article refreshes where you have not edited it.
 
 = 1.122.0 =
 Replace the theme files. The two new articles are created when the version changes. The preferred source link is on by default.
