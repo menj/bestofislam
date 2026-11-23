@@ -1,6 +1,6 @@
 {
     "files": {
-        "content\/a-father-says-this-is-islam.json": "03f3d456370e6d9417b3f24c092081ad",
+        "content\/a-father-says-this-is-islam.json": "223172fff55f7c47fdb7ab3b468590ef",
         "content\/abrogation-and-the-sword-verse.json": "edfe58ea97bac8f7c6c124bc59ed5474",
         "content\/aisha-sheep-report-stoning-and-suckling-verses.json": "7a00bdfe22ebb638fdd7de466462c16b",
         "content\/al-zutt-allegation.json": "7db14a6d801674d94a3a90cfa1b8e026",
@@ -15,7 +15,7 @@
         "content\/blasphemy-and-insults-to-the-prophet.json": "36c1303d10fa6ef1704bcac783258a63",
         "content\/buraq-and-miracle-stories.json": "69b22f06a126027cd8bc3e20bed71f38",
         "content\/camel-urine-hadith.json": "c1edbc76b0420fe360620edf78eaf286",
-        "content\/can-a-muslim-befriend-a-non-muslim.json": "494399d3f583ea57559ca84ea56967d2",
+        "content\/can-a-muslim-befriend-a-non-muslim.json": "1801296b861daf608b4bb9f1430f99b8",
         "content\/can-god-die.json": "0a6fb92f544b6eac8092d9c4cdfd8395",
         "content\/child-marriage-in-islam.json": "3a03cc3cb7be899e13a579101a2193e1",
         "content\/christian-twin-of-the-islamic-dilemma.json": "6543864561850257a0708e8800a7fdcf",
@@ -80,7 +80,7 @@
         "content\/jamnia-and-the-hebrew-canon.json": "81de9c955cd81702618e8b4f808f75e5",
         "content\/jeremiah-new-covenant-hebrews-and-the-quran.json": "bb8b2a723260341be6a7d558eb7fc6d0",
         "content\/jesus-not-god.json": "9cf911e928ad3de656660e8cd4ee3cbb",
-        "content\/jews-behind-the-stone-hadith.json": "fa7c4e0046b930e6f6eb3c92557911d0",
+        "content\/jews-behind-the-stone-hadith.json": "c21c347996f529248f0846b297f02f0e",
         "content\/jihad-meaning-quran-hadith-jurists.json": "0d49168c196a4ec075a4c3082ecea043",
         "content\/jizya.json": "f3de6f5a78bb4857b864e14cfabff611",
         "content\/kaab-ibn-al-ashraf-and-the-poets.json": "153061a6d80a84c7e20616a6521a31e5",
@@ -175,7 +175,7 @@
         "content\/was-muhammad-illiterate-ummi.json": "b647e5c0b4bad0c1675952d169ad9397",
         "content\/was-yahweh-one-of-many-gods.json": "72f91a819d902e0665e74f8bfd47790b",
         "content\/western-scholars-of-islam.json": "b6e18017678ab83144fab69cb0abd74f",
-        "content\/what-former-muslims-testimonies-show.json": "b59c3aeb023bf3b7a2ad63c0cda1eb85",
+        "content\/what-former-muslims-testimonies-show.json": "5e10eea8cad1e508b8984b676446e091",
         "content\/what-the-pagans-of-mecca-said-about-allah.json": "780b1250c2c42b0b7cc53b831f60cae1",
         "content\/when-a-stranger-online-calls-islam-a-cult.json": "3f2760b38a112872d88f1c759006a6db",
         "content\/where-did-jesus-say-he-is-god.json": "ee8bddabe665db3de37fd952fe492ea0",
@@ -186,10 +186,10 @@
         "content\/who-saw-gabriel.json": "1db04c4e8dbe545187b96a429915f2c9",
         "content\/who-was-yahweh-archaeological-origins.json": "14c864a064dc1639f9a6859956428b90",
         "content\/who-wrote-the-quran.json": "e02248006320a7a82be148d09435f3ca",
-        "content\/why-does-god-allow-suffering.json": "1cec61c31ca4c52e28574331092c07c4",
+        "content\/why-does-god-allow-suffering.json": "d91bf256061eee34f59b5759da947c79",
         "content\/why-five-prayers.json": "4f4768dd61ae5bc639e8cc742fa34ce2",
         "content\/why-no-interest.json": "a1dccf04005134fbed06b261d3261547",
-        "content\/will-every-non-muslim-go-to-hell.json": "1157f317c4b338148280a7f6af34be5b",
+        "content\/will-every-non-muslim-go-to-hell.json": "930168a3abc6a4cfd2535c468f01cb56",
         "content\/women-in-hell-and-deficient-intelligence-hadith.json": "c8db4fdb709fa929b9b51471edf6bae1",
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "8b3debbd5d5ebc38fcea0c4af7c33235",
@@ -197,5 +197,5 @@
         "inc\/data\/seed.json": "9e85b49fe2e1d7dc7e7d6febea9c3ae2",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "016d48d37c0206f67acab355a5fbf8f4"
+    "checksum": "0d70c4b746624bab3f1f6ccb33c9f37b"
 }
