@@ -169,6 +169,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Sources, second pass: every hadith number, Quran reference and Bible quotation on the site was checked; two Quran quotations, two page references and six Bible translation notes were corrected. The checks are recorded in docs/CITATIONS.md.
 
 = 1.124.0 =
+* Glossary links no longer land on part of another person's name (Joseph Smith, David Wood, Raymond Ibrahim, Musnad Ahmad), and no honorific is added there.
 * Every article now speaks in the editorial voice: it states its purpose once, speaks as "we", marks the opponent's loaded terms in quotation marks and keeps paragraphs to three sentences or fewer.
 * Three new articles: "Is Islam an Arian heresy? 7 answers on the councils and John of Damascus", "Has the Quran's challenge been met? 7 answers on al-Ma'arri and The True Furqan" and "Hafs, Warsh and the other readings: is there more than one Quran? 7 answers", each with a featured image and four in-text images.
 * Every article now ends with the site's endmark, a small navy tombstone with the gold eight-pointed star, after its last line. It does not appear on pages or in FAQs, and can be switched off under Theme Options, Display.

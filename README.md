@@ -229,7 +229,7 @@ Set these in `wp-config.php`. Each is optional.
 | `BOI_DISABLE_CONTENT_SYNC` | `true` stops the content sync: no updates, removals, redirects or hiding of seeded articles. The Content tab says so |
 | `WP_ENVIRONMENT_TYPE` | `local` or `development` keeps the development files |
 
-Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (19), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
+Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (20), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
 
 ## Security
 
