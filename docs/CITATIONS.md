@@ -61,6 +61,21 @@ The 194 articles hold 3,133 notes: 785 cite the Quran, 732 hadith, 325 the Bible
 | Church Fathers (14 notes) | Each chapter read in the Ante-Nicene Fathers text on newadvent.org | All match: Irenaeus 1.26.2 and 1.27.2; Justin, *Dialogue* 71–73; Origen, *Against Celsus* 2.27; Tertullian, *Against Marcion* 1.6, 1.19, 3.19 and 4.2; the Pseudo-Clementine *Homilies* 2.38 and 3.47–50. |
 | URLs (25) and DOIs (3) | Each link opened; each DOI looked up in Crossref | All open. Reddit and eScholarship refuse automated requests but are live. The DOI of the 2012 al-Fusul paper is the journal's own and is not registered with Crossref; the journal page is cited beside it. |
 
+| Modern books (427 titles) | Each title, author and year looked up in Open Library (and Crossref) | 216 matched exactly. Each of the 38 year mismatches was reviewed and none is an error: Open Library lists reprints, translations or later editions under other dates (for example Wenham, *Genesis 16–50*, Word, 1994; Tov, *Textual Criticism*, 3rd edition, 2012). The 124 titles not found and the 34 failed lookups are mostly classical Arabic works and older or specialist titles that Open Library does not index; they wait for a check against library catalogues. |
+
+### New articles of 1.125.0
+
+The three articles answering the list of "rules" for converts were written to this standard: before-you-convert-to-islam, before-you-convert-women-and-marriage and before-you-convert-apostates-and-lgbt-friends.
+- **Hadith and Quran:** every hadith was read in the hadith-api edition in the standard numbering, and every Quran quotation was copied from Saheeh International.
+- **Arabic sources, read in the text:**
+  - al-Nawawī on tattoos: *al-Minhāj*, vol. 14, p. 106;
+  - al-Nawawī on circumcision: *al-Majmūʿ*, vol. 1, pp. 300–304;
+  - Ibn Rushd on dogs: *Bidāyat al-mujtahid*, vol. 1, p. 34.
+- **On female circumcision:**
+  - Abū Dāwūd's own verdict on report 5271;
+  - the Grand Mufti's 2007 interview, reported in *Daily News Egypt*;
+  - Dār al-Iftāʾ's published statement.
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.

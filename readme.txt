@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.124.0
+Stable tag: 1.125.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.125.0 =
+* Three new articles answering a viral list of "rules" for converts: "Before you convert to Islam: 7 answers on what a convert actually takes on", "Women in the 'rules' for converts: 7 answers on worth, circumcision, co-wives and modesty" and "Apostates and LGBT friends in the 'rules' for converts: 7 answers on hatred and shunning", each with a featured image and four in-text images.
+* Sources, second pass: every hadith number, Quran reference and Bible quotation on the site was checked; two Quran quotations, two page references and six Bible translation notes were corrected. The checks are recorded in docs/CITATIONS.md.
 
 = 1.124.0 =
 * Every article now speaks in the editorial voice: it states its purpose once, speaks as "we", marks the opponent's loaded terms in quotation marks and keeps paragraphs to three sentences or fewer.
@@ -428,6 +432,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.125.0 =
+Replace the theme files. The three new articles are created and the corrected articles refresh where you have not edited them when the version changes.
 
 = 1.124.0 =
 Replace the theme files. The three new articles are created and the rewritten articles refresh where you have not edited them when the version changes.

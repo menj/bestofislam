@@ -9,6 +9,9 @@
         "content\/arabic-words-science.json": "ff6bdd0ed4fe5e679d43787d7d824401",
         "content\/ask-those-who-read-the-scripture.json": "0df8f41c3f68e921bc42f8fbe89fc970",
         "content\/authority-of-the-sunnah-quran-alone.json": "35457fe12feda14b400d2ff46cd50fee",
+        "content\/before-you-convert-apostates-and-lgbt-friends.json": "b5b7e8cdd4c51defcb8e6f02ab3386cc",
+        "content\/before-you-convert-to-islam.json": "751ff5088b687e30846b69e1a83ba032",
+        "content\/before-you-convert-women-and-marriage.json": "94b9c26b8fb6fd88540645fb2f82d819",
         "content\/before-your-first-friday-prayer.json": "c8f02da60b7c65111231e37320f718cf",
         "content\/bible-alteration-claim-before-islam.json": "c4200cfc92db48987801fac2771d5bcd",
         "content\/black-stone-and-kissing.json": "ce86d4a8abcbb35ad5698e4850d3efec",
@@ -194,8 +197,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "8b3debbd5d5ebc38fcea0c4af7c33235",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "9e85b49fe2e1d7dc7e7d6febea9c3ae2",
+        "inc\/data\/seed.json": "27dc3674bb40f08da4228e343a3afae9",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "fd09ffb70ec7362f0402715b516b86aa"
+    "checksum": "addc1c251bbc87699515b228fc444d96"
 }
