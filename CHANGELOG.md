@@ -4,9 +4,12 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.122.2] - 2026-11-23
+## [1.123.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
+
+### Added
+- first-and-the-last: seven answers to the argument that Quran 57:3 confirms Revelation 1:17 and so makes Jesus God: the title in Revelation (1:17, 2:8, 22:13) and Isaiah (41:4, 44:6, 48:12), with Bauckham's reading granted; shared words and shared identity (Quran 9:128, 6:14; Psalm 82:6-7); the Quran's meaning (Muslim 2713; al-Tabari on 57:3; 28:88, 25:58); Revelation's First and Last "died" (1:18, 2:8); "my God" in Revelation (1:1, 1:6, 3:2, 3:12, 3:14, 5:7); the Quran as guardian (5:48, 5:72, 5:75, 5:117) and the reception of Revelation in the East; and al-Rahman, who has no son (19:88-93; al-Baghawi and al-Tabari on 1:1). A featured image and four in-text images: Pexels photographs of Patmos, the Great Isaiah Scroll and Papyrus 47 (Wikimedia Commons, public domain) and a Walters Art Museum Quran frontispiece (CC0). In the reading guide and the related-article links.
 
 ### Changed
 - The preferred source link (SSOT D63) reads "Add as preferred source" and is led by Google's G on a white disc, in place of the newspaper icon, at the owner's request. `boi_google_g()` in `inc/features.php` draws the G inline as an SVG of four paths, so nothing is fetched from Google. The full wording, with the site's name, is the link's title, and screen readers hear "Add as preferred source on Google". Styles: `.boi-psource__g` in `assets/css/listicle.css`.
