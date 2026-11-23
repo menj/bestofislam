@@ -370,6 +370,20 @@
 			]
 		},
 		{
+			"slug": "before-you-convert-to-islam",
+			"title": "Before you convert to Islam: 7 answers on what a convert actually takes on",
+			"excerpt": "A viral list of rules for converts mixes real duties with invented ones. 7 answers on testimony, ease, food, dogs and tattoos.",
+			"topic": "belief-and-practices",
+			"seo_title": "Before you convert to Islam: 7 answers",
+			"category": "worship-rituals",
+			"tags": [
+				"Conversion",
+				"Five pillars",
+				"Fasting",
+				"Myths"
+			]
+		},
+		{
 			"slug": "who-is-allah",
 			"title": "Who is Allah? 5 misunderstandings about the name itself",
 			"excerpt": "Who is Allah? 5 common misunderstandings about the name, from \"a different god\" to \"the moon god\", answered plainly.",
@@ -940,6 +954,20 @@
 			]
 		},
 		{
+			"slug": "before-you-convert-apostates-and-lgbt-friends",
+			"title": "Apostates and LGBT friends in the \"rules\" for converts: 7 answers on hatred and shunning",
+			"excerpt": "A list of rules for converts demands shunning apostates and LGBT friends. 7 answers on what the Quran and the Prophet ask.",
+			"topic": "belief-and-practices",
+			"seo_title": "Apostates and LGBT friends: 7 answers",
+			"category": "law-ethics",
+			"tags": [
+				"Apostasy",
+				"Homosexuality",
+				"Conversion",
+				"Freedom of religion"
+			]
+		},
+		{
 			"slug": "crucifixion-quran",
 			"title": "The crucifixion and the Quran: 6 facts about Quran 4:157",
 			"excerpt": "Was Jesus crucified? What historians hold, what Quran 4:157 says, and why Islam rejects atonement by proxy. Read on.",
@@ -1220,6 +1248,20 @@
 			"tags": [
 				"Hijab",
 				"Women in Islam",
+				"Myths"
+			]
+		},
+		{
+			"slug": "before-you-convert-women-and-marriage",
+			"title": "Women in the \"rules\" for converts: 7 answers on worth, circumcision, co-wives and modesty",
+			"excerpt": "A list of rules for converts says to treat women as inferior. 7 answers on worth, circumcision, co-wives, modesty and consent.",
+			"topic": "belief-and-practices",
+			"seo_title": "Women in the rules for converts: 7 answers",
+			"category": "women-marriage",
+			"tags": [
+				"Women in Islam",
+				"Marriage",
+				"Conversion",
 				"Myths"
 			]
 		},
@@ -3112,7 +3154,7 @@
 		"Haman": "Haman in the Quran and the claim that his place in the story is a mistake.",
 		"Hanif": "The hanifs, Arabs before Islam who kept to the religion of Abraham.",
 		"Hijab": "Articles on hijab and modesty, and the verses and reports behind them.",
-		"Homosexuality": "",
+		"Homosexuality": "What the Quran, the hadith and the jurists say about same-sex desire and acts.",
 		"Hudud": "The fixed punishments of Islamic law and the strict conditions on applying them.",
 		"Injil": "The Gospel God gave to Jesus, as the Quran speaks of it.",
 		"Ishmael": "",

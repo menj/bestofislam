@@ -4,6 +4,19 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.125.0] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Added
+- before-you-convert-to-islam: seven answers to a viral list of "rules" for converts: entry by the testimony and teaching in stages (Bukhari 1395, 1458, 8; Muslim 121; 8:38), ease and the ban on extremism (Bukhari 39, 69, 5063; 22:78), pork, intoxicants and gambling (2:173, 5:90), fasting and prayer with their exemptions (2:184-185, 4:103), dogs (Bukhari 3225, 2322, 173, 174; Muslim 1574-1575; Ibn Rushd 1:34), tattoos (Bukhari 5940; al-Nawawi on Muslim 2125) and male circumcision (Bukhari 5889; al-Majmu' 1:300-304).
+- before-you-convert-women-and-marriage: seven answers on worth (49:13, 4:1, 3:195, 33:35; Tirmidhi 3895; Abu Dawud 236; Bukhari 676), 4:34, female circumcision (Abu Dawud 5271 and its compiler's verdict; al-Majmu' 1:300-301; Ali Jum'a, 2007; Dar al-Ifta), co-wives (4:3, 4:129), modesty (24:30-31, 7:26), seclusion, mosques and marriage (Bukhari 5233, 900, 5066, 5136, 5138) and child marriage (4:6).
+- before-you-convert-apostates-and-lgbt-friends: seven answers on apostates (3:86, 4:137, 3:72, 16:106, 2:217, 49:12; Muslim 96 and 1784; Bukhari 6064, 6922, 2620; Ali Jum'a, 2007) and on same-sex desire and friendship (7:81; Bukhari 5269, 6780, 5066, 1356; 49:11, 17:70, 95:4, 39:53, 60:8).
+- Images for the three articles from Pexels; credits in `inc/images-data.json`.
+
+### Changed
+- Citations, second pass (`docs/CITATIONS.md`): every hadith number (674) and Quran reference (3,549) on the site checked against the standard texts, Quran and Bible quotations compared with the translations named, and the Guillaume, al-Tabari and Church Fathers references read in their texts. Corrected: Quran 35:24 in same-god and 3:52 in will-every-non-muslim-go-to-hell, two Guillaume pages, and the English Standard Version named in six articles that quoted it.
+
 ## [1.124.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
