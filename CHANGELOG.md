@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.122.2] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- The preferred source link (SSOT D63) reads "Add as preferred source" and is led by Google's G on a white disc, in place of the newspaper icon, at the owner's request. `boi_google_g()` in `inc/features.php` draws the G inline as an SVG of four paths, so nothing is fetched from Google. The full wording, with the site's name, is the link's title, and screen readers hear "Add as preferred source on Google". Styles: `.boi-psource__g` in `assets/css/listicle.css`.
+
 ## [1.122.1] - 2026-11-23
 
 No feature removed and no public identifier renamed.

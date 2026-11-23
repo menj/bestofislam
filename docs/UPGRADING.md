@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.122.2
+
+Replace the theme files. Nothing else to do.
+
 ## Upgrading to 1.122.1
 
 Replace the theme files. The content update applies the revised Iblis article where it has not been edited.

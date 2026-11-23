@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.122.1
+Stable tag: 1.122.2
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.122.2 =
+* The preferred source link is shorter, "Add as preferred source", and is led by Google's G.
 
 = 1.122.1 =
 * The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and link to each verse on thebible.exposed.
@@ -418,6 +421,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.122.2 =
+Replace the theme files. Nothing else to do.
 
 = 1.122.1 =
 Replace the theme files. The revised article refreshes where you have not edited it.
