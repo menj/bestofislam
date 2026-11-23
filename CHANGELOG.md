@@ -11,6 +11,14 @@ No feature removed and no public identifier renamed.
 ### Added
 - scrolls-of-abraham: seven answers on the Quran's "scriptures of Abraham and Moses" (87:14-19, 53:36-42) and the identifications offered on Wikipedia: what the Quran says they contained (al-Tabari, Ibn Kathir 8:382-383 and 7:465, al-Qurtubi 20:24-25), the report of Abu Dharr and its grading (Ibn Kathir 2:470-472), the "Sabian" book in the Fihrist (Ibn al-Nadim, pp. 37-38), Rodwell's preface, the Sefer Yetzirah (Jewish Encyclopedia; Sefaria), the Testament of Abraham (M. R. James, 1892) against 53:38 (al-Tabari on 53:37), and Bukhari 4485. Images from Pexels; credits in `inc/images-data.json`. Its abstract is in `inc/data/abstracts.json`.
 
+## [1.126.2] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Every excerpt now ends with a mild call to action, as SSOT D67 requires. 90 excerpts that had none gained one ("Read on.", "See the evidence.", "Weigh the answers." or "Read the sources."), and five near the limit were shortened to stay within 150 characters. `inc/data/seed-manifest.json` rebuilt.
+- `tests/abstract-test.php` checks that every excerpt ends with a call to action.
+
 ## [1.126.1] - 2026-11-23
 
 No feature removed and no public identifier renamed.

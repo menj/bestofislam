@@ -66,6 +66,10 @@ twice.
 
 Replace the theme files. The new article is created by `boi_create_listicles()` when the version changes.
 
+## Upgrading to 1.126.2
+
+Replace the theme files. `boi_migrate_seed()` refreshes the 90 updated excerpts where the article is unedited; an edited copy is listed on the Content tab.
+
 ## Upgrading to 1.126.1
 
 Replace the theme files. `boi_migrate_seed()` refreshes the six shortened excerpts where the article is unedited; an edited copy is listed on the Content tab.

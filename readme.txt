@@ -168,6 +168,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 = 1.127.0 =
 * New article: "The Scrolls of Abraham: a lost scripture, the Sefer Yetzirah or the Testament of Abraham? 7 answers", with a featured image and four in-text images.
 
+= 1.126.2 =
+* Every article summary shown under the title and in search results now ends with a short invitation to read on.
+
 = 1.126.1 =
 * Six article summaries shown under the title and in search results were shortened to 150 characters.
 
@@ -447,6 +450,9 @@ Earlier releases are in CHANGELOG.md.
 
 = 1.127.0 =
 Replace the theme files. The new article is created when the version changes.
+
+= 1.126.2 =
+Replace the theme files. The 90 updated summaries refresh where you have not edited the article.
 
 = 1.126.1 =
 Replace the theme files. The six shortened summaries refresh where you have not edited the article.
