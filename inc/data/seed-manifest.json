@@ -142,7 +142,7 @@
         "content\/revisionist-case-weighed.json": "7ae489a5eb73dbd5f8b417babe5a06fe",
         "content\/ridda-wars-abu-bakr-fadak.json": "43878f875db65b710fe42dd9d1a87b54",
         "content\/sadness-and-depression-in-islam.json": "a366461d6f6e1f2d0b679806078313a0",
-        "content\/safiyya-and-the-women-captured-in-war.json": "9c9677961dcf95c6262e6238410fe05c",
+        "content\/safiyya-and-the-women-captured-in-war.json": "2f05f2c788f8c0f53738e39582596993",
         "content\/same-god.json": "252d84bfb4ec25c9e48c2b26d108bdc6",
         "content\/satanic-verses-report.json": "582c6ea6311e0243700b5997cb4e0410",
         "content\/schacht-isnads-dating-hadith.json": "d846cb1a60ef3b9fb66ec05212043d8b",
@@ -171,7 +171,7 @@
         "content\/uthman-copies.json": "a78cb1eecb6bf32edbd57a09f2059272",
         "content\/verses-read-differently.json": "425db419b7d9ab4362f167da1c2a3a06",
         "content\/war-and-killing-in-islam.json": "3bd9d14141f49d4115d2da69561f66a5",
-        "content\/was-muhammad-a-narcissist.json": "5f2d939cb1231fbd683c72de206a94ce",
+        "content\/was-muhammad-a-narcissist.json": "a6a9a742f9874b527163859f86b65589",
         "content\/was-muhammad-illiterate-ummi.json": "b647e5c0b4bad0c1675952d169ad9397",
         "content\/was-yahweh-one-of-many-gods.json": "72f91a819d902e0665e74f8bfd47790b",
         "content\/western-scholars-of-islam.json": "b6e18017678ab83144fab69cb0abd74f",
@@ -197,5 +197,5 @@
         "inc\/data\/seed.json": "9e85b49fe2e1d7dc7e7d6febea9c3ae2",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "64f6f797d90d44dfb2f015433d2d66fa"
+    "checksum": "dd7221a4321531765b04d0e128ab30fc"
 }
