@@ -297,6 +297,7 @@ function boi_cl_filter( $content ) {
 		return $content;
 	}
 	$epithets = boi_cl_epithet_index();
+	$names    = boi_cl_name_index();
 
 	$skip_tags  = array( 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'q', 'figure', 'figcaption', 'cite', 'code', 'pre', 'sup', 'sub', 'nav', 'table', 'button', 'label', 'select', 'textarea', 'summary', 'script', 'style' );
 	$skip_attr  = '/\b(?:lang="(?:ar|he|el|syr)[^"]*"|dir="rtl"|class="[^"]*\b(?:boi-jump|boi-entry__claim|boi-entry__cta|boi-entry__rank|screen-reader-text|wp-block-footnotes|footnotes|arabic|quran|hadith|verse|toc|boi-glossary__list|boi-lanah)\b[^"]*")/i';
@@ -393,7 +394,7 @@ function boi_cl_filter( $content ) {
 			$item = null !== $key ? $items[ $key ] : null;
 			$kind = $item && $item['own'] ? 'own' : 'sister';
 			$norm = $item ? boi_cl_norm_url( $item['url'] ) : '';
-			if ( $end <= $shadow || ! $item || ( null !== $key && null !== boi_cl_lookup( $epithets, $key ) && function_exists( 'boi_gl_part_of_name' ) && boi_gl_part_of_name( $tok, $hit[1], $end ) ) || isset( $done[ $norm ] ) || $made[ $kind ] >= $caps[ $kind ] ) {
+			if ( $end <= $shadow || ! $item || ( null !== $key && null !== boi_cl_lookup( $names, $key ) && function_exists( 'boi_gl_part_of_name' ) && boi_gl_part_of_name( $tok, $hit[1], $end ) ) || isset( $done[ $norm ] ) || $made[ $kind ] >= $caps[ $kind ] ) {
 				$shadow = max( $shadow, $end );
 				$byte   = ord( $tok[ $hit[1] ] );
 				$pos    = $hit[1] + ( $byte >= 0xF0 ? 4 : ( $byte >= 0xE0 ? 3 : ( $byte >= 0xC0 ? 2 : 1 ) ) );
@@ -424,6 +425,27 @@ function boi_cl_filter( $content ) {
 	return implode( '', $tokens );
 }
 add_filter( 'the_content', 'boi_cl_filter', 22 );
+
+/**
+ * Glossary phrases that name a prophet or a person, by phrase key, with or
+ * without an epithet: a contextual link on one of them is held to the same
+ * part-of-a-name guard as the Glossary pass (no "Bukhari" in "Abu Bukhari").
+ *
+ * @return array<string,bool>
+ */
+function boi_cl_name_index() {
+	if ( ! function_exists( 'boi_gl_map' ) || ! function_exists( 'boi_glossary_parent' ) || ! is_singular( 'post' ) || ! in_the_loop() ) {
+		return array();
+	}
+	$index = array();
+	foreach ( (array) boi_gl_map() as $item ) {
+		$key = boi_cl_key( isset( $item['phrase'] ) ? $item['phrase'] : '' );
+		if ( '' !== $key && ! empty( $item['name'] ) ) {
+			$index[ $key ] = true;
+		}
+	}
+	return $index;
+}
 
 /**
  * Glossary names that carry an epithet, by phrase key, where the Glossary

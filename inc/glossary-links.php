@@ -66,6 +66,29 @@ function boi_gl_rx( $needle ) {
 }
 
 /**
+ * The first match of a pattern in a token that is not part of a longer
+ * name, so "Joseph Smith ... the prophet Joseph" still links the second.
+ *
+ * @param string $rx    Pattern from boi_gl_rx().
+ * @param string $tok   Text token.
+ * @param bool   $guard Apply boi_gl_part_of_name() (prophet and person entries).
+ * @return int[]|null array( start, end ) in bytes, or null.
+ */
+function boi_gl_first_match( $rx, $tok, $guard ) {
+	if ( ! preg_match_all( $rx, $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
+		return null;
+	}
+	foreach ( $mm[1] as $hit ) {
+		$start = $hit[1];
+		$end   = $start + strlen( $hit[0] );
+		if ( ! $guard || ! boi_gl_part_of_name( $tok, $start, $end ) ) {
+			return array( $start, $end );
+		}
+	}
+	return null;
+}
+
+/**
  * Whether an entry is a person's name (a prophet or a person), the only kind
  * the part-of-a-name guard applies to.
  *
@@ -416,13 +439,9 @@ function boi_gl_apply( $content, $compiled, $budget ) {
 				continue;
 			}
 
-			if ( preg_match( $item['rx'], $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
-				$start = $mm[1][1];
-				$end   = $start + strlen( $mm[1][0] );
-
-				if ( ! empty( $item['name'] ) && boi_gl_part_of_name( $tok, $start, $end ) ) {
-					continue;
-				}
+			$mm = boi_gl_first_match( $item['rx'], $tok, ! empty( $item['name'] ) );
+			if ( $mm ) {
+				list( $start, $end ) = $mm;
 
 				foreach ( $found as $f ) {
 					if ( $start < $f['end'] && $end > $f['start'] ) {
