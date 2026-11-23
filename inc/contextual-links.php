@@ -393,7 +393,7 @@ function boi_cl_filter( $content ) {
 			$item = null !== $key ? $items[ $key ] : null;
 			$kind = $item && $item['own'] ? 'own' : 'sister';
 			$norm = $item ? boi_cl_norm_url( $item['url'] ) : '';
-			if ( $end <= $shadow || ! $item || isset( $done[ $norm ] ) || $made[ $kind ] >= $caps[ $kind ] ) {
+			if ( $end <= $shadow || ! $item || ( function_exists( 'boi_gl_part_of_name' ) && boi_gl_part_of_name( $tok, $hit[1], $end ) ) || isset( $done[ $norm ] ) || $made[ $kind ] >= $caps[ $kind ] ) {
 				$shadow = max( $shadow, $end );
 				$byte   = ord( $tok[ $hit[1] ] );
 				$pos    = $hit[1] + ( $byte >= 0xF0 ? 4 : ( $byte >= 0xE0 ? 3 : ( $byte >= 0xC0 ? 2 : 1 ) ) );

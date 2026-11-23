@@ -9,9 +9,9 @@ versioning.
 No feature removed and no public identifier renamed.
 
 ### Fixed
-- Glossary auto-links no longer link, or add an honorific to, a word that is only part of someone else's name: Joseph in "Joseph Smith", David in "David Wood", Ibrahim in "Raymond Ibrahim", or a name after al-, ibn, bin, Abu or Umm (`boi_gl_part_of_name()`).
+- Glossary auto-links no longer link, or add an honorific to, a word that is only part of someone else's name: Joseph in "Joseph Smith", David in "David Wood", Ibrahim in "Raymond Ibrahim", Ismail in "Edward Ismail", a name after al-, ibn, bin, Abu or Umm, after a title or initial (Mr, Dr., Rev, J.), before ibn / bin / b., or joined by a hyphen (`boi_gl_part_of_name()`). The contextual links pass (`inc/contextual-links.php`) applies the same guard, so neither linker can place an epithet inside another person's name.
 - "Ahmad" is on the stoplist: in articles it is nearly always Imam Ahmad ibn Hanbal (the Musnad), not the Prophet's name.
-- "Holy Spirit", "Paraclete" and "Comforter" still link but carry no عليه السلام, since in the articles they usually mean the Christian term (`boi_gl_no_epithet` filter). The link map's cache key is now `boi_gl_map_n2_`, so it rebuilds once.
+- "Holy Spirit", "the Holy Spirit", "Holy Ghost", "Spirit of Truth", "Paraclete" and "Comforter" still link but carry no عليه السلام, since in the articles they usually mean the Christian term (`boi_gl_no_epithet` filter). The link map's cache key is now `boi_gl_map_n2_`, so it rebuilds once.
 
 ### Added
 - `.claude/VOICE.md` and SSOT D64: the voice standard for articles, glossary and pages, from the owner's voice profile, anti-AI writing style and academic-research method. `.claude/CLAUDE.md` points to it.

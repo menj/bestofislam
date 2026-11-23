@@ -58,7 +58,7 @@ function boi_gl_stoplist() {
  * @return string[] Lowercase.
  */
 function boi_gl_no_epithet() {
-	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_no_epithet', array( 'holy spirit', 'paraclete', 'comforter' ) ) );
+	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_no_epithet', array( 'holy spirit', 'the holy spirit', 'holy ghost', 'spirit of truth', 'paraclete', 'comforter' ) ) );
 }
 
 /**
@@ -81,8 +81,14 @@ function boi_gl_part_of_name( $tok, $start, $end ) {
 	$before = substr( $tok, 0, $start );
 	$after  = substr( $tok, $end );
 
-	// Followed by a capitalised word, or by ibn / bin / bint.
-	if ( preg_match( '/^(?:\s|&nbsp;|\x{00A0})+(?:\p{Lu}|(?:ibn|bin|bint)\b)/u', $after ) ) {
+	// Followed by a capitalised word or an initial, by ibn / bin / bint / b.,
+	// or joined by a hyphen to another name (Joseph-Marie).
+	if ( preg_match( '/^(?:(?:\s|&nbsp;|\x{00A0})+(?:\p{Lu}|(?:ibn|bin|bint|bt\.?|b\.)(?!\p{L}))|-\p{L})/u', $after ) ) {
+		return true;
+	}
+
+	// Preceded by a courtesy title or an initial: Mr Ismail, Dr. Ibrahim, J. Joseph.
+	if ( preg_match( '/(?:(?<!\p{L})(?:mr|mrs|ms|miss|dr|prof|rev|fr|sr|st|sir|dame|lord|lady|pastor|father|bishop|brother|sister|sheikh)\.?|(?<!\p{L})\p{Lu}\.)(?:\s|&nbsp;|\x{00A0})+$/iu', $before ) ) {
 		return true;
 	}
 
