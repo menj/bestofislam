@@ -56,6 +56,11 @@ function boi_get_options() {
 		'article_mid_next'    => 1,
 		'preferred_source'    => 1,
 		'endmark'             => 1,
+		'abstract_enabled'    => 1,
+		'abstract_title'      => 'Abstract',
+		'abstract_style'      => 'ruled',
+		'abstract_scheme'     => 'theme',
+		'abstract_accent'     => '',
 		'll_accent'           => '',
 		'll_tabs'             => 1,
 		'll_motion'           => 1,
@@ -188,6 +193,24 @@ function boi_sanitize_options( $input ) {
 				$current['progress_types'] = array_values( array_intersect( $types, $public ) );
 			}
 
+			break;
+
+		case 'abstract':
+			$current['abstract_enabled'] = empty( $input['abstract_enabled'] ) ? 0 : 1;
+			$title                       = isset( $input['abstract_title'] ) ? sanitize_text_field( wp_unslash( $input['abstract_title'] ) ) : '';
+			$current['abstract_title']   = '' !== $title ? mb_substr( $title, 0, 40 ) : 'Abstract';
+			$style                       = isset( $input['abstract_style'] ) ? sanitize_key( $input['abstract_style'] ) : 'ruled';
+			$current['abstract_style']   = isset( boi_abstract_styles()[ $style ] ) ? $style : 'ruled';
+			$scheme                      = isset( $input['abstract_scheme'] ) ? sanitize_key( $input['abstract_scheme'] ) : 'theme';
+			$scheme                      = isset( boi_abstract_schemes()[ $scheme ] ) ? $scheme : 'theme';
+			$accent                      = isset( $input['abstract_accent'] ) ? sanitize_hex_color( trim( (string) $input['abstract_accent'] ) ) : '';
+			// The same test as the lead-and-list accent: as label text on its tint it must reach 4.5:1 in both appearances.
+			if ( $accent && ! boi_lead_list_accent_ok( $accent ) ) {
+				add_settings_error( BOI_OPTION_KEY, 'boi_abstract_accent', __( 'The abstract accent colour was not saved: as text it does not reach 4.5:1 in both the light and the dark appearance. Choose a mid-tone colour.', 'bestofislam' ), 'error' );
+				$accent = '';
+			}
+			$current['abstract_accent'] = $accent ? strtolower( $accent ) : '';
+			$current['abstract_scheme'] = ( 'custom' === $scheme && '' === $current['abstract_accent'] ) ? 'theme' : $scheme;
 			break;
 
 		case 'schema':
@@ -336,6 +359,11 @@ function boi_settings_tabs() {
 			'label' => __( 'Display', 'bestofislam' ),
 			'icon'  => 'dashicons-admin-appearance',
 			'usage' => __( 'How entries and the front page look. Choose the image size for list entries, the picture behind the front-page headline and up to 3 editor\'s picks. The follow links you fill in appear on the front page and in the footer. Colours live in the Site Editor, under Styles.', 'bestofislam' ),
+		),
+		'abstract' => array(
+			'label' => __( 'Abstract', 'bestofislam' ),
+			'icon'  => 'dashicons-text-page',
+			'usage' => __( 'The summary box at the top of each article. Every seeded article has an abstract, kept with the theme; an Abstract block or an [abstract] shortcode in a post replaces it for that post. The same text goes to search engines as the article\'s abstract. Choose the label, the style and the colours here.', 'bestofislam' ),
 		),
 		'schema'   => array(
 			'label' => __( 'Schema', 'bestofislam' ),
@@ -698,6 +726,9 @@ function boi_render_settings_panel( $slug, $opts ) {
 	boi_settings_hidden_fields( $slug );
 
 	switch ( $slug ) {
+		case 'abstract':
+			boi_render_abstract_tab( $opts );
+			break;
 		case 'schema':
 			boi_render_schema_tab( $opts );
 			break;
@@ -955,6 +986,64 @@ function boi_render_voting_tab( $opts ) {
 			'depends' => 'boi-voting-enabled',
 		)
 	);
+	boi_opt_card_close();
+}
+
+/**
+ * Abstract tab fields.
+ *
+ * @param array $opts Current options.
+ * @return void
+ */
+function boi_render_abstract_tab( $opts ) {
+	$key = BOI_OPTION_KEY;
+	boi_opt_card_open( __( 'The box', 'bestofislam' ) );
+	boi_opt_toggle(
+		array(
+			'key'     => 'abstract_enabled',
+			'label'   => __( 'Abstract', 'bestofislam' ),
+			'text'    => __( 'Show the abstract at the top of each article', 'bestofislam' ),
+			'help'    => __( 'Off hides the box. Search engines still receive the abstract in the article markup.', 'bestofislam' ),
+			'checked' => ! empty( $opts['abstract_enabled'] ),
+		)
+	);
+	boi_opt_row_open( __( 'Label', 'bestofislam' ), 'boi-abstract-title' );
+	?>
+	<input type="text" class="regular-text" id="boi-abstract-title" name="<?php echo esc_attr( $key ); ?>[abstract_title]" value="<?php echo esc_attr( $opts['abstract_title'] ); ?>" maxlength="40" aria-describedby="boi-abstract-title-help" />
+	<p class="description" id="boi-abstract-title-help"><?php esc_html_e( 'The word above the text, such as Abstract, In brief or Summary.', 'bestofislam' ); ?></p>
+	<?php
+	boi_opt_row_close();
+	boi_opt_choices(
+		array(
+			'key'     => 'abstract_style',
+			'label'   => __( 'Style', 'bestofislam' ),
+			'value'   => (string) $opts['abstract_style'],
+			'choices' => boi_abstract_styles(),
+			'help'    => __( 'One Abstract block can choose another style in its sidebar.', 'bestofislam' ),
+		)
+	);
+	boi_opt_card_close();
+
+	boi_opt_card_open( __( 'Colours', 'bestofislam' ) );
+	$choices = array();
+	foreach ( boi_abstract_schemes() as $slug => $scheme ) {
+		$choices[ $slug ] = array( $scheme[0], '' !== $scheme[1] ? $scheme[1] : ( 'custom' === $slug ? __( 'The colour below', 'bestofislam' ) : __( 'Follows the site palette', 'bestofislam' ) ) );
+	}
+	boi_opt_choices(
+		array(
+			'key'     => 'abstract_scheme',
+			'label'   => __( 'Colour scheme', 'bestofislam' ),
+			'value'   => (string) $opts['abstract_scheme'],
+			'choices' => $choices,
+			'help'    => __( 'The accent sets the rule, the label and the tint. Light and dark appearance follow on their own.', 'bestofislam' ),
+		)
+	);
+	boi_opt_row_open( __( 'Custom accent', 'bestofislam' ), 'boi-abstract-accent' );
+	?>
+	<input type="text" class="regular-text code" id="boi-abstract-accent" name="<?php echo esc_attr( $key ); ?>[abstract_accent]" value="<?php echo esc_attr( $opts['abstract_accent'] ); ?>" placeholder="#1d6ac3" maxlength="7" pattern="#[0-9A-Fa-f]{6}" aria-describedby="boi-abstract-accent-help" />
+	<p class="description" id="boi-abstract-accent-help"><?php esc_html_e( 'A hex colour, used when the scheme is Custom accent. It is refused if the label would not reach 4.5:1 in both appearances.', 'bestofislam' ); ?></p>
+	<?php
+	boi_opt_row_close();
 	boi_opt_card_close();
 }
 

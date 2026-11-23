@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bestofislam/abstract",
+	"title": "Abstract",
+	"category": "text",
+	"icon": "text-page",
+	"description": "A short summary of the article, shown in a box at the top and given to search engines as the article's abstract. It replaces the bundled abstract for this post.",
+	"keywords": [ "summary", "abstract", "tldr" ],
+	"textdomain": "bestofislam",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"reusable": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"style": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"editorScript": "file:./index.js"
+}

@@ -488,7 +488,11 @@ function boi_schema_article_details( $post, $page_id ) {
 	if ( ! $is_listicle ) {
 		$details['@type'] = array( 'Article', 'BlogPosting' );
 
-		if ( has_excerpt( $post ) ) {
+		// The article's abstract (inc/abstract.php); the excerpt where it has none.
+		$abstract = function_exists( 'boi_abstract_text' ) ? boi_abstract_text( $post ) : '';
+		if ( '' !== $abstract ) {
+			$details['abstract'] = boi_plain( $abstract );
+		} elseif ( has_excerpt( $post ) ) {
 			$details['abstract'] = boi_plain( get_the_excerpt( $post ) );
 		}
 	}

@@ -1,0 +1,110 @@
+/* The abstract box at the top of an article (inc/abstract.php).
+
+   Colours come from the preset tokens, which the dark appearance redefines
+   (theme-toggle.css), so every style follows light and dark without its own
+   dark rules. The accent is one variable: the theme's azure by default, or
+   the preset or custom accent chosen in Theme Options, Abstract, set inline
+   as --boi-abstract-accent. Tint, rule and label colour are mixed from it and
+   from the text colour, so a custom accent keeps its contrast in both
+   appearances (the custom accent is checked for 4.5:1 when it is saved). */
+
+.boi-abstract {
+	--boi-abstract-accent: var(--wp--preset--color--accent-1, #1D6AC3);
+	--boi-abstract-ink: var(--wp--preset--color--contrast, #0D2B4E);
+	--boi-abstract-ground: var(--wp--preset--color--base, #FFFFFF);
+	--boi-abstract-label: color-mix(in srgb, var(--boi-abstract-accent) 70%, var(--boi-abstract-ink));
+	--boi-abstract-tint: color-mix(in srgb, var(--boi-abstract-accent) 7%, var(--boi-abstract-ground));
+	--boi-abstract-rule: color-mix(in srgb, var(--boi-abstract-accent) 35%, var(--boi-abstract-ground));
+	margin: 0 0 2rem;
+	padding: 1.25rem 1.5rem;
+	color: var(--boi-abstract-ink);
+	font-size: 1.0625rem;
+	line-height: 1.6;
+}
+
+.boi-abstract__title {
+	margin: 0 0 0.5rem;
+	color: var(--boi-abstract-label);
+	font-family: var(--wp--preset--font-family--ysabeau-office, sans-serif);
+	font-size: 0.8125rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.boi-abstract__body p,
+p.boi-abstract__body {
+	margin: 0;
+}
+
+.boi-abstract__body p + p {
+	margin-top: 0.75rem;
+}
+
+/* Ruled: a tinted panel with the accent down the left edge. */
+.boi-abstract--ruled {
+	background: var(--boi-abstract-tint);
+	border-left: 4px solid var(--boi-abstract-accent);
+	border-radius: 0 6px 6px 0;
+}
+
+/* Card: a raised panel. */
+.boi-abstract--card {
+	background: var(--boi-abstract-ground);
+	border: 1px solid var(--boi-abstract-rule);
+	border-top: 3px solid var(--boi-abstract-accent);
+	border-radius: 8px;
+	box-shadow: 0 6px 20px color-mix(in srgb, var(--boi-abstract-ink) 8%, transparent);
+}
+
+/* Academic: the abstract of a journal paper. */
+.boi-abstract--academic {
+	padding: 1rem 0;
+	border-top: 1px solid var(--boi-abstract-rule);
+	border-bottom: 1px solid var(--boi-abstract-rule);
+	font-family: var(--wp--preset--font-family--eb-garamond, serif);
+}
+
+.boi-abstract--academic .boi-abstract__title {
+	text-align: center;
+	font-variant: small-caps;
+	text-transform: none;
+	font-size: 1rem;
+	letter-spacing: 0.08em;
+}
+
+/* Minimal: label and text, with a short accent bar. */
+.boi-abstract--minimal {
+	padding: 0;
+	font-size: 1rem;
+}
+
+.boi-abstract--minimal .boi-abstract__title::after {
+	content: "";
+	display: block;
+	width: 2.5rem;
+	height: 3px;
+	margin-top: 0.375rem;
+	background: var(--boi-abstract-accent);
+}
+
+@media (max-width: 600px) {
+	.boi-abstract {
+		padding: 1rem 1.125rem;
+		font-size: 1rem;
+	}
+
+	.boi-abstract--academic,
+	.boi-abstract--minimal {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media print {
+	.boi-abstract {
+		box-shadow: none;
+		background: none;
+		border: 1px solid #999;
+	}
+}

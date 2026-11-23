@@ -1235,6 +1235,35 @@
   }
  },
  {
+  "slug": "muslim-ibn-al-hajjaj",
+  "title": "Muslim ibn al-Hajjaj",
+  "type": "person",
+  "ar": "مسلم بن الحجاج",
+  "tr": "Muslim ibn al-Ḥajjāj",
+  "def": "Muslim ibn al-Hajjaj al-Qushayri of Nishapur (d. 875), compiler of Sahih Muslim, the second of the two most respected hadith collections.",
+  "what": [
+   "He travelled to the Hijaz, Iraq, Syria and Egypt to hear reports, and studied with Ahmad ibn Hanbal and with al-Bukhari. His <em>Ṣaḥīḥ</em> gathers the versions of a report in one place, with their chains side by side, and opens with an introduction on whose reports may be accepted."
+  ],
+  "misread": "That “Muslim” in a reference such as “narrated by Muslim” means any Muslim. It names this scholar and his collection.",
+  "sources": [
+   "Sunni scholars call his collection and al-Bukhari’s “the two Ṣaḥīḥs” (<em>al-Ṣaḥīḥayn</em>). Al-Nawawi wrote the best-known commentary on it, <em>al-Minhāj</em>."
+  ],
+  "terms": [
+   "hadith",
+   "isnad",
+   "sahih",
+   "bukhari-al"
+  ],
+  "articles": [],
+  "aliases": [
+   "Imam Muslim",
+   "Muslim ibn Hajjaj",
+   "Muslim b. al-Hajjaj",
+   "Muslim al-Naysaburi",
+   "Muslim al-Qushayri"
+  ]
+ },
+ {
   "slug": "mustaan-al",
   "title": "Mustaʿan, al-",
   "ar": "المستعان",

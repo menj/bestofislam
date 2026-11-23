@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.125.0
+Stable tag: 1.126.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -65,9 +65,10 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 == Usage ==
 
-Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
+Appearance, Theme Options holds the settings in 10 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
 * Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Abstract: the summary box at the top of each article. Switch it off, change its label, pick one of four styles (Ruled, Card, Academic, Minimal) and choose its colours from the theme azure, six presets or your own accent. To write a different abstract for one article, add the Abstract block to it.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
 * Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace. Switch on "Replace edited articles" to have every update give your edited articles the new text as well. Your text is kept as a revision first, and an article you chose to keep stays yours.
@@ -163,6 +164,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.126.0 =
+* Every article now opens with an abstract: a short summary of the claim it answers, the points it walks through and where it comes out. Search engines receive the same text. Choose its label, style and colours under Theme Options, Abstract.
+* "Imam Muslim" now links to a new Glossary entry for the scholar, and "Sahih Muslim" to the Sahih entry.
 
 = 1.125.0 =
 * Three new articles answering a viral list of "rules" for converts: "Before you convert to Islam: 7 answers on what a convert actually takes on", "Women in the 'rules' for converts: 7 answers on worth, circumcision, co-wives and modesty" and "Apostates and LGBT friends in the 'rules' for converts: 7 answers on hatred and shunning", each with a featured image and four in-text images.
@@ -433,6 +438,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.126.0 =
+Replace the theme files. Every article opens with its abstract straight away. If you use the Abstract Box plugin, deactivate it first so articles do not show two boxes.
 
 = 1.125.0 =
 Replace the theme files. The three new articles are created and the corrected articles refresh where you have not edited them when the version changes.
