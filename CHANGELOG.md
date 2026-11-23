@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.126.1] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- The Excerpt and the Abstract are separate texts (SSOT D67, `.claude/VOICE.md` section 6). The Excerpt, the post excerpt, is for a general reader: at most 150 characters with a mild call to action. The Abstract is the academic summary of the whole article.
+- Six excerpts over 150 characters shortened: a-father-says-this-is-islam, quran-anachronism-claims, was-muhammad-a-narcissist, what-former-muslims-testimonies-show, when-a-stranger-online-calls-islam-a-cult and nine-questions-from-the-floor-islamic-dilemma-debate. `inc/data/seed-manifest.json` rebuilt.
+- `tests/abstract-test.php` checks that every excerpt is within 150 characters, differs from its abstract, and that no abstract carries a call to action.
+
 ## [1.126.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
