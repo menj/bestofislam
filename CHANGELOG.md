@@ -13,6 +13,7 @@ No feature removed and no public identifier renamed.
 - Isma'il the prophet and Isma'il al Faruqi are kept apart: "Isma'il al Faruqi", "Isma'il Faruqi", "Ismail al-Faruqi" and their variants are aliases of the al-Faruqi entry, and "Isma'il" before al / al- / el- / ibn / bin (any case) never takes Ishmael's link or عليه السلام. A phrase no longer matches half of a word joined by an apostrophe ("Isma" in "Isma'il"; `boi_gl_rx()`). The name guard applies only to prophet and person entries (`boi_gl_is_name()`), so "Sahih" and "Imam" titles are unaffected, and an al- before the name itself (al-Bukhari) is read as part of that name.
 - New aliases: "al-Bukhari", "Imam al-Bukhari", "Imam Bukhari" (al-Bukhari); "Sahih al-Bukhari" (Sahih); "Musnad Ahmad", "Musnad of Ahmad", "Musnad Ahmad ibn Hanbal" and variants (al-Musnad). `BOI_GLOSSARY_VERSION` is 20, so the Glossary sync picks up the aliases once.
 - "Arab", "Arabs", "anatomy", "history", "Christian" and "Christians" are on the stoplist: they are too common to link.
+- "Arab", "Arabs", "anatomy", "history", "Christian" and "Christians" are on the stoplist: they are too common to link.
 - "Ahmad" is on the stoplist: in articles it is nearly always Imam Ahmad ibn Hanbal (the Musnad), not the Prophet's name.
 - "Holy Spirit", "the Holy Spirit", "Holy Ghost", "Spirit of Truth", "Paraclete" and "Comforter" still link but carry no عليه السلام, since in the articles they usually mean the Christian term (`boi_gl_no_epithet` filter). The link map's cache key is now `boi_gl_map_n2_`, so it rebuilds once.
 
