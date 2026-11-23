@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.125.0
+Stable tag: 1.126.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.126.0 =
+* New article: "The Scrolls of Abraham: a lost scripture, the Sefer Yetzirah or the Testament of Abraham? 7 answers", with a featured image and four in-text images.
 
 = 1.125.0 =
 * Three new articles answering a viral list of "rules" for converts: "Before you convert to Islam: 7 answers on what a convert actually takes on", "Women in the 'rules' for converts: 7 answers on worth, circumcision, co-wives and modesty" and "Apostates and LGBT friends in the 'rules' for converts: 7 answers on hatred and shunning", each with a featured image and four in-text images.
@@ -432,6 +435,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.126.0 =
+Replace the theme files. The new article is created when the version changes.
 
 = 1.125.0 =
 Replace the theme files. The three new articles are created and the corrected articles refresh where you have not edited them when the version changes.

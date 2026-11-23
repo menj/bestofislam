@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.126.0
+
+Replace the theme files. The new article is created by `boi_create_listicles()` when the version changes.
+
 ## Upgrading to 1.125.0
 
 Replace the theme files. The three new articles are created by `boi_create_listicles()` when the version changes, and `boi_migrate_seed()` refreshes the articles corrected by the second citation pass where they are unedited; an edited copy is listed on the Content tab.

@@ -76,6 +76,22 @@ The three articles answering the list of "rules" for converts were written to th
   - the Grand Mufti's 2007 interview, reported in *Daily News Egypt*;
   - Dār al-Iftāʾ's published statement.
 
+### New article of 1.126.0
+
+scrolls-of-abraham: every source read in its text. The Shamela pages, all paginated as the print, are:
+- Ibn Kathīr, vol. 2, pp. 470–472; vol. 7, p. 465; vol. 8, pp. 382–383;
+- al-Qurṭubī, vol. 20, pp. 24–25;
+- the *Fihrist*, pp. 37–38, in OpenITI.
+
+The other sources were read as follows:
+- al-Ṭabarī on 87:18–19 and 53:37, through the tafsir API;
+- Rodwell's preface, from Project Gutenberg;
+- the *Jewish Encyclopedia*, from its website;
+- Sefaria, Sefer Yetzirah 6:4, from its website;
+- M. R. James's 1892 edition, archive.org text, pp. 15, 29 and 55.
+
+Two of Wikipedia's identifications were checked against the sources it cites. The Sefer Yetzirah identification cites the *Jewish Encyclopedia*, which does not mention the Quran. The Testament of Abraham identification cites only the notes of Yusuf Ali and Asad.
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.
