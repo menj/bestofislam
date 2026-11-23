@@ -18,6 +18,7 @@ No feature removed and no public identifier renamed.
 
 ### Changed
 - All 191 existing articles: paragraphs split to three sentences at most (1,935 splits), sentence-level clean-up of banned words, phrases and contrastive reframes, and an editorial pass: purpose line, editorial "we" in place of "the site", "the article" and "I", scare-quotes on the opponent's loaded terms, and a closing "God knows best" where the close had no framing. "Jesus ﷺ" corrected to "Jesus (peace be upon him)" in two articles.
+- Citations, first pass (`docs/CITATIONS.md`): every note or paragraph in 21 articles that said a claim was "stated from general knowledge" or "not checked" now cites a source that was read, among them Guillaume's Ibn Ishaq, Ibn Sa'd, Fath al-Bari, Ibn Rushd's Bidayat al-mujtahid, al-Kafi, Majmu' al-Fatawa, the Hebrew and Greek texts and Metzger. Claims that the sources did not bear out were corrected or cut, among them the account of Safiyya's choice and two quotations that could not be read in their sources. Sahih Muslim notes use the standard numbering.
 
 ## [1.123.0] - 2026-11-23
 
