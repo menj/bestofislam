@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.123.0
+Stable tag: 1.124.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -163,6 +163,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.124.0 =
+* Every article now speaks in the editorial voice: it states its purpose once, speaks as "we", marks the opponent's loaded terms in quotation marks and keeps paragraphs to three sentences or fewer.
+* Three new articles: "Is Islam an Arian heresy? 7 answers on the councils and John of Damascus", "Has the Quran's challenge been met? 7 answers on al-Ma'arri and The True Furqan" and "Hafs, Warsh and the other readings: is there more than one Quran? 7 answers", each with a featured image and four in-text images.
 
 = 1.123.0 =
 * New article: "The First and the Last": does Quran 57:3 make Jesus God? 7 answers, with a featured image and four in-text images.
@@ -422,6 +426,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.124.0 =
+Replace the theme files. The three new articles are created and the rewritten articles refresh where you have not edited them when the version changes.
 
 = 1.123.0 =
 Replace the theme files. The new article is created when the version changes.

@@ -704,6 +704,20 @@
 			]
 		},
 		{
+			"slug": "hafs-warsh-one-quran",
+			"title": "Hafs, Warsh and the other readings: is there more than one Quran? 7 answers",
+			"excerpt": "A meme sets Hafs, Warsh and other readings against the Trinity. 7 answers on what the readings are and what they change.",
+			"topic": "faith-and-reason",
+			"seo_title": "Hafs, Warsh: more than one Quran?",
+			"category": "quran-text-revelation",
+			"tags": [
+				"Qiraat",
+				"Quran preservation",
+				"Manuscripts",
+				"Polemics"
+			]
+		},
+		{
 			"slug": "uthman-copies",
 			"title": "Uthman's copies: 5 facts about the Quran's earliest manuscripts",
 			"excerpt": "Where are Uthman's copies of the Quran? 5 facts on the earliest manuscripts, from Birmingham to Samarkand. Read them.",
@@ -964,6 +978,20 @@
 				"Divine attributes",
 				"Tawhid",
 				"Bible",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "islam-arian-heresy-claim",
+			"title": "Is Islam an Arian heresy? 7 answers on the councils and John of Damascus",
+			"excerpt": "A post calls Islam a gnostic, Arian cult refuted by the councils and John of Damascus. 7 answers on the labels, dates and Quran.",
+			"topic": "comparative-religion",
+			"seo_title": "Is Islam an Arian heresy?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Early Christianity",
+				"Divinity of Jesus",
+				"Tawhid",
 				"Polemics"
 			]
 		},
@@ -1607,6 +1635,20 @@
 				"Arabic",
 				"Quran",
 				"Qiraat",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "quran-challenge-met-claim",
+			"title": "Has the Quran's challenge been met? 7 answers on al-Ma'arri and The True Furqan",
+			"excerpt": "A critic says al-Ma'arri and The True Furqan met the Quran's challenge. 7 answers on what the challenge asks and what they are.",
+			"topic": "faith-and-reason",
+			"seo_title": "Has the Quran's challenge been met?",
+			"category": "quran-text-revelation",
+			"tags": [
+				"Quran",
+				"Arabic",
+				"Miracles",
 				"Polemics"
 			]
 		},

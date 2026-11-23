@@ -51,6 +51,7 @@
         "content\/funeral-dhikr-dua.json": "fc6de7b52bf229ecfd363351c9dd6b7b",
         "content\/genealogies-of-jesus.json": "8136dfc8223a5d469ad4fa7617e99f0c",
         "content\/gods-attributes-and-anthropomorphism.json": "fab4effe3652318c01e0e8a27455f7ec",
+        "content\/hafs-warsh-one-quran.json": "f0ae56806876a8e1988f9642c7088fdc",
         "content\/hajj-rites-explained.json": "7774b9887b4fcddf997614e51294252b",
         "content\/haman-anachronism.json": "c3e27a7adb4e71699932ae49444c28ac",
         "content\/hanif-poets-and-musaylima.json": "1b168ffa1a3300d8d7f1bc6129074606",
@@ -68,6 +69,7 @@
         "content\/is-yahweh-the-same-as-allah.json": "0d150c11f2ed3078c43939875c69194f",
         "content\/ishmael-in-the-quran-and-genesis.json": "7b11798dac49e07ac1cee41d7aa1380c",
         "content\/islam-and-evolution.json": "a60745bf54c5d0db398a5cc65b37b5ff",
+        "content\/islam-arian-heresy-claim.json": "1e4875abd522dce58490dbf7bd50b1bf",
         "content\/islam-in-china.json": "cbb10d41ad9da9998320b00b08febfb2",
         "content\/islam-religion-of-peace.json": "2d7e43e5c154482b02a66375d9a925e0",
         "content\/islamic-art-and-the-one-god.json": "62370bc5581c3b407c85720234ca201e",
@@ -117,6 +119,7 @@
         "content\/qibla-change.json": "d629ee538249678b988fd23e79a73145",
         "content\/questions-about-aisha.json": "bac707689bcf3d11e1f1574f4c974604",
         "content\/quran-anachronism-claims.json": "dcc5e38fc3a4f215556fae13a641db28",
+        "content\/quran-challenge-met-claim.json": "fd3dde985f7b820859fc9f5e150b1545",
         "content\/quran-contradictions-claims.json": "898423626c4574d833932e97f27745d9",
         "content\/quran-grammar-errors-claim.json": "e27031fa96aedb8506c72e6d4038faf9",
         "content\/quran-iblis-fallen-angels-borrowing.json": "022ce4806660755345e7d2664b4179dd",
@@ -191,8 +194,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "8b3debbd5d5ebc38fcea0c4af7c33235",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "cd5f08080fa14bb6989f5861d4fbc0c1",
+        "inc\/data\/seed.json": "9e85b49fe2e1d7dc7e7d6febea9c3ae2",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "78f5d3577c1ebbabc76e21b66243e969"
+    "checksum": "64f6f797d90d44dfb2f015433d2d66fa"
 }
