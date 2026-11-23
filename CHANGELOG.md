@@ -4,6 +4,18 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.126.0] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Added
+- The abstract: a short summary box at the top of every article, folded into the theme from the owner's Abstract Box plugin (`inc/abstract.php`, `assets/css/abstract.css`, `blocks/abstract/`). All 197 seeded articles have an abstract of about 85 words in `inc/data/abstracts.json`, written to `.claude/VOICE.md`: the claim, the points the article walks through and where it comes out.
+- The same text is the Article node's `abstract` in the theme's schema graph, in place of the excerpt; no second JSON-LD block is printed.
+- An Abstract block (`bestofislam/abstract`) and an `[abstract]` shortcode replace the bundled abstract for one post, in the box and in the schema.
+- Theme Options, Abstract tab: on or off (`abstract_enabled`), the label (`abstract_title`), four styles, Ruled, Card, Academic and Minimal (`abstract_style`), and a colour scheme (`abstract_scheme`): the theme azure, six presets, or a custom accent (`abstract_accent`) refused unless its label reaches 4.5:1 in the light and dark appearance.
+- `tests/abstract-test.php`: every seeded article has an abstract within 55 to 110 words that keeps the voice rules, every preset passes the contrast test, and the box, the overrides and the switch behave.
+- New Glossary entry, Muslim ibn al-Hajjaj (`muslim-ibn-al-hajjaj`), with the aliases "Imam Muslim", "Muslim ibn Hajjaj", "Muslim b. al-Hajjaj", "Muslim al-Naysaburi" and "Muslim al-Qushayri". "Muslim" and "Muslims" are on the stoplist, so "Imam Muslim" links to the scholar, "Sahih Muslim" to Sahih, and a bare "Muslim" (as in "al-Bukhari and Muslim") no longer links to Islam. `BOI_GLOSSARY_VERSION` is 21.
+
 ## [1.125.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
@@ -26,7 +38,6 @@ No feature removed and no public identifier renamed.
 - Isma'il the prophet and Isma'il al Faruqi are kept apart: "Isma'il al Faruqi", "Isma'il Faruqi", "Ismail al-Faruqi" and their variants are aliases of the al-Faruqi entry, and "Isma'il" before al / al- / el- / ibn / bin (any case) never takes Ishmael's link or عليه السلام. A phrase no longer matches half of a word joined by an apostrophe ("Isma" in "Isma'il"; `boi_gl_rx()`). The name guard applies only to prophet and person entries (`boi_gl_is_name()`), so "Sahih" and "Imam" titles are unaffected, and an al- before the name itself (al-Bukhari) is read as part of that name.
 - New aliases: "al-Bukhari", "Imam al-Bukhari", "Imam Bukhari" (al-Bukhari); "Sahih al-Bukhari" (Sahih); "Musnad Ahmad", "Musnad of Ahmad", "Musnad Ahmad ibn Hanbal" and variants (al-Musnad). `BOI_GLOSSARY_VERSION` is 20, so the Glossary sync picks up the aliases once.
 - The guard now passes over a mention that is part of a longer name and links the next one in the same paragraph ("Joseph Smith read of the prophet Joseph"; `boi_gl_first_match()`). The contextual links pass guards every prophet and person name, with or without an epithet (`boi_cl_name_index()`). `tests/glossary-links-test.php` adds ten fixed cases checked against stated expectations.
-- New Glossary entry, Muslim ibn al-Hajjaj (`muslim-ibn-al-hajjaj`), with the aliases "Imam Muslim", "Muslim ibn Hajjaj", "Muslim b. al-Hajjaj", "Muslim al-Naysaburi" and "Muslim al-Qushayri". "Muslim" and "Muslims" are on the stoplist, so "Imam Muslim" links to the scholar, "Sahih Muslim" to Sahih, and a bare "Muslim" (as in "al-Bukhari and Muslim") no longer links to Islam. `BOI_GLOSSARY_VERSION` is 21.
 - "Arab", "Arabs", "anatomy", "history", "Christian" and "Christians" are on the stoplist: they are too common to link.
 - "Ahmad" is on the stoplist: in articles it is nearly always Imam Ahmad ibn Hanbal (the Musnad), not the Prophet's name.
 - "Holy Spirit", "the Holy Spirit", "Holy Ghost", "Spirit of Truth", "Paraclete" and "Comforter" still link but carry no عليه السلام, since in the articles they usually mean the Christian term (`boi_gl_no_epithet` filter). The link map's cache key is now `boi_gl_map_n2_`, so it rebuilds once.

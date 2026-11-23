@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.126.0
+
+Replace the theme files. The abstract appears at the top of every seeded article at once, with no content update: its text ships in `inc/data/abstracts.json`. Choose its style and colours under Theme Options, Abstract, or switch it off there. If the Abstract Box plugin is active, deactivate it first, so an article does not show two boxes and two abstracts in its markup; an `[abstract]` shortcode already in a post keeps working and replaces the bundled text. `BOI_GLOSSARY_VERSION` is 21, so the Glossary sync adds the Muslim ibn al-Hajjaj page once.
+
 ## Upgrading to 1.125.0
 
 Replace the theme files. The three new articles are created by `boi_create_listicles()` when the version changes, and `boi_migrate_seed()` refreshes the articles corrected by the second citation pass where they are unedited; an edited copy is listed on the Content tab.
