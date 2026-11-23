@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.126.2] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Every excerpt now ends with a mild call to action, as SSOT D67 requires. 90 excerpts that had none gained one ("Read on.", "See the evidence.", "Weigh the answers." or "Read the sources."), and five near the limit were shortened to stay within 150 characters. `inc/data/seed-manifest.json` rebuilt.
+- `tests/abstract-test.php` checks that every excerpt ends with a call to action.
+
 ## [1.126.1] - 2026-11-23
 
 No feature removed and no public identifier renamed.

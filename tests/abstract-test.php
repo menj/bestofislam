@@ -95,6 +95,8 @@ foreach ( boi_abstract_schemes() as $slug => $scheme ) {
 // mild call to action. The Abstract has none (SSOT D67).
 foreach ( $seed['listicles'] as $item ) {
 	check( mb_strlen( $item['excerpt'] ) <= 150, $item['slug'] . ': excerpt within 150 characters (' . mb_strlen( $item['excerpt'] ) . ')' );
+	$last = preg_split( '/(?<=[.!?])\s+/', trim( $item['excerpt'] ) );
+	check( (bool) preg_match( '/^(Read|See|Weigh|Find|Learn|Check|Start|Test|Follow|Judge|Discover|Explore|Look|Hear|Meet|Get|Take|Compare|Decide)\b/', end( $last ) ), $item['slug'] . ': excerpt ends with a mild call to action' );
 	check( $item['excerpt'] !== ( isset( $data[ $item['slug'] ] ) ? $data[ $item['slug'] ] : '' ), $item['slug'] . ': excerpt and abstract differ' );
 }
 foreach ( $data as $slug => $text ) {
