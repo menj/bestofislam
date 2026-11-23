@@ -6312,5 +6312,137 @@
     "source": "https://www.pexels.com/photo/scenic-view-of-patmos-town-in-greece-37844612/"
    }
   ]
+ },
+ "islam-arian-heresy-claim": {
+  "featured": {
+   "file": "islam-arian-heresy-claim.avif",
+   "alt": "The bare brick interior of the church of Hagia Sophia in İznik, with arches and a dome.",
+   "caption": "Hagia Sophia in İznik, ancient Nicaea, the city of the council of 325.",
+   "artist": "Hamdigumus",
+   "licence": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ayasofya_Cami,_İznik_2014-10.jpg"
+  },
+  "inline": [
+   {
+    "file": "islam-arian-heresy-claim-1.avif",
+    "alt": "The calm water of İznik Lake under a pale sky, with reeds on the shore.",
+    "caption": "İznik Lake, on whose shore stood Nicaea, where Arius was condemned.",
+    "artist": "Efdal YILDIZ",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/7832275/"
+   },
+   {
+    "file": "islam-arian-heresy-claim-2.avif",
+    "alt": "The ruins of a Roman fountain at Ephesus, with carved columns and a pediment.",
+    "caption": "Ruins at Ephesus, where the council of 431 condemned Nestorius.",
+    "artist": "Stefan Petrov",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/13971632/"
+   },
+   {
+    "file": "islam-arian-heresy-claim-3.avif",
+    "alt": "The Roman stone bridge of Tiberius over the Marecchia river in Rimini.",
+    "caption": "The bridge of Tiberius at Rimini, ancient Ariminum, where the council of 359 met.",
+    "artist": "Piotrek Wilk",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/23121612/"
+   },
+   {
+    "file": "islam-arian-heresy-claim-4.avif",
+    "alt": "The monastery of Mar Saba built into the cliffs of a desert valley.",
+    "caption": "The monastery of Mar Saba in the Judaean desert, where John of Damascus spent his last years.",
+    "artist": "Hanna Vaknin",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:2018-10-01_The_Holy_Lavra_of_Saint_Sabbas_known_in_Syriac_as_Mar_Saba.jpg"
+   }
+  ]
+ },
+ "quran-challenge-met-claim": {
+  "featured": {
+   "file": "quran-challenge-met-claim.avif",
+   "alt": "A parchment folio of the Quran in early Kufic script, written across the page.",
+   "caption": "A folio of the Quran in Kufic script (Walters Art Museum, Ms. W.552).",
+   "artist": "Walters Art Museum",
+   "licence": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Islamic_-_Folio_with_Kufic_Script_-_Walters_W55213B_-_Full_Page.jpg"
+  },
+  "inline": [
+   {
+    "file": "quran-challenge-met-claim-1.avif",
+    "alt": "An open manuscript page of Arabic script in black ink with gold verse markers.",
+    "caption": "A page of Arabic calligraphy. The challenge asks for a surah \"like it\" in the Quran's own language (2:23).",
+    "artist": "Osman Özavcı",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/12039709/"
+   },
+   {
+    "file": "quran-challenge-met-claim-2.avif",
+    "alt": "An illuminated page with a gold geometric panel between lines of Arabic praise of God.",
+    "caption": "A finispiece of praise of God from a book of devotions by al-Shadhili (Walters Art Museum, Ms. W.578). Al-Fusul wa al-Ghayat is a book of the same kind of praise.",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Abu_al-Hasan_al-Shadhili_-_Illuminated_Finispiece_with_Doxological_Formulae_and_Qur'anic_Inscriptions_-_Walters_W5787B_-_Full_Page_(cropped).jpg"
+   },
+   {
+    "file": "quran-challenge-met-claim-3.avif",
+    "alt": "Shelves of old leather-bound books in a library.",
+    "caption": "The biographers who accused al-Ma'arri wrote centuries after him.",
+    "artist": "Jonathan Borba",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/13061431/"
+   },
+   {
+    "file": "quran-challenge-met-claim-4.avif",
+    "alt": "A close view of a Quran page with a blue and gold heading and gold verse markers.",
+    "caption": "A page of the Quran with Surat al-Ma'un. Al-Ma'arri judged his own work below it.",
+    "artist": "mohamed abdelghaffar",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/29342503/"
+   }
+  ]
+ },
+ "hafs-warsh-one-quran": {
+  "featured": {
+   "file": "hafs-warsh-one-quran.avif",
+   "alt": "A page of the Quran in Maghribi script, with gold and coloured verse markers.",
+   "caption": "A Quran in Maghribi script, the hand of North Africa, where the reading of Warsh is recited (Walters Art Museum, Ms. W.556, fol. 27b).",
+   "artist": "Walters Art Museum",
+   "licence": "CC0",
+   "source": "https://www.flickr.com/photos/medmss/4690325515"
+  },
+  "inline": [
+   {
+    "file": "hafs-warsh-one-quran-1.avif",
+    "alt": "A five-panel meme setting the Trinity diagram beside Qurans labelled Hafs, Warsh, Qalun and other transmitters, with a man painted as a clown.",
+    "caption": "The meme answered in this article, as posted on Threads in November 2026.",
+    "artist": "Unknown",
+    "licence": "Public domain",
+    "source": "https://www.threads.com/@michael.046/post/DgE3hiZjTc2"
+   },
+   {
+    "file": "hafs-warsh-one-quran-2.avif",
+    "alt": "The opening page of a Quran in Maghribi script with a decorated headpiece.",
+    "caption": "The opening of a surah in a Maghribi Quran (Walters Art Museum, Ms. W.556, fol. 4b).",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Koran,_Illuminated_incipit_page_with_headpiece,_Walters_Manuscript_W.556,_fol._4b_(4690325429).jpg"
+   },
+   {
+    "file": "hafs-warsh-one-quran-3.avif",
+    "alt": "An open Quran resting on a wooden stand with prayer beads.",
+    "caption": "An open Quran. Every reading is printed and every difference is listed.",
+    "artist": "AmirHadi Manavi Moghadam",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/40352604/"
+   },
+   {
+    "file": "hafs-warsh-one-quran-4.avif",
+    "alt": "A Quran page in large script with a few lines of text and a gold marker.",
+    "caption": "A Quran manuscript (Walters Art Museum, Ms. W.555, fol. 10b).",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://www.flickr.com/photos/medmss/4690313801"
+   }
+  ]
  }
 }

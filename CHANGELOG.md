@@ -4,6 +4,22 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.124.0] - 2026-11-23
+
+No feature removed and no public identifier renamed.
+
+### Added
+- `.claude/VOICE.md` and SSOT D64: the voice standard for articles, glossary and pages, from the owner's voice profile, anti-AI writing style and academic-research method. `.claude/CLAUDE.md` points to it.
+- islam-arian-heresy-claim: seven answers to the claim that Islam is a gnostic, Arian heresy refuted by the councils of 325, 431 and "525" and by John of Damascus: the three labels, Arius in Socrates 1.5 against Quran 3:59 and 2:117, the real dates (no council in 525; Constantinople II in 553), Ariminum 359 and Jerome's "the whole world groaned" (Dialogue against the Luciferians 19), John of Damascus's dates, his "it seems... an Arian monk", the Muslims' charge of "Associators" and his account of the Quran (On Heresies 100, Chase translation, FOC 37), and Quran 19:35, 4:171 and 112.
+- quran-challenge-met-claim: seven answers to the claim that al-Ma'arri's al-Fusul wa al-Ghayat and The True Furqan met the Quran's challenge (2:23, 10:38, 11:13, 17:88, 52:34; al-Tabari on 2:23): al-Ma'arri's Arab descent, the book's plan and subject from Kanjiyan Khanari, Ghaibi and Farajzadeh (2012) and Jasim and Ali (2024), the biographers' charge, Taha Husayn and Shawqi Dayf, Nicholson's report that the author judged it inferior (1907, p. 318), and The True Furqan (WinePress, 1999).
+- hafs-warsh-one-quran: seven answers to a meme setting the twenty transmissions of the ten readings against the Trinity: the readers and transmitters, the three conditions and the Uthmanic rasm, Bukhari 4992, Ibn Mujahid and Ibn al-Jazari, Melchert (2008), the Hafs and Warsh differences in 2:85, 19:19, 42:30 and 43:19, al-Tabari on 1:4 and 5:6, and the Christian canons. The meme itself is shown as the first in-text image.
+- Images for the three articles: Commons (CC0), the Walters Art Museum (CC0) and Pexels; credits in `inc/images-data.json`.
+- The endmark (SSOT D65): `inc/endmark.php` closes the last paragraph of every article's main text, before the Notes, with the theme's tombstone, a navy square with the gold eight-pointed star (۞), inverted in the dark appearance. It never appears on pages, in FAQs (Details blocks), lists, tables or quotations, or on posts without the listicle block. The placement logic comes from the owner's Endmark plugin (GPL-3.0), folded into the theme. Switch: Theme Options, Display, Endmark (`endmark`, on by default). Styles: `.boi-endmark` in `assets/css/listicle.css`. Test: `tests/endmark-test.php`.
+
+### Changed
+- All 191 existing articles: paragraphs split to three sentences at most (1,935 splits), sentence-level clean-up of banned words, phrases and contrastive reframes, and an editorial pass: purpose line, editorial "we" in place of "the site", "the article" and "I", scare-quotes on the opponent's loaded terms, and a closing "God knows best" where the close had no framing. "Jesus ﷺ" corrected to "Jesus (peace be upon him)" in two articles.
+- Citations, first pass (`docs/CITATIONS.md`): every note or paragraph in 21 articles that said a claim was "stated from general knowledge" or "not checked" now cites a source that was read, among them Guillaume's Ibn Ishaq, Ibn Sa'd, Fath al-Bari, Ibn Rushd's Bidayat al-mujtahid, al-Kafi, Majmu' al-Fatawa, the Hebrew and Greek texts and Metzger. Claims that the sources did not bear out were corrected or cut, among them the account of Safiyya's choice and two quotations that could not be read in their sources. Sahih Muslim notes use the standard numbering.
+
 ## [1.123.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.

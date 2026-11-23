@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.123.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.124.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -59,7 +59,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 Under Appearance, Theme Options, in nine tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. The Images tab holds a Pexels key (or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder built on the official Pexels JavaScript client (`assets/js/vendor/pexels/`, `assets/js/admin-images.js`); it copies a plan entry for `bin/stock-images.json`. Without JavaScript the tabs are links and still work.
 
-- **Display:** rank badges, the entry image size, the article contents, the mid-article next step and the preferred-source invitation (`article_contents`, `article_mid_next`, `preferred_source`), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
+- **Display:** rank badges, the entry image size, the article contents, the mid-article next step, the preferred-source invitation and the endmark (`article_contents`, `article_mid_next`, `preferred_source`, `endmark`), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them. The **Replace edited articles** switch (`sync_replace_edited`, off by default) makes updates give edited articles the new text too, after saving the owner's text as a revision or, where revisions are off, in `_boi_sync_previous`; an article the owner chose to keep stays kept.
@@ -327,7 +327,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.123.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.124.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

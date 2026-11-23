@@ -1,0 +1,52 @@
+# Citation ledger
+
+This file records the checks made on the notes of the site's articles, as `.claude/VOICE.md` and SSOT D64 require. Each check asks two questions: does the source exist as cited, and does it say what the article says it says.
+
+## How a note is checked
+
+- **Quran.** Verse and translation (Saheeh International) read on Quran.com.
+- **Hadith.** The report is read in full, and its number is given in the standard numbering: Muḥammad Fuʾād ʿAbd al-Bāqī for Muslim, Ibn Mājah and the main Bukhari numbering. Where the English edition skips a report, the Arabic is read in the OpenITI text of the collection. Gradings for the Sunan are given with the grader's name.
+- **Tafsir, fiqh and biography.** The passage is read in the Arabic. Pages are taken from a text that keeps the printed pagination: al-Maktaba al-Shāmila books marked "paginated as the print", or OpenITI page markers. Each note names the edition.
+- **Bible.** English from the World English Bible. Hebrew from the Miqra according to the Masorah on Sefaria. Greek Old Testament from Rahlfs' *Septuaginta* (CCAT text). Greek New Testament from the SBL Greek New Testament. Manuscript evidence is cited from Metzger's *Textual Commentary* (2nd edition, 1994) by verse entry.
+- **Modern works.** Author, title, journal, volume, pages and DOI are confirmed through Crossref or the publisher's page. A quotation is kept only if it has been read in the source.
+- **What fails.** If a claim cannot be traced to a source that was read, it is corrected to what the source says or it is cut. A note never says "from general knowledge".
+
+## Phase 3a: claims stated from general knowledge (2026-11-23)
+
+Some notes and paragraphs said a claim was "stated from general knowledge" or "not checked". Every one of them in the articles below has been traced to a source. Corrections to substance are listed under each article.
+
+| Article | Sources now cited | Corrections |
+|---|---|---|
+| safiyya-and-the-women-captured-in-war | Guillaume, *Life of Muhammad*, pp. 450, 464, 466, 514–515; Ibn Saʿd, *al-Ṭabaqāt al-kabīr* (Khānjī ed.), vol. 10, pp. 117, 125–127; Muslim 1456; Tirmidhi 3894 (graded); Open Letter to al-Baghdadi (2014), §12 | Ibn Saʿd's report is an offer of freedom if she chose God and His Messenger. It is not a choice to return to her people. Her father was killed two years before Khaybar, and her husband during the campaign. The Rayḥāna reports are now given as Ibn Isḥāq and Ibn Saʿd have them. |
+| was-muhammad-a-narcissist | Guillaume pp. 69–73, 79; Tirmidhi 3331; Muslim 1763, 1767, 1551; APA Principles of Medical Ethics §7.3 (via Kroll and Pouncey, *JAAPL* 44.2, 2016) | The claim that accounts differ on Ḥalīma's nursing was cut. |
+| women-in-hell-and-deficient-intelligence-hadith | Ibn Ḥajar, *Fatḥ al-Bārī* (Salafiyya), vol. 1, pp. 406–407; Ibn Rushd, *Bidāyat al-mujtahid* (Dār al-Ḥadīth, 2004), vol. 4, p. 243; Tirmidhi 3883; Muslim 2736–2737 | The claim that the phrase was used in law to bar women from judgeship was replaced by Ibn Rushd's account of the actual grounds of that debate. |
+| three-divorces-and-the-one-night-marriage | Ibn Rushd vol. 3, pp. 80, 84; Munir, *International Review of Law* 2013:2; FCDO, "Family law in Egypt" (2025); *Shayara Bano v. Union of India* (2017); Muslim 1433, 1471, 1472; Tirmidhi 1119–1120 (graded) | The unsourced claim about the Twelver Shīʿa and the Ahl-i-Ḥadīth was replaced by Ibn Rushd's report (the Ẓāhirīs and others) and Munir's (Ibn Taymiyya and Ibn al-Qayyim). |
+| jews-behind-the-stone-hadith | Muslim 2922 (Arabic, ʿAbd al-Bāqī vol. 4, p. 2239); Muslim 1744, 2944; Ibn Rushd vol. 2, p. 146; Ibn Mājah 4077 (graded weak); Zechariah 14:2–3 | The Dajjal-cycle reading is now tied to Ibn Mājah 4077 and marked weak. |
+| can-a-muslim-befriend-a-non-muslim | Wagemakers, *IJMES* 44.1 (2012), doi:10.1017/S0020743811001267; Bukhari 4890 | The occasion of 60:1 is given with Sufyān's caveat as al-Bukhari records it. |
+| what-former-muslims-testimonies-show | Human Rights Watch, 2 August 2019 | none |
+| a-father-says-this-is-islam | Tirmidhi 3883; Bukhari 7145 | "Scholars differ" was replaced by the Prophet's limit on obedience. |
+| why-does-god-allow-suffering | Muslim 2569 | "Scholars add" was replaced by the hadith qudsi. |
+| will-every-non-muslim-go-to-hell | al-Ṭabarī on 2:62, report 1114 | none |
+| early-christians-charged-others-with-corrupting-scripture | Hebrew Psalm 96:10; Rahlfs Psalm 95:10; Tertullian, *Against Marcion* 1.19, 3.19, 4.2; Metzger on Mark 16:9–20 and John 7:53–8:11; *New Catholic Encyclopedia*, "Pseudo-Clementines" | "Most scholars take them as an addition" was replaced by what the texts show. |
+| matthew-fulfilment-quotations-checked | Hebrew and Greek of Isaiah 7:14 and 42:4; Bava Batra 14b; Metzger on Matthew 27:9; Mark 11, Luke 19, John 12 | none |
+| trinity-in-the-hebrew-bible-tested | Rashi on Genesis 1:26; Genesis Rabbah 8:8; Hebrew of Isaiah 9:5, 10:21 and Zechariah 12:10 | The unsourced remark about copyists was cut. |
+| jeremiah-new-covenant-hebrews-and-the-quran | Hebrew of Jeremiah 31:32–33; Rahlfs Jeremiah 38:32; SBLGNT Hebrews 8:9; Metzger on Luke 22:17–20 | none |
+| christian-twin-of-the-islamic-dilemma | Hebrew of Isaiah 11:1 and 7:14; Rahlfs Isaiah 7:14; *New Catholic Encyclopedia* | none |
+| nine-questions-from-the-floor-islamic-dilemma-debate | Morey (1992, 1994); Smith–Van Dyck Arabic Bible, John 1:1 | A quotation that could not be read in its source (Lumbard) was cut. |
+| temporary-marriage-mutah | al-Kulaynī, *al-Kāfī*, vol. 5, pp. 448–449 | Twelver sources set beside the Sunni report about Jaʿfar al-Ṣādiq. |
+| seal-of-the-prophets | Bahá'u'lláh, *Kitáb-i-Íqán* ¶¶172–173; alislam.org; ahmadiyya.org; churchofjesuschrist.org | "And its text as intact" (Bahá'í view) was cut, because it was not found in a source. |
+| quran-word-kitab-meanings | Bukhari 4953, 6982; *Fatḥ al-Bārī* vol. 1, p. 25 | none |
+| sun-muddy-spring-and-fixed-earth | Ibn Ḥazm, *al-Fiṣal*, part 2, p. 78; Ibn Taymiyya, *Majmūʿ al-Fatāwā*, vol. 6, p. 586 and vol. 25, p. 195 | none |
+| does-islam-teach-the-bible-was-corrupted | Qurṭubī (Dār al-Kutub al-Miṣriyya, 1964); Ibn al-Qayyim, *Ighātha*, vol. 2, pp. 351, 358 | none |
+
+### Still marked in the text
+
+Two notes still tell the reader that a statement was taken from a secondary source:
+
+- **Griffith, *The Bible in Arabic* (2013), pp. 41–42**, in quran-verses-on-torah-and-gospel and quran-word-kitab-meanings. These notes stay as they are until the book itself has been read.
+- **The gradings in al-zutt-allegation.** These are reported through IslamQA answer 439356, and the note says so.
+
+## Still to do
+
+- **Phase 3b.** Check every remaining note, about 3,100 of them, in the same way, article by article, and add a line here for each article as it is finished.
+- **Sectarian articles.** Six articles on Sunni and Shia questions wait for the owner's decision on scope: ridda-wars-abu-bakr-fadak, taqiyya-myths, temporary-marriage-mutah, seal-of-the-prophets, end-of-time and islam-religion-of-peace.
