@@ -46,7 +46,23 @@ Two notes still tell the reader that a statement was taken from a secondary sour
 - **Griffith, *The Bible in Arabic* (2013), pp. 41–42**, in quran-verses-on-torah-and-gospel and quran-word-kitab-meanings. These notes stay as they are until the book itself has been read.
 - **The gradings in al-zutt-allegation.** These are reported through IslamQA answer 439356, and the note says so.
 
-## Still to do
+## Phase 3b: every note, by source type (2026-11-23)
 
-- **Phase 3b.** Check every remaining note, about 3,100 of them, in the same way, article by article, and add a line here for each article as it is finished.
+The 194 articles hold 3,133 notes: 785 cite the Quran, 732 hadith, 325 the Bible and 1,291 other works. Each type was checked across the whole site at once.
+
+| Source type | What was checked | Result |
+|---|---|---|
+| Hadith (674 citations) | Each number looked up in the standard numbering (Bukhari, Muslim by ʿAbd al-Bāqī, Abū Dāwūd, Tirmidhi, Nasāʾī, Ibn Mājah), and the narrator named in the note matched against the report | All found. Muslim 2922 and 2972, which are missing from the English edition, were read in the Arabic (OpenITI). Thirty-two narrator flags were false alarms from short names, and each was checked by eye. |
+| Quran references (3,549) | Every *surah:ayah* reference in body and notes checked against the verse count of its surah | No invalid references. |
+| Quran quotations (372) | Each quotation compared with Saheeh International, allowing for ellipses and the translator's brackets | Low scores were reviewed one by one. Most are faithful renderings of the Arabic in articles whose notes do not name a translation. Two quotations were corrected: 35:24 in same-god, which had added "a prophet", and 3:52 in will-every-non-muslim-go-to-hell. |
+| Bible quotations (123 with a book reference) | Compared with the World English Bible (eBible.org text) | Articles whose notes name the ESV or the KJV match that version. Six articles quoted the ESV without saying so: holy-war-in-the-bible, ishmael-in-the-quran-and-genesis, genealogies-of-jesus, messenger-to-every-nation, gods-attributes-and-anthropomorphism and i-read-the-entire-quran-reply. Their notes now name it. |
+| Ibn Isḥāq, trans. Guillaume (32 notes) | Each page checked in the text of the 1955 translation | Two page references corrected: Mukhayriq is at pp. 240 and 384 (apes-and-pigs-and-the-jews); the emigrant lists are at pp. 146–147 and 528–529 (first-muslims-kept-the-faith). |
+| al-Ṭabarī report numbers | Checked against the Shākir numbering in the tafsir text for each verse | All found: 2:23 (491–495), 3:54 (7131–7132), 5:6 (8959–8970). |
+| Church Fathers (14 notes) | Each chapter read in the Ante-Nicene Fathers text on newadvent.org | All match: Irenaeus 1.26.2 and 1.27.2; Justin, *Dialogue* 71–73; Origen, *Against Celsus* 2.27; Tertullian, *Against Marcion* 1.6, 1.19, 3.19 and 4.2; the Pseudo-Clementine *Homilies* 2.38 and 3.47–50. |
+| URLs (25) and DOIs (3) | Each link opened; each DOI looked up in Crossref | All open. Reddit and eScholarship refuse automated requests but are live. The DOI of the 2012 al-Fusul paper is the journal's own and is not registered with Crossref; the journal page is cited beside it. |
+
+### Not yet checkable here
+
+- **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.
+- **Page-level faithfulness of modern books.** Each book's existence and date are checked (see below). Whether the page cited says what the article says needs the book itself, and will be done book by book as copies become available.
 - **Sectarian articles.** Six articles on Sunni and Shia questions wait for the owner's decision on scope: ridda-wars-abu-bakr-fadak, taqiyya-myths, temporary-marriage-mutah, seal-of-the-prophets, end-of-time and islam-religion-of-peace.
