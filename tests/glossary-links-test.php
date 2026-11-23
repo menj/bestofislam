@@ -62,7 +62,7 @@ function test_map() {
 				'url'     => 'https://bestofislam.org/glossary/' . $t['slug'] . '/',
 				'id'      => $id,
 				'always'  => in_array( $t['slug'], boi_gl_always(), true ),
-				'epithet' => boi_glossary_epithet_html( boi_glossary_term_by_slug( $t['slug'] ) ),
+				'epithet' => in_array( $low, boi_gl_no_epithet(), true ) ? '' : boi_glossary_epithet_html( boi_glossary_term_by_slug( $t['slug'] ) ),
 			);
 		}
 	}
@@ -112,6 +112,9 @@ function boi_gl_apply_old( $content, $items, $budget ) {
 			if ( preg_match( '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu', $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
 				$start = $mm[1][1];
 				$end   = $start + strlen( $mm[1][0] );
+				if ( boi_gl_part_of_name( $tok, $start, $end ) ) {
+					continue;
+				}
 				foreach ( $found as $f ) {
 					if ( $start < $f['end'] && $end > $f['start'] ) {
 						continue 2;

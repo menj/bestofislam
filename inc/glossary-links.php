@@ -44,9 +44,63 @@ function boi_gl_stoplist() {
 		'learning', 'literacy', 'mercy', 'messiah', 'murder', 'myths', 'pictures', 'rain', 'reason', 'revelation', 'ruling',
 		'satan', 'study', 'submission', 'surrender', 'water', 'wills', 'wine', 'worship', 'fasting', 'ramadan', 'christ', 'jesus',
 		'gospel', 'gospels', 'fables', 'cartoons', 'handicapped', 'fairness', 'compassion', 'bequests', 'id', 'eid',
+		// Most often Imam Ahmad ibn Hanbal (Musnad Ahmad), not the Prophet's name.
+		'ahmad', 'aḥmad',
 	);
 
 	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_stoplist', $words ) );
+}
+
+/**
+ * Names that link but never carry the epithet: in an article they are
+ * usually the Christian term (the Holy Spirit of the Trinity), not Jibril.
+ *
+ * @return string[] Lowercase.
+ */
+function boi_gl_no_epithet() {
+	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_no_epithet', array( 'holy spirit', 'paraclete', 'comforter' ) ) );
+}
+
+/**
+ * Whether a one-word match is only part of a longer personal name, such as
+ * Joseph in "Joseph Smith", Ibrahim in "Raymond Ibrahim" or Ahmad in
+ * "Ahmad ibn Hanbal". Such a match takes no link and no epithet.
+ *
+ * @param string $tok   Text token.
+ * @param int    $start Byte offset of the match.
+ * @param int    $end   Byte offset after the match.
+ * @return bool
+ */
+function boi_gl_part_of_name( $tok, $start, $end ) {
+	$word = substr( $tok, $start, $end - $start );
+
+	if ( preg_match( '/[\s\x{00A0}]/u', $word ) || ! preg_match( '/^\p{Lu}/u', $word ) ) {
+		return false;
+	}
+
+	$before = substr( $tok, 0, $start );
+	$after  = substr( $tok, $end );
+
+	// Followed by a capitalised word, or by ibn / bin / bint.
+	if ( preg_match( '/^(?:\s|&nbsp;|\x{00A0})+(?:\p{Lu}|(?:ibn|bin|bint)\b)/u', $after ) ) {
+		return true;
+	}
+
+	// Joined to a prefix: al-, ibn, bin, Abu, Umm.
+	if ( preg_match( '/(?:-|\b(?:ibn|bin|bint|abu|abū|umm)(?:\s|&nbsp;|\x{00A0})+)$/iu', $before ) ) {
+		return true;
+	}
+
+	// Preceded by a capitalised word that is not a title or a common word
+	// that may open a sentence.
+	if ( preg_match( '/(\p{Lu}[\p{L}\x{2019}\']*)(?:\s|&nbsp;|\x{00A0})+$/u', $before, $m ) ) {
+		$ok = array( 'prophet', 'imam', 'sayyidina', 'sayyiduna', 'the', 'a', 'in', 'of', 'and', 'but', 'for', 'when', 'as', 'to', 'by', 'from', 'like', 'with', 'that', 'so', 'if', 'after', 'before', 'while', 'god', 'allah' );
+		if ( ! in_array( function_exists( 'mb_strtolower' ) ? mb_strtolower( $m[1] ) : strtolower( $m[1] ), $ok, true ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
@@ -56,7 +110,7 @@ function boi_gl_stoplist() {
  * @return array
  */
 function boi_gl_map() {
-	$key = 'boi_gl_map_' . BOI_GLOSSARY_VERSION;
+	$key = 'boi_gl_map_n2_' . BOI_GLOSSARY_VERSION;
 	$map = get_transient( $key );
 
 	if ( is_array( $map ) ) {
@@ -88,7 +142,7 @@ function boi_gl_map() {
 					'url'     => get_permalink( $page ),
 					'id'      => $page->ID,
 					'always'  => in_array( $page->post_name, boi_gl_always(), true ),
-					'epithet' => function_exists( 'boi_glossary_epithet_html' ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
+					'epithet' => function_exists( 'boi_glossary_epithet_html' ) && ! in_array( $low, boi_gl_no_epithet(), true ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
 				);
 			}
 		}
@@ -105,7 +159,7 @@ function boi_gl_map() {
 
 /** Forget the map when a Glossary page changes. */
 function boi_gl_flush( $post_id = 0 ) {
-	delete_transient( 'boi_gl_map_' . BOI_GLOSSARY_VERSION );
+	delete_transient( 'boi_gl_map_n2_' . BOI_GLOSSARY_VERSION );
 }
 add_action( 'save_post_page', 'boi_gl_flush' );
 add_action( 'trashed_post', 'boi_gl_flush' );
@@ -317,6 +371,10 @@ function boi_gl_apply( $content, $compiled, $budget ) {
 			if ( preg_match( $item['rx'], $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
 				$start = $mm[1][1];
 				$end   = $start + strlen( $mm[1][0] );
+
+				if ( boi_gl_part_of_name( $tok, $start, $end ) ) {
+					continue;
+				}
 
 				foreach ( $found as $f ) {
 					if ( $start < $f['end'] && $end > $f['start'] ) {

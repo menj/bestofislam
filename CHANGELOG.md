@@ -8,6 +8,11 @@ versioning.
 
 No feature removed and no public identifier renamed.
 
+### Fixed
+- Glossary auto-links no longer link, or add an honorific to, a word that is only part of someone else's name: Joseph in "Joseph Smith", David in "David Wood", Ibrahim in "Raymond Ibrahim", or a name after al-, ibn, bin, Abu or Umm (`boi_gl_part_of_name()`).
+- "Ahmad" is on the stoplist: in articles it is nearly always Imam Ahmad ibn Hanbal (the Musnad), not the Prophet's name.
+- "Holy Spirit", "Paraclete" and "Comforter" still link but carry no عليه السلام, since in the articles they usually mean the Christian term (`boi_gl_no_epithet` filter). The link map's cache key is now `boi_gl_map_n2_`, so it rebuilds once.
+
 ### Added
 - `.claude/VOICE.md` and SSOT D64: the voice standard for articles, glossary and pages, from the owner's voice profile, anti-AI writing style and academic-research method. `.claude/CLAUDE.md` points to it.
 - islam-arian-heresy-claim: seven answers to the claim that Islam is a gnostic, Arian heresy refuted by the councils of 325, 431 and "525" and by John of Damascus: the three labels, Arius in Socrates 1.5 against Quran 3:59 and 2:117, the real dates (no council in 525; Constantinople II in 553), Ariminum 359 and Jerome's "the whole world groaned" (Dialogue against the Luciferians 19), John of Damascus's dates, his "it seems... an Arian monk", the Muslims' charge of "Associators" and his account of the Quran (On Heresies 100, Chase translation, FOC 37), and Quran 19:35, 4:171 and 112.
