@@ -43,6 +43,7 @@
         "content\/fastest-growing-religion.json": "da0478d31331430512b9c38938578da1",
         "content\/fate-and-free-will.json": "7c5218e4d2286cdff637adc8bcfd92e0",
         "content\/fighting-verses-in-context.json": "a85e9b6475796df54ee4903c442ab64d",
+        "content\/first-and-the-last.json": "730a617a708df8b7a61add1480e9603d",
         "content\/first-muslims-kept-the-faith.json": "2b2605acd2951c8f014243258fd73581",
         "content\/first-revelation-demonic-claim.json": "3c6026c0119c71a059cc83068399ff05",
         "content\/five-pillars-explained.json": "609343fc3fe9574724c29e384397eeca",
@@ -190,8 +191,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "e868af66b8f001e3eed18ccda59c59c7",
         "content\/women-in-the-prophets-life.json": "7cceda50332599fb8fae985d8a3131bb",
         "content\/women-leading-prayer.json": "16bbaeb185073b56e610d1aafebcc9e9",
-        "inc\/data\/seed.json": "749e8deefe46636011133461c3b35e6f",
+        "inc\/data\/seed.json": "cd5f08080fa14bb6989f5861d4fbc0c1",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "81099e853d7a2b365cff447b908409fe"
+    "checksum": "835ce6ce96e60d32c28c73a699db3f9b"
 }

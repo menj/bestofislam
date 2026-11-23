@@ -174,9 +174,25 @@ function boi_preferred_source_url() {
 }
 
 /**
- * The invitation to add the site as a preferred source on Google: a link in
- * the theme's own style, with no Google script and no tracking. It follows
- * Google's deeplink method; the theme loads no remote assets.
+ * Google's G, as an inline SVG: four paths, no file and no remote request.
+ * It marks the preferred-source link as Google's, at the owner's request.
+ *
+ * @return string The mark, hidden from screen readers.
+ */
+function boi_google_g() {
+	return '<span class="boi-psource__g" aria-hidden="true"><svg viewBox="0 0 48 48" width="18" height="18" focusable="false">'
+		. '<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>'
+		. '<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>'
+		. '<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>'
+		. '<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>'
+		. '</svg></span>';
+}
+
+/**
+ * The invitation to add the site as a preferred source on Google: a short
+ * link in the theme's own style, led by Google's G, with no Google script
+ * and no tracking. It follows Google's deeplink method; the theme loads no
+ * remote assets. The full wording is in the title and for screen readers.
  *
  * @param string $class Extra class for the wrapper.
  * @return string Empty when the switch is off or the site is not eligible.
@@ -190,17 +206,19 @@ function boi_render_preferred_source( $class = '' ) {
 	}
 
 	return sprintf(
-		'<p class="boi-psource%1$s"><a class="boi-psource__link" href="%2$s" rel="noopener" target="_blank">%3$s<span>%4$s</span></a></p>',
+		'<p class="boi-psource%1$s"><a class="boi-psource__link" href="%2$s" rel="noopener" target="_blank" title="%3$s">%4$s<span>%5$s</span><span class="screen-reader-text"> %6$s</span></a></p>',
 		'' !== $class ? ' ' . esc_attr( $class ) : '',
 		esc_url( $url ),
-		boi_ui_icon( 'newspaper' ),
-		esc_html(
+		esc_attr(
 			sprintf(
 				/* translators: %s: site name. */
 				__( 'Add %s as a preferred source on Google', 'bestofislam' ),
 				wp_strip_all_tags( get_bloginfo( 'name', 'display' ) )
 			)
-		)
+		),
+		boi_google_g(),
+		esc_html__( 'Add as preferred source', 'bestofislam' ),
+		esc_html__( 'on Google', 'bestofislam' )
 	);
 }
 

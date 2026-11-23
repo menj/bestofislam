@@ -6268,5 +6268,49 @@
     "source": "https://www.flickr.com/photos/medmss/8241870728"
    }
   ]
+ },
+ "first-and-the-last": {
+  "featured": {
+   "file": "first-and-the-last.avif",
+   "alt": "An aerial view of the island of Patmos, with white houses around the walled Monastery of Saint John on the hill.",
+   "caption": "Patmos, where the author of Revelation says he received his visions (Revelation 1:9).",
+   "artist": "K",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/aerial-view-of-patmos-island-with-historical-architecture-37844621/"
+  },
+  "inline": [
+   {
+    "file": "first-and-the-last-1.avif",
+    "alt": "Columns of Hebrew text on the parchment sheets of the Great Isaiah Scroll from Qumran.",
+    "caption": "The Great Isaiah Scroll from Qumran, second century BC. \"I am the first and I am the last; besides me there is no god\" (Isaiah 44:6).",
+    "artist": "Ardon Bar Hama (photograph)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll.jpg"
+   },
+   {
+    "file": "first-and-the-last-2.avif",
+    "alt": "An illuminated frontispiece of interlaced geometric knots in gold, blue and white from a manuscript of the Quran.",
+    "caption": "The frontispiece of a manuscript of the Quran (Walters Art Museum, Ms. W.556, fol. 3b). \"He is the First and the Last, the Outward and the Inward\" (57:3).",
+    "artist": "Walters Art Museum",
+    "licence": "CC0",
+    "source": "https://www.flickr.com/photos/medmss/3834895878"
+   },
+   {
+    "file": "first-and-the-last-3.avif",
+    "alt": "A fragment of papyrus covered with Greek uncial letters.",
+    "caption": "Papyrus 47, the oldest surviving copy of part of Revelation, third century: Revelation 13:16 to 14:4 (Chester Beatty Library, Dublin).",
+    "artist": "Chester Beatty Library",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dublin,_Chester_Beatty_Ms_Chester_Beatty_III_Papyrus_47_fol._7r_Rev_13,16-14.jpg"
+   },
+   {
+    "file": "first-and-the-last-4.avif",
+    "alt": "The harbour town of Patmos with white houses below a hill, seen across trees.",
+    "caption": "The town of Patmos. Revelation opens: \"The revelation of Jesus Christ, which God gave him\" (1:1).",
+    "artist": "K",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/scenic-view-of-patmos-town-in-greece-37844612/"
+   }
+  ]
  }
 }
