@@ -201,6 +201,9 @@ $cases = array(
 	'Imam al-Bukhari reports it.'                            => '[Imam al-Bukhari→bukhari-al] reports it.',
 	'The Holy Spirit came.'                                  => 'The [Holy Spirit→gabriel] came.',
 	'The early Arabs knew its history.'                      => 'The early Arabs knew its history.',
+	'It is in Sahih Muslim.'                                 => 'It is in [Sahih Muslim→sahih].',
+	'Imam Muslim reports it.'                                => '[Imam Muslim→muslim-ibn-al-hajjaj] reports it.',
+	'Al-Bukhari and Muslim report it.'                       => '[Al-Bukhari→bukhari-al] and Muslim report it.',
 );
 $compiled = boi_gl_compiled( $map );
 foreach ( $cases as $in => $want ) {

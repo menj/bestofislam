@@ -48,6 +48,8 @@ function boi_gl_stoplist() {
 		'ahmad', 'aḥmad', 'ahmed',
 		// Everyday words the owner does not want linked (2026-11-23).
 		'arab', 'arabs', 'anatomy', 'history', 'christian', 'christians',
+		// Most often Imam Muslim (Sahih Muslim, "Bukhari and Muslim"), and too common otherwise.
+		'muslim', 'muslims',
 	);
 
 	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_stoplist', $words ) );
