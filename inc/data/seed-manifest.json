@@ -163,7 +163,7 @@
         "content\/taqiyya-myths.json": "1b7e7c1b10c8ff0641c91f802e37b74d",
         "content\/temporary-marriage-mutah.json": "7c530a424eaaf9cf268e37016b8bf492",
         "content\/terrorism-and-muslims-the-data.json": "1498a8ba09283654a122d61263b2c7c8",
-        "content\/three-divorces-and-the-one-night-marriage.json": "d3ce92c128b001a5dc773a58ce157b97",
+        "content\/three-divorces-and-the-one-night-marriage.json": "b84585164b698c8ba470ba32eb1a74d8",
         "content\/torah-on-the-cushion-hadith.json": "5635c166b73d759a89c549b83cd68d3d",
         "content\/trinity-in-the-hebrew-bible-tested.json": "874ae3489ca7dce8362f79c93eb2ba4c",
         "content\/uncreated-quran-and-the-logos.json": "2372fbe49bed66542d8688131e74340a",
@@ -190,12 +190,12 @@
         "content\/why-five-prayers.json": "4f4768dd61ae5bc639e8cc742fa34ce2",
         "content\/why-no-interest.json": "a1dccf04005134fbed06b261d3261547",
         "content\/will-every-non-muslim-go-to-hell.json": "1157f317c4b338148280a7f6af34be5b",
-        "content\/women-in-hell-and-deficient-intelligence-hadith.json": "c760b1b8c28128b79edc68580f2fac46",
+        "content\/women-in-hell-and-deficient-intelligence-hadith.json": "c8db4fdb709fa929b9b51471edf6bae1",
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "8b3debbd5d5ebc38fcea0c4af7c33235",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
         "inc\/data\/seed.json": "9e85b49fe2e1d7dc7e7d6febea9c3ae2",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "dd7221a4321531765b04d0e128ab30fc"
+    "checksum": "016d48d37c0206f67acab355a5fbf8f4"
 }
