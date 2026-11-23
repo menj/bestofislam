@@ -46,6 +46,8 @@ function boi_gl_stoplist() {
 		'gospel', 'gospels', 'fables', 'cartoons', 'handicapped', 'fairness', 'compassion', 'bequests', 'id', 'eid',
 		// Most often Imam Ahmad ibn Hanbal (Musnad Ahmad), not the Prophet's name.
 		'ahmad', 'aḥmad', 'ahmed',
+		// Everyday words the owner does not want linked (2026-11-23).
+		'arab', 'arabs', 'anatomy', 'history', 'christian', 'christians',
 	);
 
 	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_stoplist', $words ) );
