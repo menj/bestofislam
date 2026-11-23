@@ -16,13 +16,13 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.126.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.127.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
 | Seeded content | 8 sections, 23 categories, 160 tags, 190 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 784 Glossary entries (`inc/glossary-data/`) |
-| Data versions | `BOI_GLOSSARY_VERSION` 19, `BOI_TERMS_VERSION` 2 |
+| Data versions | `BOI_GLOSSARY_VERSION` 21, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
@@ -770,6 +770,14 @@ The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and
 ### D63. Readers can add the site as a preferred source on Google
 
 The owner asked on 2026-11-22 for Google's "preferred sources" (Google Search Central, last updated 2026-09-18) to be applied natively, in the theme's colours. Google offers three methods: its standard button and its advanced script, which both load `news.google.com/swg/js/v1/publisher.js`, and a deeplink to `https://www.google.com/preferences/source?q=<domain>`. The theme uses the deeplink only, because it loads no remote assets and sends no reader data to a third party until the reader clicks. `boi_render_preferred_source()` in `inc/features.php` prints it as a pill link in the theme's palette (pale blue fill, gold leading rule, azure on hover), led by Google's G on a white disc and worded "Add as preferred source". The owner asked on 2026-11-23 for the G and the shorter wording. The G is drawn inline by `boi_google_g()` as an SVG of four paths, so nothing is fetched from Google. The full wording, "Add Best of Islam as a preferred source on Google", is the link's title, and screen readers hear "Add as preferred source on Google". It appears under the share links of an article and in the Follow band. Only a domain or subdomain can be a preferred source, so `boi_preferred_source_url()` gives no link for a site in a subfolder, on a bare host or at an IP address, and drops `www.`. The `preferred_source` switch on the Display tab turns it off. The link is hidden in print.
+
+### D67. The Excerpt and the Abstract are different texts
+
+The owner set on 2026-11-23: "remember that Excerpt is different from Abstract. Excerpt is meant for general audience and has a mild CTA within 150 char. whereas Abstract is the overall summary of the article and must be more academic inclined". The Excerpt is the post excerpt (`excerpt` in `inc/data/seed.json`): general audience, at most 150 characters, a mild call to action. The Abstract (`inc/data/abstracts.json`, D66) is the academic summary of the whole article, 55 to 110 words, with no call to action. `.claude/VOICE.md` section 6 holds the working rule, and `tests/abstract-test.php` enforces both limits.
+
+### D66. An abstract opens every article
+
+The owner asked on 2026-11-23 for his Abstract Box plugin to be integrated natively into the theme, with content written for it and schema markup, and chose that every article gets an abstract and that the box sits at the top of the article. `inc/abstract.php` keeps the plugin's shortcode, block and styles idea and drops its separate settings page, Customizer panel and its own JSON-LD block: the text is the Article node's `abstract` in the theme's graph. The 197 abstracts live in `inc/data/abstracts.json`, keyed by slug, so the article files and their sync fingerprints are untouched; each states the claim, the points and the verdict in 55 to 110 words under `.claude/VOICE.md`. An Abstract block or `[abstract]` shortcode in a post replaces the bundled text. The box is an `<aside>`, so the drop cap stays on the first paragraph. Every colour preset must pass `boi_lead_list_accent_ok()` (navy and sky fail in one appearance and are not offered). Settings: Theme Options, Abstract. Test: `tests/abstract-test.php`.
 
 ### D65. An endmark closes every article
 

@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.126.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.127.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -57,9 +57,10 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 ## Settings
 
-Under Appearance, Theme Options, in nine tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. The Images tab holds a Pexels key (or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder built on the official Pexels JavaScript client (`assets/js/vendor/pexels/`, `assets/js/admin-images.js`); it copies a plan entry for `bin/stock-images.json`. Without JavaScript the tabs are links and still work.
+Under Appearance, Theme Options, in ten tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. The Images tab holds a Pexels key (or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder built on the official Pexels JavaScript client (`assets/js/vendor/pexels/`, `assets/js/admin-images.js`); it copies a plan entry for `bin/stock-images.json`. Without JavaScript the tabs are links and still work.
 
 - **Display:** rank badges, the entry image size, the article contents, the mid-article next step, the preferred-source invitation and the endmark (`article_contents`, `article_mid_next`, `preferred_source`, `endmark`), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
+- **Abstract:** the summary box at the top of each article (`inc/abstract.php`): `abstract_enabled`, `abstract_title`, `abstract_style` (`ruled`, `card`, `academic`, `minimal`), `abstract_scheme` (`theme` or a preset from `boi_abstract_schemes()`, or `custom`) and `abstract_accent`, checked with `boi_lead_list_accent_ok()`. The text comes from `inc/data/abstracts.json` (slug => plain text), or from an Abstract block (`blocks/abstract/`) or `[abstract]` shortcode in the post, which replaces it. The box is prepended at `the_content` priority 30, after the link passes, so it carries no links; `assets/css/abstract.css` loads on single posts. `boi_abstract_text()` feeds the Article node's `abstract` in `inc/schema-graph.php`.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
 - **Content:** re-running population, how many images have reached the media library, and any seeded articles that differ from this version, with a choice to update them. The **Replace edited articles** switch (`sync_replace_edited`, off by default) makes updates give edited articles the new text too, after saving the owner's text as a revision or, where revisions are off, in `_boi_sync_previous`; an article the owner chose to keep stays kept.
@@ -128,7 +129,8 @@ bestofislam/
 │                        util, taxonomy, blocks, schema, voting, settings,
 │                        setup, content-sync, appearance, reflections, search, sections,
 │                        seo, icons, features, lead-list, contact, front, inline-images,
-│                        images, questions, reading, anatomy, structured-data,
+│                        images, questions, reading, anatomy, endmark, abstract,
+│                        structured-data,
 │                        schema-graph, social-meta, rank-math, unlist,
 │                        search-permalinks, reading-progress, login,
 │                        login-screen, favicon,
@@ -138,15 +140,16 @@ bestofislam/
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
 ├── inc/data/            network-links.json (the shared phrase map),
-│                        seed.json (topics, categories, tags, 190 articles,
+│                        seed.json (topics, categories, tags, 197 articles,
 │                        8 pages), questions.json (45), image-credits.json,
+│                        abstracts.json (slug to abstract),
 │                        schema-entities.json, supersedes.json (old slug to new,
 │                        ships empty), seed-manifest.json (the checksums the
 │                        content sync trusts). Read, never executed
-├── inc/glossary-data/   a.json to z.json: the 784 Glossary entries
+├── inc/glossary-data/   a.json to z.json: the 785 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
-├── content/             The 190 seeded articles as block markup, one JSON file each
-├── blocks/              entry, listicle, theme-toggle: block.json and editor scripts
+├── content/             The 197 seeded articles as block markup, one JSON file each
+├── blocks/              abstract, entry, listicle, theme-toggle: block.json and editor scripts
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic
 ├── parts/               header, footer
@@ -229,7 +232,7 @@ Set these in `wp-config.php`. Each is optional.
 | `BOI_DISABLE_CONTENT_SYNC` | `true` stops the content sync: no updates, removals, redirects or hiding of seeded articles. The Content tab says so |
 | `WP_ENVIRONMENT_TYPE` | `local` or `development` keeps the development files |
 
-Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (19), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
+Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_settings`), `BOI_GLOSSARY_VERSION` (21), `BOI_TERMS_VERSION` (2), `BOI_UNLISTED_OPTION` (`boi_unlisted`), `BOI_CL_OPTION` (`boi_cl`), `BOI_ERR_MARKER`, `BOI_STATIC_ERRORS` (`bestofislam-errors`), `BOI_SEC_FILES_MARKER`, and the `BOI_SEC_*` option names.
 
 ## Security
 
@@ -327,7 +330,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.126.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.127.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

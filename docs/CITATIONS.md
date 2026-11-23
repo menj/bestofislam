@@ -76,7 +76,7 @@ The three articles answering the list of "rules" for converts were written to th
   - the Grand Mufti's 2007 interview, reported in *Daily News Egypt*;
   - Dār al-Iftāʾ's published statement.
 
-### New article of 1.126.0
+### New article of 1.127.0
 
 scrolls-of-abraham: every source read in its text. The Shamela pages, all paginated as the print, are:
 - Ibn Kathīr, vol. 2, pp. 470–472; vol. 7, p. 465; vol. 8, pp. 382–383;

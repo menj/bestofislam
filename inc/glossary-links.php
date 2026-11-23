@@ -44,9 +44,135 @@ function boi_gl_stoplist() {
 		'learning', 'literacy', 'mercy', 'messiah', 'murder', 'myths', 'pictures', 'rain', 'reason', 'revelation', 'ruling',
 		'satan', 'study', 'submission', 'surrender', 'water', 'wills', 'wine', 'worship', 'fasting', 'ramadan', 'christ', 'jesus',
 		'gospel', 'gospels', 'fables', 'cartoons', 'handicapped', 'fairness', 'compassion', 'bequests', 'id', 'eid',
+		// Most often Imam Ahmad ibn Hanbal (Musnad Ahmad), not the Prophet's name.
+		'ahmad', 'aḥmad', 'ahmed',
+		// Everyday words the owner does not want linked (2026-11-23).
+		'arab', 'arabs', 'anatomy', 'history', 'christian', 'christians',
+		// Most often Imam Muslim (Sahih Muslim, "Bukhari and Muslim"), and too common otherwise.
+		'muslim', 'muslims',
 	);
 
 	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_stoplist', $words ) );
+}
+
+/**
+ * The pattern for an escaped phrase: whole words only, and not one half of a
+ * word joined by an apostrophe ("Isma" in "Isma'il").
+ *
+ * @param string $needle Quoted phrase.
+ * @return string
+ */
+function boi_gl_rx( $needle ) {
+	$apos = "(?:'|&#8217;|&#039;|\xE2\x80\x99)";
+	return '/(?<![\p{L}\p{N}])(?<!\p{L}\')(?<!\p{L}&#8217;)(?<!\p{L}&#039;)(?<!\p{L}\x{2019})(' . $needle . ')(?![\p{L}\p{N}])(?!' . $apos . '\p{L})/iu';
+}
+
+/**
+ * The first match of a pattern in a token that is not part of a longer
+ * name, so "Joseph Smith ... the prophet Joseph" still links the second.
+ *
+ * @param string $rx    Pattern from boi_gl_rx().
+ * @param string $tok   Text token.
+ * @param bool   $guard Apply boi_gl_part_of_name() (prophet and person entries).
+ * @return int[]|null array( start, end ) in bytes, or null.
+ */
+function boi_gl_first_match( $rx, $tok, $guard ) {
+	if ( ! preg_match_all( $rx, $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
+		return null;
+	}
+	foreach ( $mm[1] as $hit ) {
+		$start = $hit[1];
+		$end   = $start + strlen( $hit[0] );
+		if ( ! $guard || ! boi_gl_part_of_name( $tok, $start, $end ) ) {
+			return array( $start, $end );
+		}
+	}
+	return null;
+}
+
+/**
+ * Whether an entry is a person's name (a prophet or a person), the only kind
+ * the part-of-a-name guard applies to.
+ *
+ * @param string $slug Entry slug.
+ * @return bool
+ */
+function boi_gl_is_name( $slug ) {
+	$t = function_exists( 'boi_glossary_term_by_slug' ) ? boi_glossary_term_by_slug( $slug ) : null;
+	return is_array( $t ) && isset( $t['type'] ) && in_array( $t['type'], array( 'prophet', 'person' ), true );
+}
+
+/**
+ * Names that link but never carry the epithet: in an article they are
+ * usually the Christian term (the Holy Spirit of the Trinity), not Jibril.
+ *
+ * @return string[] Lowercase.
+ */
+function boi_gl_no_epithet() {
+	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_no_epithet', array( 'holy spirit', 'the holy spirit', 'holy ghost', 'spirit of truth', 'paraclete', 'comforter' ) ) );
+}
+
+/**
+ * Whether a one-word match is only part of a longer personal name, such as
+ * Joseph in "Joseph Smith", Ibrahim in "Raymond Ibrahim" or Ahmad in
+ * "Ahmad ibn Hanbal". Such a match takes no link and no epithet.
+ *
+ * @param string $tok   Text token.
+ * @param int    $start Byte offset of the match.
+ * @param int    $end   Byte offset after the match.
+ * @return bool
+ */
+function boi_gl_part_of_name( $tok, $start, $end ) {
+	$word = substr( $tok, $start, $end - $start );
+
+	if ( preg_match( '/[\s\x{00A0}]|&nbsp;/u', $word ) ) {
+		return false;
+	}
+
+	// The text is texturized: read &#8217; and &nbsp; as the characters.
+	$before = html_entity_decode( substr( $tok, 0, $start ), ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$after  = html_entity_decode( substr( $tok, $end ), ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$sp     = '[\s\x{00A0}]+';
+
+	// Whatever its case, the word is part of a longer name when it comes
+	// before an Arabic article or a nasab (Isma'il al Faruqi, Ismail
+	// al-Faruqi, Ismail ibn Kathir, Ismail b. Ali), is joined by a hyphen
+	// (Joseph-Marie, al-Ismail), or follows a kunya or a courtesy title or
+	// an initial (Abu Ismail, Mr Ismail, Dr. Ibrahim, J. Joseph).
+	if ( preg_match( '/^(?:' . $sp . '(?:(?:al|el|ad|ar|as|at|az|an|ash|ath|adh|al)(?:' . $sp . '|-)\p{L}|(?:ibn|bin|bint|bt\.?|b\.)(?!\p{L}))|-\p{L})/iu', $after ) ) {
+		return true;
+	}
+	if ( preg_match( '/(?<![\p{L}])(?:al|el|ad|ar|as|at|az|an|ash|ath|adh)-$/iu', $before ) ) {
+		$before = '';
+	}
+	if ( preg_match( '/(?:\p{L}-|(?<!\p{L})(?:ibn|bin|bint|abu|abū|umm|mr|mrs|ms|miss|dr|prof|rev|fr|sr|st|sir|dame|lord|lady|pastor|father|bishop|brother|sister|sheikh|shaykh)\.?' . $sp . '|(?<!\p{L})\p{Lu}\.' . $sp . ')$/iu', $before ) ) {
+		return true;
+	}
+
+	if ( ! preg_match( '/^\p{Lu}/u', $word ) ) {
+		return false;
+	}
+
+	// A capitalised word beside another capitalised name (Joseph Smith,
+	// Edward Ismail), unless that word is a title or one that may open a
+	// sentence.
+	if ( preg_match( '/^' . $sp . '\p{Lu}/u', $after ) ) {
+		return true;
+	}
+	if ( preg_match( '/(?<![\p{L}\'\x{2019}])(\p{Lu}[\p{L}\'\x{2019}]*)' . $sp . '$/u', $before, $m ) ) {
+		$ok = array(
+			'prophet', 'imam', 'sayyidina', 'sayyiduna', 'god', 'allah', 'the', 'a', 'an', 'in', 'of', 'and', 'but', 'for', 'when', 'as', 'to', 'by', 'from',
+			'like', 'with', 'that', 'so', 'if', 'after', 'before', 'while', 'then', 'later', 'here', 'there', 'yet', 'only', 'even', 'both',
+			'once', 'since', 'because', 'although', 'though', 'where', 'why', 'how', 'what', 'who', 'this', 'these', 'those', 'it', 'he', 'she',
+			'they', 'we', 'his', 'her', 'their', 'our', 'not', 'or', 'nor', 'also', 'thus', 'hence', 'indeed', 'was', 'is', 'were', 'did', 'does',
+			'at', 'on', 'until', 'unlike', 'about', 'did', 'see', 'said', 'says', 'tells', 'told', 'asked', 'ask',
+		);
+		if ( ! in_array( function_exists( 'mb_strtolower' ) ? mb_strtolower( $m[1] ) : strtolower( $m[1] ), $ok, true ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
@@ -56,7 +182,7 @@ function boi_gl_stoplist() {
  * @return array
  */
 function boi_gl_map() {
-	$key = 'boi_gl_map_' . BOI_GLOSSARY_VERSION;
+	$key = 'boi_gl_map_n2_' . BOI_GLOSSARY_VERSION;
 	$map = get_transient( $key );
 
 	if ( is_array( $map ) ) {
@@ -88,7 +214,8 @@ function boi_gl_map() {
 					'url'     => get_permalink( $page ),
 					'id'      => $page->ID,
 					'always'  => in_array( $page->post_name, boi_gl_always(), true ),
-					'epithet' => function_exists( 'boi_glossary_epithet_html' ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
+					'name'    => boi_gl_is_name( $page->post_name ),
+					'epithet' => function_exists( 'boi_glossary_epithet_html' ) && ! in_array( $low, boi_gl_no_epithet(), true ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
 				);
 			}
 		}
@@ -105,7 +232,7 @@ function boi_gl_map() {
 
 /** Forget the map when a Glossary page changes. */
 function boi_gl_flush( $post_id = 0 ) {
-	delete_transient( 'boi_gl_map_' . BOI_GLOSSARY_VERSION );
+	delete_transient( 'boi_gl_map_n2_' . BOI_GLOSSARY_VERSION );
 }
 add_action( 'save_post_page', 'boi_gl_flush' );
 add_action( 'trashed_post', 'boi_gl_flush' );
@@ -151,7 +278,7 @@ function boi_gl_compiled( $items ) {
 			}
 		}
 
-		$items[ $n ]['rx']  = '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu';
+		$items[ $n ]['rx']  = boi_gl_rx( $needle );
 		$items[ $n ]['key'] = strtolower( $key );
 	}
 
@@ -314,9 +441,9 @@ function boi_gl_apply( $content, $compiled, $budget ) {
 				continue;
 			}
 
-			if ( preg_match( $item['rx'], $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
-				$start = $mm[1][1];
-				$end   = $start + strlen( $mm[1][0] );
+			$mm = boi_gl_first_match( $item['rx'], $tok, ! empty( $item['name'] ) );
+			if ( $mm ) {
+				list( $start, $end ) = $mm;
 
 				foreach ( $found as $f ) {
 					if ( $start < $f['end'] && $end > $f['start'] ) {

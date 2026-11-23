@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.126.0
+Stable tag: 1.127.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -65,9 +65,10 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 == Usage ==
 
-Appearance, Theme Options holds the settings in 8 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
+Appearance, Theme Options holds the settings in 10 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
 * Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Abstract: the summary box at the top of each article. Switch it off, change its label, pick one of four styles (Ruled, Card, Academic, Minimal) and choose its colours from the theme azure, six presets or your own accent. To write a different abstract for one article, add the Abstract block to it.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
 * Content: run population again, see how many images have reached the media library, and choose which seeded articles that differ from this release to replace. Switch on "Replace edited articles" to have every update give your edited articles the new text as well. Your text is kept as a revision first, and an article you chose to keep stays yours.
@@ -164,14 +165,22 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.126.0 =
+= 1.127.0 =
 * New article: "The Scrolls of Abraham: a lost scripture, the Sefer Yetzirah or the Testament of Abraham? 7 answers", with a featured image and four in-text images.
+
+= 1.126.1 =
+* Six article summaries shown under the title and in search results were shortened to 150 characters.
+
+= 1.126.0 =
+* Every article now opens with an abstract: a short summary of the claim it answers, the points it walks through and where it comes out. Search engines receive the same text. Choose its label, style and colours under Theme Options, Abstract.
+* "Imam Muslim" now links to a new Glossary entry for the scholar, and "Sahih Muslim" to the Sahih entry.
 
 = 1.125.0 =
 * Three new articles answering a viral list of "rules" for converts: "Before you convert to Islam: 7 answers on what a convert actually takes on", "Women in the 'rules' for converts: 7 answers on worth, circumcision, co-wives and modesty" and "Apostates and LGBT friends in the 'rules' for converts: 7 answers on hatred and shunning", each with a featured image and four in-text images.
 * Sources, second pass: every hadith number, Quran reference and Bible quotation on the site was checked; two Quran quotations, two page references and six Bible translation notes were corrected. The checks are recorded in docs/CITATIONS.md.
 
 = 1.124.0 =
+* Glossary links no longer land on part of another person's name (Joseph Smith, David Wood, Raymond Ibrahim, Musnad Ahmad), and no honorific is added there.
 * Every article now speaks in the editorial voice: it states its purpose once, speaks as "we", marks the opponent's loaded terms in quotation marks and keeps paragraphs to three sentences or fewer.
 * Three new articles: "Is Islam an Arian heresy? 7 answers on the councils and John of Damascus", "Has the Quran's challenge been met? 7 answers on al-Ma'arri and The True Furqan" and "Hafs, Warsh and the other readings: is there more than one Quran? 7 answers", each with a featured image and four in-text images.
 * Every article now ends with the site's endmark, a small navy tombstone with the gold eight-pointed star, after its last line. It does not appear on pages or in FAQs, and can be switched off under Theme Options, Display.
@@ -436,8 +445,14 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.126.0 =
+= 1.127.0 =
 Replace the theme files. The new article is created when the version changes.
+
+= 1.126.1 =
+Replace the theme files. The six shortened summaries refresh where you have not edited the article.
+
+= 1.126.0 =
+Replace the theme files. Every article opens with its abstract straight away. If you use the Abstract Box plugin, deactivate it first so articles do not show two boxes.
 
 = 1.125.0 =
 Replace the theme files. The three new articles are created and the corrected articles refresh where you have not edited them when the version changes.

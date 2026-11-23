@@ -74,3 +74,12 @@ Hostile witnesses (Christian and secular scholars quoted against Christian claim
 get the surrounding-context check without exception. A citation that cannot be
 found is treated as suspect until confirmed, and is corrected, replaced or cut.
 The ledger of checks is `docs/CITATIONS.md`.
+
+## 6. Excerpt and abstract
+
+The owner set this on 2026-11-23: the Excerpt and the Abstract are different texts with different readers.
+
+- **Excerpt** (the post excerpt, `excerpt` in `inc/data/seed.json`): for a general audience, at most 150 characters, ending in a mild call to action such as "Read on." It shows under the title, in cards and in search results.
+- **Abstract** (`inc/data/abstracts.json`, the box at the top of the article and the schema `abstract`): the overall summary of the article, academic in register. It states the claim answered, the method and the points examined, and the verdict, in 55 to 110 words, with no call to action.
+
+Never copy one into the other. `tests/abstract-test.php` checks both limits.

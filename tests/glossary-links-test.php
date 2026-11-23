@@ -62,7 +62,8 @@ function test_map() {
 				'url'     => 'https://bestofislam.org/glossary/' . $t['slug'] . '/',
 				'id'      => $id,
 				'always'  => in_array( $t['slug'], boi_gl_always(), true ),
-				'epithet' => boi_glossary_epithet_html( boi_glossary_term_by_slug( $t['slug'] ) ),
+				'name'    => boi_gl_is_name( $t['slug'] ),
+				'epithet' => in_array( $low, boi_gl_no_epithet(), true ) ? '' : boi_glossary_epithet_html( boi_glossary_term_by_slug( $t['slug'] ) ),
 			);
 		}
 	}
@@ -109,9 +110,9 @@ function boi_gl_apply_old( $content, $items, $budget ) {
 			$needle = preg_quote( htmlspecialchars( $item['phrase'], ENT_NOQUOTES, 'UTF-8' ), '/' );
 			$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
 			$needle = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
-			if ( preg_match( '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu', $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
-				$start = $mm[1][1];
-				$end   = $start + strlen( $mm[1][0] );
+			$mm = boi_gl_first_match( boi_gl_rx( $needle ), $tok, ! empty( $item['name'] ) );
+			if ( $mm ) {
+				list( $start, $end ) = $mm;
 				foreach ( $found as $f ) {
 					if ( $start < $f['end'] && $end > $f['start'] ) {
 						continue 2;
@@ -185,9 +186,40 @@ foreach ( array( 12, 0, 100 ) as $budget ) {
 	}
 }
 
+// Fixed cases, checked against stated expectations rather than against the
+// reference loop, so a guard that suppresses a real link fails here even
+// though both loops agree. Each: text, then the marked-up form expected,
+// where [phrase→slug] is a link and {} is the epithet after it.
+$cases = array(
+	'Joseph Smith and David Wood and Raymond Ibrahim spoke.' => 'Joseph Smith and David Wood and Raymond Ibrahim spoke.',
+	'Edward Isma&#8217;il spoke.'                            => 'Edward Isma&#8217;il spoke.',
+	'Isma&#8217;il al Faruqi wrote it.'                      => '[Isma&#8217;il al Faruqi→ismail-raji-al-faruqi] wrote it.',
+	'Then the prophet Isma&#8217;il built it.'               => 'Then the prophet [Isma&#8217;il→ishmael]{} built it.',
+	'Joseph Smith read of the prophet Joseph.'               => 'Joseph Smith read of the prophet [Joseph→joseph]{}.',
+	'The Musnad of Ahmad has it.'                            => 'The [Musnad of Ahmad→musnad-al] has it.',
+	'It is in Sahih al-Bukhari.'                             => 'It is in [Sahih al-Bukhari→sahih].',
+	'Imam al-Bukhari reports it.'                            => '[Imam al-Bukhari→bukhari-al] reports it.',
+	'The Holy Spirit came.'                                  => 'The [Holy Spirit→gabriel] came.',
+	'The early Arabs knew its history.'                      => 'The early Arabs knew its history.',
+	'It is in Sahih Muslim.'                                 => 'It is in [Sahih Muslim→sahih].',
+	'Imam Muslim reports it.'                                => '[Imam Muslim→muslim-ibn-al-hajjaj] reports it.',
+	'Al-Bukhari and Muslim report it.'                       => '[Al-Bukhari→bukhari-al] and Muslim report it.',
+);
+$compiled = boi_gl_compiled( $map );
+foreach ( $cases as $in => $want ) {
+	$got = boi_gl_apply( '<p>' . $in . '</p>', $compiled, 100 );
+	$got = preg_replace( '#<a href="[^"]*/glossary/([^/]*)/" class="boi-gl-link">(.*?)</a>#', '[$2→$1]', $got );
+	$got = preg_replace( '#&nbsp;<span class="boi-epithet[^"]*"[^>]*>[^<]*</span>#', '{}', $got );
+	$got = substr( $got, 3, -4 );
+	if ( $got !== $want ) {
+		++$fail;
+		echo "CASE: $in\n  want: $want\n  got:  $got\n";
+	}
+}
+
 $n = count( $bodies ) * 3;
 printf( "%d runs over %d bodies, %d map phrases, %d links added\n", $n, count( $bodies ), count( $map ), $links );
 printf( "old: %.1f ms total, %.2f ms per body\n", $t_old * 1000, $t_old * 1000 / $n );
 printf( "new: %.1f ms total, %.2f ms per body\n", $t_new * 1000, $t_new * 1000 / $n );
-echo $fail ? "FAIL: $fail differ\n" : "OK: identical output\n";
+echo $fail ? "FAIL: $fail differ\n" : "OK: identical output, " . count( $cases ) . " fixed cases\n";
 exit( $fail ? 1 : 0 );
