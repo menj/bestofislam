@@ -91,6 +91,16 @@ foreach ( boi_abstract_schemes() as $slug => $scheme ) {
 	}
 }
 
+// The Excerpt is for a general reader: 150 characters at most, with a
+// mild call to action. The Abstract has none (SSOT D67).
+foreach ( $seed['listicles'] as $item ) {
+	check( mb_strlen( $item['excerpt'] ) <= 150, $item['slug'] . ': excerpt within 150 characters (' . mb_strlen( $item['excerpt'] ) . ')' );
+	check( $item['excerpt'] !== ( isset( $data[ $item['slug'] ] ) ? $data[ $item['slug'] ] : '' ), $item['slug'] . ': excerpt and abstract differ' );
+}
+foreach ( $data as $slug => $text ) {
+	check( ! preg_match( '/(^|[.!?]\s+)(Read(?! (as|with|without|that|in|alone|together|whole|slowly|this))|See|Find out|Click|Learn|Discover|Explore)\b[^.!?]*[.!?]?\s*$/', $text ), "$slug: no call to action in the abstract" );
+}
+
 // The box at the top of the main text.
 $GLOBALS['t_post']->post_name = 'al-zutt-allegation';
 $body = '<p>Opening paragraph.</p>';
