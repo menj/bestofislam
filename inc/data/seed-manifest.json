@@ -150,6 +150,7 @@
         "content\/satanic-verses-report.json": "582c6ea6311e0243700b5997cb4e0410",
         "content\/schacht-isnads-dating-hadith.json": "d846cb1a60ef3b9fb66ec05212043d8b",
         "content\/scholars-who-shaped-islamic-study.json": "851071476b3e2cf447d39c613927b87b",
+        "content\/scrolls-of-abraham.json": "a02a1a4ee146df6f00f37b94295bd4d7",
         "content\/seal-of-the-prophets.json": "46d02c0c8de3db5338f4378dfcae5ed3",
         "content\/second-peter.json": "b313bc3e044e6932ed6fb3ed2b816152",
         "content\/septuagint.json": "8b97514452944739a6d4d98d4d3853f2",
@@ -197,8 +198,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "8b3debbd5d5ebc38fcea0c4af7c33235",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "e485ac1450db08b84dc84f0167575a77",
+        "inc\/data\/seed.json": "39d8043440a5a87e46b2bb9a5acd8871",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "1b1704172a9228236cb971a2add738c2"
+    "checksum": "2cae62f242064b3344c3101d5cb3246a"
 }

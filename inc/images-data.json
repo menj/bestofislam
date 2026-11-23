@@ -6576,5 +6576,49 @@
     "source": "https://www.pexels.com/photo/9807534/"
    }
   ]
+ },
+ "scrolls-of-abraham": {
+  "featured": {
+   "file": "scrolls-of-abraham.avif",
+   "alt": "Rolled paper scrolls tied with twine.",
+   "caption": "Rolled scrolls. The Quran describes the scrolls of Abraham by their teaching (87:14-19; 53:36-42).",
+   "artist": "pembegül",
+   "licence": "Pexels licence",
+   "source": "https://www.pexels.com/photo/9801351/"
+  },
+  "inline": [
+   {
+    "file": "scrolls-of-abraham-1.avif",
+    "alt": "Sunrise over golden sand dunes in Morocco.",
+    "caption": "Dunes at sunrise. Muslims believe that scripture was revealed to Abraham and that it does not survive.",
+    "artist": "Francesco Ungaro",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/998635/"
+   },
+   {
+    "file": "scrolls-of-abraham-2.avif",
+    "alt": "An old manuscript in Arabic script open to its aged pages.",
+    "caption": "An Arabic manuscript. The Fihrist reports a ninth-century book that claimed to translate the scrolls and drew on the Quran itself.",
+    "artist": "burcubyzt_85",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/36306963/"
+   },
+   {
+    "file": "scrolls-of-abraham-3.avif",
+    "alt": "An open Torah scroll on a synagogue table, showing the Hebrew letters.",
+    "caption": "Hebrew letters in a Torah scroll. The Sefer Yetzirah describes creation through the 22 letters and ten numbers.",
+    "artist": "cottonbro studio",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/5986493/"
+   },
+   {
+    "file": "scrolls-of-abraham-4.avif",
+    "alt": "A hand writing with a reed pen on papyrus.",
+    "caption": "Writing on papyrus. M. R. James placed the Testament of Abraham in second-century Egypt.",
+    "artist": "Ezeguna_graphy Sulaiman muhammad",
+    "licence": "Pexels licence",
+    "source": "https://www.pexels.com/photo/34326626/"
+   }
+  ]
  }
 }
