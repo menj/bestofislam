@@ -659,6 +659,53 @@
 	border-color: var(--wp--preset--color--accent-1, currentColor);
 }
 
+/* The endmark (SSOT D65): the tombstone that closes an article, a navy
+   square with the gold eight-pointed star, set at the end of the last line
+   of the main text. Gold stone, navy star in the dark appearance. */
+.boi-endmark {
+	display: inline-block;
+	inline-size: 0.78em;
+	block-size: 0.78em;
+	margin-inline-start: 0.4em;
+	vertical-align: -0.06em;
+	line-height: 1;
+}
+
+.boi-endmark__mark {
+	display: block;
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.boi-endmark__stone,
+.boi-endmark__eye {
+	fill: #0D2B4E;
+}
+
+.boi-endmark__star {
+	fill: #E8B33C;
+}
+
+:root[data-theme="dark"] .boi-endmark__stone,
+:root[data-theme="dark"] .boi-endmark__eye {
+	fill: #E8B33C;
+}
+
+:root[data-theme="dark"] .boi-endmark__star {
+	fill: #0A2038;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .boi-endmark__stone,
+	:root:not([data-theme="light"]) .boi-endmark__eye {
+		fill: #E8B33C;
+	}
+
+	:root:not([data-theme="light"]) .boi-endmark__star {
+		fill: #0A2038;
+	}
+}
+
 /* "Add as a preferred source on Google": the deeplink Google offers
    publishers, drawn in the theme's colours. Pale blue pill, gold rule on the
    leading edge, azure on hover and focus. */
