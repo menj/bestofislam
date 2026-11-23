@@ -45,10 +45,34 @@ function boi_gl_stoplist() {
 		'satan', 'study', 'submission', 'surrender', 'water', 'wills', 'wine', 'worship', 'fasting', 'ramadan', 'christ', 'jesus',
 		'gospel', 'gospels', 'fables', 'cartoons', 'handicapped', 'fairness', 'compassion', 'bequests', 'id', 'eid',
 		// Most often Imam Ahmad ibn Hanbal (Musnad Ahmad), not the Prophet's name.
-		'ahmad', 'aḥmad',
+		'ahmad', 'aḥmad', 'ahmed',
 	);
 
 	return array_map( 'strtolower', (array) apply_filters( 'boi_gl_stoplist', $words ) );
+}
+
+/**
+ * The pattern for an escaped phrase: whole words only, and not one half of a
+ * word joined by an apostrophe ("Isma" in "Isma'il").
+ *
+ * @param string $needle Quoted phrase.
+ * @return string
+ */
+function boi_gl_rx( $needle ) {
+	$apos = "(?:'|&#8217;|&#039;|\xE2\x80\x99)";
+	return '/(?<![\p{L}\p{N}])(?<!\p{L}\')(?<!\p{L}&#8217;)(?<!\p{L}&#039;)(?<!\p{L}\x{2019})(' . $needle . ')(?![\p{L}\p{N}])(?!' . $apos . '\p{L})/iu';
+}
+
+/**
+ * Whether an entry is a person's name (a prophet or a person), the only kind
+ * the part-of-a-name guard applies to.
+ *
+ * @param string $slug Entry slug.
+ * @return bool
+ */
+function boi_gl_is_name( $slug ) {
+	$t = function_exists( 'boi_glossary_term_by_slug' ) ? boi_glossary_term_by_slug( $slug ) : null;
+	return is_array( $t ) && isset( $t['type'] ) && in_array( $t['type'], array( 'prophet', 'person' ), true );
 }
 
 /**
@@ -74,33 +98,48 @@ function boi_gl_no_epithet() {
 function boi_gl_part_of_name( $tok, $start, $end ) {
 	$word = substr( $tok, $start, $end - $start );
 
-	if ( preg_match( '/[\s\x{00A0}]/u', $word ) || ! preg_match( '/^\p{Lu}/u', $word ) ) {
+	if ( preg_match( '/[\s\x{00A0}]|&nbsp;/u', $word ) ) {
 		return false;
 	}
 
-	$before = substr( $tok, 0, $start );
-	$after  = substr( $tok, $end );
+	// The text is texturized: read &#8217; and &nbsp; as the characters.
+	$before = html_entity_decode( substr( $tok, 0, $start ), ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$after  = html_entity_decode( substr( $tok, $end ), ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$sp     = '[\s\x{00A0}]+';
 
-	// Followed by a capitalised word or an initial, by ibn / bin / bint / b.,
-	// or joined by a hyphen to another name (Joseph-Marie).
-	if ( preg_match( '/^(?:(?:\s|&nbsp;|\x{00A0})+(?:\p{Lu}|(?:ibn|bin|bint|bt\.?|b\.)(?!\p{L}))|-\p{L})/u', $after ) ) {
+	// Whatever its case, the word is part of a longer name when it comes
+	// before an Arabic article or a nasab (Isma'il al Faruqi, Ismail
+	// al-Faruqi, Ismail ibn Kathir, Ismail b. Ali), is joined by a hyphen
+	// (Joseph-Marie, al-Ismail), or follows a kunya or a courtesy title or
+	// an initial (Abu Ismail, Mr Ismail, Dr. Ibrahim, J. Joseph).
+	if ( preg_match( '/^(?:' . $sp . '(?:(?:al|el|ad|ar|as|at|az|an|ash|ath|adh|al)(?:' . $sp . '|-)\p{L}|(?:ibn|bin|bint|bt\.?|b\.)(?!\p{L}))|-\p{L})/iu', $after ) ) {
+		return true;
+	}
+	if ( preg_match( '/(?<![\p{L}])(?:al|el|ad|ar|as|at|az|an|ash|ath|adh)-$/iu', $before ) ) {
+		$before = '';
+	}
+	if ( preg_match( '/(?:\p{L}-|(?<!\p{L})(?:ibn|bin|bint|abu|abū|umm|mr|mrs|ms|miss|dr|prof|rev|fr|sr|st|sir|dame|lord|lady|pastor|father|bishop|brother|sister|sheikh|shaykh)\.?' . $sp . '|(?<!\p{L})\p{Lu}\.' . $sp . ')$/iu', $before ) ) {
 		return true;
 	}
 
-	// Preceded by a courtesy title or an initial: Mr Ismail, Dr. Ibrahim, J. Joseph.
-	if ( preg_match( '/(?:(?<!\p{L})(?:mr|mrs|ms|miss|dr|prof|rev|fr|sr|st|sir|dame|lord|lady|pastor|father|bishop|brother|sister|sheikh)\.?|(?<!\p{L})\p{Lu}\.)(?:\s|&nbsp;|\x{00A0})+$/iu', $before ) ) {
-		return true;
+	if ( ! preg_match( '/^\p{Lu}/u', $word ) ) {
+		return false;
 	}
 
-	// Joined to a prefix: al-, ibn, bin, Abu, Umm.
-	if ( preg_match( '/(?:-|\b(?:ibn|bin|bint|abu|abū|umm)(?:\s|&nbsp;|\x{00A0})+)$/iu', $before ) ) {
+	// A capitalised word beside another capitalised name (Joseph Smith,
+	// Edward Ismail), unless that word is a title or one that may open a
+	// sentence.
+	if ( preg_match( '/^' . $sp . '\p{Lu}/u', $after ) ) {
 		return true;
 	}
-
-	// Preceded by a capitalised word that is not a title or a common word
-	// that may open a sentence.
-	if ( preg_match( '/(\p{Lu}[\p{L}\x{2019}\']*)(?:\s|&nbsp;|\x{00A0})+$/u', $before, $m ) ) {
-		$ok = array( 'prophet', 'imam', 'sayyidina', 'sayyiduna', 'the', 'a', 'in', 'of', 'and', 'but', 'for', 'when', 'as', 'to', 'by', 'from', 'like', 'with', 'that', 'so', 'if', 'after', 'before', 'while', 'god', 'allah' );
+	if ( preg_match( '/(?<![\p{L}\'\x{2019}])(\p{Lu}[\p{L}\'\x{2019}]*)' . $sp . '$/u', $before, $m ) ) {
+		$ok = array(
+			'prophet', 'imam', 'sayyidina', 'sayyiduna', 'god', 'allah', 'the', 'a', 'an', 'in', 'of', 'and', 'but', 'for', 'when', 'as', 'to', 'by', 'from',
+			'like', 'with', 'that', 'so', 'if', 'after', 'before', 'while', 'then', 'later', 'here', 'there', 'yet', 'only', 'even', 'both',
+			'once', 'since', 'because', 'although', 'though', 'where', 'why', 'how', 'what', 'who', 'this', 'these', 'those', 'it', 'he', 'she',
+			'they', 'we', 'his', 'her', 'their', 'our', 'not', 'or', 'nor', 'also', 'thus', 'hence', 'indeed', 'was', 'is', 'were', 'did', 'does',
+			'at', 'on', 'until', 'unlike', 'about', 'did', 'see', 'said', 'says', 'tells', 'told', 'asked', 'ask',
+		);
 		if ( ! in_array( function_exists( 'mb_strtolower' ) ? mb_strtolower( $m[1] ) : strtolower( $m[1] ), $ok, true ) ) {
 			return true;
 		}
@@ -148,6 +187,7 @@ function boi_gl_map() {
 					'url'     => get_permalink( $page ),
 					'id'      => $page->ID,
 					'always'  => in_array( $page->post_name, boi_gl_always(), true ),
+					'name'    => boi_gl_is_name( $page->post_name ),
 					'epithet' => function_exists( 'boi_glossary_epithet_html' ) && ! in_array( $low, boi_gl_no_epithet(), true ) ? boi_glossary_epithet_html( boi_glossary_term_by_slug( $page->post_name ) ) : '',
 				);
 			}
@@ -211,7 +251,7 @@ function boi_gl_compiled( $items ) {
 			}
 		}
 
-		$items[ $n ]['rx']  = '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu';
+		$items[ $n ]['rx']  = boi_gl_rx( $needle );
 		$items[ $n ]['key'] = strtolower( $key );
 	}
 
@@ -378,7 +418,7 @@ function boi_gl_apply( $content, $compiled, $budget ) {
 				$start = $mm[1][1];
 				$end   = $start + strlen( $mm[1][0] );
 
-				if ( boi_gl_part_of_name( $tok, $start, $end ) ) {
+				if ( ! empty( $item['name'] ) && boi_gl_part_of_name( $tok, $start, $end ) ) {
 					continue;
 				}
 

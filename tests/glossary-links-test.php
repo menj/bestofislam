@@ -62,6 +62,7 @@ function test_map() {
 				'url'     => 'https://bestofislam.org/glossary/' . $t['slug'] . '/',
 				'id'      => $id,
 				'always'  => in_array( $t['slug'], boi_gl_always(), true ),
+				'name'    => boi_gl_is_name( $t['slug'] ),
 				'epithet' => in_array( $low, boi_gl_no_epithet(), true ) ? '' : boi_glossary_epithet_html( boi_glossary_term_by_slug( $t['slug'] ) ),
 			);
 		}
@@ -109,10 +110,10 @@ function boi_gl_apply_old( $content, $items, $budget ) {
 			$needle = preg_quote( htmlspecialchars( $item['phrase'], ENT_NOQUOTES, 'UTF-8' ), '/' );
 			$needle = str_replace( '&amp;', '(?:&amp;|&)', $needle );
 			$needle = str_replace( "'", "(?:'|&#8217;|&#039;|\xE2\x80\x99)", $needle );
-			if ( preg_match( '/(?<![\p{L}\p{N}])(' . $needle . ')(?![\p{L}\p{N}])/iu', $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
+			if ( preg_match( boi_gl_rx( $needle ), $tok, $mm, PREG_OFFSET_CAPTURE ) ) {
 				$start = $mm[1][1];
 				$end   = $start + strlen( $mm[1][0] );
-				if ( boi_gl_part_of_name( $tok, $start, $end ) ) {
+				if ( ! empty( $item['name'] ) && boi_gl_part_of_name( $tok, $start, $end ) ) {
 					continue;
 				}
 				foreach ( $found as $f ) {
