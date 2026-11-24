@@ -71,12 +71,13 @@ function boi_keep_dev_files() {
  * now: every hidden file and folder except .htaccess, .user.ini and
  * .well-known, and the tools, tests, bin and dist folders.
  *
- * @return string[]
+ * @return string[]|null Null when the folder cannot be read, which is never
+ *                       taken for a clean one.
  */
 function boi_dev_files_entries() {
 	$items = @scandir( BOI_DIR ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 	if ( false === $items ) {
-		return array();
+		return null;
 	}
 	$keep  = array( '.', '..', '.htaccess', '.user.ini', '.well-known' );
 	$names = array();
@@ -125,14 +126,18 @@ function boi_dev_files_keep_lease() {
 /**
  * Deletes a file, a symlink or a folder tree. A symlink is removed itself
  * and never followed; a read-only file or folder is made writable first.
- * The paths come from scanning the theme folder down, so nothing outside it
- * is reached.
+ * The paths come from scanning the theme folder down, and each one's folder
+ * is checked to resolve inside the theme before anything in it is touched,
+ * so a folder swapped for a symlink part-way through leads nowhere outside.
  *
  * @param string $path Absolute path.
  * @return void
  */
 function boi_dev_files_remove( $path ) {
 	if ( ! boi_dev_files_keep_lease() ) {
+		return;
+	}
+	if ( ! boi_dev_files_inside( dirname( $path ) ) ) {
 		return;
 	}
 	// phpcs:disable WordPress.PHP.NoSilencedErrors, WordPress.WP.AlternativeFunctions
@@ -144,6 +149,9 @@ function boi_dev_files_remove( $path ) {
 		return;
 	}
 	if ( is_dir( $path ) ) {
+		if ( ! boi_dev_files_inside( $path ) ) {
+			return;
+		}
 		if ( ! is_writable( $path ) || ! is_readable( $path ) ) {
 			@chmod( $path, 0755 );
 		}
@@ -164,6 +172,18 @@ function boi_dev_files_remove( $path ) {
 	}
 	@unlink( $path );
 	// phpcs:enable
+}
+
+/**
+ * Whether a folder resolves inside the theme folder (or is it).
+ *
+ * @param string $dir Absolute path of a folder.
+ * @return bool
+ */
+function boi_dev_files_inside( $dir ) {
+	$root = realpath( BOI_DIR );
+	$real = realpath( $dir );
+	return $root && $real && ( $real === $root || 0 === strpos( $real, $root . DIRECTORY_SEPARATOR ) );
 }
 
 /**
@@ -213,7 +233,7 @@ function boi_dev_files_run() {
 	$GLOBALS['boi_dev_files_renewed'] = time(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 	$GLOBALS['boi_dev_files_lost']    = false; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 
-	foreach ( boi_dev_files_entries() as $name ) {
+	foreach ( (array) boi_dev_files_entries() as $name ) {
 		boi_dev_files_remove( BOI_DIR . DIRECTORY_SEPARATOR . $name );
 	}
 	clearstatcache();
@@ -225,8 +245,10 @@ function boi_dev_files_run() {
 		return false;
 	}
 
-	$left = 0;
-	foreach ( boi_dev_files_entries() as $name ) {
+	// A folder that cannot be read counts as one file left, never as clean.
+	$names = boi_dev_files_entries();
+	$left  = null === $names ? 1 : 0;
+	foreach ( (array) $names as $name ) {
 		$left += boi_dev_files_count( BOI_DIR . DIRECTORY_SEPARATOR . $name );
 	}
 	if ( 0 === $left ) {
@@ -260,8 +282,8 @@ function boi_dev_files_maybe_run() {
 add_action( 'init', 'boi_dev_files_maybe_run', 1 );
 
 /**
- * The hourly look: nothing to do while the folder has no development entry.
- * When it finds one, it forgets the recorded version and runs the clean-up.
+ * The hourly look: nothing to do while the folder has no development entry,
+ * or cannot be read. When it finds one, it forgets the recorded version and runs the clean-up.
  *
  * @return void
  */

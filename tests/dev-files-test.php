@@ -25,11 +25,23 @@ if ( 'main' === $boi_case ) {
 	$boi_sub_code += $boi_c;
 	// A file PHP cannot remove needs a folder the test process does not own:
 	// started as root, the case builds one and then runs as nobody.
+	// The parent, still root, removes what the case leaves behind.
 	if ( function_exists( 'posix_geteuid' ) && 0 === posix_geteuid() && posix_getpwnam( 'nobody' ) ) {
-		passthru( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( __FILE__ ) . ' stuck', $boi_c );
-		$boi_sub_code += $boi_c;
+		foreach ( array( 'stuck', 'unreadable' ) as $boi_sub ) {
+			$boi_sub_dir = sys_get_temp_dir() . '/boi-df-' . $boi_sub . '-' . getmypid() . '-' . bin2hex( random_bytes( 4 ) );
+			passthru( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( __FILE__ ) . ' ' . $boi_sub . ' ' . escapeshellarg( $boi_sub_dir ), $boi_c );
+			$boi_sub_code += $boi_c;
+			foreach ( array( $boi_sub_dir, "$boi_sub_dir-outside" ) as $boi_d ) {
+				if ( is_dir( $boi_d ) ) {
+					exec( 'chmod -R u+rwx ' . escapeshellarg( $boi_d ) . ' && rm -rf ' . escapeshellarg( $boi_d ) );
+				}
+			}
+			foreach ( array( "$boi_sub_dir.db", "$boi_sub_dir.log" ) as $boi_f ) {
+				@unlink( $boi_f ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+			}
+		}
 	} else {
-		echo "skip [stuck] needs root to build a folder the test cannot delete\n";
+		echo "skip [stuck] [unreadable] need root to build folders the test cannot delete or read\n";
 	}
 }
 
@@ -73,12 +85,14 @@ class BOI_Test_Wpdb {
 	}
 }
 
-$boi_db  = tempnam( sys_get_temp_dir(), 'boi-df-' );
+// The root-only cases run in a folder the parent names, so it can clean up.
+$boi_given = $argv[2] ?? '';
+$boi_db    = '' !== $boi_given ? "$boi_given.db" : tempnam( sys_get_temp_dir(), 'boi-df-' );
 $boi_a   = new BOI_Test_Wpdb( $boi_db );
 $boi_b   = new BOI_Test_Wpdb( $boi_db );
 $GLOBALS['wpdb'] = $boi_a;
 
-$boi_tmp = sys_get_temp_dir() . '/boi-df-' . getmypid() . '-' . bin2hex( random_bytes( 4 ) );
+$boi_tmp = '' !== $boi_given ? $boi_given : sys_get_temp_dir() . '/boi-df-' . getmypid() . '-' . bin2hex( random_bytes( 4 ) );
 $boi_out = $boi_tmp . '-outside';
 define( 'BOI_DIR', $boi_tmp );
 
@@ -157,16 +171,35 @@ function boi_rm( $dir ) {
 $boi_dev = array( '.claude', '.git', '.github', '.gitignore', '.idea', 'bin', 'dist', 'tests', 'tools' );
 boi_build( $boi_tmp, $boi_out );
 
-if ( 'stuck' === $boi_case ) {
+if ( 'unreadable' === $boi_case ) {
+	// The theme folder belongs to root and cannot be listed (0711); the
+	// clean-up runs as nobody.
+	$boi_nobody = posix_getpwnam( 'nobody' );
+	$boi_log    = "$boi_tmp.log";
+	touch( $boi_log );
+	chown( $boi_log, $boi_nobody['uid'] );
+	chown( $boi_db, $boi_nobody['uid'] );
+	chmod( $boi_tmp, 0711 );
+	ini_set( 'error_log', $boi_log );
+	posix_setgid( $boi_nobody['gid'] );
+	posix_setuid( $boi_nobody['uid'] );
+	boi_dev_files_maybe_run();
+	boi_check( null === boi_dev_files_entries() && false === get_option( 'boi_dev_files_removed' ) && '' !== boi_lease(), 'a theme folder that cannot be read is never taken for a clean one: the version stays unrecorded and the lease held' );
+	update_option( 'boi_dev_files_removed', '9.9.9' );
+	$boi_a->log = array();
+	boi_dev_files_hourly();
+	boi_check( '9.9.9' === get_option( 'boi_dev_files_removed' ) && array() === preg_grep( '/^(DELETE|UPDATE|INSERT)/', $boi_a->log ), 'the hourly callback leaves an unreadable folder alone' );
+	exit( $boi_fail ? 1 : 0 );
+} elseif ( 'stuck' === $boi_case ) {
 	// .git/locked and its file belong to root; the rest of the folder, the
 	// database and the log to nobody, who then runs the clean-up.
 	boi_put( $boi_tmp, array( '.git/locked/pack' ) );
 	$boi_nobody = posix_getpwnam( 'nobody' );
-	$boi_log    = tempnam( sys_get_temp_dir(), 'boi-df-log-' );
+	$boi_log    = "$boi_tmp.log";
+	touch( $boi_log );
 	foreach ( array( $boi_db, $boi_log ) as $boi_f ) {
 		chown( $boi_f, $boi_nobody['uid'] );
 	}
-	chown( dirname( $boi_db ), 0 );
 	$boi_walk = function ( $p ) use ( &$boi_walk, $boi_nobody, $boi_tmp ) {
 		if ( "$boi_tmp/.git/locked" === $p ) {
 			return;
@@ -244,6 +277,16 @@ if ( 'stuck' === $boi_case ) {
 	boi_check( array() === boi_dev_files_entries(), 'a stale lease is taken over, and every development entry goes (read-only git objects too)' );
 	boi_check( boi_kept( $boi_tmp, $boi_out ), 'the code, the data, docs, .htaccess, .user.ini and .well-known stay' );
 	boi_check( ! is_link( "$boi_tmp/.idea" ) && is_file( "$boi_out/precious.txt" ), 'a symlink is removed and its target is not' );
+	// A folder swapped for a link to the outside part-way through: what the
+	// run would delete next, by its old path, is left alone.
+	symlink( $boi_out, "$boi_tmp/.cache" );
+	$GLOBALS['boi_dev_files_token']   = 'x';
+	$GLOBALS['boi_dev_files_renewed'] = time();
+	$GLOBALS['boi_dev_files_lost']    = false;
+	boi_dev_files_remove( "$boi_tmp/.cache/precious.txt" );
+	unset( $GLOBALS['boi_dev_files_token'], $GLOBALS['boi_dev_files_renewed'], $GLOBALS['boi_dev_files_lost'] );
+	boi_check( is_file( "$boi_out/precious.txt" ), 'a folder swapped for a symlink part-way through: nothing outside the theme is deleted' );
+	unlink( "$boi_tmp/.cache" );
 	boi_check( '9.9.9' === get_option( 'boi_dev_files_removed' ) && '' === boi_lease(), 'the version is recorded and the lease freed' );
 	boi_check( 0 === $boi_renews, 'a quick run does not renew its lease (at most once a minute)' );
 
