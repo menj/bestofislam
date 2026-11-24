@@ -1,5 +1,5 @@
 # Keep development files out of "Download ZIP" and release archives.
-# Sites that install from a clone are cleaned by inc/housekeeping.php.
+# Sites that install from a clone are cleaned by inc/dev-files.php.
 .github         export-ignore
 .githooks       export-ignore
 .gitattributes  export-ignore

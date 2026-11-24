@@ -1,6 +1,6 @@
 # Written by the Best of Islam theme. Nothing in this folder serves a page:
 # Apache refuses every request into it, whatever the address of the theme
-# folder. inc/housekeeping.php deletes the folder on production.
+# folder. inc/dev-files.php deletes the folder on production.
 <IfModule mod_authz_core.c>
 Require all denied
 </IfModule>

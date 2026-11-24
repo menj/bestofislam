@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.127.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.128.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -135,7 +135,7 @@ bestofislam/
 │                        search-permalinks, reading-progress, login,
 │                        login-screen, favicon,
 │                        glossary, glossary-links, renamed-slugs, error-pages,
-│                        error-page-static, lock, housekeeping,
+│                        error-page-static, lock, dev-files,
 │                        security-headers, security. Loaded by those:
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
@@ -193,7 +193,8 @@ The theme's own filters:
 | `boi_cl_guards`, `boi_cl_post_types` | Longer names never linked, so a shorter phrase inside them is not taken ("Ismail al Faruqi"); the post types that get contextual links |
 | `boi_contextual_links_enabled`, `boi_contextual_links_map` | Switch contextual links off for one post; change the phrase map |
 | `boi_deferred_style_handles` | Styles loaded after first paint |
-| `boi_dev_paths` | The paths the live-server clean-up removes |
+| `boi_dev_paths` | The names, at the top of the theme folder, that the live-server clean-up removes (default: every dot entry but `.htaccess`, `.user.ini` and `.well-known`, and `tools`, `tests`, `bin` and `dist`) |
+| `boi_dev_files_renew_every` | Seconds between renewals of the clean-up lease while it works (default 60) |
 | `boi_front_title_focus` | The front page title's focus phrase (default "Objections to Islam, answered") |
 | `boi_gl_always`, `boi_gl_max`, `boi_gl_stoplist`, `boi_glossary_read_more_max` | Glossary: entries linked at first mention whatever the budget, the link budget, words never linked, and the Read more count on an entry (6) |
 | `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
@@ -225,8 +226,7 @@ Set these in `wp-config.php`. Each is optional.
 |---|---|
 | `BOI_SECURITY_LOCK` | `false` lifts the three Security locks (XML-RPC, application passwords, REST writes) without changing the options |
 | `BOI_HIDE_LOGIN` | `false` switches the private login address off |
-| `BOI_KEEP_DEV_FILES` | `true` keeps the development files on a live server. Wins over `BOI_REMOVE_GIT_DIR` |
-| `BOI_REMOVE_GIT_DIR` | `true` forces the clean-up, `.git` included, even in a development environment; `false` keeps `.git` on production while the rest goes |
+| `BOI_KEEP_DEV_FILES` | `true` keeps the development files on a live server, and the hourly clean-up event is not scheduled |
 | `BOI_BLOCK_DIRECT_FILES` | `false` leaves the "Best of Islam: block direct file access" section out of `.htaccess` |
 | `BOI_SPAM_THRESHOLD` | Spam score at which a post is held (default 3) |
 | `BOI_DISABLE_CONTENT_SYNC` | `true` stops the content sync: no updates, removals, redirects or hiding of seeded articles. The Content tab says so |
@@ -239,8 +239,12 @@ Fixed in code: `BOI_VERSION`, `BOI_DIR`, `BOI_URI`, `BOI_OPTION_KEY` (`boi_setti
 - Upload guard: see the boot sequence. A theme caught half uploaded answers 503, never a fatal error.
 - REST users: visitors who are not logged in get no `/wp/v2/users` routes (404), and `?author=N` gives them a 404 (`boi_sec_hide_user_routes()`, `boi_sec_block_author_query()`).
 - XML-RPC is off while "Turn off XML-RPC" is on (the default), and a correct password sent through it is refused even when it is back on.
-- The theme folder's `.htaccess` refuses every dot entry but `.well-known`, every theme PHP file, the `tests`, `bin`, `docs` and `dist` folders, and every Markdown file but `CHANGELOG.md`. It works with mod_alias, with mod_rewrite (`RewriteOptions Inherit`), with neither (`FilesMatch`), and on Apache 2.4 with an `<If>` for dot folders. `tests/`, `bin/` and `docs/` carry their own deny file.
-- The live-server clean-up removes the paths in `boi_dev_paths()` (`.git`, `.github`, `.githooks`, `.claude`, `.vscode`, `.idea`, `.gitattributes`, `.gitignore`, `.editorconfig`, `.DS_Store`, `dist`, `tests`, `bin`, `docs`) once per version, on activation, on the first admin page and on the first front-end request, under a lock it renews while it works.
+- The theme folder's `.htaccess` refuses every dot entry but `.well-known`, every theme PHP file, the `tools`, `tests`, `bin`, `docs` and `dist` folders, and every Markdown file but `CHANGELOG.md`. It works with mod_alias or with mod_rewrite (`RewriteOptions Inherit`). With neither, `FilesMatch` still refuses dot files, PHP and Markdown by name, and on Apache 2.4 an `<If>` refuses dot folders; the folders are then covered by their own deny file (`tests/`, `bin/` and `docs/`) or by the live-server clean-up (`tools/` and `dist/`).
+- The live-server clean-up (`inc/dev-files.php`) runs on the first request of any kind after the theme version changes. It deletes every dot file and folder at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests`, `bin` and `dist` folders; `docs`, the data and the code stay. Read-only files are made writable first, and a symlink is removed without being followed.
+  - One request runs it, under a lease in the option `boi_dev_files_lock` (`inc/lock.php`): an `INSERT IGNORE` takes a free lease, a lease left unrenewed for five minutes is taken over with one compare-and-set `UPDATE`, and a `DELETE` that matches the holder's token releases it. The holder renews it at most once a minute, and after taking it re-reads the recorded version from the database and stops if another request has finished.
+  - The version goes into `boi_dev_files_removed` only when nothing is left. A file PHP cannot remove leaves the version unrecorded and the lease held, so the next try comes five minutes later, and the PHP error log gets one line a day (`boi_dev_files_logged`) with the number of files to delete by FTP.
+  - The WP-Cron event `boi_dev_files_hourly`, scheduled on `init` and cleared on `switch_theme`, looks again every hour, because an upload can bring `.git` back. With no development entry it does nothing; with one, it forgets the recorded version and runs the same clean-up. It needs WP-Cron: a host with `DISABLE_WP_CRON` must call `wp-cron.php` from a server cron at least hourly.
+  - A local or development site (`wp_get_environment_type()`), or `BOI_KEEP_DEV_FILES`, keeps everything and schedules no event.
 
 ### Root .htaccess sections
 
@@ -273,7 +277,7 @@ RewriteRule ^wp-includes/(?!(js/tinymce/wp-tinymce|ms-files)\.php$).+\.php(/|$) 
 RewriteRule ^wp-admin/includes/.+\.php(/|$) - [F]
 RewriteRule ^(wp-config\.php|wp-settings\.php|wp-config-sample\.php|wp-admin/install\.php|readme\.html|license\.txt)(/|$) - [F]
 RewriteRule ^wp-content/themes/.+\.php(/|$) - [F]
-RewriteRule ^wp-content/themes/bestofislam/(tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]
+RewriteRule ^wp-content/themes/bestofislam/(tools|tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]
 </IfModule>
 # END Best of Islam: block direct file access
 ```
@@ -293,7 +297,7 @@ location ~ (^|/)wp-config\.php$ { deny all; }
 location ~ ^/(wp-settings|wp-config-sample)\.php { deny all; }
 location ~ ^/(wp-admin/install\.php|readme\.html|license\.txt) { deny all; }
 location ~ ^/wp-content/themes/.+\.php { deny all; }
-location ~ ^/wp-content/themes/bestofislam[^/]*/(tests|bin|docs|dist)/ { deny all; }
+location ~ ^/wp-content/themes/bestofislam[^/]*/(tools|tests|bin|docs|dist)/ { deny all; }
 location ~* ^/wp-content/themes/bestofislam[^/]*/(?!changelog\.md$).+\.md$ { deny all; }
 error_page 403 /wp-content/bestofislam-errors/403.html;
 error_page 500 /wp-content/bestofislam-errors/500.html;
@@ -330,7 +334,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.127.0.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.128.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.

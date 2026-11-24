@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.127.0
+Stable tag: 1.128.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -121,9 +121,9 @@ From 1.98.0 the front page follows Settings, Reading. With "Your latest posts" t
 
 WordPress shows a plain screen when it is updating, when PHP fails or when the database is down. The theme replaces those screens with its own, and can email you when one appears. It also ships pages for the errors your web server answers before WordPress starts (403, 500, 502, 503 and 504). The Errors tab shows their state and the lines for .htaccess.
 
-= Why did the theme delete .git, tests and docs from its folder? =
+= Why did the theme delete .git, tools and tests from its folder? =
 
-They are development files, and a web server can hand them to anyone who asks. On a live server the theme removes them on the first visit after an update. Until then Apache refuses them through the theme's .htaccess; Nginx does so only if the host has added the rules in README.md. A site where you work on the theme keeps them: set WP_ENVIRONMENT_TYPE to local or development in wp-config.php, or add define( 'BOI_KEEP_DEV_FILES', true );.
+They are development files, and a web server can hand them to anyone who asks. On a live server the theme removes them on the first visit after an update, and looks again every hour in case an upload has brought them back. Until then Apache refuses them through the theme's .htaccess; Nginx does so only if the host has added the rules in README.md. A site where you work on the theme keeps them: set WP_ENVIRONMENT_TYPE to local or development in wp-config.php, or add define( 'BOI_KEEP_DEV_FILES', true );.
 
 = What do the security headers do? =
 
@@ -164,6 +164,10 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.128.0 =
+* The theme removes the development files an FTP upload brings along (.git and the other hidden files, and the tools, tests, bin and dist folders) on the first visit after an update, and checks again every hour. The docs folder now stays, still refused to visitors.
+* If a file cannot be removed, the theme tries again every five minutes and notes once a day in the PHP error log how many files to delete by FTP.
 
 = 1.127.0 =
 * New article: "The Scrolls of Abraham: a lost scripture, the Sefer Yetzirah or the Testament of Abraham? 7 answers", with a featured image and four in-text images.
@@ -447,6 +451,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.128.0 =
+Replace the theme files. The hourly check uses WP-Cron; if your host turns WP-Cron off, ask it to run wp-cron.php from a server cron at least once an hour.
 
 = 1.127.0 =
 Replace the theme files. The new article is created when the version changes.

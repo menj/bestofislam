@@ -4,6 +4,24 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.128.0] - 2026-11-24
+
+### Changed
+- The development-file clean-up moves from `inc/housekeeping.php` to `inc/dev-files.php` (SSOT D52). On the first request of any kind after a version change, it deletes every dot file and folder at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests`, `bin` and `dist` folders. `docs`, the data and the code stay.
+- Read-only files, such as git's objects, are made writable before they are deleted. A symlink is removed itself and never followed, so a link out of the theme no longer blocks the clean-up. Each folder is checked to resolve inside the theme before anything in it is deleted, so a folder swapped for a symlink part-way through leads nowhere outside. A theme folder that cannot be read is never taken for a clean one.
+- One request runs it, under the lease in `boi_dev_files_lock`: renewed at most once a minute, and taken over after five minutes without renewal. After taking the lease it re-reads the recorded version from the database.
+- The version is recorded only when nothing is left. A file PHP cannot remove keeps the lease held, so the retry comes every five minutes, and the PHP error log gets one line a day with the number of files to delete by FTP.
+- The `boi_dev_paths` filter now receives the names found at the top of the theme folder.
+- The theme `.htaccess` and the synced "Best of Islam: block direct file access" section also refuse `tools/`.
+
+### Added
+- An hourly WP-Cron event, `boi_dev_files_hourly`, scheduled on `init` and cleared on `switch_theme`. It does nothing while the folder holds no development entry; when an upload has put one back, it forgets the recorded version and runs the clean-up. It is not scheduled where the files are kept.
+- The `boi_dev_files_renew_every` filter (seconds between lease renewals, default 60).
+- `tests/dev-files-test.php`, which replaces `tests/housekeeping-test.php`.
+
+### Removed
+- `BOI_REMOVE_GIT_DIR` is no longer read. `BOI_KEEP_DEV_FILES`, or a local or development environment, keeps the files.
+
 ## [1.127.0] - 2026-11-23
 
 No feature removed and no public identifier renamed.
