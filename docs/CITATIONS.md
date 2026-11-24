@@ -63,6 +63,16 @@ The 194 articles hold 3,133 notes: 785 cite the Quran, 732 hadith, 325 the Bible
 
 | Modern books (427 titles) | Each title, author and year looked up in Open Library (and Crossref) | 216 matched exactly. Each of the 38 year mismatches was reviewed and none is an error: Open Library lists reprints, translations or later editions under other dates (for example Wenham, *Genesis 16–50*, Word, 1994; Tov, *Textual Criticism*, 3rd edition, 2012). The 124 titles not found and the 34 failed lookups are mostly classical Arabic works and older or specialist titles that Open Library does not index; they wait for a check against library catalogues. |
 
+### The Shamela pass, second part (1.133.0)
+
+54 citations in 32 articles:
+- Ibn Ḥajar, *Fatḥ al-Bārī* (Shamela book 1673, al-Maṭbaʿa al-Salafiyya): 14 notes. Each commentary was found by the hadith number that opens it ("N - ḥaddathanā"), and the pages run to the next hadith. *Hady al-Sārī*'s count of reports is in the introduction volume, pp. 465–469.
+- al-Ṭabarī's tafsir: 40 phrases in notes that cite him beside other sources, which the first count missed because it looked only for the title *Jāmiʿ al-bayān*.
+
+Every named report, gloss and person was found on the cited page: for example the ʿUraniyyīn schools (vol. 1, pp. 336–341), Ibn Shubruma (vol. 9, p. 190), al-Bājī (vol. 7, p. 503), and al-Ṭabarī's reports of Makḥūl (vol. 17, pp. 580–581), of Ibn ʿAbbās on the tooth-stick (vol. 8, p. 314) and on "unbelief short of unbelief" (vol. 10, pp. 355–356). Correction: Ibn Ḥajar's discussion of the *gharānīq* is under sura 22, vol. 8, p. 439, where the satanic-verses note had placed it under sura 53.
+
+A fault in the search tool was found and fixed on the way: it stopped at the first missing Shamela page, so a search could miss a later page. Every negative result that a decision rested on was run again with the fix, and each held.
+
 ### The Shamela pass, first part (1.132.0)
 
 85 notes in 50 articles that cited a classical work by verse or episode alone now give volume and page, and for the tafsirs a link to the page on shamela.ws:
