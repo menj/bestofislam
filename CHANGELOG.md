@@ -9,7 +9,7 @@ versioning.
 No feature removed and no public identifier renamed.
 
 ### Added
-- The Basmala at the head of every article (`inc/basmala.php`, `assets/css/basmala.css`): the owner's public-domain calligraphy, converted to lossless WebP (`assets/images/basmala.webp`, 270 by 40 pixels) with its white edge removed, centred above the abstract. Its alt text gives the meaning in English. In the dark appearance it is inverted with the hue turned back, so the lettering reads light and the word Allah stays red. Never on pages.
+- The Basmala at the head of every article (`inc/basmala.php`, `assets/css/basmala.css`): the owner's public-domain calligraphy, redrawn sharp as lossless WebP (`assets/images/basmala.webp`, 813 by 118 pixels, three times its display size of 271 by 39): the black and red ink were separated, enlarged eight times, smoothed and re-cut, then reduced with anti-aliasing, which removes the jagged steps and the white fringe of the original GIF, centred above the abstract. Its alt text gives the meaning in English. In the dark appearance it is inverted with the hue turned back, so the lettering reads light and the word Allah stays red. Never on pages.
 - Theme Options, Display: the Basmala switch (`basmala`, on by default).
 - `tests/basmala-test.php`.
 
