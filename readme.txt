@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.126.2
+Stable tag: 1.127.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -67,7 +67,7 @@ docs/UPGRADING.md has the notes for each version. On a live server the theme rem
 
 Appearance, Theme Options holds the settings in 10 tabs. Each tab opens with a note on how to use it, and each saves only its own fields.
 
-* Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, two article switches (the contents list and the next step in the middle of an article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
+* Display: rank badges, the lead and list (category tabs, arrows and motion, an accent colour), the entry image size, article switches (the contents list, the next step in the middle of an article and the Basmala at the head of each article), the front-page hero image, editor's picks, follow links, the reading progress bar and the contact form recipient.
 * Abstract: the summary box at the top of each article. Switch it off, change its label, pick one of four styles (Ruled, Card, Academic, Minimal) and choose its colours from the theme azure, six presets or your own accent. To write a different abstract for one article, add the Abstract block to it.
 * Schema: the default list markup, ItemList or none. One listicle can override it in its block sidebar.
 * Voting: switch voting on, limit it to logged-in users and set the votes per visitor in 10 minutes. The 20 latest votes are listed.
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.127.0 =
+* Every article now opens with the Basmala, "In the name of God, the Most Merciful, the Most Compassionate", in calligraphy above the abstract. It reads light in the dark appearance. Switch it off under Theme Options, Display.
 
 = 1.126.2 =
 * Every article summary shown under the title and in search results now ends with a short invitation to read on.
@@ -444,6 +447,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.127.0 =
+Replace the theme files. The Basmala appears above every article at once.
 
 = 1.126.2 =
 Replace the theme files. The 90 updated summaries refresh where you have not edited the article.

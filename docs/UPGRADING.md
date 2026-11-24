@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.127.0
+
+Replace the theme files. The Basmala appears above every article at once; switch it off under Theme Options, Display.
+
 ## Upgrading to 1.126.2
 
 Replace the theme files. `boi_migrate_seed()` refreshes the 90 updated excerpts where the article is unedited; an edited copy is listed on the Content tab.

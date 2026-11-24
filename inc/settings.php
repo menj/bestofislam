@@ -56,6 +56,7 @@ function boi_get_options() {
 		'article_mid_next'    => 1,
 		'preferred_source'    => 1,
 		'endmark'             => 1,
+		'basmala'             => 1,
 		'abstract_enabled'    => 1,
 		'abstract_title'      => 'Abstract',
 		'abstract_style'      => 'ruled',
@@ -152,6 +153,7 @@ function boi_sanitize_options( $input ) {
 			$current['article_mid_next'] = empty( $input['article_mid_next'] ) ? 0 : 1;
 			$current['preferred_source'] = empty( $input['preferred_source'] ) ? 0 : 1;
 			$current['endmark']          = empty( $input['endmark'] ) ? 0 : 1;
+			$current['basmala']          = empty( $input['basmala'] ) ? 0 : 1;
 
 			// Lead and list. An accent that cannot carry text at 4.5:1 in both appearances is dropped.
 			$current['ll_tabs']   = empty( $input['ll_tabs'] ) ? 0 : 1;
@@ -842,6 +844,15 @@ function boi_render_display_tab( $opts ) {
 			'text'    => __( 'Close every article with the tombstone mark', 'bestofislam' ),
 			'help'    => __( 'A small navy square with the gold eight-pointed star, at the end of the last line of an article, before the notes. It never appears on pages, in FAQs, lists or quotations.', 'bestofislam' ),
 			'checked' => ! empty( $opts['endmark'] ),
+		)
+	);
+	boi_opt_toggle(
+		array(
+			'key'     => 'basmala',
+			'label'   => __( 'Basmala', 'bestofislam' ),
+			'text'    => __( 'Open every article with the Basmala', 'bestofislam' ),
+			'help'    => __( 'The calligraphy of "In the name of God, the Most Merciful, the Most Compassionate", centred above the abstract. It never appears on pages.', 'bestofislam' ),
+			'checked' => ! empty( $opts['basmala'] ),
 		)
 	);
 	boi_opt_card_close();

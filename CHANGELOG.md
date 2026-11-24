@@ -4,6 +4,18 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.127.0] - 2026-11-24
+
+No feature removed and no public identifier renamed.
+
+### Added
+- The Basmala at the head of every article (`inc/basmala.php`, `assets/css/basmala.css`): the owner's public-domain calligraphy, converted to lossless WebP (`assets/images/basmala.webp`, 270 by 40 pixels) with its white edge removed, centred above the abstract. Its alt text gives the meaning in English. In the dark appearance it is inverted with the hue turned back, so the lettering reads light and the word Allah stays red. Never on pages.
+- Theme Options, Display: the Basmala switch (`basmala`, on by default).
+- `tests/basmala-test.php`.
+
+### Changed
+- `docs/CREDITS.md` records the Basmala as public domain, and no longer calls injil.help a sister theme.
+
 ## [1.126.2] - 2026-11-23
 
 No feature removed and no public identifier renamed.

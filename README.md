@@ -4,7 +4,7 @@ A child theme of Twenty Twenty-Five (1.5) for bestofislam.org, a publication of
 numbered arguments: each article states the objections to Islam in their own
 terms and answers them from the Quran, the hadith and the historical record.
 
-Version 1.126.2. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
+Version 1.127.0. Licensed GNU GPL v3 or later; the full text is in `LICENSE`. Every feature lives in the theme, with no plugins required. See `docs/SSOT.md`
 for the decisions behind the design, `CHANGELOG.md` for the history,
 `docs/UPGRADING.md` for updates and `docs/CREDITS.md` for credits.
 
@@ -59,7 +59,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 
 Under Appearance, Theme Options, in ten tabs. The screen is a set of cards under a tab list: the tabs switch without a reload (Content and Security load their own page, so their queries run only there) and answer the arrow keys, Home and End; booleans are switches, the image size and the default schema are picked from cards, and the voting rate limit and the alert interval are sliders that print their value. Each tab saves only its own fields, and each opens with a short note on how to use it. Below 782px the rows stack and the tab list scrolls sideways. The styles and script (`assets/css/admin-settings.css`, `assets/js/admin-settings.js`) load on that screen only. The Images tab holds a Pexels key (or `BOI_PEXELS_KEY` in `wp-config.php`) and a photograph finder built on the official Pexels JavaScript client (`assets/js/vendor/pexels/`, `assets/js/admin-images.js`); it copies a plan entry for `bin/stock-images.json`. Without JavaScript the tabs are links and still work.
 
-- **Display:** rank badges, the entry image size, the article contents, the mid-article next step, the preferred-source invitation and the endmark (`article_contents`, `article_mid_next`, `preferred_source`, `endmark`), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
+- **Display:** rank badges, the entry image size, the article contents, the mid-article next step, the preferred-source invitation, the endmark and the Basmala (`article_contents`, `article_mid_next`, `preferred_source`, `endmark`, `basmala`; the Basmala is `inc/basmala.php` and `assets/css/basmala.css`, prepended at `the_content` priority 31 so it sits above the abstract), the lead and list (`ll_tabs`, `ll_motion`, `ll_accent`), the hero background, editor's picks, follow channels, the reading progress bar and the contact form recipient.
 - **Abstract:** the summary box at the top of each article (`inc/abstract.php`): `abstract_enabled`, `abstract_title`, `abstract_style` (`ruled`, `card`, `academic`, `minimal`), `abstract_scheme` (`theme` or a preset from `boi_abstract_schemes()`, or `custom`) and `abstract_accent`, checked with `boi_lead_list_accent_ok()`. The text comes from `inc/data/abstracts.json` (slug => plain text), or from an Abstract block (`blocks/abstract/`) or `[abstract]` shortcode in the post, which replaces it. The box is prepended at `the_content` priority 30, after the link passes, so it carries no links; `assets/css/abstract.css` loads on single posts. `boi_abstract_text()` feeds the Article node's `abstract` in `inc/schema-graph.php`.
 - **Schema:** the default list markup.
 - **Voting:** voting, whether it is limited to logged-in users, the rate limit, and the 20 latest votes.
@@ -129,7 +129,7 @@ bestofislam/
 │                        util, taxonomy, blocks, schema, voting, settings,
 │                        setup, content-sync, appearance, reflections, search, sections,
 │                        seo, icons, features, lead-list, contact, front, inline-images,
-│                        images, questions, reading, anatomy, endmark, abstract,
+│                        images, questions, reading, anatomy, endmark, abstract, basmala,
 │                        structured-data,
 │                        schema-graph, social-meta, rank-math, unlist,
 │                        search-permalinks, reading-progress, login,
@@ -330,7 +330,7 @@ python3 bin/build-related.py                         # rebuild inc/related-artic
 python3 bin/convert-images.py                        # every image to AVIF
 python3 bin/commons-api.py info "File:Name.jpg"      # a Commons file's licence and author
 sh bin/install-hooks.sh                              # run the image scripts before each commit
-git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.126.2.zip HEAD   # the committed files: commit the release first
+git archive --format=zip --prefix=bestofislam/ -o bestofislam-1.127.0.zip HEAD   # the committed files: commit the release first
 ```
 
 Every PHP script in `tests/` and `bin/` exits unless PHP runs it from the command line. CI runs `checks.yml` (content checks and PHP syntax), `images.yml` (Commons swaps and AVIF conversion, committed back) and `package.yml` on GitHub. The release zip is the one `package.yml` builds: it copies the checkout with `rsync`, leaving out `.git`, `.github`, `.githooks`, `/.claude`, `/.gitattributes`, `/.gitignore`, `/.editorconfig`, `bin`, `tests` and `dist`, then zips `dist/bestofislam`. The `git archive` line above gives the same files for a clean checkout, since `.gitattributes` export-ignores the same paths. `.gitattributes` keeps `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `.claude` out of the zip.
