@@ -4,6 +4,15 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.131.0] - 2026-11-24
+
+### Changed
+- The newest article now leads the front page, the Latest grid, the archive and the feed (SSOT D69). The theme used to restagger every unedited article's date by the reading order whenever that order changed, so a new article was dated by its place in the order, months back. The dates are now set once and frozen (`boi_dates_frozen`), and an article added by a later release keeps the date it was created.
+- On a site upgraded from an earlier version every date stays, except the five articles added since 1.125.0 (the three answers to the "rules" for converts, scrolls-of-abraham and is-the-cross-a-pagan-symbol), which move to the day of the upgrade in the order they were created. Edited articles keep their dates. The option `boi_dates_signature` is removed.
+
+### Added
+- `tests/reading-dates-test.php`: a new site, a later article, an upgraded site, an edited article and a second run.
+
 ## [1.130.0] - 2026-11-24
 
 No feature removed and no public identifier renamed.
