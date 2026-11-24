@@ -33,7 +33,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
-			'slugs' => array( 'same-god', 'deuteronomy-prophecy-and-the-paraclete', 'shared-prophets', 'slander-against-mary', 'nabi-and-rasul', 'messenger-to-every-nation', 'muhammad-and-the-hebrew-prophets', 'ishmael-in-the-quran-and-genesis', 'scrolls-of-abraham', 'jesus-not-god', 'where-did-jesus-say-he-is-god', 'did-jesus-pray-to-whom', 'crucifixion-quran', 'can-god-die', 'first-and-the-last', 'islam-arian-heresy-claim', 'ransom-bible-quran', 'verses-read-differently', 'genealogies-of-jesus', 'holy-war-in-the-bible', 'paul-and-the-law', 'paul-and-food-offered-to-idols', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'does-islam-teach-the-bible-was-corrupted', 'christian-twin-of-the-islamic-dilemma', 'nine-questions-from-the-floor-islamic-dilemma-debate', 'revelatory-exegesis', 'seal-of-the-prophets', 'quran-verses-on-torah-and-gospel', 'covenant-of-the-prophets', 'jeremiah-new-covenant-hebrews-and-the-quran', 'ask-those-who-read-the-scripture', 'torah-on-the-cushion-hadith', 'early-christians-charged-others-with-corrupting-scripture', 'quran-word-kitab-meanings', 'trinity-in-the-hebrew-bible-tested', 'who-is-the-holy-spirit', 'matthew-fulfilment-quotations-checked', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'jews-behind-the-stone-hadith', 'quran-on-christians', 'can-a-muslim-befriend-a-non-muslim', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing', 'quran-iblis-fallen-angels-borrowing', 'iblis-and-the-command-to-prostrate', 'is-yahweh-satan', 'who-was-yahweh-archaeological-origins', 'was-yahweh-one-of-many-gods', 'early-christians-yahweh-evil-gnosticism-marcion', 'is-yahweh-the-same-as-allah' ),
+			'slugs' => array( 'same-god', 'deuteronomy-prophecy-and-the-paraclete', 'shared-prophets', 'slander-against-mary', 'nabi-and-rasul', 'messenger-to-every-nation', 'muhammad-and-the-hebrew-prophets', 'ishmael-in-the-quran-and-genesis', 'scrolls-of-abraham', 'jesus-not-god', 'where-did-jesus-say-he-is-god', 'did-jesus-pray-to-whom', 'crucifixion-quran', 'is-the-cross-a-pagan-symbol', 'can-god-die', 'first-and-the-last', 'islam-arian-heresy-claim', 'ransom-bible-quran', 'verses-read-differently', 'genealogies-of-jesus', 'holy-war-in-the-bible', 'paul-and-the-law', 'paul-and-food-offered-to-idols', 'paul-claim-to-apostleship', 'pauline-letters-authorship', 'where-is-the-injil', 'islamic-dilemma', 'does-islam-teach-the-bible-was-corrupted', 'christian-twin-of-the-islamic-dilemma', 'nine-questions-from-the-floor-islamic-dilemma-debate', 'revelatory-exegesis', 'seal-of-the-prophets', 'quran-verses-on-torah-and-gospel', 'covenant-of-the-prophets', 'jeremiah-new-covenant-hebrews-and-the-quran', 'ask-those-who-read-the-scripture', 'torah-on-the-cushion-hadith', 'early-christians-charged-others-with-corrupting-scripture', 'quran-word-kitab-meanings', 'trinity-in-the-hebrew-bible-tested', 'who-is-the-holy-spirit', 'matthew-fulfilment-quotations-checked', 'ezra-and-mary', 'haman-anachronism', 'quranic-stories-and-history', 'quran-mysteries-in-the-stories', 'buraq-and-miracle-stories', 'apes-and-pigs-and-the-jews', 'jews-behind-the-stone-hadith', 'quran-on-christians', 'can-a-muslim-befriend-a-non-muslim', 'quran-anachronism-claims', 'talmud-midrash-apocrypha-borrowing', 'quran-iblis-fallen-angels-borrowing', 'iblis-and-the-command-to-prostrate', 'is-yahweh-satan', 'who-was-yahweh-archaeological-origins', 'was-yahweh-one-of-many-gods', 'early-christians-yahweh-evil-gnosticism-marcion', 'is-yahweh-the-same-as-allah' ),
 		),
 		array(
 			'label' => __( 'How scripture was transmitted', 'bestofislam' ),
@@ -153,49 +153,117 @@ function boi_render_read_next() {
 }
 
 /**
- * Staggers the publish dates of seeded articles so that the archive, the
- * featured lead and the Latest grid follow the reading order, one day apart,
- * ending now. Runs once for each revision of the order, and touches only
- * articles whose content is still exactly what the theme wrote: anything the
- * owner has edited keeps its date.
+ * The articles added since 1.125.0 that an earlier version dated by their
+ * place in the reading order, months back. On a site upgraded from such a
+ * version they are moved to today, once, so they lead the front page.
+ *
+ * @return string[]
+ */
+function boi_dates_recent_slugs() {
+	return array( 'before-you-convert-to-islam', 'before-you-convert-women-and-marriage', 'before-you-convert-apostates-and-lgbt-friends', 'scrolls-of-abraham', 'is-the-cross-a-pagan-symbol' );
+}
+
+/**
+ * A seeded article the theme may redate: published, and with content still
+ * exactly what the theme wrote, so anything the owner has edited keeps its
+ * date.
+ *
+ * @param string $slug   Article slug.
+ * @param array  $hashes Stored fingerprints, by slug.
+ * @return WP_Post|null
+ */
+function boi_dates_article( $slug, $hashes ) {
+	$post = get_page_by_path( $slug, OBJECT, 'post' );
+	if ( ! $post || 'publish' !== $post->post_status ) {
+		return null;
+	}
+	// The content sync's own record (inc/content-sync.php), which a refresh
+	// keeps current; the older option record where the sync is absent.
+	if ( function_exists( 'boi_sync_state' ) ) {
+		$state = boi_sync_state( $post, $slug );
+		return '' !== $state['recorded'] && $state['stored'] === $state['recorded'] ? $post : null;
+	}
+	if ( ! isset( $hashes[ $slug ] ) || boi_content_fingerprint( $post->post_content ) !== $hashes[ $slug ] ) {
+		return null;
+	}
+	return $post;
+}
+
+/**
+ * Sets an article's publish date.
+ *
+ * @param int $id        Post ID.
+ * @param int $timestamp Unix time.
+ * @return void
+ */
+function boi_dates_set( $id, $timestamp ) {
+	$gmt = gmdate( 'Y-m-d H:i:s', $timestamp );
+	boi_update_post(
+		array(
+			'ID'            => $id,
+			'post_date'     => get_date_from_gmt( $gmt ),
+			'post_date_gmt' => $gmt,
+		)
+	);
+}
+
+/**
+ * Dates the seeded articles once, then leaves them alone.
+ *
+ * On a new site every article arrives at once, so their dates follow the
+ * reading order, one day apart, ending now: the archive, the featured lead
+ * and the Latest grid then read in that order. The dates are then frozen
+ * (`boi_dates_frozen`): an article added by a later release keeps the date
+ * it was created, so the newest article leads the front page.
+ *
+ * A site whose dates an earlier version staggered (`boi_dates_signature`,
+ * redone on every change to the reading order, which put each new article
+ * months back) keeps the dates it has, except the articles in
+ * boi_dates_recent_slugs(), which move to today in the order they were
+ * created. Only articles still exactly as the theme wrote them are redated.
  *
  * @return void
  */
 function boi_stagger_seed_dates() {
-	$signature = md5( wp_json_encode( boi_reading_order() ) );
-
-	if ( get_option( 'boi_dates_signature' ) === $signature ) {
+	if ( false !== get_option( 'boi_dates_frozen' ) ) {
 		return;
 	}
 
 	$hashes = (array) get_option( 'boi_article_hashes', array() );
 	$slugs  = array_keys( boi_reading_positions() );
-	$total  = count( $slugs );
-	$end    = time();
+	$now    = time();
 
-	foreach ( $slugs as $i => $slug ) {
-		$post = get_page_by_path( $slug, OBJECT, 'post' );
-
-		if ( ! $post || 'publish' !== $post->post_status ) {
-			continue;
+	if ( false === get_option( 'boi_dates_signature' ) ) {
+		$total = count( $slugs );
+		foreach ( $slugs as $i => $slug ) {
+			$post = boi_dates_article( $slug, $hashes );
+			if ( $post ) {
+				boi_dates_set( $post->ID, $now - ( $total - 1 - $i ) * DAY_IN_SECONDS );
+			}
 		}
-
-		if ( ! isset( $hashes[ $slug ] ) || boi_content_fingerprint( $post->post_content ) !== $hashes[ $slug ] ) {
-			continue;
+	} else {
+		$recent = array();
+		foreach ( boi_dates_recent_slugs() as $slug ) {
+			$post = boi_dates_article( $slug, $hashes );
+			if ( $post ) {
+				$recent[] = $post;
+			}
 		}
-
-		$gmt = gmdate( 'Y-m-d H:i:s', $end - ( $total - 1 - $i ) * DAY_IN_SECONDS );
-
-		boi_update_post(
-			array(
-				'ID'            => $post->ID,
-				'post_date'     => get_date_from_gmt( $gmt ),
-				'post_date_gmt' => $gmt,
-			)
+		// Oldest first, by ID, a minute apart, the newest ending now.
+		usort(
+			$recent,
+			function ( $a, $b ) {
+				return $a->ID <=> $b->ID;
+			}
 		);
+		$n = count( $recent );
+		foreach ( $recent as $k => $post ) {
+			boi_dates_set( $post->ID, $now - ( $n - 1 - $k ) * MINUTE_IN_SECONDS );
+		}
+		delete_option( 'boi_dates_signature' );
 	}
 
-	update_option( 'boi_dates_signature', $signature, false );
+	update_option( 'boi_dates_frozen', gmdate( 'c', $now ), false );
 }
 
 /**

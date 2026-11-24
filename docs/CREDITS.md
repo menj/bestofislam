@@ -101,8 +101,14 @@ License. See `assets/icons/LICENSE.txt`.
 The logo, the marks, the favicons and the arrow in `assets/images/`, and the
 geometric graphics `bin/make-original-graphics.py` draws for articles with no
 suitable photograph, are the theme's own and share its licence.
-`assets/images/lanat-allah.svg` comes from the sister theme injil.help, which
-has the same owner.
+`assets/images/lanat-allah.svg` comes from the injil.help theme, which has the
+same owner.
+
+`assets/images/basmala.webp`, the Basmala calligraphy at the head of every
+article, is in the public domain, as the owner confirmed on 2026-11-24. It was
+redrawn from the owner's GIF at three times its size and saved as lossless
+WebP, with the edges smoothed, the white fringe and stray specks removed, and the
+tashkeel taken out.
 
 ## Images
 

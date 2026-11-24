@@ -4,6 +4,34 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.131.0] - 2026-11-24
+
+### Changed
+- The newest article now leads the front page, the Latest grid, the archive and the feed (SSOT D69). The theme used to restagger every unedited article's date by the reading order whenever that order changed, so a new article was dated by its place in the order, months back. The dates are now set once and frozen (`boi_dates_frozen`), and an article added by a later release keeps the date it was created.
+- On a site upgraded from an earlier version every date stays, except the five articles added since 1.125.0 (the three answers to the "rules" for converts, scrolls-of-abraham and is-the-cross-a-pagan-symbol), which move to the day of the upgrade in the order they were created. Edited articles keep their dates. The option `boi_dates_signature` is removed.
+
+### Added
+- `tests/reading-dates-test.php`: a new site, a later article, an upgraded site, an edited article and a second run.
+
+## [1.130.0] - 2026-11-24
+
+No feature removed and no public identifier renamed.
+
+### Added
+- is-the-cross-a-pagan-symbol: six graded facts on the claim that the church took the cross from paganism, adapted from the owner's 2000 essay "The Cross and Ancient Paganism" and corrected against the sources. Clement's seal symbols (Paedagogus 3.11), Tertullian (On Baptism 1, De Corona 3), Minucius Felix (Octavius 29), the staurogram in P66 and P75 (Hurtado), the Santa Sabina doors, Eusebius (Life of Constantine 1.28 to 31), Sozomen 1.8 and Aurelius Victor 41.4, Socrates 5.17 on the Serapeum and the Coptic crux ansata. The 2000 essay's Agni, Horus and Irish Mithras claims are reported as untraceable, and Augustine's Retractations 1.13.3 is read in its own sense. Excerpt, abstract, original graphics, related links and `docs/CITATIONS.md` entry included; the article sits in the reading order after crucifixion-quran.
+
+## [1.129.0] - 2026-11-24
+
+No feature removed and no public identifier renamed.
+
+### Added
+- The Basmala at the head of every article (`inc/basmala.php`, `assets/css/basmala.css`): the owner's public-domain calligraphy, redrawn sharp as lossless WebP (`assets/images/basmala.webp`, 809 by 96 pixels, three times its display size of 270 by 32): the black and red ink were separated, enlarged eight times, smoothed and re-cut, then reduced with anti-aliasing, which removes the jagged steps and the white fringe of the original GIF. The tashkeel and the stray specks were taken out at the owner's request, leaving the letters and their dots, centred above the abstract. Its alt text gives the meaning in English. In the dark appearance it is inverted with the hue turned back, so the lettering reads light and the word Allah stays red. Never on pages.
+- Theme Options, Display: the Basmala switch (`basmala`, on by default).
+- `tests/basmala-test.php`.
+
+### Changed
+- `docs/CREDITS.md` records the Basmala as public domain, and no longer calls injil.help a sister theme.
+
 ## [1.128.0] - 2026-11-24
 
 ### Changed

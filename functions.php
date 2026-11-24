@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.128.0' );
+define( 'BOI_VERSION', '1.131.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -40,6 +40,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/anatomy.php',
 	BOI_DIR . '/inc/endmark.php',
 	BOI_DIR . '/inc/abstract.php',
+	BOI_DIR . '/inc/basmala.php',
 	BOI_DIR . '/inc/structured-data.php',
 	BOI_DIR . '/inc/schema-graph.php',
 	BOI_DIR . '/inc/social-meta.php',

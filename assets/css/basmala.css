@@ -1,0 +1,28 @@
+/* The Basmala at the head of an article (inc/basmala.php): the owner's
+   public-domain calligraphy, centred above the abstract. It is shown at its
+   own width, never enlarged, so the lettering stays sharp. In the dark
+   appearance the black lettering is inverted to light and the hue turned
+   back by 180 degrees, so the word Allah stays red, a lighter rose. */
+
+.boi-basmala {
+	margin: 0 auto 1.5rem;
+	text-align: center;
+	line-height: 0;
+}
+
+.boi-basmala__image {
+	display: inline-block;
+	width: 270px;
+	max-width: 100%;
+	height: auto;
+}
+
+:root[data-theme="dark"] .boi-basmala__image {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+@media print {
+	.boi-basmala__image {
+		filter: none;
+	}
+}

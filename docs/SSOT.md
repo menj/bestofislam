@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.128.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.131.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -778,6 +778,16 @@ The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and
 ### D63. Readers can add the site as a preferred source on Google
 
 The owner asked on 2026-11-22 for Google's "preferred sources" (Google Search Central, last updated 2026-09-18) to be applied natively, in the theme's colours. Google offers three methods: its standard button and its advanced script, which both load `news.google.com/swg/js/v1/publisher.js`, and a deeplink to `https://www.google.com/preferences/source?q=<domain>`. The theme uses the deeplink only, because it loads no remote assets and sends no reader data to a third party until the reader clicks. `boi_render_preferred_source()` in `inc/features.php` prints it as a pill link in the theme's palette (pale blue fill, gold leading rule, azure on hover), led by Google's G on a white disc and worded "Add as preferred source". The owner asked on 2026-11-23 for the G and the shorter wording. The G is drawn inline by `boi_google_g()` as an SVG of four paths, so nothing is fetched from Google. The full wording, "Add Best of Islam as a preferred source on Google", is the link's title, and screen readers hear "Add as preferred source on Google". It appears under the share links of an article and in the Follow band. Only a domain or subdomain can be a preferred source, so `boi_preferred_source_url()` gives no link for a site in a subfolder, on a bare host or at an IP address, and drops `www.`. The `preferred_source` switch on the Display tab turns it off. The link is hidden in print.
+
+### D69. The newest article leads the front page
+
+The owner noticed on 2026-11-24 that the latest articles did not show on the front page, and asked for them to. The featured lead, the Latest grid, the archive and the feed order articles by date. Until 1.131.0 the theme restaggered every unedited article by the reading order, one day apart and ending now, whenever that order changed, so each new article took a date months back.
+
+From 1.131.0 `boi_stagger_seed_dates()` (`inc/reading.php`) dates the articles once. On a new site they follow the reading order, one day apart, ending now; the dates are then frozen (`boi_dates_frozen`). An article added by a later release keeps the date it was created, so it leads. On a site staggered by an earlier version (`boi_dates_signature`, removed on the upgrade), every date stays, except the articles in `boi_dates_recent_slugs()`, which move to the day of the upgrade in the order they were created. Edited articles keep their dates. The reading order still sets the reading path, the next-step links and the footer parts.
+
+### D68. The Basmala opens every article
+
+The owner asked on 2026-11-24 for the Basmala above the article text, above the abstract box, on every article, using a calligraphy image the owner stated is in the public domain, served as WebP. `assets/images/basmala.webp` is that image redrawn sharp at three times its display size (809 by 96 pixels, shown at 270 by 32), with the tashkeel and stray specks removed at the owner's request, so it stays crisp on high-density screens, centred, with the English meaning as its alt text; in the dark appearance a CSS invert and hue turn keeps it legible. It is added at `the_content` priority 31, after the abstract, on single posts only. Setting: Theme Options, Display, Basmala (`basmala`). Test: `tests/basmala-test.php`.
 
 ### D67. The Excerpt and the Abstract are different texts
 

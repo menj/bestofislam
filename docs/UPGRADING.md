@@ -62,6 +62,18 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.131.0
+
+Replace the theme files and load one page. The theme stops redating its articles by the reading order. Every date stays as it is, except the five articles added since 1.125.0 (before-you-convert-to-islam, before-you-convert-women-and-marriage, before-you-convert-apostates-and-lgbt-friends, scrolls-of-abraham and is-the-cross-a-pagan-symbol), which move to the day of the upgrade and lead the front page. An article you have edited keeps its date. From now on each new article keeps the date it arrives. Nothing to set.
+
+## Upgrading to 1.130.0
+
+Replace the theme files. `boi_create_listicles()` creates the new article when the version changes.
+
+## Upgrading to 1.129.0
+
+Replace the theme files. The Basmala appears above every article at once; switch it off under Theme Options, Display.
+
 ## Upgrading to 1.128.0
 
 Replace the theme files. On the first request afterwards the theme deletes its development files on a production server: `.git` and every other dot entry at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests`, `bin` and `dist` folders. `docs` now stays, refused by the theme `.htaccess`.

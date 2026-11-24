@@ -76,6 +76,16 @@ The three articles answering the list of "rules" for converts were written to th
   - the Grand Mufti's 2007 interview, reported in *Daily News Egypt*;
   - Dār al-Iftāʾ's published statement.
 
+### New article of 1.130.0: is-the-cross-a-pagan-symbol (2026-11-24)
+
+Checked by web search against the primary texts and catalogue pages:
+- Clement, *Paedagogus* 3.11 (dove, fish, ship, lyre, anchor; no cross); Tertullian, *On Baptism* 1 ("little fishes") and *De Corona* 3; Minucius Felix, *Octavius* 29 ("Crosses, moreover, we neither worship nor wish for", with the answer about Roman standards); Socrates, *Ecclesiastical History* 5.17 (the Serapeum hieroglyphs, "life to come", and his own doubt); Eusebius, *Life of Constantine* 1.28 to 31; Sozomen 1.8 and Aurelius Victor 41.4 on the end of crucifixion; Sahih al-Bukhari 2222 and 3448.
+- Hurtado on the staurogram in P66 and P75, given as his argument; the Santa Sabina doors, dated about 430 to 435; the Coptic crux ansata from about 400, with the borrowing debate stated; the Rinnegan plaque, seventh or eighth century.
+- Augustine, *Retractations* 1.13.3: the reference and its sense are confirmed; the English wording is a common rendering, not checked against a printed translation.
+- Graves (1875) and Doane (1882) exist and carry the lists; the specific pagan cross claims (Agni, Siva, Horus, a Mithraic crucifix in Ireland) were searched for and no primary object or inscription was found, so the article reports them as untraceable and does not repeat them as fact.
+- The Bible verses (ESV) and Quran 4:157 (Saheeh International) are quoted from the standard texts.
+
+
 ### New article of 1.127.0
 
 scrolls-of-abraham: every source read in its text. The Shamela pages, all paginated as the print, are:
