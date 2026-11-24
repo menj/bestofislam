@@ -773,7 +773,7 @@ The owner asked on 2026-11-22 for Google's "preferred sources" (Google Search Ce
 
 ### D68. The Basmala opens every article
 
-The owner asked on 2026-11-24 for the Basmala above the article text, above the abstract box, on every article, using a calligraphy image the owner stated is in the public domain, served as WebP. `assets/images/basmala.webp` is that image redrawn sharp at three times its display size (813 by 118 pixels, shown at 271 by 39), so it stays crisp on high-density screens, centred, with the English meaning as its alt text; in the dark appearance a CSS invert and hue turn keeps it legible. It is added at `the_content` priority 31, after the abstract, on single posts only. Setting: Theme Options, Display, Basmala (`basmala`). Test: `tests/basmala-test.php`.
+The owner asked on 2026-11-24 for the Basmala above the article text, above the abstract box, on every article, using a calligraphy image the owner stated is in the public domain, served as WebP. `assets/images/basmala.webp` is that image redrawn sharp at three times its display size (809 by 96 pixels, shown at 270 by 32), with the tashkeel and stray specks removed at the owner's request, so it stays crisp on high-density screens, centred, with the English meaning as its alt text; in the dark appearance a CSS invert and hue turn keeps it legible. It is added at `the_content` priority 31, after the abstract, on single posts only. Setting: Theme Options, Display, Basmala (`basmala`). Test: `tests/basmala-test.php`.
 
 ### D67. The Excerpt and the Abstract are different texts
 

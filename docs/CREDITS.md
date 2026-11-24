@@ -107,7 +107,8 @@ same owner.
 `assets/images/basmala.webp`, the Basmala calligraphy at the head of every
 article, is in the public domain, as the owner confirmed on 2026-11-24. It was
 redrawn from the owner's GIF at three times its size and saved as lossless
-WebP, with the edges smoothed and the white fringe removed.
+WebP, with the edges smoothed, the white fringe and stray specks removed, and the
+tashkeel taken out.
 
 ## Images
 

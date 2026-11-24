@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
  */
 function boi_basmala_html() {
 	return '<div class="boi-basmala">'
-		. '<img class="boi-basmala__image" src="' . esc_url( BOI_URI . '/assets/images/basmala.webp' ) . '" width="271" height="39" alt="' . esc_attr__( 'In the name of God, the Most Merciful, the Most Compassionate', 'bestofislam' ) . '" decoding="async" />'
+		. '<img class="boi-basmala__image" src="' . esc_url( BOI_URI . '/assets/images/basmala.webp' ) . '" width="270" height="32" alt="' . esc_attr__( 'In the name of God, the Most Merciful, the Most Compassionate', 'bestofislam' ) . '" decoding="async" />'
 		. '</div>';
 }
 
