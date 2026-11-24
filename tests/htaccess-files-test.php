@@ -135,7 +135,7 @@ $boi_own_hit = function ( $uri ) use ( $boi_own ) {
 	return false;
 };
 boi_check( 3 === count( $boi_own ), "the theme's .htaccess has its 3 RedirectMatch lines" );
-foreach ( array( '.git/config', '.github/workflows/ci.yml', '.gitignore', '.claude/CLAUDE.md', '.DS_Store', '.env', '.vscode/settings.json', 'assets/.DS_Store', 'tests/unlist-test.php', 'bin/build-error-pages.php', 'docs/SSOT.md', 'functions.php', 'inc/setup.php/x' ) as $boi_p ) {
+foreach ( array( '.git/config', '.github/workflows/ci.yml', '.gitignore', '.claude/CLAUDE.md', '.DS_Store', '.env', '.vscode/settings.json', 'assets/.DS_Store', 'tests/unlist-test.php', 'tools/build.php', 'bin/build-error-pages.php', 'docs/SSOT.md', 'functions.php', 'inc/setup.php/x' ) as $boi_p ) {
 	boi_check( $boi_own_hit( '/wp-content/themes/bestofislam/' . $boi_p ), "theme .htaccess: 403 for $boi_p" );
 }
 foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'assets/css/front.css', 'assets/css/front.min.css', 'testsuite.css', 'assets/css/docs.css', '.well-known/x', 'assets/images/favicon.ico', 'assets/images/favicon.svg', 'assets/images/site.webmanifest', 'assets/images/icon-maskable-512.png' ) as $boi_p ) {
@@ -143,10 +143,10 @@ foreach ( array( 'style.css', 'screenshot.png', 'assets/js/theme-toggle.js', 'as
 }
 
 // The rewrite rule, on the path below the theme folder, and the folders' own deny files.
-$boi_rw = preg_match( '/^RewriteRule (\^\(tests\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
+$boi_rw = preg_match( '/^RewriteRule (\^\((?:tools\|)?tests\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
 $boi_rd = preg_match( '/^RewriteRule (\(\^\|\/\)\S+) - \[F\]$/m', (string) file_get_contents( dirname( __DIR__ ) . '/.htaccess' ), $boi_m ) ? $boi_m[1] : '';
 boi_check( '' !== $boi_rd && 1 === preg_match( '#' . $boi_rd . '#', '.git/config' ) && 1 === preg_match( '#' . $boi_rd . '#', 'assets/.env' ) && 0 === preg_match( '#' . $boi_rd . '#', '.well-known/x' ) && 0 === preg_match( '#' . $boi_rd . '#', 'assets/css/front.css' ), 'theme .htaccess rewrite: dot entries refused without mod_alias, .well-known and assets open' );
-boi_check( '' !== $boi_rw && 1 === preg_match( '#' . $boi_rw . '#', 'docs/SSOT.md' ) && 1 === preg_match( '#' . $boi_rw . '#', 'tests' ) && 0 === preg_match( '#' . $boi_rw . '#', 'assets/docs/x.css' ), "theme .htaccess rewrite: the folders by the path below the theme, assets open" );
+boi_check( '' !== $boi_rw && 1 === preg_match( '#' . $boi_rw . '#', 'docs/SSOT.md' ) && 1 === preg_match( '#' . $boi_rw . '#', 'tests' ) && 1 === preg_match( '#' . $boi_rw . '#', 'tools/build.php' ) && 0 === preg_match( '#' . $boi_rw . '#', 'assets/docs/x.css' ), "theme .htaccess rewrite: the folders by the path below the theme, assets open" );
 foreach ( array( 'tests', 'bin', 'docs' ) as $boi_d ) {
 	$boi_ht = (string) @file_get_contents( dirname( __DIR__ ) . "/$boi_d/.htaccess" ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 	boi_check( false !== strpos( $boi_ht, 'Require all denied' ) && false !== strpos( $boi_ht, 'Deny from all' ), "$boi_d/.htaccess refuses everything, on Apache 2.4 and 2.2" );

@@ -62,6 +62,14 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.128.0
+
+Replace the theme files. On the first request afterwards the theme deletes its development files on a production server: `.git` and every other dot entry at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests` and `bin` folders. `docs` now stays, refused by the theme `.htaccess`.
+
+The clean-up runs again every hour through WP-Cron, so a later FTP upload that brings `.git` back is cleaned within the hour. A host that sets `DISABLE_WP_CRON` in `wp-config.php` must call `wp-cron.php` from a server cron at least hourly, for example `curl -s https://bestofislam.org/wp-cron.php?doing_wp_cron > /dev/null`.
+
+`BOI_REMOVE_GIT_DIR` is no longer read. To keep the files on a server where you work on the theme, set `WP_ENVIRONMENT_TYPE` to `local` or `development`, or define `BOI_KEEP_DEV_FILES` as true, before you upload. If the PHP error log says that development files could not be removed, delete them by FTP; the theme records the version once they are gone.
+
 ## Upgrading to 1.127.0
 
 Replace the theme files. The new article is created by `boi_create_listicles()` when the version changes.
@@ -428,6 +436,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 - One limit for meta descriptions. `docs/SSOT.md` says excerpts stay within 130 characters, while `docs/SEO.md` and `boi_print_meta_description()` allow 160, and 53 seeded excerpts run between 131 and 160. The owner decides which limit stands; then either those excerpts are shortened or the SSOT is changed to 160.
 - A stricter test before the seed migration refreshes an article. `boi_migrate_seed()` treats an article with no stored fingerprint as untouched when its modified time equals its creation time, so an edit made directly in the database, or by a plugin that keeps the old modified date, would be replaced on the next update. Requiring a stored fingerprint before any refresh would close that path (raised in the review of pull request 88).
 - The theme's PHP checked against the owner's `php-maintainable-code` skill, for readable, secure and maintainable conventions.
+- A notice on the Security tab when development files could not be removed. `inc/dev-files.php` (1.128.0) reports them only in the PHP error log, once a day, which many owners never read.
 
 ### Later
 

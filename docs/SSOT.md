@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.127.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.128.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -26,8 +26,8 @@ runs a separate theme.
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
-| wp-config switches | `BOI_SECURITY_LOCK`, `BOI_HIDE_LOGIN`, `BOI_KEEP_DEV_FILES`, `BOI_REMOVE_GIT_DIR`, `BOI_BLOCK_DIRECT_FILES` (README, Constants) |
-| Served documents | `readme.txt` and `CHANGELOG.md`, which the Theme Options footer links. On Apache every other Markdown file is refused by the theme `.htaccess`; on Nginx only if the host adds the rules in the README. `docs/` is removed on a live server (D52) |
+| wp-config switches | `BOI_SECURITY_LOCK`, `BOI_HIDE_LOGIN`, `BOI_KEEP_DEV_FILES`, `BOI_BLOCK_DIRECT_FILES` (README, Constants) |
+| Served documents | `readme.txt` and `CHANGELOG.md`, which the Theme Options footer links. On Apache every other Markdown file is refused by the theme `.htaccess`; on Nginx only if the host adds the rules in the README. `docs/` stays on a live server since 1.128.0, refused there by the theme `.htaccess` (D52) |
 | Release zip | Built by `.github/workflows/package.yml` (`rsync` with exclusions, then `zip`); a local `git archive` of a clean checkout gives the same files, since `.gitattributes` export-ignores `.github`, `.githooks`, `.gitattributes`, `.gitignore`, `.editorconfig`, `bin`, `tests` and `/.claude` |
 
 These names are public identifiers. Renaming one is a breaking change and needs an upgrade note.
@@ -638,22 +638,29 @@ neighbours need.
 
 ### D52. Development files never stay on a live server
 
-The owner uploads the theme over FTP, `.git` included. A web-readable `.git`
-hands out the whole source history, and the tests, build scripts, docs and
-agent notes serve no page. On a production server `boi_remove_dev_files()`
-(`inc/housekeeping.php`) deletes the paths in `boi_dev_paths()`: `.git`,
-`.github`, `.githooks`, `.claude`, `tests`, `bin`, `docs`, `dist` and the
-editor files. It runs on activation and once per theme version, even when the
-folder is a git working tree, and on the first front-end request of a new
-version, since an FTP update fires no switch hook.
+The owner uploads the theme over FTP from a working copy, `.git` included. A
+web-readable `.git` hands out the whole source history, and the build scripts
+and self-tests serve no page. The owner set the present rules on 2026-11-24
+(1.128.0), in these words: "On the first request of any kind after the theme
+version changes, delete every hidden file and folder at the top of the theme
+folder, except .htaccess, .user.ini and .well-known, and delete the tools/ and
+tests/ folders." In this theme the build scripts live in `bin/`, so `bin/` goes
+with `tools/` and `tests/`; `docs/`, `dist/`, the data and the code stay.
+
+`inc/dev-files.php` does it under a lease in `boi_dev_files_lock`, renewed at
+most once a minute and taken over after five minutes without renewal. The
+version is recorded in `boi_dev_files_removed` only when nothing is left; a
+file PHP cannot remove keeps the lease held, brings a retry every five minutes
+and one PHP error log line a day. An hourly WP-Cron event,
+`boi_dev_files_hourly`, runs the clean-up again whenever an upload has put a
+development entry back. It needs WP-Cron, or a server cron calling
+`wp-cron.php` at least hourly where `DISABLE_WP_CRON` is set.
 
 The files stay only where they are worked on: `wp_get_environment_type()` is
 `local` or `development`, or `BOI_KEEP_DEV_FILES` is true in `wp-config.php`.
-`BOI_REMOVE_GIT_DIR` still works: true forces the cleanup
-with `.git`, even in a development environment, and false keeps `.git` on
-production while the rest goes. `BOI_KEEP_DEV_FILES` wins over both.
+`BOI_REMOVE_GIT_DIR` is no longer read (1.128.0).
 
-Until the next admin page load deletes them, and on any server where PHP
+Until the clean-up deletes them, and on any server where PHP
 cannot, the web server refuses them. On Apache the theme keeps a second
 `.htaccess` section, "Best of Islam: block direct file access", beside
 "Block xmlrpc.php". It answers 403 for PHP files in `wp-includes` (except

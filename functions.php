@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.127.0' );
+define( 'BOI_VERSION', '1.128.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -56,7 +56,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/error-pages.php',
 	BOI_DIR . '/inc/error-page-static.php',
 	BOI_DIR . '/inc/lock.php',
-	BOI_DIR . '/inc/housekeeping.php',
+	BOI_DIR . '/inc/dev-files.php',
 	BOI_DIR . '/inc/security-headers.php',
 	BOI_DIR . '/inc/security.php',
 );

@@ -188,9 +188,10 @@ function boi_sec_files_htaccess_lines( $home = '' ) {
 		$rules[] = 'RewriteRule ^' . $themes . '.+\.php(/|$) - [F]';
 	}
 	if ( null !== $theme && '' !== $theme ) {
-		// Every folder and file in boi_dev_paths() that the .git rule above
-		// does not already cover, for a server where PHP cannot delete them.
-		$rules[] = 'RewriteRule ^' . $theme . '(tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]';
+		// The development folders and editor files the .git rule above does
+		// not already cover (inc/dev-files.php), for a server where PHP cannot
+		// delete them.
+		$rules[] = 'RewriteRule ^' . $theme . '(tools|tests|bin|docs|dist|\.vscode|\.idea|\.editorconfig|\.DS_Store)(/|$) - [F]';
 	}
 
 	return array_merge( array( '<IfModule mod_rewrite.c>', 'RewriteEngine On' ), $rules, array( '</IfModule>' ) );
