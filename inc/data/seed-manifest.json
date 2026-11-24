@@ -75,7 +75,7 @@
         "content\/islam-and-evolution.json": "a60745bf54c5d0db398a5cc65b37b5ff",
         "content\/islam-arian-heresy-claim.json": "1e4875abd522dce58490dbf7bd50b1bf",
         "content\/islam-in-china.json": "cbb10d41ad9da9998320b00b08febfb2",
-        "content\/islam-religion-of-peace.json": "03a94a6aa1838caeba4010530d486312",
+        "content\/islam-religion-of-peace.json": "aa56a6c470a2d32dd71e1fff49fbbdbb",
         "content\/islamic-art-and-the-one-god.json": "62370bc5581c3b407c85720234ca201e",
         "content\/islamic-dilemma.json": "9344f118734477dd7b352f94cf969042",
         "content\/islamic-rites-before-islam.json": "d7617cfcc7efbd293fce231bdff79622",
@@ -105,7 +105,7 @@
         "content\/muhammad-never-wrote-it-down.json": "096b08fc010adec05888b16949f4b787",
         "content\/muslim-societies-backwardness-claim.json": "522c605f3b6bf3962d8cc6611db644e3",
         "content\/muslims-by-the-numbers.json": "3af44350cc09ca0787d0cd4895ecbbaf",
-        "content\/nabi-and-rasul.json": "be6ec336730fe66fc23f1ea8b789992f",
+        "content\/nabi-and-rasul.json": "3852a293e01d3c8747497b36d01c0814",
         "content\/natural-world-verses.json": "ba0638ee10890a92ec53bdd55bcd2823",
         "content\/nine-questions-from-the-floor-islamic-dilemma-debate.json": "57f3180e3b77432b04a3c961dbacddc9",
         "content\/no-compulsion-in-religion.json": "5763f602ab741c6b28f65e7f8cf10c08",
@@ -128,7 +128,7 @@
         "content\/quran-grammar-errors-claim.json": "3015f1d747a428641414f57e1f7adf7d",
         "content\/quran-iblis-fallen-angels-borrowing.json": "d137d7a302fa4312743c3dfd0e7f3b06",
         "content\/quran-mysteries-in-the-stories.json": "6d72efaeae239f93f9e1efe448c9922e",
-        "content\/quran-on-christians.json": "b5d1790426618af84a87e2fdc2d80174",
+        "content\/quran-on-christians.json": "c3ae7c513f6b515a869478446dff6aa4",
         "content\/quran-preservation-reddit.json": "28977396cc72068d49afa17192d592d6",
         "content\/quran-pronoun-shifts-iltifat.json": "56c73c257e3b4e202eae009806fc70d7",
         "content\/quran-science-claims-graded.json": "3798de9c74d5eb3fae6558c853f7e44a",
@@ -202,5 +202,5 @@
         "inc\/data\/seed.json": "40321bd5bd6d2c48a728e6d4c9eebbbf",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "148c2409c89bbb9de34ccbba5bf81a11"
+    "checksum": "d17691c0a09ab3f5abbeb1f9bd5c898e"
 }

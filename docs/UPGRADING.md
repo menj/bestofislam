@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.132.0
 
-Replace the theme files. `boi_migrate_seed()` refreshes the 50 articles whose notes changed where the article is unedited; an edited copy is listed on the Content tab.
+Replace the theme files. `boi_migrate_seed()` refreshes the 50 articles whose notes changed where the article is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab.
 
 ## Upgrading to 1.131.0
 

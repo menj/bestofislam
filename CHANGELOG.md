@@ -11,7 +11,10 @@ No feature removed and no public identifier renamed.
 ### Changed
 - 85 notes in 50 articles that cited al-Ṭabarī, Ibn Kathīr, al-Qurṭubī or Ibn Isḥāq by verse or episode alone now give the volume and page, and for the tafsirs a link to the page on shamela.ws. Each claim was checked on the page (`docs/CITATIONS.md`).
 - Corrections found on the way: the hafs-warsh-one-quran note on 5:6 now gives al-Ṭabarī's report numbers as 11447 onward (vol. 10, pp. 52–64); the nabi-and-rasul note on 33:40 says "meaning", which is what Ibn Kathīr discusses; the scrolls-of-abraham note records that al-Ṭabarī's text prints Abū al-Jald as "Abī al-Khuld".
-- README counts 199 seeded articles.
+- islam-religion-of-peace: the population of roughly 450 million is the European Union's, and the sentence now says so (it said "a continent").
+- nabi-and-rasul: a note's cross-reference pointed to itself; it now points to the note on the chains of the Abu Umama report.
+- quran-on-christians: a paragraph missing its closing tag is closed.
+- README counts 199 seeded articles throughout.
 - `tests/basmala-test.php` checks pages and archives apart, with `is_singular()` honouring the post type it is asked about.
 
 ## [1.131.0] - 2026-11-24
