@@ -6576,5 +6576,48 @@
     "source": "https://www.pexels.com/photo/9807534/"
    }
   ]
+ },
+ "is-the-cross-a-pagan-symbol": {
+  "featured": {
+   "file": "is-the-cross-a-pagan-symbol.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "is-the-cross-a-pagan-symbol-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "is-the-cross-a-pagan-symbol-2.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "is-the-cross-a-pagan-symbol-3.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "is-the-cross-a-pagan-symbol-4.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   }
+  ]
  }
 }

@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.128.0] - 2026-11-24
+
+No feature removed and no public identifier renamed.
+
+### Added
+- is-the-cross-a-pagan-symbol: six graded facts on the claim that the church took the cross from paganism, adapted from the owner's 2000 essay "The Cross and Ancient Paganism" and corrected against the sources. Clement's seal symbols (Paedagogus 3.11), Tertullian (On Baptism 1, De Corona 3), Minucius Felix (Octavius 29), the staurogram in P66 and P75 (Hurtado), the Santa Sabina doors, Eusebius (Life of Constantine 1.28 to 31), Sozomen 1.8 and Aurelius Victor 41.4, Socrates 5.17 on the Serapeum and the Coptic crux ansata. The 2000 essay's Agni, Horus and Irish Mithras claims are reported as untraceable, and Augustine's Retractations 1.13.3 is read in its own sense. Excerpt, abstract, original graphics, related links and `docs/CITATIONS.md` entry included.
+
 ## [1.127.0] - 2026-11-24
 
 No feature removed and no public identifier renamed.

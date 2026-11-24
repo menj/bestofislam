@@ -68,6 +68,7 @@
         "content\/indonesia.json": "b53c13072dd3c0ced8ccfcd20077ea9e",
         "content\/instruments-islamic-world.json": "b5a4e3e55f1a8c93e1878e62c0458933",
         "content\/is-allah-a-deceiver-makr.json": "cc0d45eaf2209b21ff01dabbaca3cffc",
+        "content\/is-the-cross-a-pagan-symbol.json": "118116c90f1453bd35ea0ba1e5bccf3d",
         "content\/is-yahweh-satan.json": "a06923c5f7812184e89b047836ac7dfe",
         "content\/is-yahweh-the-same-as-allah.json": "0d150c11f2ed3078c43939875c69194f",
         "content\/ishmael-in-the-quran-and-genesis.json": "b48944c2e7aedfcf4a4d77afac03f291",
@@ -197,8 +198,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "8b3debbd5d5ebc38fcea0c4af7c33235",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "e485ac1450db08b84dc84f0167575a77",
+        "inc\/data\/seed.json": "5d2b4e7a68ad46b350cb6a12f9024d9f",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "1b1704172a9228236cb971a2add738c2"
+    "checksum": "35624687537b40066012319bf89e995d"
 }

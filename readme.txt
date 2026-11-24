@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.127.0
+Stable tag: 1.128.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.128.0 =
+* A new article: "Is the cross a pagan symbol? 6 facts on its history before and after Jesus", with its excerpt, abstract and images.
 
 = 1.127.0 =
 * Every article now opens with the Basmala, "In the name of God, the Most Merciful, the Most Compassionate", in calligraphy above the abstract. It reads light in the dark appearance. Switch it off under Theme Options, Display.
@@ -447,6 +450,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.128.0 =
+Replace the theme files. The new article is created when the version changes.
 
 = 1.127.0 =
 Replace the theme files. The Basmala appears above every article at once.

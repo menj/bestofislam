@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.128.0
+
+Replace the theme files. `boi_create_listicles()` creates the new article when the version changes.
+
 ## Upgrading to 1.127.0
 
 Replace the theme files. The Basmala appears above every article at once; switch it off under Theme Options, Display.
