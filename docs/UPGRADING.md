@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.132.0
+
+Replace the theme files. `boi_migrate_seed()` refreshes the 50 articles whose notes changed where the article is unedited; an edited copy is listed on the Content tab.
+
 ## Upgrading to 1.131.0
 
 Replace the theme files and load one page. The theme stops redating its articles by the reading order. Every date stays as it is, except the five articles added since 1.125.0 (before-you-convert-to-islam, before-you-convert-women-and-marriage, before-you-convert-apostates-and-lgbt-friends, scrolls-of-abraham and is-the-cross-a-pagan-symbol), which move to the day of the upgrade and lead the front page. An article you have edited keeps its date. From now on each new article keeps the date it arrives. Nothing to set.

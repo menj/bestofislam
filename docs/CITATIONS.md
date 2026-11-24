@@ -57,11 +57,24 @@ The 194 articles hold 3,133 notes: 785 cite the Quran, 732 hadith, 325 the Bible
 | Quran quotations (372) | Each quotation compared with Saheeh International, allowing for ellipses and the translator's brackets | Low scores were reviewed one by one. Most are faithful renderings of the Arabic in articles whose notes do not name a translation. Two quotations were corrected: 35:24 in same-god, which had added "a prophet", and 3:52 in will-every-non-muslim-go-to-hell. |
 | Bible quotations (123 with a book reference) | Compared with the World English Bible (eBible.org text) | Articles whose notes name the ESV or the KJV match that version. Six articles quoted the ESV without saying so: holy-war-in-the-bible, ishmael-in-the-quran-and-genesis, genealogies-of-jesus, messenger-to-every-nation, gods-attributes-and-anthropomorphism and i-read-the-entire-quran-reply. Their notes now name it. |
 | Ibn Isḥāq, trans. Guillaume (32 notes) | Each page checked in the text of the 1955 translation | Two page references corrected: Mukhayriq is at pp. 240 and 384 (apes-and-pigs-and-the-jews); the emigrant lists are at pp. 146–147 and 528–529 (first-muslims-kept-the-faith). |
-| al-Ṭabarī report numbers | Checked against the Shākir numbering in the tafsir text for each verse | All found: 2:23 (491–495), 3:54 (7131–7132), 5:6 (8959–8970). |
+| al-Ṭabarī report numbers | Checked against the Shākir numbering in the tafsir text for each verse | Found: 2:23 (491–495), 3:54 (7131–7132), 2:62 (1114). Corrected in 1.132.0: the 5:6 reports on "your feet" are 11447 onward in the Shākir numbering, vol. 10, pp. 52–64; the numbers 8959–8970 given before were not found there. |
 | Church Fathers (14 notes) | Each chapter read in the Ante-Nicene Fathers text on newadvent.org | All match: Irenaeus 1.26.2 and 1.27.2; Justin, *Dialogue* 71–73; Origen, *Against Celsus* 2.27; Tertullian, *Against Marcion* 1.6, 1.19, 3.19 and 4.2; the Pseudo-Clementine *Homilies* 2.38 and 3.47–50. |
 | URLs (25) and DOIs (3) | Each link opened; each DOI looked up in Crossref | All open. Reddit and eScholarship refuse automated requests but are live. The DOI of the 2012 al-Fusul paper is the journal's own and is not registered with Crossref; the journal page is cited beside it. |
 
 | Modern books (427 titles) | Each title, author and year looked up in Open Library (and Crossref) | 216 matched exactly. Each of the 38 year mismatches was reviewed and none is an error: Open Library lists reprints, translations or later editions under other dates (for example Wenham, *Genesis 16–50*, Word, 1994; Tov, *Textual Criticism*, 3rd edition, 2012). The 124 titles not found and the 34 failed lookups are mostly classical Arabic works and older or specialist titles that Open Library does not index; they wait for a check against library catalogues. |
+
+### The Shamela pass, first part (1.132.0)
+
+85 notes in 50 articles that cited a classical work by verse or episode alone now give volume and page, and for the tafsirs a link to the page on shamela.ws:
+- al-Ṭabarī, *Jāmiʿ al-bayān* (Shamela book 43: Dār al-Tarbiya wa-l-Turāth, vols. 1–16 ed. Shākir);
+- Ibn Kathīr, *Tafsīr al-Qurʾān al-ʿAẓīm* (book 8473: ed. Salāma, Dār Ṭayba, 1999);
+- al-Qurṭubī, *al-Jāmiʿ li-aḥkām al-Qurʾān* (book 20855: Dār al-Kutub al-Miṣriyya, 1964);
+- Ibn Isḥāq in Guillaume's translation (Oxford University Press, 1955), paged from the archive.org scan.
+
+The pages are print pages. Each verse was located by its heading in the tafsir, with the ayah number inside the heading, and each specific claim was checked on the page: the reports and their numbers, the gradings, the names of grammarians and the quoted phrases. Corrections:
+- al-Ṭabarī's report of Abū al-Jald on the scrolls is printed "Abī al-Khuld" (vol. 24, p. 377);
+- Ibn Kathīr on 33:40 gives the meaning of *khātam al-nabiyyīn*, not its readings, so the nabi-and-rasul note now says "meaning";
+- the hafs-warsh note on 5:6 had the wrong report numbers (see the table above).
 
 ### New articles of 1.125.0
 

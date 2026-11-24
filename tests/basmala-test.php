@@ -18,13 +18,14 @@ define( 'BOI_DIR', dirname( __DIR__ ) );
 define( 'BOI_URI', '' );
 
 $GLOBALS['t_single']  = true;
+$GLOBALS['t_type']    = 'post';
 $GLOBALS['t_options'] = array();
 
 function add_filter() {}
 function add_action() {}
 function esc_url( $s ) { return $s; }
 function esc_attr__( $s ) { return htmlspecialchars( $s, ENT_QUOTES, 'UTF-8' ); }
-function is_singular( $t = '' ) { return $GLOBALS['t_single']; }
+function is_singular( $t = '' ) { return $GLOBALS['t_single'] && ( '' === $t || in_array( $GLOBALS['t_type'], (array) $t, true ) ); }
 function boi_anatomy_is_main() { return true; }
 function boi_get_options() { return array_merge( array( 'basmala' => 1 ), $GLOBALS['t_options'] ); }
 
@@ -54,8 +55,11 @@ check( false === strpos( $out, '<p class="boi-basmala' ), 'no paragraph, so the 
 $GLOBALS['t_options'] = array( 'basmala' => 0 );
 check( $abstract === boi_basmala_filter( $abstract ), 'nothing when switched off' );
 $GLOBALS['t_options'] = array();
-$GLOBALS['t_single']  = false;
+$GLOBALS['t_type'] = 'page';
 check( $abstract === boi_basmala_filter( $abstract ), 'nothing on a page' );
+$GLOBALS['t_type']   = 'post';
+$GLOBALS['t_single'] = false;
+check( $abstract === boi_basmala_filter( $abstract ), 'nothing on an archive' );
 
 echo $fails ? "$fails of $count checks failed\n" : "All $count checks passed\n";
 exit( $fails ? 1 : 0 );
