@@ -117,7 +117,7 @@ function boi_put( $root, $files ) {
 	}
 }
 function boi_build( $root, $out ) {
-	boi_put( $root, array( '.git/HEAD', '.git/objects/ab/cdef', '.github/workflows/checks.yml', '.gitignore', '.claude/CLAUDE.md', 'tools/build.php', 'tests/a-test.php', 'bin/build.py' ) );
+	boi_put( $root, array( '.git/HEAD', '.git/objects/ab/cdef', '.github/workflows/checks.yml', '.gitignore', '.claude/CLAUDE.md', 'tools/build.php', 'tests/a-test.php', 'bin/build.py', 'dist/bestofislam/style.css' ) );
 	boi_put( $root, array( '.htaccess', '.user.ini', '.well-known/security.txt', 'style.css', 'functions.php', 'inc/keep.php', 'inc/data/seed.json', 'data/d.json', 'docs/SSOT.md' ) );
 	// Git keeps its objects read-only.
 	chmod( "$root/.git/objects/ab/cdef", 0444 );
@@ -154,7 +154,7 @@ function boi_rm( $dir ) {
 	rmdir( $dir );
 }
 
-$boi_dev = array( '.claude', '.git', '.github', '.gitignore', '.idea', 'bin', 'tests', 'tools' );
+$boi_dev = array( '.claude', '.git', '.github', '.gitignore', '.idea', 'bin', 'dist', 'tests', 'tools' );
 boi_build( $boi_tmp, $boi_out );
 
 if ( 'stuck' === $boi_case ) {
@@ -205,7 +205,7 @@ if ( 'stuck' === $boi_case ) {
 	boi_check( array() === $GLOBALS['boi_cron'], 'and schedules no hourly event' );
 } else {
 	// 1. What is listed.
-	boi_check( $boi_dev === boi_dev_files_entries(), 'listed: the hidden entries except .htaccess, .user.ini and .well-known, and tools, tests and bin' );
+	boi_check( $boi_dev === boi_dev_files_entries(), 'listed: the hidden entries except .htaccess, .user.ini and .well-known, and tools, tests, bin and dist' );
 
 	// 2. Local and development sites keep them.
 	foreach ( array( 'local', 'development' ) as $boi_e ) {

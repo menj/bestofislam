@@ -166,7 +166,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.128.0 =
-* The theme removes the development files an FTP upload brings along (.git and the other hidden files, and the tools, tests and bin folders) on the first visit after an update, and checks again every hour. The docs folder now stays, still refused to visitors.
+* The theme removes the development files an FTP upload brings along (.git and the other hidden files, and the tools, tests, bin and dist folders) on the first visit after an update, and checks again every hour. The docs folder now stays, still refused to visitors.
 * If a file cannot be removed, the theme tries again every five minutes and notes once a day in the PHP error log how many files to delete by FTP.
 
 = 1.127.0 =

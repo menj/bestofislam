@@ -8,8 +8,9 @@
  * live server, where the web server may serve or run them. On the first
  * request of any kind after the theme version changes, this deletes every
  * hidden file and folder at the top of the theme folder except .htaccess,
- * .user.ini and .well-known, and the tools, tests and bin folders. The data,
- * the code and the rest of the theme stay.
+ * .user.ini and .well-known, and the tools, tests, bin and dist folders
+ * (dist is packaging output, and carries no deny file of its own). The
+ * data, the code and the rest of the theme stay.
  *
  * One request runs it, under a lease kept in wp_options (inc/lock.php):
  * a free lease is taken with one INSERT IGNORE, a lease nobody renewed for
@@ -68,7 +69,7 @@ function boi_keep_dev_files() {
 /**
  * Names, at the top of the theme folder, of the development entries present
  * now: every hidden file and folder except .htaccess, .user.ini and
- * .well-known, and the tools, tests and bin folders.
+ * .well-known, and the tools, tests, bin and dist folders.
  *
  * @return string[]
  */
@@ -83,7 +84,7 @@ function boi_dev_files_entries() {
 		if ( in_array( $name, $keep, true ) ) {
 			continue;
 		}
-		if ( '.' === $name[0] || in_array( $name, array( 'tools', 'tests', 'bin' ), true ) ) {
+		if ( '.' === $name[0] || in_array( $name, array( 'tools', 'tests', 'bin', 'dist' ), true ) ) {
 			$names[] = $name;
 		}
 	}

@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.128.0
 
-Replace the theme files. On the first request afterwards the theme deletes its development files on a production server: `.git` and every other dot entry at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests` and `bin` folders. `docs` now stays, refused by the theme `.htaccess`.
+Replace the theme files. On the first request afterwards the theme deletes its development files on a production server: `.git` and every other dot entry at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests`, `bin` and `dist` folders. `docs` now stays, refused by the theme `.htaccess`.
 
 The clean-up runs again every hour through WP-Cron, so a later FTP upload that brings `.git` back is cleaned within the hour. A host that sets `DISABLE_WP_CRON` in `wp-config.php` must call `wp-cron.php` from a server cron at least hourly, for example `curl -s https://bestofislam.org/wp-cron.php?doing_wp_cron > /dev/null`.
 

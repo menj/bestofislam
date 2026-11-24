@@ -645,7 +645,8 @@ and self-tests serve no page. The owner set the present rules on 2026-11-24
 version changes, delete every hidden file and folder at the top of the theme
 folder, except .htaccess, .user.ini and .well-known, and delete the tools/ and
 tests/ folders." In this theme the build scripts live in `bin/`, so `bin/` goes
-with `tools/` and `tests/`; `docs/`, `dist/`, the data and the code stay.
+with `tools/` and `tests/`, and so does `dist/`, the packaging output, which has
+no deny file of its own; `docs/`, the data and the code stay.
 
 `inc/dev-files.php` does it under a lease in `boi_dev_files_lock`, renewed at
 most once a minute and taken over after five minutes without renewal. The

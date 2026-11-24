@@ -7,7 +7,7 @@ versioning.
 ## [1.128.0] - 2026-11-24
 
 ### Changed
-- The development-file clean-up moves from `inc/housekeeping.php` to `inc/dev-files.php` (SSOT D52). On the first request of any kind after a version change, it deletes every dot file and folder at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests` and `bin` folders. `docs`, `dist`, the data and the code stay.
+- The development-file clean-up moves from `inc/housekeeping.php` to `inc/dev-files.php` (SSOT D52). On the first request of any kind after a version change, it deletes every dot file and folder at the top of the theme folder except `.htaccess`, `.user.ini` and `.well-known`, and the `tools`, `tests`, `bin` and `dist` folders. `docs`, the data and the code stay.
 - Read-only files, such as git's objects, are made writable before they are deleted. A symlink is removed itself and never followed, so a link out of the theme no longer blocks the clean-up.
 - One request runs it, under the lease in `boi_dev_files_lock`: renewed at most once a minute, and taken over after five minutes without renewal. After taking the lease it re-reads the recorded version from the database.
 - The version is recorded only when nothing is left. A file PHP cannot remove keeps the lease held, so the retry comes every five minutes, and the PHP error log gets one line a day with the number of files to delete by FTP.
