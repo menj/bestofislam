@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.133.0] - 2026-11-24
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- The Shamela pass, second part: 54 more citations in 32 articles now give volume and page with a link to the page on shamela.ws. Fourteen notes cite Ibn Hajar's *Fath al-Bari* (Shamela book 1673, al-Matba'a al-Salafiyya), located by the hadith number that opens each commentary; forty cite al-Tabari's tafsir where a note named him beside other sources and the first count had missed it. Each claim was checked on the page (`docs/CITATIONS.md`).
+- satanic-verses-report: Ibn Hajar's judgement on the story of the gharaniq is in his commentary on sura 22 (al-Hajj), vol. 8, p. 439, and the note now says so (it said sura 53).
+
 ## [1.132.0] - 2026-11-24
 
 No feature removed and no public identifier renamed.

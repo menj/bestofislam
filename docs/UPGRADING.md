@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.133.0
+
+Replace the theme files. `boi_migrate_seed()` refreshes the 32 articles whose notes changed where the article is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab.
+
 ## Upgrading to 1.132.0
 
 Replace the theme files. `boi_migrate_seed()` refreshes the 50 articles whose notes changed where the article is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab.
