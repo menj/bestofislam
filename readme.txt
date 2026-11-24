@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.133.0
+Stable tag: 1.134.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.134.0 =
+* Glossary entries now give the invocation of peace after the first mention of the Prophet, and 327 entries were edited to the site's writing standard.
 
 = 1.133.0 =
 * 54 more references in 32 articles now give volume and page, with links to the Arabic text.
@@ -466,6 +469,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.134.0 =
+Replace the theme files. The Glossary updates the changed entries on the next page loads, where you have not edited them.
 
 = 1.133.0 =
 Replace the theme files. The corrected notes refresh where you have not edited the article.

@@ -4,6 +4,21 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.134.0] - 2026-11-24
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- The Glossary through the voice standard, first part (`.claude/VOICE.md`, phase 4): 327 entries changed.
+  - "(peace be upon him)" follows the first mention of the Prophet in every entry that names him (271 entries). Where that mention was possessive, the phrase was rewritten ("the father of the Prophet (peace be upon him)").
+  - 37 contrastive constructions ("X, whereas it is Y", "not only", "rather than") now state what the thing is.
+  - British spelling (judgement, centre, favoured, realisation, recognise, memorised), and "serves as", "in order to" and "realm" replaced.
+  - "vivid" and "intuitive" removed from the entries for Hell and *al-dhawq al-sharʿī*.
+- Two articles drop "worth noting": verses-read-differently and will-every-non-muslim-go-to-hell.
+- Every web address in the article notes is now a link: 182 addresses in 74 articles were plain text, the new Shamela references among them.
+- did-the-quran-say-muhammad-sinned says "we set out each of them" for the verses it lists (it said "in full", which read as a promise to quote them).
+- `BOI_GLOSSARY_VERSION` is 22, so the Glossary sync rewrites the changed entries where they are unedited.
+
 ## [1.133.0] - 2026-11-24
 
 No feature removed and no public identifier renamed.
