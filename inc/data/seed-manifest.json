@@ -2,13 +2,13 @@
     "files": {
         "content\/a-father-says-this-is-islam.json": "223172fff55f7c47fdb7ab3b468590ef",
         "content\/abrogation-and-the-sword-verse.json": "edfe58ea97bac8f7c6c124bc59ed5474",
-        "content\/adam-and-eve-in-genesis-and-the-quran.json": "f04da68b27f6c53973a56ab5d7e5455e",
+        "content\/adam-and-eve-in-genesis-and-the-quran.json": "e1bc0e8cdc2f37444d91b74edf9cb256",
         "content\/aisha-sheep-report-stoning-and-suckling-verses.json": "7a00bdfe22ebb638fdd7de466462c16b",
         "content\/al-zutt-allegation.json": "7db14a6d801674d94a3a90cfa1b8e026",
         "content\/apes-and-pigs-and-the-jews.json": "bb02201ba7b8ab30fc7ddc9050f318d8",
         "content\/apostasy-in-islam.json": "41427d18f2b9a69f22411542cc084162",
         "content\/arabic-words-science.json": "ff6bdd0ed4fe5e679d43787d7d824401",
-        "content\/are-children-born-sinful.json": "f2359ec47183b6140c463dd70b2321e1",
+        "content\/are-children-born-sinful.json": "204e8f2dbcab88fea3b94a05e8814ec3",
         "content\/ask-those-who-read-the-scripture.json": "0df8f41c3f68e921bc42f8fbe89fc970",
         "content\/authority-of-the-sunnah-quran-alone.json": "35457fe12feda14b400d2ff46cd50fee",
         "content\/before-you-convert-apostates-and-lgbt-friends.json": "b5b7e8cdd4c51defcb8e6f02ab3386cc",
@@ -83,7 +83,7 @@
         "content\/islam-religion-of-peace.json": "d5db20665d3c21b63d543c99938ffac8",
         "content\/islamic-art-and-the-one-god.json": "62370bc5581c3b407c85720234ca201e",
         "content\/islamic-dilemma.json": "9344f118734477dd7b352f94cf969042",
-        "content\/islamic-repentance-and-christian-atonement.json": "2850abb754bb90c180cd8eb3c8fc57d3",
+        "content\/islamic-repentance-and-christian-atonement.json": "d0741b9d9d09def4a815d768df52e712",
         "content\/islamic-rites-before-islam.json": "bedcea528a5fd8b9ded38dcb7b684183",
         "content\/islamisation-of-the-west.json": "5a45a711200d3fce10f1035f77c78028",
         "content\/islamophobia-facts.json": "04fb80013026dae0275792844867a76c",
@@ -92,7 +92,7 @@
         "content\/jesus-and-the-sabbath.json": "6506d2101e6f73cfb2f800a3f0c08dcf",
         "content\/jesus-not-god.json": "9cf911e928ad3de656660e8cd4ee3cbb",
         "content\/jesus-prostrated-in-prayer.json": "f3f28551ee47b391d1b5517db76e4cc8",
-        "content\/jesus-the-word-of-god-in-the-quran.json": "5fdcee664d87071a0af11c46bd2a8002",
+        "content\/jesus-the-word-of-god-in-the-quran.json": "369abe4059eaf9668f5d8c0f9b8115bd",
         "content\/jews-behind-the-stone-hadith.json": "c21c347996f529248f0846b297f02f0e",
         "content\/jihad-meaning-quran-hadith-jurists.json": "571963f9e85feb3abaac8439ae410bca",
         "content\/jizya.json": "f3de6f5a78bb4857b864e14cfabff611",
@@ -212,5 +212,5 @@
         "inc\/data\/seed.json": "80a24cd248d54554d814691ffe415d7d",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "8d02f61cb0827968e6f60f9f20c662e7"
+    "checksum": "8b27ced75e6b9c31fee27a984660352f"
 }
