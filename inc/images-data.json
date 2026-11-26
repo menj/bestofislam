@@ -6803,5 +6803,81 @@
     "source": "https://clevelandart.org/art/1924.421"
    }
   ]
+ },
+ "does-god-require-blood-to-forgive": {
+  "featured": {
+   "file": "does-god-require-blood-to-forgive.avif",
+   "alt": "A carved marble altar front with two crosses, two lambs and shell-topped arches.",
+   "caption": "An altar front from early Byzantium, sixth century. Hebrews compares Israel's altar with the death of Jesus; the Torah and the prophets also forgive the repentant without blood.",
+   "artist": "Unknown artist, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1948.25"
+  },
+  "inline": [
+   {
+    "file": "does-god-require-blood-to-forgive-1.avif",
+    "alt": "A thirteenth-century Latin Bible bound in dark tooled leather.",
+    "caption": "A Gothic Bible (Vulgate) from southern France, 1200s. Leviticus, the book of the altar, also provides a sin offering of flour for the poor (5:11 to 13).",
+    "artist": "Unknown artist, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/2008.2"
+   },
+   {
+    "file": "does-god-require-blood-to-forgive-2.avif",
+    "alt": "A page of a Book of Hours with Latin text and a border of painted flowers and fruit.",
+    "caption": "The Penitential Psalms in a French Book of Hours, about 1530. Psalm 51 is one of them: \"A broken and contrite heart, O God, you will not despise.\"",
+    "artist": "Noël Bellemare, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/2003.174.2"
+   }
+  ]
+ },
+ "islamic-repentance-and-christian-atonement": {
+  "featured": {
+   "file": "islamic-repentance-and-christian-atonement.avif",
+   "alt": "A page of Arabic script from a fourteenth-century Quran manuscript, with gold verse markers.",
+   "caption": "A folio from a Quran made in Mamluk Egypt in the 1300s. \"He is the One that accepts repentance from His Servants and forgives sins\" (42:25).",
+   "artist": "Unknown artist, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1933.480.a"
+  },
+  "inline": [
+   {
+    "file": "islamic-repentance-and-christian-atonement-1.avif",
+    "alt": "A gilded double-armed cross on a round foot.",
+    "caption": "A double-arm reliquary cross from the Latin Kingdom of Jerusalem, 1100s. The churches place the forgiveness of sins in the death and resurrection of Jesus.",
+    "artist": "Unknown artist, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1983.208"
+   },
+   {
+    "file": "islamic-repentance-and-christian-atonement-2.avif",
+    "alt": "Women kneeling at a carved wooden confessional in a church, in a nineteenth-century lithograph.",
+    "caption": "Louis Haghe, the confessional in St Gudule, Brussels (1840). Catholic and Orthodox practice confesses before a priest; a Muslim confesses to God alone.",
+    "artist": "Louis Haghe, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/2012.280"
+   }
+  ]
+ },
+ "are-children-born-sinful": {
+  "featured": {
+   "file": "are-children-born-sinful.avif",
+   "alt": "A woven basket cradle for an infant, with a hood arching over the head.",
+   "caption": "A Yurok or Hupa cradle basket from California, late 1800s. Islam teaches that every child is born upon the fitra.",
+   "artist": "Unknown artist, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1917.426"
+  },
+  "inline": [
+   {
+    "file": "are-children-born-sinful-1.avif",
+    "alt": "A pale glazed ceramic bowl marked with a white cross.",
+    "caption": "A Japanese baptismal bowl in Hagi ware, marked with a cross and the insignia of the Jesuits, about 1600. The Catholic Catechism says infants need \"the new birth in Baptism\".",
+    "artist": "Unknown artist, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1962.211"
+   }
+  ]
  }
 }
