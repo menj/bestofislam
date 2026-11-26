@@ -2,11 +2,13 @@
     "files": {
         "content\/a-father-says-this-is-islam.json": "223172fff55f7c47fdb7ab3b468590ef",
         "content\/abrogation-and-the-sword-verse.json": "edfe58ea97bac8f7c6c124bc59ed5474",
+        "content\/adam-and-eve-in-genesis-and-the-quran.json": "e1bc0e8cdc2f37444d91b74edf9cb256",
         "content\/aisha-sheep-report-stoning-and-suckling-verses.json": "7a00bdfe22ebb638fdd7de466462c16b",
         "content\/al-zutt-allegation.json": "7db14a6d801674d94a3a90cfa1b8e026",
         "content\/apes-and-pigs-and-the-jews.json": "bb02201ba7b8ab30fc7ddc9050f318d8",
         "content\/apostasy-in-islam.json": "41427d18f2b9a69f22411542cc084162",
         "content\/arabic-words-science.json": "ff6bdd0ed4fe5e679d43787d7d824401",
+        "content\/are-children-born-sinful.json": "204e8f2dbcab88fea3b94a05e8814ec3",
         "content\/ask-those-who-read-the-scripture.json": "0df8f41c3f68e921bc42f8fbe89fc970",
         "content\/authority-of-the-sunnah-quran-alone.json": "35457fe12feda14b400d2ff46cd50fee",
         "content\/before-you-convert-apostates-and-lgbt-friends.json": "b5b7e8cdd4c51defcb8e6f02ab3386cc",
@@ -35,6 +37,7 @@
         "content\/did-the-quran-say-muhammad-sinned.json": "3ce394e479685ba65fec49f0642a069e",
         "content\/disputed-books-of-the-new-testament.json": "0fcc1e0c2ea4e23b1a3cb2c5e04a179e",
         "content\/do-muslims-worship-muhammad.json": "58cd9e4e88a56b8ac5feec494e67840d",
+        "content\/does-god-require-blood-to-forgive.json": "35f05572a0fc246c6f3a8cd0e8ca9970",
         "content\/does-islam-teach-the-bible-was-corrupted.json": "79cfb777e7ebe801a085ee15f54619f2",
         "content\/does-the-quran-allow-wife-beating.json": "e68539b1326fa25835e445b9171e8a5d",
         "content\/dome-inscriptions.json": "02dfbe373e4dd2b5bc41e2bec2a88bde",
@@ -80,6 +83,7 @@
         "content\/islam-religion-of-peace.json": "d5db20665d3c21b63d543c99938ffac8",
         "content\/islamic-art-and-the-one-god.json": "62370bc5581c3b407c85720234ca201e",
         "content\/islamic-dilemma.json": "9344f118734477dd7b352f94cf969042",
+        "content\/islamic-repentance-and-christian-atonement.json": "d0741b9d9d09def4a815d768df52e712",
         "content\/islamic-rites-before-islam.json": "bedcea528a5fd8b9ded38dcb7b684183",
         "content\/islamisation-of-the-west.json": "5a45a711200d3fce10f1035f77c78028",
         "content\/islamophobia-facts.json": "04fb80013026dae0275792844867a76c",
@@ -88,6 +92,7 @@
         "content\/jesus-and-the-sabbath.json": "6506d2101e6f73cfb2f800a3f0c08dcf",
         "content\/jesus-not-god.json": "9cf911e928ad3de656660e8cd4ee3cbb",
         "content\/jesus-prostrated-in-prayer.json": "f3f28551ee47b391d1b5517db76e4cc8",
+        "content\/jesus-the-word-of-god-in-the-quran.json": "369abe4059eaf9668f5d8c0f9b8115bd",
         "content\/jews-behind-the-stone-hadith.json": "c21c347996f529248f0846b297f02f0e",
         "content\/jihad-meaning-quran-hadith-jurists.json": "571963f9e85feb3abaac8439ae410bca",
         "content\/jizya.json": "f3de6f5a78bb4857b864e14cfabff611",
@@ -204,8 +209,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "7fdbcc1d3287d2a2b3be1d3d0c82e974",
+        "inc\/data\/seed.json": "b9bacb455919424f2d88932b7f7673eb",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "b51aabb6532033e654f9a67f32be75cf"
+    "checksum": "7a7961f587f4e51b18a229a4a55dff5c"
 }

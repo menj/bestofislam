@@ -15,6 +15,7 @@ Glossary entry has no valid kind; the seed manifest (inc/data/seed-manifest.json
 Run it by hand:  python3 bin/check-content.py
 The workflow in .github/workflows/checks.yml runs it on every pull request.
 """
+import datetime
 import glob
 import json
 import os
@@ -89,6 +90,36 @@ try:
     seed_items = json.load(open(seed_path, encoding='utf-8')).get('listicles', [])
 except (OSError, json.JSONDecodeError):
     seed_items = []
+
+# The publishing schedule (SSOT D71): a `publish_on` time is UTC, falls
+# from December 2026 to December 2027, and no two articles share a day. An
+# article may link only to one that is already out when it publishes.
+schedule = {}
+scheduled_days = set()
+for item in seed_items:
+    when = item.get('publish_on')
+    if not when:
+        continue
+    try:
+        t = datetime.datetime.strptime(when, '%Y-%m-%dT%H:%M:%SZ')
+    except ValueError:
+        errors.append('seed: "%s" publish_on %r is not YYYY-MM-DDTHH:MM:SSZ' % (item.get('slug'), when))
+        continue
+    if not (datetime.datetime(2026, 12, 1) <= t < datetime.datetime(2028, 1, 1)):
+        errors.append('seed: "%s" publish_on %s falls outside December 2026 to December 2027' % (item.get('slug'), when))
+    if t.date() in scheduled_days:
+        errors.append('seed: "%s" publish_on %s shares a day with another article' % (item.get('slug'), when))
+    scheduled_days.add(t.date())
+    schedule[item.get('slug')] = t
+for slug, t in schedule.items():
+    try:
+        body = json.load(open(os.path.join(ROOT, 'content', slug + '.json'), encoding='utf-8')).get('content', '')
+    except (OSError, ValueError):
+        continue
+    for target in sorted(set(re.findall(r'href=\"/([a-z0-9-]+)/\"', body))):
+        if target in schedule and schedule[target] > t:
+            errors.append('content/%s.json: links to "%s", which is scheduled after it (%s)' % (slug, target, schedule[target].date()))
+
 for item in seed_items:
     shown = item.get('seo_title') or item.get('title', '')
     if len(shown) > TITLE_BUDGET:
