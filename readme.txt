@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.135.0
+Stable tag: 1.136.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.136.0 =
+* Eight articles on peace, war, religious freedom, apostasy, Christians, friendship, salvation and Islamophobia gain the readings of Muslim and Christian scholars from a 2009 collection on peace-building, with full references.
 
 = 1.135.0 =
 * 424 more Glossary entries now show a short passage from the classical Arabic dictionaries, with an English paraphrase and a link to the passage on the Arabic Lexicon. 491 of the 785 entries carry one.
@@ -469,6 +472,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.136.0 =
+Replace the theme files. The eight enriched articles refresh where you have not edited them.
 
 = 1.135.0 =
 Replace the theme files. The Glossary entry pages gain their dictionary notes where you have not edited them.

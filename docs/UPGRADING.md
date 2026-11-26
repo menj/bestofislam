@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.136.0
+
+Replace the theme files. `boi_migrate_seed()` refreshes the eight enriched articles where the article is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab.
+
 ## Upgrading to 1.135.0
 
 Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 23) and adds the "In the classical dictionaries" section to the entry pages you have not edited. An entry page you rewrote keeps your text. Nothing else to do.

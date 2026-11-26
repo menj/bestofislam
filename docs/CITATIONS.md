@@ -125,6 +125,22 @@ The other sources were read as follows:
 
 Two of Wikipedia's identifications were checked against the sources it cites. The Sefer Yetzirah identification cites the *Jewish Encyclopedia*, which does not mention the Quran. The Testament of Abraham identification cites only the notes of Yusuf Ali and Asad.
 
+### Enrichment of 1.136.0: *Peace-Building* (2009)
+
+Eight articles cite chapters of Mohammed Abu-Nimer and David Augsburger, eds., *Peace-Building by, between, and beyond Muslims and Evangelical Christians* (Lanham, Md.: Lexington Books, 2009). The owner supplied the insertions on 2026-11-26 from a reading of the EPUB, as paraphrase.
+
+- **The book.** The editors, publisher, date and the papers from the consultations of April 2005 and April 2006 were confirmed on Google Books, Inlibra and Amazon.
+- **Chapters and pages.** The chapter numbers and titles were confirmed on the contents lists of Google Books and Inlibra. Pages run from each chapter's start page, as Google Books gives it, to the page before the next chapter: ch. 3, pp. 19–48; ch. 7, pp. 91–102; ch. 12, pp. 135–156; ch. 13, pp. 157–170; ch. 14, pp. 171–178; ch. 15, pp. 179–194; ch. 16, pp. 195–202.
+- **Authors.**
+  - Hassan (ch. 7) is confirmed by the heading of ch. 9.
+  - Kadayifci-Orellana (ch. 3) is confirmed by the heading of ch. 4.
+  - Reisacher (ch. 13) is confirmed by a course outline that cites her chapter in this volume, at p. 169.
+  - Bakar (ch. 12) is confirmed by a later article that cites the chapter title under his name.
+  - Woodberry (ch. 14), Omar (ch. 15) and Afsaruddin (ch. 16) are among the book's listed contributors, and their names on these chapters rest on the owner's reading of the EPUB.
+  - Omar's 2006 testimony on the Abdul Rahman case argues the same position as ch. 15.
+- **Claims.** What each chapter is said to argue rests on the owner's reading, because the text is not available here. The articles attribute every reading to its author and present it as one view.
+- **Quran.** The verses quoted in the new paragraphs (2:111; 3:64; 5:8; 5:48; 9:4; 49:13) are A. Yusuf Ali's translation, read on Quran.com (translation 22).
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.

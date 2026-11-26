@@ -4,6 +4,22 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.136.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Eight articles gain the readings of contributors to Mohammed Abu-Nimer and David Augsburger, eds., *Peace-Building by, between, and beyond Muslims and Evangelical Christians* (Lexington Books, 2009), placed inside the existing entries, with their notes renumbered. No title, slug, heading, numbered item, image or SEO field changed.
+  - islam-religion-of-peace: S. Ayse Kadayifci-Orellana (ch. 3) on peace as a positive condition.
+  - war-and-killing-in-islam: Kadayifci-Orellana on Hudaybiyya and the keeping of covenants, with Quran 9:4.
+  - no-compulsion-in-religion: J. Dudley Woodberry (ch. 14) on respectful witness and Abdul Rashied Omar (ch. 15) on conversion.
+  - apostasy-in-islam: Omar (ch. 15) and Asma Afsaruddin's response (ch. 16) on *riddah*.
+  - quran-on-christians: Osman Bakar (ch. 12) on 49:13, 5:48 and 3:64, and the editors' introduction.
+  - can-a-muslim-befriend-a-non-muslim: Riffat Hassan (ch. 7) on 17:70 and human dignity.
+  - will-every-non-muslim-go-to-hell: Hassan on 2:62, 5:69 and 2:111–112.
+  - islamophobia-facts: Evelyne A. Reisacher (ch. 13) on fear between communities.
+- New English Quran quotations are A. Yusuf Ali's translation, and new Bible quotations the World English Bible (SSOT D70).
+
 ## [1.135.0] - 2026-11-26
 
 No feature removed and no public identifier renamed.
