@@ -197,6 +197,7 @@ The theme's own filters:
 | `boi_dev_files_renew_every` | Seconds between renewals of the clean-up lease while it works (default 60) |
 | `boi_front_title_focus` | The front page title's focus phrase (default "Objections to Islam, answered") |
 | `boi_gl_always`, `boi_gl_max`, `boi_gl_stoplist`, `boi_glossary_read_more_max` | Glossary: entries linked at first mention whatever the budget, the link budget, words never linked, and the Read more count on an entry (6) |
+| `boi_gl_no_epithet` | Glossary: names that link without the honorific epithet, because in an article they usually carry the Christian sense (the Holy Spirit, the Paraclete) |
 | `boi_image_sitemap` | False turns `/sitemap-images.xml` off. Rank Math, or a site hidden from search engines, turns it off anyway |
 | `boi_renamed_paths` | Old addresses and the articles they redirect to |
 | `boi_seed_renames` | Seeded article slugs that changed, old to current |
