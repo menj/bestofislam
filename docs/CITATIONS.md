@@ -141,6 +141,33 @@ Eight articles cite chapters of Mohammed Abu-Nimer and David Augsburger, eds., *
 - **Claims.** What each chapter is said to argue rests on the owner's reading, because the text is not available here. The articles attribute every reading to its author and present it as one view.
 - **Quran.** The verses quoted in the new paragraphs (2:111; 3:64; 5:8; 5:48; 9:4; 49:13) are A. Yusuf Ali's translation, read on Quran.com (translation 22).
 
+### New articles of 1.137.0 (drafts 11 to 15)
+
+The owner's drafts 11 to 15 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation (Quran.com translation 22); Bible quotations are the World English Bible (bible-api.com). Hadith wording was checked by search, because sunnah.com refuses automated reading; where the English is the site's own, the note says "our translation".
+
+- **jesus-prostrated-in-prayer.** Harkins, *Journal for the Study of the New Testament* 41.2 (2018), pp. 177–203; the Roman Missal, Good Friday no. 5, and the USCCB page on it; Schmemann, *Great Lent* (1969); the ordination prostration.
+- **did-jesus-fast.** Didache 8.1; Diamond, *Holy Men and Hunger Artists* (Oxford University Press, 2004); Bukhari 1903, 2004 and 3943 with Muslim 1130; the USCCB rules on fasting; the Orthodox Church in America on Lenten fasting.
+- **birth-of-jesus-in-surah-maryam.**
+  - Tisdall, *The Original Sources of the Qur'an* (1905), chapter 4.
+  - Pseudo-Matthew 20 to 21, dated from the NASSCAL e-Clavis.
+  - Mourad, *Oriens Christianus* 86 (2002), pp. 206–216.
+  - Shoemaker, *Jerusalem Studies in Arabic and Islam* 28 (2003). His page range could not be confirmed and is not given.
+  - Arabic Infancy Gospel 1 (*Ante-Nicene Fathers*, vol. 8).
+  - Horn, *Apocrypha* 17 (2006), pp. 113–150.
+  - Muslim 2135 and Tirmidhi 3155.
+  - Corrected: the draft said al-Tabari "records both views" on who speaks in 19:24. Ibn Kathir reports that al-Tabari preferred the view that the child spoke, and the article says so.
+- **jesus-and-the-sabbath.** Mishnah Yoma 8:6; Bryan, *Tyndale Bulletin* 54.2 (2003), pp. 7–22; *Catechism of the Catholic Church* 2174 to 2176. Replaced: the draft cited a 2015 *Biblical Theology Bulletin* article by Nina Collins that could not be found, so her book *Jesus, the Sabbath and the Jewish Debate* (2014) is cited instead.
+- **original-sin.**
+  - Fitzmyer, *Romans*, Anchor Bible 33 (1993).
+  - Cyprian, Epistle 58 (64), read in *Ante-Nicene Fathers* vol. 5 on New Advent. The quotation was corrected to "has not sinned, except in that...", and "not his own sins, but the sins of another" was added.
+  - Beatrice, *The Transmission of Sin* (Oxford University Press, 2013).
+  - *Catechism of the Catholic Church* 404 to 405, 1250 and 1263 to 1264, read on vatican.va.
+  - The Orthodox Church in America on Augustine.
+  - *Westminster Confession* 6.3.
+  - Bukhari 1359 and 4775 with Muslim 2658.
+  - Al-Fārūqī, *Al Tawhid*, chapter 1, matching `.claude/FARUQI.md`.
+  - Replaced: the draft attributed a claim to Ahmed Deedat that could not be traced, and the Bismikaa article *Adakah Munasabah?* is cited as the example instead.
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.
