@@ -120,4 +120,16 @@ $GLOBALS['t_set'] = array();
 boi_stagger_seed_dates();
 check( array() === $GLOBALS['t_set'], 'a second run redates nothing' );
 
+// 6. A new site with scheduled articles (SSOT D71): they keep the date
+// they were created with, and the rest are dated by the reading order.
+if ( ! function_exists( 'boi_seed_schedule' ) ) {
+	function boi_seed_schedule() {
+		return array( 'scrolls-of-abraham' => strtotime( '2027-03-01T01:00:00Z' ) );
+	}
+}
+$order = t_site();
+$was   = $GLOBALS['t_posts']['scrolls-of-abraham']->date;
+boi_stagger_seed_dates();
+check( $was === $GLOBALS['t_posts']['scrolls-of-abraham']->date && count( $GLOBALS['t_set'] ) === count( $order ) - 1, 'a scheduled article keeps its own date' );
+
 exit( $fail ? 1 : 0 );

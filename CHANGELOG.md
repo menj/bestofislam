@@ -18,7 +18,10 @@ No feature removed and no public identifier renamed.
 - Each has a featured image and two in the text: fifteen CC0 works from the Cleveland Museum of Art. They include a Byzantine altar front, a Gothic Bible, a Book of Hours, Quran folios from Egypt, Spain and North Africa, a reliquary cross, Louis Haghe's lithograph of a confessional, a cradle basket, a Japanese baptismal bowl, an Ottoman embroidered tree, a folio of Sa'di's *Gulistan* and a Byzantine Gospel book. None shows a prophet.
 - The tags "Atonement" and "Repentance". The five articles join the reading order.
 
+- A publishing schedule (SSOT D71). Seeded articles may carry `publish_on`, a time in UTC; `boi_seed_post_timing()` in the new `inc/schedule.php` creates such an article as Scheduled and WordPress publishes it on the day. The ten articles of 1.137.0 and 1.138.0 are scheduled ten days apart from 1 December 2026 to 1 March 2027, with seasonal articles placed before Christmas, Ramadan and Lent. `bin/check-content.py` checks the dates and that no article links to one scheduled after it; `tests/schedule-test.php` checks the timing.
+
 ### Fixed
+- Entry titles in four new articles no longer start with their number, which the listicle block already shows, and two articles now have the number of entries their titles name.
 - The tag list in `inc/data/seed.json` is in alphabetical order again; "Original sin" had been added at the end in 1.137.0.
 
 ## [1.137.0] - 2026-11-26

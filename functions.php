@@ -22,6 +22,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/voting.php',
 	BOI_DIR . '/inc/settings.php',
 	BOI_DIR . '/inc/setup.php',
+	BOI_DIR . '/inc/schedule.php',
 	BOI_DIR . '/inc/content-sync.php',
 	BOI_DIR . '/inc/appearance.php',
 	BOI_DIR . '/inc/reflections.php',

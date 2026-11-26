@@ -89,6 +89,35 @@ try:
     seed_items = json.load(open(seed_path, encoding='utf-8')).get('listicles', [])
 except (OSError, json.JSONDecodeError):
     seed_items = []
+
+# The publishing schedule (SSOT D71): a `publish_on` time is UTC, falls
+# from December 2026 to December 2027, and no two articles share a day. An
+# article may link only to one that is already out when it publishes.
+import datetime
+schedule = {}
+for item in seed_items:
+    when = item.get('publish_on')
+    if not when:
+        continue
+    try:
+        t = datetime.datetime.strptime(when, '%Y-%m-%dT%H:%M:%SZ')
+    except ValueError:
+        errors.append('seed: "%s" publish_on %r is not YYYY-MM-DDTHH:MM:SSZ' % (item.get('slug'), when))
+        continue
+    if not (datetime.datetime(2026, 12, 1) <= t < datetime.datetime(2028, 1, 1)):
+        errors.append('seed: "%s" publish_on %s falls outside December 2026 to December 2027' % (item.get('slug'), when))
+    if t.date() in [x.date() for x in schedule.values()]:
+        errors.append('seed: "%s" publish_on %s shares a day with another article' % (item.get('slug'), when))
+    schedule[item.get('slug')] = t
+for slug, t in schedule.items():
+    try:
+        body = json.load(open(os.path.join(ROOT, 'content', slug + '.json'), encoding='utf-8')).get('content', '')
+    except (OSError, ValueError):
+        continue
+    for target in sorted(set(re.findall(r'href=\"/([a-z0-9-]+)/\"', body))):
+        if target in schedule and schedule[target] > t:
+            errors.append('content/%s.json: links to "%s", which is scheduled after it (%s)' % (slug, target, schedule[target].date()))
+
 for item in seed_items:
     shown = item.get('seo_title') or item.get('title', '')
     if len(shown) > TITLE_BUDGET:

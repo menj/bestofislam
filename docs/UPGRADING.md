@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.138.0
 
-Replace the theme files. `boi_create_listicles()` creates the five new articles and the tags "Atonement" and "Repentance" when the version changes. They keep the date they arrive, so they lead the front page (D69). Nothing to set.
+Replace the theme files. `boi_create_listicles()` creates the five new articles and the tags "Atonement" and "Repentance" when the version changes. Each is created as Scheduled for its date in the publishing schedule (D71), from 20 January to 19 February 2027, and WordPress publishes it on the day. The five articles of 1.137.0 are scheduled too (1 December 2026 to 1 March 2027) on a site that has not yet created them; where 1.137.0 already published them, they stay published. If the host turns off WP-Cron, run `wp cron event run --due-now` from a real cron job so scheduled posts go out on time.
 
 ## Upgrading to 1.137.0
 

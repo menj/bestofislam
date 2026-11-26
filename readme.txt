@@ -166,6 +166,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.138.0 =
+* New articles are now scheduled: from December 2026 to December 2027, one every ten days, with seasonal articles placed before Christmas, Ramadan and Lent.
 * Five new articles on sin and forgiveness: whether God needs blood to forgive, repentance and atonement, whether children are born sinful, Adam and Eve in Genesis and the Quran, and Jesus as a Word from God.
 
 = 1.137.0 =
@@ -480,7 +481,7 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.138.0 =
-Replace the theme files. Five new articles are added and lead the front page.
+Replace the theme files. The new articles are scheduled and publish on their dates.
 
 = 1.137.0 =
 Replace the theme files. Five new articles are added and lead the front page.

@@ -234,7 +234,10 @@ function boi_stagger_seed_dates() {
 	$now    = time();
 
 	if ( false === get_option( 'boi_dates_signature' ) ) {
-		$total = count( $slugs );
+		// A scheduled article keeps its own date (SSOT D71).
+		$scheduled = function_exists( 'boi_seed_schedule' ) ? boi_seed_schedule() : array();
+		$slugs     = array_values( array_diff( $slugs, array_keys( $scheduled ) ) );
+		$total     = count( $slugs );
 		foreach ( $slugs as $i => $slug ) {
 			$post = boi_dates_article( $slug, $hashes );
 			if ( $post ) {

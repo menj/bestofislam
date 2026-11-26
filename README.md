@@ -127,7 +127,7 @@ bestofislam/
 ├── .gitattributes       export-ignore list for the release zip
 ├── inc/                 One file per concern, loaded in this order by functions.php:
 │                        util, taxonomy, blocks, schema, voting, settings,
-│                        setup, content-sync, appearance, reflections, search, sections,
+│                        setup, schedule, content-sync, appearance, reflections, search, sections,
 │                        seo, icons, features, lead-list, contact, front, inline-images,
 │                        images, questions, reading, anatomy, endmark, abstract, basmala,
 │                        structured-data,

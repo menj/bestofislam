@@ -2932,7 +2932,8 @@
 				"Gospels",
 				"Worship",
 				"Old Testament"
-			]
+			],
+			"publish_on": "2026-12-11T01:00:00Z"
 		},
 		{
 			"slug": "did-jesus-fast",
@@ -2947,7 +2948,8 @@
 				"Ramadan",
 				"Gospels",
 				"Early Christianity"
-			]
+			],
+			"publish_on": "2027-01-30T01:00:00Z"
 		},
 		{
 			"slug": "birth-of-jesus-in-surah-maryam",
@@ -2962,7 +2964,8 @@
 				"Quran commentary",
 				"Sources of the Quran",
 				"Miracles"
-			]
+			],
+			"publish_on": "2026-12-01T01:00:00Z"
 		},
 		{
 			"slug": "jesus-and-the-sabbath",
@@ -2976,7 +2979,8 @@
 				"Gospels",
 				"Torah",
 				"Jews"
-			]
+			],
+			"publish_on": "2027-03-01T01:00:00Z"
 		},
 		{
 			"slug": "original-sin",
@@ -2990,7 +2994,8 @@
 				"Paul",
 				"Early Christianity",
 				"Christians"
-			]
+			],
+			"publish_on": "2026-12-31T01:00:00Z"
 		},
 		{
 			"slug": "does-god-require-blood-to-forgive",
@@ -3005,7 +3010,8 @@
 				"Old Testament",
 				"Bible",
 				"Christians"
-			]
+			],
+			"publish_on": "2027-01-20T01:00:00Z"
 		},
 		{
 			"slug": "islamic-repentance-and-christian-atonement",
@@ -3020,7 +3026,8 @@
 				"Crucifixion",
 				"Christians",
 				"Original sin"
-			]
+			],
+			"publish_on": "2027-02-09T01:00:00Z"
 		},
 		{
 			"slug": "are-children-born-sinful",
@@ -3034,7 +3041,8 @@
 				"Christians",
 				"Afterlife",
 				"Hadith"
-			]
+			],
+			"publish_on": "2027-01-10T01:00:00Z"
 		},
 		{
 			"slug": "adam-and-eve-in-genesis-and-the-quran",
@@ -3050,7 +3058,8 @@
 				"Women in Islam",
 				"Bible",
 				"Sources of the Quran"
-			]
+			],
+			"publish_on": "2027-02-19T01:00:00Z"
 		},
 		{
 			"slug": "jesus-the-word-of-god-in-the-quran",
@@ -3065,7 +3074,8 @@
 				"Trinity",
 				"Gospels",
 				"Quran commentary"
-			]
+			],
+			"publish_on": "2026-12-21T01:00:00Z"
 		}
 	],
 	"pages": {

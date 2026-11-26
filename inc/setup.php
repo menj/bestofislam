@@ -312,14 +312,16 @@ function boi_create_listicles( $topics ) {
 		}
 
 		$post_id = boi_insert_post(
-			array(
-				'post_title'   => $listicle['title'],
-				'post_name'    => $listicle['slug'],
-				'post_excerpt' => $listicle['excerpt'],
-				'post_content' => $content,
-				'post_status'  => isset( $listicle['status'] ) ? $listicle['status'] : 'publish',
-				'post_author'  => boi_seed_author(),
-				'post_type'    => 'post',
+			array_merge(
+				array(
+					'post_title'   => $listicle['title'],
+					'post_name'    => $listicle['slug'],
+					'post_excerpt' => $listicle['excerpt'],
+					'post_content' => $content,
+					'post_author'  => boi_seed_author(),
+					'post_type'    => 'post',
+				),
+				boi_seed_post_timing( $listicle, time() )
 			)
 		);
 
