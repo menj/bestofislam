@@ -197,6 +197,28 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.139.0 (drafts 21 to 25)
+
+The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
+
+- **jesus-sign-of-the-hour.**
+  - Al-Ṭabarī on 43:61 was read in the Arabic on quran.com. He records two referents of the pronoun: Jesus' descent, from Ibn ʿAbbās, Mujāhid, Qatāda, al-Suddī, al-Ḍaḥḥāk and Ibn Zayd; and the Quran, from al-Ḥasan. He also records the reading *ʿalam* from Ibn ʿAbbās, Qatāda and al-Ḍaḥḥāk, Ubayy's *dhikr*, and his own preference for *ʿilm*.
+  - Ibn Kathīr was read in the English abridgement.
+  - Reynolds, *BSOAS* 72.2 (2009), was confirmed through Crossref. Bukhari 3448 was also confirmed.
+  - Corrected: the draft listed Abu Hurayra among the readers of *ʿalam*. He is not in al-Ṭabarī's list; Ibn Kathīr cites him for the interpretation only.
+  - Cut, because they could not be confirmed: a 2025 study by "Barati", and a 2022 *ICMR* article on the Dajjal. The article exists (Cuciniello), but its claims about 43:61 could not be checked.
+- **sons-of-god-in-the-bible.** Three works were confirmed through Crossref: Day, *Hebrew Bible and Ancient Israel* 1.4 (2012); Kim, *Biblical Theology Bulletin* 44.3 (2014); and Peppard (Oxford University Press, 2011). Doedens (Brill, 2019) was also confirmed. Added from the Bible: Luke 3:38, John 10:34–36 and Psalm 82:6.
+- **ezekiel-twenty-three-allegory.**
+  - Confirmed through Crossref: Crouch, in *The Oxford Handbook of Ezekiel* (2020), pp. 278–294; Bibb, *Review and Expositor* 111.4 (2014); and van Dijk-Hemmes, *Vetus Testamentum* 43.2 (1993). The Biermann article in *lectio difficilior* (2021) was also confirmed, and the author is Bruno Biermann.
+  - The draft's Stiebert article of 2002 could not be found and is replaced by van Dijk-Hemmes.
+  - The explicit verses are cited by number and not quoted.
+- **ezekiel-twenty-three-in-malay-and-indonesian-bibles.**
+  - Ezekiel 23:17 and 23:20 were read on the SABDA parallel view in TL (1954), TB (1974), BIS (1985), AYT (2018), Shellabear 2011 and AVB (2015). Every word quoted matches the page.
+  - The Malay Alkitab Berita Baik could not be read: the bible.com address in the draft serves the NIV. It is left out, and its wording in the draft is not used.
+  - The draft's claim about SABDA's interlinear was not read and is replaced by the World English Bible's literal rendering.
+- **biblical-anthropomorphism.** Maimonides, *Guide of the Perplexed* I.26 and I.37–38, on "the language of men", the face and the back. The Bible's correctives are Numbers 23:19, 1 Samuel 15:29 and Exodus 33:20.
+- **Captions.** The hadith of the descent at the white minaret east of Damascus is Muslim 2937, from al-Nawwās ibn Samʿān.
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.

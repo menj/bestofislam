@@ -16,6 +16,7 @@
         "content\/before-you-convert-women-and-marriage.json": "94b9c26b8fb6fd88540645fb2f82d819",
         "content\/before-your-first-friday-prayer.json": "c8f02da60b7c65111231e37320f718cf",
         "content\/bible-alteration-claim-before-islam.json": "c4200cfc92db48987801fac2771d5bcd",
+        "content\/biblical-anthropomorphism.json": "3f88cf40c430218ac6e58d19f0105e03",
         "content\/birth-of-jesus-in-surah-maryam.json": "3fe4277aa394d0f665fe67d089e89ba0",
         "content\/black-stone-and-kissing.json": "aa5b9e62badeada342222190aa9a549c",
         "content\/blasphemy-and-insults-to-the-prophet.json": "1ba5f6b6f4e07bf40cc26b44aae3dbad",
@@ -47,6 +48,8 @@
         "content\/end-of-the-world-prediction.json": "eb6a8ca92b0b9e3075b48c84a3e474ea",
         "content\/end-of-time.json": "f7879a588a6a5edc8a6db49f133a1166",
         "content\/ex-muslim-blog-study.json": "5e4cde98da80766b9200cdf269fd93d5",
+        "content\/ezekiel-twenty-three-allegory.json": "3727cfe475154a9dc2d8a383311c36ad",
+        "content\/ezekiel-twenty-three-in-malay-and-indonesian-bibles.json": "5eb7c9b5b8805c1c5b93ead9bd03427e",
         "content\/ezra-and-mary.json": "cfd06ae15cb08cc03ced404718c3fcdc",
         "content\/fastest-growing-religion.json": "52e58e9d603c97c5a99b6fdf477d25e4",
         "content\/fate-and-free-will.json": "05932ac3b50663e4f83349783e3c4109",
@@ -92,6 +95,7 @@
         "content\/jesus-and-the-sabbath.json": "6506d2101e6f73cfb2f800a3f0c08dcf",
         "content\/jesus-not-god.json": "9cf911e928ad3de656660e8cd4ee3cbb",
         "content\/jesus-prostrated-in-prayer.json": "f3f28551ee47b391d1b5517db76e4cc8",
+        "content\/jesus-sign-of-the-hour.json": "7fd5e11074d91bea2a6fbb7b333e1218",
         "content\/jesus-the-word-of-god-in-the-quran.json": "369abe4059eaf9668f5d8c0f9b8115bd",
         "content\/jews-behind-the-stone-hadith.json": "c21c347996f529248f0846b297f02f0e",
         "content\/jihad-meaning-quran-hadith-jurists.json": "571963f9e85feb3abaac8439ae410bca",
@@ -173,6 +177,7 @@
         "content\/six-articles-of-faith.json": "6fa3bed301e666eef799b0ab1bca4b19",
         "content\/slander-against-mary.json": "298b8828823946f63450b96031570284",
         "content\/slavery-in-islam.json": "cfb8120d357d563f2f5495ee4c51e536",
+        "content\/sons-of-god-in-the-bible.json": "1b51d8838837c25fb516bfe6cf3c7900",
         "content\/sun-muddy-spring-and-fixed-earth.json": "ee73cb7e1a7afc23d68f9bb2a1b8fa98",
         "content\/talmud-midrash-apocrypha-borrowing.json": "12ce6955b20a0f8a4321122eb881173b",
         "content\/taqiyya-myths.json": "97c25de67fc6e443883d765883ca11bd",
@@ -209,8 +214,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "b9bacb455919424f2d88932b7f7673eb",
+        "inc\/data\/seed.json": "e9fcb800aa8aa9a553fabaf8c2771882",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "7a7961f587f4e51b18a229a4a55dff5c"
+    "checksum": "44077206d9bc614dc64bcff19a5f19ac"
 }

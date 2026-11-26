@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.139.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 11 March to 20 April 2027 (D71), and WordPress publishes each on its day. Nothing to set.
+
 ## Upgrading to 1.138.0
 
 Replace the theme files. `boi_create_listicles()` creates the five new articles and the tags "Atonement" and "Repentance" when the version changes. Each is created as Scheduled for its date in the publishing schedule (D71), from 20 January to 19 February 2027, and WordPress publishes it on the day. The five articles of 1.137.0 are scheduled too (1 December 2026 to 1 March 2027) on a site that has not yet created them; where 1.137.0 already published them, they stay published. If the host turns off WP-Cron, run `wp cron event run --due-now` from a real cron job so scheduled posts go out on time.
