@@ -2991,6 +2991,81 @@
 				"Early Christianity",
 				"Christians"
 			]
+		},
+		{
+			"slug": "does-god-require-blood-to-forgive",
+			"title": "Does God need blood to forgive? 5 Bible passages on sacrifice and repentance",
+			"excerpt": "\"Without shedding of blood there is no remission.\" Does the Bible say God cannot forgive without it? Five passages answer. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Does God need blood to forgive sins?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Atonement",
+				"Crucifixion",
+				"Old Testament",
+				"Bible",
+				"Christians"
+			]
+		},
+		{
+			"slug": "islamic-repentance-and-christian-atonement",
+			"title": "Repentance and atonement: 6 differences between Islam and Christianity",
+			"excerpt": "Do Christians sin freely because Jesus paid? Do Muslims live without hope of pardon? Six differences, from the texts each side teaches. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "Islamic repentance and Christian atonement",
+			"category": "creed-theology",
+			"tags": [
+				"Atonement",
+				"Repentance",
+				"Crucifixion",
+				"Christians",
+				"Original sin"
+			]
+		},
+		{
+			"slug": "are-children-born-sinful",
+			"title": "Are children born sinful? 5 answers from Islam and the churches",
+			"excerpt": "Is a newborn already a sinner? Islam, the Catholic and Orthodox churches and the Protestants give different answers. See where they meet.",
+			"topic": "belief-and-practices",
+			"seo_title": "Are children born sinful? 5 answers",
+			"category": "creed-theology",
+			"tags": [
+				"Original sin",
+				"Christians",
+				"Afterlife",
+				"Hadith"
+			]
+		},
+		{
+			"slug": "adam-and-eve-in-genesis-and-the-quran",
+			"title": "Adam and Eve in Genesis and the Quran: 5 differences on blame and repentance",
+			"excerpt": "Does the Bible blame Eve, and did the Quran copy Genesis? Five differences between the two accounts of Adam and his wife. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Adam and Eve in Genesis and the Quran",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Prophets",
+				"Satan",
+				"Original sin",
+				"Women in Islam",
+				"Bible",
+				"Sources of the Quran"
+			]
+		},
+		{
+			"slug": "jesus-the-word-of-god-in-the-quran",
+			"title": "Jesus as a Word from God: 6 facts about kalimah in the Quran",
+			"excerpt": "The Quran calls Jesus a Word from God. Does that mean what John 1 means? Six facts from the verses and the commentators. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Jesus as a Word from God in the Quran",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"Trinity",
+				"Gospels",
+				"Quran commentary"
+			]
 		}
 	],
 	"pages": {
@@ -3207,6 +3282,7 @@
 		"Ashari theology": "The school of al-Ashari on the attributes of God, taken as revealed and without likening.",
 		"Astronomy": "Muslim astronomers, their instruments and the stars and craters that carry their names.",
 		"Atheism": "Answers to the case against God, from the cosmos and from conscience.",
+		"Atonement": "The Christian teaching that the death of Jesus reconciles mankind to God, and the Torah's sacrifices it draws on, set beside the Quran's call to repentance.",
 		"Banu Qurayza": "",
 		"Battle of Badr": "",
 		"Bible": "The Bible as Muslims read it: honoured as a record that carries revelation, and examined as a text.",
@@ -3297,6 +3373,7 @@
 		"New Testament": "The 27 books of the New Testament, their authors and their manuscripts.",
 		"Old Testament": "The Hebrew Bible, its text, its translations and its history.",
 		"Orientalism": "Western scholarship on Islam, and where Muslim scholars part ways with it.",
+		"Original sin": "The Christian doctrine of Adam's sin and what passed to his descendants, and the Quran's account of Adam's repentance.",
 		"Paradise": "The Garden the Quran promises, and what its descriptions mean.",
 		"Paul": "Paul of Tarsus, his letters and his claim to speak for Jesus.",
 		"People of the Book": "Jews and Christians as the Quran addresses them.",
@@ -3318,6 +3395,7 @@
 		"Quran preservation": "How the Quran was recorded, collected and passed down.",
 		"Race": "",
 		"Ramadan": "The month of fasting and the Night of Power within it.",
+		"Repentance": "Tawbah, turning back to God: its conditions in Islamic teaching, and the practice of contrition and confession in the churches.",
 		"Revelation": "How God spoke to the Prophet, and how the Quran came down.",
 		"Revisionism": "The theory that the early sources on Islam cannot be trusted, and the evidence against it.",
 		"Riba": "",
@@ -3350,7 +3428,6 @@
 		"Violence": "Violence done in the name of Islam, and what the texts say about it.",
 		"Women in Islam": "Women in the Quran, in the law and in the life of the Prophet.",
 		"Worship": "Ibadah: prayer, remembrance and devotion directed to God alone.",
-		"Yahweh": "The God of Israel in the Hebrew Bible, and the questions scholars ask about his origins.",
-		"Original sin": "The Christian doctrine of Adam's sin and what passed to his descendants, and the Quran's account of Adam's repentance."
+		"Yahweh": "The God of Israel in the Hebrew Bible, and the questions scholars ask about his origins."
 	}
 }

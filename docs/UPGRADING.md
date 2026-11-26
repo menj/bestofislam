@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.138.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles and the tags "Atonement" and "Repentance" when the version changes. They keep the date they arrive, so they lead the front page (D69). Nothing to set.
+
 ## Upgrading to 1.137.0
 
 Replace the theme files. `boi_create_listicles()` creates the five new articles and the "Original sin" tag when the version changes. They keep the date they arrive, so they lead the front page (D69). Nothing to set.

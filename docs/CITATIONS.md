@@ -168,6 +168,35 @@ The owner's drafts 11 to 15 were rewritten to `.claude/VOICE.md`, and every note
   - Al-Fārūqī, *Al Tawhid*, chapter 1, matching `.claude/FARUQI.md`.
   - Replaced: the draft attributed a claim to Ahmed Deedat that could not be traced, and the Bismikaa article *Adakah Munasabah?* is cited as the example instead.
 
+### New articles of 1.138.0 (drafts 16 to 20)
+
+The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation (Quran.com translation 22); Bible quotations are the World English Bible (bible-api.com).
+
+- **does-god-require-blood-to-forgive.** The USCCB note on Hebrews 9:22 was read on bible.usccb.org: "ancient Israel did envisage other means of obtaining forgiveness" and "the author is limiting his horizon to the sacrificial cult". Also read: *Catechism of the Catholic Church* 613 to 615 on vatican.va; the Orthodox Church in America, "Redemption"; and the Christian Research Institute article on equip.org cited as the example of the claim. The conditions of *tawbah* are from al-Nawawī, *Riyāḍ al-Ṣāliḥīn*, chapter 2. The draft quoted the Quran in *The Clear Quran*; it now quotes Yusuf Ali.
+- **islamic-repentance-and-christian-atonement.**
+  - The Westminster Confession 11.1, 15.3 and 15.6 was read on opc.org.
+  - The Catechism 1451, 1456 and 1459 was read on vatican.va.
+  - The Orthodox Church in America, "Penance", was read on its site.
+  - Bukhari 6463 and Muslim 2816 are paraphrased, because the English wording differs between the narrations.
+  - CCC 1491, which the draft cited, was not read and is not cited.
+- **are-children-born-sinful.**
+  - The Catechism 1250 and 1261 was read on vatican.va.
+  - *The Baptist Faith and Message* (2000), articles III and VII, was read on bfm.sbc.net.
+  - Steven Kostoff, "An Infant's Burial" (Orthodox Church in America, 2009), was read on its site.
+  - The Lutheran Church–Missouri Synod FAQ on baptism was read on lcms.org.
+  - Bukhari 7047 (with 1386), including "And also the children of pagans", was confirmed on sunnah.com.
+  - The text of Abu Dawud 4403 was confirmed. Its grading could not be read on sunnah.com, so the note gives no grade.
+- **adam-and-eve-in-genesis-and-the-quran.**
+  - Genesis 3, 1 Timothy 2:14, Sirach 25:24 and Romans 5:12 are in the World English Bible.
+  - Bukhari 3330 and Muslim 1470 were confirmed on sunnah.com.
+  - The explanation of the "betrayal" as Eve's failure of counsel about the tree is from the Dorar al-Saniyya hadith encyclopedia. A wording attributed to Ibn Hajar could not be found in *Fath al-Bari*, so it is not used.
+  - Tisdall (1905) is cited for the claim that the Quran took its stories from earlier sources.
+- **jesus-the-word-of-god-in-the-quran.**
+  - Ibn Kathir on 3:45 was read in the English abridgement on quran.com: "a son who will come into existence with a word from Allah, 'Be', and he was".
+  - Syed M. Waqas, *Teosofi* 10.2 (2020), pp. 179–203, was confirmed through Crossref.
+  - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
+  - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.

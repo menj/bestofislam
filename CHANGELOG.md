@@ -4,6 +4,23 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.138.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 16 to 20, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`):
+  - does-god-require-blood-to-forgive: five Bible passages on sacrifice and repentance.
+  - islamic-repentance-and-christian-atonement: six differences between Islam and Christianity.
+  - are-children-born-sinful: five answers from Islam and the churches.
+  - adam-and-eve-in-genesis-and-the-quran: five differences on blame and repentance.
+  - jesus-the-word-of-god-in-the-quran: six facts about *kalimah* in the Quran.
+- Each has a featured image and two in the text: fifteen CC0 works from the Cleveland Museum of Art. They include a Byzantine altar front, a Gothic Bible, a Book of Hours, Quran folios from Egypt, Spain and Iraq or Iran, a reliquary cross, Louis Haghe's lithograph of a confessional, a cradle basket, a Japanese baptismal bowl, an Ottoman embroidered tree, a folio of Sa'di's *Gulistan* and a Byzantine Gospel book. None shows a prophet.
+- The tags "Atonement" and "Repentance". The five articles join the reading order.
+
+### Fixed
+- The tag list in `inc/data/seed.json` is in alphabetical order again; "Original sin" had been added at the end in 1.137.0.
+
 ## [1.137.0] - 2026-11-26
 
 No feature removed and no public identifier renamed.
