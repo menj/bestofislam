@@ -15,7 +15,7 @@ No feature removed and no public identifier renamed.
   - birth-of-jesus-in-surah-maryam: seven details in Quran 19:16 to 36.
   - jesus-and-the-sabbath: five controversies in the Gospels.
   - original-sin: six questions on Adam, Paul, Augustine and the Quran.
-- Each has a featured image and two in the text. All fifteen are CC0 works from the Cleveland Museum of Art: lithographs by David Roberts and Louis Haghe, an etching by Ruisdael, Quran folios, a Latin Bible leaf, an initial with Saint Augustine and a holy-water font. None shows a prophet.
+- Each has a featured image and two in the text. All fifteen are CC0 works from the Cleveland Museum of Art: lithographs by David Roberts and Louis Haghe, a drawing of Muslims at prayer by P. Pavesi, an etching by Ruisdael, Quran folios, a Latin Bible leaf, an initial with Saint Augustine and a holy-water font. None shows a prophet.
 - The tag "Original sin". The five articles join the reading order beside the articles nearest them.
 
 ## [1.136.0] - 2026-11-26
