@@ -2918,6 +2918,79 @@
 				"Myths",
 				"Polemics"
 			]
+		},
+		{
+			"slug": "jesus-prostrated-in-prayer",
+			"title": "Jesus fell on his face in prayer: 5 passages on prostration in the Bible",
+			"excerpt": "In Gethsemane Jesus fell on his face, as Abraham and Moses had: 5 passages on prostration in the Bible and in Christian worship. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Jesus fell on his face: 5 Bible passages",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Prayer",
+				"Gospels",
+				"Worship",
+				"Old Testament"
+			]
+		},
+		{
+			"slug": "did-jesus-fast",
+			"title": "Did Jesus fast? 5 facts from the Gospels, the Torah and the Quran",
+			"excerpt": "Jesus fasted forty days, taught his disciples to fast in secret and foretold their fasting: 5 facts set beside Ramadan. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Jesus fast? 5 facts from the Gospels",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Jesus",
+				"Fasting",
+				"Ramadan",
+				"Gospels",
+				"Early Christianity"
+			]
+		},
+		{
+			"slug": "birth-of-jesus-in-surah-maryam",
+			"title": "The birth of Jesus in Surah Maryam: 7 details in Quran 19:16 to 36",
+			"excerpt": "The palm tree, the accusation and the child who speaks: 7 details of the Quran's account of Jesus' birth, with the borrowing charge tested. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The birth of Jesus in Surah Maryam",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Mary",
+				"Quran commentary",
+				"Sources of the Quran",
+				"Miracles"
+			]
+		},
+		{
+			"slug": "jesus-and-the-sabbath",
+			"title": "Did Jesus break the Sabbath? 5 controversies in the Gospels",
+			"excerpt": "Grain, a withered hand, a bent woman, dropsy and a mat: 5 Sabbath disputes, and what they show about Jesus and the Law. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Jesus break the Sabbath? 5 disputes",
+			"category": "bible-text",
+			"tags": [
+				"Jesus",
+				"Gospels",
+				"Torah",
+				"Jews"
+			]
+		},
+		{
+			"slug": "original-sin",
+			"title": "Original sin: 6 questions on Adam, Paul, Augustine and the Quran",
+			"excerpt": "Is every child born guilty in Adam? 6 questions on Genesis, Romans 5, Augustine, the churches and the Quran's story of Adam. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "Original sin: 6 questions and the Quran",
+			"category": "creed-theology",
+			"tags": [
+				"Original sin",
+				"Paul",
+				"Early Christianity",
+				"Christians"
+			]
 		}
 	],
 	"pages": {
@@ -3277,6 +3350,7 @@
 		"Violence": "Violence done in the name of Islam, and what the texts say about it.",
 		"Women in Islam": "Women in the Quran, in the law and in the life of the Prophet.",
 		"Worship": "Ibadah: prayer, remembrance and devotion directed to God alone.",
-		"Yahweh": "The God of Israel in the Hebrew Bible, and the questions scholars ask about his origins."
+		"Yahweh": "The God of Israel in the Hebrew Bible, and the questions scholars ask about his origins.",
+		"Original sin": "The Christian doctrine of Adam's sin and what passed to his descendants, and the Quran's account of Adam's repentance."
 	}
 }

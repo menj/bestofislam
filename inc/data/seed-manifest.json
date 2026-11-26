@@ -14,6 +14,7 @@
         "content\/before-you-convert-women-and-marriage.json": "94b9c26b8fb6fd88540645fb2f82d819",
         "content\/before-your-first-friday-prayer.json": "c8f02da60b7c65111231e37320f718cf",
         "content\/bible-alteration-claim-before-islam.json": "c4200cfc92db48987801fac2771d5bcd",
+        "content\/birth-of-jesus-in-surah-maryam.json": "3fe4277aa394d0f665fe67d089e89ba0",
         "content\/black-stone-and-kissing.json": "aa5b9e62badeada342222190aa9a549c",
         "content\/blasphemy-and-insults-to-the-prophet.json": "1ba5f6b6f4e07bf40cc26b44aae3dbad",
         "content\/buraq-and-miracle-stories.json": "90031a8034e223964a7e968ec989a94b",
@@ -28,6 +29,7 @@
         "content\/crucifixion-quran.json": "324396e3786e97cb1fc492805febf3a7",
         "content\/crusades-facts.json": "b2197dc3a16a5ded0c45cba91d0d6549",
         "content\/deuteronomy-prophecy-and-the-paraclete.json": "462cf600a6c1c741a557770704f43433",
+        "content\/did-jesus-fast.json": "f2d4afdcedcb58427a4ddca796b972af",
         "content\/did-jesus-pray-to-whom.json": "d6c3573f371b57dd4b36b8cf220047a1",
         "content\/did-muhammad-perform-miracles.json": "f497bd296213f725c463223fc4be3942",
         "content\/did-the-quran-say-muhammad-sinned.json": "3ce394e479685ba65fec49f0642a069e",
@@ -83,7 +85,9 @@
         "content\/islamophobia-facts.json": "04fb80013026dae0275792844867a76c",
         "content\/jamnia-and-the-hebrew-canon.json": "81de9c955cd81702618e8b4f808f75e5",
         "content\/jeremiah-new-covenant-hebrews-and-the-quran.json": "af334db4febdca51389f033526fdcfe8",
+        "content\/jesus-and-the-sabbath.json": "6506d2101e6f73cfb2f800a3f0c08dcf",
         "content\/jesus-not-god.json": "9cf911e928ad3de656660e8cd4ee3cbb",
+        "content\/jesus-prostrated-in-prayer.json": "f3f28551ee47b391d1b5517db76e4cc8",
         "content\/jews-behind-the-stone-hadith.json": "c21c347996f529248f0846b297f02f0e",
         "content\/jihad-meaning-quran-hadith-jurists.json": "571963f9e85feb3abaac8439ae410bca",
         "content\/jizya.json": "f3de6f5a78bb4857b864e14cfabff611",
@@ -112,6 +116,7 @@
         "content\/oaths-in-the-quran.json": "d468b85e85cc9ddacc546400eb2b9ca0",
         "content\/old-testament-variant-readings.json": "0e7da6af7b3ae4d386daf73201766df9",
         "content\/oldest-bible-codices.json": "5ccb5d82b121c68f05bd32d9a2587710",
+        "content\/original-sin.json": "1fea0f11d61d314634d7b6b5b7b072f3",
         "content\/paul-and-food-offered-to-idols.json": "f15cdc858d43cbacbbb2e7cb940d59f7",
         "content\/paul-and-the-law.json": "6f8fb618155d9a5526d42db91e1f2913",
         "content\/paul-claim-to-apostleship.json": "56ccec4f0913fad038e47118a58d7d8b",
@@ -199,8 +204,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "a50f5f4f55e69cd45f5936e5378ea2e6",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "635a66519f10f41f46a26cbaab27708f",
-        "inc\/data\/seed.json": "40321bd5bd6d2c48a728e6d4c9eebbbf",
+        "inc\/data\/seed.json": "7fdbcc1d3287d2a2b3be1d3d0c82e974",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "20d1fd567734e0333b10b2be10fa29e0"
+    "checksum": "b51aabb6532033e654f9a67f32be75cf"
 }
