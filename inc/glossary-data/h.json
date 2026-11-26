@@ -36,7 +36,18 @@
     "page": 28,
     "term": "ḤADĪTH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح د ث",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وكلّ كلام يبلغ الإنسان من جهة السمع أو الوحي في يقظته أو منامه يقال له: حديث",
+     "gloss": "Al-Rāghib says any speech that reaches a person, by hearing or by revelation, awake or asleep, is called <em>ḥadīth</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1207#84757b"
+    }
+   ]
+  }
  },
  {
   "slug": "hafsa",
@@ -270,7 +281,18 @@
     "page": 30,
     "term": "ḤALĀL"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ل ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعن حلّ العقدة استعير قولهم: حَلَّ الشيء حلالًا",
+     "gloss": "Al-Rāghib says the root sense of <em>ḥall</em> is untying a knot, and that from it was borrowed <em>ḥalla al-shayʾ ḥalālan</em>, \"the thing became lawful\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10345#8c8ee0"
+    }
+   ]
+  }
  },
  {
   "slug": "halekon",
@@ -368,7 +390,24 @@
     "page": 30,
     "term": "ḤANĪF"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ن ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحَنَفُ: هو ميل عن الضّلال إلى الاستقامة، والجنف: ميل عن الاستقامة إلى الضّلال، والحَنِيف هو المائل إلى ذلك، قال عزّ وجلّ: قانِتاً لِلَّهِ حَنِيفاً [النحل/ 120] ، وقال: حَنِيفاً مُسْلِماً [آل عمران/ 67]",
+     "gloss": "Al-Rāghib defines <em>ḥanaf</em> as turning from error to uprightness, and <em>janaf</em> as turning from uprightness to error. The <em>ḥanīf</em> is the one who turns toward uprightness, as in 16:120 and 3:67.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1419#54562a"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وسمّت العرب كلّ من حجّ أو اختتن حنيفا، تنبيها أنّه على دين إبراهيم",
+     "gloss": "The Arabs, he adds, called anyone who made the pilgrimage or was circumcised a <em>ḥanīf</em>, as a sign that he followed the religion of Ibrāhīm.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1419#54562a"
+    }
+   ]
+  }
  },
  {
   "slug": "haqq",
@@ -403,6 +442,23 @@
   "faruqi": {
    "page": 30,
    "term": "AL ḤAQQ"
+  },
+  "lexicon": {
+   "root": "ح ق ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الحَقّ: المطابقة والموافقة، كمطابقة رجل الباب في حقّه لدورانه على استقامة. والحقّ يقال على أوجه: الأول: يقال لموجد الشيء بسبب ما تقتضيه الحكمة، ولهذا قيل في الله تعالى: هو الحقّ",
+     "gloss": "Al-Rāghib says the root sense of <em>ḥaqq</em> is correspondence and agreement, like a door's pivot turning true in its socket. Its first sense is the One who brings a thing into being as wisdom requires, and so God is called <em>al-Ḥaqq</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10330#cd7b94"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والثاني: يقال للموجد بحسب مقتضى الحكمة، ولهذا يقال: فعل الله تعالى كلّه حق، نحو قولنا: الموت حق، والبعث حق",
+     "gloss": "Its second sense is what is brought into being as wisdom requires: so all of God's work is <em>ḥaqq</em>, as one says \"death is true, and the raising is true\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10330#cd7b94"
+    }
+   ]
   }
  },
  {
@@ -564,7 +620,18 @@
    "Twelve Disciples",
    "Apostles Of Jesus",
    "Hawariyun"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح و ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحَوَارِيُّونَ أنصار عيسى صلّى الله عليه وسلم، قيل: كانوا قصّارين ، وقيل: كانوا صيّادين، وقال بعض العلماء: إنّما سمّوا حواريّين لأنهم كانوا يطهّرون نفوس النّاس بإفادتهم الدّين والعلم",
+     "gloss": "Al-Rāghib says the <em>ḥawāriyyūn</em> were the helpers of ʿĪsā (peace be upon him). Some say they were washers of cloth, others fishermen; one scholar he cites says they were so called because they purified people's souls by teaching them religion and knowledge.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1308#11adf7"
+    }
+   ]
+  }
  },
  {
   "slug": "hazrat",
@@ -587,7 +654,18 @@
    "Hadrat",
    "Hadrat",
    "Honorifics South Asia"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ض ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحَضَر: خلاف البدو، والحَضَارة والحِضَارَة: السكون بالحضر، كالبداوة والبداوة، ثمّ جعل ذلك اسما لشهادة مكان أو إنسان أو غيره، فقال تعالى: كُتِبَ عَلَيْكُمْ إِذا حَضَرَ أَحَدَكُمُ الْمَوْتُ [البقرة/ 180]",
+     "gloss": "Al-Rāghib says <em>ḥaḍar</em> is the opposite of desert life, and that the word came to name being present at a place or with a person, as in 2:180, \"when death comes to one of you\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1292#359be7"
+    }
+   ]
+  }
  },
  {
   "slug": "hell",
@@ -623,7 +701,18 @@
     "page": 28,
     "term": "JAHANNAM"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ج ه ن م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "جَهَنَّم اسم لنار الله الموقدة، قيل: وأصلها فارسيّ معرّب جهنام ، وقال أبو مسلم: كهنّام ، والله أعلم.",
+     "gloss": "Al-Rāghib defines <em>jahannam</em> as the name of the kindled fire of God, and reports that some take it from a Persian word, <em>jahannām</em>, which Abū Muslim gives as <em>kahannām</em>. He closes: \"God knows best.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=3577#1d30d2"
+    }
+   ]
+  }
  },
  {
   "slug": "heraclius",
@@ -716,7 +805,18 @@
    "Emigration",
    "Migration",
    "Hejira"
-  ]
+  ],
+  "lexicon": {
+   "root": "ه ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الهَجْرُ والهِجْرَان: مفارقة الإنسان غيره، إمّا بالبدن، أو باللّسان، أو بالقلب.",
+     "gloss": "Al-Rāghib defines <em>hajr</em> and <em>hijrān</em> as a person's parting from another, in body, in speech or in heart.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3008#4621a5"
+    }
+   ]
+  }
  },
  {
   "slug": "hijri-calendar",
@@ -745,7 +845,18 @@
    "Calendar",
    "Dhul Hijjah",
    "Dhul Qidah"
-  ]
+  ],
+  "lexicon": {
+   "root": "ه ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والمُهاجرَةُ في الأصل: مصارمة الغير ومتاركته",
+     "gloss": "Al-Rāghib says <em>muhājara</em>, the root of <em>hijrī</em>, is at root cutting off and leaving another, and cites 8:74, \"those who believed and emigrated\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=3008#4621a5"
+    }
+   ]
+  }
  },
  {
   "slug": "historicity-of-the-early-sources",
@@ -819,7 +930,18 @@
   "articles": [],
   "aliases": [
    "Hittatun"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ط ط",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله تعالى: وَقُولُوا حِطَّةٌ [البقرة/ 58] ، كلمة أمر بها بنو إسرائيل، ومعناه: حطّ عنا ذنوبنا",
+     "gloss": "Al-Rāghib defines <em>ḥaṭṭ</em> as bringing a thing down from a height. On 2:58, \"and say: <em>ḥiṭṭa</em>\", he says it was a word the Children of Israel were told to say, meaning \"Put down our sins from us\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10338#59ce0a"
+    }
+   ]
+  }
  },
  {
   "slug": "homosexuality",
@@ -847,7 +969,18 @@
    "Liwat",
    "Lot's People",
    "Same-Sex Relations"
-  ]
+  ],
+  "lexicon": {
+   "root": "ل و ط",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقولهم: لَوَّطَ فلان: إذا تعاطى فعل قوم لوط، فمن طريق الاشتقاق، فإنّه اشتقّ من لفظ لوط الناهي عن ذلك لا من لفظ المتعاطين له.",
+     "gloss": "Al-Rāghib says the verb <em>lawwaṭa</em>, to commit the act of the people of Lūṭ, is drawn by derivation from the name of Lūṭ, who forbade the act, and from no name of those who did it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7981#db97be"
+    }
+   ]
+  }
  },
  {
   "slug": "honorifics",
@@ -898,7 +1031,18 @@
    "Houries",
    "Hur",
    "Virgins Of Paradise"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح و ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "جمع أَحْوَرَ وحَوْرَاء، والحَوَر قيل: ظهور قليل من البياض في العين من بين السّواد، وأَحْوَرَتْ عينه، وذلك نهاية الحسن من العين",
+     "gloss": "On 56:22, \"and wide-eyed companions (<em>ḥūr ʿīn</em>)\", al-Rāghib says <em>ḥūr</em> is the plural of <em>aḥwar</em> and <em>ḥawrāʾ</em>, and that <em>ḥawar</em> is a little white showing amid the black of the eye, the height of the eye's beauty.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1308#11adf7"
+    }
+   ]
+  }
  },
  {
   "slug": "houses-and-homes",
@@ -923,7 +1067,18 @@
    "Housing",
    "Home",
    "Privacy"
-  ]
+  ],
+  "lexicon": {
+   "root": "ب ي ت",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل البيت: مأوى الإنسان بالليل، لأنه يقال: بَاتَ: أقام بالليل، كما يقال: ظلّ بالنهار ثم قد يقال للمسكن بيت من غير اعتبار الليل فيه",
+     "gloss": "Al-Rāghib says a <em>bayt</em> is first a person's shelter for the night, from <em>bāta</em>, to stay the night. The word then came to mean any dwelling, without thought of the night.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1635#acb853"
+    }
+   ]
+  }
  },
  {
   "slug": "hud",
@@ -1009,6 +1164,23 @@
   "faruqi": {
    "page": 53,
    "term": "AL ḤUDŪD"
+  },
+  "lexicon": {
+   "root": "ح د د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحدّ: الحاجز بين الشيئين الذي يمنع اختلاط أحدهما بالآخر",
+     "gloss": "Al-Rāghib defines <em>ḥadd</em> as the barrier between two things that keeps them from mixing.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61750#56ca97"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وحَدُّ الزنا والخمر سمّي به لكونه مانعا لمتعاطيه من معاودة مثله، ومانعا لغيره أن يسلك مسلكه",
+     "gloss": "The <em>ḥadd</em> for unlawful intercourse and for wine, he says, is so named because it holds back the offender from repeating the act and holds back others from taking his path.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61750#56ca97"
+    }
+   ]
   }
  },
  {
@@ -1090,7 +1262,18 @@
    "Humankind",
    "Human Rights",
    "Diversity"
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ر م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الكَرَمُ إذا وصف الله تعالى به فهو اسم لإحسانه وإنعامه المتظاهر، نحو قوله: فَإِنَّ رَبِّي غَنِيٌّ كَرِيمٌ [النمل/ 40] ، وإذا وصف به الإنسان فهو اسم للأخلاق والأفعال المحمودة التي تظهر منه، ولا يقال: هو كريم حتى يظهر ذلك منه.",
+     "gloss": "Al-Rāghib says <em>karam</em>, said of God, names His evident kindness and favour, as in 27:40. Said of a human being, it names praiseworthy character and deeds that show themselves, and no one is called <em>karīm</em> until they do.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8582#1b165b"
+    }
+   ]
+  }
  },
  {
   "slug": "hunayn",
@@ -1160,7 +1343,18 @@
   "articles": [
    "hajj-rites-explained"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ص ي د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصَّيْدُ: مصدرُ صَادَ، وهو تناول ما يظفر به ممّا كان ممتنعا، وفي الشّرع: تناول الحيوانات الممتنعة ما لم يكن مملوكا، والمتناول منه ما كان حلالا",
+     "gloss": "Al-Rāghib defines <em>ṣayd</em> as taking what one gains of something that was out of reach. In the law, he says, it is taking wild animals that belong to no one, of the kinds that are lawful to eat.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8959#7c74ef"
+    }
+   ]
+  }
  },
  {
   "slug": "husayn-ibn-ali",
@@ -1252,6 +1446,17 @@
   "faruqi": {
    "page": 46,
    "term": "HADĀ"
+  },
+  "lexicon": {
+   "root": "ه د ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الهداية دلالة بلطف، ومنه: الهديّة",
+     "gloss": "Al-Rāghib defines <em>hidāya</em> as guidance given with gentleness, and says the gift (<em>hadiyya</em>) is from the same root.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10036#f0b04f"
+    }
+   ]
   }
  },
  {
@@ -1281,6 +1486,17 @@
   "faruqi": {
    "page": 47,
    "term": "AL HĀDĪ"
+  },
+  "lexicon": {
+   "root": "ه د ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ولمّا كانت الهِدَايَةُ والتّعليم يقتضي شيئين: تعريفا من المعرّف، وتعرّفا من المعرّف",
+     "gloss": "Guidance and teaching, al-Rāghib says, need two things: making known on the part of the one who guides, and coming to know on the part of the one guided.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10036#f0b04f"
+    }
+   ]
   }
  },
  {
@@ -1311,6 +1527,17 @@
   "faruqi": {
    "page": 51,
    "term": "AL ḤADĪTH AL ḌA'ĪF"
+  },
+  "lexicon": {
+   "root": "ض ع ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الضَّعْفُ: خلافُ القوّة، وقد ضَعُفَ فهو ضَعِيفٌ. قال عزّ وجلّ: ضَعُفَ الطَّالِبُ وَالْمَطْلُوبُ [الحج/ 73] ، والضَّعْفُ قد يكون في النّفس، وفي البدن، وفي الحال",
+     "gloss": "Al-Rāghib defines <em>ḍaʿf</em> as the opposite of strength, and says it may lie in the soul, in the body or in one's state.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2615#f61eac"
+    }
+   ]
   }
  },
  {
@@ -1340,6 +1567,17 @@
   "faruqi": {
    "page": 51,
    "term": "AL ḤADĪTH AL ḤASAN"
+  },
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Sharīf al-Jurjānī, Kitāb al-taʿrīfāt (d. 1413)",
+     "ar": "الحسن: هو كون الشيء ملائمًا للطبع، كالفرح، وكون الشيء صفة كمال، كالعلم، وكون الشيء متعلق المدح، كالعبادات.",
+     "gloss": "Al-Jurjānī gives three senses of <em>ḥasan</em>: what suits one's nature, like joy; what is a quality of perfection, like knowledge; and what is the object of praise, like acts of worship.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#1cbf8e"
+    }
+   ]
   }
  },
  {
@@ -1400,6 +1638,17 @@
   "faruqi": {
    "page": 50,
    "term": "AL ḤADĪTH AL ṢAḤĪḤ"
+  },
+  "lexicon": {
+   "root": "ص ح ح",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "الصِّحَّةُ فِي الْبَدَنِ حَالَةٌ طَبِيعِيَّةٌ تَجْرِي أَفْعَالُهُ مَعَهَا عَلَى الْمَجْرَى الطَّبِيعِيِّ وَقَدْ اُسْتُعِيرَتْ الصِّحَّةُ لِلْمَعَانِي فَقِيلَ صَحَّتْ الصَّلَاةُ إذَا أَسْقَطَتْ الْقَضَاءَ وَصَحَّ الْعَقْدُ إذَا تَرَتَّبَ عَلَيْهِ أَثَرُهُ وَصَحَّ الْقَوْلُ إذَا طَابَقَ الْوَاقِعَ",
+     "gloss": "Al-Fayyūmī defines <em>ṣiḥḥa</em> of the body as a natural state in which its functions run their natural course, and says the word was borrowed for meanings: a statement is <em>ṣaḥīḥ</em> when it matches what is the case.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8182#2cdd00"
+    }
+   ]
   }
  },
  {
@@ -1430,6 +1679,17 @@
   "faruqi": {
    "page": 30,
    "term": "AL ḤĀFIẒ"
+  },
+  "lexicon": {
+   "root": "ح ف ظ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحِفْظ يقال تارة لهيئة النفس التي بها يثبت ما يؤدي إليه الفهم، وتارة لضبط الشيء في النفس، ويضادّه النسيان",
+     "gloss": "Al-Rāghib says <em>ḥifẓ</em> is said of the state of the soul by which what understanding brings is held fast, and of holding a thing firm in the soul, the opposite of forgetting.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10404#ff4bf6"
+    }
+   ]
   }
  },
  {
@@ -1459,6 +1719,17 @@
   "faruqi": {
    "page": 30,
    "term": "AL ḤAFĪẒ"
+  },
+  "lexicon": {
+   "root": "ح ف ظ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وتارة لاستعمال تلك القوة، فيقال: حَفِظْتُ كذا حِفْظاً، ثم يستعمل في كلّ تفقّد وتعهّد ورعاية",
+     "gloss": "From there, al-Rāghib says, the word is used for every kind of watching over, care and guarding.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10404#ff4bf6"
+    }
+   ]
   }
  },
  {
@@ -1487,6 +1758,17 @@
   "faruqi": {
    "page": 46,
    "term": "HAJARA"
+  },
+  "lexicon": {
+   "root": "ه ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله تعالى: وَالرُّجْزَ فَاهْجُرْ [المدثر/ 5] ، فحثّ على المفارقة بالوجوه كلّها",
+     "gloss": "On 74:5, \"and shun uncleanness\", al-Rāghib says the command is to part from it in every way.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3008#4621a5"
+    }
+   ]
   }
  },
  {
@@ -1516,6 +1798,17 @@
   "faruqi": {
    "page": 30,
    "term": "AL ḤAKĪM"
+  },
+  "lexicon": {
+   "root": "ح ك م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحِكْمَةُ: إصابة الحق بالعلم والعقل، فالحكمة من الله تعالى: معرفة الأشياء وإيجادها على غاية الإحكام، ومن الإنسان: معرفة الموجودات وفعل الخيرات.",
+     "gloss": "Al-Rāghib defines <em>ḥikma</em> as reaching the truth through knowledge and reason. From God it is knowing things and bringing them into being with perfect soundness; from a human being it is knowing what exists and doing good.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1543#d91c76"
+    }
+   ]
   }
  },
  {
@@ -1544,6 +1837,17 @@
   "faruqi": {
    "page": 30,
    "term": "ḤAMADA"
+  },
+  "lexicon": {
+   "root": "ح م د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فإنّ المدح يقال فيما يكون من الإنسان باختياره، ومما يقال منه وفيه بالتسخير، فقد يمدح الإنسان بطول قامته وصباحة وجهه، كما يمدح ببذل ماله وسخائه وعلمه، والحمد يكون في الثاني دون الأول",
+     "gloss": "A person may be praised (<em>madḥ</em>) for his height and the beauty of his face as well as for his generosity and learning, al-Rāghib says, and <em>ḥamd</em> belongs to the second kind alone, what is done by choice.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1263#ae66ae"
+    }
+   ]
   }
  },
  {
@@ -1574,6 +1878,17 @@
   "faruqi": {
    "page": 30,
    "term": "AL ḤAMD"
+  },
+  "lexicon": {
+   "root": "ح م د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والشّكر لا يقال إلا في مقابلة نعمة، فكلّ شكر حمد، وليس كل حمد شكرا، وكل حمد مدح وليس كل مدح حمدا",
+     "gloss": "Thanks, al-Rāghib says, is given only in return for a favour. So every act of thanks is <em>ḥamd</em>, while <em>ḥamd</em> reaches further; and every <em>ḥamd</em> is praise, while praise reaches further still.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1263#ae66ae"
+    }
+   ]
   }
  },
  {
@@ -1603,6 +1918,17 @@
   "faruqi": {
    "page": 30,
    "term": "AL ḤĀMID"
+  },
+  "lexicon": {
+   "root": "ح م د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله عزّ وجلّ: إِنَّهُ حَمِيدٌ مَجِيدٌ [هود/ 73] ، يصحّ أن يكون في معنى المحمود، وأن يكون في معنى الحامد",
+     "gloss": "On 11:73, \"He is Praiseworthy, Glorious\", al-Rāghib says <em>ḥamīd</em> may mean the one who is praised or the one who praises.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1263#ae66ae"
+    }
+   ]
   }
  },
  {
@@ -1675,6 +2001,17 @@
   "faruqi": {
    "page": 29,
    "term": "AL ḤASANAH"
+  },
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحسنةُ يعبّر عنها عن كلّ ما يسرّ من نعمة تنال الإنسان في نفسه وبدنه وأحواله، والسيئة تضادّها.",
+     "gloss": "<em>Ḥasana</em>, al-Rāghib says, names every favour that gladdens a person in himself, his body and his circumstances, and <em>sayyiʾa</em> is its opposite.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#35cf1a"
+    }
+   ]
   }
  },
  {
@@ -1705,6 +2042,17 @@
   "faruqi": {
    "page": 57,
    "term": "ḤASBUNĀ ALLAHU WA NI‘MA AL WAKĪL."
+  },
+  "lexicon": {
+   "root": "و ك ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التَّوْكِيلُ: أن تعتمد على غيرك وتجعله نائبا عنك، والوَكِيلُ فعيلٌ بمعنى المفعول. قال تعالى: وَكَفى بِاللَّهِ وَكِيلًا [النساء/ 81] أي: اكتف به أن يتولّى أمرك، ويَتَوَكَّلَ لك، وعلى هذا: حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ [آل عمران/ 173]",
+     "gloss": "Al-Rāghib defines <em>tawkīl</em> as relying on another and making him act for you. On 4:81, \"God is enough as Guardian\", he says it means: be content with Him to take charge of your affairs, and so too 3:173, \"God is enough for us, and He is the best Guardian\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7049#b0f012"
+    }
+   ]
   }
  },
  {
@@ -1736,6 +2084,17 @@
   "faruqi": {
    "page": 29,
    "term": "AL ḤASHR"
+  },
+  "lexicon": {
+   "root": "ح ش ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحَشْرُ: إخراج الجماعة عن مقرّهم وإزعاجهم عنه إلى الحرب ونحوها، وروي: «النّساء لا يُحْشَرن» أي: لا يخرجن إلى الغزو، ويقال ذلك في الإنسان وفي غيره، يقال: حَشَرَتِ السنة مال بني فلان، أي: أزالته عنهم، ولا يقال الحشر إلا في الجماعة",
+     "gloss": "Al-Rāghib defines <em>ḥashr</em> as driving a company of people out of their place and stirring them toward war or the like, and says the word is used only of a group.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1290#9ee38d"
+    }
+   ]
   }
  },
  {
@@ -1765,6 +2124,23 @@
   "faruqi": {
    "page": 29,
    "term": "AL ḤASĪB"
+  },
+  "lexicon": {
+   "root": "ح س ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحسيب والمحاسب: من يحاسبك، ثم يعبّر به عن المكافئ بالحساب.",
+     "gloss": "Al-Rāghib says <em>ḥasīb</em> and <em>muḥāsib</em> mean the one who takes account of you, and then the one who repays according to the account.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1175#992ecb"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَكَفى بِاللَّهِ حَسِيباً [النساء/ 6] ، أي: رقيبا يحاسبهم عليه",
+     "gloss": "On 4:6, \"God is enough as Reckoner\", he says it means a watcher who calls them to account.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1175#992ecb"
+    }
+   ]
   }
  },
  {
@@ -1796,6 +2172,17 @@
   "faruqi": {
    "page": 31,
    "term": "AL ḤAYY, AL MUḤYĪ"
+  },
+  "lexicon": {
+   "root": "ح ي ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والسادسة: الحياة التي يوصف بها الباري، فإنه إذا قيل فيه تعالى: هو حيّ، فمعناه: لا يصحّ عليه الموت، وليس ذلك إلّا لله عزّ وجلّ.",
+     "gloss": "The sixth sense of life, al-Rāghib says, is the life by which the Creator is described: when it is said of Him that He is <em>ḥayy</em>, the meaning is that death cannot be said of Him, and that is true of God alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=17729#4585e0"
+    }
+   ]
   }
  },
  {
@@ -1908,6 +2295,17 @@
   "faruqi": {
    "page": 29,
    "term": "AL ḤISĀB"
+  },
+  "lexicon": {
+   "root": "ح س ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحساب: استعمال العدد، يقال: حَسَبْتُ أَحْسُبُ حِسَاباً وحُسْبَاناً، قال تعالى: لِتَعْلَمُوا عَدَدَ السِّنِينَ وَالْحِسابَ [يونس/ 5]",
+     "gloss": "Al-Rāghib defines <em>ḥisāb</em> as the use of number, and cites 10:5, \"that you may know the number of the years and the reckoning\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1175#992ecb"
+    }
+   ]
   }
  },
  {
@@ -1935,6 +2333,17 @@
   "faruqi": {
    "page": 47,
    "term": "HUDĀ"
+  },
+  "lexicon": {
+   "root": "ه د ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأوّل: الهداية التي عمّ بجنسها كلّ مكلّف من العقل، والفطنة، والمعارف الضّروريّة التي أعمّ منها كلّ شيء بقدر فيه حسب احتماله كما قال: رَبُّنَا الَّذِي أَعْطى كُلَّ شَيْءٍ خَلْقَهُ ثُمَّ هَدى [طه/ 50] . الثاني: الهداية التي جعل للناس بدعائه إيّاهم على ألسنة الأنبياء، وإنزال القرآن ونحو ذلك، وهو المقصود بقوله تعالى: وَجَعَلْنا مِنْهُمْ أَئِمَّةً يَهْدُونَ بِأَمْرِنا [الأنبياء/ 73]",
+     "gloss": "God's guidance of human beings, al-Rāghib says, has four forms. The first is given to every responsible person: reason, discernment and the basic knowledge, as in 20:50, \"who gave each thing its form and then guided it\". The second is His call to people through the tongues of the prophets and the sending down of the Quran, as in 21:73.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10036#f0b04f"
+    }
+   ]
   }
  },
  {
@@ -1960,6 +2369,17 @@
   "faruqi": {
    "page": 28,
    "term": "ḤUJJAH"
+  },
+  "lexicon": {
+   "root": "ح ج ج",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحُجَّة: الدلالة المبيّنة للمحجّة، أي: المقصد المستقيم الذي يقتضي صحة أحد النقيضين. قال تعالى: قُلْ فَلِلَّهِ الْحُجَّةُ الْبالِغَةُ [الأنعام/ 149]",
+     "gloss": "Al-Rāghib defines <em>ḥujja</em> as the proof that makes clear the right path, the straight aim that shows which of two contraries is true. He cites 6:149, \"with God is the conclusive proof\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10332#d5a6ea"
+    }
+   ]
   }
  },
  {
@@ -1988,6 +2408,17 @@
   "faruqi": {
    "page": 29,
    "term": "AL ḤUSNĀ"
+  },
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفرق بين الحسن والحسنة والحسنى أنّ الحَسَنَ يقال في الأعيان والأحداث، وكذلك الحَسَنَة إذا كانت وصفا، وإذا كانت اسما فمتعارف في الأحداث، والحُسْنَى لا يقال إلا في الأحداث دون الأعيان",
+     "gloss": "Al-Rāghib separates three words: <em>ḥasan</em> is said of things and of events; <em>ḥasana</em> likewise when it is an adjective, and of events when it is a noun; and <em>ḥusnā</em> of events alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#35cf1a"
+    }
+   ]
   }
  }
 ]

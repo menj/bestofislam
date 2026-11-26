@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.135.0
+
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 23) and adds the "In the classical dictionaries" section to the entry pages you have not edited. An entry page you rewrote keeps your text. Nothing else to do.
+
 ## Upgrading to 1.133.0
 
 Replace the theme files. `boi_migrate_seed()` refreshes the 32 articles whose notes changed where the article is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab.
@@ -456,7 +460,6 @@ These are plans, not promises. Each item rests on something on record: the code,
 - One limit for meta descriptions. `docs/SSOT.md` says excerpts stay within 130 characters, while `docs/SEO.md` and `boi_print_meta_description()` allow 160, and 102 of the 199 seeded excerpts run between 131 and 160. The owner decides which limit stands; then either those excerpts are shortened or the SSOT is changed to 160.
 - The theme's PHP checked against the owner's `php-maintainable-code` skill, for readable, secure and maintainable conventions.
 - A notice on the Security tab when development files could not be removed. `inc/dev-files.php` (1.128.0) reports them only in the PHP error log, once a day, which many owners never read.
-- More "In the classical dictionaries" notes on Glossary entries. 67 of 785 carry one. The Arabic Lexicon at arabiclexicon.hawramani.com, which supplies them, answered again on 26 November 2026 after its certificate had lapsed.
 
 ### Later
 

@@ -124,7 +124,18 @@
    "Age Of Ignorance",
    "Ignorance",
    "Pre-Islamic Arabia"
-  ]
+  ],
+  "lexicon": {
+   "root": "ج ه ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الجهل على ثلاثة أضرب: - الأول: وهو خلوّ النفس من العلم، هذا هو الأصل، وقد جعل ذلك بعض المتكلمين معنى مقتضيا للأفعال الخارجة عن النظام، كما جعل العلم معنى مقتضيا للأفعال الجارية على النظام. - والثاني: اعتقاد الشيء بخلاف ما هو عليه. - والثالث: فعل الشيء بخلاف ما حقّه أن يفعل",
+     "gloss": "Al-Rāghib counts three kinds of <em>jahl</em>: the soul's emptiness of knowledge, believing a thing to be other than it is, and doing a thing other than as it ought to be done.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3534#f32c0e"
+    }
+   ]
+  }
  },
  {
   "slug": "jamaat",
@@ -146,7 +157,18 @@
   "aliases": [
    "Jama'at",
    "Jamaat-I-Islami"
-  ]
+  ],
+  "lexicon": {
+   "root": "ج م ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويقال للمجموع: جَمْعُ وجَمِيعُ وجَمَاعَةُ",
+     "gloss": "What is gathered, al-Rāghib says, is called <em>jamʿ</em>, <em>jamīʿ</em> and <em>jamāʿa</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3462#8d0c5f"
+    }
+   ]
+  }
  },
  {
   "slug": "jerusalem",
@@ -212,7 +234,18 @@
    "Jewish",
    "Judaism",
    "Jewish Law"
-  ]
+  ],
+  "lexicon": {
+   "root": "ه و د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْهَوْدُ: الرّجوع برفق، ومنه: التَّهْوِيدُ، وهو مشي كالدّبيب، وصار الْهَوْدُ في التّعارف التّوبة. قال تعالى: إِنَّا هُدْنا إِلَيْكَ [الأعراف/ 156] أي: تبنا، قال بعضهم: يَهُودُ في الأصل من قولهم: هُدْنَا إليك، وكان اسم مدح",
+     "gloss": "Al-Rāghib says <em>hawd</em> is returning gently, and came in use to mean repentance, as in 7:156, \"we have turned (<em>hudnā</em>) to You\", that is, we have repented. Some, he reports, derive <em>Yahūd</em> from this phrase, and it was first a name of praise.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2996#9f40bc"
+    }
+   ]
+  }
  },
  {
   "slug": "jihad",
@@ -293,7 +326,18 @@
     "page": 27,
     "term": "JINN"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ج ن ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الجِنِّ: ستر الشيء عن الحاسة، يقال: جَنَّه الليل وأَجَنَّهُ وجَنَّ عليه، فَجَنَّهُ: ستره",
+     "gloss": "Al-Rāghib says the root sense of <em>jinn</em> is hiding a thing from the senses: night <em>janna</em> a thing when it covered it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10575#d9e53a"
+    }
+   ]
+  }
  },
  {
   "slug": "jizya",
@@ -318,7 +362,18 @@
    "jizya"
   ],
   "type": "law",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ج ز ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والجِزْيَة: ما يؤخذ من أهل الذمة، وتسميتها بذلك للاجتزاء بها عن حقن دمهم. قال الله تعالى: حَتَّى يُعْطُوا الْجِزْيَةَ عَنْ يَدٍ وَهُمْ صاغِرُونَ [التوبة/ 29]",
+     "gloss": "Al-Rāghib defines <em>jizya</em> as what is taken from the protected peoples, so named because it suffices (<em>ijtizāʾ</em>) in return for the protection of their lives. He cites 9:29.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61747#4190a6"
+    }
+   ]
+  }
  },
  {
   "slug": "job",
@@ -447,7 +502,18 @@
    "Judging",
    "Last Judgement",
    "Judgment"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ك م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحُكْم بالشيء: أن تقضي بأنّه كذا، أو ليس بكذا، سواء ألزمت ذلك غيره أو لم تلزمه، قال تعالى: وَإِذا حَكَمْتُمْ بَيْنَ النَّاسِ أَنْ تَحْكُمُوا بِالْعَدْلِ [النساء/ 58]",
+     "gloss": "Al-Rāghib defines judging a thing as deciding that it is so or is not so, whether or not the judgement binds another. He cites 4:58, \"when you judge between people, judge with justice\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1543#d91c76"
+    }
+   ]
+  }
  },
  {
   "slug": "judi",
@@ -555,6 +621,17 @@
   "faruqi": {
    "page": 27,
    "term": "AL JABBĀR"
+  },
+  "lexicon": {
+   "root": "ج ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فأمّا في وصفه تعالى نحو: الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ [الحشر/ 23] ، فقد قيل: سمي بذلك من قولهم: جَبَرْتُ الفقير، لأنّه هو الذي يجبر الناس بفائض نعمه، وقيل: لأنه يجبر الناس، أي: يقهرهم على ما يريده",
+     "gloss": "Of <em>al-Jabbār</em> said of God, as in 59:23, al-Rāghib reports two views: that it comes from <em>jabartu al-faqīr</em>, \"I set the poor man right\", because He sets people right with His overflowing favour, or that He compels people to what He wills.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3312#803375"
+    }
+   ]
   }
  },
  {
@@ -584,6 +661,17 @@
   "faruqi": {
    "page": 28,
    "term": "AL JĀHILIYYAH"
+  },
+  "lexicon": {
+   "root": "ج ه ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والثالث: فعل الشيء بخلاف ما حقّه أن يفعل، سواء اعتقد فيه اعتقادا صحيحا أو فاسدا، كمن يترك الصلاة متعمدا",
+     "gloss": "The third kind of <em>jahl</em>, al-Rāghib says, is doing a thing other than as it ought to be done, whether one's belief about it is sound or not, like a person who leaves the prayer on purpose.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3534#f32c0e"
+    }
+   ]
   }
  },
  {
@@ -614,6 +702,17 @@
   "faruqi": {
    "page": 27,
    "term": "AL JANĀBAH"
+  },
+  "lexicon": {
+   "root": "ج ن ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَإِنْ كُنْتُمْ جُنُباً فَاطَّهَّرُوا [المائدة/ 6] ، أي: إن أصابتكم الجنابة، وذلك بإنزال الماء أو بالتقاء الختانين، وقد جَنُبَ وأَجْنَبَ واجْتَنَبَ وتَجَنَّبَ، وسميت الجنابة بذلك لكونها سببا لتجنب الصلاة في حكم الشرع",
+     "gloss": "On 5:6, \"if you are in <em>janāba</em>, purify yourselves\", al-Rāghib says <em>janāba</em> comes from emission or from the meeting of the two circumcised parts, and is so called because by the law it is a reason for keeping away (<em>tajannub</em>) from prayer.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3234#f8af5a"
+    }
+   ]
   }
  },
  {
@@ -645,6 +744,17 @@
   "faruqi": {
    "page": 49,
    "term": "AL JARḤ WAL TA'DĪL"
+  },
+  "lexicon": {
+   "root": "ج ر ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الجرح: أثر دام في الجلد، يقال: جَرَحَه جَرْحاً، فهو جَرِيح ومجروح. قال تعالى: وَالْجُرُوحَ قِصاصٌ [المائدة/ 45] ، وسمي القدح في الشاهد جرحا تشبيها به",
+     "gloss": "Al-Rāghib defines <em>jarḥ</em> as a bleeding mark on the skin, and says that finding fault with a witness is called <em>jarḥ</em> by likeness to it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3260#7b725b"
+    }
+   ]
   }
  },
  {
@@ -670,6 +780,17 @@
   "faruqi": {
    "page": 27,
    "term": "JAZĀ"
+  },
+  "lexicon": {
+   "root": "ج ز ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والجَزَاء: ما فيه الكفاية من المقابلة، إن خيرا فخير، وإن شرا فشر.",
+     "gloss": "Al-Rāghib defines <em>jazāʾ</em> as a return that suffices for what it answers: good for good and evil for evil.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61747#4190a6"
+    }
+   ]
   }
  },
  {
@@ -699,6 +820,17 @@
   "faruqi": {
    "page": 60,
    "term": "JAZĀKUM ALLAH KHAYR AL JAZĀ’."
+  },
+  "lexicon": {
+   "root": "ج ز ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الجَزَاء: الغناء والكفاية، وقال تعالى: لا يَجْزِي والِدٌ عَنْ وَلَدِهِ وَلا مَوْلُودٌ هُوَ جازٍ عَنْ والِدِهِ شَيْئاً [لقمان/ 33]",
+     "gloss": "Al-Rāghib defines <em>jazāʾ</em> as sufficing and standing in for another, and cites 31:33, \"no father will avail his child\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=61747#4190a6"
+    }
+   ]
   }
  },
  {
@@ -724,6 +856,17 @@
   "faruqi": {
    "page": 27,
    "term": "JIZYAH"
+  },
+  "lexicon": {
+   "root": "ج ز ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والجِزْيَة: ما يؤخذ من أهل الذمة، وتسميتها بذلك للاجتزاء بها عن حقن دمهم",
+     "gloss": "Al-Rāghib defines <em>jizya</em> as what is taken from the protected peoples, so named because it suffices in return for the protection of their lives.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61747#4190a6"
+    }
+   ]
   }
  },
  {
@@ -752,6 +895,17 @@
   "faruqi": {
    "page": 54,
    "term": "JUBBAH"
+  },
+  "lexicon": {
+   "root": "ج ب ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والجُبَّة التي هي اللباس منه",
+     "gloss": "Under a root whose sense is cutting a thing off at its base, al-Rāghib says the <em>jubba</em>, the garment, comes from it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10577#591350"
+    }
+   ]
   }
  },
  {
@@ -783,6 +937,17 @@
   "faruqi": {
    "page": 27,
    "term": "AL JUMU'AH"
+  },
+  "lexicon": {
+   "root": "ج م ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقولهم: يوم الجمعة، لاجتماع الناس للصلاة، قال تعالى: إِذا نُودِيَ لِلصَّلاةِ مِنْ يَوْمِ الْجُمُعَةِ فَاسْعَوْا إِلى ذِكْرِ اللَّهِ [الجمعة/ 9]",
+     "gloss": "Al-Rāghib says the day is called <em>yawm al-jumuʿa</em> because people gather on it for the prayer, and cites 62:9.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3462#8d0c5f"
+    }
+   ]
   }
  }
 ]

@@ -59,7 +59,18 @@
     "page": 23,
     "term": "UMMAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ م م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والأُمّة: كل جماعة يجمعهم أمر ما إمّا دين واحد، أو زمان واحد، أو مكان واحد سواء كان ذلك الأمر الجامع تسخيرا أو اختيارا",
+     "gloss": "Al-Rāghib defines <em>umma</em> as any group brought together by a common bond, whether one religion, one time or one place, and whether the bond is set by nature or chosen.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9976#094300"
+    }
+   ]
+  }
  },
  {
   "slug": "ummi",
@@ -88,7 +99,24 @@
    "Ummiyyin",
    "Illiterate, Muhammad",
    "Unlettered"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ م م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والأُمِّيُّ: هو الذي لا يكتب ولا يقرأ من كتاب، وعليه حمل: هُوَ الَّذِي بَعَثَ فِي الْأُمِّيِّينَ رَسُولًا مِنْهُمْ [الجمعة/ 2]",
+     "gloss": "Al-Rāghib defines <em>ummī</em> as one who neither writes nor reads from a book, and reads 62:2, \"It is He who raised among the unlettered a messenger from among them\", in that sense.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9976#094300"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقيل: سمي بذلك لأنه لم يكن يكتب ولا يقرأ من كتاب، وذلك فضيلة له لاستغنائه بحفظه، واعتماده على ضمان الله منه بقوله: سَنُقْرِئُكَ فَلا تَنْسى [الأعلى/ 6]",
+     "gloss": "Of the Prophet (peace be upon him), called <em>ummī</em> in 7:157, one view he reports is that he neither wrote nor read from a book, and that this was a merit in him: he kept what he received by memory and relied on God's promise in 87:6, \"We will make you recite, and you will not forget\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=9976#094300"
+    }
+   ]
+  }
  },
  {
   "slug": "umrah",
@@ -149,6 +177,17 @@
   "faruqi": {
    "page": 53,
    "term": "AL 'URF"
+  },
+  "lexicon": {
+   "root": "ع ر ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعُرْفُ: المَعْرُوفُ من الإحسان، وقال: وَأْمُرْ بِالْعُرْفِ [الأعراف/ 199]",
+     "gloss": "Al-Rāghib defines <em>ʿurf</em> as kindness that is recognised as such, and cites 7:199, \"enjoin what is recognised as good\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=655#1fe06c"
+    }
+   ]
   }
  },
  {
@@ -186,7 +225,18 @@
     "page": 51,
     "term": "UṢŪL AL FIQH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ص ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأَصْلُ الشيء: قاعدته التي لو توهّمت مرتفعة لارتفع بارتفاعه سائره لذلك، قال تعالى: أَصْلُها ثابِتٌ وَفَرْعُها فِي السَّماءِ [إبراهيم/ 24]",
+     "gloss": "Al-Rāghib defines the <em>aṣl</em> of a thing as its foundation: if it were imagined taken away, everything resting on it would go with it. He cites 14:24, \"its root is firm and its branches reach the sky\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=136#ba0a16"
+    }
+   ]
+  }
  },
  {
   "slug": "uswah-hasanah",
@@ -222,6 +272,17 @@
     "page": 64,
     "term": "AL USWAH AL ḤASANAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ س و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأُسْوَة والإِسْوَةُ كالقدوة والقدوة، وهي الحالة التي يكون الإنسان عليها في اتباع غيره إن حسنا وإن قبيحا، وإن سارّا وإن ضارّا، ولهذا قال تعالى: لَقَدْ كانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ [الأحزاب/ 21] ، فوصفها بالحسنة",
+     "gloss": "Al-Rāghib says <em>uswa</em> is like <em>qudwa</em>: the state of a person who follows another, for good or for ill. That is why 33:21, on the example in the Messenger of God, calls it \"good\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=61726#e7107b"
+    }
+   ]
+  }
  }
 ]

@@ -52,7 +52,24 @@
     "page": 34,
     "term": "ZAKĀH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ز ك و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الزَّكَاةِ: النّموّ الحاصل عن بركة الله تعالى",
+     "gloss": "Al-Rāghib says the root sense of <em>zakāh</em> is growth that comes from God's blessing.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7437#59110d"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ومنه الزَّكاةُ: لما يخرج الإنسان من حقّ الله تعالى إلى الفقراء، وتسميته بذلك لما يكون فيها من رجاء البركة، أو لتزكية النّفس",
+     "gloss": "From it comes <em>zakāh</em>, he says, what a person pays out of God's due to the poor, so called for the hope of blessing in it or for the purifying of the self.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7437#59110d"
+    }
+   ]
+  }
  },
  {
   "slug": "zahir-al",
@@ -80,6 +97,17 @@
   "faruqi": {
    "page": 38,
    "term": "AL ẒĀHIR"
+  },
+  "lexicon": {
+   "root": "ظ ه ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فالظاهر قيل: إشارة إلى معرفتنا البديهية، فإنّ الفطرة تقتضي في كلّ ما نظر إليه الإنسان أنه تعالى موجود",
+     "gloss": "Of <em>al-Ẓāhir</em>, al-Rāghib reports that it points to our immediate knowledge of God: in everything a person looks at, his <em>fiṭra</em> tells him that God exists.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2037#cd116d"
+    }
+   ]
   }
  },
  {
@@ -108,6 +136,23 @@
   "faruqi": {
    "page": 38,
    "term": "ẒĀLIM"
+  },
+  "lexicon": {
+   "root": "ظ ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والظُّلْمُ يقال في مجاوزة الحقّ الذي يجري مجرى نقطة الدّائرة، ويقال فيما يكثر وفيما يقلّ من التّجاوز، ولهذا يستعمل في الذّنب الكبير، وفي الذّنب الصّغير",
+     "gloss": "Al-Rāghib says <em>ẓulm</em> is passing beyond the right, which stands like the centre point of a circle, and that it is said of great sins and of small ones.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7475#878f42"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "قال بعض الحكماء: الظُّلْمُ ثلاثةٌ: الأوّل: ظُلْمٌ بين الإنسان وبين الله تعالى، وأعظمه: الكفر والشّرك والنّفاق، ولذلك قال: إِنَّ الشِّرْكَ لَظُلْمٌ عَظِيمٌ [لقمان/ 13]",
+     "gloss": "A sage he cites counts three kinds of <em>ẓulm</em>. The first lies between a person and God, and its gravest forms are unbelief, associating others with God and hypocrisy, as in 31:13, \"associating others with God is a great wrong\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7475#878f42"
+    }
+   ]
   }
  },
  {
@@ -136,6 +181,17 @@
   "faruqi": {
    "page": 38,
    "term": "ẒANN"
+  },
+  "lexicon": {
+   "root": "ظ ن ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الظَّنُّ: اسم لما يحصل عن أمارة، ومتى قويت أدّت إلى العلم، ومتى ضعفت جدّا لم يتجاوز حدّ التّوهّم",
+     "gloss": "Al-Rāghib defines <em>ẓann</em> as what comes from a sign: when the sign is strong it leads to knowledge, and when it is very weak it goes no further than fancy.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10808#617db9"
+    }
+   ]
   }
  },
  {
