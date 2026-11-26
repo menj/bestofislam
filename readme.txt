@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 190 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 199 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -25,7 +25,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A section taxonomy (listicle-topic) at /topic/<section>/, with categories and tags on every seeded article.
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
-* A Glossary of 784 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
+* A Glossary of 785 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
 * Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
