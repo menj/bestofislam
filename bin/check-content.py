@@ -15,6 +15,7 @@ Glossary entry has no valid kind; the seed manifest (inc/data/seed-manifest.json
 Run it by hand:  python3 bin/check-content.py
 The workflow in .github/workflows/checks.yml runs it on every pull request.
 """
+import datetime
 import glob
 import json
 import os
@@ -93,8 +94,8 @@ except (OSError, json.JSONDecodeError):
 # The publishing schedule (SSOT D71): a `publish_on` time is UTC, falls
 # from December 2026 to December 2027, and no two articles share a day. An
 # article may link only to one that is already out when it publishes.
-import datetime
 schedule = {}
+scheduled_days = set()
 for item in seed_items:
     when = item.get('publish_on')
     if not when:
@@ -106,8 +107,9 @@ for item in seed_items:
         continue
     if not (datetime.datetime(2026, 12, 1) <= t < datetime.datetime(2028, 1, 1)):
         errors.append('seed: "%s" publish_on %s falls outside December 2026 to December 2027' % (item.get('slug'), when))
-    if t.date() in [x.date() for x in schedule.values()]:
+    if t.date() in scheduled_days:
         errors.append('seed: "%s" publish_on %s shares a day with another article' % (item.get('slug'), when))
+    scheduled_days.add(t.date())
     schedule[item.get('slug')] = t
 for slug, t in schedule.items():
     try:

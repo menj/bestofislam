@@ -42,13 +42,12 @@ function boi_seed_schedule() {
  * @return array Post fields.
  */
 function boi_seed_post_timing( $listicle, $now ) {
-	$status   = isset( $listicle['status'] ) ? $listicle['status'] : 'publish';
-	$schedule = boi_seed_schedule();
-	if ( ! isset( $schedule[ $listicle['slug'] ] ) ) {
+	$status = isset( $listicle['status'] ) ? $listicle['status'] : 'publish';
+	$time   = empty( $listicle['publish_on'] ) ? false : strtotime( $listicle['publish_on'] );
+	if ( false === $time ) {
 		return array( 'post_status' => $status );
 	}
-	$time = $schedule[ $listicle['slug'] ];
-	$gmt  = gmdate( 'Y-m-d H:i:s', $time );
+	$gmt = gmdate( 'Y-m-d H:i:s', $time );
 	return array(
 		'post_status'   => $time > $now ? 'future' : $status,
 		'post_date'     => get_date_from_gmt( $gmt ),
