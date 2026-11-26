@@ -26,7 +26,18 @@
   "aliases": [
    "Shape Of The Earth",
    "Flat Earth"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ر ض",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأرض: الجرم المقابل للسماء، وجمعه أرضون، ولا تجيء مجموعةً في القرآن",
+     "gloss": "Al-Rāghib defines <em>arḍ</em> as the body set against the sky. Its plural is <em>araḍūn</em>, he notes, and the Quran never uses the word in the plural.",
+     "url": "https://arabiclexicon.hawramani.com/?p=158#c7b074"
+    }
+   ]
+  }
  },
  {
   "slug": "earthquakes",
@@ -75,7 +86,18 @@
   ],
   "aliases": [
    "East And West (The)"
-  ]
+  ],
+  "lexicon": {
+   "root": "ش ر ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْمَشْرِقُ والمغرب إذا قيلا بالإفراد فإشارة إلى ناحيتي الشَّرْقِ والغرب، وإذا قيلا بلفظ التّثنية فإشارة إلى مطلعي ومغربي الشتاء والصّيف، وإذا قيلا بلفظ الجمع فاعتبار بمطلع كلّ يوم ومغربه، أو بمطلع كلّ فصل ومغربه",
+     "gloss": "Al-Rāghib says that in the singular <em>mashriq</em> and <em>maghrib</em> point to the two quarters of east and west; in the dual, to the rising and setting points of winter and summer (55:17); in the plural, to the rising and setting of each day or of each season (70:40).",
+     "url": "https://arabiclexicon.hawramani.com/?p=6295#3be435"
+    }
+   ]
+  }
  },
  {
   "slug": "ebionites",
@@ -120,7 +142,18 @@
    "astronomy"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ك س ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "كُسُوفُ الشمس والقمر: استتارهما بعارض مخصوص",
+     "gloss": "Al-Rāghib defines the <em>kusūf</em> of the sun and moon as their being hidden by a particular thing that comes before them.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3894#e99c9c"
+    }
+   ]
+  }
  },
  {
   "slug": "education",
@@ -148,7 +181,18 @@
    "Schools",
    "Madrasa",
    "Madrasah"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّعْلِيمُ اختصّ بما يكون بتكرير وتكثير حتى يحصل منه أثر في نفس المُتَعَلِّمِ",
+     "gloss": "Al-Rāghib says <em>taʿlīm</em> is teaching by repetition and abundance, until it leaves a trace in the learner's soul.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
+  }
  },
  {
   "slug": "egypt",
@@ -225,7 +269,18 @@
    "Eid Al-Fitr",
    "Eid Al-Adha",
    "Id"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع و د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعِيدُ: ما يُعَاوِدُ مرّة بعد أخرى، وخصّ في الشّريعة بيوم الفطر ويوم النّحر، ولمّا كان ذلك اليوم مجعولا للسّرور في الشريعة كما نبّه النّبيّ صلّى الله عليه وسلم بقوله: «أيّام أكل وشرب وبعال» صار يستعمل العِيدُ في كلّ يوم فيه مسرّة، وعلى ذلك قوله تعالى: أَنْزِلْ عَلَيْنا مائِدَةً مِنَ السَّماءِ تَكُونُ لَنا عِيداً [المائدة/ 114]",
+     "gloss": "Al-Rāghib defines <em>ʿīd</em> as what returns time after time. The law, he says, gave the name to the day of breaking the fast and the day of sacrifice, and because those days were made for gladness the word came to be used for any day of joy, as in 5:114.",
+     "url": "https://arabiclexicon.hawramani.com/?p=439#9b8393"
+    }
+   ]
+  }
  },
  {
   "slug": "elijah",
@@ -325,7 +380,18 @@
    "islam-religion-of-peace",
    "quranic-ethics"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ع د و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العَدُوُّ: التّجاوز ومنافاة الالتئام، فتارة يعتبر بالقلب، فيقال له: العَدَاوَةُ والمُعَادَاةُ",
+     "gloss": "Al-Rāghib says the root sense is passing beyond bounds and the absence of harmony. When it lies in the heart, it is called <em>ʿadāwa</em>, enmity.",
+     "url": "https://arabiclexicon.hawramani.com/?p=874#c49906"
+    }
+   ]
+  }
  },
  {
   "slug": "environment",
@@ -400,7 +466,18 @@
    "dhimmi"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "س و ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فَانْبِذْ إِلَيْهِمْ عَلى سَواءٍ [الأنفال/ 58] ، أي: عدل من الحكم، وكذا قوله: إِلى كَلِمَةٍ سَواءٍ بَيْنَنا وَبَيْنَكُمْ",
+     "gloss": "<em>Sawāʾ</em>, al-Rāghib says, can mean a just ruling, as in 8:58, and in 3:64, \"a word just between us and you\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=11098#d4a4b7"
+    }
+   ]
+  }
  },
  {
   "slug": "esposito-john-l",
@@ -443,7 +520,18 @@
   "aliases": [
    "Behavior",
    "Behaviour"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ ل ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والخَلْقُ والخُلْقُ في الأصل واحد، كالشّرب والشّرب، والصّرم والصّرم، لكن خصّ الخلق بالهيئات والأشكال والصّور المدركة بالبصر، وخصّ الخلق بالقوى والسّجايا المدركة بالبصيرة",
+     "gloss": "Al-Rāghib says <em>khalq</em> and <em>khuluq</em> are at root one word. <em>Khalq</em> was kept for shapes and forms seen by the eye, and <em>khuluq</em> for powers and dispositions perceived by insight. He cites 68:4, \"you are of a great character\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8806#a7661e"
+    }
+   ]
+  }
  },
  {
   "slug": "eusebius",
@@ -509,7 +597,18 @@
    "fate-and-free-will",
    "six-articles-of-faith"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ش ر ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشَّرُّ: الذي يرغب عنه الكلّ، كما أنّ الخير هو الذي يرغب فيه الكلّ",
+     "gloss": "Al-Rāghib defines <em>sharr</em> as what everyone turns away from, as <em>khayr</em> is what everyone desires.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10594#cfc1eb"
+    }
+   ]
+  }
  },
  {
   "slug": "evil-eye",
@@ -534,7 +633,18 @@
   "aliases": [
    "Eye, Evil",
    "Ruqya"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ي ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعِنْتُهُ: أصبته بعيني نحو سفته: أصبته بسيفي",
+     "gloss": "Al-Rāghib explains <em>ʿintuhu</em> as \"I struck him with my eye\", formed like <em>siftuhu</em>, \"I struck him with my sword\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10130#bb3f6a"
+    }
+   ]
+  }
  },
  {
   "slug": "evolution",
@@ -586,7 +696,18 @@
   "aliases": [
    "Terrorism",
    "Radicalism"
-  ]
+  ],
+  "lexicon": {
+   "root": "غ ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغُلُوُّ: تجاوز الحدّ، يقال ذلك إذا كان في السّعر غَلَاءٌ، وإذا كان في القدر والمنزلة غُلُوٌّ وفي السّهم: غَلْوٌ، وأفعالها جميعا: غَلَا يَغْلُو . قال تعالى: لا تَغْلُوا فِي دِينِكُمْ [النساء/ 171]",
+     "gloss": "Al-Rāghib defines <em>ghuluww</em> as passing the limit: in price it is <em>ghalāʾ</em>, in rank and standing <em>ghuluww</em>. He cites 4:171, \"do not go to excess in your religion\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=2793#fee575"
+    }
+   ]
+  }
  },
  {
   "slug": "ezekiel",

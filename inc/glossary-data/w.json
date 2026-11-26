@@ -36,6 +36,23 @@
   "faruqi": {
    "page": 48,
    "term": "AL WAḤY"
+  },
+  "lexicon": {
+   "root": "و ح ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الوحي: الإشارة السّريعة، ولتضمّن السّرعة قيل: أمر وَحْيٌ، وذلك يكون بالكلام على سبيل الرّمز والتّعريض، وقد يكون بصوت مجرّد عن التّركيب، وبإشارة ببعض الجوارح، وبالكتابة",
+     "gloss": "Al-Rāghib says the root sense of <em>waḥy</em> is a swift sign. It may be speech by hint and allusion, a bare sound, a gesture of some limb, or writing.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11165#52e06b"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويقال للكلمة الإلهيّة التي تلقى إلى أنبيائه وأوليائه: وحي، وذلك أضرب",
+     "gloss": "The divine word conveyed to His prophets and friends is also called <em>waḥy</em>, he says, and it comes in several forms, as 42:51 shows.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11165#52e06b"
+    }
+   ]
   }
  },
  {
@@ -174,7 +191,18 @@
    "page": 64,
    "term": "WA I‘TAṢIMŪ BI ḤABL ALLAHI JAMĪ‘AN WA LĀ TAFARRAQŪ."
   },
-  "quran_ref": "3:103"
+  "quran_ref": "3:103",
+  "lexicon": {
+   "root": "ع ص م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والاعْتِصَامُ: التّمسّك بالشيء، قال: وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعاً [آل عمران/ 103]",
+     "gloss": "Al-Rāghib defines <em>iʿtiṣām</em> as holding fast to a thing, as in 3:103, \"hold fast, all together, to the rope of God\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=802#6e6fb1"
+    }
+   ]
+  }
  },
  {
   "slug": "wad-al",
@@ -202,6 +230,17 @@
   "faruqi": {
    "page": 47,
    "term": "AL WA'D"
+  },
+  "lexicon": {
+   "root": "و ع د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الوَعْدُ يكون في الخير والشّرّ. يقال وَعَدْتُهُ بنفع وضرّ وَعْداً ومَوْعِداً ومِيعَاداً، والوَعِيدُ في الشّرّ خاصّة",
+     "gloss": "Al-Rāghib says <em>waʿd</em>, promise, is used of good and of evil, and <em>waʿīd</em>, threat, of evil alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6870#8e2f51"
+    }
+   ]
   }
  },
  {
@@ -230,6 +269,17 @@
   "faruqi": {
    "page": 47,
    "term": "AL WA'ĪD"
+  },
+  "lexicon": {
+   "root": "و ع د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ومن الوَعْدِ بالشّرّ: وَيَسْتَعْجِلُونَكَ بِالْعَذابِ وَلَنْ يُخْلِفَ اللَّهُ وَعْدَهُ [الحج/ 47] وكانوا إنّما يستعجلونه بالعذاب، وذلك وَعِيدٌ",
+     "gloss": "Of <em>waʿd</em> used for evil, al-Rāghib cites 22:47, \"they ask you to hasten the punishment, and God will not fail His promise\": what they were hastening was punishment, and that is <em>waʿīd</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6870#8e2f51"
+    }
+   ]
   }
  },
  {
@@ -258,6 +308,17 @@
   "faruqi": {
    "page": 47,
    "term": "WAJH"
+  },
+  "lexicon": {
+   "root": "و ج ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ولمّا كان الوجه أوّل ما يستقبلك، وأشرف ما في ظاهر البدن استعمل في مستقبل كلّ شيء، وفي أشرفه ومبدئه، فقيل: وجه كذا، ووجه النهار.",
+     "gloss": "Al-Rāghib says the root sense of <em>wajh</em> is the face. Because the face is the first thing that meets you and the noblest part of the body's surface, the word came to be used for the front of anything, for its noblest part and for its beginning, as in \"the face of the day\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7105#4f5c70"
+    }
+   ]
   }
  },
  {
@@ -287,6 +348,17 @@
   "faruqi": {
    "page": 53,
    "term": "AL WĀJIB"
+  },
+  "lexicon": {
+   "root": "و ج ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الثاني: يقال في الذي إذا لم يفعل يستحقّ به اللّوم، وذلك ضربان: واجب من جهة العقل، كوجوب معرفة الوحدانيّة، ومعرفة النّبوّة. وواجب من جهة الشّرع كوجوب العبادات الموظّفة.",
+     "gloss": "Al-Rāghib says one sense of <em>wājib</em> is what brings blame when it is left undone. It is of two kinds: what reason requires, like knowing God's oneness and knowing prophethood, and what the law requires, like the set acts of worship.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6792#27bd72"
+    }
+   ]
   }
  },
  {
@@ -315,6 +387,17 @@
   "faruqi": {
    "page": 47,
    "term": "WALIYY"
+  },
+  "lexicon": {
+   "root": "و ل ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الوَلَاءُ والتَّوَالِي: أن يَحْصُلَ شيئان فصاعدا حصولا ليس بينهما ما ليس منهما، ويستعار ذلك للقرب من حيث المكان، ومن حيث النّسبة، ومن حيث الدّين، ومن حيث الصّداقة والنّصرة",
+     "gloss": "Al-Rāghib defines <em>walāʾ</em> as two or more things coming together with nothing foreign between them, and says it is borrowed for nearness in place, in lineage, in religion, and in friendship and support.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10720#ef0739"
+    }
+   ]
   }
  },
  {
@@ -342,6 +425,17 @@
   "faruqi": {
    "page": 54,
    "term": "WUQŪF"
+  },
+  "lexicon": {
+   "root": "و ق ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "يقال: وَقَفْتُ القومَ أَقِفُهُمْ وَقْفاً، ووَاقَفُوهُمْ وُقُوفاً. قال تعالى: وَقِفُوهُمْ إِنَّهُمْ مَسْؤُلُونَ [الصافات/ 24]",
+     "gloss": "Al-Rāghib gives <em>waqaftu al-qawm</em>, \"I made the people stand\", and cites 37:24, \"and stop them, for they will be questioned\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7007#b6d9e9"
+    }
+   ]
   }
  }
 ]

@@ -71,7 +71,18 @@
    "tawhid"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "أ ب د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأبد: عبارة عن مدّة الزمان الممتد الذي لا يتجزأ كما يتجرأ الزمان، وذلك أنه يقال: زمان كذا، ولا يقال: أبد كذا.",
+     "gloss": "Al-Rāghib defines <em>abad</em> as the stretch of extended time that cannot be divided as ordinary time is divided. One says \"the time of such a thing\", he notes, but never \"the <em>abad</em> of such a thing\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=65#ff0b25"
+    }
+   ]
+  }
  },
  {
   "slug": "abasa",
@@ -93,7 +104,18 @@
    "quran"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ع ب س",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العُبُوسُ: قُطُوبُ الوجهِ من ضيق الصّدر. قال تعالى: عَبَسَ وَتَوَلَّى [عبس/ 1]",
+     "gloss": "Al-Rāghib defines <em>ʿubūs</em> as knitting the brow from tightness of the chest, and cites 80:1, \"He frowned and turned away\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=512#e052b4"
+    }
+   ]
+  }
  },
  {
   "slug": "abbas-ibn-abd-al-muttalib",
@@ -177,6 +199,23 @@
   "faruqi": {
    "page": 39,
    "term": "ʿABD, ʿĀBID"
+  },
+  "lexicon": {
+   "root": "ع ب د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العُبُودِيَّةُ: إظهار التّذلّل، والعِبَادَةُ أبلغُ منها، لأنها غاية التّذلّل، ولا يستحقّها إلا من له غاية الإفضال، وهو الله تعالى",
+     "gloss": "Al-Rāghib defines <em>ʿubūdiyya</em> as showing humility, and says <em>ʿibāda</em> goes further: it is the utmost humility, and only the One whose bounty has no equal deserves it, and that is God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=397#1fc7b3"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الثاني: عَبْدٌ بالإيجاد، وذلك ليس إلّا لله، وإيّاه قصد بقوله: إِنْ كُلُّ مَنْ فِي السَّماواتِ وَالْأَرْضِ إِلَّا آتِي الرَّحْمنِ عَبْداً [مريم/ 93]",
+     "gloss": "Among the senses of <em>ʿabd</em> he lists the servant by creation, which is said only in relation to God, as in 19:93: \"There is none in the heavens and the earth but comes to the Most Merciful as a servant.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=397#1fc7b3"
+    }
+   ]
   }
  },
  {
@@ -406,7 +445,18 @@
     "page": 54,
     "term": "WUḌŪ'"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "و ض أ",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "وَضُؤَ الْوَجْهُ مَهْمُوزٌ وَضَاءَةً وِزَانُ ضَخُمَ ضَخَامَةٌ فَهُوَ وَضِيءٌ وَهُوَ الْحُسْنُ وَالْبَهْجَةُ وَالْوَضُوءُ بِالْفَتْحِ الْمَاءُ يُتَوَضَّأُ بِهِ وَبِالضَّمِّ الْفِعْلُ",
+     "gloss": "Al-Fayyūmī says the root sense is the brightness and beauty of a face, and that <em>waḍūʾ</em>, with <em>a</em>, is the water used for washing, while <em>wuḍūʾ</em>, with <em>u</em>, is the act.",
+     "url": "https://arabiclexicon.hawramani.com/?p=22734#5866ba"
+    }
+   ]
+  }
  },
  {
   "slug": "abraham",
@@ -711,7 +761,18 @@
   "articles": [],
   "aliases": [
    "Talh"
-  ]
+  ],
+  "lexicon": {
+   "root": "ط ل ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الطَّلْحُ شجرٌ، الواحدةُ طَلْحَةٌ. قال تعالى: وَطَلْحٍ مَنْضُودٍ [الواقعة/ 29]",
+     "gloss": "Al-Rāghib says <em>ṭalḥ</em> is a kind of tree, one of which is a <em>ṭalḥa</em>, and cites 56:29, \"and <em>ṭalḥ</em> laden in layers\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=945#4b3df9"
+    }
+   ]
+  }
  },
  {
   "slug": "adam",
@@ -802,7 +863,18 @@
    "zakat"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "و ل د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويقال للمتبنّى وَلَدٌ، قال: أَوْ نَتَّخِذَهُ وَلَداً [القصص/ 9]",
+     "gloss": "Al-Rāghib notes that an adopted child is also called <em>walad</em>, as in 28:9, where the wife of Pharaoh says \"or we may take him as a son\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=6875#87870e"
+    }
+   ]
+  }
  },
  {
   "slug": "adoptionism",
@@ -866,7 +938,18 @@
   "articles": [],
   "aliases": [
    "Breast-Feeding (adult)"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر ض ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويقال: فلان أخو فلان من الرّضاعة، وقال صلّى الله عليه وسلم: «يحرم من الرَّضَاعِ ما يحرم من النّسب»",
+     "gloss": "Al-Rāghib says a man is called another's brother \"by nursing\", and cites the saying of the Prophet (peace be upon him): \"Nursing makes unlawful what lineage makes unlawful.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=5563#4bd1fa"
+    }
+   ]
+  }
  },
  {
   "slug": "adultery",
@@ -944,7 +1027,24 @@
    "Patience",
    "Sabr",
    "Burden"
-  ]
+  ],
+  "lexicon": {
+   "root": "ص ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصَّبْرُ: حبس النّفس على ما يقتضيه العقل والشرع، أو عمّا يقتضيان حبسها عنه",
+     "gloss": "Al-Rāghib defines <em>ṣabr</em> as holding oneself to what reason and the law require, or back from what they require one to avoid.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8961#784157"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فإن كان حبس النّفس لمصيبة سمّي صبرا لا غير، ويُضَادُّهُ الجزع، وإن كان في محاربة سمّي شجاعة، ويضادّه الجبن",
+     "gloss": "The same restraint, he adds, takes other names by its setting: under a calamity it is <em>ṣabr</em>, whose opposite is panic; in battle it is courage, whose opposite is cowardice.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8961#784157"
+    }
+   ]
+  }
  },
  {
   "slug": "afternoon-prayer",
@@ -968,7 +1068,18 @@
   "aliases": [
    "Asr",
    "Afternoon"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ص ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَصْرُ: العشيُّ، ومنه: صلاة العَصْرِ",
+     "gloss": "Al-Rāghib says <em>ʿaṣr</em> is the late afternoon, and from it comes <em>ṣalāt al-ʿaṣr</em>, the afternoon prayer.",
+     "url": "https://arabiclexicon.hawramani.com/?p=468#4e50f5"
+    }
+   ]
+  }
  },
  {
   "slug": "age-of-responsibility",
@@ -993,7 +1104,18 @@
   "aliases": [
    "Age",
    "Bulugh"
-  ]
+  ],
+  "lexicon": {
+   "root": "ب ل غ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البُلُوغ والبَلَاغ: الانتهاء إلى أقصى المقصد والمنتهى، مكانا كان أو زمانا، أو أمرا من الأمور المقدّرة، وربما يعبّر به عن المشارفة عليه وإن لم ينته إليه، فمن الانتهاء: بَلَغَ أَشُدَّهُ وَبَلَغَ أَرْبَعِينَ سَنَةً [الأحقاف/ 15]",
+     "gloss": "Al-Rāghib defines <em>bulūgh</em> as reaching the furthest point of an aim, in place, in time or in a matter that has been set. His first example is 46:15, the one who \"reached his full strength and reached forty years\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1890#44a036"
+    }
+   ]
+  }
  },
  {
   "slug": "aggression",
@@ -1023,7 +1145,18 @@
   "aliases": [
    "Attacks",
    "Arguments"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع د و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ومن العُدْوَانِ المحظور ابتداء قوله: وَتَعاوَنُوا عَلَى الْبِرِّ وَالتَّقْوى وَلا تَعاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوانِ [المائدة/ 2] ، ومن العُدْوَانِ الذي هو على سبيل المجازاة، ويصحّ أن يتعاطى مع من ابتدأ قوله: فَلا عُدْوانَ إِلَّا عَلَى الظَّالِمِينَ [البقرة/ 193]",
+     "gloss": "Al-Rāghib separates the <em>ʿudwān</em> forbidden as a first act, as in 5:2, \"do not help one another in sin and aggression\", from the <em>ʿudwān</em> that answers it and may be done against the one who began, as in 2:193, \"there is to be no aggression except against the wrongdoers\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=874#c49906"
+    }
+   ]
+  }
  },
  {
   "slug": "ahl-al-bayt",
@@ -1046,7 +1179,24 @@
   "articles": [],
   "aliases": [
    "Ahlul-Bayt"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ه ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وتعورف في أسرة النبيّ عليه الصلاة والسلام مطلقا إذا قيل: أهل البيت لقوله عزّ وجلّ: إِنَّما يُرِيدُ اللَّهُ لِيُذْهِبَ عَنْكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ [الأحزاب/ 33]",
+     "gloss": "Al-Rāghib says that when \"the people of the house\" (<em>ahl al-bayt</em>) is said without qualification, it is understood of the family of the Prophet (peace be upon him), from 33:33.",
+     "url": "https://arabiclexicon.hawramani.com/?p=145#75aa45"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أهل الرجل: من يجمعه وإياهم نسب أو دين، أو ما يجري مجراهما من صناعة وبيت وبلد",
+     "gloss": "He defines a man's <em>ahl</em> as those joined to him by lineage or by religion, or by what stands in their place: a craft, a house or a town.",
+     "url": "https://arabiclexicon.hawramani.com/?p=145#75aa45"
+    }
+   ]
+  }
  },
  {
   "slug": "ahl-al-kitab",
@@ -1078,7 +1228,18 @@
     "page": 45,
     "term": "AHL AL KITĀB"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ت ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والكِتاب في الأصل مصدر، ثم سمّي المكتوب فيه كتابا، والْكِتَابُ في الأصل اسم للصّحيفة مع المكتوب فيه",
+     "gloss": "Al-Rāghib says <em>kitāb</em> was first a verbal noun, then the name of what is written in, and properly names the sheet together with what is written on it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3645#c1abab"
+    }
+   ]
+  }
  },
  {
   "slug": "ahmad",
@@ -1201,7 +1362,18 @@
   "aliases": [
    "Akhirah",
    "Hereafter"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ خ ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويعبّر بالدار الآخرة عن النشأة الثانية، كما يعبّر بالدار الدنيا عن النشأة الأولى نحو: وَإِنَّ الدَّارَ الْآخِرَةَ لَهِيَ الْحَيَوانُ [العنكبوت/ 64]",
+     "gloss": "Al-Rāghib says \"the last abode\" (<em>al-dār al-ākhira</em>) names the second coming-into-being, as \"the near abode\" (<em>al-dār al-dunyā</em>) names the first. He cites 29:64.",
+     "url": "https://arabiclexicon.hawramani.com/?p=90#e8c150"
+    }
+   ]
+  }
  },
  {
   "slug": "al",
@@ -1271,7 +1443,18 @@
     "page": 39,
     "term": "AL ʿAZĪZ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ز ز",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَالعَزيزُ: الذي يقهر ولا يقهر. قال تعالى: إِنَّهُ هُوَ الْعَزِيزُ الْحَكِيمُ [العنكبوت/ 26]",
+     "gloss": "Al-Rāghib defines <em>al-ʿAzīz</em> as the one who overcomes and is not overcome, and cites 29:26, \"He is the Mighty, the Wise\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10258#4f55d9"
+    }
+   ]
+  }
  },
  {
   "slug": "al-ghazali",
@@ -1466,7 +1649,18 @@
   ],
   "aliases": [
    "Ulama"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العِلْمُ: إدراك الشيء بحقيقته، وذلك ضربان:أحدهما: إدراك ذات الشيء.والثاني: الحكم على الشيء بوجود شيء هو موجود له، أو نفي شيء هو منفيّ عنه",
+     "gloss": "Al-Rāghib defines <em>ʿilm</em> as grasping a thing as it truly is. It is of two kinds: grasping the thing itself, and judging rightly that something belongs to it or does not.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
+  }
  },
  {
   "slug": "allah",
@@ -1504,7 +1698,24 @@
     "page": 23,
     "term": "ALLAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ل ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الله: قيل: أصله إله فحذفت همزته، وأدخل عليها الألف واللام، فخصّ بالباري تعالى، ولتخصصه به قال تعالى: هَلْ تَعْلَمُ لَهُ سَمِيًّا [مريم/ 65]",
+     "gloss": "Al-Rāghib reports the view that <em>Allāh</em> was first <em>ilāh</em>, which lost its hamza and took the article, and so became the name of the Creator alone. He cites 19:65: \"Do you know of any who shares His name?\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=258#94a561"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأَلَهَ فلان يَأْلُهُ الآلهة: عبد، وقيل: تَأَلَّهَ. فالإله على هذا هو المعبود",
+     "gloss": "<em>Alaha</em>, he adds, means to worship, so on this reading an <em>ilāh</em> is the one who is worshipped.",
+     "url": "https://arabiclexicon.hawramani.com/?p=258#94a561"
+    }
+   ]
+  }
  },
  {
   "slug": "allahu-akbar",
@@ -1534,7 +1745,18 @@
     "page": 56,
     "term": "ALLĀHU AKBAR."
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّكْبِيرُ يقال لذلك، ولتعظيم الله تعالى بقولهم: الله أَكْبَرُ، ولعبادته واستشعار تعظيمه، وعلى ذلك: وَلِتُكَبِّرُوا اللَّهَ عَلى ما هَداكُمْ [البقرة/ 185] ، وَكَبِّرْهُ تَكْبِيراً [الإسراء/ 111]",
+     "gloss": "Al-Rāghib says <em>takbīr</em> is said for magnifying God with the words <em>Allāhu akbar</em>, and for worshipping Him with a sense of His greatness, as in 2:185, \"that you magnify God for guiding you\", and 17:111.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3773#d9f6fc"
+    }
+   ]
+  }
  },
  {
   "slug": "alliances",
@@ -1638,7 +1860,18 @@
   ],
   "aliases": [
    "Trust"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ م ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله: إِنَّا عَرَضْنَا الْأَمانَةَ عَلَى السَّماواتِ وَالْأَرْضِ [الأحزاب/ 72] قيل: هي كلمة التوحيد، وقيل: العدالة ، وقيل: حروف التهجي، وقيل: العقل، وهو صحيح فإنّ العقل هو الذي بحصوله يتحصل معرفة التوحيد",
+     "gloss": "On the trust offered to the heavens and the earth (33:72), al-Rāghib lists the readings: the word of <em>tawḥīd</em>, justice, the letters of the alphabet, and reason. He accepts reason, because through reason the knowledge of <em>tawḥīd</em> is gained.",
+     "url": "https://arabiclexicon.hawramani.com/?p=248#a8f479"
+    }
+   ]
+  }
  },
  {
   "slug": "amanah",
@@ -1657,7 +1890,18 @@
    "ihsan"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "أ م ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والأَمْنُ والأَمَانَةُ والأَمَانُ في الأصل مصادر، ويجعل الأمان تارة اسما للحالة التي يكون عليها الإنسان في الأمن، وتارة اسما لما يؤمن عليه الإنسان، نحو قوله تعالى: وَتَخُونُوا أَماناتِكُمْ [الأنفال/ 27] ، أي: ما ائتمنتم عليه",
+     "gloss": "Al-Rāghib says the words of this root began as verbal nouns, and that one of them came to name what a person is entrusted with, as in 8:27, \"nor betray your trusts\": what has been placed in your keeping.",
+     "url": "https://arabiclexicon.hawramani.com/?p=248#a8f479"
+    }
+   ]
+  }
  },
  {
   "slug": "amen",
@@ -1676,7 +1920,18 @@
    "salah"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "أ م ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "آمين يقال بالمدّ والقصر، وهو اسم للفعل نحو: صه ومه. قال الحسن: معناه: استجب، وأَمَّنَ فلان: إذا قال: آمين.",
+     "gloss": "Al-Rāghib says <em>āmīn</em> is said with a long or a short first vowel, and is a noun that stands for a verb, like <em>ṣah</em>, \"hush\". Al-Ḥasan, he reports, took it to mean \"Answer\", and saying <em>āmīn</em> is called <em>ammana</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=248#a8f479"
+    }
+   ]
+  }
  },
  {
   "slug": "aminah",
@@ -1780,7 +2035,24 @@
   ],
   "aliases": [
    "Malaika"
-  ]
+  ],
+  "lexicon": {
+   "root": "م ل ك",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأما المَلَكُ فالنحويون جعلوه من لفظ الملائكة، وجعل الميم فيه زائدة.",
+     "gloss": "Al-Rāghib reports that the grammarians take <em>malak</em>, angel, from the same word as <em>malāʾika</em>, with its <em>m</em> an added letter.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4313#88860f"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقال بعض المحقّقين: هو من المِلك، قال: والمتولّي من الملائكة شيئا من السّياسات يقال له: ملك بالفتح، ومن البشر يقال له: ملك بالكسر، فكلّ مَلَكٍ ملائكة وليس كلّ ملائكة ملكا، بل الملك هو المشار إليه بقوله: فَالْمُدَبِّراتِ أَمْراً [النازعات/ 5]",
+     "gloss": "Another scholar he cites derives the word from <em>milk</em>, rule: an angel entrusted with some part of the governing of things is a <em>malak</em>, and a human ruler a <em>malik</em>. He cites 79:5, \"those who arrange each matter\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=4313#88860f"
+    }
+   ]
+  }
  },
  {
   "slug": "anger",
@@ -1858,7 +2130,18 @@
    "Honey",
    "Hudhud",
    "Hoopoe"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ي ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحَيَوَانُ: مقرّ الحياة، ويقال على ضربين: أحدهما: ما له الحاسّة، والثاني: ما له البقاء الأبديّ، وهو المذكور في قوله عزّ وجلّ: وَإِنَّ الدَّارَ الْآخِرَةَ لَهِيَ الْحَيَوانُ لَوْ كانُوا يَعْلَمُونَ [العنكبوت/ 64]",
+     "gloss": "Al-Rāghib says <em>ḥayawān</em> is the seat of life, and is said in two senses: what has the senses, and what has everlasting life, as in 29:64, where the last abode is called <em>al-ḥayawān</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=17729#4585e0"
+    }
+   ]
+  }
  },
  {
   "slug": "ansar",
@@ -1887,7 +2170,18 @@
     "page": 46,
     "term": "ANṢĀR"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ن ص ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النَّصْرُ والنُّصْرَةُ: العَوْنُ. قال تعالى: نَصْرٌ مِنَ اللَّهِ وَفَتْحٌ قَرِيبٌ [الصف/ 13]",
+     "gloss": "Al-Rāghib defines <em>naṣr</em> and <em>nuṣra</em> as help, and cites 61:13, \"help from God and a victory near\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=4549#e43114"
+    }
+   ]
+  }
  },
  {
   "slug": "ant",
@@ -1908,7 +2202,18 @@
    "hud"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ن م ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويُستعارُ النَّمْلُ للنَّمِيمَةِ تَصَوُّراً لدَبِيبِهِ",
+     "gloss": "Under this root, which opens with 27:18, \"an ant said: O ants\", al-Rāghib notes that the ant is borrowed as a figure for tale-bearing, from the way it creeps.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4776#61ea24"
+    }
+   ]
+  }
  },
  {
   "slug": "antar",
@@ -1978,7 +2283,18 @@
    "asbab-al-nuzul"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ق ر د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "القِرْدُ جمعه قِرَدَةٌ. قال تعالى: كُونُوا قِرَدَةً خاسِئِينَ [البقرة/ 65] ، وقال: وَجَعَلَ مِنْهُمُ الْقِرَدَةَ وَالْخَنازِيرَ [المائدة/ 60] ، قيل: جعل صورهم المشاهدة كصور القردة. وقيل: بل جعل أخلاقهم كأخلاقها وإن لم تكن صورتهم كصورتها.",
+     "gloss": "On 2:65 and 5:60 al-Rāghib reports two readings: that their visible forms were made like the forms of apes, or that their character was made like the apes' while their forms stayed as they were.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4951#28f851"
+    }
+   ]
+  }
  },
  {
   "slug": "apologetics",
@@ -2032,7 +2348,18 @@
     "page": 33,
     "term": "RIDDAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ر د د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والارْتِدَادُ والرِّدَّةُ: الرّجوع في الطّريق الذي جاء منه، لكن الرّدّة تختصّ بالكفر، والارتداد يستعمل فيه وفي غيره، قال تعالى: إِنَّ الَّذِينَ ارْتَدُّوا عَلى أَدْبارِهِمْ [محمد/ 25] ، وقال: يا أَيُّهَا الَّذِينَ آمَنُوا مَنْ يَرْتَدَّ مِنْكُمْ عَنْ دِينِهِ [المائدة/ 54]",
+     "gloss": "Al-Rāghib defines <em>irtidād</em> and <em>ridda</em> as going back along the road one came by. <em>Ridda</em> is kept for unbelief, he says, and <em>irtidād</em> is used for it and for other things. He cites 47:25 and 5:54.",
+     "url": "https://arabiclexicon.hawramani.com/?p=23279#72ae3e"
+    }
+   ]
+  }
  },
  {
   "slug": "apostle",
@@ -2062,7 +2389,18 @@
   "aliases": [
    "Rasul",
    "Messenger"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر س ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ورُسُلُ الله تارة يراد بها الملائكة، وتارة يراد بها الأنبياء",
+     "gloss": "Al-Rāghib says the messengers of God are sometimes the angels and sometimes the prophets.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    }
+   ]
+  }
  },
  {
   "slug": "aqeeda",
@@ -2091,7 +2429,24 @@
    "Aqidah",
    "Doctrine",
    "Creed"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ق د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العَقْدُ: الجمع بين أطراف الشيء، ويستعمل ذلك في الأجسام الصّلبة كعقد الحبل وعقد البناء، ثم يستعار ذلك للمعاني نحو: عَقْدِ البيع، والعهد، وغيرهما",
+     "gloss": "Al-Rāghib defines <em>ʿaqd</em> as tying together the ends of a thing, as with a rope or a building, and says it is then borrowed for meanings, such as the contract of sale and the covenant.",
+     "url": "https://arabiclexicon.hawramani.com/?p=421#51cbf8"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ومنه قيل: لفلان عقيدة",
+     "gloss": "From the same root, he notes, comes the expression \"so-and-so holds an <em>ʿaqīda</em>\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=421#51cbf8"
+    }
+   ]
+  }
  },
  {
   "slug": "arabia",
@@ -2147,7 +2502,18 @@
   ],
   "aliases": [
    "Arabic Language"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ر ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَرَبيُّ: الفصيح البيّن من الكلام، قال تعالى: قُرْآناً عَرَبِيًّا [يوسف/ 2]",
+     "gloss": "Al-Rāghib says <em>ʿarabī</em>, said of speech, means what is eloquent and clear, as in 12:2, \"an Arabic Quran\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=310#3dac2d"
+    }
+   ]
+  }
  },
  {
   "slug": "arabic-dictionaries",
@@ -2197,7 +2563,18 @@
    "scholars-who-shaped-islamic-study",
    "quranic-stories-and-history"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ع ر ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العَرَبُ: وُلْدُ إسماعيلَ، والأَعْرَابُ جمعه في الأصل، وصار ذلك اسما لسكّان البادية.",
+     "gloss": "Al-Rāghib says the Arabs are the descendants of Ismāʿīl, and that <em>aʿrāb</em>, first the plural of the word, became the name for those who live in the desert.",
+     "url": "https://arabiclexicon.hawramani.com/?p=310#3dac2d"
+    }
+   ]
+  }
  },
  {
   "slug": "arafat",
@@ -2262,7 +2639,18 @@
   ],
   "aliases": [
    "Hakam"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ك م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "حَكَمَ أصله: منع منعا لإصلاح، ومنه سميت اللّجام: حَكَمَة الدابّة",
+     "gloss": "Al-Rāghib says the root sense of <em>ḥakama</em> is to restrain for the sake of setting right: the bit of a bridle is called the <em>ḥakama</em> of the mount.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1543#d91c76"
+    }
+   ]
+  }
  },
  {
   "slug": "archaeology",
@@ -2336,7 +2724,18 @@
   "aliases": [
    "The Ark",
    "Tabut"
-  ]
+  ],
+  "lexicon": {
+   "root": "س ف ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وباعتبار السَّفْنِ سمّيت السَّفِينَةُ. قال الله تعالى: أَمَّا السَّفِينَةُ [الكهف/ 79]",
+     "gloss": "<em>Safn</em>, al-Rāghib says, is shaving the outer surface of a thing, and from it the ship (<em>safīna</em>) takes its name. He cites 18:79.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6008#3e61b6"
+    }
+   ]
+  }
  },
  {
   "slug": "armour",
@@ -2435,7 +2834,18 @@
     "page": 48,
     "term": "ASBĀB AL NUZŪL"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ن ز ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النُّزُولُ في الأصل هو انحِطَاطٌ من عُلْوّ",
+     "gloss": "Al-Rāghib says <em>nuzūl</em> is at root a descent from a height.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4759#497087"
+    }
+   ]
+  }
  },
  {
   "slug": "ashari-al",
@@ -2689,7 +3099,18 @@
     "page": 24,
     "term": "ĀYAH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ي ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والآية: هي العلامة الظاهرة، وحقيقته لكل شيء ظاهر، وهو ملازم لشيء لا يظهر ظهوره، فمتى أدرك مدرك الظاهر منهما علم أنه أدرك الآخر الذي لم يدركه بذاته",
+     "gloss": "Al-Rāghib defines <em>āya</em> as a plain sign. Its reality, he says, is something visible bound to something that is not, so that whoever perceives the visible one knows he has reached the other, which he could not perceive in itself.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10643#8122ca"
+    }
+   ]
+  }
  },
  {
   "slug": "azar",
@@ -2731,7 +3152,18 @@
   "articles": [],
   "aliases": [
    "Coitus Interruptus"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ز ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الاعْتِزَالُ: تجنّب الشيء عمالة كانت أو براءة، أو غيرهما، بالبدن كان ذلك أو بالقلب",
+     "gloss": "Al-Rāghib defines <em>iʿtizāl</em> as keeping away from a thing, whether an office, a disowning or anything else, in body or in heart.",
+     "url": "https://arabiclexicon.hawramani.com/?p=740#ac565e"
+    }
+   ]
+  }
  },
  {
   "slug": "azrail",
@@ -2784,6 +3216,17 @@
   "faruqi": {
    "page": 39,
    "term": "AʿAZZA"
+  },
+  "lexicon": {
+   "root": "ع ز ز",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَلِلَّهِ الْعِزَّةُ وَلِرَسُولِهِ وَلِلْمُؤْمِنِينَ [المنافقون/ 8] ، سُبْحانَ رَبِّكَ رَبِّ الْعِزَّةِ [الصافات/ 180] ، فقد يمدح بالعِزَّةِ تارة كما ترى، ويذمّ بها تارة كَعِزَّةِ الكفّارِ.",
+     "gloss": "<em>ʿIzza</em>, al-Rāghib notes, is sometimes praised, as in 63:8, \"might belongs to God, His Messenger and the believers\", and 37:180, and sometimes blamed, like the <em>ʿizza</em> of the disbelievers.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10258#4f55d9"
+    }
+   ]
   }
  },
  {
@@ -2811,6 +3254,17 @@
   "faruqi": {
    "page": 38,
    "term": "'ABADA"
+  },
+  "lexicon": {
+   "root": "ع ب د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعِبَادَةُ ضربان: عِبَادَةٌ بالتّسخير، وهو كما ذكرناه في السّجود. وعِبَادَةٌ بالاختيار، وهي لذوي النّطق، وهي المأمور بها في نحو قوله: اعْبُدُوا رَبَّكُمُ [البقرة/ 21]",
+     "gloss": "Al-Rāghib counts two kinds of <em>ʿibāda</em>: worship by subjection, which he explains under prostration, and worship by choice, which belongs to beings with speech and is the worship commanded in 2:21, \"Worship your Lord\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=397#1fc7b3"
+    }
+   ]
   }
  },
  {
@@ -2839,6 +3293,17 @@
   "faruqi": {
    "page": 39,
    "term": "ʿADHĀB"
+  },
+  "lexicon": {
+   "root": "ع ذ ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَذَابُ: هو الإيجاع الشّديد، وقد عَذَّبَهُ تَعْذِيباً: أكثر حبسه في العَذَابِ.",
+     "gloss": "Al-Rāghib defines <em>ʿadhāb</em> as severe pain, and <em>ʿadhdhabahu</em> as keeping someone long in it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=309#4920d1"
+    }
+   ]
   }
  },
  {
@@ -2867,6 +3332,17 @@
   "faruqi": {
    "page": 43,
    "term": "AFLAḤA"
+  },
+  "lexicon": {
+   "root": "ف ل ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفَلْحُ: الشّقّ، وقيل: الحديد بالحديد يُفْلَحُ ، أي: يشقّ. والفَلَّاحُ: الأكّار لذلك",
+     "gloss": "Al-Rāghib says the root sense of <em>falḥ</em> is splitting, and that the <em>fallāḥ</em>, the ploughman, is named from it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7541#82216e"
+    }
+   ]
   }
  },
  {
@@ -2895,6 +3371,23 @@
   "faruqi": {
    "page": 41,
    "term": "AL ʿAHD"
+  },
+  "lexicon": {
+   "root": "ع ه د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العَهْدُ: حفظ الشيء ومراعاته حالا بعد حال، وسمّي الموثق الذي يلزم مراعاته عَهْداً",
+     "gloss": "Al-Rāghib defines <em>ʿahd</em> as keeping a thing and watching over it, state after state, and says the binding pledge that must be kept is called an <em>ʿahd</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=438#b78272"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعَهْدُ اللهِ تارة يكون بما ركزه في عقولنا، وتارة يكون بما أمرنا به بالكتاب وبالسّنّة رسله، وتارة بما نلتزمه وليس بلازم في أصل الشّرع كالنّذور وما يجري مجراها",
+     "gloss": "God's covenant, he says, is sometimes what He has set in our minds, sometimes what He commands us through the Book and the practice of His messengers, and sometimes what we bind ourselves to beyond what the law requires, such as vows.",
+     "url": "https://arabiclexicon.hawramani.com/?p=438#b78272"
+    }
+   ]
   }
  },
  {
@@ -2923,6 +3416,17 @@
   "faruqi": {
    "page": 51,
    "term": "AḤKĀM AL QUR'ĀN"
+  },
+  "lexicon": {
+   "root": "ح ك م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحُكْم بالشيء: أن تقضي بأنّه كذا، أو ليس بكذا، سواء ألزمت ذلك غيره أو لم تلزمه، قال تعالى: وَإِذا حَكَمْتُمْ بَيْنَ النَّاسِ أَنْ تَحْكُمُوا بِالْعَدْلِ [النساء/ 58]",
+     "gloss": "Al-Rāghib defines <em>ḥukm</em>, judging a thing, as deciding that it is so or is not so, whether or not the decision binds another. He cites 4:58, \"when you judge between people, judge with justice\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1543#d91c76"
+    }
+   ]
   }
  },
  {
@@ -2951,6 +3455,17 @@
   "faruqi": {
    "page": 64,
    "term": "AHL AL SUNNAH WAL JAMĀ‘AH"
+  },
+  "lexicon": {
+   "root": "س ن ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وسُنَّةُ النّبيّ: طريقته التي كان يتحرّاها، وسُنَّةُ الله تعالى: قد تقال لطريقة حكمته، وطريقة طاعته، نحو: سُنَّةَ اللَّهِ الَّتِي قَدْ خَلَتْ مِنْ قَبْلُ وَلَنْ تَجِدَ لِسُنَّةِ اللَّهِ تَبْدِيلًا [الفتح/ 23]",
+     "gloss": "Al-Rāghib says the <em>sunna</em> of the Prophet (peace be upon him) is the way he made a point of following, and the <em>sunna</em> of God is the way of His wisdom and the way of obedience to Him, as in 48:23.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11013#4deb07"
+    }
+   ]
   }
  },
  {
@@ -2981,6 +3496,17 @@
   "faruqi": {
    "page": 29,
    "term": "AḤṢANA"
+  },
+  "lexicon": {
+   "root": "ح ص ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحصان في الجملة: المُحْصَنَة، إما بعفّتها، أو تزوّجها، أو بمانع من شرفها وحريتها.",
+     "gloss": "Al-Rāghib takes the root from <em>ḥiṣn</em>, a fortress, and says a woman called <em>ḥaṣān</em> or <em>muḥṣana</em> is one who is guarded, whether by her chastity, by her marriage, or by her rank and freedom.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1568#6e73ce"
+    }
+   ]
   }
  },
  {
@@ -3007,6 +3533,17 @@
   "faruqi": {
    "page": 23,
    "term": "AJAL"
+  },
+  "lexicon": {
+   "root": "أ ج ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأَجَل: المدّة المضروبة للشيء، قال تعالى: لِتَبْلُغُوا أَجَلًا مُسَمًّى [غافر/ 67] ، أَيَّمَا الْأَجَلَيْنِ قَضَيْتُ [القصص/ 28] . ويقال: دينه مُؤَجَّل، وقد أَجَّلْتُهُ: جعلت له أجلًا، ويقال للمدّة المضروبة لحياة الإنسان أجل فيقال: دنا أجله، عبارة عن دنوّ الموت.",
+     "gloss": "Al-Rāghib defines <em>ajal</em> as the term set for a thing, and says the term set for a human life is also called <em>ajal</em>: \"his <em>ajal</em> drew near\" means his death drew near. He cites 40:67.",
+     "url": "https://arabiclexicon.hawramani.com/?p=128#4a86b0"
+    }
+   ]
   }
  },
  {
@@ -3033,6 +3570,17 @@
   "faruqi": {
    "page": 60,
    "term": "AJRUKUM ‘ALĀ ALLAH."
+  },
+  "lexicon": {
+   "root": "أ ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأجر والأجرة: ما يعود من ثواب العمل دنيوياً كان أو أخروياً، نحو قوله تعالى: إِنْ أَجْرِيَ إِلَّا عَلَى اللَّهِ [يونس/ 72]",
+     "gloss": "Al-Rāghib defines <em>ajr</em> as the return a deed earns, in this world or the next, and cites 10:72: \"My reward rests only with God.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=89#9aa34a"
+    }
+   ]
   }
  },
  {
@@ -3060,6 +3608,17 @@
   "faruqi": {
    "page": 44,
    "term": "AKBAR"
+  },
+  "lexicon": {
+   "root": "ك ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْكَبِيرُ والصّغير من الأسماء المتضايفة التي تقال عند اعتبار بعضها ببعض، فالشيء قد يكون صغيرا في جنب شيء، وكبيرا في جنب غيره",
+     "gloss": "Al-Rāghib says <em>kabīr</em> and <em>ṣaghīr</em> are relative terms, said of one thing measured against another: a thing may be small beside one thing and great beside another.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3773#d9f6fc"
+    }
+   ]
   }
  },
  {
@@ -3088,6 +3647,17 @@
   "faruqi": {
    "page": 23,
    "term": "AKH"
+  },
+  "lexicon": {
+   "root": "أ خ و",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "الْأَخُ لَامُهُ مَحْذُوفَةٌ وَهِيَ وَاوٌ وَتُرَدُّ فِي التَّثْنِيَةِ عَلَى الْأَشْهَرِ فَيُقَالُ أَخَوَانِ. وَفِي لُغَةٍ يُسْتَعْمَلُ مَنْقُوصًا فَيُقَالُ أَخَانَ وَجَمْعُهُ إخْوَةٌ وَإِخْوَانٌ",
+     "gloss": "Al-Fayyūmī notes that <em>akh</em>, brother, has lost its final <em>w</em>, which returns in the dual <em>akhawān</em>, and that its plurals are <em>ikhwa</em> and <em>ikhwān</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=22571#ec4038"
+    }
+   ]
   }
  },
  {
@@ -3117,6 +3687,17 @@
   "faruqi": {
    "page": 23,
    "term": "AL ĀKHIRAH"
+  },
+  "lexicon": {
+   "root": "أ خ ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وربما ترك ذكر الدار نحو قوله تعالى: أُولئِكَ الَّذِينَ لَيْسَ لَهُمْ فِي الْآخِرَةِ إِلَّا النَّارُ [هود/ 16]",
+     "gloss": "Al-Rāghib notes that the word \"abode\" is often left out, so that <em>al-ākhira</em> stands alone for the hereafter, as in 11:16.",
+     "url": "https://arabiclexicon.hawramani.com/?p=90#e8c150"
+    }
+   ]
   }
  },
  {
@@ -3148,6 +3729,17 @@
   "faruqi": {
    "page": 63,
    "term": "AL AMR BIL MA‘RŪF WAL NAHY ‘AN AL MUNKAR"
+  },
+  "lexicon": {
+   "root": "ع ر ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والمَعْرُوفُ: اسمٌ لكلّ فعل يُعْرَفُ بالعقل أو الشّرع حسنه، والمنكر: ما ينكر بهما.",
+     "gloss": "Al-Rāghib defines <em>maʿrūf</em> as any act whose goodness is known by reason or by the law, and <em>munkar</em> as what reason and the law both reject.",
+     "url": "https://arabiclexicon.hawramani.com/?p=655#1fe06c"
+    }
+   ]
   }
  },
  {
@@ -3178,6 +3770,17 @@
   "faruqi": {
    "page": 25,
    "term": "ĀL AL BAYT"
+  },
+  "lexicon": {
+   "root": "ب ي ت",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وصار أهلُ البيتِ متعارفا في آل النبيّ عليه الصلاة والسلام، ونبّه النبيّ صلّى الله عليه وسلم بقوله: «سلمان منّا أهل البيت» أنّ مولى القوم يصح نسبته إليهم",
+     "gloss": "Al-Rāghib says \"the people of the house\" became the accepted name for the family of the Prophet (peace be upon him). The saying he quotes from the Prophet, \"Salmān is one of us, the people of the house\", shows, he says, that a client of a family may be counted as one of them.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1635#acb853"
+    }
+   ]
   }
  },
  {
@@ -3234,6 +3837,17 @@
   "faruqi": {
    "page": 54,
    "term": "AL DHAWQ AL SHAR'Ī"
+  },
+  "lexicon": {
+   "root": "ذ و ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الذّوق: وجود الطعم بالفم، وأصله فيما يقلّ تناوله دون ما يكثر، فإنّ ما يكثر منه يقال له: الأكل",
+     "gloss": "Al-Rāghib defines <em>dhawq</em> as finding taste in the mouth, said first of a little taken, since taking much is called eating.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8262#44a705"
+    }
+   ]
   }
  },
  {
@@ -3263,6 +3877,17 @@
   "faruqi": {
    "page": 61,
    "term": "AL ḤAMDU LILLAH."
+  },
+  "lexicon": {
+   "root": "ح م د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحَمْدُ لله تعالى: الثناء عليه بالفضيلة، وهو أخصّ من المدح وأعمّ من الشكر",
+     "gloss": "Al-Rāghib defines <em>ḥamd</em> of God as praising Him for His excellence. It is narrower than <em>madḥ</em>, praise in general, and wider than <em>shukr</em>, thanks.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1263#ae66ae"
+    }
+   ]
   }
  },
  {
@@ -3403,6 +4028,17 @@
   "faruqi": {
    "page": 63,
    "term": "AL MU’ALLAFAH QULŪBUHUM"
+  },
+  "lexicon": {
+   "root": "أ ل ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والمؤلَّفة قلوبهم : هم الذين يتحرى فيهم بتفقدهم أن يصيروا من جملة من وصفهم الله، لَوْ أَنْفَقْتَ ما فِي الْأَرْضِ جَمِيعاً ما أَلَّفْتَ بَيْنَ قُلُوبِهِمْ [الأنفال/ 63]",
+     "gloss": "Al-Rāghib says <em>al-muʾallafa qulūbuhum</em> are those one looks after in the hope that they will join the people God describes in 8:63, whose hearts He brought together.",
+     "url": "https://arabiclexicon.hawramani.com/?p=185#f2c6ab"
+    }
+   ]
   }
  },
  {
@@ -3431,6 +4067,17 @@
   "faruqi": {
    "page": 54,
    "term": "AL QAWĀ'ID AL FIQHIYYAH"
+  },
+  "lexicon": {
+   "root": "ق ع د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقَوَاعدُ البِنَاءِ: أساسه.",
+     "gloss": "Al-Rāghib says the <em>qawāʿid</em> of a building are its foundations.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4958#ba664b"
+    }
+   ]
   }
  },
  {
@@ -3459,6 +4106,17 @@
   "faruqi": {
    "page": 54,
    "term": "AL QAWĀ'ID AL UṢŪLIYYAH"
+  },
+  "lexicon": {
+   "root": "أ ص ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأَصْلُ الشيء: قاعدته التي لو توهّمت مرتفعة لارتفع بارتفاعه سائره لذلك، قال تعالى: أَصْلُها ثابِتٌ وَفَرْعُها فِي السَّماءِ [إبراهيم/ 24]",
+     "gloss": "Al-Rāghib defines the <em>aṣl</em> of a thing as its base: if it were imagined taken away, the rest would go with it. He cites 14:24, the tree whose root is firm.",
+     "url": "https://arabiclexicon.hawramani.com/?p=136#ba0a16"
+    }
+   ]
   }
  },
  {
@@ -3545,6 +4203,17 @@
   "faruqi": {
    "page": 64,
    "term": "AL ‘URWAH AL WUTHQĀ"
+  },
+  "lexicon": {
+   "root": "ع ر و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعُرْوَةُ: ما يتعلّق به من عُرَاهُ. أي: ناحيته. قال تعالى: فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقى [البقرة/ 256] ، وذلك على سبيل التّمثيل.",
+     "gloss": "Al-Rāghib defines <em>ʿurwa</em> as the loop by which a thing is held, and says \"the firmest handhold\" of 2:256 is said by way of likeness.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61786#161376"
+    }
+   ]
   }
  },
  {
@@ -3574,6 +4243,17 @@
   "faruqi": {
    "page": 40,
    "term": "AL ʿĀLAMĪN"
+  },
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعالَمُ: اسم للفلك وما يحويه من الجواهر والأعراض، وهو في الأصل اسم لما يعلم به كالطابع والخاتم لما يطبع به ويختم به، وجعل بناؤه على هذه الصّيغة لكونه كالآلة، والعَالَمُ آلة في الدّلالة على صانعه، ولهذا أحالنا تعالى عليه في معرفة وحدانيّته، فقال: أَوَلَمْ يَنْظُرُوا فِي مَلَكُوتِ السَّماواتِ وَالْأَرْضِ [الأعراف/ 185]",
+     "gloss": "Al-Rāghib says <em>ʿālam</em> names the heavens and all they hold. The word first meant that by which a thing is known, like a seal; the world is an instrument that points to its Maker, and that is why God refers us to it for knowledge of His oneness, as in 7:185.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
   }
  },
  {
@@ -3603,6 +4283,17 @@
   "faruqi": {
    "page": 59,
    "term": "‘ALAYH AL SALĀM OR ‘ALAYHIM AL SALĀM (AS)"
+  },
+  "lexicon": {
+   "root": "س ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "السِّلْمُ والسَّلَامَةُ: التّعرّي من الآفات الظاهرة والباطنة، قال: بِقَلْبٍ سَلِيمٍ [الشعراء/ 89]",
+     "gloss": "Al-Rāghib defines <em>silm</em> and <em>salāma</em> as freedom from every harm, outward and inward, and cites 26:89, \"a sound heart\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=9709#ba18f8"
+    }
+   ]
   }
  },
  {
@@ -3632,6 +4323,17 @@
   "faruqi": {
    "page": 40,
    "term": "AL ʿALĪM"
+  },
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَالِمُ في وصف الله هو الّذي لا يخفى عليه شيء كما قال: لا تَخْفى مِنْكُمْ خافِيَةٌ [الحاقة/ 18] ، وذلك لا يصحّ إلا في وصفه تعالى.",
+     "gloss": "Said of God, al-Rāghib says, <em>ʿālim</em> is the One from whom nothing is hidden, as in 69:18, \"no secret of yours will be hidden\", and that is true of Him alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
   }
  },
  {
@@ -3661,6 +4363,17 @@
   "faruqi": {
    "page": 40,
    "term": "AL ʿALIYY"
+  },
+  "lexicon": {
+   "root": "ع ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَليُّ: هو الرّفيع القدر من: عَلِيَ، وإذا وصف الله تعالى به في قوله: أَنَّ اللَّهَ هُوَ الْعَلِيُّ الْكَبِيرُ [الحج/ 62] ، إِنَّ اللَّهَ كانَ عَلِيًّا كَبِيراً [النساء/ 34] ، فمعناه: يعلو أن يحيط به وصف الواصفين بل علم العارفين.",
+     "gloss": "Al-Rāghib defines <em>ʿalī</em> as high in rank. Said of God, as in 22:62 and 4:34, it means that He is too high to be encompassed by any description, and even by the knowledge of those who know Him.",
+     "url": "https://arabiclexicon.hawramani.com/?p=887#908e87"
+    }
+   ]
   }
  },
  {
@@ -3689,6 +4402,17 @@
   "faruqi": {
    "page": 23,
    "term": "ALLAHUMMA"
+  },
+  "lexicon": {
+   "root": "أ ل ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "«اللهم» قيل: معناه: يا الله، فأبدل من الياء في أوله الميمان في آخره ، وخصّ بدعاء الله",
+     "gloss": "Al-Rāghib reports that <em>Allāhumma</em> means \"O God\": the calling word <em>yā</em> at the front gives way to the doubled <em>m</em> at the end, and the form is kept for calling on God alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=258#94a561"
+    }
+   ]
   }
  },
  {
@@ -3859,6 +4583,17 @@
   "faruqi": {
    "page": 41,
    "term": "ʿAMALA"
+  },
+  "lexicon": {
+   "root": "ع م ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العَمَلُ: كلّ فعل يكون من الحيوان بقصد، فهو أخصّ من الفعل ، لأنّ الفعل قد ينسب إلى الحيوانات التي يقع منها فعل بغير قصد، وقد ينسب إلى الجمادات",
+     "gloss": "Al-Rāghib defines <em>ʿamal</em> as any act a living being does with intent. It is narrower than <em>fiʿl</em>, which may be said of creatures acting without intent and even of lifeless things.",
+     "url": "https://arabiclexicon.hawramani.com/?p=764#b1a33e"
+    }
+   ]
   }
  },
  {
@@ -3887,6 +4622,17 @@
   "faruqi": {
    "page": 40,
    "term": "ʿAMARA"
+  },
+  "lexicon": {
+   "root": "ع م ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأَعْمَرْتُهُ الأرضَ واسْتَعْمَرْتُهُ: إذا فوّضت إليه العِمَارَةُ، قال: وَاسْتَعْمَرَكُمْ فِيها [هود/ 61]",
+     "gloss": "Al-Rāghib says <em>aʿmarahu al-arḍ</em> and <em>istaʿmarahu</em> mean to entrust someone with making a land flourish, as in 11:61, \"He settled you in it\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=482#723382"
+    }
+   ]
   }
  },
  {
@@ -3911,6 +4657,17 @@
   "faruqi": {
    "page": 62,
    "term": "AN‘AMA ALLAHU ‘ALAYK."
+  },
+  "lexicon": {
+   "root": "ن ع م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والإِنْعَامُ: إيصالُ الإحسانِ إلى الغَيْرِ، ولا يقال إلّا إذا كان المُوصَلُ إليه من جِنْسِ النَّاطِقِينَ، فإنه لا يقال أَنْعَمَ فلانٌ على فَرَسِهِ.",
+     "gloss": "Al-Rāghib defines <em>inʿām</em> as bringing good to another, and says it is used only when the one who receives it is a being with speech: one does not say a man did <em>inʿām</em> to his horse.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4796#5d525b"
+    }
+   ]
   }
  },
  {
@@ -3937,6 +4694,17 @@
   "faruqi": {
    "page": 40,
    "term": "ʿAQALA"
+  },
+  "lexicon": {
+   "root": "ع ق ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأصل العَقْل: الإمساك والاستمساك، كعقل البعير بالعِقَال",
+     "gloss": "The root sense of <em>ʿaql</em>, al-Rāghib says, is holding and holding fast, as one hobbles a camel with its cord.",
+     "url": "https://arabiclexicon.hawramani.com/?p=758#213417"
+    }
+   ]
   }
  },
  {
@@ -3961,6 +4729,17 @@
   "faruqi": {
    "page": 44,
    "term": "AQĀMA"
+  },
+  "lexicon": {
+   "root": "ق و م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإِقَامَةُ الشيء: توفية حقّه، وقال: قُلْ يا أَهْلَ الْكِتابِ لَسْتُمْ عَلى شَيْءٍ حَتَّى تُقِيمُوا التَّوْراةَ وَالْإِنْجِيلَ [المائدة/ 68] أي: توفّون حقوقهما بالعلم والعمل",
+     "gloss": "Al-Rāghib defines the <em>iqāma</em> of a thing as giving it its full due. On 5:68, \"until you uphold the Torah and the Gospel\", he says it means giving both their due in knowledge and practice.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5329#ed7f13"
+    }
+   ]
   }
  },
  {
@@ -3988,6 +4767,17 @@
   "faruqi": {
    "page": 40,
    "term": "ʿĀQIL"
+  },
+  "lexicon": {
+   "root": "ع ق ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وكلّ موضع ذمّ الله فيه الكفّار بعدم العقل فإشارة إلى الثاني دون الأوّل",
+     "gloss": "Wherever God blames the disbelievers for lacking <em>ʿaql</em>, al-Rāghib says, the blame concerns the second kind of reason, the knowledge a person gains by the inborn power.",
+     "url": "https://arabiclexicon.hawramani.com/?p=758#213417"
+    }
+   ]
   }
  },
  {
@@ -4014,6 +4804,17 @@
   "faruqi": {
    "page": 44,
    "term": "AQSAṬA"
+  },
+  "lexicon": {
+   "root": "ق س ط",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والقِسْطُ: هو أن يأخذ قسط غيره، وذلك جور، والْإِقْسَاطُ: أن يعطي قسط غيره، وذلك إنصاف، ولذلك قيل: قَسَطَ الرّجل: إذا جار، وأَقْسَطَ: إذا عدل.",
+     "gloss": "Al-Rāghib explains the pair: <em>qasaṭa</em> is taking another's share, and that is injustice; <em>aqsaṭa</em> is giving another his share, and that is fairness. So <em>qāsiṭ</em> means unjust (72:15) and <em>muqsiṭ</em> just (49:9).",
+     "url": "https://arabiclexicon.hawramani.com/?p=5139#2b2679"
+    }
+   ]
   }
  },
  {
@@ -4041,6 +4842,17 @@
   "faruqi": {
    "page": 64,
    "term": "ASMĀ’ ALLAH AL ḤUSNĀ"
+  },
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الحُسْنُ: عبارة عن كلّ مبهج مرغوب فيه، وذلك ثلاثة أضرب: مستحسن من جهة العقل. ومستحسن من جهة الهوى. ومستحسن من جهة الحسّ.",
+     "gloss": "Al-Rāghib defines <em>ḥusn</em> as whatever delights and is desired, and divides it into what reason finds beautiful, what desire finds beautiful and what the senses find beautiful.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#35cf1a"
+    }
+   ]
   }
  },
  {
@@ -4174,6 +4986,23 @@
   "faruqi": {
    "page": 24,
    "term": "AWWĀB"
+  },
+  "lexicon": {
+   "root": "أ و ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والأوَّاب كالتوّاب، وهو الراجع إلى الله تعالى بترك المعاصي وفعل الطاعات، قال تعالى: أَوَّابٍ حَفِيظٍ [ق/ 32]",
+     "gloss": "Al-Rāghib says <em>awwāb</em> is like <em>tawwāb</em>: the one who returns to God by leaving sins and doing acts of obedience. He cites 50:32.",
+     "url": "https://arabiclexicon.hawramani.com/?p=28#5c827a"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الأَوْبُ: ضرب من الرجوع، وذلك أنّ الأوب لا يقال إلا في الحيوان الذي له إرادة، والرجوع يقال فيه وفي غيره",
+     "gloss": "He explains that <em>awb</em> is a kind of return said only of a creature that has a will, while <em>rujūʿ</em> is said of anything.",
+     "url": "https://arabiclexicon.hawramani.com/?p=28#5c827a"
+    }
+   ]
   }
  },
  {
@@ -4204,6 +5033,17 @@
   "faruqi": {
    "page": 24,
    "term": "AL AWWAL"
+  },
+  "lexicon": {
+   "root": "أ و ل",
+   "notes": [
+    {
+     "src": "al-Sharīf al-Jurjānī, Kitāb al-taʿrīfāt (d. 1413)",
+     "ar": "الأول: فرد لا يكون غيره من جنسه سابقًا عليه ولا مقارنًا له.",
+     "gloss": "Al-Jurjānī defines <em>al-awwal</em>, the first, as a single thing that nothing of its kind precedes or accompanies.",
+     "url": "https://arabiclexicon.hawramani.com/?p=146#0c5343"
+    }
+   ]
   }
  },
  {
@@ -4285,6 +5125,17 @@
   "faruqi": {
    "page": 39,
    "term": "AL ʿAẒĪM"
+  },
+  "lexicon": {
+   "root": "ع ظ م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعَظُمَ الشيء أصله: كبر عظمه، ثم استعير لكلّ كبير، فأجري مجراه محسوسا كان أو معقولا، عينا كان أو معنى.",
+     "gloss": "Al-Rāghib says <em>ʿaẓuma</em> first meant that a thing's bone grew large, and was then borrowed for anything great, whether perceived by the senses or by the mind, a thing or a meaning.",
+     "url": "https://arabiclexicon.hawramani.com/?p=805#5f1aad"
+    }
+   ]
   }
  }
 ]

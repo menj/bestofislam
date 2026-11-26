@@ -119,6 +119,17 @@
   "faruqi": {
    "page": 47,
    "term": "YUSR"
+  },
+  "lexicon": {
+   "root": "ي س ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "اليُسْرُ: ضدّ العسر. قال تعالى: يُرِيدُ اللَّهُ بِكُمُ الْيُسْرَ وَلا يُرِيدُ بِكُمُ الْعُسْرَ [البقرة/ 185]",
+     "gloss": "Al-Rāghib defines <em>yusr</em> as the opposite of hardship, and cites 2:185, \"God wants ease for you and does not want hardship for you\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8349#cf5604"
+    }
+   ]
   }
  }
 ]

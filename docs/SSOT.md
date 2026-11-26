@@ -16,13 +16,13 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.133.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.135.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
 | Seeded content | 8 sections, 23 categories, 160 tags, 199 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 785 Glossary entries (`inc/glossary-data/`) |
-| Data versions | `BOI_GLOSSARY_VERSION` 21, `BOI_TERMS_VERSION` 2 |
+| Data versions | `BOI_GLOSSARY_VERSION` 23, `BOI_TERMS_VERSION` 2 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
@@ -744,7 +744,7 @@ references that can be checked.
 
 ### D57. Glossary entries may quote the classical word-books
 
-The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
+The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here. Where al-Rāghib has no entry for the word, because it is not Quranic, al-Fayyūmī's *Miṣbāḥ al-munīr* serves for the terms of law and daily life and al-Sharīf al-Jurjānī's *Taʿrīfāt* for technical terms. Persons, prophets, places, books, modern movements and long supplications carry no note, because the word-books treat words. Each excerpt is checked against the page it links to before it ships (1.135.0).
 
 ### D60. Seeded articles follow the bundle, safely
 

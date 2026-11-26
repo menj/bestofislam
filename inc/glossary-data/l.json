@@ -23,7 +23,18 @@
    "Night Of Power",
    "Night Of Destiny",
    "Lailat Al-Qadr"
-  ]
+  ],
+  "lexicon": {
+   "root": "ق د ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله: إِنَّا أَنْزَلْناهُ فِي لَيْلَةِ الْقَدْرِ [القدر/ 1] ، إلى آخرها. أي: ليلة قيّضها لأمور مخصوصة",
+     "gloss": "On 97:1, \"We sent it down on the Night of <em>Qadr</em>\", al-Rāghib says it means a night God appointed for particular matters.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4990#755b41"
+    }
+   ]
+  }
  },
  {
   "slug": "la-hawla-wa-la-quwwata-illa-billah",
@@ -49,6 +60,17 @@
   "faruqi": {
    "page": 57,
    "term": "LĀ ḤAWLA WA LĀ QUWWATA ILLĀ BILLĀH."
+  },
+  "lexicon": {
+   "root": "ح و ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحول: ما له من القوّة في أحد هذه الأصول الثّلاثة، ومنه قيل: لا حول ولا قوّة إلّا بالله",
+     "gloss": "Al-Rāghib defines <em>ḥawl</em> as the power a person has in his self, his body or his possessions, and says the phrase \"there is no <em>ḥawl</em> and no strength except through God\" comes from it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1511#de62ff"
+    }
+   ]
   }
  },
  {
@@ -74,6 +96,17 @@
   "faruqi": {
    "page": 56,
    "term": "LĀ ILĀHA ILLA ALLAH."
+  },
+  "lexicon": {
+   "root": "أ ل ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإِلَهٌ حقّه ألا يجمع، إذ لا معبود سواه، لكن العرب لاعتقادهم أنّ هاهنا معبودات جمعوه، فقالوا: الآلهة.",
+     "gloss": "Al-Rāghib says <em>ilāh</em> ought to have no plural, since there is nothing worthy of worship besides Him. The Arabs gave it one, <em>āliha</em>, because they believed there were other objects of worship.",
+     "url": "https://arabiclexicon.hawramani.com/?p=258#94a561"
+    }
+   ]
   }
  },
  {

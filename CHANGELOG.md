@@ -4,6 +4,19 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.135.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Added
+- "In the classical dictionaries" notes on 424 more Glossary entries, so 491 of the 785 entries now carry one (544 notes in all). Each note quotes a short passage copied from the entry's page on the Arabic Lexicon (arabiclexicon.hawramani.com), gives the site's own English paraphrase and links to the passage. 407 entries quote al-Rāghib al-Iṣfahānī's *al-Mufradāt fī gharīb al-Qurʾān*; for 17 non-Quranic terms (among them ablutions, dowry, blood money, the funeral, *mandūb*, *mubāḥ*, *ṣaḥīḥ* and *sīra*) the note quotes al-Fayyūmī's *al-Miṣbāḥ al-munīr* or al-Sharīf al-Jurjānī's *Kitāb al-taʿrīfāt*.
+- Every excerpt was matched against the cached text of the page it links to, and none runs past the 450-character limit `bin/check-content.py` enforces.
+- Persons, prophets, places, books, modern movements, entries with no Arabic headword and the long supplications carry no note, because the word-books treat words. Of the word entries, 24 were left without one, where no word-book on the site said anything useful about the term or the term is not in them (among them chess, earthquakes, gold and silver, philosophy, *istiḥsān* and the five schools).
+
+### Changed
+- `BOI_GLOSSARY_VERSION` is 23, so the Glossary sync rewrites unedited entry pages with their new section.
+- SSOT D57 names the two further word-books and the entries that carry no note.
+
 ## [1.133.0] - 2026-11-24
 
 No feature removed and no public identifier renamed.
