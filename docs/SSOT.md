@@ -16,7 +16,7 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.135.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.136.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
@@ -778,6 +778,10 @@ The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and
 ### D63. Readers can add the site as a preferred source on Google
 
 The owner asked on 2026-11-22 for Google's "preferred sources" (Google Search Central, last updated 2026-09-18) to be applied natively, in the theme's colours. Google offers three methods: its standard button and its advanced script, which both load `news.google.com/swg/js/v1/publisher.js`, and a deeplink to `https://www.google.com/preferences/source?q=<domain>`. The theme uses the deeplink only, because it loads no remote assets and sends no reader data to a third party until the reader clicks. `boi_render_preferred_source()` in `inc/features.php` prints it as a pill link in the theme's palette (pale blue fill, gold leading rule, azure on hover), led by Google's G on a white disc and worded "Add as preferred source". The owner asked on 2026-11-23 for the G and the shorter wording. The G is drawn inline by `boi_google_g()` as an SVG of four paths, so nothing is fetched from Google. The full wording, "Add Best of Islam as a preferred source on Google", is the link's title, and screen readers hear "Add as preferred source on Google". It appears under the share links of an article and in the Follow band. Only a domain or subdomain can be a preferred source, so `boi_preferred_source_url()` gives no link for a site in a subfolder, on a bare host or at an IP address, and drops `www.`. The `preferred_source` switch on the Display tab turns it off. The link is hidden in print.
+
+### D70. English Quran quotations use A. Yusuf Ali
+
+The owner asked on 2026-11-26 that "all Quranic translations in English" use A. Yusuf Ali. A new English quotation of the Quran is taken from his translation (Quran.com translation 22), word for word, and its note says "translated by A. Yusuf Ali"; a paraphrase is not a quotation and carries the verse number alone. From 1.136.0 every new article and every enrichment follows this. The quotations already in the articles, the Glossary and the pages, most of them from Saheeh International, are converted in a release of their own, which also rewrites the translation line in `docs/CITATIONS.md`. Bible quotations in new work are taken from the World English Bible, which is in the public domain and can be checked word for word.
 
 ### D69. The newest article leads the front page
 
