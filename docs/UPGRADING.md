@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.154.0
+
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 26) and adds the new aliases to Iblis and the Basmala entry.
+
 ## Upgrading to 1.153.0
 
 Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 25) and adds the new aliases to Istighfar and Taqiyya.

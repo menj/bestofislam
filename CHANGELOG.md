@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.154.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Glossary aliases: `iblis` gains Shaitan and Shaytaan; `bismi-allah-al-rahman-al-rahim` gains Basmala, Bismillah al-Rahman al-Rahim and Bismillahir Rahmanir Rahim. "Bismillah" alone stays with `common-phrases`. `BOI_GLOSSARY_VERSION` 26.
+
 ## [1.153.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
