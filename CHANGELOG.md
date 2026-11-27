@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.149.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- opposition-to-islam-to-conversion, scheduled for 19 July 2027, adds Richard McKinney: the former Marine who went to the Islamic Center of Muncie, Indiana, in 2009 to plant a bomb and converted to Islam eight months later. The owner supplied the lead on 2026-11-27, and the facts are cited from CNN (John Blake, 8 October 2022) and the official site of *Stranger at the Gate*. The article's title, excerpt and abstract now count four stories.
+
 ## [1.148.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
