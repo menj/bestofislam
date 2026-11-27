@@ -16,12 +16,12 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.152.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.153.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 164 tags, 236 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 785 Glossary entries (`inc/glossary-data/`) |
+| Seeded content | 8 sections, 23 categories, 164 tags, 241 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 785 Glossary entries (`inc/glossary-data/`) |
 | Data versions | `BOI_GLOSSARY_VERSION` 25, `BOI_TERMS_VERSION` 3 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
@@ -787,7 +787,7 @@ The owner decided on 2026-11-27 that where Sunni and Shia Muslims differ, the ar
 
 The owner asked on 2026-11-26 that the posts be scheduled from December 2026 up to December 2027, "the frequency is up to you but must be up to current SEO standards", and chose two things: only the articles of the forty-draft project are scheduled, and the 199 articles already published stay as they are; and the articles are spread evenly across the year.
 
-The schedule has forty slots, one every ten days at 09:00 Malaysia time (01:00 UTC), from 1 December 2026 to 26 December 2027. A steady, predictable rhythm is what search engines and returning readers reward, and ten days apart gives each article time to be crawled and indexed before the next. Within that rhythm an article with a season takes the slot just before it: the birth of Jesus in Surah Maryam and Jesus as a Word from God in December 2026, the fasting and repentance articles before Ramadan and Lent in February 2027, and the Christmas articles (drafts 31 to 34) in November and early December 2027. Drafts 11 to 30 and 35 to 40 take the other slots in their own order, and the last ten slots wait for drafts 1 to 10.
+The schedule has forty slots, one every ten days at 09:00 Malaysia time (01:00 UTC), from 1 December 2026 to 26 December 2027. A steady, predictable rhythm is what search engines and returning readers reward, and ten days apart gives each article time to be crawled and indexed before the next. Within that rhythm an article with a season takes the slot just before it: the birth of Jesus in Surah Maryam and Jesus as a Word from God in December 2026, the fasting and repentance articles before Ramadan and Lent in February 2027, and the Christmas articles (drafts 31 to 34) in November and early December 2027. Drafts 11 to 30 and 35 to 40 take the other slots in their own order, The ten slots left open for drafts 1 to 10, from 18 August to 26 December 2027 around the Christmas articles, went to the owner's five drafts on Paul (1.151.0, 18 August to 27 September 2027) and drafts 6 to 10 (1.152.0, three in October and two in late December 2027), so all forty are taken.
 
 Each scheduled article carries `publish_on` in `inc/data/seed.json`, an ISO 8601 time in UTC. `boi_seed_post_timing()` (`inc/schedule.php`) creates it as Scheduled when that time is still ahead, and WordPress publishes it on the day; a time already past publishes it with that date. The date stagger of D69 leaves a scheduled article alone. An article that already exists is never moved, so one created by an earlier release keeps the date it has. Related links, the reading path, the front page and the sitemap show only published articles, so a scheduled article appears nowhere until its day. `bin/check-content.py` checks that every date falls from December 2026 to December 2027, that no two articles share a day, and that no article links to one scheduled after it. `tests/schedule-test.php` checks the timing.
 

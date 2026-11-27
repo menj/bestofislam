@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.152.0
+Stable tag: 1.153.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Apart from its parent theme, Twenty Twenty-Five, everything the site needs ships in this theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 236 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
+Apart from its parent theme, Twenty Twenty-Five, everything the site needs ships in this theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 241 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -165,11 +165,11 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.152.0 =
+= 1.153.0 =
 * Glossary: Istighfar is also listed as Astaghfirullah, and Taqiyya as Taqiyah, Taqiya and Taqiyyah, so searches for those spellings reach the entries.
 
 = 1.152.0 =
-Replace the theme files. The Glossary sync runs once (BOI_GLOSSARY_VERSION 25).
+* Five new articles, scheduled from 7 October to 26 December 2027: did Paul receive his gospel from Jesus, Paul and circumcision, six Pauline teachings that shaped Christian theology, four occasions when Jesus prayed at night or before dawn, and six religious practices of Jesus that Muslims recognise.
 
 = 1.151.0 =
 * Five new articles on Paul, scheduled from 18 August to 27 September 2027: Saul of Tarsus before his conversion, the three Damascus road accounts in Acts, the quarrel with Peter at Antioch, Paul and James on faith and works, and the Epimenides paradox in Titus 1:12.
@@ -524,6 +524,12 @@ Replace the theme files. The Glossary sync runs once (BOI_GLOSSARY_VERSION 25).
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.153.0 =
+Replace the theme files. The Glossary sync runs once (BOI_GLOSSARY_VERSION 25).
+
+= 1.152.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
 
 = 1.151.0 =
 Replace the theme files. Five new articles are scheduled and publish on their dates.

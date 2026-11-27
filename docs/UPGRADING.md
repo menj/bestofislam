@@ -62,9 +62,13 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
-## Upgrading to 1.152.0
+## Upgrading to 1.153.0
 
 Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 25) and adds the new aliases to Istighfar and Taqiyya.
+
+## Upgrading to 1.152.0
+
+Replace the theme files. `boi_create_listicles()` creates each of the five new articles as Scheduled for its date, from 7 October to 26 December 2027 (D71), and WordPress publishes it on that day from its cron. An article whose date has already passed when the theme updates is created as published. Nothing to set, except on a host that turns off WP-Cron (`DISABLE_WP_CRON`), where a real cron job must run `wp cron event run --due-now` (D71).
 
 ## Upgrading to 1.151.0
 
