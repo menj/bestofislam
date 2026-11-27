@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.143.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 26 to 30, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`), and scheduled ten days apart from 30 April to 9 June 2027 (SSOT D71):
+  - camel-method: Kevin Greeson's 2004 method, Quran 3:42–55 read whole, and the Christian critics of the method.
+  - quran-passages-in-christian-missions: five passages missionaries quote (3:42–55, 3:45, 4:171, 5:110, 10:94), each read in its context.
+  - does-the-virgin-birth-make-jesus-divine: five answers from the Quran and the Gospels, with Luke 3:38.
+  - principles-of-dawah-in-the-quran: six principles, from 16:125 to 28:56, with al-Tabari and al-Faruqi.
+  - religious-pluralism-and-islam: five distinctions, with 5:48, 60:8, 2:62 and 3:85.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
 ## [1.142.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.

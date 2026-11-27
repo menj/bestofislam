@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.142.0
+Stable tag: 1.143.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 215 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 220 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.143.0 =
+* Five new articles, scheduled from 30 April to 9 June 2027: the Camel Method, five Quranic passages Christian missionaries use, whether the virgin birth makes Jesus divine, six principles of da'wah in the Quran, and religious pluralism and Islam.
 
 = 1.142.0 =
 * Five new articles, scheduled from 11 March to 20 April 2027: Quran 43:61 and the sign of the Hour, the sons of God in the Bible, Ezekiel 23 and its allegory, Ezekiel 23 in Malay and Indonesian Bibles, and biblical anthropomorphism.
@@ -491,6 +494,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.143.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
 
 = 1.142.0 =
 Replace the theme files. Five new articles are scheduled and publish on their dates.

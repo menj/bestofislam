@@ -84,8 +84,8 @@
   "ramadan-last-ten-nights",
   "buraq-and-miracle-stories",
   "ishmael-in-the-quran-and-genesis",
-  "revisionist-case-weighed",
-  "i-read-the-entire-quran-reply"
+  "i-read-the-entire-quran-reply",
+  "revisionist-case-weighed"
  ],
  "before-you-convert-apostates-and-lgbt-friends": [
   "apostasy-in-islam",
@@ -136,12 +136,12 @@
   "crucifixion-quran"
  ],
  "birth-of-jesus-in-surah-maryam": [
+  "does-the-virgin-birth-make-jesus-divine",
   "scrolls-of-abraham",
   "ishmael-in-the-quran-and-genesis",
   "jesus-the-word-of-god-in-the-quran",
   "shared-prophets",
-  "genealogies-of-jesus",
-  "iblis-and-the-command-to-prostrate"
+  "genealogies-of-jesus"
  ],
  "black-stone-and-kissing": [
   "what-the-pagans-of-mecca-said-about-allah",
@@ -166,6 +166,14 @@
   "ishmael-in-the-quran-and-genesis",
   "sira-ibn-ishaq-hisham-tabari",
   "apes-and-pigs-and-the-jews"
+ ],
+ "camel-method": [
+  "quran-passages-in-christian-missions",
+  "iblis-and-the-command-to-prostrate",
+  "is-yahweh-the-same-as-allah",
+  "muhammad-and-the-hebrew-prophets",
+  "is-yahweh-satan",
+  "genealogies-of-jesus"
  ],
  "camel-urine-hadith": [
   "fly-hadith-and-adult-suckling",
@@ -301,7 +309,7 @@
   "black-stone-and-kissing",
   "buraq-and-miracle-stories",
   "end-of-time",
-  "muhammad-and-the-hebrew-prophets"
+  "abrogation-and-the-sword-verse"
  ],
  "does-god-require-blood-to-forgive": [
   "ransom-bible-quran",
@@ -326,6 +334,14 @@
   "quranic-ethics",
   "temporary-marriage-mutah",
   "hajj-rites-explained"
+ ],
+ "does-the-virgin-birth-make-jesus-divine": [
+  "birth-of-jesus-in-surah-maryam",
+  "who-is-the-holy-spirit",
+  "jesus-the-word-of-god-in-the-quran",
+  "islam-arian-heresy-claim",
+  "genealogies-of-jesus",
+  "shared-prophets"
  ],
  "dome-inscriptions": [
   "mosques-adapt-to-place",
@@ -357,7 +373,7 @@
   "verses-read-differently",
   "who-is-the-holy-spirit",
   "is-yahweh-the-same-as-allah",
-  "scrolls-of-abraham"
+  "shared-prophets"
  ],
  "end-of-the-world-prediction": [
   "no-compulsion-in-religion",
@@ -400,8 +416,8 @@
   "jeremiah-new-covenant-hebrews-and-the-quran"
  ],
  "ezra-and-mary": [
-  "genealogies-of-jesus",
   "ishmael-in-the-quran-and-genesis",
+  "genealogies-of-jesus",
   "prophets-you-may-not-know",
   "quran-iblis-fallen-angels-borrowing",
   "bible-alteration-claim-before-islam",
@@ -413,7 +429,7 @@
   "no-compulsion-in-religion",
   "nabi-and-rasul",
   "race-in-quran-and-hadith",
-  "ex-muslim-blog-study"
+  "first-muslims-kept-the-faith"
  ],
  "fate-and-free-will": [
   "scholars-who-shaped-islamic-study",
@@ -481,11 +497,11 @@
  ],
  "genealogies-of-jesus": [
   "shared-prophets",
-  "ishmael-in-the-quran-and-genesis",
   "quran-anachronism-claims",
+  "ishmael-in-the-quran-and-genesis",
   "ezra-and-mary",
-  "birth-of-jesus-in-surah-maryam",
-  "septuagint"
+  "septuagint",
+  "birth-of-jesus-in-surah-maryam"
  ],
  "gods-attributes-and-anthropomorphism": [
   "six-articles-of-faith",
@@ -515,8 +531,8 @@
   "quran-anachronism-claims",
   "who-was-yahweh-archaeological-origins",
   "preservation-and-truth",
-  "ishmael-in-the-quran-and-genesis",
   "quran-iblis-fallen-angels-borrowing",
+  "ishmael-in-the-quran-and-genesis",
   "messenger-to-every-nation"
  ],
  "hanif-poets-and-musaylima": [
@@ -581,7 +597,7 @@
   "shared-prophets",
   "where-did-jesus-say-he-is-god",
   "ishmael-in-the-quran-and-genesis",
-  "fate-and-free-will"
+  "quran-on-christians"
  ],
  "indonesia": [
   "islam-in-china",
@@ -653,7 +669,7 @@
   "first-and-the-last",
   "scrolls-of-abraham",
   "who-is-the-holy-spirit",
-  "birth-of-jesus-in-surah-maryam"
+  "is-yahweh-the-same-as-allah"
  ],
  "islam-in-china": [
   "indonesia",
@@ -773,13 +789,13 @@
   "muhammad-and-the-hebrew-prophets",
   "who-is-the-holy-spirit",
   "scrolls-of-abraham",
-  "ishmael-in-the-quran-and-genesis"
+  "does-the-virgin-birth-make-jesus-divine"
  ],
  "jews-behind-the-stone-hadith": [
   "apes-and-pigs-and-the-jews",
   "i-read-the-entire-quran-reply",
-  "medina-jewish-tribes-and-qurayza",
   "can-a-muslim-befriend-a-non-muslim",
+  "medina-jewish-tribes-and-qurayza",
   "a-father-says-this-is-islam",
   "deuteronomy-prophecy-and-the-paraclete"
  ],
@@ -885,7 +901,7 @@
   "quran-challenge-met-claim",
   "prophets-you-may-not-know",
   "western-scholars-of-islam",
-  "instruments-islamic-world"
+  "mosques-adapt-to-place"
  ],
  "morality-without-god": [
   "six-articles-of-faith",
@@ -954,10 +970,10 @@
  "natural-world-verses": [
   "ishmael-in-the-quran-and-genesis",
   "quran-on-christians",
-  "quran-iblis-fallen-angels-borrowing",
   "satanic-verses-report",
+  "quran-iblis-fallen-angels-borrowing",
   "do-muslims-worship-muhammad",
-  "six-articles-of-faith"
+  "apes-and-pigs-and-the-jews"
  ],
  "nine-questions-from-the-floor-islamic-dilemma-debate": [
   "ishmael-in-the-quran-and-genesis",
@@ -973,7 +989,7 @@
   "jizya",
   "apostasy-in-islam",
   "black-stone-and-kissing",
-  "fighting-verses-in-context"
+  "first-muslims-kept-the-faith"
  ],
  "oaths-in-the-quran": [
   "quran-contradictions-claims",
@@ -1019,8 +1035,8 @@
   "paul-and-food-offered-to-idols",
   "christian-twin-of-the-islamic-dilemma",
   "paul-claim-to-apostleship",
-  "ishmael-in-the-quran-and-genesis",
   "early-christians-yahweh-evil-gnosticism-marcion",
+  "ishmael-in-the-quran-and-genesis",
   "holy-war-in-the-bible"
  ],
  "paul-claim-to-apostleship": [
@@ -1041,11 +1057,19 @@
  ],
  "preservation-and-truth": [
   "quran-anachronism-claims",
-  "i-read-the-entire-quran-reply",
   "apes-and-pigs-and-the-jews",
+  "i-read-the-entire-quran-reply",
   "haman-anachronism",
   "revisionist-case-weighed",
   "muhammad-false-prophet-claim"
+ ],
+ "principles-of-dawah-in-the-quran": [
+  "no-compulsion-in-religion",
+  "apostasy-in-islam",
+  "islam-religion-of-peace",
+  "jizya",
+  "sharia-and-hudud",
+  "fate-and-free-will"
  ],
  "prophet-died-poisoning": [
   "raids-badr-and-the-conquest-of-mecca",
@@ -1143,6 +1167,14 @@
   "shared-prophets",
   "ishmael-in-the-quran-and-genesis"
  ],
+ "quran-passages-in-christian-missions": [
+  "camel-method",
+  "who-is-the-holy-spirit",
+  "muhammad-and-the-hebrew-prophets",
+  "early-christians-yahweh-evil-gnosticism-marcion",
+  "jesus-the-word-of-god-in-the-quran",
+  "deuteronomy-prophecy-and-the-paraclete"
+ ],
  "quran-preservation-reddit": [
   "companions-who-started-with-nothing",
   "uthman-copies",
@@ -1162,8 +1194,8 @@
  "quran-science-claims-graded": [
   "quran-iblis-fallen-angels-borrowing",
   "moon-craters",
-  "arabic-words-science",
   "islam-in-china",
+  "arabic-words-science",
   "quran-challenge-met-claim",
   "prophets-you-may-not-know"
  ],
@@ -1212,8 +1244,8 @@
   "prophet-died-poisoning",
   "first-muslims-kept-the-faith",
   "companions-who-started-with-nothing",
-  "kaab-ibn-al-ashraf-and-the-poets",
-  "hajj-rites-explained"
+  "hajj-rites-explained",
+  "kaab-ibn-al-ashraf-and-the-poets"
  ],
  "ramadan-last-ten-nights": [
   "before-your-first-friday-prayer",
@@ -1236,8 +1268,16 @@
   "ransom-bible-quran",
   "muhammad-and-the-hebrew-prophets",
   "islamic-repentance-and-christian-atonement",
-  "shared-prophets",
-  "apostasy-in-islam"
+  "apostasy-in-islam",
+  "shared-prophets"
+ ],
+ "religious-pluralism-and-islam": [
+  "six-articles-of-faith",
+  "fate-and-free-will",
+  "can-a-muslim-befriend-a-non-muslim",
+  "abrogation-and-the-sword-verse",
+  "scrolls-of-abraham",
+  "no-compulsion-in-religion"
  ],
  "revelation-warning-and-the-canon": [
   "disputed-books-of-the-new-testament",
@@ -1245,7 +1285,7 @@
   "paul-claim-to-apostleship",
   "septuagint",
   "second-peter",
-  "earliest-new-testament-lists"
+  "paul-and-the-law"
  ],
  "revelatory-exegesis": [
   "seal-of-the-prophets",
@@ -1275,8 +1315,8 @@
   "why-does-god-allow-suffering",
   "do-muslims-worship-muhammad",
   "war-and-killing-in-islam",
-  "fate-and-free-will",
   "funeral-dhikr-dua",
+  "fate-and-free-will",
   "scrolls-of-abraham"
  ],
  "safiyya-and-the-women-captured-in-war": [
@@ -1291,8 +1331,8 @@
   "muhammad-false-prophet-claim",
   "jihad-meaning-quran-hadith-jurists",
   "terrorism-and-muslims-the-data",
-  "taqiyya-myths",
   "women-in-the-prophets-life",
+  "taqiyya-myths",
   "questions-about-aisha"
  ],
  "same-god": [
@@ -1301,7 +1341,7 @@
   "who-is-allah",
   "is-yahweh-satan",
   "scrolls-of-abraham",
-  "septuagint"
+  "quran-on-christians"
  ],
  "satanic-verses-report": [
   "black-stone-and-kissing",
@@ -1373,7 +1413,7 @@
   "arabic-words-science",
   "quran-on-christians",
   "companions-who-started-with-nothing",
-  "kharijites-and-takfir"
+  "ridda-wars-abu-bakr-fadak"
  ],
  "shared-prophets": [
   "ransom-bible-quran",
@@ -1395,8 +1435,8 @@
   "women-in-the-prophets-life",
   "buraq-and-miracle-stories",
   "questions-about-aisha",
-  "aisha-sheep-report-stoning-and-suckling-verses",
   "apostasy-in-islam",
+  "aisha-sheep-report-stoning-and-suckling-verses",
   "first-muslims-kept-the-faith"
  ],
  "six-articles-of-faith": [
@@ -1516,13 +1556,13 @@
   "end-of-time",
   "who-wrote-the-quran",
   "five-pillars-explained",
-  "manuscript-transmission",
-  "muhammad-never-wrote-it-down"
+  "muhammad-never-wrote-it-down",
+  "manuscript-transmission"
  ],
  "verses-read-differently": [
   "messenger-to-every-nation",
-  "islam-arian-heresy-claim",
   "same-god",
+  "islam-arian-heresy-claim",
   "early-christians-yahweh-evil-gnosticism-marcion",
   "scrolls-of-abraham",
   "nabi-and-rasul"
@@ -1572,8 +1612,8 @@
   "islam-religion-of-peace",
   "slavery-in-islam",
   "a-father-says-this-is-islam",
-  "who-is-allah",
-  "terrorism-and-muslims-the-data"
+  "terrorism-and-muslims-the-data",
+  "who-is-allah"
  ],
  "what-the-pagans-of-mecca-said-about-allah": [
   "black-stone-and-kissing",
@@ -1628,12 +1668,12 @@
   "jesus-the-word-of-god-in-the-quran",
   "early-christians-yahweh-evil-gnosticism-marcion",
   "is-yahweh-satan",
-  "islam-arian-heresy-claim",
-  "where-did-jesus-say-he-is-god"
+  "where-did-jesus-say-he-is-god",
+  "islam-arian-heresy-claim"
  ],
  "who-saw-gabriel": [
-  "i-read-the-entire-quran-reply",
   "quran-on-christians",
+  "i-read-the-entire-quran-reply",
   "buraq-and-miracle-stories",
   "first-revelation-demonic-claim",
   "first-muslims-kept-the-faith",
@@ -1667,8 +1707,8 @@
   "five-pillars-explained",
   "prophets-you-may-not-know",
   "fate-and-free-will",
-  "before-your-first-friday-prayer",
   "hajj-rites-explained",
+  "before-your-first-friday-prayer",
   "black-stone-and-kissing"
  ],
  "why-no-interest": [
@@ -1699,8 +1739,8 @@
   "fly-hadith-and-adult-suckling",
   "child-marriage-in-islam",
   "sharia-and-hudud",
-  "no-compulsion-in-religion",
   "women-in-the-prophets-life",
+  "no-compulsion-in-religion",
   "homosexuality-in-islam"
  ],
  "women-in-the-prophets-life": [

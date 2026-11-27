@@ -3184,6 +3184,83 @@
 				"Tawhid"
 			],
 			"publish_on": "2027-04-20T01:00:00Z"
+		},
+		{
+			"slug": "camel-method",
+			"title": "The Camel Method: 6 facts about a Christian missionary approach to Muslims",
+			"excerpt": "Missionaries ask Muslims to read Surah Al Imran 3:42 to 55 and follow it to the Gospel. What does the passage say? Six facts. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The Camel Method: 6 facts",
+			"category": "answering-polemics",
+			"tags": [
+				"Christians",
+				"Polemics",
+				"Conversion",
+				"Quran commentary",
+				"Jesus"
+			],
+			"publish_on": "2027-04-30T01:00:00Z"
+		},
+		{
+			"slug": "quran-passages-in-christian-missions",
+			"title": "5 Quranic passages Christian missionaries use, and what they say",
+			"excerpt": "Missionaries quote the Quran on Jesus: a Word, a spirit from God, a worker of miracles. What do the verses say in context? Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "5 Quranic passages missionaries use",
+			"category": "answering-polemics",
+			"tags": [
+				"Polemics",
+				"Christians",
+				"Jesus",
+				"Quran commentary",
+				"Divinity of Jesus"
+			],
+			"publish_on": "2027-05-10T01:00:00Z"
+		},
+		{
+			"slug": "does-the-virgin-birth-make-jesus-divine",
+			"title": "Does the virgin birth make Jesus divine? 5 answers from the Quran",
+			"excerpt": "The Quran affirms that Jesus was born without a father. Does that make him divine? Five answers from the Quran and the Gospels. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Does the virgin birth make Jesus divine?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Mary",
+				"Divinity of Jesus",
+				"Quran commentary"
+			],
+			"publish_on": "2027-05-20T01:00:00Z"
+		},
+		{
+			"slug": "principles-of-dawah-in-the-quran",
+			"title": "6 principles of da'wah in the Quran",
+			"excerpt": "How should a Muslim invite others to Islam? Six principles the Quran sets for the call, from wisdom to leaving guidance to God. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "6 principles of da'wah in the Quran",
+			"category": "law-ethics",
+			"tags": [
+				"Freedom of religion",
+				"People of the Book",
+				"Conversion",
+				"Quran commentary"
+			],
+			"publish_on": "2027-05-30T01:00:00Z"
+		},
+		{
+			"slug": "religious-pluralism-and-islam",
+			"title": "Religious pluralism and Islam: 5 distinctions that matter",
+			"excerpt": "Does Islam accept religious pluralism? The answer depends on which of five questions is meant. See the distinctions the Quran keeps.",
+			"topic": "belief-and-practices",
+			"seo_title": "Religious pluralism and Islam",
+			"category": "creed-theology",
+			"tags": [
+				"People of the Book",
+				"Afterlife",
+				"Freedom of religion",
+				"Tawhid"
+			],
+			"publish_on": "2027-06-09T01:00:00Z"
 		}
 	],
 	"pages": {
