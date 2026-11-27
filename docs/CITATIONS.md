@@ -197,7 +197,7 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
-### New articles of 1.150.0 (five articles on Paul)
+### New articles of 1.151.0 (five articles on Paul)
 
 The owner sent five drafts on Paul on 2026-11-27. They were rewritten to `.claude/VOICE.md`. Bible quotations are the World English Bible; Quran quotations are A. Yusuf Ali's translation.
 

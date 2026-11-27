@@ -4,7 +4,7 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.150.0] - 2026-11-27
+## [1.151.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
 
@@ -18,6 +18,14 @@ No feature removed and no public identifier renamed.
 - Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
 - The five articles join the reading order beside the existing articles on Paul, with pinned related links.
 - By the owner's request, each links in its text to the matching page on apostleofdoom.org (Saul the persecutor, the three accounts compared, Paul, Barnabas and Peter, justification by faith and James the brother, and the letters to Timothy and Titus). The contextual links of `inc/data/network-links.json` add others where its phrases occur; the shared map itself is unchanged.
+
+## [1.150.0] - 2026-11-27
+
+No feature removed. One article slug renamed, with a 301 redirect.
+
+### Changed
+- Honorific guard (`inc/honorific-guard.php`): removes an Arabic honorific a site plugin adds after the surname Gabriel in the case name "In re Marriage of Gabriel".
+- sam-shamoun-on-the-pbd-podcast is now sam-shamoun-on-two-podcasts, "Sam Shamoun on two podcasts: 14 claims checked against the sources". Five claims added from the Bryce Crawford Podcast, episode 182, each time linked to the video with `rel="nofollow noopener"`: his rule against bad-faith questions (Titus 3:10) against his own method; Ahaziah's age (2 Kings 8:26, 2 Chronicles 22:2) against the readings (Bukhari 4992); the double witness (Bukhari 4784, 4986, Abu Dawud 3607); the mountain passage (Bukhari 3, 6982); and Abu al-Darda's saying under the chapter on courtesy. 37 notes, with both episode titles and dates. Images renamed with the slug.
 
 ## [1.149.0] - 2026-11-27
 

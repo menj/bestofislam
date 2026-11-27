@@ -21,7 +21,8 @@ defined( 'ABSPATH' ) || exit;
  */
 function boi_post_slug_renames() {
 	return array(
-		'quran-4-34'                       => 'does-the-quran-allow-wife-beating',
+		'sam-shamoun-on-the-pbd-podcast' => 'sam-shamoun-on-two-podcasts',
+	'quran-4-34'                       => 'does-the-quran-allow-wife-beating',
 		'deuteronomy-18-and-the-paraclete' => 'deuteronomy-prophecy-and-the-paraclete',
 		'crusades-5-facts'                 => 'crusades-facts',
 		'muslims-by-the-numbers-2020'      => 'muslims-by-the-numbers',
