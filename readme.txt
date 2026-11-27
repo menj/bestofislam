@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.143.0
+Stable tag: 1.144.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.144.0 =
+* "Sam Shamoun under oath" now has photographs of the Chicago courts in place of the pattern graphics, and its notes give paragraph numbers in words.
 
 = 1.143.0 =
 * Five new articles, scheduled from 30 April to 9 June 2027: the Camel Method, five Quranic passages Christian missionaries use, whether the virgin birth makes Jesus divine, six principles of da'wah in the Quran, and religious pluralism and Islam.
@@ -494,6 +497,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.144.0 =
+Replace the theme files. The article refreshes if you have not edited it.
 
 = 1.143.0 =
 Replace the theme files. Five new articles are scheduled and publish on their dates.

@@ -166,7 +166,7 @@
         "content\/ridda-wars-abu-bakr-fadak.json": "48511d7b06cdc10a89c66bf65a679122",
         "content\/sadness-and-depression-in-islam.json": "707884c9b8f2cda5a4f31a75646a430e",
         "content\/safiyya-and-the-women-captured-in-war.json": "2f05f2c788f8c0f53738e39582596993",
-        "content\/sam-shamoun-under-oath.json": "82dbe689fd63ec8e029114a86664ca74",
+        "content\/sam-shamoun-under-oath.json": "0278cc2f71dd1a855f7ab07501d06b2f",
         "content\/same-god.json": "1e2d6fcf2396760c8b10e68aa1f3b775",
         "content\/satanic-verses-report.json": "7959811cfa1feb2de4380746e1572a39",
         "content\/schacht-isnads-dating-hadith.json": "626a3f28014edb4ddd34e0277e181020",
@@ -223,5 +223,5 @@
         "inc\/data\/seed.json": "e8f13e8b99a7371a94155c3180e7f634",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "d0e4e6c6e0cd05b50b066819014d4eac"
+    "checksum": "bab1c6b4df6021763c05c559ff9ca6d3"
 }

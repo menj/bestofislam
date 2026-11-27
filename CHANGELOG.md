@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.144.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- sam-shamoun-under-oath: five Wikimedia Commons photographs replace the pattern graphics: the Richard J. Daley Center (featured, Ken Lund, CC BY-SA 2.0), a statue of Justice (James Cridland, CC BY 2.0), scales of justice (North Charleston, CC BY-SA 2.0), the Daley Center (GregMcCollum, CC0) and the Michael A. Bilandic Building, seat of the First District Appellate Court (TonyTheTiger, CC BY-SA 3.0). The notes write paragraph numbers in words in place of the ¶ sign. The line on the child-support recalculation is removed at the owner's request; the bottom line states only what the appellate court upheld. The opening quotes a 2024 God Reports profile of him ("unhinged, fiery Assyrian evangelist", "pugnacious debater").
+- `.claude/VOICE.md`: court findings are cited by paragraph in words, and rulings in a critic's favour are not reported, provided nothing left in implies he lost on every point.
+
 ## [1.143.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.

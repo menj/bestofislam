@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.144.0
+
+Replace the theme files. The article sam-shamoun-under-oath refreshes where unedited, and its five photographs are added to the media library.
+
 ## Upgrading to 1.143.0
 
 Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 30 April to 9 June 2027 (D71), and WordPress publishes each on its day. Nothing to set.
