@@ -9,7 +9,7 @@ versioning.
 No feature removed and no public identifier renamed.
 
 ### Added
-- Five articles from the owner's drafts 26 to 30, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`), and scheduled ten days apart from 30 April to 9 June 2027 (SSOT D71):
+- Five articles from the owner's drafts 26 to 30, rewritten to `.claude/VOICE.md` and scheduled ten days apart from 30 April to 9 June 2027 (SSOT D71). Every note was checked again (`docs/CITATIONS.md`), except three page references to al-Fārūqī's *Cultural Atlas* and *Essential Writings*, which wait on the owner's copies; the article gives those points in paraphrase:
   - camel-method: Kevin Greeson's 2004 method, Quran 3:42–55 read whole, and the Christian critics of the method.
   - quran-passages-in-christian-missions: five passages missionaries quote (3:42–55, 3:45, 4:171, 5:110, 10:94), each read in its context.
   - does-the-virgin-birth-make-jesus-divine: five answers from the Quran and the Gospels, with Luke 3:38.
