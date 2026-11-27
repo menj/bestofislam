@@ -6947,43 +6947,44 @@
  "sam-shamoun-under-oath": {
   "featured": {
    "file": "sam-shamoun-under-oath.avif",
-   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
-   "artist": "Best of Islam",
-   "licence": "Original artwork",
-   "source": "bin/make-original-graphics.py"
+   "alt": "The Richard J. Daley Center in the Chicago Loop, seat of the Circuit Court of Cook County.",
+   "caption": "The Richard J. Daley Center in Chicago, seat of the Circuit Court of Cook County, where the case was tried.",
+   "artist": "Ken Lund from Reno, Nevada, USA",
+   "licence": "CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Richard_J._Daley_Center,_Chicago_Loop,_Chicago,_Illinois_(9181641122).jpg"
   },
   "inline": [
    {
     "file": "sam-shamoun-under-oath-1.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py",
-    "caption": "An original star pattern, drawn for this site."
+    "alt": "A gilded statue of Justice holding a sword and scales against the sky.",
+    "caption": "A court weighs testimony against the documents. The trial judge found his testimony on income not credible.",
+    "artist": "James Cridland from Brisbane, AU",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_scales_of_justice_(4984060658).jpg"
    },
    {
     "file": "sam-shamoun-under-oath-2.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py",
-    "caption": "An original star pattern, drawn for this site."
+    "alt": "Brass scales of justice on a desk in a courtroom office.",
+    "caption": "The court traced income and donations that he had not disclosed.",
+    "artist": "North Charleston from North Charleston, SC, United States",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Scales_of_Justice_(15030066870).jpg"
    },
    {
     "file": "sam-shamoun-under-oath-3.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py",
-    "caption": "An original star pattern, drawn for this site."
+    "alt": "The Daley Center, Chicago, home of the Circuit Court of Cook County.",
+    "caption": "The Circuit Court of Cook County, where the support orders, the fee awards and the body attachment were made.",
+    "artist": "GregMcCollum",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Daley_Center_June_20,_2025.jpg"
    },
    {
     "file": "sam-shamoun-under-oath-4.avif",
-    "alt": "Layered star outlines on a navy ground.",
-    "artist": "Best of Islam",
-    "licence": "Original artwork",
-    "source": "bin/make-original-graphics.py",
-    "caption": "An original star pattern, drawn for this site."
+    "alt": "The Michael A. Bilandic Building, Chicago, seat of the Appellate Court of Illinois, First District.",
+    "caption": "The Appellate Court of Illinois, First District, which published both opinions in 2020.",
+    "artist": "TonyTheTiger",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20120929_Michael_Bilandic_Building.JPG"
    }
   ]
  }

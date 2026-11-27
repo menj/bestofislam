@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.142.0
+
+Replace the theme files. The article sam-shamoun-under-oath refreshes where unedited, and its five photographs are added to the media library.
+
 ## Upgrading to 1.141.0
 
 Replace the theme files and load the dashboard once: `boi_migrate_seed_terms()` moves sixteen articles to their new section and category. A post you filed yourself keeps your choice. Arts & Culture (4), Science (7) and The Muslim World (8) stay small until new articles are written for them.

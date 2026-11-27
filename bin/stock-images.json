@@ -2406,5 +2406,39 @@
     "caption": "A page of a Greek Gospel book with commentaries, copied about 1000 to 1100 (Cleveland Museum of Art)."
    }
   ]
+ },
+ "sam-shamoun-under-oath": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Richard J. Daley Center, Chicago Loop, Chicago, Illinois (9181641122).jpg",
+   "alt": "The Richard J. Daley Center in the Chicago Loop, seat of the Circuit Court of Cook County.",
+   "caption": "The Richard J. Daley Center in Chicago, seat of the Circuit Court of Cook County, where the case was tried."
+  },
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:The scales of justice (4984060658).jpg",
+    "alt": "A gilded statue of Justice holding a sword and scales against the sky.",
+    "caption": "A court weighs testimony against the documents. The trial judge found his testimony on income not credible."
+   },
+   {
+    "src": "commons",
+    "id": "File:Scales of Justice (15030066870).jpg",
+    "alt": "Brass scales of justice on a desk in a courtroom office.",
+    "caption": "The court traced income and donations that he had not disclosed."
+   },
+   {
+    "src": "commons",
+    "id": "File:Daley Center June 20, 2025.jpg",
+    "alt": "The Daley Center, Chicago, home of the Circuit Court of Cook County.",
+    "caption": "The Circuit Court of Cook County, where the support orders, the fee awards and the body attachment were made."
+   },
+   {
+    "src": "commons",
+    "id": "File:20120929 Michael Bilandic Building.JPG",
+    "alt": "The Michael A. Bilandic Building, Chicago, seat of the Appellate Court of Illinois, First District.",
+    "caption": "The Appellate Court of Illinois, First District, which published both opinions in 2020."
+   }
+  ]
  }
 }
