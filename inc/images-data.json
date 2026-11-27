@@ -6943,5 +6943,16 @@
     "source": "https://clevelandart.org/art/1942.152.100.a"
    }
   ]
+ },
+ "jesus-sign-of-the-hour": {
+  "featured": {
+   "file": "jesus-sign-of-the-hour.avif",
+   "alt": "Two pages of a Quran manuscript in bold brown Kufic script on illuminated grounds.",
+   "caption": "A double-sided leaf from a Quran made in Seljuk Iran. Al-Tabari records two readings of 43:61, \"knowledge\" and \"sign\" of the Hour.",
+   "artist": "Unknown scribe, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1939.507"
+  },
+  "inline": []
  }
 }
