@@ -197,6 +197,14 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### The Sunni position, 1.147.0
+
+The owner decided on 2026-11-27 that sectarian questions are written from the Sunni position (SSOT D72), which settles the six articles held for that decision. Two of them, seal-of-the-prophets and islam-religion-of-peace, mention the Shia only in passing and are unchanged. The new citations, in two of the other four, were checked in the Arabic and English text of the collections (sunnah.com refused automated fetching, so the open hadith-json dataset was used, and the notes cite book and chapter because its numbering differs from sunnah.com's):
+
+- **ridda-wars-abu-bakr-fadak.** The report of Malik ibn Aws in al-Bukhari, in which Umar asks Ali and al-Abbas whether they know the saying "Our property is not to be inherited, and whatever we leave is to be given in charity" and "They both replied, 'Yes'". Aisha's report of Fatima's request, in al-Bukhari, Book of Military Expeditions, for Ali's words to Abu Bakr, "We know well your superiority and what Allah has given you", his pledge, and the Muslims who "became happy".
+- **end-of-time.** Al-Tirmidhi, Book of Tribulations, chapter on the Mahdi, the report of Ibn Masʿud, which al-Tirmidhi grades *ḥasan ṣaḥīḥ* in the Arabic. Abu Dawud, Book of the Mahdi: the longer version of Ibn Masʿud's report ("whose father's name is the same as my father's"), which carries no grade in the text consulted; al-Tirmidhi's grade applies to his shorter wording and Umm Salama's ("The Mahdi will be of my family, of the descendants of Fatimah").
+- **taqiyya-myths** and **temporary-marriage-mutah.** No new citations; the Sunni position is stated from the sources already cited.
+
 ### New articles of 1.146.0 (drafts 31 to 35)
 
 The owner's drafts 31 to 35 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
@@ -282,4 +290,3 @@ The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.
 - **Page-level faithfulness of modern books.** Each book's existence and date are checked (see below). Whether the page cited says what the article says needs the book itself, and will be done book by book as copies become available.
-- **Sectarian articles.** Six articles on Sunni and Shia questions wait for the owner's decision on scope: ridda-wars-abu-bakr-fadak, taqiyya-myths, temporary-marriage-mutah, seal-of-the-prophets, end-of-time and islam-religion-of-peace.

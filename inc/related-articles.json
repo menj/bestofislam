@@ -43,8 +43,8 @@
   "i-read-the-entire-quran-reply",
   "first-muslims-kept-the-faith",
   "prophets-marriages-zaynab-and-others",
-  "scholars-who-shaped-islamic-study",
   "torah-on-the-cushion-hadith",
+  "scholars-who-shaped-islamic-study",
   "ishmael-in-the-quran-and-genesis"
  ],
  "apostasy-in-islam": [
@@ -408,12 +408,12 @@
   "satanic-verses-report"
  ],
  "end-of-time": [
+  "scholars-who-shaped-islamic-study",
+  "scrolls-of-abraham",
+  "i-read-the-entire-quran-reply",
   "do-muslims-worship-muhammad",
   "fate-and-free-will",
-  "i-read-the-entire-quran-reply",
-  "six-articles-of-faith",
-  "scrolls-of-abraham",
-  "nabi-and-rasul"
+  "six-articles-of-faith"
  ],
  "ex-muslim-blog-study": [
   "apostasy-in-islam",
@@ -532,8 +532,8 @@
   "quran-anachronism-claims",
   "ishmael-in-the-quran-and-genesis",
   "ezra-and-mary",
-  "christmas-quran-jesus-birth",
-  "septuagint"
+  "septuagint",
+  "christmas-quran-jesus-birth"
  ],
  "gods-attributes-and-anthropomorphism": [
   "six-articles-of-faith",
@@ -829,15 +829,15 @@
   "can-a-muslim-befriend-a-non-muslim",
   "medina-jewish-tribes-and-qurayza",
   "a-father-says-this-is-islam",
-  "first-muslims-kept-the-faith"
+  "end-of-time"
  ],
  "jihad-meaning-quran-hadith-jurists": [
   "war-and-killing-in-islam",
   "kaab-ibn-al-ashraf-and-the-poets",
   "blasphemy-and-insults-to-the-prophet",
   "kharijites-and-takfir",
-  "women-in-the-prophets-life",
-  "taqiyya-myths"
+  "taqiyya-myths",
+  "women-in-the-prophets-life"
  ],
  "jizya": [
   "no-compulsion-in-religion",
@@ -917,7 +917,7 @@
   "prophets-marriages-zaynab-and-others",
   "raids-badr-and-the-conquest-of-mecca",
   "prophet-died-poisoning",
-  "slavery-in-islam"
+  "apes-and-pigs-and-the-jews"
  ],
  "messenger-to-every-nation": [
   "ishmael-in-the-quran-and-genesis",
@@ -1005,7 +1005,7 @@
   "satanic-verses-report",
   "quran-iblis-fallen-angels-borrowing",
   "do-muslims-worship-muhammad",
-  "apes-and-pigs-and-the-jews"
+  "six-articles-of-faith"
  ],
  "nine-questions-from-the-floor-islamic-dilemma-debate": [
   "ishmael-in-the-quran-and-genesis",
@@ -1115,9 +1115,9 @@
   "women-in-the-prophets-life",
   "slavery-in-islam",
   "first-muslims-kept-the-faith",
+  "ridda-wars-abu-bakr-fadak",
   "apes-and-pigs-and-the-jews",
-  "was-muhammad-a-narcissist",
-  "raids-badr-and-the-conquest-of-mecca"
+  "was-muhammad-a-narcissist"
  ],
  "prophets-you-may-not-know": [
   "muhammad-and-the-hebrew-prophets",
@@ -1336,12 +1336,12 @@
   "five-pillars-explained"
  ],
  "ridda-wars-abu-bakr-fadak": [
-  "companions-who-started-with-nothing",
   "prophets-marriages-zaynab-and-others",
   "kharijites-and-takfir",
+  "companions-who-started-with-nothing",
   "women-in-the-prophets-life",
-  "raids-badr-and-the-conquest-of-mecca",
-  "first-muslims-kept-the-faith"
+  "first-muslims-kept-the-faith",
+  "jihad-meaning-quran-hadith-jurists"
  ],
  "sadness-and-depression-in-islam": [
   "why-does-god-allow-suffering",
@@ -1373,7 +1373,7 @@
   "jihad-meaning-quran-hadith-jurists",
   "sam-shamoun-on-the-pbd-podcast",
   "women-in-the-prophets-life",
-  "questions-about-aisha"
+  "taqiyya-myths"
  ],
  "same-god": [
   "is-yahweh-the-same-as-allah",
@@ -1405,7 +1405,7 @@
   "apes-and-pigs-and-the-jews",
   "quran-on-christians",
   "raids-badr-and-the-conquest-of-mecca",
-  "seven-libraries"
+  "end-of-time"
  ],
  "scrolls-of-abraham": [
   "ransom-bible-quran",
@@ -1413,7 +1413,7 @@
   "ishmael-in-the-quran-and-genesis",
   "birth-of-jesus-in-surah-maryam",
   "six-articles-of-faith",
-  "messenger-to-every-nation"
+  "end-of-time"
  ],
  "seal-of-the-prophets": [
   "revelatory-exegesis",
@@ -1539,9 +1539,9 @@
   "hajj-rites-explained",
   "questions-about-aisha",
   "scholars-who-shaped-islamic-study",
+  "end-of-time",
   "kharijites-and-takfir",
-  "black-stone-and-kissing",
-  "five-pillars-explained"
+  "black-stone-and-kissing"
  ],
  "terrorism-and-muslims-the-data": [
   "islam-religion-of-peace",
@@ -1706,8 +1706,8 @@
  "who-is-allah": [
   "islamic-rites-before-islam",
   "black-stone-and-kissing",
-  "same-god",
   "quran-on-christians",
+  "same-god",
   "i-read-the-entire-quran-reply",
   "race-in-quran-and-hadith"
  ],
