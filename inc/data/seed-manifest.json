@@ -25,8 +25,11 @@
         "content\/camel-urine-hadith.json": "5ffc00af75e2644a4dea02383155f093",
         "content\/can-a-muslim-befriend-a-non-muslim.json": "51b40b8a214984f81e75dcfbd19452b3",
         "content\/can-god-die.json": "b009274ba01e8ee38e13a23a1cb4c821",
+        "content\/can-muslims-say-merry-christmas.json": "fed7560639b9e6b8f5e446a3268c36ae",
         "content\/child-marriage-in-islam.json": "3f2652a4ebb7c433ae3667a6b46c5866",
         "content\/christian-twin-of-the-islamic-dilemma.json": "2e0c9336b9161efc6b76a9d41ba3599a",
+        "content\/christmas-quran-jesus-birth.json": "cbaa032269455a382a9e66481868a9d9",
+        "content\/christmas-traditions-historical-origins.json": "a187fe6e9a7a8e53711ea322ed4e5ad2",
         "content\/comma-johanneum.json": "58820aa86783b1dfd34e0b36e50dca92",
         "content\/companions-who-started-with-nothing.json": "af7de0525f478df6e25a7cdbe204ef65",
         "content\/covenant-of-the-prophets.json": "2f33f542b1cbf252db68f515821589bc",
@@ -61,6 +64,7 @@
         "content\/first-revelation-demonic-claim.json": "3d4e5e64413e705bd0fa25d8d7808710",
         "content\/five-pillars-explained.json": "5dc58367051db7e1294d4c4b6d7ddab2",
         "content\/fly-hadith-and-adult-suckling.json": "35e53d1e558d91d7752ca289a81c0898",
+        "content\/former-christian-ministers-who-embraced-islam.json": "1bb850afafa76463f4f058ff88b3c4d1",
         "content\/funeral-dhikr-dua.json": "fc6de7b52bf229ecfd363351c9dd6b7b",
         "content\/genealogies-of-jesus.json": "dec45028bd0dd7c08ff118e365f027d8",
         "content\/gods-attributes-and-anthropomorphism.json": "0febe7fff213dc53f135637ea56c51bb",
@@ -198,6 +202,7 @@
         "content\/uthman-copies.json": "a78cb1eecb6bf32edbd57a09f2059272",
         "content\/verses-read-differently.json": "7099465cbc1ad9ac984de5b416b33562",
         "content\/war-and-killing-in-islam.json": "4bc1beffb2363fd5e9228803591ef2f5",
+        "content\/was-jesus-born-on-christmas-day.json": "dee7edcd1e9902ef724a1a6061e78a55",
         "content\/was-muhammad-a-narcissist.json": "a6a9a742f9874b527163859f86b65589",
         "content\/was-muhammad-illiterate-ummi.json": "0c3249021a4f77869bde5dcef0c220d4",
         "content\/was-yahweh-one-of-many-gods.json": "b9e5459782f662aed17572377c2c9923",
@@ -221,8 +226,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "521412aedfba29a09902c76b8981c99b",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "f1193c41b06dfef865a67d1291ed7f10",
-        "inc\/data\/seed.json": "df24724e97cef855ed196cd26fcc1739",
+        "inc\/data\/seed.json": "a5b956675794aa604d2a011fbcbdb1bd",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "6332dc2ea596c6fe1a03e2ab91298b2d"
+    "checksum": "0dfa9c14a3c3cdd396a802723924a142"
 }

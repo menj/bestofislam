@@ -4,6 +4,22 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.146.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 31 to 35, rewritten to `.claude/VOICE.md`, with every note checked again (`docs/CITATIONS.md`). They are scheduled under SSOT D71. The four Christmas articles take the season's slots, ten days apart from 6 November to 6 December 2027:
+  - was-jesus-born-on-christmas-day: six facts, from Clement of Alexandria and the Chronography of 354 to Nothaft, Bradshaw and Edwards.
+  - christmas-quran-jesus-birth: Surah Maryam, Matthew and Luke compared on five points.
+  - christmas-traditions-historical-origins: the tree, the crib, the gifts, Santa Claus, a carol and the greenery, each traced to its records.
+  - can-muslims-say-merry-christmas: five positions, from Ibn al-Qayyim to Dar al-Ifta and Malaysia's National Fatwa Committee.
+  - former-christian-ministers-who-embraced-islam: Keldani, Estes, Dirks, Jenkins and Tawfiq, scheduled for 19 June 2027.
+- A new tag, Christmas, for the four Christmas articles.
+- Each article has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+- The article counts in the readme, README and SSOT now include the Sam Shamoun article of 1.145.0.
+
 ## [1.145.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.

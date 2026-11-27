@@ -78,6 +78,11 @@ PINS = {
     'who-changed-the-bible': ['does-islam-teach-the-bible-was-corrupted', 'bible-alteration-claim-before-islam', 'muhammad-never-wrote-it-down', 'manuscript-transmission'],
     'muhammad-never-wrote-it-down': ['who-changed-the-bible', 'uthman-copies', 'was-muhammad-illiterate-ummi', 'schacht-isnads-dating-hadith'],
     'ransom-bible-quran': ['crucifixion-quran', 'ishmael-in-the-quran-and-genesis', 'relationship-with-god'],
+    'can-muslims-say-merry-christmas': ['can-a-muslim-befriend-a-non-muslim', 'quran-on-christians', 'christmas-traditions-historical-origins', 'was-jesus-born-on-christmas-day', 'principles-of-dawah-in-the-quran'],
+    'christmas-traditions-historical-origins': ['was-jesus-born-on-christmas-day', 'christmas-quran-jesus-birth', 'can-muslims-say-merry-christmas', 'islamic-art-and-the-one-god'],
+    'was-jesus-born-on-christmas-day': ['christmas-quran-jesus-birth', 'birth-of-jesus-in-surah-maryam', 'christmas-traditions-historical-origins', 'genealogies-of-jesus'],
+    'christmas-quran-jesus-birth': ['birth-of-jesus-in-surah-maryam', 'does-the-virgin-birth-make-jesus-divine', 'was-jesus-born-on-christmas-day', 'jesus-the-word-of-god-in-the-quran'],
+    'former-christian-ministers-who-embraced-islam': ['what-former-muslims-testimonies-show', 'no-compulsion-in-religion', 'before-you-convert-to-islam', 'quran-on-christians'],
 }
 
 related = {}

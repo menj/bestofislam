@@ -197,6 +197,35 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.146.0 (drafts 31 to 35)
+
+The owner's drafts 31 to 35 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
+
+- **was-jesus-born-on-christmas-day.**
+  - Clement of Alexandria, *Stromata* I.21, was read in the *Ante-Nicene Fathers* text: the 28th year of Augustus, 25 Pachon, and 24 or 25 Pharmuthi.
+  - The Chronography of 354, "Depositio Martyrum", was read in the Latin: "VIII kal. Ian. natus Christus in Betleem Iudeae".
+  - Confirmed through Crossref: Nothaft, *Church History* 81.4 (2012), pp. 903–911; Bradshaw, in *The Oxford Handbook of Christmas* (2020), ed. Timothy Larsen, whose abstract opens with the Egyptian feast of 6 January; and Edwards, *Journal of Ecclesiastical History* 75.3 (2024), pp. 427–443.
+  - Corrected: the draft did not name the author of "Travelling Festivals in Late Antiquity", and it cited Gregory of Nyssa for the East. The author is Robert G. T. Edwards, and his abstract credits Theodosius I, from 380. Gregory of Nazianzus' Oration 38 is cited instead, from the *Nicene and Post-Nicene Fathers*.
+  - The draft's slug had digits, which the site does not allow. The article is `was-jesus-born-on-christmas-day`.
+- **christmas-quran-jesus-birth.** The comparison uses only the Quran and the two Gospels, checked verse by verse. Sanders and the Met essay in the draft are not cited, since neither was needed for the comparison.
+- **christmas-traditions-historical-origins.**
+  - Read and confirmed: Winick (Library of Congress, 2021) on Queen Charlotte's trees by 1800 and on gift-giving "for centuries" before Dickens; Parrish (Library of Congress, 2024) on Sinterklaas and on Nast and the North Pole; Miller (Library of Congress, 2016) on Wesley (1739), Whitefield (1753), Mendelssohn (1840) and Cummings (1855); the *Catholic Encyclopedia* on Nicholas of Myra; the Academy of American Poets on the poem's anonymous publication in 1823; Pliny, *Natural History* 16.95, in the Bostock and Riley translation (the "fifth day of the moon"); and the Rauhes Haus foundation on Wichern's wreath of 1839.
+  - Thomas of Celano, *First Life* §84, was read in Spanish translation, and the Greccio passage is paraphrased.
+  - The Strasbourg record of 1605 is cited from Tille (1890), as printed in the German Wikipedia article on the Christmas tree. Tille's volume itself was not read.
+  - Not cited, because the pages refused automated fetching: the Smithsonian pages and the Met's pages in the draft. The draft's Sélestat 1521 claim is not used, since the record does not mention a Christmas tree.
+- **can-muslims-say-merry-christmas.**
+  - Read: the Federal Territories Mufti, *Tahqiq al-Masail* 7 (24 December 2018), with its list of scholars on each side; *Tinta Mufti* 47/2025 (18 December 2025), with the National Fatwa Committee's ruling of its 78th meeting, 12 June 2007; Dar al-Ifta fatwas 6710 (18 November 2013) and 21593 (2 December 2024); and Islam Q&A 947, quoting Ibn ʿUthaymin and Ibn al-Qayyim.
+  - Ibn al-Qayyim's *Aḥkām ahl al-dhimma* is quoted in the English of Islam Q&A; the Arabic was not read.
+- **former-christian-ministers-who-embraced-islam.**
+  - Keldani: Betül Avcı's entry in *Christian-Muslim Relations* 18 (Brill, 2021), pp. 223–236, was read. It gives his ordination in 1895, the letter of 1900 signed "Archpriest of Urmia", his time with the Unitarians from 1903, and his conversion in Istanbul in 1904.
+  - Dirks: *AboutIslam*, 15 January 2019. His own site did not resolve.
+  - Estes: his foundation's own pages; the draft's name for the Egyptian, "Mohamed", is not on them and is not used.
+  - Jenkins: *Arab News*, 8 August 2014, and his own account on IslamReligion.com. His account names the shaykh as "Abdullah bin Abdulaziz bin Baz", so the article says only "Shaykh Ibn Baz".
+  - Tawfiq: his own words on *AboutIslam* and NewMuslim.net. "Roman Catholic priest" comes from his publisher's note; in his own words he left "the ministry" and "the Church" before embracing Islam.
+  - Confirmed through Crossref: Sealy (2021), van Nieuwkerk (2008), and Vamanu and Guzik (2015). They are cited for their subjects only, as given in their titles.
+  - The Bismikaa leads named in the draft (Tengker and Al-Hafiz) are left out, as the draft advised.
+- **Bible links.** Every reference written as book, chapter and verse links to its verse (`.claude/VOICE.md` section 7). The 23 anchors were fetched and confirmed before they were added.
+
 ### New articles of 1.143.0 (drafts 26 to 30)
 
 The owner's drafts 26 to 30 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
