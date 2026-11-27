@@ -4,6 +4,23 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.142.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 21 to 25, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`), and scheduled ten days apart from 11 March to 20 April 2027 (SSOT D71):
+  - jesus-sign-of-the-hour: Quran 43:61, its readings and its commentators.
+  - sons-of-god-in-the-bible: seven uses of the title, with Luke 3:38 and John 10:34–36.
+  - ezekiel-twenty-three-allegory: the chapter's message honoured, its wording cited and left unquoted, and its own scholars' objections.
+  - ezekiel-twenty-three-in-malay-and-indonesian-bibles: Ezekiel 23:17 and 23:20 in six editions on the SABDA parallel Bible.
+  - biblical-anthropomorphism: six Torah passages, the Bible's own correctives and the Quran's rule in 42:11.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
+### Fixed
+- The content sync (`boi_sync_maybe_run()`) waits until the version migration has finished. Before, an admin request that could not take the migration lock went on to populate under the sync lock while another request was migrating, so both could create the same new article and WordPress would save the second as `slug-2`.
+
 ## [1.141.0] - 2026-11-27
 
 No feature removed and no public identifier renamed. No article changes its address.
