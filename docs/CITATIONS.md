@@ -197,6 +197,26 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.152.0 (drafts 6 to 10)
+
+The owner's drafts 6 to 10 (Batch Two) were rewritten to `.claude/VOICE.md`. Bible quotations are the World English Bible; Quran quotations are A. Yusuf Ali's translation. All 80 quotations were checked word for word against those texts. The five journal articles were confirmed through Crossref, and every quotation from them comes from the abstract Crossref holds. Hadith are cited by book, chapter and narrator, and were checked in the open hadith-json dataset (sunnah.com refused automated fetching; the dataset's numbering differs from sunnah.com's).
+
+- **did-paul-receive-his-gospel-from-jesus.**
+  - Michael Winger, "Tradition, Revelation and Gospel: A Study in Galatians", *JSNT* 16, no. 53 (1994), pp. 65–86, doi:10.1177/0142064X9401605304. Quoted: tradition as "a human mechanism", the gospel made known "only by divine power", and the apparent contradiction that "results from the different arguments he makes in the two letters".
+  - B. J. Oropeza, "The Gospel According to Paul: Over a Hundred Years of Interpretation", *Religions* 15, no. 12 (2024), article 1566, doi:10.3390/rel15121566. Paraphrased: the debate on the origin, content and terminology of Paul's gospel, and the noun *euangelion* missing in a sacred sense from the Jewish Scriptures.
+- **paul-and-circumcision.**
+  - Paula Fredriksen, "Judaizing the Nations: The Ritual Demands of Paul's Gospel", *New Testament Studies* 56, no. 2 (2010), pp. 232–252, doi:10.1017/S0028688509990294. Quoted: "principled resistance to circumcising Gentiles precisely preserves these distinctions 'according to the flesh'".
+  - Peter-Ben Smit, "In Search of Real Circumcision: Ritual Failure and Circumcision in Paul", *JSNT* 40, no. 1 (2017), pp. 73–100, doi:10.1177/0142064X17723488. Quoted: "from an attitude of strong propagation, by way of indifference and a subsequent attitude of rejection, to one of modified reintegration".
+  - Hadith: al-Bukhari, Book of Dress, Abu Hurayra, the five practices of the fitrah; Book of Asking Permission, Abu Hurayra, Abraham's circumcision "after he had passed the age of eighty years".
+- **pauline-teachings-that-shaped-christian-theology.** Scripture only, with one hadith: Muslim, Book of the Characteristics of the Day of Judgement, Paradise and Hell, Abu Hurayra, on deeds and mercy ("Not even I, but that my Lord wraps me in Mercy").
+- **jesus-prayed-at-night-and-before-dawn.**
+  - Angela Kim Harkins, "Ritualizing Jesus' Grief at Gethsemane", *JSNT* 41, no. 2 (2018), pp. 177–203, doi:10.1177/0142064X18804433. Quoted: "a reenactment of a recognizable Second Temple ritual that joined emotional prayers of supplication and confession to mourning practices".
+  - Hadith: al-Bukhari, Book of Prayer at Night (Tahajjud), Abu Hurayra, the last third of the night; Muslim, Book of Fasting, Abu Hurayra, "the most excellent prayer after what is prescribed is prayer during the night"; Muslim, Book of Prayers, Abu Hurayra, on prostration.
+- **religious-practices-of-jesus-muslims-recognise.** Hadith: Muslim, Book of Prayers, Abu Hurayra, on prostration; al-Bukhari, Book of Good Manners (al-Adab), Abu Hurayra, on false speech and fasting; al-Bukhari, Book of the Call to Prayer, Abu Hurayra, the seven whom God will shade.
+- **Bible links.** 76 references link to their verses, every anchor fetched and confirmed.
+- **Links to apostleofdoom.org.** Two, as the owner asked for the articles on Paul: "Two portraits of ʿĪsā" (/at-the-crossroads-of-the-message/) and "Seven doctrines: God and cross" (/seven-doctrines/). Both were fetched and answer 200.
+- **Not cited from the drafts.** The rewrite rests on Scripture, the hadith above and the five Crossref-confirmed articles. The drafts' other sources are not cited, and sentences that rested only on them were cut or restated from the text of Scripture: the *Harvard Theological Review* article on Paul's vision (2018), Dunn's *Cambridge Companion to St Paul* and its chapters (Hurtado on Christology, and those on ecclesiology and ethics), Thiessen, *Paul and the Gentile Problem* (2016), Gaston, *Paul and the Torah*, Larsson in *New Testament Studies* 31, Linebaugh in the *Scottish Journal of Theology* 71 (2018), Parker, *The Living Text of the Gospels*, an Oxford chapter abstract, the *New Catholic Encyclopedia* entries on Encyclopedia.com, and Bible Gateway. The drafts' sunnah.com hadith numbers are replaced by book and chapter, since sunnah.com refused fetching.
+
 ### New articles of 1.151.0 (five articles on Paul)
 
 The owner sent five drafts on Paul on 2026-11-27. They were rewritten to `.claude/VOICE.md`. Bible quotations are the World English Bible; Quran quotations are A. Yusuf Ali's translation.
