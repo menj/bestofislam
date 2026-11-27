@@ -133,7 +133,7 @@
         "content\/paul-claim-to-apostleship.json": "a511b4dfb01b88fe65137320d54d3f7f",
         "content\/pauline-letters-authorship.json": "342b09bfa9c64444e098ce0127cd9a94",
         "content\/preservation-and-truth.json": "951cfaf84a47fc3487c55a65305a21c9",
-        "content\/principles-of-dawah-in-the-quran.json": "68b7824350653a5f87b55bf0a359c857",
+        "content\/principles-of-dawah-in-the-quran.json": "657506697b9e24d3447c36b8cf8945fe",
         "content\/prophet-died-poisoning.json": "46522fb5896c1015640768adb7d062fa",
         "content\/prophets-marriages-zaynab-and-others.json": "b84d5f45b3a6357a78866fa5811f70fb",
         "content\/prophets-you-may-not-know.json": "b3f25014be570dcc6eb33595b4dcd155",
@@ -223,5 +223,5 @@
         "inc\/data\/seed.json": "e8f13e8b99a7371a94155c3180e7f634",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "bd40a67f73efac60e3d83e599d652127"
+    "checksum": "d0e4e6c6e0cd05b50b066819014d4eac"
 }

@@ -216,7 +216,7 @@ The owner's drafts 26 to 30 were rewritten to `.claude/VOICE.md`, and every note
   - Lincoln, *JSNT* 34.3 (2012), pp. 211–231, was confirmed through Crossref. Ibn Kathīr on 21:91 was read in the English abridgement.
 - **principles-of-dawah-in-the-quran.**
   - Al-Ṭabarī on 16:125 was read in the Arabic and is paraphrased.
-  - Al-Fārūqī, *The Cultural Atlas of Islam*, p. 188, and *Essential Writings*, p. 124, are quoted from the draft and wait on the owner's copies (see below).
+  - Al-Fārūqī, *The Cultural Atlas of Islam*, p. 188, and *Essential Writings*, p. 124: the draft's quotations could not be checked against the books, so the article gives his points in paraphrase. The exact wording waits on the owner's copies (see below).
   - Confirmed through Crossref: Issa Khan and others, *SAGE Open* 10.4 (2020), doi:10.1177/2158244020970560; and Jaeho Chung, *Religions* 17.8 (2026), art. 932, doi:10.3390/rel17080932.
   - Corrected: the draft gave the second author as "Seung-Kyu". The article's author is Jaeho Chung.
 - **religious-pluralism-and-islam.**
