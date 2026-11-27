@@ -4,6 +4,21 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.150.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles on Paul from drafts the owner sent on 2026-11-27, rewritten to `.claude/VOICE.md` with every note checked (`docs/CITATIONS.md`). They take five of the ten slots held for further drafts under SSOT D71, ten days apart from 18 August to 27 September 2027, in the order of Paul's life:
+  - saul-of-tarsus-before-conversion: six facts, each marked by whether Paul's letters or Acts gives it.
+  - paul-damascus-road-contradictions: five differences between Acts 9, 22 and 26, with the New American Bible's notes and Wallace on the Greek.
+  - paul-peter-antioch-confrontation: five facts on Galatians 2:11 to 14.
+  - paul-james-faith-and-works: six points, from Romans 3:28 and James 2:24 to the Quran on faith, deeds and mercy.
+  - epimenides-paradox-in-titus: five questions on Titus 1:12, with Cook (2021) and den Dulk (2026). The draft's slug had digits and is renamed.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order beside the existing articles on Paul, with pinned related links.
+- By the owner's request, each links in its text to the matching page on apostleofdoom.org (Saul the persecutor, the three accounts compared, Paul, Barnabas and Peter, justification by faith and James the brother, and the letters to Timothy and Titus). The contextual links of `inc/data/network-links.json` add others where its phrases occur; the shared map itself is unchanged.
+
 ## [1.149.0] - 2026-11-27
 
 No feature removed and no public identifier renamed. No article changes its address.

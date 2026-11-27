@@ -197,6 +197,18 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.150.0 (five articles on Paul)
+
+The owner sent five drafts on Paul on 2026-11-27. They were rewritten to `.claude/VOICE.md`. Bible quotations are the World English Bible; Quran quotations are A. Yusuf Ali's translation.
+
+- **saul-of-tarsus-before-conversion.** Paul's letters and Acts only, each fact marked by its source. The American Bible Society page in the draft was read and is not cited: it gives Acts 21 for Tarsus, where the verse is Acts 22:3. The draft's Oxford Handbook chapter (Trebilco, in *The Oxford Handbook of Pauline Studies*) could be read only in its catalogue entry, and is not cited.
+- **paul-damascus-road-contradictions.** The New American Bible, Revised Edition, notes on Acts 9:1–19 ("with some differences of detail owing to Luke's use of different sources"), 26:16 (the words "reflect the dialogues between Christ and Ananias ... and between Ananias and Paul") and 26:18 ("no mention is made of Paul's blindness") were read on the USCCB site. The NET Bible note in the draft refused fetching, and Wallace, *Greek Grammar Beyond the Basics*, pp. 133–134, is cited as in `paul-claim-to-apostleship`.
+- **paul-peter-antioch-confrontation.** Galatians and Acts only. The IVP commentary page in the draft showed no author and could be read only in outline, and is not cited.
+- **paul-james-faith-and-works.** Felix Just, S.J., "Paul & James on Faith & Works", read on catholic-resources.org ("There are differences in emphasis, but no contradictions in teaching, if one understands both properly"). The hadith on deeds and mercy is quoted from the English of al-Bukhari, Book of al-Riqaq, report of Aisha (the draft's number 6463 follows sunnah.com, which refused fetching). The draft's Luther remark and the claim about the phrase "faith only" are cut for want of a source read.
+- **epimenides-paradox-in-titus.** The New American Bible note on Titus 1:12 ("quoted from Epimenides, a Cretan poet of the sixth century B.C.") was read on the USCCB site. Confirmed through Crossref: Cook, *Zeitschrift für Antikes Christentum* 25.3 (2021), pp. 367–394, whose abstract is quoted; den Dulk, "Lying Cretans", in *Ethnic Stereotypes and the Letters of Paul* (Cambridge University Press, 2026), pp. 176–209, cited from the book's description.
+- **Bible links.** 75 references link to their verses, every anchor fetched and confirmed.
+- **Links to apostleofdoom.org.** Added at the owner's request. Each of the six pages linked was fetched and answers 200 at its final address.
+
 ### New articles of 1.148.0 (drafts 36 to 40)
 
 The owner's drafts 36 to 40 were rewritten to `.claude/VOICE.md`. Several of the draft's sources refused automated fetching (*The Straits Times*, *The Star*'s paywall, *The Guardian*, AP, Deutsche Welle, *The New Yorker*, the Middle East Forum, the National Library Board's Infopedia, Britannica). The owner chose on 2026-11-27 that the articles keep only what could be confirmed, so cases resting on those sources were left out. Quran quotations are A. Yusuf Ali's translation.

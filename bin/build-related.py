@@ -88,6 +88,11 @@ PINS = {
     'opposition-to-islam-to-conversion': ['islamophobia-facts', 'former-christian-ministers-who-embraced-islam', 'why-people-convert-to-islam', 'what-former-muslims-testimonies-show'],
     'why-people-convert-to-islam': ['from-atheism-to-islam', 'indonesian-conversion-stories', 'fastest-growing-religion', 'before-you-convert-to-islam', 'no-compulsion-in-religion'],
     'maria-hertogh-natrah-case': ['indonesia', 'no-compulsion-in-religion', 'apostasy-in-islam', 'can-a-muslim-befriend-a-non-muslim'],
+    'saul-of-tarsus-before-conversion': ['paul-claim-to-apostleship', 'paul-damascus-road-contradictions', 'paul-and-the-law', 'pauline-letters-authorship'],
+    'paul-damascus-road-contradictions': ['paul-claim-to-apostleship', 'saul-of-tarsus-before-conversion', 'paul-peter-antioch-confrontation', 'pauline-letters-authorship'],
+    'paul-peter-antioch-confrontation': ['paul-claim-to-apostleship', 'paul-and-food-offered-to-idols', 'paul-and-the-law', 'paul-james-faith-and-works'],
+    'paul-james-faith-and-works': ['paul-and-the-law', 'paul-peter-antioch-confrontation', 'islamic-repentance-and-christian-atonement', 'does-god-require-blood-to-forgive'],
+    'epimenides-paradox-in-titus': ['pauline-letters-authorship', 'paul-claim-to-apostleship', 'paul-james-faith-and-works'],
 }
 
 related = {}

@@ -7575,5 +7575,145 @@
     "source": "https://clevelandart.org/art/1958.30"
    }
   ]
+ },
+ "saul-of-tarsus-before-conversion": {
+  "featured": {
+   "file": "saul-of-tarsus-before-conversion.avif",
+   "alt": "Both faces of a gold Roman coin: an emperor's laureate head and a triumphal arch.",
+   "caption": "A gold aureus of the emperor Claudius, 47 to 48 CE, the years of Paul's early mission. Acts says Paul was born a Roman citizen.",
+   "artist": "Roman, Claudius I, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1969.158"
+  },
+  "inline": [
+   {
+    "file": "saul-of-tarsus-before-conversion-1.avif",
+    "alt": "A silver spouted pitcher on a footed base.",
+    "caption": "A silver pitcher from Byzantine Syria, 300 to 600 CE. Acts places Paul's birth in Tarsus, in the Roman province of Cilicia.",
+    "artist": "Byzantium, Syria, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1956.32"
+   },
+   {
+    "file": "saul-of-tarsus-before-conversion-2.avif",
+    "alt": "An eight-sided gold pendant set with a central coin and small portrait medallions.",
+    "caption": "A Late Roman gold pendant, 324 to 326 CE. Paul's letters use his Roman name; Acts records that he was also called Saul.",
+    "artist": "Byzantium, Late Roman, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1994.98.1"
+   }
+  ]
+ },
+ "paul-damascus-road-contradictions": {
+  "featured": {
+   "file": "paul-damascus-road-contradictions.avif",
+   "alt": "A cylindrical inlaid brass container with a lid and bands of calligraphy.",
+   "caption": "An inlaid container from northern Iraq, about 1250 to 1350. Acts tells Paul's vision on the road to Damascus three times.",
+   "artist": "Northern Iraq, Ayyubid period, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1944.482"
+  },
+  "inline": [
+   {
+    "file": "paul-damascus-road-contradictions-1.avif",
+    "alt": "A floor mosaic of a ram standing beside a tree.",
+    "caption": "A floor mosaic from northern Syria, 400s. In Acts 9 the companions stand; in Acts 26 all fall to the ground.",
+    "artist": "Byzantium, Northern Syria, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1969.113"
+   },
+   {
+    "file": "paul-damascus-road-contradictions-2.avif",
+    "alt": "A mosaic fragment of an ibex beside a tree.",
+    "caption": "A mosaic of an ibex from northern Syria, 400s. Galatians sends Paul to Arabia after the vision; Acts does not mention it.",
+    "artist": "Byzantium, Northern Syria, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1969.114"
+   }
+  ]
+ },
+ "paul-peter-antioch-confrontation": {
+  "featured": {
+   "file": "paul-peter-antioch-confrontation.avif",
+   "alt": "Both faces of a silver tetradrachm with a royal head and a seated figure.",
+   "caption": "A silver tetradrachm minted at Antioch in Syria, 164 to 162 BCE. Paul confronted Peter in Antioch.",
+   "artist": "Greek, Seleukid, minted at Antioch, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1916.975"
+  },
+  "inline": [
+   {
+    "file": "paul-peter-antioch-confrontation-1.avif",
+    "alt": "A worn textile fragment with roundels of camels carrying howdahs.",
+    "caption": "A textile with roundels of camels, probably Syria, 900s to 1000s. The dispute at Antioch was over shared meals.",
+    "artist": "Syria, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1986.90"
+   },
+   {
+    "file": "paul-peter-antioch-confrontation-2.avif",
+    "alt": "A mosaic panel of a peacock beside a grape harvester among vines.",
+    "caption": "A floor mosaic from northern Syria, 400s. No source records Peter's reply to Paul at Antioch.",
+    "artist": "Byzantium, Northern Syria, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1969.112"
+   }
+  ]
+ },
+ "paul-james-faith-and-works": {
+  "featured": {
+   "file": "paul-james-faith-and-works.avif",
+   "alt": "A manuscript leaf of dense Latin legal text with a decorated initial.",
+   "caption": "A leaf from Gratian's Decretum, a twelfth-century collection of church law. Paul and James answer the question of justification in opposite words.",
+   "artist": "France, Burgundy, Abbey of Pontigny, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1954.598"
+  },
+  "inline": [
+   {
+    "file": "paul-james-faith-and-works-1.avif",
+    "alt": "A mosaic panel with a large cross set in a geometric frame.",
+    "caption": "A mosaic cross from Byzantine north Syria, 300s to 400s. The churches still divide over faith and works.",
+    "artist": "Byzantium, North Syria, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1968.270"
+   },
+   {
+    "file": "paul-james-faith-and-works-2.avif",
+    "alt": "A gold signet ring with several engraved faces.",
+    "caption": "A gold signet ring, England, about 1550 to 1600. Paul calls Abraham's circumcision \"a seal of the righteousness of the faith\" he already had.",
+    "artist": "England, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1916.125"
+   }
+  ]
+ },
+ "epimenides-paradox-in-titus": {
+  "featured": {
+   "file": "epimenides-paradox-in-titus.avif",
+   "alt": "An embroidered border strip with flowers, double-headed birds and arches in many colours.",
+   "caption": "Embroidered skirt borders from Crete, 1600s to 1700s. The Letter to Titus quotes a Cretan calling his own people \"always liars\".",
+   "artist": "Greece, Crete, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1926.217"
+  },
+  "inline": [
+   {
+    "file": "epimenides-paradox-in-titus-1.avif",
+    "alt": "A small stone bowl carved with rounded petals.",
+    "caption": "A Minoan stone bowl from Crete, 1600 to 1500 BCE. Epimenides was a Cretan poet of the sixth century BC.",
+    "artist": "Crete, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1927.435"
+   },
+   {
+    "file": "epimenides-paradox-in-titus-2.avif",
+    "alt": "A black-figure wine jug showing a woman riding a bull.",
+    "caption": "An Athenian wine jug of about 530 BCE showing Europa on the bull, a Cretan myth of Zeus. Cook reads Titus 1:12 against the Cretan tale of Zeus's tomb.",
+    "artist": "Class of Vatican 440, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1929.978"
+   }
+  ]
  }
 }
