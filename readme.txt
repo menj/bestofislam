@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.140.0
+Stable tag: 1.141.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.141.0 =
+* Sixteen articles move to the section and category that fit their subject, so the sections are more even: answers on the Quran and the hadith go to Faith & Reason, articles on the Prophet to History, and answers to Islamophobic charges to Islamophobia. No address changes.
 
 = 1.140.0 =
 * A new article: "Sam Shamoun under oath: 7 findings from the Illinois courts", on what the Illinois appellate courts found about his testimony, income and conduct.
@@ -485,6 +488,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.141.0 =
+Replace the theme files and open the dashboard once. Sixteen articles move section and category; an article you filed yourself keeps your choice.
 
 = 1.140.0 =
 Replace the theme files. The new article is created when the version changes.
