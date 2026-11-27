@@ -166,7 +166,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 == Changelog ==
 
 = 1.140.0 =
-* A new page, "Who is Sam Shamoun?", on what the Illinois appellate courts found about his testimony and income, with links to the articles that answer the subjects he writes about.
+* A new article: "Sam Shamoun under oath: 7 findings from the Illinois courts", on what the Illinois appellate courts found about his testimony, income and conduct.
 
 = 1.139.0 =
 * Every Bible reference in the articles and the Glossary now links to the verse it cites: 1,340 references in 107 articles and 7 Glossary letters.
@@ -487,7 +487,7 @@ Earlier releases are in CHANGELOG.md.
 == Upgrade Notice ==
 
 = 1.140.0 =
-Replace the theme files. The new page is created when the version changes.
+Replace the theme files. The new article is created when the version changes.
 
 = 1.139.0 =
 Replace the theme files. Articles you have not edited take the new links when the version changes, and the Glossary pages are rebuilt once.

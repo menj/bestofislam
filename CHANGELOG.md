@@ -9,7 +9,7 @@ versioning.
 No feature removed and no public identifier renamed.
 
 ### Added
-- The page "Who is Sam Shamoun?" (`sam-shamoun`), seeded from `inc/data/seed.json`. It quotes the two 2020 opinions of the Appellate Court of Illinois in his divorce case on his credibility, his undisclosed income and donations, and his compliance with court orders, each quotation checked against the opinion with its paragraph number, and states where he prevailed. The order of protection is reported as the court recorded it (¶¶ 5, 70), with no description of conduct the opinions do not give. The family matters and the private persons in the case are otherwise left out. It ends with links to eight articles on the subjects he writes about.
+- sam-shamoun-under-oath: "Sam Shamoun under oath: 7 findings from the Illinois courts", a listicle with excerpt, abstract and images. It quotes the two 2020 opinions of the Appellate Court of Illinois in his divorce case on his credibility, his undisclosed income and donations, and his compliance with court orders, each quotation checked against the opinion with its paragraph number, and states where he prevailed. The order of protection is reported as the court recorded it (¶¶ 5, 70), with no description of conduct the opinions do not give. The family matters and the private persons in the case are otherwise left out. It ends with links to five articles on the subjects he writes about.
 
 ### Changed
 - `.claude/VOICE.md` and SSOT: published court findings on a named critic's own credibility and his handling of money given for his work may be quoted, exactly and fairly; family matters and private persons stay out.

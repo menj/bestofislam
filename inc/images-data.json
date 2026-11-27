@@ -6943,5 +6943,48 @@
     "source": "https://clevelandart.org/art/1942.152.100.a"
    }
   ]
+ },
+ "sam-shamoun-under-oath": {
+  "featured": {
+   "file": "sam-shamoun-under-oath.avif",
+   "alt": "Star outlines in gold, blue and white around a gold centre on navy.",
+   "artist": "Best of Islam",
+   "licence": "Original artwork",
+   "source": "bin/make-original-graphics.py"
+  },
+  "inline": [
+   {
+    "file": "sam-shamoun-under-oath-1.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "sam-shamoun-under-oath-2.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "sam-shamoun-under-oath-3.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   },
+   {
+    "file": "sam-shamoun-under-oath-4.avif",
+    "alt": "Layered star outlines on a navy ground.",
+    "artist": "Best of Islam",
+    "licence": "Original artwork",
+    "source": "bin/make-original-graphics.py",
+    "caption": "An original star pattern, drawn for this site."
+   }
+  ]
  }
 }

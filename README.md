@@ -140,7 +140,7 @@ bestofislam/
 │                        maintenance (first, the upload guard),
 │                        contextual-links, glossary-data, security-detector
 ├── inc/data/            network-links.json (the shared phrase map),
-│                        seed.json (topics, categories, tags, 209 articles,
+│                        seed.json (topics, categories, tags, 210 articles,
 │                        8 pages), questions.json (45), image-credits.json,
 │                        abstracts.json (slug to abstract),
 │                        schema-entities.json, supersedes.json (old slug to new,
@@ -148,7 +148,7 @@ bestofislam/
 │                        content sync trusts). Read, never executed
 ├── inc/glossary-data/   a.json to z.json: the 785 Glossary entries
 ├── inc/*.json           images-data.json, glossary-images.json, related-articles.json
-├── content/             The 209 seeded articles as block markup, one JSON file each
+├── content/             The 210 seeded articles as block markup, one JSON file each
 ├── blocks/              abstract, entry, listicle, theme-toggle: block.json and editor scripts
 ├── templates/           404, archive, front-page, home, page, page-glossary,
 │                        search, single, single-listicle, tag, taxonomy-listicle-topic

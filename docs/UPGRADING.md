@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.140.0
 
-Replace the theme files. `boi_create_pages()` creates the page "Who is Sam Shamoun?" at `/sam-shamoun/` when the version changes. It is not added to the menu.
+Replace the theme files. `boi_create_listicles()` creates the article "Sam Shamoun under oath" when the version changes.
 
 ## Upgrading to 1.139.0
 

@@ -157,6 +157,7 @@
         "content\/ridda-wars-abu-bakr-fadak.json": "48511d7b06cdc10a89c66bf65a679122",
         "content\/sadness-and-depression-in-islam.json": "707884c9b8f2cda5a4f31a75646a430e",
         "content\/safiyya-and-the-women-captured-in-war.json": "2f05f2c788f8c0f53738e39582596993",
+        "content\/sam-shamoun-under-oath.json": "82dbe689fd63ec8e029114a86664ca74",
         "content\/same-god.json": "1e2d6fcf2396760c8b10e68aa1f3b775",
         "content\/satanic-verses-report.json": "7959811cfa1feb2de4380746e1572a39",
         "content\/schacht-isnads-dating-hadith.json": "626a3f28014edb4ddd34e0277e181020",
@@ -209,8 +210,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "521412aedfba29a09902c76b8981c99b",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "f1193c41b06dfef865a67d1291ed7f10",
-        "inc\/data\/seed.json": "827efa5dd4fc41bf9d8a660f311e3e3e",
+        "inc\/data\/seed.json": "5eb79012a9255189800356ffe7900896",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "d98c835e734980e4ff0efe9e253a761e"
+    "checksum": "420dce69d54044fe32920cb267118b5e"
 }

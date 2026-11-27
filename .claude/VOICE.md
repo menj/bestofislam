@@ -25,8 +25,8 @@ One exception (owner's decision, 2026-11-27): published court findings about a
 named critic's own credibility, and about his handling of money given for his
 work, may be cited, quoted exactly from the opinion with paragraph numbers, and
 stated fairly, including any point on which he prevailed. The family matters in
-the same case, and every private person in it, stay out. The page "Who is Sam
-Shamoun?" (`sam-shamoun` in `inc/data/seed.json`) is the model.
+the same case, and every private person in it, stay out. The article
+`sam-shamoun-under-oath` is the model.
 
 ## 2. Voice and structure
 
