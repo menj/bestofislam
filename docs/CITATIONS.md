@@ -197,6 +197,58 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.143.0 (drafts 26 to 30)
+
+The owner's drafts 26 to 30 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
+
+- **camel-method.**
+  - Phil Parshall's review of Greeson's 2004 manual, *Evangelical Missions Quarterly*, July 2005, was read. Both quotations ("asking a Muslim to read Surah Al-Imran 3:42-55"; the credibility of the people against "the veracity of these huge numbers") match it.
+  - Ken Walker, "Out of Context", *Christianity Today*, April 2010, was read for Rankin, the 2002 survey of 125,000 and Oksnevad's "sloppy missiology and theology".
+  - Bob Allen, Associated Baptist Press, 11 February 2010, was read for Ergun Caner's charges, the three points of the method, the camel legend and the IMB guideline of 2007.
+  - Al-Ṭabarī on 3:59 is cited in the Shakir edition, vol. 6, pp. 468–469.
+  - Bridger, *Christian Exegesis of the Qurʾān* (Pickwick, 2015), is cited only for the general "point of contact" argument.
+  - Cut, because they could not be confirmed: the draft's expansion of CAMEL as an acronym, and an interview in the *Christian Post*.
+- **quran-passages-in-christian-missions.** Sam Shamoun, "The Quran Confirms the Trinity! Pt. 3a", was read, with the passage he quotes from John Gilchrist, *The Titles of Jesus in the Qur'an and the Bible*, on 58:22. The reading of 10:94 is quoted from the Jesus-Islam site. Parshall and Allen as above.
+- **does-the-virgin-birth-make-jesus-divine.**
+  - Don Stewart on Blue Letter Bible was read: "If Joseph were His true father, then Jesus would be only a human being".
+  - "Virgin-Born Rabbits", *Christianity Today* editorial, 14 December 1984: "The deity of Jesus Christ, of course, does not rest upon his virgin birth."
+  - Corrected: the draft placed Oliver Crisp's article in *IJST*. It is in the *Heythrop Journal* 49.2 (2008), pp. 197–221, confirmed through Crossref.
+  - Lincoln, *JSNT* 34.3 (2012), pp. 211–231, was confirmed through Crossref. Ibn Kathīr on 21:91 was read in the English abridgement.
+- **principles-of-dawah-in-the-quran.**
+  - Al-Ṭabarī on 16:125 was read in the Arabic and is paraphrased.
+  - Al-Fārūqī, *The Cultural Atlas of Islam*, p. 188, and *Essential Writings*, p. 124: the draft's quotations could not be checked against the books, so the article gives his points in paraphrase. The exact wording waits on the owner's copies (see below).
+  - Confirmed through Crossref: Issa Khan and others, *SAGE Open* 10.4 (2020), doi:10.1177/2158244020970560; and Jaeho Chung, *Religions* 17.8 (2026), art. 932, doi:10.3390/rel17080932.
+  - Corrected: the draft gave the second author as "Seung-Kyu". The article's author is Jaeho Chung.
+- **religious-pluralism-and-islam.**
+  - Ibn Kathīr on 2:62 was read in the English abridgement, with Ibn ʿAbbās' report that 3:85 came afterwards.
+  - Lumbard, "Qur'anic Inclusivism in an Age of Globalization", *Iqbal Review*, October 2005; Sirry, *Scriptural Polemics* (Oxford University Press, 2014); and Khalil, *Islam and the Fate of Others* (Oxford University Press, 2012), were confirmed.
+  - The A. Yusuf Ali text of 17:15 used for checking has a typing error, so the verse is paraphrased.
+  - Al-Fārūqī's *Essential Writings*, pp. 192–193, waits on the owner's copy. The tolerance quotation from *Al Tawhid*, ch. 4, matches `.claude/FARUQI.md`.
+- **Bible links.** Every reference written as book, chapter and verse links to its verse (`.claude/VOICE.md` section 7). The eight anchors were fetched and confirmed before they were added.
+
+### New articles of 1.142.0 (drafts 21 to 25)
+
+The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
+
+- **jesus-sign-of-the-hour.**
+  - Al-Ṭabarī on 43:61 was read in the Arabic on quran.com. He records two referents of the pronoun: Jesus' descent, from Ibn ʿAbbās, Mujāhid, Qatāda, al-Suddī, al-Ḍaḥḥāk and Ibn Zayd; and the Quran, from al-Ḥasan. He also records the reading *ʿalam* from Ibn ʿAbbās, Qatāda and al-Ḍaḥḥāk, Ubayy's *dhikr*, and his own preference for *ʿilm*.
+  - Ibn Kathīr was read in the English abridgement.
+  - Reynolds, *BSOAS* 72.2 (2009), was confirmed through Crossref. Bukhari 3448 was also confirmed.
+  - Corrected: the draft listed Abu Hurayra among the readers of *ʿalam*. He is not in al-Ṭabarī's list; Ibn Kathīr cites him for the interpretation only.
+  - Cut, because they could not be confirmed: a 2025 study by "Barati", and a 2022 *ICMR* article on the Dajjal. The article exists (Cuciniello), but its claims about 43:61 could not be checked.
+- **sons-of-god-in-the-bible.** Three works were confirmed through Crossref: Day, *Hebrew Bible and Ancient Israel* 1.4 (2012); Kim, *Biblical Theology Bulletin* 44.3 (2014); and Peppard (Oxford University Press, 2011). Doedens (Brill, 2019) was also confirmed. Added from the Bible: Luke 3:38, John 10:34–36 and Psalm 82:6.
+- **ezekiel-twenty-three-allegory.**
+  - Confirmed through Crossref: Crouch, in *The Oxford Handbook of Ezekiel* (2020), pp. 278–294; Bibb, *Review and Expositor* 111.4 (2014); and van Dijk-Hemmes, *Vetus Testamentum* 43.2 (1993). The Biermann article in *lectio difficilior* (2021) was also confirmed, and the author is Bruno Biermann.
+  - The draft's Stiebert article of 2002 could not be found and is replaced by van Dijk-Hemmes.
+  - The explicit verses are cited by number and not quoted.
+- **ezekiel-twenty-three-in-malay-and-indonesian-bibles.**
+  - Ezekiel 23:17 and 23:20 were read on the SABDA parallel view in TL (1954), TB (1974), BIS (1985), AYT (2018), Shellabear 2011 and AVB (2015). Every word quoted matches the page.
+  - The Malay Alkitab Berita Baik could not be read: the bible.com address in the draft serves the NIV. It is left out, and its wording in the draft is not used.
+  - The draft's claim about SABDA's interlinear was not read and is replaced by the World English Bible's literal rendering.
+- **biblical-anthropomorphism.** Maimonides, *Guide of the Perplexed* I.26 and I.37–38, on "the language of men", the face and the back. The Bible's correctives are Numbers 23:19, 1 Samuel 15:29 and Exodus 33:20.
+- **Captions.** The hadith of the descent at the white minaret east of Damascus is Muslim 2937, from al-Nawwās ibn Samʿān.
+- **Bible links.** Every reference written as book, chapter and verse in the four articles that cite the Bible links to its verse (`.claude/VOICE.md` section 7). All 52 anchors were fetched and confirmed before they were added.
+
 ### Not yet checkable here
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.
