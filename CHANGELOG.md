@@ -10,7 +10,7 @@ No feature removed. One article slug renamed, with a 301 redirect.
 
 ### Changed
 - Honorific guard (`inc/honorific-guard.php`): removes an Arabic honorific a site plugin adds after the surname Gabriel in the case name "In re Marriage of Gabriel".
-- sam-shamoun-on-the-pbd-podcast is now sam-shamoun-on-two-podcasts, "Sam Shamoun on two podcasts: 14 claims checked against the sources". Five claims added from the Bryce Crawford Podcast, episode 182, each time linked to the video with `rel="nofollow noopener"`: his rule against bad-faith questions (Titus 3:10) against his own method; Ahaziah's age (2 Kings 8:26, 2 Chronicles 22:2) against the readings (Bukhari 4992); the double witness (Bukhari 4784, 4986, Abu Dawud 3607); the mountain passage (Bukhari 3, 6982); and Abu al-Darda's saying under the chapter on courtesy. 37 notes. Images renamed with the slug.
+- sam-shamoun-on-the-pbd-podcast is now sam-shamoun-on-two-podcasts, "Sam Shamoun on two podcasts: 14 claims checked against the sources". Five claims added from the Bryce Crawford Podcast, episode 182, each time linked to the video with `rel="nofollow noopener"`: his rule against bad-faith questions (Titus 3:10) against his own method; Ahaziah's age (2 Kings 8:26, 2 Chronicles 22:2) against the readings (Bukhari 4992); the double witness (Bukhari 4784, 4986, Abu Dawud 3607); the mountain passage (Bukhari 3, 6982); and Abu al-Darda's saying under the chapter on courtesy. 37 notes, with both episode titles and dates. Images renamed with the slug.
 
 ## [1.145.0] - 2026-11-27
 
