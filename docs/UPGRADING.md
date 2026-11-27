@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.150.0
 
-Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 18 August to 27 September 2027 (D71), and WordPress publishes each on its day from its cron. Nothing to set, except on a host that turns off WP-Cron (`DISABLE_WP_CRON`), where a real cron job must run `wp cron event run --due-now` (D71).
+Replace the theme files. `boi_create_listicles()` creates each of the five new articles as Scheduled for its date, 18 August to 27 September 2027 (D71), and WordPress publishes it on that day from its cron. An article whose date has already passed when the theme updates is created as published. Nothing to set, except on a host that turns off WP-Cron (`DISABLE_WP_CRON`), where a real cron job must run `wp cron event run --due-now` (D71).
 
 ## Upgrading to 1.149.0
 
