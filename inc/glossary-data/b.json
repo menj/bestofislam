@@ -1551,7 +1551,11 @@
   ],
   "articles": [],
   "type": "worship",
-  "aliases": [],
+  "aliases": [
+   "Basmala",
+   "Bismillah al-Rahman al-Rahim",
+   "Bismillahir Rahmanir Rahim"
+  ],
   "faruqi": {
    "page": 56,
    "term": "BISMI ALLAH AL RAḤMĀN AL RAḤĪM."
