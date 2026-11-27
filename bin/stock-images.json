@@ -2440,5 +2440,27 @@
     "caption": "The Appellate Court of Illinois, First District, which published both opinions in 2020."
    }
   ]
+ },
+ "sam-shamoun-on-the-pbd-podcast": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Microphone studio.jpg",
+   "alt": "A studio microphone with a pop shield.",
+   "caption": "A studio microphone. He made these claims in a two-hour podcast interview."
+  },
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:P46.jpg",
+    "alt": "A leaf of Papyrus 46, the oldest surviving copy of Paul's letters.",
+    "caption": "Papyrus 46, the oldest copy of Paul's letters. In 1 Corinthians 2:9 Paul introduces the words with \"as it is written\"."
+   },
+   {
+    "src": "commons",
+    "id": "File:Papyrus66.jpg",
+    "alt": "A page of Papyrus 66, an early copy of the Gospel of John.",
+    "caption": "Papyrus 66, an early copy of the Gospel of John, the gospel in which the Son \"can do nothing of his own accord\"."
+   }
+  ]
  }
 }
