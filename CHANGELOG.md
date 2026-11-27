@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.152.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 6 to 10 (Batch Two), rewritten to `.claude/VOICE.md` with every note checked (`docs/CITATIONS.md`). They take the last five slots of SSOT D71, so all forty slots are now filled:
+  - did-paul-receive-his-gospel-from-jesus (7 October 2027): five questions on Galatians 1:12, with Winger (1994) and Oropeza (2024).
+  - paul-and-circumcision (17 October 2027): five passages, from Genesis 17 to 1 Corinthians 7, with Fredriksen (2010) and Smit (2017).
+  - pauline-teachings-that-shaped-christian-theology (27 October 2027): six teachings from the seven undisputed letters, each set beside the Quran.
+  - jesus-prayed-at-night-and-before-dawn (16 December 2027): four occasions in the Gospels, with Harkins (2018) on Gethsemane.
+  - religious-practices-of-jesus-muslims-recognise (26 December 2027): six practices in the Gospels and their Islamic counterparts.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The articles join the reading order beside the existing articles on Paul and on the prayer and fasting of Jesus, with pinned related links. Two link to apostleofdoom.org, as the owner asked for the articles on Paul.
+
 ## [1.151.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.

@@ -93,6 +93,11 @@ PINS = {
     'paul-peter-antioch-confrontation': ['paul-claim-to-apostleship', 'paul-and-food-offered-to-idols', 'paul-and-the-law', 'paul-james-faith-and-works'],
     'paul-james-faith-and-works': ['paul-and-the-law', 'paul-peter-antioch-confrontation', 'islamic-repentance-and-christian-atonement', 'does-god-require-blood-to-forgive'],
     'epimenides-paradox-in-titus': ['pauline-letters-authorship', 'paul-claim-to-apostleship', 'paul-james-faith-and-works'],
+    'did-paul-receive-his-gospel-from-jesus': ['paul-claim-to-apostleship', 'paul-damascus-road-contradictions', 'paul-peter-antioch-confrontation', 'pauline-letters-authorship'],
+    'paul-and-circumcision': ['paul-and-the-law', 'paul-james-faith-and-works', 'did-paul-receive-his-gospel-from-jesus', 'paul-claim-to-apostleship'],
+    'pauline-teachings-that-shaped-christian-theology': ['paul-and-circumcision', 'original-sin', 'does-god-require-blood-to-forgive', 'jesus-not-god'],
+    'jesus-prayed-at-night-and-before-dawn': ['jesus-prostrated-in-prayer', 'did-jesus-pray-to-whom', 'did-jesus-fast', 'jesus-and-the-sabbath'],
+    'religious-practices-of-jesus-muslims-recognise': ['jesus-prayed-at-night-and-before-dawn', 'jesus-prostrated-in-prayer', 'did-jesus-fast', 'jesus-and-the-sabbath'],
 }
 
 related = {}
