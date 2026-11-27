@@ -7886,7 +7886,16 @@
    "licence": "CC BY-SA 4.0",
    "source": "https://commons.wikimedia.org/wiki/File:The_Kaaba_during_Hajj_-_edited.jpg"
   },
-  "inline": []
+  "inline": [
+   {
+    "file": "did-abraham-build-the-kaaba-1.avif",
+    "alt": "A photograph of the Kaaba and pilgrims in 1886.",
+    "caption": "The Kaaba in 1886, one of the earliest photographs of the House that Abraham and Ishmael raised (2:127).",
+    "artist": "Post of Switzerland",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kaaba_during_the_Hajj_-_1886.jpg"
+   }
+  ]
  },
  "synagogues-in-the-quran-and-islamic-history": {
   "featured": {
@@ -7937,6 +7946,23 @@
    "licence": "CC BY-SA 2.0 fr",
    "source": "https://commons.wikimedia.org/wiki/File:Baal_thunderbolt_from_Ugarit_(Louvre_AO15775).jpg"
   },
-  "inline": []
+  "inline": [
+   {
+    "file": "is-allah-baal-or-hubal-1.avif",
+    "alt": "A bronze figurine of a horned storm god.",
+    "caption": "A figurine of Baal Hadad, the storm god of Canaan, whom the Quran names in the story of Elias (37:125).",
+    "artist": "Jastrow",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baal_Hadad_with_horns.jpg"
+   },
+   {
+    "file": "is-allah-baal-or-hubal-2.avif",
+    "alt": "A photograph of the Kaaba and pilgrims in 1886.",
+    "caption": "The Kaaba in 1886. Its 360 idols, Hubal among them, were removed at the conquest of Mecca.",
+    "artist": "Post of Switzerland",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kaaba_during_the_Hajj_-_1886.jpg"
+   }
+  ]
  }
 }
