@@ -7897,7 +7897,16 @@
    "licence": "CC BY-SA 3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Ben_Ezra_Synagogue-1.jpg"
   },
-  "inline": []
+  "inline": [
+   {
+    "file": "synagogues-in-the-quran-and-islamic-history-1.avif",
+    "alt": "The interior of the Ben Ezra Synagogue, with its wooden gallery.",
+    "caption": "Inside the Ben Ezra Synagogue in Fustat, where Maimonides worshipped.",
+    "artist": "Schlanger",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ben_Ezra_Synagogue_Interior.jpg"
+   }
+  ]
  },
  "monogenes-only-begotten": {
   "featured": {
@@ -7908,7 +7917,16 @@
    "licence": "Public domain",
    "source": "https://commons.wikimedia.org/wiki/File:Papyrus66.jpg"
   },
-  "inline": []
+  "inline": [
+   {
+    "file": "monogenes-only-begotten-1.avif",
+    "alt": "A leaf of Papyrus 46, an early copy of the letters of Paul.",
+    "caption": "Papyrus 46, the oldest copy of the letter to the Hebrews, where Isaac is called monogenes (11:17).",
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:P46.jpg"
+   }
+  ]
  },
  "is-allah-baal-or-hubal": {
   "featured": {
