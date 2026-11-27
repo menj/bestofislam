@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.154.0
+Stable tag: 1.155.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.155.0 =
+* Five new articles, published at once: what the Talmud says about Jesus, whether Allah is Baal or Hubal, whether Abraham built the Kaaba, synagogues in the Quran and Islamic history, and the meaning of monogenes.
 
 = 1.154.0 =
 * Glossary: Iblis is also listed as Shaitan and Shaytaan, and the Basmala entry as Basmala, Bismillah al-Rahman al-Rahim and Bismillahir Rahmanir Rahim.
@@ -527,6 +530,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.155.0 =
+Replace the theme files. Five new articles are created on the next admin visit.
 
 = 1.154.0 =
 Replace the theme files. The Glossary sync runs once (BOI_GLOSSARY_VERSION 26).

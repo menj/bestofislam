@@ -36,6 +36,7 @@
         "content\/crucifixion-quran.json": "9a9f946a3bd8090c235a03c4e35a84fb",
         "content\/crusades-facts.json": "b2197dc3a16a5ded0c45cba91d0d6549",
         "content\/deuteronomy-prophecy-and-the-paraclete.json": "109675ae1be6b0d126cb9507ebfdf213",
+        "content\/did-abraham-build-the-kaaba.json": "15cbd941f213f37311812b1634c17df8",
         "content\/did-jesus-fast.json": "998c128e66cc4309d12fe0f869d52bbb",
         "content\/did-jesus-pray-to-whom.json": "e8afadfcc4c09a2b6012177ce036ebd0",
         "content\/did-muhammad-perform-miracles.json": "2f232121faadaf3fc36f6f3f2229a6aa",
@@ -86,6 +87,7 @@
         "content\/indonesian-conversion-stories.json": "5c78ff18b38baaa76e269b23294406fa",
         "content\/instruments-islamic-world.json": "b5a4e3e55f1a8c93e1878e62c0458933",
         "content\/is-allah-a-deceiver-makr.json": "1a79dba60a702803b322732ec4db98aa",
+        "content\/is-allah-baal-or-hubal.json": "6aead81e75a671eaf667ae7e42168f09",
         "content\/is-the-cross-a-pagan-symbol.json": "6a6e486e0792582c5afcc3d5c46f259f",
         "content\/is-yahweh-satan.json": "ba123f4968885fe79683245ac305cf6c",
         "content\/is-yahweh-the-same-as-allah.json": "97e0ef1544dbc44ad3b1a338b4b206fa",
@@ -122,6 +124,7 @@
         "content\/matthew-fulfilment-quotations-checked.json": "ed09b6cc31680ee25004fc88269ea963",
         "content\/medina-jewish-tribes-and-qurayza.json": "57a3dae373d9235abb69ca583dc179cb",
         "content\/messenger-to-every-nation.json": "946ba80d9b4d04d5ae5e8d59eaf874d8",
+        "content\/monogenes-only-begotten.json": "95348bcbd563b547f67018795bfc90a8",
         "content\/moon-craters.json": "b218051ceee021ef1cfede99e56dc3a2",
         "content\/morality-without-god.json": "2808503a44c4cebcdd9dccf9ccf6ac69",
         "content\/mosques-adapt-to-place.json": "57ed7d7d0895b63a4d21e1546c4f63c1",
@@ -204,6 +207,7 @@
         "content\/slavery-in-islam.json": "cfb8120d357d563f2f5495ee4c51e536",
         "content\/sons-of-god-in-the-bible.json": "c73019d6501d2cfec646e760772a77dc",
         "content\/sun-muddy-spring-and-fixed-earth.json": "cb4fe1729bdf947bd3390d030617f7d2",
+        "content\/synagogues-in-the-quran-and-islamic-history.json": "81f5a005f422cb79ea6a5b73094f82e6",
         "content\/talmud-midrash-apocrypha-borrowing.json": "00003cb3daad9fcaa04e7699810cb881",
         "content\/taqiyya-myths.json": "592aff8f73637413f3515b3c8505e6c6",
         "content\/temporary-marriage-mutah.json": "9d224df31a6fe701764d211a7009f547",
@@ -223,6 +227,7 @@
         "content\/western-scholars-of-islam.json": "b6e18017678ab83144fab69cb0abd74f",
         "content\/what-former-muslims-testimonies-show.json": "5e10eea8cad1e508b8984b676446e091",
         "content\/what-the-pagans-of-mecca-said-about-allah.json": "d69e258fab63d3d134e23f5457b58eaa",
+        "content\/what-the-talmud-says-about-jesus.json": "1b19ed333eb6c4fe8c51a0269086b1b3",
         "content\/when-a-stranger-online-calls-islam-a-cult.json": "58967793f0b900c9bdf9c5b31de57317",
         "content\/where-did-jesus-say-he-is-god.json": "4bc8456ead228611b3fb17e13c850e9a",
         "content\/where-is-the-injil.json": "f02cb6857f7d5cba45586c7d51a75ebf",
@@ -241,8 +246,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "521412aedfba29a09902c76b8981c99b",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "f1193c41b06dfef865a67d1291ed7f10",
-        "inc\/data\/seed.json": "b2538b95d82244124662e2c372e7bec0",
+        "inc\/data\/seed.json": "d3fb8c55c4b8c6ca1c56c7296d57b980",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "17ee09670d354fafca18d885e808dfa1"
+    "checksum": "0638d4938598c8012b21c2948e8b3a43"
 }

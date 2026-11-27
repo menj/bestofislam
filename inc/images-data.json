@@ -7855,5 +7855,60 @@
     "source": "https://clevelandart.org/art/1953.12"
    }
   ]
+ },
+ "what-the-talmud-says-about-jesus": {
+  "featured": {
+   "file": "what-the-talmud-says-about-jesus.avif",
+   "alt": "A page of the Babylonian Talmud printed by Daniel Bomberg in Venice.",
+   "caption": "The Babylonian Talmud in the Venice edition of Daniel Bomberg, 1519 to 1523. Later Christian censors removed several of the passages on Jesus.",
+   "artist": "Daniel Bomberg",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Babylonian_Talmud_(Daniel_Bomberg_1519-1523).jpg"
+  },
+  "inline": []
+ },
+ "did-abraham-build-the-kaaba": {
+  "featured": {
+   "file": "did-abraham-build-the-kaaba.avif",
+   "alt": "Pilgrims circling the Kaaba in the Masjid al-Haram during the Hajj.",
+   "caption": "Pilgrims circle the Kaaba during the Hajj. The Quran calls it \"the first House appointed for men\" (3:96).",
+   "artist": "Adli Wahid Minor modifications made by Basile Morin, from the original version.",
+   "licence": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Kaaba_during_Hajj_-_edited.jpg"
+  },
+  "inline": []
+ },
+ "synagogues-in-the-quran-and-islamic-history": {
+  "featured": {
+   "file": "synagogues-in-the-quran-and-islamic-history.avif",
+   "alt": "The facade of the Ben Ezra Synagogue in Old Cairo.",
+   "caption": "The Ben Ezra Synagogue in Fustat, Old Cairo. Its storeroom kept the documents now called the Cairo Geniza.",
+   "artist": "Faris knight",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ben_Ezra_Synagogue-1.jpg"
+  },
+  "inline": []
+ },
+ "monogenes-only-begotten": {
+  "featured": {
+   "file": "monogenes-only-begotten.avif",
+   "alt": "A page of Papyrus 66, an early copy of the Gospel of John.",
+   "caption": "Papyrus 66, an early copy of the Gospel of John. At John 1:18 it reads monogenes theos, the variant behind the ESV's \"God the only Son\".",
+   "artist": "unknown writer in 3rd century",
+   "licence": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Papyrus66.jpg"
+  },
+  "inline": []
+ },
+ "is-allah-baal-or-hubal": {
+  "featured": {
+   "file": "is-allah-baal-or-hubal.avif",
+   "alt": "A limestone stele of a striding storm god with a raised club, from Ugarit.",
+   "caption": "The \"Baal with Thunderbolt\" stele from Ugarit, now in the Louvre (AO 15775). The Quran names Baal once, as the god Elias told his people to abandon.",
+   "artist": "Rama",
+   "licence": "CC BY-SA 2.0 fr",
+   "source": "https://commons.wikimedia.org/wiki/File:Baal_thunderbolt_from_Ugarit_(Louvre_AO15775).jpg"
+  },
+  "inline": []
  }
 }
