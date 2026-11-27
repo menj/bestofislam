@@ -165,7 +165,11 @@
    "taqiyya-myths"
   ],
   "type": "law",
-  "aliases": []
+  "aliases": [
+   "Taqiyah",
+   "Taqiya",
+   "Taqiyyah"
+  ]
  },
  {
   "slug": "taqwa",
