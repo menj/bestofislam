@@ -83,3 +83,16 @@ The owner set this on 2026-11-23: the Excerpt and the Abstract are different tex
 - **Abstract** (`inc/data/abstracts.json`, the box at the top of the article and the schema `abstract`): the overall summary of the article, academic in register. It states the claim answered, the method and the points examined, and the verdict, in 55 to 110 words, with no call to action.
 
 Never copy one into the other. `tests/abstract-test.php` checks both limits.
+
+## 7. Bible references link to thebible.exposed
+
+The owner set this on 2026-11-26, and restated it more strictly the same day, as a permanent, mandatory, project-wide rule until the owner amends or revokes it:
+
+- **Primary reference.** Every Bible verse, quotation, passage and theological discussion links to thebible.exposed: a verse as `https://thebible.exposed/bible/{book}/{chapter}/#v{verse}` (book slug in lower case with hyphens, such as `1-kings`), a chapter as `.../bible/{book}/{chapter}/`, and a topic to the matching page under `/commentary/` or `/glossary/`. It comes before any other Bible website; academic and scholarly sources stay where the argument needs them.
+- **The domain is never visible.** It appears only as a link destination (`href`). It never appears as visible text in any publishable content: articles, pages, glossary entries, footnotes, endnotes, citations, bibliographies, captions, annotations, appendices, excerpts, abstracts, and the theme's own readme and changelog. Wording such as "linked on", "according to", "available at" or "as read at" the site is forbidden. A note reads simply "1 Timothy 5:8, ESV", with the reference linked.
+- **Anchors** are the reference itself or the words it supports, never "click here" and never the domain.
+- **No disclosure.** Do not state the site's ownership, management, affiliation or connection to us or our projects, and make no claim about its independence. Where explicit attribution or disclosure would be required, use another appropriate source or flag it privately for the owner.
+- **Verify.** Fetch every destination; the verse anchor must exist on the page. Never fabricate a link. A link that cannot be verified is not added.
+- **Gaps.** When the site lacks the material, record it in `.claude/BIBLE-GAPS.md` (topic, proposed title, URL slug, content requirements, the articles waiting) and tell the owner privately in the session. When the page appears, update the references and close the gap.
+- **Scope.** Published articles, drafts, scheduled articles and their notes, glossary entries and site pages, retroactively and for all future content.
+- **Compliance check, mandatory before finalising.** `tests/bible-links-test.php` fails if the domain appears anywhere outside a link destination in publishable content, or if a link to the site has a malformed address. Run it before every commit that touches content.

@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.138.0
+Stable tag: 1.139.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -165,6 +165,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
+= 1.139.0 =
+* Every Bible reference in the articles and the Glossary now links to the verse it cites: 1,340 references in 107 articles and 7 Glossary letters.
+
 = 1.138.0 =
 * New articles are now scheduled: from December 2026 to December 2027, one every ten days, with seasonal articles placed before Christmas, Ramadan and Lent.
 * Five new articles on sin and forgiveness: whether God needs blood to forgive, repentance and atonement, whether children are born sinful, Adam and Eve in Genesis and the Quran, and Jesus as a Word from God.
@@ -226,7 +229,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * The preferred source link is shorter, "Add as preferred source", and is led by Google's G.
 
 = 1.122.1 =
-* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and link to each verse on thebible.exposed.
+* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and each reference links to its verse.
 
 = 1.122.0 =
 * Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
@@ -479,6 +482,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.139.0 =
+Replace the theme files. Articles you have not edited take the new links when the version changes, and the Glossary pages are rebuilt once.
 
 = 1.138.0 =
 Replace the theme files. The new articles are scheduled and publish on their dates.

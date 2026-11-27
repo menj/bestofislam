@@ -4,6 +4,18 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.139.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Every Bible reference in the form "Book chapter:verse" in the articles and the Glossary links to that verse in the ESV: 1,340 links in 107 articles and 7 Glossary letters, each checked against the page and its verse anchor. Headings, existing links and quoted wording are left as they were; John 5:4, which the ESV omits, links to its chapter. A Septuagint reference (Jeremiah 38:32) and 4 Ezra 14:9 are left unlinked.
+- The one link to another Bible site (2 Kings 3, in who-was-yahweh-archaeological-origins) now points to the same source, and notes give the translation only, with no website named.
+- `BOI_GLOSSARY_VERSION` is raised, so the Glossary pages pick up the links once.
+
+### Added
+- `tests/bible-links-test.php`: fails if a Bible link has a malformed address, or if the domain of the Bible site appears anywhere in shipped content outside a link destination.
+
 ## [1.138.0] - 2026-11-26
 
 No feature removed and no public identifier renamed.
@@ -223,7 +235,7 @@ No feature removed and no public identifier renamed.
 No feature removed and no public identifier renamed.
 
 ### Changed
-- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse on thebible.exposed (`/bible/{book}/{chapter}/#v{verse}`). The notes name the ESV at thebible.exposed in place of the World English Bible.
+- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse. The notes name the ESV in place of the World English Bible.
 
 ## [1.122.0] - 2026-11-23
 
