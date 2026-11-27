@@ -3566,6 +3566,80 @@
 				"Worship"
 			],
 			"publish_on": "2027-12-26T01:00:00Z"
+		},
+		{
+			"slug": "what-the-talmud-says-about-jesus",
+			"title": "What the Talmud says about Jesus: 5 passages, and the Quran's answer",
+			"excerpt": "Executed, born of an adulteress, a sorcerer in boiling excrement: five Talmud passages on Jesus, set beside the Quran. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The Talmud on Jesus: 5 passages",
+			"category": "answering-polemics",
+			"tags": [
+				"Jesus",
+				"Jews",
+				"Mary",
+				"Sources of the Quran",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "is-allah-baal-or-hubal",
+			"title": "Is Allah Baal or Hubal? 5 answers from the Quran and the sources",
+			"excerpt": "Some say Allah is Baal, or Hubal, the idol of the Kaaba. The Quran condemns Baal by name and the Prophet broke Hubal. Read on.",
+			"topic": "history",
+			"seo_title": "Is Allah Baal or Hubal? 5 answers",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Allah",
+				"Polytheism",
+				"Kaaba",
+				"Arabia before Islam",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "did-abraham-build-the-kaaba",
+			"title": "Did Abraham build the Kaaba? 5 points from the Quran, the hadith and Genesis",
+			"excerpt": "The Quran says Abraham and Ishmael raised the Kaaba. Critics say he never came near Arabia. Five points on the evidence. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Abraham build the Kaaba? 5 points",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Abraham",
+				"Ishmael",
+				"Kaaba",
+				"Mecca",
+				"Arabia before Islam"
+			]
+		},
+		{
+			"slug": "synagogues-in-the-quran-and-islamic-history",
+			"title": "Synagogues in the Quran and Islamic history: 5 facts",
+			"excerpt": "The Quran names synagogues among the houses of God it protects, and one in Cairo kept 850 years of Jewish records. Read on.",
+			"topic": "history",
+			"seo_title": "Synagogues in the Quran and Islamic history",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Jews",
+				"Freedom of religion",
+				"People of the Book",
+				"Mosques"
+			]
+		},
+		{
+			"slug": "monogenes-only-begotten",
+			"title": "Monogenes: does \"only begotten\" make Jesus the Son of God? 5 points",
+			"excerpt": "John 3:16 once read \"only begotten Son\". Modern Bibles read \"only Son\". What does the Greek word mean? Five points. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Monogenes and \"only begotten\": 5 points",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"New Testament",
+				"Gospels",
+				"Tawhid"
+			]
 		}
 	],
 	"pages": {
@@ -3836,7 +3910,7 @@
 		"Homosexuality": "What the Quran, the hadith and the jurists say about same-sex desire and acts.",
 		"Hudud": "The fixed punishments of Islamic law and the strict conditions on applying them.",
 		"Injil": "The Gospel God gave to Jesus, as the Quran speaks of it.",
-		"Ishmael": "",
+		"Ishmael": "Articles on Ishmael, the son of Abraham and Hagar, in the Quran and in Genesis.",
 		"Islamic architecture": "Mosques, domes and minarets, and how builders fitted them to each land.",
 		"Islamic art": "Art made under the belief in one God: pattern, script and space.",
 		"Islamic Dilemma": "The argument that the Quran's praise of the Torah and the Gospel traps it, and its two claims answered.",

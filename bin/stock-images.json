@@ -2462,5 +2462,50 @@
     "caption": "Papyrus 66, an early copy of the Gospel of John, the gospel in which the Son \"can do nothing of his own accord\"."
    }
   ]
+ },
+ "what-the-talmud-says-about-jesus": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Babylonian Talmud (Daniel Bomberg 1519-1523).jpg",
+   "alt": "A page of the Babylonian Talmud printed by Daniel Bomberg in Venice.",
+   "caption": "The Babylonian Talmud in the Venice edition of Daniel Bomberg, 1519 to 1523. Later Christian censors removed several of the passages on Jesus."
+  },
+  "inline": []
+ },
+ "is-allah-baal-or-hubal": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Baal thunderbolt from Ugarit (Louvre AO15775).jpg",
+   "alt": "A limestone stele of a striding storm god with a raised club, from Ugarit.",
+   "caption": "The \"Baal with Thunderbolt\" stele from Ugarit, now in the Louvre (AO 15775). The Quran names Baal once, as the god Elias told his people to abandon."
+  },
+  "inline": []
+ },
+ "did-abraham-build-the-kaaba": {
+  "featured": {
+   "src": "commons",
+   "id": "File:The Kaaba during Hajj - edited.jpg",
+   "alt": "Pilgrims circling the Kaaba in the Masjid al-Haram during the Hajj.",
+   "caption": "Pilgrims circle the Kaaba during the Hajj. The Quran calls it \"the first House appointed for men\" (3:96)."
+  },
+  "inline": []
+ },
+ "synagogues-in-the-quran-and-islamic-history": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Ben Ezra Synagogue-1.jpg",
+   "alt": "The facade of the Ben Ezra Synagogue in Old Cairo.",
+   "caption": "The Ben Ezra Synagogue in Fustat, Old Cairo. Its storeroom kept the documents now called the Cairo Geniza."
+  },
+  "inline": []
+ },
+ "monogenes-only-begotten": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Papyrus66.jpg",
+   "alt": "A page of Papyrus 66, an early copy of the Gospel of John.",
+   "caption": "Papyrus 66, an early copy of the Gospel of John. At John 1:18 it reads monogenes theos, the variant behind the ESV's \"God the only Son\"."
+  },
+  "inline": []
  }
 }

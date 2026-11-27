@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.155.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles chosen from the competitor keyword exports, each in the Faruqian voice with its notes checked: did-abraham-build-the-kaaba, is-allah-baal-or-hubal, monogenes-only-begotten, synagogues-in-the-quran-and-islamic-history and what-the-talmud-says-about-jesus. Images from Wikimedia Commons: the Bomberg Talmud and Papyrus 66 (public domain), the Ugarit Baal stele (CC BY-SA 2.0 fr), the Kaaba during the Hajj (CC BY-SA 4.0) and the Ben Ezra Synagogue (CC BY-SA 3.0).
+- Tag description for Ishmael.
+
 ## [1.154.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.

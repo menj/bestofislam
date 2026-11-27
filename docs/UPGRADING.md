@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.155.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as published posts on the next admin visit, and fills in the empty Ishmael tag description.
+
 ## Upgrading to 1.154.0
 
 Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 26) and adds the new aliases to Iblis and the Basmala entry.
