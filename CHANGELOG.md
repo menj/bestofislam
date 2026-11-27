@@ -18,6 +18,9 @@ No feature removed and no public identifier renamed.
 - Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
 - The five articles join the reading order.
 
+### Fixed
+- The content sync (`boi_sync_maybe_run()`) waits until the version migration has finished. Before, an admin request that could not take the migration lock went on to populate under the sync lock while another request was migrating, so both could create the same new article and WordPress would save the second as `slug-2`.
+
 ## [1.138.0] - 2026-11-26
 
 No feature removed and no public identifier renamed.
