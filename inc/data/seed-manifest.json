@@ -51,7 +51,7 @@
         "content\/early-christians-charged-others-with-corrupting-scripture.json": "9c2f16b7e565908f1ca4be03ecc2ddc5",
         "content\/early-christians-yahweh-evil-gnosticism-marcion.json": "9f762008c911ebe77bf86d905e57ce8d",
         "content\/end-of-the-world-prediction.json": "ee70fcc146f88935fb79b655e84c7774",
-        "content\/end-of-time.json": "f7879a588a6a5edc8a6db49f133a1166",
+        "content\/end-of-time.json": "300915fe3ac4be6ef9da35ba013e4046",
         "content\/ex-muslim-blog-study.json": "5e4cde98da80766b9200cdf269fd93d5",
         "content\/ezekiel-twenty-three-allegory.json": "2bb009ed85c62130986afca0c4fd03f9",
         "content\/ezekiel-twenty-three-in-malay-and-indonesian-bibles.json": "6803a3a181a9518855176e1df0b6ee57",
@@ -167,7 +167,7 @@
         "content\/revelation-warning-and-the-canon.json": "1954a62d9b30486d3f1af0788f7bd196",
         "content\/revelatory-exegesis.json": "a9519360d409570a1931df42affd868f",
         "content\/revisionist-case-weighed.json": "7ae489a5eb73dbd5f8b417babe5a06fe",
-        "content\/ridda-wars-abu-bakr-fadak.json": "48511d7b06cdc10a89c66bf65a679122",
+        "content\/ridda-wars-abu-bakr-fadak.json": "7cdb19120222d5a4c985b6e47f6f84b0",
         "content\/sadness-and-depression-in-islam.json": "707884c9b8f2cda5a4f31a75646a430e",
         "content\/safiyya-and-the-women-captured-in-war.json": "2f05f2c788f8c0f53738e39582596993",
         "content\/sam-shamoun-on-the-pbd-podcast.json": "9c0b7936e68cb18a0a39b24ceaff58dc",
@@ -191,8 +191,8 @@
         "content\/sons-of-god-in-the-bible.json": "c73019d6501d2cfec646e760772a77dc",
         "content\/sun-muddy-spring-and-fixed-earth.json": "cb4fe1729bdf947bd3390d030617f7d2",
         "content\/talmud-midrash-apocrypha-borrowing.json": "00003cb3daad9fcaa04e7699810cb881",
-        "content\/taqiyya-myths.json": "97c25de67fc6e443883d765883ca11bd",
-        "content\/temporary-marriage-mutah.json": "a6854db553af977e23ee11d9bad95b4e",
+        "content\/taqiyya-myths.json": "592aff8f73637413f3515b3c8505e6c6",
+        "content\/temporary-marriage-mutah.json": "9d224df31a6fe701764d211a7009f547",
         "content\/terrorism-and-muslims-the-data.json": "1498a8ba09283654a122d61263b2c7c8",
         "content\/three-divorces-and-the-one-night-marriage.json": "b84585164b698c8ba470ba32eb1a74d8",
         "content\/torah-on-the-cushion-hadith.json": "c1c587e14c90058cb13a068b4d55d1d0",
@@ -229,5 +229,5 @@
         "inc\/data\/seed.json": "a5b956675794aa604d2a011fbcbdb1bd",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "0dfa9c14a3c3cdd396a802723924a142"
+    "checksum": "12038fd59340e825b7a4bc8195b20322"
 }

@@ -4,6 +4,17 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.147.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- Four articles on questions where Sunni and Shia Muslims differ now state the Sunni position, by the owner's decision (SSOT D72). The Shia position is still stated from its own sources:
+  - ridda-wars-abu-bakr-fadak: Abu Bakr applied the Prophet's ruling, "Our property is not to be inherited", which Ali and al-Abbas affirmed under oath before Umar (al-Bukhari), and Ali later gave Abu Bakr his pledge.
+  - end-of-time: Sunni scholarship accepts the Mahdi reports taken together (al-Tirmidhi grades Ibn Masʿud's report *ḥasan ṣaḥīḥ*), and the Mahdi of the Sunni reports bears the name of the Prophet's father, which excludes the Twelver hidden imam.
+  - taqiyya-myths: taqiyya is held to the Quran's limit, a concession under compulsion (16:106).
+  - temporary-marriage-mutah: the article states the Sunni position, permission for a time and then prohibition "until the Day of Resurrection".
+
 ## [1.146.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.

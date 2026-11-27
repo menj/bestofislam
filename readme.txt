@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.146.0
+Stable tag: 1.147.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.147.0 =
+* Four articles on questions where Sunni and Shia Muslims differ now state the Sunni position: the Fadak dispute, the Mahdi, taqiyya and temporary marriage (mutah).
 
 = 1.146.0 =
 * Five new articles. Four on Christmas are scheduled from 6 November to 6 December 2027: was Jesus born on 25 December, Christmas and the Quran, six Christmas traditions and their origins, and whether Muslims may say Merry Christmas. The fifth, on five former Christian ministers and priests who embraced Islam, is scheduled for 19 June 2027.
@@ -503,6 +506,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.147.0 =
+Replace the theme files. Unedited copies of four articles take the new text; an edited copy is listed on the Content tab.
 
 = 1.146.0 =
 Replace the theme files. Five new articles are scheduled and publish on their dates.
