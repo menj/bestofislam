@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.144.0
+Stable tag: 1.145.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -164,6 +164,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * Code carried under GPLv2-or-later and MIT grants: the notices those licences require are kept in docs/CREDITS.md.
 
 == Changelog ==
+
+= 1.145.0 =
+* A new article: "Sam Shamoun on the PBD Podcast: 9 claims checked against the sources", each claim quoted with its time in the interview.
 
 = 1.144.0 =
 * "Sam Shamoun under oath" now has photographs of the Chicago courts in place of the pattern graphics, and its notes give paragraph numbers in words.
@@ -497,6 +500,9 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
+
+= 1.145.0 =
+Replace the theme files. The new article is created when the version changes.
 
 = 1.144.0 =
 Replace the theme files. The article refreshes if you have not edited it.

@@ -4,6 +4,14 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.145.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- sam-shamoun-on-the-pbd-podcast: "Sam Shamoun on the PBD Podcast: 9 claims checked against the sources", in the Islamophobia section. Each claim is quoted from the transcript of PBD Podcast episode 684 with its time, and each time in the notes links to that moment of the video with `rel="nofollow noopener"`. Answered from Bukhari 3244, 2227, Muslim 804 and 2824, Abu Dawud 2135, Quran 3:49, 4:3, 4:128, 33:6, 56:17 and 78:31 to 33, the ESV (Isaiah 64:4, John 5:19, 26, 30, 14:6, 28, 17:3, 1 Corinthians 2:9, Genesis 4:10), Pew Research Center (2018) and the State Department on the 1962 abolition of slavery in Saudi Arabia. Images: a studio microphone, Papyrus 46 and Papyrus 66, all public domain.
+- sam-shamoun-under-oath links to it from its bottom line.
+
 ## [1.144.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
