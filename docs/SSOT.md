@@ -16,13 +16,13 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.138.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.141.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
 | Seeded content | 8 sections, 23 categories, 163 tags, 209 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 785 Glossary entries (`inc/glossary-data/`) |
-| Data versions | `BOI_GLOSSARY_VERSION` 23, `BOI_TERMS_VERSION` 2 |
+| Data versions | `BOI_GLOSSARY_VERSION` 24, `BOI_TERMS_VERSION` 3 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
@@ -37,7 +37,7 @@ These names are public identifiers. Renaming one is a breaking change and needs 
 - Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
 - Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
 - English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
-- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Do not name the individuals who present arguments for or against any position in an article, excerpt, heading, list or published note. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
+- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Public critics of Islam may be named and confronted directly where the article answers a claim they made, quoting them exactly with a source (owner's rule of 2026-11-27, `.claude/VOICE.md` section 1); their private lives, and private individuals, stay out, except that published court findings on such a critic's own credibility and his handling of money given for his work may be quoted exactly and stated fairly (owner's decision of 2026-11-27, the article `sam-shamoun-under-oath`). Named scholars of record, such as classical authorities and academic writers of reference works, stay.
 - Articles never concede the critic's argument. Each answer meets the critic with the strongest case the sources support, and a claim the sources cannot support is left out (owner, 2026-11-20).
 - The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
 - Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).

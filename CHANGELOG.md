@@ -4,6 +4,41 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.141.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- Sections rebalanced by subject. Comparative Religion held 84 of 210 articles; sixteen move to where their subject lies, leaving Comparative Religion 71, Belief & Practices 48, Faith & Reason 32, History 29 and Islamophobia 11:
+  - to The Quran's Text and Revelation: haman-anachronism, quran-anachronism-claims, i-read-the-entire-quran-reply;
+  - to Hadith and Sira Under Scrutiny: al-zutt-allegation, apes-and-pigs-and-the-jews, jews-behind-the-stone-hadith, buraq-and-miracle-stories;
+  - to The Prophet's Life: prophet-died-poisoning, was-muhammad-a-narcissist, muhammad-false-prophet-claim, did-muhammad-perform-miracles;
+  - to Islam and Other Peoples: western-scholars-of-islam, what-the-pagans-of-mecca-said-about-allah;
+  - to Islamophobia: sam-shamoun-under-oath, fighting-verses-in-context, jihad-meaning-quran-hadith-jurists.
+- The term migration now moves the section (`listicle-topic`) as well as the category, under the same rule: only while the post still holds what the theme gave it (`_boi_seed_topic`, or the seed's `topic_v1`). `BOI_TERMS_VERSION` and the seed's `terms_version` are 3.
+
+## [1.140.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- sam-shamoun-under-oath: "Sam Shamoun under oath: 7 findings from the Illinois courts", a listicle with excerpt, abstract and images. It quotes the two 2020 opinions of the Appellate Court of Illinois in his divorce case on his credibility, his undisclosed income and donations, and his compliance with court orders, each quotation checked against the opinion with its paragraph number, and states where he prevailed. The order of protection is reported as the court recorded it (¶¶ 5, 70), with no description of conduct the opinions do not give. The family matters and the private persons in the case are otherwise left out. It ends with links to five articles on the subjects he writes about.
+
+### Changed
+- `.claude/VOICE.md` and SSOT: published court findings on a named critic's own credibility and his handling of money given for his work may be quoted, exactly and fairly; family matters and private persons stay out.
+
+## [1.139.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Every Bible reference in the form "Book chapter:verse" in the articles and the Glossary links to that verse in the ESV: 1,340 links in 107 articles and 7 Glossary letters, each checked against the page and its verse anchor. Headings, existing links and quoted wording are left as they were; John 5:4, which the ESV omits, links to its chapter. A Septuagint reference (Jeremiah 38:32) and 4 Ezra 14:9 are left unlinked.
+- The one link to another Bible site (2 Kings 3, in who-was-yahweh-archaeological-origins) now points to the same source, and notes give the translation only, with no website named.
+- `BOI_GLOSSARY_VERSION` is raised, so the Glossary pages pick up the links once.
+
+### Added
+- `tests/bible-links-test.php`: fails if a Bible link has a malformed address, or if the domain of the Bible site appears anywhere in shipped content outside a link destination.
+
 ## [1.138.0] - 2026-11-26
 
 No feature removed and no public identifier renamed.
@@ -223,7 +258,7 @@ No feature removed and no public identifier renamed.
 No feature removed and no public identifier renamed.
 
 ### Changed
-- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse on thebible.exposed (`/bible/{book}/{chapter}/#v{verse}`). The notes name the ESV at thebible.exposed in place of the World English Bible.
+- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse. The notes name the ESV in place of the World English Bible.
 
 ## [1.122.0] - 2026-11-23
 
