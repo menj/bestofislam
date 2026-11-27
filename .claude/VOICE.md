@@ -10,9 +10,16 @@ and `.claude/FARUQI.md` touch the same point, they agree; FARUQI.md still comes 
 
 The work answers claims and refuses to grant the opponent's frame. A fact the
 evidence supports is stated as a fact, and the argument built on it is then
-answered; the critic's argument is never conceded (FARUQI.md). The refusal is made
-by walking the evidence to a verdict, never by raising the temperature. No humour,
-no mockery, no confrontation with a person: the work answers the argument.
+answered; the critic's argument is never conceded (FARUQI.md).
+
+Confrontation with Islamophobes is a must (owner's rule, 2026-11-27). Name the
+public critic who made the claim, quote him exactly with a checkable source, and
+take the claim apart directly and without deference: call an error an error, a
+misquotation a misquotation, a fabrication a fabrication, and show it from the
+evidence. The tone may be hard, blunt and scornful of the argument. Its force
+comes from the evidence: every charge against a named critic's work must be
+documented. What is out of bounds is the person's private life (family, marriage,
+health, appearance), slurs and abuse, and private individuals, who are never named.
 
 ## 2. Voice and structure
 
