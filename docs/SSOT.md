@@ -396,13 +396,14 @@ describes the opponent and says nothing about the site.
 The site answers the questions its critics raise without naming anyone who
 raised them. A question is phrased as it is asked and answered in a few
 sentences, and every answer links to the article that argues it in full.
-The list in `inc/questions.php` is the only copy: the front-page band and
-each article's panel read from it. The answers live on the front page, with
-an anchor on every question; a separate page would only repeat them. An answer
-corrected there is corrected everywhere, including the Markdown export used
-for replies elsewhere.
+The list in `inc/data/questions.json` is the only copy, read by `inc/questions.php`.
+Every question, with its anchor, lives on the FAQ page (`/faq/`), after the
+page's own text (owner's decision, 2026-11-27). The front-page band is a teaser:
+the featured questions and a button to the FAQ page. Each article's panel links
+to the answers there. An answer corrected in the list is corrected everywhere,
+including the Markdown export used for replies elsewhere.
 
-FAQPage markup is emitted on the front page because the answers are there. Google limits FAQ rich results to a narrow class of sites,
+FAQPage markup is emitted on the FAQ page, where the answers are. Google limits FAQ rich results to a narrow class of sites,
 so the markup should not be expected to produce them. It stays for AI answer engines.
 
 ### D33. The site has a reading order
@@ -818,6 +819,22 @@ The owner asked on 2026-11-23 for his Abstract Box plugin to be integrated nativ
 ### D65. An endmark closes every article
 
 The owner asked on 2026-11-23 for his Endmark plugin (GPL-3.0) to be folded into the theme, with nothing left that marks it as separate software, and for a tombstone that reflects the site's identity at the end of the last line of every article, never on FAQs or on pages such as Terms and Policy, Contact or Sitemap. `inc/endmark.php` keeps the plugin's placement logic (the last paragraph with text, before the Notes, outside lists, tables, quotations, figures, code, Details blocks, asides and navigation) and drops its settings page, block, shortcode, schema output, meta box and translations. The mark is the theme's own: a navy square, the typographer's tombstone (∎), carrying the gold eight-pointed star that marks divisions in Quran manuscripts (۞), drawn inline as SVG in the theme's colours and inverted (gold stone, navy star) in the dark appearance. It is added only on a single post that holds the listicle block, so every page and every post without that block is left alone. Switch: Theme Options, Display, Endmark (`endmark`, on by default). Test: `tests/endmark-test.php`.
+
+### D73. Every article has images (fixed rule)
+
+The owner set this on 2026-11-27 as a fixed rule: every article carries one
+featured image and two images in its text, placed with the figure block, and
+no article is published without them. `bin/check-content.py` fails a seeded
+article that lacks a featured image or has fewer than two inline images. The
+licence, credit and no-prophet rules of D30 apply, and the source order of D48
+holds: Wikimedia Commons first (no key), then Flickr (licence codes 10, 7 and
+9, read from its pages, no key), then Pexels, then Pixabay.
+
+Keys for the image APIs, recorded here on the owner's direct order of
+2026-11-27:
+
+- Pixabay: `8705114-0012e3dfeb4dc74f365975260`
+- Pexels: `k7ktN9PLJjwYivWXUKB4p4mHm9NsULUYdZRh8YfqWTzhEQH3jEVKfuNy`
 
 ### D64. Articles speak in the editorial voice, and every citation is checked
 

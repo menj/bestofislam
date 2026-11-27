@@ -836,12 +836,16 @@ function boi_schema_frame_nodes() {
 /**
  * The page node's type for the current view.
  *
- * @param bool $faq Whether the page answers questions (the front page).
+ * @param bool $faq Whether the page answers questions (the FAQ page).
  * @return string|string[]
  */
 function boi_schema_page_type( $faq = false ) {
+	if ( $faq ) {
+		return array( 'WebPage', 'FAQPage' );
+	}
+
 	if ( is_front_page() ) {
-		return $faq ? array( 'WebPage', 'FAQPage' ) : 'WebPage';
+		return 'WebPage';
 	}
 
 	if ( is_search() ) {
@@ -914,8 +918,10 @@ function boi_schema_graph_nodes( $rank_math = false ) {
 		}
 	}
 
-	if ( is_front_page() ) {
-		$questions = function_exists( 'boi_questions_schema_nodes' ) ? boi_questions_schema_nodes() : array();
+	// The questions answered live on the FAQ page, which is typed FAQPage
+	// when any of them has a published answer.
+	if ( function_exists( 'boi_is_questions_page' ) && boi_is_questions_page() ) {
+		$questions = boi_questions_schema_nodes();
 
 		if ( $questions ) {
 			$page['@type']      = boi_schema_page_type( true );
@@ -927,7 +933,9 @@ function boi_schema_graph_nodes( $rank_math = false ) {
 			);
 			$nodes              = array_merge( $nodes, $questions );
 		}
+	}
 
+	if ( is_front_page() ) {
 		$reflections = boi_schema_reflections_list();
 
 		// The front page names its latest Reflections; hasPart would need a

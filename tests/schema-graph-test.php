@@ -246,6 +246,9 @@ function get_query_var() {
 function get_queried_object() {
 	return $GLOBALS['t']['obj'];
 }
+function get_queried_object_id() {
+	return $GLOBALS['t']['obj'] instanceof WP_Post ? $GLOBALS['t']['obj']->ID : 0;
+}
 function get_the_ID() {
 	return $GLOBALS['t']['obj'] instanceof WP_Post ? $GLOBALS['t']['obj']->ID : 0;
 }
@@ -519,13 +522,15 @@ foreach ( array_slice( boi_glossary_terms(), 0, 6 ) as $term ) {
 	++$n;
 }
 $about   = boi_t_add( array( 'ID' => 40, 'post_name' => 'about', 'post_type' => 'page', 'post_title' => 'About' ) );
+$faq     = boi_t_add( array( 'ID' => 42, 'post_name' => 'faq', 'post_type' => 'page', 'post_title' => 'Frequently asked questions', 'post_status' => 'publish' ) );
 $contact = boi_t_add( array( 'ID' => 41, 'post_name' => 'contact', 'post_type' => 'page', 'post_title' => 'Contact', 'post_content' => '<!-- wp:bestofislam/contact-form /-->' ) );
 
 global $wp_query;
 $wp_query = (object) array( 'posts' => array( $listicle, $quotes ) );
 
 $views = array(
-	'front'          => array( 'front', get_post( 1 ), array( 'WebPage', 'FAQPage' ) ),
+	'front'          => array( 'front', get_post( 1 ), array( 'WebPage' ) ),
+	'faq'            => array( 'page', $faq, array( 'WebPage', 'FAQPage' ) ),
 	'listicle'       => array( 'post', $listicle, array( 'WebPage' ) ),
 	'quotes'         => array( 'post', $quotes, array( 'WebPage' ) ),
 	'reflection'     => array( 'post', $reflect, array( 'WebPage' ) ),

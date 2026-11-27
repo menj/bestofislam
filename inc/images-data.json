@@ -7865,7 +7865,17 @@
    "licence": "Public domain",
    "source": "https://commons.wikimedia.org/wiki/File:Babylonian_Talmud_(Daniel_Bomberg_1519-1523).jpg"
   },
-  "inline": []
+  "inline": [
+   null,
+   {
+    "file": "what-the-talmud-says-about-jesus-2.avif",
+    "alt": "Two early printed editions of the Talmud side by side.",
+    "caption": "Talmud editions of Daniel Bomberg and Ambrosius Froben. The Basel edition of Froben was printed under Christian censorship.",
+    "artist": "LGLou",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg"
+   }
+  ]
  },
  "did-abraham-build-the-kaaba": {
   "featured": {

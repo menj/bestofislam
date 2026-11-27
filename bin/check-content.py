@@ -254,6 +254,22 @@ for slug, entry in credits.items():
         if not os.path.exists(os.path.join(ROOT, 'assets', 'images', folder, shot['file'])):
             errors.append('images: %s lists %s/%s, which does not exist' % (slug, folder, shot['file']))
 
+# Every article has images (SSOT D73): a featured image, from
+# inc/images-data.json or inc/data/image-credits.json, and at least two inline
+# images placed with the figure block.
+try:
+    _base = json.load(open(os.path.join(ROOT, 'inc', 'data', 'image-credits.json'), encoding='utf-8'))
+    for _item in json.load(open(seed_path, encoding='utf-8')).get('listicles', []):
+        _slug = _item.get('slug', '')
+        _entry = credits.get(_slug) or {}
+        if not (_entry.get('featured') or _slug in _base):
+            errors.append('images: %s has no featured image (D73)' % _slug)
+        _inline = [i for i in (_entry.get('inline') or []) if i]
+        if len(_inline) < 2:
+            errors.append('images: %s has %d inline image(s); two are needed (D73)' % (_slug, len(_inline)))
+except (OSError, json.JSONDecodeError) as e:
+    errors.append('images: cannot check D73 (%s)' % e)
+
 
 # Categories and tags. Every seeded article names one category from
 # `categories` and 3 to 6 tags from `tags` in inc/data/seed.json. A tag slug

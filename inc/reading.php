@@ -135,7 +135,7 @@ function boi_render_read_next() {
 			'<nav class="boi-next is-end" aria-label="%1$s"><p class="boi-next__label">%2$s</p><a class="boi-next__title" href="%3$s">%4$s</a></nav>',
 			esc_attr__( 'Reading order', 'bestofislam' ),
 			esc_html__( 'You have reached the end of the reading order', 'bestofislam' ),
-			esc_url( home_url( '/#objections' ) ),
+			esc_url( function_exists( 'boi_questions_url' ) ? boi_questions_url() : home_url( '/#objections' ) ),
 			esc_html__( 'See every question answered', 'bestofislam' )
 		);
 	}

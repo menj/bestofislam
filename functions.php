@@ -237,6 +237,16 @@ function boi_enqueue_assets() {
 
 	if ( is_front_page() ) {
 		wp_enqueue_script(
+			'boi-hero-stack',
+			BOI_URI . '/assets/js/hero-stack.js',
+			array(),
+			BOI_VERSION,
+			array( 'in_footer' => true, 'strategy' => 'defer' )
+		);
+	}
+
+	if ( is_front_page() || ( function_exists( 'boi_is_questions_page' ) && boi_is_questions_page() ) ) {
+		wp_enqueue_script(
 			'boi-questions',
 			BOI_URI . '/assets/js/questions.js',
 			array(),

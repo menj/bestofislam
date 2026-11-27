@@ -33,48 +33,12 @@ function boi_register_front_blocks() {
 add_action( 'init', 'boi_register_front_blocks' );
 
 /**
- * Hero visual: the first three entries of the newest listicle, stacked as
- * numbered cards. It shows the format before the reader has scrolled.
+ * The first three entries of a listicle, as hero cards.
  *
- * @return string
+ * @param WP_Post $post Listicle.
+ * @return array{title: string, url: string, cards: array}|null
  */
-function boi_render_hero_stack() {
-	$post = null;
-
-	// The hero opens the reading order, so a first visit starts where the site starts.
-	if ( function_exists( 'boi_reading_positions' ) ) {
-		foreach ( array_keys( boi_reading_positions() ) as $slug ) {
-			$candidate = get_page_by_path( $slug, OBJECT, 'post' );
-
-			if ( $candidate && 'publish' === $candidate->post_status && ! boi_is_unlisted( $candidate ) ) {
-				$post = $candidate;
-				break;
-			}
-		}
-	}
-
-	if ( ! $post ) {
-		$posts = get_posts(
-			array(
-				'post_type'      => 'post',
-				'posts_per_page' => 1,
-				'meta_query'     => array(
-					array(
-						'key'     => BOI_LISTICLE_META,
-						'compare' => 'EXISTS',
-					),
-				),
-			)
-		);
-
-		if ( empty( $posts ) ) {
-			return '';
-		}
-
-		$post = $posts[0];
-	}
-
-
+function boi_hero_stack_set( $post ) {
 	$entries = array();
 
 	foreach ( boi_find_listicles( parse_blocks( $post->post_content ) ) as $listicle ) {
@@ -89,29 +53,144 @@ function boi_render_hero_stack() {
 		}
 	}
 
-	if ( empty( $entries ) ) {
+	if ( count( $entries ) < 3 ) {
+		return null;
+	}
+
+	$url   = get_permalink( $post );
+	$cards = array();
+
+	foreach ( $entries as $entry ) {
+		$cards[] = array(
+			'href'  => $url . '#' . boi_entry_anchor( $entry ),
+			'title' => wp_strip_all_tags( $entry['title'] ),
+		);
+	}
+
+	$set = array(
+		'title' => get_the_title( $post ),
+		'url'   => $url,
+		'cards' => $cards,
+	);
+
+	// The background changes with the cards, to the article's own image.
+	$image = boi_hero_image_for( $post );
+
+	if ( $image && '' !== $image['source'] ) {
+		$set['img'] = array(
+			'large'  => $image['large'],
+			'small'  => $image['small'],
+			'credit' => sprintf( /* translators: 1: artist, 2: licence. */ __( 'Background: %1$s. %2$s,', 'bestofislam' ), $image['artist'], $image['licence'] ),
+			'source' => $image['source'],
+		);
+	}
+
+	return $set;
+}
+
+/**
+ * The listicles the hero cycles through: the opening of the reading order,
+ * then a changing selection of other published listicles. Cached for an hour,
+ * so the selection changes through the day.
+ *
+ * @return array[] Sets from boi_hero_stack_set().
+ */
+function boi_hero_stack_sets() {
+	$cached = get_transient( 'boi_hero_sets' );
+
+	if ( is_array( $cached ) && $cached ) {
+		return $cached;
+	}
+
+	$posts = array();
+
+	if ( function_exists( 'boi_reading_positions' ) ) {
+		foreach ( array_keys( boi_reading_positions() ) as $slug ) {
+			$candidate = get_page_by_path( $slug, OBJECT, 'post' );
+
+			if ( $candidate && 'publish' === $candidate->post_status && ! boi_is_unlisted( $candidate ) ) {
+				$posts[ $candidate->ID ] = $candidate;
+				break;
+			}
+		}
+	}
+
+	$more = get_posts(
+		array(
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => 12,
+			'orderby'        => 'rand',
+			'meta_query'     => array(
+				array(
+					'key'     => BOI_LISTICLE_META,
+					'compare' => 'EXISTS',
+				),
+			),
+		)
+	);
+
+	foreach ( $more as $candidate ) {
+		if ( ! isset( $posts[ $candidate->ID ] ) && ! boi_is_unlisted( $candidate ) ) {
+			$posts[ $candidate->ID ] = $candidate;
+		}
+	}
+
+	$sets = array();
+
+	foreach ( $posts as $post ) {
+		$set = boi_hero_stack_set( $post );
+
+		if ( $set ) {
+			$sets[] = $set;
+		}
+
+		if ( count( $sets ) >= 8 ) {
+			break;
+		}
+	}
+
+	if ( $sets ) {
+		set_transient( 'boi_hero_sets', $sets, HOUR_IN_SECONDS );
+	}
+
+	return $sets;
+}
+
+/**
+ * Hero visual: the first three entries of a listicle, stacked as numbered
+ * cards, so the format shows before the reader has scrolled. The first set
+ * is rendered here; assets/js/hero-stack.js cycles through the others, which
+ * travel in a data attribute.
+ *
+ * @return string
+ */
+function boi_render_hero_stack() {
+	$sets = boi_hero_stack_sets();
+
+	if ( ! $sets ) {
 		return '';
 	}
 
 	$cards = '';
 
-	foreach ( $entries as $i => $entry ) {
+	foreach ( $sets[0]['cards'] as $i => $card ) {
 		$cards .= sprintf(
-			'<a class="boi-stack__card" href="%1$s#%2$s" style="--i:%3$d"><span class="boi-stack__num">%4$s</span><span class="boi-stack__title">%5$s</span></a>',
-			esc_url( get_permalink( $post ) ),
-			esc_attr( boi_entry_anchor( $entry ) ),
+			'<a class="boi-stack__card" href="%1$s" style="--i:%2$d"><span class="boi-stack__num">%3$s</span><span class="boi-stack__title">%4$s</span></a>',
+			esc_url( $card['href'] ),
 			(int) $i,
 			esc_html( number_format_i18n( $i + 1 ) ),
-			esc_html( wp_strip_all_tags( $entry['title'] ) )
+			esc_html( $card['title'] )
 		);
 	}
 
 	return sprintf(
-		'<div class="boi-stack"><p class="boi-stack__from">%1$s <a href="%2$s">%3$s</a></p>%4$s</div>',
+		'<div class="boi-stack" data-sets="%5$s" aria-live="polite"><p class="boi-stack__from">%1$s <a href="%2$s">%3$s</a></p>%4$s</div>',
 		esc_html__( 'From', 'bestofislam' ),
-		esc_url( get_permalink( $post ) ),
-		esc_html( get_the_title( $post ) ),
-		$cards
+		esc_url( $sets[0]['url'] ),
+		esc_html( $sets[0]['title'] ),
+		$cards,
+		esc_attr( wp_json_encode( $sets ) )
 	);
 }
 
@@ -178,6 +257,7 @@ function boi_site_counts() {
 function boi_flush_site_counts() {
 	delete_transient( 'boi_site_counts' );
 	delete_transient( 'boi_auto_picks' );
+	delete_transient( 'boi_hero_sets' );
 	delete_transient( 'boi_reading_urls' );
 }
 add_action( 'save_post_post', 'boi_flush_site_counts' );
@@ -188,27 +268,32 @@ add_action( 'edited_listicle-topic', 'boi_flush_site_counts' );
 add_action( 'delete_listicle-topic', 'boi_flush_site_counts' );
 
 /**
- * Renders the stats strip.
+ * Renders the strip under the hero: four facts of the faith, each linked to
+ * the page that explains it. A link whose page is not published is left
+ * plain.
  *
  * @return string
  */
 function boi_render_stats() {
-	$c     = boi_site_counts();
 	$items = array(
-		array( $c['pieces'], __( 'pieces published', 'bestofislam' ) ),
-		array( $c['entries'], __( 'objections and answers', 'bestofislam' ) ),
-		array( $c['sections'], __( 'sections', 'bestofislam' ) ),
-		array( __( '0', 'bestofislam' ), __( 'ads or trackers', 'bestofislam' ) ),
+		array( 114, __( 'surahs in the Quran', 'bestofislam' ), 'glossary/quran' ),
+		array( 6236, __( 'verses, in the Kufan count', 'bestofislam' ), 'glossary/aya' ),
+		array( 25, __( 'prophets named in the Quran', 'bestofislam' ), 'shared-prophets' ),
+		array( 5, __( 'pillars of Islam', 'bestofislam' ), 'five-pillars-explained' ),
 	);
 
 	$html = '';
 
 	foreach ( $items as $item ) {
-		$html .= sprintf(
-			'<li class="boi-stats__item"><span class="boi-stats__num">%1$s</span><span class="boi-stats__label">%2$s</span></li>',
-			esc_html( is_numeric( $item[0] ) ? number_format_i18n( (int) $item[0] ) : $item[0] ),
-			esc_html( $item[1] )
-		);
+		$num   = '<span class="boi-stats__num">' . esc_html( number_format_i18n( $item[0] ) ) . '</span><span class="boi-stats__label">' . esc_html( $item[1] ) . '</span>';
+		$type  = 0 === strpos( $item[2], 'glossary/' ) ? 'page' : 'post';
+		$found = get_page_by_path( $item[2], OBJECT, $type );
+
+		if ( $found && 'publish' === $found->post_status ) {
+			$num = '<a class="boi-stats__link" href="' . esc_url( get_permalink( $found ) ) . '">' . $num . '</a>';
+		}
+
+		$html .= '<li class="boi-stats__item">' . $num . '</li>';
 	}
 
 	return '<ul class="boi-stats">' . $html . '</ul>';
@@ -471,23 +556,29 @@ function boi_hero_post() {
 function boi_hero_image() {
 	static $hero = false;
 
-	if ( false !== $hero ) {
-		return $hero;
+	if ( false === $hero ) {
+		$post = boi_hero_post();
+		$hero = $post ? boi_hero_image_for( $post ) : null;
 	}
 
-	$hero = null;
-	$post = boi_hero_post();
+	return $hero;
+}
 
-	if ( ! $post ) {
-		return $hero;
-	}
-
+/**
+ * An article's featured image as a hero background, with its credit, or the
+ * image bundled with the theme when none is attached yet.
+ *
+ * @param WP_Post $post Article.
+ * @return array|null Image URLs, post ID and credit, or null.
+ */
+function boi_hero_image_for( $post ) {
 	$id    = (int) get_post_thumbnail_id( $post );
 	$large = $id ? wp_get_attachment_image_url( $id, 'full' ) : false;
 
 	if ( $large ) {
 		$credit = get_post_meta( $id, '_boi_credit', true );
-		$hero   = array(
+
+		return array(
 			'post_id' => (int) $post->ID,
 			'large'   => $large,
 			'small'   => wp_get_attachment_image_url( $id, 'large' ) ?: $large,
@@ -495,13 +586,12 @@ function boi_hero_image() {
 			'licence' => is_array( $credit ) && ! empty( $credit['licence'] ) ? $credit['licence'] : '',
 			'source'  => is_array( $credit ) && ! empty( $credit['source'] ) ? $credit['source'] : '',
 		);
-		return $hero;
 	}
 
 	$bundled = function_exists( 'boi_bundled_image' ) ? boi_bundled_image( $post ) : null;
 
 	if ( $bundled ) {
-		$hero = array(
+		return array(
 			'post_id' => (int) $post->ID,
 			'large'   => $bundled['url'],
 			'small'   => $bundled['url'],
@@ -511,7 +601,7 @@ function boi_hero_image() {
 		);
 	}
 
-	return $hero;
+	return null;
 }
 
 /**

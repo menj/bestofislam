@@ -17,7 +17,7 @@ for the decisions behind the design, `CHANGELOG.md` for the history,
 - **Sections.** A hierarchical `listicle-topic` taxonomy at `/topic/<section>/`, with its own template.
 - **Categories and tags.** Each seeded article also carries one WordPress category and 3 to 6 tags, listed in `inc/data/seed.json` (`categories`, `tags`, and `category` and `tags` on each article). Every category mirrors a section; the section archive is canonical, so category archives are noindexed, point their canonical link at the section and stay out of the sitemap. A tag archive with fewer than 2 articles is noindexed too. `bin/check-content.py --summary` prints the counts.
 - **Reading order.** Seven parts that take a new reader from what Islam teaches to the Muslim world today, with a "Read next" card at the foot of every article and a numbered list of the parts in the footer.
-- **Questions answered.** 45 questions with short answers, 14 of them on the front page, each linked to its article: in an accordion on the front page, in a panel on every article, and as FAQ markup.
+- **Questions answered.** 45 questions with short answers, each linked to its article: all of them on the FAQ page (`/faq/`) with FAQ markup, 14 of them as a teaser on the front page, and a panel on every article.
 - **Voting.** Optional, rate-limited visitor voting stored in a dedicated table, with a moderation log. Off by default.
 - **Contact form.** A native form with a nonce, a honeypot and a rate limit, sent through `wp_mail`.
 

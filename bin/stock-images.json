@@ -2470,7 +2470,20 @@
    "alt": "A page of the Babylonian Talmud printed by Daniel Bomberg in Venice.",
    "caption": "The Babylonian Talmud in the Venice edition of Daniel Bomberg, 1519 to 1523. Later Christian censors removed several of the passages on Jesus."
   },
-  "inline": []
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:Bomberg Talmud.JPG",
+    "alt": "A printed folio of the Bomberg Talmud.",
+    "caption": "A folio of the Talmud printed by Daniel Bomberg. The passages on \"Yeshu\" stood in the uncensored editions."
+   },
+   {
+    "src": "commons",
+    "id": "File:Talmud-Druck von Daniel Bomberg und Ambrosius Froben.jpg",
+    "alt": "Two early printed editions of the Talmud side by side.",
+    "caption": "Talmud editions of Daniel Bomberg and Ambrosius Froben. The Basel edition of Froben was printed under Christian censorship."
+   }
+  ]
  },
  "is-allah-baal-or-hubal": {
   "featured": {
@@ -2479,7 +2492,20 @@
    "alt": "A limestone stele of a striding storm god with a raised club, from Ugarit.",
    "caption": "The \"Baal with Thunderbolt\" stele from Ugarit, now in the Louvre (AO 15775). The Quran names Baal once, as the god Elias told his people to abandon."
   },
-  "inline": []
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:Baal Hadad with horns.jpg",
+    "alt": "A bronze figurine of a horned storm god.",
+    "caption": "A figurine of Baal Hadad, the storm god of Canaan, whom the Quran names in the story of Elias (37:125)."
+   },
+   {
+    "src": "commons",
+    "id": "File:Kaaba during the Hajj - 1886.jpg",
+    "alt": "A photograph of the Kaaba and pilgrims in 1886.",
+    "caption": "The Kaaba in 1886. Its 360 idols, Hubal among them, were removed at the conquest of Mecca."
+   }
+  ]
  },
  "did-abraham-build-the-kaaba": {
   "featured": {
@@ -2488,7 +2514,20 @@
    "alt": "Pilgrims circling the Kaaba in the Masjid al-Haram during the Hajj.",
    "caption": "Pilgrims circle the Kaaba during the Hajj. The Quran calls it \"the first House appointed for men\" (3:96)."
   },
-  "inline": []
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:Kaaba during the Hajj - 1886.jpg",
+    "alt": "A photograph of the Kaaba and pilgrims in 1886.",
+    "caption": "The Kaaba in 1886, one of the earliest photographs of the House that Abraham and Ishmael raised (2:127)."
+   },
+   {
+    "src": "commons",
+    "id": "File:Kaaba, Masjid Al Haram, Mecca.jpg",
+    "alt": "The Kaaba and the courtyard of the Masjid al-Haram.",
+    "caption": "The Kaaba in the Masjid al-Haram. Pilgrims run between al-Safa and al-Marwa nearby, in the steps of Hagar."
+   }
+  ]
  },
  "synagogues-in-the-quran-and-islamic-history": {
   "featured": {
@@ -2497,7 +2536,20 @@
    "alt": "The facade of the Ben Ezra Synagogue in Old Cairo.",
    "caption": "The Ben Ezra Synagogue in Fustat, Old Cairo. Its storeroom kept the documents now called the Cairo Geniza."
   },
-  "inline": []
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:Ben Ezra Synagogue Interior.jpg",
+    "alt": "The interior of the Ben Ezra Synagogue, with its wooden gallery.",
+    "caption": "Inside the Ben Ezra Synagogue in Fustat, where Maimonides worshipped."
+   },
+   {
+    "src": "commons",
+    "id": "File:BenEzraAnnex.jpg",
+    "alt": "The annex building beside the Ben Ezra Synagogue in Cairo.",
+    "caption": "The grounds of the Ben Ezra Synagogue, whose storeroom kept the Cairo Geniza for about 850 years."
+   }
+  ]
  },
  "monogenes-only-begotten": {
   "featured": {
@@ -2506,6 +2558,19 @@
    "alt": "A page of Papyrus 66, an early copy of the Gospel of John.",
    "caption": "Papyrus 66, an early copy of the Gospel of John. At John 1:18 it reads monogenes theos, the variant behind the ESV's \"God the only Son\"."
   },
-  "inline": []
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:P46.jpg",
+    "alt": "A leaf of Papyrus 46, an early copy of the letters of Paul.",
+    "caption": "Papyrus 46, the oldest copy of the letter to the Hebrews, where Isaac is called monogenes (11:17)."
+   },
+   {
+    "src": "commons",
+    "id": "File:King James Bible-1611.jpg",
+    "alt": "The title page of the King James Bible of 1611.",
+    "caption": "The King James Bible of 1611, which rendered monogenes as \"only begotten\"."
+   }
+  ]
  }
 }

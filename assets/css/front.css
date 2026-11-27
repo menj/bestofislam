@@ -169,6 +169,16 @@
 	padding-inline-end: 2.5rem;
 }
 
+.boi-stack .boi-stack__from,
+.boi-stack .boi-stack__title {
+	transition: opacity 0.35s ease;
+}
+
+.boi-stack.is-changing .boi-stack__from,
+.boi-stack.is-changing .boi-stack__title {
+	opacity: 0;
+}
+
 .boi-stack__from {
 	margin: 0 0 0.25rem;
 	font-size: 0.8rem;
@@ -218,6 +228,20 @@
 	font-weight: 600;
 	font-size: 1.05rem;
 	line-height: 1.3;
+}
+
+/* Facts strip: each fact links to the page that explains it. */
+.boi-stats__link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	color: inherit;
+	text-decoration: none;
+}
+
+.boi-stats__link:hover .boi-stats__label,
+.boi-stats__link:focus-visible .boi-stats__label {
+	text-decoration: underline;
 }
 
 /* Stats strip. */
@@ -642,6 +666,17 @@
 	border-radius: 999px;
 	font-weight: 600;
 	text-decoration: none;
+}
+
+/* The FAQ page: every question, grouped by theme, after the page's text. */
+.boi-faq-questions {
+	margin-block-start: 2.5rem;
+}
+
+.boi-faq-questions .boi-objections--list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
 }
 
 /* The remaining questions, behind one disclosure beneath the featured set. */
