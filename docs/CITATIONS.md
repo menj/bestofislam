@@ -197,7 +197,7 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
-### New articles of 1.144.0 (drafts 31 to 35)
+### New articles of 1.146.0 (drafts 31 to 35)
 
 The owner's drafts 31 to 35 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
 

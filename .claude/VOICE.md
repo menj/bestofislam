@@ -23,8 +23,10 @@ health, appearance), slurs and abuse, and private individuals, who are never nam
 
 One exception (owner's decision, 2026-11-27): published court findings about a
 named critic's own credibility, and about his handling of money given for his
-work, may be cited, quoted exactly from the opinion with paragraph numbers, and
-stated fairly, including any point on which he prevailed. The family matters in
+work, may be cited, quoted exactly from the opinion with paragraph numbers (written
+out as "paragraph 15", never the ¶ sign). The owner chose on 2026-11-27 not to
+report rulings in the critic's favour; nothing left in may then state or imply
+that he lost on every point. The family matters in
 the same case, and every private person in it, stay out. The article
 `sam-shamoun-under-oath` is the model.
 

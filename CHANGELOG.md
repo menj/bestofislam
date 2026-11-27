@@ -4,7 +4,7 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.144.0] - 2026-11-27
+## [1.146.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
 
@@ -18,6 +18,23 @@ No feature removed and no public identifier renamed.
 - A new tag, Christmas, for the four Christmas articles.
 - Each article has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
 - The five articles join the reading order.
+- The article counts in the readme, README and SSOT now include the Sam Shamoun article of 1.145.0.
+
+## [1.145.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- sam-shamoun-on-the-pbd-podcast: "Sam Shamoun on the PBD Podcast: 9 claims checked against the sources", in the Islamophobia section. Each claim is quoted from the transcript of PBD Podcast episode 684 with its time, and each time in the notes links to that moment of the video with `rel="nofollow noopener"`. Answered from Bukhari 3244, 2227, Muslim 804 and 2824, Abu Dawud 2135, Quran 3:49, 4:3, 4:128, 33:6, 56:17 and 78:31 to 33, the ESV (Isaiah 64:4, John 5:19, 26, 30, 14:6, 28, 17:3, 1 Corinthians 2:9, Genesis 4:10), Pew Research Center (2018) and the State Department on the 1962 abolition of slavery in Saudi Arabia. Images: a studio microphone, Papyrus 46 and Papyrus 66, all public domain.
+- sam-shamoun-under-oath links to it from its bottom line.
+
+## [1.144.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- sam-shamoun-under-oath: five Wikimedia Commons photographs replace the pattern graphics: the Richard J. Daley Center (featured, Ken Lund, CC BY-SA 2.0), a statue of Justice (James Cridland, CC BY 2.0), scales of justice (North Charleston, CC BY-SA 2.0), the Daley Center (GregMcCollum, CC0) and the Michael A. Bilandic Building, seat of the First District Appellate Court (TonyTheTiger, CC BY-SA 3.0). The notes write paragraph numbers in words in place of the ¶ sign. The line on the child-support recalculation is removed at the owner's request; the bottom line states only what the appellate court upheld. The opening quotes a 2024 God Reports profile of him ("unhinged, fiery Assyrian evangelist", "pugnacious debater").
+- `.claude/VOICE.md`: court findings are cited by paragraph in words, and rulings in a critic's favour are not reported, provided nothing left in implies he lost on every point.
 
 ## [1.143.0] - 2026-11-27
 
