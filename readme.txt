@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.146.0
+Stable tag: 1.150.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 220 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 231 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -165,8 +165,19 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.146.0 =
+= 1.150.0 =
 * Merged the Bryce Crawford Podcast (episode 182) into the Sam Shamoun podcast article, now "Sam Shamoun on two podcasts: 14 claims checked against the sources" at sam-shamoun-on-two-podcasts; the old address redirects.
+= 1.149.0 =
+* The scheduled article on former opponents of Islam who converted adds a fourth story: Richard McKinney, the Marine who came to a mosque in Muncie, Indiana, to bomb it and became a Muslim.
+
+= 1.148.0 =
+* Five new articles, scheduled from 29 June to 8 August 2027: from atheism to Islam, four Indonesian conversion stories, three former opponents of Islam who converted, seven reasons converts give, and the Maria Hertogh (Natrah) case.
+
+= 1.147.0 =
+* Four articles on questions where Sunni and Shia Muslims differ now state the Sunni position: the Fadak dispute, the Mahdi, taqiyya and temporary marriage (mutah).
+
+= 1.150.0 =
+* Five new articles. Four on Christmas are scheduled from 6 November to 6 December 2027: was Jesus born on 25 December, Christmas and the Quran, six Christmas traditions and their origins, and whether Muslims may say Merry Christmas. The fifth, on five former Christian ministers and priests who embraced Islam, is scheduled for 19 June 2027.
 
 = 1.145.0 =
 * A new article: "Sam Shamoun on the PBD Podcast: 9 claims checked against the sources", each claim quoted with its time in the interview.
@@ -504,8 +515,19 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.146.0 =
+= 1.150.0 =
 Content only: one article merged and renamed, with a 301 from the old address.
+= 1.149.0 =
+Replace the theme files. A scheduled article takes its new text before it publishes.
+
+= 1.148.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.147.0 =
+Replace the theme files. Unedited copies of four articles take the new text; an edited copy is listed on the Content tab.
+
+= 1.150.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
 
 = 1.145.0 =
 Replace the theme files. The new article is created when the version changes.

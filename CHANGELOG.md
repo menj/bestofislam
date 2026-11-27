@@ -4,13 +4,60 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.146.0] - 2026-11-27
+## [1.150.0] - 2026-11-27
 
 No feature removed. One article slug renamed, with a 301 redirect.
 
 ### Changed
 - Honorific guard (`inc/honorific-guard.php`): removes an Arabic honorific a site plugin adds after the surname Gabriel in the case name "In re Marriage of Gabriel".
 - sam-shamoun-on-the-pbd-podcast is now sam-shamoun-on-two-podcasts, "Sam Shamoun on two podcasts: 14 claims checked against the sources". Five claims added from the Bryce Crawford Podcast, episode 182, each time linked to the video with `rel="nofollow noopener"`: his rule against bad-faith questions (Titus 3:10) against his own method; Ahaziah's age (2 Kings 8:26, 2 Chronicles 22:2) against the readings (Bukhari 4992); the double witness (Bukhari 4784, 4986, Abu Dawud 3607); the mountain passage (Bukhari 3, 6982); and Abu al-Darda's saying under the chapter on courtesy. 37 notes, with both episode titles and dates. Images renamed with the slug.
+## [1.149.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- opposition-to-islam-to-conversion, scheduled for 19 July 2027, adds Richard McKinney: the former Marine who went to the Islamic Center of Muncie, Indiana, in 2009 to plant a bomb and converted to Islam eight months later. The owner supplied the lead on 2026-11-27, and the facts are cited from CNN (John Blake, 8 October 2022) and the official site of *Stranger at the Gate*. The article's title, excerpt and abstract now count four stories.
+
+## [1.148.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 36 to 40, rewritten to `.claude/VOICE.md` and scheduled ten days apart from 29 June to 8 August 2027 (SSOT D71). Every case in them was checked against a source that could be read; cases that could not be confirmed were left out (`docs/CITATIONS.md`):
+  - from-atheism-to-islam: five questions (existence, oneness, suffering, morality, revelation), with Pew's 2017 figures and Michael David Shapiro's testimony.
+  - indonesian-conversion-stories: Iga Mawarni, Deddy Corbuzier, Felix Siauw and Roger Danuarta. The draft's five became four.
+  - opposition-to-islam-to-conversion: Joram van Klaveren, Arnoud van Doorn and the corrected story of Daniel Streich. The draft's five became three.
+  - why-people-convert-to-islam: the seven reasons American converts gave Pew in 2017, with Pew's 2025 study of switching.
+  - maria-hertogh-natrah-case: seven facts, from her birth in Java in 1937 to Justice Brown's judgment and the riots of December 1950.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
+## [1.147.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- Four articles on questions where Sunni and Shia Muslims differ now state the Sunni position, by the owner's decision (SSOT D72). The Shia position is still stated from its own sources:
+  - ridda-wars-abu-bakr-fadak: Abu Bakr applied the Prophet's ruling, "Our property is not to be inherited", which Ali and al-Abbas affirmed under oath before Umar (al-Bukhari), and Ali later gave Abu Bakr his pledge.
+  - end-of-time: Sunni scholarship accepts the Mahdi reports taken together (al-Tirmidhi grades Ibn Masʿud's report *ḥasan ṣaḥīḥ*), and the Mahdi of the Sunni reports bears the name of the Prophet's father, which excludes the Twelver hidden imam.
+  - taqiyya-myths: taqiyya is held to the Quran's limit, a concession under compulsion (16:106).
+  - temporary-marriage-mutah: the article states the Sunni position, permission for a time and then prohibition "until the Day of Resurrection".
+
+## [1.150.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 31 to 35, rewritten to `.claude/VOICE.md`, with every note checked again (`docs/CITATIONS.md`). They are scheduled under SSOT D71. The four Christmas articles take the season's slots, ten days apart from 6 November to 6 December 2027:
+  - was-jesus-born-on-christmas-day: six facts, from Clement of Alexandria and the Chronography of 354 to Nothaft, Bradshaw and Edwards.
+  - christmas-quran-jesus-birth: Surah Maryam, Matthew and Luke compared on five points.
+  - christmas-traditions-historical-origins: the tree, the crib, the gifts, Santa Claus, a carol and the greenery, each traced to its records.
+  - can-muslims-say-merry-christmas: five positions, from Ibn al-Qayyim to Dar al-Ifta and Malaysia's National Fatwa Committee.
+  - former-christian-ministers-who-embraced-islam: Keldani, Estes, Dirks, Jenkins and Tawfiq, scheduled for 19 June 2027.
+- A new tag, Christmas, for the four Christmas articles.
+- Each article has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+- The article counts in the readme, README and SSOT now include the Sam Shamoun article of 1.145.0.
 
 ## [1.145.0] - 2026-11-27
 

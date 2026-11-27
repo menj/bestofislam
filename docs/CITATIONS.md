@@ -197,6 +197,66 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.148.0 (drafts 36 to 40)
+
+The owner's drafts 36 to 40 were rewritten to `.claude/VOICE.md`. Several of the draft's sources refused automated fetching (*The Straits Times*, *The Star*'s paywall, *The Guardian*, AP, Deutsche Welle, *The New Yorker*, the Middle East Forum, the National Library Board's Infopedia, Britannica). The owner chose on 2026-11-27 that the articles keep only what could be confirmed, so cases resting on those sources were left out. Quran quotations are A. Yusuf Ali's translation.
+
+- **from-atheism-to-islam.**
+  - Pew Research Center, 26 July 2017, chapter 6, read: 21% of American Muslims are converts; of the converts, 53% were Protestant, one in five Catholic, and 19% unaffiliated; 24% gave a preference for Islam's beliefs and teachings.
+  - Michael David Shapiro's testimony, read on IslamReligion.com (5 May 2008) and in *Arab News* (2 September 2016). His words are "My belief in God was uncertain", so the article does not call him an atheist.
+  - Corrected or cut: Jeffrey Lang. His books were confirmed through Open Library, *Struggling to Surrender* (Amana, 1994) and *Even Angels Ask* (Amana, 1997), and his post as a professor of mathematics at the University of Kansas on the department's site, but his own account of atheism and suffering could not be read, so he is left out. Sealy's "Susanne" could not be read and is left out. The draft's Ibn Sina sentence is cut for want of a source read.
+- **indonesian-conversion-stories.** The draft's five Southeast Asian stories became four Indonesian ones.
+  - Read: *iNews*, 24 August 2021 (Iga Mawarni, 23 March 1994, Malang); *ANTARA*, 21 June 2019 (Deddy Corbuzier's words and his eight months with Gus Miftah); the CRCS Gadjah Mada report of 20 September 2017 on Felix Siauw; *Suara.com*, 24 February 2021, and *Okezone*, 31 October 2018 (Roger Danuarta, 29 October 2018, and his mother's condition). Hew Wai Weng, *Chinese Ways of Being Muslim* (NIAS Press, 2017), was confirmed through Open Library.
+  - Cut: Syafiq Raffiqin Liow (*The Star*, paywalled) and Muhammad Joy Kumar Paul (*The Straits Times*, refused). Roger Danuarta, confirmed in two Indonesian outlets, is added.
+- **opposition-to-islam-to-conversion.** The draft's five became three.
+  - Read: *Euronews*, 5 February 2019 (van Klaveren's years in parliament and his words on Dutch radio, and van Doorn's earlier conversion); *SWI swissinfo.ch*, 29 November 2019 (57.5%); Jason Van Boom, *OpEdNews*, 10 February 2010 (Streich).
+  - Van Klaveren's book title and van Doorn's part in distributing *Fitna*, his conversion and his hajj are cited from the English Wikipedia articles on them, since the *Guardian* and Deutsche Welle pages refused fetching.
+  - Corrected: the draft dated van Doorn's conversion to 2013. He announced it in April 2012; the *Guardian* piece of October 2013 concerned his hajj.
+  - Richard McKinney, cut in 1.148.0 and restored in 1.149.0. The owner supplied a social-media post on 2026-11-27, which is not cited. The facts come from two sources. John Blake, CNN, was read in the text republished by *ABC7 Chicago*, 8 October 2022 (the owner supplied CNN's own page of 8 March 2023, which refused automated reading), for the 2009 visit, Bibi Bahrami's part, his conversion "eight months after McKinney's initial visit", the "mosh pit of hugs" after the ceremony and his two years as the center's president. The film's official site was read for "suffering from PTSD and filled with hatred". The post's "sergeant", and its claim that he came only to scout, are not in either source and are not used. The Religion News Service report refused fetching.
+  - Leia Azzahra, already marked unverified in the draft, is left out.
+- **why-people-convert-to-islam.** Pew 2017, read: the seven reasons with their shares (24%, "one-in-five", 10%, 9%, 9%, 8%, 8%). Corrected: the draft's 25% is 24%, and the reading figure is "one-in-five" with no exact percentage. Pew 2025 (Lesage, Starr and Miner), read: 36 countries surveyed, 13 analysed for Islam, 3% or fewer of adults entering or leaving it. The hadith on intentions is quoted from the English of al-Bukhari's first hadith.
+- **maria-hertogh-natrah-case.**
+  - SG101, "Maria Hertogh Riots on 11 Dec 1950", read: 18 dead and 173 injured, the crowd of 2,000 to 3,000, and the dates 11 to 13 December.
+  - Her birth, family, the custody hearings, the marriage and Justice Brown's judgment (quoted) are cited from the English Wikipedia article "Maria Hertogh", since Infopedia returned nothing. The date of the judgment, 2 December 1950, is the title of a chapter in Hughes, *Tangled Worlds* (ISEAS, 1980), confirmed through Open Library and the publisher's catalogue. Aljunied (Routledge, 2009) is confirmed through Kessler's review in the *American Historical Review* 116.4 (2011), pp. 1111–1112, via Crossref.
+  - Not used: the date of her departure for the Netherlands, which no page read gives.
+
+### The Sunni position, 1.147.0
+
+The owner decided on 2026-11-27 that sectarian questions are written from the Sunni position (SSOT D72), which settles the six articles held for that decision. Two of them, seal-of-the-prophets and islam-religion-of-peace, mention the Shia only in passing and are unchanged. The new citations, in two of the other four, were checked in the Arabic and English text of the collections (sunnah.com refused automated fetching, so the open hadith-json dataset was used, and the notes cite book and chapter because its numbering differs from sunnah.com's):
+
+- **ridda-wars-abu-bakr-fadak.** The report of Malik ibn Aws in al-Bukhari, in which Umar asks Ali and al-Abbas whether they know the saying "Our property is not to be inherited, and whatever we leave is to be given in charity" and "They both replied, 'Yes'". Aisha's report of Fatima's request, in al-Bukhari, Book of Military Expeditions, for Ali's words to Abu Bakr, "We know well your superiority and what Allah has given you", his pledge, and the Muslims who "became happy".
+- **end-of-time.** Al-Tirmidhi, Book of Tribulations, chapter on the Mahdi, the report of Ibn Masʿud, which al-Tirmidhi grades *ḥasan ṣaḥīḥ* in the Arabic. Abu Dawud, Book of the Mahdi: the longer version of Ibn Masʿud's report ("whose father's name is the same as my father's"), which carries no grade in the text consulted; al-Tirmidhi's grade applies to his shorter wording and Umm Salama's ("The Mahdi will be of my family, of the descendants of Fatimah").
+- **taqiyya-myths** and **temporary-marriage-mutah.** No new citations; the Sunni position is stated from the sources already cited.
+
+### New articles of 1.146.0 (drafts 31 to 35)
+
+The owner's drafts 31 to 35 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
+
+- **was-jesus-born-on-christmas-day.**
+  - Clement of Alexandria, *Stromata* I.21, was read in the *Ante-Nicene Fathers* text: the 28th year of Augustus, 25 Pachon, and 24 or 25 Pharmuthi.
+  - The Chronography of 354, "Depositio Martyrum", was read in the Latin: "VIII kal. Ian. natus Christus in Betleem Iudeae".
+  - Confirmed through Crossref: Nothaft, *Church History* 81.4 (2012), pp. 903–911; Bradshaw, in *The Oxford Handbook of Christmas* (2020), ed. Timothy Larsen, whose abstract opens with the Egyptian feast of 6 January; and Edwards, *Journal of Ecclesiastical History* 75.3 (2024), pp. 427–443.
+  - Corrected: the draft did not name the author of "Travelling Festivals in Late Antiquity", and it cited Gregory of Nyssa for the East. The author is Robert G. T. Edwards, and his abstract credits Theodosius I, from 380. Gregory of Nazianzus' Oration 38 is cited instead, from the *Nicene and Post-Nicene Fathers*.
+  - The draft's slug had digits, which the site does not allow. The article is `was-jesus-born-on-christmas-day`.
+- **christmas-quran-jesus-birth.** The comparison uses only the Quran and the two Gospels, checked verse by verse. Sanders and the Met essay in the draft are not cited, since neither was needed for the comparison.
+- **christmas-traditions-historical-origins.**
+  - Read and confirmed: Winick (Library of Congress, 2021) on Queen Charlotte's trees by 1800 and on gift-giving "for centuries" before Dickens; Parrish (Library of Congress, 2024) on Sinterklaas and on Nast and the North Pole; Miller (Library of Congress, 2016) on Wesley (1739), Whitefield (1753), Mendelssohn (1840) and Cummings (1855); the *Catholic Encyclopedia* on Nicholas of Myra; the Academy of American Poets on the poem's anonymous publication in 1823; Pliny, *Natural History* 16.95, in the Bostock and Riley translation (the "fifth day of the moon"); and the Rauhes Haus foundation on Wichern's wreath of 1839.
+  - Thomas of Celano, *First Life* §84, was read in Spanish translation, and the Greccio passage is paraphrased.
+  - The Strasbourg record of 1605 is cited from Tille (1890), as printed in the German Wikipedia article on the Christmas tree. Tille's volume itself was not read.
+  - Not cited, because the pages refused automated fetching: the Smithsonian pages and the Met's pages in the draft. The draft's Sélestat 1521 claim is not used, since the record does not mention a Christmas tree.
+- **can-muslims-say-merry-christmas.**
+  - Read: the Federal Territories Mufti, *Tahqiq al-Masail* 7 (24 December 2018), with its list of scholars on each side; *Tinta Mufti* 47/2025 (18 December 2025), with the National Fatwa Committee's ruling of its 78th meeting, 12 June 2007; Dar al-Ifta fatwas 6710 (18 November 2013) and 21593 (2 December 2024); and Islam Q&A 947, quoting Ibn ʿUthaymin and Ibn al-Qayyim.
+  - Ibn al-Qayyim's *Aḥkām ahl al-dhimma* is quoted in the English of Islam Q&A; the Arabic was not read.
+- **former-christian-ministers-who-embraced-islam.**
+  - Keldani: Betül Avcı's entry in *Christian-Muslim Relations* 18 (Brill, 2021), pp. 223–236, was read. It gives his ordination in 1895, the letter of 1900 signed "Archpriest of Urmia", his time with the Unitarians from 1903, and his conversion in Istanbul in 1904.
+  - Dirks: *AboutIslam*, 15 January 2019. His own site did not resolve.
+  - Estes: his foundation's own pages; the draft's name for the Egyptian, "Mohamed", is not on them and is not used.
+  - Jenkins: *Arab News*, 8 August 2014, and his own account on IslamReligion.com. His account names the shaykh as "Abdullah bin Abdulaziz bin Baz", so the article says only "Shaykh Ibn Baz".
+  - Tawfiq: his own words on *AboutIslam* and NewMuslim.net. "Roman Catholic priest" comes from his publisher's note; in his own words he left "the ministry" and "the Church" before embracing Islam.
+  - Confirmed through Crossref: Sealy (2021), van Nieuwkerk (2008), and Vamanu and Guzik (2015). They are cited for their subjects only, as given in their titles.
+  - The Bismikaa leads named in the draft (Tengker and Al-Hafiz) are left out, as the draft advised.
+- **Bible links.** Every reference written as book, chapter and verse links to its verse (`.claude/VOICE.md` section 7). The 23 anchors were fetched and confirmed before they were added.
+
 ### New articles of 1.143.0 (drafts 26 to 30)
 
 The owner's drafts 26 to 30 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
@@ -253,4 +313,3 @@ The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note
 
 - **Al-Fārūqī's other works.** His quotations from *Al Tawhid* match the transcription in `.claude/FARUQI.md`. About 80 quotations from his other books and articles cannot be checked in this environment: *Christian Mission and Islamic Da'wah*, *Islam and Other Faiths*, *Essential Writings*, *Islam and Christianity: Diatribe or Dialogue* and others. No legitimate copy is available, and they wait on the owner's copies.
 - **Page-level faithfulness of modern books.** Each book's existence and date are checked (see below). Whether the page cited says what the article says needs the book itself, and will be done book by book as copies become available.
-- **Sectarian articles.** Six articles on Sunni and Shia questions wait for the owner's decision on scope: ridda-wars-abu-bakr-fadak, taqiyya-myths, temporary-marriage-mutah, seal-of-the-prophets, end-of-time and islam-religion-of-peace.

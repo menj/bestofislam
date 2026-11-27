@@ -3274,6 +3274,151 @@
 				"Islamophobia",
 				"Christians"
 			]
+		},
+		{
+			"slug": "was-jesus-born-on-christmas-day",
+			"title": "Was Jesus born on 25 December? 6 facts from the historical record",
+			"excerpt": "Was Jesus born on 25 December, or is Christmas a renamed pagan festival? Six facts from the Gospels and early Christian records. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Was Jesus born on 25 December? 6 facts",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Christmas",
+				"Jesus",
+				"Early Christianity",
+				"Gospels"
+			],
+			"publish_on": "2027-11-06T01:00:00Z"
+		},
+		{
+			"slug": "christmas-quran-jesus-birth",
+			"title": "Christmas and the Quran: 5 differences in the story of Jesus' birth",
+			"excerpt": "The Christmas card shows one scene. Surah Maryam, Matthew and Luke tell three accounts of the birth of Jesus. Five differences. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Christmas and the Quran: 5 differences",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Christmas",
+				"Jesus",
+				"Mary",
+				"Gospels",
+				"Quran commentary"
+			],
+			"publish_on": "2027-11-16T01:00:00Z"
+		},
+		{
+			"slug": "christmas-traditions-historical-origins",
+			"title": "6 Christmas traditions and their historical origins",
+			"excerpt": "Is Christmas pagan? The tree, the crib, the gifts, Santa Claus, the carols and the greenery each have a datable history. See where they began.",
+			"topic": "arts-and-culture",
+			"seo_title": "6 Christmas traditions and their origins",
+			"category": "arts-and-culture",
+			"tags": [
+				"Christmas",
+				"Christians",
+				"Myths"
+			],
+			"publish_on": "2027-11-26T01:00:00Z"
+		},
+		{
+			"slug": "can-muslims-say-merry-christmas",
+			"title": "Can Muslims say Merry Christmas? 5 scholarly positions",
+			"excerpt": "May a Muslim say Merry Christmas? Five positions from Ibn al-Qayyim to Dar al-Ifta and the Malaysian fatwa, with their reasons. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "Can Muslims say Merry Christmas?",
+			"category": "law-ethics",
+			"tags": [
+				"Christmas",
+				"Fiqh",
+				"Christians",
+				"Southeast Asia"
+			],
+			"publish_on": "2027-12-06T01:00:00Z"
+		},
+		{
+			"slug": "former-christian-ministers-who-embraced-islam",
+			"title": "5 former Christian ministers and priests who embraced Islam",
+			"excerpt": "Lists of priests who became Muslim inflate their titles. Five former ministers and priests whose Christian roles are on record. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "5 former ministers who embraced Islam",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Christians",
+				"Freedom of religion"
+			],
+			"publish_on": "2027-06-19T01:00:00Z"
+		},
+		{
+			"slug": "from-atheism-to-islam",
+			"title": "From atheism to Islam: 5 questions on the way to belief",
+			"excerpt": "Why do some people move from unbelief to Islam? Five questions they meet, on existence, God's oneness, suffering, morality and revelation. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "From atheism to Islam: 5 questions",
+			"category": "creed-theology",
+			"tags": [
+				"Atheism",
+				"Conversion",
+				"Existence of God",
+				"Tawhid"
+			],
+			"publish_on": "2027-06-29T01:00:00Z"
+		},
+		{
+			"slug": "indonesian-conversion-stories",
+			"title": "4 Indonesian conversion stories and the questions behind them",
+			"excerpt": "Did they convert only to marry, or give up who they were? Four Indonesian converts answer in their own words. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "4 Indonesian conversion stories",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Southeast Asia",
+				"Freedom of religion"
+			],
+			"publish_on": "2027-07-09T01:00:00Z"
+		},
+		{
+			"slug": "opposition-to-islam-to-conversion",
+			"title": "From opposition to Islam to conversion: 4 stories examined",
+			"excerpt": "Some of Islam's opponents became Muslims, and some stories about them grew in the telling. Four cases checked against the record. Read on.",
+			"topic": "islamophobia",
+			"seo_title": "Opponents of Islam who converted: 4 stories",
+			"category": "islamophobia",
+			"tags": [
+				"Conversion",
+				"Islamophobia",
+				"Myths"
+			],
+			"publish_on": "2027-07-19T01:00:00Z"
+		},
+		{
+			"slug": "why-people-convert-to-islam",
+			"title": "Why do people convert to Islam? 7 reasons converts give",
+			"excerpt": "Is conversion to Islam mostly about marriage? American converts gave Pew seven reasons, and marriage was one of the smaller ones. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "Why do people convert to Islam? 7 reasons",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Pew Research",
+				"Demographics"
+			],
+			"publish_on": "2027-07-29T01:00:00Z"
+		},
+		{
+			"slug": "maria-hertogh-natrah-case",
+			"title": "The Maria Hertogh controversy: 7 facts about the Natrah case",
+			"excerpt": "A custody case over a girl raised as Natrah ended in riots in Singapore in 1950. Seven facts from the court record and the official history. Read on.",
+			"topic": "history",
+			"seo_title": "The Natrah case: 7 facts",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Southeast Asia",
+				"Freedom of religion",
+				"Christians"
+			],
+			"publish_on": "2027-08-08T01:00:00Z"
 		}
 	],
 	"pages": {
@@ -3503,6 +3648,7 @@
 		"Child marriage": "The age of marriage in the texts, in history and in modern law.",
 		"China": "Islam in China, from the Tang dynasty to the present day.",
 		"Christians": "What the Quran and the Prophet said about Christians, and how Muslims live beside them.",
+		"Christmas": "Articles on Christmas: the date of the feast, its customs, the Quran's account of the birth of Jesus, and the rulings on greetings.",
 		"Comma Johanneum": "",
 		"Companions of the Prophet": "The men and women who knew the Prophet and carried his teaching.",
 		"Conversion": "People who come to Islam: their numbers, and what a newcomer needs to know.",
