@@ -134,7 +134,7 @@
         "content\/oaths-in-the-quran.json": "a3d151334bdd848ccedabe453fb027d9",
         "content\/old-testament-variant-readings.json": "51431a46c541caad87614855d325d0c1",
         "content\/oldest-bible-codices.json": "e730dd0dade865418e520bbeca0f8079",
-        "content\/opposition-to-islam-to-conversion.json": "023c36ddaa1642de3c30d6794ac3859b",
+        "content\/opposition-to-islam-to-conversion.json": "bc3c7f3d06fb73ea2fe37fe59789f704",
         "content\/original-sin.json": "d2d93ef0a9cff9e82c249c0214673738",
         "content\/paul-and-food-offered-to-idols.json": "28d4901bf45f0c5cfc7b1262a0170f0e",
         "content\/paul-and-the-law.json": "5d8331e34cc6d2a7c0543bf1dc594952",
@@ -234,5 +234,5 @@
         "inc\/data\/seed.json": "f522ae45b8d9236d2ece81187831f7b1",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "2d4ca8cfd34a9e46e29be82cc2f1ed30"
+    "checksum": "1004171bffc8de9be9e393e205b0013d"
 }

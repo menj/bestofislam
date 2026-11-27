@@ -64,7 +64,7 @@ twice.
 
 ## Upgrading to 1.149.0
 
-Replace the theme files. `boi_migrate_seed()` gives the scheduled article `opposition-to-islam-to-conversion` its new text and title; an edited copy is listed on the Content tab. Nothing to set.
+Replace the theme files. `boi_migrate_seed()` gives the scheduled article `opposition-to-islam-to-conversion` its new text and title where it is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab. Nothing to set.
 
 ## Upgrading to 1.148.0
 
