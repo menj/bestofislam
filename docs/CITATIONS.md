@@ -197,7 +197,7 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
-### New articles of 1.139.0 (drafts 21 to 25)
+### New articles of 1.142.0 (drafts 21 to 25)
 
 The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
 
@@ -218,6 +218,7 @@ The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note
   - The draft's claim about SABDA's interlinear was not read and is replaced by the World English Bible's literal rendering.
 - **biblical-anthropomorphism.** Maimonides, *Guide of the Perplexed* I.26 and I.37–38, on "the language of men", the face and the back. The Bible's correctives are Numbers 23:19, 1 Samuel 15:29 and Exodus 33:20.
 - **Captions.** The hadith of the descent at the white minaret east of Damascus is Muslim 2937, from al-Nawwās ibn Samʿān.
+- **Bible links.** Every reference written as book, chapter and verse in the four articles that cite the Bible links to its verse (`.claude/VOICE.md` section 7). All 52 anchors were fetched and confirmed before they were added.
 
 ### Not yet checkable here
 

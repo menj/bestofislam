@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.139.0
+Stable tag: 1.142.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 214 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
+Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 215 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -165,8 +165,17 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.139.0 =
+= 1.142.0 =
 * Five new articles, scheduled from 11 March to 20 April 2027: Quran 43:61 and the sign of the Hour, the sons of God in the Bible, Ezekiel 23 and its allegory, Ezekiel 23 in Malay and Indonesian Bibles, and biblical anthropomorphism.
+
+= 1.141.0 =
+* Sixteen articles move to the section and category that fit their subject, so the sections are more even: answers on the Quran and the hadith go to Faith & Reason, articles on the Prophet to History, and answers to Islamophobic charges to Islamophobia. No address changes.
+
+= 1.140.0 =
+* A new article: "Sam Shamoun under oath: 7 findings from the Illinois courts", on what the Illinois appellate courts found about his testimony, income and conduct.
+
+= 1.139.0 =
+* Every Bible reference in the articles and the Glossary now links to the verse it cites: 1,340 references in 107 articles and 7 Glossary letters.
 
 = 1.138.0 =
 * New articles are now scheduled: from December 2026 to December 2027, one every ten days, with seasonal articles placed before Christmas, Ramadan and Lent.
@@ -229,7 +238,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * The preferred source link is shorter, "Add as preferred source", and is led by Google's G.
 
 = 1.122.1 =
-* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and link to each verse on thebible.exposed.
+* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and each reference links to its verse.
 
 = 1.122.0 =
 * Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
@@ -483,8 +492,17 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.139.0 =
+= 1.142.0 =
 Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.141.0 =
+Replace the theme files and open the dashboard once. Sixteen articles move section and category; an article you filed yourself keeps your choice.
+
+= 1.140.0 =
+Replace the theme files. The new article is created when the version changes.
+
+= 1.139.0 =
+Replace the theme files. Articles you have not edited take the new links when the version changes, and the Glossary pages are rebuilt once.
 
 = 1.138.0 =
 Replace the theme files. The new articles are scheduled and publish on their dates.

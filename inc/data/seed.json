@@ -1,5 +1,5 @@
 {
-	"terms_version": 2,
+	"terms_version": 3,
 	"topics": {
 		"belief-and-practices": {
 			"name": "Belief & Practices",
@@ -178,55 +178,59 @@
 			"slug": "prophet-died-poisoning",
 			"title": "6 answers to the claim that the Prophet died from poisoning",
 			"excerpt": "Polemicists say the poisoning at Khaybar disproves Muhammad's prophethood. 6 answers from the sources. Read them.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Did the Prophet die from poisoning?",
-			"category": "answering-polemics",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Prophethood",
 				"Hadith",
 				"Sira"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "muhammad-false-prophet-claim",
 			"title": "Did Muhammad fail as a prophet? 5 answers on miracles, signs and the Al-Rum prophecy",
 			"excerpt": "Critics say Muhammad showed no miracles, made a failed prophecy and might have been epileptic. 5 answers from the record. Read them.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Did Muhammad fail as a prophet? 5 answers",
-			"category": "prophets-both-scriptures",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Prophethood",
 				"Miracles",
 				"Prophecy"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "did-muhammad-perform-miracles",
 			"title": "Did Muhammad perform miracles? 6 answers",
 			"excerpt": "The Quran calls him only a warner, critics say, so he had no signs. 6 answers from the Quran, the hadith and the Gospels. Read on.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Did Muhammad perform miracles?",
-			"category": "prophets-both-scriptures",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Miracles",
 				"Prophethood",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "al-zutt-allegation",
 			"title": "5 things wrong with the al-Zutt allegation",
 			"excerpt": "A recent polemic reads a hadith about al-Zutt as sexual assault. 5 reasons the reading collapses. Read the philology.",
-			"topic": "comparative-religion",
-			"category": "answering-polemics",
+			"topic": "faith-and-reason",
+			"category": "hadith-sira",
 			"tags": [
 				"Prophet Muhammad",
 				"Hadith",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "islamic-dilemma",
@@ -594,15 +598,16 @@
 			"slug": "haman-anachronism",
 			"title": "5 answers to the claim that Haman is a Quranic mistake",
 			"excerpt": "Did the Quran borrow Haman from Esther? 5 answers, including what an Egyptian inscription can establish. Read on.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Is Haman a Quranic mistake? 5 answers",
-			"category": "answering-polemics",
+			"category": "quran-text-revelation",
 			"tags": [
 				"Haman",
 				"Moses",
 				"Quran and history",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "where-is-the-injil",
@@ -1531,14 +1536,15 @@
 			"slug": "western-scholars-of-islam",
 			"title": "5 Western scholars of Islam and where Muslims differ with them",
 			"excerpt": "Geiger, Caetani, Jeffery, Goitein and Armstrong: 5 Western scholars of Islam, what they argued and where Muslims disagree. Read on.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "5 Western scholars of Islam",
-			"category": "answering-polemics",
+			"category": "islam-other-peoples",
 			"tags": [
 				"Orientalism",
 				"Islamic scholarship",
 				"Revisionism"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "islamic-art-and-the-one-god",
@@ -1767,15 +1773,16 @@
 			"slug": "buraq-and-miracle-stories",
 			"title": "6 miracle stories critics call a fairy tale, and what the sources say",
 			"excerpt": "The Night Journey, the Buraq, a talking donkey and the Bible's own miracles: 6 miracle stories critics mock, and what the sources say. Read on.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "6 miracle stories critics call fairy tales",
-			"category": "answering-polemics",
+			"category": "hadith-sira",
 			"tags": [
 				"Miracles",
 				"Isra and Miraj",
 				"Jerusalem",
 				"Gospels"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "raids-badr-and-the-conquest-of-mecca",
@@ -1925,15 +1932,16 @@
 			"slug": "apes-and-pigs-and-the-jews",
 			"title": "Apes and pigs and the Jews in the Quran and hadith: 6 facts",
 			"excerpt": "What the verses on apes and pigs say, who they address, and how commentators read them: 6 facts. Read the sources.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Apes, pigs and the Jews in the Quran",
-			"category": "answering-polemics",
+			"category": "hadith-sira",
 			"tags": [
 				"Jews",
 				"Quran commentary",
 				"Hadith",
 				"Myths"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "satanic-verses-report",
@@ -2009,15 +2017,16 @@
 			"slug": "fighting-verses-in-context",
 			"title": "The fighting verses in context: 6 facts from the sources",
 			"excerpt": "Nine war verses are quoted against Islam. The setting, the classical commentary and the limits each verse carries, with fair concessions. Read on.",
-			"topic": "belief-and-practices",
+			"topic": "islamophobia",
 			"seo_title": "The fighting verses in context: 6 facts",
-			"category": "law-ethics",
+			"category": "islamophobia",
 			"tags": [
 				"Fighting verses",
 				"Jihad",
 				"Sword verse",
 				"Ethics of war"
-			]
+			],
+			"topic_v1": "belief-and-practices"
 		},
 		{
 			"slug": "first-muslims-kept-the-faith",
@@ -2036,29 +2045,31 @@
 			"slug": "quran-anachronism-claims",
 			"title": "7 answers to the claim that the Quran gets its history wrong",
 			"excerpt": "Seven alleged historical slips, from Nimrod and Talut to Job and Pharaoh, checked against what the verses say. See how each one fares.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Does the Quran get history wrong?",
-			"category": "answering-polemics",
+			"category": "quran-text-revelation",
 			"tags": [
 				"Quran and history",
 				"Haman",
 				"Mary",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "jihad-meaning-quran-hadith-jurists",
 			"title": "5 facts about jihad in the Quran, the hadith and the jurists",
 			"excerpt": "Jihad means effort, and in Medinan verses and the law books often fighting; 5 facts on the ranking hadith and the jurists. Read the sources.",
-			"topic": "belief-and-practices",
+			"topic": "islamophobia",
 			"seo_title": "Jihad in the Quran and hadith: 5 facts",
-			"category": "law-ethics",
+			"category": "islamophobia",
 			"tags": [
 				"Jihad",
 				"Ethics of war",
 				"Fiqh",
 				"Fighting verses"
-			]
+			],
+			"topic_v1": "belief-and-practices"
 		},
 		{
 			"slug": "talmud-midrash-apocrypha-borrowing",
@@ -2107,15 +2118,16 @@
 			"slug": "i-read-the-entire-quran-reply",
 			"title": "\"I read the entire Quran, the hadith and the Sira\": 7 answers",
 			"excerpt": "A reader of the Quran, hadith and Sira says the founder is the problem and God's love conditional. 7 answers from the sources. Read the sources.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Reply to \"I read the entire Quran\"",
-			"category": "answering-polemics",
+			"category": "quran-text-revelation",
 			"tags": [
 				"Polemics",
 				"Prophet Muhammad",
 				"Abrogation",
 				"Divinity of Jesus"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "is-yahweh-satan",
@@ -2628,15 +2640,16 @@
 			"slug": "jews-behind-the-stone-hadith",
 			"title": "The hadith of the Jews behind the stone: 6 points from the sources",
 			"excerpt": "What Bukhari and Muslim report, why it is a prediction and not a command, and how a movement turned it into a slogan. 6 points. Read on.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "The Jews behind the stone hadith",
-			"category": "answering-polemics",
+			"category": "hadith-sira",
 			"tags": [
 				"Jews",
 				"Hadith",
 				"Signs of the Hour",
 				"Myths"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "can-a-muslim-befriend-a-non-muslim",
@@ -2684,15 +2697,16 @@
 			"slug": "was-muhammad-a-narcissist",
 			"title": "Was Muhammad a narcissist? 6 points on a diagnosis of the dead",
 			"excerpt": "The childhood facts, his conduct in Bukhari and the Quran's rebukes: why a diagnosis fourteen centuries later cannot hold. 6 points. Read on.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Was Muhammad a narcissist?",
-			"category": "prophets-both-scriptures",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Prophethood",
 				"Polemics",
 				"Myths"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "safiyya-and-the-women-captured-in-war",
@@ -2768,15 +2782,16 @@
 			"slug": "what-the-pagans-of-mecca-said-about-allah",
 			"title": "What did the pagans of Mecca believe about Allah? 8 answers",
 			"excerpt": "Did the Meccans take Allah for a moon god? 8 answers from the Quran and early reports on what they believed about Allah. Read on.",
-			"topic": "belief-and-practices",
+			"topic": "history",
 			"seo_title": "What the pagans of Mecca said about Allah",
-			"category": "creed-theology",
+			"category": "islam-other-peoples",
 			"tags": [
 				"Allah",
 				"Arabia before Islam",
 				"Same God",
 				"Polemics"
-			]
+			],
+			"topic_v1": "belief-and-practices"
 		},
 		{
 			"slug": "sun-muddy-spring-and-fixed-earth",
@@ -3076,6 +3091,20 @@
 				"Quran commentary"
 			],
 			"publish_on": "2026-12-21T01:00:00Z"
+		},
+		{
+			"slug": "sam-shamoun-under-oath",
+			"title": "Sam Shamoun under oath: 7 findings from the Illinois courts",
+			"excerpt": "He asks readers to trust his word on Islam. Under oath, a court found his testimony not credible. Seven findings from the record. Read on.",
+			"topic": "islamophobia",
+			"seo_title": "Sam Shamoun under oath: 7 findings",
+			"category": "islamophobia",
+			"tags": [
+				"Polemics",
+				"Islamophobia",
+				"Christians"
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "jesus-sign-of-the-hour",
