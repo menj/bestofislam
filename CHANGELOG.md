@@ -4,6 +4,13 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.153.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Glossary aliases: `istighfar` gains Astaghfirullah and Astagfirullah; `taqiyya` gains Taqiyah, Taqiya and Taqiyyah. These are the spellings people search for, and they now show on the entry pages and in their schema. `BOI_GLOSSARY_VERSION` 25.
+
 ## [1.152.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
