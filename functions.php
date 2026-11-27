@@ -42,6 +42,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/endmark.php',
 	BOI_DIR . '/inc/abstract.php',
 	BOI_DIR . '/inc/basmala.php',
+	BOI_DIR . '/inc/honorific-guard.php',
 	BOI_DIR . '/inc/structured-data.php',
 	BOI_DIR . '/inc/schema-graph.php',
 	BOI_DIR . '/inc/social-meta.php',
