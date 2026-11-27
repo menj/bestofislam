@@ -7126,5 +7126,145 @@
     "source": "https://clevelandart.org/art/2008.2"
    }
   ]
+ },
+ "camel-method": {
+  "featured": {
+   "file": "camel-method.avif",
+   "alt": "A watercolour of a camel caravan crossing a flat desert under a pale sky.",
+   "caption": "A Caravan in the Desert, by Narcisse Berchère, about the 1860s. The Camel Method takes its name from a saying about the hundredth name of God.",
+   "artist": "Narcisse Berchère, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/2019.61"
+  },
+  "inline": [
+   {
+    "file": "camel-method-1.avif",
+    "alt": "An ink drawing of a saddled camel led by a groom, set in a decorated border.",
+    "caption": "Camel and Groom, a drawing from Safavid Qazvin, 1500s. Kevin Greeson's 2004 manual made the camel its emblem.",
+    "artist": "Shaykh Muhammad, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1944.489"
+   },
+   {
+    "file": "camel-method-2.avif",
+    "alt": "Two pages of a Quran manuscript in black script with gold verse markers on pink paper.",
+    "caption": "A leaf from a Quran copied in Mamluk Cairo, 1300s. The method asks the reader to stop at 3:55, before the verse that explains the passage.",
+    "artist": "Unknown scribe, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/2013.102"
+   }
+  ]
+ },
+ "quran-passages-in-christian-missions": {
+  "featured": {
+   "file": "quran-passages-in-christian-missions.avif",
+   "alt": "Two pages of a Quran manuscript in large black script with gold rosettes between the verses.",
+   "caption": "A Quran folio from the Mamluk sultanate, 1300s to 1400s. Each verse missionaries quote sits inside a passage that explains it.",
+   "artist": "Unknown scribe, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1933.473"
+  },
+  "inline": [
+   {
+    "file": "quran-passages-in-christian-missions-1.avif",
+    "alt": "A single Quran page in brown angular script with a small gold marker.",
+    "caption": "A leaf from a Quran, probably Egypt, 1000s to 1100s. The phrase \"a spirit from Him\" in 58:22 is said of believers.",
+    "artist": "Unknown scribe, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1933.481"
+   },
+   {
+    "file": "quran-passages-in-christian-missions-2.avif",
+    "alt": "A cylindrical copper pen and ink box with a hinged lid.",
+    "caption": "A pen and ink box from Safavid Iran, 1667 to 1698. The written word has always been read whole in the commentary tradition.",
+    "artist": "Iran, Safavid period, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1940.689.c"
+   }
+  ]
+ },
+ "does-the-virgin-birth-make-jesus-divine": {
+  "featured": {
+   "file": "does-the-virgin-birth-make-jesus-divine.avif",
+   "alt": "Four Iznik wall tiles with blue and green floral roundels.",
+   "caption": "Wall tiles from Iznik, Ottoman Turkey, 1600s. The Quran affirms the virgin birth and denies that it makes Jesus divine.",
+   "artist": "Turkey, Iznik, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1915.651"
+  },
+  "inline": [
+   {
+    "file": "does-the-virgin-birth-make-jesus-divine-1.avif",
+    "alt": "A tall Iznik tile spandrel painted with red and blue flowering sprays.",
+    "caption": "A tile spandrel from Iznik, about 1570 to 1575. God's command Be answers Mary's question in 3:47.",
+    "artist": "Turkey, Iznik, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/2004.70"
+   },
+   {
+    "file": "does-the-virgin-birth-make-jesus-divine-2.avif",
+    "alt": "A large Iznik dish painted with blue artichoke plants on a white ground.",
+    "caption": "A large dish with artichokes, Iznik, about 1535 to 1540. Mary and her son are named together as one sign in 21:91.",
+    "artist": "Turkey, Iznik, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1995.17"
+   }
+  ]
+ },
+ "principles-of-dawah-in-the-quran": {
+  "featured": {
+   "file": "principles-of-dawah-in-the-quran.avif",
+   "alt": "A panel of Persian calligraphy framed by a painted border of flowers, birds and deer.",
+   "caption": "Persian calligraphy by Mir Ali Haravi in a border from the court of Shah Jahan. The Quran asks for wisdom and good counsel in the call to God.",
+   "artist": "Mir 'Ali Haravi, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1977.207"
+  },
+  "inline": [
+   {
+    "file": "principles-of-dawah-in-the-quran-1.avif",
+    "alt": "A lustre-painted bowl with an antelope among scrolling plants.",
+    "caption": "A lustre bowl from Fatimid Fustat, 1000s. Al-Faruqi held that a forced judgment is a contradiction in terms.",
+    "artist": "Egypt, Fatimid period, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1944.476"
+   },
+   {
+    "file": "principles-of-dawah-in-the-quran-2.avif",
+    "alt": "A glazed bowl painted in brown and green with birds and plant scrolls.",
+    "caption": "A bowl from Ayyubid Syria, late 1100s to early 1200s. Guidance, says 28:56, belongs to God alone.",
+    "artist": "Syria, Ayyubid period, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1944.75"
+   }
+  ]
+ },
+ "religious-pluralism-and-islam": {
+  "featured": {
+   "file": "religious-pluralism-and-islam.avif",
+   "alt": "A painting of a camel caravan leaving a palm oasis at dusk beside a domed tomb.",
+   "caption": "Leaving the Oasis, by Jean-Léon Gérôme, 1880s. The Quran names diversity among peoples as God's will in 5:48.",
+   "artist": "Jean-Léon Gérôme, Cleveland Museum of Art",
+   "licence": "CC0",
+   "source": "https://clevelandart.org/art/1977.126"
+  },
+  "inline": [
+   {
+    "file": "religious-pluralism-and-islam-1.avif",
+    "alt": "A copper-lustre dish with a central medallion and dense ornament.",
+    "caption": "A lustre dish, probably from Valencia, about 1475 to 1500. Valencian lustreware was made largely by Muslim potters living under Christian rule.",
+    "artist": "Spain, Valencia, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1915.712"
+   },
+   {
+    "file": "religious-pluralism-and-islam-2.avif",
+    "alt": "A red silk band woven with castles and lions in gold.",
+    "caption": "Silk with the arms of Castile and León, woven in Nasrid Granada for a Christian royal robe, 1200 to 1325. Justice to peaceful neighbours is commanded in 60:8.",
+    "artist": "Spain, Granada, Nasrid period, Cleveland Museum of Art",
+    "licence": "CC0",
+    "source": "https://clevelandart.org/art/1939.48"
+   }
+  ]
  }
 }

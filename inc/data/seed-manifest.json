@@ -21,6 +21,7 @@
         "content\/black-stone-and-kissing.json": "aa5b9e62badeada342222190aa9a549c",
         "content\/blasphemy-and-insults-to-the-prophet.json": "1ba5f6b6f4e07bf40cc26b44aae3dbad",
         "content\/buraq-and-miracle-stories.json": "e63ed56fe57525681186a28a8bfcbce6",
+        "content\/camel-method.json": "ad9d82c74bb622549585d95bc9c6fa70",
         "content\/camel-urine-hadith.json": "5ffc00af75e2644a4dea02383155f093",
         "content\/can-a-muslim-befriend-a-non-muslim.json": "51b40b8a214984f81e75dcfbd19452b3",
         "content\/can-god-die.json": "b009274ba01e8ee38e13a23a1cb4c821",
@@ -41,6 +42,7 @@
         "content\/does-god-require-blood-to-forgive.json": "a56ee84393a07b6e05a5d85c54327981",
         "content\/does-islam-teach-the-bible-was-corrupted.json": "899e16feb2aac093596402d5efd5c51b",
         "content\/does-the-quran-allow-wife-beating.json": "e68539b1326fa25835e445b9171e8a5d",
+        "content\/does-the-virgin-birth-make-jesus-divine.json": "c7abb73cc6efb29e129f4e4a960e525e",
         "content\/dome-inscriptions.json": "02dfbe373e4dd2b5bc41e2bec2a88bde",
         "content\/earliest-new-testament-lists.json": "4c1ff5baed463cafb2a011a47339286e",
         "content\/early-christians-charged-others-with-corrupting-scripture.json": "9c2f16b7e565908f1ca4be03ecc2ddc5",
@@ -131,6 +133,7 @@
         "content\/paul-claim-to-apostleship.json": "a511b4dfb01b88fe65137320d54d3f7f",
         "content\/pauline-letters-authorship.json": "342b09bfa9c64444e098ce0127cd9a94",
         "content\/preservation-and-truth.json": "951cfaf84a47fc3487c55a65305a21c9",
+        "content\/principles-of-dawah-in-the-quran.json": "657506697b9e24d3447c36b8cf8945fe",
         "content\/prophet-died-poisoning.json": "46522fb5896c1015640768adb7d062fa",
         "content\/prophets-marriages-zaynab-and-others.json": "b84d5f45b3a6357a78866fa5811f70fb",
         "content\/prophets-you-may-not-know.json": "b3f25014be570dcc6eb33595b4dcd155",
@@ -143,6 +146,7 @@
         "content\/quran-iblis-fallen-angels-borrowing.json": "d137d7a302fa4312743c3dfd0e7f3b06",
         "content\/quran-mysteries-in-the-stories.json": "4237c61b02cc24cbb086ba6c58a3c7d3",
         "content\/quran-on-christians.json": "0440b93583021fd45f3dfd12135f027a",
+        "content\/quran-passages-in-christian-missions.json": "f8d0842787a3a886bc8e03ca93dfe428",
         "content\/quran-preservation-reddit.json": "28977396cc72068d49afa17192d592d6",
         "content\/quran-pronoun-shifts-iltifat.json": "56c73c257e3b4e202eae009806fc70d7",
         "content\/quran-science-claims-graded.json": "e996ab485c8143afaf1d5c32e8f03cb5",
@@ -155,6 +159,7 @@
         "content\/ramadan-last-ten-nights.json": "c43b6a43790e176e85eb4a743d8c3ea6",
         "content\/ransom-bible-quran.json": "15375efa9f9aca2b286fad4ecf5b489a",
         "content\/relationship-with-god.json": "5db2fcaa108c850fdb6c6aeb0955e5d6",
+        "content\/religious-pluralism-and-islam.json": "de5bf2e47c255451c8f53d46b224ac00",
         "content\/revelation-warning-and-the-canon.json": "1954a62d9b30486d3f1af0788f7bd196",
         "content\/revelatory-exegesis.json": "a9519360d409570a1931df42affd868f",
         "content\/revisionist-case-weighed.json": "7ae489a5eb73dbd5f8b417babe5a06fe",
@@ -215,8 +220,8 @@
         "content\/women-in-islamic-law-testimony-inheritance.json": "521412aedfba29a09902c76b8981c99b",
         "content\/women-in-the-prophets-life.json": "dc6d78cd6c1656df229f6ce5fa148c5d",
         "content\/women-leading-prayer.json": "f1193c41b06dfef865a67d1291ed7f10",
-        "inc\/data\/seed.json": "1f0ffd9bfae1b114163e9208db33c544",
+        "inc\/data\/seed.json": "e8f13e8b99a7371a94155c3180e7f634",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "f6483343487d4230bc56adbf1d125493"
+    "checksum": "d0e4e6c6e0cd05b50b066819014d4eac"
 }

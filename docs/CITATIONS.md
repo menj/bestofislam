@@ -197,6 +197,35 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.143.0 (drafts 26 to 30)
+
+The owner's drafts 26 to 30 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
+
+- **camel-method.**
+  - Phil Parshall's review of Greeson's 2004 manual, *Evangelical Missions Quarterly*, July 2005, was read. Both quotations ("asking a Muslim to read Surah Al-Imran 3:42-55"; the credibility of the people against "the veracity of these huge numbers") match it.
+  - Ken Walker, "Out of Context", *Christianity Today*, April 2010, was read for Rankin, the 2002 survey of 125,000 and Oksnevad's "sloppy missiology and theology".
+  - Bob Allen, Associated Baptist Press, 11 February 2010, was read for Ergun Caner's charges, the three points of the method, the camel legend and the IMB guideline of 2007.
+  - Al-Ṭabarī on 3:59 is cited in the Shakir edition, vol. 6, pp. 468–469.
+  - Bridger, *Christian Exegesis of the Qurʾān* (Pickwick, 2015), is cited only for the general "point of contact" argument.
+  - Cut, because they could not be confirmed: the draft's expansion of CAMEL as an acronym, and an interview in the *Christian Post*.
+- **quran-passages-in-christian-missions.** Sam Shamoun, "The Quran Confirms the Trinity! Pt. 3a", was read, with the passage he quotes from John Gilchrist, *The Titles of Jesus in the Qur'an and the Bible*, on 58:22. The reading of 10:94 is quoted from the Jesus-Islam site. Parshall and Allen as above.
+- **does-the-virgin-birth-make-jesus-divine.**
+  - Don Stewart on Blue Letter Bible was read: "If Joseph were His true father, then Jesus would be only a human being".
+  - "Virgin-Born Rabbits", *Christianity Today* editorial, 14 December 1984: "The deity of Jesus Christ, of course, does not rest upon his virgin birth."
+  - Corrected: the draft placed Oliver Crisp's article in *IJST*. It is in the *Heythrop Journal* 49.2 (2008), pp. 197–221, confirmed through Crossref.
+  - Lincoln, *JSNT* 34.3 (2012), pp. 211–231, was confirmed through Crossref. Ibn Kathīr on 21:91 was read in the English abridgement.
+- **principles-of-dawah-in-the-quran.**
+  - Al-Ṭabarī on 16:125 was read in the Arabic and is paraphrased.
+  - Al-Fārūqī, *The Cultural Atlas of Islam*, p. 188, and *Essential Writings*, p. 124: the draft's quotations could not be checked against the books, so the article gives his points in paraphrase. The exact wording waits on the owner's copies (see below).
+  - Confirmed through Crossref: Issa Khan and others, *SAGE Open* 10.4 (2020), doi:10.1177/2158244020970560; and Jaeho Chung, *Religions* 17.8 (2026), art. 932, doi:10.3390/rel17080932.
+  - Corrected: the draft gave the second author as "Seung-Kyu". The article's author is Jaeho Chung.
+- **religious-pluralism-and-islam.**
+  - Ibn Kathīr on 2:62 was read in the English abridgement, with Ibn ʿAbbās' report that 3:85 came afterwards.
+  - Lumbard, "Qur'anic Inclusivism in an Age of Globalization", *Iqbal Review*, October 2005; Sirry, *Scriptural Polemics* (Oxford University Press, 2014); and Khalil, *Islam and the Fate of Others* (Oxford University Press, 2012), were confirmed.
+  - The A. Yusuf Ali text of 17:15 used for checking has a typing error, so the verse is paraphrased.
+  - Al-Fārūqī's *Essential Writings*, pp. 192–193, waits on the owner's copy. The tolerance quotation from *Al Tawhid*, ch. 4, matches `.claude/FARUQI.md`.
+- **Bible links.** Every reference written as book, chapter and verse links to its verse (`.claude/VOICE.md` section 7). The eight anchors were fetched and confirmed before they were added.
+
 ### New articles of 1.142.0 (drafts 21 to 25)
 
 The owner's drafts 21 to 25 were rewritten to `.claude/VOICE.md`, and every note was checked again. Quran quotations are A. Yusuf Ali's translation; Bible quotations are the World English Bible.
