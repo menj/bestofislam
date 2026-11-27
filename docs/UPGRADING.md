@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.146.0
+
+No action needed. The old address /sam-shamoun-on-the-pbd-podcast/ redirects to /sam-shamoun-on-two-podcasts/ through `inc/renamed-slugs.php`. Re-run the seeder so the article takes its new slug.
+
 ## Upgrading to 1.145.0
 
 Replace the theme files. `boi_create_listicles()` creates the new article; sam-shamoun-under-oath refreshes where unedited.
