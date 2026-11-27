@@ -25,11 +25,11 @@
         "content\/camel-urine-hadith.json": "5ffc00af75e2644a4dea02383155f093",
         "content\/can-a-muslim-befriend-a-non-muslim.json": "51b40b8a214984f81e75dcfbd19452b3",
         "content\/can-god-die.json": "b009274ba01e8ee38e13a23a1cb4c821",
-        "content\/can-muslims-say-merry-christmas.json": "44242a2776ae2caee5618191f4b30edd",
+        "content\/can-muslims-say-merry-christmas.json": "fed7560639b9e6b8f5e446a3268c36ae",
         "content\/child-marriage-in-islam.json": "3f2652a4ebb7c433ae3667a6b46c5866",
         "content\/christian-twin-of-the-islamic-dilemma.json": "2e0c9336b9161efc6b76a9d41ba3599a",
         "content\/christmas-quran-jesus-birth.json": "cbaa032269455a382a9e66481868a9d9",
-        "content\/christmas-traditions-historical-origins.json": "62e53b7fe6bd07b9d5edb5445dd2115b",
+        "content\/christmas-traditions-historical-origins.json": "a187fe6e9a7a8e53711ea322ed4e5ad2",
         "content\/comma-johanneum.json": "58820aa86783b1dfd34e0b36e50dca92",
         "content\/companions-who-started-with-nothing.json": "af7de0525f478df6e25a7cdbe204ef65",
         "content\/covenant-of-the-prophets.json": "2f33f542b1cbf252db68f515821589bc",
@@ -64,7 +64,7 @@
         "content\/first-revelation-demonic-claim.json": "3d4e5e64413e705bd0fa25d8d7808710",
         "content\/five-pillars-explained.json": "5dc58367051db7e1294d4c4b6d7ddab2",
         "content\/fly-hadith-and-adult-suckling.json": "35e53d1e558d91d7752ca289a81c0898",
-        "content\/former-christian-ministers-who-embraced-islam.json": "a59deca33562bfac6ae7c841a5a4352b",
+        "content\/former-christian-ministers-who-embraced-islam.json": "1bb850afafa76463f4f058ff88b3c4d1",
         "content\/funeral-dhikr-dua.json": "fc6de7b52bf229ecfd363351c9dd6b7b",
         "content\/genealogies-of-jesus.json": "dec45028bd0dd7c08ff118e365f027d8",
         "content\/gods-attributes-and-anthropomorphism.json": "0febe7fff213dc53f135637ea56c51bb",
@@ -229,5 +229,5 @@
         "inc\/data\/seed.json": "a5b956675794aa604d2a011fbcbdb1bd",
         "inc\/data\/supersedes.json": "4edd782755a3f5717f6d34721f4bf23d"
     },
-    "checksum": "ef280751802bd78028d2082147402ab5"
+    "checksum": "0dfa9c14a3c3cdd396a802723924a142"
 }
