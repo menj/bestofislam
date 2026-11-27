@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.148.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 29 June to 8 August 2027 (D71), and WordPress publishes each on its day. Nothing to set.
+
 ## Upgrading to 1.147.0
 
 Replace the theme files. `boi_migrate_seed()` gives unedited copies of four articles their new text (SSOT D72); an edited copy is listed on the Content tab. Nothing to set.

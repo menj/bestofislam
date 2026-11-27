@@ -29,7 +29,7 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'Whether belief is reasonable', 'bestofislam' ),
-			'slugs' => array( 'universe-demands-creator', 'why-does-god-allow-suffering', 'morality-without-god', 'who-saw-gabriel', 'quran-science-claims-graded', 'islam-and-evolution', 'sun-muddy-spring-and-fixed-earth', 'natural-world-verses' ),
+			'slugs' => array( 'universe-demands-creator', 'from-atheism-to-islam', 'why-does-god-allow-suffering', 'morality-without-god', 'who-saw-gabriel', 'quran-science-claims-graded', 'islam-and-evolution', 'sun-muddy-spring-and-fixed-earth', 'natural-world-verses' ),
 		),
 		array(
 			'label' => __( 'The Bible and the Quran', 'bestofislam' ),
@@ -45,11 +45,11 @@ function boi_reading_order() {
 		),
 		array(
 			'label' => __( 'History and civilisation', 'bestofislam' ),
-			'slugs' => array( 'raids-badr-and-the-conquest-of-mecca', 'medina-jewish-tribes-and-qurayza', 'kaab-ibn-al-ashraf-and-the-poets', 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters', 'crusades-facts', 'kharijites-and-takfir', 'scholars-who-shaped-islamic-study', 'western-scholars-of-islam', 'islamic-art-and-the-one-god', 'mosques-adapt-to-place', 'christmas-traditions-historical-origins' ),
+			'slugs' => array( 'raids-badr-and-the-conquest-of-mecca', 'medina-jewish-tribes-and-qurayza', 'kaab-ibn-al-ashraf-and-the-poets', 'qibla-change', 'kaaba-witnesses', 'dome-inscriptions', 'jizya', 'library-of-alexandria', 'seven-libraries', 'instruments-islamic-world', 'arabic-words-science', 'moon-craters', 'crusades-facts', 'kharijites-and-takfir', 'scholars-who-shaped-islamic-study', 'western-scholars-of-islam', 'islamic-art-and-the-one-god', 'mosques-adapt-to-place', 'christmas-traditions-historical-origins', 'maria-hertogh-natrah-case' ),
 		),
 		array(
 			'label' => __( 'The Muslim world today', 'bestofislam' ),
-			'slugs' => array( 'muslims-by-the-numbers', 'islam-religion-of-peace', 'apostasy-in-islam', 'before-you-convert-apostates-and-lgbt-friends', 'fastest-growing-religion', 'former-christian-ministers-who-embraced-islam', 'indonesia', 'ex-muslim-blog-study', 'what-former-muslims-testimonies-show', 'islam-in-china', 'islamophobia-facts', 'when-a-stranger-online-calls-islam-a-cult', 'islamisation-of-the-west', 'muslim-societies-backwardness-claim', 'taqiyya-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'no-compulsion-in-religion', 'principles-of-dawah-in-the-quran', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
+			'slugs' => array( 'muslims-by-the-numbers', 'islam-religion-of-peace', 'apostasy-in-islam', 'before-you-convert-apostates-and-lgbt-friends', 'fastest-growing-religion', 'former-christian-ministers-who-embraced-islam', 'why-people-convert-to-islam', 'indonesian-conversion-stories', 'indonesia', 'ex-muslim-blog-study', 'what-former-muslims-testimonies-show', 'islam-in-china', 'islamophobia-facts', 'opposition-to-islam-to-conversion', 'when-a-stranger-online-calls-islam-a-cult', 'islamisation-of-the-west', 'muslim-societies-backwardness-claim', 'taqiyya-myths', 'war-and-killing-in-islam', 'hijab-and-modesty', 'homosexuality-in-islam', 'sharia-and-hudud', 'blasphemy-and-insults-to-the-prophet', 'why-no-interest', 'terrorism-and-muslims-the-data', 'race-in-quran-and-hadith', 'fighting-verses-in-context', 'no-compulsion-in-religion', 'principles-of-dawah-in-the-quran', 'jihad-meaning-quran-hadith-jurists', 'ridda-wars-abu-bakr-fadak' ),
 		),
 	);
 }

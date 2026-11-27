@@ -197,6 +197,28 @@ The owner's drafts 16 to 20 were rewritten to `.claude/VOICE.md`, and every note
   - The Ubada hadith (Bukhari 3435, Muslim 28) is paraphrased.
   - Not cited: the draft's "Cambridge study" in *BSOAS* could not be identified. The *Encyclopaedia of the Qur'an* entry was not read.
 
+### New articles of 1.148.0 (drafts 36 to 40)
+
+The owner's drafts 36 to 40 were rewritten to `.claude/VOICE.md`. Several of the draft's sources refused automated fetching (*The Straits Times*, *The Star*'s paywall, *The Guardian*, AP, Deutsche Welle, *The New Yorker*, the Middle East Forum, the National Library Board's Infopedia, Britannica). The owner chose on 2026-11-27 that the articles keep only what could be confirmed, so cases resting on those sources were left out. Quran quotations are A. Yusuf Ali's translation.
+
+- **from-atheism-to-islam.**
+  - Pew Research Center, 26 July 2017, chapter 6, read: 21% of American Muslims are converts; of the converts, 53% were Protestant, one in five Catholic, and 19% unaffiliated; 24% gave a preference for Islam's beliefs and teachings.
+  - Michael David Shapiro's testimony, read on IslamReligion.com (5 May 2008) and in *Arab News* (2 September 2016). His words are "My belief in God was uncertain", so the article does not call him an atheist.
+  - Corrected or cut: Jeffrey Lang. His books were confirmed through Open Library, *Struggling to Surrender* (Amana, 1994) and *Even Angels Ask* (Amana, 1997), and his post as a professor of mathematics at the University of Kansas on the department's site, but his own account of atheism and suffering could not be read, so he is left out. Sealy's "Susanne" could not be read and is left out. The draft's Ibn Sina sentence is cut for want of a source read.
+- **indonesian-conversion-stories.** The draft's five Southeast Asian stories became four Indonesian ones.
+  - Read: *iNews*, 24 August 2021 (Iga Mawarni, 23 March 1994, Malang); *ANTARA*, 21 June 2019 (Deddy Corbuzier's words and his eight months with Gus Miftah); the CRCS Gadjah Mada report of 20 September 2017 on Felix Siauw; *Suara.com*, 24 February 2021, and *Okezone*, 31 October 2018 (Roger Danuarta, 29 October 2018, and his mother's condition). Hew Wai Weng, *Chinese Ways of Being Muslim* (NIAS Press, 2017), was confirmed through Open Library.
+  - Cut: Syafiq Raffiqin Liow (*The Star*, paywalled) and Muhammad Joy Kumar Paul (*The Straits Times*, refused). Roger Danuarta, confirmed in two Indonesian outlets, is added.
+- **opposition-to-islam-to-conversion.** The draft's five became three.
+  - Read: *Euronews*, 5 February 2019 (van Klaveren's years in parliament and his words on Dutch radio, and van Doorn's earlier conversion); *SWI swissinfo.ch*, 29 November 2019 (57.5%); Jason Van Boom, *OpEdNews*, 10 February 2010 (Streich).
+  - Van Klaveren's book title and van Doorn's part in distributing *Fitna*, his conversion and his hajj are cited from the English Wikipedia articles on them, since the *Guardian* and Deutsche Welle pages refused fetching.
+  - Corrected: the draft dated van Doorn's conversion to 2013. He announced it in April 2012; the *Guardian* piece of October 2013 concerned his hajj.
+  - Cut: Richard McKinney. The film's site confirms his plan to bomb the mosque in his Indiana town, but no page that could be read confirms his conversion. Leia Azzahra, already marked unverified in the draft, is left out.
+- **why-people-convert-to-islam.** Pew 2017, read: the seven reasons with their shares (24%, "one-in-five", 10%, 9%, 9%, 8%, 8%). Corrected: the draft's 25% is 24%, and the reading figure is "one-in-five" with no exact percentage. Pew 2025 (Lesage, Starr and Miner), read: 36 countries surveyed, 13 analysed for Islam, 3% or fewer of adults entering or leaving it. The hadith on intentions is quoted from the English of al-Bukhari's first hadith.
+- **maria-hertogh-natrah-case.**
+  - SG101, "Maria Hertogh Riots on 11 Dec 1950", read: 18 dead and 173 injured, the crowd of 2,000 to 3,000, and the dates 11 to 13 December.
+  - Her birth, family, the custody hearings, the marriage and Justice Brown's judgment (quoted) are cited from the English Wikipedia article "Maria Hertogh", since Infopedia returned nothing. The date of the judgment, 2 December 1950, is the title of a chapter in Hughes, *Tangled Worlds* (ISEAS, 1980), confirmed through Open Library and the publisher's catalogue. Aljunied (Routledge, 2009) is confirmed through Kessler's review in the *American Historical Review* 116.4 (2011), pp. 1111–1112, via Crossref.
+  - Not used: the date of her departure for the Netherlands, which no page read gives.
+
 ### The Sunni position, 1.147.0
 
 The owner decided on 2026-11-27 that sectarian questions are written from the Sunni position (SSOT D72), which settles the six articles held for that decision. Two of them, seal-of-the-prophets and islam-religion-of-peace, mention the Shia only in passing and are unchanged. The new citations, in two of the other four, were checked in the Arabic and English text of the collections (sunnah.com refused automated fetching, so the open hadith-json dataset was used, and the notes cite book and chapter because its numbering differs from sunnah.com's):

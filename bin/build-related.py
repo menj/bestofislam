@@ -83,6 +83,11 @@ PINS = {
     'was-jesus-born-on-christmas-day': ['christmas-quran-jesus-birth', 'birth-of-jesus-in-surah-maryam', 'christmas-traditions-historical-origins', 'genealogies-of-jesus'],
     'christmas-quran-jesus-birth': ['birth-of-jesus-in-surah-maryam', 'does-the-virgin-birth-make-jesus-divine', 'was-jesus-born-on-christmas-day', 'jesus-the-word-of-god-in-the-quran'],
     'former-christian-ministers-who-embraced-islam': ['what-former-muslims-testimonies-show', 'no-compulsion-in-religion', 'before-you-convert-to-islam', 'quran-on-christians'],
+    'from-atheism-to-islam': ['universe-demands-creator', 'why-does-god-allow-suffering', 'morality-without-god', 'why-people-convert-to-islam', 'who-is-allah'],
+    'indonesian-conversion-stories': ['indonesia', 'why-people-convert-to-islam', 'before-you-convert-to-islam', 'no-compulsion-in-religion', 'former-christian-ministers-who-embraced-islam'],
+    'opposition-to-islam-to-conversion': ['islamophobia-facts', 'former-christian-ministers-who-embraced-islam', 'why-people-convert-to-islam', 'what-former-muslims-testimonies-show'],
+    'why-people-convert-to-islam': ['from-atheism-to-islam', 'indonesian-conversion-stories', 'fastest-growing-religion', 'before-you-convert-to-islam', 'no-compulsion-in-religion'],
+    'maria-hertogh-natrah-case': ['indonesia', 'no-compulsion-in-religion', 'apostasy-in-islam', 'can-a-muslim-befriend-a-non-muslim'],
 }
 
 related = {}

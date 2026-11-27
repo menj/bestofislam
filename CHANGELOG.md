@@ -4,6 +4,20 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.148.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 36 to 40, rewritten to `.claude/VOICE.md` and scheduled ten days apart from 29 June to 8 August 2027 (SSOT D71). Every case in them was checked against a source that could be read; cases that could not be confirmed were left out (`docs/CITATIONS.md`):
+  - from-atheism-to-islam: five questions (existence, oneness, suffering, morality, revelation), with Pew's 2017 figures and Michael David Shapiro's testimony.
+  - indonesian-conversion-stories: Iga Mawarni, Deddy Corbuzier, Felix Siauw and Roger Danuarta. The draft's five became four.
+  - opposition-to-islam-to-conversion: Joram van Klaveren, Arnoud van Doorn and the corrected story of Daniel Streich. The draft's five became three.
+  - why-people-convert-to-islam: the seven reasons American converts gave Pew in 2017, with Pew's 2025 study of switching.
+  - maria-hertogh-natrah-case: seven facts, from her birth in Java in 1937 to Justice Brown's judgment and the riots of December 1950.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
 ## [1.147.0] - 2026-11-27
 
 No feature removed and no public identifier renamed. No article changes its address.

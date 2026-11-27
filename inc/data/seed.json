@@ -3348,6 +3348,77 @@
 				"Freedom of religion"
 			],
 			"publish_on": "2027-06-19T01:00:00Z"
+		},
+		{
+			"slug": "from-atheism-to-islam",
+			"title": "From atheism to Islam: 5 questions on the way to belief",
+			"excerpt": "Why do some people move from unbelief to Islam? Five questions they meet, on existence, God's oneness, suffering, morality and revelation. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "From atheism to Islam: 5 questions",
+			"category": "creed-theology",
+			"tags": [
+				"Atheism",
+				"Conversion",
+				"Existence of God",
+				"Tawhid"
+			],
+			"publish_on": "2027-06-29T01:00:00Z"
+		},
+		{
+			"slug": "indonesian-conversion-stories",
+			"title": "4 Indonesian conversion stories and the questions behind them",
+			"excerpt": "Did they convert only to marry, or give up who they were? Four Indonesian converts answer in their own words. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "4 Indonesian conversion stories",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Southeast Asia",
+				"Freedom of religion"
+			],
+			"publish_on": "2027-07-09T01:00:00Z"
+		},
+		{
+			"slug": "opposition-to-islam-to-conversion",
+			"title": "From opposition to Islam to conversion: 3 stories examined",
+			"excerpt": "Some of Islam's opponents became Muslims, and some stories about them grew in the telling. Three cases checked against the record. Read on.",
+			"topic": "islamophobia",
+			"seo_title": "Opponents of Islam who converted: 3 stories",
+			"category": "islamophobia",
+			"tags": [
+				"Conversion",
+				"Islamophobia",
+				"Myths"
+			],
+			"publish_on": "2027-07-19T01:00:00Z"
+		},
+		{
+			"slug": "why-people-convert-to-islam",
+			"title": "Why do people convert to Islam? 7 reasons converts give",
+			"excerpt": "Is conversion to Islam mostly about marriage? American converts gave Pew seven reasons, and marriage was one of the smaller ones. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "Why do people convert to Islam? 7 reasons",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Pew Research",
+				"Demographics"
+			],
+			"publish_on": "2027-07-29T01:00:00Z"
+		},
+		{
+			"slug": "maria-hertogh-natrah-case",
+			"title": "The Maria Hertogh controversy: 7 facts about the Natrah case",
+			"excerpt": "A custody case over a girl raised as Natrah ended in riots in Singapore in 1950. Seven facts from the court record and the official history. Read on.",
+			"topic": "history",
+			"seo_title": "The Natrah case: 7 facts",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Southeast Asia",
+				"Freedom of religion",
+				"Christians"
+			],
+			"publish_on": "2027-08-08T01:00:00Z"
 		}
 	],
 	"pages": {
