@@ -4,6 +4,16 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
+## [1.140.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- The page "Who is Sam Shamoun?" (`sam-shamoun`), seeded from `inc/data/seed.json`. It quotes the two 2020 opinions of the Appellate Court of Illinois in his divorce case on his credibility, his undisclosed income and donations, and his compliance with court orders, each quotation checked against the opinion with its paragraph number, and states where he prevailed. The family matters and the private persons in the case are left out. It ends with links to eight articles on the subjects he writes about.
+
+### Changed
+- `.claude/VOICE.md` and SSOT: published court findings on a named critic's own credibility and his handling of money given for his work may be quoted, exactly and fairly; family matters and private persons stay out.
+
 ## [1.139.0] - 2026-11-26
 
 No feature removed and no public identifier renamed.

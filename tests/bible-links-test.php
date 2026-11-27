@@ -92,7 +92,19 @@ $it   = new RecursiveIteratorIterator(
 );
 foreach ( $it as $f ) {
 	if ( preg_match( '/\.(json|txt|md|php|html|js|css)$/', $f->getFilename() ) ) {
-		check_text( substr( $f->getPathname(), strlen( $root ) + 1 ), file_get_contents( $f->getPathname() ) );
+		$raw  = file_get_contents( $f->getPathname() );
+		$json = '.json' === substr( $f->getFilename(), -5 ) ? json_decode( $raw, true ) : null;
+		if ( is_array( $json ) ) {
+			// Decoded, so an escaped href=\"...\" reads as the link it is.
+			$raw = '';
+			array_walk_recursive(
+				$json,
+				function ( $v ) use ( &$raw ) {
+					$raw .= is_string( $v ) ? $v . "\n" : '';
+				}
+			);
+		}
+		check_text( substr( $f->getPathname(), strlen( $root ) + 1 ), $raw );
 	}
 }
 

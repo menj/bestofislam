@@ -62,6 +62,10 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
+## Upgrading to 1.140.0
+
+Replace the theme files. `boi_create_pages()` creates the page "Who is Sam Shamoun?" at `/sam-shamoun/` when the version changes. It is not added to the menu.
+
 ## Upgrading to 1.139.0
 
 Replace the theme files. `boi_migrate_seed()` gives unedited articles their Bible links; an edited copy is listed on the Content tab. The Glossary sync rebuilds its pages once.
