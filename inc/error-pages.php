@@ -145,6 +145,19 @@ function boi_error_copy( $kind ) {
 }
 
 /**
+ * Whether the two templates the error pages are built from are present and
+ * whole: page.html with its placeholders, and a non-empty page.css.
+ *
+ * @param string $root Theme folder on disk.
+ * @return bool
+ */
+function boi_error_templates_ready( $root = BOI_DIR ) {
+	$html = is_readable( $root . '/assets/error-pages/page.html' ) ? (string) file_get_contents( $root . '/assets/error-pages/page.html' ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions
+	$css  = is_readable( $root . '/assets/error-pages/page.css' ) ? (string) file_get_contents( $root . '/assets/error-pages/page.css' ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions
+	return false !== strpos( $html, '{{HEADING}}' ) && false !== strpos( $html, '{{CSS}}' ) && '' !== trim( $css );
+}
+
+/**
  * Builds the source of one drop-in.
  *
  * @param string $kind Drop-in kind.
@@ -434,6 +447,14 @@ function boi_error_sync_failures( $set = null ) {
 function boi_error_sync() {
 	$opts   = boi_get_options();
 	$failed = array();
+
+	// The pages are built from two templates. While an FTP upload has removed
+	// or not yet sent them, writing would replace every error page with an
+	// empty one, so nothing is written and the sync is tried again later.
+	if ( ! boi_error_templates_ready() ) {
+		boi_error_sync_failures( array( 'assets/error-pages/page.html', 'assets/error-pages/page.css' ) );
+		return false;
+	}
 
 	foreach ( boi_error_kinds() as $kind => $def ) {
 		$path = WP_CONTENT_DIR . '/' . $def['file'];

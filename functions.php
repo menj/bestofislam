@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.155.0' );
+define( 'BOI_VERSION', '1.156.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -67,6 +67,8 @@ $boi_need = array_merge(
 	$boi_load,
 	array(
 		BOI_DIR . '/inc/glossary-data.php',
+		BOI_DIR . '/assets/error-pages/page.html',
+		BOI_DIR . '/assets/error-pages/page.css',
 		BOI_DIR . '/inc/security-detector.php',
 		BOI_DIR . '/inc/contextual-links.php',
 		BOI_DIR . '/inc/data/image-credits.json',
