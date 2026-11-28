@@ -52,7 +52,18 @@
    "Immoral",
    "Lewdness",
    "Indecency"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ح ش",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفُحْشُ والفَحْشَاءُ والفَاحِشَةُ: ما عظم قبحه من الأفعال والأقوال، وقال: إِنَّ اللَّهَ لا يَأْمُرُ بِالْفَحْشاءِ [الأعراف/ 28]",
+     "gloss": "Al-Rāghib defines <em>fuḥsh</em>, <em>faḥshāʾ</em> and <em>fāḥisha</em> as deeds and words of great ugliness, and cites 7:28, \"God does not command indecency\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7646#94322c"
+    }
+   ]
+  }
  },
  {
   "slug": "fal-and-istikhara",
@@ -78,7 +89,18 @@
    "Fal",
    "Istihkara",
    "Istikhara"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ ي ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الخَيْرُ: ما يرغب فيه الكلّ، كالعقل مثلا، والعدل، والفضل، والشيء النافع، وضدّه: الشرّ.",
+     "gloss": "Al-Rāghib defines <em>khayr</em> as what everyone desires, such as reason, justice, excellence and anything useful; its opposite is <em>sharr</em>. <em>Istikhāra</em>, from the same root, is asking God for the better course.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8662#cbee67"
+    }
+   ]
+  }
  },
  {
   "slug": "family",
@@ -101,7 +123,18 @@
   "aliases": [
    "Kinship",
    "Silat Al-Rahm"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ س ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأُسْرَة الرجل: من يتقوّى به.",
+     "gloss": "Al-Rāghib defines a man's <em>usra</em> as the people from whom he draws strength. The root, <em>asr</em>, means binding with a cord.",
+     "url": "https://arabiclexicon.hawramani.com/?p=94#3574ae"
+    }
+   ]
+  }
  },
  {
   "slug": "faqir",
@@ -120,7 +153,18 @@
    "sufism"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ف ق ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفَقْرُ يستعمل على أربعة أوجه: الأوّل: وجود الحاجة الضّرورية، وذلك عامّ للإنسان ما دام في دار الدّنيا بل عامّ للموجودات كلّها، وعلى هذا قوله تعالى: يا أَيُّهَا النَّاسُ أَنْتُمُ الْفُقَراءُ إِلَى اللَّهِ [فاطر/ 15]",
+     "gloss": "Al-Rāghib gives four senses of <em>faqr</em>. The first is need of what is necessary, which belongs to every human being in this world and to every created thing, as in 35:15: \"O people, you are the ones in need of God\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7602#5b8121"
+    }
+   ]
+  }
  },
  {
   "slug": "fatiha",
@@ -150,7 +194,18 @@
    "Fatihah",
    "The Opening",
    "Umm Al-Kitab"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وفَاتِحَةُ كلّ شيء: مبدؤه الذي يفتح به ما بعده، وبه سمّي فاتحة الكتاب",
+     "gloss": "Al-Rāghib says the <em>fātiḥa</em> of anything is its beginning, by which what follows is opened, and the Opening of the Book takes its name from that.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
+  }
  },
  {
   "slug": "fatima",
@@ -202,7 +257,18 @@
   "aliases": [
    "Fatrah",
    "Pause In Revelation"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ت ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفُتُورُ: سكون بعد حدّة، ولين بعد شدّة، وضعف بعد قوّة. قال تعالى: يا أَهْلَ الْكِتابِ قَدْ جاءَكُمْ رَسُولُنا يُبَيِّنُ لَكُمْ عَلى فَتْرَةٍ مِنَ الرُّسُلِ [المائدة/ 19] ، أي: سكون حال عن مجيء رسول الله صلّى الله عليه وسلم",
+     "gloss": "Al-Rāghib defines <em>futūr</em> as stillness after sharpness, softness after hardness and weakness after strength. On 5:19, \"after an interval (<em>fatra</em>) between the messengers\", he says it means a time of stillness before the coming of the Messenger of God (peace be upon him).",
+     "url": "https://arabiclexicon.hawramani.com/?p=7590#1fb344"
+    }
+   ]
+  }
  },
  {
   "slug": "fatwa",
@@ -232,7 +298,18 @@
     "page": 42,
     "term": "FATWĀ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ت ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفُتْيَا والفَتْوَى: الجواب عمّا يشكل من الأحكام، ويقال: اسْتَفْتَيْتُهُ فَأَفْتَانِي بكذا.",
+     "gloss": "Al-Rāghib defines <em>futyā</em> and <em>fatwā</em> as the answer to a question of law that is unclear: one says <em>istaftaytuhu fa-aftānī</em>, \"I asked him and he gave me his answer\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=11127#735b00"
+    }
+   ]
+  }
  },
  {
   "slug": "fidya",
@@ -257,7 +334,18 @@
   "aliases": [
    "Fidayah",
    "Expiation"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف د ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفِدَى والفِدَاءُ: حفظ الإنسان عن النّائبة بما يبذله عنه، قال تعالى: فَإِمَّا مَنًّا بَعْدُ وَإِمَّا فِداءً [محمد/ 4]",
+     "gloss": "Al-Rāghib defines <em>fidāʾ</em> as shielding a person from a misfortune by what one gives on his behalf, and cites 47:4, \"either grace afterwards or ransom\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=11128#a9a36e"
+    }
+   ]
+  }
  },
  {
   "slug": "fig-and-olive",
@@ -282,7 +370,18 @@
    "Fig",
    "At-Tin",
    "Olive"
-  ]
+  ],
+  "lexicon": {
+   "root": "ت ي ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَالتِّينِ وَالزَّيْتُونِ [التين/ 1] قيل: هما جبلان، وقيل: هما المأكولان.",
+     "gloss": "On 95:1, \"by the fig and the olive\", al-Rāghib reports two views: that they are two mountains, or that they are the fruits that are eaten.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6601#553aee"
+    }
+   ]
+  }
  },
  {
   "slug": "fighting",
@@ -312,7 +411,18 @@
    "Sword Verse",
    "Sword",
    "Fighting Unbelievers"
-  ]
+  ],
+  "lexicon": {
+   "root": "ق ت ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والمُقاتَلَةُ: المحاربة وتحرّي القتل. قال: وَقاتِلُوهُمْ حَتَّى لا تَكُونَ فِتْنَةٌ [البقرة/ 193]",
+     "gloss": "Al-Rāghib defines <em>muqātala</em> as waging war and seeking to kill, and cites 2:193, \"fight them until there is no more persecution\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5221#481a0b"
+    }
+   ]
+  }
  },
  {
   "slug": "fingerprints",
@@ -335,7 +445,18 @@
   "articles": [
    "quran-science-claims-graded"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ب ن ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البَنَان: الأصابع، قيل: سمّيت بذلك لأنّ بها صلاح الأحوال التي يمكن للإنسان أن يبنّ بها، يريد: أن يقيم بها، ويقال: أَبَنَّ بالمكان يُبِنُّ ، ولذلك خصّ في قوله تعالى: بَلى قادِرِينَ عَلى أَنْ نُسَوِّيَ بَنانَهُ [القيامة/ 4]",
+     "gloss": "Al-Rāghib says <em>banān</em> are the fingers, named so, it is said, because with them a person keeps his affairs in order. That, he says, is why they are singled out in 75:4.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10862#6f0de1"
+    }
+   ]
+  }
  },
  {
   "slug": "fiqh",
@@ -407,7 +528,18 @@
    "quranic-ethics",
    "taqiyya-myths"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ن و ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والنَّارُ تقال للهيب الذي يبدو للحاسّة، قال: أَفَرَأَيْتُمُ النَّارَ الَّتِي تُورُونَ [الواقعة/ 71]",
+     "gloss": "Al-Rāghib says <em>nār</em> is said of the flame that appears to the senses, as in 56:71, \"Have you seen the fire you kindle?\" He also uses it for bare heat and for the fire of Hell.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4563#1f22a4"
+    }
+   ]
+  }
  },
  {
   "slug": "fitna",
@@ -477,7 +609,18 @@
   "aliases": [
    "Fitrah",
    "Natural Disposition"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ط ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وفِطْرَةُ الله: هي ما ركز فيه من قوّته على معرفة الإيمان، وهو المشار إليه بقوله: وَلَئِنْ سَأَلْتَهُمْ مَنْ خَلَقَهُمْ لَيَقُولُنَّ اللَّهُ [الزخرف/ 87]",
+     "gloss": "Al-Rāghib defines <em>fiṭrat Allāh</em> as the power God has set in a person to know faith, and points to 43:87: \"If you ask them who created them, they will surely say: God\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=7599#50544c"
+    }
+   ]
+  }
  },
  {
   "slug": "five-pillars",
@@ -501,7 +644,18 @@
   "aliases": [
    "Pillars Of Islam",
    "Arkan Al-Islam"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر ك ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأَرْكَانُ العبادات: جوانبها التي عليها مبناها ، وبتركها بطلانها.",
+     "gloss": "Al-Rāghib says the <em>rukn</em> of a thing is the side it rests on, and the <em>arkān</em> of acts of worship are the parts on which they are built: leave them out and the act is void.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5707#394f1d"
+    }
+   ]
+  }
  },
  {
   "slug": "forgetting",
@@ -523,7 +677,24 @@
    "wahy"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ن س ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النِّسْيَانُ: تَرْكُ الإنسانِ ضبطَ ما استُودِعَ، إمَّا لضَعْفِ قلبِهِ، وإمَّا عن غفْلةٍ، وإمَّا عن قصْدٍ حتى يَنْحَذِفَ عن القلبِ ذِكْرُهُ",
+     "gloss": "Al-Rāghib defines <em>nisyān</em> as failing to keep hold of what was entrusted to one, from weakness of heart, from heedlessness or on purpose, until its memory is gone from the heart.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10102#915af0"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وما عُذِرَ فيه نحو ما رُوِيَ عن النبيِّ صلَّى اللَّه عليه وسلم: «رُفِعَ عَنْ أُمَّتِي الْخَطَأُ وَالنِّسْيَانُ» فهو ما لم يكنْ سَبَبُهُ منه.",
+     "gloss": "The forgetting that is excused, he says, as in the report \"Mistakes and forgetting are lifted from my community\", is forgetting whose cause did not come from the person.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10102#915af0"
+    }
+   ]
+  }
  },
  {
   "slug": "forgiveness",
@@ -595,7 +766,18 @@
   ],
   "aliases": [
    "Liberty"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ر ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والحريّة ضربان: - الأول: من لم يجر عليه حكم الشيء، نحو: الْحُرُّ بِالْحُرِّ [البقرة/ 178] . - والثاني: من لم تتملّكه الصفات الذميمة من الحرص والشّره على المقتنيات الدنيوية، وإلى العبودية التي تضادّ ذلك أشار النبيّ صلّى الله عليه وسلم بقوله: «تعس عبد الدّرهم، تعس عبد الدّينار»",
+     "gloss": "Al-Rāghib gives <em>ḥurriyya</em> two senses: one who is under no other's ownership, as in 2:178, and one whom no blameworthy trait such as greed for worldly goods possesses. To the slavery opposed to that second freedom, he says, the Prophet (peace be upon him) pointed: \"Wretched is the slave of the dirham, wretched the slave of the dinar.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=10344#cf9d0e"
+    }
+   ]
+  }
  },
  {
   "slug": "friday",
@@ -620,7 +802,18 @@
    "Jumah",
    "Juma'Ah",
    "Friday Prayer"
-  ]
+  ],
+  "lexicon": {
+   "root": "ج م ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقولهم: يوم الجمعة، لاجتماع الناس للصلاة، قال تعالى: إِذا نُودِيَ لِلصَّلاةِ مِنْ يَوْمِ الْجُمُعَةِ فَاسْعَوْا إِلى ذِكْرِ اللَّهِ [الجمعة/ 9]",
+     "gloss": "Al-Rāghib says Friday is called <em>yawm al-jumuʿa</em> because people gather on it for the prayer, and cites 62:9, \"when the call is made to the prayer on the day of gathering, hasten to the remembrance of God\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=3462#8d0c5f"
+    }
+   ]
+  }
  },
  {
   "slug": "funeral",
@@ -645,7 +838,18 @@
    "Burial",
    "Janaza",
    "Burial Rites"
-  ]
+  ],
+  "lexicon": {
+   "root": "ج ن ز",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "جَنَزْتُ الشَّيْءَ أَجْنِزُهُ مِنْ بَابِ ضَرَبَ سَتَرْتُهُ وَمِنْهُ اشْتِقَاقُ الْجِنَازَةِ",
+     "gloss": "Al-Fayyūmī says <em>janaztu al-shayʾ</em> means \"I covered the thing\", and that <em>janāza</em>, the bier and the funeral, is derived from it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3368#273db1"
+    }
+   ]
+  }
  },
  {
   "slug": "furqan",
@@ -670,7 +874,18 @@
   "aliases": [
    "Furqaan",
    "Criterion"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ر ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفُرْقَانُ أبلغ من الفرق، لأنه يستعمل في الفرق بين الحقّ والباطل",
+     "gloss": "Al-Rāghib says <em>furqān</em> is stronger than <em>farq</em>, because it is used for the separating of truth from falsehood.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7714#0a4113"
+    }
+   ]
+  }
  },
  {
   "slug": "fahishah-al",
@@ -700,6 +915,17 @@
   "faruqi": {
    "page": 43,
    "term": "AL FĀḤISHAH, AL FAḤSHĀ'"
+  },
+  "lexicon": {
+   "root": "ف ح ش",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "إِلَّا أَنْ يَأْتِينَ بِفاحِشَةٍ مُبَيِّنَةٍ [النساء/ 19] ، كناية عن الزّنا",
+     "gloss": "In 4:19, \"unless they commit a clear <em>fāḥisha</em>\", al-Rāghib says the word is a veiled term for unlawful intercourse.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7646#94322c"
+    }
+   ]
   }
  },
  {
@@ -727,6 +953,17 @@
   "faruqi": {
    "page": 43,
    "term": "FAKKARA"
+  },
+  "lexicon": {
+   "root": "ف ك ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ولا يقال إلا فيما يمكن أن يحصل له صورة في القلب، ولهذا روي: «تَفَكَّرُوا في آلاء الله ولا تَفَكَّرُوا في الله»",
+     "gloss": "Thinking, al-Rāghib says, is used only of what can take a form in the heart; that is why it is reported: \"Reflect on the favours of God, and do not reflect on God.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=7603#85137a"
+    }
+   ]
   }
  },
  {
@@ -755,6 +992,17 @@
   "faruqi": {
    "page": 43,
    "term": "FALĀḤ"
+  },
+  "lexicon": {
+   "root": "ف ل ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفَلَاحُ: الظَّفَرُ وإدراك بغية، وذلك ضربان: دنيويّ وأخرويّ، فالدّنيويّ: الظّفر بالسّعادات التي تطيب بها حياة الدّنيا، وهو البقاء والغنى والعزّ",
+     "gloss": "Al-Rāghib defines <em>falāḥ</em> as winning and reaching what one seeks. It is of two kinds, he says; the worldly kind is gaining the goods that make this life pleasant: long life, wealth and honour.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7541#82216e"
+    }
+   ]
   }
  },
  {
@@ -782,6 +1030,17 @@
   "faruqi": {
    "page": 43,
    "term": "FAQAHA"
+  },
+  "lexicon": {
+   "root": "ف ق ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفِقْهُ: هو التّوصل إلى علم غائب بعلم شاهد، فهو أخصّ من العلم.",
+     "gloss": "Al-Rāghib defines <em>fiqh</em> as reaching knowledge of what is absent through knowledge of what is present, so it is narrower than <em>ʿilm</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7816#da1415"
+    }
+   ]
   }
  },
  {
@@ -811,6 +1070,17 @@
   "faruqi": {
    "page": 43,
    "term": "FAQĪH"
+  },
+  "lexicon": {
+   "root": "ف ق ه",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفِقْهُ: العلم بأحكام الشريعة، يقال: فَقُهَ الرّجل فَقَاهَةً: إذا صار فَقِيهاً ، وفَقِهَ أي: فهم فَقَهاً، وفَقِهَهُ أي: فهمه، وتَفَقَّهَ: إذا طلبه فتخصّص به.",
+     "gloss": "<em>Fiqh</em>, al-Rāghib says, is knowledge of the rulings of the law: <em>faquha</em> means a man has become a <em>faqīh</em>, and <em>tafaqqaha</em> that he sought it and gave himself to it, as in 9:122.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7816#da1415"
+    }
+   ]
   }
  },
  {
@@ -840,6 +1110,23 @@
   "faruqi": {
    "page": 43,
    "term": "FASAQA"
+  },
+  "lexicon": {
+   "root": "ف س ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فَسَقَ فلان: خرج عن حجر الشّرع، وذلك من قولهم: فَسَقَ الرُّطَبُ، إذا خرج عن قشره ، وهو أعمّ من الكفر.",
+     "gloss": "Al-Rāghib says <em>fasaqa</em> means to go out from the shelter of the law, from <em>fasaqa al-ruṭab</em>, said when a ripe date comes out of its skin. It is wider than <em>kufr</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7718#058176"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأكثر ما يقال الفَاسِقُ لمن التزم حكم الشّرع وأقرّ به، ثمّ أخلّ بجميع أحكامه أو ببعضه",
+     "gloss": "<em>Fāsiq</em>, he says, is mostly said of one who has accepted the law and acknowledged it, then failed in all of its rulings or in some.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7718#058176"
+    }
+   ]
   }
  },
  {
@@ -865,6 +1152,17 @@
   "faruqi": {
    "page": 42,
    "term": "FATAḤA"
+  },
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفَتْحُ: إزالة الإغلاق والإشكال، وذلك ضربان: أحدهما: يدرك بالبصر كفتح الباب ونحوه، وكفتح القفل والغلق والمتاع، نحو قوله: وَلَمَّا فَتَحُوا مَتاعَهُمْ [يوسف/ 65] ، وَلَوْ فَتَحْنا عَلَيْهِمْ باباً مِنَ السَّماءِ [الحجر/ 14] . والثاني: يدرك بالبصيرة كفتح الهمّ",
+     "gloss": "Al-Rāghib defines <em>fatḥ</em> as removing what is shut or unclear. It is of two kinds: what the eye sees, like opening a door, and what insight grasps, like relief from grief.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
   }
  },
  {
@@ -892,6 +1190,23 @@
   "faruqi": {
    "page": 42,
    "term": "FATANA"
+  },
+  "lexicon": {
+   "root": "ف ت ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الفَتْنِ: إدخال الذّهب النار لتظهر جودته من رداءته",
+     "gloss": "Al-Rāghib says the root sense of <em>fatn</em> is putting gold into the fire to show whether it is good or base.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7792#78e6be"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وجعلت الفتنة كالبلاء في أنهما يستعملان فيما يدفع إليه الإنسان من شدّة ورخاء، وهما في الشّدّة أظهر معنى وأكثر استعمالا",
+     "gloss": "<em>Fitna</em>, he adds, is like <em>balāʾ</em>: both are used of what a person is driven to, in hardship and in ease, and are plainer and more frequent in hardship.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7792#78e6be"
+    }
+   ]
   }
  },
  {
@@ -919,6 +1234,17 @@
   "faruqi": {
    "page": 42,
    "term": "FATḤ"
+  },
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فإنّه يحتمل النّصرة والظّفر والحكم، وما يفتح الله تعالى من المعارف",
+     "gloss": "On 110:1, \"when the help of God comes, and the opening\", al-Rāghib says <em>fatḥ</em> may mean help, victory, judgement, or the knowledge God opens to people.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
   }
  },
  {
@@ -949,6 +1275,17 @@
   "faruqi": {
    "page": 42,
    "term": "AL FĀTIḤ, AL FATTĀḤ"
+  },
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "قُلْ يَوْمَ الْفَتْحِ [السجدة/ 29] ، أي: يوم الحكم",
+     "gloss": "On 32:29, \"say: on the day of the <em>fatḥ</em>\", al-Rāghib says the word there means the day of judgement.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
   }
  },
  {
@@ -979,6 +1316,17 @@
   "faruqi": {
    "page": 42,
    "term": "AL FĀTIḤAH"
+  },
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وفَاتِحَةُ كلّ شيء: مبدؤه الذي يفتح به ما بعده، وبه سمّي فاتحة الكتاب",
+     "gloss": "Al-Rāghib says the <em>fātiḥa</em> of anything is its beginning, by which what follows is opened, and that the Opening of the Book is named for this.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
   }
  },
  {
@@ -1008,6 +1356,17 @@
   "faruqi": {
    "page": 48,
    "term": "FAWĀTIḤ AL SUWAR"
+  },
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وفَاتِحَةُ كلّ شيء: مبدؤه الذي يفتح به ما بعده",
+     "gloss": "Al-Rāghib defines the <em>fātiḥa</em> of anything, plural <em>fawātiḥ</em>, as its beginning, by which what follows is opened.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
   }
  },
  {
@@ -1036,6 +1395,17 @@
   "faruqi": {
    "page": 43,
    "term": "FIKR"
+  },
+  "lexicon": {
+   "root": "ف ك ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْفِكْرَةُ: قوّة مطرقة للعلم إلى المعلوم، والتَّفَكُّرُ: جولان تلك القوّة بحسب نظر العقل، وذلك للإنسان دون الحيوان",
+     "gloss": "Al-Rāghib defines <em>fikra</em> as a power that opens the way from knowledge to what is known, and <em>tafakkur</em> as that power ranging as reason looks. It belongs to human beings and to no other animal.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7603#85137a"
+    }
+   ]
   }
  },
  {
@@ -1066,6 +1436,17 @@
   "faruqi": {
    "page": 42,
    "term": "AL FUTŪḤĀT"
+  },
+  "lexicon": {
+   "root": "ف ت ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فإنّه يحتمل النّصرة والظّفر والحكم، وما يفتح الله تعالى من المعارف",
+     "gloss": "Al-Rāghib says the <em>fatḥ</em> of 110:1 may mean help, victory, judgement, or the knowledge God opens to people.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10034#a5b490"
+    }
+   ]
   }
  }
 ]

@@ -44,7 +44,18 @@
   "aliases": [
    "Ar-Rass",
    "Rass, Al-"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر س س",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أَصْحابَ الرَّسِ قيل: هو واد، قال الشاعر: وهنّ لوادي الرَّسِّ كاليد للفم وأصل الرَّسِّ: الأثر القليل الموجود في الشيء",
+     "gloss": "On \"the companions of al-Rass\" (25:38), al-Rāghib reports the view that al-Rass is a valley. The root sense, he says, is a slight trace found in a thing.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61767#91ae5a"
+    }
+   ]
+  }
  },
  {
   "slug": "reason-and-faith",
@@ -76,7 +87,18 @@
     "page": 40,
     "term": "ʿAQL"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ق ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "العَقْل يقال للقوّة المتهيّئة لقبول العلم، ويقال للعلم الذي يستفيده الإنسان بتلك القوّة عَقْلٌ",
+     "gloss": "Al-Rāghib says <em>ʿaql</em> is said of the power made ready to receive knowledge, and of the knowledge a person gains by that power.",
+     "url": "https://arabiclexicon.hawramani.com/?p=758#213417"
+    }
+   ]
+  }
  },
  {
   "slug": "riba",
@@ -90,7 +112,7 @@
   ],
   "misread": "That Islam is simply against business.",
   "sources": [
-   "The same teaching is found in the other scriptures: the Torah forbids charging interest to the poor (Exodus 22:25), and the medieval Church banned usury for centuries. Islam is a religion in which trade is praised, and the Prophet was himself a merchant. The prohibition is aimed at gain from the weakness of a debtor, and not at commerce."
+   "The same teaching is found in the other scriptures: the Torah forbids charging interest to the poor (<a href=\"https://thebible.exposed/bible/exodus/22/#v25\">Exodus 22:25</a>), and the medieval Church banned usury for centuries. Islam is a religion in which trade is praised, and the Prophet was himself a merchant. The prohibition is aimed at gain from the weakness of a debtor, and not at commerce."
   ],
   "terms": [
    "zakat",
@@ -154,6 +176,23 @@
   "faruqi": {
    "page": 32,
    "term": "RABB"
+  },
+  "lexicon": {
+   "root": "ر ب ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرَّبُّ في الأصل: التربية، وهو إنشاء الشيء حالا فحالا إلى حدّ التمام",
+     "gloss": "Al-Rāghib says <em>rabb</em> is at root <em>tarbiya</em>, nurturing: bringing a thing on, stage by stage, to its completion.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10832#da4b0d"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ولا يقال الرّبّ مطلقا إلا لله تعالى المتكفّل بمصلحة الموجودات، نحو قوله: بَلْدَةٌ طَيِّبَةٌ وَرَبٌّ غَفُورٌ [سبأ/ 15]",
+     "gloss": "Said without qualification, he adds, <em>rabb</em> is used of God alone, who takes charge of the good of all that exists, as in 34:15, \"a good land and a forgiving Lord\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10832#da4b0d"
+    }
+   ]
   }
  },
  {
@@ -236,6 +275,17 @@
   "faruqi": {
    "page": 33,
    "term": "RAḌIYA"
+  },
+  "lexicon": {
+   "root": "ر ض ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ورِضَا العبد عن الله: أن لا يكره ما يجري به قضاؤه، ورِضَا الله عن العبد هو أن يراه مؤتمرا لأمره، ومنتهيا عن نهيه، قال الله تعالى: رَضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ [المائدة/ 119]",
+     "gloss": "Al-Rāghib says the servant's <em>riḍā</em> with God is accepting what His decree brings without dislike, and God's <em>riḍā</em> with the servant is seeing him keep His command and stop at His prohibition. He cites 5:119, \"God is pleased with them and they with Him\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5737#fb3db6"
+    }
+   ]
   }
  },
  {
@@ -264,6 +314,17 @@
   "faruqi": {
    "page": 59,
    "term": "RADIYA ALLAHU ‘ANHU (OR ‘ANHUM) (RA)"
+  },
+  "lexicon": {
+   "root": "ر ض ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ورِضَا العبد عن الله: أن لا يكره ما يجري به قضاؤه، ورِضَا الله عن العبد هو أن يراه مؤتمرا لأمره، ومنتهيا عن نهيه",
+     "gloss": "Al-Rāghib says the servant's <em>riḍā</em> with God is accepting what His decree brings without dislike, and God's <em>riḍā</em> with the servant is seeing him keep His command and stop at His prohibition.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5737#fb3db6"
+    }
+   ]
   }
  },
  {
@@ -292,6 +353,17 @@
   "faruqi": {
    "page": 33,
    "term": "AL RAḤĪM"
+  },
+  "lexicon": {
+   "root": "ر ح م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرَّحِيمُ يستعمل في غيره وهو الذي كثرت رحمته، قال تعالى: إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ [البقرة/ 182] ، وقال في صفة النبيّ صلّى الله عليه وسلم: لَقَدْ جاءَكُمْ رَسُولٌ مِنْ أَنْفُسِكُمْ عَزِيزٌ عَلَيْهِ ما عَنِتُّمْ حَرِيصٌ عَلَيْكُمْ بِالْمُؤْمِنِينَ رَؤُفٌ رَحِيمٌ [التوبة/ 128]",
+     "gloss": "<em>Raḥīm</em>, al-Rāghib says, is also used of others, and means one whose mercy is abundant, as in 2:182, \"God is Forgiving, Merciful\", and in 9:128, where it describes the Prophet (peace be upon him).",
+     "url": "https://arabiclexicon.hawramani.com/?p=5663#850569"
+    }
+   ]
   }
  },
  {
@@ -319,6 +391,17 @@
   "faruqi": {
    "page": 33,
    "term": "RAḤIMA"
+  },
+  "lexicon": {
+   "root": "ر ح م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصف به الباري فليس يراد به إلّا الإحسان المجرّد دون الرّقّة، وعلى هذا روي أنّ الرَّحْمَةَ من الله إنعام وإفضال، ومن الآدميّين رقّة وتعطّف.",
+     "gloss": "When mercy is said of the Creator, al-Rāghib says, only pure kindness is meant, without any softening of heart; so it is reported that mercy from God is favour and bounty, and from human beings tenderness and sympathy.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5663#850569"
+    }
+   ]
   }
  },
  {
@@ -347,6 +430,17 @@
   "faruqi": {
    "page": 60,
    "term": "RAḤMAH ALLAH ‘ALAYH (‘ALAYHĀ or ‘ALAYHIM)."
+  },
+  "lexicon": {
+   "root": "ر ح م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرَّحْمَةُ رقّة تقتضي الإحسان إلى الْمَرْحُومِ",
+     "gloss": "Al-Rāghib defines <em>raḥma</em> as a tenderness that moves one to do good to the one shown mercy.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5663#850569"
+    }
+   ]
   }
  },
  {
@@ -375,6 +469,17 @@
   "faruqi": {
    "page": 33,
    "term": "AL RAḤMĀN"
+  },
+  "lexicon": {
+   "root": "ر ح م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ولا يطلق الرَّحْمَنُ إلّا على الله تعالى من حيث إنّ معناه لا يصحّ إلّا له، إذ هو الذي وسع كلّ شيء رَحْمَةً",
+     "gloss": "Al-Rāghib says <em>al-Raḥmān</em> is said of God alone, because its meaning holds of no one else: He is the One whose mercy embraces everything.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5663#850569"
+    }
+   ]
   }
  },
  {
@@ -402,6 +507,17 @@
   "faruqi": {
    "page": 34,
    "term": "RAKA'A"
+  },
+  "lexicon": {
+   "root": "ر ك ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرُّكُوعُ: الانحناء، فتارة يستعمل في الهيئة المخصوصة في الصلاة كما هي، وتارة في التّواضع والتّذلّل، إمّا في العبادة، وإمّا في غيرها",
+     "gloss": "Al-Rāghib defines <em>rukūʿ</em> as bending. It is used for the particular posture of the prayer, and for humility and lowliness, in worship or outside it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5568#ef6eac"
+    }
+   ]
   }
  },
  {
@@ -503,6 +619,17 @@
   "faruqi": {
    "page": 33,
    "term": "AL RASŪL"
+  },
+  "lexicon": {
+   "root": "ر س ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الرِّسْلِ: الانبعاث على التّؤدة ويقال: ناقة رِسْلَةٌ: سهلة السّير، وإبل مَرَاسِيلُ: منبعثة انبعاثا سهلا، ومنه: الرَّسُولُ المنبعث",
+     "gloss": "Al-Rāghib says the root sense of <em>risl</em> is setting out unhurried, and the <em>rasūl</em> is the one sent out.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    }
+   ]
   }
  },
  {
@@ -531,6 +658,17 @@
   "faruqi": {
    "page": 32,
    "term": "AL RA'ŪF"
+  },
+  "lexicon": {
+   "root": "ر أ ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرَّأْفَةُ: الرّحمة، وقد رَؤُفَ فهو رَئِفٌ ورُؤُوفٌ، نحو يقظ، وحذر، قال تعالى: لا تَأْخُذْكُمْ بِهِما رَأْفَةٌ فِي دِينِ اللَّهِ [النور/ 2]",
+     "gloss": "Al-Rāghib defines <em>raʾfa</em> as mercy, and cites 24:2.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5584#8db77e"
+    }
+   ]
   }
  },
  {
@@ -559,6 +697,17 @@
   "faruqi": {
    "page": 33,
    "term": "AL RĀZIQ"
+  },
+  "lexicon": {
+   "root": "ر ز ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرَّازِقُ يقال لخالق الرّزق، ومعطيه، والمسبّب له، وهو الله تعالى ، ويقال ذلك للإنسان الذي يصير سببا في وصول الرّزق. والرَّزَّاقُ لا يقال إلّا لله تعالى",
+     "gloss": "Al-Rāghib says <em>rāziq</em> is said of the Creator of provision, its Giver and its Cause, who is God, and also of a person who becomes a means for provision to arrive. <em>Razzāq</em>, he adds, is said of God alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5610#c0743e"
+    }
+   ]
   }
  },
  {
@@ -587,6 +736,17 @@
   "faruqi": {
    "page": 34,
    "term": "AL RIḌĀ"
+  },
+  "lexicon": {
+   "root": "ر ض ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ورِضَا الله عن العبد هو أن يراه مؤتمرا لأمره، ومنتهيا عن نهيه",
+     "gloss": "Al-Rāghib says God's <em>riḍā</em> with His servant is seeing him keep His command and stop at His prohibition.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5737#fb3db6"
+    }
+   ]
   }
  },
  {
@@ -642,6 +802,17 @@
   "faruqi": {
    "page": 33,
    "term": "RIJS"
+  },
+  "lexicon": {
+   "root": "ر ج س",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرِّجْسُ يكون على أربعة أوجه: إمّا من حيث الطّبع، وإمّا من جهة العقل، وإمّا من جهة الشرع، وإمّا من كلّ ذلك كالميتة، فإنّ الميتة تعاف طبعا وعقلا وشرعا",
+     "gloss": "Al-Rāghib says <em>rijs</em>, filth, is filthy in four ways: by nature, by reason, by the law, or by all three, like carrion, which nature, reason and the law all reject.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5504#3b2d21"
+    }
+   ]
   }
  },
  {
@@ -670,6 +841,17 @@
   "faruqi": {
    "page": 33,
    "term": "AL RISĀLAH"
+  },
+  "lexicon": {
+   "root": "ر س ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرَّسُولُ يقال تارة للقول المتحمّل كقول الشاعر: ألا أبلغ أبا حفص رسولا وتارة لمتحمّل القول والرِّسَالَةِ.",
+     "gloss": "Al-Rāghib says <em>rasūl</em> is said both of the message carried, as in the poet's \"carry a message to Abū Ḥafṣ\", and of the one who carries the word and the <em>risāla</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5643#1aa8b4"
+    }
+   ]
   }
  },
  {

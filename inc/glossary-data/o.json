@@ -25,6 +25,17 @@
    "Guardians",
    "Orphans",
    "Guardianship"
-  ]
+  ],
+  "lexicon": {
+   "root": "ي ت م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "اليُتْمُ: انقطاع الصَّبيِّ عن أبيه قبل بلوغه، وفي سائر الحيوانات من قِبَلِ أمّه. قال تعالى: أَلَمْ يَجِدْكَ يَتِيماً فَآوى [الضحى/ 6]",
+     "gloss": "Al-Rāghib defines <em>yutm</em> as a child's losing his father before he comes of age; among other animals it is losing the mother. He cites 93:6, \"Did He not find you an orphan and shelter you?\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=8395#7a820a"
+    }
+   ]
+  }
  }
 ]

@@ -312,14 +312,16 @@ function boi_create_listicles( $topics ) {
 		}
 
 		$post_id = boi_insert_post(
-			array(
-				'post_title'   => $listicle['title'],
-				'post_name'    => $listicle['slug'],
-				'post_excerpt' => $listicle['excerpt'],
-				'post_content' => $content,
-				'post_status'  => isset( $listicle['status'] ) ? $listicle['status'] : 'publish',
-				'post_author'  => boi_seed_author(),
-				'post_type'    => 'post',
+			array_merge(
+				array(
+					'post_title'   => $listicle['title'],
+					'post_name'    => $listicle['slug'],
+					'post_excerpt' => $listicle['excerpt'],
+					'post_content' => $content,
+					'post_author'  => boi_seed_author(),
+					'post_type'    => 'post',
+				),
+				boi_seed_post_timing( $listicle, time() )
 			)
 		);
 
@@ -570,6 +572,38 @@ function boi_assign_seed_terms( $post_id, $listicle ) {
 		}
 	}
 
+	// The section (listicle-topic) follows the same rule: it is set while the
+	// post has none, or still holds exactly the section the theme gave it
+	// (post meta _boi_seed_topic; before that record existed, the "topic_v1"
+	// of an article that has since moved, or its current "topic").
+	if ( ! empty( $listicle['topic'] ) ) {
+		$term = get_term_by( 'slug', $listicle['topic'], 'listicle-topic' );
+
+		if ( $term ) {
+			$target   = (int) $term->term_id;
+			$current  = wp_get_object_terms( $post_id, 'listicle-topic', array( 'fields' => 'ids' ) );
+			$current  = is_wp_error( $current ) ? array() : array_map( 'intval', $current );
+			$recorded = (int) get_post_meta( $post_id, '_boi_seed_topic', true );
+			$previous_slug = ! empty( $listicle['topic_v1'] ) ? $listicle['topic_v1'] : $listicle['topic'];
+			$previous_term = $recorded ? null : get_term_by( 'slug', $previous_slug, 'listicle-topic' );
+			$seeded        = $recorded ? $recorded : ( $previous_term ? (int) $previous_term->term_id : 0 );
+
+			if ( array( $target ) === $current ) {
+				update_post_meta( $post_id, '_boi_seed_topic', $target );
+			} elseif ( ! $current || ( $seeded && array( $seeded ) === $current ) ) {
+				$set = wp_set_object_terms( $post_id, array( $target ), 'listicle-topic', false );
+
+				if ( is_wp_error( $set ) ) {
+					$ok = false;
+				} else {
+					update_post_meta( $post_id, '_boi_seed_topic', $target );
+				}
+			}
+		} else {
+			$ok = false;
+		}
+	}
+
 	$tags = array();
 
 	foreach ( isset( $listicle['tags'] ) ? (array) $listicle['tags'] : array() as $name ) {
@@ -596,9 +630,10 @@ function boi_assign_seed_terms( $post_id, $listicle ) {
 /**
  * Version of the category and tag map. Raise it when the seed's categories
  * or tags change, and the migration below runs once more. 2: the
- * subcategories of 1.90.0.
+ * subcategories of 1.90.0. 3: the rebalanced sections and categories of
+ * 1.141.0, with the section now migrated as well.
  */
-const BOI_TERMS_VERSION = 2;
+const BOI_TERMS_VERSION = 3;
 
 /**
  * Once per term-map version: gives every seeded post that a site already

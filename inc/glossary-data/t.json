@@ -92,7 +92,18 @@
   "type": "scripture",
   "aliases": [
    "Corruption Of The Bible"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح ر ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وتَحريفُ الشيء: إمالته، كتحريف القلم، وتحريف الكلام: أن تجعله على حرف من الاحتمال يمكن حمله على الوجهين، قال عزّ وجلّ: يُحَرِّفُونَ الْكَلِمَ عَنْ مَواضِعِهِ [النساء/ 46] ، ويُحَرِّفُونَ الْكَلِمَ مِنْ بَعْدِ مَواضِعِهِ [المائدة/ 41] ، وَقَدْ كانَ فَرِيقٌ مِنْهُمْ يَسْمَعُونَ كَلامَ اللَّهِ ثُمَّ يُحَرِّفُونَهُ مِنْ بَعْدِ ما عَقَلُوهُ [البقرة/ 75]",
+     "gloss": "Al-Rāghib defines the <em>taḥrīf</em> of a thing as tilting it, like slanting the nib of a pen, and the <em>taḥrīf</em> of speech as setting it on an edge of meaning where it can be taken two ways. He cites 4:46, 5:41 and 2:75, \"a party of them used to hear the word of God and then distort it after they had understood it\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1405#d5e4c7"
+    }
+   ]
+  }
  },
  {
   "slug": "takfir",
@@ -118,7 +129,18 @@
   ],
   "aliases": [
    "Excommunication"
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّكْفِيرُ: ستره وتغطيته حتى يصير بمنزلة ما لم يعمل",
+     "gloss": "Al-Rāghib defines <em>takfīr</em> of a sin as covering and hiding it until it is as though it had never been done, as in 5:65 and 4:31.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3792#4131cd"
+    }
+   ]
+  }
  },
  {
   "slug": "taqiyya",
@@ -143,7 +165,11 @@
    "taqiyya-myths"
   ],
   "type": "law",
-  "aliases": []
+  "aliases": [
+   "Taqiyah",
+   "Taqiya",
+   "Taqiyyah"
+  ]
  },
  {
   "slug": "taqwa",
@@ -170,7 +196,18 @@
     "page": 47,
     "term": "TAQWĀ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "و ق ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّقْوَى جعل النّفس في وِقَايَةٍ مما يخاف، هذا تحقيقه، ثمّ يسمّى الخوف تارة تَقْوًى، والتَّقْوَى خوفاً حسب تسمية مقتضى الشيء بمقتضيه والمقتضي بمقتضاه، وصار التَّقْوَى في تعارف الشّرع حفظ النّفس عمّا يؤثم، وذلك بترك المحظور",
+     "gloss": "Al-Rāghib defines <em>taqwā</em> as putting the self in a shelter from what it fears. In the usage of the law, he says, it became guarding the self from sin, by leaving what is forbidden.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9899#3cb2a3"
+    }
+   ]
+  }
  },
  {
   "slug": "tawhid",
@@ -268,7 +305,18 @@
    "Elephant",
    "Year Of The Elephant",
    "Abraha"
-  ]
+  ],
+  "lexicon": {
+   "root": "ف ي ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفِيلُ معروف. جمعه فِيلَةٌ وفُيُولٌ. قال: أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحابِ الْفِيلِ [الفيل/ 1]",
+     "gloss": "Al-Rāghib gives the plurals of <em>fīl</em>, elephant, as <em>fiyala</em> and <em>fuyūl</em>, and cites 105:1, \"Have you not seen how your Lord dealt with the people of the elephant?\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=7765#d2cdfe"
+    }
+   ]
+  }
  },
  {
   "slug": "trade-and-business",
@@ -300,7 +348,24 @@
    "Credit",
    "Debt",
    "Deposits"
-  ]
+  ],
+  "lexicon": {
+   "root": "ت ج ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التِّجَارَة: التصرّف في رأس المال طلبا للربح",
+     "gloss": "Al-Rāghib defines <em>tijāra</em> as dealing with capital in search of profit.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6503#7ff9a9"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "هَلْ أَدُلُّكُمْ عَلى تِجارَةٍ تُنْجِيكُمْ مِنْ عَذابٍ أَلِيمٍ [الصف/ 10] ، فقد فسّر هذه التجارة بقوله: تُؤْمِنُونَ بِاللَّهِ [الصف/ 11]",
+     "gloss": "On 61:10, \"shall I show you a trade that will save you from a painful punishment?\", he notes that God explains this trade in the next verse: \"that you believe in God\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=6503#7ff9a9"
+    }
+   ]
+  }
  },
  {
   "slug": "trench-battle-of-the",
@@ -355,6 +420,17 @@
   "faruqi": {
    "page": 40,
    "term": "TAʿĀLĀ"
+  },
+  "lexicon": {
+   "root": "ع ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعلى ذلك يقال: تَعَالَى، نحو: تَعالَى اللَّهُ عَمَّا يُشْرِكُونَ [النمل/ 63]",
+     "gloss": "From the sense of being too high to be encompassed by any description, al-Rāghib says, comes <em>taʿālā</em>, \"He is exalted\", as in 27:63, \"exalted is God above what they associate with Him\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=887#908e87"
+    }
+   ]
   }
  },
  {
@@ -419,6 +495,17 @@
   "faruqi": {
    "page": 26,
    "term": "TĀBA"
+  },
+  "lexicon": {
+   "root": "ت و ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التَّوْبُ: ترك الذنب على أجمل الوجوه ، وهو أبلغ وجوه الاعتذار",
+     "gloss": "Al-Rāghib defines <em>tawb</em> as leaving sin in the finest way, and calls it the most complete form of apology.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6470#8da772"
+    }
+   ]
   }
  },
  {
@@ -482,6 +569,17 @@
   "faruqi": {
    "page": 24,
    "term": "TABARRAJA"
+  },
+  "lexicon": {
+   "root": "ب ر ج",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وثوب مُبَرَّج: صوّرت عليه بروج، واعتبر حسنه، فقيل: تَبَرَّجَتِ المرأة أي: تشبّهت به في إظهار المحاسن، وقيل: ظهرت من برجها، أي: قصرها",
+     "gloss": "Al-Rāghib says a <em>thawb mubarraj</em> is a garment figured with towers and prized for its beauty, and that <em>tabarrajat al-marʾa</em> means a woman made herself like it in showing her charms. Others, he reports, say it means she came out of her <em>burj</em>, her tower.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10905#65d4ae"
+    }
+   ]
   }
  },
  {
@@ -514,6 +612,23 @@
   "faruqi": {
    "page": 24,
    "term": "TABATTALA"
+  },
+  "lexicon": {
+   "root": "ب ت ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًا [المزمل/ 8] أي: انقطع في العبادة وإخلاص النية انقطاعا يختص به",
+     "gloss": "On 73:8, \"devote yourself to Him completely\", al-Rāghib says the command is to withdraw for worship and sincere intention, in a devotion given to Him alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1945#136b89"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وليس هذا منافيا لقوله عليه الصلاة والسلام: «لا رهبانية ولا تَبَتُّلَ في الإسلام» فإنّ التبتل هاهنا هو الانقطاع عن النكاح",
+     "gloss": "He reconciles this with the saying he attributes to the Prophet (peace be upon him), \"No monasticism and no <em>tabattul</em> in Islam\": there, he says, <em>tabattul</em> means withdrawal from marriage.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1945#136b89"
+    }
+   ]
   }
  },
  {
@@ -548,6 +663,17 @@
   "faruqi": {
    "page": 26,
    "term": "AL TĀBI'"
+  },
+  "lexicon": {
+   "root": "ت ب ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "تَبِعَهُ واتَّبَعَهُ: قفا أثره، وذلك تارة بالجسم، وتارة بالارتسام والائتمار",
+     "gloss": "Al-Rāghib says <em>tabiʿahu</em> and <em>ittabaʿahu</em> mean to follow in someone's tracks, at times in body and at times by taking his example and obeying his command.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6450#467bfa"
+    }
+   ]
   }
  },
  {
@@ -581,6 +707,17 @@
   "faruqi": {
    "page": 49,
    "term": "AL TAFSĪR BIL MA'THŪR"
+  },
+  "lexicon": {
+   "root": "أ ث ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أَثَرُ الشيء: حصول ما يدلّ على وجوده، يقال: أثر وأثّر، والجمع: الآثار. قال الله تعالى: ثُمَّ قَفَّيْنا عَلى آثارِهِمْ بِرُسُلِنا [الحديد/ 27] ، وَآثاراً فِي الْأَرْضِ [غافر/ 21] ، وقوله: فَانْظُرْ إِلى آثارِ رَحْمَتِ اللَّهِ [الروم/ 50] . ومن هذا يقال للطريق المستدل به على من تقدّم: آثار",
+     "gloss": "Al-Rāghib defines the <em>athar</em> of a thing as what remains to show that it existed. The path by which those who went before can be traced, he says, is also called <em>āthār</em>. He cites 57:27, 40:21 and 30:50.",
+     "url": "https://arabiclexicon.hawramani.com/?p=88#3f21bf"
+    }
+   ]
   }
  },
  {
@@ -610,6 +747,17 @@
   "faruqi": {
    "page": 49,
    "term": "AL TAFSĪR BIL RA'Y"
+  },
+  "lexicon": {
+   "root": "ر أ ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرَّأْيُ: اعتقاد النّفس أحد النّقيضين عن غلبة الظّنّ",
+     "gloss": "Al-Rāghib defines <em>raʾy</em> as the soul's holding one of two contraries on the strength of what seems most likely.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10068#e7e491"
+    }
+   ]
   }
  },
  {
@@ -635,6 +783,17 @@
   "faruqi": {
    "page": 38,
    "term": "ṬAGHĀ"
+  },
+  "lexicon": {
+   "root": "ط غ ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "طَغَوْتُ وطَغَيْتُ طَغَوَاناً وطُغْيَاناً، وأَطْغَاهُ كذا: حمله على الطُّغْيَانِ، وذلك تجاوز الحدّ في العصيان. قال تعالى: اذْهَبْ إِلى فِرْعَوْنَ إِنَّهُ طَغى [النازعات/ 17]",
+     "gloss": "Al-Rāghib defines <em>ṭughyān</em> as passing the limit in disobedience, and cites 79:17, \"Go to Pharaoh, he has transgressed\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=61784#b78440"
+    }
+   ]
   }
  },
  {
@@ -686,6 +845,17 @@
   "faruqi": {
    "page": 38,
    "term": "ṬAGHĪYAH"
+  },
+  "lexicon": {
+   "root": "ط غ ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله: إِنَّا لَمَّا طَغَى الْماءُ [الحاقة/ 11] ، فاستعير الطُّغْيَانُ فيه لتجاوز الماء الحدّ، وقوله: فَأُهْلِكُوا بِالطَّاغِيَةِ [الحاقة/ 5] ، فإشارة إلى الطّوفان",
+     "gloss": "Al-Rāghib says <em>ṭughyān</em> is borrowed in 69:11 for water passing its bounds, and that <em>al-ṭāghiya</em> in 69:5, \"they were destroyed by the <em>ṭāghiya</em>\", points to the flood.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61784#b78440"
+    }
+   ]
   }
  },
  {
@@ -749,6 +919,23 @@
   "faruqi": {
    "page": 26,
    "term": "TALĀ"
+  },
+  "lexicon": {
+   "root": "ت ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتلاوة تختص باتباع كتب الله المنزلة، تارة بالقراءة، وتارة بالارتسام لما فيها من أمر ونهي، وترغيب وترهيب.",
+     "gloss": "Al-Rāghib says <em>tilāwa</em> belongs to following the revealed books of God, by reciting them and by acting on what they hold of command and prohibition, promise and warning.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10805#511c32"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وهو أخصّ من القراءة، فكل تلاوة قراءة، وليس كل قراءة تلاوة",
+     "gloss": "It is narrower than <em>qirāʾa</em>, he adds: every <em>tilāwa</em> is reading, and reading is <em>tilāwa</em> only when what is read must be followed.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10805#511c32"
+    }
+   ]
   }
  },
  {
@@ -823,6 +1010,17 @@
   "faruqi": {
    "page": 48,
    "term": "TARTĪL, TAJWĪD"
+  },
+  "lexicon": {
+   "root": "ر ت ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الرَّتَلُ: اتّساق الشيء وانتظامه على استقامة، يقال: رجل رَتَلُ الأسنان، والتَّرْتِيلُ: إرسال الكلمة من الفم بسهولة واستقامة. قال تعالى: وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا [المزمل/ 4]",
+     "gloss": "Al-Rāghib says <em>ratal</em> is the even and orderly arrangement of a thing, and <em>tartīl</em> is letting words leave the mouth with ease and evenness, as in 73:4, \"and recite the Quran in measured recitation\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5636#61cf79"
+    }
+   ]
   }
  },
  {
@@ -850,6 +1048,17 @@
   "faruqi": {
    "page": 34,
    "term": "TASKHĪR"
+  },
+  "lexicon": {
+   "root": "س خ ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التَّسْخِيرُ: سياقة إلى الغرض المختصّ قهرا",
+     "gloss": "Al-Rāghib defines <em>taskhīr</em> as driving a thing by compulsion toward the end set for it.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9222#0d7a74"
+    }
+   ]
   }
  },
  {
@@ -877,6 +1086,17 @@
   "faruqi": {
    "page": 55,
    "term": "TASLĪM"
+  },
+  "lexicon": {
+   "root": "س ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله تعالى: إِذْ دَخَلُوا عَلَيْهِ فَقالُوا سَلاماً قالَ سَلامٌ [الذاريات/ 25] ، فإنما رفع الثاني، لأنّ الرّفع في باب الدّعاء أبلغ",
+     "gloss": "On 51:25, \"they said: Peace (<em>salāman</em>); he said: Peace (<em>salāmun</em>)\", al-Rāghib explains that the second is in the nominative because the nominative is the stronger form in a greeting: Ibrāhīm returned the greeting with a better one.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9709#ba18f8"
+    }
+   ]
   }
  },
  {
@@ -983,6 +1203,17 @@
   "faruqi": {
    "page": 26,
    "term": "AL TAWWĀB"
+  },
+  "lexicon": {
+   "root": "ت و ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّوَّاب: العبد الكثير التوبة، وذلك بتركه كلّ وقت بعض الذنوب على الترتيب حتى يصير تاركا لجميعه، وقد يقال ذلك لله تعالى لكثرة قبوله توبة العباد حالا بعد حال",
+     "gloss": "Al-Rāghib says <em>tawwāb</em> is the servant who repents much, leaving some sins at every turn until he has left them all. The word is also said of God, for His frequent acceptance of His servants' repentance, time after time.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6470#8da772"
+    }
+   ]
   }
  },
  {
@@ -1014,6 +1245,17 @@
   "faruqi": {
    "page": 53,
    "term": "AL TA'ZĪR"
+  },
+  "lexicon": {
+   "root": "ع ز ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التَّعْزِيرُ: النّصرة مع التّعظيم. قال تعالى: وَتُعَزِّرُوهُ [الفتح/ 9] ، وقال عزّ وجلّ وَعَزَّرْتُمُوهُمْ [المائدة/ 12] ، والتَّعْزِيرُ: ضربٌ دون الحدّ، وذلك يرجع إلى الأوّل",
+     "gloss": "Al-Rāghib defines <em>taʿzīr</em> as help joined with honour, as in 48:9, and says <em>taʿzīr</em> in the sense of a beating short of the fixed penalty goes back to the same meaning.",
+     "url": "https://arabiclexicon.hawramani.com/?p=460#cf3023"
+    }
+   ]
   }
  },
  {
@@ -1041,6 +1283,17 @@
   "faruqi": {
    "page": 26,
    "term": "THAWĀB"
+  },
+  "lexicon": {
+   "root": "ث و ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والثَّوَاب: ما يرجع إلى الإنسان من جزاء أعماله، فيسمى الجزاء ثوابا تصوّرا أنه هو هو",
+     "gloss": "Al-Rāghib says the root sense of <em>thawb</em> is returning, and that <em>thawāb</em> is what comes back to a person as the requital of his deeds. The requital is called <em>thawāb</em> because it is pictured as the deed itself, as in 99:7, \"whoever does an atom's weight of good will see it\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=6641#acfdab"
+    }
+   ]
   }
  }
 ]

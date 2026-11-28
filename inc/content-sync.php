@@ -551,6 +551,13 @@ function boi_sync_maybe_run() {
 	if ( boi_sync_disabled() || wp_doing_ajax() || ! current_user_can( 'manage_options' ) || ! boi_seed_ready() ) {
 		return;
 	}
+	// The version migration in boi_maybe_install() populates first, under its
+	// own lock. Until it has finished, the sync waits for a later request, so
+	// two requests never create the same new article at once (a duplicate
+	// would be saved as slug-2).
+	if ( get_option( 'boi_db_version' ) !== BOI_VERSION ) {
+		return;
+	}
 	$fp = md5( BOI_VERSION . boi_sync_manifest()['checksum'] . wp_json_encode( boi_supersedes() ) . boi_sync_removal_block() . ( boi_sync_replace_edited() ? 'replace' : '' ) );
 	if ( get_option( 'boi_sync_fp' ) === $fp ) {
 		return;

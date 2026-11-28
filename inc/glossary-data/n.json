@@ -198,6 +198,17 @@
   "faruqi": {
    "page": 62,
    "term": "NA‘ĪMAN."
+  },
+  "lexicon": {
+   "root": "ن ع م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "النِّعْمَةُ: الحالةُ الحسنةُ، وبِنَاء النِّعْمَة بِناء الحالةِ التي يكون عليها الإنسان كالجِلْسَة والرِّكْبَة، والنَّعْمَةُ: التَّنَعُّمُ، وبِنَاؤُها بِنَاءُ المَرَّة من الفِعْلِ كالضَّرْبَة والشَّتْمَة، والنِّعْمَةُ للجِنْسِ تقال للقليلِ والكثيرِ. قال تعالى: وَإِنْ تَعُدُّوا نِعْمَةَ اللَّهِ لا تُحْصُوها [النحل/ 18]",
+     "gloss": "Al-Rāghib defines <em>niʿma</em> as a good state, and says the word, taken as a kind, covers little and much, as in 16:18, \"if you counted the favours of God, you could not number them\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=4796#5d525b"
+    }
+   ]
   }
  },
  {
@@ -228,6 +239,17 @@
   "faruqi": {
    "page": 48,
    "term": "AL NĀSIKH"
+  },
+  "lexicon": {
+   "root": "ن س خ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ونَسْخُ الكتاب: إزالة الحُكْمِ بحكم يَتَعَقَّبُهُ. قال تعالى: ما نَنْسَخْ مِنْ آيَةٍ أَوْ نُنْسِها نَأْتِ بِخَيْرٍ مِنْها [البقرة/ 106]",
+     "gloss": "The <em>naskh</em> of scripture, al-Rāghib says, is removing a ruling by a ruling that follows it, as in 2:106, \"whatever verse We abrogate or cause to be forgotten, We bring one better than it\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=4512#7d8437"
+    }
+   ]
   }
  },
  {
@@ -256,6 +278,17 @@
   "faruqi": {
    "page": 50,
    "term": "NĀSIKH AL ḤADĪTH WA MANSŪKHUHU"
+  },
+  "lexicon": {
+   "root": "ن س خ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فَتَارَةً يُفْهَمُ منه الإزالة، وتَارَةً يُفْهَمُ منه الإثباتُ، وتَارَةً يُفْهَم منه الأَمْرَانِ",
+     "gloss": "<em>Naskh</em>, al-Rāghib says, sometimes conveys the removal, sometimes the setting in place, and sometimes both.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4512#7d8437"
+    }
+   ]
   }
  },
  {
@@ -283,6 +316,17 @@
   "faruqi": {
    "page": 46,
    "term": "NAZZALA"
+  },
+  "lexicon": {
+   "root": "ن ز ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفَرْقُ بَيْنَ الإِنْزَالِ والتَّنْزِيلِ في وَصْفِ القُرآنِ والملائكةِ أنّ التَّنْزِيل يختصّ بالموضع الذي يُشِيرُ إليه إنزالُهُ مفرَّقاً، ومرَّةً بعد أُخْرَى، والإنزالُ عَامٌّ",
+     "gloss": "Al-Rāghib says that, said of the Quran and the angels, <em>tanzīl</em> marks a sending down in parts, one time after another, while <em>inzāl</em> is the general word.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4759#497087"
+    }
+   ]
   }
  }
 ]

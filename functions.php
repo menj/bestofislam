@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOI_VERSION', '1.134.0' );
+define( 'BOI_VERSION', '1.156.0' );
 define( 'BOI_DIR', get_stylesheet_directory() );
 define( 'BOI_URI', get_stylesheet_directory_uri() );
 
@@ -22,6 +22,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/voting.php',
 	BOI_DIR . '/inc/settings.php',
 	BOI_DIR . '/inc/setup.php',
+	BOI_DIR . '/inc/schedule.php',
 	BOI_DIR . '/inc/content-sync.php',
 	BOI_DIR . '/inc/appearance.php',
 	BOI_DIR . '/inc/reflections.php',
@@ -41,6 +42,7 @@ $boi_load = array(
 	BOI_DIR . '/inc/endmark.php',
 	BOI_DIR . '/inc/abstract.php',
 	BOI_DIR . '/inc/basmala.php',
+	BOI_DIR . '/inc/honorific-guard.php',
 	BOI_DIR . '/inc/structured-data.php',
 	BOI_DIR . '/inc/schema-graph.php',
 	BOI_DIR . '/inc/social-meta.php',

@@ -48,7 +48,18 @@
    "Ad-Dajjal",
    "Antichrist",
    "Anti-Christ"
-  ]
+  ],
+  "lexicon": {
+   "root": "د ج ل",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "وَالدَّجَّالُ هُوَ الْكَذَّابُ قَالَ ثَعْلَبٌ الدَّجَّالُ هُوَ الْمُمَوِّهُ يُقَالُ سَيْفٌ مُدَجَّلٌ إذَا طُلِيَ بِذَهَبٍ وَقَالَ ابْنُ دُرَيْدٍ كُلُّ شَيْءٍ غَطَّيْتَهُ فَقَدْ دَجَّلْتَهُ وَاشْتِقَاقُ الدَّجَّالِ مِنْ هَذَا لِأَنَّهُ يُغَطِّي الْأَرْضَ بِالْجَمْعِ الْكَثِيرِ",
+     "gloss": "Al-Fayyūmī defines <em>dajjāl</em> as a great liar. Thaʿlab, he reports, calls him the one who gilds a false surface, from <em>sayf mudajjal</em>, a gilded sword, and Ibn Durayd derives it from covering, because he covers the earth with great hosts.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2406#dc1dff"
+    }
+   ]
+  }
  },
  {
   "slug": "dar-al-islam-and-dar-al-harb",
@@ -104,7 +115,18 @@
   "aliases": [
    "Date Palms",
    "Palm"
-  ]
+  ],
+  "lexicon": {
+   "root": "ت م ر",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "التَّمْرُ مِنْ ثَمَرِ النَّخْلِ كَالزَّبِيبِ مِنْ الْعِنَبِ وَهُوَ الْيَابِسُ بِإِجْمَاعِ أَهْلِ اللُّغَةِ",
+     "gloss": "Al-Fayyūmī says <em>tamr</em> is to the fruit of the palm what raisins are to grapes: by the agreement of the lexicographers, it is the dried fruit.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6513#0a9ff1"
+    }
+   ]
+  }
  },
  {
   "slug": "david",
@@ -159,7 +181,18 @@
    "Dawa",
    "Da'Wa",
    "Da'Wah"
-  ]
+  ],
+  "lexicon": {
+   "root": "د ع و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والدُّعاءُ إلى الشيء: الحثّ على قصده قالَ رَبِّ السِّجْنُ أَحَبُّ إِلَيَّ مِمَّا يَدْعُونَنِي إِلَيْهِ [يوسف/ 33] ، وقال: وَاللَّهُ يَدْعُوا إِلى دارِ السَّلامِ [يونس/ 25]",
+     "gloss": "Al-Rāghib defines calling to a thing as urging someone to make for it, as in 10:25, \"God calls to the abode of peace\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8427#b1746e"
+    }
+   ]
+  }
  },
  {
   "slug": "dead-sea-scrolls",
@@ -338,7 +371,18 @@
     "page": 41,
     "term": "ʿAMAL"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ع م ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعَمَلُ يستعمل في الأَعْمَالِ الصالحة والسّيّئة، قال: إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحاتِ [البقرة/ 277] ، وَمَنْ يَعْمَلْ مِنَ الصَّالِحاتِ [النساء/ 124] ، مَنْ يَعْمَلْ سُوءاً يُجْزَ بِهِ [النساء/ 123]",
+     "gloss": "<em>ʿAmal</em>, al-Rāghib says, is used for good deeds and for bad, as in 2:277, \"those who believe and do good deeds\", and 4:123, \"whoever does evil will be repaid for it\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=764#b1a33e"
+    }
+   ]
+  }
  },
  {
   "slug": "deification",
@@ -452,7 +496,18 @@
   "aliases": [
    "Humility",
    "Humiliation"
-  ]
+  ],
+  "lexicon": {
+   "root": "ذ ل ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الذُّلُّ: ما كان عن قهر، يقال: ذَلَّ يَذِلُّ ذُلًّا ، والذِّلُّ، ما كان بعد تصعّب، وشماس من غير قهر ، يقال: ذَلَّ يَذِلُّ ذِلًّا. وقوله تعالى: وَاخْفِضْ لَهُما جَناحَ الذُّلِّ مِنَ الرَّحْمَةِ[الإسراء/ 24] ، أي: كن كالمقهور لهما",
+     "gloss": "Al-Rāghib separates <em>dhull</em>, lowliness that comes from being overpowered, from <em>dhill</em>, docility that comes after stubbornness without force. On 17:24, \"lower to them the wing of humility out of mercy\", he says it means: be as one overpowered before your parents.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10814#c62cfc"
+    }
+   ]
+  }
  },
  {
   "slug": "dhimmi",
@@ -486,7 +541,18 @@
     "page": 32,
     "term": "DHIMMĪ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ذ م م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والذِّمَام: ما يذّمّ الرّجل على إضاعته من عهد",
+     "gloss": "Al-Rāghib defines <em>dhimām</em> as a pledge that a man is blamed for neglecting.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10818#af89ad"
+    }
+   ]
+  }
  },
  {
   "slug": "dhu-al-kifl",
@@ -573,14 +639,25 @@
   ],
   "misread": "That the Quran puts a coin of a later age in the time of Joseph.",
   "sources": [
-   "The Quran is told in Arabic, for Arabic hearers, and its words for money are those of the hearers. Ancient trade used silver by weight long before coinage, and the Bible says that Joseph was sold for twenty shekels of silver (Genesis 37:28), a weight of silver. Translators do the same when they say “pieces of silver” of a time before coins."
+   "The Quran is told in Arabic, for Arabic hearers, and its words for money are those of the hearers. Ancient trade used silver by weight long before coinage, and the Bible says that Joseph was sold for twenty shekels of silver (<a href=\"https://thebible.exposed/bible/genesis/37/#v28\">Genesis 37:28</a>), a weight of silver. Translators do the same when they say “pieces of silver” of a time before coins."
   ],
   "terms": [
    "joseph",
    "trade-and-business"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "د ر ه م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "قال تعالى: وَشَرَوْهُ بِثَمَنٍ بَخْسٍ دَراهِمَ مَعْدُودَةٍ [يوسف/ 20] ، الدّرهم: الفضّة المطبوعة المتعامل بها.",
+     "gloss": "On 12:20, \"they sold him for a paltry price, a few dirhams\", al-Rāghib defines the <em>dirham</em> as struck silver used in trade.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2446#7a5be8"
+    }
+   ]
+  }
  },
  {
   "slug": "disability",
@@ -684,7 +761,18 @@
   "aliases": [
    "Anthropomorphism",
    "Tashbih"
-  ]
+  ],
+  "lexicon": {
+   "root": "و ص ف",
+   "notes": [
+    {
+     "src": "al-Sharīf al-Jurjānī, Kitāb al-taʿrīfāt (d. 1413)",
+     "ar": "الوصف: عبارة عما دل على الذات باعتبار معنى هو المقصود من جوهر حروفه، أي يدل على الذات بصفة",
+     "gloss": "Al-Jurjānī defines <em>waṣf</em> as what points to an essence by way of a meaning carried by its own letters: it points to the essence through a quality.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7002#744242"
+    }
+   ]
+  }
  },
  {
   "slug": "divorce",
@@ -709,7 +797,18 @@
   "aliases": [
    "Talaq",
    "Khul"
-  ]
+  ],
+  "lexicon": {
+   "root": "ط ل ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل الطَّلَاقِ: التّخليةُ من الوثاق، يقال: أَطْلَقْتُ البعيرَ من عقاله، وطَلَّقْتُهُ، وهو طَالِقٌ وطَلِقٌ بلا قيدٍ، ومنه استعير: طَلَّقْتُ المرأةَ، نحو: خلّيتها فهي طَالِقٌ، أي: مُخَلَّاةٌ عن حبالة النّكاح",
+     "gloss": "Al-Rāghib says <em>ṭalāq</em> is at root release from a bond, as a camel is let loose from its hobble, and that <em>ṭallaqtu al-marʾa</em> was borrowed from it: the woman is released from the tie of marriage.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1060#e3b252"
+    }
+   ]
+  }
  },
  {
   "slug": "diya",
@@ -733,7 +832,18 @@
   "aliases": [
    "Bloodmoney",
    "Blood Money"
-  ]
+  ],
+  "lexicon": {
+   "root": "و د ي",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "وَدَى الْقَاتِلُ الْقَتِيلَ يَدِيهِ دِيَةً إذَا أَعْطَى وَلِيَّهُ الْمَالَ الَّذِي هُوَ بَدَلُ النَّفْسِ",
+     "gloss": "Al-Fayyūmī explains <em>wadā al-qātil al-qatīl</em> as the killer's giving the next of kin of the one killed the wealth that stands in place of the life; that payment is the <em>diya</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7121#dbe355"
+    }
+   ]
+  }
  },
  {
   "slug": "dogs",
@@ -754,7 +864,18 @@
    "fiqh"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ك ل ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الكَلْبُ: الحيوان النّبّاح، والأنثى كَلْبَةٌ، والجمع: أَكْلُبٌ وكِلَابٌ، وقد يقال للجمع كَلِيبٌ. قال تعالى: كَمَثَلِ الْكَلْبِ [الأعراف/ 176] قال: وَكَلْبُهُمْ باسِطٌ ذِراعَيْهِ بِالْوَصِيدِ [الكهف/ 18] وعنه اشتقّ الكلب للحرص",
+     "gloss": "Al-Rāghib defines <em>kalb</em> as the barking animal, and cites 7:176 and 18:18, the dog of the cave stretching its forelegs at the threshold. From it, he says, comes <em>kalab</em>, greed.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3667#09b081"
+    }
+   ]
+  }
  },
  {
   "slug": "dome-of-the-rock",
@@ -851,7 +972,18 @@
    "Dowries",
    "Mahr",
    "Bridal Gift"
-  ]
+  ],
+  "lexicon": {
+   "root": "م ه ر",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "الْمَهْرُ صَدَاقُ الْمَرْأَةِ وَالْجَمْعُ مُهُورَةٌ",
+     "gloss": "Al-Fayyūmī defines <em>mahr</em> as a woman's <em>ṣadāq</em>, the marriage gift, with the plural <em>muhūra</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4187#f2b01a"
+    }
+   ]
+  }
  },
  {
   "slug": "dreams",
@@ -872,7 +1004,18 @@
   "articles": [],
   "aliases": [
    "Ruya"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر أ ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرُّؤْيَا: ما يرى في المنام، وهو فعلى، وقد يخفّف فيه الهمزة فيقال بالواو، وروي: «لم يبق من مبشّرات النّبوّة إلّا الرّؤيا»",
+     "gloss": "Al-Rāghib defines <em>ruʾyā</em> as what is seen in sleep, and quotes the report \"Nothing is left of the good tidings of prophethood except the dream\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=10068#e7e491"
+    }
+   ]
+  }
  },
  {
   "slug": "du-wenxiu",
@@ -929,7 +1072,24 @@
     "page": 32,
     "term": "DU'Ā'"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "د ع و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الدُّعَاء كالنّداء، إلّا أنّ النّداء قد يقال بيا، أو أيا، ونحو ذلك من غير أن يضمّ إليه الاسم، والدُّعَاء لا يكاد يقال إلّا إذا كان معه الاسم، نحو: يا فلان",
+     "gloss": "Al-Rāghib says <em>duʿāʾ</em> is like <em>nidāʾ</em>, calling out. <em>Nidāʾ</em> may be a bare \"O!\" with no name joined to it, while <em>duʿāʾ</em> is hardly ever said without the name, as in \"O so-and-so\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8427#b1746e"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ودَعَوْتَهُ: إذا سألته، وإذا استغثته",
+     "gloss": "<em>Daʿawtuhu</em>, he adds, means \"I asked him\" and \"I called on him for help\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8427#b1746e"
+    }
+   ]
+  }
  },
  {
   "slug": "dalal",
@@ -954,6 +1114,17 @@
   "faruqi": {
    "page": 36,
    "term": "ḌALĀL"
+  },
+  "lexicon": {
+   "root": "ض ل ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويقال الضَّلَالُ لكلّ عدولٍ عن المنهج، عمدا كان أو سهوا، يسيرا كان أو كثيرا، فإنّ الطّريق المستقيم الذي هو المرتضى صعب جدا",
+     "gloss": "Al-Rāghib says <em>ḍalāl</em> is said of every turning aside from the road, deliberate or by oversight, small or great, because the straight road that is pleasing to God is very hard to keep.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10737#babc1a"
+    }
+   ]
   }
  },
  {
@@ -982,6 +1153,17 @@
   "faruqi": {
    "page": 36,
    "term": "ḌĀLL"
+  },
+  "lexicon": {
+   "root": "ض ل ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا كان الضَّلَالُ تركَ الطّريق المستقيم عمدا كان أو سهوا، قليلا كان أو كثيرا، صحّ أن يستعمل لفظ الضَّلَالِ ممّن يكون منه خطأ ما، ولذلك نسب الضَّلَالُ إلى الأنبياء، وإلى الكفّار، وإن كان بين الضَّلَالَيْنِ بون بعيد",
+     "gloss": "Since <em>ḍalāl</em> covers any leaving of the straight road, al-Rāghib says, the word can be used of anyone who makes some mistake. That is why it is said both of prophets and of disbelievers, though the distance between the two is vast.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10737#babc1a"
+    }
+   ]
   }
  },
  {
@@ -1007,6 +1189,17 @@
   "faruqi": {
    "page": 36,
    "term": "ḌALLA"
+  },
+  "lexicon": {
+   "root": "ض ل ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقال بعض الحكماء: كوننا مصيبين من وجه وكوننا ضَالِّينَ من وجوه كثيرة، فإنّ الاستقامة والصّواب يجري مجرى المقرطس من المرمى، وما عداه من الجوانب كلّها ضَلَالٌ.",
+     "gloss": "He quotes a sage: we are right in one way and astray in many, because being upright and correct is like the arrow that strikes the target, and every other direction is <em>ḍalāl</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10737#babc1a"
+    }
+   ]
   }
  },
  {
@@ -1032,6 +1225,23 @@
   "faruqi": {
    "page": 49,
    "term": "DIRĀYAH AL ḤADĪTH"
+  },
+  "lexicon": {
+   "root": "د ر ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الدّراية: المعرفة المدركة بضرب من الحيل",
+     "gloss": "Al-Rāghib defines <em>dirāya</em> as knowledge reached by some kind of skill or contrivance.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11063#7325b8"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والدّراية لا تستعمل في الله تعالى",
+     "gloss": "For that reason, he says, the word is never used of God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11063#7325b8"
+    }
+   ]
   }
  },
  {
@@ -1060,6 +1270,17 @@
   "faruqi": {
    "page": 36,
    "term": "AL ḌUḤĀ"
+  },
+  "lexicon": {
+   "root": "ض ح و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الضُّحَى: انبساطُ الشمس وامتداد النهار، وسمّي الوقت به. قال الله عزّ وجل: وَالشَّمْسِ وَضُحاها [الشمس/ 1] ، إِلَّا عَشِيَّةً أَوْ ضُحاها [النازعات/ 46] ، وَالضُّحى وَاللَّيْلِ [الضحى/ 1- 2]",
+     "gloss": "Al-Rāghib defines <em>ḍuḥā</em> as the spreading of the sun and the lengthening of the day, and says the time is named from it. He cites 91:1, 79:46 and 93:1-2.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10171#9cd60e"
+    }
+   ]
   }
  },
  {
@@ -1089,6 +1310,23 @@
   "faruqi": {
    "page": 32,
    "term": "AL DUNYĀ"
+  },
+  "lexicon": {
+   "root": "د ن و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الدّنوّ: القرب بالذّات، أو بالحكم، ويستعمل في المكان والزّمان والمنزلة.",
+     "gloss": "Al-Rāghib defines <em>dunūw</em> as nearness, in the thing itself or in its standing, and says it is used of place, time and rank. <em>Al-dunyā</em>, the nearer life, is from this root.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8434#70bd0b"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعن الأوّل فيقابل بالآخر، نحو: خَسِرَ الدُّنْيا وَالْآخِرَةَ [الحج/ 11]",
+     "gloss": "<em>Adnā</em>, he adds, may also mean the first, set against the last, as in 22:11, \"he has lost this world and the hereafter\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8434#70bd0b"
+    }
+   ]
   }
  }
 ]

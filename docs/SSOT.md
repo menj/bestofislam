@@ -16,13 +16,13 @@ runs a separate theme.
 | Theme name and folder | Best of Islam, `bestofislam` (lower case on the server) |
 | Parent | Twenty Twenty-Five 1.5 or later (`Template: twentytwentyfive`) |
 | Licence | GNU GPL v3 or later (`style.css`, `readme.txt`, the full text in `LICENSE`) |
-| Version | 1.134.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
+| Version | 1.156.0, in `style.css`, `functions.php` (`BOI_VERSION`), `readme.txt` (Stable tag and changelog) and `CHANGELOG.md` |
 | Requires | WordPress 6.7, PHP 8.4; tested on WordPress 7.1 |
 | Author for schema | Mohd Elfie Nieshaem Juferi (`style.css` Author, the `#author` Person) |
 | Text domain | `bestofislam` |
 | Settings | One option, `boi_settings` (`BOI_OPTION_KEY`); nine tabs under Appearance, Theme Options (`themes.php?page=boi-settings`): Display, Schema, Voting, Content, Search engines, Access, Security, Images, Errors. Contextual Links has its own screen (`boi_cl`) with Domains, Phrases and Rules |
-| Seeded content | 8 sections, 23 categories, 160 tags, 190 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 784 Glossary entries (`inc/glossary-data/`) |
-| Data versions | `BOI_GLOSSARY_VERSION` 22, `BOI_TERMS_VERSION` 2 |
+| Seeded content | 8 sections, 23 categories, 164 tags, 241 articles (`inc/data/seed.json`, `content/`), 8 pages, 45 questions (14 on the front page), 785 Glossary entries (`inc/glossary-data/`) |
+| Data versions | `BOI_GLOSSARY_VERSION` 27, `BOI_TERMS_VERSION` 3 |
 | Votes table | `{prefix}_boi_votes` |
 | Root `.htaccess` markers | `Block xmlrpc.php` (shared marker) and `Best of Islam: block direct file access` (`BOI_SEC_FILES_MARKER`) |
 | Drop-in marker | `Best of Islam error drop-in` (`BOI_ERR_MARKER`); static copies in `wp-content/bestofislam-errors/` |
@@ -37,7 +37,7 @@ These names are public identifiers. Renaming one is a breaking change and needs 
 - Read `.claude/FARUQI.md` first. Every article, label and design choice answers to it.
 - Titles read `<page> | Best of Islam` and stay under 60 characters (D47, `boi_title_max_length()`, 59). Meta descriptions stay within 130 characters.
 - English prose follows the anti-AI writing style: no contractions (D34), no em dashes, no banned words, no negative parallelisms, short paragraphs.
-- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Do not name the individuals who present arguments for or against any position in an article, excerpt, heading, list or published note. Named scholars of record, such as classical authorities and academic writers of reference works, stay.
+- Credit the compilers of material in `docs/CREDITS.md` only. Articles cite the verse, hadith, tafsir entry, manuscript or work itself. Public critics of Islam may be named and confronted directly where the article answers a claim they made, quoting them exactly with a source (owner's rule of 2026-11-27, `.claude/VOICE.md` section 1); their private lives, and private individuals, stay out, except that published court findings on such a critic's own credibility and his handling of money given for his work may be quoted exactly and stated fairly (owner's decision of 2026-11-27, the article `sam-shamoun-under-oath`). Named scholars of record, such as classical authorities and academic writers of reference works, stay.
 - Articles never concede the critic's argument. Each answer meets the critic with the strongest case the sources support, and a claim the sources cannot support is left out (owner, 2026-11-20).
 - The site's links to other sites are cross-links. Public text never calls those sites related, sister sites or a network.
 - Images come from Wikimedia Commons first (D48), then Pexels and Pixabay, are AVIF, are credited, and never depict a prophet (D30).
@@ -744,7 +744,7 @@ references that can be checked.
 
 ### D57. Glossary entries may quote the classical word-books
 
-The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here.
+The owner supplied a list of classical Arabic dictionaries and word-books on 2026-11-07 and asked that they be used, especially for the Glossary. An entry may carry a `lexicon` record: the Arabic root and notes of `src` (author, work and date), `ar` (a short excerpt, at most 450 characters), `gloss` (the site's own English paraphrase) and `url` (the entry's permalink on arabiclexicon.hawramani.com). The page shows it as "In the classical dictionaries". Rules: the Arabic is copied from the lexicon page and never retyped; the English is paraphrase and says "he says" where a dictionary is speaking; every note links to its page; no dictionary is presented as the voice of the faith. Prefer al-Raghib's *Mufradat* for Quranic words and Ibn al-Athir's *Nihaya* for words of the hadith. Lane's entries are in English and are cited in articles, not quoted here. Where al-Rāghib has no entry for the word, because it is not Quranic, al-Fayyūmī's *Miṣbāḥ al-munīr* serves for the terms of law and daily life and al-Sharīf al-Jurjānī's *Taʿrīfāt* for technical terms. Persons, prophets, places, books, modern movements and long supplications carry no note, because the word-books treat words. Each excerpt is checked against the page it links to before it ships (1.135.0).
 
 ### D60. Seeded articles follow the bundle, safely
 
@@ -778,6 +778,24 @@ The contents list in `inc/anatomy.php` is the theme's own (owner, 2026-11-08 and
 ### D63. Readers can add the site as a preferred source on Google
 
 The owner asked on 2026-11-22 for Google's "preferred sources" (Google Search Central, last updated 2026-09-18) to be applied natively, in the theme's colours. Google offers three methods: its standard button and its advanced script, which both load `news.google.com/swg/js/v1/publisher.js`, and a deeplink to `https://www.google.com/preferences/source?q=<domain>`. The theme uses the deeplink only, because it loads no remote assets and sends no reader data to a third party until the reader clicks. `boi_render_preferred_source()` in `inc/features.php` prints it as a pill link in the theme's palette (pale blue fill, gold leading rule, azure on hover), led by Google's G on a white disc and worded "Add as preferred source". The owner asked on 2026-11-23 for the G and the shorter wording. The G is drawn inline by `boi_google_g()` as an SVG of four paths, so nothing is fetched from Google. The full wording, "Add Best of Islam as a preferred source on Google", is the link's title, and screen readers hear "Add as preferred source on Google". It appears under the share links of an article and in the Follow band. Only a domain or subdomain can be a preferred source, so `boi_preferred_source_url()` gives no link for a site in a subfolder, on a bare host or at an IP address, and drops `www.`. The `preferred_source` switch on the Display tab turns it off. The link is hidden in print.
+
+### D72. Sectarian questions are written from the Sunni position
+
+The owner decided on 2026-11-27 that where Sunni and Shia Muslims differ, the articles take the Sunni position. The Shia position is stated fairly, from its own sources, and answered from the Sunni sources; Shia Muslims are never denigrated. From 1.147.0 four articles follow this: `ridda-wars-abu-bakr-fadak` (Abu Bakr applied the Prophet's ruling, affirmed by Ali and al-Abbas before Umar), `end-of-time` (the Mahdi reports accepted taken together, the Twelver hidden imam rejected), `taqiyya-myths` (a concession under compulsion only, 16:106) and `temporary-marriage-mutah` (permitted for a time, then forbidden until the Day of Resurrection). New articles follow the same rule.
+
+### D71. New articles are scheduled from December 2026 to December 2027
+
+The owner asked on 2026-11-26 that the posts be scheduled from December 2026 up to December 2027, "the frequency is up to you but must be up to current SEO standards", and chose two things: only the articles of the forty-draft project are scheduled, and the 199 articles already published stay as they are; and the articles are spread evenly across the year.
+
+The schedule has forty slots, one every ten days at 09:00 Malaysia time (01:00 UTC), from 1 December 2026 to 26 December 2027. A steady, predictable rhythm is what search engines and returning readers reward, and ten days apart gives each article time to be crawled and indexed before the next. Within that rhythm an article with a season takes the slot just before it: the birth of Jesus in Surah Maryam and Jesus as a Word from God in December 2026, the fasting and repentance articles before Ramadan and Lent in February 2027, and the Christmas articles (drafts 31 to 34) in November and early December 2027. Drafts 11 to 30 and 35 to 40 take the other slots in their own order, The ten slots left open for drafts 1 to 10, from 18 August to 26 December 2027 around the Christmas articles, went to the owner's five drafts on Paul (1.151.0, 18 August to 27 September 2027) and drafts 6 to 10 (1.152.0, three in October and two in late December 2027), so all forty are taken.
+
+Each scheduled article carries `publish_on` in `inc/data/seed.json`, an ISO 8601 time in UTC. `boi_seed_post_timing()` (`inc/schedule.php`) creates it as Scheduled when that time is still ahead, and WordPress publishes it on the day; a time already past publishes it with that date. The date stagger of D69 leaves a scheduled article alone. An article that already exists is never moved, so one created by an earlier release keeps the date it has. Related links, the reading path, the front page and the sitemap show only published articles, so a scheduled article appears nowhere until its day. `bin/check-content.py` checks that every date falls from December 2026 to December 2027, that no two articles share a day, and that no article links to one scheduled after it. `tests/schedule-test.php` checks the timing.
+
+WordPress publishes scheduled posts from its cron, which runs on page loads. A host that turns off WP-Cron (`DISABLE_WP_CRON`) must run `wp cron event run --due-now` from a real cron job, or a post can miss its time.
+
+### D70. English Quran quotations use A. Yusuf Ali
+
+The owner asked on 2026-11-26 that "all Quranic translations in English" use A. Yusuf Ali. A new English quotation of the Quran is taken from his translation (Quran.com translation 22), word for word, and its note says "translated by A. Yusuf Ali"; a paraphrase is not a quotation and carries the verse number alone. From 1.136.0 every new article and every enrichment follows this. The quotations already in the articles, the Glossary and the pages, most of them from Saheeh International, are converted in a release of their own, which also rewrites the translation line in `docs/CITATIONS.md`. Bible quotations in new work are taken from the World English Bible, which is in the public domain and can be checked word for word.
 
 ### D69. The newest article leads the front page
 

@@ -60,7 +60,18 @@
    "Games Of Chance",
    "Lottery",
    "Gaming"
-  ]
+  ],
+  "lexicon": {
+   "root": "ي س ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ومن اليُسْرِ المَيْسِرُ.",
+     "gloss": "Al-Rāghib derives <em>maysir</em>, gambling, from <em>yusr</em>, ease.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8349#cf5604"
+    }
+   ]
+  }
  },
  {
   "slug": "geiger-abraham",
@@ -154,7 +165,18 @@
   "articles": [],
   "aliases": [
    "Ghul"
-  ]
+  ],
+  "lexicon": {
+   "root": "غ و ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَوْلُ: إهلاك الشيء من حيث لا يحسّ به، يقال: غَالَ يَغُولُ غَوْلًا، واغْتَالَهُ اغْتِيَالًا، ومنه سمّي السّعلاة غُولًا. قال في صفة خمر الجنّة: لا فِيها غَوْلٌ [الصافات/ 47]",
+     "gloss": "Al-Rāghib defines <em>ghawl</em> as destroying a thing without its being felt, and says the she-demon of the desert was called <em>ghūl</em> from it. He cites 37:47, where the drink of Paradise has \"no <em>ghawl</em> in it\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=2896#526efa"
+    }
+   ]
+  }
  },
  {
   "slug": "god-as-father",
@@ -211,7 +233,18 @@
   ],
   "aliases": [
    "Yajuj And Majuj"
-  ]
+  ],
+  "lexicon": {
+   "root": "أ ج ج",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ويأجوج ومأجوج منه، شبّهوا بالنار المضطرمة والمياه المتموّجة لكثرة اضطرابهم",
+     "gloss": "Al-Rāghib derives <em>Yaʾjūj</em> and <em>Maʾjūj</em> from the root of <em>ajīj</em>, the blaze of a fire. They are likened, he says, to a raging fire and to surging water, because of their great turmoil.",
+     "url": "https://arabiclexicon.hawramani.com/?p=61721#71ed3c"
+    }
+   ]
+  }
  },
  {
   "slug": "goitein-s-d",
@@ -281,7 +314,18 @@
   "aliases": [
    "Calf, The Golden",
    "Samiri"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ج ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَالعِجْلُ: ولد البقرة لتصوّر عَجَلَتِهَا التي تعدم منه إذا صار ثورا. قال: عِجْلًا جَسَداً[الأعراف/ 148]",
+     "gloss": "Al-Rāghib says the <em>ʿijl</em>, calf, is the young of the cow, named for the haste (<em>ʿajala</em>) it shows and loses once it becomes a bull. He cites 7:148, \"a calf, a body\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=727#cbf49d"
+    }
+   ]
+  }
  },
  {
   "slug": "golden-rule",
@@ -295,7 +339,7 @@
   ],
   "misread": "",
   "sources": [
-   "Jesus’ teaching in Matthew 7:12 and Rabbi Hillel’s negative form are the same principle, found in many traditions. Muslims see it as part of the ethics common to the prophets."
+   "Jesus’ teaching in <a href=\"https://thebible.exposed/bible/matthew/7/#v12\">Matthew 7:12</a> and Rabbi Hillel’s negative form are the same principle, found in many traditions. Muslims see it as part of the ethics common to the prophets."
   ],
   "terms": [
    "ihsan",
@@ -338,7 +382,7 @@
   "tr": "",
   "def": "Islam says goodness belongs to God: “God is good and accepts only what is good” (hadith).",
   "what": [
-   "The Prophet (peace be upon him) said: “O people, God is good and accepts only what is good” (Sahih Muslim). The Quran calls God “the Beneficent” (52:28), and says that whatever good one has is from Him (16:53). Muslims also read Jesus’ words, “why do you call me good? No one is good but God alone” (Mark 10:18), as the teaching that only God is good in the absolute sense."
+   "The Prophet (peace be upon him) said: “O people, God is good and accepts only what is good” (Sahih Muslim). The Quran calls God “the Beneficent” (52:28), and says that whatever good one has is from Him (16:53). Muslims also read Jesus’ words, “why do you call me good? No one is good but God alone” (<a href=\"https://thebible.exposed/bible/mark/10/#v18\">Mark 10:18</a>), as the teaching that only God is good in the absolute sense."
   ],
   "misread": "",
   "sources": [],
@@ -379,7 +423,18 @@
    "Barzakh",
    "Barzakh",
    "Tomb"
-  ]
+  ],
+  "lexicon": {
+   "root": "ق ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "القَبْرُ: مقرّ الميّت، ومصدر قَبَرْتُهُ: جعلته في القَبْرِ، وأَقْبَرْتُهُ: جعلت له مكانا يُقْبَرُ فيه. نحو: أسقيته: جعلت له ما يسقى منه. قال تعالى: ثُمَّ أَماتَهُ فَأَقْبَرَهُ [عبس/ 21] ، قيل: معناه ألهم كيف يدفن",
+     "gloss": "Al-Rāghib defines <em>qabr</em> as the resting place of the dead. On 80:21, \"then He caused him to die and gave him a grave\", he reports that it means God taught people how to bury.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4978#93c47b"
+    }
+   ]
+  }
  },
  {
   "slug": "greed-and-avarice",
@@ -476,6 +531,17 @@
   "faruqi": {
    "page": 41,
    "term": "GHAFARA"
+  },
+  "lexicon": {
+   "root": "غ ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَفْرُ: إلباس ما يصونه عن الدّنس، ومنه قيل: اغْفِرْ ثوبك في الوعاء، واصبغ ثوبك فإنّه أَغْفَرُ للوسخ ، والغُفْرَانُ والْمَغْفِرَةُ من الله هو أن يصون العبد من أن يمسّه العذاب",
+     "gloss": "Al-Rāghib says <em>ghafr</em> is covering a thing with what guards it from dirt, and that <em>ghufrān</em> and <em>maghfira</em> from God mean that He guards His servant from being touched by punishment.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2755#59becf"
+    }
+   ]
   }
  },
  {
@@ -507,6 +573,17 @@
   "faruqi": {
    "page": 41,
    "term": "AL GHAFŪR, AL GHAFFĀR"
+  },
+  "lexicon": {
+   "root": "غ ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والغَافِرُ والْغَفُورُ في وصف الله نحو: غافِرِ الذَّنْبِ [غافر/ 3] ، إِنَّهُ غَفُورٌ شَكُورٌ [فاطر/ 30] ، هُوَ الْغَفُورُ الرَّحِيمُ [الزمر/ 53]",
+     "gloss": "Al-Rāghib lists <em>al-Ghāfir</em> and <em>al-Ghafūr</em> among the descriptions of God, as in 40:3, \"Forgiver of sin\", 35:30 and 39:53, \"He is the Forgiving, the Merciful\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=2755#59becf"
+    }
+   ]
   }
  },
  {
@@ -535,6 +612,17 @@
   "faruqi": {
    "page": 41,
    "term": "AL GHĀLIB"
+  },
+  "lexicon": {
+   "root": "غ ل ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَلَبَةُ القهر يقال: غَلَبْتُهُ غَلْباً وغَلَبَةً وغَلَباً ، فأنا غَالِبٌ. قال تعالى: الم غُلِبَتِ الرُّومُ فِي أَدْنَى الْأَرْضِ وَهُمْ مِنْ بَعْدِ غَلَبِهِمْ سَيَغْلِبُونَ [الروم/ 1- 2- 3] ، كَمْ مِنْ فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً [البقرة/ 249] ، يَغْلِبُوا مِائَتَيْنِ ، [الأنفال/ 65] ، يَغْلِبُوا أَلْفاً [الأنفال/ 65] ، لَأَغْلِبَنَّ أَنَا وَرُسُلِي [المجادلة/ 21]",
+     "gloss": "Al-Rāghib defines <em>ghalaba</em> as overpowering. Among his verses are 30:2-3 and 58:21, \"I will surely prevail, I and My messengers\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=2705#d300b0"
+    }
+   ]
   }
  }
 ]

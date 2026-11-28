@@ -63,6 +63,17 @@
   "faruqi": {
    "page": 50,
    "term": "AL ṢAḤĪḤ"
+  },
+  "lexicon": {
+   "root": "ص ح ح",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "الصِّحَّةُ فِي الْبَدَنِ حَالَةٌ طَبِيعِيَّةٌ تَجْرِي أَفْعَالُهُ مَعَهَا عَلَى الْمَجْرَى الطَّبِيعِيِّ وَقَدْ اُسْتُعِيرَتْ الصِّحَّةُ لِلْمَعَانِي فَقِيلَ صَحَّتْ الصَّلَاةُ إذَا أَسْقَطَتْ الْقَضَاءَ وَصَحَّ الْعَقْدُ إذَا تَرَتَّبَ عَلَيْهِ أَثَرُهُ وَصَحَّ الْقَوْلُ إذَا طَابَقَ الْوَاقِعَ",
+     "gloss": "Al-Fayyūmī defines <em>ṣiḥḥa</em> of the body as a natural state in which its functions run their natural course, and says the word was borrowed for meanings: a prayer is <em>ṣaḥīḥ</em> when it discharges the duty, and a statement when it matches what is the case.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8182#2cdd00"
+    }
+   ]
   }
  },
  {
@@ -101,7 +112,18 @@
     "page": 36,
     "term": "ṢALĀH"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ص ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصَّلَاةُ التي هي العبادة المخصوصة، أصلها: الدّعاء، وسمّيت هذه العبادة بها كتسمية الشيء باسم بعض ما يتضمّنه، والصَّلَاةُ من العبادات التي لم تنفكّ شريعة منها، وإن اختلفت صورها بحسب شرع فشرع",
+     "gloss": "Al-Rāghib says the prayer that is the particular act of worship is at root supplication, named after part of what it contains. It is one of the acts of worship that no revealed law has been without, though its forms differ from one law to the next.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9123#c7ba50"
+    }
+   ]
+  }
  },
  {
   "slug": "salman-al-farisi",
@@ -139,7 +161,7 @@
   ],
   "misread": "",
   "sources": [
-   "The fast is a private act of worship. In a hadith qudsi God says: “Every deed of the son of Adam is for himself, except fasting; it is for Me and I reward for it” (Sahih al-Bukhari). The Prophet (peace be upon him) urged breaking the fast promptly, and the evening meal is called <em>iftār</em>. Jesus’ teaching to fast without show (Matthew 6:16–18) is echoed in the hadith."
+   "The fast is a private act of worship. In a hadith qudsi God says: “Every deed of the son of Adam is for himself, except fasting; it is for Me and I reward for it” (Sahih al-Bukhari). The Prophet (peace be upon him) urged breaking the fast promptly, and the evening meal is called <em>iftār</em>. Jesus’ teaching to fast without show (<a href=\"https://thebible.exposed/bible/matthew/6/#v16\">Matthew 6:16–18</a>) is echoed in the hadith."
   ],
   "terms": [
    "zakat",
@@ -192,7 +214,18 @@
   "articles": [],
   "aliases": [
    "Conspiracy"
-  ]
+  ],
+  "lexicon": {
+   "root": "ن ج و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ونَاجَيْتُهُ. أي: سارَرْتُه، وأصله أن تخلو به في نَجْوة من الأرض",
+     "gloss": "Al-Rāghib says <em>nājaytuhu</em> means \"I spoke to him in secret\", and that its root sense is to be alone with someone on a raised piece of ground (<em>najwa</em>).",
+     "url": "https://arabiclexicon.hawramani.com/?p=17196#e2d4d8"
+    }
+   ]
+  }
  },
  {
   "slug": "self-defence",
@@ -218,7 +251,18 @@
    "Defense",
    "Defence",
    "Danger"
-  ]
+  ],
+  "lexicon": {
+   "root": "د ف ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الدَّفْعُ إذا عدّي بإلى اقتضى معنى الإنالة، نحو قوله تعالى: فَادْفَعُوا إِلَيْهِمْ أَمْوالَهُمْ [النساء/ 6] ، وإذا عدّي بعن اقتضى معنى الحماية، نحو: إِنَّ اللَّهَ يُدافِعُ عَنِ الَّذِينَ آمَنُوا [الحج/ 38]",
+     "gloss": "Al-Rāghib says <em>dafʿ</em> joined with \"to\" means handing over, as in 4:6, and joined with \"from\" means protecting, as in 22:38, \"God defends those who believe\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=2318#87ad52"
+    }
+   ]
+  }
  },
  {
   "slug": "sharia",
@@ -343,7 +387,18 @@
   "aliases": [
    "Communications",
    "Shihab"
-  ]
+  ],
+  "lexicon": {
+   "root": "ش ه ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشِّهَابُ: الشّعلة السّاطعة من النار الموقدة، ومن العارض في الجوّ، نحو: فَأَتْبَعَهُ شِهابٌ ثاقِبٌ [الصافات/ 10] ، شِهابٌ مُبِينٌ [الحجر/ 18] ، شِهاباً رَصَداً [الجن/ 9]",
+     "gloss": "Al-Rāghib defines <em>shihāb</em> as a bright flame, of a kindled fire or of what appears in the sky, and cites 37:10, 15:18 and 72:9, \"a flame lying in wait\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=6052#ac4cca"
+    }
+   ]
+  }
  },
  {
   "slug": "shuayb-and-midian",
@@ -401,7 +456,18 @@
     "page": 37,
     "term": "SHŪRĀ"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ش و ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "قال الله تعالى: وَشاوِرْهُمْ فِي الْأَمْرِ [آل عمران/ 159] ، والشُّورَى: الأمر الذي يُتَشَاوَرُ فيه. قال: وَأَمْرُهُمْ شُورى بَيْنَهُمْ [الشورى/ 38]",
+     "gloss": "Al-Rāghib defines <em>shūrā</em> as the matter on which counsel is taken, and cites 3:159, \"consult them in the matter\", and 42:38, \"their affairs are by consultation among them\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=6173#acdb9f"
+    }
+   ]
+  }
  },
  {
   "slug": "sira",
@@ -427,7 +493,18 @@
    "women-in-the-prophets-life"
   ],
   "type": "term",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "س ي ر",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "وَالسِّيرَةُ الطَّرِيقَةُ وَسَارَ فِي النَّاسِ سِيرَةً حَسَنَةً أَوْ قَبِيحَةً وَالْجَمْعُ سِيَرٌ مِثْلُ: سِدْرَةٍ وَسِدَرٍ وَغَلَبَ اسْمُ السِّيَرِ فِي أَلْسِنَةِ الْفُقَهَاءِ عَلَى الْمَغَازِي",
+     "gloss": "Al-Fayyūmī defines <em>sīra</em> as a way of conduct, good or bad, and says that among the jurists the word <em>siyar</em> came to mean above all the campaigns.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9251#6a3d80"
+    }
+   ]
+  }
  },
  {
   "slug": "slavery-and-concubinage",
@@ -458,7 +535,18 @@
    "Slavery",
    "Slaves",
    "Ma Malakat Aymanukum"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر ق ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والرِّقُّ: ملك العبيد.",
+     "gloss": "Al-Rāghib says <em>riqq</em> is the ownership of slaves, under a root whose sense is thinness and delicacy.",
+     "url": "https://arabiclexicon.hawramani.com/?p=23288#441222"
+    }
+   ]
+  }
  },
  {
   "slug": "solomon",
@@ -511,7 +599,18 @@
    "Booty",
    "Anfal",
    "Fay"
-  ]
+  ],
+  "lexicon": {
+   "root": "غ ن م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الغَنَمُ معروف. قال تعالى: وَمِنَ الْبَقَرِ وَالْغَنَمِ حَرَّمْنا عَلَيْهِمْ شُحُومَهُما [الأنعام/ 146] . والغُنْمُ: إصابته والظّفر به، ثم استعمل في كلّ مظفور به من جهة العدى وغيرهم",
+     "gloss": "Al-Rāghib says <em>ghanam</em> are sheep, cites 6:146, and defines <em>ghunm</em> as getting them and winning them; the word was then used of anything won, from enemies or from others.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2913#f2b04d"
+    }
+   ]
+  }
  },
  {
   "slug": "sufism",
@@ -540,7 +639,18 @@
    "Tasawwuf",
    "Tariqa",
    "Dervish"
-  ]
+  ],
+  "lexicon": {
+   "root": "ص و ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصُّوفِيُّ قيل: منسوب إلى لبسه الصُّوفَ، وقيل: منسوب إلى الصُّوفَةِ الذين كانوا يخدمون الكعبة لاشتغالهم بالعبادة",
+     "gloss": "Al-Rāghib reports two views of the name <em>ṣūfī</em>: that it refers to wearing wool (<em>ṣūf</em>), or to the Ṣūfa, a people who served the Kaʿba, for their devotion to worship.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9030#851b88"
+    }
+   ]
+  }
  },
  {
   "slug": "sunnah",
@@ -621,6 +731,17 @@
   "faruqi": {
    "page": 35,
    "term": "ṢABARA"
+  },
+  "lexicon": {
+   "root": "ص ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقد سمّى الله تعالى كلّ ذلك صبرا، ونبّه عليه بقوله: وَالصَّابِرِينَ فِي الْبَأْساءِ وَالضَّرَّاءِ [البقرة/ 177]",
+     "gloss": "Al-Rāghib says God calls every kind of steadfast restraint <em>ṣabr</em>, and points to it in 2:177, \"those who are patient in misfortune and hardship\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8961#784157"
+    }
+   ]
   }
  },
  {
@@ -651,6 +772,17 @@
   "faruqi": {
    "page": 48,
    "term": "SAB'ATU AḤRUFIN"
+  },
+  "lexicon": {
+   "root": "ح ر ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "حَرْفُ الشيء: طرفه، وجمعه: أحرف وحروف، يقال: حرف السيف، وحرف السفينة، وحرف الجبل، وحروف الهجاء: أطراف الكلمة",
+     "gloss": "Al-Rāghib says the <em>ḥarf</em> of a thing is its edge, as of a sword, a ship or a mountain, and that the letters of the alphabet are called <em>ḥurūf</em> as the edges of a word.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1405#d5e4c7"
+    }
+   ]
   }
  },
  {
@@ -682,6 +814,17 @@
   "faruqi": {
    "page": 34,
    "term": "SABBAḤA"
+  },
+  "lexicon": {
+   "root": "س ب ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والتَّسْبِيحُ: تنزيه الله تعالى. وأصله: المرّ السّريع في عبادة الله تعالى",
+     "gloss": "Al-Rāghib defines <em>tasbīḥ</em> as declaring God free of every imperfection. Its root sense, he says, is moving swiftly, as through water, and it came to mean speeding in the worship of God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9157#fd34b0"
+    }
+   ]
   }
  },
  {
@@ -714,6 +857,17 @@
   "faruqi": {
    "page": 35,
    "term": "ṢĀBIR"
+  },
+  "lexicon": {
+   "root": "ص ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصَّبْرُ: الإمساك في ضيق، يقال: صَبَرْتُ الدّابّة: حبستها بلا علف",
+     "gloss": "Al-Rāghib defines <em>ṣabr</em> as holding back in a tight place: <em>ṣabartu al-dābba</em> means \"I held the beast without fodder\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8961#784157"
+    }
+   ]
   }
  },
  {
@@ -745,6 +899,23 @@
   "faruqi": {
    "page": 34,
    "term": "SAJADA"
+  },
+  "lexicon": {
+   "root": "س ج د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "السُّجُودُ أصله: التّطامن والتّذلّل، وجعل ذلك عبارة عن التّذلّل لله وعبادته، وهو عامّ في الإنسان، والحيوانات، والجمادات",
+     "gloss": "Al-Rāghib says <em>sujūd</em> is at root lowering oneself in humility, and came to mean humility before God and worship of Him, which covers human beings, animals and lifeless things.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9188#8dd35c"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وسجود تسخير، وهو للإنسان، والحيوانات، والنّبات",
+     "gloss": "It is of two kinds, he says: prostration by choice, which belongs to human beings alone and earns reward, and prostration by subjection, which belongs to human beings, animals and plants.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9188#8dd35c"
+    }
+   ]
   }
  },
  {
@@ -776,6 +947,17 @@
   "faruqi": {
    "page": 34,
    "term": "SAKHKHARA"
+  },
+  "lexicon": {
+   "root": "س خ ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "التَّسْخِيرُ: سياقة إلى الغرض المختصّ قهرا، قال تعالى: وَسَخَّرَ لَكُمْ ما فِي السَّماواتِ وَما فِي الْأَرْضِ [الجاثية/ 13]",
+     "gloss": "Al-Rāghib defines <em>taskhīr</em> as driving a thing by compulsion toward the end set for it, and cites 45:13, \"He has made subservient to you all that is in the heavens and the earth\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=9222#0d7a74"
+    }
+   ]
   }
  },
  {
@@ -808,6 +990,17 @@
   "faruqi": {
    "page": 55,
    "term": "ṢALAH AL FARḌ"
+  },
+  "lexicon": {
+   "root": "ف ر ض",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والفَرْضُ كالإيجاب لكن الإيجاب يقال اعتبارا بوقوعه وثباته، والفرض بقطع الحكم فيه",
+     "gloss": "Al-Rāghib says <em>farḍ</em> is at root cutting into something hard, and that as a ruling it is like <em>ījāb</em>: <em>ījāb</em> looks at the duty's falling due and standing firm, <em>farḍ</em> at the ruling's being cut and decided.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7666#eed8ef"
+    }
+   ]
   }
  },
  {
@@ -841,6 +1034,17 @@
   "faruqi": {
    "page": 55,
    "term": "SALAH AL NĀFILAH"
+  },
+  "lexicon": {
+   "root": "ن ف ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأصل ذلك من النَّفْلِ. أي: الزيادةِ على الواجبِ، ويقال له: النَّافِلَةُ. قال تعالى: وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نافِلَةً لَكَ [الإسراء/ 79]",
+     "gloss": "Al-Rāghib says <em>nafl</em> means what goes beyond the duty, also called <em>nāfila</em>, as in 17:79, \"keep vigil with it in the night as an extra for you\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=4771#075b20"
+    }
+   ]
   }
  },
  {
@@ -873,6 +1077,17 @@
   "faruqi": {
    "page": 55,
    "term": "ṢALAH AL SUNNAH"
+  },
+  "lexicon": {
+   "root": "س ن ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وسُنَّةُ النّبيّ: طريقته التي كان يتحرّاها",
+     "gloss": "Al-Rāghib defines the <em>sunna</em> of the Prophet (peace be upon him) as the way he made a point of following.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11013#4deb07"
+    }
+   ]
   }
  },
  {
@@ -904,6 +1119,17 @@
   "faruqi": {
    "page": 35,
    "term": "SALĀM"
+  },
+  "lexicon": {
+   "root": "س ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والسّلامة الحقيقيّة ليست إلّا في الجنّة، إذ فيها بقاء بلا فناء، وغنى بلا فقر، وعزّ بلا ذلّ، وصحّة بلا سقم",
+     "gloss": "True <em>salāma</em>, al-Rāghib says, is found only in Paradise, where there is lasting without passing away, wealth without poverty, honour without abasement and health without sickness.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9709#ba18f8"
+    }
+   ]
   }
  },
  {
@@ -935,6 +1161,17 @@
   "faruqi": {
    "page": 35,
    "term": "AL SALĀM"
+  },
+  "lexicon": {
+   "root": "س ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقيل: السَّلَامُ اسم من أسماء الله تعالى ، وكذا قيل في قوله: لَهُمْ دارُ السَّلامِ [الأنعام/ 127] ، والسَّلامُ الْمُؤْمِنُ الْمُهَيْمِنُ [الحشر/ 23] ، قيل: وصف بذلك من حيث لا يلحقه العيوب والآفات التي تلحق الخلق",
+     "gloss": "Al-Rāghib reports that <em>al-Salām</em> is one of the names of God, as in 59:23, and that He is so called because no fault or harm that befalls creatures can reach Him.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9709#ba18f8"
+    }
+   ]
   }
  },
  {
@@ -968,6 +1205,17 @@
   "faruqi": {
    "page": 35,
    "term": "AL ṢĀLIḤĀT"
+  },
+  "lexicon": {
+   "root": "ص ل ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصَّلَاحُ: ضدّ الفساد، وهما مختصّان في أكثر الاستعمال بالأفعال، وقوبل في القرآن تارة بالفساد، وتارة بالسّيّئة. قال تعالى: خَلَطُوا عَمَلًا صالِحاً وَآخَرَ سَيِّئاً [التوبة/ 102]",
+     "gloss": "Al-Rāghib defines <em>ṣalāḥ</em> as the opposite of corruption, said mostly of deeds, and set in the Quran against corruption and against evil, as in 9:102, \"they mixed a good deed with a bad one\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8191#017d87"
+    }
+   ]
   }
  },
  {
@@ -1000,6 +1248,17 @@
   "faruqi": {
    "page": 36,
    "term": "ṢALLĀ"
+  },
+  "lexicon": {
+   "root": "ص ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصَّلاةُ، قال كثير من أهل اللّغة: هي الدّعاء، والتّبريك والتّمجيد ، يقال: صَلَّيْتُ عليه، أي: دعوت له وزكّيت",
+     "gloss": "Al-Rāghib reports that for many lexicographers <em>ṣalāh</em> means supplication, blessing and glorifying: <em>ṣallaytu ʿalayhi</em> means \"I prayed for him and called down good on him\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=9123#c7ba50"
+    }
+   ]
   }
  },
  {
@@ -1035,6 +1294,17 @@
   "faruqi": {
    "page": 58,
    "term": "ṢALLĀ ALLAHU ‘ALAYHI WA SALLAM."
+  },
+  "lexicon": {
+   "root": "ص ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وصَلَاةُ اللهِ للمسلمين هو في التّحقيق: تزكيته إيّاهم. وقال: أُولئِكَ عَلَيْهِمْ صَلَواتٌ مِنْ رَبِّهِمْ وَرَحْمَةٌ [البقرة/ 157] ، ومن الملائكة هي الدّعاء والاستغفار، كما هي من النّاس",
+     "gloss": "Al-Rāghib says the <em>ṣalāh</em> of God upon the Muslims is in truth His purifying them, as in 2:157, and that from the angels it is supplication and the asking of forgiveness, as it is from people.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9123#c7ba50"
+    }
+   ]
   }
  },
  {
@@ -1067,6 +1337,17 @@
   "faruqi": {
    "page": 35,
    "term": "AL SAMĪ'"
+  },
+  "lexicon": {
+   "root": "س م ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصفت الله تعالى بِالسَّمْعِ فالمراد به علمه بِالْمَسْمُوعَاتِ، وتحرّيه بالمجازاة بها نحو: قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجادِلُكَ فِي زَوْجِها [المجادلة/ 1]",
+     "gloss": "When God is described by hearing, al-Rāghib says, what is meant is His knowledge of what is heard and His requiting it, as in 58:1, \"God has heard the words of the woman who disputes with you about her husband\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5839#c99325"
+    }
+   ]
   }
  },
  {
@@ -1098,6 +1379,17 @@
   "faruqi": {
    "page": 37,
    "term": "SHAF'A"
+  },
+  "lexicon": {
+   "root": "ش ف ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشَّفْعُ: ضمّ الشيء إلى مثله، ويقال لِلْمَشْفُوعِ: شَفْعٌ",
+     "gloss": "Al-Rāghib defines <em>shafʿ</em> as joining a thing to its like, and says the thing so joined is also called <em>shafʿ</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6250#800f67"
+    }
+   ]
   }
  },
  {
@@ -1131,6 +1423,17 @@
   "faruqi": {
    "page": 37,
    "term": "SHAFĀ'AH"
+  },
+  "lexicon": {
+   "root": "ش ف ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والشَّفَاعَةُ: الانضمام إلى آخر ناصرا له وسائلا عنه",
+     "gloss": "Al-Rāghib defines <em>shafāʿa</em> as joining oneself to another to support him and plead on his behalf.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6250#800f67"
+    }
+   ]
   }
  },
  {
@@ -1163,6 +1466,17 @@
   "faruqi": {
    "page": 60,
    "term": "SHAFĀKUM ALLAH WA ‘AFĀKUM."
+  },
+  "lexicon": {
+   "root": "ش ف ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والشِّفَاءُ من المرض: موافاة شفا السّلامة، وصار اسما للبرء.",
+     "gloss": "Al-Rāghib says <em>shifāʾ</em> from illness is reaching the edge (<em>shafā</em>) of safety, and that it became the name for recovery. He cites 16:69 on honey and 41:44 on the Quran.",
+     "url": "https://arabiclexicon.hawramani.com/?p=17772#729f1d"
+    }
+   ]
   }
  },
  {
@@ -1239,6 +1553,17 @@
   "faruqi": {
    "page": 37,
    "term": "AL SHAHĀDAH"
+  },
+  "lexicon": {
+   "root": "ش ه د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فشهادة الله تعالى بوحدانيّته هي إيجاد ما يدلّ على وحدانيّته في العالم، وفي نفوسنا",
+     "gloss": "On 3:18, \"God bears witness that there is no god but He\", al-Rāghib says God's witness to His oneness is His bringing into being what points to His oneness, in the world and in our own selves.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6117#761d5c"
+    }
+   ]
   }
  },
  {
@@ -1270,6 +1595,17 @@
   "faruqi": {
    "page": 37,
    "term": "AL SHAKŪR"
+  },
+  "lexicon": {
+   "root": "ش ك ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وإذا وصف الله بالشّكر في قوله: وَاللَّهُ شَكُورٌ حَلِيمٌ [التغابن/ 17] ، فإنما يعنى به إنعامه على عباده، وجزاؤه بما أقاموه من العبادة.",
+     "gloss": "When God is described by thankfulness, as in 64:17, \"God is Appreciative, Forbearing\", al-Rāghib says what is meant is His favour to His servants and His reward for the worship they have done.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6154#23a246"
+    }
+   ]
   }
  },
  {
@@ -1302,6 +1638,17 @@
   "faruqi": {
    "page": 36,
    "term": "SHARA'A"
+  },
+  "lexicon": {
+   "root": "ش ر ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الشَّرْعُ: نهج الطّريق الواضح. يقال: شَرَعْتُ له طريقا، والشَّرْعُ: مصدر، ثم جعل اسما للطريق النّهج فقيل له: شِرْعٌ، وشَرْعٌ، وشَرِيعَةٌ، واستعير ذلك للطريقة الإلهيّة",
+     "gloss": "Al-Rāghib defines <em>sharʿ</em> as opening a clear road. The word became the name of the road itself, <em>shirʿ</em>, <em>sharʿ</em> and <em>sharīʿa</em>, and was borrowed for the way God has laid down.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6245#644c61"
+    }
+   ]
   }
  },
  {
@@ -1336,6 +1683,17 @@
   "faruqi": {
    "page": 36,
    "term": "AL SHARĪ'AH"
+  },
+  "lexicon": {
+   "root": "ش ر ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "قال بعضهم: سمّيت الشَّرِيعَةُ شَرِيعَةً تشبيها بشريعة الماء من حيث إنّ من شرع فيها على الحقيقة المصدوقة روي وتطهّر",
+     "gloss": "One scholar al-Rāghib cites says the <em>sharīʿa</em> is named after the <em>sharīʿa</em> of water, the place where people go down to drink, because whoever truly enters it is quenched and made pure.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6245#644c61"
+    }
+   ]
   }
  },
  {
@@ -1413,6 +1771,17 @@
   "faruqi": {
    "page": 35,
    "term": "AL ṢIRĀṬ"
+  },
+  "lexicon": {
+   "root": "ص ر ط",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصِّرَاطُ: الطّريقُ المستقيمُ. قال تعالى: وَأَنَّ هذا صِراطِي مُسْتَقِيماً [الأنعام/ 153]",
+     "gloss": "Al-Rāghib defines <em>ṣirāṭ</em> as the straight road, and cites 6:153, \"this is My path, straight\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8988#b93664"
+    }
+   ]
   }
  },
  {
@@ -1479,6 +1848,17 @@
   "faruqi": {
    "page": 56,
    "term": "SUBḤANA ALLAH."
+  },
+  "lexicon": {
+   "root": "س ب ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وجعل التَّسْبِيحُ عامّا في العبادات قولا كان، أو فعلا، أو نيّة",
+     "gloss": "<em>Tasbīḥ</em>, al-Rāghib says, was made to cover all worship, in word, in deed or in intention.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9157#fd34b0"
+    }
+   ]
   }
  },
  {
@@ -1510,6 +1890,17 @@
   "faruqi": {
    "page": 57,
    "term": "SUBḤĀNA ALLAH WA BI ḤAMDIH."
+  },
+  "lexicon": {
+   "root": "س ب ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فَسُبْحانَ اللَّهِ حِينَ تُمْسُونَ [الروم/ 17] ، وسُبْحانَكَ لا عِلْمَ لَنا [البقرة/ 32]",
+     "gloss": "Among al-Rāghib's examples of <em>subḥān</em> are 30:17, \"So glory be to God when you reach evening\", and 2:32, \"Glory be to You, we have no knowledge\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=9157#fd34b0"
+    }
+   ]
   }
  },
  {
@@ -1541,6 +1932,17 @@
   "faruqi": {
    "page": 34,
    "term": "SUBḤĀNAHU"
+  },
+  "lexicon": {
+   "root": "س ب ح",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والسُّبُّوحُ القدّوس من أسماء الله تعالى",
+     "gloss": "Al-Rāghib notes that <em>al-Subbūḥ al-Quddūs</em>, the All-Glorified, the Most Holy, are among the names of God.",
+     "url": "https://arabiclexicon.hawramani.com/?p=9157#fd34b0"
+    }
+   ]
   }
  },
  {
@@ -1573,6 +1975,17 @@
   "faruqi": {
    "page": 56,
    "term": "SUBḤANAHU WA TA‘ĀLĀ. (SWT)"
+  },
+  "lexicon": {
+   "root": "ع ل و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعلى ذلك يقال: تَعَالَى، نحو: تَعالَى اللَّهُ عَمَّا يُشْرِكُونَ [النمل/ 63]",
+     "gloss": "Al-Rāghib says <em>taʿālā</em>, \"He is exalted\", comes from God's being too high to be encompassed by any description, as in 27:63, \"exalted is God above what they associate with Him\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=887#908e87"
+    }
+   ]
   }
  },
  {
@@ -1647,6 +2060,17 @@
   "faruqi": {
    "page": 51,
    "term": "AL SUNNAH AL FI'LIYYAH"
+  },
+  "lexicon": {
+   "root": "ف ع ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الفِعْلُ: التأثير من جهة مؤثّر، وهو عامّ لما كان بإجادة أو غير إجادة، ولما كان بعلم أو غير علم، وقصد أو غير قصد، ولما كان من الإنسان والحيوان والجمادات",
+     "gloss": "Al-Rāghib defines <em>fiʿl</em> as the effect worked by an agent, and says it covers what is done well or badly, with knowledge or without, by intent or not, by human beings, animals or lifeless things.",
+     "url": "https://arabiclexicon.hawramani.com/?p=7755#8a3864"
+    }
+   ]
   }
  },
  {
@@ -1711,6 +2135,17 @@
   "faruqi": {
    "page": 52,
    "term": "AL SUNNAH AL TAQRĪRIYYAH"
+  },
+  "lexicon": {
+   "root": "ق ر ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "قَرَّ في مكانه يَقِرُّ قَرَاراً، إذا ثبت ثبوتا جامدا",
+     "gloss": "Al-Rāghib says <em>qarra</em> means to settle firmly in one's place; <em>taqrīr</em>, from the same root, is confirming a thing in its place.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10528#97d91e"
+    }
+   ]
   }
  }
 ]

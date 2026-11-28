@@ -10,9 +10,25 @@ and `.claude/FARUQI.md` touch the same point, they agree; FARUQI.md still comes 
 
 The work answers claims and refuses to grant the opponent's frame. A fact the
 evidence supports is stated as a fact, and the argument built on it is then
-answered; the critic's argument is never conceded (FARUQI.md). The refusal is made
-by walking the evidence to a verdict, never by raising the temperature. No humour,
-no mockery, no confrontation with a person: the work answers the argument.
+answered; the critic's argument is never conceded (FARUQI.md).
+
+Confrontation with Islamophobes is a must (owner's rule, 2026-11-27). Name the
+public critic who made the claim, quote him exactly with a checkable source, and
+take the claim apart directly and without deference: call an error an error, a
+misquotation a misquotation, a fabrication a fabrication, and show it from the
+evidence. The tone may be hard, blunt and scornful of the argument. Its force
+comes from the evidence: every charge against a named critic's work must be
+documented. What is out of bounds is the person's private life (family, marriage,
+health, appearance), slurs and abuse, and private individuals, who are never named.
+
+One exception (owner's decision, 2026-11-27): published court findings about a
+named critic's own credibility, and about his handling of money given for his
+work, may be cited, quoted exactly from the opinion with paragraph numbers (written
+out as "paragraph 15", never the ¶ sign). The owner chose on 2026-11-27 not to
+report rulings in the critic's favour; nothing left in may then state or imply
+that he lost on every point. The family matters in
+the same case, and every private person in it, stay out. The article
+`sam-shamoun-under-oath` is the model.
 
 ## 2. Voice and structure
 
@@ -83,3 +99,16 @@ The owner set this on 2026-11-23: the Excerpt and the Abstract are different tex
 - **Abstract** (`inc/data/abstracts.json`, the box at the top of the article and the schema `abstract`): the overall summary of the article, academic in register. It states the claim answered, the method and the points examined, and the verdict, in 55 to 110 words, with no call to action.
 
 Never copy one into the other. `tests/abstract-test.php` checks both limits.
+
+## 7. Bible references link to thebible.exposed
+
+The owner set this on 2026-11-26, and restated it more strictly the same day, as a permanent, mandatory, project-wide rule until the owner amends or revokes it:
+
+- **Primary reference.** Every Bible verse, quotation, passage and theological discussion links to thebible.exposed: a verse as `https://thebible.exposed/bible/{book}/{chapter}/#v{verse}` (book slug in lower case with hyphens, such as `1-kings`), a chapter as `.../bible/{book}/{chapter}/`, and a topic to the matching page under `/commentary/` or `/glossary/`. It comes before any other Bible website; academic and scholarly sources stay where the argument needs them.
+- **The domain is never visible.** It appears only as a link destination (`href`). It never appears as visible text in any publishable content: articles, pages, glossary entries, footnotes, endnotes, citations, bibliographies, captions, annotations, appendices, excerpts, abstracts, and the theme's own readme and changelog. Wording such as "linked on", "according to", "available at" or "as read at" the site is forbidden. A note reads simply "1 Timothy 5:8, ESV", with the reference linked.
+- **Anchors** are the reference itself or the words it supports, never "click here" and never the domain.
+- **No disclosure.** Do not state the site's ownership, management, affiliation or connection to us or our projects, and make no claim about its independence. Where explicit attribution or disclosure would be required, use another appropriate source or flag it privately for the owner.
+- **Verify.** Fetch every destination; the verse anchor must exist on the page. Never fabricate a link. A link that cannot be verified is not added.
+- **Gaps.** When the site lacks the material, record it in `.claude/BIBLE-GAPS.md` (topic, proposed title, URL slug, content requirements, the articles waiting) and tell the owner privately in the session. When the page appears, update the references and close the gap.
+- **Scope.** Published articles, drafts, scheduled articles and their notes, glossary entries and site pages, retroactively and for all future content.
+- **Compliance check, mandatory before finalising.** `tests/bible-links-test.php` fails if the domain appears anywhere outside a link destination in publishable content, or if a link to the site has a malformed address. Run it before every commit that touches content.

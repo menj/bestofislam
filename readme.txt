@@ -3,7 +3,7 @@ Contributors: menj
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.4
-Stable tag: 1.134.0
+Stable tag: 1.156.0
 Template: twentytwentyfive
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@ The child theme of Twenty Twenty-Five that runs bestofislam.org: numbered object
 
 Best of Islam is a block child theme for one site, bestofislam.org. Each article is a numbered list. An entry states an objection to Islam in the objector's own terms, then answers it.
 
-Everything the site needs ships in the theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 190 articles, each with a featured image and at least 2 more in its text. A Glossary of 784 Arabic and Islamic terms sits at /glossary/.
+Apart from its parent theme, Twenty Twenty-Five, everything the site needs ships in this theme. There is no companion plugin. The theme builds the site on activation: 8 sections, the standing pages, the menus and 241 articles, each with a featured image and at least 2 more in its text. A Glossary of 785 Arabic and Islamic terms sits at /glossary/.
 
 Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its templates and base styles from it.
 
@@ -25,7 +25,7 @@ Twenty Twenty-Five 1.5 or later must stay installed. Best of Islam takes its tem
 * A section taxonomy (listicle-topic) at /topic/<section>/, with categories and tags on every seeded article.
 * A reading order in 7 parts, with a "Read next" card at the foot of every article.
 * 45 questions with short answers, linked to their articles, on the front page and in a panel on each article.
-* A Glossary of 784 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
+* A Glossary of 785 entries with Arabic script, a search box and an A to Z index, linked from the first mention of a term in an article.
 * Contextual links from phrases in articles to other articles here and to inner pages of other sites, set under Appearance, Contextual Links.
 * Optional visitor voting, rate limited and stored in its own table. It is off by default.
 * A contact form with a nonce, a honeypot and a rate limit, sent with wp_mail().
@@ -165,8 +165,72 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 
 == Changelog ==
 
-= 1.134.0 =
-* Glossary entries now give the invocation of peace after the first mention of the Prophet, and 327 entries were edited to the site's writing standard.
+= 1.156.0 =
+* Glossary entries now give the invocation of peace after the first mention of the Prophet, and 327 entries were edited to the site's writing standard. Web addresses in the article notes are now links.
+
+= 1.155.0 =
+* Five new articles, published at once: what the Talmud says about Jesus, whether Allah is Baal or Hubal, whether Abraham built the Kaaba, synagogues in the Quran and Islamic history, and the meaning of monogenes.
+
+= 1.154.0 =
+* Glossary: Iblis is also listed as Shaitan and Shaytaan, and the Basmala entry as Basmala, Bismillah al-Rahman al-Rahim and Bismillahir Rahmanir Rahim.
+
+= 1.153.0 =
+* Glossary: Istighfar is also listed as Astaghfirullah, and Taqiyya as Taqiyah, Taqiya and Taqiyyah, so searches for those spellings reach the entries.
+
+= 1.152.0 =
+* Five new articles, scheduled from 7 October to 26 December 2027: did Paul receive his gospel from Jesus, Paul and circumcision, six Pauline teachings that shaped Christian theology, four occasions when Jesus prayed at night or before dawn, and six religious practices of Jesus that Muslims recognise.
+
+= 1.151.0 =
+* Five new articles on Paul, scheduled from 18 August to 27 September 2027: Saul of Tarsus before his conversion, the three Damascus road accounts in Acts, the quarrel with Peter at Antioch, Paul and James on faith and works, and the Epimenides paradox in Titus 1:12.
+
+= 1.150.0 =
+* Merged the Bryce Crawford Podcast (episode 182) into the Sam Shamoun podcast article, now "Sam Shamoun on two podcasts: 14 claims checked against the sources" at sam-shamoun-on-two-podcasts; the old address redirects.
+
+= 1.149.0 =
+* The scheduled article on former opponents of Islam who converted adds a fourth story: Richard McKinney, the Marine who came to a mosque in Muncie, Indiana, to bomb it and became a Muslim.
+
+= 1.148.0 =
+* Five new articles, scheduled from 29 June to 8 August 2027: from atheism to Islam, four Indonesian conversion stories, three former opponents of Islam who converted, seven reasons converts give, and the Maria Hertogh (Natrah) case.
+
+= 1.147.0 =
+* Four articles on questions where Sunni and Shia Muslims differ now state the Sunni position: the Fadak dispute, the Mahdi, taqiyya and temporary marriage (mutah).
+
+= 1.146.0 =
+* Five new articles. Four on Christmas are scheduled from 6 November to 6 December 2027: was Jesus born on 25 December, Christmas and the Quran, six Christmas traditions and their origins, and whether Muslims may say Merry Christmas. The fifth, on five former Christian ministers and priests who embraced Islam, is scheduled for 19 June 2027.
+
+= 1.145.0 =
+* A new article: "Sam Shamoun on the PBD Podcast: 9 claims checked against the sources", each claim quoted with its time in the interview.
+
+= 1.144.0 =
+* "Sam Shamoun under oath" now has photographs of the Chicago courts in place of the pattern graphics, and its notes give paragraph numbers in words.
+
+= 1.143.0 =
+* Five new articles, scheduled from 30 April to 9 June 2027: the Camel Method, five Quranic passages Christian missionaries use, whether the virgin birth makes Jesus divine, six principles of da'wah in the Quran, and religious pluralism and Islam.
+
+= 1.142.0 =
+* Five new articles, scheduled from 11 March to 20 April 2027: Quran 43:61 and the sign of the Hour, the sons of God in the Bible, Ezekiel 23 and its allegory, Ezekiel 23 in Malay and Indonesian Bibles, and biblical anthropomorphism.
+
+= 1.141.0 =
+* Sixteen articles move to the section and category that fit their subject, so the sections are more even: answers on the Quran and the hadith go to Faith & Reason, articles on the Prophet to History, and answers to Islamophobic charges to Islamophobia. No address changes.
+
+= 1.140.0 =
+* A new article: "Sam Shamoun under oath: 7 findings from the Illinois courts", on what the Illinois appellate courts found about his testimony, income and conduct.
+
+= 1.139.0 =
+* Every Bible reference in the articles and the Glossary now links to the verse it cites: 1,340 references in 107 articles and 7 Glossary letters.
+
+= 1.138.0 =
+* New articles are now scheduled: from December 2026 to December 2027, one every ten days, with seasonal articles placed before Christmas, Ramadan and Lent.
+* Five new articles on sin and forgiveness: whether God needs blood to forgive, repentance and atonement, whether children are born sinful, Adam and Eve in Genesis and the Quran, and Jesus as a Word from God.
+
+= 1.137.0 =
+* Five new articles on Jesus and the Bible: his prostration in prayer, his fasting, his birth in Surah Maryam, the Sabbath controversies, and original sin.
+
+= 1.136.0 =
+* Eight articles on peace, war, religious freedom, apostasy, Christians, friendship, salvation and Islamophobia gain the readings of Muslim and Christian scholars from a 2009 collection on peace-building, with full references.
+
+= 1.135.0 =
+* 424 more Glossary entries now show a short passage from the classical Arabic dictionaries, with an English paraphrase and a link to the passage on the Arabic Lexicon. 491 of the 785 entries carry one.
 
 = 1.133.0 =
 * 54 more references in 32 articles now give volume and page, with links to the Arabic text.
@@ -216,7 +280,7 @@ Bundled resources keep their owners' licences. docs/CREDITS.md lists each one wi
 * The preferred source link is shorter, "Add as preferred source", and is led by Google's G.
 
 = 1.122.1 =
-* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and link to each verse on thebible.exposed.
+* The Bible quotations in "Was Iblis punished for a command that was not his?" now follow the ESV and each reference links to its verse.
 
 = 1.122.0 =
 * Two new articles from a public debate: "Can God die? 7 answers on the cross and the eternal God" and "Food offered to idols: did Paul overrule the apostles? 6 answers", each with a featured image and four in-text images.
@@ -470,8 +534,71 @@ Earlier releases are in CHANGELOG.md.
 
 == Upgrade Notice ==
 
-= 1.134.0 =
-Replace the theme files. The Glossary updates the changed entries on the next page loads, where you have not edited them.
+= 1.156.0 =
+Replace the theme files. The Glossary updates the changed entries over the next page loads, where you have not edited them.
+
+= 1.155.0 =
+Replace the theme files. Five new articles are created on the next admin visit.
+
+= 1.154.0 =
+Replace the theme files. The Glossary sync runs once (BOI_GLOSSARY_VERSION 26).
+
+= 1.153.0 =
+Replace the theme files. The Glossary sync runs once (BOI_GLOSSARY_VERSION 25).
+
+= 1.152.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.151.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.150.0 =
+Content only: one article merged and renamed, with a 301 from the old address.
+
+= 1.149.0 =
+Replace the theme files. A scheduled article takes its new text before it publishes.
+
+= 1.148.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.147.0 =
+Replace the theme files. Unedited copies of four articles take the new text; an edited copy is listed on the Content tab.
+
+= 1.146.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.145.0 =
+Replace the theme files. The new article is created when the version changes.
+
+= 1.144.0 =
+Replace the theme files. The article refreshes if you have not edited it.
+
+= 1.143.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.142.0 =
+Replace the theme files. Five new articles are scheduled and publish on their dates.
+
+= 1.141.0 =
+Replace the theme files and open the dashboard once. Sixteen articles move section and category; an article you filed yourself keeps your choice.
+
+= 1.140.0 =
+Replace the theme files. The new article is created when the version changes.
+
+= 1.139.0 =
+Replace the theme files. Articles you have not edited take the new links when the version changes, and the Glossary pages are rebuilt once.
+
+= 1.138.0 =
+Replace the theme files. The new articles are scheduled and publish on their dates.
+
+= 1.137.0 =
+Replace the theme files. Five new articles are added and lead the front page.
+
+= 1.136.0 =
+Replace the theme files. The eight enriched articles refresh where you have not edited them.
+
+= 1.135.0 =
+Replace the theme files. The Glossary entry pages gain their dictionary notes where you have not edited them.
 
 = 1.133.0 =
 Replace the theme files. The corrected notes refresh where you have not edited the article.

@@ -2406,5 +2406,106 @@
     "caption": "A page of a Greek Gospel book with commentaries, copied about 1000 to 1100 (Cleveland Museum of Art)."
    }
   ]
+ },
+ "sam-shamoun-under-oath": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Richard J. Daley Center, Chicago Loop, Chicago, Illinois (9181641122).jpg",
+   "alt": "The Richard J. Daley Center in the Chicago Loop, seat of the Circuit Court of Cook County.",
+   "caption": "The Richard J. Daley Center in Chicago, seat of the Circuit Court of Cook County, where the case was tried."
+  },
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:The scales of justice (4984060658).jpg",
+    "alt": "A gilded statue of Justice holding a sword and scales against the sky.",
+    "caption": "A court weighs testimony against the documents. The trial judge found his testimony on income not credible."
+   },
+   {
+    "src": "commons",
+    "id": "File:Scales of Justice (15030066870).jpg",
+    "alt": "Brass scales of justice on a desk in a courtroom office.",
+    "caption": "The court traced income and donations that he had not disclosed."
+   },
+   {
+    "src": "commons",
+    "id": "File:Daley Center June 20, 2025.jpg",
+    "alt": "The Daley Center, Chicago, home of the Circuit Court of Cook County.",
+    "caption": "The Circuit Court of Cook County, where the support orders, the fee awards and the body attachment were made."
+   },
+   {
+    "src": "commons",
+    "id": "File:20120929 Michael Bilandic Building.JPG",
+    "alt": "The Michael A. Bilandic Building, Chicago, seat of the Appellate Court of Illinois, First District.",
+    "caption": "The Appellate Court of Illinois, First District, which published both opinions in 2020."
+   }
+  ]
+ },
+ "sam-shamoun-on-two-podcasts": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Microphone studio.jpg",
+   "alt": "A studio microphone with a pop shield.",
+   "caption": "A studio microphone. He made these claims in a two-hour podcast interview."
+  },
+  "inline": [
+   {
+    "src": "commons",
+    "id": "File:P46.jpg",
+    "alt": "A leaf of Papyrus 46, the oldest surviving copy of Paul's letters.",
+    "caption": "Papyrus 46, the oldest copy of Paul's letters. In 1 Corinthians 2:9 Paul introduces the words with \"as it is written\"."
+   },
+   {
+    "src": "commons",
+    "id": "File:Papyrus66.jpg",
+    "alt": "A page of Papyrus 66, an early copy of the Gospel of John.",
+    "caption": "Papyrus 66, an early copy of the Gospel of John, the gospel in which the Son \"can do nothing of his own accord\"."
+   }
+  ]
+ },
+ "what-the-talmud-says-about-jesus": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Babylonian Talmud (Daniel Bomberg 1519-1523).jpg",
+   "alt": "A page of the Babylonian Talmud printed by Daniel Bomberg in Venice.",
+   "caption": "The Babylonian Talmud in the Venice edition of Daniel Bomberg, 1519 to 1523. Later Christian censors removed several of the passages on Jesus."
+  },
+  "inline": []
+ },
+ "is-allah-baal-or-hubal": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Baal thunderbolt from Ugarit (Louvre AO15775).jpg",
+   "alt": "A limestone stele of a striding storm god with a raised club, from Ugarit.",
+   "caption": "The \"Baal with Thunderbolt\" stele from Ugarit, now in the Louvre (AO 15775). The Quran names Baal once, as the god Elias told his people to abandon."
+  },
+  "inline": []
+ },
+ "did-abraham-build-the-kaaba": {
+  "featured": {
+   "src": "commons",
+   "id": "File:The Kaaba during Hajj - edited.jpg",
+   "alt": "Pilgrims circling the Kaaba in the Masjid al-Haram during the Hajj.",
+   "caption": "Pilgrims circle the Kaaba during the Hajj. The Quran calls it \"the first House appointed for men\" (3:96)."
+  },
+  "inline": []
+ },
+ "synagogues-in-the-quran-and-islamic-history": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Ben Ezra Synagogue-1.jpg",
+   "alt": "The facade of the Ben Ezra Synagogue in Old Cairo.",
+   "caption": "The Ben Ezra Synagogue in Fustat, Old Cairo. Its storeroom kept the documents now called the Cairo Geniza."
+  },
+  "inline": []
+ },
+ "monogenes-only-begotten": {
+  "featured": {
+   "src": "commons",
+   "id": "File:Papyrus66.jpg",
+   "alt": "A page of Papyrus 66, an early copy of the Gospel of John.",
+   "caption": "Papyrus 66, an early copy of the Gospel of John. At John 1:18 it reads monogenes theos, the variant behind the ESV's \"God the only Son\"."
+  },
+  "inline": []
  }
 }

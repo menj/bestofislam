@@ -98,7 +98,18 @@
    "preservation-and-truth"
   ],
   "type": "scripture",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ق ر أ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والقِرَاءَةُ: ضمّ الحروف والكلمات بعضها إلى بعض في التّرتيل",
+     "gloss": "Al-Rāghib defines <em>qirāʾa</em> as joining letters and words to one another in measured recitation.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4846#1012ec"
+    }
+   ]
+  }
  },
  {
   "slug": "qisas",
@@ -130,6 +141,17 @@
   "faruqi": {
    "page": 53,
    "term": "AL QIṢĀṢ"
+  },
+  "lexicon": {
+   "root": "ق ص ص",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والقِصاصُ: تتبّع الدّم بالقود. قال تعالى: وَلَكُمْ فِي الْقِصاصِ حَياةٌ [البقرة/ 179]",
+     "gloss": "Al-Rāghib says <em>qiṣāṣ</em> is following up blood with retaliation, from <em>qaṣṣ</em>, following a trail. He cites 2:179, \"in retaliation there is life for you\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5116#4375cd"
+    }
+   ]
   }
  },
  {
@@ -160,6 +182,17 @@
   "faruqi": {
    "page": 52,
    "term": "AL QIYĀS"
+  },
+  "lexicon": {
+   "root": "ق ي س",
+   "notes": [
+    {
+     "src": "al-Fayyūmī, al-Miṣbāḥ al-munīr fī gharīb al-sharḥ al-kabīr (d. 1368)",
+     "ar": "قِسْتُهُ عَلَى الشَّيْءِ وَبِهِ أَقِيسُهُ قَيْسًا مِنْ بَابِ بَاعَ وَأَقُوسُهُ قَوْسًا مِنْ بَابِ قَالَ لُغَةٌ وَقَايَسْتُهُ بِالشَّيْءِ مُقَايَسَةً وَقِيَاسًا مِنْ بَابِ قَاتَلَ وَهُوَ تَقْدِيرُهُ بِهِ وَالْمِقْيَاسُ الْمِقْدَارُ.",
+     "gloss": "Al-Fayyūmī says <em>qistuhu ʿalā al-shayʾ</em> and <em>qāyastuhu</em> mean to measure one thing by another, and that a <em>miqyās</em> is a measure.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10946#b3ca9e"
+    }
+   ]
   }
  },
  {
@@ -281,6 +314,17 @@
   "faruqi": {
    "page": 43,
    "term": "QADDARA"
+  },
+  "lexicon": {
+   "root": "ق د ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والقَدِيرُ: هو الفاعل لما يشاء على قَدْرِ ما تقتضي الحكمة، لا زائدا عليه ولا ناقصا عنه، ولذلك لا يصحّ أن يوصف به إلا الله تعالى",
+     "gloss": "Al-Rāghib defines <em>qadīr</em> as the One who does what He wills in the measure wisdom requires, neither more nor less, and says the word can be said of God alone.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4990#755b41"
+    }
+   ]
   }
  },
  {
@@ -351,6 +395,17 @@
   "faruqi": {
    "page": 44,
    "term": "QAṢṢA"
+  },
+  "lexicon": {
+   "root": "ق ص ص",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْقَصُّ: تتبّع الأثر، يقال: قَصَصْتُ أثره، والْقَصَصُ: الأثر. قال تعالى: فَارْتَدَّا عَلى آثارِهِما قَصَصاً [الكهف/ 64]",
+     "gloss": "Al-Rāghib defines <em>qaṣṣ</em> as following a trail, and cites 18:64, \"they went back retracing their footsteps\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5116#4375cd"
+    }
+   ]
   }
  },
  {
@@ -416,6 +471,17 @@
   "faruqi": {
    "page": 44,
    "term": "QIST"
+  },
+  "lexicon": {
+   "root": "ق س ط",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْقِسْطُ: هو النّصيب بالعدل كالنّصف والنّصفة. قال تعالى: لِيَجْزِيَ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحاتِ بِالْقِسْطِ [يونس/ 4] ، وَأَقِيمُوا الْوَزْنَ بِالْقِسْطِ [الرحمن/ 9]",
+     "gloss": "Al-Rāghib defines <em>qisṭ</em> as a share given with justice, like a half fairly divided, and cites 10:4 and 55:9, \"set up the weight with justice\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=5139#2b2679"
+    }
+   ]
   }
  },
  {
@@ -473,6 +539,17 @@
   "faruqi": {
    "page": 55,
    "term": "QU‘ŪD"
+  },
+  "lexicon": {
+   "root": "ق ع د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "القُعُودُ يقابل به القيام، والْقَعْدَةُ للمرّة، والقِعْدَةُ للحال التي يكون عليها الْقَاعِدُ، والقُعُودُ قد يكون جمع قاعد. قال: فَاذْكُرُوا اللَّهَ قِياماً وَقُعُوداً [النساء/ 103]",
+     "gloss": "Al-Rāghib says <em>quʿūd</em>, sitting, is set against standing, and cites 4:103, \"remember God standing and sitting\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=4958#ba664b"
+    }
+   ]
   }
  }
 ]

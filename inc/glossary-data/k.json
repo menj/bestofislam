@@ -66,7 +66,18 @@
     "page": 45,
     "term": "KĀFIR"
    }
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الكُفْرُ في اللّغة: ستر الشيء، ووصف الليل بِالْكَافِرِ لستره الأشخاص، والزّرّاع لستره البذر في الأرض",
+     "gloss": "Al-Rāghib says <em>kufr</em> in the language is covering a thing: night is called <em>kāfir</em> because it hides people, and the sower because he covers the seed in the earth.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3792#4131cd"
+    }
+   ]
+  }
  },
  {
   "slug": "kafur",
@@ -84,7 +95,18 @@
    "paradise"
   ],
   "articles": [],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ك ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْكَافُورُ: اسم أكمام الثّمرة التي تَكْفُرُهَا",
+     "gloss": "Al-Rāghib says <em>kāfūr</em> is the name of the husks that cover a fruit, from <em>kafr</em>, covering.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3792#4131cd"
+    }
+   ]
+  }
  },
  {
   "slug": "khadija",
@@ -165,7 +187,18 @@
    "Khawarij",
    "Kharijis",
    "Seceders"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ ر ج",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "خَرَجَ خُرُوجاً: برز من مقرّه أو حاله، سواء كان مقرّه دارا، أو بلدا، أو ثوبا، وسواء كان حاله حالة في نفسه، أو في أسبابه الخارجة",
+     "gloss": "Al-Rāghib defines <em>khurūj</em> as coming out from one's place or state, whether a house, a town or a garment, or a state within oneself or in one's outward circumstances.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3996#e9c989"
+    }
+   ]
+  }
  },
  {
   "slug": "khawf",
@@ -279,7 +312,18 @@
    "Murder",
    "Homicide",
    "Retaliation"
-  ]
+  ],
+  "lexicon": {
+   "root": "ق ت ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل القَتْلِ: إزالة الروح عن الجسد كالموت، لكن إذا اعتبر بفعل المتولّي لذلك يقال: قَتْلٌ، وإذا اعتبر بفوت الحياة يقال: موت.",
+     "gloss": "Al-Rāghib says <em>qatl</em> is at root removing the soul from the body, as death does. Seen as the act of the one who does it, it is <em>qatl</em>; seen as the loss of life, it is death (<em>mawt</em>).",
+     "url": "https://arabiclexicon.hawramani.com/?p=5221#481a0b"
+    }
+   ]
+  }
  },
  {
   "slug": "kindness",
@@ -303,7 +347,18 @@
    "Mercy",
    "Compassion",
    "Rahma"
-  ]
+  ],
+  "lexicon": {
+   "root": "ح س ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والإحسان يقال على وجهين: أحدهما: الإنعام على الغير، يقال: أحسن إلى فلان. والثاني: إحسان في فعله، وذلك إذا علم علما حسنا، أو عمل عملا حسنا",
+     "gloss": "Al-Rāghib gives <em>iḥsān</em> two senses: doing good to another, as in \"he was kind to so-and-so\", and doing one's own work well, by knowing well or acting well.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1566#35cf1a"
+    }
+   ]
+  }
  },
  {
   "slug": "kitab",
@@ -378,7 +433,18 @@
    "Learning",
    "Study",
    "Literacy"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ل م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعِلْمُ من وجه ضربان: نظريّ وعمليّ.فالنّظريّ: ما إذا علم فقد كمل، نحو: العلم بموجودات العالَم.والعمليّ: ما لا يتمّ إلا بأن يعمل كالعلم بالعبادات",
+     "gloss": "Al-Rāghib divides knowledge into the theoretical, which is complete once known, such as knowledge of what exists in the world, and the practical, which is complete only when acted on, such as knowledge of worship.",
+     "url": "https://arabiclexicon.hawramani.com/?p=812#777d82"
+    }
+   ]
+  }
  },
  {
   "slug": "kubrawiyya",
@@ -470,7 +536,18 @@
    "shared-prophets"
   ],
   "type": "scripture",
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ك ت ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "فالأصل في الْكِتَابَةِ: النّظم بالخطّ لكن يستعار كلّ واحد للآخر، ولهذا سمّي كلام الله- وإن لم يُكْتَبْ- كِتَاباً",
+     "gloss": "Al-Rāghib says writing is properly the ordering of letters in script, and that script and speech each lend the word to the other. That is why the speech of God is called a <em>kitāb</em> even when it has not been written down.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3645#c1abab"
+    }
+   ]
+  }
  },
  {
   "slug": "kabbara",
@@ -498,6 +575,17 @@
   "faruqi": {
    "page": 44,
    "term": "KABBARA"
+  },
+  "lexicon": {
+   "root": "ك ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ومنه ما اعتبر فيه المنزلة والرّفعة نحو: قُلْ أَيُّ شَيْءٍ أَكْبَرُ شَهادَةً قُلِ اللَّهُ شَهِيدٌ بَيْنِي وَبَيْنَكُمْ [الأنعام/ 19] ، ونحو: الْكَبِيرُ الْمُتَعالِ [الرعد/ 9]",
+     "gloss": "Al-Rāghib says greatness is sometimes said of rank and height, as in 6:19, \"What is greatest in testimony? Say: God\", and 13:9, \"the Great, the Most High\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=3773#d9f6fc"
+    }
+   ]
   }
  },
  {
@@ -525,6 +613,17 @@
   "faruqi": {
    "page": 45,
    "term": "KAFARA"
+  },
+  "lexicon": {
+   "root": "ك ف ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وأعظم الكُفْرِ: جحود الوحدانيّة أو الشريعة أو النّبوّة، والكُفْرَانُ في جحود النّعمة أكثر استعمالا، والكُفْرُ في الدّين أكثر",
+     "gloss": "The gravest <em>kufr</em>, al-Rāghib says, is denying God's oneness, the law or prophethood. <em>Kufrān</em> is used more often of denying a favour, and <em>kufr</em> more often in religion.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3792#4131cd"
+    }
+   ]
   }
  },
  {
@@ -553,6 +652,17 @@
   "faruqi": {
    "page": 31,
    "term": "AL KHABĪR"
+  },
+  "lexicon": {
+   "root": "خ ب ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الخُبْرُ: العلم بالأشياء المعلومة من جهة الخَبَر، وخَبَرْتُهُ خُبْراً وخِبْرَة، وأَخْبَرْتُ: أعلمت بما حصل لي من الخبر، وقيل الخِبْرَة المعرفة ببواطن الأمر",
+     "gloss": "Al-Rāghib defines <em>khubr</em> as knowing things through report, and reports the view that <em>khibra</em> is knowledge of the inner side of a matter.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4028#f6e34a"
+    }
+   ]
   }
  },
  {
@@ -582,6 +692,17 @@
   "faruqi": {
    "page": 31,
    "term": "AL KHABĪTH"
+  },
+  "lexicon": {
+   "root": "خ ب ث",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الخُبْثُ والخَبِيثُ: ما يكره رداءة وخساسة، محسوسا كان أو معقولا، وأصله الرّديء الدّخلة الجاري مجرى خَبَثِ الحديد",
+     "gloss": "Al-Rāghib defines <em>khubth</em> and <em>khabīth</em> as what is disliked for its baseness, whether felt by the senses or known by the mind. The root sense, he says, is base inner stuff, like the dross of iron.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3978#725ad2"
+    }
+   ]
   }
  },
  {
@@ -609,6 +730,17 @@
   "faruqi": {
    "page": 31,
    "term": "AL KHABĪTHAH"
+  },
+  "lexicon": {
+   "root": "خ ب ث",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "ما كانَ اللَّهُ لِيَذَرَ الْمُؤْمِنِينَ عَلى ما أَنْتُمْ عَلَيْهِ حَتَّى يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ [آل عمران/ 179] ، أي: الأعمال الخبيثة من الأعمال الصالحة، والنّفوس الخبيثة من النّفوس الزّكيّة.",
+     "gloss": "On 3:179, \"until He separates the foul from the good\", al-Rāghib says it means foul deeds from good deeds, and foul souls from pure ones.",
+     "url": "https://arabiclexicon.hawramani.com/?p=3978#725ad2"
+    }
+   ]
   }
  },
  {
@@ -636,6 +768,17 @@
   "faruqi": {
    "page": 31,
    "term": "KHALĪFAH"
+  },
+  "lexicon": {
+   "root": "خ ل ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وعلى هذا الوجه الأخير استخلف الله أولياءه في الأرض، قال تعالى: هُوَ الَّذِي جَعَلَكُمْ خَلائِفَ فِي الْأَرْضِ [فاطر/ 39]",
+     "gloss": "Al-Rāghib says God has made His friends successors (<em>khalāʾif</em>) in the earth in the sense of an honour given to them, as in 35:39, \"It is He who made you successors in the earth\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8780#fc3fb9"
+    }
+   ]
   }
  },
  {
@@ -663,6 +806,17 @@
   "faruqi": {
    "page": 31,
    "term": "AL KHĀLIQ"
+  },
+  "lexicon": {
+   "root": "خ ل ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وليس الخَلْقُ الذي هو الإبداع إلّا لله تعالى، ولهذا قال في الفصل بينه تعالى وبين غيره: أَفَمَنْ يَخْلُقُ كَمَنْ لا يَخْلُقُ أَفَلا تَذَكَّرُونَ [النحل/ 17]",
+     "gloss": "Creation that is origination, al-Rāghib says, belongs to God alone, and that is why He draws the line between Himself and all else in 16:17: \"Is He who creates like one who does not create?\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=8806#a7661e"
+    }
+   ]
   }
  },
  {
@@ -727,6 +881,23 @@
   "faruqi": {
    "page": 31,
    "term": "KHAZĀ"
+  },
+  "lexicon": {
+   "root": "خ ز ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "خَزِيَ الرّجل: لحقه انكسار، إمّا من نفسه، وإمّا من غيره. فالذي يلحقه من نفسه هو الحياء المفرط",
+     "gloss": "Al-Rāghib says <em>khaziya</em> means a man is broken, from within himself or by others. What comes from within is excessive shame.",
+     "url": "https://arabiclexicon.hawramani.com/?p=17731#6facb5"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والذي يلحقه من غيره يقال: هو ضرب من الاستخفاف، ومصدره الخِزْي",
+     "gloss": "What comes from others, he says, is a kind of being held in contempt, and its noun is <em>khizy</em>, as in 5:33, \"that is a disgrace for them in this world\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=17731#6facb5"
+    }
+   ]
   }
  },
  {
@@ -754,6 +925,17 @@
   "faruqi": {
    "page": 31,
    "term": "KHILĀFAH"
+  },
+  "lexicon": {
+   "root": "خ ل ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والخِلافةُ النّيابة عن الغير إمّا لغيبة المنوب عنه، وإمّا لموته، وإمّا لعجزه، وإمّا لتشريف المستخلف.",
+     "gloss": "Al-Rāghib defines <em>khilāfa</em> as standing in for another, because the other is absent, has died or cannot act, or to honour the one appointed.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8780#fc3fb9"
+    }
+   ]
   }
  }
 ]

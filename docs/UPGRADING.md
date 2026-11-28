@@ -62,9 +62,93 @@ twice.
    on. It is off until switched on, even when an address was imported.
 4. Delete the plugin once the theme's version is working.
 
-## Upgrading to 1.134.0
+## Upgrading to 1.156.0
 
-Replace the theme files. `BOI_GLOSSARY_VERSION` is 22, so the Glossary sync rewrites the 327 changed entries a batch at a time over the next page loads; an entry you have edited keeps your text. The two articles whose wording changed refresh where unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set.
+Replace the theme files. `BOI_GLOSSARY_VERSION` is 27, so the Glossary sync rewrites the 327 changed entries a batch at a time over the next page loads; an entry you have edited keeps your text. The articles whose notes or wording changed refresh where unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set.
+
+## Upgrading to 1.155.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as published posts on the next admin visit, and fills in the empty Ishmael tag description.
+
+## Upgrading to 1.154.0
+
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 26) and adds the new aliases to Iblis and the Basmala entry.
+
+## Upgrading to 1.153.0
+
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 25) and adds the new aliases to Istighfar and Taqiyya.
+
+## Upgrading to 1.152.0
+
+Replace the theme files. `boi_create_listicles()` creates each of the five new articles as Scheduled for its date, from 7 October to 26 December 2027 (D71), and WordPress publishes it on that day from its cron. An article whose date has already passed when the theme updates is created as published. Nothing to set, except on a host that turns off WP-Cron (`DISABLE_WP_CRON`), where a real cron job must run `wp cron event run --due-now` (D71).
+
+## Upgrading to 1.151.0
+
+Replace the theme files. `boi_create_listicles()` creates each of the five new articles as Scheduled for its date, 18 August to 27 September 2027 (D71), and WordPress publishes it on that day from its cron. An article whose date has already passed when the theme updates is created as published. Nothing to set, except on a host that turns off WP-Cron (`DISABLE_WP_CRON`), where a real cron job must run `wp cron event run --due-now` (D71).
+
+## Upgrading to 1.150.0
+
+No action needed. The old address /sam-shamoun-on-the-pbd-podcast/ redirects to /sam-shamoun-on-two-podcasts/ through `inc/renamed-slugs.php`. Re-run the seeder so the article takes its new slug.
+
+## Upgrading to 1.149.0
+
+Replace the theme files. `boi_migrate_seed()` gives the scheduled article `opposition-to-islam-to-conversion` its new text and title where it is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab. Nothing to set.
+
+## Upgrading to 1.148.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 29 June to 8 August 2027 (D71), and WordPress publishes each on its day from its cron. Nothing to set, except on a host that turns off WP-Cron (`DISABLE_WP_CRON`): there a real cron job must run `wp cron event run --due-now`, or the articles miss their dates (D71).
+
+## Upgrading to 1.147.0
+
+Replace the theme files. `boi_migrate_seed()` gives unedited copies of four articles their new text (SSOT D72); an edited copy is listed on the Content tab. Nothing to set.
+
+## Upgrading to 1.146.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled (D71): the four Christmas articles for 6 November to 6 December 2027, and the article on former Christian ministers for 19 June 2027. WordPress publishes each on its day. The new tag Christmas is created with them. Nothing to set.
+
+## Upgrading to 1.145.0
+
+Replace the theme files. `boi_create_listicles()` creates the new article; sam-shamoun-under-oath refreshes where unedited.
+
+## Upgrading to 1.144.0
+
+Replace the theme files. The article sam-shamoun-under-oath refreshes where unedited, and its five photographs are added to the media library.
+
+## Upgrading to 1.143.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 30 April to 9 June 2027 (D71), and WordPress publishes each on its day. Nothing to set.
+
+## Upgrading to 1.142.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles as Scheduled for 11 March to 20 April 2027 (D71), and WordPress publishes each on its day. Nothing to set.
+
+## Upgrading to 1.141.0
+
+Replace the theme files and load the dashboard once: `boi_migrate_seed_terms()` moves sixteen articles to their new section and category. A post you filed yourself keeps your choice. Arts & Culture (4), Science (7) and The Muslim World (8) stay small until new articles are written for them.
+
+## Upgrading to 1.140.0
+
+Replace the theme files. `boi_create_listicles()` creates the article "Sam Shamoun under oath" when the version changes.
+
+## Upgrading to 1.139.0
+
+Replace the theme files. `boi_migrate_seed()` gives unedited articles their Bible links; an edited copy is listed on the Content tab. The Glossary sync rebuilds its pages once.
+
+## Upgrading to 1.138.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles and the tags "Atonement" and "Repentance" when the version changes. Each is created as Scheduled for its date in the publishing schedule (D71), from 20 January to 19 February 2027, and WordPress publishes it on the day. The five articles of 1.137.0 are scheduled too (1 December 2026 to 1 March 2027) on a site that has not yet created them; where 1.137.0 already published them, they stay published. If the host turns off WP-Cron, run `wp cron event run --due-now` from a real cron job so scheduled posts go out on time.
+
+## Upgrading to 1.137.0
+
+Replace the theme files. `boi_create_listicles()` creates the five new articles and the "Original sin" tag when the version changes. They keep the date they arrive, so they lead the front page (D69). Nothing to set.
+
+## Upgrading to 1.136.0
+
+Replace the theme files. `boi_migrate_seed()` refreshes the eight enriched articles where the article is unedited, unless `BOI_DISABLE_CONTENT_SYNC` is set; an edited copy is listed on the Content tab.
+
+## Upgrading to 1.135.0
+
+Replace the theme files. The Glossary sync runs once on the version change (`BOI_GLOSSARY_VERSION` 23) and adds the "In the classical dictionaries" section to the entry pages you have not edited. An entry page you rewrote keeps your text. Nothing else to do.
 
 ## Upgrading to 1.133.0
 
@@ -448,7 +532,7 @@ What remains is 1 to 2 px of rounding in the article body and the 10 px lead-and
 
 ## Roadmap
 
-These are plans, not promises. Each item rests on something on record: the code, the server logs of November 2026, a documented limit, or a feature another of the owner's themes already has. Items leave this list when they ship and go into `CHANGELOG.md`. GitHub had no open issues or pull requests when the list was last checked (2026-11-05), and the code carries no TODO markers.
+These are plans, not promises. Each item rests on something on record: the code, the server logs of November 2026, a documented limit, or a feature another of the owner's themes already has. Items leave this list when they ship and go into `CHANGELOG.md`. When the list was last checked (2026-11-26), GitHub had no open issues and one open release pull request, and the code carried no TODO markers.
 
 ### Next
 
@@ -457,8 +541,7 @@ These are plans, not promises. Each item rests on something on record: the code,
 - Export, import and reset for Theme Options. The abrahamic theme has all three on its Tools tab; here a move to a new site means setting every tab again by hand.
 - Error pages on a network. The admin-page repair runs on the main site only (`boi_error_maybe_sync()`), so the shared drop-ins stop updating once it leaves the theme, while activation and a settings save on any subsite run `boi_error_sync()` unguarded and can rewrite them with that subsite's address. The abrahamic theme hands the job to one site, the lowest ID that runs it.
 - Keep the root `.htaccess` sections on a network when one site leaves the theme. `boi_sec_remove_htaccess()` runs on any site's `switch_theme`, and the shared file then lacks both sections until another site's next sync.
-- One limit for meta descriptions. `docs/SSOT.md` says excerpts stay within 130 characters, while `docs/SEO.md` and `boi_print_meta_description()` allow 160, and 53 seeded excerpts run between 131 and 160. The owner decides which limit stands; then either those excerpts are shortened or the SSOT is changed to 160.
-- A stricter test before the seed migration refreshes an article. `boi_migrate_seed()` treats an article with no stored fingerprint as untouched when its modified time equals its creation time, so an edit made directly in the database, or by a plugin that keeps the old modified date, would be replaced on the next update. Requiring a stored fingerprint before any refresh would close that path (raised in the review of pull request 88).
+- One limit for meta descriptions. `docs/SSOT.md` says excerpts stay within 130 characters, while `docs/SEO.md` and `boi_print_meta_description()` allow 160, and 102 of the 199 seeded excerpts run between 131 and 160. The owner decides which limit stands; then either those excerpts are shortened or the SSOT is changed to 160.
 - The theme's PHP checked against the owner's `php-maintainable-code` skill, for readable, secure and maintainable conventions.
 - A notice on the Security tab when development files could not be removed. `inc/dev-files.php` (1.128.0) reports them only in the PHP error log, once a day, which many owners never read.
 
@@ -466,13 +549,12 @@ These are plans, not promises. Each item rests on something on record: the code,
 
 - A preview of the `bestofislam/lead-list` block in the Site Editor. It renders on the server only, so the editor shows a placeholder. Waits on an editor script for the theme's server-rendered blocks.
 - A translation template, `languages/bestofislam.pot`. The FAQ in `readme.txt` tells owners where to put a `.mo` file, but the theme ships no template to make one from. The injil.help and compelling-evidence themes ship a `languages/` folder. Waits on a string freeze after the current round of article work.
-- More "In the classical dictionaries" notes on Glossary entries: 67 of 784 carry them. Waits on arabiclexicon.hawramani.com, whose security certificate had expired when last checked on 18 November 2026.
 - A full Content-Security-Policy. `inc/security-headers.php` sends `frame-ancestors` only, because WordPress and its plugins print inline scripts and styles an enforcing policy would block. Waits on WordPress core.
 
 ### Ideas
 
 - A sticky contents variant for long articles, as the compelling-evidence theme has (`#ce-toc`). The contents here are inline only.
-- Key points for the 174 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
+- Key points for the 199 seeded articles. The box is built, but no seeded article carries key points yet, so it shows only the questions panel.
 - A crawl rule for the heaviest bots. In the November 2026 log QlyzeBot made 1,014 requests and Amazonbot 825, against 378 from Googlebot.
 - Fixed publication dates for seeded articles, as the abrahamic seeder has (`post_date`, published or Scheduled), so new articles can go out on a plan.
 - An image sitemap that stays on beside Rank Math. `boi_image_sitemap_enabled()` turns it off whenever Rank Math is active, and leaves the images to Rank Math's own sitemap; weigh whether the theme's licence data should reach search engines there too.

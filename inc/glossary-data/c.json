@@ -89,7 +89,18 @@
    "Khalifa",
    "Khilafa",
    "Caliphate"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ ل ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والخِلافةُ النّيابة عن الغير إمّا لغيبة المنوب عنه، وإمّا لموته، وإمّا لعجزه، وإمّا لتشريف المستخلف. وعلى هذا الوجه الأخير استخلف الله أولياءه في الأرض، قال تعالى: هُوَ الَّذِي جَعَلَكُمْ خَلائِفَ فِي الْأَرْضِ [فاطر/ 39]",
+     "gloss": "Al-Rāghib defines <em>khilāfa</em> as standing in for another, because the other is absent, has died or cannot act, or to honour the one appointed. In that last sense, he says, God has made His friends successors in the earth, as in 35:39.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8780#fc3fb9"
+    }
+   ]
+  }
  },
  {
   "slug": "canaan",
@@ -226,7 +237,18 @@
    "Daughters",
    "Infanticide",
    "Children Of Adam"
-  ]
+  ],
+  "lexicon": {
+   "root": "و ل د",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الوَلَدُ: المَوْلُودُ. يقال للواحد والجمع والصّغير والكبير.",
+     "gloss": "Al-Rāghib defines <em>walad</em> as the one born, and says it is used for one or many, young or grown.",
+     "url": "https://arabiclexicon.hawramani.com/?p=6875#87870e"
+    }
+   ]
+  }
  },
  {
   "slug": "china",
@@ -280,7 +302,18 @@
    "Christianity",
    "Nasara",
    "Nazarenes"
-  ]
+  ],
+  "lexicon": {
+   "root": "ن ص ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَالنَّصَارَى قيل: سُمُّوا بذلك لقوله: كُونُوا أَنْصارَ اللَّهِ كَما قالَ عِيسَى ابْنُ مَرْيَمَ لِلْحَوارِيِّينَ مَنْ أَنْصارِي إِلَى اللَّهِ قالَ الْحَوارِيُّونَ نَحْنُ أَنْصارُ اللَّهِ [الصف/ 14] ، وقيل: سُمُّوا بذلك انتسابا إلى قرية يقال لها: نَصْرَانَةُ، فيقال: نَصْرَانِيٌّ، وجمْعُه نَصَارَى",
+     "gloss": "Al-Rāghib reports two views on the name <em>Naṣārā</em>: that it comes from 61:14, where the disciples of ʿĪsā say \"We are God's helpers (<em>anṣār</em>)\", or that it refers to a village called Naṣrāna, from which comes <em>naṣrānī</em>, plural <em>naṣārā</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=4549#e43114"
+    }
+   ]
+  }
  },
  {
   "slug": "christmas",
@@ -358,7 +391,18 @@
    "Khitan",
    "Female Circumcision",
    "FGM"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ ت ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وسمّت العرب كلّ من حجّ أو اختتن حنيفا، تنبيها أنّه على دين إبراهيم",
+     "gloss": "Al-Rāghib says the Arabs called anyone who made the pilgrimage or was circumcised a <em>ḥanīf</em>, as a sign that he followed the religion of Ibrāhīm.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1419#54562a"
+    }
+   ]
+  }
  },
  {
   "slug": "commandments",
@@ -466,7 +510,18 @@
    "Cave, The People Of",
    "People Of The Cave",
    "Seven Sleepers"
-  ]
+  ],
+  "lexicon": {
+   "root": "ك ه ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْكَهْفُ: الغار في الجبل، وجمعه كُهُوفٌ.قال تعالى: أَنَّ أَصْحابَ الْكَهْفِ الآية [الكهف/ 9]",
+     "gloss": "Al-Rāghib defines <em>kahf</em> as a cave in a mountain, and cites 18:9, \"the companions of the cave\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=3900#619392"
+    }
+   ]
+  }
  },
  {
   "slug": "companions-of-the-prophet",
@@ -497,7 +552,18 @@
    "Ashab",
    "Companions",
    "Sahaba"
-  ]
+  ],
+  "lexicon": {
+   "root": "ص ح ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الصَّاحِبُ: الملازم إنسانا كان أو حيوانا، أو مكانا، أو زمانا. ولا فرق بين أن تكون مُصَاحَبَتُهُ بالبدن- وهو الأصل والأكثر-، أو بالعناية والهمّة، وعلى هذا قال: لئن غبت عن عزيني لما غبت عن قلبي ولا يقال في العرف إلّا لمن كثرت ملازمته",
+     "gloss": "Al-Rāghib defines <em>ṣāḥib</em> as one who keeps close company, with a person, an animal, a place or a time, in body or in care and concern. In common use, he says, the word is kept for one whose company is frequent.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8143#0867b1"
+    }
+   ]
+  }
  },
  {
   "slug": "conception",
@@ -617,7 +683,18 @@
    "The Cow",
    "Baqara",
    "Cow, The Yellow"
-  ]
+  ],
+  "lexicon": {
+   "root": "ب ق ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البَقَر واحدته بَقَرَة. قال الله تعالى: إِنَّ الْبَقَرَ تَشابَهَ عَلَيْنا [البقرة/ 70] ، وقال: بَقَرَةٌ لا فارِضٌ وَلا بِكْرٌ [البقرة/ 68] ، بَقَرَةٌ صَفْراءُ فاقِعٌ لَوْنُها [البقرة/ 69]",
+     "gloss": "Al-Rāghib gives <em>baqara</em> as the singular of <em>baqar</em>, cattle, and cites the verses of the cow in 2:68-70, among them \"a yellow cow, bright in colour\" (2:69).",
+     "url": "https://arabiclexicon.hawramani.com/?p=1754#63a090"
+    }
+   ]
+  }
  },
  {
   "slug": "creation",
@@ -649,7 +726,18 @@
    "Day",
    "Universe",
    "Yawm"
-  ]
+  ],
+  "lexicon": {
+   "root": "خ ل ق",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الخَلْقُ أصله: التقدير المستقيم، ويستعمل في إبداع الشّيء من غير أصل ولا احتذاء، قال: خَلْقِ السَّماواتِ وَالْأَرْضِ [الأنعام/ 1]",
+     "gloss": "Al-Rāghib says <em>khalq</em> is at root right measuring, and is used for originating a thing with no prior matter or model, as in 6:1, \"who created the heavens and the earth\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8806#a7661e"
+    }
+   ]
+  }
  },
  {
   "slug": "crescent",
@@ -675,7 +763,18 @@
   ],
   "aliases": [
    "Crescent Moon Symbol"
-  ]
+  ],
+  "lexicon": {
+   "root": "ه ل ل",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الْهِلَالُ: القمر في أوّل ليلة والثّانية، ثم يقال له القمر، ولا يقال: له هِلَالٌ، وجمعه: أَهِلَّةٌ، قال الله تعالى: يَسْئَلُونَكَ عَنِ الْأَهِلَّةِ قُلْ هِيَ مَواقِيتُ لِلنَّاسِ وَالْحَجِ [البقرة/ 189]",
+     "gloss": "Al-Rāghib says <em>hilāl</em> is the moon on its first and second night; after that it is called <em>qamar</em>. He cites 2:189, where the new moons are \"times appointed for people and for the pilgrimage\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8468#fadc48"
+    }
+   ]
+  }
  },
  {
   "slug": "crucifixion",
@@ -699,7 +798,24 @@
    "crucifixion-quran",
    "shared-prophets"
   ],
-  "aliases": []
+  "aliases": [],
+  "lexicon": {
+   "root": "ص ل ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والصَّلْبُ الذي هو تعليق الإنسان للقتل، قيل: هو شدّ صُلْبِهِ على خشب، وقيل: إنما هو من صَلْبِ الوَدَكِ.",
+     "gloss": "Al-Rāghib says <em>ṣalb</em>, hanging a person up to kill him, is explained either as binding his back (<em>ṣulb</em>) to wood, or as taken from <em>ṣalb al-wadak</em>, drawing the fat out of bone. Under this root he cites 4:157, \"they did not kill him and they did not crucify him\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=8154#b557ca"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وَما قَتَلُوهُ يَقِيناً [النساء/ 157] ، أي: ما علموا كونه مصلوبا علما يقينا",
+     "gloss": "On 4:157, \"and they did not kill him for certain\", he says it means they had no certain knowledge that he had been crucified.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5221#481a0b"
+    }
+   ]
+  }
  },
  {
   "slug": "crusades",
@@ -744,7 +860,18 @@
   "articles": [],
   "aliases": [
    "Curses"
-  ]
+  ],
+  "lexicon": {
+   "root": "ل ع ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "اللَّعْنُ: الطّرد والإبعاد على سبيل السّخط، وذلك من الله تعالى في الآخرة عقوبة، وفي الدّنيا انقطاع من قبول رحمته وتوفيقه، ومن الإنسان دعاء على غيره.",
+     "gloss": "Al-Rāghib defines <em>laʿn</em> as driving away and putting far off in anger. From God it is punishment in the hereafter and, in this world, being cut off from His mercy and help; from a human being it is a prayer against another.",
+     "url": "https://arabiclexicon.hawramani.com/?p=8092#ab6546"
+    }
+   ]
+  }
  },
  {
   "slug": "custom",
@@ -770,6 +897,17 @@
   "aliases": [
    "Customs",
    "Urf"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ر ف",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والعُرْفُ: المَعْرُوفُ من الإحسان، وقال: وَأْمُرْ بِالْعُرْفِ [الأعراف/ 199]",
+     "gloss": "Al-Rāghib defines <em>ʿurf</em> as kindness that is recognised as such, and cites 7:199, \"enjoin what is recognised as good\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=655#1fe06c"
+    }
+   ]
+  }
  }
 ]

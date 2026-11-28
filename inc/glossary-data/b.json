@@ -95,9 +95,9 @@
   "type": "topic",
   "ar": "بكة",
   "tr": "Bakka",
-  "def": "A name in Psalm 84:6; the Quran uses a similar name, Bakka, for Mecca (3:96).",
+  "def": "A name in <a href=\"https://thebible.exposed/bible/psalms/84/#v6\">Psalm 84:6</a>; the Quran uses a similar name, Bakka, for Mecca (3:96).",
   "what": [
-   "“The first house established for mankind was that at Bakka, blessed and a guidance for all the worlds” (3:96). Some Muslim writers connect it with the “valley of Baca” in Psalm 84:6. Scholars, Muslim and other, differ, and nothing in Islamic belief depends on it. Muslims say Bakka is an old name of Mecca, or the site of the Kaaba within it."
+   "“The first house established for mankind was that at Bakka, blessed and a guidance for all the worlds” (3:96). Some Muslim writers connect it with the “valley of Baca” in <a href=\"https://thebible.exposed/bible/psalms/84/#v6\">Psalm 84:6</a>. Scholars, Muslim and other, differ, and nothing in Islamic belief depends on it. Muslims say Bakka is an old name of Mecca, or the site of the Kaaba within it."
   ],
   "misread": "",
   "sources": [],
@@ -131,7 +131,18 @@
   ],
   "aliases": [
    "Ghiba"
-  ]
+  ],
+  "lexicon": {
+   "root": "غ ي ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والْغِيبَةُ: أن يذكر الإنسان غيره بما فيه من عيب من غير أن أحوج إلى ذكره، قال تعالى: وَلا يَغْتَبْ بَعْضُكُمْ بَعْضاً [الحجرات/ 12]",
+     "gloss": "Al-Rāghib defines <em>ghība</em> as mentioning another person's fault when there was no need to mention it, and cites 49:12, \"do not backbite one another\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=2709#56f537"
+    }
+   ]
+  }
  },
  {
   "slug": "badawi-jamal",
@@ -211,7 +222,7 @@
   ],
   "misread": "",
   "sources": [
-   "The Bible says the Israelites in Egypt made bricks (Exodus 1:14), and fired brick has been found at Egyptian sites, so the verse is not out of place. See the Haman article for the other objection raised against this passage."
+   "The Bible says the Israelites in Egypt made bricks (<a href=\"https://thebible.exposed/bible/exodus/1/#v14\">Exodus 1:14</a>), and fired brick has been found at Egyptian sites, so the verse is not out of place. See the Haman article for the other objection raised against this passage."
   ],
   "terms": [
    "haman",
@@ -253,7 +264,7 @@
   "tr": "",
   "def": "A companion of Paul in Acts; a late “Gospel of Barnabas” in which Muhammad (peace be upon him) is foretold is not an early text.",
   "what": [
-   "Barnabas was a Levite from Cyprus and an early Christian leader (Acts 4:36). The Gospel of Barnabas that some Muslims cite survives in Italian and Spanish manuscripts of the sixteenth century and is thought by most scholars to be a medieval work, with Islamic material in it."
+   "Barnabas was a Levite from Cyprus and an early Christian leader (<a href=\"https://thebible.exposed/bible/acts/4/#v36\">Acts 4:36</a>). The Gospel of Barnabas that some Muslims cite survives in Italian and Spanish manuscripts of the sixteenth century and is thought by most scholars to be a medieval work, with Islamic material in it."
   ],
   "misread": "",
   "sources": [
@@ -329,7 +340,18 @@
   "articles": [],
   "aliases": [
    "A'rab"
-  ]
+  ],
+  "lexicon": {
+   "root": "ع ر ب",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والأَعْرَابِيُّ في التّعارف صار اسما للمنسوبين إلى سكّان البادية",
+     "gloss": "In common use, al-Rāghib says, <em>aʿrābī</em> came to name anyone counted among the desert dwellers.",
+     "url": "https://arabiclexicon.hawramani.com/?p=310#3dac2d"
+    }
+   ]
+  }
  },
  {
   "slug": "begging",
@@ -358,7 +380,7 @@
   "tr": "",
   "def": "The Quran’s statement that God neither begets nor is begotten (112:3), directed at the belief that God has a son in a literal sense.",
   "what": [
-   "“He neither begets nor is begotten” (112:3). “It is not for God to take a son; glory be to Him” (19:35). “How could He have a son when He has no consort?” (6:101). Muslims read these as rejecting the idea of a child born to God by generation. The Bible uses “son of God” of Israel (Exodus 4:22), of kings (Psalm 2:7), and of the righteous."
+   "“He neither begets nor is begotten” (112:3). “It is not for God to take a son; glory be to Him” (19:35). “How could He have a son when He has no consort?” (6:101). Muslims read these as rejecting the idea of a child born to God by generation. The Bible uses “son of God” of Israel (<a href=\"https://thebible.exposed/bible/exodus/4/#v22\">Exodus 4:22</a>), of kings (<a href=\"https://thebible.exposed/bible/psalms/2/#v7\">Psalm 2:7</a>), and of the righteous."
   ],
   "misread": "",
   "sources": [
@@ -825,7 +847,18 @@
   "aliases": [
    "Romans",
    "Rum"
-  ]
+  ],
+  "lexicon": {
+   "root": "ر و م",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "الم غُلِبَتِ الرُّومُ [الروم/ 1- 2] ، يقال مرّة للجيل المعروف، وتارة لجمع رُومِيٍّ كالعجم.",
+     "gloss": "On 30:2, \"the Romans have been defeated\", al-Rāghib says <em>al-Rūm</em> is said at times of the well-known people, and at times as the plural of <em>rūmī</em>, in the way <em>ʿajam</em> is used.",
+     "url": "https://arabiclexicon.hawramani.com/?p=5682#b9a483"
+    }
+   ]
+  }
  },
  {
   "slug": "badi-al",
@@ -857,6 +890,17 @@
   "faruqi": {
    "page": 24,
    "term": "AL BĀDI'"
+  },
+  "lexicon": {
+   "root": "ب د أ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والله هو المُبْدِئُ المعيد ، أي: هو السبب في المبدأ والنهاية",
+     "gloss": "Al-Rāghib says God is <em>al-Mubdiʾ al-Muʿīd</em>, the One who begins and brings back: He is the cause of the beginning and of the end.",
+     "url": "https://arabiclexicon.hawramani.com/?p=10873#c05820"
+    }
+   ]
   }
  },
  {
@@ -886,6 +930,23 @@
   "faruqi": {
    "page": 25,
    "term": "AL BAGHY"
+  },
+  "lexicon": {
+   "root": "ب غ ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البَغْي: طلب تجاوز الاقتصاد فيما يتحرّى، تجاوزه أم لم يتجاوزه",
+     "gloss": "Al-Rāghib defines <em>baghy</em> as seeking to pass beyond the right measure in what one pursues, whether one passes it or not.",
+     "url": "https://arabiclexicon.hawramani.com/?p=16907#3205c2"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبَغْيُ على ضربين: - أحدهما محمود، وهو تجاوز العدل إلى الإحسان، والفرض إلى التطوع. - والثاني مذموم، وهو تجاوز الحق إلى الباطل، أو تجاوزه إلى الشّبه",
+     "gloss": "He counts two kinds. The praised kind passes beyond justice into <em>iḥsān</em>, and beyond the duty into the voluntary. The blamed kind passes beyond the truth into falsehood, or into what is doubtful.",
+     "url": "https://arabiclexicon.hawramani.com/?p=16907#3205c2"
+    }
+   ]
   }
  },
  {
@@ -915,6 +976,17 @@
   "faruqi": {
    "page": 25,
    "term": "AL BALĀGH"
+  },
+  "lexicon": {
+   "root": "ب ل غ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبَلَاغ: التبليغ، نحو قوله عزّ وجلّ: هذا بَلاغٌ لِلنَّاسِ [إبراهيم/ 52]",
+     "gloss": "Al-Rāghib says <em>balāgh</em> means delivering the message, as in 14:52: \"This is a message for mankind.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=1890#44a036"
+    }
+   ]
   }
  },
  {
@@ -942,6 +1014,17 @@
   "faruqi": {
    "page": 25,
    "term": "AL BĀQĪ"
+  },
+  "lexicon": {
+   "root": "ب ق ي",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والباقي ضربان: باق بنفسه لا إلى مدّة وهو الباري تعالى، ولا يصحّ عليه الفناء، وباق بغيره وهو ما عداه ويصح عليه الفناء.",
+     "gloss": "Al-Rāghib divides what endures into two kinds. One endures by itself, without limit of time, and that is the Creator, of whom passing away cannot be said. The other endures through another, and that is everything besides Him, of which passing away can be said.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2072#efb554"
+    }
+   ]
   }
  },
  {
@@ -967,6 +1050,23 @@
   "faruqi": {
    "page": 24,
    "term": "BĀRAKA"
+  },
+  "lexicon": {
+   "root": "ب ر ك",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل البَرْك صدر البعير وإن استعمل في غيره، ويقال له: بركة، وبَرَكَ البعير: ألقى بركه، واعتبر منه معنى اللزوم",
+     "gloss": "Al-Rāghib traces the root to <em>bark</em>, the breast of a camel: <em>baraka al-baʿīr</em> is said when the camel kneels, and from it comes the sense of staying fixed in place.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1926#ef950f"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبَرَكَةُ: ثبوت الخير الإلهي في الشيء.قال تعالى: لَفَتَحْنا عَلَيْهِمْ بَرَكاتٍ مِنَ السَّماءِ وَالْأَرْضِ [الأعراف/ 96]",
+     "gloss": "He defines <em>baraka</em> as the settled presence of divine good in a thing, and cites 7:96, \"We would have opened to them blessings from the sky and the earth\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1926#ef950f"
+    }
+   ]
   }
  },
  {
@@ -992,6 +1092,17 @@
   "faruqi": {
    "page": 60,
    "term": "BĀRAKA ALLAH FĪK (or FĪKUM)."
+  },
+  "lexicon": {
+   "root": "ب ر ك",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبَرَكَةُ: ثبوت الخير الإلهي في الشيء.قال تعالى: لَفَتَحْنا عَلَيْهِمْ بَرَكاتٍ مِنَ السَّماءِ وَالْأَرْضِ [الأعراف/ 96]",
+     "gloss": "Al-Rāghib defines <em>baraka</em> as the settled presence of divine good in a thing, and cites 7:96, \"We would have opened to them blessings from the sky and the earth\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1926#ef950f"
+    }
+   ]
   }
  },
  {
@@ -1020,6 +1131,17 @@
   "faruqi": {
    "page": 24,
    "term": "AL BĀRI'"
+  },
+  "lexicon": {
+   "root": "ب ر أ",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبارئ خصّ بوصف الله تعالى، نحو قوله: الْبارِئُ الْمُصَوِّرُ [الحشر/ 24]",
+     "gloss": "Al-Rāghib says <em>al-Bāriʾ</em> is kept for God alone, as in 59:24, \"the Maker, the Shaper\".",
+     "url": "https://arabiclexicon.hawramani.com/?p=1612#f767ad"
+    }
+   ]
   }
  },
  {
@@ -1045,6 +1167,17 @@
   "faruqi": {
    "page": 24,
    "term": "BASHĪR"
+  },
+  "lexicon": {
+   "root": "ب ش ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبشير: المُبَشِّر، قال تعالى: فَلَمَّا أَنْ جاءَ الْبَشِيرُ أَلْقاهُ عَلى وَجْهِهِ فَارْتَدَّ بَصِيراً [يوسف/ 96]",
+     "gloss": "Al-Rāghib glosses <em>bashīr</em> as <em>mubashshir</em>, the bringer of good news, and cites 12:96, where the bearer of good news laid the shirt on the face of Yūsuf's father and his sight returned.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1742#895e89"
+    }
+   ]
   }
  },
  {
@@ -1075,6 +1208,17 @@
   "faruqi": {
    "page": 25,
    "term": "AL BAṢĪR"
+  },
+  "lexicon": {
+   "root": "ب ص ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البَصَر يقال للجارحة الناظرة، نحو قوله تعالى: كَلَمْحِ الْبَصَرِ [النحل/ 77] ، ووَ إِذْ زاغَتِ الْأَبْصارُ [الأحزاب/ 10] ، وللقوّة التي فيها، ويقال لقوة القلب المدركة: بَصِيرَة وبَصَر",
+     "gloss": "Al-Rāghib says <em>baṣar</em> is said of the eye that sees and of the power within it, and that the heart's power to perceive is also called <em>baṣīra</em> and <em>baṣar</em>. He cites 16:77 and 33:10.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1743#4a6bea"
+    }
+   ]
   }
  },
  {
@@ -1103,6 +1247,17 @@
   "faruqi": {
    "page": 25,
    "term": "AL BA'TH"
+  },
+  "lexicon": {
+   "root": "ب ع ث",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "أصل البَعْث: إثارة الشيء وتوجيهه، يقال: بَعَثْتُهُ فَانْبَعَثَ، ويختلف البعث بحسب اختلاف ما علّق به، فَبَعَثْتُ البعير: أثرته وسيّرته، وقوله عزّ وجل: وَالْمَوْتى يَبْعَثُهُمُ اللَّهُ [الأنعام/ 36] ، أي: يخرجهم ويسيرهم إلى القيامة",
+     "gloss": "Al-Rāghib says the root sense of <em>baʿth</em> is to rouse a thing and send it on its way. Of the dead in 6:36 it means that God brings them out and drives them on to the Resurrection.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1641#4ac69b"
+    }
+   ]
   }
  },
  {
@@ -1168,6 +1323,17 @@
   "faruqi": {
    "page": 25,
    "term": "AL BĀṬIN"
+  },
+  "lexicon": {
+   "root": "ب ط ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والظاهر والباطن في صفات الله تعالى: لا يقال إلا مزدوجين، كالأوّل والآخر",
+     "gloss": "Al-Rāghib says that among the attributes of God, <em>al-Ẓāhir</em> and <em>al-Bāṭin</em> are only ever said as a pair, like <em>al-Awwal</em> and <em>al-Ākhir</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2037#cd116d"
+    }
+   ]
   }
  },
  {
@@ -1198,6 +1364,23 @@
   "faruqi": {
    "page": 25,
    "term": "BAY'AH"
+  },
+  "lexicon": {
+   "root": "ب ي ع",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وبَايَعَ السلطان: إذا تضمّن بذل الطاعة له بما رضخ له، ويقال لذلك: بَيْعَة ومُبَايَعَة.",
+     "gloss": "Al-Rāghib says that to give <em>bayʿa</em> to a ruler is to pledge him obedience in return for what he grants, and that this is called <em>bayʿa</em> or <em>mubāyaʿa</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=1883#8d9bab"
+    },
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "وقوله عزّ وجل: فَاسْتَبْشِرُوا بِبَيْعِكُمُ الَّذِي بايَعْتُمْ بِهِ [التوبة/ 111] ، إشارة إلى بيعة الرضوان المذكورة في قوله تعالى: لَقَدْ رَضِيَ اللَّهُ عَنِ الْمُؤْمِنِينَ إِذْ يُبايِعُونَكَ تَحْتَ الشَّجَرَةِ [الفتح/ 18]",
+     "gloss": "He reads 9:111, \"rejoice in the bargain you have made\", as a pointer to the Pledge of Riḍwān under the tree (48:18).",
+     "url": "https://arabiclexicon.hawramani.com/?p=1883#8d9bab"
+    }
+   ]
   }
  },
  {
@@ -1225,6 +1408,17 @@
   "faruqi": {
    "page": 26,
    "term": "AL BAYĀN"
+  },
+  "lexicon": {
+   "root": "ب ي ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبَيَان: الكشف عن الشيء، وهو أعمّ من النطق، لأنّ النطق مختص بالإنسان، ويسمّى ما بيّن به بيانا.",
+     "gloss": "Al-Rāghib defines <em>bayān</em> as uncovering a thing. It is wider than speech, he says, because speech belongs to human beings alone, and whatever makes a thing clear is also called <em>bayān</em>.",
+     "url": "https://arabiclexicon.hawramani.com/?p=2048#43e8b4"
+    }
+   ]
   }
  },
  {
@@ -1280,6 +1474,17 @@
   "faruqi": {
    "page": 26,
    "term": "AL BAYYINAH"
+  },
+  "lexicon": {
+   "root": "ب ي ن",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والبَيِّنَة: الدلالة الواضحة عقلية كانت أو محسوسة، وسمي الشاهدان بيّنة لقوله عليه السلام: «البيّنة على المدّعي واليمين على من أنكر»",
+     "gloss": "Al-Rāghib defines <em>bayyina</em> as clear proof, whether of reason or of the senses. Two witnesses are called <em>bayyina</em>, he says, after the saying of the Prophet (peace be upon him): \"The proof is on the claimant, and the oath on the one who denies.\"",
+     "url": "https://arabiclexicon.hawramani.com/?p=2048#43e8b4"
+    }
+   ]
   }
  },
  {
@@ -1308,6 +1513,17 @@
   "faruqi": {
    "page": 24,
    "term": "AL BIRR"
+  },
+  "lexicon": {
+   "root": "ب ر ر",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "البَرُّ خلاف البحر، وتصوّر منه التوسع فاشتق منه البِرُّ، أي: التوسع في فعل الخير، وينسب ذلك إلى الله تعالى تارة نحو: إِنَّهُ هُوَ الْبَرُّ الرَّحِيمُ [الطور/ 28] ، وإلى العبد تارة، فيقال: بَرَّ العبد ربه، أي: توسّع في طاعته، فمن الله تعالى الثواب، ومن العبد الطاعة.",
+     "gloss": "Al-Rāghib says <em>barr</em>, dry land, is the opposite of the sea, and from its breadth comes <em>birr</em>, breadth in doing good. It is said of God, as in 52:28, and of the servant, who is <em>barr</em> to his Lord when he is broad in obeying Him: from God the reward, from the servant the obedience.",
+     "url": "https://arabiclexicon.hawramani.com/?p=50040#ac1e98"
+    }
+   ]
   }
  },
  {
@@ -1335,12 +1551,27 @@
   ],
   "articles": [],
   "type": "worship",
-  "aliases": [],
+  "aliases": [
+   "Basmala",
+   "Bismillah al-Rahman al-Rahim",
+   "Bismillahir Rahmanir Rahim"
+  ],
   "faruqi": {
    "page": 56,
    "term": "BISMI ALLAH AL RAḤMĀN AL RAḤĪM."
   },
-  "quran_ref": "1:1"
+  "quran_ref": "1:1",
+  "lexicon": {
+   "root": "س م و",
+   "notes": [
+    {
+     "src": "al-Rāghib al-Iṣfahānī, al-Mufradāt fī gharīb al-Qurʾān (d. about 1109)",
+     "ar": "والِاسْمُ: ما يعرف به ذات الشيء، وأصله سِمْوٌ، بدلالة قولهم: أسماء وسُمَيٌّ، وأصله من السُّمُوِّ وهو الذي به رفع ذكر الْمُسَمَّى فيعرف به",
+     "gloss": "Al-Rāghib defines <em>ism</em>, name, as that by which the essence of a thing is known. Its root is <em>sumūw</em>, height, he says, because a name raises the mention of what it names so that it becomes known.",
+     "url": "https://arabiclexicon.hawramani.com/?p=11096#c3cdd2"
+    }
+   ]
+  }
  },
  {
   "slug": "bismi-allah-alladhi-la-ilaha-illa-huwa",

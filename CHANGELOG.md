@@ -4,20 +4,272 @@ All notable changes to the Best of Islam child theme are recorded here. The
 format follows Keep a Changelog, and the project adheres to semantic
 versioning.
 
-## [1.134.0] - 2026-11-24
+## [1.156.0] - 2026-11-28
 
 No feature removed and no public identifier renamed.
 
 ### Changed
 - The Glossary through the voice standard, first part (`.claude/VOICE.md`, phase 4): 327 entries changed.
-  - "(peace be upon him)" follows the first mention of the Prophet in every entry that names him (271 entries). Where that mention was possessive, the phrase was rewritten ("the father of the Prophet (peace be upon him)").
+  - "(peace be upon him)" follows the first mention of the Prophet in every entry that names him. Where that mention was possessive, the phrase was rewritten by hand ("the father of the Prophet (peace be upon him)"). Entries on other men named Muhammad, such as al-Bukhari, are left alone, and so are quotations.
   - 37 contrastive constructions ("X, whereas it is Y", "not only", "rather than") now state what the thing is.
   - British spelling (judgement, centre, favoured, realisation, recognise, memorised), and "serves as", "in order to" and "realm" replaced.
   - "vivid" and "intuitive" removed from the entries for Hell and *al-dhawq al-sharʿī*.
 - Two articles drop "worth noting": verses-read-differently and will-every-non-muslim-go-to-hell.
-- Every web address in the article notes is now a link: 182 addresses in 74 articles were plain text, the new Shamela references among them.
+- Every web address in the article notes is now a link: 182 addresses in 74 articles were plain text, the Shamela references among them.
 - did-the-quran-say-muhammad-sinned says "we set out each of them" for the verses it lists (it said "in full", which read as a promise to quote them).
-- `BOI_GLOSSARY_VERSION` is 22, so the Glossary sync rewrites the changed entries where they are unedited.
+- `BOI_GLOSSARY_VERSION` is 27, so the Glossary sync rewrites the changed entries where they are unedited. README now gives the same number as the code.
+
+## [1.155.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles chosen from the competitor keyword exports, each in the Faruqian voice with its notes checked: did-abraham-build-the-kaaba, is-allah-baal-or-hubal, monogenes-only-begotten, synagogues-in-the-quran-and-islamic-history and what-the-talmud-says-about-jesus. Images from Wikimedia Commons: the Bomberg Talmud and Papyrus 66 (public domain), the Ugarit Baal stele (CC BY-SA 2.0 fr), the Kaaba during the Hajj (CC BY-SA 4.0) and the Ben Ezra Synagogue (CC BY-SA 3.0).
+- Tag description for Ishmael.
+
+## [1.154.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Glossary aliases: `iblis` gains Shaitan and Shaytaan; `bismi-allah-al-rahman-al-rahim` gains Basmala, Bismillah al-Rahman al-Rahim and Bismillahir Rahmanir Rahim. "Bismillah" alone stays with `common-phrases`. `BOI_GLOSSARY_VERSION` 26.
+
+## [1.153.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Glossary aliases: `istighfar` gains Astaghfirullah and Astagfirullah; `taqiyya` gains Taqiyah, Taqiya and Taqiyyah. These are the spellings people search for, and they now show on the entry pages and in their schema. `BOI_GLOSSARY_VERSION` 25.
+
+## [1.152.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 6 to 10 (Batch Two), rewritten to `.claude/VOICE.md` with every note checked (`docs/CITATIONS.md`). They take the last five slots of SSOT D71, so all forty slots are now filled:
+  - did-paul-receive-his-gospel-from-jesus (7 October 2027): five questions on Galatians 1:12, with Winger (1994) and Oropeza (2024).
+  - paul-and-circumcision (17 October 2027): five passages, from Genesis 17 to 1 Corinthians 7, with Fredriksen (2010) and Smit (2017).
+  - pauline-teachings-that-shaped-christian-theology (27 October 2027): six teachings from the seven undisputed letters, each set beside the Quran.
+  - jesus-prayed-at-night-and-before-dawn (16 December 2027): four occasions in the Gospels, with Harkins (2018) on Gethsemane.
+  - religious-practices-of-jesus-muslims-recognise (26 December 2027): six practices in the Gospels and their Islamic counterparts.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The articles join the reading order beside the existing articles on Paul and on the prayer and fasting of Jesus, with pinned related links. Two link to apostleofdoom.org, as the owner asked for the articles on Paul.
+
+## [1.151.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles on Paul from drafts the owner sent on 2026-11-27, rewritten to `.claude/VOICE.md` with every note checked (`docs/CITATIONS.md`). They take five of the ten slots held for further drafts under SSOT D71, ten days apart from 18 August to 27 September 2027, in the order of Paul's life:
+  - saul-of-tarsus-before-conversion: six facts, each marked by whether Paul's letters or Acts gives it.
+  - paul-damascus-road-contradictions: five differences between Acts 9, 22 and 26, with the New American Bible's notes and Wallace on the Greek.
+  - paul-peter-antioch-confrontation: five facts on Galatians 2:11 to 14.
+  - paul-james-faith-and-works: six points, from Romans 3:28 and James 2:24 to the Quran on faith, deeds and mercy.
+  - epimenides-paradox-in-titus: five questions on Titus 1:12, with Cook (2021) and den Dulk (2026). The draft's slug had digits and is renamed.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order beside the existing articles on Paul, with pinned related links.
+- By the owner's request, each links in its text to the matching page on apostleofdoom.org (Saul the persecutor, the three accounts compared, Paul, Barnabas and Peter, justification by faith and James the brother, and the letters to Timothy and Titus). The contextual links of `inc/data/network-links.json` add others where its phrases occur; the shared map itself is unchanged.
+
+## [1.150.0] - 2026-11-27
+
+No feature removed. One article slug renamed, with a 301 redirect.
+
+### Changed
+- Honorific guard (`inc/honorific-guard.php`): removes an Arabic honorific a site plugin adds after the surname Gabriel in the case name "In re Marriage of Gabriel".
+- sam-shamoun-on-the-pbd-podcast is now sam-shamoun-on-two-podcasts, "Sam Shamoun on two podcasts: 14 claims checked against the sources". Five claims added from the Bryce Crawford Podcast, episode 182, each time linked to the video with `rel="nofollow noopener"`: his rule against bad-faith questions (Titus 3:10) against his own method; Ahaziah's age (2 Kings 8:26, 2 Chronicles 22:2) against the readings (Bukhari 4992); the double witness (Bukhari 4784, 4986, Abu Dawud 3607); the mountain passage (Bukhari 3, 6982); and Abu al-Darda's saying under the chapter on courtesy. 37 notes, with both episode titles and dates. Images renamed with the slug.
+
+## [1.149.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- opposition-to-islam-to-conversion, scheduled for 19 July 2027, adds Richard McKinney: the former Marine who went to the Islamic Center of Muncie, Indiana, in 2009 to plant a bomb and converted to Islam eight months later. The owner supplied the lead on 2026-11-27, and the facts are cited from CNN (John Blake, 8 October 2022) and the official site of *Stranger at the Gate*. The article's title, excerpt and abstract now count four stories.
+
+## [1.148.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 36 to 40, rewritten to `.claude/VOICE.md` and scheduled ten days apart from 29 June to 8 August 2027 (SSOT D71). Every case in them was checked against a source that could be read; cases that could not be confirmed were left out (`docs/CITATIONS.md`):
+  - from-atheism-to-islam: five questions (existence, oneness, suffering, morality, revelation), with Pew's 2017 figures and Michael David Shapiro's testimony.
+  - indonesian-conversion-stories: Iga Mawarni, Deddy Corbuzier, Felix Siauw and Roger Danuarta. The draft's five became four.
+  - opposition-to-islam-to-conversion: Joram van Klaveren, Arnoud van Doorn and the corrected story of Daniel Streich. The draft's five became three.
+  - why-people-convert-to-islam: the seven reasons American converts gave Pew in 2017, with Pew's 2025 study of switching.
+  - maria-hertogh-natrah-case: seven facts, from her birth in Java in 1937 to Justice Brown's judgment and the riots of December 1950.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
+## [1.147.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- Four articles on questions where Sunni and Shia Muslims differ now state the Sunni position, by the owner's decision (SSOT D72). The Shia position is still stated from its own sources:
+  - ridda-wars-abu-bakr-fadak: Abu Bakr applied the Prophet's ruling, "Our property is not to be inherited", which Ali and al-Abbas affirmed under oath before Umar (al-Bukhari), and Ali later gave Abu Bakr his pledge.
+  - end-of-time: Sunni scholarship accepts the Mahdi reports taken together (al-Tirmidhi grades Ibn Masʿud's report *ḥasan ṣaḥīḥ*), and the Mahdi of the Sunni reports bears the name of the Prophet's father, which excludes the Twelver hidden imam.
+  - taqiyya-myths: taqiyya is held to the Quran's limit, a concession under compulsion (16:106).
+  - temporary-marriage-mutah: the article states the Sunni position, permission for a time and then prohibition "until the Day of Resurrection".
+
+## [1.146.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 31 to 35, rewritten to `.claude/VOICE.md`, with every note checked again (`docs/CITATIONS.md`). They are scheduled under SSOT D71. The four Christmas articles take the season's slots, ten days apart from 6 November to 6 December 2027:
+  - was-jesus-born-on-christmas-day: six facts, from Clement of Alexandria and the Chronography of 354 to Nothaft, Bradshaw and Edwards.
+  - christmas-quran-jesus-birth: Surah Maryam, Matthew and Luke compared on five points.
+  - christmas-traditions-historical-origins: the tree, the crib, the gifts, Santa Claus, a carol and the greenery, each traced to its records.
+  - can-muslims-say-merry-christmas: five positions, from Ibn al-Qayyim to Dar al-Ifta and Malaysia's National Fatwa Committee.
+  - former-christian-ministers-who-embraced-islam: Keldani, Estes, Dirks, Jenkins and Tawfiq, scheduled for 19 June 2027.
+- A new tag, Christmas, for the four Christmas articles.
+- Each article has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+- The article counts in the readme, README and SSOT now include the Sam Shamoun article of 1.145.0.
+
+## [1.145.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- sam-shamoun-on-the-pbd-podcast: "Sam Shamoun on the PBD Podcast: 9 claims checked against the sources", in the Islamophobia section. Each claim is quoted from the transcript of PBD Podcast episode 684 with its time, and each time in the notes links to that moment of the video with `rel="nofollow noopener"`. Answered from Bukhari 3244, 2227, Muslim 804 and 2824, Abu Dawud 2135, Quran 3:49, 4:3, 4:128, 33:6, 56:17 and 78:31 to 33, the ESV (Isaiah 64:4, John 5:19, 26, 30, 14:6, 28, 17:3, 1 Corinthians 2:9, Genesis 4:10), Pew Research Center (2018) and the State Department on the 1962 abolition of slavery in Saudi Arabia. Images: a studio microphone, Papyrus 46 and Papyrus 66, all public domain.
+- sam-shamoun-under-oath links to it from its bottom line.
+
+## [1.144.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- sam-shamoun-under-oath: five Wikimedia Commons photographs replace the pattern graphics: the Richard J. Daley Center (featured, Ken Lund, CC BY-SA 2.0), a statue of Justice (James Cridland, CC BY 2.0), scales of justice (North Charleston, CC BY-SA 2.0), the Daley Center (GregMcCollum, CC0) and the Michael A. Bilandic Building, seat of the First District Appellate Court (TonyTheTiger, CC BY-SA 3.0). The notes write paragraph numbers in words in place of the ¶ sign. The line on the child-support recalculation is removed at the owner's request; the bottom line states only what the appellate court upheld. The opening quotes a 2024 God Reports profile of him ("unhinged, fiery Assyrian evangelist", "pugnacious debater").
+- `.claude/VOICE.md`: court findings are cited by paragraph in words, and rulings in a critic's favour are not reported, provided nothing left in implies he lost on every point.
+
+## [1.143.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 26 to 30, rewritten to `.claude/VOICE.md` and scheduled ten days apart from 30 April to 9 June 2027 (SSOT D71). Every note was checked again (`docs/CITATIONS.md`), except three page references to al-Fārūqī's *Cultural Atlas* and *Essential Writings*, which wait on the owner's copies; the article gives those points in paraphrase:
+  - camel-method: Kevin Greeson's 2004 method, Quran 3:42–55 read whole, and the Christian critics of the method.
+  - quran-passages-in-christian-missions: five passages missionaries quote (3:42–55, 3:45, 4:171, 5:110, 10:94), each read in its context.
+  - does-the-virgin-birth-make-jesus-divine: five answers from the Quran and the Gospels, with Luke 3:38.
+  - principles-of-dawah-in-the-quran: six principles, from 16:125 to 28:56, with al-Tabari and al-Faruqi.
+  - religious-pluralism-and-islam: five distinctions, with 5:48, 60:8, 2:62 and 3:85.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
+## [1.142.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 21 to 25, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`), and scheduled ten days apart from 11 March to 20 April 2027 (SSOT D71):
+  - jesus-sign-of-the-hour: Quran 43:61, its readings and its commentators.
+  - sons-of-god-in-the-bible: seven uses of the title, with Luke 3:38 and John 10:34–36.
+  - ezekiel-twenty-three-allegory: the chapter's message honoured, its wording cited and left unquoted, and its own scholars' objections.
+  - ezekiel-twenty-three-in-malay-and-indonesian-bibles: Ezekiel 23:17 and 23:20 in six editions on the SABDA parallel Bible.
+  - biblical-anthropomorphism: six Torah passages, the Bible's own correctives and the Quran's rule in 42:11.
+- Each has a featured image and two in the text, CC0 works from the Cleveland Museum of Art. None shows a prophet.
+- The five articles join the reading order.
+
+### Fixed
+- The content sync (`boi_sync_maybe_run()`) waits until the version migration has finished. Before, an admin request that could not take the migration lock went on to populate under the sync lock while another request was migrating, so both could create the same new article and WordPress would save the second as `slug-2`.
+
+## [1.141.0] - 2026-11-27
+
+No feature removed and no public identifier renamed. No article changes its address.
+
+### Changed
+- Sections rebalanced by subject. Comparative Religion held 84 of 210 articles; sixteen move to where their subject lies, leaving Comparative Religion 71, Belief & Practices 48, Faith & Reason 32, History 29 and Islamophobia 11:
+  - to The Quran's Text and Revelation: haman-anachronism, quran-anachronism-claims, i-read-the-entire-quran-reply;
+  - to Hadith and Sira Under Scrutiny: al-zutt-allegation, apes-and-pigs-and-the-jews, jews-behind-the-stone-hadith, buraq-and-miracle-stories;
+  - to The Prophet's Life: prophet-died-poisoning, was-muhammad-a-narcissist, muhammad-false-prophet-claim, did-muhammad-perform-miracles;
+  - to Islam and Other Peoples: western-scholars-of-islam, what-the-pagans-of-mecca-said-about-allah;
+  - to Islamophobia: sam-shamoun-under-oath, fighting-verses-in-context, jihad-meaning-quran-hadith-jurists.
+- The term migration now moves the section (`listicle-topic`) as well as the category, under the same rule: only while the post still holds what the theme gave it (`_boi_seed_topic`, or the seed's `topic_v1`). `BOI_TERMS_VERSION` and the seed's `terms_version` are 3.
+
+## [1.140.0] - 2026-11-27
+
+No feature removed and no public identifier renamed.
+
+### Added
+- sam-shamoun-under-oath: "Sam Shamoun under oath: 7 findings from the Illinois courts", a listicle with excerpt, abstract and images. It quotes the two 2020 opinions of the Appellate Court of Illinois in his divorce case on his credibility, his undisclosed income and donations, and his compliance with court orders, each quotation checked against the opinion with its paragraph number, and states where he prevailed. The order of protection is reported as the court recorded it (¶¶ 5, 70), with no description of conduct the opinions do not give. The family matters and the private persons in the case are otherwise left out. It ends with links to five articles on the subjects he writes about.
+
+### Changed
+- `.claude/VOICE.md` and SSOT: published court findings on a named critic's own credibility and his handling of money given for his work may be quoted, exactly and fairly; family matters and private persons stay out.
+
+## [1.139.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Every Bible reference in the form "Book chapter:verse" in the articles and the Glossary links to that verse in the ESV: 1,340 links in 107 articles and 7 Glossary letters, each checked against the page and its verse anchor. Headings, existing links and quoted wording are left as they were; John 5:4, which the ESV omits, links to its chapter. A Septuagint reference (Jeremiah 38:32) and 4 Ezra 14:9 are left unlinked.
+- The one link to another Bible site (2 Kings 3, in who-was-yahweh-archaeological-origins) now points to the same source, and notes give the translation only, with no website named.
+- `BOI_GLOSSARY_VERSION` is raised, so the Glossary pages pick up the links once.
+
+### Added
+- `tests/bible-links-test.php`: fails if a Bible link has a malformed address, or if the domain of the Bible site appears anywhere in shipped content outside a link destination.
+
+## [1.138.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 16 to 20, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`):
+  - does-god-require-blood-to-forgive: five Bible passages on sacrifice and repentance.
+  - islamic-repentance-and-christian-atonement: six differences between Islam and Christianity.
+  - are-children-born-sinful: five answers from Islam and the churches.
+  - adam-and-eve-in-genesis-and-the-quran: five differences on blame and repentance.
+  - jesus-the-word-of-god-in-the-quran: six facts about *kalimah* in the Quran.
+- Each has a featured image and two in the text: fifteen CC0 works from the Cleveland Museum of Art. They include a Byzantine altar front, a Gothic Bible, a Book of Hours, Quran folios from Egypt, Spain and North Africa, a reliquary cross, Louis Haghe's lithograph of a confessional, a cradle basket, a Japanese baptismal bowl, an Ottoman embroidered tree, a folio of Sa'di's *Gulistan* and a Byzantine Gospel book. None shows a prophet.
+- The tags "Atonement" and "Repentance". The five articles join the reading order.
+
+- A publishing schedule (SSOT D71). Seeded articles may carry `publish_on`, a time in UTC; `boi_seed_post_timing()` in the new `inc/schedule.php` creates such an article as Scheduled and WordPress publishes it on the day. The ten articles of 1.137.0 and 1.138.0 are scheduled ten days apart from 1 December 2026 to 1 March 2027, with seasonal articles placed before Christmas, Ramadan and Lent. `bin/check-content.py` checks the dates and that no article links to one scheduled after it; `tests/schedule-test.php` checks the timing.
+
+### Fixed
+- Entry titles in four new articles no longer start with their number, which the listicle block already shows, and two articles now have the number of entries their titles name.
+- The tag list in `inc/data/seed.json` is in alphabetical order again; "Original sin" had been added at the end in 1.137.0.
+
+## [1.137.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Added
+- Five articles from the owner's drafts 11 to 15, rewritten to `.claude/VOICE.md` with every note checked again (`docs/CITATIONS.md`):
+  - jesus-prostrated-in-prayer: five passages on prostration in the Bible.
+  - did-jesus-fast: five facts from the Gospels, the Torah and the Quran.
+  - birth-of-jesus-in-surah-maryam: seven details in Quran 19:16 to 36.
+  - jesus-and-the-sabbath: five controversies in the Gospels.
+  - original-sin: six questions on Adam, Paul, Augustine and the Quran.
+- Each has a featured image and two in the text. All fifteen are CC0 works from the Cleveland Museum of Art: lithographs by David Roberts and Louis Haghe, a drawing of Muslims at prayer by P. Pavesi, an etching by Ruisdael, Quran folios, a Latin Bible leaf, an initial with Saint Augustine and a holy-water font. None shows a prophet.
+- The tag "Original sin". The five articles join the reading order beside the articles nearest them.
+
+## [1.136.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Changed
+- Eight articles gain the readings of contributors to Mohammed Abu-Nimer and David Augsburger, eds., *Peace-Building by, between, and beyond Muslims and Evangelical Christians* (Lexington Books, 2009), placed inside the existing entries, with their notes renumbered. No title, slug, heading, numbered item, image or SEO field changed.
+  - islam-religion-of-peace: S. Ayse Kadayifci-Orellana (ch. 3) on peace as a positive condition.
+  - war-and-killing-in-islam: Kadayifci-Orellana on Hudaybiyya and the keeping of covenants, with Quran 9:4.
+  - no-compulsion-in-religion: J. Dudley Woodberry (ch. 14) on respectful witness and Abdul Rashied Omar (ch. 15) on conversion.
+  - apostasy-in-islam: Omar (ch. 15) and Asma Afsaruddin's response (ch. 16) on *riddah*.
+  - quran-on-christians: Osman Bakar (ch. 12) on 49:13, 5:48 and 3:64, and the editors' introduction.
+  - can-a-muslim-befriend-a-non-muslim: Riffat Hassan (ch. 7) on 17:70 and human dignity.
+  - will-every-non-muslim-go-to-hell: Hassan on 2:62, 5:69 and 2:111–112.
+  - islamophobia-facts: Evelyne A. Reisacher (ch. 13) on fear between communities.
+- New English Quran quotations are A. Yusuf Ali's translation, and new Bible quotations the World English Bible (SSOT D70).
+
+## [1.135.0] - 2026-11-26
+
+No feature removed and no public identifier renamed.
+
+### Added
+- "In the classical dictionaries" notes on 424 more Glossary entries, so 491 of the 785 entries now carry one (544 notes in all). Each note quotes a short passage copied from the entry's page on the Arabic Lexicon (arabiclexicon.hawramani.com), gives the site's own English paraphrase and links to the passage. 407 entries quote al-Rāghib al-Iṣfahānī's *al-Mufradāt fī gharīb al-Qurʾān*; for 17 non-Quranic terms (among them ablutions, dowry, blood money, the funeral, *mandūb*, *mubāḥ*, *ṣaḥīḥ* and *sīra*) the note quotes al-Fayyūmī's *al-Miṣbāḥ al-munīr* or al-Sharīf al-Jurjānī's *Kitāb al-taʿrīfāt*.
+- Every excerpt was matched against the cached text of the page it links to, and none runs past the 450-character limit `bin/check-content.py` enforces.
+- Persons, prophets, places, books, modern movements, entries with no Arabic headword and the long supplications carry no note, because the word-books treat words. Of the word entries, 24 were left without one, where no word-book on the site said anything useful about the term or the term is not in them (among them chess, earthquakes, gold and silver, philosophy, *istiḥsān* and the five schools).
+
+### Changed
+- `BOI_GLOSSARY_VERSION` is 23, so the Glossary sync rewrites unedited entry pages with their new section.
+- SSOT D57 names the two further word-books and the entries that carry no note.
 
 ## [1.133.0] - 2026-11-24
 
@@ -175,7 +427,7 @@ No feature removed and no public identifier renamed.
 No feature removed and no public identifier renamed.
 
 ### Changed
-- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse on thebible.exposed (`/bible/{book}/{chapter}/#v{verse}`). The notes name the ESV at thebible.exposed in place of the World English Bible.
+- iblis-and-the-command-to-prostrate: the four Bible quotations (Hebrews 1:6, Exodus 9:12, 1 Kings 22:23, 2 Thessalonians 2:11) now follow the ESV, and each reference links to its verse. The notes name the ESV in place of the World English Bible.
 
 ## [1.122.0] - 2026-11-23
 

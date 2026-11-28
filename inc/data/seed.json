@@ -1,5 +1,5 @@
 {
-	"terms_version": 2,
+	"terms_version": 3,
 	"topics": {
 		"belief-and-practices": {
 			"name": "Belief & Practices",
@@ -178,55 +178,59 @@
 			"slug": "prophet-died-poisoning",
 			"title": "6 answers to the claim that the Prophet died from poisoning",
 			"excerpt": "Polemicists say the poisoning at Khaybar disproves Muhammad's prophethood. 6 answers from the sources. Read them.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Did the Prophet die from poisoning?",
-			"category": "answering-polemics",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Prophethood",
 				"Hadith",
 				"Sira"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "muhammad-false-prophet-claim",
 			"title": "Did Muhammad fail as a prophet? 5 answers on miracles, signs and the Al-Rum prophecy",
 			"excerpt": "Critics say Muhammad showed no miracles, made a failed prophecy and might have been epileptic. 5 answers from the record. Read them.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Did Muhammad fail as a prophet? 5 answers",
-			"category": "prophets-both-scriptures",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Prophethood",
 				"Miracles",
 				"Prophecy"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "did-muhammad-perform-miracles",
 			"title": "Did Muhammad perform miracles? 6 answers",
 			"excerpt": "The Quran calls him only a warner, critics say, so he had no signs. 6 answers from the Quran, the hadith and the Gospels. Read on.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Did Muhammad perform miracles?",
-			"category": "prophets-both-scriptures",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Miracles",
 				"Prophethood",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "al-zutt-allegation",
 			"title": "5 things wrong with the al-Zutt allegation",
 			"excerpt": "A recent polemic reads a hadith about al-Zutt as sexual assault. 5 reasons the reading collapses. Read the philology.",
-			"topic": "comparative-religion",
-			"category": "answering-polemics",
+			"topic": "faith-and-reason",
+			"category": "hadith-sira",
 			"tags": [
 				"Prophet Muhammad",
 				"Hadith",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "islamic-dilemma",
@@ -594,15 +598,16 @@
 			"slug": "haman-anachronism",
 			"title": "5 answers to the claim that Haman is a Quranic mistake",
 			"excerpt": "Did the Quran borrow Haman from Esther? 5 answers, including what an Egyptian inscription can establish. Read on.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Is Haman a Quranic mistake? 5 answers",
-			"category": "answering-polemics",
+			"category": "quran-text-revelation",
 			"tags": [
 				"Haman",
 				"Moses",
 				"Quran and history",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "where-is-the-injil",
@@ -1531,14 +1536,15 @@
 			"slug": "western-scholars-of-islam",
 			"title": "5 Western scholars of Islam and where Muslims differ with them",
 			"excerpt": "Geiger, Caetani, Jeffery, Goitein and Armstrong: 5 Western scholars of Islam, what they argued and where Muslims disagree. Read on.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "5 Western scholars of Islam",
-			"category": "answering-polemics",
+			"category": "islam-other-peoples",
 			"tags": [
 				"Orientalism",
 				"Islamic scholarship",
 				"Revisionism"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "islamic-art-and-the-one-god",
@@ -1767,15 +1773,16 @@
 			"slug": "buraq-and-miracle-stories",
 			"title": "6 miracle stories critics call a fairy tale, and what the sources say",
 			"excerpt": "The Night Journey, the Buraq, a talking donkey and the Bible's own miracles: 6 miracle stories critics mock, and what the sources say. Read on.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "6 miracle stories critics call fairy tales",
-			"category": "answering-polemics",
+			"category": "hadith-sira",
 			"tags": [
 				"Miracles",
 				"Isra and Miraj",
 				"Jerusalem",
 				"Gospels"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "raids-badr-and-the-conquest-of-mecca",
@@ -1925,15 +1932,16 @@
 			"slug": "apes-and-pigs-and-the-jews",
 			"title": "Apes and pigs and the Jews in the Quran and hadith: 6 facts",
 			"excerpt": "What the verses on apes and pigs say, who they address, and how commentators read them: 6 facts. Read the sources.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Apes, pigs and the Jews in the Quran",
-			"category": "answering-polemics",
+			"category": "hadith-sira",
 			"tags": [
 				"Jews",
 				"Quran commentary",
 				"Hadith",
 				"Myths"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "satanic-verses-report",
@@ -2009,15 +2017,16 @@
 			"slug": "fighting-verses-in-context",
 			"title": "The fighting verses in context: 6 facts from the sources",
 			"excerpt": "Nine war verses are quoted against Islam. The setting, the classical commentary and the limits each verse carries, with fair concessions. Read on.",
-			"topic": "belief-and-practices",
+			"topic": "islamophobia",
 			"seo_title": "The fighting verses in context: 6 facts",
-			"category": "law-ethics",
+			"category": "islamophobia",
 			"tags": [
 				"Fighting verses",
 				"Jihad",
 				"Sword verse",
 				"Ethics of war"
-			]
+			],
+			"topic_v1": "belief-and-practices"
 		},
 		{
 			"slug": "first-muslims-kept-the-faith",
@@ -2036,29 +2045,31 @@
 			"slug": "quran-anachronism-claims",
 			"title": "7 answers to the claim that the Quran gets its history wrong",
 			"excerpt": "Seven alleged historical slips, from Nimrod and Talut to Job and Pharaoh, checked against what the verses say. See how each one fares.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Does the Quran get history wrong?",
-			"category": "answering-polemics",
+			"category": "quran-text-revelation",
 			"tags": [
 				"Quran and history",
 				"Haman",
 				"Mary",
 				"Polemics"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "jihad-meaning-quran-hadith-jurists",
 			"title": "5 facts about jihad in the Quran, the hadith and the jurists",
 			"excerpt": "Jihad means effort, and in Medinan verses and the law books often fighting; 5 facts on the ranking hadith and the jurists. Read the sources.",
-			"topic": "belief-and-practices",
+			"topic": "islamophobia",
 			"seo_title": "Jihad in the Quran and hadith: 5 facts",
-			"category": "law-ethics",
+			"category": "islamophobia",
 			"tags": [
 				"Jihad",
 				"Ethics of war",
 				"Fiqh",
 				"Fighting verses"
-			]
+			],
+			"topic_v1": "belief-and-practices"
 		},
 		{
 			"slug": "talmud-midrash-apocrypha-borrowing",
@@ -2107,15 +2118,16 @@
 			"slug": "i-read-the-entire-quran-reply",
 			"title": "\"I read the entire Quran, the hadith and the Sira\": 7 answers",
 			"excerpt": "A reader of the Quran, hadith and Sira says the founder is the problem and God's love conditional. 7 answers from the sources. Read the sources.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "Reply to \"I read the entire Quran\"",
-			"category": "answering-polemics",
+			"category": "quran-text-revelation",
 			"tags": [
 				"Polemics",
 				"Prophet Muhammad",
 				"Abrogation",
 				"Divinity of Jesus"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "is-yahweh-satan",
@@ -2628,15 +2640,16 @@
 			"slug": "jews-behind-the-stone-hadith",
 			"title": "The hadith of the Jews behind the stone: 6 points from the sources",
 			"excerpt": "What Bukhari and Muslim report, why it is a prediction and not a command, and how a movement turned it into a slogan. 6 points. Read on.",
-			"topic": "comparative-religion",
+			"topic": "faith-and-reason",
 			"seo_title": "The Jews behind the stone hadith",
-			"category": "answering-polemics",
+			"category": "hadith-sira",
 			"tags": [
 				"Jews",
 				"Hadith",
 				"Signs of the Hour",
 				"Myths"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "can-a-muslim-befriend-a-non-muslim",
@@ -2684,15 +2697,16 @@
 			"slug": "was-muhammad-a-narcissist",
 			"title": "Was Muhammad a narcissist? 6 points on a diagnosis of the dead",
 			"excerpt": "The childhood facts, his conduct in Bukhari and the Quran's rebukes: why a diagnosis fourteen centuries later cannot hold. 6 points. Read on.",
-			"topic": "comparative-religion",
+			"topic": "history",
 			"seo_title": "Was Muhammad a narcissist?",
-			"category": "prophets-both-scriptures",
+			"category": "prophets-life",
 			"tags": [
 				"Prophet Muhammad",
 				"Prophethood",
 				"Polemics",
 				"Myths"
-			]
+			],
+			"topic_v1": "comparative-religion"
 		},
 		{
 			"slug": "safiyya-and-the-women-captured-in-war",
@@ -2768,15 +2782,16 @@
 			"slug": "what-the-pagans-of-mecca-said-about-allah",
 			"title": "What did the pagans of Mecca believe about Allah? 8 answers",
 			"excerpt": "Did the Meccans take Allah for a moon god? 8 answers from the Quran and early reports on what they believed about Allah. Read on.",
-			"topic": "belief-and-practices",
+			"topic": "history",
 			"seo_title": "What the pagans of Mecca said about Allah",
-			"category": "creed-theology",
+			"category": "islam-other-peoples",
 			"tags": [
 				"Allah",
 				"Arabia before Islam",
 				"Same God",
 				"Polemics"
-			]
+			],
+			"topic_v1": "belief-and-practices"
 		},
 		{
 			"slug": "sun-muddy-spring-and-fixed-earth",
@@ -2917,6 +2932,713 @@
 				"Jesus",
 				"Myths",
 				"Polemics"
+			]
+		},
+		{
+			"slug": "jesus-prostrated-in-prayer",
+			"title": "Jesus fell on his face in prayer: 5 passages on prostration in the Bible",
+			"excerpt": "In Gethsemane Jesus fell on his face, as Abraham and Moses had: 5 passages on prostration in the Bible and in Christian worship. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Jesus fell on his face: 5 Bible passages",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Prayer",
+				"Gospels",
+				"Worship",
+				"Old Testament"
+			],
+			"publish_on": "2026-12-11T01:00:00Z"
+		},
+		{
+			"slug": "did-jesus-fast",
+			"title": "Did Jesus fast? 5 facts from the Gospels, the Torah and the Quran",
+			"excerpt": "Jesus fasted forty days, taught his disciples to fast in secret and foretold their fasting: 5 facts set beside Ramadan. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Jesus fast? 5 facts from the Gospels",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Jesus",
+				"Fasting",
+				"Ramadan",
+				"Gospels",
+				"Early Christianity"
+			],
+			"publish_on": "2027-01-30T01:00:00Z"
+		},
+		{
+			"slug": "birth-of-jesus-in-surah-maryam",
+			"title": "The birth of Jesus in Surah Maryam: 7 details in Quran 19:16 to 36",
+			"excerpt": "The palm tree, the accusation and the child who speaks: 7 details of the Quran's account of Jesus' birth, with the borrowing charge tested. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The birth of Jesus in Surah Maryam",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Mary",
+				"Quran commentary",
+				"Sources of the Quran",
+				"Miracles"
+			],
+			"publish_on": "2026-12-01T01:00:00Z"
+		},
+		{
+			"slug": "jesus-and-the-sabbath",
+			"title": "Did Jesus break the Sabbath? 5 controversies in the Gospels",
+			"excerpt": "Grain, a withered hand, a bent woman, dropsy and a mat: 5 Sabbath disputes, and what they show about Jesus and the Law. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Jesus break the Sabbath? 5 disputes",
+			"category": "bible-text",
+			"tags": [
+				"Jesus",
+				"Gospels",
+				"Torah",
+				"Jews"
+			],
+			"publish_on": "2027-03-01T01:00:00Z"
+		},
+		{
+			"slug": "original-sin",
+			"title": "Original sin: 6 questions on Adam, Paul, Augustine and the Quran",
+			"excerpt": "Is every child born guilty in Adam? 6 questions on Genesis, Romans 5, Augustine, the churches and the Quran's story of Adam. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "Original sin: 6 questions and the Quran",
+			"category": "creed-theology",
+			"tags": [
+				"Original sin",
+				"Paul",
+				"Early Christianity",
+				"Christians"
+			],
+			"publish_on": "2026-12-31T01:00:00Z"
+		},
+		{
+			"slug": "does-god-require-blood-to-forgive",
+			"title": "Does God need blood to forgive? 5 Bible passages on sacrifice and repentance",
+			"excerpt": "\"Without shedding of blood there is no remission.\" Does the Bible say God cannot forgive without it? Five passages answer. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Does God need blood to forgive sins?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Atonement",
+				"Crucifixion",
+				"Old Testament",
+				"Bible",
+				"Christians"
+			],
+			"publish_on": "2027-01-20T01:00:00Z"
+		},
+		{
+			"slug": "islamic-repentance-and-christian-atonement",
+			"title": "Repentance and atonement: 6 differences between Islam and Christianity",
+			"excerpt": "Do Christians sin freely because Jesus paid? Do Muslims live without hope of pardon? Six differences, from the texts each side teaches. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "Islamic repentance and Christian atonement",
+			"category": "creed-theology",
+			"tags": [
+				"Atonement",
+				"Repentance",
+				"Crucifixion",
+				"Christians",
+				"Original sin"
+			],
+			"publish_on": "2027-02-09T01:00:00Z"
+		},
+		{
+			"slug": "are-children-born-sinful",
+			"title": "Are children born sinful? 5 answers from Islam and the churches",
+			"excerpt": "Is a newborn already a sinner? Islam, the Catholic and Orthodox churches and the Protestants give different answers. See where they meet.",
+			"topic": "belief-and-practices",
+			"seo_title": "Are children born sinful? 5 answers",
+			"category": "creed-theology",
+			"tags": [
+				"Original sin",
+				"Christians",
+				"Afterlife",
+				"Hadith"
+			],
+			"publish_on": "2027-01-10T01:00:00Z"
+		},
+		{
+			"slug": "adam-and-eve-in-genesis-and-the-quran",
+			"title": "Adam and Eve in Genesis and the Quran: 5 differences on blame and repentance",
+			"excerpt": "Does the Bible blame Eve, and did the Quran copy Genesis? Five differences between the two accounts of Adam and his wife. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Adam and Eve in Genesis and the Quran",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Prophets",
+				"Satan",
+				"Original sin",
+				"Women in Islam",
+				"Bible",
+				"Sources of the Quran"
+			],
+			"publish_on": "2027-02-19T01:00:00Z"
+		},
+		{
+			"slug": "jesus-the-word-of-god-in-the-quran",
+			"title": "Jesus as a Word from God: 6 facts about kalimah in the Quran",
+			"excerpt": "The Quran calls Jesus a Word from God. Does that mean what John 1 means? Six facts from the verses and the commentators. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Jesus as a Word from God in the Quran",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"Trinity",
+				"Gospels",
+				"Quran commentary"
+			],
+			"publish_on": "2026-12-21T01:00:00Z"
+		},
+		{
+			"slug": "sam-shamoun-under-oath",
+			"title": "Sam Shamoun under oath: 7 findings from the Illinois courts",
+			"excerpt": "He asks readers to trust his word on Islam. Under oath, a court found his testimony not credible. Seven findings from the record. Read on.",
+			"topic": "islamophobia",
+			"seo_title": "Sam Shamoun under oath: 7 findings",
+			"category": "islamophobia",
+			"tags": [
+				"Polemics",
+				"Islamophobia",
+				"Christians"
+			],
+			"topic_v1": "comparative-religion"
+		},
+		{
+			"slug": "jesus-sign-of-the-hour",
+			"title": "Does Quran 43:61 make Jesus divine? 5 points on the sign of the Hour",
+			"excerpt": "Does the Quran call Jesus the knowledge of the Hour, and so divine? Five points from the verse, its readings and its commentators. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Does Quran 43:61 make Jesus divine?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"Quran commentary",
+				"Signs of the Hour",
+				"Tabari"
+			],
+			"publish_on": "2027-03-11T01:00:00Z"
+		},
+		{
+			"slug": "sons-of-god-in-the-bible",
+			"title": "Sons of God in the Bible: 7 uses of a disputed title",
+			"excerpt": "The Bible calls angels, Israel, kings, peacemakers and Adam sons of God. What does the title mean for Jesus? Seven uses examined. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Sons of God in the Bible: 7 uses",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"Bible",
+				"Old Testament",
+				"Trinity"
+			],
+			"publish_on": "2027-03-21T01:00:00Z"
+		},
+		{
+			"slug": "ezekiel-twenty-three-allegory",
+			"title": "Ezekiel 23: 5 facts about the Bible's most explicit allegory",
+			"excerpt": "Is Ezekiel 23 an allegory or explicit language unworthy of scripture? Five facts on its meaning, its wording and its scholars. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Ezekiel 23: 5 facts about its allegory",
+			"category": "bible-text",
+			"tags": [
+				"Bible",
+				"Old Testament",
+				"Tahrif",
+				"Polytheism",
+				"Jerusalem"
+			],
+			"publish_on": "2027-03-31T01:00:00Z"
+		},
+		{
+			"slug": "ezekiel-twenty-three-in-malay-and-indonesian-bibles",
+			"title": "Ezekiel 23 in Malay and Indonesian Bibles: 5 translation choices",
+			"excerpt": "Do Malay and Indonesian Bibles hide the explicit verses of Ezekiel 23? Six editions compared side by side. See what each one says.",
+			"topic": "comparative-religion",
+			"seo_title": "Ezekiel 23 in Malay and Indonesian Bibles",
+			"category": "bible-text",
+			"tags": [
+				"Bible",
+				"Old Testament",
+				"Southeast Asia",
+				"Tahrif"
+			],
+			"publish_on": "2027-04-10T01:00:00Z"
+		},
+		{
+			"slug": "biblical-anthropomorphism",
+			"title": "Biblical anthropomorphism: 6 Torah passages and the Quran's rule",
+			"excerpt": "The Quran speaks of God's hands and face. Is that the same as a God who walks, regrets and rests? Six Torah passages compared. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Biblical anthropomorphism: 6 passages",
+			"category": "yahweh-same-god",
+			"tags": [
+				"Divine attributes",
+				"Ashari theology",
+				"Yahweh",
+				"Old Testament",
+				"Tawhid"
+			],
+			"publish_on": "2027-04-20T01:00:00Z"
+		},
+		{
+			"slug": "camel-method",
+			"title": "The Camel Method: 6 facts about a Christian missionary approach to Muslims",
+			"excerpt": "Missionaries ask Muslims to read Surah Al Imran 3:42 to 55 and follow it to the Gospel. What does the passage say? Six facts. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The Camel Method: 6 facts",
+			"category": "answering-polemics",
+			"tags": [
+				"Christians",
+				"Polemics",
+				"Conversion",
+				"Quran commentary",
+				"Jesus"
+			],
+			"publish_on": "2027-04-30T01:00:00Z"
+		},
+		{
+			"slug": "quran-passages-in-christian-missions",
+			"title": "5 Quranic passages Christian missionaries use, and what they say",
+			"excerpt": "Missionaries quote the Quran on Jesus: a Word, a spirit from God, a worker of miracles. What do the verses say in context? Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "5 Quranic passages missionaries use",
+			"category": "answering-polemics",
+			"tags": [
+				"Polemics",
+				"Christians",
+				"Jesus",
+				"Quran commentary",
+				"Divinity of Jesus"
+			],
+			"publish_on": "2027-05-10T01:00:00Z"
+		},
+		{
+			"slug": "does-the-virgin-birth-make-jesus-divine",
+			"title": "Does the virgin birth make Jesus divine? 5 answers from the Quran",
+			"excerpt": "The Quran affirms that Jesus was born without a father. Does that make him divine? Five answers from the Quran and the Gospels. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Does the virgin birth make Jesus divine?",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Mary",
+				"Divinity of Jesus",
+				"Quran commentary"
+			],
+			"publish_on": "2027-05-20T01:00:00Z"
+		},
+		{
+			"slug": "principles-of-dawah-in-the-quran",
+			"title": "6 principles of da'wah in the Quran",
+			"excerpt": "How should a Muslim invite others to Islam? Six principles the Quran sets for the call, from wisdom to leaving guidance to God. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "6 principles of da'wah in the Quran",
+			"category": "law-ethics",
+			"tags": [
+				"Freedom of religion",
+				"People of the Book",
+				"Conversion",
+				"Quran commentary"
+			],
+			"publish_on": "2027-05-30T01:00:00Z"
+		},
+		{
+			"slug": "religious-pluralism-and-islam",
+			"title": "Religious pluralism and Islam: 5 distinctions that matter",
+			"excerpt": "Does Islam accept religious pluralism? The answer depends on which of five questions is meant. See the distinctions the Quran keeps.",
+			"topic": "belief-and-practices",
+			"seo_title": "Religious pluralism and Islam",
+			"category": "creed-theology",
+			"tags": [
+				"People of the Book",
+				"Afterlife",
+				"Freedom of religion",
+				"Tawhid"
+			],
+			"publish_on": "2027-06-09T01:00:00Z"
+		},
+		{
+			"slug": "sam-shamoun-on-two-podcasts",
+			"title": "Sam Shamoun on two podcasts: 14 claims checked against the sources",
+			"excerpt": "On two podcasts he said the Quran plagiarises Paul and that Muslims befriend you to deceive. Fourteen claims, checked. Read on.",
+			"topic": "islamophobia",
+			"seo_title": "Sam Shamoun on two podcasts: 14 claims",
+			"category": "islamophobia",
+			"tags": [
+				"Polemics",
+				"Islamophobia",
+				"Christians"
+			]
+		},
+		{
+			"slug": "was-jesus-born-on-christmas-day",
+			"title": "Was Jesus born on 25 December? 6 facts from the historical record",
+			"excerpt": "Was Jesus born on 25 December, or is Christmas a renamed pagan festival? Six facts from the Gospels and early Christian records. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Was Jesus born on 25 December? 6 facts",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Christmas",
+				"Jesus",
+				"Early Christianity",
+				"Gospels"
+			],
+			"publish_on": "2027-11-06T01:00:00Z"
+		},
+		{
+			"slug": "christmas-quran-jesus-birth",
+			"title": "Christmas and the Quran: 5 differences in the story of Jesus' birth",
+			"excerpt": "The Christmas card shows one scene. Surah Maryam, Matthew and Luke tell three accounts of the birth of Jesus. Five differences. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Christmas and the Quran: 5 differences",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Christmas",
+				"Jesus",
+				"Mary",
+				"Gospels",
+				"Quran commentary"
+			],
+			"publish_on": "2027-11-16T01:00:00Z"
+		},
+		{
+			"slug": "christmas-traditions-historical-origins",
+			"title": "6 Christmas traditions and their historical origins",
+			"excerpt": "Is Christmas pagan? The tree, the crib, the gifts, Santa Claus, the carols and the greenery each have a datable history. See where they began.",
+			"topic": "arts-and-culture",
+			"seo_title": "6 Christmas traditions and their origins",
+			"category": "arts-and-culture",
+			"tags": [
+				"Christmas",
+				"Christians",
+				"Myths"
+			],
+			"publish_on": "2027-11-26T01:00:00Z"
+		},
+		{
+			"slug": "can-muslims-say-merry-christmas",
+			"title": "Can Muslims say Merry Christmas? 5 scholarly positions",
+			"excerpt": "May a Muslim say Merry Christmas? Five positions from Ibn al-Qayyim to Dar al-Ifta and the Malaysian fatwa, with their reasons. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "Can Muslims say Merry Christmas?",
+			"category": "law-ethics",
+			"tags": [
+				"Christmas",
+				"Fiqh",
+				"Christians",
+				"Southeast Asia"
+			],
+			"publish_on": "2027-12-06T01:00:00Z"
+		},
+		{
+			"slug": "former-christian-ministers-who-embraced-islam",
+			"title": "5 former Christian ministers and priests who embraced Islam",
+			"excerpt": "Lists of priests who became Muslim inflate their titles. Five former ministers and priests whose Christian roles are on record. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "5 former ministers who embraced Islam",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Christians",
+				"Freedom of religion"
+			],
+			"publish_on": "2027-06-19T01:00:00Z"
+		},
+		{
+			"slug": "from-atheism-to-islam",
+			"title": "From atheism to Islam: 5 questions on the way to belief",
+			"excerpt": "Why do some people move from unbelief to Islam? Five questions they meet, on existence, God's oneness, suffering, morality and revelation. Read on.",
+			"topic": "belief-and-practices",
+			"seo_title": "From atheism to Islam: 5 questions",
+			"category": "creed-theology",
+			"tags": [
+				"Atheism",
+				"Conversion",
+				"Existence of God",
+				"Tawhid"
+			],
+			"publish_on": "2027-06-29T01:00:00Z"
+		},
+		{
+			"slug": "indonesian-conversion-stories",
+			"title": "4 Indonesian conversion stories and the questions behind them",
+			"excerpt": "Did they convert only to marry, or give up who they were? Four Indonesian converts answer in their own words. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "4 Indonesian conversion stories",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Southeast Asia",
+				"Freedom of religion"
+			],
+			"publish_on": "2027-07-09T01:00:00Z"
+		},
+		{
+			"slug": "opposition-to-islam-to-conversion",
+			"title": "From opposition to Islam to conversion: 4 stories examined",
+			"excerpt": "Some of Islam's opponents became Muslims, and some stories about them grew in the telling. Four cases checked against the record. Read on.",
+			"topic": "islamophobia",
+			"seo_title": "Opponents of Islam who converted: 4 stories",
+			"category": "islamophobia",
+			"tags": [
+				"Conversion",
+				"Islamophobia",
+				"Myths"
+			],
+			"publish_on": "2027-07-19T01:00:00Z"
+		},
+		{
+			"slug": "why-people-convert-to-islam",
+			"title": "Why do people convert to Islam? 7 reasons converts give",
+			"excerpt": "Is conversion to Islam mostly about marriage? American converts gave Pew seven reasons, and marriage was one of the smaller ones. Read on.",
+			"topic": "the-muslim-world",
+			"seo_title": "Why do people convert to Islam? 7 reasons",
+			"category": "muslim-world",
+			"tags": [
+				"Conversion",
+				"Pew Research",
+				"Demographics"
+			],
+			"publish_on": "2027-07-29T01:00:00Z"
+		},
+		{
+			"slug": "maria-hertogh-natrah-case",
+			"title": "The Maria Hertogh controversy: 7 facts about the Natrah case",
+			"excerpt": "A custody case over a girl raised as Natrah ended in riots in Singapore in 1950. Seven facts from the court record and the official history. Read on.",
+			"topic": "history",
+			"seo_title": "The Natrah case: 7 facts",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Southeast Asia",
+				"Freedom of religion",
+				"Christians"
+			],
+			"publish_on": "2027-08-08T01:00:00Z"
+		},
+		{
+			"slug": "saul-of-tarsus-before-conversion",
+			"title": "6 facts about Saul of Tarsus before his conversion",
+			"excerpt": "Who was Paul before the Damascus road? Six facts about Saul of Tarsus, marked by what his letters say and what only Acts adds. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "6 facts about Saul before his conversion",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Early Christianity",
+				"New Testament"
+			],
+			"publish_on": "2027-08-18T01:00:00Z"
+		},
+		{
+			"slug": "paul-damascus-road-contradictions",
+			"title": "Paul on the Damascus road: 5 differences between the accounts in Acts",
+			"excerpt": "Did Paul's companions hear the voice of Jesus or not? Five differences between the three accounts of his conversion in Acts. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The Damascus road: 5 differences in Acts",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Biblical contradictions",
+				"New Testament"
+			],
+			"publish_on": "2027-08-28T01:00:00Z"
+		},
+		{
+			"slug": "paul-peter-antioch-confrontation",
+			"title": "Paul and Peter: 5 facts about their confrontation at Antioch",
+			"excerpt": "Why did Paul accuse Peter of hypocrisy to his face? Five facts about the quarrel at Antioch in Galatians 2, and what no source records. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Paul and Peter at Antioch: 5 facts",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Early Christianity",
+				"New Testament"
+			],
+			"publish_on": "2027-09-07T01:00:00Z"
+		},
+		{
+			"slug": "paul-james-faith-and-works",
+			"title": "Paul and James: 6 points of tension over faith, works and salvation",
+			"excerpt": "Paul says a man is justified by faith apart from works; James says by works and not by faith only. Six points of tension. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Paul and James on faith and works",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Abraham",
+				"Biblical contradictions",
+				"New Testament"
+			],
+			"publish_on": "2027-09-17T01:00:00Z"
+		},
+		{
+			"slug": "epimenides-paradox-in-titus",
+			"title": "The Epimenides paradox: 5 questions about Titus 1:12",
+			"excerpt": "Titus quotes a Cretan calling all Cretans liars, then calls it true. Is it a paradox, a joke or a slur? Five questions answered. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The Epimenides paradox and Titus 1:12",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Biblical contradictions",
+				"New Testament",
+				"Pseudepigrapha"
+			],
+			"publish_on": "2027-09-27T01:00:00Z"
+		},
+		{
+			"slug": "did-paul-receive-his-gospel-from-jesus",
+			"title": "Did Paul receive his gospel from Jesus? 5 claims examined",
+			"excerpt": "Paul said his gospel came by revelation, not from man. His own letters show traditions received and apostles consulted. Five claims examined. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Paul receive his gospel from Jesus?",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Gospels",
+				"Early Christianity",
+				"New Testament"
+			],
+			"publish_on": "2027-10-07T01:00:00Z"
+		},
+		{
+			"slug": "paul-and-circumcision",
+			"title": "Paul and circumcision: 5 passages that raise difficult questions",
+			"excerpt": "Genesis calls circumcision an everlasting covenant and Jesus was circumcised. Why did Paul set it aside? Five passages examined. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Paul and circumcision: 5 passages",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Abraham",
+				"Torah",
+				"New Testament"
+			],
+			"publish_on": "2027-10-17T01:00:00Z"
+		},
+		{
+			"slug": "pauline-teachings-that-shaped-christian-theology",
+			"title": "6 Pauline teachings that shaped Christian theology",
+			"excerpt": "Did Paul invent Christianity? No, and his influence is still decisive. Six teachings from his letters set beside the Quran. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "6 Pauline teachings that shaped theology",
+			"category": "bible-text",
+			"tags": [
+				"Paul",
+				"Atonement",
+				"Original sin",
+				"Divinity of Jesus"
+			],
+			"publish_on": "2027-10-27T01:00:00Z"
+		},
+		{
+			"slug": "jesus-prayed-at-night-and-before-dawn",
+			"title": "4 occasions when Jesus prayed at night or before dawn",
+			"excerpt": "Did Jesus pray at night like Muslims who rise for tahajjud? Four occasions in the Gospels when he prayed in the dark. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "4 times Jesus prayed at night",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Prayer",
+				"Gospels",
+				"Worship"
+			],
+			"publish_on": "2027-12-16T01:00:00Z"
+		},
+		{
+			"slug": "religious-practices-of-jesus-muslims-recognise",
+			"title": "6 religious practices of Jesus that Muslims recognise",
+			"excerpt": "Prayer, prostration, fasting, charity, one God and obedience: six practices of Jesus in the Gospels that Muslims recognise. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "6 practices of Jesus Muslims recognise",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Jesus",
+				"Prayer",
+				"Fasting",
+				"Worship"
+			],
+			"publish_on": "2027-12-26T01:00:00Z"
+		},
+		{
+			"slug": "what-the-talmud-says-about-jesus",
+			"title": "What the Talmud says about Jesus: 5 passages, and the Quran's answer",
+			"excerpt": "Executed, born of an adulteress, a sorcerer in boiling excrement: five Talmud passages on Jesus, set beside the Quran. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "The Talmud on Jesus: 5 passages",
+			"category": "answering-polemics",
+			"tags": [
+				"Jesus",
+				"Jews",
+				"Mary",
+				"Sources of the Quran",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "is-allah-baal-or-hubal",
+			"title": "Is Allah Baal or Hubal? 5 answers from the Quran and the sources",
+			"excerpt": "Some say Allah is Baal, or Hubal, the idol of the Kaaba. The Quran condemns Baal by name and the Prophet broke Hubal. Read on.",
+			"topic": "history",
+			"seo_title": "Is Allah Baal or Hubal? 5 answers",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Allah",
+				"Polytheism",
+				"Kaaba",
+				"Arabia before Islam",
+				"Polemics"
+			]
+		},
+		{
+			"slug": "did-abraham-build-the-kaaba",
+			"title": "Did Abraham build the Kaaba? 5 points from the Quran, the hadith and Genesis",
+			"excerpt": "The Quran says Abraham and Ishmael raised the Kaaba. Critics say he never came near Arabia. Five points on the evidence. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Did Abraham build the Kaaba? 5 points",
+			"category": "prophets-both-scriptures",
+			"tags": [
+				"Abraham",
+				"Ishmael",
+				"Kaaba",
+				"Mecca",
+				"Arabia before Islam"
+			]
+		},
+		{
+			"slug": "synagogues-in-the-quran-and-islamic-history",
+			"title": "Synagogues in the Quran and Islamic history: 5 facts",
+			"excerpt": "The Quran names synagogues among the houses of God it protects, and one in Cairo kept 850 years of Jewish records. Read on.",
+			"topic": "history",
+			"seo_title": "Synagogues in the Quran and Islamic history",
+			"category": "islam-other-peoples",
+			"tags": [
+				"Jews",
+				"Freedom of religion",
+				"People of the Book",
+				"Mosques"
+			]
+		},
+		{
+			"slug": "monogenes-only-begotten",
+			"title": "Monogenes: does \"only begotten\" make Jesus the Son of God? 5 points",
+			"excerpt": "John 3:16 once read \"only begotten Son\". Modern Bibles read \"only Son\". What does the Greek word mean? Five points. Read on.",
+			"topic": "comparative-religion",
+			"seo_title": "Monogenes and \"only begotten\": 5 points",
+			"category": "jesus-and-trinity",
+			"tags": [
+				"Jesus",
+				"Divinity of Jesus",
+				"New Testament",
+				"Gospels",
+				"Tawhid"
 			]
 		}
 	],
@@ -3134,6 +3856,7 @@
 		"Ashari theology": "The school of al-Ashari on the attributes of God, taken as revealed and without likening.",
 		"Astronomy": "Muslim astronomers, their instruments and the stars and craters that carry their names.",
 		"Atheism": "Answers to the case against God, from the cosmos and from conscience.",
+		"Atonement": "The Christian teaching that the death of Jesus reconciles mankind to God, and the Torah's sacrifices it draws on, set beside the Quran's call to repentance.",
 		"Banu Qurayza": "",
 		"Battle of Badr": "",
 		"Bible": "The Bible as Muslims read it: honoured as a record that carries revelation, and examined as a text.",
@@ -3146,6 +3869,7 @@
 		"Child marriage": "The age of marriage in the texts, in history and in modern law.",
 		"China": "Islam in China, from the Tang dynasty to the present day.",
 		"Christians": "What the Quran and the Prophet said about Christians, and how Muslims live beside them.",
+		"Christmas": "Articles on Christmas: the date of the feast, its customs, the Quran's account of the birth of Jesus, and the rulings on greetings.",
 		"Comma Johanneum": "",
 		"Companions of the Prophet": "The men and women who knew the Prophet and carried his teaching.",
 		"Conversion": "People who come to Islam: their numbers, and what a newcomer needs to know.",
@@ -3186,7 +3910,7 @@
 		"Homosexuality": "What the Quran, the hadith and the jurists say about same-sex desire and acts.",
 		"Hudud": "The fixed punishments of Islamic law and the strict conditions on applying them.",
 		"Injil": "The Gospel God gave to Jesus, as the Quran speaks of it.",
-		"Ishmael": "",
+		"Ishmael": "Articles on Ishmael, the son of Abraham and Hagar, in the Quran and in Genesis.",
 		"Islamic architecture": "Mosques, domes and minarets, and how builders fitted them to each land.",
 		"Islamic art": "Art made under the belief in one God: pattern, script and space.",
 		"Islamic Dilemma": "The argument that the Quran's praise of the Torah and the Gospel traps it, and its two claims answered.",
@@ -3224,6 +3948,7 @@
 		"New Testament": "The 27 books of the New Testament, their authors and their manuscripts.",
 		"Old Testament": "The Hebrew Bible, its text, its translations and its history.",
 		"Orientalism": "Western scholarship on Islam, and where Muslim scholars part ways with it.",
+		"Original sin": "The Christian doctrine of Adam's sin and what passed to his descendants, and the Quran's account of Adam's repentance.",
 		"Paradise": "The Garden the Quran promises, and what its descriptions mean.",
 		"Paul": "Paul of Tarsus, his letters and his claim to speak for Jesus.",
 		"People of the Book": "Jews and Christians as the Quran addresses them.",
@@ -3245,6 +3970,7 @@
 		"Quran preservation": "How the Quran was recorded, collected and passed down.",
 		"Race": "",
 		"Ramadan": "The month of fasting and the Night of Power within it.",
+		"Repentance": "Tawbah, turning back to God: its conditions in Islamic teaching, and the practice of contrition and confession in the churches.",
 		"Revelation": "How God spoke to the Prophet, and how the Quran came down.",
 		"Revisionism": "The theory that the early sources on Islam cannot be trusted, and the evidence against it.",
 		"Riba": "",
