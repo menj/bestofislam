@@ -67,6 +67,8 @@ $boi_need = array_merge(
 	$boi_load,
 	array(
 		BOI_DIR . '/inc/glossary-data.php',
+		BOI_DIR . '/assets/error-pages/page.html',
+		BOI_DIR . '/assets/error-pages/page.css',
 		BOI_DIR . '/inc/security-detector.php',
 		BOI_DIR . '/inc/contextual-links.php',
 		BOI_DIR . '/inc/data/image-credits.json',

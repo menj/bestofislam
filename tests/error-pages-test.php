@@ -127,6 +127,10 @@ boi_check( ! file_exists( "$boi_tmp/.boi-alert-config.php" ) && ! is_dir( $boi_s
 boi_error_remove();
 unset( $GLOBALS['boi_opts'] );
 
+// A half-finished FTP upload: without the templates nothing may be written.
+boi_check( true === boi_error_templates_ready(), 'the templates are ready in the theme' );
+boi_check( false === boi_error_templates_ready( $boi_tmp ), 'a folder without the templates is not ready, so the sync writes nothing' );
+
 exec( escapeshellarg( PHP_BINARY ) . ' ' . escapeshellarg( dirname( __DIR__ ) . '/bin/build-error-pages.php' ) . ' --check 2>&1', $boi_o, $boi_code );
 boi_check( 0 === $boi_code, 'errors/*.html match the builder' );
 foreach ( array( '403', '500', '502', '503', '504' ) as $boi_c ) {

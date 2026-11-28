@@ -19,6 +19,9 @@ No feature removed and no public identifier renamed.
 - did-the-quran-say-muhammad-sinned says "we set out each of them" for the verses it lists (it said "in full", which read as a promise to quote them).
 - `BOI_GLOSSARY_VERSION` is 27, so the Glossary sync rewrites the changed entries where they are unedited. README now gives the same number as the code.
 
+### Fixed
+- A half-finished FTP upload could blank every error page. On 27 November the PHP error log shows the error-page sync running at 06:48, after `functions.php` and `inc/error-pages.php` had arrived and before `assets/error-pages/page.html` and `page.css` had: both templates read as empty, and the three drop-ins and five static pages were written without a page in them, until a later run rewrote them. `boi_error_sync()` now writes nothing and tries again later while either template is missing or incomplete (`boi_error_templates_ready()`), and the upload guard in `functions.php` counts both templates among the files the theme needs, so visitors see the "updating" notice until they arrive. `tests/error-pages-test.php` checks both.
+
 ## [1.155.0] - 2026-11-27
 
 No feature removed and no public identifier renamed.
